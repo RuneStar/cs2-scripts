@@ -1,11 +1,10 @@
 [clientscript,meslayer_mode9](int $int0, string $string0)
-~meslayer_open;
-if_settext($string0, 162:44);
 if ($int0 = 2) {
-	%varcint5 = 15;
+	~meslayer_open(15);
 } else {
-	%varcint5 = 9;
+	~meslayer_open(9);
 }
+if_settext($string0, 162:44);
 ~script222("");
 def_string $string1 = "";
 if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string1)", 162:45);

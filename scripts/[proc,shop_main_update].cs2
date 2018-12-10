@@ -8,13 +8,12 @@ while ($int7 < $int1) {
 		if ($obj5 ! null) {
 			cc_sethide(false);
 			cc_setobject($obj5, inv_getnum($inv2, $int7));
-			if (~on_mobile = true) {
+			if ((~on_mobile = true) & (%varbit6348 > 0)) {
 				cc_setop(1, ~script2228);
+				cc_setop(6, "Value");
 			} else {
 				cc_setop(1, "Value");
-			}
-			if (%varbit6348 > 0) {
-				cc_setop(6, "Value");
+				cc_setop(6, "");
 			}
 			if ($obj5 = $obj3) {
 				if ((($int4 > 1) & ($int4 ! 5)) & ($int4 ! 10)) {

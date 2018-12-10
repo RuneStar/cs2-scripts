@@ -1,7 +1,6 @@
 [clientscript,meslayer_mode8](string $string0)
-~meslayer_open;
+~meslayer_open(8);
 if_settext($string0, 162:44);
-%varcint5 = 8;
 ~script222("");
 def_string $string1 = "";
 if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string1)", 162:45);

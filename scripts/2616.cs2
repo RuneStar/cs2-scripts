@@ -1,19 +1,15 @@
-script2616(enum $enum0, component $component1, int $int2, int $int3)
-def_component $component4 = null;
-def_int $int5 = 0;
-def_obj $obj6 = enum(int, obj, $enum0, $int5);
-while ($obj6 ! null) {
-	$component4 = oc_param($obj6, 596);
-	if_setopbase("<col=00ff00><oc_param($obj6, 601)></col>", $component4);
-	if (if_gettargetmask($component4) ! 0) {
-		if_setontargetenter("magic_spellbook_targetmode(true, event_com)", $component4);
-		if_setontargetleave("magic_spellbook_targetmode(false, event_com)", $component4);
+script2616(enum $enum0, int $int1, int $int2)
+def_component $component3 = null;
+def_int $int4 = 0;
+def_obj $obj5 = enum(int, obj, $enum0, $int4);
+while ($obj5 ! null) {
+	$component3 = oc_param($obj5, 596);
+	if_setopbase("<col=00ff00><oc_param($obj5, 601)></col>", $component3);
+	if (if_gettargetmask($component3) ! 0) {
+		if_setontargetenter("magic_spellbook_targetmode(true, event_com)", $component3);
+		if_setontargetleave("magic_spellbook_targetmode(false, event_com)", $component3);
 	}
-	if ($int2 = 0) {
-		if_setonmouserepeat("magic_spellbook_settooltip(true, $obj6, event_com, -1, $component1, $int3)", $component4);
-		if_setonmouseleave("magic_spellbook_settooltip(false, $obj6, event_com, -1, $component1, $int3)", $component4);
-	}
-	$int5 = calc($int5 + 1);
-	$obj6 = enum(int, obj, $enum0, $int5);
+	$int4 = calc($int4 + 1);
+	$obj5 = enum(int, obj, $enum0, $int4);
 }
 return;

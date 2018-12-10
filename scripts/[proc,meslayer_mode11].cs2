@@ -2,9 +2,8 @@
 if (%varcint11 = 1) {
 	if_close;
 }
-~meslayer_open;
+~meslayer_open(11);
 if_settext("Show items whose names contain the following text:", 162:44);
-%varcint5 = 11;
 ~script222("");
 def_string $string0 = "";
 if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string0)", 162:45);

@@ -6,11 +6,10 @@ if ((%varcint203 = 0) | (%varcint203 = -1)) {
 	mes("You must set a name before you can chat.");
 	return;
 } else {
-	~meslayer_open;
+	~meslayer_open(13);
 	%varcint62 = 0;
 	%varcstring28 = "";
 	~script95;
-	%varcint5 = 13;
 	~script222("");
 	~script551;
 	def_string $string0 = "";

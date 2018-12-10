@@ -1,0 +1,23 @@
+[clientscript,collection_hover_tab](component $component0, int $int1)
+if ($int1 = 1) {
+	if (cc_find($component0, 0) = true) {
+		cc_setgraphic(998);
+	}
+	if (cc_find($component0, 1) = true) {
+		cc_setgraphic(999);
+	}
+	if (cc_find($component0, 2) = true) {
+		cc_setgraphic(1000);
+	}
+} else {
+	if (cc_find($component0, 0) = true) {
+		cc_setgraphic(1001);
+	}
+	if (cc_find($component0, 1) = true) {
+		cc_setgraphic(1002);
+	}
+	if (cc_find($component0, 2) = true) {
+		cc_setgraphic(1003);
+	}
+}
+return;

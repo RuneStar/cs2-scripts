@@ -7,9 +7,8 @@ if ((%varcint203 = 0) | (%varcint203 = -1)) {
 	return;
 } else {
 	%varcstring23 = $string0;
-	~meslayer_open;
+	~meslayer_open(6);
 	if_settext("Enter message to send to <%varcstring23>", 162:44);
-	%varcint5 = 6;
 	~script222("");
 	def_string $string1 = "";
 	if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string1)", 162:45);

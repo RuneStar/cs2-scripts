@@ -1,17 +1,34 @@
-script2389()
-switch (%varbit6255) {
+script2389(int $int0)
+~collection_draw_tab(621:4, 471, $int0);
+~collection_draw_tab(621:5, 472, $int0);
+~collection_draw_tab(621:6, 473, $int0);
+~collection_draw_tab(621:7, 474, $int0);
+~collection_draw_tab(621:8, 475, $int0);
+if_sethide(true, 621:10);
+if_sethide(true, 621:13);
+if_sethide(true, 621:14);
+if_sethide(true, 621:21);
+if_sethide(true, 621:22);
+if_sethide(true, 621:23);
+if_sethide(true, 621:24);
+if_sethide(true, 621:26);
+if_sethide(true, 621:27);
+if_sethide(true, 621:28);
+switch ($int0) {
+	case 0 :
+		if_sethide(false, 621:10);
+		if_sethide(false, 621:13);
 	case 1 :
-		if_setgraphic(1717, 601:32);
+		if_sethide(false, 621:14);
+		if_sethide(false, 621:21);
 	case 2 :
-		if_setgraphic(1718, 601:32);
+		if_sethide(false, 621:22);
+		if_sethide(false, 621:23);
 	case 3 :
-		if_setgraphic(1716, 601:32);
-	else :
-		if_setgraphic(1715, 601:32);
-}
-if ((%varbit6255 ! 3) & (%varbit6256 = 0)) {
-	if_settrans(155, 601:32);
-} else {
-	if_settrans(0, 601:32);
+		if_sethide(false, 621:24);
+		if_sethide(false, 621:26);
+	case 4 :
+		if_sethide(false, 621:27);
+		if_sethide(false, 621:28);
 }
 return;

@@ -13,19 +13,11 @@ while ($int5 < $int4) {
 	cc_setposition(calc(($int5 % 8) * $int3), calc(($int5 / 8) * $int3), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	if (~on_mobile = true) {
-		cc_setop(1, ~script2228);
-	} else {
-		cc_setop(1, "Value");
-	}
 	cc_setop(2, "Buy 1");
 	cc_setop(3, "Buy 5");
 	cc_setop(4, "Buy 10");
 	if (~script2082 = 0) {
 		cc_setop(5, "Buy 50");
-	}
-	if (%varbit6348 > 0) {
-		cc_setop(6, "Value");
 	}
 	cc_setop(10, "Examine");
 	cc_setonop("script487(event_com, event_comid, 125, 0)");

@@ -1,23 +1,23 @@
 script1434(boolean $boolean0, int $int1, boolean $boolean2)
-if_sethide($boolean0, 90:10);
-if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, 90:10);
-if_sethide($boolean2, 90:15);
+if_sethide($boolean0, 90:13);
+if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, 90:13);
+if_sethide($boolean2, 90:18);
 if ($boolean2 = false) {
-	if_setonvartransmit("deadman_tournament_timer_resynch(event_com){1434, 1542, 1676, 1601, 1602}", 90:15);
-	if_setonvartransmit("script1636(event_com){1293, 1542, 1601, 1602}", 90:19);
+	if_setonvartransmit("deadman_tournament_timer_resynch(event_com){1434, 1542, 1676, 1601, 1602}", 90:18);
+	if_setonvartransmit("script1636(event_com){1293, 1542, 1601, 1602}", 90:22);
 } else {
-	if_setontimer(null, 90:15);
-	if_setonvartransmit(null, 90:15);
-	if_setonvartransmit(null, 90:19);
+	if_setontimer(null, 90:18);
+	if_setonvartransmit(null, 90:18);
+	if_setonvartransmit(null, 90:22);
 }
 if ($boolean0 = true) {
 	return;
 } else {
 	if (~script1942 = 1) {
-		if_setonvartransmit("script1943(){1601, 1602}", 90:11);
+		if_setonvartransmit("script1943(){1601, 1602}", 90:14);
 		~script1944;
 	} else {
-		if_setonvartransmit("deadman_tournament_hudupdate(){1542, 1293}", 90:11);
+		if_setonvartransmit("deadman_tournament_hudupdate(){1542, 1293}", 90:14);
 		~deadman_tournament_hudupdate;
 	}
 	return;

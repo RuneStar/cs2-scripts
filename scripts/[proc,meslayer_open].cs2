@@ -1,13 +1,34 @@
-[proc,meslayer_open]()
+[proc,meslayer_open](int $int0)
 ~meslayer_close(1, 0);
+%varcint5 = $int0;
 if_sethide(false, 162:40);
 if (~on_mobile = true) {
 	~mobile_chatbox_resize;
 	if_sethide(false, 162:42);
-	if_sethide(false, 162:41);
-	if_setposition(0, 76, ^setpos_abs_left, ^setpos_abs_top, 162:41);
-	if_setsize(if_getwidth(162:40), 20, ^setsize_abs, ^setsize_abs, 162:41);
+	switch ($int0) {
+		case 1 :
+			if_sethide(true, 162:41);
+			if_setonclick(null, 162:41);
+		case 8, 10 :
+			if_sethide(false, 162:41);
+			if_setposition(0, if_gety(162:44), ^setpos_abs_centre, ^setpos_abs_top, 162:41);
+			if_setsize(20, if_gety(162:44), ^setsize_minus, ^setsize_minus, 162:41);
+			if_setonclick("script2727()", 162:41);
+		case 14 :
+			if_sethide(false, 162:41);
+			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, 162:41);
+			if_setsize(20, 20, ^setsize_minus, ^setsize_abs, 162:41);
+			if_setonclick("script2727()", 162:41);
+		else :
+			if_sethide(false, 162:41);
+			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 162:41);
+			if_setsize(20, 20, ^setsize_minus, ^setsize_minus, 162:41);
+			if_setonclick("script2727()", 162:41);
+	}
 	~script2526;
+} else {
+	if_sethide(true, 162:41);
+	if_setonclick(null, 162:41);
 }
 if_sethide(true, 162:55);
 ~toplevel_chatbox_background;

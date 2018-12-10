@@ -1,0 +1,52 @@
+[proc,collection_draw_tab](component $component0, struct $struct1, int $int2)
+cc_deleteall($component0);
+def_int $int3 = struct_param($struct1, 684);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_create($component0, ^iftype_graphic, 1);
+cc_setsize(40, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settiling(true);
+cc_create($component0, ^iftype_graphic, 2);
+cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_create($component0, ^iftype_text, 3);
+cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext(struct_param($struct1, 682));
+if ($int3 = $int2) {
+	if (cc_find($component0, 0) = true) {
+		cc_setgraphic(998);
+	}
+	if (cc_find($component0, 1) = true) {
+		cc_setgraphic(999);
+	}
+	if (cc_find($component0, 2) = true) {
+		cc_setgraphic(1000);
+	}
+	if (cc_find($component0, 3) = true) {
+		cc_setcolour(0xffa82f);
+	}
+	if_setonmouseover(null, $component0);
+	if_setonmouseleave(null, $component0);
+} else {
+	if (cc_find($component0, 0) = true) {
+		cc_setgraphic(1001);
+	}
+	if (cc_find($component0, 1) = true) {
+		cc_setgraphic(1002);
+	}
+	if (cc_find($component0, 2) = true) {
+		cc_setgraphic(1003);
+	}
+	if (cc_find($component0, 3) = true) {
+		cc_setcolour(0xff981f);
+	}
+	if_setonmouseover("collection_hover_tab($component0, true)", $component0);
+	if_setonmouseleave("collection_hover_tab($component0, false)", $component0);
+}
+return;

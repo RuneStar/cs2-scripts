@@ -1,0 +1,93 @@
+[proc,collection_draw_log](struct $struct0)
+def_component $component1 = 621:19;
+def_component $component2 = 621:35;
+def_component $component3 = 621:36;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_enum $enum6 = struct_param($struct0, 690);
+def_int $int7 = 0;
+def_int $int8 = enum_getoutputcount($enum6);
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_string $string0 = "";
+def_obj $obj11 = null;
+def_obj $obj12 = null;
+cc_deleteall($component1);
+cc_create($component1, ^iftype_text, 0);
+$string0 = struct_param($struct0, 689);
+cc_settext($string0);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(parawidth(if_getwidth($component1), b12_full, $string0), 20, ^setsize_abs, ^setsize_abs);
+cc_deleteall($component2);
+while ($int7 < $int8) {
+	if ($int4 > if_getwidth($component2)) {
+		$int4 = 0;
+		$int5 = calc($int5 + 36);
+	}
+	$obj11 = enum(int, namedobj, $enum6, $int7);
+	$int9 = inv_total(620, $obj11);
+	$obj12 = enum(namedobj, namedobj, 2108, $obj11);
+	if ((%varbit6907 = 1) & ($obj12 ! null)) {
+		$obj11 = $obj12;
+	}
+	cc_create($component2, ^iftype_graphic, $int7);
+	cc_setoutline(1);
+	cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setop(1, "Check");
+	cc_setopbase("<col=ff9040><oc_name($obj11)></col>");
+	cc_setonop("collection_item_click($obj11, $int9)");
+	if ($int9 > 1) {
+		cc_setobject($obj11, $int9);
+	} else {
+		cc_setobject_nonum($obj11, 1);
+	}
+	if ($int9 = 0) {
+		cc_settrans(175);
+	} else {
+		$int10 = calc($int10 + 1);
+	}
+	$int7 = calc($int7 + 1);
+	$int4 = calc($int4 + 42);
+}
+$int5 = calc($int5 + 36);
+if ($int5 > if_getheight($component2)) {
+	if_setscrollsize(0, $int5, $component2);
+} else {
+	if_setscrollsize(0, 0, $component2);
+}
+if_setscrollpos(0, 0, $component2);
+cc_deleteall($component3);
+~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_create($component1, ^iftype_text, 1);
+$string0 = "Obtained: ";
+if ($int10 = $int8) {
+	$string0 = "<$string0><col=0dc10d><tostring($int10)>/<tostring($int8)></col>";
+} else if ($int10 > 0) {
+	$string0 = "<$string0><col=ffff00><tostring($int10)>/<tostring($int8)></col>";
+} else {
+	$string0 = "<$string0><col=ff0000><tostring($int10)>/<tostring($int8)></col>";
+}
+cc_settext($string0);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(parawidth(if_getwidth($component1), p11_full, $string0), 20, ^setsize_abs, ^setsize_abs);
+$string0 = ~collection_category_count($struct0);
+if (string_length($string0) ! 0) {
+	cc_create($component1, ^iftype_text, 2);
+	cc_settext($string0);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
+	cc_setsize(parawidth(if_getwidth($component1), p11_full, $string0), 20, ^setsize_abs, ^setsize_abs);
+}
+return;

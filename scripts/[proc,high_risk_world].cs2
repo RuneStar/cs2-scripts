@@ -1,6 +1,5 @@
 [proc,high_risk_world]()(int)
-def_int $int0 = worldflags;
-if (testbit($int0, 10) = true) {
+if (testbit(worldflags, 10) = true) {
 	return(1);
 } else {
 	return(0);

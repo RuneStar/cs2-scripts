@@ -1,40 +1,29 @@
 [clientscript,magic_spellbook_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
-def_int $int11 = if_getwidth($component1);
-def_int $int12 = if_getheight($component1);
 cc_deleteall($component7);
 def_string $string0 = "Info";
 def_string $string1 = "Filters";
-def_int $int13 = 0;
-def_boolean $boolean14 = ~on_mobile;
-if ($boolean14 = true) {
-	$int13 = calc(~max(parawidth(190, p11_full, $string0), parawidth(190, p11_full, $string1)) + 14);
-	if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $component8);
-	if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $component9);
-	$int13 = calc((190 - ($int13 * 2)) / 3);
-	if_setposition($int13, 0, ^setpos_abs_left, ^setpos_abs_centre, $component8);
-	if_setposition($int13, 0, ^setpos_abs_right, ^setpos_abs_centre, $component9);
+def_int $int11 = 0;
+def_boolean $boolean12 = ~on_mobile;
+if ($boolean12 = true) {
 	cc_deleteall($component4);
-	$int13 = 0;
-	while ($int13 < 4) {
-		cc_create($component4, ^iftype_rectangle, $int13);
+	$int11 = 0;
+	while ($int11 < 4) {
+		cc_create($component4, ^iftype_rectangle, $int11);
 		cc_sethide(false);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setsize(calc($int13 * 2), calc($int13 * 2), ^setsize_minus, ^setsize_minus);
+		cc_setsize(calc($int11 * 2), calc($int11 * 2), ^setsize_minus, ^setsize_minus);
 		cc_setcolour(^white);
 		cc_setfill(true);
-		$int13 = calc($int13 + 1);
+		$int11 = calc($int11 + 1);
 	}
-} else {
-	if_setsize(calc(parawidth(190, p11_full, $string1) + 14), 0, ^setsize_abs, ^setsize_minus, $component9);
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component9);
 }
-~script2603(null, $boolean14, $component8, $component9, $component2, $component3, $component4, $component5, $component6, $component10, $string0, $string1);
-~script2616(1982, $component10, $boolean14, $int12);
-~script2616(1983, $component10, $boolean14, $int12);
-~script2616(1984, $component10, $boolean14, $int12);
-~script2616(1985, $component10, $boolean14, $int12);
-~magic_spellbook_redraw($component2, $component3, $component10, $int11, $int12, $boolean14);
-if_setonvartransmit("magic_spellbook_redraw($component2, $component3, $component10, $int11, $int12, $boolean14){638, 375, 1139, 1140, 1141, 439, 318, 635, 1377, 1339, 1429, 1632, 1047}", $component0);
-if_setoninvtransmit("magic_spellbook_redraw($component2, $component3, $component10, $int11, $int12, $boolean14){93}", $component0);
-if_setonstattransmit("magic_spellbook_redraw($component2, $component3, $component10, $int11, $int12, $boolean14){magic}", $component0);
+~script2603(null, $boolean12, $component8, $component9, $component2, $component3, $component4, $component5, $component6, $component10, $string0, $string1);
+~script2616(1982, $component10, $boolean12);
+~script2616(1983, $component10, $boolean12);
+~script2616(1984, $component10, $boolean12);
+~script2616(1985, $component10, $boolean12);
+~magic_spellbook_redraw($component2, $component3, $component10, $component1, $component7, $component8, $component9, $component4, $component5, $component6, $boolean12, $string0, $string1);
+if_setonvartransmit("magic_spellbook_redraw($component2, $component3, $component10, $component1, $component7, $component8, $component9, $component4, $component5, $component6, $string0, $string1, $boolean12){638, 375, 1139, 1140, 1141, 439, 318, 635, 1377, 1339, 1429, 1632, 1047}", $component0);
+if_setoninvtransmit("magic_spellbook_redraw($component2, $component3, $component10, $component1, $component7, $component8, $component9, $component4, $component5, $component6, $string0, $string1, $boolean12){93}", $component0);
+if_setonstattransmit("magic_spellbook_redraw($component2, $component3, $component10, $component1, $component7, $component8, $component9, $component4, $component5, $component6, $string0, $string1, $boolean12){magic}", $component0);
 return;

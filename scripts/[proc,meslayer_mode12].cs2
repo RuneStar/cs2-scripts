@@ -2,12 +2,11 @@
 if (%varcint11 = 1) {
 	if_close;
 }
-~meslayer_open;
+~meslayer_open(12);
 if (string_length(chat_getmessagefilter) > 0) {
 	chat_setmessagefilter("");
 	~rebuildchatbox(~script553);
 }
-%varcint5 = 12;
 ~script222("");
 ~script549;
 def_string $string0 = "";

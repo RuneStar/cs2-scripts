@@ -7,6 +7,7 @@ if (~on_mobile = true) {
 }
 def_int $int3 = 0;
 if (%varbit6704 = 1) {
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
 	if_setsize(if_getwidth($component1), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component0);
 	if_setvflip(false, $component2);
 	if_sethflip(true, $component2);
@@ -25,6 +26,7 @@ if (%varbit6704 = 1) {
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	}
 } else {
+	if_setposition(0, 32, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
 	if_setsize(194, 92, ^setsize_abs, ^setsize_abs, $component0);
 	if_setvflip(true, $component2);
@@ -43,10 +45,15 @@ if (%varbit6704 = 1) {
 if (~on_mobile = false) {
 	if (%varbit6715 = 2) {
 		if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
+		~script1486(90:5, ^setpos_abs_left, 1, 0);
 	} else if (%varbit6715 = 3) {
 		if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+		~script1486(90:5, ^setpos_abs_centre, 1, 0);
 	} else {
 		if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, $component0);
+		~script1486(90:5, ^setpos_abs_right, 1, 0);
 	}
+} else {
+	~script1486(90:5, ^setpos_abs_right, 1, 0);
 }
 return;
