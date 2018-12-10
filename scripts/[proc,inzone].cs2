@@ -1,3 +1,4 @@
+// 247
 [proc,inzone](coordgrid $coordgrid0, coordgrid $coordgrid1, coordgrid $coordgrid2)(int)
 def_int $int3 = coordx($coordgrid2);
 if (($int3 < coordx($coordgrid0)) | ($int3 > coordx($coordgrid1))) {

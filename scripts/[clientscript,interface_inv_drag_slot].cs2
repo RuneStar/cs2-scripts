@@ -1,3 +1,4 @@
+// 162
 [clientscript,interface_inv_drag_slot](int $int0, component $component1, component $component2, int $int3)
 if (cc_find($component1, $int0) = true) {
 	$int3 = calc($int3 - if_getscrolly($component1));

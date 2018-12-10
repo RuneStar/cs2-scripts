@@ -1,3 +1,4 @@
+// 1750
 [clientscript,worldmap_overlay](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, coordgrid $coordgrid6)
 def_maparea $maparea7 = worldmap_getcurrentmap;
 if (((worldmap_isloaded = false) | ($maparea7 = null)) | (if_getwidth($component0) <= 0)) {
