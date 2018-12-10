@@ -1,18 +1,14 @@
-[clientscript,pvp_store_init](component $component0, component $component1)
+[clientscript,pvp_store_init](component $component0, component $component1, enum $enum2)
 cc_deleteall($component0);
 cc_deleteall($component1);
-def_int $int2 = 0;
 def_int $int3 = 0;
-def_enum $enum4 = 878;
-if (~deadman_mode = 2) {
-	$enum4 = 1975;
-}
-def_obj $obj5 = enum(int, namedobj, $enum4, $int3);
+def_int $int4 = 0;
+def_obj $obj5 = enum(int, namedobj, $enum2, $int4);
 while ($obj5 ! null) {
-	cc_create($component0, ^iftype_graphic, $int3);
+	cc_create($component0, ^iftype_graphic, $int4);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	$int2 = calc(($int3 / 8) * 50);
-	cc_setposition(calc(($int3 % 8) * 46), $int2, ^setpos_abs_left, ^setpos_abs_top);
+	$int3 = calc(($int4 / 8) * 50);
+	cc_setposition(calc(($int4 % 8) * 46), $int3, ^setpos_abs_left, ^setpos_abs_top);
 	if ((%var1137 > %var1138) & ($obj5 = hunters_honour_12855)) {
 		$obj5 = rogues_revenge_12856;
 	}
@@ -22,21 +18,19 @@ while ($obj5 ! null) {
 	cc_setop(2, "Buy-1");
 	cc_setop(3, "Buy-5");
 	cc_setop(4, "Buy-10");
-	if (~script2082 = 0) {
-		cc_setop(5, "Buy-50");
-	}
+	cc_setop(5, "Buy-50");
 	cc_setop(10, "Examine");
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	$int3 = calc($int3 + 1);
-	$obj5 = enum(int, namedobj, $enum4, $int3);
+	$int4 = calc($int4 + 1);
+	$obj5 = enum(int, namedobj, $enum2, $int4);
 }
-if ($int2 > 0) {
-	$int2 = calc($int2 + 32);
+if ($int3 > 0) {
+	$int3 = calc($int3 + 32);
 }
 if_setscrollpos(0, 0, $component0);
-if ($int2 > if_getheight($component0)) {
-	if_setscrollsize(0, $int2, $component0);
+if ($int3 > if_getheight($component0)) {
+	if_setscrollsize(0, $int3, $component0);
 	~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 } else {
 	if_setscrollsize(0, 0, $component0);
