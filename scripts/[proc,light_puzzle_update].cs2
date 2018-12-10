@@ -1,0 +1,24 @@
+[proc,light_puzzle_update](component $component0)
+def_int $int1 = 0;
+def_int $int2 = if_getwidth($component0);
+def_int $int3 = 0;
+def_obj $obj4 = null;
+def_int $int5 = 8;
+def_int $int6 = 5;
+def_int $int7 = calc(($int2 - (36 * $int6)) / ($int6 + 1));
+def_int $int8 = calc(((if_getheight($component0) - (32 * $int6)) - $int5) / ($int6 + 1));
+cc_deleteall($component0);
+while ($int1 < 25) {
+	if (testbit(%var1356, $int1) = true) {
+		$obj4 = 20356;
+	} else {
+		$obj4 = 20357;
+	}
+	cc_create($component0, ^iftype_graphic, $int1);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(($int7 + (($int1 % $int6) * (36 + $int7))) + 1), calc($int5 + (($int1 / $int6) * (32 + $int8))), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject_nonum($obj4, 0);
+	cc_setoutline(1);
+	$int1 = calc($int1 + 1);
+}
+return;

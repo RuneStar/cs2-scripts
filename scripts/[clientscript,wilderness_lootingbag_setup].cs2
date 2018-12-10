@@ -1,0 +1,9 @@
+[clientscript,wilderness_lootingbag_setup](int $int0, string $string0)
+if_settext($string0, 81:1);
+def_inv $inv1 = 516;
+if ($int0 = 1) {
+	$inv1 = 93;
+}
+~wilderness_lootingbag_draw($inv1);
+if_setoninvtransmit("wilderness_lootingbag_draw($inv1){$inv1}", 81:1);
+return;

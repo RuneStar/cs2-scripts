@@ -1,0 +1,32 @@
+[proc,tournament_supplies_search_on](component $component0, component $component1, component $component2, int $int3, int $int4)
+cc_deleteall($component2);
+def_int $int5 = ~options_button_on($component2, 0);
+cc_create($component2, ^iftype_graphic, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setgraphic("bankbuttons,2");
+cc_create($component2, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(33, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(4, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+def_string $string0 = removetags(lowercase(%varcstring22));
+def_int $int6 = string_length($string0);
+if ($int6 > 9) {
+	cc_settext(substring($string0, 0, 9));
+} else if ($int6 > 0) {
+	cc_settext($string0);
+} else {
+	cc_settext("<lt>Search term<gt>");
+}
+cc_setcolour(^white);
+if_setonmouseover(null, $component2);
+if_setonmouseleave(null, $component2);
+if_setop(1, "Clear", $component2);
+if_setonop("tournament_supplies_search_toggle(false, $component0, $component1, $component2, $int3, $int4)", $component2);
+if_setontimer("tournament_supplies_search_update($component0, $component1, $component2, %varcstring22, $int3, $int4)", $component2);
+~tournament_supplies_drawlist($component0, $component1, $int3, $int4, $string0);
+return;

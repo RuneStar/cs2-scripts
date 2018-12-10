@@ -1,0 +1,34 @@
+script2145(component $component0)
+def_obj $obj1 = null;
+def_int $int2 = inv_size(93);
+while ($int2 > 0) {
+	$int2 = calc($int2 - 1);
+	if (cc_find($component0, $int2) = true) {
+		$obj1 = inv_getobj(93, $int2);
+		cc_clearops;
+		cc_setontimer(null);
+		if ($obj1 = null) {
+			cc_sethide(true);
+		} else if (oc_uncert($obj1) = drift_net_21652) {
+			cc_sethide(false);
+			cc_settrans(0);
+			cc_setonop("script487(event_com, event_comid, 100, 0)");
+			cc_setobject($obj1, inv_getnum(93, $int2));
+			cc_setop(1, "Store-1");
+			cc_setop(2, "Store-5");
+			cc_setop(3, "Store-X");
+			cc_setop(4, "Store-All");
+			cc_setop(10, "Examine");
+			cc_setopbase("<col=ff9040><oc_name($obj1)></col>");
+		} else {
+			cc_sethide(false);
+			cc_settrans(130);
+			cc_setonop("script487(event_com, event_comid, 170, 130)");
+			cc_setobject($obj1, inv_getnum(93, $int2));
+			cc_setop(1, "Store");
+			cc_setop(10, "Examine");
+			cc_setopbase("<col=ff9040><oc_name($obj1)></col>");
+		}
+	}
+}
+return;

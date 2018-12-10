@@ -1,0 +1,62 @@
+[proc,telenexus_options](component $component0, component $component1)
+cc_deleteall($component0);
+if (%varbit6671 = 1) {
+	if_settext("<~text_device("Click", "Tap")> here to scry house portal.", $component1);
+} else {
+	if_settext("", $component1);
+}
+def_graphic $graphic2 = "options_radio_buttons,0";
+def_graphic $graphic3 = "options_radio_buttons,4";
+def_graphic $graphic4 = "options_radio_buttons,2";
+def_graphic $graphic5 = "options_radio_buttons,6";
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 3, ^setpos_abs_left, ^setpos_abs_top);
+if (%varbit6671 = 0) {
+	cc_setgraphic($graphic4);
+} else {
+	cc_setgraphic($graphic2);
+}
+cc_create($component0, ^iftype_graphic, 1);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_bottom);
+if (%varbit6671 = 1) {
+	cc_setgraphic($graphic4);
+} else {
+	cc_setgraphic($graphic2);
+}
+cc_create($component0, ^iftype_text, 2);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Teleport Mode");
+cc_setcolour(0xff981f);
+cc_setsize(10, 18, ^setsize_minus, ^setsize_abs);
+cc_setposition(15, 5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setop(1, "Select");
+cc_setonop("script2678($component0, $component1, 2)");
+if (%varbit6671 = 0) {
+	cc_setonmouseover("telenexus_options_mouseover(event_com, 0, 2, $graphic5)");
+	cc_setonmouseleave("telenexus_options_mouseleave(event_com, 0, 2, $graphic4)");
+} else {
+	cc_setonmouseover("telenexus_options_mouseover(event_com, 0, 2, $graphic3)");
+	cc_setonmouseleave("telenexus_options_mouseleave(event_com, 0, 2, $graphic2)");
+}
+cc_create($component0, ^iftype_text, 3);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Scry Mode");
+cc_setcolour(0xff981f);
+cc_setsize(10, 18, ^setsize_minus, ^setsize_abs);
+cc_setposition(15, 5, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setop(1, "Select");
+cc_setonop("script2678($component0, $component1, 3)");
+if (%varbit6671 = 1) {
+	cc_setonmouseover("telenexus_options_mouseover(event_com, 1, 3, $graphic5)");
+	cc_setonmouseleave("telenexus_options_mouseleave(event_com, 1, 3, $graphic4)");
+} else {
+	cc_setonmouseover("telenexus_options_mouseover(event_com, 1, 3, $graphic3)");
+	cc_setonmouseleave("telenexus_options_mouseleave(event_com, 1, 3, $graphic2)");
+}
+return;

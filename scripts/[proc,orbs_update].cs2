@@ -1,0 +1,31 @@
+[proc,orbs_update](component $component0, component $component1, int $int2, int $int3)
+if (($component0 = null) | ($component1 = null)) {
+	return;
+} else {
+	if ($int3 <= 0) {
+		$int3 = 1;
+	}
+	if ($int2 <= 0) {
+		$int2 = 0;
+	}
+	if_settext(tostring($int2), $component0);
+	if ($int2 > $int3) {
+		$int2 = $int3;
+	}
+	if_setsize(26, calc((26 * ($int3 - $int2)) / $int3), ^setsize_abs, ^setsize_abs, $component1);
+	def_int $colour4 = ^black;
+	def_int $int5 = calc($int3 / 2);
+	if ($int5 <= 0) {
+		if ($int2 >= $int3) {
+			$colour4 = ^green;
+		} else {
+			$colour4 = ^red;
+		}
+	} else if ($int2 > $int5) {
+		$colour4 = ~script246(calc(255 - ((255 * ($int2 - $int5)) / $int5)), 255, 0);
+	} else {
+		$colour4 = ~script246(255, calc(($int2 * 255) / $int5), 0);
+	}
+	if_setcolour($colour4, $component0);
+	return;
+}

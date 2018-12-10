@@ -1,0 +1,16 @@
+[proc,meslayer_open]()
+~meslayer_close(1, 0);
+if_sethide(false, 162:40);
+if (~on_mobile = true) {
+	~mobile_chatbox_resize;
+	if_sethide(false, 162:42);
+	if_sethide(false, 162:41);
+	if_setposition(0, 76, ^setpos_abs_left, ^setpos_abs_top, 162:41);
+	if_setsize(if_getwidth(162:40), 20, ^setsize_abs, ^setsize_abs, 162:41);
+	~script2526;
+}
+if_sethide(true, 162:55);
+~toplevel_chatbox_background;
+~rebuildpmbox(~script553);
+~chatdefault_setonkey(0);
+return;

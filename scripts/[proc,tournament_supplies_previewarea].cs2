@@ -1,0 +1,71 @@
+[proc,tournament_supplies_previewarea](component $component0)
+def_int $int1 = 0;
+def_component $component2 = null;
+def_obj $obj3 = null;
+def_int $int4 = 0;
+def_int $int5 = inv_size(94);
+while ($int4 < $int5) {
+	$component2 = enum(int, component, 678, $int4);
+	if ($component2 ! null) {
+		cc_deleteall($component2);
+		cc_create($component2, ^iftype_graphic, 0);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+		cc_setgraphic("miscgraphics,0");
+		cc_create($component2, ^iftype_graphic, 1);
+		$obj3 = inv_getobj(207, $int4);
+		if ($obj3 ! null) {
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+			cc_setgraphicshadow(0x333333);
+			cc_setoutline(1);
+			cc_setobject($obj3, inv_getnum(207, $int4));
+			if_setopbase("<col=ff9040><oc_name($obj3)></col>", $component2);
+			if_setop(10, "Examine", $component2);
+			if_setonop("script487(event_com, cc_getid, 100, 0)", $component2);
+			$int1 = 1;
+		} else {
+			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+			cc_setgraphic(enum(int, graphic, 904, $int4));
+			if_clearops($component2);
+			if_setonop(null, $component2);
+		}
+	}
+	$int4 = calc($int4 + 1);
+}
+cc_deleteall($component0);
+def_int $int6 = calc((((if_getwidth($component0) - 4) - (4 * 36)) / 3) + 36);
+def_int $int7 = calc((((if_getheight($component0) - 4) - (7 * 32)) / 6) + 32);
+def_int $int8 = 0;
+def_int $int9 = inv_size(93);
+while ($int8 < $int9) {
+	$obj3 = inv_getobj(207, $int4);
+	cc_create($component0, ^iftype_graphic, $int8);
+	if ($obj3 ! null) {
+		cc_sethide(false);
+		cc_setposition(calc(2 + ($int6 * ($int8 % 4))), calc(2 + ($int7 * ($int8 / 4))), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_setobject($obj3, inv_getnum(207, $int4));
+		cc_setopbase("<col=ff9040><oc_name($obj3)></col>");
+		cc_setop(10, "Examine");
+		$int1 = 1;
+	} else {
+		cc_sethide(true);
+	}
+	$int4 = calc($int4 + 1);
+	$int8 = calc($int8 + 1);
+}
+if ($int1 = 0) {
+	cc_create($component0, ^iftype_text, $int8);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 20);
+	cc_settext("Select a load-out<br>to preview it.");
+}
+return;

@@ -1,0 +1,23 @@
+script1483(int $int0, component $component1)
+if ($int0 = 1) {
+	if (cc_find($component1, 0) = true) {
+		cc_setgraphic(998);
+	}
+	if (cc_find($component1, 1) = true) {
+		cc_setgraphic(999);
+	}
+	if (cc_find($component1, 2) = true) {
+		cc_setgraphic(1000);
+	}
+} else {
+	if (cc_find($component1, 0) = true) {
+		cc_setgraphic(1001);
+	}
+	if (cc_find($component1, 1) = true) {
+		cc_setgraphic(1002);
+	}
+	if (cc_find($component1, 2) = true) {
+		cc_setgraphic(1003);
+	}
+}
+return;

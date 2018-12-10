@@ -1,0 +1,13 @@
+script2202(string $string0)
+if ((string_length(%varcstring139) ! 0) & (compare(%varcstring139, $string0) ! 0)) {
+	friend_del(%varcstring139);
+}
+if (string_length($string0) = 0) {
+	return;
+} else if (friend_test($string0) = true) {
+	return;
+} else {
+	friend_add($string0);
+	%varcstring139 = $string0;
+	return;
+}

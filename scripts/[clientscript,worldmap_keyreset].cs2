@@ -1,0 +1,9 @@
+[clientscript,worldmap_keyreset](category $category0, component $component1, int $int2, int $int3)
+if (clientclock < $int3) {
+	return;
+} else {
+	if (cc_find($component1, $int2) = true) {
+		~worldmap_keybutton($category0, $component1, $int2);
+	}
+	return;
+}

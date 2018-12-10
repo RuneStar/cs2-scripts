@@ -1,0 +1,74 @@
+[clientscript,tournament_supplies_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+cc_deleteall($component3);
+cc_deleteall($component4);
+def_int $int8 = calc((if_getwidth($component3) - (10 * 36)) / (10 - 1));
+def_int $int9 = calc(32 + 10);
+def_int $int10 = 0;
+def_enum $enum11 = 1124;
+if (~script1942 = 1) {
+	$enum11 = 1735;
+}
+def_int $int12 = ~tournament_beta_world;
+def_obj $obj13 = enum(int, namedobj, $enum11, $int10);
+while ($obj13 ! null) {
+	cc_create($component3, ^iftype_graphic, $int10);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject_nonum($obj13, 10000);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setop(1, "Take");
+	if (oc_stackable($obj13) = false) {
+		cc_setop(2, "Take-5");
+		cc_setop(3, "Take-10");
+	}
+	cc_setop(4, "Take-X");
+	cc_setop(10, "Examine");
+	cc_setopbase("<col=ff9040><oc_name($obj13)></col>");
+	cc_setonop("script487(event_com, event_comid, 100, 0)");
+	cc_sethide(true);
+	$int10 = calc($int10 + 1);
+	$obj13 = enum(int, namedobj, $enum11, $int10);
+}
+def_int $int14 = 0;
+if ($int12 = 1) {
+	$int14 = 0;
+	$obj13 = enum(int, namedobj, 1906, $int14);
+	while ($obj13 ! null) {
+		cc_create($component3, ^iftype_graphic, $int10);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setobject_nonum($obj13, 10000);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_setop(1, "Take");
+		if (oc_stackable($obj13) = false) {
+			cc_setop(2, "Take-5");
+			cc_setop(3, "Take-10");
+		}
+		cc_setop(4, "Take-X");
+		cc_setop(10, "Examine");
+		cc_setopbase("<col=ff9040><oc_name($obj13)></col>");
+		cc_setonop("script487(event_com, event_comid, 100, 0)");
+		cc_sethide(true);
+		$int14 = calc($int14 + 1);
+		$int10 = calc($int10 + 1);
+		$obj13 = enum(int, namedobj, 1906, $int14);
+	}
+}
+cc_create($component3, ^iftype_text, $int10);
+cc_setsize(0, 50, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("No matching items found.");
+cc_sethide(true);
+~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (~bankmain_searching = 1) {
+	~meslayer_close(1, 1);
+}
+~tournament_supplies_search_off($component3, $component4, $component5, $int8, $int9);
+~tournament_supplies_switchlayer($component2, $component1, $component2, $component6, $component3, $component4, $component5, $int8, $int9, "Items", "Load-outs");
+~tournament_supplies_previewarea($component7);
+if_setoninvtransmit("tournament_supplies_previewarea($component7){207}", $component7);
+return;

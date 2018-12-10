@@ -1,0 +1,13 @@
+script1071(int $int0, component $component1, string $string0)(int)
+cc_create($component1, ^iftype_text, calc($int0 * 2));
+.cc_create($component1, ^iftype_graphic, calc(($int0 * 2) + 1));
+cc_setsize(20, 17, ^setsize_minus, ^setsize_abs);
+.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext($string0);
+cc_setonvartransmit("script1072(event_com, $int0){453}");
+.cc_setgraphic("tick");
+~script1073($int0);
+return(parawidth(512, p12_full, $string0));

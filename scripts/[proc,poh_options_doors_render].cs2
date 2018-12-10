@@ -1,0 +1,15 @@
+[proc,poh_options_doors_render](component $component0, component $component1, component $component2)
+if (%varbit6269 = 0) {
+	if_setgraphic("options_radio_buttons,2", $component0);
+	if_setgraphic("options_radio_buttons,0", $component1);
+	if_setgraphic("options_radio_buttons,0", $component2);
+} else if (%varbit6269 = 1) {
+	if_setgraphic("options_radio_buttons,0", $component0);
+	if_setgraphic("options_radio_buttons,2", $component1);
+	if_setgraphic("options_radio_buttons,0", $component2);
+} else {
+	if_setgraphic("options_radio_buttons,0", $component0);
+	if_setgraphic("options_radio_buttons,0", $component1);
+	if_setgraphic("options_radio_buttons,2", $component2);
+}
+return;

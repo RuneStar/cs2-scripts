@@ -1,0 +1,11 @@
+[clientscript,bugreport_textinput](int $int0)
+def_string $string0 = "";
+if (~on_mobile = true) {
+	if ($int0 = 10223631) {
+		$string0 = %varcstring27;
+	} else if ($int0 = 10223637) {
+		$string0 = %varcstring130;
+	}
+	~script1838(0, 500, $string0);
+}
+return;

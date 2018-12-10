@@ -1,0 +1,8 @@
+script2139(int $int0, component $component1)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	if_sethide(true, $component1);
+	return;
+}

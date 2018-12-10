@@ -1,0 +1,85 @@
+script1456(component $component0, int $int1, boolean $boolean2)
+def_int $int3 = if_getheight($component0);
+def_int $int4 = if_getwidth($component0);
+def_int $int5 = 44;
+def_int $int6 = calc(($int3 - (5 * $int5)) / 2);
+def_int $int7 = calc(($int4 - (7 * $int5)) / 2);
+if (($int6 < 0) | ($int7 < 0)) {
+	return;
+} else {
+	def_int $int8 = 1;
+	def_component $component9 = null;
+	def_coordgrid $coordgrid10 = null;
+	def_int $int11 = 0;
+	def_int $int12 = 0;
+	def_int $int13 = 0;
+	def_int $int14 = 0;
+	def_int $int15 = 0;
+	def_int $int16 = 0;
+	def_obj $obj17 = null;
+	cc_deleteall($component0);
+	.cc_create($component0, ^iftype_rectangle, 0);
+	.cc_sethide(true);
+	def_int $int18 = 0;
+	while ($int8 <= 14) {
+		$int16 = 0;
+		$component9 = enum(int, component, 1511, $int8);
+		if ($component9 = null) {
+			return;
+		} else {
+			$coordgrid10 = enum(int, coordgrid, 1512, $int8);
+			if ($coordgrid10 = null) {
+				return;
+			} else {
+				$int11 = coordy($coordgrid10);
+				$int12 = coordx($coordgrid10);
+				$int13 = calc($int7 + (($int12 - 1) * $int5));
+				$int14 = calc($int6 + (($int11 - 1) * $int5));
+				if_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top, $component9);
+				if_setsize($int5, $int5, ^setsize_abs, ^setsize_abs, $component9);
+				$obj17 = enum(int, namedobj, 982, $int8);
+				$int18 = inv_total(93, $obj17);
+				if (inv_total(93, rune_pouch_12791) > 0) {
+					if (%varbit29 = $int8) {
+						$int18 = calc($int18 + %varbit1624);
+					} else if (%varbit1622 = $int8) {
+						$int18 = calc($int18 + %varbit1625);
+					} else if (%varbit1623 = $int8) {
+						$int18 = calc($int18 + %varbit1626);
+					}
+				}
+				if (($int18 >= 20) | ($boolean2 = false)) {
+					$int16 = 1;
+				}
+				cc_deleteall($component9);
+				if ($int16 = 1) {
+					if ($int8 = $int1) {
+						$int15 = ~script198($component9);
+					} else {
+						$int15 = ~script208($component9);
+					}
+					if_setonmouseover("script1455($component0, $int8, $boolean2)", $component9);
+					if_setonmouseleave("script1455($component0, -1, $boolean2)", $component9);
+				} else {
+					$int15 = ~script134($component9);
+				}
+				if_setopbase("<col=ff9040><oc_name($obj17)></col>", $component9);
+				if_setop(1, "Choose", $component9);
+				if_setonop("script1457($int8, $component0, $component9, $int15, $boolean2)", $component9);
+				cc_create($component9, ^iftype_graphic, $int15);
+				cc_setobject($obj17, $int18);
+				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+				cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+				cc_setgraphicshadow(0x333333);
+				cc_setoutline(1);
+				if ($int16 = 0) {
+					cc_settrans(125);
+				}
+				.cc_create($component0, ^iftype_rectangle, $int8);
+				.cc_sethide(true);
+				$int8 = calc($int8 + 1);
+			}
+		}
+	}
+	return;
+}

@@ -1,0 +1,148 @@
+[proc,trade_main_drawitems](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5)
+if (%varbit4374 = 1) {
+	if_settext("Trade modified", $component3);
+} else {
+	if_settext("", $component3);
+}
+if (%varbit4375 = 1) {
+	if_settext("Trade modified", $component5);
+} else {
+	if_settext("", $component5);
+}
+def_int $array0(4);
+def_int $int6 = calc($int0 / 4);
+if ($int6 < 2) {
+	$int6 = 2;
+}
+def_int $int7 = calc((if_getheight($component2) - ($int6 * 32)) / ($int6 - 1));
+def_int $int8 = calc(((if_getwidth($component2) - 12) - (4 * 36)) / 3);
+$array0(0) = 6;
+$array0(1) = calc(($array0(0) + $int8) + 36);
+$array0(2) = calc(($array0(1) + $int8) + 36);
+$array0(3) = calc(($array0(2) + $int8) + 36);
+def_int $array1($int0);
+$array1(0) = %varcint81;
+$array1(1) = %varcint82;
+$array1(2) = %varcint83;
+$array1(3) = %varcint84;
+$array1(4) = %varcint85;
+$array1(5) = %varcint86;
+$array1(6) = %varcint87;
+$array1(7) = %varcint88;
+$array1(8) = %varcint89;
+$array1(9) = %varcint90;
+$array1(10) = %varcint91;
+$array1(11) = %varcint92;
+$array1(12) = %varcint93;
+$array1(13) = %varcint94;
+$array1(14) = %varcint95;
+$array1(15) = %varcint96;
+$array1(16) = %varcint97;
+$array1(17) = %varcint98;
+$array1(18) = %varcint99;
+$array1(19) = %varcint100;
+$array1(20) = %varcint101;
+$array1(21) = %varcint102;
+$array1(22) = %varcint104;
+$array1(23) = %varcint105;
+$array1(24) = %varcint106;
+$array1(25) = %varcint107;
+$array1(26) = %varcint108;
+$array1(27) = %varcint109;
+def_obj $obj9 = null;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+while ($int15 < $int0) {
+	if ((cc_find($component2, $int15) = true) & (.cc_find($component2, calc($int0 + $int15)) = true)) {
+		$obj9 = inv_getobj(90, $int15);
+		if ($obj9 ! null) {
+			$int10 = inv_getnum(90, $int15);
+			cc_sethide(false);
+			cc_setobject($obj9, $int10);
+			cc_setop(1, "Remove");
+			cc_setop(2, "Remove-5");
+			cc_setop(3, "Remove-10");
+			cc_setop(4, "Remove-All");
+			cc_setop(5, "Remove-X");
+			cc_setop(10, "Examine");
+			cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
+			~trade_tooltip($int10, $array1($int15), 335:32);
+		} else {
+			cc_sethide(true);
+			cc_clearops;
+			cc_setonmouserepeat(null);
+			cc_setonmouseleave(null);
+		}
+		$int11 = calc($int15 / 4);
+		$int12 = calc($int15 % 4);
+		$int13 = $array0($int12);
+		$int14 = calc($int11 * (32 + $int7));
+		cc_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc($int13 + $int1), $int14, ^setpos_abs_left, ^setpos_abs_top);
+	}
+	$int15 = calc($int15 + 1);
+}
+$int8 = calc(((if_getwidth($component4) - 12) - (4 * 36)) / 3);
+$array0(0) = 6;
+$array0(1) = calc(($array0(0) + $int8) + 36);
+$array0(2) = calc(($array0(1) + $int8) + 36);
+$array0(3) = calc(($array0(2) + $int8) + 36);
+$array1(0) = %varcint110;
+$array1(1) = %varcint111;
+$array1(2) = %varcint112;
+$array1(3) = %varcint113;
+$array1(4) = %varcint114;
+$array1(5) = %varcint115;
+$array1(6) = %varcint116;
+$array1(7) = %varcint117;
+$array1(8) = %varcint118;
+$array1(9) = %varcint119;
+$array1(10) = %varcint120;
+$array1(11) = %varcint121;
+$array1(12) = %varcint122;
+$array1(13) = %varcint123;
+$array1(14) = %varcint124;
+$array1(15) = %varcint125;
+$array1(16) = %varcint126;
+$array1(17) = %varcint127;
+$array1(18) = %varcint128;
+$array1(19) = %varcint129;
+$array1(20) = %varcint130;
+$array1(21) = %varcint131;
+$array1(22) = %varcint132;
+$array1(23) = %varcint133;
+$array1(24) = %varcint134;
+$array1(25) = %varcint135;
+$array1(26) = %varcint136;
+$array1(27) = %varcint137;
+$int15 = 0;
+while ($int15 < $int0) {
+	if ((cc_find($component4, $int15) = true) & (.cc_find($component4, calc($int0 + $int15)) = true)) {
+		$obj9 = invother_getobj(90, $int15);
+		if ($obj9 ! null) {
+			$int10 = invother_getnum(90, $int15);
+			cc_sethide(false);
+			cc_setobject($obj9, $int10);
+			cc_setop(10, "Examine");
+			cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
+			~trade_tooltip($int10, $array1($int15), 335:32);
+		} else {
+			cc_sethide(true);
+			cc_clearops;
+			cc_setonmouserepeat(null);
+			cc_setonmouseleave(null);
+		}
+		$int11 = calc($int15 / 4);
+		$int12 = calc($int15 % 4);
+		$int13 = $array0($int12);
+		$int14 = calc($int11 * (32 + $int7));
+		cc_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc($int13 + $int1), $int14, ^setpos_abs_left, ^setpos_abs_top);
+	}
+	$int15 = calc($int15 + 1);
+}
+return;

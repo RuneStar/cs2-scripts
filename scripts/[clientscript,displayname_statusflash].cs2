@@ -1,0 +1,8 @@
+[clientscript,displayname_statusflash](component $component0)
+def_int $int1 = calc(clientclock % 80);
+if ($int1 > 40) {
+	$int1 = calc(80 - $int1);
+}
+$int1 = calc($int1 + 100);
+if_setcolour(~script246($int1, $int1, $int1), $component0);
+return;

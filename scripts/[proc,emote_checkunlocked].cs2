@@ -1,0 +1,82 @@
+[proc,emote_checkunlocked](int $int0)(int)
+def_int $int1 = 1;
+def_stat $stat2 = null;
+switch ($int0) {
+	case 22, 23 :
+		if (%varbit532 >= 7) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 24 :
+		return(~script633(%varbit1368));
+	case 25 :
+		return(~script633(%varbit1369));
+	case 26 :
+		return(~script633(%varbit1370));
+	case 27 :
+		return(~script633(%varbit1367));
+	case 28 :
+		return(~script633(%varbit2311));
+	case 29 :
+		return(~script633(%varbit2312));
+	case 30 :
+		return(~script633(%varbit2309));
+	case 31 :
+		return(~script633(%varbit2310));
+	case 32 :
+		return(~script633(%varbit1921));
+	case 33 :
+		return(~script633(%varbit1920));
+	case 34 :
+		return(~script633(%varbit1371));
+	case 35 :
+		return(~script633(%varbit2055));
+	case 36 :
+		return(~script633(%varbit4732));
+	case 37 :
+		return(~script633(%varbit4732));
+	case 38 :
+		return(~script633(%varbit4732));
+	case 39 :
+		return(~script633(%varbit4732));
+	case 40 :
+		return(~script633(%varbit1000));
+	case 41 :
+		return(~script633(%varbit4802));
+	case 42 :
+		if ((%var101 >= %varbit1782) & (%varbit1782 > 0)) {
+			return(1);
+		} else if (%varbit4797 = 1) {
+			return(1);
+		} else if (%varbit5003 >= 3) {
+			return(1);
+		} else {
+			$stat2 = enum(int, stat, 681, $int1);
+			while ($stat2 ! null) {
+				if (stat_base($stat2) >= 99) {
+					return(1);
+				} else {
+					$int1 = calc($int1 + 1);
+					$stat2 = enum(int, stat, 681, $int1);
+				}
+			}
+			return(0);
+		}
+	case 43 :
+		if (%varbit4673 = 1) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 44 :
+		return(~script633(%varbit5104));
+	case 45 :
+		return(~script633(%varbit5597));
+	case 46 :
+		return(~script633(%varbit5598));
+	case 47 :
+		return(~script633(%varbit6041));
+	else :
+		return(1);
+}

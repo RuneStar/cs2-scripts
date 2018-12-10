@@ -1,0 +1,115 @@
+[proc,glidermap_fly]()
+def_int $int0 = coordx(%var153);
+def_int $int1 = coordy(%var153);
+if ($int0 = 9) {
+	$int0 = 0;
+} else if ($int0 = 8) {
+	$int0 = 6;
+}
+if ($int1 = 9) {
+	$int1 = 0;
+} else if ($int1 = 8) {
+	$int1 = 6;
+}
+if ($int0 = 0) {
+	if ($int1 = 1) {
+		~glidermap_showglider(170, 150, 430, 306, 832, 7242);
+	} else if ($int1 = 2) {
+		~glidermap_showglider(272, 129, 425, 105, 689, 7242);
+	} else if ($int1 = 3) {
+		~glidermap_showglider(265, 82, 365, 2031, 689, 7242);
+	} else if ($int1 = 4) {
+		~glidermap_showglider(287, 78, 404, 2039, 689, 7243);
+	} else if ($int1 = 5) {
+		~glidermap_showglider(60, 136, 293, 497, 689, 7242);
+	} else if ($int1 = 6) {
+		~glidermap_showglider(97, 174, 435, 364, 650, 7242);
+	} else if ($int1 = 7) {
+		~glidermap_showglider(154, 155, 512, 289, 880, 7242);
+	} else {
+		~glidermap_hideglider;
+	}
+} else if ($int0 = 1) {
+	if ($int1 = 0) {
+		~glidermap_showglider(144, 127, 405, 1319, 832, 7242);
+	} else if ($int1 = 2) {
+		~glidermap_showglider(404, 134, 512, 1817, 720, 7243);
+	} else if ($int1 = 3) {
+		~glidermap_showglider(359, 116, 410, 1700, 850, 7242);
+	} else if ($int1 = 4) {
+		~glidermap_showglider(267, 112, 378, 1518, 850, 7242);
+	} else if ($int1 = 5) {
+		~glidermap_showglider(43, 206, 512, 1037, 620, 7243);
+	} else if ($int1 = 6) {
+		~glidermap_showglider(75, 305, 320, 903, 680, 7242);
+	} else {
+		~glidermap_hideglider;
+	}
+} else if ($int0 = 2) {
+	if ($int1 = 0) {
+		~glidermap_showglider(225, 111, 375, 1126, 689, 7242);
+	} else if ($int1 = 1) {
+		~glidermap_showglider(239, 257, 512, 839, 680, 7243);
+	} else if ($int1 = 3) {
+		~glidermap_showglider(419, 4, 512, 1582, 780, 7243);
+	} else if ($int1 = 4) {
+		~glidermap_showglider(261, 13, 512, 1277, 680, 7243);
+	} else if ($int1 = 5) {
+		~glidermap_showglider(176, 182, 512, 935, 680, 7242);
+	} else if ($int1 = 6) {
+		~glidermap_showglider(227, 258, 384, 807, 620, 7242);
+	} else {
+		~glidermap_hideglider;
+	}
+} else if ($int0 = 4) {
+	if ($int1 = 0) {
+		~glidermap_showglider(86, 76, 494, 1015, 689, 7243);
+	} else if ($int1 = 1) {
+		~glidermap_showglider(263, 152, 384, 518, 820, 7242);
+	} else if ($int1 = 2) {
+		~glidermap_showglider(397, 189, 512, 262, 620, 7243);
+	} else if ($int1 = 3) {
+		~glidermap_showglider(415, 78, 512, 80, 800, 7243);
+	} else if ($int1 = 5) {
+		~glidermap_showglider(134, 148, 512, 764, 720, 7242);
+	} else if ($int1 = 6) {
+		~glidermap_showglider(141, 228, 512, 668, 620, 7242);
+	} else {
+		~glidermap_hideglider;
+	}
+} else if ($int0 = 5) {
+	if ($int1 = 0) {
+		~glidermap_showglider(107, 41, 506, 1584, 689, 7243);
+	} else if ($int1 = 1) {
+		~glidermap_showglider(304, 253, 315, 0, 600, 7243);
+	} else if ($int1 = 2) {
+		~glidermap_showglider(263, 188, 389, 1972, 700, 7242);
+	} else if ($int1 = 3) {
+		~glidermap_showglider(271, 125, 389, 1892, 650, 7242);
+	} else if ($int1 = 4) {
+		~glidermap_showglider(179, 117, 512, 1790, 750, 7242);
+	} else if ($int1 = 6) {
+		~glidermap_showglider(31, 378, 512, 583, 750, 7243);
+	} else {
+		~glidermap_hideglider;
+	}
+} else if ($int0 = 6) {
+	if ($int1 = 0) {
+		~glidermap_showglider(94, 153, 412, 1401, 650, 7242);
+	} else if ($int1 = 1) {
+		~glidermap_showglider(187, 313, 384, 1839, 710, 7242);
+	} else if ($int1 = 2) {
+		~glidermap_showglider(291, 229, 410, 1844, 690, 7242);
+	} else if ($int1 = 3) {
+		~glidermap_showglider(326, 170, 521, 1716, 610, 7242);
+	} else if ($int1 = 4) {
+		~glidermap_showglider(211, 155, 512, 1678, 640, 7242);
+	} else if ($int1 = 5) {
+		~glidermap_showglider(70, 192, 512, 1598, 640, 7243);
+	} else {
+		~glidermap_hideglider;
+	}
+} else {
+	~glidermap_hideglider;
+}
+return;

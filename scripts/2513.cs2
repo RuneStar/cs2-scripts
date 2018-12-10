@@ -1,0 +1,21 @@
+script2513(component $component0, int $int1)
+def_enum $enum2 = null;
+def_int $int3 = 0;
+if ($int1 ! %varcint222) {
+	$enum2 = ~toplevel_getcomponents;
+	if ($enum2 = 1745) {
+		if (~script2519 = 1) {
+			if (%varbit6254 = 0) {
+				$int3 = calc(if_getwidth(enum(component, component, $enum2, 164:64)) - 182);
+			} else {
+				$int3 = calc(if_getwidth(enum(component, component, $enum2, 164:64)) - 120);
+			}
+		} else {
+			$int3 = 2;
+		}
+		if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component0);
+		if_setsize($int3, 0, ^setsize_minus, ^setsize_minus, $component0);
+	}
+	if_setontimer("script2512($component0, %varcint222)", $component0);
+}
+return;

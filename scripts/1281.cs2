@@ -1,0 +1,12 @@
+script1281()
+cc_create(257:0, ^iftype_rectangle, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setfill(true);
+cc_setcolour(0x008080);
+cc_setfillcolour(0x008080);
+cc_settrans(255);
+_1124(255);
+_1125(2);
+cc_setontimer("script1283(clientclock, calc(clientclock + 60))");
+return;

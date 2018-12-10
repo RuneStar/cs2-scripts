@@ -1,0 +1,11 @@
+[clientscript,raids_rewards_op](int $int0, component $component1, int $int2)
+if (($int0 ! 1) & ($int0 ! 10)) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	if (cc_find($component1, $int2) = true) {
+		cc_settrans(120);
+		cc_setontimer("script488(event_com, event_comid, 0, calc(clientclock + 10))");
+	}
+	return;
+}

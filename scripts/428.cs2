@@ -1,0 +1,12 @@
+script428(obj $obj0, component $component1, component $component2, component $component3, int $int4)
+if ($int4 = 1) {
+	if_setoninvtransmit("script428($obj0, event_com, $component2, $component3, false){93}", $component1);
+}
+if (inv_total(93, $obj0) > 0) {
+	if_sethide(false, $component3);
+	if_sethide(true, $component2);
+} else {
+	if_sethide(true, $component3);
+	if_sethide(false, $component2);
+}
+return;

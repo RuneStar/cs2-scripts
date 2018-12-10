@@ -1,0 +1,20 @@
+[clientscript,champions_log](int $int0)
+cc_deleteall(468:2);
+cc_deleteall(468:3);
+def_int $int1 = 0;
+def_int $int2 = 15;
+$int1, $int2 = ~champions_log_build(0, $int0, $int1, $int2);
+$int1, $int2 = ~champions_log_build(1, $int0, $int1, $int2);
+$int1, $int2 = ~champions_log_build(2, $int0, $int1, $int2);
+$int1, $int2 = ~champions_log_build(3, $int0, $int1, $int2);
+$int1, $int2 = ~champions_log_build(4, $int0, $int1, $int2);
+$int1, $int2 = ~champions_log_build(5, $int0, $int1, $int2);
+$int1, $int2 = ~champions_log_build(6, $int0, $int1, $int2);
+$int1, $int2 = ~champions_log_build(7, $int0, $int1, $int2);
+$int1, $int2 = ~champions_log_build(8, $int0, $int1, $int2);
+$int1, $int2 = ~champions_log_build(9, $int0, $int1, $int2);
+$int1, $int2 = ~champions_log_build(10, $int0, $int1, $int2);
+if_setscrollpos(0, 0, 468:2);
+if_setscrollsize(0, calc($int2 + 15), 468:2);
+~scrollbar_vertical(468:3, 468:2, 798, 795, 796, 797, 793, 794);
+return;

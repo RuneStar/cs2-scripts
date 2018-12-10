@@ -1,0 +1,5 @@
+script584(component $component0, int $int1, int $int2)
+if ((cc_find($component0, calc($int1 + 1)) = true) & (.cc_find($component0, calc($int1 + 2)) = true)) {
+	~script585($component0, $int2);
+}
+return;

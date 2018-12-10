@@ -1,0 +1,17 @@
+[clientscript,wint_countdown](int $int0)
+def_int $int1 = calc($int0 - clientclock);
+if ($int1 <= 0) {
+	if_settext("", 396:3);
+	if_setontimer(null, 396:3);
+	return;
+} else {
+	def_int $int2 = calc($int1 / 50);
+	def_int $int3 = calc($int2 / 60);
+	def_int $int4 = calc($int2 % 60);
+	if ($int3 > 0) {
+		if_settext("The Wintertodt returns in: <tostring($int3)>min <tostring($int4)>sec", 396:3);
+	} else {
+		if_settext("The Wintertodt returns in: <tostring($int4)>sec", 396:3);
+	}
+	return;
+}

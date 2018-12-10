@@ -1,0 +1,31 @@
+[proc,raids_storage_private_items](component $component0, component $component1, component $component2)
+cc_deleteall($component0);
+def_int $int3 = 0;
+def_int $int4 = inv_size(583);
+def_int $int5 = 0;
+def_obj $obj6 = null;
+def_int $int7 = 0;
+while ($int3 < $int4) {
+	$obj6 = inv_getobj(583, $int3);
+	cc_create($component0, ^iftype_graphic, $int3);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	$int5 = calc(($int3 / 8) * (32 + 8));
+	cc_setposition(calc(($int3 % 8) * (36 + 8)), $int5, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setoutline(1);
+	cc_setgraphicshadow(0x333333);
+	$int7 = ~raids_storage_private_drawitem($obj6, inv_getnum(583, $int3), $int7, $component1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$int3 = calc($int3 + 1);
+}
+def_int $int8 = 0;
+$int5 = calc($int5 + 32);
+if ($int5 > if_getheight($component0)) {
+	$int8 = if_getscrolly($component0);
+	if_setscrollsize(0, $int5, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+}
+~scrollbar_resize($component1, $component0, $int8);
+if_settext(tostring($int7), $component2);
+return;

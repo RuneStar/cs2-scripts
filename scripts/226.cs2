@@ -1,0 +1,58 @@
+script226(int $int0, int $int1, int $int2)
+cc_deleteall(557:2);
+cc_deleteall(557:3);
+def_int $int3 = calc(((if_getwidth(557:2) - 20) - (6 * 36)) / 5);
+def_int $int4 = calc(32 + 36);
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_boolean $boolean7 = false;
+def_int $int8 = 0;
+def_obj $obj9 = null;
+while ($int5 <= 36) {
+	cc_create(557:2, ^iftype_graphic, calc($int5 * 2));
+	.cc_create(557:2, ^iftype_text, calc(($int5 * 2) + 1));
+	if ($int5 < 32) {
+		$boolean7 = testbit($int0, $int5);
+	} else {
+		$boolean7 = testbit($int1, calc($int5 - 32));
+	}
+	if ($boolean7 = true) {
+		$obj9 = enum(int, namedobj, 767, $int5);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		.cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc((($int6 % 6) * (36 + $int3)) + 10), calc(($int6 / 6) * $int4), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(cc_getx, calc(cc_gety + 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject($obj9, 1);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_setop(1, "Buy");
+		cc_setop(10, "Examine");
+		cc_setopbase("<col=ff9040><oc_name($obj9)>");
+		.cc_settextfont(p11_full);
+		.cc_setcolour(0x46320a);
+		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+		.cc_settext(~script46(enum(int, int, 768, $int5), ","));
+		$int6 = calc($int6 + 1);
+		if ($int5 = $int2) {
+			$int8 = cc_gety;
+		}
+	} else {
+		cc_sethide(true);
+		.cc_sethide(true);
+	}
+	$int5 = calc($int5 + 1);
+}
+def_int $int10 = calc($int6 / 6);
+if (calc($int6 % 6) > 0) {
+	$int10 = calc($int10 + 1);
+}
+$int10 = calc($int10 * $int4);
+if ($int10 > if_getheight(557:2)) {
+	if_setscrollsize(0, $int10, 557:2);
+	~scrollbar_vertical(557:3, 557:2, 798, 795, 796, 797, 793, 794);
+	~scrollbar_resize(557:3, 557:2, $int8);
+} else {
+	if_setscrollsize(0, 0, 557:2);
+	if_setscrollpos(0, 0, 557:2);
+}
+return;

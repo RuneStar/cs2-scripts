@@ -1,0 +1,23 @@
+[proc,logout_layout_update](component $component0, component $component1, component $component2, component $component3, component $component4)
+if ((%varbit6272 = 0) & ((%varbit6273 = 1) | (%varbit6273 = 2))) {
+	if_sethide(false, $component1);
+	if (%varbit6273 = 1) {
+		if_settext("Did you enjoy playing<br>Old School RuneScape today?", $component2);
+		if_sethide(false, $component3);
+		if_sethide(true, $component4);
+	} else {
+		if_settext("How much did you enjoy playing<br>Old School RuneScape today?", $component2);
+		if_sethide(true, $component3);
+		if_sethide(false, $component4);
+	}
+	if_setsize(0, 85, ^setsize_minus, ^setsize_abs, $component1);
+	if_setsize(0, 132, ^setsize_minus, ^setsize_abs, $component0);
+	if_setposition(0, 16, ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
+} else {
+	if_sethide(true, $component1);
+	if_sethide(true, $component3);
+	if_sethide(true, $component4);
+	if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
+	if_setsize(0, 170, ^setsize_minus, ^setsize_abs, $component0);
+}
+return;

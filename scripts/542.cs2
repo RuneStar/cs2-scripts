@@ -1,0 +1,9 @@
+script542(int $int0, component $component1, string $string0)
+if ($int0 ! 1) {
+	return;
+} else {
+	~ge_offers_bigbutton($component1, 1, $string0);
+	sound_synth(2266, 1, 0);
+	if_setontimer("script543($component1, $string0, calc(clientclock + 20))", $component1);
+	return;
+}

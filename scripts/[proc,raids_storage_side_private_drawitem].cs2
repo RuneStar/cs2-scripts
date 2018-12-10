@@ -1,0 +1,20 @@
+[proc,raids_storage_side_private_drawitem](obj $obj0, int $int1)
+if ($obj0 ! null) {
+	cc_setobject($obj0, $int1);
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_setop(1, "Store");
+	cc_setop(2, "Store-5");
+	cc_setop(3, "Store-10");
+	cc_setop(4, "Store-All");
+	cc_setop(5, "Store-X");
+	cc_setop(10, "Examine");
+	cc_settrans(0);
+	cc_setonop("raids_storage_items_op(event_opindex, event_com, event_comid)");
+	cc_setondragcomplete("raids_storage_side_reorder(event_com, event_comid, event_dragtargetid)");
+} else {
+	cc_clearops;
+	cc_settrans(255);
+	cc_setobject_nonum(6512, 1);
+	cc_setondragcomplete(null);
+}
+return;

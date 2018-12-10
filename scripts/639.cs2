@@ -1,0 +1,7 @@
+script639(component $component0, component $component1)
+cc_deleteall($component1);
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~script641($component0, $component1, 0);
+if_setoninvtransmit("script640($component0, $component1){517}", $component0);
+if_setonvartransmit("script640($component0, $component1){864, 1416, 783}", $component0);
+return;

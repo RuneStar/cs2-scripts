@@ -1,0 +1,8 @@
+script1249(component $component0, string $string0)
+sound_synth(2266, 1, 0);
+~script1248(1, $component0, "---");
+if_setonmouseover(null, $component0);
+if_setonmouseleave(null, $component0);
+if_setonclick(null, $component0);
+if_setontimer("script1250(calc(clientclock + 60), $component0, $string0)", $component0);
+return;

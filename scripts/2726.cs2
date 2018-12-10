@@ -1,0 +1,52 @@
+script2726(component $component0, component $component1, component $component2)
+cc_deleteall($component1);
+if (~on_mobile = true) {
+	if_setsize(25, 25, ^setsize_abs, ^setsize_abs, $component1);
+} else {
+	if_setsize(11, 11, ^setsize_abs, ^setsize_abs, $component1);
+}
+def_int $int3 = 0;
+if (%varbit6704 = 1) {
+	if_setsize(if_getwidth($component1), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component0);
+	if_setvflip(false, $component2);
+	if_sethflip(true, $component2);
+	if_setop(1, "Maximise", $component1);
+	if_setop(2, "", $component1);
+	if_setop(3, "", $component1);
+	if_setop(4, "", $component1);
+	if (~on_mobile = true) {
+		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component2);
+		$int3 = ~script134($component1);
+		cc_create($component1, ^iftype_graphic, $int3);
+		cc_setgraphic("zeah_book,0");
+		cc_setsize(11, 11, ^setsize_abs, ^setsize_abs);
+		cc_setvflip(false);
+		cc_sethflip(true);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	}
+} else {
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
+	if_setsize(194, 92, ^setsize_abs, ^setsize_abs, $component0);
+	if_setvflip(true, $component2);
+	if_sethflip(false, $component2);
+	if_setop(1, "Minimise", $component1);
+	if (~on_mobile = false) {
+		if_setop(2, "Dock Left", $component1);
+		if_setop(3, "Dock Middle", $component1);
+		if_setop(4, "Dock Right", $component1);
+	} else {
+		if_setop(2, "", $component1);
+		if_setop(3, "", $component1);
+		if_setop(4, "", $component1);
+	}
+}
+if (~on_mobile = false) {
+	if (%varbit6715 = 2) {
+		if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	} else if (%varbit6715 = 3) {
+		if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+	} else {
+		if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, $component0);
+	}
+}
+return;

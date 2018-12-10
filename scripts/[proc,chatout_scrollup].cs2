@@ -1,0 +1,18 @@
+[proc,chatout_scrollup]()
+def_int $int0 = %varcint3;
+def_string $string0 = "null";
+if ($int0 = -1) {
+	$int0 = %varcint4;
+}
+if (%varcint3 ! %varcint4) {
+	$int0 = calc($int0 - 1);
+	if ($int0 < 0) {
+		$int0 = 19;
+	}
+	$string0 = ~chatout_get($int0);
+	if (string_length($string0) > 0) {
+		%varcstring1 = $string0;
+		%varcint3 = $int0;
+	}
+}
+return;

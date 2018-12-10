@@ -1,0 +1,13 @@
+script1989(int $int0, component $component1, component $component2, component $component3, component $component4)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	if_setgraphic("miscgraphics,9", $component1);
+	if_settrans(0, $component2);
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setonop(null, $component1);
+	if_setontimer("script1990(calc(clientclock + 20), $component1, $component2, $component3, $component4)", $component1);
+	return;
+}

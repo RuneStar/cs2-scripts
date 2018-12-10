@@ -1,0 +1,15 @@
+[clientscript,chat_broadcast_op](int $int0, string $string0)
+def_int $int1 = -1;
+if ($int0 = 9) {
+	%varcint202 = clientclock;
+	$int1 = ~script553;
+	~rebuildchatbox($int1);
+	~rebuildpmbox($int1);
+} else if (string_length($string0) > 0) {
+	if ($int0 = 6) {
+		~script2399(true, 1, $string0);
+	} else {
+		mes("Link destination: <col=ef1020><$string0></col>");
+	}
+}
+return;

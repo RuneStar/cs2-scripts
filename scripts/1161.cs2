@@ -1,0 +1,20 @@
+script1161(obj $obj0, int $int1, int $int2)
+if ($obj0 ! null) {
+	cc_settrans(0);
+	cc_setobject($obj0, $int1);
+	cc_clearops;
+	cc_setop(1, "Deposit-1");
+	cc_setop(2, "Deposit-5");
+	cc_setop(3, "Deposit-10");
+	cc_setop(4, "Deposit-X");
+	cc_setop(5, "Deposit-All");
+	cc_setop(10, "Examine");
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_setondragcomplete("script1162(event_com, event_comid, event_dragtargetid)");
+} else {
+	cc_settrans(255);
+	cc_setobject(6512, 1);
+	cc_clearops;
+	cc_setondragcomplete(null);
+}
+return;

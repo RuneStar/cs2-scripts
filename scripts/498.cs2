@@ -1,0 +1,19 @@
+script498(string $string0, string $string1)
+def_int $int0 = if_getwidth(380:3);
+def_int $int1 = paraheight($int0, p12_full, $string0);
+def_int $int2 = paraheight($int0, p12_full, $string1);
+if ($int2 > $int1) {
+	$int1 = $int2;
+}
+$int1 = calc(($int1 * 12) + 3);
+if ($int1 > if_getheight(380:3)) {
+	if_setscrollsize(0, $int1, 380:3);
+} else {
+	if_setscrollsize(0, 0, 380:3);
+}
+if_setsize($int0, $int1, ^setsize_abs, ^setsize_abs, 380:2);
+if_setsize($int0, $int1, ^setsize_abs, ^setsize_abs, 380:5);
+if_settext($string0, 380:2);
+if_settext($string1, 380:5);
+~scrollbar_vertical(380:4, 380:3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+return;

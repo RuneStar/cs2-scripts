@@ -1,0 +1,15 @@
+[proc,cws_set_toggle](component $component0, int $int1, int $int2, int $int3)
+if ($int3 >= 7) {
+	cc_setgraphic("warning_icons,2");
+	if_setop(1, "Enable warning", $component0);
+	if_setonop("cws_response_toggle(event_com, cc_getid, $int1, $int2, 6)", $component0);
+} else if ($int3 = 6) {
+	cc_setgraphic("warning_icons,1");
+	if_setop(1, "Disable warning", $component0);
+	if_setonop("cws_response_toggle(event_com, cc_getid, $int1, $int2, 7)", $component0);
+} else {
+	cc_setgraphic(null);
+	if_clearops($component0);
+	if_setonop(null, $component0);
+}
+return;

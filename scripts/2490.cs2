@@ -1,0 +1,93 @@
+script2490(component $component0)
+def_int $int1 = if_getwidth($component0);
+def_graphic $graphic2 = "ge_icons,4";
+def_graphic $graphic3 = "ge_icons,5";
+def_int $int4 = 35;
+def_int $int5 = 55;
+cc_deleteall($component0);
+def_int $int6 = 0;
+cc_create($component0, ^iftype_graphic, $int6);
+def_int $int7 = $int6;
+$int6 = calc($int6 + 1);
+cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, $int4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(1116);
+cc_setonmouserepeat("cc_settrans(event_com, event_comid, 100, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comid, 0, null)");
+cc_setop(1, "-1");
+cc_create($component0, ^iftype_graphic, $int6);
+def_int $int8 = $int6;
+$int6 = calc($int6 + 1);
+cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, $int4, ^setpos_abs_right, ^setpos_abs_top);
+cc_setgraphic(1117);
+cc_setonmouserepeat("cc_settrans(event_com, event_comid, 100, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comid, 0, null)");
+cc_setop(1, "+1");
+cc_create($component0, ^iftype_graphic, $int6);
+def_int $int9 = $int6;
+$int6 = calc($int6 + 1);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic2);
+cc_setonmouserepeat("script229(event_com, event_comid, $graphic3, null)");
+cc_setonmouseleave("script229(event_com, event_comid, $graphic2, null)");
+cc_create($component0, ^iftype_graphic, $int6);
+def_int $int10 = $int6;
+$int6 = calc($int6 + 1);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+cc_setposition(40, $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic2);
+cc_setonmouserepeat("script229(event_com, event_comid, $graphic3, null)");
+cc_setonmouseleave("script229(event_com, event_comid, $graphic2, null)");
+cc_create($component0, ^iftype_graphic, $int6);
+def_int $int11 = $int6;
+$int6 = calc($int6 + 1);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+cc_setposition(80, $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic2);
+cc_setonmouserepeat("script229(event_com, event_comid, $graphic3, null)");
+cc_setonmouseleave("script229(event_com, event_comid, $graphic2, null)");
+cc_create($component0, ^iftype_graphic, $int6);
+def_int $int12 = $int6;
+$int6 = calc($int6 + 1);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+cc_setposition(120, $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic2);
+cc_setonmouserepeat("script229(event_com, event_comid, $graphic3, null)");
+cc_setonmouseleave("script229(event_com, event_comid, $graphic2, null)");
+cc_setop(1, "Enter quantity");
+cc_setonop("opsound(event_opindex, 2)");
+$int6 = ~duel_stake_textbox($component0, $int6, 32, calc($int4 - 2), calc($int1 - 64));
+if ($component0 = 481:19) {
+	cc_setoninvtransmit("script2493(event_com, event_comid, platinum_token_13204){93, 134}");
+	if (cc_find($component0, $int9) = true) {
+		cc_setop(1, "+10");
+	}
+	if (cc_find($component0, $int10) = true) {
+		cc_setop(1, "+100");
+	}
+	if (cc_find($component0, $int11) = true) {
+		cc_setop(1, "+1k");
+	}
+	$int6 = ~duel_stake_setup_buttontext($component0, $int9, $int6, "+10");
+	$int6 = ~duel_stake_setup_buttontext($component0, $int10, $int6, "+100");
+	$int6 = ~duel_stake_setup_buttontext($component0, $int11, $int6, "+1k");
+	$int6 = ~duel_stake_setup_buttontext($component0, $int12, $int6, "...");
+} else {
+	cc_setoninvtransmit("script2493(event_com, event_comid, coins_995){93, 134}");
+	if (cc_find($component0, $int9) = true) {
+		cc_setop(1, "+100k");
+	}
+	if (cc_find($component0, $int10) = true) {
+		cc_setop(1, "+1m");
+	}
+	if (cc_find($component0, $int11) = true) {
+		cc_setop(1, "+10m");
+	}
+	$int6 = ~duel_stake_setup_buttontext($component0, $int9, $int6, "+100k");
+	$int6 = ~duel_stake_setup_buttontext($component0, $int10, $int6, "+1m");
+	$int6 = ~duel_stake_setup_buttontext($component0, $int11, $int6, "+10m");
+	$int6 = ~duel_stake_setup_buttontext($component0, $int12, $int6, "...");
+}
+return;

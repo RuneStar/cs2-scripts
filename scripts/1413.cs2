@@ -1,0 +1,11 @@
+script1413(component $component0, model $model1, component $component2, int $int3)
+if (clientclock < $int3) {
+	return;
+} else {
+	if_setmodel($model1, $component0);
+	if_sethide(true, $component2);
+	if_setonmouserepeat("script69(false, $component2)", $component0);
+	if_setonmouseleave("script69(true, $component2)", $component0);
+	if_setontimer(null, $component0);
+	return;
+}

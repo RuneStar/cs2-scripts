@@ -1,0 +1,53 @@
+[proc,tog_sidepanel_tears](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
+if_settext(tostring(%varbit455), $component0);
+if (%varbit455 >= 1) {
+	if_sethide(false, $component1);
+} else {
+	if_sethide(true, $component1);
+}
+if (%varbit455 >= 2) {
+	if_sethide(false, $component2);
+} else {
+	if_sethide(true, $component2);
+}
+if (%varbit455 >= 4) {
+	if_sethide(false, $component3);
+} else {
+	if_sethide(true, $component3);
+}
+if (%varbit455 >= 7) {
+	if_sethide(false, $component4);
+} else {
+	if_sethide(true, $component4);
+}
+if (%varbit455 >= 11) {
+	if_sethide(false, $component5);
+} else {
+	if_sethide(true, $component5);
+}
+if (%varbit455 >= 16) {
+	if_sethide(false, $component6);
+} else {
+	if_sethide(true, $component6);
+}
+if (%varbit455 >= 22) {
+	if_sethide(false, $component7);
+} else {
+	if_sethide(true, $component7);
+}
+if (%varbit455 >= 29) {
+	if_sethide(false, $component8);
+} else {
+	if_sethide(true, $component8);
+}
+if (%varbit455 >= 37) {
+	if_sethide(false, $component9);
+} else {
+	if_sethide(true, $component9);
+}
+if (%varbit455 >= 46) {
+	if_sethide(false, $component10);
+} else {
+	if_sethide(true, $component10);
+}
+return;

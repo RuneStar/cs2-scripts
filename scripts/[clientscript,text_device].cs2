@@ -1,0 +1,17 @@
+[clientscript,text_device](component $component0, int $int1, string $string0, string $string1)
+if ($int1 = -1) {
+	if (if_find($component0) = true) {
+		if (~on_mobile = true) {
+			cc_settext($string1);
+		} else {
+			cc_settext($string0);
+		}
+	} else if (cc_find($component0, $int1) = true) {
+		if (~on_mobile = true) {
+			cc_settext($string1);
+		} else {
+			cc_settext($string0);
+		}
+	}
+}
+return;

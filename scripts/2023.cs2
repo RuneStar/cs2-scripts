@@ -1,0 +1,12 @@
+script2023(int $int0)(string)
+def_int $int1 = calc($int0 - 50);
+if ($int1 < 0) {
+	$int1 = calc(0 - $int1);
+}
+if ($int1 <= 15) {
+	return("<col=00ff00><tostring($int0)>%</col>");
+} else if ($int1 <= 30) {
+	return("<col=ffff00><tostring($int0)>%</col>");
+} else {
+	return("<col=ff0000><tostring($int0)>%</col>");
+}

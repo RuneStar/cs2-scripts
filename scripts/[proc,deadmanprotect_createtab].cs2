@@ -1,0 +1,12 @@
+[proc,deadmanprotect_createtab](int $int0, graphic $graphic1, string $string0)
+cc_create(226:4, ^iftype_graphic, calc($int0 * 2));
+cc_setposition(calc($int0 * 39), 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(39, 29, ^setsize_abs, ^setsize_abs);
+cc_setgraphic(1345);
+cc_setop(1, $string0);
+cc_setonop("deadmanprotect_settab($int0)");
+cc_create(226:4, ^iftype_graphic, calc(($int0 * 2) + 1));
+cc_setposition(calc(($int0 * 39) + 7), 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(25, 20, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic1);
+return;

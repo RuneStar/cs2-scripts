@@ -1,0 +1,5 @@
+[clientscript,fade_overlay_legacy]()
+if_setcolour(^black, 174:1);
+if_settrans(255, 174:1);
+if_setontimer("fade_overlay_legacy_update(clientclock)", 174:0);
+return;

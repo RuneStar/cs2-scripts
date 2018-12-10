@@ -1,0 +1,67 @@
+[clientscript,trade_main_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+%varcint12 = 0;
+%varcint13 = 0;
+%varcint14 = 0;
+%varcint15 = 0;
+%varcint16 = 0;
+%varcint17 = 0;
+%varcint18 = 0;
+%varcint19 = 0;
+%varcint20 = 0;
+%varcint21 = 0;
+%varcint22 = 0;
+%varcint23 = 0;
+%varcint24 = 0;
+%varcint25 = 0;
+%varcint26 = 0;
+%varcint27 = 0;
+%varcint28 = 0;
+%varcint29 = 0;
+%varcint30 = 0;
+%varcint31 = 0;
+%varcint32 = 0;
+%varcint33 = 0;
+%varcint34 = 0;
+%varcint35 = 0;
+%varcint36 = 0;
+%varcint37 = 0;
+%varcint38 = 0;
+%varcint39 = 0;
+def_int $int5 = inv_size(90);
+cc_deleteall($component1);
+cc_deleteall($component3);
+def_int $int6 = 0;
+while ($int6 < $int5) {
+	cc_create($component1, ^iftype_graphic, $int6);
+	.cc_create($component3, ^iftype_graphic, $int6);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	.cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	.cc_setoutline(1);
+	cc_sethide(true);
+	.cc_sethide(true);
+	$int6 = calc($int6 + 1);
+}
+def_int $int7 = 0;
+$int6 = 0;
+while ($int6 < $int5) {
+	$int7 = calc($int5 + $int6);
+	cc_create($component1, ^iftype_graphic, $int7);
+	.cc_create($component3, ^iftype_graphic, $int7);
+	cc_setgraphic(937);
+	.cc_setgraphic(937);
+	cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
+	cc_sethide(false);
+	.cc_sethide(false);
+	cc_settrans(255);
+	.cc_settrans(255);
+	$int6 = calc($int6 + 1);
+}
+def_int $int8 = calc((36 - 10) / 2);
+~trade_main_drawitems($int5, $int8, $component1, $component2, $component3, $component4);
+if_setoninvtransmit("trade_main_drawitems($int5, $int8, $component1, $component2, $component3, $component4){90}", $component0);
+if_setonvartransmit("trade_main_drawitems($int5, $int8, $component1, $component2, $component3, $component4){1042}", $component0);
+return;

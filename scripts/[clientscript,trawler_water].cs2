@@ -1,0 +1,7 @@
+[clientscript,trawler_water](component $component0, int $int1)
+if (%varbit2463 >= $int1) {
+	if_setcolour(0x7f7fff, $component0);
+} else {
+	if_setcolour(^black, $component0);
+}
+return;

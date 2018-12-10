@@ -1,0 +1,24 @@
+[proc,tournament_supplies_search_off](component $component0, component $component1, component $component2, int $int3, int $int4)
+cc_deleteall($component2);
+def_int $int5 = ~options_button_off($component2, 0);
+cc_create($component2, ^iftype_graphic, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setgraphic("bankbuttons,2");
+cc_create($component2, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_setsize(33, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(4, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Search");
+cc_setcolour(0xff981f);
+if_setonmouseover("script85(event_com, cc_getid, 16777215)", $component2);
+if_setonmouseleave("script85(event_com, cc_getid, 16750623)", $component2);
+if_setop(1, "Search", $component2);
+if_setonop("tournament_supplies_search_toggle(true, $component0, $component1, $component2, $int3, $int4)", $component2);
+if_setontimer(null, $component2);
+~tournament_supplies_drawlist($component0, $component1, $int3, $int4, "");
+return;

@@ -1,0 +1,11 @@
+[proc,meslayer_dynamicbutton]()
+cc_create(162:40, ^iftype_text, 0);
+cc_setsize(if_getwidth(162:40), if_gety(162:44), ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(false);
+cc_setcolour(^blue);
+cc_setonmouseover("script85(event_com, event_comid, 16777215)");
+cc_setonmouseleave("script85(event_com, event_comid, 255)");
+return;

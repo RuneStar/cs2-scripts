@@ -1,0 +1,41 @@
+script1121(int $int0, int $int1, int $int2, component $component3, int $int4, int $int5, int $int6, string $string0)(int, int, int)
+def_int $int7 = calc(if_getwidth($component3) / 2);
+if ($int2 = 1) {
+	$int7 = calc($int7 + 15);
+} else {
+	$int7 = calc($int7 - 15);
+}
+cc_create($component3, ^iftype_rectangle, $int4);
+$int4 = calc($int4 + 1);
+cc_setsize($int7, 15, ^setsize_abs, ^setsize_abs);
+if ($int2 = 1) {
+	cc_setposition(0, $int6, ^setpos_abs_right, ^setpos_abs_top);
+	$int6 = calc($int6 + 15);
+} else {
+	cc_setposition(0, $int5, ^setpos_abs_left, ^setpos_abs_top);
+	$int5 = calc($int5 + 15);
+}
+cc_settrans(255);
+cc_setop(1, "Send report");
+cc_setonop("snapshot_rules_send($int1)");
+cc_setonmouseover("snapshot_rules_hover(event_com, event_comid, 16711680)");
+cc_setonmouseleave("snapshot_rules_hover(event_com, event_comid, 16777215)");
+.cc_create($component3, ^iftype_text, $int4);
+$int4 = calc($int4 + 1);
+.cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
+.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(^white);
+.cc_settextfont(p11_full);
+.cc_settextalign(^settextalign_right, ^settextalign_top, 0);
+.cc_settextshadow(true);
+.cc_settext("<tostring($int0)>:");
+.cc_create($component3, ^iftype_text, $int4);
+$int4 = calc($int4 + 1);
+.cc_setsize(calc($int7 - 20), 15, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc(cc_getx + 20), cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(^white);
+.cc_settextfont(p11_full);
+.cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+.cc_settextshadow(true);
+.cc_settext($string0);
+return($int4, $int5, $int6);

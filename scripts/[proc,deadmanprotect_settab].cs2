@@ -1,0 +1,28 @@
+[proc,deadmanprotect_settab](int $int0)
+def_int $int1 = 0;
+while (cc_find(226:4, $int1) = true) {
+	cc_setgraphic(1345);
+	$int1 = calc($int1 + 2);
+}
+if (cc_find(226:4, calc($int0 * 2)) = true) {
+	cc_setgraphic(1344);
+}
+%varcint139 = $int0;
+~script1277;
+~script1280;
+def_string $string0 = "";
+if ($int0 = 0) {
+	$string0 = "In Deadman mode, when you die <col=ffffff>unskulled</col> from <col=ffffff>PvM combat</col>, you only lose the items you are carrying at the time. Your 3 most valuable items are protected. You do not lose any experience.<br><br>You may lose more if you die from <col=ffffff>PvP combat</col> or if you are <col=ffffff>skulled</col> at the time.";
+} else if ($int0 = 1) {
+	if (%varbit5667 = 1) {
+		$string0 = "In Deadman mode, when you die from <col=ffffff>PvP combat</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>You will not lose any experience in your protected and unprotected skills if you die <col=ffffff>unskulled</col>.";
+	} else {
+		$string0 = "In Deadman mode, when you die from <col=ffffff>PvP combat</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Dependent on level difference, you may also lose <col=ffffff>up to 25%</col> of your experience in any unprotected skills.";
+	}
+} else if ($int0 = 2) {
+	$string0 = "In Deadman mode, if you die whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Dependent on level difference, you may also lose <col=ffffff>up to 50%</col> of your experience in any unprotected skills. You may lose even more in a <col=ffffff>guarded</col> area.";
+} else if ($int0 = 3) {
+	$string0 = "In Deadman mode, if you die in a <col=ffffff>guarded</col> area whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Dependent on level difference, you may also lose <col=ffffff>up to 10%</col> of your experience in any protected skills, and <col=ffffff>up to 50%</col> in any unprotected skills.";
+}
+if_settext($string0, 226:5);
+return;

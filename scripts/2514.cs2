@@ -1,0 +1,29 @@
+script2514(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+if (~on_mobile = true) {
+	if_sethide(true, $component0);
+	if_sethide(true, $component1);
+	if_setposition(8, 8, ^setpos_abs_left, ^setpos_abs_top, $component4);
+	if_setposition(0, 8, ^setpos_abs_centre, ^setpos_abs_top, $component2);
+	if_setposition(8, 8, ^setpos_abs_left, ^setpos_abs_bottom, $component5);
+	if_setposition(0, 8, ^setpos_abs_centre, ^setpos_abs_bottom, $component6);
+	if_setsize(124, 40, ^setsize_abs, ^setsize_abs, $component4);
+	if_setsize(282, 40, ^setsize_minus, ^setsize_abs, $component2);
+	if_setsize(124, 40, ^setsize_abs, ^setsize_abs, $component3);
+	if_setsize(124, 40, ^setsize_abs, ^setsize_abs, $component5);
+	if_setsize(282, 40, ^setsize_minus, ^setsize_abs, $component6);
+	if_setsize(124, 40, ^setsize_abs, ^setsize_abs, $component7);
+} else {
+	if_sethide(false, $component0);
+	if_sethide(false, $component1);
+	if_setposition(8, 8, ^setpos_abs_left, ^setpos_abs_bottom, $component4);
+	if_setposition(208, 8, ^setpos_abs_left, ^setpos_abs_top, $component2);
+	if_setposition(123, 8, ^setpos_abs_left, ^setpos_abs_bottom, $component5);
+	if_setposition(238, 8, ^setpos_abs_left, ^setpos_abs_bottom, $component6);
+	if_setsize(110, 40, ^setsize_abs, ^setsize_abs, $component4);
+	if_setsize(331, 40, ^setsize_minus, ^setsize_abs, $component2);
+	if_setsize(110, 40, ^setsize_abs, ^setsize_abs, $component3);
+	if_setsize(110, 40, ^setsize_abs, ^setsize_abs, $component5);
+	if_setsize(321, 40, ^setsize_minus, ^setsize_abs, $component6);
+	if_setsize(70, 40, ^setsize_abs, ^setsize_abs, $component7);
+}
+return;

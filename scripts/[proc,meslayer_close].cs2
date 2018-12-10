@@ -1,0 +1,59 @@
+[proc,meslayer_close](int $int0, int $int1)
+if_sethide(true, 162:40);
+if_sethide(false, 162:55);
+~toplevel_chatbox_background;
+def_int $int2 = 0;
+if ($int1 = 1) {
+	$int2 = ~script553;
+	~rebuildchatbox($int2);
+	~rebuildpmbox($int2);
+	~script223;
+	~chatdefault_setonkey(1);
+	if (~on_mobile = true) {
+		~script1984;
+	}
+}
+if (~on_mobile = true) {
+	~mobile_chatbox_resize;
+}
+%varcint5 = 0;
+if ($int0 = 1) {
+	%varcstring22 = "";
+}
+if_setposition(0, -8, ^setpos_abs_centre, ^setpos_abs_centre, 162:44);
+if_setsize(0, 40, ^setsize_minus, ^setsize_abs, 162:44);
+if_setposition(0, 22, ^setpos_abs_centre, ^setpos_abs_centre, 162:45);
+if_setsize(0, 20, ^setsize_minus, ^setsize_abs, 162:45);
+if_sethide(false, 162:44);
+if_sethide(false, 162:45);
+if_sethide(true, 162:49);
+cc_deleteall(162:53);
+cc_deleteall(162:54);
+if_setonclick(null, 162:40);
+if_setontimer(null, 162:40);
+cc_deleteall(162:40);
+cc_deleteall(162:46);
+cc_deleteall(162:47);
+cc_deleteall(162:48);
+if_sethide(true, 162:46);
+if_sethide(true, 162:47);
+if_sethide(true, 162:48);
+if_setonmouserepeat(null, 162:46);
+if_setonmouserepeat(null, 162:47);
+if_setonmouserepeat(null, 162:48);
+if_setonmouseleave(null, 162:46);
+if_setonmouseleave(null, 162:47);
+if_setonmouseleave(null, 162:48);
+if_setontimer(null, 162:46);
+if_setontimer(null, 162:47);
+if_setontimer(null, 162:48);
+if_setonclick(null, 162:46);
+if_setonclick(null, 162:47);
+if_setonclick(null, 162:48);
+if (%varcint41 = -1) {
+	~script2526;
+}
+if (~on_mobile = true) {
+	~mobile_chatbox_resize;
+}
+return;

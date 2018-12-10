@@ -1,0 +1,13 @@
+[proc,clanwars_hud_countdown_redraw](component $component0, component $component1, int $int2)
+def_int $int3 = calc(($int2 % 3000) / 50);
+if ($int3 >= 10) {
+	cc_settext("<tostring(calc($int2 / 3000))>:<tostring($int3)>");
+} else {
+	cc_settext("<tostring(calc($int2 / 3000))>:0<tostring($int3)>");
+}
+if_setontimer("clanwars_hud_countdown_tick($component0, $component1, cc_getid, $int2)", $component0);
+if ($int2 > 500) {
+	$int2 = 500;
+}
+cc_setcolour(~script246(255, interpolate(0, $int2, 0, 500, 152), interpolate(0, $int2, 0, 500, 31)));
+return;

@@ -1,0 +1,37 @@
+[clientscript,shop_main_init](inv $inv0, obj $obj1, int $int2, string $string0)
+cc_deleteall(300:1);
+cc_deleteall(300:16);
+cc_deleteall(300:17);
+~steelborder(300:1, 0, $string0);
+def_int $int3 = calc(((if_getwidth(300:16) - (8 * 36)) / 7) + 36);
+def_int $int4 = inv_size($inv0);
+def_int $int5 = 0;
+cc_create(300:16, ^iftype_graphic, 0);
+while ($int5 < $int4) {
+	cc_create(300:16, ^iftype_graphic, calc($int5 + 1));
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(($int5 % 8) * $int3), calc(($int5 / 8) * $int3), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	if (~on_mobile = true) {
+		cc_setop(1, ~script2228);
+	} else {
+		cc_setop(1, "Value");
+	}
+	cc_setop(2, "Buy 1");
+	cc_setop(3, "Buy 5");
+	cc_setop(4, "Buy 10");
+	if (~script2082 = 0) {
+		cc_setop(5, "Buy 50");
+	}
+	if (%varbit6348 > 0) {
+		cc_setop(6, "Value");
+	}
+	cc_setop(10, "Examine");
+	cc_setonop("script487(event_com, event_comid, 125, 0)");
+	$int5 = calc($int5 + 1);
+}
+~scrollbar_vertical(300:17, 300:16, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~shop_main_update(300:16, $int4, $inv0, $obj1, $int2);
+if_setoninvtransmit("shop_main_update(event_com, $int4, $inv0, $obj1, $int2){$inv0}", 300:16);
+return;

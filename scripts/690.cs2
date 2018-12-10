@@ -1,0 +1,51 @@
+script690(component $component0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6)
+def_inv $inv7 = 140;
+if (%var261 = 8) {
+	$inv7 = 222;
+} else if (%var261 = 7) {
+	$inv7 = 221;
+}
+def_enum $enum8 = null;
+def_enum $enum9 = null;
+$enum9 = enum(int, enum, 1865, %var261);
+$enum8 = enum(int, enum, 1864, %var261);
+if ((%var261 = 7) | (%var261 = 8)) {
+	if_sethide(true, $component5);
+	if_sethide(false, $component6);
+} else {
+	if_sethide(false, $component5);
+	if_sethide(true, $component6);
+}
+def_obj $obj10 = null;
+def_int $int11 = 0;
+while ($int11 < $int1) {
+	if (($enum8 ! null) & ($enum9 ! null)) {
+		$obj10 = inv_getobj($inv7, $int11);
+		~script1485($int11, enum(obj, int, $enum9, $obj10));
+		if (cc_find($component0, $int11) = true) {
+			if (%var261 = 8) {
+				cc_clearops;
+				cc_setonop(null);
+			} else {
+				cc_setop(1, "Move");
+				cc_setonop("script691(event_opindex, event_com, event_comid, $int1, $int2, $int3, $int4)");
+			}
+		}
+		if (($int11 < $int2) & (cc_find($component0, calc($int1 + $int11)) = true)) {
+			$obj10 = enum(int, namedobj, $enum8, $int11);
+			if ($obj10 ! null) {
+				cc_setmodel(oc_param($obj10, 186));
+			} else {
+				cc_setmodel(null);
+			}
+		}
+	} else {
+		~script1485($int11, -1);
+		if (($int11 < $int2) & (cc_find($component0, calc($int1 + $int11)) = true)) {
+			cc_setmodel(null);
+		}
+	}
+	$int11 = calc($int11 + 1);
+}
+~script692($component0, $int1, $int2, $int3, $int4);
+return;

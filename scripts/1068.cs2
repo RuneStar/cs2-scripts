@@ -1,0 +1,24 @@
+script1068()
+def_enum $enum0 = ~toplevel_getcomponents;
+if ($enum0 = null) {
+	return;
+} else {
+	def_component $component1 = enum(component, component, $enum0, 161:3);
+	if ($component1 = null) {
+		return;
+	} else {
+		cc_deleteall($component1);
+		cc_create($component1, ^iftype_model, 0);
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setmodel(29403);
+		.cc_create($component1, ^iftype_rectangle, 1);
+		.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		.cc_setcolour(^white);
+		.cc_setfill(true);
+		cc_setontimer("script1069(event_com, event_comid, .cc_getid, clientclock)");
+		~script1070($component1, 0);
+		return;
+	}
+}

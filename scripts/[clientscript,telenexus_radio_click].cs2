@@ -1,0 +1,8 @@
+[clientscript,telenexus_radio_click](component $component0, component $component1, component $component2, int $int3, int $int4, component $component5, component $component6)
+if (((($int4 = 1) | ($int4 = 3)) & (%varbit6669 < 150)) & (%varbit6669 > 0)) {
+	%varbit6669 = calc(%varbit6669 + 150);
+} else if ((($int4 = 0) | ($int4 = 2)) & (%varbit6669 > 150)) {
+	%varbit6669 = calc(%varbit6669 - 150);
+}
+~telenexus_left_click($component0, $component1, $component2, $component5, $component6);
+return;

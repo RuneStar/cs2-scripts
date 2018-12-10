@@ -1,0 +1,40 @@
+script446(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+if ($component0 ! null) {
+	if_setnoclickthrough(true, $component6);
+	if_setonstattransmit("script446(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7){hitpoints}", $component0);
+	if_setonvartransmit("script446(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7){102, 456}", $component0);
+	if_setonsubchange("script446(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7)", $component0);
+}
+~orbs_update($component1, $component2, stat(hitpoints), stat_base(hitpoints));
+if (%var456 > 0) {
+	if_setgraphic(1062, $component3);
+} else if (%var102 >= 1000000) {
+	if_setgraphic(1102, $component3);
+} else if (%var102 > 0) {
+	if_setgraphic(1061, $component3);
+} else {
+	if_setgraphic(1060, $component3);
+}
+if (%var102 > 0) {
+	if (%var102 >= 1000000) {
+		if_setgraphic(1102, $component5);
+	} else {
+		if_setgraphic(1061, $component5);
+	}
+	if_sethide(false, $component4);
+} else {
+	if_sethide(true, $component4);
+}
+def_graphic $graphic8 = 1072;
+if (((%var102 > 0) | (%var456 > 0)) & (~toplevel_check_sidepanel(3) = true)) {
+	if_setonmouserepeat("script44($component6, $graphic8)", $component7);
+	$graphic8 = 1071;
+	if_setonmouseleave("script44($component6, $graphic8)", $component7);
+	if_sethide(false, $component7);
+} else {
+	if_setgraphic(1071, $component6);
+	if_setonmouserepeat(null, $component7);
+	if_setonmouseleave(null, $component7);
+	if_sethide(true, $component7);
+}
+return;

@@ -1,0 +1,30 @@
+[proc,zeah_favour_sort](int $int0, int $int1, int $int2)
+def_int $int3 = calc(($int1 + $int2) / 2);
+def_int $int4 = $array0($int3);
+$array0($int3) = $array0($int2);
+$array0($int2) = $int4;
+def_int $int5 = $int1;
+def_int $int6 = $int1;
+def_int $int7 = -1;
+def_int $int8 = 0;
+def_int $int9 = 0;
+while ($int6 < $int2) {
+	$int8 = calc((enum(int, int, 1267, $array0($int6)) * 1000) + $array0($int6));
+	$int9 = calc((enum(int, int, 1267, $int4) * 1000) + $int4);
+	if ($int8 <= $int9) {
+		$int7 = $array0($int6);
+		$array0($int6) = $array0($int5);
+		$array0($int5) = $int7;
+		$int5 = calc($int5 + 1);
+	}
+	$int6 = calc($int6 + 1);
+}
+$array0($int2) = $array0($int5);
+$array0($int5) = $int4;
+if ($int1 < calc($int5 - 1)) {
+	~zeah_favour_sort(0, $int1, calc($int5 - 1));
+}
+if (calc($int5 + 1) < $int2) {
+	~zeah_favour_sort(0, calc($int5 + 1), $int2);
+}
+return;

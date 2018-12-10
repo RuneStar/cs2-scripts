@@ -1,0 +1,67 @@
+[clientscript,poll_history_setup](int $int0, string $string0, string $string1)
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:13)) = false) {
+	return;
+} else {
+	cc_deleteall(310:4);
+	def_int $int1 = 0;
+	while ($int1 < $int0) {
+		cc_create(310:4, ^iftype_rectangle, $int1);
+		cc_sethide(true);
+		$int1 = calc($int1 + 1);
+	}
+	def_int $int2 = 10;
+	def_string $string2 = "";
+	def_int $int3 = 0;
+	def_int $int4 = if_getwidth(310:4);
+	def_int $int5 = 0;
+	while ($int5 < $int0) {
+		cc_create(310:4, ^iftype_rectangle, $int1);
+		$int1 = calc($int1 + 1);
+		cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour(^white);
+		cc_setfill(true);
+		cc_settrans(255);
+		.cc_create(310:4, ^iftype_text, $int1);
+		$int1 = calc($int1 + 1);
+		.cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setcolour(0xff981f);
+		.cc_settextfont(p12_full);
+		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+		.cc_settextshadow(true);
+		$string2, $string0 = ~script632($string0);
+		.cc_settext($string2);
+		cc_setonmouseover("cc_settrans(event_com, event_comid, 220, null)");
+		cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+		cc_setop(1, "View");
+		cc_setonop("poll_historyop(event_com, $int5, .cc_getid, $string2)");
+		$int3 = calc((paraheight($int4, p12_full, $string2) * 12) + 5);
+		$string2, $string1 = ~script632($string1);
+		$int3 = calc(($int3 + (paraheight($int4, p11_full, $string2) * 10)) + 2);
+		cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
+		.cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
+		.cc_create(310:4, ^iftype_text, $int1);
+		$int1 = calc($int1 + 1);
+		.cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
+		.cc_setcolour(0xafafaf);
+		.cc_settextfont(p11_full);
+		.cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+		.cc_settextshadow(true);
+		.cc_settext($string2);
+		$int5 = calc($int5 + 1);
+		$int2 = calc($int2 + $int3);
+		if ($int5 < $int0) {
+			$int2 = calc($int2 + 10);
+		}
+	}
+	if ($int2 > if_getheight(310:4)) {
+		if_setscrollsize(0, $int2, 310:4);
+	} else {
+		if_setscrollsize(0, 0, 310:4);
+	}
+	%varcint49 = $int2;
+	cc_deleteall(310:5);
+	if_setscrollpos(0, 0, 310:4);
+	~scrollbar_vertical(310:5, 310:4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	return;
+}

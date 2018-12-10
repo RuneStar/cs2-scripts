@@ -1,0 +1,35 @@
+[proc,skillmulti_itembutton_draw](int $int0, obj $obj1, component $component2, int $int3, int $int4)
+if_setsize($int3, $int4, ^setsize_abs, ^setsize_abs, $component2);
+cc_deleteall($component2);
+def_int $int5 = 0;
+while ($int5 <= 28) {
+	cc_create($component2, ^iftype_rectangle, $int5);
+	cc_sethide(true);
+	$int5 = calc($int5 + 1);
+}
+if ($int0 = 1) {
+	$int5 = ~script2044($component2, $int5);
+} else {
+	$int5 = ~script2045($component2, $int5);
+}
+def_int $int6 = 0;
+if ($obj1 ! null) {
+	cc_create($component2, ^iftype_model, $int5);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	$int6 = calc(~min($int3, $int4) - 10);
+	cc_setsize($int6, $int6, ^setsize_abs, ^setsize_abs);
+	if ($obj1 = unblessed_symbol_1716) {
+		cc_setmodel(2462);
+		cc_setmodelangle(0, -10, 440, 36, 0, 450);
+	} else {
+		cc_setobject_nonum($obj1, ^int_max);
+	}
+} else {
+	cc_create($component2, ^iftype_graphic, $int5);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject_nonum(hourglass_5610, 1);
+	cc_setoutline(1);
+	cc_setgraphicshadow(0x333333);
+}
+return;

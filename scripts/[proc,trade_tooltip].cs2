@@ -1,0 +1,28 @@
+[proc,trade_tooltip](int $int0, int $int1, component $component2)
+def_string $string0 = "";
+def_string $string1 = ",";
+def_int $int3 = 0;
+if (($int1 >= 0) & ($int0 > 0)) {
+	if (calc(^int_max / $int0) < $int1) {
+		$int3 = ^int_max;
+	} else {
+		$int3 = calc($int0 * $int1);
+	}
+	if ($int0 > 1) {
+		if (($int3 >= 0) & ($int3 < ^int_max)) {
+			$string0 = "<~script46($int0, $string1)> x <~script46($int1, $string1)><br>= <~script46($int3, $string1)>";
+		} else {
+			$string0 = "<~script46($int0, $string1)> x <~script46($int1, $string1)>";
+		}
+		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component2, $string0, 25, 512)");
+		cc_setonmouseleave("deltooltip($component2)");
+	} else {
+		$string0 = ~script46($int1, $string1);
+		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component2, $string0, 25, 512)");
+		cc_setonmouseleave("deltooltip($component2)");
+	}
+} else {
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+}
+return;

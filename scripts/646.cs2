@@ -1,0 +1,11 @@
+script646(int $int0, component $component1, int $int2)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	if (cc_find($component1, $int2) = true) {
+		cc_setgraphic("options_radio_buttons,0");
+	}
+	if_setontimer("script644(event_com, $int2, calc(clientclock + 35))", $component1);
+	return;
+}

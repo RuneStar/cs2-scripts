@@ -1,0 +1,121 @@
+[proc,toplevel_chatbox_background]()
+cc_deleteall(162:2);
+def_boolean $boolean0 = false;
+if (%varcint41 = -1) {
+	if (~script922 = 1) {
+		$boolean0 = true;
+	} else if (getwindowmode = 1) {
+		%varcint41 = 0;
+		~chat_alert_set(0, 0);
+	}
+}
+if_sethide($boolean0, 162:37);
+if ((%varbit6374 = 1) & (getwindowmode ! 1)) {
+	if_setposition(1, 0, ^setpos_abs_right, ^setpos_abs_top, 162:58);
+	if_setposition(-1, 0, ^setpos_abs_left, ^setpos_abs_top, 162:559);
+} else {
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, 162:58);
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, 162:559);
+}
+cc_deleteall(162:38);
+cc_deleteall(162:56);
+def_int $int1 = 0;
+if ((clientclock < %varcint223) & (~toplevel_getcomponents ! 1129)) {
+	$int1 = 1;
+	if_setontimer("script2155(%varcint223)", 162:38);
+} else {
+	if_setontimer(null, 162:38);
+}
+if (~script921 = 0) {
+	if_setnoclickthrough(true, 162:38);
+	if ($int1 = 0) {
+		cc_create(162:38, ^iftype_graphic, 0);
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setgraphic("chat_background");
+		cc_settiling(false);
+		cc_settrans(0);
+		cc_create(162:56, ^iftype_rectangle, 0);
+		cc_setsize(0, 1, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, 15, ^setpos_abs_centre, ^setpos_abs_bottom);
+		cc_setcolour(0x807660);
+		cc_setfill(true);
+	}
+	~script838(162:559, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1", 0);
+	if (~script2373 = 1) {
+		if_settrans(255, 162:3);
+	} else {
+		if_settrans(0, 162:3);
+	}
+	return;
+} else {
+	def_int $int2 = calc(16384 / 25);
+	def_int $int3 = 16384;
+	if (%varbit2570 = 1) {
+		if_setnoclickthrough(true, 162:38);
+	} else {
+		if_setnoclickthrough(false, 162:38);
+		_2006(true, 162:38);
+	}
+	def_int $int4 = 0;
+	if ($int1 = 0) {
+		if (~on_mobile = false) {
+			while ($int4 < 20) {
+				cc_create(162:38, ^iftype_rectangle, $int4);
+				cc_setsize(0, $int3, ^setsize_minus, ^setsize_2);
+				cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+				cc_setcolour(^black);
+				cc_setfill(true);
+				cc_settrans(254);
+				cc_create(162:56, ^iftype_rectangle, calc($int4 * 2));
+				.cc_create(162:56, ^iftype_rectangle, calc(($int4 * 2) + 1));
+				cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
+				.cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
+				cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+				.cc_setposition(0, 15, ^setpos_abs_left, ^setpos_abs_bottom);
+				cc_setcolour(^white);
+				.cc_setcolour(^white);
+				cc_setfill(true);
+				.cc_setfill(true);
+				cc_settrans(251);
+				.cc_settrans(250);
+				$int3 = calc($int3 - $int2);
+				$int4 = calc($int4 + 1);
+			}
+		} else {
+			cc_create(162:38, ^iftype_rectangle, $int4);
+			cc_setsize(0, $int3, ^setsize_minus, ^setsize_2);
+			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+			cc_setcolour(^black);
+			cc_setfill(true);
+			cc_settrans(225);
+			cc_create(162:56, ^iftype_rectangle, calc($int4 * 2));
+			.cc_create(162:56, ^iftype_rectangle, calc(($int4 * 2) + 1));
+			cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
+			.cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
+			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(0, 15, ^setpos_abs_left, ^setpos_abs_bottom);
+			cc_setcolour(^white);
+			.cc_setcolour(^white);
+			cc_setfill(true);
+			.cc_setfill(true);
+			cc_settrans(200);
+			.cc_settrans(130);
+		}
+	}
+	~script838(162:559, 1190, 1187, 1188, 1189, 1185, 1186, 1);
+	if ($boolean0 = true) {
+		if_settrans(255, 162:3);
+	} else if (~on_mobile = false) {
+		if_settrans(155, 162:3);
+	} else {
+		if_settrans(255, 162:3);
+		cc_create(162:2, ^iftype_rectangle, 0);
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setcolour(^black);
+		cc_setfill(true);
+		cc_settrans(225);
+	}
+	return;
+}

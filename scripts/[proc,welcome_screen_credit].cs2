@@ -1,0 +1,25 @@
+[proc,welcome_screen_credit](component $component0)
+def_string $string0 = "";
+def_int $int1 = 0;
+if (%var1780 > 1) {
+	$string0 = "You have <col=00ff00><~script46(%var1780, ",")></col> days of Old School RuneScape membership remaining.";
+} else if (%var1780 = 1) {
+	$string0 = "You have <col=00ff00><~script46(%var1780, ",")></col> day of Old School RuneScape membership remaining.";
+} else if (%varcint103 = 1) {
+	$string0 = "You have no Old School RuneScape membership credit remaining.<br><br><col=ff9040>Subscribe to retain your membership status!</col>";
+} else if (%varcint103 = 0) {
+	$string0 = "You are not a member.<br>Subscribe to access extra skills, areas,<br>quests, and more.";
+} else {
+	$int1 = 1;
+}
+if (((%varcint226 = 0) & (%var1780 <= 3)) & (%varcint103 = 1)) {
+	$string0 = "<$string0><br><br><col=ff9040>Credit low! Renew now to avoid losing your</col><br><col=ff9040>membership status!</col>";
+}
+if ($int1 = 1) {
+	if_setontimer("welcome_screen_credit($component0)", $component0);
+	if_settext("", $component0);
+} else {
+	if_settext($string0, $component0);
+	if_setontimer(null, $component0);
+}
+return;

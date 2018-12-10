@@ -1,0 +1,65 @@
+[clientscript,zeah_favour_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
+def_int $array0(47);
+def_int $int13 = 0;
+def_int $int14 = 0;
+while ($int14 < 47) {
+	$int13 = calc($int14 + 1);
+	$array0($int14) = $int13;
+	$int14 = calc($int14 + 1);
+}
+~zeah_favour_sort(0, 0, calc(47 - 1));
+if (((((%varcint79 ! 3) & (%varcint79 ! 2)) & (%varcint79 ! 4)) & (%varcint79 ! 5)) & (%varcint79 ! 1)) {
+	%varcint79 = 3;
+}
+def_int $int15 = calc(parawidth(512, b12_full, "Favour") + 15);
+cc_deleteall($component8);
+cc_deleteall($component9);
+cc_deleteall($component10);
+cc_deleteall($component11);
+cc_deleteall($component12);
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_int $int25 = 0;
+$int16, $int21 = ~zeah_favour_init_list($int15, $int16, $int21, 3, %varbit4896, $component8);
+$int17, $int22 = ~zeah_favour_init_list($int15, $int17, $int22, 2, %varbit4895, $component9);
+$int18, $int23 = ~zeah_favour_init_list($int15, $int18, $int23, 4, %varbit4898, $component10);
+$int19, $int24 = ~zeah_favour_init_list($int15, $int19, $int24, 5, %varbit4899, $component11);
+$int20, $int25 = ~zeah_favour_init_list($int15, $int20, $int25, 1, %varbit4894, $component12);
+def_int $int26 = 0;
+$int14 = 0;
+while ($int14 < 47) {
+	$int13 = $array0($int14);
+	$int26 = enum(int, int, 1269, $int13);
+	if ($int26 = 3) {
+		$int16, $int21 = ~zeah_favour_add_list($int15, $int16, $int21, %varbit4896, $int13, $int26, $component8);
+	} else if ($int26 = 2) {
+		$int17, $int22 = ~zeah_favour_add_list($int15, $int17, $int22, %varbit4895, $int13, $int26, $component9);
+	} else if ($int26 = 4) {
+		$int18, $int23 = ~zeah_favour_add_list($int15, $int18, $int23, %varbit4898, $int13, $int26, $component10);
+	} else if ($int26 = 5) {
+		$int19, $int24 = ~zeah_favour_add_list($int15, $int19, $int24, %varbit4899, $int13, $int26, $component11);
+	} else if ($int26 = 1) {
+		$int20, $int25 = ~zeah_favour_add_list($int15, $int20, $int25, %varbit4894, $int13, $int26, $component12);
+	}
+	$int14 = calc($int14 + 1);
+}
+if_setsize(0, $int21, ^setsize_minus, ^setsize_abs, $component8);
+if_setsize(0, $int22, ^setsize_minus, ^setsize_abs, $component9);
+if_setsize(0, $int23, ^setsize_minus, ^setsize_abs, $component10);
+if_setsize(0, $int24, ^setsize_minus, ^setsize_abs, $component11);
+if_setsize(0, $int25, ^setsize_minus, ^setsize_abs, $component12);
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~zeah_favour_init_tab(3, $component3, $component2);
+~zeah_favour_init_tab(2, $component4, $component2);
+~zeah_favour_init_tab(4, $component5, $component2);
+~zeah_favour_init_tab(5, $component6, $component2);
+~zeah_favour_init_tab(1, $component7, $component2);
+~zeah_favour_set_tab($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12);
+return;

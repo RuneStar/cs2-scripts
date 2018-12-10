@@ -1,0 +1,65 @@
+[proc,bankmain_quantity_buttons](component $component0, component $component1, component $component2, component $component3, component $component4)
+switch (%varbit6590) {
+	case 0 :
+		~options_button_on($component0, 0);
+		~options_button_off($component1, 0);
+		~options_button_off($component2, 0);
+		~options_button_off($component3, 0);
+		~options_button_off($component4, 0);
+		if_setonop(null, $component0);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 1)", $component1);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 2)", $component2);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 3)", $component3);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 4)", $component4);
+	case 1 :
+		~options_button_off($component0, 0);
+		~options_button_on($component1, 0);
+		~options_button_off($component2, 0);
+		~options_button_off($component3, 0);
+		~options_button_off($component4, 0);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 0)", $component0);
+		if_setonop(null, $component1);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 2)", $component2);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 3)", $component3);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 4)", $component4);
+	case 2 :
+		~options_button_off($component0, 0);
+		~options_button_off($component1, 0);
+		~options_button_on($component2, 0);
+		~options_button_off($component3, 0);
+		~options_button_off($component4, 0);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 0)", $component0);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 1)", $component1);
+		if_setonop(null, $component2);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 3)", $component3);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 4)", $component4);
+	case 3 :
+		~options_button_off($component0, 0);
+		~options_button_off($component1, 0);
+		~options_button_off($component2, 0);
+		~options_button_on($component3, 0);
+		~options_button_off($component4, 0);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 0)", $component0);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 1)", $component1);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 2)", $component2);
+		if_setonop(null, $component3);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 4)", $component4);
+	case 4 :
+		~options_button_off($component0, 0);
+		~options_button_off($component1, 0);
+		~options_button_off($component2, 0);
+		~options_button_off($component3, 0);
+		~options_button_on($component4, 0);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 0)", $component0);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 1)", $component1);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 2)", $component2);
+		if_setonop("bankmain_quantity_op(event_opindex, $component0, $component1, $component2, $component3, $component4, 3)", $component3);
+		if_setonop(null, $component4);
+}
+def_string $string0 = ",";
+if (%varbit3960 > 0) {
+	if_setop(1, "Default quantity: <~script46(%varbit3960, $string0)>", $component3);
+} else {
+	if_setop(1, "", $component3);
+}
+return;

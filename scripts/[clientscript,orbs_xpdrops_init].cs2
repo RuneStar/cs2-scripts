@@ -1,0 +1,5 @@
+[clientscript,orbs_xpdrops_init](component $component0)
+if_setopbase("<col=ff9040>XP drops</col>", $component0);
+~orbs_xpdrops_update($component0);
+if_setonvartransmit("orbs_xpdrops_update(event_com){1055}", $component0);
+return;

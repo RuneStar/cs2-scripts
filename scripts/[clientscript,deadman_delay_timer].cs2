@@ -1,0 +1,15 @@
+[clientscript,deadman_delay_timer](component $component0, int $int1, int $int2, int $int3, string $string0)
+def_int $int4 = calc($int2 - (clientclock - $int1));
+def_int $int5 = calc((49 + $int4) / 50);
+if ($int4 <= 0) {
+	if_setontimer(null, $component0);
+	if ($int3 ! -1) {
+		logout;
+	}
+	if_resume_pausebutton(228:4);
+} else if ($int5 = 1) {
+	if_settext("There is 1 second remaining <$string0>", 228:2);
+} else {
+	if_settext("There are <tostring($int5)> seconds remaining <$string0>", 228:2);
+}
+return;

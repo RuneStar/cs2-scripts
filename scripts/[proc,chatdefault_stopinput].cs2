@@ -1,0 +1,7 @@
+[proc,chatdefault_stopinput]()
+%varcint11 = 1;
+if (if_gethide(162:40) = false) {
+	~meslayer_close(1, 1);
+}
+~chatdefault_setonkey(0);
+return;

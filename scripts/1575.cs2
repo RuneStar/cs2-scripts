@@ -1,0 +1,10 @@
+script1575(int $int0, int $int1, int $int2)
+cc_setontimer("script1576(event_com, event_comid, $int1, $int2)");
+def_int $int3 = calc($int0 / 60);
+$int0 = calc($int0 % 60);
+if ($int0 < 10) {
+	cc_settext("<tostring($int3)>:0<tostring($int0)>");
+} else {
+	cc_settext("<tostring($int3)>:<tostring($int0)>");
+}
+return;

@@ -1,0 +1,73 @@
+script1235(inv $inv0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, int $int20, int $int21, int $int22, int $int23, int $int24, int $int25, int $int26, int $int27, int $int28)
+%varcint81 = $int1;
+%varcint82 = $int2;
+%varcint83 = $int3;
+%varcint84 = $int4;
+%varcint85 = $int5;
+%varcint86 = $int6;
+%varcint87 = $int7;
+%varcint88 = $int8;
+%varcint89 = $int9;
+%varcint90 = $int10;
+%varcint91 = $int11;
+%varcint92 = $int12;
+%varcint93 = $int13;
+%varcint94 = $int14;
+%varcint95 = $int15;
+%varcint96 = $int16;
+%varcint97 = $int17;
+%varcint98 = $int18;
+%varcint99 = $int19;
+%varcint100 = $int20;
+%varcint101 = $int21;
+%varcint102 = $int22;
+%varcint104 = $int23;
+%varcint105 = $int24;
+%varcint106 = $int25;
+%varcint107 = $int26;
+%varcint108 = $int27;
+%varcint109 = $int28;
+def_int $int29 = inv_size($inv0);
+def_int $array0($int29);
+$array0(0) = $int1;
+$array0(1) = $int2;
+$array0(2) = $int3;
+$array0(3) = $int4;
+$array0(4) = $int5;
+$array0(5) = $int6;
+$array0(6) = $int7;
+$array0(7) = $int8;
+$array0(8) = $int9;
+$array0(9) = $int10;
+$array0(10) = $int11;
+$array0(11) = $int12;
+$array0(12) = $int13;
+$array0(13) = $int14;
+$array0(14) = $int15;
+$array0(15) = $int16;
+$array0(16) = $int17;
+$array0(17) = $int18;
+$array0(18) = $int19;
+$array0(19) = $int20;
+$array0(20) = $int21;
+$array0(21) = $int22;
+$array0(22) = $int23;
+$array0(23) = $int24;
+$array0(24) = $int25;
+$array0(25) = $int26;
+$array0(26) = $int27;
+$array0(27) = $int28;
+def_string $string0 = "Invalid item.";
+while ($int29 > 0) {
+	$int29 = calc($int29 - 1);
+	if (cc_find(81:5, $int29) = true) {
+		if ((($inv0 = 93) & ($array0($int29) <= -1)) & (inv_getobj(93, $int29) ! null)) {
+			cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 81:7, $string0, 25, 512)");
+			cc_setonmouseleave("deltooltip(81:7)");
+		} else {
+			~trade_tooltip(inv_getnum($inv0, $int29), $array0($int29), 81:7);
+		}
+	}
+}
+~deltooltip_action(81:7);
+return;

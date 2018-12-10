@@ -1,0 +1,5 @@
+script1200(component $component0, component $component1, component $component2, component $component3, obj $obj4, int $int5, int $int6)
+if ((cc_find($component1, $int5) = true) & (.cc_find($component2, $int6) = true)) {
+	~script1201($component0, $component1, $component2, $component3, $obj4);
+}
+return;

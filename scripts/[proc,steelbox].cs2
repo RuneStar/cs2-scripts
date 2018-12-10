@@ -1,0 +1,19 @@
+[proc,steelbox](component $component0, int $int1)(int)
+def_int $int2 = if_getwidth($component0);
+def_int $int3 = if_getheight($component0);
+~create_graphic($component0, $int1, "steelborder,0", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 25, 30, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "steelborder,1", 0, 0, ^setpos_abs_right, ^setpos_abs_top, 25, 30, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "steelborder,2", 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 25, 30, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "steelborder,3", 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 25, 30, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "miscgraphics,2", -15, 0, ^setpos_abs_left, ^setpos_abs_centre, 36, 60, ^setsize_abs, ^setsize_minus);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "steelborder2,1", -15, 0, ^setpos_abs_right, ^setpos_abs_centre, 36, 60, ^setsize_abs, ^setsize_minus);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "steelborder2,0", 0, -15, ^setpos_abs_centre, ^setpos_abs_top, 50, 36, ^setsize_minus, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "miscgraphics,3", 0, -15, ^setpos_abs_centre, ^setpos_abs_bottom, 50, 36, ^setsize_minus, ^setsize_abs);
+return(calc($int1 + 1));

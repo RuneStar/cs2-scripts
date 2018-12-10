@@ -1,0 +1,10 @@
+[proc,deadman_stats_set_unprotect](component $component0, int $int1)
+~deadmanprotect_stats_refresh($int1);
+if (cc_find($component0, 4) = true) {
+	cc_sethide(false);
+}
+if (cc_find($component0, 5) = true) {
+	cc_sethide(false);
+}
+if_setop(1, "Protect", $component0);
+return;

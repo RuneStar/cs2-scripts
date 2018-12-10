@@ -1,0 +1,17 @@
+script1533(int $int0, string $string0)
+def_int $int1 = 0;
+if ($int0 = 33226765) {
+	$int1 = %varbit5433;
+} else if ($int0 = 33226769) {
+	$int1 = %varbit5426;
+} else if ($int0 = 33226773) {
+	$int1 = %varbit5427;
+}
+if ($int1 > 0) {
+	cc_settext("<$string0>: <col=ffffff><tostring($int1)></col>");
+} else if ($int0 = 33226774) {
+	cc_settext($string0);
+} else {
+	cc_settext("<$string0>: ---");
+}
+return;

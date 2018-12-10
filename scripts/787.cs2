@@ -1,0 +1,120 @@
+script787()
+def_int $int0 = if_getwidth(464:2);
+def_int $int1 = calc($int0 / 5);
+def_int $int2 = calc((($int0 - (5 * $int1)) / 4) + $int1);
+def_int $int3 = calc(32 + 35);
+def_int $int4 = calc(($int1 - 36) / 2);
+cc_deleteall(464:2);
+def_int $int5 = -1;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_obj $obj8 = null;
+def_int $int9 = inv_size(90);
+def_int $array0($int9);
+$array0(0) = %varcint81;
+$array0(1) = %varcint82;
+$array0(2) = %varcint83;
+$array0(3) = %varcint84;
+$array0(4) = %varcint85;
+$array0(5) = %varcint86;
+$array0(6) = %varcint87;
+$array0(7) = %varcint88;
+$array0(8) = %varcint89;
+$array0(9) = %varcint90;
+$array0(10) = %varcint91;
+$array0(11) = %varcint92;
+$array0(12) = %varcint93;
+$array0(13) = %varcint94;
+$array0(14) = %varcint95;
+$array0(15) = %varcint96;
+$array0(16) = %varcint97;
+$array0(17) = %varcint98;
+$array0(18) = %varcint99;
+$array0(19) = %varcint100;
+$array0(20) = %varcint101;
+$array0(21) = %varcint102;
+$array0(22) = %varcint104;
+$array0(23) = %varcint105;
+$array0(24) = %varcint106;
+$array0(25) = %varcint107;
+$array0(26) = %varcint108;
+$array0(27) = %varcint109;
+def_int $int10 = 0;
+while ($int10 < $int9) {
+	cc_create(464:2, ^iftype_graphic, $int10);
+	$obj8 = inv_getobj(90, $int10);
+	if ($obj8 ! null) {
+		$int7 = calc(($int10 / 5) * $int3);
+		$int6 = calc(($int10 % 5) * $int2);
+		$int5 = $int7;
+		cc_sethide(false);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int6 + $int4), $int7, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_setobject($obj8, inv_getnum(90, $int10));
+		cc_setop(1, "Remove");
+		cc_setop(2, "Remove-5");
+		cc_setop(3, "Remove-10");
+		cc_setop(4, "Remove-All");
+		cc_setop(5, "Remove-X");
+		cc_setop(10, "Examine");
+		cc_setopbase("<col=ff9040><oc_name($obj8)></col>");
+		cc_setonop("script487(event_com, event_comid, 100, 0)");
+	} else {
+		cc_sethide(true);
+	}
+	$int10 = calc($int10 + 1);
+}
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_string $string0 = ",";
+def_int $int13 = $int10;
+$int10 = 0;
+while ($int10 < $int9) {
+	$int11 = inv_getnum(90, $int10);
+	$obj8 = inv_getobj(90, $int10);
+	if (($obj8 ! null) & ($int11 > 0)) {
+		$int7 = calc(($int10 / 5) * $int3);
+		$int6 = calc(($int10 % 5) * $int2);
+		cc_create(464:2, ^iftype_text, $int13);
+		$int13 = calc($int13 + 1);
+		cc_sethide(false);
+		cc_setsize($int1, 35, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int6, calc($int7 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour(^white);
+		cc_settextfont(p11_full);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+		if (calc(^int_max / $int11) < $array0($int10)) {
+			$int12 = ^int_max;
+		} else {
+			$int12 = calc($int11 * $array0($int10));
+		}
+		if ($int11 > 1) {
+			if (($int12 >= 0) & ($int12 < ^int_max)) {
+				cc_settext("<~script46($int11, $string0)> x <~script46($array0($int10), $string0)><br>= <~script46($int12, $string0)>");
+			} else {
+				cc_settext("<~script46($int11, $string0)> x <~script46($array0($int10), $string0)>");
+			}
+		} else {
+			cc_settext(~script46($array0($int10), $string0));
+		}
+	}
+	$int10 = calc($int10 + 1);
+}
+def_int $int14 = 0;
+if ($int5 >= 0) {
+	$int14 = calc($int5 + $int3);
+}
+def_int $int15 = if_getscrolly(464:2);
+if ($int15 > $int5) {
+	$int15 = $int5;
+}
+if ($int14 > if_getheight(464:2)) {
+	if_setscrollsize(0, $int14, 464:2);
+} else {
+	if_setscrollsize(0, 0, 464:2);
+}
+~scrollbar_resize(464:3, 464:2, $int15);
+return;

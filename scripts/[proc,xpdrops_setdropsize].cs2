@@ -1,0 +1,35 @@
+[proc,xpdrops_setdropsize](component $component0, int $int1, fontmetrics $fontmetrics2, fontmetrics $fontmetrics3, string $string0)
+def_int $int4 = 0;
+if (string_length($string0) > 0) {
+	$int4 = parawidth(512, $fontmetrics2, $string0);
+}
+def_int $int5 = calc($int1 - 1);
+def_int $int6 = 0;
+def_int $int7 = 1;
+while ($int7 <= 5) {
+	if (.cc_find($component0, $int7) = true) {
+		$int6 = $int7;
+	}
+	$int7 = calc($int7 + 1);
+}
+def_int $int8 = calc((($int5 * $int6) + 3) + $int4);
+if ((~on_mobile = true) | (%varbit4692 = 0)) {
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre, $component0);
+} else if (%varbit4692 = 2) {
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre, $component0);
+} else {
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
+}
+if_setsize($int8, 0, ^setsize_abs, ^setsize_minus, $component0);
+cc_settextfont($fontmetrics3);
+cc_setsize(0, $int1, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, cc_gety, ^setpos_abs_centre, ^setpos_abs_top);
+$int7 = 1;
+while ($int7 <= $int6) {
+	if (.cc_find($component0, $int7) = true) {
+		.cc_setsize($int1, $int1, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(calc(($int7 - 1) * $int5), .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	}
+	$int7 = calc($int7 + 1);
+}
+return;

@@ -1,0 +1,27 @@
+[proc,nzone_rewards_tabs](component $component0, component $component1, component $component2, component $component3, component $component4)
+cc_deleteall($component0);
+def_int $int5 = 0;
+def_int $int6 = 0;
+$int5, $int6 = ~nzone_rewards_tab($component0, $component1, $int5, $int6, $component1, $component2, $component3, $component4, "Resources");
+$int5, $int6 = ~nzone_rewards_tab($component0, $component2, $int5, $int6, $component1, $component2, $component3, $component4, "Upgrades");
+$int5, $int6 = ~nzone_rewards_tab($component0, $component3, $int5, $int6, $component1, $component2, $component3, $component4, "Benefits");
+cc_create($component0, ^iftype_text, $int5);
+cc_setposition($int6, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc(if_getwidth($component0) - $int6), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+~nzone_rewards_setpoints;
+cc_setonvartransmit("nzone_rewards_setpoints(event_com, event_comid){1060}");
+if_sethide(false, $component4);
+if ($component4 ! $component1) {
+	if_sethide(true, $component1);
+}
+if ($component4 ! $component2) {
+	if_sethide(true, $component2);
+}
+if ($component4 ! $component3) {
+	if_sethide(true, $component3);
+}
+return;

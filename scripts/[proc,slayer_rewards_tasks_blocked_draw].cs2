@@ -1,0 +1,90 @@
+[proc,slayer_rewards_tasks_blocked_draw](component $component0, int $int1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7)
+cc_deleteall($component0);
+def_int $int8 = 0;
+def_int $int9 = -1;
+if ($int1 = 1) {
+	$int9 = 3;
+	$int8 = %varbit3209;
+} else if ($int1 = 2) {
+	$int9 = 4;
+	$int8 = %varbit3210;
+} else if ($int1 = 3) {
+	$int9 = 5;
+	$int8 = %varbit3211;
+} else if ($int1 = 4) {
+	$int9 = 6;
+	$int8 = %varbit3212;
+} else if ($int1 = 5) {
+	$int9 = 7;
+	$int8 = %varbit4441;
+} else if ($int1 = 6) {
+	$int9 = 8;
+	$int8 = %varbit5023;
+} else {
+	return;
+}
+$int9 = calc(44 + $int9);
+def_int $int10 = 0;
+cc_create($component0, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(85, 0, ^setsize_abs, ^setsize_minus);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext("Slot <tostring($int1)>:");
+cc_create($component0, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(170, 0, ^setsize_minus, ^setsize_minus);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if ($int8 = 0) {
+	if ($int2 = 0) {
+		if (%varbit4538 = 0) {
+			cc_setcolour(^red);
+			cc_settextfont(p11_full);
+			cc_settext("You must complete the Lumbridge & Draynor<br>elite diary to use this slot.");
+		} else {
+			cc_setcolour(0xff981f);
+			cc_settextfont(p12_full);
+			cc_settext("Empty");
+		}
+	} else if (%var101 < $int2) {
+		cc_setcolour(^red);
+		cc_settextfont(p12_full);
+		cc_settext("You need <tostring($int2)> QP to use this slot.");
+	} else {
+		cc_setcolour(0xff981f);
+		cc_settextfont(p12_full);
+		cc_settext("Empty");
+	}
+} else {
+	cc_setcolour(^white);
+	cc_settextfont(p12_full);
+	cc_settext(enum(int, string, 693, $int8));
+}
+cc_create($component0, ^iftype_graphic, $int10);
+$int10 = calc($int10 + 1);
+.cc_create($component0, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
+.cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setgraphic(812);
+.cc_settextfont(p11_full);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextshadow(true);
+.cc_settext("Unblock task");
+if ($int8 ! 0) {
+	.cc_setcolour(0xff981f);
+	cc_setonmouseover("script85(event_com, .cc_getid, 16777215)");
+	cc_setonmouseleave("script85(event_com, .cc_getid, 16750623)");
+	cc_setop(1, "Unblock");
+	cc_setonop("slayer_rewards_tasks_unblocktask($int8, $int9, $component3, $component4, $component5, $component6, $component7)");
+} else {
+	.cc_setcolour(0x7f4c0f);
+}
+return;

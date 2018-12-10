@@ -1,0 +1,189 @@
+[proc,bankmain_build](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
+if (%varbit5102 = 1) {
+	if_sethide(false, $component10);
+} else {
+	if_sethide(true, $component10);
+	~deltooltip_action($component12);
+}
+if (%varbit5364 = 1) {
+	if_setsize(37, 37, ^setsize_minus, ^setsize_abs, $component5);
+} else {
+	if_setsize(0, 37, ^setsize_minus, ^setsize_abs, $component5);
+}
+if_sethide(true, $component11);
+cc_deleteall($component11);
+def_int $int13 = 0;
+if (%varbit4170 = 3) {
+	if (((((((((%varbit4171 > 0) | (%varbit4172 > 0)) | (%varbit4173 > 0)) | (%varbit4174 > 0)) | (%varbit4175 > 0)) | (%varbit4176 > 0)) | (%varbit4177 > 0)) | (%varbit4178 > 0)) | (%varbit4179 > 0)) {
+		$int13 = 0;
+	} else {
+		$int13 = 1;
+	}
+}
+def_int $int14 = 0;
+if ($int13 = 1) {
+	if_sethide(true, $component9);
+	$int14 = 11;
+	if_setsize(0, 26, ^setsize_minus, ^setsize_minus, $component1);
+	if_setsize(460, 39, ^setsize_abs, ^setsize_minus, $component3);
+	if_setsize(16, 39, ^setsize_abs, ^setsize_minus, $component4);
+	if_setposition(30, 48, ^setpos_abs_right, ^setpos_abs_top, $component2);
+} else {
+	if_sethide(false, $component9);
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component1);
+	if_setsize(460, 81, ^setsize_abs, ^setsize_minus, $component3);
+	if_setsize(16, 81, ^setsize_abs, ^setsize_minus, $component4);
+	if_setposition(12, 42, ^setpos_abs_right, ^setpos_abs_top, $component2);
+}
+~scrollbar_vertical_rebuild($component4, $component3);
+def_int $int15 = 816;
+def_int $int16 = calc(816 + (9 * 3));
+while ($int15 <= $int16) {
+	if (cc_find($component3, $int15) = true) {
+		cc_sethide(true);
+	}
+	$int15 = calc($int15 + 1);
+}
+$int15 = 0;
+def_int $int17 = calc(8 - 1);
+def_int $int18 = calc((if_getwidth($component3) - 51) - 35);
+def_int $int19 = calc(($int18 - (8 * 36)) / $int17);
+def_obj $obj20 = null;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_int $int25 = -1;
+def_int $int26 = 0;
+def_string $string0 = "";
+if ((%varbit4150 <= 0) | (%varbit4150 > 9)) {
+	while ($int15 < 816) {
+		if (cc_find($component3, $int15) = true) {
+			cc_sethide(true);
+		}
+		if (inv_getobj(95, $int15) ! null) {
+			$int25 = $int15;
+			$int24 = calc($int24 + 1);
+		}
+		$int15 = calc($int15 + 1);
+	}
+	$int26 = calc((((((((%varbit4171 + %varbit4172) + %varbit4173) + %varbit4174) + %varbit4175) + %varbit4176) + %varbit4177) + %varbit4178) + %varbit4179);
+	if ($int26 <= 0) {
+		$int25 = calc(816 - 1);
+	}
+	$int23, $int21 = ~script509($int26, calc($int25 + 1), 0, $component3, $component4, $component10, $component11, $component12, $int14, $int19, $int17, $int13);
+	$int22 = calc($int22 + $int21);
+	$int15 = 0;
+	if (%varbit4171 > 0) {
+		$int14 = ~script510(1, $component3, $int23);
+		$int23, $int21 = ~script509($int15, calc($int15 + %varbit4171), 1, $component3, $component4, $component10, $component11, $component12, $int14, $int19, $int17, $int13);
+		$int22 = calc($int22 + $int21);
+		$int15 = calc($int15 + %varbit4171);
+	}
+	if (%varbit4172 > 0) {
+		$int14 = ~script510(2, $component3, $int23);
+		$int23, $int21 = ~script509($int15, calc($int15 + %varbit4172), 2, $component3, $component4, $component10, $component11, $component12, $int14, $int19, $int17, $int13);
+		$int22 = calc($int22 + $int21);
+		$int15 = calc($int15 + %varbit4172);
+	}
+	if (%varbit4173 > 0) {
+		$int14 = ~script510(3, $component3, $int23);
+		$int23, $int21 = ~script509($int15, calc($int15 + %varbit4173), 3, $component3, $component4, $component10, $component11, $component12, $int14, $int19, $int17, $int13);
+		$int22 = calc($int22 + $int21);
+		$int15 = calc($int15 + %varbit4173);
+	}
+	if (%varbit4174 > 0) {
+		$int14 = ~script510(4, $component3, $int23);
+		$int23, $int21 = ~script509($int15, calc($int15 + %varbit4174), 4, $component3, $component4, $component10, $component11, $component12, $int14, $int19, $int17, $int13);
+		$int22 = calc($int22 + $int21);
+		$int15 = calc($int15 + %varbit4174);
+	}
+	if (%varbit4175 > 0) {
+		$int14 = ~script510(5, $component3, $int23);
+		$int23, $int21 = ~script509($int15, calc($int15 + %varbit4175), 5, $component3, $component4, $component10, $component11, $component12, $int14, $int19, $int17, $int13);
+		$int22 = calc($int22 + $int21);
+		$int15 = calc($int15 + %varbit4175);
+	}
+	if (%varbit4176 > 0) {
+		$int14 = ~script510(6, $component3, $int23);
+		$int23, $int21 = ~script509($int15, calc($int15 + %varbit4176), 6, $component3, $component4, $component10, $component11, $component12, $int14, $int19, $int17, $int13);
+		$int22 = calc($int22 + $int21);
+		$int15 = calc($int15 + %varbit4176);
+	}
+	if (%varbit4177 > 0) {
+		$int14 = ~script510(7, $component3, $int23);
+		$int23, $int21 = ~script509($int15, calc($int15 + %varbit4177), 7, $component3, $component4, $component10, $component11, $component12, $int14, $int19, $int17, $int13);
+		$int22 = calc($int22 + $int21);
+		$int15 = calc($int15 + %varbit4177);
+	}
+	if (%varbit4178 > 0) {
+		$int14 = ~script510(8, $component3, $int23);
+		$int23, $int21 = ~script509($int15, calc($int15 + %varbit4178), 8, $component3, $component4, $component10, $component11, $component12, $int14, $int19, $int17, $int13);
+		$int22 = calc($int22 + $int21);
+		$int15 = calc($int15 + %varbit4178);
+	}
+	if (%varbit4179 > 0) {
+		$int14 = ~script510(9, $component3, $int23);
+		$int23, $int21 = ~script509($int15, calc($int15 + %varbit4179), 9, $component3, $component4, $component10, $component11, $component12, $int14, $int19, $int17, $int13);
+		$int22 = calc($int22 + $int21);
+		$int15 = calc($int15 + %varbit4179);
+	}
+	if (~bankmain_searching = 1) {
+		$string0 = ~bankmain_filterstring;
+		if (string_length($string0) > 0) {
+			if_settext("Showing items: <col=ff0000><$string0></col>", $component6);
+			if (%varcint5 = 11) {
+				if_settext("Show items whose names contain the following text: (<tostring($int22)> found)", 162:44);
+			}
+		} else {
+			if_settext("Showing items: <col=ff0000>*</col>", $component6);
+			if (%varcint5 = 11) {
+				if_settext("Show items whose names contain the following text:", 162:44);
+			}
+		}
+	} else {
+		if_settext("The Bank of Gielinor", $component6);
+	}
+	~bankmain_finishbuilding($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $int23, $int24);
+	return;
+} else {
+	if (~bankmain_searching = 1) {
+		~meslayer_close(1, 1);
+	}
+	def_int $int27 = -1;
+	def_int $int28 = -1;
+	$int27, $int28 = ~script513(%varbit4150);
+	def_int $int29 = 0;
+	def_int $int30 = 0;
+	while ($int15 < 816) {
+		if (cc_find($component3, $int15) = true) {
+			$obj20 = inv_getobj(95, $int15);
+			if ($obj20 ! null) {
+				$int24 = calc($int24 + 1);
+			}
+			if (($int15 >= $int27) & ($int15 < $int28)) {
+				cc_sethide(false);
+				~bankmain_drawitem($obj20, inv_getnum(95, $int15), $component3, $component4, $component10, $component11, $component12);
+				$int23 = calc($int30 * 36);
+				cc_setposition(calc(51 + ($int29 * (36 + $int19))), $int23, ^setpos_abs_left, ^setpos_abs_top);
+				$int23 = calc($int23 + 32);
+				if ($int29 < $int17) {
+					$int29 = calc($int29 + 1);
+				} else {
+					$int30 = calc($int30 + 1);
+					$int29 = 0;
+				}
+			} else {
+				cc_sethide(true);
+			}
+		}
+		$int15 = calc($int15 + 1);
+	}
+	if (%varbit4170 = 2) {
+		if_settext("Tab <enum(int, string, 207, %varbit4150)>", $component6);
+	} else {
+		if_settext("Tab <tostring(%varbit4150)>", $component6);
+	}
+	~bankmain_finishbuilding($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $int23, $int24);
+	return;
+}

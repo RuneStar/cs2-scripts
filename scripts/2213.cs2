@@ -1,0 +1,33 @@
+script2213()
+if (%varbit6281 = 1) {
+	if_setgraphic("miscgraphics,9", 12:55);
+	if_setgraphic("miscgraphics,0", 12:58);
+	if_setgraphic("miscgraphics,0", 12:60);
+	if_setgraphic("miscgraphics,0", 12:62);
+	if_setgraphic("miscgraphics,0", 12:64);
+} else if (%varbit6281 = 2) {
+	if_setgraphic("miscgraphics,0", 12:55);
+	if_setgraphic("miscgraphics,9", 12:58);
+	if_setgraphic("miscgraphics,0", 12:60);
+	if_setgraphic("miscgraphics,0", 12:62);
+	if_setgraphic("miscgraphics,0", 12:64);
+} else if (%varbit6281 = 3) {
+	if_setgraphic("miscgraphics,0", 12:55);
+	if_setgraphic("miscgraphics,0", 12:58);
+	if_setgraphic("miscgraphics,9", 12:60);
+	if_setgraphic("miscgraphics,0", 12:62);
+	if_setgraphic("miscgraphics,0", 12:64);
+} else if (%varbit6281 = 4) {
+	if_setgraphic("miscgraphics,0", 12:55);
+	if_setgraphic("miscgraphics,0", 12:58);
+	if_setgraphic("miscgraphics,0", 12:60);
+	if_setgraphic("miscgraphics,9", 12:62);
+	if_setgraphic("miscgraphics,0", 12:64);
+} else {
+	if_setgraphic("miscgraphics,0", 12:55);
+	if_setgraphic("miscgraphics,0", 12:58);
+	if_setgraphic("miscgraphics,0", 12:60);
+	if_setgraphic("miscgraphics,0", 12:62);
+	if_setgraphic("miscgraphics,9", 12:64);
+}
+return;

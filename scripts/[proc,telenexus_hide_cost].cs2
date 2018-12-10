@@ -1,0 +1,7 @@
+[proc,telenexus_hide_cost](component $component0, component $component1, int $int2)
+if_sethide(true, $component0);
+%varcint227 = -1;
+if (cc_find($component1, $int2) = true) {
+	cc_sethide(true);
+}
+return;

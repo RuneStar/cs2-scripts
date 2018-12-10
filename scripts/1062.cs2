@@ -1,0 +1,25 @@
+script1062(component $component0, int $int1, string $string0)
+def_int $int2 = 0;
+def_obj $obj3 = null;
+$int2, $obj3 = ~script1064($int1);
+def_int $colour4 = 0x7f2000;
+if ($int2 > 0) {
+	$colour4 = 0x20df20;
+}
+if ($int1 = 6797) {
+	if ($obj3 = null) {
+		$obj3 = watering_can_6797;
+	}
+	$string0 = oc_name($obj3);
+}
+if ((cc_find($component0, 0) = true) & (.cc_find($component0, 1) = true)) {
+	cc_settext($string0);
+	cc_setcolour($colour4);
+	.cc_setcolour($colour4);
+	.cc_settext(~magic_tostring($int2));
+}
+if (cc_find($component0, 2) = true) {
+	cc_setobject_nonum($obj3, $int2);
+}
+if_setopbase("<col=ff9040><oc_name($obj3)></col>", $component0);
+return;

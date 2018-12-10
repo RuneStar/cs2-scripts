@@ -1,0 +1,6 @@
+[proc,slayer_rewards_unlock_desc](int $int0)(string)
+def_string $string0 = enum(int, string, 835, $int0);
+if (%varbit5037 = 1) {
+	$string0 = ~script1299($string0, "Nieve", "Steve");
+}
+return($string0);

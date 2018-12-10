@@ -1,0 +1,47 @@
+[proc,chatalerts](int $int0)
+def_int $int1 = %varcint57;
+%varcint57 = clientclock;
+if (%varcint41 = 0) {
+	return;
+} else {
+	def_int $int2 = 0;
+	if (%varcint41 = -1) {
+		$int2 = 1;
+	}
+	def_int $int3 = 0;
+	def_int $int4 = -1;
+	def_string $string0 = "";
+	def_string $string1 = "";
+	def_string $string2 = "";
+	def_int $int5 = 0;
+	def_boolean $boolean6 = ~on_mobile;
+	while ($int0 ! -1) {
+		$int3, $int4, $int5, $string0, $string1, $string2 = chat_gethistory_byuid($int0);
+		if ($int4 <= $int1) {
+			return;
+		} else {
+			if ((~filtertest($int3, $int4, $int2, $int5, $string0, $string2, removetags(chat_playername)) = 1) & (~script210($int3, $int5, $string0) = 0)) {
+				switch ($int3) {
+					case 1, 2 :
+						~chat_alert_enable(2);
+					case 3, 6, 7 :
+						~chat_alert_enable(3);
+					case 5 :
+						if ($boolean6 = false) {
+							~chat_alert_enable(3);
+						}
+					case 101, 102, 103 :
+						~chat_alert_enable(5);
+					case 9, 11, 104 :
+						~chat_alert_enable(4);
+					else :
+						if (enum(int, boolean, 892, $int3) = true) {
+							~chat_alert_enable(1);
+						}
+				}
+			}
+			$int0 = chat_getprevuid($int0);
+		}
+	}
+	return;
+}

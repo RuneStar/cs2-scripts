@@ -1,0 +1,42 @@
+[clientscript,meslayer_onkey](int $int0, char $char1, string $string0)
+if (~script1701(-1, 162) = 0) {
+	return;
+} else if ($int0 = 84) {
+	if ((%varcint56 = 1) & (string_length(%varcstring22) <= 0)) {
+		if (%varcint5 = 8) {
+			%varcstring22 = %varcstring128;
+			~script222($string0);
+		} else if (%varcint5 = 10) {
+			%varcstring22 = %varcstring129;
+			~script222($string0);
+		}
+	}
+	~meslayer_enter;
+	return;
+} else {
+	switch (%varcint5) {
+		case 7, 16 :
+			%varcstring22 = ~script74(1, $int0, $char1, %varcstring22);
+		case 6, 9, 11 :
+			%varcstring22 = ~script74(0, $int0, $char1, %varcstring22);
+		case 12 :
+			%varcstring22 = ~script74(3, $int0, $char1, %varcstring22);
+			~script549;
+		case 13 :
+			%varcstring22 = ~script74(0, $int0, $char1, %varcstring22);
+			~script551;
+		case 14 :
+			if ($int0 = 13) {
+				resume_objdialog(-1);
+				sound_synth(2266, 1, 0);
+				~meslayer_close(1, 1);
+				return;
+			} else {
+				%varcstring22 = ~script74(4, $int0, $char1, %varcstring22);
+			}
+		else :
+			%varcstring22 = ~script74(2, $int0, $char1, %varcstring22);
+	}
+	~script222($string0);
+	return;
+}

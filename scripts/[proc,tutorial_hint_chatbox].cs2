@@ -1,0 +1,10 @@
+[proc,tutorial_hint_chatbox]()
+def_string $string0 = "bottom";
+if (~on_mobile = true) {
+	$string0 = "top";
+}
+if_settext("Follow the instructions in the <col=ffffff>chatbox<col=ff981f>", 614:10);
+if_settext("to complete the tutorial.", 614:11);
+if_settext("The <col=ffffff>chatbox<col=ff981f> can be found at the", 614:12);
+if_settext("<col=ffffff><$string0><col=ff981f> of the screen.", 614:13);
+return;

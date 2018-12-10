@@ -1,0 +1,26 @@
+[proc,quicksort_componentenum](int $int0, int $int1, int $int2, enum $enum3)
+def_int $int4 = calc(($int1 + $int2) / 2);
+def_component $component5 = $array0($int4);
+$array0($int4) = $array0($int2);
+$array0($int2) = $component5;
+def_int $int6 = $int1;
+def_int $int7 = $int1;
+def_int $int8 = -1;
+while ($int7 < $int2) {
+	if (compare(lowercase(enum(component, string, $enum3, $array0($int7))), lowercase(enum(component, string, $enum3, $component5))) <= 0) {
+		$int8 = $array0($int7);
+		$array0($int7) = $array0($int6);
+		$array0($int6) = $int8;
+		$int6 = calc($int6 + 1);
+	}
+	$int7 = calc($int7 + 1);
+}
+$array0($int2) = $array0($int6);
+$array0($int6) = $component5;
+if ($int1 < calc($int6 - 1)) {
+	~quicksort_componentenum(0, $int1, calc($int6 - 1), $enum3);
+}
+if (calc($int6 + 1) < $int2) {
+	~quicksort_componentenum(0, calc($int6 + 1), $int2, $enum3);
+}
+return;

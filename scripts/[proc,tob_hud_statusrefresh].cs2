@@ -1,0 +1,49 @@
+[proc,tob_hud_statusrefresh](int $int0, int $int1, component $component2, component $component3, component $component4, string $string0)
+def_int $int5 = 0;
+if (($int1 ! 0) & (cc_find($component2, 0) = true)) {
+	if_sethide(false, $component2);
+	if ((string_length($string0) <= 0) | (compare($string0, "null") = 0)) {
+		$string0 = "-";
+	}
+	if ($int0 = calc(%varbit6441 - 1)) {
+		cc_settext("Me");
+		$int5 = 1;
+	} else {
+		cc_settext(substring($string0, 0, 1));
+	}
+	if_setonmouserepeat("tooltip_mouserepeat($component2, -1, $component4, $string0, 25, 512)", $component2);
+	if_setonmouseleave("deltooltip($component4)", $component2);
+	if ($int1 = 31) {
+		if (.cc_find($component3, 0) = true) {
+			.cc_setgraphic(1062);
+		}
+		cc_setcolour(0x7f0000);
+		if_setsize(26, 26, ^setsize_abs, ^setsize_abs, $component3);
+		if_setonstattransmit(null, $component2);
+	} else {
+		if (.cc_find($component3, 0) = true) {
+			.cc_setgraphic(1060);
+		}
+		if ($int1 = 30) {
+			cc_setcolour(^red);
+			if_setsize(26, 0, ^setsize_abs, ^setsize_abs, $component3);
+			if_setonstattransmit(null, $component2);
+		} else {
+			cc_setcolour(^white);
+			if ($int5 = 1) {
+				~script2300($component3);
+				if_setonstattransmit("script2299($component3){hitpoints}", $component2);
+			} else {
+				if_setsize(26, ~min(26, calc($int1 - 1)), ^setsize_abs, ^setsize_abs, $component3);
+				if_setonstattransmit(null, $component2);
+			}
+		}
+	}
+} else {
+	if_sethide(true, $component2);
+	if_setonstattransmit(null, $component2);
+	if_setonmouserepeat(null, $component2);
+	if_setonmouseleave(null, $component2);
+	~deltooltip_action($component4);
+}
+return;

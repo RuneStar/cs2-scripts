@@ -1,0 +1,9 @@
+[clientscript,grouping_joinchannel](int $int0)
+if (string_length(clan_getchatownername) > 0) {
+	clan_leavechat;
+}
+def_string $string0 = enum(int, string, 849, $int0);
+if (string_length($string0) > 0) {
+	clan_joinchat($string0);
+}
+return;

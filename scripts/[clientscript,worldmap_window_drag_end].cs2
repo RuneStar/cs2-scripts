@@ -1,0 +1,11 @@
+[clientscript,worldmap_window_drag_end](int $int0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, int $int9)
+if (clientclock < $int0) {
+	return;
+} else {
+	%varcint194 = $int4;
+	%varcint193 = $int3;
+	%varcint192 = $int2;
+	%varcint191 = $int1;
+	~worldmap_window_set($component5, $component6, $component7, $component8, $int9);
+	return;
+}

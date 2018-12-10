@@ -1,0 +1,16 @@
+script664(int $int0)
+def_int $int1 = clientclock;
+def_int $int2 = -1;
+if ((($int0 = 1) | ($int1 = %varcint65)) | (calc($int1 % 25) = 0)) {
+	$int2 = ~script553;
+	if ($int1 = %varcint65) {
+		~rebuildchatbox($int2);
+	}
+	~rebuildpmbox($int2);
+	if (((%varcint65 > $int1) | (reboottimer > 0)) | (%varcint55 > calc($int1 - 3000))) {
+		if_setontimer("script664(false)", 162:0);
+	} else {
+		if_setontimer(null, 162:0);
+	}
+}
+return;

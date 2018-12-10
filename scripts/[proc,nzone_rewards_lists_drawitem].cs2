@@ -1,0 +1,23 @@
+[proc,nzone_rewards_lists_drawitem](obj $obj0)
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+.cc_setsize(36, 15, ^setsize_abs, ^setsize_abs);
+cc_setobject(oc_uncert($obj0), 1);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_setop(1, "Buy-1");
+cc_setop(2, "Buy-5");
+cc_setop(3, "Buy-10");
+if (~script2082 = 0) {
+	cc_setop(4, "Buy-50");
+}
+cc_setop(5, "Buy-X");
+cc_setop(10, "Examine");
+cc_setopbase("<col=ff9040><oc_name($obj0)>");
+cc_setonmouseover("cc_settrans(event_com, event_comid, 50, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comid, 0, null)");
+.cc_settextfont(p11_full);
+.cc_setcolour(0xff981f);
+.cc_settextshadow(true);
+.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+.cc_settext(~nzone_rewards_price($obj0));
+return;

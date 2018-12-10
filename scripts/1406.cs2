@@ -1,0 +1,82 @@
+script1406(int $int0, int $int1)
+if ($int0 > 31) {
+	$int0 = 31;
+}
+cc_deleteall(458:2);
+cc_create(458:2, ^iftype_rectangle, 0);
+cc_sethide(true);
+def_int $array0(calc($int0 + 1));
+def_int $int2 = 1;
+while ($int2 <= $int0) {
+	$array0($int2) = $int2;
+	cc_create(458:2, ^iftype_rectangle, $int2);
+	cc_sethide(true);
+	$int2 = calc($int2 + 1);
+}
+~script1407(0, 1, $int0);
+def_int $int3 = ^int_max;
+def_int $int4 = 0;
+def_int $int5 = 4;
+if ($int0 <= 3) {
+	$int5 = 18;
+	$int4 = 36;
+	cc_deleteall(458:3);
+	cc_create(458:3, ^iftype_text, 0);
+	cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	cc_settext("Select a piece of furniture to build.");
+} else if ($int0 <= 8) {
+	$int3 = 5;
+} else {
+	$int3 = calc((($int0 / 2) + ($int0 % 2)) + 1);
+}
+def_component $component6 = null;
+def_int $int7 = $int4;
+$int2 = 1;
+while (($int2 <= $int0) & ($int2 < $int3)) {
+	$component6 = enum(int, component, 1461, $array0($int2));
+	if_sethide(false, $component6);
+	if_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top, $component6);
+	if ($int1 = 0) {
+		~script1631($int2, $array0($int2), $component6);
+	}
+	$int2 = calc($int2 + 1);
+	$int7 = calc(($int7 + if_getheight($component6)) + $int5);
+}
+if ($int2 > 1) {
+	$int7 = calc($int7 - $int5);
+}
+if_setscrollpos(0, 0, 458:3);
+if ($int7 > if_getheight(458:3)) {
+	if_setscrollsize(0, $int7, 458:3);
+} else {
+	if_setscrollsize(0, 0, 458:3);
+	%varcint58 = 0;
+}
+~scrollbar_vertical(458:35, 458:3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (cc_find(458:35, 1) = true) {
+	~scrollbar_vertical_doscroll(458:35, 458:3, %varcint58, 1);
+}
+$int7 = $int4;
+while ($int2 <= $int0) {
+	$component6 = enum(int, component, 1461, $array0($int2));
+	if_sethide(false, $component6);
+	if_setposition(0, $int7, ^setpos_abs_right, ^setpos_abs_top, $component6);
+	if ($int1 = 0) {
+		~script1631($int2, $array0($int2), $component6);
+	}
+	$int2 = calc($int2 + 1);
+	$int7 = calc(($int7 + if_getheight($component6)) + $int5);
+}
+while ($int2 <= 31) {
+	if_sethide(true, enum(int, component, 1461, $int2));
+	$int2 = calc($int2 + 1);
+}
+if ($int1 = 0) {
+	~chatdefault_stopinput;
+}
+return;

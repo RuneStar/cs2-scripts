@@ -1,0 +1,12 @@
+[clientscript,grouping_init](component $component0)
+~scrollbar_vertical(76:18, 76:17, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical(76:24, 76:23, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setonfriendtransmit("grouping_rebuild()", $component0);
+if_setonclantransmit("grouping_rebuild()", $component0);
+~grouping_rebuild;
+if (~on_mobile = true) {
+	if_sethide(true, 76:4);
+	if_setsize(0, if_getheight(76:1), ^setsize_minus, ^setsize_abs, 76:1);
+	if_sethide(false, 76:3);
+}
+return;

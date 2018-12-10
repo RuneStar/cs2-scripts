@@ -1,0 +1,65 @@
+[clientscript,toplevel_init](component $component0, enum $enum1)
+if_setonsubchange("toplevel_subchange(event_com, $enum1)", $component0);
+if_setonresize("toplevel_resize(event_com, $enum1)", $component0);
+if_setonvartransmit("toplevel_vartransmit(event_com, $enum1){1021, 1055, 1734, 1431, 1227, 439}", $component0);
+def_int $int2 = 0;
+def_component $component3 = enum(int, component, 1138, $int2);
+while ($component3 ! null) {
+	$component3 = enum(component, component, $enum1, $component3);
+	if ($component3 ! null) {
+		if_setop(1, enum(int, string, 1141, $int2), $component3);
+		if_setonop("toplevel_sidebutton_op(event_opindex, $enum1, $int2)", $component3);
+	}
+	$int2 = calc($int2 + 1);
+	$component3 = enum(int, component, 1138, $int2);
+}
+if ((%varcint171 <= 0) & (enum(enum, boolean, 1134, $enum1) = false)) {
+	%varcint171 = 3;
+}
+%varcint173 = -1;
+%varcint172 = -1;
+$component3 = enum(component, component, $enum1, 161:26);
+if ($component3 ! null) {
+	cc_deleteall($component3);
+	cc_create($component3, ^iftype_text, 0);
+	.cc_create($component3, ^iftype_text, 1);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setnoclickthrough(true);
+	cc_setonclick("opsound(0, 0)");
+	.cc_setop(1, "Look North");
+	.cc_setonop("toplevel_compass_op(event_opindex)");
+}
+~script1044;
+if ($enum1 = 139) {
+	_3118(false);
+	_3125(false);
+	_3126(false);
+	_3130(299, -1);
+	_3131(0);
+} else if ($enum1 = 1745) {
+	_3118(true);
+	_3125(true);
+	_3126(true);
+	_3130(1625, 1);
+	_3131(1);
+	~script1490(601:6);
+	~script1490(601:12);
+	~script2249(601:10, setbit(0, 3));
+	~script868(601:28);
+	~script957(601:29);
+} else {
+	_3118(true);
+	_3125(true);
+	_3126(true);
+	_3130(299, -1);
+	_3131(0);
+}
+~script2345;
+~account_update_display;
+~toplevel_redraw($component0, $enum1);
+~toplevel_subchange($component0, $enum1);
+~toplevel_sidebutton_switch(%varcint171, $enum1);
+return;

@@ -1,0 +1,17 @@
+script2389()
+switch (%varbit6255) {
+	case 1 :
+		if_setgraphic(1717, 601:32);
+	case 2 :
+		if_setgraphic(1718, 601:32);
+	case 3 :
+		if_setgraphic(1716, 601:32);
+	else :
+		if_setgraphic(1715, 601:32);
+}
+if ((%varbit6255 ! 3) & (%varbit6256 = 0)) {
+	if_settrans(155, 601:32);
+} else {
+	if_settrans(0, 601:32);
+}
+return;

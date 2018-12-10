@@ -1,0 +1,19 @@
+[clientscript,duel_stake_inv_cash](component $component0)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setobject_always_num(platinum_token_13204, inv_total(93, platinum_token_13204));
+cc_setonmouseover("cc_outline_on($component0, 0)");
+cc_setonmouseleave("cc_outline_off($component0, 0)");
+cc_setop(1, "Examine");
+cc_setonop("duel_stake_inv_details(platinum_token_13204)");
+cc_create($component0, ^iftype_graphic, 1);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setobject_always_num(coins_995, inv_total(93, coins_995));
+cc_setonmouseover("cc_outline_on($component0, 1)");
+cc_setonmouseleave("cc_outline_off($component0, 1)");
+cc_setop(1, "Examine");
+cc_setonop("duel_stake_inv_details(coins_995)");
+return;

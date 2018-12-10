@@ -1,0 +1,16 @@
+[clientscript,meslayer_mode9](int $int0, string $string0)
+~meslayer_open;
+if_settext($string0, 162:44);
+if ($int0 = 2) {
+	%varcint5 = 15;
+} else {
+	%varcint5 = 9;
+}
+~script222("");
+def_string $string1 = "";
+if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string1)", 162:45);
+if_setondialogabort("meslayer_ondialogabort()", 162:45);
+if (~on_mobile = true) {
+	~script1983(0, 80);
+}
+return;

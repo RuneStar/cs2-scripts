@@ -1,0 +1,24 @@
+[proc,decant_button](component $component0, int $int1, obj $obj2, string $string0, string $string1)
+def_int $int3 = 0;
+if ($int1 = 1) {
+	$int3 = ~script2044($component0, $int3);
+} else {
+	$int3 = ~script2045($component0, $int3);
+}
+if_setonmouseover("decant_mouseover($component0, true, $obj2, $string0, $string1)", $component0);
+if_setonmouseleave("decant_mouseover($component0, false, $obj2, $string0, $string1)", $component0);
+cc_create($component0, ^iftype_model, $int3);
+cc_setposition(0, -2, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(50, 44, ^setsize_abs, ^setsize_abs);
+cc_setobject_nonum($obj2, ^int_max);
+$int3 = calc($int3 + 1);
+cc_create($component0, ^iftype_text, $int3);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setsize(0, 16, ^setsize_minus, ^setsize_abs);
+cc_settextfont(b12_full);
+cc_setcolour(0x46320a);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(false);
+cc_settext($string0);
+if_setonkey("decant_itembutton_key($component0, event_keypressed, event_keytyped, $string1, $obj2, $string0)", $component0);
+return;

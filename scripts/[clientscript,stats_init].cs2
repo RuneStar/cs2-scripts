@@ -1,0 +1,57 @@
+[clientscript,stats_init](component $component0, component $component1, int $int2, int $int3)
+def_string $string0 = enum(int, string, 108, $int2);
+def_stat $stat4 = enum(int, stat, 681, $int2);
+def_boolean $boolean5 = enum(stat, boolean, 1497, $stat4);
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,4");
+cc_create($component0, ^iftype_graphic, 1);
+cc_setposition(28, -2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,5");
+cc_create($component0, ^iftype_graphic, 2);
+cc_setposition(calc(3 + $int3), 4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+cc_setgraphic(enum(stat, graphic, 255, $stat4));
+cc_create($component0, ^iftype_text, 3);
+.cc_create($component0, ^iftype_text, 4);
+cc_setposition(32, 4, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(44, 16, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(15, 12, ^setsize_abs, ^setsize_abs);
+.cc_setsize(15, 12, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^yellow);
+.cc_setcolour(^yellow);
+cc_settextfont(p11_full);
+.cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settextshadow(true);
+.cc_settextshadow(true);
+if_clearops($component0);
+if_setop(2, "View <col=ff981f><$string0></col> guide", $component0);
+if (~on_mobile = true) {
+	if_setop(1, "Toggle <col=ff981f><$string0></col> XP", $component0);
+} else {
+	if_setop(1, "", $component0);
+	if_setonmouseleave("deltooltip($component1)", $component0);
+}
+if_setonstattransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .cc_getid, $component1){$stat4, attack, strength, defence, ranged, magic}", $component0);
+if_setonvartransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .cc_getid, $component1){427, 1588, 1437, 1438, 1439, 1436, 1435, 1440, 1453, 1447, 1452, 1443, 1449, 1441, 1442, 1444, 1450, 1457, 1445, 1446, 1454, 1455, 1456, 1451, 1448}", $component0);
+~stats_setlevels($stat4, $component0, $component1, $string0);
+if ((($boolean5 = false) | (map_members = true)) | (%varcint103 = 1)) {
+	return;
+} else {
+	cc_create($component0, ^iftype_graphic, 6);
+	cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("miscgraphics,4");
+	cc_settrans(90);
+	cc_create($component0, ^iftype_graphic, 7);
+	cc_setposition(28, -2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic("miscgraphics,6");
+	cc_settrans(90);
+	return;
+}

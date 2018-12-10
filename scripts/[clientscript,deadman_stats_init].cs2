@@ -1,0 +1,54 @@
+[clientscript,deadman_stats_init](component $component0, int $int1, int $int2)
+def_string $string0 = enum(int, string, 108, $int1);
+def_stat $stat3 = enum(int, stat, 681, $int1);
+if_setop(1, "Protect", $component0);
+if_setopbase($string0, $component0);
+if_setonop("deadman_stats_click(event_opindex, $component0, $int1)", $component0);
+if_setonvartransmit("deadman_stats_vartransmit($component0, $int1){1295}", $component0);
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,4");
+cc_create($component0, ^iftype_graphic, 1);
+cc_setposition(28, -2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,6");
+cc_create($component0, ^iftype_graphic, 2);
+cc_setposition(calc(3 + $int2), 4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+cc_setgraphic(enum(stat, graphic, 255, $stat3));
+cc_create($component0, ^iftype_text, 3);
+cc_setposition(30, 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(32, 12, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^yellow);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settextshadow(true);
+cc_create($component0, ^iftype_graphic, 4);
+cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,7");
+cc_settrans(128);
+cc_create($component0, ^iftype_graphic, 5);
+cc_setposition(28, -2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,8");
+cc_settrans(128);
+cc_create($component0, ^iftype_text, 6);
+cc_setposition(30, 13, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(32, 16, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^yellow);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settextshadow(true);
+cc_create($component0, ^iftype_rectangle, 7);
+cc_setposition(38, 7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(17, 2, ^setsize_abs, ^setsize_abs);
+cc_setcolour(^red);
+if (testbit(%var1295, calc($int1 - 1)) = true) {
+	~deadman_stats_set_protect($component0, $int1);
+} else {
+	~deadman_stats_set_unprotect($component0, $int1);
+}
+return;

@@ -1,0 +1,62 @@
+script576(enum $enum0, component $component1, component $component2, component $component3, component $component4, component $component5)
+def_enum $enum6 = enum(enum, enum, 373, $enum0);
+cc_deleteall($component1);
+cc_deleteall($component3);
+if ($component4 ! null) {
+	cc_deleteall($component4);
+}
+~script577($component2, $component3, enum(int, string, $enum0, -1));
+def_int $int7 = if_getwidth($component3);
+def_int $int8 = if_getheight($component3);
+def_int $int9 = ~tournament_world;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_string $string0 = enum(int, string, $enum0, $int11);
+while (string_length($string0) > 0) {
+	cc_create($component3, ^iftype_rectangle, calc($int11 * 3));
+	cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int7, 17, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	cc_settrans(255);
+	cc_setonmouseover("cc_settrans(event_com, event_comid, 220, null)");
+	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component5, enum(int, string, $enum6, $int11), 25, 512)");
+	cc_setonmouseleave("clanwars_setup_mouseleave(event_com, event_comid, $component5)");
+	cc_setop(1, $string0);
+	cc_create($component3, ^iftype_graphic, calc(($int11 * 3) + 1));
+	cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+	cc_create($component3, ^iftype_text, calc(($int11 * 3) + 2));
+	cc_setposition(17, calc($int10 + 1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int7 - 17), 16, ^setsize_abs, ^setsize_abs);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	if (($enum0 = 929) & (map_members = false)) {
+		if (enum(int, boolean, 935, $int11) = true) {
+			cc_settext("<str><$string0></str>");
+		} else {
+			cc_settext($string0);
+		}
+	} else {
+		cc_settext($string0);
+	}
+	$int10 = calc($int10 + 17);
+	$int11 = calc($int11 + 1);
+	$string0 = enum(int, string, $enum0, $int11);
+	if ((($int9 = 0) & ($enum0 = 929)) & ($int10 >= calc(12 * 17))) {
+		$string0 = "";
+	}
+}
+if_setscrollpos(0, 0, $component3);
+if ($component4 ! null) {
+	if ($int10 > $int8) {
+		if_setscrollsize(0, $int10, $component3);
+	} else {
+		if_setscrollsize(0, 0, $component3);
+	}
+	~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+}
+~script581($enum0, $component1, $component3, $component4, $int11);
+if_setonvartransmit("script580($enum0, $component1, $component3, $component4, $int11){92}", $component1);
+return;

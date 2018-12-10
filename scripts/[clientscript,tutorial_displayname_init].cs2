@@ -1,0 +1,5 @@
+[clientscript,tutorial_displayname_init](component $component0, component $component1, component $component2)
+~chatdefault_stopinput;
+~tutorial_displayname_buttons($component1, $component2);
+if_setonvartransmit("tutorial_displayname_buttons($component1, $component2){1042}", $component0);
+return;

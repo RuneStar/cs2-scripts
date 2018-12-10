@@ -1,0 +1,8 @@
+[clientscript,snapshot_ignore](component $component0)
+if (%varcint140 = 1) {
+	%varcint140 = 0;
+} else {
+	%varcint140 = 1;
+}
+~snapshot_toggle($component0, %varcint140);
+return;

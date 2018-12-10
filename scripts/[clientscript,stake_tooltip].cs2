@@ -1,0 +1,4 @@
+[clientscript,stake_tooltip](component $component0, string $string0)
+if_setonmouserepeat("addtooltip($component0, 481:83, $string0, 50, 300)", $component0);
+if_setonmouseleave("deltooltip(481:83)", $component0);
+return;

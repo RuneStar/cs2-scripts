@@ -1,0 +1,21 @@
+[proc,hp_hud_update](component $component0, component $component1, component $component2, component $component3)
+def_string $string0 = nc_param(%var1683, 510);
+if (compare($string0, "") = 0) {
+	if_sethide(true, $component2);
+} else {
+	if_sethide(false, $component2);
+	if_settext($string0, $component3);
+	if_setsize(~max(80, calc(parawidth(512, p11_full, $string0) + 15)), if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
+}
+def_string $string1 = "<tostring(%varbit6099)> / <tostring(%varbit6100)>";
+if_settext($string1, $component0);
+def_int $int4 = if_getwidth(303:8);
+$int4 = scale(%varbit6099, %varbit6100, $int4);
+if (($int4 = 0) & (%varbit6099 > 0)) {
+	$int4 = 1;
+}
+if (($int4 = if_getwidth(303:8)) & (%varbit6099 < %varbit6100)) {
+	$int4 = calc($int4 - 1);
+}
+if_setsize($int4, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
+return;

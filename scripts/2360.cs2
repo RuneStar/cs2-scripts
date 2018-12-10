@@ -1,0 +1,26 @@
+script2360(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, struct $struct8, int $int9, int $int10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
+if ($int9 ! 1245221) {
+	return;
+} else {
+	def_int $int17 = ~telenexus_slots_full;
+	def_int $int18 = 0;
+	def_string $string0 = "";
+	$string0, $int18 = ~script2664($struct8);
+	if ($int18 = 0) {
+		return;
+	} else if ((%varbit6670 = 1) & ($int17 >= 4)) {
+		return;
+	} else if ((%varbit6670 = 2) & ($int17 >= 8)) {
+		return;
+	} else {
+		def_int $int19 = ~script2665($int10);
+		if ($int19 = -1) {
+			return;
+		} else {
+			$int19 = calc($int19 + 1);
+			~script2271($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component11, $component12, $component13, $component14, $component15, $component16, 0);
+			~script2273(if_getlayer($component15), $component11, $component12, $component13, $component14, $component15, $component16, 1);
+			return;
+		}
+	}
+}

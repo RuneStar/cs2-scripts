@@ -1,0 +1,68 @@
+[clientscript,worldmap_window_drag_preview](int $int0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, int $int9)
+def_int $int10 = %varcint191;
+def_int $int11 = %varcint192;
+def_int $int12 = %varcint193;
+def_int $int13 = %varcint194;
+def_int $int14 = 0;
+def_int $int15 = if_getwidth($component5);
+def_int $int16 = if_getheight($component5);
+if (cc_find($component5, $int0) = true) {
+	cc_setgraphic(null);
+	switch ($int0) {
+		case 0 :
+			$int13 = calc($int13 + ($int2 - $int4));
+			$int12 = calc($int12 + ($int1 - $int3));
+		case 1 :
+			$int11 = calc($int11 - ($int2 - $int4));
+		case 2 :
+			$int14 = calc($int1 - $int3);
+			$int12 = calc($int12 + $int14);
+			$int10 = calc($int10 + $int14);
+		case 3 :
+			$int10 = calc($int10 - ($int1 - $int3));
+		case 4 :
+			$int14 = calc($int1 - $int3);
+			$int12 = calc($int12 + $int14);
+			$int10 = calc($int10 + $int14);
+			$int14 = calc($int2 - $int4);
+			$int13 = calc($int13 + $int14);
+			$int11 = calc($int11 + $int14);
+		case 5 :
+			$int10 = calc($int10 - ($int1 - $int3));
+			$int14 = calc($int2 - $int4);
+			$int13 = calc($int13 + $int14);
+			$int11 = calc($int11 + $int14);
+		case 6 :
+			$int14 = calc($int1 - $int3);
+			$int12 = calc($int12 + $int14);
+			$int10 = calc($int10 + $int14);
+			$int11 = calc($int11 - ($int2 - $int4));
+		case 7 :
+			$int10 = calc($int10 - ($int1 - $int3));
+			$int11 = calc($int11 - ($int2 - $int4));
+	}
+	if ($int12 < 10) {
+		$int10 = calc($int10 - $int12);
+		$int12 = 0;
+	}
+	if ($int10 < calc($int12 + 10)) {
+		$int10 = $int12;
+	}
+	if ($int13 < 10) {
+		$int11 = calc($int11 - $int13);
+		$int13 = 0;
+	}
+	if ($int11 < calc($int13 + 10)) {
+		$int11 = $int13;
+	}
+	$int10 = ~max(~min($int10, calc($int15 - $int9)), 0);
+	$int11 = ~max(~min($int11, calc($int16 - 280)), 0);
+	$int13 = ~max(~min($int13, $int11), 0);
+	$int12 = ~max(~min($int12, $int10), 0);
+	if_setposition($int12, $int13, ^setpos_abs_left, ^setpos_abs_top, $component7);
+	if_setsize($int10, $int11, ^setsize_minus, ^setsize_minus, $component7);
+	if_sethide(false, $component7);
+	if_sethide(true, $component8);
+	cc_setontimer("worldmap_window_drag_end(calc(clientclock + 3), $int10, $int11, $int12, $int13, $component5, $component6, $component7, $component8, $int9)");
+}
+return;

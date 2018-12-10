@@ -1,0 +1,22 @@
+[proc,tt_reward_set_desc]()(string)
+if (%varbit2459 = 0) {
+	return("Blue token:<br><tostring(50)>-<tostring(150)> essence<br><br>Yellow token:<br><tostring(120)>-<tostring(380)> essence<br><br>Red token:<br><tostring(370)>-<tostring(660)> essence");
+} else if (%varbit2459 = 1) {
+	return("Blue token:<br><tostring(100)>-<tostring(200)> bow strings<br><br>Yellow token:<br><tostring(150)>-<tostring(250)> bow strings<br><br>Red token:<br><tostring(200)>-<tostring(300)> bow strings");
+} else if (%varbit2459 = 2) {
+	return("Blue token:<br><tostring(5)>-<tostring(50)> silver bars<br><br>Yellow token:<br><tostring(50)>-<tostring(100)> silver bars<br><br>Red token:<br><tostring(100)>-<tostring(150)> silver bars");
+} else if (%varbit2459 = 3) {
+	return("Blue token:<br><tostring(5)>-<tostring(15)> herbs<br><br>Yellow token:<br><tostring(10)>-<tostring(20)> herbs<br><br>Red token:<br><tostring(15)>-<tostring(30)> herbs");
+} else if (%varbit2459 = 4) {
+	return("Blue token:<br><tostring(21)>-<tostring(72)> coal and iron ores<br><br>Yellow token:<br><tostring(66)>-<tostring(165)> coal and iron ores<br><br>Red token:<br><tostring(150)>-<tostring(216)> coal and iron ores");
+} else if (%varbit2459 = 5) {
+	return("Blue token:<br><tostring(10)>-<tostring(20)> watermelon seeds<br><br>Yellow token:<br><tostring(15)>-<tostring(30)> watermelon seeds<br><br>Red token:<br><tostring(20)>-<tostring(40)> watermelon seeds");
+} else if (%varbit2459 = 6) {
+	return("Blue token:<br><tostring(2)>-<tostring(35)> raw lobsters<br><br>Yellow token:<br><tostring(30)>-<tostring(65)> raw lobsters<br><br>Red token:<br><tostring(60)>-<tostring(80)> raw lobsters");
+} else if (%varbit2459 = 7) {
+	return("Blue token:<br><tostring(calc(11000 / 10))>-<tostring(calc(16500 / 10))> XP tome<br><br>Yellow token:<br><tostring(calc(20350 / 10))>-<tostring(calc(30250 / 10))> XP tome<br><br>Red token:<br><tostring(calc(40150 / 10))>-<tostring(calc(50050 / 10))> XP tome");
+} else if (%varbit2459 = 8) {
+	return("A random reward appropriate to the token colour.");
+} else {
+	return("Select a reward<br><br>on the left to<br><br>display information<br><br>here.");
+}

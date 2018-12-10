@@ -1,0 +1,5 @@
+[clientscript,clanwars_view_spin](component $component0, int $int1)
+if (cc_find($component0, $int1) = true) {
+	cc_setmodelangle(0, 150, cc_getmodelangle_x, calc((cc_getmodelangle_y + 10) % 2048), cc_getmodelangle_z, cc_getmodelzoom);
+}
+return;

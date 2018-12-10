@@ -1,0 +1,10 @@
+script139(component $component0, int $int1, int $int2)
+if (clientclock < $int2) {
+	return;
+} else {
+	if (cc_find($component0, $int1) = true) {
+		cc_setontimer(null);
+	}
+	~script890(507:34, 507:3, enum(component, int, 1539, 507:34), "Refresh");
+	return;
+}

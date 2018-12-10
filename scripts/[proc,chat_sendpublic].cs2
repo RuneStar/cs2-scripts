@@ -1,0 +1,12 @@
+[proc,chat_sendpublic](int $int0, string $string0)
+if (%varbit4394 = 1) {
+	if ($int0 = 1) {
+		mes("<chat_playername>: <col=2020ef><$string0></col>");
+	} else {
+		mes("<chat_playername>: <col=0000ff><$string0></col>");
+	}
+} else {
+	chat_sendpublic($string0, $int0);
+}
+%varcint61 = clientclock;
+return;

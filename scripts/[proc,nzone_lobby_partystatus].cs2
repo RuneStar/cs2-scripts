@@ -1,0 +1,112 @@
+[proc,nzone_lobby_partystatus](int $int0, component $component1)
+def_boolean $boolean2 = false;
+if (($int0 = 0) & (%var1065 = -1)) {
+	$boolean2 = true;
+	if_setontimer(null, $component1);
+} else {
+	if_setontimer("nzone_lobby_partynames(event_com)", $component1);
+}
+cc_create($component1, ^iftype_rectangle, 0);
+cc_sethide($boolean2);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(125, 96, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x7f460f);
+cc_setfill(true);
+cc_settrans(50);
+cc_create($component1, ^iftype_rectangle, 1);
+cc_sethide($boolean2);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(125, 96, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0x7f460f);
+cc_setfill(false);
+~create_graphic($component1, 2, "tradebacking_light", 4, 4, ^setpos_abs_left, ^setpos_abs_top, 121, 17, ^setsize_abs, ^setsize_abs);
+cc_sethide($boolean2);
+cc_settrans(100);
+cc_create($component1, ^iftype_text, 3);
+cc_sethide($boolean2);
+cc_setposition(4, 4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 17, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Rumble Party");
+~create_graphic($component1, 4, "tradebacking_dark", 4, 22, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
+cc_sethide($boolean2);
+cc_settrans(150);
+~create_graphic($component1, 5, "tradebacking", 4, 37, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
+cc_sethide($boolean2);
+cc_settrans(150);
+if ($int0 = 1) {
+	cc_setop(1, "Kick player");
+	cc_setonmouseover("cc_settrans(event_com, event_comid, 75, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comid, 150, null)");
+}
+~create_graphic($component1, 6, "tradebacking", 4, 52, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
+cc_sethide($boolean2);
+cc_settrans(150);
+if ($int0 = 1) {
+	cc_setop(1, "Kick player");
+	cc_setonmouseover("cc_settrans(event_com, event_comid, 75, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comid, 150, null)");
+}
+~create_graphic($component1, 7, "tradebacking", 4, 67, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
+cc_sethide($boolean2);
+cc_settrans(150);
+if ($int0 = 1) {
+	cc_setop(1, "Kick player");
+	cc_setonmouseover("cc_settrans(event_com, event_comid, 75, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comid, 150, null)");
+}
+~create_graphic($component1, 8, "tradebacking", 4, 82, ^setpos_abs_left, ^setpos_abs_top, 121, 14, ^setsize_abs, ^setsize_abs);
+cc_sethide($boolean2);
+cc_settrans(150);
+if ($int0 = 1) {
+	cc_setop(1, "Kick player");
+	cc_setonmouseover("cc_settrans(event_com, event_comid, 75, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comid, 150, null)");
+}
+cc_create($component1, ^iftype_text, 9);
+cc_sethide($boolean2);
+cc_setposition(4, 22, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 14, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component1, ^iftype_text, 10);
+cc_sethide($boolean2);
+cc_setposition(4, 37, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 14, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component1, ^iftype_text, 11);
+cc_sethide($boolean2);
+cc_setposition(4, 52, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 14, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component1, ^iftype_text, 12);
+cc_sethide($boolean2);
+cc_setposition(4, 67, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 14, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component1, ^iftype_text, 13);
+cc_sethide($boolean2);
+cc_setposition(4, 82, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(121, 14, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if ($boolean2 = false) {
+	~nzone_lobby_partynames($component1);
+}
+return;

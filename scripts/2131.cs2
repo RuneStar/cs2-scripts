@@ -1,0 +1,19 @@
+script2131(component $component0)
+def_int $int1 = inv_total(93, glistening_tear_22207);
+def_string $string0 = "";
+if ($int1 > 700) {
+	$int1 = 700;
+	$string0 = "Only <col=ffffff><~script46(700, ",")></col> may be exchanged.";
+} else {
+	$string0 = "<col=ffffff><~script46($int1, ",")></col> x <oc_name(glistening_tear_22207)>";
+}
+cc_setobject_nonum(glistening_tear_22207, $int1);
+.cc_settext($string0);
+def_int $int2 = if_getwidth($component0);
+def_int $int3 = parawidth($int2, p12_full, $string0);
+.cc_setsize($int3, 32, ^setsize_abs, ^setsize_abs);
+$int3 = calc((36 + 3) + $int3);
+def_int $int4 = calc(($int2 - $int3) / 2);
+cc_setposition($int4, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+.cc_setposition($int4, 0, ^setpos_abs_right, ^setpos_abs_bottom);
+return;

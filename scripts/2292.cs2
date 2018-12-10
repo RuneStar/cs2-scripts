@@ -1,0 +1,56 @@
+script2292(int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, string $string0)
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
+def_string $string4 = "";
+def_string $string5 = "";
+def_string $string6 = "";
+def_string $string7 = "";
+def_string $string8 = "";
+def_string $string9 = "";
+def_string $string10 = "";
+$string1, $string0 = ~script632($string0);
+$string2, $string0 = ~script632($string0);
+$string3, $string0 = ~script632($string0);
+$string4, $string0 = ~script632($string0);
+$string5, $string0 = ~script632($string0);
+if (($int2 = 0) | ($int2 = -1)) {
+	$string6 = "<col=aaaaaa>00:00:00</col>";
+	$string1 = "Grab a team and get Raiding!";
+} else {
+	$string6 = ~script2275($int2);
+	$string1 = "Team: <$string1>";
+}
+if (($int3 = 0) | ($int3 = -1)) {
+	$string7 = "<col=aaaaaa>00:00:00</col>";
+	$string2 = "Grab a team and get Raiding!";
+} else {
+	$string7 = ~script2275($int3);
+	$string2 = "Team: <$string2>";
+}
+if (($int4 = 0) | ($int4 = -1)) {
+	$string8 = "<col=aaaaaa>00:00:00</col>";
+	$string3 = "Grab a team and get Raiding!";
+} else {
+	$string8 = ~script2275($int4);
+	$string3 = "Team: <$string3>";
+}
+if (($int5 = 0) | ($int5 = -1)) {
+	$string9 = "<col=aaaaaa>00:00:00</col>";
+	$string4 = "Grab a team and get Raiding!";
+} else {
+	$string9 = ~script2275($int5);
+	$string4 = "Team: <$string4>";
+}
+if (($int6 = 0) | ($int6 = -1)) {
+	$string10 = "<col=aaaaaa>00:00:00</col>";
+	$string5 = "Grab a team and get Raiding!";
+} else {
+	$string10 = ~script2275($int6);
+	$string5 = "Team: <$string5>";
+}
+if_settext(~script2275($int1), 21:15);
+if_settext(~script2275($int0), 21:13);
+if_settext("<$string6><br><$string7><br><$string8><br><$string9><br><$string10>", 21:16);
+if_settext("1. <$string1><br>2. <$string2><br>3. <$string3><br>4. <$string4><br>5. <$string5>", 21:17);
+return;

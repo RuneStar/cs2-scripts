@@ -1,0 +1,21 @@
+[clientscript,fade_overlay](int $int0, int $int1, int $colour2, int $int3, int $int4)
+if ($int1 < 0) {
+	$int1 = 0;
+} else if ($int1 > 255) {
+	$int1 = 255;
+}
+if ($int3 < 0) {
+	$int3 = 0;
+} else if ($int3 > 255) {
+	$int3 = 255;
+}
+if ($int4 <= 0) {
+	if_setcolour($colour2, 174:1);
+	if_settrans($int3, 174:1);
+	if_setontimer(null, 174:0);
+	return;
+} else {
+	~script950($int0, $int1, $colour2, $int3, $int4, $int4);
+	if_setontimer("fade_overlay_update($int0, $int1, $colour2, $int3, $int4, calc(clientclock + $int4))", 174:0);
+	return;
+}

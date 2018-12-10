@@ -1,0 +1,216 @@
+[proc,xpdrops_setbar](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+%varcint2 = 0;
+def_stat $stat7 = null;
+if (%varbit4697 = 31) {
+	$stat7 = %varcint72;
+} else if (%varbit4697 = 30) {
+	$stat7 = null;
+} else {
+	$stat7 = enum(int, stat, 681, %varbit4697);
+}
+def_stat $stat8 = null;
+if (%varbit4698 = 31) {
+	$stat8 = %varcint72;
+} else if (%varbit4698 = 30) {
+	$stat8 = null;
+} else {
+	$stat8 = enum(int, stat, 681, %varbit4698);
+}
+def_int $int9 = 0;
+def_string $string0 = ",";
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+if ($stat7 ! null) {
+	$int9 = 1;
+	if_setgraphic(enum(stat, graphic, 255, $stat7), $component1);
+	$int10, $int11 = ~xpdrops_data_get($stat7);
+	$int12 = stat_xp($stat7);
+	if ($int11 = -1) {
+		$int15 = calc($int12 - $int10);
+		if ($int15 >= 0) {
+			$string3 = ~script46($int15, $string0);
+			if_settext("+<$string3>", $component2);
+			$string1 = "<enum(stat, string, 680, $stat7)> tracker:|Tracking from:|Total XP:";
+			$string2 = "<$string3>|<~script46($int10, $string0)>|<~script46($int12, $string0)>";
+		} else {
+			if_settext("N/A", $component2);
+			$string1 = "Your <enum(stat, string, 680, $stat7)> tracker is invalid.<br>Set a lower starting point.";
+		}
+	} else {
+		$string3 = ~script46($int12, $string0);
+		if_settext($string3, $component2);
+		$int13 = stat_base($stat7);
+		if ($int13 < 99) {
+			$int14 = enum(int, int, 256, calc($int13 + 1));
+			$string1 = "<enum(stat, string, 680, $stat7)> XP:|<col=7f7f7f>Next level:</col>|Remaining:";
+			$string2 = "<$string3>|<col=7f7f7f><~script46($int14, $string0)></col>|<~script46(calc($int14 - $int12), $string0)>";
+		} else {
+			$string1 = "<enum(stat, string, 680, $stat7)> XP:";
+			$string2 = $string3;
+		}
+	}
+} else if (%varbit4697 = 30) {
+	if_setgraphic(null, $component1);
+	if_settext("", $component2);
+	$string2 = "";
+	$string1 = "";
+	~deltooltip_action($component6);
+} else {
+	$int9 = 1;
+	if_setgraphic("staticons2,7", $component1);
+	$int17, $int16 = ~stats_totalxp;
+	if (%var1252 = -1) {
+		$int15 = calc($int16 % 1000);
+		$int18 = calc(($int17 * pow(10, 6)) + ($int16 / 1000));
+		if ($int18 > %var1228) {
+			$string3 = "<~script46(calc($int18 - %var1228), $string0)><$string0><~script47($int15)>";
+			if_settext("+<$string3>", $component2);
+			$string1 = "Total XP tracker:|Tracking from:|Total XP:";
+			if (%var1228 > 0) {
+				$string2 = "<$string3>|<~script46(%var1228, $string0)><$string0>000|<~stats_tostring_totalxp($int17, $int16)>";
+			} else {
+				$string2 = "<$string3>|0|<~stats_tostring_totalxp($int17, $int16)>";
+			}
+		} else if (($int18 = %var1228) & ($int15 >= 0)) {
+			$string3 = tostring($int15);
+			if_settext("+<$string3>", $component2);
+			$string1 = "Total XP tracker:|Tracking from:|Total XP:";
+			if (%var1228 > 0) {
+				$string2 = "<$string3>|<~script46(%var1228, $string0)><$string0>000|<~stats_tostring_totalxp($int17, $int16)>";
+			} else {
+				$string2 = "<$string3>|0|<~stats_tostring_totalxp($int17, $int16)>";
+			}
+		} else {
+			if_settext("N/A", $component2);
+			$string1 = "Your Total XP tracker is invalid.<br>Set a lower starting point.";
+		}
+	} else {
+		$string3 = ~stats_tostring_totalxp($int17, $int16);
+		if_settext($string3, $component2);
+		$string1 = "Total XP:";
+		$string2 = $string3;
+	}
+}
+def_component $component19 = if_getlayer($component2);
+~script2504($component6, $component19, $component0, $string2, $string1);
+if (~on_mobile = true) {
+	~script2504($component6, $component3, $component0, $string2, $string1);
+}
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_int $int25 = 0;
+def_int $int26 = 0;
+if ($stat8 ! null) {
+	$int20 = 1;
+	$int12 = stat_xp($stat8);
+	$int10, $int11 = ~xpdrops_data_get($stat8);
+	if (($int11 ! -1) & ($int11 > $int10)) {
+		$int21 = ~xpdrops_setbar_progress($component4, $int10, $int12, $int11, 1);
+		$string1 = "<enum(stat, string, 680, $stat8)> goal|<col=7f7f7f>Start:</col>|Current:|<col=7f7f7f>End:</col>";
+		$string2 = "<~xpdrops_percentage_tostring($int21)>|<col=7f7f7f><~script46($int10, $string0)></col>|<~script46($int12, $string0)>|<col=7f7f7f><~script46($int11, $string0)></col>";
+		if ($int12 < $int11) {
+			$string1 = append($string1, "|Remaining:");
+			$string2 = append($string2, "|<~script46(calc($int11 - $int12), $string0)>");
+		}
+	} else {
+		$int13 = stat_base($stat8);
+		$int22 = calc($int13 + 1);
+		if ($int22 > 99) {
+			$int22 = 99;
+		}
+		$int14 = enum(int, int, 256, $int22);
+		$int21 = ~xpdrops_setbar_progress($component4, enum(int, int, 256, $int13), $int12, $int14, 0);
+		if ($int13 < 99) {
+			$string1 = "<enum(stat, string, 680, $stat8)>|Current XP:|<col=7f7f7f>Next level:</col>|Remaining:";
+			$string2 = "<~xpdrops_percentage_tostring($int21)>|<~script46($int12, $string0)>|<col=7f7f7f><~script46($int14, $string0)></col>|<~script46(calc($int14 - $int12), $string0)>";
+		} else {
+			$string1 = "<enum(stat, string, 680, $stat8)> XP:";
+			$string2 = ~script46($int12, $string0);
+		}
+	}
+} else if (%varbit4698 = 30) {
+	$int20 = 1;
+	$int17, $int16 = ~stats_totalxp;
+	if ((%var1252 ! -1) & (%var1252 > %var1228)) {
+		if (($int17 < 2) & (%var1252 <= calc(^int_max / 1000))) {
+			$int21 = ~xpdrops_setbar_progress($component4, calc(%var1228 * 1000), calc(($int17 * pow(10, 9)) + $int16), calc(%var1252 * 1000), 1);
+			$int24 = calc((%var1252 * 1000) - (($int17 * pow(10, 9)) + $int16));
+		} else {
+			$int25 = calc(($int17 * pow(10, 6)) + ($int16 / 1000));
+			$int21 = ~xpdrops_setbar_progress($component4, %var1228, $int25, %var1252, 1);
+			if ($int25 < %var1252) {
+				$int24 = calc(%var1252 - $int25);
+				$int26 = calc($int16 % 1000);
+				if ($int26 > 0) {
+					$int24 = calc($int24 - 1);
+					$int23 = calc($int24 / pow(10, 6));
+					$int24 = calc(($int24 % pow(10, 6)) * 1000);
+					$int24 = calc($int24 + (1000 - $int26));
+				} else {
+					$int23 = calc($int24 / pow(10, 6));
+					$int24 = calc(($int24 % pow(10, 6)) * 1000);
+				}
+			}
+		}
+		$string1 = "Total XP goal|<col=7f7f7f>Start:</col>|Current:|<col=7f7f7f>End:</col>";
+		if (%var1228 > 0) {
+			$string2 = "<~xpdrops_percentage_tostring($int21)>|<col=7f7f7f><~script46(%var1228, $string0)><$string0>000</col>|<~stats_tostring_totalxp($int17, $int16)>|<col=7f7f7f><~script46(%var1252, $string0)><$string0>000</col>";
+		} else {
+			$string2 = "<~xpdrops_percentage_tostring($int21)>|<col=7f7f7f>0</col>|<~stats_tostring_totalxp($int17, $int16)>|<col=7f7f7f><~script46(%var1252, $string0)><$string0>000</col>";
+		}
+		if (($int23 > 0) | ($int24 > 0)) {
+			$string1 = append($string1, "|Remaining:");
+			$string2 = append($string2, "|<~stats_tostring_totalxp($int23, $int24)>");
+		}
+	} else {
+		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component4);
+		if_setcolour(0x606060, $component4);
+		$string2 = "";
+		$string1 = "Use the setup menu to set a Total XP goal.";
+	}
+} else {
+	$string2 = "";
+	$string1 = "";
+	~deltooltip_action($component6);
+}
+if (~on_mobile = false) {
+	~script2504($component6, $component3, $component0, $string2, $string1);
+}
+if ($int9 = 1) {
+	if_sethide(false, $component19);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component19);
+	if_setsize(0, 29, ^setsize_minus, ^setsize_abs, $component19);
+	if ($int20 = 1) {
+		if_sethide(false, $component3);
+		if_setposition(0, 28, ^setpos_abs_centre, ^setpos_abs_top, $component3);
+		if_setposition(0, calc(if_gety($component0) + 38), ^setpos_abs_centre, ^setpos_abs_top, $component5);
+	} else {
+		if_sethide(true, $component3);
+		if_setposition(0, calc(if_gety($component0) + 29), ^setpos_abs_centre, ^setpos_abs_top, $component5);
+	}
+} else if ($int20 = 1) {
+	if_sethide(false, $component19);
+	if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top, $component19);
+	if_setsize(0, 4, ^setsize_minus, ^setsize_abs, $component19);
+	if_sethide(false, $component3);
+	if_setposition(0, 7, ^setpos_abs_centre, ^setpos_abs_top, $component3);
+	if_setposition(0, calc(if_gety($component0) + 17), ^setpos_abs_centre, ^setpos_abs_top, $component5);
+} else {
+	if_sethide(true, $component19);
+	if_sethide(true, $component3);
+	if_setposition(0, if_gety($component0), ^setpos_abs_centre, ^setpos_abs_top, $component5);
+}
+return;

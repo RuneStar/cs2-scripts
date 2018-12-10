@@ -1,0 +1,34 @@
+script513(int $int0)(int, int)
+if ($int0 = 1) {
+	return(0, %varbit4171);
+} else {
+	def_int $int1 = 0;
+	if ($int0 = 2) {
+		$int1 = %varbit4171;
+		return($int1, calc($int1 + %varbit4172));
+	} else if ($int0 = 3) {
+		$int1 = calc(%varbit4171 + %varbit4172);
+		return($int1, calc($int1 + %varbit4173));
+	} else if ($int0 = 4) {
+		$int1 = calc((%varbit4171 + %varbit4172) + %varbit4173);
+		return($int1, calc($int1 + %varbit4174));
+	} else if ($int0 = 5) {
+		$int1 = calc(((%varbit4171 + %varbit4172) + %varbit4173) + %varbit4174);
+		return($int1, calc($int1 + %varbit4175));
+	} else if ($int0 = 6) {
+		$int1 = calc((((%varbit4171 + %varbit4172) + %varbit4173) + %varbit4174) + %varbit4175);
+		return($int1, calc($int1 + %varbit4176));
+	} else if ($int0 = 7) {
+		$int1 = calc(((((%varbit4171 + %varbit4172) + %varbit4173) + %varbit4174) + %varbit4175) + %varbit4176);
+		return($int1, calc($int1 + %varbit4177));
+	} else if ($int0 = 8) {
+		$int1 = calc((((((%varbit4171 + %varbit4172) + %varbit4173) + %varbit4174) + %varbit4175) + %varbit4176) + %varbit4177);
+		return($int1, calc($int1 + %varbit4178));
+	} else if ($int0 = 9) {
+		$int1 = calc(((((((%varbit4171 + %varbit4172) + %varbit4173) + %varbit4174) + %varbit4175) + %varbit4176) + %varbit4177) + %varbit4178);
+		return($int1, calc($int1 + %varbit4179));
+	} else {
+		$int1 = calc((((((((%varbit4171 + %varbit4172) + %varbit4173) + %varbit4174) + %varbit4175) + %varbit4176) + %varbit4177) + %varbit4178) + %varbit4179);
+		return($int1, 816);
+	}
+}

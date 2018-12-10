@@ -1,0 +1,20 @@
+[proc,autocast_spellhighlight](obj $obj0)
+def_obj $obj1 = null;
+if (stat(magic) >= oc_param($obj0, 604)) {
+	$obj1 = oc_param($obj0, 365);
+	if (($obj1 = null) | (~magic_runecount($obj1) >= oc_param($obj0, 366))) {
+		$obj1 = oc_param($obj0, 367);
+		if (($obj1 = null) | (~magic_runecount($obj1) >= oc_param($obj0, 368))) {
+			$obj1 = oc_param($obj0, 369);
+			if (($obj1 = null) | (~magic_runecount($obj1) >= oc_param($obj0, 370))) {
+				$obj1 = oc_param($obj0, 606);
+				if (($obj1 = null) | (~magic_runecount($obj1) >= oc_param($obj0, 607))) {
+					cc_setgraphic(oc_param($obj0, 597));
+					return;
+				}
+			}
+		}
+	}
+}
+cc_setgraphic(oc_param($obj0, 598));
+return;

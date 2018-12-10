@@ -1,0 +1,28 @@
+script1106(component $component0, int $int1)
+def_int $int2 = 0;
+if ($int1 <= 60) {
+	if (cc_find($component0, 0) = true) {
+		cc_settrans(calc(255 - ($int1 * 4)));
+	}
+	if ((cc_find($component0, 1) = true) & (.cc_find($component0, 2) = true)) {
+		$int2 = calc(2000 - ($int1 * 32));
+		cc_setmodelangle(0, 120, 0, 0, 0, $int2);
+		.cc_setmodelangle(0, 120, 0, 0, 0, $int2);
+		cc_setmodel(7427);
+		.cc_setmodel(7428);
+	}
+	return;
+} else if ($int1 <= 90) {
+	$int1 = calc($int1 - 60);
+	if (cc_find($component0, 0) = true) {
+		cc_settrans(calc(15 + ($int1 * 8)));
+	}
+	if ((cc_find($component0, 1) = true) & (.cc_find($component0, 2) = true)) {
+		cc_setmodel(16238);
+		.cc_setmodel(16238);
+	}
+	return;
+} else {
+	cc_deleteall($component0);
+	return;
+}

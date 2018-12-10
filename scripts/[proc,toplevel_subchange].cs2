@@ -1,0 +1,59 @@
+[proc,toplevel_subchange](component $component0, enum $enum1)
+if (if_hassub(162:561) = true) {
+	if_sethide(false, 162:561);
+	if_sethide(true, 162:560);
+	if_sethide(true, 162:56);
+} else if (if_hassub(162:560) = true) {
+	if_sethide(true, 162:561);
+	if_sethide(false, 162:560);
+	if_sethide(true, 162:56);
+} else {
+	if_sethide(true, 162:561);
+	if_sethide(true, 162:560);
+	if_sethide(false, 162:56);
+}
+~toplevel_sidebuttons_enable($enum1);
+def_component $component2 = null;
+if (%varcint171 ! -1) {
+	$component2 = enum(int, component, 1137, %varcint171);
+	$component2 = enum(component, component, $enum1, $component2);
+	if ($component2 ! null) {
+		if (if_hassub($component2) = true) {
+			if (if_gethide($component2) = true) {
+				~toplevel_sidebutton_switch(%varcint171, $enum1);
+			}
+		} else if (if_gethide($component2) = false) {
+			~toplevel_sidebutton_switch(%varcint171, $enum1);
+		}
+	}
+}
+if (if_hassub(enum(component, component, $enum1, 161:66)) = true) {
+	$component2 = enum(component, component, $enum1, 161:67);
+	if ($component2 ! null) {
+		if_sethide(true, $component2);
+	}
+	$component2 = enum(component, component, $enum1, 161:50);
+	if ($component2 ! null) {
+		if_sethide(true, $component2);
+	}
+	$component2 = enum(component, component, $enum1, 161:34);
+	if ($component2 ! null) {
+		if_sethide(true, $component2);
+	}
+} else {
+	$component2 = enum(component, component, $enum1, 161:67);
+	if ($component2 ! null) {
+		if_sethide(false, $component2);
+	}
+	$component2 = enum(component, component, $enum1, 161:50);
+	if ($component2 ! null) {
+		if_sethide(false, $component2);
+	}
+	$component2 = enum(component, component, $enum1, 161:34);
+	if ($component2 ! null) {
+		if_sethide(false, $component2);
+	}
+}
+~toplevel_resize($component0, $enum1);
+~script919($enum1);
+return;

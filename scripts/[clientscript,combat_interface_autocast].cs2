@@ -1,0 +1,29 @@
+[clientscript,combat_interface_autocast](component $component0, component $component1, int $int2)
+def_int $int3 = 33;
+def_int $int4 = 36;
+def_int $int5 = 0;
+def_graphic $graphic6 = 780;
+def_obj $obj7 = enum(int, obj, 1986, %varbit276);
+if ($obj7 ! null) {
+	$graphic6 = oc_param($obj7, 597);
+	if ($graphic6 ! null) {
+		$int4 = 24;
+		$int3 = 24;
+	} else {
+		$graphic6 = 780;
+	}
+	if (%varbit2668 = $int2) {
+		~options_button_on($component1, 0);
+	} else {
+		~options_button_off($component1, 0);
+	}
+} else {
+	~options_button_off($component1, 0);
+}
+if_setsize($int3, $int4, ^setsize_abs, ^setsize_abs, $component0);
+if_setgraphic($graphic6, $component0);
+if ($int2 = 1) {
+	$int5 = 14;
+}
+if_setposition($int5, -5, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
+return;

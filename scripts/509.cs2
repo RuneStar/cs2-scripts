@@ -1,0 +1,49 @@
+script509(int $int0, int $int1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8, int $int9, int $int10, int $int11)(int, int)
+def_int $int12 = 0;
+if ((($int11 = 0) & ($int2 > 0)) & (~bankmain_searching = 1)) {
+	$int12 = calc($int8 + 15);
+} else {
+	$int12 = $int8;
+}
+def_obj $obj13 = null;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+while ($int0 < $int1) {
+	if (cc_find($component3, $int0) = true) {
+		$obj13 = inv_getobj(95, $int0);
+		if (~bankmain_filteritem($obj13) = 1) {
+			cc_sethide(false);
+			~bankmain_drawitem($obj13, inv_getnum(95, $int0), $component3, $component4, $component5, $component6, $component7);
+			$int15 = calc($int15 + 1);
+			$int14 = calc($int12 + ($int17 * 36));
+			cc_setposition(calc(51 + ($int16 * (36 + $int9))), $int14, ^setpos_abs_left, ^setpos_abs_top);
+			$int14 = calc($int14 + 32);
+			if ($int16 < $int10) {
+				$int16 = calc($int16 + 1);
+			} else {
+				$int17 = calc($int17 + 1);
+				$int16 = 0;
+			}
+		}
+	}
+	$int0 = calc($int0 + 1);
+}
+if ($int14 <= 0) {
+	return($int8, $int15);
+} else {
+	if ($int11 = 0) {
+		if (($int16 > 0) & (cc_find($component3, calc((816 + (9 * 2)) + $int2)) = true)) {
+			cc_sethide(false);
+			cc_setposition(calc(51 + ($int16 * (36 + $int9))), calc($int14 - 32), ^setpos_abs_left, ^setpos_abs_top);
+			$int16 = calc(8 - $int16);
+			cc_setsize(calc(($int16 * 36) + (($int16 - 1) * $int9)), 32, ^setsize_abs, ^setsize_abs);
+		}
+		if (($int12 > $int8) & (cc_find($component3, calc(((816 + 9) + $int2) - 1)) = true)) {
+			cc_setposition(51, $int8, ^setpos_abs_left, ^setpos_abs_top);
+			cc_sethide(false);
+		}
+	}
+	return($int14, $int15);
+}

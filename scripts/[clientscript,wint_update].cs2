@@ -1,0 +1,63 @@
+[clientscript,wint_update](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9)
+if ($int1 = 0) {
+	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, 396:19);
+	if_settext("Wintertodt's Energy: 0%", 396:21);
+} else if ($int1 ! -1) {
+	if_setsize(interpolate(1, 16384, 0, 3500, $int1), 0, ^setsize_2, ^setsize_minus, 396:19);
+	if_settext("Wintertodt's Energy: <tostring(interpolate(1, 100, 0, 3500, $int1))>%", 396:21);
+}
+if_settext("Points<br><tostring($int0)>", 396:7);
+if ($int0 < 500) {
+	if_setcolour(^red, 396:7);
+} else {
+	if_setcolour(^white, 396:7);
+}
+if ($int2 = 1) {
+	if_setgraphic(null, 396:8);
+} else {
+	if_setgraphic(1400, 396:8);
+}
+if ($int3 = 1) {
+	if_setgraphic(null, 396:9);
+} else {
+	if_setgraphic(1400, 396:9);
+}
+if ($int4 = 1) {
+	if_setgraphic(null, 396:10);
+} else {
+	if_setgraphic(1400, 396:10);
+}
+if ($int5 = 1) {
+	if_setgraphic(null, 396:11);
+} else {
+	if_setgraphic(1400, 396:11);
+}
+if ($int6 = 0) {
+	if_setgraphic(1397, 396:12);
+} else if ($int6 = 1) {
+	if_setgraphic(1398, 396:12);
+} else if ($int6 = 2) {
+	if_setgraphic(1399, 396:12);
+}
+if ($int7 = 0) {
+	if_setgraphic(1397, 396:13);
+} else if ($int7 = 1) {
+	if_setgraphic(1398, 396:13);
+} else if ($int7 = 2) {
+	if_setgraphic(1399, 396:13);
+}
+if ($int8 = 0) {
+	if_setgraphic(1397, 396:14);
+} else if ($int8 = 1) {
+	if_setgraphic(1398, 396:14);
+} else if ($int8 = 2) {
+	if_setgraphic(1399, 396:14);
+}
+if ($int9 = 0) {
+	if_setgraphic(1397, 396:15);
+} else if ($int9 = 1) {
+	if_setgraphic(1398, 396:15);
+} else if ($int9 = 2) {
+	if_setgraphic(1399, 396:15);
+}
+return;

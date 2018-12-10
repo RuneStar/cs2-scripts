@@ -1,0 +1,16 @@
+script2236(component $component0, component $component1, int $int2, int $int3)
+def_int $int4 = if_getwidth($component1);
+def_int $int5 = if_getheight($component1);
+def_int $int6 = 16064;
+def_int $int7 = 16258;
+if (($int4 ! $int2) | ($int5 ! $int3)) {
+	$int6, $int7 = ~script2682($int4, $int5);
+	if_setsize($int6, $int7, ^setsize_2, ^setsize_2, $component0);
+	if ($component0 = 601:12) {
+		~script2232(601:2, $component0);
+	}
+	if_setonresize("script2235($component0, $component1, $int4, $int5)", $component0);
+	if_setonsubchange("script2235($component0, $component1, $int4, $int5)", $component0);
+	if_setontimer("script2235($component0, $component1, $int4, $int5)", $component0);
+}
+return;

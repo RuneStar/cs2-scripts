@@ -1,0 +1,16 @@
+script1245(int $int0, component $component1, component $component2, model $model3, model $model4, component $component5, model $model6, model $model7, component $component8, model $model9, model $model10)
+if_setmodel($model6, $component5);
+if_setmodel($model9, $component8);
+if ($int0 = 0) {
+	if_sethide(true, $component1);
+} else {
+	if_sethide(false, $component1);
+	if ($int0 = 1) {
+		if_setmodel($model7, $component5);
+		if_setmodel($model3, $component2);
+	} else if ($int0 = 2) {
+		if_setmodel($model10, $component8);
+		if_setmodel($model4, $component2);
+	}
+}
+return;

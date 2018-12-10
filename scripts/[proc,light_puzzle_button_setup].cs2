@@ -1,0 +1,14 @@
+[proc,light_puzzle_button_setup](component $component0, component $component1, string $string0)
+if_setop(1, "Press", $component0);
+if_setonop("light_puzzle_op_button(event_com)", $component0);
+if_setopbase("<col=ff981f>Button", $component0);
+cc_create($component1, ^iftype_text, 0);
+cc_settext($string0);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setposition(0, 0, ^setpos_4, ^setpos_4);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setonmouseover("light_puzzle_text_mouseover(event_com, event_comid, 16777215)");
+cc_setonmouseleave("light_puzzle_text_mouseover(event_com, event_comid, 16750623)");
+return;

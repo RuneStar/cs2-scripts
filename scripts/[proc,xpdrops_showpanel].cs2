@@ -1,0 +1,17 @@
+[proc,xpdrops_showpanel](component $component0, component $component1, component $component2, component $component3)
+if_sethide(false, $component1);
+if_sethide(false, $component2);
+if_sethide(false, $component3);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = enum(int, int, 1167, %varbit4694);
+if ($int6 > 0) {
+	$int4 = calc(%varcint71 + enum(int, int, 1171, %varbit4722));
+	if ($int4 > clientclock) {
+		$int5 = calc($int4 - clientclock);
+	}
+	if_setontimer("xpdrops_hidepanel($component0, $component1, $component2, $component3, calc((clientclock + $int5) + $int6))", $component0);
+} else {
+	if_setontimer(null, $component0);
+}
+return;

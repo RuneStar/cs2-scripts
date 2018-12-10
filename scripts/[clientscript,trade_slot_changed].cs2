@@ -1,0 +1,11 @@
+[clientscript,trade_slot_changed](int $int0, int $int1)
+def_int $int2 = -1;
+if ($int0 = 1) {
+	~script147($int1);
+	if (cc_find(335:28, calc(inv_size(90) + $int1)) = true) {
+		cc_setontimer("script766(event_com, event_comid, clientclock)");
+	}
+} else if (cc_find(335:25, calc(inv_size(90) + $int1)) = true) {
+	cc_setontimer("script766(event_com, event_comid, clientclock)");
+}
+return;

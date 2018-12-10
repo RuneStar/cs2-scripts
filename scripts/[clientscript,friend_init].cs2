@@ -1,0 +1,13 @@
+[clientscript,friend_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+~script2508($component1);
+if_settext("Friends List - World <tostring(map_world)>", $component2);
+cc_deleteall($component9);
+~scrollbar_vertical($component9, $component8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+switch (%varcint183) {
+	case 0, 1, 2, 3, 4, 5, 8, 9 :
+	else :
+		%varcint183 = 0;
+}
+~friend_update($component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
+if_setonfriendtransmit("friend_update($component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)", $component0);
+return;

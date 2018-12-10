@@ -1,0 +1,5 @@
+script615(component $component0)
+def_int $int1 = clientclock;
+if_setontimer("script616($component0, $int1)", $component0);
+~script617($component0, $int1);
+return;

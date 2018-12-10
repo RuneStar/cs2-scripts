@@ -1,0 +1,69 @@
+[proc,slayer_rewards_tasks_currenttask](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+cc_deleteall($component0);
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_string $string0 = "Creature";
+if (%var262 = 98) {
+	if (%var261 > 0) {
+		$string0 = enum(int, string, 1174, %var263);
+		$int8 = 1;
+		if_settext("<tostring(%var261)> x <$string0>", $component1);
+	} else if (%var261 = -1) {
+		$string0 = enum(int, string, 1174, %var263);
+		$int8 = 1;
+		if_settext($string0, $component1);
+	} else {
+		if_settext("None", $component1);
+	}
+} else if ((%var261 > 0) & (%var262 ! 0)) {
+	$string0 = enum(int, string, 693, %var262);
+	$int8 = 1;
+	if_settext("<tostring(%var261)> x <$string0>", $component1);
+} else {
+	if_settext("None", $component1);
+}
+cc_create($component0, ^iftype_graphic, $int7);
+$int7 = calc($int7 + 1);
+.cc_create($component0, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
+.cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
+cc_setposition(275, 62, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(275, 62, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(812);
+.cc_settextfont(p11_full);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextshadow(true);
+.cc_settext("Cancel task");
+if ($int8 = 1) {
+	.cc_setcolour(0xff981f);
+	cc_setonmouseover("script85(event_com, .cc_getid, 16777215)");
+	cc_setonmouseleave("script85(event_com, .cc_getid, 16750623)");
+	cc_setop(1, "Cancel");
+	cc_setonop("slayer_rewards_tasks_canceltask($string0, false, $component2, $component3, $component4, $component5, $component6)");
+} else {
+	.cc_setcolour(0x7f4c0f);
+}
+cc_create($component0, ^iftype_graphic, $int7);
+$int7 = calc($int7 + 1);
+.cc_create($component0, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
+.cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
+cc_setposition(375, 62, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(375, 62, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(812);
+.cc_settextfont(p11_full);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextshadow(true);
+.cc_settext("Block task");
+if (((($int8 = 1) & (%var262 ! 97)) & (%var262 ! 105)) & (%var262 ! 98)) {
+	.cc_setcolour(0xff981f);
+	cc_setonmouseover("script85(event_com, .cc_getid, 16777215)");
+	cc_setonmouseleave("script85(event_com, .cc_getid, 16750623)");
+	cc_setop(1, "Block");
+	cc_setonop("slayer_rewards_tasks_canceltask($string0, true, $component2, $component3, $component4, $component5, $component6)");
+} else {
+	.cc_setcolour(0x7f4c0f);
+}
+return;

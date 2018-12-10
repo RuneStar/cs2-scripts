@@ -1,0 +1,16 @@
+script636(int $int0)
+if (cc_find(148:14, $int0) = true) {
+	cc_sethide(true);
+}
+def_int $int1 = 0;
+$int0 = 0;
+while (($int1 = 0) & ($int0 <= 40)) {
+	if ((cc_find(148:14, $int0) = true) & (cc_gethide = false)) {
+		$int1 = 1;
+	}
+	$int0 = calc($int0 + 1);
+}
+if ($int1 = 0) {
+	~pet_insurance_drawlist(148:14, 31, 148:15, 0, 0);
+}
+return;

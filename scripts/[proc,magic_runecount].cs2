@@ -1,0 +1,215 @@
+[proc,magic_runecount](obj $obj0)(int)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_obj $obj4 = inv_getobj(94, 3);
+if (map_members = true) {
+	if (inv_total(93, rune_pouch_12791) > 0) {
+		$int3 = %varbit1623;
+		$int2 = %varbit1622;
+		$int1 = %varbit29;
+	}
+} else if (($obj4 ! null) & (oc_members($obj4) = true)) {
+	$obj4 = null;
+}
+def_int $int5 = 0;
+switch ($obj0) {
+	case nature_rune_561 :
+		if (~script234 = 1) {
+			return(inv_total(93, nature_rune_11693));
+		} else {
+			$int5 = inv_total(93, nature_rune_561);
+			if (map_members = true) {
+				if ($obj4 = bryophytas_staff_22370) {
+					return(^int_max);
+				} else {
+					if (enum(int, namedobj, 982, $int1) = nature_rune_561) {
+						$int5 = ~add($int5, %varbit1624);
+					}
+					if (enum(int, namedobj, 982, $int2) = nature_rune_561) {
+						$int5 = ~add($int5, %varbit1625);
+					}
+					if (enum(int, namedobj, 982, $int3) = nature_rune_561) {
+						$int5 = ~add($int5, %varbit1626);
+					}
+				}
+			}
+		}
+	case zamorak_staff_2417 :
+		switch ($obj4) {
+			case zamorak_staff_2417, staff_of_the_dead_11791, toxic_staff_uncharged_12902, toxic_staff_of_the_dead_12904 :
+				return(1);
+			else :
+				return(0);
+		}
+	case ibans_staff_1409 :
+		if (($obj4 = ibans_staff_1409) | ($obj4 = ibans_staff_u_12658)) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case fire_rune_554 :
+		if (%varbit4145 = 1) {
+			return(^int_max);
+		} else if (enum(obj, boolean, 997, $obj4) = true) {
+			return(^int_max);
+		} else if (~script234 = 1) {
+			return(inv_total(93, fire_rune_11686));
+		} else if ((inv_getobj(94, 5) = tome_of_fire_20714) & (map_members = true)) {
+			return(^int_max);
+		} else {
+			$int5 = inv_total(93, fire_rune_554);
+			if (map_members = true) {
+				$int5 = ~add($int5, inv_total(93, steam_rune_4694));
+				$int5 = ~add($int5, inv_total(93, smoke_rune_4697));
+				$int5 = ~add($int5, inv_total(93, lava_rune_4699));
+				$int5 = ~add($int5, inv_total(93, fire_rune_nz_11718));
+				if (enum(int, boolean, 994, $int1) = true) {
+					$int5 = ~add($int5, %varbit1624);
+				}
+				if (enum(int, boolean, 994, $int2) = true) {
+					$int5 = ~add($int5, %varbit1625);
+				}
+				if (enum(int, boolean, 994, $int3) = true) {
+					$int5 = ~add($int5, %varbit1626);
+				}
+			}
+			return($int5);
+		}
+	case slayers_staff_4170 :
+		switch ($obj4) {
+			case slayers_staff_4170, staff_of_the_dead_11791, toxic_staff_uncharged_12902, toxic_staff_of_the_dead_12904, slayers_staff_e_21255, staff_of_light_22296 :
+				return(1);
+			else :
+				return(0);
+		}
+	case water_rune_555 :
+		if (%varbit4145 = 1) {
+			return(^int_max);
+		} else if (enum(obj, boolean, 989, $obj4) = true) {
+			return(^int_max);
+		} else if (~script234 = 1) {
+			return(inv_total(93, water_rune_11687));
+		} else {
+			$int5 = inv_total(93, water_rune_555);
+			if (map_members = true) {
+				$int5 = ~add($int5, inv_total(93, steam_rune_4694));
+				$int5 = ~add($int5, inv_total(93, mist_rune_4695));
+				$int5 = ~add($int5, inv_total(93, mud_rune_4698));
+				$int5 = ~add($int5, inv_total(93, water_rune_nz_11716));
+				if (enum(int, boolean, 987, $int1) = true) {
+					$int5 = ~add($int5, %varbit1624);
+				}
+				if (enum(int, boolean, 987, $int2) = true) {
+					$int5 = ~add($int5, %varbit1625);
+				}
+				if (enum(int, boolean, 987, $int3) = true) {
+					$int5 = ~add($int5, %varbit1626);
+				}
+			}
+			return($int5);
+		}
+	case 8843 :
+		if (($obj4 = guthix_staff_2416) | ($obj4 = void_knight_mace_8841)) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case air_rune_556 :
+		if (%varbit4145 = 1) {
+			return(^int_max);
+		} else if (enum(obj, boolean, 988, $obj4) = true) {
+			return(^int_max);
+		} else if (~script234 = 1) {
+			return(inv_total(93, air_rune_11688));
+		} else {
+			$int5 = inv_total(93, air_rune_556);
+			if (map_members = true) {
+				$int5 = ~add($int5, inv_total(93, smoke_rune_4697));
+				$int5 = ~add($int5, inv_total(93, mist_rune_4695));
+				$int5 = ~add($int5, inv_total(93, dust_rune_4696));
+				$int5 = ~add($int5, inv_total(93, air_rune_nz_11715));
+				if (enum(int, boolean, 983, $int1) = true) {
+					$int5 = ~add($int5, %varbit1624);
+				}
+				if (enum(int, boolean, 983, $int2) = true) {
+					$int5 = ~add($int5, %varbit1625);
+				}
+				if (enum(int, boolean, 983, $int3) = true) {
+					$int5 = ~add($int5, %varbit1626);
+				}
+			}
+			return($int5);
+		}
+	case earth_rune_557 :
+		if (%varbit4145 = 1) {
+			return(^int_max);
+		} else if (enum(obj, boolean, 996, $obj4) = true) {
+			return(^int_max);
+		} else if (~script234 = 1) {
+			return(inv_total(93, earth_rune_11689));
+		} else {
+			$int5 = inv_total(93, earth_rune_557);
+			if (map_members = true) {
+				$int5 = ~add($int5, inv_total(93, dust_rune_4696));
+				$int5 = ~add($int5, inv_total(93, lava_rune_4699));
+				$int5 = ~add($int5, inv_total(93, mud_rune_4698));
+				$int5 = ~add($int5, inv_total(93, earth_rune_nz_11717));
+				if (enum(int, boolean, 993, $int1) = true) {
+					$int5 = ~add($int5, %varbit1624);
+				}
+				if (enum(int, boolean, 993, $int2) = true) {
+					$int5 = ~add($int5, %varbit1625);
+				}
+				if (enum(int, boolean, 993, $int3) = true) {
+					$int5 = ~add($int5, %varbit1626);
+				}
+			}
+			return($int5);
+		}
+	case saradomin_staff_2415 :
+		if (($obj4 = $obj0) | ($obj4 = staff_of_light_22296)) {
+			return(1);
+		} else {
+			return(0);
+		}
+}
+def_obj $obj6 = enum(obj, obj, 13, $obj0);
+if (($obj6 ! null) & (~script234 = 1)) {
+	if ((map_members = true) | (oc_members($obj6) = false)) {
+		return(inv_total(93, $obj6));
+	} else {
+		return(0);
+	}
+} else if ((%varbit4145 = 1) & (enum(obj, int, 55, $obj0) ! 0)) {
+	if ((map_members = true) | (oc_members($obj0) = false)) {
+		return(^int_max);
+	} else {
+		return(0);
+	}
+} else {
+	if (map_members = true) {
+		$int5 = inv_total(93, $obj0);
+		if ($obj0 = chaos_rune_562) {
+			$int5 = ~add($int5, inv_total(93, chaos_rune_nz_11712));
+		} else if ($obj0 = death_rune_560) {
+			$int5 = ~add($int5, inv_total(93, death_rune_nz_11713));
+		} else if ($obj0 = blood_rune_565) {
+			$int5 = ~add($int5, inv_total(93, blood_rune_nz_11714));
+		}
+		if ($obj0 = enum(int, namedobj, 982, $int1)) {
+			$int5 = ~add($int5, %varbit1624);
+		}
+		if ($obj0 = enum(int, namedobj, 982, $int2)) {
+			$int5 = ~add($int5, %varbit1625);
+		}
+		if ($obj0 = enum(int, namedobj, 982, $int3)) {
+			$int5 = ~add($int5, %varbit1626);
+		}
+	} else if (oc_members($obj0) = false) {
+		$int5 = inv_total(93, $obj0);
+	} else {
+		$int5 = 0;
+	}
+	return($int5);
+}

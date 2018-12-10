@@ -1,0 +1,17 @@
+[clientscript,closebutton_key](int $int0)
+if (~script1701(-1, -1) = 0) {
+	return;
+} else {
+	def_enum $enum1 = ~toplevel_getcomponents;
+	if ($enum1 = null) {
+		return;
+	} else {
+		def_component $component2 = enum(component, component, $enum1, 161:13);
+		if (((($component2 ! null) & ($int0 = 13)) & (%varbit4681 = 1)) & (if_hassub($component2) = true)) {
+			if_close;
+			return;
+		} else {
+			return;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+[proc,raids_storage_side_items](component $component0, int $int1)
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_obj $obj4 = null;
+def_obj $obj5 = null;
+def_int $int6 = 0;
+while ($int6 < $int1) {
+	if (cc_find($component0, $int6) = true) {
+		cc_clearops;
+		$obj5 = inv_getobj(93, $int6);
+		if (%varbit3459 = 1) {
+			cc_sethide(false);
+			~raids_storage_side_private_drawitem($obj5, inv_getnum(93, $int6));
+			cc_setdragdeadzone(10);
+			cc_setdragdeadtime(10);
+		} else if ($obj5 ! null) {
+			cc_sethide(false);
+			cc_setobject($obj5, inv_getnum(93, $int6));
+			cc_setopbase("<col=ff9040><oc_name($obj5)></col>");
+			$int3 = 0;
+			$int2 = 0;
+			$obj4 = enum(int, obj, 1666, $int3);
+			while (($int2 = 0) & ($obj4 ! null)) {
+				if ($obj4 = $obj5) {
+					$int2 = 1;
+				}
+				$int3 = calc($int3 + 1);
+				$obj4 = enum(int, obj, 1666, $int3);
+			}
+			if ($int2 = 1) {
+				cc_setop(1, "Donate");
+				cc_setop(2, "Donate-5");
+				cc_setop(3, "Donate-10");
+				cc_setop(4, "Donate-All");
+				cc_setop(5, "Donate-X");
+				cc_setop(10, "Examine");
+				cc_settrans(0);
+				cc_setonop("raids_storage_items_op(event_opindex, event_com, event_comid)");
+			} else {
+				cc_setop(10, "Donate");
+				cc_settrans(150);
+				cc_setonop(null);
+			}
+		} else {
+			cc_sethide(true);
+			cc_setonop(null);
+		}
+	}
+	$int6 = calc($int6 + 1);
+}
+return;

@@ -1,0 +1,31 @@
+[proc,slayer_rewards_tabs](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+cc_deleteall($component0);
+def_int $int6 = 0;
+def_int $int7 = 0;
+$int6, $int7 = ~slayer_rewards_tab($component0, $component1, $int6, $int7, $component1, $component2, $component3, $component4, $component5, "Unlock");
+$int6, $int7 = ~slayer_rewards_tab($component0, $component2, $int6, $int7, $component1, $component2, $component3, $component4, $component5, "Extend");
+$int6, $int7 = ~slayer_rewards_tab($component0, $component3, $int6, $int7, $component1, $component2, $component3, $component4, $component5, "Buy");
+$int6, $int7 = ~slayer_rewards_tab($component0, $component4, $int6, $int7, $component1, $component2, $component3, $component4, $component5, "Tasks");
+cc_create($component0, ^iftype_text, $int6);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize($int7, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+~slayer_rewards_setpoints;
+cc_setonvartransmit("slayer_rewards_setpoints(event_com, event_comid){661}");
+if_sethide(false, $component5);
+if ($component5 ! $component1) {
+	if_sethide(true, $component1);
+}
+if ($component5 ! $component2) {
+	if_sethide(true, $component2);
+}
+if ($component5 ! $component3) {
+	if_sethide(true, $component3);
+}
+if ($component5 ! $component4) {
+	if_sethide(true, $component4);
+}
+return;

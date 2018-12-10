@@ -1,0 +1,23 @@
+script2722()
+~script2224;
+def_enum $enum0 = ~toplevel_getcomponents;
+if ($enum0 = null) {
+	return;
+} else {
+	def_component $component1 = enum(component, component, $enum0, 161:6);
+	if ($component1 = null) {
+		return;
+	} else {
+		cc_deleteall($component1);
+		cc_create($component1, ^iftype_text, 0);
+		cc_setsize(0, scale(1, 3, 16384), ^setsize_minus, ^setsize_2);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setcolour(0xff981f);
+		cc_settextshadow(true);
+		cc_settextfont(645);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settext("<col=ffffff>F12</col>: Exit<br><col=ffffff>PageUP</col>: Faster<br><col=ffffff>PageDOWN</col>: Slower<br>");
+		cc_setontimer("script2723(event_com, event_comid, calc(clientclock + 400))");
+		return;
+	}
+}

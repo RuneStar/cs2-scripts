@@ -1,0 +1,7 @@
+[clientscript,kourend_sidepanel_tasks_reset](component $component0, int $int1, string $string0)
+if (clientclock < $int1) {
+	return;
+} else {
+	~kourend_sidepanel_tasks_default($component0, $string0);
+	return;
+}

@@ -1,0 +1,9 @@
+[proc,ge_offers_setup_buttongraphic](component $component0, int $int1, graphic $graphic2, int $int3)(int)
+if (cc_find($component0, $int1) = true) {
+	.cc_create($component0, ^iftype_graphic, $int3);
+	$int3 = calc($int3 + 1);
+	.cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(calc(cc_getx + 8), calc(cc_gety + 8), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setgraphic($graphic2);
+}
+return($int3);

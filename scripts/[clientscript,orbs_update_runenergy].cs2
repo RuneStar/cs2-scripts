@@ -1,0 +1,31 @@
+[clientscript,orbs_update_runenergy](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+if ($component0 ! null) {
+	if_setnoclickthrough(true, $component5);
+	if_setonmisctransmit("orbs_update_runenergy(null, $component1, $component2, $component3, $component4, $component5, $component6)", $component0);
+	if_setonvartransmit("orbs_update_runenergy(null, $component1, $component2, $component3, $component4, $component5, $component6){173, 1575, 281}", $component0);
+	if_setonsubchange("orbs_update_runenergy(null, $component1, $component2, $component3, $component4, $component5, $component6)", $component0);
+	if_setonop("orbs_toggle_runmode(event_opindex, $component3, $component4)", $component6);
+}
+def_graphic $graphic7 = 1072;
+def_graphic $graphic8 = 1071;
+if (~toplevel_check_sidepanel(11) = false) {
+	if_setgraphic($graphic8, $component5);
+	if_setonmouserepeat(null, $component6);
+	if_setonmouseleave(null, $component6);
+	if_sethide(true, $component6);
+} else {
+	if_sethide(false, $component6);
+	if (%var281 = 200) {
+		if_setontimer("script2647($component5)", $component5);
+		if_setonmouserepeat(null, $component6);
+		if_setonmouseleave(null, $component6);
+	} else {
+		if_setgraphic($graphic8, $component5);
+		if_setontimer(null, $component5);
+		if_setonmouserepeat("script44($component5, $graphic7)", $component6);
+		if_setonmouseleave("script44($component5, $graphic8)", $component6);
+	}
+}
+~orbs_update($component1, $component2, runenergy_visible, 100);
+~orbs_update_runmode($component3, $component4);
+return;

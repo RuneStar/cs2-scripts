@@ -1,0 +1,10 @@
+[clientscript,tutorial_default_settings]()
+setwindowmode(2);
+setdefaultwindowmode(2);
+setremoveroofs(true);
+if (~on_mobile = true) {
+	~camera_do_zoom(320, 320);
+} else {
+	~camera_do_zoom(400, 400);
+}
+return;

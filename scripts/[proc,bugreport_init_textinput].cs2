@@ -1,0 +1,13 @@
+[proc,bugreport_init_textinput](component $component0)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+.cc_create($component0, ^iftype_text, 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settiling(true);
+cc_setgraphic("tradebacking_light");
+.cc_setcolour(0xff981f);
+.cc_settextfont(p12_full);
+.cc_settextshadow(true);
+.cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+return;

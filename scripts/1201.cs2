@@ -1,0 +1,25 @@
+script1201(component $component0, component $component1, int $int2, component $component3, obj $obj4)
+def_int $int5 = inv_total(173, $obj4);
+if ($int5 > 1000) {
+	$int5 = 1000;
+}
+.cc_setsize(calc(($int5 * 16384) / 1000), 0, ^setsize_2, ^setsize_minus);
+def_int $int6 = 0;
+def_int $int7 = 0;
+if ($int5 <= 500) {
+	$int7 = interpolate(0, $int5, 0, 500, 255);
+	$int6 = 255;
+} else {
+	$int7 = 255;
+	$int6 = interpolate(0, calc(1000 - $int5), 0, 500, 255);
+}
+def_int $colour8 = ~script246($int6, $int7, 0);
+cc_setcolour($colour8);
+.cc_setcolour($colour8);
+def_string $string0 = "<oc_name($obj4)>: <tostring(calc($int5 / 10))>.<tostring(calc($int5 % 10))>% appreciation";
+if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component3, $string0, 25, 512)", $component0);
+if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component3, $string0, 25, 512)", $component1);
+if_setonmouseleave("deltooltip($component3)", $component0);
+if_setonmouseleave("deltooltip($component3)", $component1);
+%varcint2 = 0;
+return;

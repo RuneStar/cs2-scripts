@@ -1,0 +1,22 @@
+[clientscript,clanwars_gameover](int $int0, string $string0)
+if ($int0 = 1) {
+	if_setmodel(3037, 89:2);
+	if_setmodelangle(-190, 75, 512, 0, 0, 700, 89:2);
+	if_setposition(180, 90, ^setpos_abs_left, ^setpos_abs_top, 89:3);
+	if_setsize(215, 34, ^setsize_abs, ^setsize_abs, 89:3);
+	if_settext("Congratulations!", 89:3);
+	if_setposition(180, 124, ^setpos_abs_left, ^setpos_abs_top, 89:4);
+	if_setsize(215, 120, ^setsize_abs, ^setsize_abs, 89:4);
+	if_settextalign(^settextalign_left, ^settextalign_centre, 20, 89:4);
+} else {
+	if_setmodel(20733, 89:2);
+	if_setmodelangle(0, 23, 512, 0, 0, 550, 89:2);
+	if_setposition(125, 95, ^setpos_abs_left, ^setpos_abs_top, 89:3);
+	if_setsize(262, 34, ^setsize_abs, ^setsize_abs, 89:3);
+	if_settext("Game Over!", 89:3);
+	if_setposition(125, 129, ^setpos_abs_left, ^setpos_abs_top, 89:4);
+	if_setsize(262, 110, ^setsize_abs, ^setsize_abs, 89:4);
+	if_settextalign(^settextalign_centre, ^settextalign_centre, 20, 89:4);
+}
+if_settext($string0, 89:4);
+return;

@@ -1,0 +1,27 @@
+[proc,deadman_restricted_item](obj $obj0)(int)
+def_int $int1 = oc_param($obj0, 568);
+if ($int1 = 0) {
+	return(0);
+} else {
+	def_int $int2 = 0;
+	$int2 = ~deadman_mode;
+	switch ($int2) {
+		case 0 :
+			if ($int1 ! 0) {
+				return(1);
+			}
+		case 1 :
+			if (($int1 ! 1) & ($int1 ! 5)) {
+				return(1);
+			}
+		case 2 :
+			if ((($int1 ! 1) & ($int1 ! 2)) & ($int1 ! 4)) {
+				return(1);
+			}
+		case 3 :
+			if ((($int1 ! 1) & ($int1 ! 3)) & ($int1 ! 4)) {
+				return(1);
+			}
+	}
+	return(0);
+}

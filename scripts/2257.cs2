@@ -1,0 +1,41 @@
+script2257(component $component0, int $int1)
+if_setontimer(null, $component0);
+def_int $array0(calc(18 + 1));
+$array0(1) = %var20;
+$array0(2) = %var21;
+$array0(3) = %var22;
+$array0(4) = %var23;
+$array0(5) = %var24;
+$array0(6) = %var25;
+$array0(7) = %var298;
+$array0(8) = %var311;
+$array0(9) = %var346;
+$array0(10) = %var414;
+$array0(11) = %var464;
+$array0(12) = %var598;
+$array0(13) = %var662;
+$array0(14) = %var721;
+$array0(15) = %var906;
+$array0(16) = %var1009;
+$array0(17) = %var1338;
+$array0(18) = %var1681;
+def_int $int2 = 0;
+def_coordgrid $coordgrid3 = null;
+def_int $int4 = 0;
+def_int $int5 = 0;
+while ($int5 < $int1) {
+	$int2 = enum(int, int, 818, $int5);
+	$coordgrid3 = enum(int, coordgrid, 819, $int2);
+	if ($coordgrid3 ! null) {
+		if (testbit($array0(coordx($coordgrid3)), coordy($coordgrid3)) = true) {
+			$int4 = calc($int4 + 1);
+		} else if (($int2 = 331) & (%varbit1028 > 35)) {
+			$int4 = calc($int4 + 1);
+		}
+	} else {
+		$int4 = calc($int4 + 1);
+	}
+	$int5 = calc($int5 + 1);
+}
+if_settext("<~script46(~min($int4, $int1), ",")> / <~script46($int1, ",")>", $component0);
+return;

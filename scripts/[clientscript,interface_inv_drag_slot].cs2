@@ -1,0 +1,11 @@
+[clientscript,interface_inv_drag_slot](int $int0, component $component1, component $component2, int $int3)
+if (cc_find($component1, $int0) = true) {
+	$int3 = calc($int3 - if_getscrolly($component1));
+	if ($int3 < 10) {
+		~scrollbar_ondrag_doscroll($component2, $component1, calc(if_getscrolly($component1) - 4), 1);
+	}
+	if (calc($int3 + cc_getheight) > calc(if_getheight($component1) - 10)) {
+		~scrollbar_ondrag_doscroll($component2, $component1, calc(if_getscrolly($component1) + 4), 1);
+	}
+}
+return;

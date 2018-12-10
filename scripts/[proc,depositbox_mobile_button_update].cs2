@@ -1,0 +1,19 @@
+[proc,depositbox_mobile_button_update]()
+if_setgraphic("miscgraphics,0", 192:11);
+if_setgraphic("miscgraphics,0", 192:13);
+if_setgraphic("miscgraphics,0", 192:15);
+if_setgraphic("miscgraphics,0", 192:17);
+if_setgraphic("miscgraphics,0", 192:19);
+switch (%varbit4430) {
+	case 1 :
+		if_setgraphic("miscgraphics,9", 192:13);
+	case 2 :
+		if_setgraphic("miscgraphics,9", 192:15);
+	case 3 :
+		if_setgraphic("miscgraphics,9", 192:17);
+	case 4 :
+		if_setgraphic("miscgraphics,9", 192:19);
+	else :
+		if_setgraphic("miscgraphics,9", 192:11);
+}
+return;

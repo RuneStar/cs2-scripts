@@ -1,0 +1,32 @@
+[proc,stonepanel](int $int0, component $component1, int $int2)(int)
+def_int $int3 = if_getwidth($component1);
+def_int $int4 = if_getheight($component1);
+def_int $int5 = calc($int3 - 32);
+def_int $int6 = calc($int4 - 32);
+~create_graphic($component1, $int2, 987, 16, -13, ^setpos_abs_left, ^setpos_abs_top, $int5, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, 989, 16, calc($int4 - 20), ^setpos_abs_left, ^setpos_abs_top, $int5, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, 988, -14, 16, ^setpos_abs_left, ^setpos_abs_top, 32, $int6, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, 990, calc($int3 - 20), 16, ^setpos_abs_left, ^setpos_abs_top, 32, $int6, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, 991, 0, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, 992, $int5, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, 993, 0, $int6, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, 994, $int5, $int6, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+if ($int0 < 6) {
+	return($int2);
+} else {
+	~create_graphic($component1, $int2, 995, 0, calc($int0 - 20), ^setpos_abs_left, ^setpos_abs_top, $int3, 32, ^setsize_abs, ^setsize_abs);
+	$int2 = calc($int2 + 1);
+	~create_graphic($component1, $int2, 996, 0, calc($int0 - 18), ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+	$int2 = calc($int2 + 1);
+	~create_graphic($component1, $int2, 997, $int5, calc($int0 - 18), ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+	$int2 = calc($int2 + 1);
+	return($int2);
+}

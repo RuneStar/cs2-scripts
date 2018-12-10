@@ -1,0 +1,11 @@
+script1019(int $int0, component $component1, int $int2, int $int3)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	if (cc_find($component1, $int2) = true) {
+		cc_setcolour(^white);
+		cc_setontimer("script1020(event_com, event_comid, $int3, calc(clientclock + 30))");
+	}
+	return;
+}

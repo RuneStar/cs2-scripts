@@ -1,0 +1,41 @@
+[clientscript,nzone_game_subtitle](component $component0, int $int1, int $int2, int $int3)
+def_int $int4 = pow(50, 2);
+def_int $int5 = calc(50 * 2);
+def_int $int6 = calc(clientclock - $int3);
+if ($int6 < 50) {
+	if ($int6 < 0) {
+		$int6 = 0;
+	} else if ($int6 = 1) {
+		sound_synth(2201, 1, 0);
+	}
+	$int6 = calc(50 - $int6);
+	if (cc_find($component0, $int1) = true) {
+		cc_settrans(interpolate(0, $int6, 0, 50, 255));
+	}
+	if (cc_find($component0, $int2) = true) {
+		cc_setposition(interpolate(0, pow($int6, 2), 0, $int4, 16384), cc_gety, ^setpos_3, ^setpos_abs_top);
+	}
+	return;
+} else if ($int6 < $int5) {
+	return;
+} else if ($int6 < calc(50 * 3)) {
+	if ($int6 = $int5) {
+		sound_synth(2201, 1, 0);
+	}
+	$int6 = calc($int6 - $int5);
+	if (cc_find($component0, $int1) = true) {
+		cc_settrans(interpolate(0, $int6, 0, 50, 255));
+	}
+	if (cc_find($component0, $int2) = true) {
+		cc_setposition(interpolate(0, pow($int6, 2), 0, $int4, 16384), cc_gety, ^setpos_5, ^setpos_abs_top);
+	}
+	return;
+} else {
+	if (cc_find($component0, $int1) = true) {
+		cc_delete;
+	}
+	if (cc_find($component0, $int2) = true) {
+		cc_delete;
+	}
+	return;
+}

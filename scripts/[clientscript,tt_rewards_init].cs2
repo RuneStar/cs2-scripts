@@ -1,0 +1,33 @@
+[clientscript,tt_rewards_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+if_setonvartransmit("script5($component1, $component0, $component3, $component2, $component4){702}", $component2);
+cc_deleteall($component0);
+cc_deleteall($component1);
+if_sethide(true, $component2);
+if_sethide(true, $component4);
+if_settext("Select a reward<br><br>on the left to<br><br>display information<br><br>here.", $component3);
+def_int $int5 = 0;
+def_int $int6 = calc(if_getwidth($component0) / 3);
+def_int $int7 = calc(($int6 - 36) / 2);
+def_int $int8 = 20;
+while ($int5 < 9) {
+	cc_create($component1, ^iftype_graphic, $int5);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int7 + ((($int7 * 2) + 36) * ($int5 % 3))), $int8, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject_nonum(enum(int, obj, 1382, $int5), 0);
+	cc_setop(1, "Details");
+	cc_setonop("script4(event_comid, $component1, $component0, $component3, $component2, $component4)");
+	cc_setonmouseover("tt_reward_highlight(event_comid, $component1, $component0)");
+	cc_setonmouseleave("tt_reward_highlight_off(event_comid, $component1, $component0)");
+	cc_create($component0, ^iftype_text, $int5);
+	cc_setsize(56, 62, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(($int7 - 10) + (((($int7 - 10) * 2) + 56) * ($int5 % 3))), $int8, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext(enum(int, string, 1383, $int5));
+	cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	$int5 = calc($int5 + 1);
+	if (calc($int5 % 3) = 0) {
+		$int8 = calc($int8 + 80);
+	}
+}
+return;

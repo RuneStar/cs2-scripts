@@ -1,0 +1,12 @@
+[clientscript,deadman_stats_click](int $int0, component $component1, int $int2)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	if (testbit(%var1295, calc($int2 - 1)) = false) {
+		~script1143($component1, $int2);
+	} else {
+		~script1144($component1, $int2);
+	}
+	return;
+}

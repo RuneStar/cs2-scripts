@@ -1,0 +1,13 @@
+[proc,emote_update](component $component0)
+def_int $int1 = 0;
+while ($int1 <= 47) {
+	if (cc_find($component0, $int1) = true) {
+		if (~emote_checkunlocked($int1) = 1) {
+			cc_setgraphic(enum(int, graphic, 1001, $int1));
+		} else {
+			cc_setgraphic(enum(int, graphic, 1002, $int1));
+		}
+	}
+	$int1 = calc($int1 + 1);
+}
+return;

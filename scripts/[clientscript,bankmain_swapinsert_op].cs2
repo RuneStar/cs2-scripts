@@ -1,0 +1,11 @@
+[clientscript,bankmain_swapinsert_op](int $int0, component $component1, component $component2, int $int3)
+if ($int0 ! 1) {
+	return;
+} else {
+	if (%varbit3959 ! $int3) {
+		%varbit3959 = $int3;
+		sound_synth(2266, 1, 0);
+	}
+	~bankmain_swapinsert($component1, $component2);
+	return;
+}

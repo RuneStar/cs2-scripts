@@ -1,0 +1,128 @@
+script1296(component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, obj $obj6, int $int7, obj $obj8, int $int9, obj $obj10, int $int11, int $int12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21)
+def_obj $array0(4);
+def_int $array1(4);
+def_int $int22 = 0;
+if_setobject(null, 0, $component13);
+if_setobject(null, 0, $component14);
+if_setobject(null, 0, $component15);
+if_setobject(null, 0, $component16);
+cc_deleteall($component0);
+$array0($int22) = dark_essence_block_13446;
+$array1($int22) = 1;
+$int22 = calc($int22 + 1);
+if ($int2 > 0) {
+	$array0($int22) = air_rune_556;
+	$array1($int22) = $int2;
+	$int22 = calc($int22 + 1);
+}
+if ($int3 > 0) {
+	$array0($int22) = water_rune_555;
+	$array1($int22) = $int3;
+	$int22 = calc($int22 + 1);
+}
+if (($int22 <= 3) & ($int4 > 0)) {
+	$array0($int22) = earth_rune_557;
+	$array1($int22) = $int4;
+	$int22 = calc($int22 + 1);
+}
+if (($int22 <= 3) & ($int5 > 0)) {
+	$array0($int22) = fire_rune_554;
+	$array1($int22) = $int5;
+	$int22 = calc($int22 + 1);
+}
+if (($int22 <= 3) & ($int7 > 0)) {
+	$array0($int22) = $obj6;
+	$array1($int22) = $int7;
+	$int22 = calc($int22 + 1);
+}
+if (($int22 <= 3) & ($int9 > 0)) {
+	$array0($int22) = $obj8;
+	$array1($int22) = $int9;
+	$int22 = calc($int22 + 1);
+}
+if (($int22 <= 3) & ($int11 > 0)) {
+	$array0($int22) = $obj10;
+	$array1($int22) = $int11;
+	$int22 = calc($int22 + 1);
+}
+if_settext("Magic level: <tostring($int12)>", $component17);
+if (stat(magic) >= $int12) {
+	if_setcolour(0xff981f, $component17);
+} else {
+	if_setcolour(0xc80000, $component17);
+}
+if (($array0(0) ! null) & ($array1(0) > 0)) {
+	if_settext("<tostring(inv_total(93, dark_essence_block_13446))>/1", $component18);
+	if_setobject_nonum($array0(0), $array1(0), $component13);
+	if (inv_total(93, $array0(0)) < $array1(0)) {
+		cc_create($component0, ^iftype_graphic, 0);
+		cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(if_getx($component13) + 20), calc(if_gety($component13) + 16), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("cross");
+		if_setcolour(0xc80000, $component18);
+	} else {
+		cc_create($component0, ^iftype_graphic, 0);
+		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(if_getx($component13) + 20), calc(if_gety($component13) + 16), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("tick");
+		if_setcolour(0xff981f, $component18);
+	}
+}
+if (($array0(1) ! null) & ($array1(1) > 0)) {
+	if_settext("<~magic_tostring(~magic_runecount($array0(1)))>/<tostring($array1(1))>", $component19);
+	if_setobject_nonum($array0(1), $array1(1), $component14);
+	if (~magic_runecount($array0(1)) < $array1(1)) {
+		cc_create($component0, ^iftype_graphic, 1);
+		cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(if_getx($component14) + 20), calc(if_gety($component14) + 16), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("cross");
+		if_setcolour(0xc80000, $component19);
+	} else {
+		cc_create($component0, ^iftype_graphic, 1);
+		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(if_getx($component14) + 20), calc(if_gety($component14) + 16), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("tick");
+		if_setcolour(0xff981f, $component19);
+	}
+} else {
+	if_settext("", $component19);
+}
+if (($array0(2) ! null) & ($array1(2) > 0)) {
+	if_settext("<~magic_tostring(~magic_runecount($array0(2)))>/<tostring($array1(2))>", $component20);
+	if_setobject_nonum($array0(2), $array1(2), $component15);
+	if (~magic_runecount($array0(2)) < $array1(2)) {
+		cc_create($component0, ^iftype_graphic, 2);
+		cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(if_getx($component15) + 20), calc(if_gety($component15) + 16), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("cross");
+		if_setcolour(0xc80000, $component20);
+	} else {
+		cc_create($component0, ^iftype_graphic, 2);
+		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(if_getx($component15) + 20), calc(if_gety($component15) + 16), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("tick");
+		if_setcolour(0xff981f, $component20);
+	}
+} else {
+	if_settext("", $component20);
+}
+if (($array0(3) ! null) & ($array1(3) > 0)) {
+	if_settext("<~magic_tostring(~magic_runecount($array0(3)))>/<tostring($array1(3))>", $component21);
+	if_setobject_nonum($array0(3), $array1(3), $component16);
+	if (~magic_runecount($array0(3)) < $array1(3)) {
+		cc_create($component0, ^iftype_graphic, 3);
+		cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(if_getx($component16) + 20), calc(if_gety($component16) + 16), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("cross");
+		if_setcolour(0xc80000, $component21);
+	} else {
+		cc_create($component0, ^iftype_graphic, 3);
+		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(if_getx($component16) + 20), calc(if_gety($component16) + 16), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("tick");
+		if_setcolour(0xff981f, $component21);
+	}
+} else {
+	if_settext("", $component21);
+}
+return;

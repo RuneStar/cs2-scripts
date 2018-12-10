@@ -1,0 +1,7 @@
+script383()(int)
+def_int $int0 = worldflags;
+if (testbit($int0, 2) = true) {
+	return(1);
+} else {
+	return(0);
+}

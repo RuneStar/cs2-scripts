@@ -1,0 +1,23 @@
+[clientscript,orbs_update_prayer](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+if ($component0 ! null) {
+	if_setnoclickthrough(true, $component5);
+	if_setonstattransmit("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6){prayer}", $component0);
+	if_setonvartransmit("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6){375}", $component0);
+	if_setonsubchange("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6)", $component0);
+	if_setonop("orbs_toggle_prayer(event_opindex, $component3, $component4, $component6)", $component6);
+}
+def_graphic $graphic7 = 1072;
+if (~toplevel_check_sidepanel(5) = true) {
+	if_setonmouserepeat("script44($component5, $graphic7)", $component6);
+	$graphic7 = 1071;
+	if_setonmouseleave("script44($component5, $graphic7)", $component6);
+	if_sethide(false, $component6);
+} else {
+	if_setgraphic(1071, $component5);
+	if_setonmouserepeat(null, $component6);
+	if_setonmouseleave(null, $component6);
+	if_sethide(true, $component6);
+}
+~orbs_update($component1, $component2, stat(prayer), stat_base(prayer));
+~orbs_update_prayer($component3, $component4, $component6);
+return;

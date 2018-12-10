@@ -1,0 +1,12 @@
+[clientscript,tournament_supplies_search_toggle](int $int0, component $component1, component $component2, component $component3, int $int4, int $int5)
+sound_synth(2266, 1, 0);
+if ($int0 = 1) {
+	~meslayer_mode11;
+	~tournament_supplies_search_on($component1, $component2, $component3, $int4, $int5);
+} else {
+	if (%varcint5 = 11) {
+		~meslayer_close(1, 1);
+	}
+	~tournament_supplies_search_off($component1, $component2, $component3, $int4, $int5);
+}
+return;

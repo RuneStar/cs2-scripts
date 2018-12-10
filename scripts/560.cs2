@@ -1,0 +1,12 @@
+script560(component $component0, string $string0)
+cc_create($component0, ^iftype_text, ~script198($component0));
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_setcolour(^white);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+return;

@@ -1,0 +1,117 @@
+script2344(component $component0, int $int1, component $component2, fontmetrics $fontmetrics3, string $string0, string $string1)
+def_fontmetrics $fontmetrics4 = p12_full;
+def_int $int5 = 12;
+def_int $int6 = 4;
+if ($fontmetrics3 = p11_full) {
+	$int6 = 2;
+	$int5 = 10;
+	$fontmetrics4 = p11_full;
+} else if ($fontmetrics3 = b12_full) {
+	$fontmetrics4 = b12_full;
+}
+def_string $string2 = "";
+def_string $string3 = "";
+def_string $string4 = "";
+def_string $string5 = "";
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+$string4, $string0 = ~script632($string0);
+$string5, $string1 = ~script632($string1);
+def_int $int12 = string_length($string4);
+def_int $int13 = string_length($string5);
+while (($int12 > 0) | ($int13 > 0)) {
+	if ($int12 > 0) {
+		$int7 = parawidth(^int_max, $fontmetrics3, $string4);
+	} else {
+		$int7 = 0;
+	}
+	if ($int13 > 0) {
+		$int8 = parawidth(^int_max, $fontmetrics3, $string5);
+	} else {
+		$int8 = 0;
+	}
+	$int9 = calc(($int7 + $int6) + $int8);
+	if ($int10 < $int9) {
+		$int10 = $int9;
+	}
+	if ($int11 > 0) {
+		$string3 = append($string3, append("<br>", $string5));
+		$string2 = append($string2, append("<br>", $string4));
+	} else {
+		$string3 = append($string3, $string5);
+		$string2 = append($string2, $string4);
+	}
+	$int11 = calc($int11 + 1);
+	if ((string_length($string0) > 0) | (string_length($string1) > 0)) {
+		$string4, $string0 = ~script632($string0);
+		$string5, $string1 = ~script632($string1);
+		$int12 = string_length($string4);
+		$int13 = string_length($string5);
+	} else {
+		$int13 = 0;
+		$int12 = 0;
+	}
+}
+$int5 = calc((($int11 * $int5) + ($int6 - 1)) + 4);
+$int9 = calc($int10 + 4);
+if_setsize($int9, $int5, ^setsize_abs, ^setsize_abs, $component2);
+def_int $int14 = if_getx($component0);
+def_int $int15 = if_gety($component0);
+def_int $int16 = 0;
+if (($int1 ! -1) & (cc_find($component0, $int1) = true)) {
+	$int16 = cc_getheight;
+	$int15 = calc(($int15 + cc_gety) - if_getscrolly($component0));
+	$int14 = calc(($int14 + cc_getx) - if_getscrollx($component0));
+} else {
+	$int16 = if_getheight($component0);
+}
+def_component $component17 = if_getlayer($component0);
+while ($component17 ! null) {
+	$int15 = calc(($int15 + if_gety($component17)) - if_getscrolly($component17));
+	$int14 = calc(($int14 + if_getx($component17)) - if_getscrollx($component17));
+	$component17 = if_getlayer($component17);
+}
+def_int $int18 = calc($int14 + 5);
+def_int $int19 = calc(($int15 + $int16) + 5);
+def_int $int20 = 0;
+def_component $component21 = if_getlayer($component2);
+if ($component21 ! null) {
+	$int20 = calc(if_getwidth($component21) - $int9);
+	if ($int18 > $int20) {
+		$int18 = $int20;
+	}
+	if ($int19 > calc(if_getheight($component21) - $int5)) {
+		$int19 = calc(($int15 - $int5) - 5);
+	}
+}
+if_setposition($int18, $int19, ^setpos_abs_left, ^setpos_abs_top, $component2);
+cc_deleteall($component2);
+cc_create($component2, ^iftype_rectangle, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_setcolour(0xffffa0);
+cc_create($component2, ^iftype_rectangle, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(^black);
+cc_create($component2, ^iftype_text, 2);
+cc_setsize(4, 1, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settext($string2);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextfont($fontmetrics4);
+cc_setcolour(^black);
+cc_create($component2, ^iftype_text, 3);
+cc_setsize(4, 1, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settext($string3);
+cc_settextalign(^settextalign_right, ^settextalign_top, 0);
+cc_settextfont($fontmetrics4);
+cc_setcolour(^black);
+%varcint2 = 1;
+return;

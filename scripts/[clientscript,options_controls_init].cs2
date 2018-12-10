@@ -1,0 +1,9 @@
+[clientscript,options_controls_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+~script2355;
+~script1124($component2, $component6, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, "Player 'Attack' options:");
+~script1124($component3, $component7, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, "NPC 'Attack' options:");
+~script1131($component2, $component3);
+if_setonvartransmit("script1130($component2, $component3){1107, 1306}", $component0);
+if_sethide(true, $component4);
+if_setonclick("script1128($component4, $component9, $component2, $component3)", $component4);
+return;

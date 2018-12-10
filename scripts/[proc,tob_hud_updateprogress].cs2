@@ -1,0 +1,17 @@
+[proc,tob_hud_updateprogress](int $int0, component $component1)
+def_int $int2 = %varcint220;
+if ($int2 = -1) {
+	$int2 = $int0;
+	if_setontimer(null, $component1);
+} else if ($int2 < $int0) {
+	$int2 = calc($int2 + ~max(1, scale(3, 7, ($int0 - $int2))));
+	if_setontimer("tob_hud_updateprogress($int0, $component1, .cc_getid)", $component1);
+} else if ($int2 > $int0) {
+	$int2 = calc($int2 - ~max(1, scale(3, 7, ($int2 - $int0))));
+	if_setontimer("tob_hud_updateprogress($int0, $component1, .cc_getid)", $component1);
+} else {
+	if_setontimer(null, $component1);
+}
+.cc_setsize($int2, 0, ^setsize_2, ^setsize_minus);
+%varcint220 = $int2;
+return;

@@ -1,0 +1,23 @@
+[clientscript,ge_history_finish]()
+def_int $int0 = 0;
+if (%varcint43 > 0) {
+	$int0 = calc(%varcint43 * 38);
+} else {
+	cc_deleteall(383:3);
+	cc_create(383:3, ^iftype_text, 0);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext("You have no recorded Grand Exchange trades.");
+}
+if_setscrollpos(0, 0, 383:3);
+if ($int0 > if_getheight(383:3)) {
+	if_setscrollsize(0, $int0, 383:3);
+} else {
+	if_setscrollsize(0, 0, 383:3);
+}
+~scrollbar_vertical(383:4, 383:3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+return;

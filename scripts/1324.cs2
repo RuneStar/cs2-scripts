@@ -1,0 +1,12 @@
+script1324(component $component0)
+if ((playermod = true) | (staffmodlevel > 0)) {
+	if (%varcint6 = 1) {
+		%varcint6 = 0;
+	} else {
+		%varcint6 = 1;
+	}
+	~snapshot_toggle($component0, %varcint6);
+} else {
+	mes("Only moderators may do that.");
+}
+return;

@@ -1,0 +1,8 @@
+[clientscript,hp_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+~script2249($component1, setbit(0, 3));
+~script1486($component2, ^setpos_abs_left, 1, 0);
+if_setonsubchange("hp_hud_pos(0, $component0, $component3, $component4, $component5, $component8, $component6, $component7)", $component0);
+if_setonvartransmit("hp_hud_update($component6, $component7, $component4, $component8){1682, 1683}", $component6);
+~hp_hud_pos(0, $component0, $component3, $component4, $component5, $component8, $component6, $component7);
+~hp_hud_update($component6, $component7, $component4, $component8);
+return;

@@ -1,0 +1,23 @@
+[proc,wom_tab_highlight]()
+def_component $component0 = null;
+def_component $component1 = null;
+def_component $component2 = null;
+def_int $int3 = 0;
+def_int $int4 = -1;
+def_int $int5 = ~wom_get_tab(%varbit6610);
+def_int $int6 = enum_getoutputcount(2071);
+while ($int3 < $int6) {
+	$int4 = ~wom_get_tab($int3);
+	$component0, $component1, $component2 = ~wom_get_graphics($int4);
+	if ($int5 = $int4) {
+		if_setgraphic(998, $component0);
+		if_setgraphic(999, $component1);
+		if_setgraphic(1000, $component2);
+	} else {
+		if_setgraphic(1001, $component0);
+		if_setgraphic(1002, $component1);
+		if_setgraphic(1003, $component2);
+	}
+	$int3 = calc($int3 + 1);
+}
+return;

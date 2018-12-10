@@ -1,0 +1,6 @@
+[clientscript,smithing_init](component $component0)
+~smithing_setup;
+if_setonvartransmit("smithing_setup(){210, 281, 197, 314, 1317, 1318}", $component0);
+if_setonstattransmit("smithing_setup(){smithing}", $component0);
+if_setoninvtransmit("smithing_setup(){93}", $component0);
+return;

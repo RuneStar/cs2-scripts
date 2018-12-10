@@ -1,0 +1,23 @@
+script2043(int $int0)
+def_coordgrid $coordgrid1 = coord;
+if (~inzone(0_16_140_0_0, 3_823_161_63_63, $coordgrid1) = 1) {
+	$coordgrid1 = movecoord($coordgrid1, 0, 0, -6400);
+}
+def_int $int2 = calc(coordx($coordgrid1) - coordx(0_45_49_32_0));
+def_int $int3 = calc(coordy($coordgrid1) - coordy(0_45_49_32_0));
+if (((($int2 < 0) | ($int2 > 384)) | ($int3 < 0)) | ($int3 > 384)) {
+	cc_sethide(true);
+	return;
+} else {
+	cc_sethide(false);
+	def_int $int4 = 75;
+	def_int $int5 = 235;
+	$int5 = calc($int5 - scale($int3, 384, 188));
+	$int4 = calc($int4 + scale($int3, 384, 85));
+	def_int $int6 = calc(295 - scale($int3, 384, 53));
+	$int4 = calc($int4 + scale($int2, 384, $int6));
+	$int6 = calc(70 - scale($int3, 384, 20));
+	$int5 = calc($int5 + scale($int2, 384, $int6));
+	cc_setposition(calc($int4 - (cc_getwidth / 2)), calc($int5 - (cc_getheight / 2)), ^setpos_abs_left, ^setpos_abs_top);
+	return;
+}

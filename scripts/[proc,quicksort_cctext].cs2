@@ -1,0 +1,38 @@
+[proc,quicksort_cctext](int $int0, component $component1, int $int2, int $int3)
+def_int $int4 = calc(($int2 + $int3) / 2);
+def_int $int5 = $array0($int4);
+$array0($int4) = $array0($int3);
+$array0($int3) = $int5;
+def_int $int6 = $int2;
+def_int $int7 = $int2;
+def_int $int8 = -1;
+def_string $string0 = "";
+def_string $string1 = "";
+while ($int7 < $int3) {
+	if (cc_find($component1, $array0($int7)) = true) {
+		$string0 = cc_gettext;
+	} else {
+		$string0 = "";
+	}
+	if (cc_find($component1, $int5) = true) {
+		$string1 = cc_gettext;
+	} else {
+		$string1 = "";
+	}
+	if (compare(lowercase($string0), lowercase($string1)) <= 0) {
+		$int8 = $array0($int7);
+		$array0($int7) = $array0($int6);
+		$array0($int6) = $int8;
+		$int6 = calc($int6 + 1);
+	}
+	$int7 = calc($int7 + 1);
+}
+$array0($int3) = $array0($int6);
+$array0($int6) = $int5;
+if ($int2 < calc($int6 - 1)) {
+	~quicksort_cctext(0, $component1, $int2, calc($int6 - 1));
+}
+if (calc($int6 + 1) < $int3) {
+	~quicksort_cctext(0, $component1, calc($int6 + 1), $int3);
+}
+return;

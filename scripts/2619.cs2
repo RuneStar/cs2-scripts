@@ -1,0 +1,24 @@
+script2619(obj $obj0)(int)
+def_int $int1 = oc_param($obj0, 605);
+if ($int1 = 0) {
+	if (%varbit6605 = 1) {
+		return(0);
+	}
+} else if ($int1 = 1) {
+	if (%varbit6606 = 1) {
+		return(0);
+	}
+} else if (($int1 = 2) & (%varbit6609 = 1)) {
+	return(0);
+}
+if (%varbit6607 = 1) {
+	$int1 = oc_param($obj0, 604);
+	if ((stat_base(magic) < $int1) & (stat(magic) < $int1)) {
+		return(0);
+	}
+}
+if ((%varbit6608 = 1) & (~magic_spellbook_hasrunes($obj0) = 0)) {
+	return(0);
+} else {
+	return(1);
+}

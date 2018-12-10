@@ -1,0 +1,13 @@
+[clientscript,deadmanprotect_onload]()
+~deadmanprotect_createtab(0, 1346, "PvM");
+~deadmanprotect_createtab(1, 1347, "PvP");
+~deadmanprotect_createtab(2, 1348, "Skulled");
+~deadmanprotect_createtab(3, 1349, "Guarded");
+%varcint139 = 1;
+~deadmanprotect_settab(1);
+def_int $int0 = 0;
+def_int $int1 = 0;
+$int0, $int1 = ~deadmanprotect_xp_counts;
+if_settext("Combat <tostring($int0)>/2", 226:46);
+if_settext("Other <tostring($int1)>/3", 226:47);
+return;

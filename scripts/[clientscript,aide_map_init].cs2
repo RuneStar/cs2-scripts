@@ -1,0 +1,21 @@
+[clientscript,aide_map_init](component $component0, component $component1, component $component2)
+cc_deleteall($component2);
+cc_create($component2, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 32, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_settextshadow(false);
+cc_settext("Show Tutors");
+~aide_map_tutors(true, $component1);
+if_setonmouserepeat("aide_map_tutors(false, $component2, cc_getid, $component1)", $component2);
+if_setonmouseleave("aide_map_tutors(true, $component2, cc_getid, $component1)", $component2);
+cc_deleteall($component0);
+cc_create($component0, ^iftype_model, 0);
+cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+cc_setmodel(3062);
+cc_setmodelangle(0, 0, 512, 68, 0, 1526);
+cc_setmodelanim(646);
+~script2043($component0);
+if_setontimer("script2042($component0, cc_getid)", $component0);
+return;

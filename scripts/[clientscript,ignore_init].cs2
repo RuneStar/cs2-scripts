@@ -1,0 +1,13 @@
+[clientscript,ignore_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+~script2507($component1);
+if_settext("Ignore List - World <tostring(map_world)>", $component2);
+cc_deleteall($component7);
+~scrollbar_vertical($component7, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+switch (%varcint184) {
+	case 0, 1, 2, 3 :
+	else :
+		%varcint184 = 0;
+}
+~ignore_update($component3, $component4, $component5, $component6, $component7, $component8, $component9);
+if_setonfriendtransmit("ignore_update($component3, $component4, $component5, $component6, $component7, $component8, $component9)", $component0);
+return;

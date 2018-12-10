@@ -1,0 +1,17 @@
+[clientscript,bugreport_submit]()
+if (string_length(%varcstring27) > 0) {
+	sound_synth(2266, 1, 0);
+	if (%varbit4931 < 10) {
+		bug_report(0, ~script1099(%varcstring27), ~script1099(%varcstring130));
+	}
+	if (~on_mobile = true) {
+		~script1984;
+	}
+	if_close;
+	mes("Your bug report has been submitted. Thank you.");
+	return;
+} else {
+	sound_synth(2277, 1, 0);
+	mes("Please describe the bug.");
+	return;
+}

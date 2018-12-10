@@ -1,0 +1,21 @@
+script429(obj $obj0, obj $obj1, obj $obj2, component $component3, int $int4)
+if ($int4 = 1) {
+	if_setoninvtransmit("script429($obj0, $obj1, $obj2, event_com, false){93}", $component3);
+}
+if (($obj0 = enchanted_gem_4155) & (inv_total(93, eternal_gem_21270) > 0)) {
+	$obj1 = slayer_ring_eternal_21268;
+	$obj0 = eternal_gem_21270;
+}
+if ((($obj0 = null) | (inv_total(93, $obj0) > 0)) & ((inv_total(93, gold_bar_2357) > 0) | ((map_members = true) & (inv_total(93, perfect_gold_bar_2365) > 0)))) {
+	if_setobject($obj1, 1, $component3);
+	if_setopbase("<col=ff9040><oc_name($obj1)>", $component3);
+	if_setop(1, "Make-1", $component3);
+	if_setop(2, "Make-5", $component3);
+	if_setop(3, "Make-10", $component3);
+	if_setop(4, "Make-X", $component3);
+	if_setop(5, "Make-All", $component3);
+} else {
+	if_setobject($obj2, 1, $component3);
+	if_clearops($component3);
+}
+return;

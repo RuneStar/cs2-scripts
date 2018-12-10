@@ -1,0 +1,22 @@
+script1099(string $string0)(string)
+$string0 = escape($string0);
+def_int $int0 = string_length($string0);
+def_int $int1 = 0;
+if (($int0 > 0) & (compare(substring($string0, calc($int0 - 1), $int0), "|") = 0)) {
+	$int1 = 1;
+}
+def_string $string1 = "";
+def_string $string2 = "";
+while (string_length($string0) > 0) {
+	$string2, $string0 = ~script632($string0);
+	if (string_length($string1) > 0) {
+		$string1 = append($string1, append("<br>", $string2));
+	} else {
+		$string1 = $string2;
+	}
+}
+if ($int1 = 1) {
+	return(append($string1, "<br>"));
+} else {
+	return($string1);
+}

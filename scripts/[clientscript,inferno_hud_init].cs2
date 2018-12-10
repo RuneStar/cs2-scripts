@@ -1,0 +1,7 @@
+[clientscript,inferno_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+~script2249($component0, setbit(0, 3));
+~script1486($component1, ^setpos_abs_left, 1, 0);
+if_setonvartransmit("inferno_hud_update($component5, $component6){1575}", $component5);
+~inferno_hud_pos(0, $component2, $component3, $component4, $component7, $component5, $component6);
+~inferno_hud_update($component5, $component6);
+return;

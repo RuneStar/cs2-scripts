@@ -1,0 +1,43 @@
+[proc,raids_sidepanel_data](int $int0, component $component1)
+cc_settext("Party size: <col=ffffff><tostring(%varbit5424)></col>");
+if (%varbit5425 = 0) {
+	if (%varbit5423 = 1) {
+		.cc_settext("");
+	} else {
+		.cc_settext("Waiting for your leader to begin the raid...");
+	}
+} else if (%varbit5425 = 1) {
+	.cc_settext("Your party is exploring the upper level...");
+} else if (%varbit5425 = 2) {
+	if (%varbit6385 = 1) {
+		.cc_settext("Your party has reached the middle level...");
+	} else {
+		.cc_settext("Your party has reached the lower level...");
+	}
+} else if (%varbit5425 = 3) {
+	.cc_settext("Your party has reached the lower level...");
+} else if (%varbit5425 = 4) {
+	.cc_settext("Your party has reached the bottom...");
+} else {
+	.cc_settext("Get out! Get out!<br>GET OUT!");
+}
+def_string $string0 = "Start raid";
+if ((%varbit5423 = 1) & (%varbit5425 = 0)) {
+	if_setsize(calc(parawidth(190, p12_full, $string0) + 20), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
+	if_sethide(false, $component1);
+	~raids_sidepanel_drawbutton(0, $component1, $string0);
+	if_setonmouserepeat("raids_sidepanel_drawbutton(true, $string0, $component1)", $component1);
+	if_setonmouseleave("raids_sidepanel_drawbutton(false, $string0, $component1)", $component1);
+	if_setonop("raids_sidepanel_opbutton(event_opindex, $string0, $component1)", $component1);
+	if_setontimer(null, $component1);
+	if_setop(1, $string0, $component1);
+} else {
+	if_sethide(true, $component1);
+	cc_deleteall($component1);
+	if_clearops($component1);
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setonop(null, $component1);
+	if_setontimer(null, $component1);
+}
+return;

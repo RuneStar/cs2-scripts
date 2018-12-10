@@ -1,0 +1,12 @@
+[clientscript,tob_hud_playportal](int $int0, int $int1)
+def_int $int2 = 0;
+if (cc_find(28:1, $int0) = true) {
+	$int2 = calc(clientclock - $int1);
+	if ($int2 >= 20) {
+		cc_setontimer(null);
+		cc_sethide(true);
+	} else {
+		cc_setmodelangle(0, 130, 0, 0, 0, ~max(1, scale(6464, 10000, cc_getmodelzoom)));
+	}
+}
+return;

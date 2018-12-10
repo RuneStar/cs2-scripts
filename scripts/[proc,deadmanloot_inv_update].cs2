@@ -1,0 +1,50 @@
+[proc,deadmanloot_inv_update]()
+def_inv $inv0 = null;
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_obj $obj3 = null;
+def_int $int4 = 0;
+def_boolean $boolean5 = false;
+def_int $int6 = 0;
+while ($int1 < 5) {
+	$inv0 = enum(int, inv, 1243, $int1);
+	while ($int2 < 28) {
+		if (cc_find(234:15, calc(($int1 * 28) + $int2)) = true) {
+			$obj3 = inv_getobj($inv0, $int2);
+			if (($obj3 ! null) & ($int1 = %varbit4842)) {
+				cc_setobject($obj3, inv_getnum($inv0, $int2));
+				cc_setopbase("<col=ff981f><oc_name($obj3)>");
+				if ($int1 = %varbit4842) {
+					cc_sethide(false);
+				}
+				$boolean5 = true;
+			} else {
+				cc_setobject_nonum(6512, 1);
+				cc_setopbase("");
+				cc_sethide(true);
+			}
+		}
+		$int2 = calc($int2 + 1);
+	}
+	if (((($boolean5 = true) & (cc_find(234:14, $int1) = true)) & (string_length(cc_getop(1)) = 0)) & (inv_total(93, enum(int, namedobj, 1244, $int1)) > 0)) {
+		$int6 = 1;
+	}
+	if ($int1 = %varbit4842) {
+		if_sethide($boolean5, 234:16);
+		if_sethide($boolean5, 234:46);
+		if (cc_find(234:14, calc(5 + $int1)) = true) {
+			if (inv_total(93, enum(int, namedobj, 1244, $int1)) <= 0) {
+				cc_sethide(true);
+			} else {
+				cc_sethide(false);
+			}
+		}
+	}
+	$int1 = calc($int1 + 1);
+	$int2 = 0;
+	$boolean5 = false;
+}
+if ($int6 = 1) {
+	~script1175;
+}
+return;

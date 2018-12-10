@@ -1,0 +1,91 @@
+[proc,stats_setlevels](stat $stat0, component $component1, component $component2, string $string0)
+def_boolean $boolean3 = enum(stat, boolean, 1497, $stat0);
+cc_settext(tostring(stat($stat0)));
+def_int $int4 = stat_base($stat0);
+.cc_settext(tostring($int4));
+def_int $int5 = stat_xp($stat0);
+def_string $string1 = ",";
+def_string $string2 = "<$string0> XP:";
+def_string $string3 = ~script46($int5, $string1);
+def_int $int6 = 0;
+if (%varbit4181 = 0) {
+	if ($int4 < 99) {
+		$int6 = enum(int, int, 256, calc($int4 + 1));
+		$string2 = append($string2, "|Next level at:|Remaining XP:");
+		$string3 = append($string3, "|<~script46($int6, $string1)>|<~script46(calc($int6 - $int5), $string1)>");
+	}
+} else {
+	$string2 = append($string2, "|Next level at:");
+	$string3 = append($string3, "|<~script46(enum(int, int, 256, calc($int4 + 1)), $string1)>");
+}
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+if (~deadman_world = 1) {
+	$int7 = ~script1936($stat0);
+	if ($int7 ! -1) {
+		$int7 = calc($int7 / 10);
+		if ($int7 > $int5) {
+			$string2 = append($string2, "|<col=7c0808>XP to regain:</col>");
+			$string3 = append($string3, "|<col=7c0808><~script46(calc($int7 - $int5), $string1)></col>");
+			$int8 = 1;
+		}
+	}
+	if (($int8 = 0) & (%var1588 > 0)) {
+		switch ($stat0) {
+			case attack, strength, magic :
+				$int10 = ~script2031(20);
+				if ($int10 > 0) {
+					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
+					$string3 = append($string3, "|<col=7c0808><~script46($int10, $string1)></col>");
+				} else {
+					$int9 = 1;
+					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
+					$string3 = append($string3, "|<col=7c0808>NONE</col>");
+				}
+			case defence, ranged :
+				$int10 = ~script2031(30);
+				if ($int10 > 0) {
+					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
+					$string3 = append($string3, "|<col=7c0808><~script46($int10, $string1)></col>");
+				} else {
+					$int9 = 1;
+					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
+					$string3 = append($string3, "|<col=7c0808>NONE</col>");
+				}
+		}
+	}
+}
+if (.cc_find($component1, 5) = true) {
+	if ($int9 = 1) {
+		.cc_sethide(false);
+	} else {
+		.cc_sethide(true);
+	}
+} else {
+	.cc_create($component1, ^iftype_graphic, 5);
+	.cc_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	.cc_setsize(19, 19, ^setsize_abs, ^setsize_abs);
+	.cc_setgraphic("warning_icons,0");
+	.cc_setgraphicshadow(0x010101);
+	if ($int9 = 1) {
+		.cc_sethide(false);
+	} else {
+		.cc_sethide(true);
+	}
+}
+if ((($boolean3 = true) & (map_members = false)) & (%varcint103 = 0)) {
+	$string2 = "<col=ff0000><$string0>:</col>";
+	$string3 = "<col=ff0000>Members Only</col>";
+}
+if (~on_mobile = true) {
+	if_setonop("stats_op(event_opindex, event_com, -1, $component2, $string2, $string3, p12_full)", $component1);
+	if ((%varcint218 = $component1) & (%varcint217 = -1)) {
+		~script2344($component1, -1, $component2, p12_full, $string2, $string3);
+	}
+} else {
+	if_setonmouserepeat("script992(event_com, -1, $component2, $string2, $string3, p12_full, calc(25 / 5))", $component1);
+	%varcint2 = 0;
+}
+return;

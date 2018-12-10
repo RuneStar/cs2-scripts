@@ -1,0 +1,35 @@
+[proc,skill_guide_addentry](int $int0, obj $obj1, component $component2, component $component3, int $int4, int $int5, int $int6, int $int7, string $string0)(int)
+cc_create($component2, ^iftype_text, calc($int6 * 2));
+cc_setsize(26, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_right, ^settextalign_top, 0);
+cc_setcolour(0x46320a);
+cc_settextfont(q8_full);
+cc_settextshadow(false);
+if ($int0 > 0) {
+	cc_settext(tostring($int0));
+} else {
+	cc_settext("");
+}
+cc_create($component3, ^iftype_graphic, $int6);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(28, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setoutline(1);
+cc_setgraphicshadow(0x604e32);
+cc_setobject($obj1, -1);
+if (((%varbit4371 = 22) & ($int5 >= 1)) & ($int5 <= 11)) {
+	cc_setop(1, "Check materials");
+}
+cc_create($component2, ^iftype_text, calc(($int6 * 2) + 1));
+def_int $int8 = calc(paraheight($int4, p12_full, $string0) * 15);
+if ($int8 < 32) {
+	$int8 = 32;
+}
+cc_setsize($int4, $int8, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(if_getwidth($component2) - $int4), $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_setcolour(0x46320a);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settext($string0);
+return(calc($int7 + $int8));

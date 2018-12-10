@@ -1,0 +1,23 @@
+[clientscript,dream_bank_init]()
+def_int $int0 = 3;
+def_int $int1 = 5;
+def_int $int2 = 0;
+while ($int0 < 255) {
+	while ($int1 < 235) {
+		cc_create(260:42, ^iftype_graphic, $int2);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int1, $int0, ^setpos_abs_left, ^setpos_abs_top);
+		if (inv_getobj(514, $int2) ! null) {
+			cc_setobject(inv_getobj(514, $int2), inv_getnum(514, $int2));
+			cc_setopbase(oc_name(inv_getobj(514, $int2)));
+			cc_setop(1, "Withdraw");
+			cc_setgraphicshadow(0x111111);
+			cc_setoutline(1);
+		}
+		$int1 = calc($int1 + 40);
+		$int2 = calc($int2 + 1);
+	}
+	$int0 = calc($int0 + 44);
+	$int1 = 5;
+}
+return;

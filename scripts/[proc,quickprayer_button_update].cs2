@@ -1,0 +1,7 @@
+[proc,quickprayer_button_update](int $int0)
+if (testbit(%varbit4102, $int0) = true) {
+	.cc_setgraphic("miscgraphics,11");
+} else {
+	.cc_setgraphic("miscgraphics,10");
+}
+return;

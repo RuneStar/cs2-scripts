@@ -1,0 +1,5 @@
+[proc,worldmap_overlay_clear](component $component0, component $component1)
+if_setontimer("worldmap_overlay($component0, $component1, -1, -1, -1, -1, null)", $component0);
+cc_deleteall($component0);
+cc_deleteall($component1);
+return;

@@ -1,0 +1,93 @@
+[proc,update_diary_entry](component $component0, int $int1, int $int2)
+def_int $int3 = -1;
+def_int $colour4 = ^red;
+$int3 = ~script56($int2);
+if ($int3 = 2) {
+	$colour4 = 0x0dc10d;
+} else if ($int3 = 1) {
+	$colour4 = ^yellow;
+} else {
+	$colour4 = ^red;
+}
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+$int5, $int10, $int15, $int6, $int11, $int16, $int7, $int12, $int17, $int8, $int13, $int18 = ~diary_completion_info($int2);
+def_int $int19 = 0;
+if (cc_find($component0, calc($int1 + 1)) = true) {
+	cc_setcolour($colour4);
+}
+if (cc_find($component0, calc($int1 + 2)) = true) {
+	$int9 = calc((($int5 + $int6) + $int7) + $int8);
+	$int14 = calc((($int10 + $int11) + $int12) + $int13);
+	cc_settext("<tostring($int9)>/<tostring($int14)>");
+	cc_setcolour($colour4);
+}
+if (cc_find($component0, calc($int1 + 8)) = true) {
+	if ($int5 = 0) {
+		$int19 = 0;
+	} else {
+		$int19 = calc(1 + scale($int5, $int10, (35 - 1)));
+	}
+	$int19 = ~min(35, $int19);
+	cc_setsize($int19, 5, ^setsize_abs, ^setsize_abs);
+	if ($int15 = 1) {
+		cc_setcolour(0x37b514);
+	} else {
+		cc_setcolour(~scale_colour(13905408, 13676544, $int19, 35));
+	}
+}
+if (cc_find($component0, calc($int1 + 9)) = true) {
+	if ($int6 = 0) {
+		$int19 = 0;
+	} else {
+		$int19 = calc(1 + scale($int6, $int11, (35 - 1)));
+	}
+	$int19 = ~min(35, $int19);
+	cc_setsize($int19, 5, ^setsize_abs, ^setsize_abs);
+	if ($int16 = 1) {
+		cc_setcolour(0x37b514);
+	} else {
+		cc_setcolour(~scale_colour(13905408, 13676544, $int19, 35));
+	}
+}
+if (cc_find($component0, calc($int1 + 10)) = true) {
+	if ($int7 = 0) {
+		$int19 = 0;
+	} else {
+		$int19 = calc(1 + scale($int7, $int12, (35 - 1)));
+	}
+	$int19 = ~min(35, $int19);
+	cc_setsize($int19, 5, ^setsize_abs, ^setsize_abs);
+	if ($int17 = 1) {
+		cc_setcolour(0x37b514);
+	} else {
+		cc_setcolour(~scale_colour(13905408, 13676544, $int19, 35));
+	}
+}
+if (cc_find($component0, calc($int1 + 11)) = true) {
+	if ($int8 = 0) {
+		$int19 = 0;
+	} else {
+		$int19 = calc(1 + scale($int8, $int13, (35 - 1)));
+	}
+	$int19 = ~min(35, $int19);
+	cc_setsize($int19, 5, ^setsize_abs, ^setsize_abs);
+	if ($int18 = 1) {
+		cc_setcolour(0x37b514);
+	} else {
+		cc_setcolour(~scale_colour(13905408, 13676544, $int19, 35));
+	}
+}
+return;

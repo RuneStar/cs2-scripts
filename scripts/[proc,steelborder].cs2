@@ -1,0 +1,44 @@
+[proc,steelborder](component $component0, int $int1, string $string0)(int)
+cc_deleteall($component0);
+~create_graphic($component0, 0, "tradebacking", 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 2, 2, ^setsize_minus, ^setsize_minus);
+cc_create($component0, ^iftype_text, 1);
+cc_setposition(0, 6, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(12, 24, ^setsize_minus, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_settext($string0);
+def_int $int2 = cc_getid;
+~create_graphic($component0, 2, "steelborder,0", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 25, 30, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 3, "steelborder,1", 0, 0, ^setpos_abs_right, ^setpos_abs_top, 25, 30, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 4, "steelborder,2", 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 25, 30, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 5, "steelborder,3", 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 25, 30, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 6, "steelborder2,0", 0, 14, ^setpos_abs_centre, ^setpos_abs_top, 12, 26, ^setsize_minus, ^setsize_abs);
+~create_graphic($component0, 7, "miscgraphics,2", -15, 0, ^setpos_abs_left, ^setpos_abs_centre, 36, 60, ^setsize_abs, ^setsize_minus);
+~create_graphic($component0, 8, "steelborder2,1", -15, 0, ^setpos_abs_right, ^setpos_abs_centre, 36, 60, ^setsize_abs, ^setsize_minus);
+~create_graphic($component0, 9, "steelborder2,0", 0, -15, ^setpos_abs_centre, ^setpos_abs_top, 50, 36, ^setsize_minus, ^setsize_abs);
+~create_graphic($component0, 10, "miscgraphics,3", 0, -15, ^setpos_abs_centre, ^setpos_abs_bottom, 50, 36, ^setsize_minus, ^setsize_abs);
+def_graphic $graphic3 = "close_buttons,0";
+def_graphic $graphic4 = "close_buttons,1";
+def_int $int5 = 3;
+def_int $int6 = 6;
+def_int $int7 = 26;
+def_int $int8 = 23;
+if (~on_mobile = true) {
+	$graphic3 = 1731;
+	$graphic4 = 1731;
+	$int5 = 1;
+	$int6 = 1;
+	$int7 = 33;
+	$int8 = 33;
+}
+if (testbit($int1, 0) = false) {
+	~create_graphic($component0, 11, $graphic3, $int5, $int6, ^setpos_abs_right, ^setpos_abs_top, $int7, $int8, ^setsize_abs, ^setsize_abs);
+	cc_setonmouseleave("script229(event_com, event_comid, $graphic3, null)");
+	cc_setonmouseover("script229(event_com, event_comid, $graphic4, null)");
+	cc_setop(1, "Close");
+	cc_setonop("closebutton_click()");
+	cc_setonkey("closebutton_key(event_keytyped)");
+}
+return($int2);

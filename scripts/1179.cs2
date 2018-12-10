@@ -1,0 +1,31 @@
+script1179(string $string0)
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
+def_string $string4 = "";
+$string1, $string0 = ~script632($string0);
+$string2, $string0 = ~script632($string0);
+$string3, $string0 = ~script632($string0);
+$string4, $string0 = ~script632($string0);
+if_settext($string1, 522:20);
+if_settext($string2, 522:22);
+if_settext($string3, 522:24);
+if_settext($string4, 522:26);
+def_int $int0 = calc(paraheight(if_getwidth(522:20), p12_full, $string1) * 12);
+if ($int0 > if_getheight(522:18)) {
+	if_setscrollsize(0, $int0, 522:19);
+}
+$int0 = calc(paraheight(if_getwidth(522:22), p12_full, $string2) * 12);
+if ($int0 > if_getheight(522:18)) {
+	if_setscrollsize(0, $int0, 522:21);
+}
+$int0 = calc(paraheight(if_getwidth(522:24), p12_full, $string3) * 12);
+if ($int0 > if_getheight(522:18)) {
+	if_setscrollsize(0, $int0, 522:23);
+}
+$int0 = calc(paraheight(if_getwidth(522:26), p12_full, $string4) * 12);
+if ($int0 > if_getheight(522:18)) {
+	if_setscrollsize(0, $int0, 522:25);
+}
+~script1181(522:5);
+return;

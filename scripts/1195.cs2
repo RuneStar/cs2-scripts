@@ -1,0 +1,30 @@
+script1195(component $component0, component $component1, component $component2)
+if (%varbit4901 = 1) {
+	if_setobject_nonum(golovanova_fruit_13426, 1, $component0);
+} else if (%varbit4901 = 2) {
+	if_setobject_nonum(bologano_fruit_13427, 1, $component0);
+} else if (%varbit4901 = 3) {
+	if_setobject_nonum(logavano_fruit_13428, 1, $component0);
+} else {
+	if_setobject_nonum(cabbage_1965, 1, $component0);
+}
+def_int $int3 = 100;
+if (%varbit4900 <= 100) {
+	$int3 = %varbit4900;
+}
+if_settext(tostring($int3), $component1);
+def_int $int4 = interpolate(0, 75, 0, 100, 100);
+def_int $int5 = 210;
+def_int $int6 = 0;
+if ($int3 < $int4) {
+	$int5 = interpolate(0, $int3, 0, $int4, 152);
+	$int6 = interpolate(0, $int3, 0, $int4, 31);
+}
+if_setcolour(~script246(255, $int5, $int6), $component1);
+if_settext("Points: <~script46(%varbit4893, ",")>", $component2);
+if (%varbit4893 >= 1000) {
+	if_setcolour(^red, $component2);
+} else {
+	if_setcolour(0xff981f, $component2);
+}
+return;

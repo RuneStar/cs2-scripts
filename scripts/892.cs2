@@ -1,0 +1,108 @@
+script892(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+~script760($component3, 2, 3, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
+~script760($component4, 0, 1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
+~script760($component5, 4, 5, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
+~script760($component6, 8, 9, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
+~script760($component7, 6, 7, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
+if (%varbit4596 = 2) {
+	worldlist_sort(7, false, 0, false);
+} else if (%varbit4596 = 3) {
+	worldlist_sort(7, true, 0, false);
+} else if (%varbit4596 = 4) {
+	worldlist_sort(2, false, 0, false);
+} else if (%varbit4596 = 5) {
+	worldlist_sort(2, true, 0, false);
+} else if (%varbit4596 = 8) {
+	worldlist_sort(1, false, 0, false);
+} else if (%varbit4596 = 9) {
+	worldlist_sort(1, true, 0, false);
+} else if (%varbit4596 = 6) {
+	worldlist_sort(3, false, 0, false);
+} else if (%varbit4596 = 7) {
+	worldlist_sort(3, true, 0, false);
+} else if (%varbit4596 = 1) {
+	worldlist_sort(0, true, 7, false);
+} else {
+	worldlist_sort(0, false, 7, false);
+}
+def_int $int12 = if_getheight($component3);
+def_int $int13 = if_getwidth($component3);
+def_int $int14 = if_getwidth($component4);
+def_int $int15 = if_getwidth($component5);
+def_int $int16 = if_getwidth($component6);
+def_int $int17 = if_getwidth($component7);
+cc_deleteall($component0);
+def_int $int18 = ~stat_totallevel;
+def_int $int19 = ~stat_f2plevel;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_string $string0 = "";
+def_int $int23 = -1;
+def_int $int24 = 0;
+def_string $string1 = "";
+def_int $int25 = 16;
+if (~on_mobile = true) {
+	$int25 = 24;
+}
+$int21, $int22, $string0, $int23, $int24, $string1 = worldlist_start;
+while ($int21 > 0) {
+	if (~script961($int21, $int22) = 1) {
+		$int20 = ~script960($component0, $int20, $int12, $component2, $int21, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int17, $int18, $int19, $component11, $string0);
+		$int12 = calc($int12 + $int25);
+	}
+	$int21, $int22, $string0, $int23, $int24, $string1 = worldlist_next;
+}
+if ($int12 > if_getheight($component0)) {
+	if_setscrollsize(0, $int12, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+}
+if_setsize(0, $int12, ^setsize_minus, ^setsize_abs, $component2);
+if (%varcint69 < 0) {
+	%varcint69 = 0;
+}
+~scrollbar_resize($component1, $component0, %varcint69);
+cc_deleteall($component8);
+cc_deleteall($component9);
+def_int $int26 = calc(if_getwidth($component8) - ((($int13 + $int14) + $int15) + $int16));
+if (%varbit4597 > 0) {
+	if_sethide(true, $component10);
+	$int21, $int22, $string0, $int23, $int24, $string1 = worldlist_specific(%varbit4597);
+	if (~script961($int21, $int22) = 0) {
+		$int24 = 0;
+		$int23 = -1;
+		$string0 = "Unavailable";
+		$int21 = 0;
+	}
+	~script960($component8, 0, 0, $component8, -1, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int26, $int18, $int19, $component11, $string0);
+	if (%varbit4598 > 0) {
+		$int21, $int22, $string0, $int23, $int24, $string1 = worldlist_specific(%varbit4598);
+		if (~script961($int21, $int22) = 0) {
+			$int24 = 0;
+			$int23 = -1;
+			$string0 = "Unavailable";
+			$int21 = 0;
+		}
+		~script960($component9, 0, 0, $component9, -1, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int26, $int18, $int19, $component11, $string0);
+	} else {
+		~script893($component9);
+	}
+} else {
+	~script893($component8);
+	if (%varbit4598 > 0) {
+		if_sethide(true, $component10);
+		$int21, $int22, $string0, $int23, $int24, $string1 = worldlist_specific(%varbit4598);
+		if (~script961($int21, $int22) = 0) {
+			$int24 = 0;
+			$int23 = -1;
+			$string0 = "Unavailable";
+			$int21 = 0;
+		}
+		~script960($component9, 0, 0, $component9, -1, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int26, $int18, $int19, $component11, $string0);
+	} else {
+		if_sethide(false, $component10);
+		~script893($component9);
+	}
+}
+return;

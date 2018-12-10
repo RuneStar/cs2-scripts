@@ -1,0 +1,26 @@
+[proc,account_inbox_update]()
+def_component $component0 = 109:14;
+def_component $component1 = 109:19;
+def_component $component2 = 109:17;
+def_component $component3 = 109:18;
+if (%varcint228 = 1) {
+	if_settext("Email: <col=ff0000>Unlinked</col>", $component0);
+	if_settext("Link Email", $component1);
+	if_setgraphic(2149, $component2);
+	if_setgraphic(2149, $component3);
+	return;
+} else {
+	def_string $string0 = "Inbox: 0 unread messages";
+	if (%var1781 > 9999) {
+		$string0 = "Inbox: 9999+ unread messages";
+	} else if (%var1781 = 1) {
+		$string0 = "Inbox: 1 unread message";
+	} else {
+		$string0 = "Inbox: <tostring(%var1781)> unread messages";
+	}
+	if_settext($string0, $component0);
+	if_settext("View Inbox", $component1);
+	if_setgraphic(1706, $component2);
+	if_setgraphic(1706, $component3);
+	return;
+}

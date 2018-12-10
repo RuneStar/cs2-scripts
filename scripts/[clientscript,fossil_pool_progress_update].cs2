@@ -1,0 +1,13 @@
+[clientscript,fossil_pool_progress_update](int $int0)
+if_setsize(interpolate(0, 16384, 0, 10, $int0), 0, ^setsize_2, ^setsize_minus, 606:18);
+def_int $int1 = 0;
+def_int $int2 = 0;
+if ($int0 <= 2) {
+	$int2 = interpolate(0, $int0, 0, 2, 255);
+	$int1 = 255;
+} else {
+	$int2 = 255;
+	$int1 = interpolate(0, $int0, 0, 10, 255);
+}
+if_setcolour(~script246($int1, $int2, 0), 606:18);
+return;

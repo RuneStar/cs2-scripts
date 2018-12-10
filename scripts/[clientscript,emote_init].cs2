@@ -1,0 +1,38 @@
+[clientscript,emote_init](component $component0, component $component1, component $component2, component $component3)
+cc_deleteall($component1);
+cc_deleteall($component2);
+def_string $string0 = "";
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+while ($int6 <= 47) {
+	cc_create($component1, ^iftype_graphic, $int6);
+	if (enum(int, graphic, 1001, $int6) ! null) {
+		cc_sethide(false);
+		cc_setsize(42, 48, ^setsize_abs, ^setsize_abs);
+		$int5 = calc((($int4 / 4) * 49) + 6);
+		cc_setposition(calc(($int4 % 4) * 43), $int5, ^setpos_abs_left, ^setpos_abs_top);
+		$string0 = enum(int, string, 1000, $int6);
+		cc_setop(1, $string0);
+		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component3, $string0, 25, 120)");
+		cc_setonmouseleave("deltooltip($component3)");
+		$int4 = calc($int4 + 1);
+	} else {
+		cc_sethide(true);
+	}
+	$int6 = calc($int6 + 1);
+}
+if ($int4 > 0) {
+	$int5 = calc($int5 + 48);
+}
+if_setscrollpos(0, 0, $component1);
+if ($int5 > if_getheight($component1)) {
+	if_setscrollsize(0, $int5, $component1);
+} else {
+	if_setscrollsize(0, 0, $component1);
+}
+~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~emote_update($component1);
+if_setonvartransmit("emote_update($component1){313, 802, 465, 101, 904, 1336}", $component0);
+if_setonstattransmit("emote_update($component1)", $component0);
+return;

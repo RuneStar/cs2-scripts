@@ -1,0 +1,14 @@
+[proc,music_optionbuttons](component $component0, component $component1, component $component2)
+if (%var18 = 1) {
+	if_setgraphic("miscgraphics2,1", $component0);
+	if_setgraphic("miscgraphics2,0", $component1);
+} else {
+	if_setgraphic("miscgraphics2,0", $component0);
+	if_setgraphic("miscgraphics2,1", $component1);
+}
+if (%varbit4137 = 1) {
+	if_setgraphic("miscgraphics2,1", $component2);
+} else {
+	if_setgraphic("miscgraphics2,0", $component2);
+}
+return;

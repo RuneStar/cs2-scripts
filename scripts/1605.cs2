@@ -1,0 +1,18 @@
+script1605(int $int0, component $component1, component $component2, int $int3)
+def_string $string0 = "";
+if (%varbit5432 = 1) {
+	$string0 = "Deposit all";
+	if_settext("Items stored here <col=ff0000>cannot</col> be taken by other players.<br>Any <col=ff0000>non-raiding</col> items left in here <col=ff0000>can</col> be retrieved outside.", $component2);
+	if (cc_find($component1, $int3) = true) {
+		cc_settext($string0);
+	}
+	if_setonop("raids_storage_opbutton(event_opindex, $component1, $string0, "p12_full")", $component1);
+} else {
+	$string0 = "Bank all";
+	if_settext("You must retrieve <col=ff0000>all your items</col> from the private storage<br>before you can re-enter the Chambers of Xeric.", $component2);
+	if (cc_find($component1, $int3) = true) {
+		cc_settext($string0);
+	}
+	if_setonop("raids_storage_opbutton(event_opindex, $component1, $string0, "p12_full")", $component1);
+}
+return;

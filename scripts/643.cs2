@@ -1,0 +1,20 @@
+script643(component $component0)
+def_int $int1 = if_getwidth($component0);
+def_int $int2 = calc(if_getheight($component0) - 17);
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+.cc_create($component0, ^iftype_text, 1);
+.cc_setsize(calc($int1 - 22), 17, ^setsize_abs, ^setsize_abs);
+.cc_setposition(22, $int2, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(0xff981f);
+.cc_settextfont(p12_full);
+.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+.cc_settext("Allow pets to roam");
+if_setonmouseover("script85(event_com, .cc_getid, 16777215)", $component0);
+if_setonmouseleave("script85(event_com, .cc_getid, 16750623)", $component0);
+~script645($component0);
+if_setonvartransmit("script644(event_com, cc_getid, 0){661}", $component0);
+if_setonop("script646(event_opindex, event_com, cc_getid)", $component0);
+return;

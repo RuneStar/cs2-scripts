@@ -1,0 +1,18 @@
+[clientscript,cc_fade_timer](component $component0, int $int1, int $int2, int $int3)
+def_int $int4 = 0;
+if (cc_find($component0, $int1) = true) {
+	$int4 = calc(cc_gettrans + $int3);
+	if ($int3 < 0) {
+		if ($int4 < $int2) {
+			cc_settrans($int2);
+			cc_setontimer(null);
+			return;
+		}
+	} else if ($int4 > $int2) {
+		cc_settrans($int2);
+		cc_setontimer(null);
+		return;
+	}
+	cc_settrans($int4);
+}
+return;

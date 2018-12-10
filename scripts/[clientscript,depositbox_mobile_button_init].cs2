@@ -1,0 +1,10 @@
+[clientscript,depositbox_mobile_button_init](component $component0, component $component1, component $component2, component $component3)
+if (~on_mobile = false) {
+	return;
+} else {
+	~depositbox_mobile_button_optext($component0);
+	if_setonop("depositbox_mobile_button_op(event_opindex, $component0, $component1, $component2, $component3)", $component0);
+	if_setonvartransmit("depositbox_mobile_button_update(){1793, 1794}", $component0);
+	~depositbox_mobile_button_update;
+	return;
+}

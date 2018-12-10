@@ -1,0 +1,17 @@
+[proc,raids_sidepanel_drawbutton](int $int0, component $component1, string $string0)
+cc_deleteall($component1);
+def_int $int2 = 0;
+if ($int0 = 1) {
+	$int2 = ~script198($component1);
+} else {
+	$int2 = ~script208($component1);
+}
+cc_create($component1, ^iftype_text, $int2);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+return;

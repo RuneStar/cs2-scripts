@@ -1,0 +1,98 @@
+script641(component $component0, component $component1, int $int2)
+cc_deleteall($component0);
+def_int $int3 = if_getwidth($component0);
+def_int $int4 = if_getheight($component0);
+def_int $int5 = calc((($int3 - (36 * 6)) / 5) + 36);
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_enum $enum8 = null;
+def_int $int9 = 0;
+while ($int9 <= 40) {
+	cc_create($component0, ^iftype_graphic, $int9);
+	if ($int9 < 32) {
+		if (testbit(%var864, $int9) = true) {
+			if ($int9 = 11) {
+				$enum8 = 1686;
+			} else if ($int9 = 15) {
+				$enum8 = 1687;
+			} else if ($int9 = 19) {
+				$enum8 = 1688;
+			} else if ($int9 = 25) {
+				$enum8 = 1691;
+			} else if ($int9 = 27) {
+				$enum8 = 1689;
+			} else if ($int9 = 31) {
+				$enum8 = 1690;
+			} else if ($int9 = 14) {
+				$enum8 = 285;
+			} else if ($int9 = 36) {
+				$enum8 = 1893;
+			} else if ($int9 = 34) {
+				$enum8 = 1711;
+			} else if ($int9 = 12) {
+				$enum8 = 995;
+			} else {
+				$enum8 = null;
+			}
+			$int7 = ~script642(enum(int, namedobj, 985, $int9), $enum8, $int5, $int6);
+			$int6 = calc($int6 + 1);
+		} else if (($int9 >= 32) & (testbit(%var1416, calc($int9 - 32)) = true)) {
+			if ($int9 = 11) {
+				$enum8 = 1686;
+			} else if ($int9 = 15) {
+				$enum8 = 1687;
+			} else if ($int9 = 19) {
+				$enum8 = 1688;
+			} else if ($int9 = 25) {
+				$enum8 = 1691;
+			} else if ($int9 = 27) {
+				$enum8 = 1689;
+			} else if ($int9 = 31) {
+				$enum8 = 1690;
+			} else if ($int9 = 14) {
+				$enum8 = 285;
+			} else if ($int9 = 36) {
+				$enum8 = 1893;
+			} else if ($int9 = 34) {
+				$enum8 = 1711;
+			} else if ($int9 = 12) {
+				$enum8 = 995;
+			} else {
+				$enum8 = null;
+			}
+			$int7 = ~script642(enum(int, namedobj, 985, $int9), $enum8, $int5, $int6);
+			$int6 = calc($int6 + 1);
+		} else {
+			cc_sethide(true);
+		}
+	}
+	$int9 = calc($int9 + 1);
+}
+def_obj $obj10 = null;
+def_int $int11 = 0;
+def_int $int12 = inv_size(517);
+while ($int11 < $int12) {
+	cc_create($component0, ^iftype_graphic, $int9);
+	$obj10 = inv_getobj(517, $int11);
+	if ($obj10 ! null) {
+		$int7 = ~script642($obj10, null, $int5, $int6);
+		$int6 = calc($int6 + 1);
+	} else {
+		cc_sethide(true);
+	}
+	$int11 = calc($int11 + 1);
+	$int9 = calc($int9 + 1);
+}
+if ($int6 > 0) {
+	$int7 = calc($int7 + 32);
+}
+if ($int7 > $int4) {
+	if_setscrollsize(0, $int7, $component0);
+	if_setscrollpos(0, $int2, $component0);
+} else {
+	$int7 = 0;
+	if_setscrollsize(0, 0, $component0);
+	if_setscrollpos(0, 0, $component0);
+}
+~scrollbar_resize($component1, $component0, $int7);
+return;

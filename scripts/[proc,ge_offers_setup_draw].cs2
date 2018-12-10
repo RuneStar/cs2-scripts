@@ -1,0 +1,112 @@
+[proc,ge_offers_setup_draw](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, component $component13, int $int14)
+if (%varbit4397 = 1) {
+	if (cc_find($component0, $int1) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, $int6) = true) {
+		cc_settrans(0);
+		cc_setontimer(null);
+	}
+	if (cc_find($component0, $int12) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, $int4) = true) {
+		cc_settext("Sell offer");
+	}
+	if (cc_find($component0, $int5) = true) {
+		cc_setgraphic(1119);
+	}
+	if (cc_find($component0, $int2) = true) {
+		cc_setop(1, "All");
+	}
+	if (cc_find($component0, $int3) = true) {
+		cc_settext("All");
+	}
+} else {
+	if (cc_find($component0, $int1) = true) {
+		cc_sethide(false);
+	}
+	if (cc_find($component0, $int6) = true) {
+		cc_settrans(100);
+		cc_setontimer("script811(event_com, event_comid, clientclock, 100, 250)");
+	}
+	if (cc_find($component0, $int12) = true) {
+		cc_sethide(false);
+	}
+	if (cc_find($component0, $int4) = true) {
+		cc_settext("Buy offer");
+	}
+	if (cc_find($component0, $int5) = true) {
+		cc_setgraphic(1118);
+	}
+	if (cc_find($component0, $int2) = true) {
+		cc_setop(1, "+1K");
+	}
+	if (cc_find($component0, $int3) = true) {
+		cc_settext("+1K");
+	}
+}
+def_string $string0 = ",";
+def_int $int15 = 0;
+if (%var1151 ! -1) {
+	if (cc_find($component0, $int7) = true) {
+		cc_setobject_nonum(%var1151, %varbit4396);
+	}
+	if (cc_find($component0, $int8) = true) {
+		cc_settext(oc_name(%var1151));
+	}
+	if (cc_find($component0, $int9) = true) {
+		cc_settext(~script46(%varbit4396, $string0));
+	}
+	if (cc_find($component0, $int10) = true) {
+		if (%varbit4398 = 1) {
+			cc_settext("1 coin");
+		} else {
+			cc_settext("<~script46(%varbit4398, $string0)> coins");
+		}
+	}
+	if ((%varbit4396 > 0) & (calc(^int_max / %varbit4396) < %varbit4398)) {
+		if (cc_find($component0, $int11) = true) {
+			cc_settext("<col=ff0000>Too much money!</col>");
+		}
+		~script780($component0, $int14, $component13);
+	} else {
+		$int15 = calc(%varbit4396 * %varbit4398);
+		if (cc_find($component0, $int11) = true) {
+			if ($int15 = 1) {
+				cc_settext("1 coin");
+			} else {
+				cc_settext("<~script46($int15, $string0)> coins");
+			}
+		}
+		if ($int15 > 0) {
+			~script208($component13);
+			if_setonmouserepeat("script772(event_com)", $component13);
+			if_setonmouseleave("script97(event_com)", $component13);
+			if_setonop("opsound(event_opindex, 2)", $component13);
+			if (cc_find($component0, $int14) = true) {
+				cc_settext("<col=ffffff>Confirm</col>");
+			}
+		} else {
+			~script780($component0, $int14, $component13);
+		}
+	}
+} else {
+	if (cc_find($component0, $int7) = true) {
+		cc_setobject_nonum(6512, 1);
+	}
+	if (cc_find($component0, $int8) = true) {
+		cc_settext("Choose an item...");
+	}
+	if (cc_find($component0, $int9) = true) {
+		cc_settext("");
+	}
+	if (cc_find($component0, $int10) = true) {
+		cc_settext("");
+	}
+	if (cc_find($component0, $int11) = true) {
+		cc_settext("");
+	}
+	~script780($component0, $int14, $component13);
+}
+return;

@@ -1,0 +1,18 @@
+script2140(component $component0, component $component1, component $component2)
+if_setnpchead(7510, $component1);
+if_setmodelanim(579, $component1);
+cc_deleteall($component2);
+cc_create($component2, ^iftype_graphic, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setoutline(1);
+cc_setgraphicshadow(0x333333);
+cc_setop(1, "Withdraw-1");
+cc_setop(2, "Withdraw-5");
+cc_setop(3, "Withdraw-X");
+cc_setop(4, "Withdraw-All");
+cc_setop(10, "Examine");
+cc_setopbase("<col=ff9040><oc_name(drift_net_21652)></col>");
+~script2142;
+if_setonvartransmit("script2141($component2, cc_getid){1632}", $component0);
+return;

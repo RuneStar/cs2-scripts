@@ -1,0 +1,16 @@
+[proc,xpdrops_setup_display_dropdown_close](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+if (if_gethide($component0) = false) {
+	sound_synth(2266, 1, 0);
+}
+if_sethide(true, $component0);
+if_sethide(false, $component1);
+~deltooltip_action($component1);
+~xpdrops_setup_display_hoveroff($component2);
+~xpdrops_setup_display_hoveroff($component3);
+~xpdrops_setup_display_hoveroff($component4);
+~xpdrops_setup_display_hoveroff($component5);
+~xpdrops_setup_display_hoveroff($component6);
+~xpdrops_setup_display_hoveroff($component7);
+~xpdrops_setup_display_hoveroff($component8);
+~xpdrops_setup_display_hoveroff($component9);
+return;

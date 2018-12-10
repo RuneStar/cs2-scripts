@@ -1,0 +1,33 @@
+[proc,skill_guide_subsection_construction](int $int0)(string, int)
+switch ($int0) {
+	case 0 :
+		return("Rooms", 1);
+	case 1 :
+		return("Skills", 1);
+	case 2 :
+		return("Surfaces", 1);
+	case 3 :
+		return("Storage", 1);
+	case 4 :
+		return("Decorative", 1);
+	case 5 :
+		return("Trophies", 1);
+	case 6 :
+		return("Games", 1);
+	case 7 :
+		return("Garden", 1);
+	case 8 :
+		return("Dungeon", 1);
+	case 9 :
+		return("Chapel", 1);
+	case 10 :
+		return("Raids", 1);
+	case 11 :
+		return("Other", 1);
+	case 12 :
+		return("Servants", 1);
+	case 13 :
+		return("House Size", 1);
+	else :
+		return("", -1);
+}

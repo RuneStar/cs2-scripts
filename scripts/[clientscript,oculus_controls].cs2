@@ -1,0 +1,28 @@
+[clientscript,oculus_controls](int $int0, component $component1, int $int2)
+if (~script1701(16, -1) = 0) {
+	return;
+} else {
+	switch ($int0) {
+		case 83 :
+			if (cc_find($component1, $int2) = true) {
+				sound_synth(2266, 1, 0);
+				cc_resume_pausebutton;
+			}
+		case 104 :
+			if (%varcint204 < 15) {
+				sound_synth(2266, 1, 0);
+				%varcint204 = ~max(3, calc(%varcint204 + 1));
+				_3129(%varcint204, 2);
+			}
+		case 105 :
+			if (%varcint204 > 3) {
+				sound_synth(2266, 1, 0);
+				%varcint204 = ~min(15, calc(%varcint204 - 1));
+				_3129(%varcint204, 2);
+			}
+		case 13 :
+			sound_synth(2266, 1, 0);
+			if_close;
+	}
+	return;
+}

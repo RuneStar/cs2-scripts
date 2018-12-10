@@ -1,0 +1,44 @@
+[clientscript,wom_tab_init](component $component0, component $component1, component $component2)
+def_int $int3 = 0;
+def_component $component4 = null;
+def_component $component5 = null;
+def_string $string0 = "";
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = enum_getoutputcount(2070);
+while ($int3 <= $int9) {
+	$component4 = ~wom_get_tab($int3);
+	$component5 = ~wom_get_text($int3);
+	$string0 = enum(int, string, 2071, $int3);
+	if ((map_members = false) & (compare($string0, "Free") ! 0)) {
+		$string0 = "";
+	}
+	if ($component4 = null) {
+		return;
+	} else {
+		if ($component5 = null) {
+			if_sethide(true, $component4);
+		}
+		if (compare($string0, "") = 0) {
+			if_sethide(true, $component4);
+		} else {
+			$int7 = ~max(40, calc(40 + parawidth(400, p11_full, $string0)));
+			if_setonmouseover("script45($component5, 16777215)", $component4);
+			if_setonmouseleave("script45($component5, 16750623)", $component4);
+			if_setonop("wom_tab_highlight_onclick($int3, $component1, $component2)", $component4);
+			if_setonvartransmit("wom_tab_highlight($component1, $component2){279}", $component0);
+			if_setoninvtransmit("wom_item_update($component1, $component2){93, 94, 95}", $component1);
+			if_sethide(false, $component4);
+			if_setsize($int7, 0, ^setsize_abs, ^setsize_minus, $component4);
+			if_settext($string0, $component5);
+			if_setposition($int6, 0, ^setpos_abs_left, ^setpos_abs_centre, $component4);
+			$int6 = calc($int6 + $int7);
+		}
+		$int3 = calc($int3 + 1);
+	}
+}
+~script21($component1, $component2);
+if_setscrollpos(0, 0, $component1);
+~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+return;

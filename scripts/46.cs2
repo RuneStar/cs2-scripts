@@ -1,0 +1,14 @@
+script46(int $int0, string $string0)(string)
+def_int $int1 = calc($int0 / 1000000000);
+def_int $int2 = calc(($int0 - ($int1 * 1000000000)) / 1000000);
+def_int $int3 = calc(($int0 - (($int1 * 1000000000) + ($int2 * 1000000))) / 1000);
+def_int $int4 = calc($int0 - ((($int1 * 1000000000) + ($int2 * 1000000)) + ($int3 * 1000)));
+if ($int1 > 0) {
+	return("<tostring($int1)><$string0><~script47($int2)><$string0><~script47($int3)><$string0><~script47($int4)>");
+} else if ($int2 > 0) {
+	return("<tostring($int2)><$string0><~script47($int3)><$string0><~script47($int4)>");
+} else if ($int3 > 0) {
+	return("<tostring($int3)><$string0><~script47($int4)>");
+} else {
+	return(tostring($int0));
+}

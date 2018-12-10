@@ -1,0 +1,14 @@
+[proc,tob_hud_status_init](component $component0, component $component1)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(q8_full);
+cc_settextshadow(false);
+cc_deleteall($component1);
+cc_create($component1, ^iftype_graphic, 0);
+cc_setsize(26, 26, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settiling(true);
+return;

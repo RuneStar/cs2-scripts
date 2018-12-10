@@ -1,0 +1,29 @@
+[proc,ge_offers_bigbutton](component $component0, int $int1, string $string0)
+if_setsize(calc(parawidth(512, p11_full, $string0) + 10), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+cc_deleteall($component0);
+def_int $int2 = 0;
+if ($int1 = 1) {
+	$int2 = ~options_button_on($component0, 0);
+} else {
+	$int2 = ~options_button_off($component0, 0);
+}
+cc_create($component0, ^iftype_text, $int2);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+if_setop(1, $string0, $component0);
+if ($int1 = 1) {
+	cc_setcolour(^white);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_setonop(null, $component0);
+} else {
+	cc_setcolour(0xff981f);
+	if_setonmouserepeat("script85(event_com, $int2, 16777215)", $component0);
+	if_setonmouseleave("script85(event_com, $int2, 16750623)", $component0);
+	if_setonop("script542(event_opindex, $component0, $string0)", $component0);
+}
+return;

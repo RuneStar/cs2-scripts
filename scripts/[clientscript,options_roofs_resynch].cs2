@@ -1,0 +1,14 @@
+[clientscript,options_roofs_resynch](int $int0, component $component1, component $component2)
+if (calc(clientclock % 10) ! 0) {
+	return;
+} else {
+	if (getremoveroofs = true) {
+		if ($int0 = 1) {
+			return;
+		}
+	} else if ($int0 = 0) {
+		return;
+	}
+	~options_roofs($component1, $component2);
+	return;
+}

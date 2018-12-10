@@ -1,0 +1,44 @@
+script1501(int $int0, int $int1, int $int2, component $component3, int $int4)
+if ($int1 = 1) {
+	if ($int0 = 1) {
+		sound_synth(2266, 1, 0);
+		%varbit5412 = 0;
+		%varbit5411 = 0;
+		if (cc_find($component3, $int4) = true) {
+			~script1500($component3);
+		}
+	} else if ($int0 = 2) {
+		sound_synth(2266, 1, 0);
+		if (cc_find($component3, $int4) = true) {
+			cc_setcolour(^white);
+			cc_settext("Set a value...");
+			if_setonmouserepeat(null, $component3);
+			if_setonmouseleave(null, $component3);
+			if_setonop(null, $component3);
+			if_setontimer("script1502($component3, cc_getid, calc(clientclock + 100))", $component3);
+		}
+	}
+} else if ($int0 = 1) {
+	if ($int2 > 0) {
+		sound_synth(2266, 1, 0);
+		if ($int2 > 500000000) {
+			$int2 = 500000000;
+		}
+		%varbit5412 = $int2;
+		%varbit5411 = 1;
+		if (cc_find($component3, $int4) = true) {
+			~script1500($component3);
+		}
+	} else {
+		sound_synth(2266, 1, 0);
+		if (cc_find($component3, $int4) = true) {
+			cc_setcolour(^white);
+			cc_settext("Set a value...");
+			if_setonmouserepeat(null, $component3);
+			if_setonmouseleave(null, $component3);
+			if_setonop(null, $component3);
+			if_setontimer("script1502($component3, cc_getid, calc(clientclock + 100))", $component3);
+		}
+	}
+}
+return;

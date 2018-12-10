@@ -1,0 +1,105 @@
+[proc,meslayer_mode14_update](boolean $boolean0, enum $enum1)
+%varcint66 = 0;
+cc_deleteall(162:53);
+def_int $int2 = if_getwidth(162:53);
+def_int $int3 = if_getheight(162:53);
+if (string_length(%varcstring22) <= 0) {
+	~script753($int2, $int3, "Start typing the name of an item to search for it.");
+	return;
+} else {
+	def_int $int4 = oc_find($boolean0, %varcstring22);
+	if ($int4 < 0) {
+		~script753($int2, $int3, "Too many matches found. Please refine your search.");
+		return;
+	} else if ($int4 = 0) {
+		~script753($int2, $int3, "No matches found.");
+		return;
+	} else {
+		def_int $int5 = calc($int2 / 3);
+		def_int $int6 = 0;
+		def_int $int7 = calc($int2 - $int5);
+		def_int $int8 = calc($int7 - $int5);
+		def_int $int9 = calc($int8 - $int5);
+		def_int $int10 = calc($int5 - 40);
+		def_int $int11 = calc($int7 + 40);
+		def_int $int12 = calc($int8 + 40);
+		def_int $int13 = calc($int9 + 40);
+		def_int $int14 = 0;
+		def_int $int15 = 0;
+		def_int $int16 = 0;
+		def_int $int17 = 0;
+		def_int $int18 = 0;
+		def_obj $obj19 = oc_findnext;
+		while ($obj19 ! null) {
+			if ((($enum1 = null) | (enum(obj, boolean, $enum1, $obj19) = true)) & (($boolean0 = false) | (~deadman_restricted_item($obj19) = 0))) {
+				$int14 = calc($int18 % 3);
+				if ($int14 = 0) {
+					$int16 = $int13;
+					$int15 = $int9;
+				} else if ($int14 = 1) {
+					$int16 = $int12;
+					$int15 = $int8;
+				} else {
+					$int16 = $int11;
+					$int15 = $int7;
+				}
+				cc_create(162:53, ^iftype_rectangle, $int6);
+				if ($int6 = 0) {
+					cc_setonkey("meslayer_mode14_select($obj19, event_keytyped)");
+				}
+				$int6 = calc($int6 + 1);
+				cc_setsize($int5, 32, ^setsize_abs, ^setsize_abs);
+				cc_setposition($int15, $int17, ^setpos_abs_left, ^setpos_abs_top);
+				cc_setcolour(^white);
+				cc_setfill(true);
+				cc_settrans(255);
+				cc_setonmouseover("cc_settrans(event_com, event_comid, 200, null)");
+				cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+				cc_setopbase("<col=ff9040><oc_name($obj19)></col>");
+				cc_setop(1, "Select");
+				cc_setonop("meslayer_mode14_select($obj19, 84)");
+				cc_create(162:53, ^iftype_text, $int6);
+				$int6 = calc($int6 + 1);
+				cc_setsize($int10, 32, ^setsize_abs, ^setsize_abs);
+				cc_setposition($int16, $int17, ^setpos_abs_left, ^setpos_abs_top);
+				cc_settextfont(p12_full);
+				cc_settextshadow(false);
+				cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+				cc_setcolour(^black);
+				cc_settext(oc_name($obj19));
+				cc_create(162:53, ^iftype_graphic, $int6);
+				$int6 = calc($int6 + 1);
+				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+				cc_setposition($int15, $int17, ^setpos_abs_left, ^setpos_abs_top);
+				cc_setoutline(1);
+				cc_setgraphicshadow(0x555555);
+				if (oc_stackable($obj19) = true) {
+					cc_setobject_nonum($obj19, 100);
+				} else {
+					cc_setobject_nonum($obj19, 1);
+				}
+				$int18 = calc($int18 + 1);
+				if ($int14 >= 2) {
+					$int17 = calc($int17 + 32);
+				}
+			}
+			$obj19 = oc_findnext;
+		}
+		if ($int18 <= 0) {
+			~script753($int2, $int3, "No matches found.");
+			return;
+		} else {
+			if ($int14 < 2) {
+				$int17 = calc($int17 + 32);
+			}
+			if ($int17 > $int3) {
+				if_setscrollsize(0, $int17, 162:53);
+			} else {
+				if_setscrollpos(0, 0, 162:53);
+				if_setscrollsize(0, 0, 162:53);
+			}
+			~scrollbar_resize(162:54, 162:53, if_getscrolly(162:53));
+			return;
+		}
+	}
+}

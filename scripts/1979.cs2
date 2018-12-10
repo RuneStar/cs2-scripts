@@ -1,0 +1,10 @@
+script1979()(int)
+if (%varcint41 ! -1) {
+	%varcint196 = %varcint41;
+	%varcint41 = -1;
+	~toplevel_chatbox_background;
+	~redraw_chat_buttons;
+	return(1);
+} else {
+	return(0);
+}

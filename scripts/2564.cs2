@@ -1,0 +1,9 @@
+script2564(component $component0, int $int1, int $int2)
+if (cc_find($component0, $int1) = true) {
+	if ($int2 = 1) {
+		cc_setgraphic("open_buttons,3");
+	} else {
+		cc_setgraphic("open_buttons,2");
+	}
+}
+return;

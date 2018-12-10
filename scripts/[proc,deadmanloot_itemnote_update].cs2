@@ -1,0 +1,17 @@
+[proc,deadmanloot_itemnote_update]()
+if (%varbit4843 = 1) {
+	if_setgraphic(1229, 234:27);
+	if_setgraphic(1230, 234:28);
+	if_setgraphic(1231, 234:29);
+	if_setgraphic(1232, 234:32);
+	if_setgraphic(1233, 234:33);
+	if_setgraphic(1234, 234:34);
+} else {
+	if_setgraphic(1232, 234:27);
+	if_setgraphic(1233, 234:28);
+	if_setgraphic(1234, 234:29);
+	if_setgraphic(1229, 234:32);
+	if_setgraphic(1230, 234:33);
+	if_setgraphic(1231, 234:34);
+}
+return;

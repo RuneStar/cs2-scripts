@@ -1,0 +1,44 @@
+script223()
+def_string $string0 = "<col=0000ff>";
+def_int $colour0 = ^black;
+def_int $int1 = 6250335;
+if (~script921 = 1) {
+	$int1 = 12566463;
+	$colour0 = ^white;
+	$string0 = "<col=9090ff>";
+	if_settextshadow(true, 162:57);
+} else {
+	if_settextshadow(false, 162:57);
+}
+if_setcolour($colour0, 162:57);
+def_int $int2 = string_length(%varcstring1);
+def_string $string1 = escape(%varcstring1);
+def_string $string2 = "";
+def_int $int3 = 0;
+if (%varcint203 = 1) {
+	$string2 = "<enum(int, string, 1894, %varbit1777)><chat_playername>: <$string0><$string1></col>";
+	if ($int2 < 80) {
+		$string2 = append($string2, "<$string0>*</col>");
+	}
+	$int3 = parawidth(^int_max, p12_full, $string2);
+	if ($int3 > if_getwidth(162:57)) {
+		if_settextalign(^settextalign_right, ^settextalign_bottom, 0, 162:57);
+	} else {
+		if_settextalign(^settextalign_left, ^settextalign_bottom, 0, 162:57);
+	}
+	if_clearops(162:57);
+	if_setonmouserepeat(null, 162:57);
+	if_setonmouseleave(null, 162:57);
+	if_setonop(null, 162:57);
+} else {
+	$string2 = "<enum(int, string, 1894, %varbit1777)> You must set a name before you can chat.";
+	if_settextalign(^settextalign_centre, ^settextalign_bottom, 0, 162:57);
+	if_setop(10, "Configure", 162:57);
+	if_setopbase("<col=ff9040>Display name</col>", 162:57);
+	if_setonmouserepeat("script45(event_com, $int1)", 162:57);
+	if_setonmouseleave("script45(event_com, $colour0)", 162:57);
+	if_setonop("opsound(event_opindex, 1024)", 162:57);
+}
+if_settext($string2, 162:57);
+if_setsize(3, 16, ^setsize_minus, ^setsize_abs, 162:57);
+return;

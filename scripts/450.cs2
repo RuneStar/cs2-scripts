@@ -1,0 +1,83 @@
+script450(int $int0, int $int1, int $int2, int $int3, string $string0)
+if_settext($string0, 78:1);
+cc_deleteall(78:3);
+cc_deleteall(78:4);
+def_int $int4 = calc(((if_getwidth(78:3) - (10 * 36)) / 9) + 36);
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_obj $obj8 = null;
+def_int $int9 = 0;
+while ($int9 <= 103) {
+	if ($int9 < 32) {
+		if (testbit($int0, $int9) = true) {
+			$int7 = 1;
+		} else {
+			$int7 = 0;
+		}
+	} else if ($int9 < 64) {
+		if (testbit($int1, calc($int9 - 32)) = true) {
+			$int7 = 1;
+		} else {
+			$int7 = 0;
+		}
+	} else if ($int9 < 96) {
+		if (testbit($int2, calc($int9 - 64)) = true) {
+			$int7 = 1;
+		} else {
+			$int7 = 0;
+		}
+	} else if ($int9 < 128) {
+		if (testbit($int3, calc($int9 - 96)) = true) {
+			$int7 = 1;
+		} else {
+			$int7 = 0;
+		}
+	} else {
+		$int7 = 0;
+	}
+	cc_create(78:3, ^iftype_graphic, $int9);
+	if ($int7 = 1) {
+		$obj8 = enum(int, namedobj, 708, $int9);
+		if ($obj8 ! null) {
+			if (inv_total(93, $obj8) = 0) {
+				cc_sethide(false);
+			} else {
+				cc_sethide(true);
+			}
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(calc($int6 * $int4), $int5, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setgraphicshadow(0x333333);
+			cc_setoutline(1);
+			cc_setobject($obj8, 1);
+			cc_setop(1, "Take");
+			cc_setop(10, "Examine");
+			cc_setopbase("<col=ff9040><oc_name($obj8)>");
+			if ($int6 < 9) {
+				$int6 = calc($int6 + 1);
+			} else {
+				$int5 = calc(($int5 + 32) + 15);
+				$int6 = 0;
+			}
+		} else {
+			cc_sethide(true);
+		}
+	} else {
+		cc_sethide(true);
+	}
+	$int9 = calc($int9 + 1);
+}
+if ($int6 > 0) {
+	$int5 = calc($int5 + 32);
+} else if ($int5 > 0) {
+	$int5 = calc($int5 - 15);
+}
+if ($int5 <= if_getheight(78:3)) {
+	if_setscrollsize(0, 0, 78:3);
+} else {
+	if_setscrollsize(0, $int5, 78:3);
+}
+if_setscrollpos(0, 0, 78:3);
+~scrollbar_vertical(78:4, 78:3, 798, 795, 796, 797, 793, 794);
+if_setoninvtransmit("script474($int0, $int1, $int2, $int3){93}", 78:3);
+return;

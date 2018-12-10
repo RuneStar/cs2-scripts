@@ -1,0 +1,16 @@
+[proc,poh_viewer_enablebutton](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, string $string0)
+cc_deleteall($component0);
+def_int $int16 = ~options_button_off($component0, 0);
+cc_create($component0, ^iftype_text, $int16);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+if_setonmouserepeat("script85(event_com, $int16, 16777215)", $component0);
+if_setonmouseleave("script85(event_com, $int16, 16750623)", $component0);
+if_setonop("poh_viewer_opbutton(event_opindex, event_com, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15)", $component0);
+if_setop(1, $string0, $component0);
+return;

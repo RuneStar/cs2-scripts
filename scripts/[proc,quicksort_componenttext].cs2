@@ -1,0 +1,26 @@
+[proc,quicksort_componenttext](int $int0, int $int1, int $int2)
+def_int $int3 = calc(($int1 + $int2) / 2);
+def_component $component4 = $array0($int3);
+$array0($int3) = $array0($int2);
+$array0($int2) = $component4;
+def_int $int5 = $int1;
+def_int $int6 = $int1;
+def_int $int7 = -1;
+while ($int6 < $int2) {
+	if (compare(lowercase(if_gettext($array0($int6))), lowercase(if_gettext($component4))) <= 0) {
+		$int7 = $array0($int6);
+		$array0($int6) = $array0($int5);
+		$array0($int5) = $int7;
+		$int5 = calc($int5 + 1);
+	}
+	$int6 = calc($int6 + 1);
+}
+$array0($int2) = $array0($int5);
+$array0($int5) = $component4;
+if ($int1 < calc($int5 - 1)) {
+	~quicksort_componenttext(0, $int1, calc($int5 - 1));
+}
+if (calc($int5 + 1) < $int2) {
+	~quicksort_componenttext(0, calc($int5 + 1), $int2);
+}
+return;

@@ -1,0 +1,7 @@
+[clientscript,deadmanloot_inv_switch](int $int0)
+if (%varbit4842 ! $int0) {
+	%varbit4842 = $int0;
+	sound_synth(2266, 1, 0);
+	~deadmanloot_inv_switch;
+}
+return;

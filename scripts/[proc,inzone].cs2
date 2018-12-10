@@ -1,0 +1,17 @@
+[proc,inzone](coordgrid $coordgrid0, coordgrid $coordgrid1, coordgrid $coordgrid2)(int)
+def_int $int3 = coordx($coordgrid2);
+if (($int3 < coordx($coordgrid0)) | ($int3 > coordx($coordgrid1))) {
+	return(0);
+} else {
+	$int3 = coordz($coordgrid2);
+	if (($int3 < coordz($coordgrid0)) | ($int3 > coordz($coordgrid1))) {
+		return(0);
+	} else {
+		$int3 = coordy($coordgrid2);
+		if (($int3 < coordy($coordgrid0)) | ($int3 > coordy($coordgrid1))) {
+			return(0);
+		} else {
+			return(1);
+		}
+	}
+}

@@ -1,0 +1,27 @@
+script672(component $component0, component $component1, int $int2, int $int3, int $int4, int $int5)
+def_int $int6 = inv_size(93);
+if (($int2 < 0) | ($int2 >= $int6)) {
+	return;
+} else if ($component1 ! $component0) {
+	if (cc_find($component0, $int2) = true) {
+		cc_settrans($int4);
+		cc_setontimer("script488(event_com, event_comid, $int5, calc(clientclock + 30))");
+	}
+	return;
+} else if ((($int2 = $int3) | ($int3 < 0)) | ($int3 >= $int6)) {
+	return;
+} else {
+	def_obj $obj7 = inv_getobj(93, $int2);
+	if ($obj7 = null) {
+		return;
+	} else {
+		def_obj $obj8 = inv_getobj(93, $int3);
+		if (cc_find($component0, $int3) = true) {
+			~script671($obj7, inv_getnum(93, $int2));
+		}
+		if (cc_find($component0, $int2) = true) {
+			~script671($obj8, inv_getnum(93, $int3));
+		}
+		return;
+	}
+}

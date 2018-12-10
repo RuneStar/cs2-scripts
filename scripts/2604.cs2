@@ -1,0 +1,18 @@
+script2604(int $int0, component $component1, int $int2, string $string0)(int)
+def_int $int3 = calc($int0 * 25);
+cc_create($component1, ^iftype_graphic, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, calc($int3 + 4), ^setpos_abs_left, ^setpos_abs_top);
+~script2606($int0);
+cc_setonvartransmit("script2605(event_com, event_comid, $int0){1140, 439, 1047}");
+cc_create($component1, ^iftype_text, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize(30, 25, ^setsize_minus, ^setsize_abs);
+cc_setposition(5, $int3, ^setpos_abs_right, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext($string0);
+return($int2);

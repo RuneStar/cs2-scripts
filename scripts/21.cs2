@@ -1,0 +1,35 @@
+script21(component $component0, component $component1)
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 1;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_enum $enum8 = null;
+def_enum $enum9 = null;
+def_int $int10 = 0;
+def_int $int11 = 0;
+cc_deleteall($component0);
+if (map_members = false) {
+	$int2, $int6, $int7 = ~wom_item_display($component0, $component1, 1, 0, 0, 0, 0);
+} else if (%varbit6610 = 0) {
+	$int10 = enum_getoutputcount(2070);
+	while ($int5 <= $int10) {
+		$enum8 = enum(int, enum, 2070, $int5);
+		$int2, $int6, $int7 = ~wom_item_display($component0, $component1, $int5, $int3, $int2, $int6, $int7);
+		$int11 = enum_getoutputcount($enum8);
+		while ($int4 < $int11) {
+			$enum9 = enum(int, enum, $enum8, $int4);
+			$int3 = calc($int3 + enum_getoutputcount($enum9));
+			$int4 = calc($int4 + 1);
+		}
+		$int4 = 0;
+		$int5 = calc($int5 + 1);
+	}
+} else {
+	$int2, $int6, $int7 = ~wom_item_display($component0, $component1, %varbit6610, 0, 0, 0, 0);
+}
+if_setscrollsize(0, $int2, $component0);
+if_setscrollpos(0, ~max(0, ~min($int2, if_getscrolly($component0))), $component0);
+~scrollbar_resize($component1, $component0, if_getscrolly($component0));
+return;

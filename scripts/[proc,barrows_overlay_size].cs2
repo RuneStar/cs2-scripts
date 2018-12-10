@@ -1,0 +1,82 @@
+[proc,barrows_overlay_size](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, int $int10)
+def_enum $enum11 = ~toplevel_getcomponents;
+if ($enum11 = null) {
+	return;
+} else {
+	def_int $colour12 = 0x4d4d2f;
+	def_int $setposh13 = ^setpos_abs_left;
+	def_int $setposh14 = ^setpos_abs_right;
+	if (~inzone(0_55_151_0_0, 3_823_151_63_63, coord) = 1) {
+		if_sethide(false, $component1);
+		if_sethide(false, $component8);
+		if_sethide(false, $component9);
+	} else if (~inzone(0_55_51_26_4, 0_55_51_63_55, coord) = 1) {
+		if_sethide(true, $component1);
+		if_sethide(false, $component8);
+		if_sethide(false, $component9);
+	} else {
+		if_sethide(true, $component1);
+		if_sethide(true, $component8);
+		if_sethide(true, $component9);
+	}
+	~hud_clamp($component1);
+	def_int $int15 = enum(enum, int, 1135, $enum11);
+	def_int $int16 = 5;
+	def_int $int17 = 200;
+	def_int $int18 = 20;
+	def_int $setposh19 = ^setpos_abs_left;
+	if ($int15 > 0) {
+		if ($enum11 = 1745) {
+			$int16 = 220;
+			$int15 = 45;
+			$int18 = 60;
+			$int17 = 180;
+			$setposh19 = ^setpos_abs_right;
+		} else {
+			$int15 = 18;
+		}
+		if_setposition($int15, $int17, ^setpos_abs_right, ^setpos_abs_top, $component8);
+		if_setposition($int16, $int18, $setposh19, ^setpos_abs_top, $component9);
+		$setposh14 = ^setpos_abs_left;
+		$setposh13 = ^setpos_abs_right;
+		$colour12 = 0xa0a0a0;
+	} else {
+		if_setposition(10, 8, ^setpos_abs_right, ^setpos_abs_bottom, $component8);
+		if_setposition(10, 28, ^setpos_abs_right, ^setpos_abs_bottom, $component9);
+	}
+	if_setcolour($colour12, $component8);
+	def_int $int20 = 0;
+	while ($int20 < 6) {
+		if ((cc_find($component9, calc($int20 * 2)) = true) & (.cc_find($component9, calc(($int20 * 2) + 1)) = true)) {
+			cc_setposition(0, calc($int20 * 17), $setposh14, ^setpos_abs_top);
+			.cc_setposition(0, calc($int20 * 17), $setposh13, ^setpos_abs_top);
+			cc_setcolour($colour12);
+		}
+		$int20 = calc($int20 + 1);
+	}
+	def_int $int21 = if_getheight($component1);
+	if ($int21 < 334) {
+		$int21 = 334;
+	} else if ($int21 > 1500) {
+		$int21 = 1500;
+	}
+	if ($int21 = $int10) {
+		return;
+	} else {
+		def_int $int22 = calc(400 - interpolate(0, invpow(($int21 - 334), 2), 0, invpow((1500 - 334), 2), 280));
+		if_setmodelangle(0, 0, 0, 0, 0, $int22, $component2);
+		if_setmodelangle(0, 0, 0, 0, 0, $int22, $component3);
+		if_setmodelangle(0, 0, 0, 0, 0, $int22, $component4);
+		if_setmodelangle(0, 0, 0, 0, 0, $int22, $component5);
+		if_setmodelangle(0, 0, 0, 0, 0, $int22, $component6);
+		if_setmodelangle(0, 0, 0, 0, 0, $int22, $component7);
+		if_sethide(true, $component2);
+		if_sethide(true, $component3);
+		if_sethide(true, $component4);
+		if_sethide(true, $component5);
+		if_sethide(true, $component6);
+		if_sethide(true, $component7);
+		if_setontimer("barrows_overlay_size($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $int21)", $component0);
+		return;
+	}
+}

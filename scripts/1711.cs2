@@ -1,0 +1,11 @@
+script1711(int $int0, maparea $maparea1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	~script1710($component2, $component3);
+	if ((worldmap_getcurrentmap ! $maparea1) & (cc_find($component2, 4) = true)) {
+		~worldmap_loadmap($maparea1, %varcint188, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+	}
+	return;
+}

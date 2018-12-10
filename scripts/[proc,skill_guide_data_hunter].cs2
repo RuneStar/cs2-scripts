@@ -1,0 +1,271 @@
+[proc,skill_guide_data_hunter](int $int0, int $int1)(string, int, int)
+if ($int0 = 0) {
+	if ($int1 = 0) {
+		return("Polar kebbits (snow)", 1, 9953);
+	} else if ($int1 = 1) {
+		return("Common kebbits (woodland)", 3, 9954);
+	} else if ($int1 = 2) {
+		return("Feldip weasels (jungle)", 7, 9955);
+	} else if ($int1 = 3) {
+		return("Desert devils (desert)", 13, 9956);
+	} else if ($int1 = 4) {
+		return("Razor-backed kebbits (woodland)", 49, 9961);
+	} else if ($int1 = 5) {
+		return("Herbiboar (with 31 Herblore)", 80, 21511);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 1) {
+	if ($int1 = 0) {
+		return("Crimson swifts (jungle)", 1, 9965);
+	} else if ($int1 = 1) {
+		return("Golden warblers (desert)", 5, 9968);
+	} else if ($int1 = 2) {
+		return("Copper longtails (woodland)", 9, 9966);
+	} else if ($int1 = 3) {
+		return("Cerulean twitches (snow)", 11, 9967);
+	} else if ($int1 = 4) {
+		return("Tropical wagtails (jungle)", 19, 9969);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 2) {
+	if ($int1 = 0) {
+		return("Ruby harvest butterflies (woodland)", 15, 9970);
+	} else if ($int1 = 1) {
+		return("Sapphire glacialis butterflies (snow)", 25, 9971);
+	} else if ($int1 = 2) {
+		return("Snowy knight butterflies (snow)", 35, 9972);
+	} else if ($int1 = 3) {
+		return("Black warlock butterflies (jungle)", 45, 9973);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 3) {
+	if ($int1 = 0) {
+		return("Baby implings", 17, 11238);
+	} else if ($int1 = 1) {
+		return("Young implings", 22, 11240);
+	} else if ($int1 = 2) {
+		return("Barehanded: Baby implings", 27, 11238);
+	} else if ($int1 = 3) {
+		return("Gourmet implings", 28, 11242);
+	} else if ($int1 = 4) {
+		return("Barehanded: Young implings", 32, 11240);
+	} else if ($int1 = 5) {
+		return("Earth implings", 36, 11244);
+	} else if ($int1 = 6) {
+		return("Barehanded: Gourmet implings", 38, 11242);
+	} else if ($int1 = 7) {
+		return("Essence implings", 42, 11246);
+	} else if ($int1 = 8) {
+		return("Barehanded: Earth implings", 46, 11244);
+	} else if ($int1 = 9) {
+		return("Eclectic implings", 50, 11248);
+	} else if ($int1 = 10) {
+		return("Barehanded: Essence implings", 52, 11246);
+	} else if ($int1 = 11) {
+		return("Nature implings", 58, 11250);
+	} else if ($int1 = 12) {
+		return("Barehanded: Eclectic implings", 60, 11248);
+	} else if ($int1 = 13) {
+		return("Magpie implings", 65, 11252);
+	} else if ($int1 = 14) {
+		return("Barehanded: Nature implings", 68, 11250);
+	} else if ($int1 = 15) {
+		return("Ninja implings", 74, 11254);
+	} else if ($int1 = 16) {
+		return("Barehanded: Magpie implings", 75, 11252);
+	} else if ($int1 = 17) {
+		return("Dragon implings", 83, 11256);
+	} else if ($int1 = 18) {
+		return("Barehanded: Ninja implings", 84, 11254);
+	} else if ($int1 = 19) {
+		return("Lucky implings", 89, 19732);
+	} else if ($int1 = 20) {
+		return("Barehanded: Dragon implings", 93, 11256);
+	} else if ($int1 = 21) {
+		return("Barehanded: Lucky implings", 99, 19732);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 4) {
+	if ($int1 = 0) {
+		return("Wild kebbits (woodland)<br>Preferred bait: Raw meat", 23, 9962);
+	} else if ($int1 = 1) {
+		return("Barb-tailed kebbits (jungle)<br>Preferred bait: Raw rainbow fish ", 33, 9958);
+	} else if ($int1 = 2) {
+		return("Prickly kebbits (northern woodland)<br>Preferred bait: Barley", 37, 9957);
+	} else if ($int1 = 3) {
+		return("Sabre-toothed kebbits (snow)<br>Preferred bait: Raw meat", 51, 9959);
+	} else if ($int1 = 4) {
+		return("Maniacal monkeys (Ape Atoll)<br>Preferred bait: Banana", 60, 19556);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 5) {
+	if ($int1 = 0) {
+		return("Ferrets (woodland)", 27, 10092);
+	} else if ($int1 = 1) {
+		return("Chinchompas (woodland)<br>Preferred bait: Spicy chopped tomatoes", 53, 9976);
+	} else if ($int1 = 2) {
+		return("Red chinchompas (jungle)<br>Preferred bait: Spicy minced meat", 63, 9977);
+	} else if ($int1 = 3) {
+		return("Black chinchompas (woodland)<br>Preferred bait: Spicy minced meat", 73, 5091);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 6) {
+	if ($int1 = 0) {
+		return("Swamp lizards (swamp)<br>Preferred bait: Guam tar", 29, 10149);
+	} else if ($int1 = 1) {
+		return("Orange salamanders (desert)<br>Preferred bait: Marrentill tar", 47, 10146);
+	} else if ($int1 = 2) {
+		return("Red salamanders (lava)<br>Preferred bait: Tarromin tar", 59, 10147);
+	} else if ($int1 = 3) {
+		return("Black salamanders (lava)<br>Preferred bait: Harralander tar", 67, 10148);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 7) {
+	if ($int1 = 0) {
+		return("Spined larupias (jungle)", 31, 10045);
+	} else if ($int1 = 1) {
+		return("Horned graahks (Karamja)", 41, 10051);
+	} else if ($int1 = 2) {
+		return("Sabre-toothed kyatts (snow)", 55, 10039);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 8) {
+	if ($int1 = 0) {
+		return("Spotted kebbits (woodland)", 43, 9960);
+	} else if ($int1 = 1) {
+		return("Dark kebbits (woodland)", 57, 9963);
+	} else if ($int1 = 2) {
+		return("Dashing kebbits (woodland)", 69, 9964);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 9) {
+	if ($int1 = 0) {
+		return("Lay 1 trap at a time", 1, 9951);
+	} else if ($int1 = 1) {
+		return("Set a bird trap", 1, 10006);
+	} else if ($int1 = 2) {
+		return("Use a noose wand in tracking", 1, 10150);
+	} else if ($int1 = 3) {
+		return("Net butterflies", 15, 10010);
+	} else if ($int1 = 4) {
+		return("Lay up to 2 traps at a time", 20, 9951);
+	} else if ($int1 = 5) {
+		return("Set a deadfall trap (limit of 1)", 23, 1511);
+	} else if ($int1 = 6) {
+		return("Set a box trap<br>(After Eagles' Peak quest)", 27, 10008);
+	} else if ($int1 = 7) {
+		return("Set a rabbit snare", 27, 10031);
+	} else if ($int1 = 8) {
+		return("Set a net trap", 29, 303);
+	} else if ($int1 = 9) {
+		return("Set a pitfall trap", 31, 10029);
+	} else if ($int1 = 10) {
+		return("Use smoke to mask the scent on a trap", 39, 594);
+	} else if ($int1 = 11) {
+		return("Lay up to 3 traps at a time", 40, 9951);
+	} else if ($int1 = 12) {
+		return("Hunt with a falcon", 43, 10023);
+	} else if ($int1 = 13) {
+		return("Lay up to 4 traps at a time", 60, 9951);
+	} else if ($int1 = 14) {
+		return("Set an imp trap", 71, 10025);
+	} else if ($int1 = 15) {
+		return("Lay up to 5 traps at a time", 80, 9951);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 10) {
+	if ($int1 = 0) {
+		return("Polar kebbit fur clothing (snow)", 1, 10065);
+	} else if ($int1 = 1) {
+		return("Common kebbit fur clothing (woodland)", 1, 10053);
+	} else if ($int1 = 2) {
+		return("Feldip weasel fur clothing (jungle)", 4, 10057);
+	} else if ($int1 = 3) {
+		return("Desert devil fur clothing (desert)", 10, 10061);
+	} else if ($int1 = 4) {
+		return("Lucky rabbit's foot", 24, 10132);
+	} else if ($int1 = 5) {
+		return("Larupia fur clothing", 28, 10045);
+	} else if ($int1 = 6) {
+		return("Graahk hide clothing", 38, 10051);
+	} else if ($int1 = 7) {
+		return("Spotted capes", 40, 10069);
+	} else if ($int1 = 8) {
+		return("Kyatt fur clothing", 52, 10039);
+	} else if ($int1 = 9) {
+		return("Gloves of silence", 54, 10075);
+	} else if ($int1 = 10) {
+		return("Spottier capes", 66, 10071);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 11) {
+	if ($int1 = 0) {
+		return("Guanic bat", 1, 20870);
+	} else if ($int1 = 1) {
+		return("Prael bat", 15, 20872);
+	} else if ($int1 = 2) {
+		return("Giral bat", 30, 20874);
+	} else if ($int1 = 3) {
+		return("Phluxia bat", 45, 20876);
+	} else if ($int1 = 4) {
+		return("Kryket bat", 60, 20878);
+	} else if ($int1 = 5) {
+		return("Murng bat", 75, 20880);
+	} else if ($int1 = 6) {
+		return("Psykk bat", 90, 20882);
+	} else if ($int1 = 7) {
+		return("Barehanded bat-catching", 99, 20882);
+	} else {
+		return("", -1, -1);
+	}
+} else if ($int0 = 12) {
+	switch ($int1) {
+		case 0 :
+			return("Normal Birdhouse Trap", 5, 21512);
+		case 1 :
+			return("Oak Birdhouse Trap", 14, 21515);
+		case 2 :
+			return("Willow Birdhouse Trap", 24, 21518);
+		case 3 :
+			return("Teak Birdhouse Trap", 34, 21521);
+		case 4 :
+			return("Maple Birdhouse Trap", 44, 22192);
+		case 5 :
+			return("Mahogany Birdhouse Trap", 49, 22195);
+		case 6 :
+			return("Yew Birdhouse Trap", 59, 22198);
+		case 7 :
+			return("Magic Birdhouse Trap", 74, 22201);
+		case 8 :
+			return("Redwood Birdhouse Trap", 89, 22204);
+		else :
+			return("", -1, -1);
+	}
+} else if ($int0 = 13) {
+	if ($int1 = 0) {
+		return("Dig for sandworms (Great Kourend Beach)", 15, 13431);
+	} else if ($int1 = 1) {
+		return("Giant eagles(various)", 27, 9974);
+	} else if ($int1 = 2) {
+		return("White rabbits (woodland)<br>Use a ferret to flush the rabbit out of its hole", 27, 9975);
+	} else if ($int1 = 3) {
+		return("Accessing drift net fishing on Fossil Island (with 47 fishing)", 44, 21655);
+	} else if ($int1 = 4) {
+		return("Imps (worldwide)<br>Preferred bait: Magical beads", 71, 9952);
+	} else {
+		return("", -1, -1);
+	}
+} else {
+	return("", -1, -1);
+}

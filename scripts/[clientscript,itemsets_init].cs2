@@ -1,0 +1,39 @@
+[clientscript,itemsets_init](component $component0, component $component1)
+cc_deleteall($component0);
+cc_deleteall($component1);
+def_int $int2 = calc(((if_getwidth($component0) - (36 * 8)) / 7) + 36);
+def_int $int3 = 0;
+def_obj $obj4 = null;
+def_int $int5 = 0;
+def_enum $enum6 = enum(int, enum, 1033, $int5);
+while ($enum6 ! null) {
+	$obj4 = enum(int, namedobj, $enum6, -1);
+	cc_create($component0, ^iftype_graphic, $int5);
+	if ($obj4 ! null) {
+		cc_sethide(false);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		$int3 = calc(($int5 / 8) * 48);
+		cc_setposition(calc(($int5 % 8) * $int2), $int3, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject_nonum($obj4, 1);
+		cc_setopbase("<col=ff9040><oc_name($obj4)></col>");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		~itemsets_redraw($enum6);
+		cc_setoninvtransmit("itemsets_redraw(event_com, event_comid, $enum6){93}");
+	} else {
+		cc_sethide(true);
+	}
+	$int5 = calc($int5 + 1);
+	$enum6 = enum(int, enum, 1033, $int5);
+}
+if ($int3 > 0) {
+	$int3 = calc($int3 + 32);
+}
+if_setscrollpos(0, 0, $component0);
+if ($int3 > if_getheight($component0)) {
+	if_setscrollsize(0, $int3, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+}
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+return;

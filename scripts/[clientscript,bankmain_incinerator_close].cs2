@@ -1,0 +1,9 @@
+[clientscript,bankmain_incinerator_close](int $int0, component $component1)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	cc_deleteall($component1);
+	if_sethide(true, $component1);
+	return;
+}

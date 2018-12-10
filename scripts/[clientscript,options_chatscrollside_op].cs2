@@ -1,0 +1,11 @@
+[clientscript,options_chatscrollside_op](int $int0, component $component1, component $component2)
+if ($int0 ! 1) {
+	return;
+} else if (~mobile_setting_check = 0) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	%varbit6374 = calc(1 - %varbit6374);
+	~options_chatscrollside($component1, $component2);
+	return;
+}

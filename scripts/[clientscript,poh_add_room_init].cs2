@@ -1,0 +1,44 @@
+[clientscript,poh_add_room_init](component $component0, component $component1)
+cc_deleteall($component0);
+def_int $int2 = 0;
+while ($int2 <= 28) {
+	cc_create($component0, ^iftype_rectangle, $int2);
+	cc_sethide(true);
+	$int2 = calc($int2 + 1);
+}
+def_int $int3 = 5;
+$int3 = ~poh_add_room_initbutton($int3, 1, 1, "Parlour");
+$int3 = ~poh_add_room_initbutton($int3, 2, 1, "Garden");
+$int3 = ~poh_add_room_initbutton($int3, 3, 5, "Kitchen");
+$int3 = ~poh_add_room_initbutton($int3, 4, 10, "Dining room");
+$int3 = ~poh_add_room_initbutton($int3, 12, 15, "Workshop");
+$int3 = ~poh_add_room_initbutton($int3, 5, 20, "Bedroom");
+$int3 = ~poh_add_room_initbutton($int3, 7, 25, "Hall - Skill trophies");
+$int3 = ~poh_add_room_initbutton($int3, 6, 30, "Games room");
+$int3 = ~poh_add_room_initbutton($int3, 22, 32, "Combat room");
+$int3 = ~poh_add_room_initbutton($int3, 9, 35, "Hall - Quest trophies");
+$int3 = ~poh_add_room_initbutton($int3, 25, 37, "Menagerie (outdoors)");
+$int3 = ~poh_add_room_initbutton($int3, 24, 37, "Menagerie (indoors)");
+$int3 = ~poh_add_room_initbutton($int3, 13, 40, "Study");
+$int3 = ~poh_add_room_initbutton($int3, 23, 42, "Costume room");
+$int3 = ~poh_add_room_initbutton($int3, 11, 45, "Chapel");
+$int3 = ~poh_add_room_initbutton($int3, 14, 50, "Portal chamber");
+$int3 = ~poh_add_room_initbutton($int3, 21, 55, "Formal garden");
+$int3 = ~poh_add_room_initbutton($int3, 15, 60, "Throne room");
+$int3 = ~poh_add_room_initbutton($int3, 16, 65, "Oubliette");
+$int3 = ~poh_add_room_initbutton($int3, 26, 65, "Superior garden");
+$int3 = ~poh_add_room_initbutton($int3, 17, 70, "Dungeon - Corridor");
+$int3 = ~poh_add_room_initbutton($int3, 18, 70, "Dungeon - Junction");
+$int3 = ~poh_add_room_initbutton($int3, 19, 70, "Dungeon - Stairs");
+$int3 = ~poh_add_room_initbutton($int3, 28, 72, "Portal Nexus");
+$int3 = ~poh_add_room_initbutton($int3, 20, 75, "Treasure room");
+$int3 = ~poh_add_room_initbutton($int3, 27, 80, "Achievement gallery");
+cc_deleteall($component1);
+if ($int3 > if_getheight($component0)) {
+	if_setscrollsize(0, $int3, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+}
+if_setscrollpos(0, 0, $component0);
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+return;

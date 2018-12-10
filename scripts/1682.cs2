@@ -1,0 +1,13 @@
+script1682(component $component0, int $int1)
+cc_deleteall($component0);
+def_int $int2 = 0;
+if ($int1 = 1) {
+	$int2 = ~script198($component0);
+} else {
+	$int2 = ~script208($component0);
+}
+cc_create($component0, ^iftype_model, $int2);
+cc_setsize(42, 42, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setobject_nonum(old_school_bond_13190, 1);
+return;

@@ -1,0 +1,16 @@
+script1048(component $component0, component $component1, int $int2)
+if (%varbit4606 ! 0) {
+	return;
+} else {
+	def_int $int3 = 512;
+	def_int $int4 = 512;
+	def_int $int5 = calc(if_getwidth($component1) - if_getwidth($component0));
+	$int2 = ~max(0, $int2);
+	$int2 = ~min(calc(if_getwidth($component1) - if_getwidth($component0)), $int2);
+	def_int $int6 = calc(896 - 128);
+	def_int $int7 = calc(896 - 128);
+	$int3 = calc((($int2 * $int6) / $int5) + 128);
+	$int4 = calc((($int2 * $int7) / $int5) + 128);
+	~camera_do_zoom($int4, $int3);
+	return;
+}

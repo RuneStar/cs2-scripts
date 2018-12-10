@@ -1,0 +1,29 @@
+script2361(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, int $int7, component $component8, int $int9, int $int10)
+def_int $int11 = 4;
+if (%varbit6670 = 2) {
+	$int11 = 8;
+} else if (%varbit6670 = 3) {
+	$int11 = 18;
+}
+if (($int10 < 0) | ($int10 > $int11)) {
+	return;
+} else {
+	def_int $int12 = 0;
+	if ($component8 = $component0) {
+		if (($int9 < 0) | ($int9 >= $int11)) {
+			return;
+		} else {
+			$int12 = ~script2669($int10);
+			~telenexus_set_slot($int10, ~script2669($int9));
+			~telenexus_set_slot($int9, ~script2669($int12));
+			~script2273($component0, $component1, $component2, $component3, $component4, $component5, $component6, 0);
+		}
+	} else if ($component8 = 19:20) {
+		~telenexus_remove_tele(~script2669($int10));
+		~script2273($component0, $component1, $component2, $component3, $component4, $component5, $component6, 0);
+	} else if ($component8 = 19:3) {
+		%varbit6669 = ~script2669($int10);
+		~telenexus_left_click($component8, 19:7, 19:8, 19:4, 19:6);
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+[clientscript,options_tabs_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+def_int $int5 = calc((190 - 160) / 5);
+cc_deleteall($component0);
+def_graphic $graphic6 = ~graphic_device(1084, 1563);
+~options_tabs_create(0, $component1, $graphic6, $int5, $component0, $component1, $component2, $component3, $component4, "Display");
+~options_tabs_create(1, $component2, "options_icons,2", $int5, $component0, $component1, $component2, $component3, $component4, "Audio");
+~options_tabs_create(2, $component3, "options_icons,23", $int5, $component0, $component1, $component2, $component3, $component4, "Chat");
+~options_tabs_create(3, $component4, "options_icons,26", $int5, $component0, $component1, $component2, $component3, $component4, "Controls");
+~options_tabs_switch(0, $component1, $component0, $component1, $component2, $component3, $component4);
+return;

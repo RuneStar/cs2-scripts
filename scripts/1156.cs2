@@ -1,0 +1,21 @@
+script1156(obj $obj0, int $int1, int $int2)
+if ($obj0 ! null) {
+	cc_settrans(0);
+	cc_setobject($obj0, $int1);
+	cc_clearops;
+	cc_setop(1, "Withdraw-1");
+	cc_setop(2, "Withdraw-5");
+	cc_setop(3, "Withdraw-10");
+	cc_setop(4, "Withdraw-X");
+	cc_setop(5, "Withdraw-All");
+	cc_setop(10, "Examine");
+	cc_setopbase("<col=ff981f><oc_name($obj0)>");
+	cc_setondragcomplete("script1157(event_com, event_comid, event_dragtargetid)");
+} else {
+	cc_settrans(255);
+	cc_setobject_nonum(6512, 1);
+	cc_clearops;
+	cc_setondrag(null);
+	cc_setondragcomplete(null);
+}
+return;

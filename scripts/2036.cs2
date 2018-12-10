@@ -1,0 +1,23 @@
+script2036(component $component0, int $int1, obj $obj2, int $colour3, string $string0)
+cc_create($component0, ^iftype_model, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
+if ($obj2 = null) {
+	cc_setsize(10, 30, ^setsize_minus, ^setsize_minus);
+	cc_setmodel(32817);
+	cc_setmodelangle(0, 90, 0, 117, 0, 720);
+	cc_setmodelanim(808);
+} else {
+	cc_setsize(50, 50, ^setsize_abs, ^setsize_abs);
+	cc_setobject_nonum($obj2, 1);
+}
+cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+cc_setcolour($colour3);
+cc_settextshadow(true);
+cc_settext($string0);
+return;

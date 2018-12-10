@@ -1,0 +1,6 @@
+[proc,worldmap_keybutton](category $category0, int $int1, int $int2)
+cc_settrans(255);
+cc_setonop("worldmap_keyflash(event_opindex, $category0, event_com, event_comid)");
+cc_setonmouserepeat("cc_settrans(event_com, event_comid, 220, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+return;

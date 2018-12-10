@@ -1,0 +1,29 @@
+[proc,deadmanprotect_stats_refresh](int $int0)
+def_component $component1 = enum(int, component, 1302, $int0);
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+$int2, $int3, $int4 = ~script1279($int0);
+if ($int4 <= 0) {
+	if (cc_find($component1, 3) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component1, 6) = true) {
+		cc_settext(tostring($int2));
+	}
+	if (cc_find($component1, 7) = true) {
+		cc_sethide(true);
+	}
+} else {
+	if (cc_find($component1, 3) = true) {
+		cc_sethide(false);
+		cc_settext(tostring($int2));
+	}
+	if (cc_find($component1, 6) = true) {
+		cc_settext(tostring($int3));
+	}
+	if (cc_find($component1, 7) = true) {
+		cc_sethide(false);
+	}
+}
+return;

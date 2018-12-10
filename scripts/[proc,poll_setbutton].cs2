@@ -1,0 +1,29 @@
+[proc,poll_setbutton](component $component0, component $component1, string $string0)
+if_setontimer(null, $component0);
+cc_deleteall($component0);
+if (string_length($string0) <= 0) {
+	if_sethide(true, $component0);
+	return;
+} else {
+	if_sethide(false, $component0);
+	def_int $int2 = if_getwidth($component0);
+	def_int $int3 = if_getheight($component0);
+	cc_create($component0, ^iftype_graphic, 0);
+	.cc_create($component0, ^iftype_text, 1);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
+	.cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
+	cc_settiling(true);
+	cc_setgraphic(812);
+	.cc_settextfont(p11_full);
+	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	.cc_setcolour(0xff981f);
+	.cc_settextshadow(true);
+	.cc_settext($string0);
+	cc_setop(1, $string0);
+	cc_setonop("poll_buttonop($component0, $component1, $string0, cc_getid, .cc_getid)");
+	cc_setonmouseover("poll_buttonhover(true, $component0, cc_getid, .cc_getid)");
+	cc_setonmouseleave("poll_buttonhover(false, $component0, cc_getid, .cc_getid)");
+	return;
+}

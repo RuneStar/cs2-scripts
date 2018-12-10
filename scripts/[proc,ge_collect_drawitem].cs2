@@ -1,0 +1,36 @@
+[proc,ge_collect_drawitem](int $int0, inv $inv1, component $component2, int $int3)
+def_graphic $graphic4 = 1120;
+def_graphic $graphic5 = 1121;
+if (.cc_find($component2, $int3) = true) {
+	.cc_setgraphic($graphic4);
+}
+def_obj $obj6 = inv_getobj($inv1, $int0);
+def_int $int7 = 0;
+if ($obj6 ! null) {
+	$int7 = inv_getnum($inv1, $int0);
+	cc_sethide(false);
+	cc_clearops;
+	cc_setonmouserepeat("script229(event_com, $int3, $graphic5, null)");
+	cc_setonmouseleave("script229(event_com, $int3, $graphic4, null)");
+	if (oc_cert($obj6) ! $obj6) {
+		if ($int7 = 1) {
+			cc_setop(1, "Collect-item");
+			cc_setop(2, "Collect-note");
+		} else {
+			cc_setop(1, "Collect-notes");
+			cc_setop(2, "Collect-items");
+		}
+	} else {
+		cc_setop(2, "Collect");
+	}
+	cc_setop(3, "Bank");
+	cc_setop(10, "Examine");
+	cc_setobject($obj6, $int7);
+	cc_setopbase("<col=ff9040><oc_name($obj6)></col>");
+} else {
+	cc_sethide(true);
+	cc_clearops;
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+}
+return;

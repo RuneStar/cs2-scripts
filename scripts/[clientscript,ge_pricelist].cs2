@@ -1,0 +1,28 @@
+[clientscript,ge_pricelist](inv $inv0, string $string0)
+cc_deleteall(237:1);
+~steelborder(237:1, 0, "Grand Exchange: <$string0>");
+cc_deleteall(237:3);
+~scrollbar_vertical(237:3, 237:2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_deleteall(237:4);
+cc_create(237:4, ^iftype_graphic, 0);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+def_string $string1 = "Column view";
+def_int $int1 = calc(parawidth(512, p12_full, $string1) + 20);
+if_setsize($int1, 17, ^setsize_abs, ^setsize_abs, 237:4);
+.cc_create(237:4, ^iftype_text, 1);
+.cc_setsize($int1, 17, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(0xff981f);
+if_setonmouseover("script85(event_com, .cc_getid, 16777215)", 237:4);
+if_setonmouseleave("script85(event_com, .cc_getid, 16750623)", 237:4);
+.cc_settextfont(p12_full);
+.cc_settextshadow(true);
+.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+.cc_settext($string1);
+def_int $int2 = inv_size($inv0);
+if_setoninvtransmit("ge_pricelist_draw($inv0, $int2, cc_getid){$inv0}", 237:0);
+if_setonvartransmit("ge_pricelist_draw($inv0, $int2, cc_getid){499}", 237:0);
+if_setonop("ge_pricelist_switchmode(event_opindex, $inv0, $int2, cc_getid)", 237:4);
+~ge_pricelist_draw($inv0, $int2, cc_getid);
+return;

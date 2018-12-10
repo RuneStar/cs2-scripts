@@ -1,0 +1,15 @@
+[proc,prayer_updatebutton](int $int0, component $component1, component $component2)
+if (testbit(%varbit4101, $int0) = true) {
+	if_setop(1, "Deactivate", $component1);
+	cc_sethide(false);
+} else {
+	if_setop(1, "Activate", $component1);
+	cc_sethide(true);
+}
+if (~script464($int0) = 1) {
+	.cc_setgraphic(enum(int, graphic, 865, $int0));
+} else {
+	.cc_setgraphic(enum(int, graphic, 864, $int0));
+}
+~prayer_tooltips($component2, $component1, $int0);
+return;

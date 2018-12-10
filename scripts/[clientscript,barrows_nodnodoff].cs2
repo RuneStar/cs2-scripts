@@ -1,0 +1,10 @@
+[clientscript,barrows_nodnodoff](component $component0, int $int1)
+if (clientclock < $int1) {
+	return;
+} else {
+	if_setontimer(null, $component0);
+	if_sethide(true, $component0);
+	if_setmodel(16238, $component0);
+	if_setmodelanim(3354, $component0);
+	return;
+}

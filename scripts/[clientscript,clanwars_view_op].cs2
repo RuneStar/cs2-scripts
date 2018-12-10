@@ -1,0 +1,8 @@
+[clientscript,clanwars_view_op](int $int0, int $int1, model $model2)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	~clanwars_view_setup($int1, $model2);
+	return;
+}

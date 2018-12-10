@@ -1,0 +1,17 @@
+[proc,bankmain_filteritem](obj $obj0)(int)
+def_string $string0 = "";
+def_string $string1 = "";
+if (~bankmain_searching = 1) {
+	$string1 = ~bankmain_filterstring;
+	if (string_length($string1) > 0) {
+		if ($obj0 ! null) {
+			$string0 = lowercase(oc_name($obj0));
+		}
+		if (string_indexof_string($string0, $string1, 0) ! -1) {
+			return(1);
+		} else {
+			return(0);
+		}
+	}
+}
+return(1);

@@ -1,0 +1,7 @@
+[proc,tournament_world]()(int)
+def_int $int0 = worldflags;
+if ((testbit($int0, 25) = true) & (testbit($int0, 23) = false)) {
+	return(1);
+} else {
+	return(0);
+}

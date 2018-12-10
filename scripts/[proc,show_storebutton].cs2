@@ -1,0 +1,8 @@
+[proc,show_storebutton]()(int)
+if (~on_mobile = false) {
+	return(0);
+} else if (%varbit6506 = 1) {
+	return(1);
+} else {
+	return(0);
+}

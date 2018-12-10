@@ -1,0 +1,12 @@
+[proc,worldmap_search_off](component $component0)
+def_graphic $graphic1 = "tradebacking_dark";
+def_graphic $graphic2 = "tradebacking";
+cc_setgraphic($graphic1);
+%varcstring138 = "";
+~worldmap_search_update($component0, "Search");
+cc_setonmouserepeat("script229(event_com, event_comid, $graphic2, null)");
+cc_setonmouseleave("script229(event_com, event_comid, $graphic1, null)");
+cc_setop(1, "Search");
+cc_setonop("worldmap_search_start($component0, cc_getid, .cc_getid)");
+_3138;
+return;

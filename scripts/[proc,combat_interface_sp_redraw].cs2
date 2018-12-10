@@ -1,0 +1,44 @@
+[proc,combat_interface_sp_redraw](component $component0)
+def_int $int1 = 0;
+if ((map_members = true) | (%varbit5314 = 1)) {
+	$int1 = enum(obj, int, 906, inv_getobj(94, 3));
+}
+if ($int1 <= 0) {
+	if_sethide(true, 593:34);
+	return;
+} else {
+	def_int $int2 = 0;
+	if (if_gethide(593:34) = true) {
+		$int2 = 1;
+	}
+	if_sethide(false, 593:34);
+	if (%var301 > 0) {
+		if_setcolour(^yellow, 593:39);
+	} else {
+		if_setcolour(0x000010, 593:39);
+	}
+	def_int $int3 = %var300;
+	if ($int3 < 0) {
+		$int3 = 0;
+	}
+	if_settext("Special Attack: <tostring(calc($int3 / 10))>%", 593:39);
+	~combat_interface_sp_updatebar($component0, $int3, $int2);
+	if ($int3 >= $int1) {
+		if_setcolour(0x397d3b, 593:38);
+	} else {
+		if_setcolour(0x00326b, 593:38);
+	}
+	~options_button_off(593:35, 0);
+	def_obj $obj4 = inv_getobj(94, 3);
+	def_string $string0 = "<enum(obj, string, 1739, $obj4)> (<tostring(calc(enum(obj, int, 906, $obj4) / 10))>%)";
+	if (%varbit5712 = 0) {
+		if (((((($obj4 = dark_bow_11235) | ($obj4 = dark_bow_20408)) | ($obj4 = dark_bow_12765)) | ($obj4 = dark_bow_12768)) | ($obj4 = dark_bow_12767)) & ((((inv_getobj(94, 13) = dragon_arrow_11212) | (inv_getobj(94, 13) = dragon_arrow_p_11227)) | (inv_getobj(94, 13) = dragon_arrow_p_11228)) | (inv_getobj(94, 13) = dragon_arrow_p_11229))) {
+			$string0 = "Descent of Dragons: Deal a double attack with dragon arrows that inflicts up to 50% more damage (minimum damage of 8 per hit). (<tostring(calc(enum(obj, int, 906, $obj4) / 10))>%)";
+		}
+		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 593:41, $string0, 25, 160)", 593:34);
+		if_setonmouseleave("deltooltip(593:41)", 593:34);
+	} else {
+		if_setonmouserepeat(null, 593:34);
+	}
+	return;
+}

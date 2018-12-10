@@ -1,0 +1,40 @@
+script1391(component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, string $string0)(int)
+def_int $int6 = calc(parawidth(512, p11_full, $string0) + 10);
+if_setsize($int6, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+cc_deleteall($component0);
+def_int $int7 = 0;
+if ($int1 = $int2) {
+	$int7 = ~options_button_on($component0, 0);
+} else {
+	$int7 = ~options_button_off($component0, 0);
+}
+cc_create($component0, ^iftype_text, $int7);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+if ($int1 = $int2) {
+	if ($int1 = $int5) {
+		cc_setcolour(^yellow);
+	} else {
+		cc_setcolour(^white);
+	}
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_setonop(null, $component0);
+	if_clearops($component0);
+} else {
+	if ($int1 = $int5) {
+		cc_setcolour(^yellow);
+		if_setonmouseleave("script85(event_com, $int7, 16776960)", $component0);
+	} else {
+		cc_setcolour(0xff981f);
+		if_setonmouseleave("script85(event_com, $int7, 16750623)", $component0);
+	}
+	if_setonmouserepeat("script85(event_com, $int7, 16777215)", $component0);
+	if_setonop("poh_viewer_setlevel(true, $int1, $int3, $int4)", $component0);
+	if_setop(1, $string0, $component0);
+}
+return($int6);

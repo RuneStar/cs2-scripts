@@ -1,0 +1,39 @@
+[proc,options_allsounds](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5)
+if ($int0 = 4) {
+	if_setgraphic(687, $component1);
+	if_setgraphic(693, $component2);
+	if_setgraphic(694, $component3);
+	if_setgraphic(695, $component4);
+	if_setgraphic(696, $component5);
+} else if ($int0 = 3) {
+	if_setgraphic(692, $component1);
+	if_setgraphic(688, $component2);
+	if_setgraphic(694, $component3);
+	if_setgraphic(695, $component4);
+	if_setgraphic(696, $component5);
+} else if ($int0 = 2) {
+	if_setgraphic(692, $component1);
+	if_setgraphic(693, $component2);
+	if_setgraphic(689, $component3);
+	if_setgraphic(695, $component4);
+	if_setgraphic(696, $component5);
+} else if ($int0 = 1) {
+	if_setgraphic(692, $component1);
+	if_setgraphic(693, $component2);
+	if_setgraphic(694, $component3);
+	if_setgraphic(690, $component4);
+	if_setgraphic(696, $component5);
+} else if ($int0 = 0) {
+	if_setgraphic(692, $component1);
+	if_setgraphic(693, $component2);
+	if_setgraphic(694, $component3);
+	if_setgraphic(695, $component4);
+	if_setgraphic(691, $component5);
+} else {
+	if_setgraphic(692, $component1);
+	if_setgraphic(693, $component2);
+	if_setgraphic(694, $component3);
+	if_setgraphic(695, $component4);
+	if_setgraphic(696, $component5);
+}
+return;

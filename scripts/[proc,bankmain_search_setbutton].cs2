@@ -1,0 +1,13 @@
+[proc,bankmain_search_setbutton](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
+if (~bankmain_searching = 1) {
+	if_setgraphic("miscgraphics,9", $component8);
+	if (%varcint5 = 11) {
+		if_setontimer("bankmain_search_refresh($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component8);
+	} else {
+		if_setontimer(null, $component8);
+	}
+} else {
+	if_setgraphic("miscgraphics,0", $component8);
+	if_setontimer(null, $component8);
+}
+return;

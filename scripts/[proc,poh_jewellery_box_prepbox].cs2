@@ -1,0 +1,35 @@
+[proc,poh_jewellery_box_prepbox](component $component0, int $int1, obj $obj2, int $int3, string $string0)(int)
+cc_deleteall($component0);
+def_int $int4 = 0;
+cc_create($component0, ^iftype_graphic, $int4);
+$int4 = calc($int4 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settiling(true);
+if ($int3 >= $int1) {
+	cc_setgraphic("tradebacking_light");
+} else {
+	cc_setgraphic("tradebacking_dark");
+}
+$int4 = ~thinbox($component0, $int4);
+cc_create($component0, ^iftype_text, $int4);
+$int4 = calc($int4 + 1);
+cc_setsize(70, 30, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_bottom);
+if ($int3 >= $int1) {
+	cc_setcolour(^white);
+} else {
+	cc_setcolour(0x7f7f7f);
+}
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+cc_create($component0, ^iftype_graphic, $int4);
+$int4 = calc($int4 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(7 + ((70 - 36) / 2)), 35, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_setobject_nonum($obj2, 1);
+return($int4);

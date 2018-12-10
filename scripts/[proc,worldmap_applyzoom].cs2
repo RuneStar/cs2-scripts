@@ -1,0 +1,13 @@
+[proc,worldmap_applyzoom](int $int0, component $component1, component $component2)
+worldmap_setzoom($int0);
+if ($int0 >= 200) {
+	~script1722($component2, true, $component1, $component2, "");
+} else {
+	~script1722($component2, true, $component1, $component2, "Zoom in");
+}
+if ($int0 <= 25) {
+	~script1722($component1, false, $component1, $component2, "");
+} else {
+	~script1722($component1, false, $component1, $component2, "Zoom out");
+}
+return;

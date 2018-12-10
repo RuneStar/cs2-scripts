@@ -1,0 +1,13 @@
+[clientscript,tutorial_overlay_hint](int $int0)
+if_sethide(false, 614:6);
+switch ($int0) {
+	case 1 :
+		~tutorial_hint_chatbox;
+	case 2 :
+		~tutorial_hint_camera;
+	case 3 :
+		~tutorial_hint_move;
+	case 4 :
+		~tutorial_hint_interact;
+}
+return;

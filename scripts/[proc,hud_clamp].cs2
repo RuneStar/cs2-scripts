@@ -1,0 +1,11 @@
+[proc,hud_clamp](component $component0)
+def_enum $enum1 = ~toplevel_getcomponents;
+if ($enum1 = null) {
+	return;
+} else {
+	def_int $int2 = enum(enum, int, 1960, $enum1);
+	def_int $int3 = enum(enum, int, 1961, $enum1);
+	if_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setsize(calc($int2 + enum(enum, int, 1135, $enum1)), calc($int3 + enum(enum, int, 1136, $enum1)), ^setsize_minus, ^setsize_minus, $component0);
+	return;
+}

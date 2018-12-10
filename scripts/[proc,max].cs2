@@ -1,0 +1,8 @@
+[proc,max](int $int0, int $int1)(int)
+def_int $int2 = 0;
+if ($int0 > $int1) {
+	$int2 = $int0;
+} else {
+	$int2 = $int1;
+}
+return($int2);

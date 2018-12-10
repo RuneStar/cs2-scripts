@@ -1,0 +1,7 @@
+[proc,snapshot_toggle](component $component0, int $int1)
+if ($int1 = 1) {
+	if_setgraphic("checkbox,2", $component0);
+} else {
+	if_setgraphic("checkbox,1", $component0);
+}
+return;

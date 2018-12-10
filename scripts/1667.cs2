@@ -1,0 +1,7 @@
+script1667(component $component0, int $int1, int $int2, string $string0)
+def_int $int3 = calc($int2 - 1);
+friend_setrank(removetags($string0), $int3);
+if (cc_find($component0, $int1) = true) {
+	cc_settext(enum(int, string, 170, $int3));
+}
+return;

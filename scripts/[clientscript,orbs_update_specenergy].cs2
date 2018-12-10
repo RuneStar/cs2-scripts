@@ -1,0 +1,8 @@
+[clientscript,orbs_update_specenergy](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+if ($component0 ! null) {
+	if_setnoclickthrough(true, $component5);
+	if_setonvartransmit("orbs_update_specenergy(null, $component1, $component2, $component3, $component4, $component5){300}", $component0);
+	if_setonsubchange("orbs_update_specenergy(null, $component1, $component2, $component3, $component4, $component5)", $component0);
+}
+~orbs_update($component1, $component2, calc(%var300 / 10), 100);
+return;

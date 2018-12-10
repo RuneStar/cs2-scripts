@@ -1,0 +1,28 @@
+[clientscript,pvp_icons_wildernesslevel](component $component0)
+def_int $int1 = ~wilderness_level;
+def_int $int2 = ~deadman_world;
+if ($int2 = 1) {
+	if (%var1676 > 4) {
+		if (($int1 > 0) & (%varbit5954 = 1)) {
+			if_settext("Level: <tostring($int1)>", $component0);
+		} else {
+			if_settext("Deadman", $component0);
+		}
+	} else if (%varbit4965 > 0) {
+		if_settext("Protection", $component0);
+	} else if (($int1 > 0) & (%varbit5954 = 1)) {
+		if_settext("Level: <tostring($int1)>", $component0);
+	} else if (%varcint78 = 1) {
+		if_settext("Guarded", $component0);
+	} else if (%varcint78 = 2) {
+		if_settext("No PvP", $component0);
+	} else {
+		if_settext("Deadman", $component0);
+	}
+} else if ($int1 > 0) {
+	if_settext("Level: <tostring($int1)>", $component0);
+} else {
+	if_settext("", $component0);
+}
+~pvp_icons_comlevelrange($int1);
+return;

@@ -1,0 +1,19 @@
+script1632(char $char0, int $int1, component $component2, int $int3, string $string0, string $string1)
+if (clientclock < $int3) {
+	return;
+} else if (~script1701(458, -1) = 0) {
+	return;
+} else {
+	if (($char0 ! null) & ((string_indexof_char($string0, $char0) ! -1) | (string_indexof_char($string1, $char0) ! -1))) {
+		if_setonkey("script1632(event_keypressed, $int1, event_com, $string0, $string1, calc(clientclock + 20))", $component2);
+		if (cc_find($component2, 4) = true) {
+			cc_settrans(120);
+			cc_setontimer("script488(event_com, event_comid, 0, calc(clientclock + 10))");
+		}
+		sound_synth(2266, 1, 0);
+		if (cc_find(458:2, $int1) = true) {
+			cc_resume_pausebutton;
+		}
+	}
+	return;
+}

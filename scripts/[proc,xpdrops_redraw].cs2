@@ -1,0 +1,34 @@
+[proc,xpdrops_redraw](component $component0, component $component1, component $component2, int $int3, component $component4, component $component5)
+~xpdrops_showpanel($component0, $component1, $component4, $component5);
+def_fontmetrics $fontmetrics6 = p11_full;
+def_fontmetrics $fontmetrics7 = p11_full;
+def_int $int8 = 16;
+if ((%varbit4693 = 1) & (~on_mobile = false)) {
+	$int8 = 25;
+	$fontmetrics7 = p12_full;
+	$fontmetrics6 = p12_full;
+} else if ((%varbit4693 = 2) & (~on_mobile = false)) {
+	$int8 = 25;
+	$fontmetrics7 = b12_full;
+	$fontmetrics6 = b12_full;
+}
+def_int $int9 = calc((28 + parawidth(512, $fontmetrics6, "+8,888,888,888")) + 2);
+if_setsize($int9, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
+if_settextfont($fontmetrics7, $component2);
+def_int $int10 = 0;
+def_component $component11 = enum(int, component, 1163, $int10);
+while ($component11 ! null) {
+	if (cc_find($component11, 0) = true) {
+		cc_setcolour(enum(int, int, 1169, %varbit4695));
+		~xpdrops_setdropsize($component11, $int8, $fontmetrics6, $fontmetrics7, cc_gettext);
+	}
+	$int10 = calc($int10 + 1);
+	$component11 = enum(int, component, 1163, $int10);
+}
+if (~on_mobile = true) {
+	if_setnoclickthrough(true, $component1);
+} else {
+	if_setnoclickthrough(false, $component1);
+}
+~xpdrops_setposition($component1);
+return;

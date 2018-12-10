@@ -1,0 +1,23 @@
+script1724(component $component0, int $int1, int $colour2, string $string0)
+cc_deleteall($component0);
+def_int $int3 = 0;
+if ($int1 = 1) {
+	$int3 = ~script198($component0);
+} else {
+	$int3 = ~script208($component0);
+}
+cc_create($component0, ^iftype_graphic, $int3);
+$int3 = calc($int3 + 1);
+.cc_create($component0, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setgraphic("bankbuttons,2");
+.cc_setcolour($colour2);
+.cc_settextshadow(false);
+.cc_settextfont(p12_full);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settext($string0);
+return;

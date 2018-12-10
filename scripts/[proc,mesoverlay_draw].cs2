@@ -1,0 +1,33 @@
+[proc,mesoverlay_draw](int $int0, string $string0)
+if_setscrollpos(0, 0, 263:1);
+cc_deleteall(263:1);
+def_int $int1 = if_getwidth(263:1);
+def_int $int2 = paraheight($int1, q8_full, $string0);
+def_int $int3 = 16;
+if ($int2 = 2) {
+	$int3 = 31;
+} else if ($int2 = 3) {
+	$int3 = 24;
+}
+def_int $int4 = calc(($int2 * $int3) + 4);
+cc_create(263:1, ^iftype_text, 0);
+cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^black);
+cc_settextshadow(false);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, $int3);
+cc_settextfont(q8_full);
+cc_settext($string0);
+if ($int4 <= $int0) {
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	if_setscrollsize(0, 0, 263:1);
+	cc_deleteall(263:2);
+	if_sethide(true, 263:2);
+} else {
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+	if_setscrollsize(0, $int4, 263:1);
+	cc_deleteall(263:2);
+	if_sethide(false, 263:2);
+	~scrollbar_vertical(263:2, 263:1, 798, 795, 796, 797, 793, 794);
+}
+if_setontimer("script2017($string0, $int0)", 263:1);
+return;

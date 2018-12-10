@@ -1,0 +1,18 @@
+[proc,chatout_scrolldown]()
+def_string $string0 = "null";
+if (%varcint3 ! -1) {
+	%varcint3 = calc(%varcint3 + 1);
+	if (%varcint3 >= 20) {
+		%varcint3 = 0;
+	}
+	if (%varcint3 = %varcint4) {
+		%varcstring1 = "";
+		%varcint3 = -1;
+	} else {
+		$string0 = ~chatout_get(%varcint3);
+		if (string_length($string0) > 0) {
+			%varcstring1 = $string0;
+		}
+	}
+}
+return;

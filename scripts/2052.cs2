@@ -1,0 +1,16 @@
+script2052(obj $obj0, component $component1, int $int2, int $int3, int $int4, string $string0)
+~skillmulti_itembutton_draw(1, null, $component1, $int3, $int4);
+if_setonmouseover(null, $component1);
+if_setonmouseleave("deltooltip(270:24)", $component1);
+if_setonop(null, $component1);
+if_setonkey(null, $component1);
+if_setontimer("skillmulti_itembutton_reset(calc(clientclock + 40), $obj0, $component1, $string0, $int2, $int3, $int4)", $component1);
+if ((%varcint200 >= 1) & (%varcint200 <= 28)) {
+	sound_synth(2266, 1, 0);
+	if (cc_find($component1, %varcint200) = true) {
+		cc_resume_pausebutton;
+	}
+} else {
+	sound_synth(2277, 1, 0);
+}
+return;

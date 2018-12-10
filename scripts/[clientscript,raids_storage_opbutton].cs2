@@ -1,0 +1,22 @@
+[clientscript,raids_storage_opbutton](int $int0, component $component1, fontmetrics $fontmetrics2, string $string0)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	cc_deleteall($component1);
+	def_int $int3 = ~options_button_on($component1, 0);
+	cc_create($component1, ^iftype_text, $int3);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setcolour(0xff981f);
+	cc_settextfont($fontmetrics2);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext("---");
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_clearops($component1);
+	if_setonop(null, $component1);
+	if_setontimer("raids_storage_resetbutton($component1, $string0, $fontmetrics2, calc(clientclock + 20))", $component1);
+	return;
+}

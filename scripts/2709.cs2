@@ -1,0 +1,66 @@
+script2709(component $component0)
+def_component $component1 = null;
+def_obj $obj2 = null;
+def_int $int3 = 0;
+def_int $int4 = inv_size(94);
+while ($int3 < $int4) {
+	$component1 = enum(int, component, 1379, $int3);
+	if ($component1 ! null) {
+		cc_deleteall($component1);
+		cc_create($component1, ^iftype_graphic, 0);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+		cc_setgraphic("miscgraphics,0");
+		cc_create($component1, ^iftype_graphic, 1);
+		$obj2 = inv_getobj(207, $int3);
+		if ($obj2 ! null) {
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+			cc_setgraphicshadow(0x333333);
+			if (enum(obj, boolean, 679, $obj2) = true) {
+				cc_setoutline(2);
+			} else {
+				cc_setoutline(1);
+			}
+			cc_setobject($obj2, inv_getnum(207, $int3));
+			if_setopbase("<col=ff9040><oc_name($obj2)></col>", $component1);
+			if_setop(10, "Examine", $component1);
+			if_setonop("script487(event_com, cc_getid, 100, 0)", $component1);
+		} else {
+			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+			cc_setgraphic(enum(int, graphic, 904, $int3));
+			if_clearops($component1);
+			if_setonop(null, $component1);
+		}
+	}
+	$int3 = calc($int3 + 1);
+}
+cc_deleteall($component0);
+def_int $int5 = calc((((if_getwidth($component0) - 4) - (4 * 36)) / 3) + 36);
+def_int $int6 = calc((((if_getheight($component0) - 4) - (7 * 32)) / 6) + 32);
+def_int $int7 = 0;
+def_int $int8 = inv_size(93);
+while ($int7 < $int8) {
+	$obj2 = inv_getobj(207, $int3);
+	cc_create($component0, ^iftype_graphic, $int7);
+	if ($obj2 ! null) {
+		cc_sethide(false);
+		cc_setposition(calc(2 + ($int5 * ($int7 % 4))), calc(2 + ($int6 * ($int7 / 4))), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setgraphicshadow(0x333333);
+		if (enum(obj, boolean, 679, $obj2) = true) {
+			cc_setoutline(2);
+		} else {
+			cc_setoutline(1);
+		}
+		cc_setobject($obj2, inv_getnum(207, $int3));
+		cc_setopbase("<col=ff9040><oc_name($obj2)></col>");
+		cc_setop(10, "Examine");
+	} else {
+		cc_sethide(true);
+	}
+	$int3 = calc($int3 + 1);
+	$int7 = calc($int7 + 1);
+}
+return;

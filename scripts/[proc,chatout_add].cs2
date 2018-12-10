@@ -1,0 +1,8 @@
+[proc,chatout_add](string $string0)
+~chatout_set(%varcint4, $string0);
+%varcint4 = calc(%varcint4 + 1);
+if (%varcint4 >= 20) {
+	%varcint4 = 0;
+}
+%varcint3 = -1;
+return;

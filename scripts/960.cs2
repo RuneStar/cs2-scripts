@@ -1,0 +1,175 @@
+script960(component $component0, int $int1, int $int2, component $component3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, component $component16, string $string0)(int)
+if (($int4 ! -1) & (.cc_find($component3, $int4) = true)) {
+	.cc_sethide(false);
+	.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
+	if (string_length($string0) > 0) {
+		.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component16, removetags($string0), 25, 190)");
+	} else {
+		.cc_setonmouserepeat(null);
+	}
+} else if (string_length($string0) > 0) {
+	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component16, removetags($string0), 25, 190)", $component3);
+} else {
+	if_setonmouserepeat(null, $component3);
+}
+def_int $int17 = 0;
+def_int $int18 = 0;
+if (map_world = $int5) {
+	$int17 = 1;
+} else if (testbit($int6, 7) = true) {
+	$int18 = enum(int, int, 1496, $int5);
+	if (testbit($int6, 0) = true) {
+		if ($int14 < $int18) {
+			$int17 = 1;
+		}
+	} else if ($int15 < $int18) {
+		$int17 = 1;
+	}
+}
+def_int $int19 = 16;
+if (~on_mobile = true) {
+	$int19 = 24;
+}
+cc_create($component0, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+if ($int17 = 0) {
+	cc_setcolour(^white);
+	cc_settrans(255);
+	if (($int4 ! -1) & (.cc_find($component3, $int4) = true)) {
+		.cc_setonmouseover("cc_settrans($component0, cc_getid, 200, null)");
+		.cc_setonmouseleave("cc_settrans($component0, cc_getid, 255, $component16)");
+		.cc_setonop("logout_op(event_opindex, 6, $int5)");
+	} else {
+		if_setonmouseover("cc_settrans(event_com, cc_getid, 200, null)", $component3);
+		if_setonmouseleave("cc_settrans(event_com, cc_getid, 255, $component16)", $component3);
+		if_setonop("logout_op(event_opindex, 6, $int5)", $component3);
+	}
+} else {
+	if (map_world = $int5) {
+		cc_setcolour(0x0dc10d);
+	} else {
+		cc_setcolour(^black);
+	}
+	cc_settrans(175);
+	if (($int4 ! -1) & (.cc_find($component3, $int4) = true)) {
+		.cc_setonmouseleave("deltooltip($component16)");
+		.cc_setonop(null);
+	} else {
+		if_setonmouseleave("deltooltip($component16)", $component3);
+		if_setonop(null, $component3);
+	}
+}
+cc_create($component0, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+if (~on_mobile = true) {
+	cc_setposition(0, calc($int2 + 3), ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+}
+.cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+.cc_setsize($int10, $int19, ^setsize_abs, ^setsize_abs);
+.cc_setposition($int9, $int2, ^setpos_abs_left, ^setpos_abs_top);
+.cc_settextfont(p12_full);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextshadow(true);
+if ($int5 <= 0) {
+	.cc_settext("-");
+} else {
+	.cc_settext(tostring($int5));
+}
+if (testbit($int6, 2) = true) {
+	cc_setgraphic(1237);
+	if ($int17 = 0) {
+		.cc_setcolour(0xf0f000);
+	} else {
+		.cc_setcolour(0x7f7f7f);
+	}
+} else if (testbit($int6, 29) = true) {
+	cc_setgraphic(1238);
+	if ($int17 = 0) {
+		.cc_setcolour(0xf0f000);
+	} else {
+		.cc_setcolour(0x7f7f7f);
+	}
+} else if (testbit($int6, 25) = true) {
+	cc_setgraphic(1338);
+	if ($int17 = 0) {
+		.cc_setcolour(0xf0f000);
+	} else {
+		.cc_setcolour(0x7f7f7f);
+	}
+} else if (testbit($int6, 0) = true) {
+	cc_setgraphic(1131);
+	if ($int17 = 0) {
+		.cc_setcolour(0xf0f000);
+	} else {
+		.cc_setcolour(0x7f7f7f);
+	}
+} else {
+	cc_setgraphic(1130);
+	if ($int17 = 0) {
+		.cc_setcolour(0xe0e0e0);
+	} else {
+		.cc_setcolour(0x7f7f7f);
+	}
+}
+cc_create($component0, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize($int11, 15, ^setsize_abs, ^setsize_abs);
+if (~on_mobile = true) {
+	cc_setposition(calc($int9 + $int10), calc($int2 + 4), ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int9 + $int10), $int2, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setgraphic(enum(int, graphic, 1125, $int7));
+cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize($int12, $int19, ^setsize_abs, ^setsize_abs);
+cc_setposition($int13, $int2, ^setpos_abs_right, ^setpos_abs_top);
+if ($int17 = 0) {
+	cc_setcolour(^white);
+} else {
+	cc_setcolour(0x7f7f7f);
+}
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext(tostring($int8));
+def_int $int20 = 0;
+def_string $string1 = "";
+def_int $int21 = string_length($string0);
+if ($int21 <= 0) {
+	$int21 = 1;
+	$string0 = "-";
+}
+if (($int21 > 0) & (parawidth(512, p11_full, $string0) > $int13)) {
+	while (($int21 > 1) & ($int20 = 0)) {
+		$int21 = calc($int21 - 1);
+		$string1 = append(substring($string0, 0, $int21), "...");
+		if (parawidth(512, p11_full, $string1) <= $int13) {
+			$int20 = 1;
+			$string0 = $string1;
+		}
+	}
+}
+cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize($int13, $int19, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int2, ^setpos_abs_right, ^setpos_abs_top);
+if ($int17 = 1) {
+	cc_setcolour(0x7f7f7f);
+} else if (((testbit($int6, 2) = true) | (testbit($int6, 29) = true)) | (testbit($int6, 25) = true)) {
+	cc_setcolour(^red);
+} else {
+	cc_setcolour(0xff981f);
+}
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+return($int1);

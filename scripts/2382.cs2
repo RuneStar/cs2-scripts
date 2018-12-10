@@ -1,0 +1,22 @@
+script2382(component $component0, component $component1)
+switch (%var75) {
+	case -1 :
+		if_setmodelanim(8173, $component0);
+	case -2 :
+		if_setmodelanim(8174, $component0);
+	case 1 :
+		if_setmodelanim(8175, $component0);
+	case 2 :
+		if_setmodelanim(8176, $component0);
+	case 3 :
+		if_setmodelanim(8177, $component0);
+	case 4 :
+		if_setmodelanim(8178, $component0);
+	case 5 :
+		if_setmodelanim(8179, $component0);
+	case 6 :
+		if_setmodelanim(8180, $component0);
+	else :
+		if_sethide(false, $component1);
+		return;
+}

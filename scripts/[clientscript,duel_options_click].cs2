@@ -1,0 +1,8 @@
+[clientscript,duel_options_click](int $int0)
+if (testbit(%var286, $int0) = false) {
+	%var286 = setbit(%var286, $int0);
+} else {
+	%var286 = clearbit(%var286, $int0);
+}
+~duel_options_radio_buttons;
+return;

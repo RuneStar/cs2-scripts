@@ -1,0 +1,13 @@
+[proc,chat_get_filter](int $int0)(int)
+switch ($int0) {
+	case 2 :
+		return(chat_getfilter_public);
+	case 3 :
+		return(chat_getfilter_private);
+	case 4 :
+		return(%var1054);
+	case 5 :
+		return(chat_getfilter_trade);
+	else :
+		return(0);
+}

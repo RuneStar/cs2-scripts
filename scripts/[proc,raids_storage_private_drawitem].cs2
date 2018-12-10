@@ -1,0 +1,23 @@
+[proc,raids_storage_private_drawitem](obj $obj0, int $int1, int $int2, component $component3)(int)
+if ($obj0 ! null) {
+	cc_setobject($obj0, $int1);
+	cc_settrans(0);
+	cc_setop(1, "Withdraw");
+	cc_setop(2, "Withdraw-5");
+	cc_setop(3, "Withdraw-10");
+	cc_setop(4, "Withdraw-All");
+	cc_setop(5, "Withdraw-X");
+	cc_setop(10, "Examine");
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_setonop("raids_storage_items_op(event_opindex, event_com, event_comid)");
+	cc_setondrag("raids_storage_private_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component3, 0)");
+	cc_setondragcomplete("raids_storage_private_reorder(event_com, event_comid, event_dragtargetid, $component3)");
+	$int2 = calc($int2 + 1);
+} else {
+	cc_settrans(255);
+	cc_setobject_nonum(6512, 1);
+	cc_setonop(null);
+	cc_setondrag(null);
+	cc_setondragcomplete(null);
+}
+return($int2);

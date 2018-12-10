@@ -1,0 +1,68 @@
+[proc,fossil_storage_build](component $component0, component $component1, int $int2, component $component3)
+cc_deleteall($component1);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 10;
+def_int $int7 = 0;
+def_int $int8 = 10;
+def_int $int9 = $int8;
+def_int $int10 = 0;
+def_int $int11 = 5;
+def_obj $obj12 = enum(int, namedobj, 1782, $int4);
+while ($obj12 ! null) {
+	if (((((($obj12 = rare_fossilised_limbs_21610) | ($obj12 = rare_fossilised_spine_21612)) | ($obj12 = rare_fossilised_ribs_21614)) | ($obj12 = rare_fossilised_pelvis_21616)) | ($obj12 = rare_fossilised_skull_21618)) | ($obj12 = rare_fossilised_tusk_21620)) {
+		$int11 = 6;
+	} else {
+		$int11 = 5;
+	}
+	if (compare(enum(obj, string, 1783, $obj12), "") ! 0) {
+		if ($int4 ! 0) {
+			$int7 = calc((3 + $int7) + ((if_getheight($component1) - $int6) / 6));
+			$int9 = $int8;
+		}
+		cc_create($component0, ^iftype_text, $int5);
+		cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize(100, 32, ^setsize_abs, ^setsize_abs);
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+		cc_setcolour(0xff981f);
+		cc_settext(enum(obj, string, 1783, $obj12));
+		$int5 = calc($int5 + 1);
+	}
+	cc_create($component1, ^iftype_graphic, $int4);
+	$int10 = ~fossil_storage_get($obj12);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int9, $int7, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject($obj12, $int10);
+	cc_setgraphicshadow(0x333333);
+	cc_setopbase("<col=ff9040><oc_name($obj12)></col>");
+	if ($int10 > 0) {
+		cc_setoutline(1);
+		cc_settrans(0);
+		cc_setop(1, "Withdraw");
+		cc_setop(2, "Withdraw 5");
+		cc_setop(3, "Withdraw 10");
+		cc_setop(4, "Withdraw All");
+		cc_setop(5, "Withdraw X");
+		cc_setop(10, "Examine");
+	} else {
+		cc_setoutline(0);
+		cc_settrans(50);
+		cc_clearops;
+		cc_setop(10, "Examine");
+	}
+	$int4 = calc($int4 + 1);
+	$int9 = calc((3 + $int9) + (if_getwidth($component1) / $int11));
+	$obj12 = enum(int, namedobj, 1782, $int4);
+}
+def_int $int13 = 0;
+$int7 = calc($int7 + 32);
+if ($int7 > if_getheight($component1)) {
+	$int13 = if_getscrolly($component1);
+	if_setscrollsize(0, $int7, $component1);
+} else {
+	if_setscrollsize(0, 0, $component1);
+}
+~scrollbar_resize($component3, $component1, $int13);
+return;

@@ -1,0 +1,21 @@
+script1328(component $component0, component $component1, component $component2, component $component3, string $string0)
+def_int $int4 = 0;
+def_int $int5 = 15;
+def_int $int6 = 20;
+def_int $int7 = string_indexof_string($string0, "|", 0);
+def_string $string1 = "";
+while ($int7 ! -1) {
+	$string1 = substring($string0, 0, $int7);
+	$int4, $int5, $int6 = ~script1329($component0, $component1, $component2, $int4, $int5, $int6, $string1);
+	$string0 = substring($string0, calc($int7 + 1), string_length($string0));
+	$int7 = string_indexof_string($string0, "|", 0);
+}
+$int4, $int5, $int6 = ~script1329($component0, $component1, $component2, $int4, $int5, $int6, $string0);
+if (calc($int6 + 38) > if_getheight($component0)) {
+	if_setscrollsize(0, calc($int6 + 50), $component0);
+	if_setscrollpos(0, 0, $component0);
+	~scrollbar_vertical($component3, $component0, 798, 795, 796, 797, 793, 794);
+} else {
+	cc_deleteall($component3);
+}
+return;

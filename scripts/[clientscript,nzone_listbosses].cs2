@@ -1,0 +1,129 @@
+[clientscript,nzone_listbosses](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, string $string0, string $string1)
+if ((string_length($string0) > 0) | (string_length($string1) > 0)) {
+	if_setsize(400, if_getheight(129:1), ^setsize_abs, ^setsize_abs, 129:1);
+	~script1246(129:6, "<col=00ff00><$string1></col>");
+	~script1246(129:7, "<col=ff0000><$string0></col>");
+	if ($int6 ! -1) {
+		~script1246(129:8, "All");
+		if ($int7 = 1) {
+			~script1246(129:9, "Previous");
+		} else {
+			if_sethide(true, 129:9);
+		}
+	} else {
+		if_sethide(true, 129:8);
+		if_sethide(true, 129:9);
+	}
+} else {
+	if_setsize(300, if_getheight(129:1), ^setsize_abs, ^setsize_abs, 129:1);
+	if_sethide(true, 129:6);
+	if_sethide(true, 129:7);
+	if_sethide(true, 129:8);
+	if_sethide(true, 129:9);
+}
+cc_deleteall(129:13);
+def_int $int8 = 0;
+if ($int6 ! -1) {
+	while ($int8 < 62) {
+		cc_create(129:13, ^iftype_graphic, $int8);
+		cc_sethide(true);
+		$int8 = calc($int8 + 1);
+	}
+}
+def_int $int9 = 0;
+if ($int6 ! -1) {
+	$int9 = 17;
+}
+def_int $int10 = -1;
+def_int $int11 = -1;
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_string $string2 = "";
+def_int $int14 = 0;
+def_int $int15 = 0;
+while ($int15 < 62) {
+	$int10 = enum(int, int, 797, $int15);
+	if ($int10 ! -1) {
+		$int11 = enum(int, int, 803, $int10);
+		if (($int11 ! -1) & (~script1260($int0, $int1, $int11) = 1)) {
+			cc_create(129:13, ^iftype_graphic, $int8);
+			$int8 = calc($int8 + 1);
+			cc_setsize(0, 17, ^setsize_minus, ^setsize_abs);
+			cc_setposition(0, $int13, ^setpos_abs_centre, ^setpos_abs_top);
+			if (calc($int12 % 2) = 0) {
+				cc_setgraphic("tradebacking");
+			} else {
+				cc_setgraphic("tradebacking_light");
+			}
+			cc_settiling(true);
+			.cc_create(129:13, ^iftype_text, $int8);
+			$int8 = calc($int8 + 1);
+			.cc_setsize($int9, 17, ^setsize_minus, ^setsize_abs);
+			.cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_settextfont(p12_full);
+			.cc_settextshadow(true);
+			.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			if (~script1260($int2, $int3, $int11) = 1) {
+				$string2 = enum(int, string, 802, $int10);
+				.cc_settext($string2);
+				if ($int6 ! -1) {
+					$int14 = ~script1260($int4, $int5, $int11);
+					if ($int14 = 1) {
+						.cc_setcolour(0x8f8f8f);
+					} else {
+						.cc_setcolour(0xff981f);
+					}
+					cc_setop(1, "Toggle");
+					cc_setopbase("<col=ff9040><enum(int, string, 804, $int11)></col> bosses");
+					cc_setonop("script1258(event_opindex, $int15, event_com, .cc_getid, $string2)");
+					cc_setonmouseover("cc_settrans(event_com, event_comid, 255, null)");
+					cc_setonmouseleave("cc_settrans(event_com, event_comid, 0, 129:15)");
+					$string2 = "<$string2>:<br>Unlocked from <col=7f0000><enum(int, string, 804, $int11)></col>";
+					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 129:15, $string2, 25, 512)");
+					.cc_create(129:13, ^iftype_graphic, $int8);
+					$int8 = calc($int8 + 1);
+					.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+					.cc_setposition(0, $int13, ^setpos_abs_right, ^setpos_abs_top);
+					if ($int14 = 1) {
+						.cc_setgraphic("options_radio_buttons,1");
+					} else {
+						.cc_setgraphic("options_radio_buttons,2");
+					}
+				} else {
+					.cc_setcolour(0xff981f);
+				}
+			} else {
+				.cc_setcolour(0xff981f);
+				.cc_settext("<str><col=8f8f8f><enum(int, string, 802, $int10)></col></str>");
+			}
+			$int13 = calc($int13 + 17);
+			$int12 = calc($int12 + 1);
+		}
+	}
+	$int15 = calc($int15 + 1);
+}
+if ($int13 > if_getheight(129:13)) {
+	if_setscrollsize(0, $int13, 129:13);
+	if ($int6 ! 1) {
+		if_setscrollpos(0, 0, 129:13);
+		%varcint138 = 0;
+	}
+} else {
+	if_setscrollsize(0, 0, 129:13);
+	if_setscrollpos(0, 0, 129:13);
+	%varcint138 = 0;
+	cc_create(129:13, ^iftype_graphic, $int8);
+	$int8 = calc($int8 + 1);
+	cc_setsize(0, $int13, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_setgraphic("tradebacking_dark");
+	cc_settiling(true);
+}
+~scrollbar_vertical(129:14, 129:13, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if ($int6 = 1) {
+	if (%varcint138 < 0) {
+		%varcint138 = 0;
+	}
+	~scrollbar_resize(129:14, 129:13, %varcint138);
+}
+return;

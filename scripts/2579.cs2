@@ -1,0 +1,13 @@
+script2579()(string)
+switch (%varbit6590) {
+	case 1 :
+		return("5");
+	case 2 :
+		return("10");
+	case 3 :
+		return(tostring(~max(1, %varbit3960)));
+	case 4 :
+		return("All");
+	else :
+		return("1");
+}

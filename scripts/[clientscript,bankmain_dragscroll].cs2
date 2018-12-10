@@ -1,0 +1,49 @@
+[clientscript,bankmain_dragscroll](component $component0, int $int1, int $int2, int $int3, component $component4, int $int5)
+if (calc($int2 - if_getx($component0)) < -5) {
+	return;
+} else {
+	$int3 = calc($int3 - if_gety($component0));
+	def_int $int6 = 5;
+	def_int $int7 = 0;
+	def_int $int8 = if_getscrolly($component0);
+	if ($int3 < 15) {
+		if ($int3 < -8) {
+			return;
+		} else {
+			if ($int5 <= clientclock) {
+				if (cc_find($component0, $int1) = true) {
+					cc_setondrag("bankmain_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc(clientclock + 2))");
+					return;
+				}
+			} else if (calc($int5 - clientclock) < 5) {
+				if (cc_find($component0, $int1) = true) {
+					cc_setondrag("bankmain_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc($int5 + 2))");
+					return;
+				}
+			} else if (cc_find($component0, $int1) = true) {
+				cc_setondrag("bankmain_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc($int5 + 1))");
+			}
+			if ($int3 < 5) {
+				$int6 = 8;
+			}
+			if ($int8 > $int6) {
+				$int8 = calc($int8 - $int6);
+			} else {
+				$int8 = 0;
+			}
+			~scrollbar_resize($component4, $component0, $int8);
+		}
+	} else {
+		$int7 = calc((if_getheight($component0) - 32) - $int3);
+		if ($int7 < 20) {
+			if ($int7 < -5) {
+				$int6 = 10;
+			} else if ($int7 < 5) {
+				$int6 = 8;
+			}
+			$int8 = calc($int8 + $int6);
+			~scrollbar_resize($component4, $component0, $int8);
+		}
+	}
+	return;
+}

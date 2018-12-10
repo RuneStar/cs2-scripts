@@ -1,0 +1,11 @@
+script1429(int $int0, component $component1, int $int2)
+if ($int0 ! 1) {
+	return;
+} else {
+	if (cc_find($component1, $int2) = true) {
+		sound_synth(2266, 1, 0);
+		%varbit5364 = calc(1 - %varbit5364);
+		~script1431($component1);
+	}
+	return;
+}

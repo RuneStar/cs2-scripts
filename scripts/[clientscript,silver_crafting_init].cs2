@@ -1,0 +1,173 @@
+[clientscript,silver_crafting_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+cc_deleteall($component0);
+cc_deleteall($component1);
+cc_deleteall($component2);
+if_setoninvtransmit("silver_crafting_init($component0, $component1, $component2, $component3, $component4){93}", $component1);
+def_int $int5 = 36;
+def_int $int6 = 32;
+def_int $int7 = 60;
+def_int $int8 = 0;
+def_obj $obj9 = null;
+while ($int8 < 4) {
+	$obj9 = enum(int, obj, 1521, $int8);
+	cc_create($component0, ^iftype_graphic, $int8);
+	cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
+	cc_setposition(10, calc(20 + ($int8 * 60)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject_nonum(enum(int, obj, 1521, $int8), 0);
+	if (inv_total(93, $obj9) = 0) {
+		cc_sethide(false);
+	} else {
+		cc_sethide(true);
+	}
+	$int8 = calc($int8 + 1);
+}
+$int8 = 0;
+while ($int8 < 4) {
+	$obj9 = enum(int, obj, 1521, $int8);
+	cc_create($component0, ^iftype_text, calc($int8 + 4));
+	cc_setsize(210, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int7, calc(15 + ($int8 * 60)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext(enum(int, string, 1522, $int8));
+	cc_settextfont(b12_full);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	$int8 = calc($int8 + 1);
+}
+$int8 = 0;
+while ($int8 < 4) {
+	$obj9 = enum(int, obj, 1521, $int8);
+	cc_create($component0, ^iftype_text, calc($int8 + 8));
+	cc_setsize(210, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int7, calc(35 + ($int8 * 60)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext(enum(int, string, 1523, $int8));
+	cc_settextfont(p12_full);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	if (inv_total(93, $obj9) = 0) {
+		cc_sethide(false);
+	} else {
+		cc_sethide(true);
+	}
+	$int8 = calc($int8 + 1);
+}
+$obj9 = null;
+$int8 = 0;
+def_obj $obj10 = enum(int, obj, 1515, $int8);
+def_int $int11 = 30;
+def_obj $obj12 = null;
+def_string $string0 = "";
+def_int $int13 = -1;
+while ($obj10 ! null) {
+	cc_create($component1, ^iftype_graphic, $int8);
+	cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int7 + (($int8 % 3) * 70)), $int11, ^setpos_abs_left, ^setpos_abs_top);
+	$obj12 = enum(obj, obj, 1519, $obj10);
+	$int13 = enum(obj, int, 1520, $obj10);
+	if (($obj12 ! null) & ((inv_total(93, $obj12) = 0) | (inv_total(93, silver_bar_2355) = 0))) {
+		if (stat(crafting) >= $int13) {
+			$string0 = "<oc_name($obj10)><br><col=008000>Requires <tostring($int13)> Crafting<br><col=800000>Requires <oc_name($obj12)>";
+		} else {
+			$string0 = "<oc_name($obj10)><br><col=800000>Requires <tostring($int13)> Crafting<br><col=800000>Requires <oc_name($obj12)>";
+		}
+		cc_setobject_nonum(enum(obj, obj, 1518, $obj10), 0);
+		cc_clearops;
+	} else {
+		if (stat(crafting) >= $int13) {
+			$string0 = "<oc_name($obj10)><br><col=008000>Requires <tostring($int13)> Crafting";
+		} else {
+			$string0 = "<oc_name($obj10)><br><col=800000>Requires <tostring($int13)> Crafting";
+		}
+		cc_setobject_nonum($obj10, 0);
+		cc_setop(1, "Craft 1");
+		cc_setop(2, "Craft 5");
+		cc_setop(3, "Craft 10");
+		cc_setop(4, "Craft X");
+		cc_setop(5, "Craft All");
+		cc_setopbase(oc_name($obj10));
+	}
+	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component4, $string0, 25, 512)");
+	cc_setonmouseleave("deltooltip($component4)");
+	$obj9 = enum(obj, obj, 1517, $obj10);
+	if (($obj9 ! null) & (inv_total(93, $obj9) = 0)) {
+		cc_sethide(true);
+	} else {
+		cc_sethide(false);
+	}
+	$int8 = calc($int8 + 1);
+	$obj10 = enum(int, obj, 1515, $int8);
+	if (calc($int8 % 3) = 0) {
+		$int11 = calc($int11 + 60);
+	}
+}
+$int8 = 0;
+$obj10 = enum(int, obj, 1516, $int8);
+if ($obj10 = null) {
+	return;
+} else {
+	$obj9 = enum(obj, obj, 1517, $obj10);
+	$int11 = 8;
+	$int7 = 25;
+	while ($obj10 ! null) {
+		cc_create($component3, ^iftype_text, $int8);
+		cc_setsize(80, 30, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int7 + (($int8 % 2) * 85)), $int11, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settext(enum(obj, string, 1682, $obj10));
+		cc_settextfont(p12_full);
+		cc_setcolour(0xff981f);
+		cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+		$int8 = calc($int8 + 1);
+		$obj10 = enum(int, obj, 1516, $int8);
+		$obj9 = enum(obj, obj, 1517, $obj10);
+		if (calc($int8 % 2) = 0) {
+			$int11 = calc($int11 + 60);
+		}
+	}
+	$obj9 = null;
+	$int8 = 0;
+	$obj10 = enum(int, obj, 1516, $int8);
+	if ($obj10 = null) {
+		return;
+	} else {
+		$obj9 = enum(obj, obj, 1517, $obj10);
+		$int11 = 35;
+		$int7 = 45;
+		while ($obj10 ! null) {
+			cc_create($component2, ^iftype_graphic, $int8);
+			cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
+			cc_setposition(calc($int7 + (($int8 % 2) * 90)), $int11, ^setpos_abs_left, ^setpos_abs_top);
+			$obj9 = enum(obj, obj, 1517, $obj10);
+			$int13 = enum(obj, int, 1520, $obj10);
+			if (($obj9 ! null) & (inv_total(93, $obj9) = 0)) {
+				if (stat(crafting) >= $int13) {
+					$string0 = "<oc_name($obj10)><br><col=008000>Requires <tostring($int13)> Crafting<br><col=800000>Requires mould";
+				} else {
+					$string0 = "<oc_name($obj10)><br><col=800000>Requires <tostring($int13)> Crafting<br><col=800000>Requires mould";
+				}
+				cc_setobject_nonum($obj9, 0);
+				cc_clearops;
+			} else {
+				if (stat(crafting) >= $int13) {
+					$string0 = "<oc_name($obj10)><br><col=008000>Requires <tostring($int13)> Crafting";
+				} else {
+					$string0 = "<oc_name($obj10)><br><col=800000>Requires <tostring($int13)> Crafting";
+				}
+				cc_setobject_nonum($obj10, 0);
+				cc_setop(1, "Craft 1");
+				cc_setop(2, "Craft 5");
+				cc_setop(3, "Craft 10");
+				cc_setop(4, "Craft X");
+				cc_setop(5, "Craft All");
+				cc_setopbase(oc_name($obj10));
+			}
+			cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component4, $string0, 25, 512)");
+			cc_setonmouseleave("deltooltip($component4)");
+			$int8 = calc($int8 + 1);
+			$obj10 = enum(int, obj, 1516, $int8);
+			$obj9 = enum(obj, obj, 1517, $obj10);
+			if (calc($int8 % 2) = 0) {
+				$int11 = calc($int11 + 60);
+			}
+		}
+		return;
+	}
+}

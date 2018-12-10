@@ -1,0 +1,20 @@
+script1251(int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+def_string $string0 = "Saradomin";
+~script1253($component1, %var261, damaged_book_3839, holy_book_3840, $string0);
+if_setonvartransmit("script1252($component1, $string0, damaged_book_3839, holy_book_3840){261}", $component1);
+$string0 = "Guthix";
+~script1253($component2, %var262, damaged_book_3843, book_of_balance_3844, $string0);
+if_setonvartransmit("script1252($component2, $string0, damaged_book_3843, book_of_balance_3844){262}", $component2);
+$string0 = "Zamorak";
+~script1253($component3, %var263, damaged_book_3841, unholy_book_3842, $string0);
+if_setonvartransmit("script1252($component3, $string0, damaged_book_3841, unholy_book_3842){263}", $component3);
+$string0 = "Bandos";
+~script1253($component4, %var264, damaged_book_12607, book_of_war_12608, $string0);
+if_setonvartransmit("script1252($component4, $string0, damaged_book_12607, book_of_war_12608){264}", $component4);
+$string0 = "Armadyl";
+~script1253($component5, %var265, damaged_book_12609, book_of_law_12610, $string0);
+if_setonvartransmit("script1252($component5, $string0, damaged_book_12609, book_of_law_12610){265}", $component5);
+$string0 = "Ancient";
+~script1253($component6, %var266, damaged_book_12611, book_of_darkness_12612, $string0);
+if_setonvartransmit("script1252($component6, $string0, damaged_book_12611, book_of_darkness_12612){266}", $component6);
+return;

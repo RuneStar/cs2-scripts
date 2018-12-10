@@ -1,0 +1,20 @@
+script15(component $component0, int $int1, int $int2)
+if (if_gethide(90:58) = false) {
+	if_settext("", $component0);
+	return;
+} else {
+	def_int $int3 = calc($int1 - ((clientclock - $int2) / 50));
+	if ($int3 <= 0) {
+		if_settext("Hurry!", $component0);
+		return;
+	} else {
+		def_int $int4 = calc($int3 / 60);
+		$int3 = calc($int3 % 60);
+		if ($int3 >= 10) {
+			if_settext("<tostring($int4)>:<tostring($int3)>", $component0);
+		} else {
+			if_settext("<tostring($int4)>:0<tostring($int3)>", $component0);
+		}
+		return;
+	}
+}

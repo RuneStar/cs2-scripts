@@ -1,0 +1,6 @@
+[clientscript,snapshot_rules_hover](component $component0, int $int1, int $colour2)
+if ((cc_find($component0, calc($int1 + 1)) = true) & (.cc_find($component0, calc($int1 + 2)) = true)) {
+	cc_setcolour($colour2);
+	.cc_setcolour($colour2);
+}
+return;

@@ -1,0 +1,7 @@
+[proc,wint_layout_update](component $component0)
+if (~on_mobile = true) {
+	if_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_top, $component0);
+} else {
+	if_setposition(10, 25, ^setpos_abs_left, ^setpos_abs_top, $component0);
+}
+return;

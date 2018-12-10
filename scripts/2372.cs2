@@ -1,0 +1,61 @@
+script2372(component $component0, int $int1, int $int2)
+def_enum $enum3 = null;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+if ($int2 ! %varcint222) {
+	$enum3 = ~toplevel_getcomponents;
+	if ($enum3 = 1745) {
+		if ((testbit($int1, 0) = true) | (testbit($int1, 4) = true)) {
+			$int4 = 1;
+		}
+		if (testbit($int1, 1) = true) {
+			$int5 = 1;
+		}
+		if (testbit($int1, 2) = true) {
+			$int6 = 1;
+		}
+		if (testbit($int1, 3) = true) {
+			$int7 = 1;
+		}
+		if (($int4 = 1) & (~script2518 = 1)) {
+			$int4 = 1;
+		} else {
+			$int4 = 0;
+		}
+		if (($int5 = 1) & (~script2519 = 1)) {
+			$int5 = 1;
+		} else {
+			$int5 = 0;
+		}
+		if (($int7 = 1) & ((((%varcint41 ! -1) | (if_hassub(162:560) = true)) | (if_hassub(162:561) = true)) | (if_gethide(162:40) = false))) {
+			$int7 = 1;
+		} else {
+			$int7 = 0;
+		}
+		if (($int4 = 1) & (((((testbit($int1, 4) = false) | (%varcint41 ! -1)) | (if_hassub(162:560) = true)) | (if_hassub(162:561) = true)) | (if_gethide(162:40) = false))) {
+			$int9 = if_getwidth(enum(component, component, $enum3, 164:64));
+		}
+		if ($int5 = 1) {
+			$int10 = if_getwidth(enum(component, component, $enum3, 164:64));
+		}
+		if ($int6 = 1) {
+			if (%varbit6254 = 0) {
+				$int10 = ~max($int10, 182);
+			} else {
+				$int10 = ~max($int10, 120);
+			}
+		}
+		if ($int7 = 1) {
+			$int8 = calc(((165 - 23) - enum(enum, int, 1961, $enum3)) + 2);
+		}
+		if_setposition($int9, $int8, ^setpos_abs_left, ^setpos_abs_top, $component0);
+		if_setsize(calc($int9 + $int10), $int8, ^setsize_minus, ^setsize_minus, $component0);
+	}
+	if_setontimer("script2250($component0, $int1, %varcint222)", $component0);
+}
+return;

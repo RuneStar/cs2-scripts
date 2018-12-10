@@ -1,0 +1,19 @@
+script1988(int $int0, component $component1, component $component2, component $component3)
+if ($int0 = 1) {
+	if_settrans(100, $component1);
+	if ($component2 ! null) {
+		if_sethide(true, $component2);
+	}
+	if ($component3 ! null) {
+		if_sethide(false, $component3);
+	}
+} else {
+	if_settrans(0, $component1);
+	if ($component2 ! null) {
+		if_sethide(false, $component2);
+	}
+	if ($component3 ! null) {
+		if_sethide(true, $component3);
+	}
+}
+return;

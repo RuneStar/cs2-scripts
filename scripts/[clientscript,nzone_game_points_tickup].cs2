@@ -1,0 +1,24 @@
+[clientscript,nzone_game_points_tickup](component $component0, int $int1, int $int2, int $int3, int $int4)
+def_int $int5 = calc($int3 - $int2);
+if ($int5 = 0) {
+	if (cc_find($component0, $int1) = true) {
+		cc_setontimer(null);
+	}
+	~nzone_game_points_set($component0, $int3);
+	return;
+} else {
+	if (clientclock < $int4) {
+		if ($int5 <= -2) {
+			$int5 = calc($int5 / 2);
+		} else if ($int5 >= 2) {
+			$int5 = calc($int5 / 2);
+		}
+	}
+	$int2 = calc($int2 + $int5);
+	if (cc_find($component0, $int1) = true) {
+		cc_setontimer("nzone_game_points_tickup($component0, $int1, $int2, $int3, $int4)");
+		~nzone_game_points_set($component0, $int2);
+		sound_synth(2304, 1, 0);
+	}
+	return;
+}

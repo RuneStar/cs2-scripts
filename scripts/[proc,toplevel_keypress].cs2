@@ -1,0 +1,34 @@
+[proc,toplevel_keypress](int $int0, enum $enum1, int $int2)
+if (~script1701(-1, -1) = 0) {
+	return;
+} else {
+	def_component $component3 = enum(component, component, $enum1, 161:13);
+	def_component $component4 = enum(int, component, 1137, 3);
+	def_component $component5 = enum(component, component, $enum1, 161:14);
+	$component4 = enum(component, component, $enum1, $component4);
+	if (($int0 = 13) & (%varbit4681 = 1)) {
+		if (($component5 ! null) & (if_hassub($component5) = true)) {
+			return;
+		} else if ((($component3 ! null) & (if_hassub($component4) = true)) & (if_hassub($component3) = true)) {
+			if_close;
+			return;
+		} else {
+			$component3 = enum(component, component, $enum1, 161:66);
+			if ((($component3 ! null) & (if_hassub($component4) = true)) & (if_hassub($component3) = true)) {
+				if_close;
+				return;
+			}
+		}
+	}
+	def_int $int6 = ~keybind_get_slot($int0);
+	if (($int6 = -1) | ($int6 = calc(%varbit3756 - 1))) {
+		return;
+	} else {
+		def_component $component7 = enum(int, component, 1137, $int6);
+		$component7 = enum(component, component, $enum1, $component7);
+		if (if_hassub($component7) = true) {
+			~toplevel_sidebutton_op($enum1, $int6, $int2);
+		}
+		return;
+	}
+}

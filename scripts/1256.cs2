@@ -1,0 +1,13 @@
+script1256(int $int0, component $component1, int $int2, obj $obj3, obj $obj4, obj $obj5, string $string0)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	~script1255(1, $component1, $obj5, $string0, "<col=7f7f7f>Requesting...</col>");
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setonop(null, $component1);
+	if_setop(1, "", $component1);
+	if_setontimer("script1257(calc(clientclock + 40), $component1, $int2, $string0, $obj3, $obj4)", $component1);
+	return;
+}

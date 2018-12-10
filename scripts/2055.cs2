@@ -1,0 +1,104 @@
+script2055(int $int0, int $int1)
+def_boolean $boolean2 = enum(int, boolean, 1810, $int0);
+if ($boolean2 = true) {
+	%varcint200 = ~max(1, ~min($int1, %varcint200));
+} else {
+	if (%varcint200 > 5) {
+		%varcint200 = 10;
+	} else if (%varcint200 > 1) {
+		%varcint200 = 5;
+	} else {
+		%varcint200 = 1;
+	}
+	%varcint200 = ~min(%varcint200, $int1);
+}
+def_int $int3 = 0;
+def_string $string0 = "X";
+if ($boolean2 = true) {
+	if ($int1 > 1) {
+		if (%varcint200 = 1) {
+			$int3 = ~script2056(1, 1, 270:7, $int0, $int1, $int3);
+		} else {
+			$int3 = ~script2056(0, 1, 270:7, $int0, $int1, $int3);
+		}
+	} else {
+		~script2047(270:7);
+	}
+	if ($int1 > 5) {
+		if (%varcint200 = 5) {
+			$int3 = ~script2056(1, 5, 270:8, $int0, $int1, $int3);
+		} else {
+			$int3 = ~script2056(0, 5, 270:8, $int0, $int1, $int3);
+		}
+	} else {
+		~script2047(270:8);
+	}
+	if ($int1 > 10) {
+		if (%varcint200 = 10) {
+			$int3 = ~script2056(1, 10, 270:9, $int0, $int1, $int3);
+		} else {
+			$int3 = ~script2056(0, 10, 270:9, $int0, $int1, $int3);
+		}
+	} else {
+		~script2047(270:9);
+	}
+	if ((((%varcint201 = 1) | (%varcint201 = 5)) | (%varcint201 = 10)) | (%varcint201 = $int1)) {
+		~script2047(270:10);
+	} else if ((%varcint201 < 1) | (%varcint201 > $int1)) {
+		~script2047(270:10);
+	} else if (%varcint200 = %varcint201) {
+		$int3 = ~script2056(1, %varcint201, 270:10, $int0, $int1, $int3);
+	} else {
+		$int3 = ~script2056(0, %varcint201, 270:10, $int0, $int1, $int3);
+	}
+	if ($int1 > 2) {
+		if_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_centre, 270:11);
+		$int3 = calc(($int3 + if_getwidth(270:11)) + 5);
+		~script2058(0, 270:11, $string0);
+		if_setonmouseover("script2057(true, $string0, event_com)", 270:11);
+		if_setonmouseleave("script2057(false, $string0, event_com)", 270:11);
+		if_setop(1, "Other quantity", 270:11);
+		if_setonop("script2060(event_opindex, $int0, $int1)", 270:11);
+		if_setontimer(null, 270:11);
+	} else {
+		~script2047(270:11);
+	}
+	if (%varcint200 >= $int1) {
+		$int3 = ~script2056(1, $int1, 270:12, $int0, $int1, $int3);
+	} else {
+		$int3 = ~script2056(0, $int1, 270:12, $int0, $int1, $int3);
+	}
+} else {
+	if (%varcint200 = 1) {
+		$int3 = ~script2056(1, 1, 270:7, $int0, $int1, $int3);
+	} else {
+		$int3 = ~script2056(0, 1, 270:7, $int0, $int1, $int3);
+	}
+	if ($int1 >= 5) {
+		if (%varcint200 = 5) {
+			$int3 = ~script2056(1, 5, 270:8, $int0, $int1, $int3);
+		} else {
+			$int3 = ~script2056(0, 5, 270:8, $int0, $int1, $int3);
+		}
+	} else {
+		~script2047(270:8);
+	}
+	if ($int1 >= 10) {
+		if (%varcint200 = 10) {
+			$int3 = ~script2056(1, 10, 270:9, $int0, $int1, $int3);
+		} else {
+			$int3 = ~script2056(0, 10, 270:9, $int0, $int1, $int3);
+		}
+	} else {
+		~script2047(270:9);
+	}
+	~script2047(270:10);
+	~script2047(270:11);
+	~script2047(270:12);
+}
+if ($int3 > 0) {
+	$int3 = calc($int3 - 5);
+}
+if_setsize($int3, 0, ^setsize_abs, ^setsize_minus, 270:6);
+if_setsize($int3, 0, ^setsize_minus, ^setsize_minus, 270:3);
+return;

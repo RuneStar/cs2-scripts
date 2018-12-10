@@ -1,0 +1,22 @@
+script222(string $string0)
+def_string $string1 = escape(%varcstring22);
+def_int $int0 = 12;
+if ((((%varcint5 = 6) | (%varcint5 = 9)) | (%varcint5 = 11)) | (%varcint5 = 13)) {
+	$int0 = 80;
+} else if ((%varcint5 = 7) | (%varcint5 = 12)) {
+	$int0 = 10;
+} else if (%varcint5 = 14) {
+	$int0 = 25;
+	%varcint66 = 20;
+	$string1 = append("<col=000000><$string0></col> ", $string1);
+}
+if (string_length(%varcstring22) < $int0) {
+	$string1 = append($string1, "*");
+}
+if (parawidth(^int_max, b12_full, $string1) > if_getwidth(162:45)) {
+	if_settextalign(^settextalign_right, ^settextalign_centre, 0, 162:45);
+} else {
+	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, 162:45);
+}
+if_settext($string1, 162:45);
+return;

@@ -1,0 +1,35 @@
+[proc,bankside_drawitem](obj $obj0, int $int1, int $int2, component $component3, int $int4, component $component5, component $component6)
+def_string $string0 = "";
+if ($obj0 ! null) {
+	cc_settrans(0);
+	cc_setobject($obj0, $int1);
+	cc_clearops;
+	if ((($obj0 = looting_bag_11941) | ($obj0 = looting_bag_22586)) & ($int4 = 1)) {
+		cc_setop(1, "View");
+		cc_setonop("bankside_switchview(event_opindex, $component5, $component6, 1)");
+	}
+	cc_setop(2, "Deposit-<~script2579>");
+	if (%varbit6590 ! 0) {
+		cc_setop(3, "Deposit-1");
+	}
+	cc_setop(4, "Deposit-5");
+	cc_setop(5, "Deposit-10");
+	if (%varbit3960 > 0) {
+		cc_setop(6, "Deposit-<tostring(%varbit3960)>");
+	}
+	cc_setop(7, "Deposit-X");
+	cc_setop(8, "Deposit-All");
+	$string0 = ~bankside_extraop($obj0);
+	if (string_length($string0) > 0) {
+		cc_setop(9, $string0);
+	}
+	cc_setop(10, "Examine");
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_setondragcomplete("bankside_reorder(event_com, event_dragtarget, event_comid, event_dragtargetid, $component3, $component5, $component6)");
+} else {
+	cc_settrans(255);
+	cc_setobject(6512, 1);
+	cc_clearops;
+	cc_setondragcomplete(null);
+}
+return;

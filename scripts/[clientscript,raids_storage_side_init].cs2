@@ -1,0 +1,20 @@
+[clientscript,raids_storage_side_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+~raids_storage_side_setup($component1, $component2, $component3);
+if_setonvartransmit("raids_storage_side_setup($component1, $component2, $component3){499, 1429, 115}", $component4);
+cc_deleteall($component4);
+def_int $int5 = calc(((42 - 36) * 3) - 2);
+def_int $int6 = calc((36 - 32) * 2);
+def_int $int7 = 0;
+def_int $int8 = inv_size(93);
+while ($int7 < $int8) {
+	cc_create($component4, ^iftype_graphic, $int7);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int5 + (($int7 % 4) * 42)), calc($int6 + (($int7 / 4) * 36)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	$int7 = calc($int7 + 1);
+}
+~raids_storage_side_items($component4, $int7);
+if_setoninvtransmit("raids_storage_side_items($component4, $int7){93}", $component0);
+if_setonvartransmit("raids_storage_side_items($component4, $int7){115}", $component0);
+return;

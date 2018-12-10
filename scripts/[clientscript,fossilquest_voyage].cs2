@@ -1,0 +1,23 @@
+[clientscript,fossilquest_voyage](component $component0, int $int1, component $component2, component $component3, component $component4, int $int5, component $component6, int $int7)
+if_setontimer("script1995($component0, $int1, $int5)", $component0);
+if ($int5 = 0) {
+	if_sethide(false, $component2);
+	if_sethide(true, $component3);
+	if_sethide(true, $component4);
+} else if ($int5 = 1) {
+	if_sethide(true, $component2);
+	if_sethide(false, $component3);
+	if_sethide(true, $component4);
+} else if ($int5 = 2) {
+	if_sethide(true, $component2);
+	if_sethide(true, $component3);
+	if_sethide(false, $component4);
+}
+if ($int7 = 1) {
+	if_set2dangle(44721, $component6);
+} else if ($int7 = 2) {
+	if_set2dangle(53722, $component6);
+} else if ($int7 = 0) {
+	if_set2dangle(49152, $component6);
+}
+return;

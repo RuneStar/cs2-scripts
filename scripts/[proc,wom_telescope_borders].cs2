@@ -1,0 +1,43 @@
+[proc,wom_telescope_borders](component $component0, int $int1, int $int2, component $component3, component $component4)
+def_int $int5 = $int2;
+if ($int5 < 334) {
+	$int5 = 334;
+} else if ($int5 > 1000) {
+	$int5 = 1000;
+}
+def_int $int6 = invpow(calc($int5 - 334), 2);
+def_int $int7 = invpow(calc(1000 - 334), 2);
+def_int $int8 = calc(150 - interpolate(0, $int6, 0, $int7, 100));
+if_setmodelangle(0, 0, 0, 0, 0, $int8, $component3);
+if_setmodelangle(0, 0, 0, 0, 0, $int8, $component4);
+def_int $int9 = 0;
+def_int $int10 = 334;
+if ($int5 > $int10) {
+	$int10 = $int5;
+}
+if ((cc_find($component0, 0) = true) & (.cc_find($component0, 1) = true)) {
+	if ($int2 < $int10) {
+		cc_sethide(true);
+		.cc_sethide(true);
+	} else {
+		cc_sethide(false);
+		.cc_sethide(false);
+		$int9 = calc(($int2 - $int10) / 2);
+		cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+		.cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+	}
+}
+if ((cc_find($component0, 2) = true) & (.cc_find($component0, 3) = true)) {
+	if ($int1 < $int10) {
+		cc_sethide(true);
+		.cc_sethide(true);
+	} else {
+		cc_sethide(false);
+		.cc_sethide(false);
+		$int9 = calc(($int1 - $int10) / 2);
+		cc_setsize($int9, 0, ^setsize_abs, ^setsize_minus);
+		.cc_setsize($int9, 0, ^setsize_abs, ^setsize_minus);
+	}
+}
+if_setontimer("wom_telescope_borders($component0, $int1, $int2, $component3, $component4)", $component0);
+return;

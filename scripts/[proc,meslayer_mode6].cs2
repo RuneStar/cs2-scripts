@@ -1,0 +1,20 @@
+[proc,meslayer_mode6](string $string0)
+if ((%varcint203 = 0) | (%varcint203 = -1)) {
+	mes("You must set a name before you can chat.");
+	return;
+} else if (%varcint11 = 1) {
+	mes("You can't do that right now.");
+	return;
+} else {
+	%varcstring23 = $string0;
+	~meslayer_open;
+	if_settext("Enter message to send to <%varcstring23>", 162:44);
+	%varcint5 = 6;
+	~script222("");
+	def_string $string1 = "";
+	if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string1)", 162:45);
+	if (~on_mobile = true) {
+		~script1983(0, 80);
+	}
+	return;
+}

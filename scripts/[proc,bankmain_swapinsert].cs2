@@ -1,0 +1,13 @@
+[proc,bankmain_swapinsert](component $component0, component $component1)
+if (%varbit3959 = 1) {
+	~options_button_off($component0, 0);
+	~options_button_on($component1, 0);
+	if_setonop("bankmain_swapinsert_op(event_opindex, $component0, $component1, 0)", $component0);
+	if_setonop(null, $component1);
+} else {
+	~options_button_on($component0, 0);
+	~options_button_off($component1, 0);
+	if_setonop(null, $component0);
+	if_setonop("bankmain_swapinsert_op(event_opindex, $component0, $component1, 1)", $component1);
+}
+return;

@@ -1,0 +1,7 @@
+[clientscript,raids_storage_resetbutton](component $component0, fontmetrics $fontmetrics1, int $int2, string $string0)
+if (clientclock < $int2) {
+	return;
+} else {
+	~raids_storage_drawbutton($component0, $fontmetrics1, $string0);
+	return;
+}

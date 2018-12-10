@@ -1,0 +1,53 @@
+[proc,worldmap_search_update](component $component0, string $string0)
+def_int $int1 = -1;
+def_coordgrid $coordgrid2 = null;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_string $string1 = "";
+def_int $int5 = 0;
+def_string $string2 = "";
+def_coordgrid $coordgrid6 = null;
+if (string_length($string0) > 0) {
+	.cc_settext($string0);
+	cc_setonkey(null);
+	%varcint187 = calc(clientclock + 2);
+	%varcint190 = 0;
+} else {
+	$int3 = string_length(%varcstring138);
+	if ($int3 > 0) {
+		if ($int3 > 1) {
+			$int1, $coordgrid2 = worldmap_listelement_start;
+			while (($coordgrid6 = null) & ($int1 ! -1)) {
+				$string1 = mec_text($int1);
+				$int4 = string_length($string1);
+				if ($int4 > 0) {
+					$string1 = ~script1299($string1, "<br>", " ");
+					$int4 = string_length($string1);
+					$int5 = string_indexof_string(lowercase($string1), lowercase(%varcstring138), 0);
+					if ($int5 ! -1) {
+						if ($int5 > 0) {
+							$string2 = "<col=ff0000><substring($string1, 0, $int5)>";
+						}
+						$string2 = append($string2, "<col=ffffff><substring($string1, $int5, calc($int5 + $int3))>");
+						if (calc($int5 + $int3) < $int4) {
+							$string2 = append($string2, "<col=ff0000><substring($string1, calc($int5 + $int3), $int4)>");
+						}
+						$coordgrid6 = $coordgrid2;
+					}
+				}
+				$int1, $coordgrid2 = worldmap_listelement_next;
+			}
+		}
+		if ($coordgrid6 ! null) {
+			.cc_settext($string2);
+		} else {
+			.cc_settext("<col=ffffff><%varcstring138><col=ff0000>*</col>");
+		}
+	} else {
+		.cc_settext("<col=ff0000>*</col>");
+	}
+	cc_setonkey("worldmap_search_input(event_keytyped, event_keypressed, $component0, cc_getid, .cc_getid, $coordgrid6)");
+	%varcint190 = 1;
+}
+~script1739(if_getwidth($component0));
+return;

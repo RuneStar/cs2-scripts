@@ -1,0 +1,12 @@
+[clientscript,orbs_toggle_runmode](int $int0, component $component1, component $component2)
+if ($int0 ! 1) {
+	return;
+} else {
+	if (%var173 <= 0) {
+		%var173 = 1;
+	} else {
+		%var173 = 0;
+	}
+	~orbs_update_runmode($component1, $component2);
+	return;
+}

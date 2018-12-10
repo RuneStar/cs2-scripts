@@ -1,0 +1,19 @@
+script2020()
+def_string $string0 = "A: -%";
+def_string $string1 = "B: -%";
+def_string $string2 = "C: -%";
+if (%varbit5941 >= 2) {
+	if (%varbit5939 ! 127) {
+		$string0 = "A: <~script2023(%varbit5939)>";
+	}
+	if (%varbit5940 ! 127) {
+		$string1 = "B: <~script2023(%varbit5940)>";
+	}
+	if (%varbit5942 ! 127) {
+		$string2 = "C: <~script2023(%varbit5942)>";
+	}
+}
+if_settext($string0, 611:20);
+if_settext($string1, 611:21);
+if_settext($string2, 611:22);
+return;

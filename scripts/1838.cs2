@@ -1,0 +1,14 @@
+script1838(int $int0, int $int1, string $string0)
+if (~on_mobile = false) {
+	return;
+} else {
+	%varcint215 = $int0;
+	%varcint216 = $int1;
+	switch ($int0) {
+		case 0 :
+			_6522($int1, $string0);
+		case 1 :
+			_6523($int1, $string0);
+	}
+	return;
+}

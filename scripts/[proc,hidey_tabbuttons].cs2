@@ -1,0 +1,34 @@
+[proc,hidey_tabbuttons](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+if_sethide(true, 493:4);
+if_sethide(true, 493:5);
+if_sethide(true, 493:6);
+if_sethide(true, 493:7);
+if_sethide(true, 493:8);
+if_sethide(true, 493:9);
+if_sethide(true, 493:10);
+if_sethide(true, 493:11);
+if_sethide(true, 493:12);
+if_sethide(true, 493:13);
+if ($component0 = $component2) {
+	if_sethide(false, 493:6);
+	if_sethide(false, 493:7);
+} else if ($component0 = $component3) {
+	if_sethide(false, 493:8);
+	if_sethide(false, 493:9);
+} else if ($component0 = $component4) {
+	if_sethide(false, 493:10);
+	if_sethide(false, 493:11);
+} else if ($component0 = $component5) {
+	if_sethide(false, 493:12);
+	if_sethide(false, 493:13);
+} else {
+	$component0 = $component1;
+	if_sethide(false, 493:4);
+	if_sethide(false, 493:5);
+}
+~script1482($component1, $component0, $component1, $component2, $component3, $component4, $component5, "Easy");
+~script1482($component2, $component0, $component1, $component2, $component3, $component4, $component5, "Medium");
+~script1482($component3, $component0, $component1, $component2, $component3, $component4, $component5, "Hard");
+~script1482($component4, $component0, $component1, $component2, $component3, $component4, $component5, "Elite");
+~script1482($component5, $component0, $component1, $component2, $component3, $component4, $component5, "Master");
+return;

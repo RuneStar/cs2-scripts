@@ -1,0 +1,14 @@
+[proc,worldmap_findcoordinmap](maparea $maparea0, coordgrid $coordgrid1)(coordgrid)
+if (($maparea0 = null) | ($coordgrid1 = null)) {
+	return(null);
+} else if (worldmap_coordinmap($maparea0, $coordgrid1) = true) {
+	return($coordgrid1);
+} else {
+	while (coordz($coordgrid1) > 0) {
+		$coordgrid1 = movecoord($coordgrid1, 0, -1, 0);
+		if (worldmap_coordinmap($maparea0, $coordgrid1) = true) {
+			return($coordgrid1);
+		}
+	}
+	return(null);
+}

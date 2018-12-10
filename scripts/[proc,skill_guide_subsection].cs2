@@ -1,0 +1,329 @@
+[proc,skill_guide_subsection](int $int0, int $int1)(string, int)
+switch ($int0) {
+	case 1 :
+		if ($int1 = 0) {
+			return("Weapons", 0);
+		} else if ($int1 = 1) {
+			return("Armour", 1);
+		} else if ($int1 = 2) {
+			return("Salamanders", 1);
+		} else {
+			return("", -1);
+		}
+	case 2 :
+		if ($int1 = 0) {
+			return("Weapons", 1);
+		} else if ($int1 = 1) {
+			return("Armour", 1);
+		} else if ($int1 = 2) {
+			return("Shortcuts", 1);
+		} else if ($int1 = 3) {
+			return("Areas", 1);
+		} else if ($int1 = 4) {
+			return("Barbarian", 1);
+		} else {
+			return("", -1);
+		}
+	case 3 :
+		if ($int1 = 0) {
+			return("Bows", 0);
+		} else if ($int1 = 1) {
+			return("Thrown", 1);
+		} else if ($int1 = 2) {
+			return("Crossbows", 0);
+		} else if ($int1 = 3) {
+			return("Armour", 0);
+		} else if ($int1 = 4) {
+			return("Miscellaneous", 1);
+		} else if ($int1 = 5) {
+			return("Shortcuts", 1);
+		} else if ($int1 = 6) {
+			return("Salamanders", 1);
+		} else {
+			return("", -1);
+		}
+	case 4 :
+		if ($int1 = 0) {
+			return("Normal Spells", 0);
+		} else if ($int1 = 1) {
+			return("Ancient Magicks", 1);
+		} else if ($int1 = 2) {
+			return("Lunar Spells", 1);
+		} else if ($int1 = 3) {
+			return("Arceuus Spells", 1);
+		} else if ($int1 = 4) {
+			return("Armour", 1);
+		} else if ($int1 = 5) {
+			return("Bolts", 1);
+		} else if ($int1 = 6) {
+			return("Weapons", 1);
+		} else if ($int1 = 7) {
+			return("Equipment", 1);
+		} else if ($int1 = 8) {
+			return("Salamanders", 1);
+		} else {
+			return("", -1);
+		}
+	case 5 :
+		if ($int1 = 0) {
+			return("Armour", 0);
+		} else if ($int1 = 1) {
+			return("Penance", 1);
+		} else if ($int1 = 2) {
+			return("Prayers", 1);
+		} else if ($int1 = 3) {
+			return("Shields", 1);
+		} else {
+			return("", -1);
+		}
+	case 6 :
+		if ($int1 = 0) {
+			return("Hitpoints", 0);
+		} else if ($int1 = 1) {
+			return("Healing", 0);
+		} else if ($int1 = 2) {
+			return("Equipment", 1);
+		} else {
+			return("", -1);
+		}
+	case 7 :
+		if ($int1 = 0) {
+			return("Prayers", 0);
+		} else if ($int1 = 1) {
+			return("Equipment", 1);
+		} else if ($int1 = 2) {
+			return("Other", 1);
+		} else {
+			return("", -1);
+		}
+	case 8 :
+		if ($int1 = 0) {
+			return("Courses", 1);
+		} else if ($int1 = 1) {
+			return("Areas", 1);
+		} else if ($int1 = 2) {
+			return("Shortcuts", 1);
+		} else if ($int1 = 3) {
+			return("Barbarian", 1);
+		} else {
+			return("", -1);
+		}
+	case 9 :
+		if ($int1 = 0) {
+			return("Potions", 1);
+		} else if ($int1 = 1) {
+			return("Herbs", 1);
+		} else if ($int1 = 2) {
+			return("Barbarian Potions", 1);
+		} else if ($int1 = 3) {
+			return("Raids", 1);
+		} else if ($int1 = 4) {
+			return("Other", 1);
+		} else {
+			return("", -1);
+		}
+	case 10 :
+		if ($int1 = 0) {
+			return("Pickpocket", 1);
+		} else if ($int1 = 1) {
+			return("Stalls", 1);
+		} else if ($int1 = 2) {
+			return("Chests", 1);
+		} else if ($int1 = 3) {
+			return("Other", 1);
+		} else {
+			return("", -1);
+		}
+	case 11 :
+		if ($int1 = 0) {
+			return("Weaving", 1);
+		} else if ($int1 = 1) {
+			return("Armour", 0);
+		} else if ($int1 = 2) {
+			return("Spinning", 0);
+		} else if ($int1 = 3) {
+			return("Pottery", 0);
+		} else if ($int1 = 4) {
+			return("Glass", 1);
+		} else if ($int1 = 5) {
+			return("Jewellery", 0);
+		} else if ($int1 = 6) {
+			return("Weaponry", 1);
+		} else if ($int1 = 7) {
+			return("Other", 1);
+		} else {
+			return("", -1);
+		}
+	case 12 :
+		if ($int1 = 0) {
+			return("Runes", 0);
+		} else if ($int1 = 1) {
+			return("Multiple Runes", 0);
+		} else if ($int1 = 2) {
+			return("Rune Pouches", 1);
+		} else if ($int1 = 3) {
+			return("Infusing", 1);
+		} else {
+			return("", -1);
+		}
+	case 13 :
+		if ($int1 = 0) {
+			return("Rocks", 0);
+		} else if ($int1 = 1) {
+			return("Equipment", 0);
+		} else {
+			return("", -1);
+		}
+	case 14 :
+		if ($int1 = 0) {
+			return("Smelting", 0);
+		} else if ($int1 = 1) {
+			return("Bronze", 0);
+		} else if ($int1 = 2) {
+			return("Blurite", 1);
+		} else if ($int1 = 3) {
+			return("Iron", 0);
+		} else if ($int1 = 4) {
+			return("Steel", 0);
+		} else if ($int1 = 5) {
+			return("Mithril", 0);
+		} else if ($int1 = 6) {
+			return("Adamant", 0);
+		} else if ($int1 = 7) {
+			return("Rune", 0);
+		} else if ($int1 = 8) {
+			return("Lovakite", 1);
+		} else if ($int1 = 9) {
+			return("Other", 1);
+		} else {
+			return("", -1);
+		}
+	case 15 :
+		if ($int1 = 0) {
+			return("Catches", 0);
+		} else if ($int1 = 1) {
+			return("Barbarian", 1);
+		} else if ($int1 = 2) {
+			return("Equipment", 1);
+		} else if ($int1 = 3) {
+			return("Raids", 1);
+		} else if ($int1 = 4) {
+			return("Other", 1);
+		} else {
+			return("", -1);
+		}
+	case 16 :
+		if ($int1 = 0) {
+			return("Meats", 0);
+		} else if ($int1 = 1) {
+			return("Bread", 0);
+		} else if ($int1 = 2) {
+			return("Pies", 0);
+		} else if ($int1 = 3) {
+			return("Stews", 0);
+		} else if ($int1 = 4) {
+			return("Pizzas", 0);
+		} else if ($int1 = 5) {
+			return("Cakes", 0);
+		} else if ($int1 = 6) {
+			return("Wine", 0);
+		} else if ($int1 = 7) {
+			return("Hot Drinks", 1);
+		} else if ($int1 = 8) {
+			return("Brewing", 1);
+		} else if ($int1 = 9) {
+			return("Vegetable", 1);
+		} else if ($int1 = 10) {
+			return("Dairy", 1);
+		} else if ($int1 = 11) {
+			return("Gnome", 1);
+		} else if ($int1 = 12) {
+			return("Raids", 1);
+		} else {
+			return("", -1);
+		}
+	case 17 :
+		if ($int1 = 0) {
+			return("Burning", 0);
+		} else if ($int1 = 1) {
+			return("Barbarian", 1);
+		} else if ($int1 = 2) {
+			return("Equipment", 1);
+		} else if ($int1 = 3) {
+			return("Troll Fires", 1);
+		} else {
+			return("", -1);
+		}
+	case 18 :
+		if ($int1 = 0) {
+			return("Trees", 0);
+		} else if ($int1 = 1) {
+			return("Axes", 0);
+		} else if ($int1 = 2) {
+			return("Other", 0);
+		} else {
+			return("", -1);
+		}
+	case 19 :
+		if ($int1 = 0) {
+			return("Arrows", 1);
+		} else if ($int1 = 1) {
+			return("Bows", 1);
+		} else if ($int1 = 2) {
+			return("Bolts", 1);
+		} else if ($int1 = 3) {
+			return("Darts", 1);
+		} else if ($int1 = 4) {
+			return("Crossbows", 1);
+		} else if ($int1 = 5) {
+			return("Javelins", 1);
+		} else if ($int1 = 6) {
+			return("Shields", 1);
+		} else {
+			return("", -1);
+		}
+	case 20 :
+		if ($int1 = 0) {
+			return("Monsters", 1);
+		} else if ($int1 = 1) {
+			return("Equipment", 1);
+		} else if ($int1 = 2) {
+			return("Slayer Masters", 1);
+		} else {
+			return("", -1);
+		}
+	case 21 :
+		if ($int1 = 0) {
+			return("Allotments", 1);
+		} else if ($int1 = 1) {
+			return("Hops", 1);
+		} else if ($int1 = 2) {
+			return("Trees", 1);
+		} else if ($int1 = 3) {
+			return("Fruit Trees", 1);
+		} else if ($int1 = 4) {
+			return("Bushes", 1);
+		} else if ($int1 = 5) {
+			return("Flowers", 1);
+		} else if ($int1 = 6) {
+			return("Herbs", 1);
+		} else if ($int1 = 7) {
+			return("Special", 1);
+		} else if ($int1 = 8) {
+			return("Scarecrows", 1);
+		} else if ($int1 = 9) {
+			return("Multiple roots", 1);
+		} else if ($int1 = 10) {
+			return("Tithe Farm", 1);
+		} else if ($int1 = 11) {
+			return("Raids", 1);
+		} else {
+			return("", -1);
+		}
+	case 22 :
+		return(~skill_guide_subsection_construction($int1));
+	case 23 :
+		return(~skill_guide_subsection_hunter($int1));
+	else :
+		return("", -1);
+}

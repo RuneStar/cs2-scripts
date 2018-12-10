@@ -1,0 +1,15 @@
+[proc,deadman_map_keypress](int $int0)
+switch ($int0) {
+	case 3 :
+		~deadman_map_enable;
+	case 4 :
+		~deadman_area_switch;
+	case 5 :
+		~script2191;
+	case 6 :
+		~script2192;
+	case 7 :
+		~deadman_arenas_tele;
+	else :
+		return;
+}

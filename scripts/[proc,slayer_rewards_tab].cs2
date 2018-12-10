@@ -1,0 +1,22 @@
+[proc,slayer_rewards_tab](component $component0, component $component1, int $int2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8, string $string0)(int, int)
+cc_create($component0, ^iftype_graphic, $int2);
+.cc_create($component0, ^iftype_text, calc($int2 + 1));
+cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
+.cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_settextfont(p11_full);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_setcolour(0xff981f);
+.cc_settextshadow(true);
+.cc_settext($string0);
+if ($component1 ! $component8) {
+	cc_setgraphic(812);
+	cc_setonmouseover("script85(event_com, .cc_getid, 16777215)");
+	cc_setonmouseleave("script85(event_com, .cc_getid, 16750623)");
+	cc_setop(1, $string0);
+	cc_setonop("slayer_rewards_tabs($component0, $component4, $component5, $component6, $component7, $component1)");
+} else {
+	cc_setgraphic(813);
+}
+return(calc($int2 + 2), calc($int3 + 86));

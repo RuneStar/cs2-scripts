@@ -1,0 +1,100 @@
+[clientscript,chatdefault_onkey](int $int0, char $char1)
+if ((if_gethide(162:55) = true) | (if_gethide(162:56) = true)) {
+	return;
+} else if (((%varcint203 = 0) | (%varcint203 = -1)) | (~script1701(-1, 162) = 0)) {
+	return;
+} else {
+	def_int $int2 = string_length(%varcstring1);
+	def_int $int3 = 0;
+	def_int $int4 = 0;
+	if ((~on_mobile = true) & (%varcint41 = 4)) {
+		$int4 = 1;
+	}
+	if (staffmodlevel > 0) {
+		$int3 = 1;
+	}
+	if ((($int3 = 1) & (string_indexof_char("`", $char1) ! -1)) & ($int2 = 0)) {
+		return;
+	} else {
+		if ($int0 = 84) {
+			~script1984;
+			if ($int2 > 0) {
+				if ((string_indexof_string(%varcstring1, "/", 0) = 0) | ($int4 = 1)) {
+					if (clan_getchatcount > 0) {
+						if ($int2 <= 1) {
+							return;
+						} else {
+							if (%varbit4394 = 1) {
+								if (clan_getchatcount > 0) {
+									clan_leavechat;
+								}
+							} else {
+								if ($int4 = 1) {
+									%varcstring1 = append("/", %varcstring1);
+								}
+								~chat_sendpublic(2, %varcstring1);
+							}
+						}
+					} else {
+						~chat_sendpublic(0, %varcstring1);
+					}
+				} else if (string_indexof_string(%varcstring1, "::", 0) = 0) {
+					if ($int2 > 2) {
+						if (string_indexof_string(%varcstring1, "::toggleroof", 0) = 0) {
+							if (getremoveroofs = true) {
+								setremoveroofs(false);
+								mes("Roofs will only be removed selectively.");
+							} else {
+								setremoveroofs(true);
+								mes("Roofs are now all hidden.");
+							}
+						} else if (string_indexof_string(%varcstring1, "::bank", 0) = 0) {
+							~chat_sendpublic(0, "Hey, everyone, I just tried to do something very silly!");
+						} else {
+							%varcstring1 = ~script224(%varcstring1);
+							$int2 = string_length(%varcstring1);
+							docheat(substring(%varcstring1, 2, $int2));
+						}
+					} else {
+						~chat_sendpublic(0, %varcstring1);
+					}
+				} else {
+					~chat_sendpublic(0, %varcstring1);
+				}
+				~chatout_add(%varcstring1);
+				%varcstring1 = "";
+			}
+		} else if ($int0 = 104) {
+			if ($int3 = 1) {
+				~chatout_scrollup;
+			}
+		} else if ($int0 = 105) {
+			if ($int3 = 1) {
+				~chatout_scrolldown;
+			}
+		} else if ($int0 = 80) {
+			if (string_length(%varcstring0) > 0) {
+				if (friend_test(%varcstring0) = true) {
+					~meslayer_mode6(%varcstring0);
+					return;
+				} else if (%varcint60 > clientclock) {
+					return;
+				} else {
+					%varcint60 = calc(clientclock + 50);
+					mes("That player was not found on your Friends list.");
+					return;
+				}
+			} else if (%varcint60 > clientclock) {
+				return;
+			} else {
+				%varcint60 = calc(clientclock + 50);
+				mes("You haven't received any messages to which you can reply.");
+				return;
+			}
+		} else {
+			%varcstring1 = ~script74(0, $int0, $char1, %varcstring1);
+		}
+		~script223;
+		return;
+	}
+}

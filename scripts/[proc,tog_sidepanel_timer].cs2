@@ -1,0 +1,30 @@
+[proc,tog_sidepanel_timer](component $component0, component $component1)
+def_int $int2 = 1;
+if (%var101 > $int2) {
+	$int2 = %var101;
+}
+def_int $int3 = %varbit5099;
+if (%varbit5099 < %var101) {
+	$int3 = calc($int3 - 1);
+}
+if (($int3 <= 0) | ($int2 <= 0)) {
+	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $component1);
+	if_setontimer(null, $component0);
+	return;
+} else if ($int3 >= $int2) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component1);
+	if_setontimer(null, $component0);
+	return;
+} else {
+	def_int $int4 = interpolate(0, $int3, 0, $int2, 16384);
+	def_int $int5 = calc($int3 * 30);
+	if (($int4 <= 0) | ($int5 <= 0)) {
+		if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $component1);
+		if_setontimer(null, $component0);
+		return;
+	} else {
+		if_setsize($int4, 0, ^setsize_2, ^setsize_minus, $component1);
+		if_setontimer("tog_sidepanel_timer_update($component0, $component1, $int4, calc($int4 / $int5), clientclock)", $component0);
+		return;
+	}
+}

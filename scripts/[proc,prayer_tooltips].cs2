@@ -1,0 +1,11 @@
+[proc,prayer_tooltips](component $component0, component $component1, int $int2)
+def_string $string0 = enum(int, string, 860, $int2);
+$string0 = append("Level <tostring(enum(int, int, 861, $int2))><br>", $string0);
+$string0 = append($string0, "<br><enum(int, string, 862, $int2)>");
+if (%varbit5711 = 0) {
+	if_setonmouserepeat("addtooltip(event_com, $component0, $string0, 25, if_getwidth(if_getlayer($component1)))", $component1);
+	if_setonmouseleave("deltooltip($component0)", $component1);
+} else {
+	if_setonmouserepeat(null, $component1);
+}
+return;

@@ -1,0 +1,20 @@
+script2357()
+if ((clienttype = 3) & (%varbit6713 = 0)) {
+	if_sethide(true, 261:100);
+	if_sethide(true, 261:101);
+	if_setposition(-56, 0, ^setpos_abs_centre, ^setpos_abs_top, 261:92);
+	if_setposition(-56, 4, ^setpos_abs_centre, ^setpos_abs_top, 261:93);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, 261:94);
+	if_setposition(56, 0, ^setpos_abs_centre, ^setpos_abs_top, 261:98);
+	if_setposition(56, 4, ^setpos_abs_centre, ^setpos_abs_top, 261:99);
+	return;
+} else {
+	if_sethide(false, 261:100);
+	if_sethide(false, 261:101);
+	if_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_top, 261:92);
+	if_setposition(10, 4, ^setpos_abs_left, ^setpos_abs_top, 261:93);
+	if_setposition(52, 0, ^setpos_abs_left, ^setpos_abs_top, 261:94);
+	if_setposition(98, 0, ^setpos_abs_left, ^setpos_abs_top, 261:98);
+	if_setposition(102, 4, ^setpos_abs_left, ^setpos_abs_top, 261:99);
+	return;
+}

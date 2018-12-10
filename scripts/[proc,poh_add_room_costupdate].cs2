@@ -1,0 +1,7 @@
+[proc,poh_add_room_costupdate](int $int0)
+if (inv_total(93, coins_995) < $int0) {
+	cc_setcolour(^red);
+} else {
+	cc_setcolour(^yellow);
+}
+return;

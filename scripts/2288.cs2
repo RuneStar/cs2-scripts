@@ -1,0 +1,10 @@
+script2288(component $component0, int $int1)
+def_int $int2 = 0;
+if (cc_find($component0, $int1) = true) {
+	$int2 = ~min(255, calc(cc_gettrans + 40));
+	cc_settrans($int2);
+	if ($int2 >= 255) {
+		cc_setontimer(null);
+	}
+}
+return;

@@ -1,0 +1,47 @@
+[clientscript,music_vartransmit](component $component0, component $component1, int $int2)
+def_int $array0(calc(18 + 1));
+$array0(1) = %var20;
+$array0(2) = %var21;
+$array0(3) = %var22;
+$array0(4) = %var23;
+$array0(5) = %var24;
+$array0(6) = %var25;
+$array0(7) = %var298;
+$array0(8) = %var311;
+$array0(9) = %var346;
+$array0(10) = %var414;
+$array0(11) = %var464;
+$array0(12) = %var598;
+$array0(13) = %var662;
+$array0(14) = %var721;
+$array0(15) = %var906;
+$array0(16) = %var1009;
+$array0(17) = %var1338;
+$array0(18) = %var1681;
+def_int $int3 = 0;
+def_coordgrid $coordgrid4 = null;
+def_int $int5 = 0;
+def_int $int6 = 0;
+while ($int6 < $int2) {
+	if (cc_find($component0, $int6) = true) {
+		$int3 = enum(int, int, 818, $int6);
+		$coordgrid4 = enum(int, coordgrid, 819, $int3);
+		if ($coordgrid4 ! null) {
+			if (testbit($array0(coordx($coordgrid4)), coordy($coordgrid4)) = true) {
+				~music_setcolour(0x0dc10d);
+				$int5 = calc($int5 + 1);
+			} else if (($int3 = 331) & (%varbit1028 > 35)) {
+				~music_setcolour(0x0dc10d);
+				$int5 = calc($int5 + 1);
+			} else {
+				~music_setcolour(^red);
+			}
+		} else {
+			~music_setcolour(0x0dc10d);
+			$int5 = calc($int5 + 1);
+		}
+	}
+	$int6 = calc($int6 + 1);
+}
+if_settext("<~script46(~min($int5, $int2), ",")> / <~script46($int2, ",")>", $component1);
+return;

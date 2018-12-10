@@ -1,0 +1,30 @@
+script1992(component $component0, component $component1)
+def_obj $obj2 = null;
+def_int $int3 = 0;
+def_int $int4 = 0;
+while ($int4 < 90) {
+	if (cc_find($component0, $int4) = true) {
+		$obj2 = inv_getobj(525, $int4);
+		if ($obj2 ! null) {
+			cc_sethide(false);
+			cc_setobject($obj2, inv_getnum(525, $int4));
+			cc_setopbase("<col=ff9040><oc_name($obj2)></col>");
+			cc_settrans(0);
+			cc_setonop("script487(event_com, event_comid, 100, 0)");
+			cc_setontimer(null);
+			$int3 = calc(cc_gety + cc_getheight);
+		} else {
+			cc_sethide(true);
+		}
+	}
+	$int4 = calc($int4 + 1);
+}
+if ($int3 > if_getheight($component0)) {
+	if_setscrollpos(0, ~min(if_getscrolly($component0), calc($int3 - if_getheight($component0))), $component0);
+	if_setscrollsize(0, $int3, $component0);
+} else {
+	if_setscrollpos(0, 0, $component0);
+	if_setscrollsize(0, 0, $component0);
+}
+~scrollbar_vertical_rebuild($component1, $component0);
+return;

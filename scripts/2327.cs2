@@ -1,0 +1,17 @@
+script2327(int $int0, component $component1, int $int2, int $int3, string $string0)
+if ($int0 ! 1) {
+	return;
+} else {
+	if ((cc_find($component1, $int2) = true) & (.cc_find(50:0, enum(component, int, 1939, $component1)) = true)) {
+		sound_synth(2266, 1, 0);
+		cc_setcolour(0x7f7f7f);
+		cc_settext("...");
+		if_setonmouserepeat(null, $component1);
+		if_setonmouseleave(null, $component1);
+		if_setonop(null, $component1);
+		if_clearops($component1);
+		if_setontimer("script2328($component1, $int2, $string0, $int3, calc(clientclock + 80))", $component1);
+		.cc_resume_pausebutton;
+	}
+	return;
+}

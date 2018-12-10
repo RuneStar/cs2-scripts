@@ -1,0 +1,15 @@
+script864(int $int0, component $component1, model $model2, model $model3, component $component4, component $component5, int $int6)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	if_setmodel($model3, $component1);
+	if_sethide(false, $component4);
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setontimer("script1413($component1, $model2, $component4, calc(clientclock + 20))", $component1);
+	if (cc_find($component5, $int6) = true) {
+		cc_resume_pausebutton;
+	}
+	return;
+}

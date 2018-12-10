@@ -1,0 +1,10 @@
+[proc,godwars_hideshow](component $component0, component $component1)
+if (~inzone(0_44_82_0_0, 3_813_83_63_63, coord) = 1) {
+	if_sethide(false, $component0);
+} else {
+	if_sethide(true, $component0);
+	if_setontimer(null, $component1);
+	if_settrans(255, $component1);
+	%varcint50 = 256;
+}
+return;

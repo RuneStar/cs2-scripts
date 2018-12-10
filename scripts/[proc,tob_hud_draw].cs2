@@ -1,0 +1,104 @@
+[proc,tob_hud_draw](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19)
+%varcint219 = calc(clientclock + 30);
+~hud_clamp($component1);
+if (~inzone(0_56_50_56_2, 1_313_50_36_36, coord) = 1) {
+	if (%varbit6440 ! 3) {
+		if_sethide(false, $component2);
+		if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $component2);
+		if (%varbit6440 = 2) {
+			if_settext("Step inside now!", $component3);
+			~script2303($component3);
+			if_setontimer("script2302($component3)", $component3);
+		} else if (%varbit6440 = 0) {
+			if_settext("No party", $component3);
+			if_setcolour(0xff981f, $component3);
+			if_setontimer(null, $component3);
+		} else {
+			if_settext("Party", $component3);
+			if_setcolour(0xff981f, $component3);
+			if_setontimer(null, $component3);
+		}
+	} else {
+		if_sethide(true, $component2);
+	}
+} else {
+	if_sethide(true, $component2);
+}
+def_int $int20 = 90;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_int $int23 = 0;
+def_int $int24 = 0;
+if (~instance_check(coord) = 1) {
+	if (%varbit6440 = 2) {
+		if_sethide(false, $component7);
+		if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $component7);
+		if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $component4);
+		if (~on_mobile = true) {
+			$int20 = 400;
+		}
+		$int21 = if_getwidth($component1);
+		$int22 = scale(4, 7, $int21);
+		$int23 = calc($int21 - $int20);
+		if ($int22 <= $int23) {
+			if_setsize(scale(4, 7, 16384), if_getheight($component4), ^setsize_2, ^setsize_abs, $component4);
+		} else {
+			if_setsize($int20, if_getheight($component4), ^setsize_minus, ^setsize_abs, $component4);
+		}
+		if ((cc_find($component5, 0) = true) & (.cc_find($component5, 1) = true)) {
+			if (%varbit6447 = 1) {
+				cc_setcolour(^red);
+				.cc_setcolour(0x0dc10d);
+				$int24 = scale(%varbit6448, ~max(%varbit6449, 1), 1000);
+				if_settext("<tostring(calc($int24 / 10))>.<tostring(calc($int24 % 10))>%", $component6);
+			} else if (%varbit6447 = 3) {
+				cc_setcolour(0x0a0573);
+				.cc_setcolour(0x46eae4);
+				$int24 = scale(%varbit6448, ~max(%varbit6449, 1), 1000);
+				if_settext("<col=ff0000><tostring(calc($int24 / 10))>.<tostring(calc($int24 % 10))>%</col>", $component6);
+			} else {
+				cc_setcolour(0x7f5813);
+				.cc_setcolour(0x7f7fff);
+				if_settext("", $component6);
+			}
+			~tob_hud_updateprogress(scale(%varbit6448, ~max(1, %varbit6449), 16384), $component5);
+			if (%varbit6447 = 0) {
+				if_sethide(true, $component4);
+				%varcint220 = -1;
+			} else {
+				if_sethide(false, $component4);
+			}
+		} else {
+			%varcint220 = -1;
+			if_setontimer(null, $component5);
+			if_settext("", $component6);
+		}
+		~tob_hud_statusrefresh(0, %varbit6442, $component8, $component9, $component19, %varcstring140);
+		~tob_hud_statusrefresh(1, %varbit6443, $component10, $component11, $component19, %varcstring141);
+		~tob_hud_statusrefresh(2, %varbit6444, $component12, $component13, $component19, %varcstring142);
+		~tob_hud_statusrefresh(3, %varbit6445, $component14, $component15, $component19, %varcstring143);
+		~tob_hud_statusrefresh(4, %varbit6446, $component16, $component17, $component19, %varcstring144);
+		if (%varbit6441 = 0) {
+			if_sethide(false, $component18);
+			if_setsize(34, 209, ^setsize_abs, ^setsize_abs, $component7);
+		} else {
+			if_sethide(true, $component18);
+			if_setsize(34, 174, ^setsize_abs, ^setsize_abs, $component7);
+		}
+	} else {
+		%varcint220 = -1;
+		if_setontimer(null, $component5);
+		if_sethide(true, $component4);
+		if_sethide(true, $component7);
+		if_sethide(true, $component18);
+		~deltooltip_action($component19);
+	}
+} else {
+	%varcint220 = -1;
+	if_setontimer(null, $component5);
+	if_sethide(true, $component4);
+	if_sethide(true, $component7);
+	if_sethide(true, $component18);
+	~deltooltip_action($component19);
+}
+return;

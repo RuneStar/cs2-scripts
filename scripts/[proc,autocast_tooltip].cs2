@@ -1,0 +1,210 @@
+[proc,autocast_tooltip](component $component0, obj $obj1)
+if ($obj1 = null) {
+	if (cc_find($component0, 0) = true) {
+		cc_sethide(false);
+	}
+	if (cc_find($component0, 1) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 2) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 3) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 4) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 5) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 6) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 7) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 8) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 9) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 10) = true) {
+		cc_sethide(true);
+	}
+	return;
+} else {
+	if (cc_find($component0, 0) = true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 1) = true) {
+		cc_sethide(false);
+		cc_settext("Level <tostring(oc_param($obj1, 604))>: <oc_param($obj1, 601)>");
+	}
+	if (cc_find($component0, 2) = true) {
+		cc_sethide(false);
+		cc_settext(oc_param($obj1, 602));
+	}
+	def_obj $obj2 = oc_param($obj1, 365);
+	def_int $int3 = oc_param($obj1, 366);
+	def_obj $obj4 = oc_param($obj1, 367);
+	def_int $int5 = oc_param($obj1, 368);
+	def_obj $obj6 = oc_param($obj1, 369);
+	def_int $int7 = oc_param($obj1, 370);
+	def_obj $obj8 = oc_param($obj1, 606);
+	def_int $int9 = oc_param($obj1, 607);
+	def_int $int10 = 4;
+	if ($obj8 = null) {
+		if ($obj6 = null) {
+			if ($obj4 = null) {
+				if ($obj2 = null) {
+					if (cc_find($component0, 3) = true) {
+						cc_sethide(true);
+					}
+					if (cc_find($component0, 4) = true) {
+						cc_sethide(true);
+					}
+					if (cc_find($component0, 5) = true) {
+						cc_sethide(true);
+					}
+					if (cc_find($component0, 6) = true) {
+						cc_sethide(true);
+					}
+					if (cc_find($component0, 7) = true) {
+						cc_sethide(true);
+					}
+					if (cc_find($component0, 8) = true) {
+						cc_sethide(true);
+					}
+					if (cc_find($component0, 9) = true) {
+						cc_sethide(true);
+					}
+					if (cc_find($component0, 10) = true) {
+						cc_sethide(true);
+					}
+					return;
+				} else {
+					if ((cc_find($component0, 3) = true) & (.cc_find($component0, 4) = true)) {
+						cc_sethide(false);
+						.cc_sethide(false);
+						cc_setposition(0, 37, ^setpos_abs_centre, ^setpos_abs_top);
+						.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+						~autocast_tooltip_runecount(0, $obj2, $int3);
+						cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){93, 94}");
+						cc_setonvartransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){638, 375, 1139, 1140, 1377}");
+					}
+					if ((cc_find($component0, 5) = true) & (.cc_find($component0, 6) = true)) {
+						cc_sethide(true);
+						.cc_sethide(true);
+					}
+					if ((cc_find($component0, 7) = true) & (.cc_find($component0, 8) = true)) {
+						cc_sethide(true);
+						.cc_sethide(true);
+					}
+					if ((cc_find($component0, 9) = true) & (.cc_find($component0, 10) = true)) {
+						cc_sethide(true);
+						.cc_sethide(true);
+					}
+				}
+			} else {
+				if ((cc_find($component0, 3) = true) & (.cc_find($component0, 4) = true)) {
+					cc_sethide(false);
+					.cc_sethide(false);
+					cc_setposition(-32, 37, ^setpos_abs_centre, ^setpos_abs_top);
+					.cc_setposition(-32, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+					~autocast_tooltip_runecount(0, $obj2, $int3);
+					cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){93, 94}");
+					cc_setonvartransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){638, 375, 1139, 1140, 1377}");
+				}
+				if ((cc_find($component0, 5) = true) & (.cc_find($component0, 6) = true)) {
+					cc_sethide(false);
+					.cc_sethide(false);
+					cc_setposition(32, 37, ^setpos_abs_centre, ^setpos_abs_top);
+					.cc_setposition(32, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+					~autocast_tooltip_runecount(0, $obj4, $int5);
+					cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){93, 94}");
+					cc_setonvartransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){638, 375, 1139, 1140, 1377}");
+				}
+				if ((cc_find($component0, 7) = true) & (.cc_find($component0, 8) = true)) {
+					cc_sethide(true);
+					.cc_sethide(true);
+				}
+				if ((cc_find($component0, 9) = true) & (.cc_find($component0, 10) = true)) {
+					cc_sethide(true);
+					.cc_sethide(true);
+				}
+			}
+		} else {
+			if ((cc_find($component0, 3) = true) & (.cc_find($component0, 4) = true)) {
+				cc_sethide(false);
+				.cc_sethide(false);
+				cc_setposition(-53, 37, ^setpos_abs_centre, ^setpos_abs_top);
+				.cc_setposition(-53, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+				~autocast_tooltip_runecount(0, $obj2, $int3);
+				cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){93, 94}");
+				cc_setonvartransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){638, 375, 1139, 1140, 1377}");
+			}
+			if ((cc_find($component0, 5) = true) & (.cc_find($component0, 6) = true)) {
+				cc_sethide(false);
+				.cc_sethide(false);
+				cc_setposition(0, 37, ^setpos_abs_centre, ^setpos_abs_top);
+				.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+				~autocast_tooltip_runecount(0, $obj4, $int5);
+				cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){93, 94}");
+				cc_setonvartransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){638, 375, 1139, 1140, 1377}");
+			}
+			if ((cc_find($component0, 7) = true) & (.cc_find($component0, 8) = true)) {
+				cc_sethide(false);
+				.cc_sethide(false);
+				cc_setposition(53, 37, ^setpos_abs_centre, ^setpos_abs_top);
+				.cc_setposition(53, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+				~autocast_tooltip_runecount(0, $obj6, $int7);
+				cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj6, $int7, event_com, cc_getid, .cc_getid){93, 94}");
+				cc_setonvartransmit("autocast_tooltip_runecount(false, $obj6, $int7, event_com, cc_getid, .cc_getid){638, 375, 1139, 1140, 1377}");
+			}
+			if ((cc_find($component0, 9) = true) & (.cc_find($component0, 10) = true)) {
+				cc_sethide(true);
+				.cc_sethide(true);
+			}
+		}
+	} else {
+		if ((cc_find($component0, 3) = true) & (.cc_find($component0, 4) = true)) {
+			cc_sethide(false);
+			.cc_sethide(false);
+			cc_setposition(-61, 37, ^setpos_abs_centre, ^setpos_abs_top);
+			.cc_setposition(-61, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+			~autocast_tooltip_runecount(0, $obj2, $int3);
+			cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){93, 94}");
+			cc_setonvartransmit("autocast_tooltip_runecount(false, $obj2, $int3, event_com, cc_getid, .cc_getid){638, 375, 1139, 1140, 1377}");
+		}
+		if ((cc_find($component0, 5) = true) & (.cc_find($component0, 6) = true)) {
+			cc_sethide(false);
+			.cc_sethide(false);
+			cc_setposition(-20, 37, ^setpos_abs_centre, ^setpos_abs_top);
+			.cc_setposition(-20, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+			~autocast_tooltip_runecount(0, $obj4, $int5);
+			cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){93, 94}");
+			cc_setonvartransmit("autocast_tooltip_runecount(false, $obj4, $int5, event_com, cc_getid, .cc_getid){638, 375, 1139, 1140, 1377}");
+		}
+		if ((cc_find($component0, 7) = true) & (.cc_find($component0, 8) = true)) {
+			cc_sethide(false);
+			.cc_sethide(false);
+			cc_setposition(20, 37, ^setpos_abs_centre, ^setpos_abs_top);
+			.cc_setposition(20, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+			~autocast_tooltip_runecount(0, $obj6, $int7);
+			cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj6, $int7, event_com, cc_getid, .cc_getid){93, 94}");
+			cc_setonvartransmit("autocast_tooltip_runecount(false, $obj6, $int7, event_com, cc_getid, .cc_getid){638, 375, 1139, 1140, 1377}");
+		}
+		if ((cc_find($component0, 9) = true) & (.cc_find($component0, 10) = true)) {
+			cc_sethide(false);
+			.cc_sethide(false);
+			cc_setposition(61, 37, ^setpos_abs_centre, ^setpos_abs_top);
+			.cc_setposition(61, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+			~autocast_tooltip_runecount(0, $obj8, $int9);
+			cc_setoninvtransmit("autocast_tooltip_runecount(false, $obj8, $int9, event_com, cc_getid, .cc_getid){93, 94}");
+			cc_setonvartransmit("autocast_tooltip_runecount(false, $obj8, $int9, event_com, cc_getid, .cc_getid){638, 375, 1139, 1140, 1377}");
+		}
+	}
+	return;
+}

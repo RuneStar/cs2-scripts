@@ -1,0 +1,6 @@
+[proc,instance_check](coordgrid $coordgrid0)(int)
+if (coordx($coordgrid0) >= 6400) {
+	return(1);
+} else {
+	return(0);
+}

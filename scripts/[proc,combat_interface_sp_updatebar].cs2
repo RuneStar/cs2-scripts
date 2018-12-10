@@ -1,0 +1,27 @@
+[proc,combat_interface_sp_updatebar](component $component0, int $int1, int $int2)
+def_int $int3 = if_getwidth(593:37);
+def_int $int4 = if_getheight(593:37);
+def_int $int5 = calc(interpolate(0, $int1, 0, 1000, if_getwidth(593:36)) - $int3);
+if ($int5 > 0) {
+	if ($int2 = 0) {
+		$int5 = calc($int5 / 2);
+		if ($int5 = 0) {
+			$int5 = 1;
+		}
+	}
+	$int3 = calc($int3 + $int5);
+	if_setontimer("combat_interface_sp_updatebar($component0, $int1)", $component0);
+} else if ($int5 < 0) {
+	if ($int2 = 0) {
+		$int5 = calc($int5 / 2);
+		if ($int5 = 0) {
+			$int5 = -1;
+		}
+	}
+	$int3 = calc($int3 + $int5);
+	if_setontimer("combat_interface_sp_updatebar($component0, $int1)", $component0);
+} else {
+	if_setontimer(null, $component0);
+}
+if_setsize($int3, $int4, ^setsize_abs, ^setsize_abs, 593:37);
+return;

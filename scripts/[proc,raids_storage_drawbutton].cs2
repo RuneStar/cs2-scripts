@@ -1,0 +1,17 @@
+[proc,raids_storage_drawbutton](component $component0, fontmetrics $fontmetrics1, string $string0)(int)
+cc_deleteall($component0);
+def_int $int2 = ~options_button_off($component0, 0);
+cc_create($component0, ^iftype_text, $int2);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0xff981f);
+cc_settextfont($fontmetrics1);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+if_setonmouserepeat("script85(event_com, $int2, 16777215)", $component0);
+if_setonmouseleave("script85(event_com, $int2, 16750623)", $component0);
+if_setop(1, $string0, $component0);
+if_setonop("raids_storage_opbutton(event_opindex, $component0, $string0, $fontmetrics1)", $component0);
+if_setontimer(null, $component0);
+return($int2);

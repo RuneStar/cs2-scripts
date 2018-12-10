@@ -1,0 +1,35 @@
+script642(obj $obj0, enum $enum1, int $int2, int $int3)(int)
+switch ($enum1) {
+	case 995 :
+		$obj0 = enum(int, namedobj, $enum1, %varbit6592);
+	case 1893 :
+		$obj0 = enum(int, namedobj, $enum1, %varbit6270);
+	case 1686 :
+		$obj0 = enum(int, namedobj, $enum1, %varbit4324);
+	case 1687 :
+		$obj0 = enum(int, namedobj, $enum1, %varbit4325);
+	case 1688 :
+		$obj0 = enum(int, namedobj, $enum1, %varbit4326);
+	case 1689 :
+		$obj0 = enum(int, namedobj, $enum1, %varbit4327);
+	case 1690 :
+		$obj0 = enum(int, namedobj, $enum1, %varbit4328);
+	case 1691 :
+		$obj0 = enum(int, namedobj, $enum1, %varbit4388);
+	case 285 :
+		$obj0 = enum(int, namedobj, $enum1, %varbit3983);
+	case 1711 :
+		$obj0 = enum(int, namedobj, $enum1, %varbit6380);
+}
+cc_sethide(false);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+def_int $int4 = calc(40 * ($int3 / 6));
+cc_setposition(calc($int2 * ($int3 % 6)), $int4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setobject($obj0, 1);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_setop(1, "Take");
+cc_setop(10, "Examine");
+cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+cc_setonop("pet_insurance_op(event_opindex, event_com, event_comid)");
+return($int4);

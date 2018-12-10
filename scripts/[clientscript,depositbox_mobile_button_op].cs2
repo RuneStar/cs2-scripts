@@ -1,0 +1,9 @@
+[clientscript,depositbox_mobile_button_op](int $int0, component $component1, component $component2, component $component3, component $component4)
+if ($int0 ! 1) {
+	return;
+} else {
+	%varbit4430 = enum(component, int, 1980, $component1);
+	~depositbox_mobile_button_update;
+	~bank_depositbox_update($component2, $component3, $component4);
+	return;
+}

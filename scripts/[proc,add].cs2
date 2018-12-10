@@ -1,0 +1,6 @@
+[proc,add](int $int0, int $int1)(int)
+if (calc(^int_max - $int0) < $int1) {
+	return(^int_max);
+} else {
+	return(calc($int0 + $int1));
+}

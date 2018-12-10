@@ -1,0 +1,11 @@
+[proc,scrollbar_vertical_setdragger](component $component0, component $component1)
+def_int $int2 = ~max(calc(if_getscrollheight($component1) - if_getheight($component1)), 1);
+def_int $int3 = calc((if_getheight($component0) - 32) - cc_getheight);
+cc_setposition(0, calc(16 + (($int3 * if_getscrolly($component1)) / $int2)), ^setpos_abs_centre, ^setpos_abs_top);
+if (.cc_find($component0, 2) = true) {
+	.cc_setposition(0, cc_gety, ^setpos_abs_centre, ^setpos_abs_top);
+}
+if (.cc_find($component0, 3) = true) {
+	.cc_setposition(0, calc((cc_gety + cc_getheight) - 5), ^setpos_abs_centre, ^setpos_abs_top);
+}
+return;

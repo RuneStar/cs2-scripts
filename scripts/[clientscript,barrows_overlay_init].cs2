@@ -1,0 +1,30 @@
+[clientscript,barrows_overlay_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
+~script1490($component1);
+~barrows_overlay_reward($component9);
+if_setonvartransmit("barrows_overlay_reward($component9){453}", $component0);
+cc_deleteall($component10);
+def_int $int11 = ~script1071(0, $component10, "Ahrim");
+def_int $int12 = ~script1071(1, $component10, "Dharok");
+if ($int12 > $int11) {
+	$int11 = $int12;
+}
+$int12 = ~script1071(2, $component10, "Guthan");
+if ($int12 > $int11) {
+	$int11 = $int12;
+}
+$int12 = ~script1071(3, $component10, "Karil");
+if ($int12 > $int11) {
+	$int11 = $int12;
+}
+$int12 = ~script1071(4, $component10, "Torag");
+if ($int12 > $int11) {
+	$int11 = $int12;
+}
+$int12 = ~script1071(5, $component10, "Verac");
+if ($int12 > $int11) {
+	$int11 = $int12;
+}
+if_setsize(calc($int11 + 20), 102, ^setsize_abs, ^setsize_abs, $component10);
+~barrows_overlay_size($component0, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, ^int_min);
+if_setonsubchange("barrows_overlay_size($component0, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, ^int_min)", $component0);
+return;

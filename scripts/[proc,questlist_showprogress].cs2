@@ -1,0 +1,58 @@
+[proc,questlist_showprogress](component $component0, component $component1, component $component2)
+def_int $int3 = 0;
+def_int $colour4 = ^black;
+def_int $int5 = 0;
+def_int $int6 = ~quest_f2p_count;
+while ($int5 < $int6) {
+	if (cc_find($component0, $int5) = true) {
+		$int3 = ~questlist_f2p_progress($int5);
+		if ($int3 = 2) {
+			$colour4 = 0x0dc10d;
+		} else if ($int3 = 0) {
+			$colour4 = ^yellow;
+		} else {
+			$colour4 = ^red;
+		}
+		cc_setcolour($colour4);
+		cc_setonmouseover("script85(event_com, event_comid, 16777215)");
+		cc_setonmouseleave("script85(event_com, event_comid, $colour4)");
+	}
+	$int5 = calc($int5 + 1);
+}
+$int6 = ~quest_members_count;
+$int5 = 0;
+while ($int5 < $int6) {
+	if (cc_find($component1, $int5) = true) {
+		$int3 = ~questlist_members_progress($int5);
+		if ($int3 = 2) {
+			$colour4 = 0x0dc10d;
+		} else if ($int3 = 0) {
+			$colour4 = ^yellow;
+		} else {
+			$colour4 = ^red;
+		}
+		cc_setcolour($colour4);
+		cc_setonmouseover("script85(event_com, event_comid, 16777215)");
+		cc_setonmouseleave("script85(event_com, event_comid, $colour4)");
+	}
+	$int5 = calc($int5 + 1);
+}
+$int6 = ~miniquest_count;
+$int5 = 0;
+while ($int5 < $int6) {
+	if (cc_find($component2, $int5) = true) {
+		$int3 = ~script1359($int5);
+		if ($int3 = 2) {
+			$colour4 = 0x0dc10d;
+		} else if ($int3 = 0) {
+			$colour4 = ^yellow;
+		} else {
+			$colour4 = ^red;
+		}
+		cc_setcolour($colour4);
+		cc_setonmouseover("script85(event_com, event_comid, 16777215)");
+		cc_setonmouseleave("script85(event_com, event_comid, $colour4)");
+	}
+	$int5 = calc($int5 + 1);
+}
+return;

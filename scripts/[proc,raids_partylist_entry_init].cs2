@@ -1,0 +1,14 @@
+[proc,raids_partylist_entry_init](int $int0, component $component1, int $int2, component $component3, string $string0)
+def_int $colour4 = ^white;
+def_int $int5 = 235;
+if (calc($int0 % 2) = 0) {
+	$int5 = 255;
+	$colour4 = ^black;
+}
+cc_setcolour($colour4);
+cc_settrans($int5);
+if_setonmouserepeat("script1015(event_com, cc_getid, 16777215, 220)", $component1);
+if_setonmouseleave("script1015(event_com, cc_getid, $colour4, $int5)", $component1);
+if_setonop("raids_partylist_op(event_opindex, event_com, cc_getid, $colour4, $int5, 16777215, 220, $int2, $string0, $component3)", $component1);
+if_setontimer(null, $component1);
+return;

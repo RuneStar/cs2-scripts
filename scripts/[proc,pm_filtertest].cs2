@@ -1,0 +1,35 @@
+[proc,pm_filtertest](int $int0, int $int1, int $int2, string $string0)(int)
+switch ($int0) {
+	case 3 :
+		if ($int1 < %varcint175) {
+			return(0);
+		} else if ($int2 = 2) {
+			return(0);
+		} else if (chat_getfilter_private = 0) {
+			return(1);
+		} else if ((chat_getfilter_private = 1) & ($int2 = 1)) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 5, 6 :
+		if ($int1 < %varcint175) {
+			return(0);
+		} else if ((($int0 = 5) & (%varbit1627 = 0)) & (calc(clientclock - $int1) >= 500)) {
+			return(0);
+		} else if (chat_getfilter_private ! 2) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 7 :
+		if ($int1 < %varcint175) {
+			return(0);
+		} else if ($int2 = 2) {
+			return(0);
+		} else {
+			return(1);
+		}
+	else :
+		return(0);
+}

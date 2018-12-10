@@ -1,0 +1,69 @@
+script2674(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
+cc_deleteall($component1);
+cc_deleteall($component2);
+cc_deleteall($component5);
+cc_deleteall($component8);
+cc_deleteall($component7);
+cc_deleteall($component4);
+def_int $int11 = ~telenexus_slots_full;
+def_int $int12 = 4;
+if (%varbit6670 = 2) {
+	$int12 = 8;
+} else if (%varbit6670 = 3) {
+	$int12 = 18;
+}
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_struct $struct15 = null;
+def_int $int16 = 0;
+def_int $int17 = 1;
+def_int $int18 = 10;
+def_int $int19 = 24;
+if (~on_mobile = true) {
+	$int17 = 0;
+	$int18 = 20;
+	$int19 = 40;
+}
+if ($int17 = 1) {
+	~chatdefault_stopinput;
+}
+def_int $int20 = 0;
+def_int $int21 = 1;
+def_int $int22 = 1;
+def_int $int23 = 1;
+def_int $int24 = 0;
+def_string $string0 = "";
+while ($int21 <= $int12) {
+	$int16 = ~telenexus_get_slot($int21);
+	$struct15 = enum(int, struct, 1377, $int16);
+	if ($struct15 ! null) {
+		$int13, $int23, $int20, $int22 = ~script2675($component9, $component1, $component2, $int19, $int13, $int18, $int20, $struct15, $int23, $int17, $int22, $component5);
+		$struct15 = struct_param($struct15, 679);
+		if ($struct15 ! null) {
+			$string0, $int24 = ~script2664($struct15);
+			if ($int24 = 1) {
+				$int14, $int23, $int20, $int22 = ~script2675($component10, $component6, $component8, $int19, $int14, $int18, $int20, $struct15, $int23, $int17, $int22, $component7);
+			} else {
+				cc_create($component6, ^iftype_text, $int14);
+				cc_sethide(true);
+				cc_create($component10, ^iftype_rectangle, $int14);
+				cc_sethide(true);
+				cc_create($component7, ^iftype_rectangle, $int14);
+				cc_sethide(true);
+				cc_create($component8, ^iftype_graphic, $int14);
+				cc_sethide(true);
+				$int14 = calc($int14 + 1);
+			}
+		}
+	}
+	$int21 = calc($int21 + 1);
+}
+if ($int20 > if_getheight($component0)) {
+	if_setscrollsize(0, $int20, $component3);
+} else {
+	if_setscrollsize(0, 0, $component3);
+	if_setscrollpos(0, 0, $component3);
+	if_setscrollsize(0, 0, $component3);
+}
+~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+return;

@@ -1,0 +1,22 @@
+[clientscript,deadman_tournament_refresh_op](int $int0, component $component1)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	cc_deleteall($component1);
+	def_int $int2 = ~options_button_on($component1, 0);
+	cc_create($component1, ^iftype_text, $int2);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x8f8f8f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext("Refresh");
+	if_setonmouseover(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setop(1, "", $component1);
+	if_setonop(null, $component1);
+	if_setontimer("deadman_tournament_refresh_reset(calc(clientclock + 40), event_com)", $component1);
+	return;
+}

@@ -1,0 +1,12 @@
+script561(component $component0)
+cc_create($component0, ^iftype_text, ~script208($component0));
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(if_getwidth($component0), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Okay");
+if_setonmouserepeat("script85($component0, cc_getid, 16777215)", $component0);
+if_setonmouseleave("script85($component0, cc_getid, 16750623)", $component0);
+return;

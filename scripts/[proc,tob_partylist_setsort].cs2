@@ -1,0 +1,64 @@
+[proc,tob_partylist_setsort]()
+~script2342(364:11, 0, 1, "Sort by members");
+~script2342(364:12, 2, 3, "Sort by target size");
+~script2342(364:13, 4, 5, "Sort by leader name");
+~script2342(364:14, 6, 7, "Sort by preferred combat level");
+~script2342(364:15, 12, 13, "Sort by age");
+def_int $int0 = enum_getoutputcount(1937);
+def_int $array0($int0);
+def_int $int1 = 0;
+def_int $int2 = 0;
+while ($int2 < $int0) {
+	if (cc_find(enum(int, component, 1937, $int1), 0) = true) {
+		$array0($int1) = $int1;
+		$int1 = calc($int1 + 1);
+	}
+	$int2 = calc($int2 + 1);
+}
+def_string $string0 = "";
+if ($int1 >= 2) {
+	switch (%varcint180) {
+		case 2, 3 :
+			~raids_partylist_sort(0, 0, calc($int1 - 1), 7, 1937);
+		case 4, 5 :
+			~raids_partylist_sort(0, 0, calc($int1 - 1), 3, 1937);
+		case 6, 7 :
+			~raids_partylist_sort(0, 0, calc($int1 - 1), 8, 1937);
+		case 12, 13 :
+			~raids_partylist_sort(0, 0, calc($int1 - 1), 9, 1937);
+		else :
+			~raids_partylist_sort(0, 0, calc($int1 - 1), 6, 1937);
+	}
+}
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_component $component5 = null;
+def_string $string1 = "";
+switch (%varcint180) {
+	case 1, 3, 5, 7, 13 :
+		$int3 = $int1;
+		while ($int3 > 0) {
+			$int3 = calc($int3 - 1);
+			$component5 = enum(int, component, 1937, $array0($int3));
+			if ($component5 ! null) {
+				if_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top, $component5);
+				if ((cc_find($component5, 0) = true) & (.cc_find($component5, 3) = true)) {
+					~raids_partylist_entry_init($int3, $component5, $array0($int3), 364:16, .cc_gettext);
+				}
+			}
+			$int4 = calc($int4 + 18);
+		}
+	else :
+		while ($int3 < $int1) {
+			$component5 = enum(int, component, 1937, $array0($int3));
+			if ($component5 ! null) {
+				if_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top, $component5);
+				if ((cc_find($component5, 0) = true) & (.cc_find($component5, 3) = true)) {
+					~raids_partylist_entry_init($int3, $component5, $array0($int3), 364:16, .cc_gettext);
+				}
+			}
+			$int3 = calc($int3 + 1);
+			$int4 = calc($int4 + 18);
+		}
+}
+return;

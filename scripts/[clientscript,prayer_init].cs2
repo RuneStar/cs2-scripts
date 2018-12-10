@@ -1,0 +1,25 @@
+[clientscript,prayer_init](int $int0, component $component1, component $component2)
+def_int $array0(calc(28 + 1));
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_component $component5 = null;
+while ($int4 <= 28) {
+	$component5 = enum(int, component, 859, $int4);
+	if ($component5 ! null) {
+		$array0($int3) = $int4;
+		$int3 = calc($int3 + 1);
+		~prayer_setupbutton($int4, $component5, $component2);
+	}
+	$int4 = calc($int4 + 1);
+}
+if ($int3 > 0) {
+	~prayer_quicksort(0, 0, calc($int3 - 1));
+}
+def_int $int6 = 0;
+while ($int6 < $int3) {
+	if_setposition(calc(($int6 % 5) * 37), calc(($int6 / 5) * 37), ^setpos_abs_left, ^setpos_abs_top, enum(int, component, 859, $array0($int6)));
+	$int6 = calc($int6 + 1);
+}
+~prayer_level($component1);
+if_setonstattransmit("prayer_level($component1){prayer}", $component1);
+return;

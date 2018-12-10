@@ -1,0 +1,13 @@
+[clientscript,smokeoverlay_init](component $component0)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setsize(0, interpolate(0, 5, 0, 20, 16384), ^setsize_minus, ^setsize_2);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setfill(true);
+_2127(true, 313:1);
+cc_setcolour(^black);
+cc_setfillcolour(0x808080);
+cc_settrans(255);
+_1124(64);
+_1125(2);
+return;

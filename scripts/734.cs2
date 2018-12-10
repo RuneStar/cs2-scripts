@@ -1,0 +1,22 @@
+script734(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+cc_deleteall($component1);
+cc_deleteall($component2);
+%varcint178 = 0;
+%varcint179 = 0;
+~script2286($component3, $component4);
+if_setonvartransmit("script2285($component3, $component4){1204}", $component0);
+def_int $int6 = 0;
+def_int $int7 = 0;
+$int6, $int7 = ~script2274($component5, $int7);
+if_setonmouserepeat("script2287(true, $component5, $int6)", $component5);
+if_setonmouseleave("script2287(false, $component5, $int6)", $component5);
+cc_create($component5, ^iftype_text, $int7);
+$int7 = calc($int7 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(q8_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Cancel");
+return;

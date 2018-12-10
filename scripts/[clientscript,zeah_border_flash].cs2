@@ -1,0 +1,28 @@
+[clientscript,zeah_border_flash](int $int0)
+def_component $component1 = null;
+def_component $component2 = null;
+if ($int0 = 3) {
+	$component2 = 246:22;
+	$component1 = 245:12;
+} else if ($int0 = 2) {
+	$component2 = 246:26;
+	$component1 = 245:15;
+} else if ($int0 = 4) {
+	$component2 = 246:30;
+	$component1 = 245:18;
+} else if ($int0 = 5) {
+	$component2 = 246:34;
+	$component1 = 245:21;
+} else if ($int0 = 1) {
+	$component2 = 246:38;
+	$component1 = 245:24;
+} else {
+	return;
+}
+if (cc_find($component1, 0) = true) {
+	cc_setcolour(^white);
+	cc_setontimer("script1233(event_com, event_comid, $int0, calc(clientclock + 30))");
+}
+if_setcolour(^white, $component2);
+if_setontimer("zeah_fade_border($component2, $int0)", $component2);
+return;

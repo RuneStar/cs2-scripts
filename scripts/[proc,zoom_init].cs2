@@ -1,0 +1,18 @@
+[proc,zoom_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+if_setgraphic(~graphic_device(1162, 1565), $component1);
+if (%varbit6357 = 0) {
+	if_sethide(true, $component2);
+} else if (%varbit6357 = 1) {
+	if_sethide(false, $component2);
+}
+if_setondrag("script833($component4, $component3, event_mousex)", $component4);
+if_setondragcomplete("script1043($component4, $component3, event_mousex)", $component4);
+def_string $string0 = "<~text_device("Click", "Tap")> here to enable zooming using <~text_device("the mouse scroll wheel", "the pinch gesture")>.";
+if (%varbit6357 = 0) {
+	$string0 = "<~text_device("Click", "Tap")> here to disable zooming using <~text_device("the mouse scroll wheel", "the pinch gesture")>.";
+}
+if_setonmouseover("zoom_outline(1, $component1)", $component1);
+if_setonmouseleave("zoom_outline(0, $component1)", $component1);
+if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component5, $string0, 25, 190)", $component0);
+if_setonmouseleave("deltooltip($component5)", $component0);
+return;

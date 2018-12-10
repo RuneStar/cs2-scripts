@@ -1,0 +1,7 @@
+[clientscript,wom_telescope_borders](component $component0, int $int1, int $int2, component $component3, component $component4)
+def_int $int5 = if_getwidth($component0);
+def_int $int6 = if_getheight($component0);
+if (($int1 ! $int5) | ($int2 ! $int6)) {
+	~wom_telescope_borders($component0, $int5, $int6, $component3, $component4);
+}
+return;

@@ -1,0 +1,37 @@
+[clientscript,fossil_pool_update](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5)
+if_setsize(interpolate(0, 16384, 0, 10, $int4), 0, ^setsize_2, ^setsize_minus, 613:26);
+if_setsize(interpolate(0, 16384, 0, 10, $int4), 0, ^setsize_2, ^setsize_minus, 606:6);
+def_int $int6 = 0;
+def_int $int7 = 0;
+if ($int4 <= 2) {
+	$int7 = interpolate(0, $int4, 0, 2, 255);
+	$int6 = 255;
+} else {
+	$int7 = 255;
+	$int6 = interpolate(0, calc(10 - $int4), 0, 10, 255);
+}
+if_setcolour(~script246($int6, $int7, 0), 613:26);
+if_setcolour(~script246($int6, $int7, 0), 606:6);
+if_setsize(interpolate(0, 16384, 0, 10, $int5), 0, ^setsize_2, ^setsize_minus, 613:31);
+if_setsize(interpolate(0, 16384, 0, 10, $int5), 0, ^setsize_2, ^setsize_minus, 606:12);
+if ($int5 <= 2) {
+	$int7 = interpolate(0, $int5, 0, 2, 255);
+	$int6 = 255;
+} else {
+	$int7 = 255;
+	$int6 = interpolate(0, calc(10 - $int5), 0, 10, 255);
+}
+if_setcolour(~script246($int6, $int7, 0), 613:31);
+if_setcolour(~script246($int6, $int7, 0), 606:12);
+def_int $int8 = calc((($int0 + $int1) + $int2) + $int3);
+if_setsize(interpolate(0, 16384, 0, 28, $int8), 0, ^setsize_2, ^setsize_minus, 613:34);
+if ($int8 <= 4) {
+	$int7 = interpolate(0, $int8, 0, 4, 255);
+	$int6 = 255;
+} else {
+	$int7 = 255;
+	$int6 = interpolate(0, calc(28 - $int8), 0, 28, 255);
+}
+if_setcolour(~script246($int6, $int7, 0), 613:34);
+if_settext("<tostring($int8)>/<tostring(28)>", 613:35);
+return;

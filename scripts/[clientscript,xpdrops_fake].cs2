@@ -1,0 +1,31 @@
+[clientscript,xpdrops_fake](stat $stat0, int $int1)
+if (enum(int, stat, 681, coordx(%varcint207)) = $stat0) {
+	%varcint207 = movecoord(%varcint207, 0, 0, $int1);
+} else if (enum(int, stat, 681, coordx(%varcint208)) = $stat0) {
+	%varcint208 = movecoord(%varcint208, 0, 0, $int1);
+} else if (enum(int, stat, 681, coordx(%varcint209)) = $stat0) {
+	%varcint209 = movecoord(%varcint209, 0, 0, $int1);
+} else if (enum(int, stat, 681, coordx(%varcint210)) = $stat0) {
+	%varcint210 = movecoord(%varcint210, 0, 0, $int1);
+} else if (enum(int, stat, 681, coordx(%varcint211)) = $stat0) {
+	%varcint211 = movecoord(%varcint211, 0, 0, $int1);
+} else if (enum(int, stat, 681, coordx(%varcint212)) = $stat0) {
+	%varcint212 = movecoord(%varcint212, 0, 0, $int1);
+} else if (enum(int, stat, 681, coordx(%varcint213)) = $stat0) {
+	%varcint213 = movecoord(%varcint213, 0, 0, $int1);
+} else if (%varcint207 = -1) {
+	%varcint207 = movecoord(0_0_0_0_0, enum(stat, int, 81, $stat0), 0, $int1);
+} else if (%varcint208 = -1) {
+	%varcint208 = movecoord(0_0_0_0_0, enum(stat, int, 81, $stat0), 0, $int1);
+} else if (%varcint209 = -1) {
+	%varcint209 = movecoord(0_0_0_0_0, enum(stat, int, 81, $stat0), 0, $int1);
+} else if (%varcint210 = -1) {
+	%varcint210 = movecoord(0_0_0_0_0, enum(stat, int, 81, $stat0), 0, $int1);
+} else if (%varcint211 = -1) {
+	%varcint211 = movecoord(0_0_0_0_0, enum(stat, int, 81, $stat0), 0, $int1);
+} else if (%varcint212 = -1) {
+	%varcint212 = movecoord(0_0_0_0_0, enum(stat, int, 81, $stat0), 0, $int1);
+} else if (%varcint213 = -1) {
+	%varcint213 = movecoord(0_0_0_0_0, enum(stat, int, 81, $stat0), 0, $int1);
+}
+return;

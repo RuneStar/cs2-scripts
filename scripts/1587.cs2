@@ -1,0 +1,16 @@
+script1587(component $component0, int $int1)
+def_int $int2 = 0;
+def_int $int3 = 0;
+if ((cc_find($component0, $int1) = true) & (.cc_find(549:13, $int1) = true)) {
+	if_settext("Reset streak:<br><.cc_gettext>", 549:24);
+	if_setsize(calc(parawidth(75, p11_full, if_gettext(549:24)) + 10), 50, ^setsize_abs, ^setsize_abs, 549:19);
+	if (paraheight(if_getwidth(549:24), p11_full, if_gettext(549:24)) > 2) {
+		if_setsize(if_getwidth(549:19), 60, ^setsize_abs, ^setsize_abs, 549:19);
+	}
+	$int2 = if_getscrolly(549:5);
+	$int3 = calc((if_getscrolly(549:5) + if_getheight(549:5)) - if_getheight(549:19));
+	if_sethide(false, 549:17);
+	if_sethide(false, 549:19);
+	if_setposition(12, ~minmax($int2, $int3, calc((18 * $int1) + 5)), ^setpos_abs_right, ^setpos_abs_top, 549:19);
+}
+return;

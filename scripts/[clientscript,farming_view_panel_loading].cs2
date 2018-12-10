@@ -1,0 +1,14 @@
+[clientscript,farming_view_panel_loading](component $component0)
+if (cc_find($component0, 0) = true) {
+	return;
+} else {
+	cc_create($component0, ^iftype_text, ~thinbox($component0, 0));
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(true);
+	cc_settext("Loading...");
+	return;
+}

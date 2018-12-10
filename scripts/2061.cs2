@@ -1,0 +1,20 @@
+script2061(string $string0)
+sound_synth(2266, 1, 0);
+$string0 = ~script212($string0);
+def_int $int0 = string_length($string0);
+def_int $int1 = string_length(tostring(28));
+if ($int0 > $int1) {
+	%varcint200 = 28;
+	return;
+} else {
+	def_int $int2 = 0;
+	def_int $int3 = 0;
+	while ($int0 > 0) {
+		$int2 = string_indexof_string("0123456789", substring($string0, 0, 1), 0);
+		$int3 = calc($int3 + ($int2 * pow(10, ($int0 - 1))));
+		$string0 = substring($string0, 1, $int0);
+		$int0 = calc($int0 - 1);
+	}
+	%varcint200 = $int3;
+	return;
+}

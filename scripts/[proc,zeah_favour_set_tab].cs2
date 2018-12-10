@@ -1,0 +1,73 @@
+[proc,zeah_favour_set_tab](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
+if_sethide(true, $component8);
+if_sethide(true, $component9);
+if_sethide(true, $component10);
+if_sethide(true, $component11);
+if_sethide(true, $component12);
+def_graphic $graphic13 = "banktabs,0";
+if (cc_find($component3, 0) = true) {
+	cc_setgraphic($graphic13);
+}
+if (cc_find($component4, 0) = true) {
+	cc_setgraphic($graphic13);
+}
+if (cc_find($component5, 0) = true) {
+	cc_setgraphic($graphic13);
+}
+if (cc_find($component6, 0) = true) {
+	cc_setgraphic($graphic13);
+}
+if (cc_find($component7, 0) = true) {
+	cc_setgraphic($graphic13);
+}
+if_setonmouserepeat("zeah_favour_tab_mouserepeat(event_com, $component2, 3)", $component3);
+if_setonmouserepeat("zeah_favour_tab_mouserepeat(event_com, $component2, 2)", $component4);
+if_setonmouserepeat("zeah_favour_tab_mouserepeat(event_com, $component2, 4)", $component5);
+if_setonmouserepeat("zeah_favour_tab_mouserepeat(event_com, $component2, 5)", $component6);
+if_setonmouserepeat("zeah_favour_tab_mouserepeat(event_com, $component2, 1)", $component7);
+if_setonmouseleave("script229(event_com, 0, $graphic13, $component2)", $component3);
+if_setonmouseleave("script229(event_com, 0, $graphic13, $component2)", $component4);
+if_setonmouseleave("script229(event_com, 0, $graphic13, $component2)", $component5);
+if_setonmouseleave("script229(event_com, 0, $graphic13, $component2)", $component6);
+if_setonmouseleave("script229(event_com, 0, $graphic13, $component2)", $component7);
+if_setonop("zeah_favour_set_tab(3, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component3);
+if_setonop("zeah_favour_set_tab(2, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component4);
+if_setonop("zeah_favour_set_tab(4, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component5);
+if_setonop("zeah_favour_set_tab(5, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component6);
+if_setonop("zeah_favour_set_tab(1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component7);
+def_component $component14 = null;
+def_component $component15 = null;
+if (%varcint79 = 3) {
+	$component15 = $component8;
+	$component14 = $component3;
+} else if (%varcint79 = 2) {
+	$component15 = $component9;
+	$component14 = $component4;
+} else if (%varcint79 = 4) {
+	$component15 = $component10;
+	$component14 = $component5;
+} else if (%varcint79 = 5) {
+	$component15 = $component11;
+	$component14 = $component6;
+} else if (%varcint79 = 1) {
+	$component15 = $component12;
+	$component14 = $component7;
+} else {
+	return;
+}
+if_sethide(false, $component15);
+if (cc_find($component14, 0) = true) {
+	cc_setgraphic("banktabs,2");
+}
+if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component2, enum(int, string, 1264, %varcint79), 25, 512)", $component14);
+if_setonmouseleave("deltooltip($component2)", $component14);
+if_setonop("opsound(0, 0)", $component14);
+def_int $int16 = if_getheight($component15);
+if ($int16 > if_getheight($component0)) {
+	if_setscrollsize(0, $int16, $component0);
+	~scrollbar_resize($component1, $component0, if_getscrolly($component0));
+} else {
+	if_setscrollsize(0, 0, $component0);
+	~scrollbar_resize($component1, $component0, 0);
+}
+return;

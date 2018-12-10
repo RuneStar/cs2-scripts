@@ -1,0 +1,6 @@
+[clientscript,clanwars_hud_update](component $component0, component $component1, int $int2, component $component3, int $int4)
+~clanwars_hud_info_update($component0, $component1, $int2);
+if (cc_find($component3, $int4) = true) {
+	~clanwars_hud_countdown_update($component0, $component3);
+}
+return;

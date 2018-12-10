@@ -1,0 +1,52 @@
+[proc,raids_storage_shared_items](component $component0, component $component1, component $component2)
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+cc_deleteall($component0);
+def_int $int6 = 0;
+def_obj $obj7 = enum(int, obj, 1666, $int6);
+while ($obj7 ! null) {
+	cc_create($component0, ^iftype_graphic, $int6);
+	$int4 = invother_total(582, $obj7);
+	if ($int4 > 0) {
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		$int5 = calc(($int3 / 10) * (32 + 8));
+		cc_setposition(calc(2 + (($int3 % 10) * (36 + 8))), $int5, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setoutline(1);
+		cc_settrans(0);
+		cc_setgraphicshadow(0x333333);
+		cc_setobject($obj7, $int4);
+		cc_setop(1, "Withdraw");
+		cc_setop(2, "Withdraw-5");
+		cc_setop(3, "Withdraw-10");
+		cc_setop(4, "Withdraw-All");
+		cc_setop(5, "Withdraw-X");
+		cc_setop(10, "Examine");
+		cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
+		cc_setonop("raids_storage_items_op(event_opindex, event_com, event_comid)");
+		$int3 = calc($int3 + 1);
+	} else {
+		cc_sethide(true);
+	}
+	$int6 = calc($int6 + 1);
+	$obj7 = enum(int, obj, 1666, $int6);
+}
+def_int $int8 = 0;
+$int5 = calc($int5 + 32);
+if ($int5 > if_getheight($component0)) {
+	$int8 = if_getscrolly($component0);
+	if_setscrollsize(0, $int5, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+}
+~scrollbar_resize($component1, $component0, $int8);
+$int3 = 0;
+$int6 = inv_size(582);
+while ($int6 > 0) {
+	$int6 = calc($int6 - 1);
+	if (invother_getnum(582, $int6) > 0) {
+		$int3 = calc($int3 + 1);
+	}
+}
+if_settext(tostring($int3), $component2);
+return;

@@ -1,0 +1,17 @@
+[clientscript,zeah_favour_settitle](component $component0, int $int1, int $int2)
+def_int $int3 = 0;
+if ($int2 = 3) {
+	$int3 = %varbit4896;
+} else if ($int2 = 2) {
+	$int3 = %varbit4895;
+} else if ($int2 = 4) {
+	$int3 = %varbit4898;
+} else if ($int2 = 5) {
+	$int3 = %varbit4899;
+} else if ($int2 = 1) {
+	$int3 = %varbit4894;
+}
+if (cc_find($component0, $int1) = true) {
+	~zeah_favour_settitle($int2, $int3);
+}
+return;

@@ -1,0 +1,14 @@
+[clientscript,welcome_screen_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+~script1490($component1);
+~welcome_screen_position($component0);
+~welcome_screen_lastlogin($component2);
+if_setonvartransmit("welcome_screen_lastlogin($component2){261}", $component2);
+~welcome_screen_messages($component3, $component4, $component5);
+if_setonvartransmit("welcome_screen_messages($component3, $component4, $component5){1781}", $component4);
+~welcome_screen_credit($component6);
+if_setonvartransmit("welcome_screen_credit($component6){1780}", $component6);
+~script2218;
+if_setonvartransmit("script2217(){264}", $component0);
+~welcome_screen_continue_text;
+if_setopkey(1, 13, 0, 378:3);
+return;

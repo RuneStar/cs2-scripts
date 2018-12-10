@@ -1,0 +1,9 @@
+script521(int $int0, component $component1, int $int2)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	%varbit4170 = $int2;
+	~script523($component1);
+	return;
+}

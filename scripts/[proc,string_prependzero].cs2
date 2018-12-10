@@ -1,0 +1,5 @@
+[proc,string_prependzero](int $int0, string $string0)(string)
+while (string_length($string0) < $int0) {
+	$string0 = append("0", $string0);
+}
+return($string0);

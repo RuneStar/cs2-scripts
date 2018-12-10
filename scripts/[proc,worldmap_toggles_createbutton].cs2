@@ -1,0 +1,10 @@
+[proc,worldmap_toggles_createbutton](int $int0, component $component1)
+cc_create($component1, ^iftype_rectangle, $int0);
+cc_setsize(0, 21, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, calc(21 * $int0), ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(255);
+cc_setonmouserepeat("cc_settrans(event_com, event_comid, 220, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+return;

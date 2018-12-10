@@ -1,0 +1,82 @@
+[clientscript,chat_button_onop](int $int0, int $int1)
+def_int $int2 = ~script553;
+if ($int0 = 1) {
+	if ((getwindowmode = 2) & (%varcint41 = $int1)) {
+		%varcint41 = -1;
+	} else {
+		%varcint41 = $int1;
+	}
+	~script2526;
+	~toplevel_chatbox_background;
+	~chat_alert_set($int1, 0);
+	~redraw_chat_buttons;
+	~rebuildchatbox($int2);
+	~rebuildpmbox($int2);
+} else if ($int0 = 2) {
+	if ($int1 = 2) {
+		~chat_set_filter($int1, 4);
+		~redraw_chat_buttons;
+		~rebuildchatbox($int2);
+		~rebuildpmbox($int2);
+	} else if ($int1 = 1) {
+		if (%varbit26 = 0) {
+			%varbit26 = 1;
+		} else {
+			%varbit26 = 0;
+		}
+		~redraw_chat_buttons;
+		~rebuildchatbox($int2);
+		~rebuildpmbox($int2);
+	}
+} else if ($int0 = 3) {
+	if ($int1 = 1) {
+		return;
+	} else {
+		~chat_set_filter($int1, 0);
+		~redraw_chat_buttons;
+		~rebuildchatbox($int2);
+		~rebuildpmbox($int2);
+	}
+} else if ($int0 = 4) {
+	~chat_set_filter($int1, 1);
+	~redraw_chat_buttons;
+	~rebuildchatbox($int2);
+	~rebuildpmbox($int2);
+} else if ($int0 = 5) {
+	~chat_set_filter($int1, 2);
+	~redraw_chat_buttons;
+	~rebuildchatbox($int2);
+	~rebuildpmbox($int2);
+} else if ($int1 = 2) {
+	switch ($int0) {
+		case 6 :
+			~chat_set_filter($int1, 3);
+			~redraw_chat_buttons;
+			~rebuildchatbox($int2);
+			~rebuildpmbox($int2);
+		case 7 :
+			%varcint199 = clientclock;
+			~rebuildchatbox($int2);
+		case 8 :
+			~meslayer_mode12;
+		case 9 :
+			~meslayer_mode13;
+		case 10 :
+			if (string_length(%varcstring28) > 0) {
+				if (%varcint62 = 1) {
+					%varcint62 = 0;
+				} else {
+					%varcint62 = 1;
+				}
+				~script95;
+			} else {
+				%varcint62 = 0;
+				~script95;
+			}
+	}
+} else if (($int1 = 3) & ($int0 = 6)) {
+	%varcint175 = clientclock;
+	~rebuildchatbox($int2);
+	~rebuildpmbox($int2);
+}
+return;

@@ -1,0 +1,7 @@
+[clientscript,poll_resetbutton](component $component0, component $component1, int $int2, string $string0)
+if (clientclock < $int2) {
+	return;
+} else {
+	~poll_setbutton($component0, $component1, $string0);
+	return;
+}

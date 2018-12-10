@@ -1,0 +1,14 @@
+[clientscript,meslayer_mode2]()
+if (%varcint11 = 1) {
+	if_close;
+}
+~meslayer_open;
+if_settext("Enter name of friend to add to list", 162:44);
+%varcint5 = 2;
+~script222("");
+def_string $string0 = "";
+if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string0)", 162:45);
+if (~on_mobile = true) {
+	~script1983(0, 12);
+}
+return;

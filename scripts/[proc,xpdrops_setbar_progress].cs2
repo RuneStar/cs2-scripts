@@ -1,0 +1,65 @@
+[proc,xpdrops_setbar_progress](component $component0, int $int1, int $int2, int $int3, int $int4)(int)
+def_int $int5 = calc($int2 - $int1);
+def_int $int6 = calc($int3 - $int1);
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+if ($int5 >= $int6) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
+	if ($int4 = 1) {
+		$int9 = 210;
+		$int8 = 255;
+	} else {
+		$int9 = 150;
+		$int8 = 0;
+	}
+	$int10 = 1000;
+} else if ($int5 <= 0) {
+	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $component0);
+	$int9 = 0;
+	$int8 = 150;
+} else if ($int6 <= 0) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
+	$int9 = 0;
+	$int8 = 150;
+} else if ($int6 < 2) {
+	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $component0);
+	$int9 = 0;
+	$int8 = 150;
+} else {
+	if ($int6 > 1000000000) {
+		$int6 = calc($int6 / 100000);
+		$int5 = calc($int5 / 100000);
+	} else if ($int6 > 100000000) {
+		$int6 = calc($int6 / 10000);
+		$int5 = calc($int5 / 10000);
+	} else if ($int6 > 10000000) {
+		$int6 = calc($int6 / 1000);
+		$int5 = calc($int5 / 1000);
+	} else if ($int6 > 1000000) {
+		$int6 = calc($int6 / 100);
+		$int5 = calc($int5 / 100);
+	} else if ($int6 > 100000) {
+		$int6 = calc($int6 / 10);
+		$int5 = calc($int5 / 10);
+	}
+	if ($int5 >= $int6) {
+		$int6 = calc($int5 + 1);
+	}
+	if_setsize(interpolate(0, $int5, 0, $int6, 16384), 0, ^setsize_2, ^setsize_minus, $component0);
+	$int7 = calc($int6 / 2);
+	if ($int7 <= 0) {
+		$int7 = 1;
+	}
+	if ($int5 <= $int7) {
+		$int9 = interpolate(0, $int5, 0, $int7, 150);
+		$int8 = 150;
+	} else {
+		$int9 = 150;
+		$int8 = calc(150 - interpolate(0, ($int5 - $int7), 0, $int7, 150));
+	}
+	$int10 = interpolate(0, $int5, 0, $int6, 1000);
+}
+if_setcolour(~script246($int8, $int9, 0), $component0);
+return($int10);

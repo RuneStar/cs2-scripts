@@ -1,0 +1,40 @@
+script709(component $component0, component $component1, component $component2, component $component3, component $component4)
+def_int $array0(11);
+def_int $int5 = 0;
+def_int $int6 = 0;
+while ($int5 < 11) {
+	cc_create($component0, ^iftype_rectangle, $int6);
+	$int6 = calc($int6 + 1);
+	cc_setop(1, "Open <enum(int, string, 595, $int5)> Journal");
+	cc_setfill(false);
+	cc_setcolour(0xff9933);
+	cc_settrans(150);
+	cc_setsize(16, 27, ^setsize_minus, ^setsize_abs);
+	$array0($int5) = $int5;
+	$int5 = calc($int5 + 1);
+}
+~quicksort_intenum(0, 0, calc(11 - 1), 595);
+def_int $int7 = 8;
+$int5 = 0;
+while ($int5 < 11) {
+	if (cc_find($component0, $array0($int5)) = true) {
+		cc_setposition(0, $int7, ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	$int6 = ~setup_diary_entry($component0, $array0($int5), $int6, $int7);
+	$int7 = calc($int7 + 28);
+	$int5 = calc($int5 + 1);
+}
+$int7 = calc($int7 + 8);
+if_setscrollpos(0, 0, $component0);
+if ($int7 > if_getheight($component0)) {
+	if_setscrollsize(0, $int7, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+}
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (~on_mobile = true) {
+	if_sethide(true, $component3);
+	if_setsize(0, if_getheight($component2), ^setsize_minus, ^setsize_abs, $component2);
+	if_sethide(false, $component4);
+}
+return;

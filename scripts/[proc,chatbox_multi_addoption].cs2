@@ -1,0 +1,13 @@
+[proc,chatbox_multi_addoption](int $int0, int $int1, int $int2, int $settextalignv3, string $string0)
+cc_create(219:1, ^iftype_text, $int0);
+cc_setsize(479, $int2, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^black);
+cc_settextshadow(false);
+cc_settextfont(q8_full);
+cc_settextalign(^settextalign_centre, $settextalignv3, 0);
+cc_settext($string0);
+cc_setonmouseover("script85(event_com, event_comid, 16777215)");
+cc_setonmouseleave("script85(event_com, event_comid, 0)");
+cc_setonkey("script57(event_keytyped, event_keypressed, event_com, event_comid, null, -1, tostring($int0), "", 0, 0)");
+return;

@@ -1,0 +1,20 @@
+script2324(component $component0, int $int1, int $int2, string $string0)
+if_sethide(false, $component0);
+cc_deleteall($component0);
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+~script2325($int1, $string0);
+if ($int2 = 2) {
+	~script2326($component0, cc_getid, $int1, $string0);
+} else {
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_clearops($component0);
+	if_setonop(null, $component0);
+}
+return;

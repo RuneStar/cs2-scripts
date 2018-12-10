@@ -1,0 +1,11 @@
+[clientscript,bankpin_button_mouseover](int $int0, component $component1, int $int2, int $int3)
+if ((cc_find($component1, $int2) = true) & (.cc_find($component1, $int3) = true)) {
+	if ($int0 = 1) {
+		cc_settrans(255);
+		.cc_sethide(false);
+	} else {
+		cc_settrans(245);
+		.cc_sethide(true);
+	}
+}
+return;

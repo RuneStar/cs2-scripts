@@ -1,0 +1,8 @@
+[clientscript,logout_op](int $int0, int $int1, int $int2)
+if ($int0 = 1) {
+	logout;
+}
+if (testbit($int1, $int0) = true) {
+	sound_synth(2266, 1, 0);
+}
+return;

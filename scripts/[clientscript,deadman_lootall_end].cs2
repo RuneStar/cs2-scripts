@@ -1,0 +1,8 @@
+[clientscript,deadman_lootall_end](component $component0, graphic $graphic1, int $int2)
+if (clientclock < $int2) {
+	return;
+} else {
+	if_setgraphic($graphic1, $component0);
+	if_setontimer(null, $component0);
+	return;
+}

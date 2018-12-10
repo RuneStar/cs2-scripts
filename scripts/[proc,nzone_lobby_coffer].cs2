@@ -1,0 +1,11 @@
+[proc,nzone_lobby_coffer]()
+if (%varbit3957 = 0) {
+	cc_setonop("nzone_lobby_coffer_examine(-1)");
+	.cc_setobject(khazard_cell_keys_76, 1);
+	return;
+} else {
+	def_int $int0 = calc(%varbit3948 * 1000);
+	cc_setonop("nzone_lobby_coffer_examine($int0)");
+	.cc_setobject(coins_995, $int0);
+	return;
+}

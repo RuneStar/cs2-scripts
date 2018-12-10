@@ -1,0 +1,10 @@
+script922()(int)
+if (getwindowmode = 1) {
+	return(0);
+} else if ((if_hassub(162:561) = true) | (if_hassub(162:560) = true)) {
+	return(0);
+} else if (if_gethide(162:40) = false) {
+	return(0);
+} else {
+	return(1);
+}

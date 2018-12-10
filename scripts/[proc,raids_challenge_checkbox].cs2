@@ -1,0 +1,13 @@
+[proc,raids_challenge_checkbox](component $component0, int $int1)
+if ($int1 = 2) {
+	if (%varbit6385 = 1) {
+		if_setgraphic("checkbox,5", $component0);
+	} else {
+		if_setgraphic("checkbox,3", $component0);
+	}
+} else if (%varbit6385 = 1) {
+	if_setgraphic("checkbox,2", $component0);
+} else {
+	if_setgraphic("checkbox,0", $component0);
+}
+return;

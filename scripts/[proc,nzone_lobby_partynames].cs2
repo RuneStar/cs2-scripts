@@ -1,0 +1,23 @@
+[proc,nzone_lobby_partynames](component $component0)
+def_int $int1 = 9;
+def_string $string0 = if_gettext(207:9);
+def_string $string1 = "";
+def_int $int2 = 0;
+while ($int1 <= 13) {
+	$int2 = string_indexof_string($string0, "|", 0);
+	if ($int2 ! -1) {
+		$string1 = substring($string0, 0, $int2);
+		$string0 = substring($string0, calc($int2 + 1), string_length($string0));
+	} else {
+		$string1 = $string0;
+		$string0 = "";
+	}
+	if (string_length($string1) <= 0) {
+		$string1 = "-";
+	}
+	if (cc_find($component0, $int1) = true) {
+		cc_settext($string1);
+	}
+	$int1 = calc($int1 + 1);
+}
+return;

@@ -1,0 +1,98 @@
+[proc,meslayer_enter]()
+if (%varcint5 = 14) {
+	%varcint66 = 1;
+	return;
+} else {
+	def_int $int0 = -1;
+	def_string $string0 = "";
+	def_int $int1 = string_length(%varcstring22);
+	if ($int1 > 0) {
+		switch (%varcint5) {
+			case 1 :
+				return;
+			case 2, 3, 6 :
+				if (friend_count < 0) {
+					mes("Unable to complete action - system busy.");
+				} else if (%varcint5 = 2) {
+					friend_add(%varcstring22);
+				} else if (%varcint5 = 3) {
+					friend_del(%varcstring22);
+				} else if (%varcint5 = 6) {
+					if ((%varcint203 = 0) | (%varcint203 = -1)) {
+						~meslayer_close(1, 1);
+						mes("You must set a name before you can chat.");
+						return;
+					} else {
+						if (chat_getfilter_private = 2) {
+							chat_setfilter(chat_getfilter_public, 1, chat_getfilter_trade);
+							~redraw_chat_buttons;
+							$int0 = ~script553;
+							~rebuildchatbox($int0);
+							~rebuildpmbox($int0);
+						}
+						if (%varbit4394 = 1) {
+							friend_del(%varcstring23);
+						} else {
+							chat_sendprivate(%varcstring23, %varcstring22);
+						}
+						%varcint61 = clientclock;
+					}
+				}
+			case 4, 5 :
+				if (ignore_count < 0) {
+					mes("Unable to update ignore list - system busy.");
+				} else if (%varcint5 = 4) {
+					ignore_add(%varcstring22);
+				} else if (%varcint5 = 5) {
+					ignore_del(%varcstring22);
+				}
+			case 7 :
+				resume_countdialog(~script212(%varcstring22));
+			case 8 :
+				%varcstring128 = removetags(%varcstring22);
+				resume_namedialog(%varcstring22);
+			case 9, 15 :
+				resume_stringdialog(%varcstring22);
+			case 10 :
+				if ((%varcint203 = 0) | (%varcint203 = -1)) {
+					~meslayer_close(1, 1);
+					mes("You must set a name before you can chat.");
+					return;
+				} else {
+					%varcstring129 = removetags(%varcstring22);
+					clan_joinchat(%varcstring22);
+				}
+			case 11 :
+				~meslayer_close(0, 1);
+				return;
+			case 12 :
+				if ($int1 > 10) {
+					$string0 = substring(%varcstring22, 0, 9);
+				} else {
+					$string0 = %varcstring22;
+				}
+				chat_setmessagefilter(lowercase($string0));
+				~rebuildchatbox(~script553);
+			case 13 :
+				if ((%varcint203 = 0) | (%varcint203 = -1)) {
+					~meslayer_close(1, 1);
+					mes("You must set a name before you can chat.");
+					return;
+				} else {
+					%varcint62 = 0;
+					%varcstring28 = %varcstring22;
+					~script95;
+					if_setontimer("script552(event_com, true)", 162:13);
+				}
+			case 16 :
+				~script2061(%varcstring22);
+		}
+	} else {
+		switch (%varcint5) {
+			case 16 :
+				return;
+			case 7, 8, 9, 15 :
+				return;
+		}
+	}
+}

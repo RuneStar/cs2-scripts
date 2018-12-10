@@ -1,0 +1,35 @@
+[clientscript,diary_mouseover](component $component0, int $int1, int $int2, int $int3)
+def_int $int4 = -1;
+def_int $colour5 = ^red;
+if ($int3 = 0) {
+	$int4 = ~script56($int2);
+	if ($int4 = 2) {
+		$colour5 = 0x0dc10d;
+	} else if ($int4 = 1) {
+		$colour5 = ^yellow;
+	} else {
+		$colour5 = ^red;
+	}
+}
+if (cc_find($component0, $int1) = true) {
+	if ($int3 = 1) {
+		cc_settrans(200);
+	} else {
+		cc_settrans(255);
+	}
+}
+if (cc_find($component0, calc($int1 + 1)) = true) {
+	if ($int3 = 1) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour($colour5);
+	}
+}
+if (cc_find($component0, calc($int1 + 2)) = true) {
+	if ($int3 = 1) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour($colour5);
+	}
+}
+return;

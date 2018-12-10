@@ -1,0 +1,14 @@
+[clientscript,poll_buttonop](component $component0, component $component1, int $int2, int $int3, string $string0)
+if_resume_pausebutton($component1);
+sound_synth(2266, 1, 0);
+if ((cc_find($component0, $int2) = true) & (.cc_find($component0, $int3) = true)) {
+	cc_setgraphic(813);
+	.cc_setcolour(^white);
+	.cc_settext("Loading...");
+	cc_clearops;
+	cc_setonmouseover(null);
+	cc_setonmouseleave(null);
+	cc_setonop(null);
+}
+if_setontimer("poll_resetbutton($component0, $component1, $string0, calc(clientclock + 30))", $component0);
+return;

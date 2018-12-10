@@ -1,0 +1,24 @@
+[clientscript,slayer_rewards_tasks_unblocktask](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6)
+sound_synth(2266, 1, 0);
+if_sethide(true, $component2);
+if_sethide(false, $component3);
+cc_deleteall($component5);
+if_setposition(33, 165, ^setpos_abs_left, ^setpos_abs_top, $component6);
+if_sethide(false, $component5);
+if_settext("<u=ff981f><enum(int, string, 693, $int0)></u><br><br>Slayer Masters will once again be able to assign you this creature.<br><br>You will not get your points back.", $component4);
+def_int $int7 = 0;
+while ($int7 < $int1) {
+	cc_create($component5, ^iftype_rectangle, $int7);
+	cc_sethide(true);
+	$int7 = calc($int7 + 1);
+}
+cc_create($component5, ^iftype_rectangle, $int1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_settrans(255);
+cc_setop(1, "Unblock");
+cc_setonop("script319(true, event_opindex, $component2, $component3, $component4, $component5, $component6)");
+if_setop(1, "Back", $component6);
+if_setonop("script319(false, event_opindex, $component2, $component3, $component4, $component5, $component6)", $component6);
+return;

@@ -1,0 +1,9 @@
+script518(component $component0, int $int1, int $int2, string $string0)
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition(4, calc(4 + (($int1 + 1) * 17)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int2, 17, ^setsize_abs, ^setsize_abs);
+cc_setop(1, $string0);
+cc_setonmouserepeat("script85(event_com, calc($int1 + 8), 16777215)");
+cc_setonmouseleave("script85(event_com, calc($int1 + 8), 16750623)");
+cc_setonop("script521(event_opindex, event_com, $int1)");
+return;

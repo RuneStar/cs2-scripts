@@ -1,0 +1,8 @@
+script543(component $component0, int $int1, string $string0)
+if (clientclock < $int1) {
+	return;
+} else {
+	if_setontimer(null, $component0);
+	~ge_offers_bigbutton($component0, 0, $string0);
+	return;
+}

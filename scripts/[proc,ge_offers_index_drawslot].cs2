@@ -1,0 +1,225 @@
+[proc,ge_offers_index_drawslot](inv $inv0, int $int1, component $component2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, int $int20, int $int21, int $int22, int $int23, int $int24, int $int25, int $int26, component $component27)
+def_obj $obj28 = null;
+def_int $int29 = 0;
+def_int $int30 = 0;
+def_int $int31 = 0;
+def_string $string0 = "Cancelled";
+def_graphic $graphic32 = "ge_icons,2";
+def_graphic $graphic33 = "ge_icons,3";
+def_graphic $graphic34 = "ge_icons,0";
+def_graphic $graphic35 = "ge_icons,1";
+def_string $string1 = "Offer to BUY items.";
+def_int $int36 = 0;
+def_int $int37 = 0;
+if (~deadman_world = 1) {
+	if ($int9 < 8) {
+		$int37 = 1;
+	}
+} else if (($int9 < 3) | (%varcint103 = 1)) {
+	$int37 = 1;
+}
+if (stockmarket_isofferempty($int9) = true) {
+	$obj28 = inv_getobj($inv0, 0);
+	if ($obj28 = null) {
+		$obj28 = inv_getobj($inv0, 1);
+	}
+	if ($obj28 = null) {
+		if (cc_find($component8, $int15) = true) {
+			cc_settext("Empty");
+		}
+		if (cc_find($component8, $int12) = true) {
+			cc_sethide(true);
+		}
+		if (cc_find($component8, $int16) = true) {
+			cc_sethide(true);
+		}
+		if (cc_find($component8, $int17) = true) {
+			cc_sethide(true);
+		}
+		if (cc_find($component8, $int18) = true) {
+			cc_sethide(true);
+		}
+		if (cc_find($component8, $int19) = true) {
+			cc_sethide(true);
+		}
+		if (cc_find($component8, $int20) = true) {
+			cc_sethide(true);
+		}
+		if (cc_find($component8, $int21) = true) {
+			cc_sethide(true);
+		}
+		if (cc_find($component8, $int22) = true) {
+			cc_sethide(true);
+		}
+		if (cc_find($component8, $int23) = true) {
+			cc_sethide(true);
+		}
+		if (cc_find($component8, $int24) = true) {
+			cc_sethide(true);
+		}
+		if (cc_find($component8, $int10) = true) {
+			cc_sethide(false);
+		}
+		if (cc_find($component8, $int11) = true) {
+			cc_sethide(false);
+		}
+		if ((cc_find($component8, $int13) = true) & (.cc_find($component8, $int14) = true)) {
+			cc_sethide(false);
+			.cc_sethide(false);
+			if ($int37 = 1) {
+				cc_setop(1, "Create <col=ff9040>Buy</col> offer");
+				.cc_setop(1, "Create <col=ff9040>Sell</col> offer");
+				cc_setonop("script805(event_opindex, $int9, 0, $component2, $int3, $component4, $component5, $component6, $component7, $component27)");
+				.cc_setonop("script805(event_opindex, $int9, 1, $component2, $int3, $component4, $component5, $component6, $component7, $component27)");
+				cc_setonmouseover("script229($component8, $int25, $graphic33, null)");
+				.cc_setonmouseover("script229($component8, $int26, $graphic35, null)");
+				cc_setonmouseleave("script229($component8, $int25, $graphic32, $component27)");
+				.cc_setonmouseleave("script229($component8, $int26, $graphic34, $component27)");
+				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component27, $string1, 25, 512)");
+				$string1 = "Offer to SELL items.";
+				.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component27, $string1, 25, 512)");
+				if ((cc_find($component8, $int25) = true) & (.cc_find($component8, $int26) = true)) {
+					cc_sethide(false);
+					.cc_sethide(false);
+					cc_setgraphic($graphic32);
+					.cc_setgraphic($graphic34);
+				}
+			} else {
+				cc_clearops;
+				.cc_clearops;
+				cc_setonop(null);
+				.cc_setonop(null);
+				cc_setonmouseover(null);
+				.cc_setonmouseover(null);
+				cc_setonmouseleave(null);
+				.cc_setonmouseleave(null);
+				cc_setonmouserepeat(null);
+				.cc_setonmouserepeat(null);
+				if ((cc_find($component8, $int25) = true) & (.cc_find($component8, $int26) = true)) {
+					cc_sethide(false);
+					.cc_sethide(false);
+					cc_setgraphic($graphic33);
+					.cc_setgraphic($graphic35);
+				}
+			}
+		}
+		return;
+	} else {
+		$int29 = inv_total($inv0, $obj28);
+		$int36 = 1;
+	}
+} else {
+	$int29 = stockmarket_getoffercount($int9);
+	$obj28 = stockmarket_getofferitem($int9);
+	$int31 = stockmarket_getofferprice($int9);
+	$int30 = stockmarket_getoffercompletedcount($int9);
+	if (stockmarket_getoffertype($int9) = 1) {
+		$string0 = "Sell";
+	} else {
+		$string0 = "Buy";
+	}
+}
+if (cc_find($component8, $int15) = true) {
+	cc_settext($string0);
+}
+if (cc_find($component8, $int10) = true) {
+	cc_sethide(true);
+}
+if (cc_find($component8, $int11) = true) {
+	cc_sethide(true);
+}
+if (cc_find($component8, $int13) = true) {
+	cc_sethide(true);
+}
+if (cc_find($component8, $int14) = true) {
+	cc_sethide(true);
+}
+if (cc_find($component8, $int25) = true) {
+	cc_sethide(true);
+}
+if (cc_find($component8, $int26) = true) {
+	cc_sethide(true);
+}
+def_string $string2 = ",";
+if (cc_find($component8, $int12) = true) {
+	cc_sethide(false);
+	cc_settrans(255);
+	cc_setonmouseover("cc_settrans($component8, $int12, 245, null)");
+	cc_setonmouseleave("cc_settrans($component8, $int12, 255, $component27)");
+	cc_clearops;
+	cc_setop(1, "View offer");
+	if ($int36 = 1) {
+		$string1 = "Collect your items.";
+	} else if (stockmarket_getoffertype($int9) = 1) {
+		if (stockmarket_isofferfinished($int9) = true) {
+			$string1 = "Sold: <oc_name($obj28)><br><~script46($int30, $string2)> / <~script46($int29, $string2)>";
+		} else {
+			$string1 = "Selling: <oc_name($obj28)><br><~script46($int30, $string2)> / <~script46($int29, $string2)>";
+			cc_setop(2, "Abort offer");
+		}
+	} else if (stockmarket_isofferfinished($int9) = true) {
+		$string1 = "Bought: <oc_name($obj28)><br><~script46($int30, $string2)> / <~script46($int29, $string2)>";
+	} else {
+		$string1 = "Buying: <oc_name($obj28)><br><~script46($int30, $string2)> / <~script46($int29, $string2)>";
+		cc_setop(2, "Abort offer");
+	}
+	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component27, $string1, 25, 512)");
+}
+if (cc_find($component8, $int16) = true) {
+	cc_sethide(false);
+}
+if (cc_find($component8, $int17) = true) {
+	cc_sethide(false);
+	cc_setobject($obj28, $int29);
+}
+def_int $int38 = 0;
+def_string $string3 = "";
+def_int $int39 = 0;
+def_int $int40 = 0;
+def_string $string4 = "";
+if (cc_find($component8, $int18) = true) {
+	cc_sethide(false);
+	$string3 = oc_name($obj28);
+	$int38 = cc_getwidth;
+	$int39 = string_length($string3);
+	if (($int39 > 0) & (parawidth($int38, p11_full, $string3) > $int38)) {
+		while (($int39 > 1) & ($int40 = 0)) {
+			$int39 = calc($int39 - 1);
+			$string4 = append(substring($string3, 0, $int39), "...");
+			if (parawidth($int38, p11_full, $string4) <= $int38) {
+				$int40 = 1;
+				$string3 = $string4;
+			}
+		}
+	}
+	cc_settext($string3);
+}
+if (cc_find($component8, $int19) = true) {
+	if ($int31 > 0) {
+		cc_sethide(false);
+		if ($int31 = 1) {
+			cc_settext("1 coin");
+		} else {
+			cc_settext("<~script46($int31, ",")> coins");
+		}
+	} else {
+		cc_sethide(true);
+	}
+}
+if (cc_find($component8, $int20) = true) {
+	cc_sethide(false);
+}
+if (cc_find($component8, $int21) = true) {
+	cc_sethide(false);
+}
+if (cc_find($component8, $int23) = true) {
+	cc_sethide(false);
+}
+if (cc_find($component8, $int24) = true) {
+	cc_sethide(false);
+}
+if (cc_find($component8, $int22) = true) {
+	cc_sethide(false);
+	~script812($int9, $int29, $int30, $int36, $int1);
+}
+return;

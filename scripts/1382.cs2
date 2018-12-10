@@ -1,0 +1,151 @@
+script1382(int $int0, coordgrid $coordgrid1, coordgrid $coordgrid2, int $int3)
+def_int $int4 = coordx($coordgrid1);
+def_int $int5 = coordy($coordgrid1);
+def_int $int6 = coordx($coordgrid2);
+def_int $int7 = coordy($coordgrid2);
+def_int $int8 = calc(($int6 - $int4) + 1);
+def_int $int9 = calc(($int7 - $int5) + 1);
+def_int $int10 = $int8;
+if ($int9 > $int10) {
+	$int10 = $int9;
+}
+def_int $int11 = 32;
+if ($int10 <= 2) {
+	$int11 = calc($int11 * 2);
+} else if ($int10 <= 4) {
+	$int11 = interpolate(0, 3, 0, 2, $int11);
+}
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+if (($int8 >= 7) & ($int9 >= 7)) {
+	$int14 = calc(7 * $int11);
+	$int13 = $int11;
+	$int12 = $int11;
+} else {
+	$int13 = calc(($int5 - 1) * $int11);
+	$int12 = calc(($int4 - 1) * $int11);
+	$int14 = calc(($int10 + 2) * $int11);
+	$int15 = calc((7 + 2) * $int11);
+	$int16 = calc(($int12 + $int14) - $int15);
+	if ($int16 > 0) {
+		$int12 = calc($int12 - $int16);
+		if ($int12 < 0) {
+			$int12 = 0;
+		}
+	}
+	$int16 = calc(($int13 + $int14) - $int15);
+	if ($int16 > 0) {
+		$int13 = calc($int13 - $int16);
+		if ($int13 < 0) {
+			$int13 = 0;
+		}
+	}
+}
+if_setsize($int14, $int14, ^setsize_abs, ^setsize_abs, 422:5);
+def_int $int17 = calc(7 + 2);
+def_int $int18 = pow($int17, 2);
+def_int $int19 = 0;
+def_int $int20 = 0;
+cc_deleteall(422:5);
+def_int $int21 = 0;
+def_int $int22 = 0;
+while ($int22 < $int18) {
+	cc_create(422:5, ^iftype_rectangle, $int21);
+	$int21 = calc($int21 + 1);
+	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
+	$int20 = calc($int22 / $int17);
+	$int19 = calc($int22 % $int17);
+	cc_setposition(calc(($int19 * $int11) - $int12), calc(($int20 * $int11) - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setfill(false);
+	cc_sethide(true);
+	$int22 = calc($int22 + 1);
+}
+$int22 = 0;
+while ($int22 < $int18) {
+	cc_create(422:5, ^iftype_rectangle, $int21);
+	$int21 = calc($int21 + 1);
+	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
+	$int20 = calc($int22 / $int17);
+	$int19 = calc($int22 % $int17);
+	cc_setposition(calc(($int19 * $int11) - $int12), calc(($int20 * $int11) - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setfill(false);
+	cc_sethide(true);
+	$int22 = calc($int22 + 1);
+}
+$int22 = 0;
+while ($int22 < $int18) {
+	cc_create(422:5, ^iftype_rectangle, $int21);
+	$int21 = calc($int21 + 1);
+	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
+	$int20 = calc($int22 / $int17);
+	$int19 = calc($int22 % $int17);
+	cc_setposition(calc(($int19 * $int11) - $int12), calc(($int20 * $int11) - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setfill(false);
+	cc_sethide(true);
+	$int22 = calc($int22 + 1);
+}
+~script1383(1, %varcint141, $int0, $int11, $int12, $int13);
+~script1383(2, %varcint142, $int0, $int11, $int12, $int13);
+~script1383(3, %varcint143, $int0, $int11, $int12, $int13);
+~script1383(4, %varcint144, $int0, $int11, $int12, $int13);
+~script1383(5, %varcint145, $int0, $int11, $int12, $int13);
+~script1383(6, %varcint146, $int0, $int11, $int12, $int13);
+~script1383(7, %varcint147, $int0, $int11, $int12, $int13);
+~script1383(8, %varcint148, $int0, $int11, $int12, $int13);
+~script1383(9, %varcint149, $int0, $int11, $int12, $int13);
+~script1383(10, %varcint150, $int0, $int11, $int12, $int13);
+~script1383(11, %varcint151, $int0, $int11, $int12, $int13);
+~script1383(12, %varcint152, $int0, $int11, $int12, $int13);
+~script1383(13, %varcint153, $int0, $int11, $int12, $int13);
+~script1383(14, %varcint154, $int0, $int11, $int12, $int13);
+~script1383(15, %varcint155, $int0, $int11, $int12, $int13);
+~script1383(16, %varcint156, $int0, $int11, $int12, $int13);
+~script1383(17, %varcint157, $int0, $int11, $int12, $int13);
+~script1383(18, %varcint158, $int0, $int11, $int12, $int13);
+~script1383(19, %varcint159, $int0, $int11, $int12, $int13);
+~script1383(20, %varcint160, $int0, $int11, $int12, $int13);
+~script1383(21, %varcint161, $int0, $int11, $int12, $int13);
+~script1383(22, %varcint162, $int0, $int11, $int12, $int13);
+~script1383(23, %varcint163, $int0, $int11, $int12, $int13);
+~script1383(24, %varcint164, $int0, $int11, $int12, $int13);
+~script1383(25, %varcint165, $int0, $int11, $int12, $int13);
+~script1383(26, %varcint166, $int0, $int11, $int12, $int13);
+~script1383(27, %varcint167, $int0, $int11, $int12, $int13);
+~script1383(28, %varcint168, $int0, $int11, $int12, $int13);
+~script1383(29, %varcint169, $int0, $int11, $int12, $int13);
+~script1383(30, %varcint170, $int0, $int11, $int12, $int13);
+~script1383(31, %varcint174, $int0, $int11, $int12, $int13);
+~script1383(32, %varcint176, $int0, $int11, $int12, $int13);
+~script1383(33, %varcint177, $int0, $int11, $int12, $int13);
+def_component $component23 = enum(int, component, 1424, -1);
+if_setsize($int11, $int11, ^setsize_abs, ^setsize_abs, $component23);
+if_setonvartransmit("poh_viewer_preview_position($component23, $int17, $int18, $int11, $int12, $int13){780}", 422:40);
+cc_deleteall($component23);
+cc_create($component23, ^iftype_graphic, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setgraphic(null);
+cc_create($component23, ^iftype_rectangle, 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setcolour(^yellow);
+cc_setfill(false);
+cc_settrans(255);
+cc_create($component23, ^iftype_rectangle, 2);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
+cc_setcolour(^yellow);
+cc_setfill(false);
+cc_settrans(255);
+cc_create($component23, ^iftype_rectangle, 3);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(6, 6, ^setsize_minus, ^setsize_minus);
+cc_setcolour(^yellow);
+cc_setfill(false);
+cc_settrans(255);
+if_sethide(true, $component23);
+~poh_viewer_setlevel($int3, coordz($coordgrid1), coordz($coordgrid2));
+return;

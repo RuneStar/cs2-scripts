@@ -1,0 +1,63 @@
+[clientscript,deadmanloot_onload]()
+cc_deleteall(234:14);
+cc_deleteall(234:15);
+def_int $int0 = 0;
+while ($int0 < 5) {
+	cc_create(234:14, ^iftype_graphic, $int0);
+	cc_setsize(41, 40, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int0 * 40), 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setopbase(tostring($int0));
+	cc_settiling(false);
+	$int0 = calc($int0 + 1);
+}
+$int0 = 0;
+while ($int0 < 5) {
+	cc_create(234:14, ^iftype_graphic, calc(5 + $int0));
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(($int0 * 40) + 3), 4, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject_nonum(bank_key_13302, 1);
+	cc_setgraphicshadow(0x111111);
+	cc_setoutline(1);
+	$int0 = calc($int0 + 1);
+}
+$int0 = 0;
+while ($int0 < 5) {
+	cc_create(234:14, ^iftype_text, calc((5 * 2) + $int0));
+	cc_setsize(41, 38, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int0 * 40), 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p11_full);
+	cc_setcolour(^white);
+	cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+	cc_settextshadow(true);
+	$int0 = calc($int0 + 1);
+}
+def_int $int1 = 0;
+def_int $int2 = 0;
+while ($int1 < 5) {
+	while ($int2 < 28) {
+		cc_create(234:15, ^iftype_graphic, calc(($int1 * 28) + $int2));
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(($int2 % 7) * 39), calc(($int2 / 7) * 38), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphicshadow(0x111111);
+		cc_setoutline(1);
+		cc_setop(1, "Bank 1");
+		cc_setop(2, "Bank 5");
+		cc_setop(3, "Bank 10");
+		cc_setop(4, "Bank X");
+		cc_setop(5, "Bank All");
+		cc_setop(6, "Withdraw 1");
+		cc_setop(7, "Withdraw 5");
+		cc_setop(8, "Withdraw 10");
+		cc_setop(9, "Withdraw X");
+		cc_setop(10, "Withdraw All");
+		$int2 = calc($int2 + 1);
+	}
+	$int1 = calc($int1 + 1);
+	$int2 = 0;
+}
+~deadmanloot_inv_switch;
+~deadmanloot_itemnote_update;
+if_setonvartransmit("deadmanloot_itemnote_transmit(){1299}", 234:25);
+if_setonvartransmit("deadmanloot_tab_transmit(){1299}", 234:15);
+if_setoninvtransmit("deadmanloot_inv_transmit(){558, 559, 560, 561, 562}", 234:15);
+return;

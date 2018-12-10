@@ -1,0 +1,61 @@
+[proc,shop_main_update](component $component0, int $int1, inv $inv2, obj $obj3, int $int4)
+def_obj $obj5 = null;
+def_int $int6 = -1;
+def_int $int7 = 0;
+while ($int7 < $int1) {
+	if (cc_find($component0, calc($int7 + 1)) = true) {
+		$obj5 = inv_getobj($inv2, $int7);
+		if ($obj5 ! null) {
+			cc_sethide(false);
+			cc_setobject($obj5, inv_getnum($inv2, $int7));
+			if (~on_mobile = true) {
+				cc_setop(1, ~script2228);
+			} else {
+				cc_setop(1, "Value");
+			}
+			if (%varbit6348 > 0) {
+				cc_setop(6, "Value");
+			}
+			if ($obj5 = $obj3) {
+				if ((($int4 > 1) & ($int4 ! 5)) & ($int4 ! 10)) {
+					cc_setop(9, "Buy <tostring($int4)>");
+				} else {
+					cc_setop(9, "");
+				}
+				if (.cc_find(300:16, 0) = true) {
+					.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
+					.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+					.cc_setgraphic("prayerglow");
+					.cc_settrans(180);
+				}
+			} else {
+				cc_setop(9, "");
+			}
+			cc_setopbase("<col=ff9040><oc_name($obj5)></col>");
+			$int6 = cc_gety;
+		} else {
+			cc_sethide(true);
+			cc_setobject_nonum(6512, 1);
+			cc_setopbase("");
+			cc_settrans(0);
+			cc_setontimer(null);
+		}
+	}
+	$int7 = calc($int7 + 1);
+}
+if ($int6 ! -1) {
+	$int6 = calc($int6 + 32);
+} else {
+	$int6 = 0;
+}
+if ($int6 > if_getheight($component0)) {
+	if_setscrollsize(0, $int6, $component0);
+	~scrollbar_resize(300:17, $component0, if_getscrolly($component0));
+	if_sethide(false, 300:17);
+} else {
+	if_setscrollpos(0, 0, 300:16);
+	if_setscrollsize(0, 0, 300:16);
+	~scrollbar_resize(300:17, $component0, 0);
+	if_sethide(true, 300:17);
+}
+return;

@@ -1,0 +1,13 @@
+script753(int $int0, int $int1, string $string0)
+cc_create(162:53, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int0, $int1, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(^black);
+cc_settext($string0);
+if_setscrollpos(0, 0, 162:53);
+if_setscrollsize(0, 0, 162:53);
+~scrollbar_resize(162:54, 162:53, 0);
+return;

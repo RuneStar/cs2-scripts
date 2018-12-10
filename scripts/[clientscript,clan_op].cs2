@@ -1,0 +1,14 @@
+[clientscript,clan_op](int $int0, string $string0)
+def_string $string1 = removetags($string0);
+if (($int0 = 6) & (~script1942 = 0)) {
+	~clan_sendkick($string1);
+} else if ($int0 = 7) {
+	friend_add($string1);
+} else if ($int0 = 8) {
+	ignore_add($string1);
+} else if ($int0 = 9) {
+	friend_del($string1);
+} else if ($int0 = 10) {
+	ignore_del($string1);
+}
+return;

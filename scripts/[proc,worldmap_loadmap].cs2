@@ -1,0 +1,27 @@
+[proc,worldmap_loadmap](maparea $maparea0, coordgrid $coordgrid1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+cc_settext(worldmap_getmapname($maparea0));
+if (worldmap_getcurrentmap ! $maparea0) {
+	worldmap_setmap($maparea0);
+}
+$coordgrid1 = ~worldmap_findcoordinmap($maparea0, $coordgrid1);
+if ($coordgrid1 ! null) {
+	worldmap_jumptosourcecoord_instant($coordgrid1);
+}
+if_setontimer("script1713($maparea0, $component2, cc_getid, $component3, $component4, $component5, $component6, $component7, $component8)", $component2);
+~worldmap_overlay_clear($component4, $component6);
+def_int $int9 = 0;
+def_int $int10 = 0;
+$int9, $int10 = worldmap_getconfigsize($maparea0);
+$int10 = ~max($int10, 1);
+$int9 = ~max($int9, 1);
+def_int $int11 = 200;
+def_int $int12 = 200;
+if ($int9 > $int10) {
+	$int12 = ~max(scale($int10, $int9, $int11), 50);
+} else {
+	$int11 = ~max(scale($int9, $int10, $int12), 50);
+}
+if_setsize($int11, $int12, ^setsize_abs, ^setsize_abs, $component5);
+if_setonclickrepeat("script1714(event_mousex, event_mousey, -1, event_com, $int11, $int12, $int9, $int10, worldmap_getconfigbounds($maparea0))", $component6);
+~worldmap_applyzoom(worldmap_getconfigzoom($maparea0), $component7, $component8);
+return;

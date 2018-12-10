@@ -1,0 +1,13 @@
+[clientscript,music_optionbuttons_setloop](int $int0, component $component1, component $component2, component $component3)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2266, 1, 0);
+	if (%varbit4137 <= 0) {
+		%varbit4137 = 1;
+	} else {
+		%varbit4137 = 0;
+	}
+	~music_optionbuttons($component1, $component2, $component3);
+	return;
+}

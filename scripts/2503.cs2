@@ -1,0 +1,43 @@
+script2503()
+def_component $component0 = 109:2;
+def_component $component1 = 109:3;
+def_component $component2 = 109:7;
+def_component $component3 = 109:5;
+def_component $component4 = 109:6;
+def_component $component5 = 109:12;
+def_component $component6 = 109:10;
+def_component $component7 = 109:11;
+def_string $string0 = "Membership: <col=ff0000>None</col>";
+def_string $string1 = "Upgrade Now";
+def_graphic $graphic8 = 2151;
+def_string $string2 = "Bond Pouch";
+def_graphic $graphic9 = 1705;
+if ((%varcint103 = 1) & (%var1780 > 0)) {
+	if (%var1780 > 99999) {
+		$string0 = "Membership: 99999+ days left";
+	} else if (%var1780 = 1) {
+		if (%varcint226 = 0) {
+			$string0 = "Membership: <col=ff0000>1 day left</col>";
+		} else {
+			$string0 = "Membership: 1 day left";
+		}
+	} else if ((%var1780 <= 3) & (%varcint226 = 0)) {
+		$string0 = "Membership: <col=ff0000><tostring(%var1780)> days left</col>";
+	} else {
+		$string0 = "Membership: <tostring(%var1780)> days left";
+	}
+	$string1 = "Open Store";
+	$graphic8 = 1704;
+} else if (%varbit6713 = 0) {
+	$string2 = "View Benefits";
+	$graphic9 = 2150;
+}
+if_settext($string2, $component5);
+if_setgraphic($graphic9, $component6);
+if_setgraphic($graphic9, $component7);
+if_settext($string0, $component0);
+if_setop(1, $string1, $component1);
+if_settext($string1, $component2);
+if_setgraphic($graphic8, $component3);
+if_setgraphic($graphic8, $component4);
+return;

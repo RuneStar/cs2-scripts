@@ -1,0 +1,22 @@
+[proc,bankpin_button_setup](component $component0, int $int1, int $int2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setsize(64, 64, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(255);
+.cc_create($component0, ^iftype_text, 1);
+.cc_setsize(10, 15, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc(5 + randominc((if_getwidth($component0) - 15))), calc(5 + randominc((if_getheight($component0) - 20))), ^setpos_abs_left, ^setpos_abs_top);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextfont(b12_full);
+.cc_setcolour(0xff7f00);
+.cc_settextshadow(false);
+.cc_settext("");
+.cc_setontimer("script683(event_com, event_comid, $int1, calc(clientclock + 5))");
+cc_setonmouserepeat("bankpin_button_mouseover(false, event_com, event_comid, .cc_getid)");
+cc_setonmouseleave("bankpin_button_mouseover(true, event_com, event_comid, .cc_getid)");
+cc_setop(1, "Select");
+cc_setonop("bankpin_button_op($int1, $int2, $int3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20)");
+return;

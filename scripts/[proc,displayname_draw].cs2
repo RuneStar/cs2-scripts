@@ -1,0 +1,30 @@
+[proc,displayname_draw](component $component0, component $component1, component $component2)
+if (%varbit5605 = 1) {
+	~displayname_statusstatic($component0);
+	~displayname_button_init($component1, "Look up name");
+	~displayname_disablebutton($component2, "---");
+} else if (%varbit5605 = 2) {
+	if_setontimer("displayname_statusflash($component0)", $component0);
+	~displayname_disablebutton($component1, "Look up name");
+	~displayname_disablebutton($component2, "---");
+} else if (%varbit5605 = 4) {
+	~displayname_statusstatic($component0);
+	~displayname_button_init($component1, "Another name");
+	if ((%varbit5606 = 1) & (%varbit5607 = 0)) {
+		if (string_length(%varcstring137) <= 0) {
+			%varcstring137 = "-";
+		}
+		~displayname_button_init($component2, "<col=00ff00><%varcstring137></col>");
+	} else {
+		~displayname_disablebutton($component2, "---");
+	}
+} else if (%varbit5605 = 5) {
+	if_setontimer("displayname_statusflash($component0)", $component0);
+	~displayname_disablebutton($component1, "Another name");
+	~displayname_disablebutton($component2, "---");
+} else {
+	if_setontimer("displayname_statusflash($component0)", $component0);
+	~displayname_disablebutton($component1, "Look up name");
+	~displayname_disablebutton($component2, "---");
+}
+return;

@@ -1,0 +1,25 @@
+[clientscript,duel_switch_setup_buttons](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+def_string $string0 = "To view your opponent's backpack and worn inventories the option 'Show Inventories' must be enabled.";
+if (testbit(%var286, 3) = false) {
+	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component8, $string0, 50, 250)", $component2);
+	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component8, $string0, 50, 250)", $component3);
+	if_setonmouseover(null, $component2);
+	if_setonmouseover(null, $component3);
+	if_setonop("script2483()", $component2);
+	if_setonop("script2483()", $component3);
+} else {
+	$string0 = "Opponent's backpack inventory";
+	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component8, $string0, 50, 250)", $component2);
+	$string0 = "Opponent's worn inventory";
+	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component8, $string0, 50, 250)", $component3);
+	if_setonmouseover("v2_stone_button_in(event_com)", $component2);
+	if_setonmouseover("v2_stone_button_in(event_com)", $component3);
+	if_setonop("duel_switch_to_inv(event_com, $component6, $component7, $component4, $component5, $component1, $component2, $component3, $component8)", $component2);
+	if_setonop("script2486(event_com, $component6, $component7, $component4, $component5, $component1, $component2, $component3, $component8)", $component3);
+}
+~duel_switch_buttons($component0, $component1, $component2, $component3, $component8);
+if_sethide(false, $component5);
+if_sethide(true, $component6);
+if_sethide(true, $component7);
+if_sethide(true, $component4);
+return;

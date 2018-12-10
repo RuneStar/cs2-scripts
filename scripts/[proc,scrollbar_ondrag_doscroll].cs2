@@ -1,0 +1,8 @@
+[proc,scrollbar_ondrag_doscroll](component $component0, component $component1, int $int2, int $int3)
+def_int $int4 = calc(if_getscrollheight($component1) - if_getheight($component1));
+$int2 = ~max(~min($int2, $int4), 0);
+if_setscrollpos(0, $int2, $component1);
+if (($int3 = 1) & (cc_find($component0, 1) = true)) {
+	~scrollbar_vertical_setdragger($component0, $component1);
+}
+return;

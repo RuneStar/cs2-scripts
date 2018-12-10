@@ -1,0 +1,78 @@
+script2615(component $component0)
+switch ($component0) {
+	case 218:27 :
+		if (%varbit4744 = 1) {
+			if_setop(1, "", $component0);
+			if_setop(3, "Cast", $component0);
+		} else {
+			if_setop(1, "Cast", $component0);
+			if_setop(3, "", $component0);
+		}
+	case 218:30 :
+		if ((%varbit4560 = 1) & (map_members = true)) {
+			if_setop(1, "", $component0);
+			if_setop(3, "Cast", $component0);
+		} else {
+			if_setop(1, "Cast", $component0);
+			if_setop(3, "", $component0);
+		}
+	case 218:94 :
+		if (%varbit6284 = 1) {
+			if_setop(10, "Disable warning", $component0);
+		} else {
+			if_setop(10, "Enable warning", $component0);
+		}
+	case 218:95 :
+		if (%varbit6285 = 1) {
+			if_setop(10, "Disable warning", $component0);
+		} else {
+			if_setop(10, "Enable warning", $component0);
+		}
+	case 218:19 :
+		if ((%varbit4585 = 1) & (map_members = true)) {
+			if_setop(1, "", $component0);
+			if_setop(3, "Cast", $component0);
+		} else {
+			if_setop(1, "Cast", $component0);
+			if_setop(3, "", $component0);
+		}
+	case 218:41 :
+		if ((%varbit4548 = 1) & (map_members = true)) {
+			if_setop(1, "", $component0);
+			if_setop(3, "Cast", $component0);
+		} else {
+			if_setop(1, "Cast", $component0);
+			if_setop(3, "", $component0);
+		}
+	case 218:4, 218:98, 218:99, 218:143 :
+		if (%varbit1771 = 1) {
+			if_setop(10, "Animation", $component0);
+		} else {
+			if_setop(10, "", $component0);
+		}
+	case 218:96 :
+		if (%varbit6286 = 1) {
+			if_setop(10, "Disable warning", $component0);
+		} else {
+			if_setop(10, "Enable warning", $component0);
+		}
+	case 218:97 :
+		if (%varbit6287 = 1) {
+			if_setop(10, "Disable warning", $component0);
+		} else {
+			if_setop(10, "Enable warning", $component0);
+		}
+	case 218:103 :
+		if ((%varbit5006 = 10) & (%varbit5037 = 1)) {
+			if_setop(2, "Steve", $component0);
+		} else {
+			if_setop(2, enum(int, string, 1702, %varbit5006), $component0);
+		}
+	case 218:68 :
+		if (%varbit236 = 1) {
+			if_setop(10, "Disable warning", $component0);
+		} else {
+			if_setop(10, "Enable warning", $component0);
+		}
+}
+return;

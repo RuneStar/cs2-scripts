@@ -1,0 +1,16 @@
+[proc,skillmulti_itembutton_init](int $int0, obj $obj1, component $component2, int $int3, int $int4, int $int5, int $int6, string $string0)
+~skillmulti_itembutton_draw(0, $obj1, $component2, $int5, $int6);
+if_setonmouseover("skillmulti_itembutton_hover(true, $obj1, $component2, $int5, $int6)", $component2);
+if_setonmouseleave("skillmulti_itembutton_hover(false, $obj1, $component2, $int5, $int6)", $component2);
+def_string $string1 = enum(int, string, 1812, $int0);
+def_string $string2 = $string0;
+if (string_length($string1) > 0) {
+	$string2 = append("<col=7f7f7f>(<$string1>)</col> ", $string2);
+}
+if_setonmouserepeat("tooltip_mouserepeat($component2, -1, 270:24, $string2, 25, 479)", $component2);
+if_setonop("skillmulti_itembutton_op(event_opindex, $obj1, $component2, $string1, $int3, $int5, $int6)", $component2);
+if_setonkey("skillmulti_itembutton_key(event_keypressed, event_keytyped, $obj1, $component2, $string1, $int3, $int5, $int6)", $component2);
+if_setontimer(null, $component2);
+if_setop(1, enum(int, string, 1809, $int4), $component2);
+if_setopbase("<col=ff9040><$string0></col>", $component2);
+return;

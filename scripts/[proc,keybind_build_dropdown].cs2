@@ -1,0 +1,23 @@
+[proc,keybind_build_dropdown](component $component0, component $component1, component $component2, int $int3)
+cc_deleteall($component2);
+def_int $int4 = 0;
+def_int $int5 = 5;
+while (($int4 = 0) | (enum(int, int, 1160, $int4) ! 0)) {
+	cc_create($component2, ^iftype_text, $int4);
+	cc_settext(enum(int, string, 1159, $int4));
+	cc_setsize(40, 15, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(5 + (($int4 % 2) * 40)), $int5, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p12_full);
+	cc_settextshadow(false);
+	cc_setcolour(0xff981f);
+	cc_setop(1, "Select");
+	cc_setonmouseover("script85(event_com, event_comid, 16777215)");
+	cc_setonmouseleave("script85(event_com, event_comid, 16747039)");
+	cc_setonop("keybind_dropdown_select(event_com, event_comid, $component1)");
+	$int4 = calc($int4 + 1);
+	if (($int4 ! 0) & (calc($int4 % 2) = 0)) {
+		$int5 = calc($int5 + 15);
+	}
+}
+if_setsize(100, calc($int5 + 5), ^setsize_abs, ^setsize_abs, $component0);
+return;

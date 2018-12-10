@@ -1,0 +1,46 @@
+[clientscript,rune_pouch_init](component $component0, component $component1, component $component2)
+cc_deleteall($component1);
+def_int $int3 = 7;
+cc_create($component1, ^iftype_graphic, 0);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, 25, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_setdragdeadzone(5);
+cc_setdragdeadtime(5);
+$int3 = calc(($int3 + 36) + 20);
+cc_create($component1, ^iftype_graphic, 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, 25, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_setdragdeadzone(5);
+cc_setdragdeadtime(5);
+$int3 = calc(($int3 + 36) + 20);
+cc_create($component1, ^iftype_graphic, 2);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, 25, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_setdragdeadzone(5);
+cc_setdragdeadtime(5);
+~script666($component1);
+if_setonvartransmit("script665($component1){1139, 1140}", $component0);
+cc_deleteall($component2);
+$int3 = calc(((if_getwidth($component2) - (10 + (7 * 36))) / 6) + 36);
+def_int $int4 = calc(((if_getheight($component2) - (30 + (4 * 32))) / 3) + 32);
+def_int $int5 = inv_size(93);
+def_int $int6 = 0;
+while ($int6 < $int5) {
+	cc_create($component2, ^iftype_graphic, $int6);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(5 + (($int6 % 7) * $int3)), calc(25 + (($int6 / 7) * $int4)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$int6 = calc($int6 + 1);
+}
+~script670($component2);
+if_setoninvtransmit("script669($component2){93}", $component0);
+return;

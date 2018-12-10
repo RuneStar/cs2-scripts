@@ -1,0 +1,12 @@
+script1759()(int)
+if (testbit(%varbit5640, 4) = true) {
+	return(0);
+} else {
+	def_int $int0 = calc(clientclock % 40);
+	if ($int0 < 20) {
+		return(scale(pow($int0, 2), 400, 8192));
+	} else {
+		$int0 = calc(40 - $int0);
+		return(calc(16384 - scale(pow($int0, 2), 400, 8192)));
+	}
+}

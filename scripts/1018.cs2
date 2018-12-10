@@ -1,0 +1,17 @@
+script1018(int $int0, int $colour1, component $component2, string $string0)(int)
+def_int $int3 = 0;
+if ($int0 = 1) {
+	$int3 = ~script198($component2);
+} else {
+	$int3 = ~script208($component2);
+}
+if_setop(1, $string0, $component2);
+cc_create($component2, ^iftype_text, $int3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour($colour1);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+return($int3);

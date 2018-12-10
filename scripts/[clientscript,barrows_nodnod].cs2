@@ -1,0 +1,6 @@
+[clientscript,barrows_nodnod](component $component0, model $model1)
+if_sethide(false, $component0);
+if_setmodel($model1, $component0);
+if_setmodelanim(2085, $component0);
+if_setontimer("barrows_nodnodoff($component0, calc(clientclock + 120))", $component0);
+return;

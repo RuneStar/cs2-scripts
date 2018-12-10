@@ -1,0 +1,13 @@
+[clientscript,nzone_game_hide](component $component0, coordgrid $coordgrid1)
+def_int $int2 = coordx(coord);
+def_int $int3 = coordx($coordgrid1);
+if (($int2 >= $int3) & ($int2 < calc($int3 + 128))) {
+	$int3 = coordy($coordgrid1);
+	$int2 = coordy(coord);
+	if (($int2 >= $int3) & ($int2 < calc($int3 + 128))) {
+		if_sethide(false, $component0);
+		return;
+	}
+}
+if_sethide(true, $component0);
+return;

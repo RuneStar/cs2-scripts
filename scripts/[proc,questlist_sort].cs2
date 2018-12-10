@@ -1,0 +1,27 @@
+[proc,questlist_sort](int $int0, int $int1, int $int2, enum $enum3, int $int4)
+def_int $int5 = calc(($int1 + $int2) / 2);
+def_int $int6 = $array0($int5);
+$array0($int5) = $array0($int2);
+$array0($int2) = $int6;
+def_int $int7 = $int1;
+def_int $int8 = $int1;
+def_int $int9 = -1;
+def_string $string0 = "";
+while ($int8 < $int2) {
+	if (compare("<tostring(calc($array0($int8) / $int4))><struct_param(enum(int, struct, $enum3, calc($array0($int8) % $int4)), 579)>", "<tostring(calc($int6 / $int4))><struct_param(enum(int, struct, $enum3, calc($int6 % $int4)), 579)>") <= 0) {
+		$int9 = $array0($int8);
+		$array0($int8) = $array0($int7);
+		$array0($int7) = $int9;
+		$int7 = calc($int7 + 1);
+	}
+	$int8 = calc($int8 + 1);
+}
+$array0($int2) = $array0($int7);
+$array0($int7) = $int6;
+if ($int1 < calc($int7 - 1)) {
+	~questlist_sort(0, $int1, calc($int7 - 1), $enum3, $int4);
+}
+if (calc($int7 + 1) < $int2) {
+	~questlist_sort(0, calc($int7 + 1), $int2, $enum3, $int4);
+}
+return;

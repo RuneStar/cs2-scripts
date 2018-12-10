@@ -1,0 +1,12 @@
+[proc,vm_kudos_update]()
+def_string $string0 = "Museum Kudos:";
+def_string $string1 = "<tostring(%varbit3637)>/<tostring(225)>";
+if (%varbit3637 >= 225) {
+	$string1 = "<col=00ff00><$string1></col>";
+}
+def_int $int0 = calc((parawidth(512, b12_full, $string0) + 5) + parawidth(512, p12_full, $string1));
+cc_setsize($int0, 17, ^setsize_abs, ^setsize_abs);
+.cc_setsize($int0, 17, ^setsize_abs, ^setsize_abs);
+cc_settext($string0);
+.cc_settext($string1);
+return;

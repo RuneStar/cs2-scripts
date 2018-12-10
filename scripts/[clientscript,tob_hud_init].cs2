@@ -1,0 +1,25 @@
+[clientscript,tob_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23)
+~script2249($component3, setbit(0, 3));
+~script1486($component4, ^setpos_abs_left, 1, 0);
+~script1486($component5, ^setpos_abs_centre, 1, 0);
+~script1490($component1);
+cc_deleteall($component9);
+cc_create($component9, ^iftype_rectangle, 0);
+.cc_create($component9, ^iftype_rectangle, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setfill(true);
+.cc_setfill(true);
+~tob_hud_status_init($component12, $component13);
+~tob_hud_status_init($component14, $component15);
+~tob_hud_status_init($component16, $component17);
+~tob_hud_status_init($component18, $component19);
+~tob_hud_status_init($component20, $component21);
+~tob_hud_draw($component0, $component2, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23);
+if_setonvartransmit("tob_hud_draw(true, $component0, $component2, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23){1745, 1737, 1227, 1055}", $component0);
+if_setonresize("tob_hud_draw(true, $component0, $component2, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23)", $component0);
+if_setonsubchange("tob_hud_draw(true, $component0, $component2, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23)", $component0);
+if_setontimer("tob_hud_draw(false, $component0, $component2, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23)", $component0);
+return;

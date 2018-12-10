@@ -1,0 +1,15 @@
+script501(int $int0, int $int1)
+def_int $int2 = 0;
+if ($int1 = 1) {
+	$int2 = %var261;
+} else if ($int1 = 2) {
+	$int2 = %var262;
+} else if ($int1 = 3) {
+	$int2 = %var263;
+}
+if ($int2 = $int0) {
+	cc_settrans(0);
+} else {
+	cc_settrans(255);
+}
+return;

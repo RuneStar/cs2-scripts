@@ -1,0 +1,14 @@
+[proc,options_gfx_windowmode](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5)
+if ($int1 = 1) {
+	if_settrans(140, $component2);
+	if_settrans(140, $component3);
+	if_settrans(140, $component4);
+	if_settrans(140, $component5);
+} else {
+	if_settrans(0, $component2);
+	if_settrans(0, $component3);
+	if_settrans(0, $component4);
+	if_settrans(0, $component5);
+}
+if_setonsubchange("options_gfx_windowmode_check($component0, $int1, $component2, $component3, $component4, $component5)", $component0);
+return;
