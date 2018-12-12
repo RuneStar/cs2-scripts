@@ -1,37 +1,37 @@
 // 713
 [proc,stonebox](component $component0, int $int1, int $int2)(int)
 if ($int1 = 1) {
-	~create_graphic($component0, $int2, 824, 0, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,4", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 825, 0, 0, ^setpos_abs_right, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,5", 0, 0, ^setpos_abs_right, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 826, 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 32, 32, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,6", 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 32, 32, ^setsize_abs, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 827, 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 32, 32, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,7", 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 32, 32, ^setsize_abs, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 820, 0, -13, ^setpos_abs_centre, ^setpos_abs_top, 64, 32, ^setsize_minus, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,0", 0, -13, ^setpos_abs_centre, ^setpos_abs_top, 64, 32, ^setsize_minus, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 822, 0, -12, ^setpos_abs_centre, ^setpos_abs_bottom, 64, 32, ^setsize_minus, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,2", 0, -12, ^setpos_abs_centre, ^setpos_abs_bottom, 64, 32, ^setsize_minus, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 821, -13, 0, ^setpos_abs_left, ^setpos_abs_centre, 32, 64, ^setsize_abs, ^setsize_minus);
+	~create_graphic($component0, $int2, "v2_stone_borders,1", -13, 0, ^setpos_abs_left, ^setpos_abs_centre, 32, 64, ^setsize_abs, ^setsize_minus);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 823, -12, 0, ^setpos_abs_right, ^setpos_abs_centre, 32, 64, ^setsize_abs, ^setsize_minus);
+	~create_graphic($component0, $int2, "v2_stone_borders,3", -12, 0, ^setpos_abs_right, ^setpos_abs_centre, 32, 64, ^setsize_abs, ^setsize_minus);
 } else {
-	~create_graphic($component0, $int2, 846, 0, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,18", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 847, 0, 0, ^setpos_abs_right, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,19", 0, 0, ^setpos_abs_right, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 848, 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 32, 32, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,20", 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 32, 32, ^setsize_abs, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 849, 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 32, 32, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,21", 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 32, 32, ^setsize_abs, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 828, 0, -14, ^setpos_abs_centre, ^setpos_abs_top, 64, 32, ^setsize_minus, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,8", 0, -14, ^setpos_abs_centre, ^setpos_abs_top, 64, 32, ^setsize_minus, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 828, 0, -12, ^setpos_abs_centre, ^setpos_abs_bottom, 64, 32, ^setsize_minus, ^setsize_abs);
+	~create_graphic($component0, $int2, "v2_stone_borders,8", 0, -12, ^setpos_abs_centre, ^setpos_abs_bottom, 64, 32, ^setsize_minus, ^setsize_abs);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 841, -14, 0, ^setpos_abs_left, ^setpos_abs_centre, 32, 64, ^setsize_abs, ^setsize_minus);
+	~create_graphic($component0, $int2, "v2_stone_borders,13", -14, 0, ^setpos_abs_left, ^setpos_abs_centre, 32, 64, ^setsize_abs, ^setsize_minus);
 	$int2 = calc($int2 + 1);
-	~create_graphic($component0, $int2, 841, -12, 0, ^setpos_abs_right, ^setpos_abs_centre, 32, 64, ^setsize_abs, ^setsize_minus);
+	~create_graphic($component0, $int2, "v2_stone_borders,13", -12, 0, ^setpos_abs_right, ^setpos_abs_centre, 32, 64, ^setsize_abs, ^setsize_minus);
 }
 $int2 = calc($int2 + 1);
 return($int2);
