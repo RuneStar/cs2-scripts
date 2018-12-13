@@ -1,0 +1,6 @@
+// 2736
+[clientscript,xmas18_cow_init](component $component0, component $component1, component $component2, int $int3, int $int4)
+if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $component2);
+if_setontimer("xmas18_rotate_cow($component1)", $component1);
+if_setontimer("script2737($component2, clientclock, $component0)", $component0);
+return;
