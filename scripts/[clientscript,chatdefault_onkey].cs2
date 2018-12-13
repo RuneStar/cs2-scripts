@@ -22,13 +22,11 @@ if ((if_gethide(162:55) = true) | (if_gethide(162:56) = true)) {
 			if ($int2 > 0) {
 				if ((string_indexof_string(%varcstring1, "/", 0) = 0) | ($int4 = 1)) {
 					if (clan_getchatcount > 0) {
-						if ($int2 <= 1) {
+						if (($int2 <= 1) & ($int4 = 0)) {
 							return;
 						} else {
 							if (%varbit4394 = 1) {
-								if (clan_getchatcount > 0) {
-									clan_leavechat;
-								}
+								clan_leavechat;
 							} else {
 								if ($int4 = 1) {
 									%varcstring1 = append("/", %varcstring1);

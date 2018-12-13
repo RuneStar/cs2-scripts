@@ -1,0 +1,38 @@
+// 2738
+script2738()
+def_component $component0 = 623:8;
+def_component $component1 = 623:9;
+def_component $component2 = 623:7;
+def_component $component3 = 623:6;
+def_component $component4 = 623:10;
+def_component $component5 = 623:11;
+def_component $component6 = 623:12;
+def_component $component7 = 623:13;
+def_component $component8 = 623:14;
+def_component $component9 = 623:15;
+def_int $int10 = calc(clientclock % 150);
+def_int $int11 = $int10;
+if (calc(2 * $int10) > 150) {
+	$int11 = calc(150 - $int10);
+}
+$int11 = calc(2 * $int11);
+if_setposition($int11, 0, ^setpos_abs_centre, ^setpos_abs_centre, 623:5);
+if ($int11 < 0) {
+	if_setsize(interpolate(0, 40, 0, 150, $int11), 40, ^setsize_abs, ^setsize_abs, $component8);
+} else {
+	if_setsize(interpolate(0, 40, 0, -150, $int11), 40, ^setsize_abs, ^setsize_abs, $component8);
+}
+if ($int11 > 0) {
+	if_setsize(interpolate(0, 20, 0, 150, $int11), 60, ^setsize_abs, ^setsize_abs, $component9);
+} else {
+	if_setsize(interpolate(0, 20, 0, -150, $int11), 60, ^setsize_abs, ^setsize_abs, $component9);
+}
+if_setsize(interpolate(0, 40, -150, 150, $int11), 30, ^setsize_abs, ^setsize_abs, $component0);
+if_setsize(interpolate(40, 0, -150, 150, $int11), 30, ^setsize_abs, ^setsize_abs, $component1);
+if_setsize(interpolate(0, 100, -150, 150, $int11), 80, ^setsize_abs, ^setsize_abs, $component4);
+if_setsize(interpolate(100, 0, -150, 150, $int11), 80, ^setsize_abs, ^setsize_abs, $component5);
+if_setsize(interpolate(0, 80, -150, 150, $int11), 80, ^setsize_abs, ^setsize_abs, $component6);
+if_setsize(interpolate(80, 0, -150, 150, $int11), 80, ^setsize_abs, ^setsize_abs, $component7);
+if_setsize(interpolate(0, 40, -150, 150, $int11), 100, ^setsize_abs, ^setsize_abs, $component2);
+if_setsize(interpolate(40, 0, -150, 150, $int11), 100, ^setsize_abs, ^setsize_abs, $component3);
+return;

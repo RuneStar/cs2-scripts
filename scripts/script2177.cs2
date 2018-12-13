@@ -1,3 +1,7 @@
 // 2177
 script2177(int $int0)(int)
-return(0);
+if ((testbit($int0, 25) = true) & (testbit($int0, 23) = true)) {
+	return(1);
+} else {
+	return(0);
+}

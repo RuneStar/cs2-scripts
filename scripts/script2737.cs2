@@ -1,0 +1,14 @@
+// 2737
+script2737(component $component0, int $int1, component $component2)
+if (calc(clientclock - $int1) < 150) {
+	return;
+} else {
+	if (if_getwidth($component0) < if_getwidth($component2)) {
+		if_setsize(calc(if_getwidth($component0) + 3), 0, ^setsize_abs, ^setsize_minus, $component0);
+	} else {
+		if_setontimer(null, $component2);
+		if_settext("Pin the tail on the cow...", 623:17);
+		if_setontimer("script2738()", 623:5);
+	}
+	return;
+}

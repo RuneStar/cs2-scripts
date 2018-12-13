@@ -1,3 +1,7 @@
 // 445
 script445(int $int0)(int)
-return(0);
+if ((testbit($int0, 25) = true) & (testbit($int0, 23) = false)) {
+	return(1);
+} else {
+	return(0);
+}
