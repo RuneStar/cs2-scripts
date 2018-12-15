@@ -7,7 +7,7 @@ cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 .cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-.cc_setgraphic(1083);
+.cc_setgraphic("banktab_icons,2");
 .cc_settiling(true);
 if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 75, null)", $component3);
 if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component3);

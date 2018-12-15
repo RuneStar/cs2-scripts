@@ -234,7 +234,7 @@ cc_create($component10, ^iftype_graphic, $int25);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition(2, calc($int26 + 1), ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic(650);
+cc_setgraphic("options_icons_small,1");
 def_int $int38 = 0;
 $int25, $int38 = ~worldmap_toggles_enablebutton(0, $component10, $int25, $int38, $component4, $component7, $component23);
 $int25, $int38 = ~worldmap_toggles_enablebutton(1, $component10, $int25, $int38, $component4, $component7, $component23);

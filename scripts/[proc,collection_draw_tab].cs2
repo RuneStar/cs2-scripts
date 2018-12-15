@@ -21,13 +21,13 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settext(struct_param($struct1, 682));
 if ($int3 = $int2) {
 	if (cc_find($component0, 0) = true) {
-		cc_setgraphic(998);
+		cc_setgraphic("tabs_split,0");
 	}
 	if (cc_find($component0, 1) = true) {
-		cc_setgraphic(999);
+		cc_setgraphic("tabs_split,1");
 	}
 	if (cc_find($component0, 2) = true) {
-		cc_setgraphic(1000);
+		cc_setgraphic("tabs_split,2");
 	}
 	if (cc_find($component0, 3) = true) {
 		cc_setcolour(0xffa82f);
@@ -36,13 +36,13 @@ if ($int3 = $int2) {
 	if_setonmouseleave(null, $component0);
 } else {
 	if (cc_find($component0, 0) = true) {
-		cc_setgraphic(1001);
+		cc_setgraphic("tabs_split,3");
 	}
 	if (cc_find($component0, 1) = true) {
-		cc_setgraphic(1002);
+		cc_setgraphic("tabs_split,4");
 	}
 	if (cc_find($component0, 2) = true) {
-		cc_setgraphic(1003);
+		cc_setgraphic("tabs_split,5");
 	}
 	if (cc_find($component0, 3) = true) {
 		cc_setcolour(0xff981f);

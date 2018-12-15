@@ -36,7 +36,7 @@ cc_setoutline(1);
 cc_create($component1, ^iftype_graphic, $int0);
 $int0 = calc($int0 + 1);
 cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
-cc_setgraphic(1112);
+cc_setgraphic("ge_smallicons,0");
 ~ge_offers_priceicon($component2);
 cc_setontimer("ge_offers_priceicon(event_com, event_comid, $component2)");
 $int0 = ~script771($component1, $int0, 164, 0, calc($int6 - 149), 91);

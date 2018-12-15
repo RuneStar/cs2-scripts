@@ -8,32 +8,32 @@ if ($component0 ! null) {
 }
 ~orbs_update($component1, $component2, stat(hitpoints), stat_base(hitpoints));
 if (%var456 > 0) {
-	if_setgraphic(1062, $component3);
+	if_setgraphic("orb_filler,3", $component3);
 } else if (%var102 >= 1000000) {
-	if_setgraphic(1102, $component3);
+	if_setgraphic("orb_filler,8", $component3);
 } else if (%var102 > 0) {
-	if_setgraphic(1061, $component3);
+	if_setgraphic("orb_filler,2", $component3);
 } else {
-	if_setgraphic(1060, $component3);
+	if_setgraphic("orb_filler,1", $component3);
 }
 if (%var102 > 0) {
 	if (%var102 >= 1000000) {
-		if_setgraphic(1102, $component5);
+		if_setgraphic("orb_filler,8", $component5);
 	} else {
-		if_setgraphic(1061, $component5);
+		if_setgraphic("orb_filler,2", $component5);
 	}
 	if_sethide(false, $component4);
 } else {
 	if_sethide(true, $component4);
 }
-def_graphic $graphic8 = 1072;
+def_graphic $graphic8 = "orb_frame,1";
 if (((%var102 > 0) | (%var456 > 0)) & (~toplevel_check_sidepanel(3) = true)) {
 	if_setonmouserepeat("script44($component6, $graphic8)", $component7);
-	$graphic8 = 1071;
+	$graphic8 = "orb_frame,0";
 	if_setonmouseleave("script44($component6, $graphic8)", $component7);
 	if_sethide(false, $component7);
 } else {
-	if_setgraphic(1071, $component6);
+	if_setgraphic("orb_frame,0", $component6);
 	if_setonmouserepeat(null, $component7);
 	if_setonmouseleave(null, $component7);
 	if_sethide(true, $component7);

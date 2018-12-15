@@ -8,7 +8,7 @@ if (.cc_find($component9, $int13) = true) {
 		cc_create($component9, ^iftype_graphic, calc(($int13 + 9) + 1));
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc((($int13 * 40) + $int17) + $int18), $int19, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic(1081);
+		cc_setgraphic("banktab_icons,0");
 		cc_settrans(20);
 		cc_setop(1, "View all items");
 		cc_setop(7, "Remove placeholders");
@@ -69,7 +69,7 @@ if (.cc_find($component9, $int13) = true) {
 		cc_create($component9, ^iftype_graphic, calc(($int13 + 9) + 1));
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc((($int13 * 40) + $int17) + $int18), $int19, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic(1082);
+		cc_setgraphic("banktab_icons,1");
 		cc_settrans(20);
 		cc_setop(1, "New tab");
 		cc_setonop("opsound(event_opindex, 1)");

@@ -53,10 +53,10 @@ if (($inv14 = null) | (stockmarket_isofferempty($int13) = true)) {
 		.cc_sethide(false);
 		if ($int15 = 1) {
 			cc_settext("Sell offer");
-			.cc_setgraphic(1119);
+			.cc_setgraphic("ge_smallicons,7");
 		} else {
 			cc_settext("Buy offer");
-			.cc_setgraphic(1118);
+			.cc_setgraphic("ge_smallicons,6");
 		}
 	}
 	if (cc_find($component0, $int3) = true) {
@@ -88,8 +88,8 @@ if (($inv14 = null) | (stockmarket_isofferempty($int13) = true)) {
 			}
 		}
 	}
-	def_graphic $graphic23 = 1126;
-	def_graphic $graphic24 = 1127;
+	def_graphic $graphic23 = "ge_cancel,0";
+	def_graphic $graphic24 = "ge_cancel,1";
 	if (cc_find($component8, $int10) = true) {
 		if ($boolean21 = true) {
 			if ($int15 = 1) {

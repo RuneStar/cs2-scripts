@@ -16,14 +16,14 @@ if (($int1 ! 0) & (cc_find($component2, 0) = true)) {
 	if_setonmouseleave("deltooltip($component4)", $component2);
 	if ($int1 = 31) {
 		if (.cc_find($component3, 0) = true) {
-			.cc_setgraphic(1062);
+			.cc_setgraphic("orb_filler,3");
 		}
 		cc_setcolour(0x7f0000);
 		if_setsize(26, 26, ^setsize_abs, ^setsize_abs, $component3);
 		if_setonstattransmit(null, $component2);
 	} else {
 		if (.cc_find($component3, 0) = true) {
-			.cc_setgraphic(1060);
+			.cc_setgraphic("orb_filler,1");
 		}
 		if ($int1 = 30) {
 			cc_setcolour(^red);

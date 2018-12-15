@@ -11,13 +11,13 @@ while ($int3 < $int6) {
 	$int4 = ~wom_get_tab($int3);
 	$component0, $component1, $component2 = ~wom_get_graphics($int4);
 	if ($int5 = $int4) {
-		if_setgraphic(998, $component0);
-		if_setgraphic(999, $component1);
-		if_setgraphic(1000, $component2);
+		if_setgraphic("tabs_split,0", $component0);
+		if_setgraphic("tabs_split,1", $component1);
+		if_setgraphic("tabs_split,2", $component2);
 	} else {
-		if_setgraphic(1001, $component0);
-		if_setgraphic(1002, $component1);
-		if_setgraphic(1003, $component2);
+		if_setgraphic("tabs_split,3", $component0);
+		if_setgraphic("tabs_split,4", $component1);
+		if_setgraphic("tabs_split,5", $component2);
 	}
 	$int3 = calc($int3 + 1);
 }

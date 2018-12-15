@@ -6,19 +6,19 @@ cc_create($component0, ^iftype_graphic, 0);
 cc_setsize(7, 5, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc((if_getwidth($component0) - 7) / 2), calc((if_getheight($component0) - 5) / 2), ^setpos_abs_left, ^setpos_abs_top);
 if (%varbit4596 = $int2) {
-	cc_setgraphic(1051);
+	cc_setgraphic("sortarrows,1");
 	cc_settrans(0);
 	if_setonmouseover("cc_settrans(event_com, cc_getid, 120, null)", $component0);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)", $component0);
 	if_setonop("script761(event_opindex, $int1, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14)", $component0);
 } else if (%varbit4596 = $int1) {
-	cc_setgraphic(1050);
+	cc_setgraphic("sortarrows,0");
 	cc_settrans(0);
 	if_setonmouseover("cc_settrans(event_com, cc_getid, 120, null)", $component0);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)", $component0);
 	if_setonop("script761(event_opindex, $int2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14)", $component0);
 } else {
-	cc_setgraphic(1050);
+	cc_setgraphic("sortarrows,0");
 	cc_settrans(100);
 	if_setonmouseover("cc_settrans(event_com, cc_getid, 200, null)", $component0);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 100, null)", $component0);

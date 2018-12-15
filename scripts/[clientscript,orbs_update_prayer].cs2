@@ -7,14 +7,14 @@ if ($component0 ! null) {
 	if_setonsubchange("orbs_update_prayer(null, $component1, $component2, $component3, $component4, $component5, $component6)", $component0);
 	if_setonop("orbs_toggle_prayer(event_opindex, $component3, $component4, $component6)", $component6);
 }
-def_graphic $graphic7 = 1072;
+def_graphic $graphic7 = "orb_frame,1";
 if (~toplevel_check_sidepanel(5) = true) {
 	if_setonmouserepeat("script44($component5, $graphic7)", $component6);
-	$graphic7 = 1071;
+	$graphic7 = "orb_frame,0";
 	if_setonmouseleave("script44($component5, $graphic7)", $component6);
 	if_sethide(false, $component6);
 } else {
-	if_setgraphic(1071, $component5);
+	if_setgraphic("orb_frame,0", $component5);
 	if_setonmouserepeat(null, $component6);
 	if_setonmouseleave(null, $component6);
 	if_sethide(true, $component6);

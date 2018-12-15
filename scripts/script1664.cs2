@@ -109,7 +109,7 @@ if ($int16 <= -2) {
 		$int10 = calc($int10 + 1);
 		.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(calc(parawidth($int9, b12_full, $string0) + 9), calc($int11 + (($int12 - 14) / 2)), ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setgraphic(1093);
+		.cc_setgraphic("friends_changed_name");
 		.cc_setgraphicshadow(0x333333);
 		if (string_length($string1) > 0) {
 			if ($boolean15 = true) {

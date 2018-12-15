@@ -9,19 +9,19 @@ def_graphic $graphic8 = null;
 while ($int7 < 5) {
 	switch ($int7) {
 		case 0 :
-			$graphic8 = 1733;
+			$graphic8 = "oge_title,0";
 			$string0 = "Explore a world three times larger!";
 		case 1 :
-			$graphic8 = 1734;
+			$graphic8 = "oge_title,1";
 			$string0 = "Master eight extra skills!";
 		case 2 :
-			$graphic8 = 1735;
+			$graphic8 = "oge_title,2";
 			$string0 = "Take on a hundred more quests!";
 		case 3 :
-			$graphic8 = 1736;
+			$graphic8 = "oge_title,3";
 			$string0 = "Defeat twenty additional bosses!";
 		case 4 :
-			$graphic8 = 1737;
+			$graphic8 = "oge_title,4";
 			$string0 = "And much more...";
 	}
 	cc_create($component0, ^iftype_graphic, $int7);

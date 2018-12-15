@@ -1,11 +1,11 @@
 // 456
 [proc,orbs_update_prayer](component $component0, component $component1, component $component2)
 if (%varbit4103 = 1) {
-	if_setgraphic(1066, $component0);
+	if_setgraphic("orb_filler,7", $component0);
 	if_setgraphic("orb_icon,4", $component1);
 	if_setop(1, "Deactivate", $component2);
 } else {
-	if_setgraphic(1063, $component0);
+	if_setgraphic("orb_filler,4", $component0);
 	if_setgraphic("orb_icon,1", $component1);
 	if_setop(1, "Activate", $component2);
 }
