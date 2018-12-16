@@ -25,7 +25,7 @@ if (~script1701(156, -1) = 0) {
 	} else {
 		return;
 	}
-	$string0 = ~script1099($string0);
+	$string0 = ~bugreport_parse($string0);
 	$string0 = append($string0, "<col=ffffff>*</col>");
 	def_int $int8 = calc((paraheight(if_getwidth($component2), p12_full, $string0) * 12) + 5);
 	def_int $int9 = if_getheight($component2);

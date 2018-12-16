@@ -1,5 +1,5 @@
 // 960
-script960(component $component0, int $int1, int $int2, component $component3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, component $component16, string $string0)(int)
+[proc,worldswitcher_entry_draw](component $component0, int $int1, int $int2, component $component3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, component $component16, string $string0)(int)
 if (($int4 ! -1) & (.cc_find($component3, $int4) = true)) {
 	.cc_sethide(false);
 	.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);

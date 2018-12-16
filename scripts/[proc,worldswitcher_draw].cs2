@@ -1,5 +1,5 @@
 // 892
-script892(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+[proc,worldswitcher_draw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
 ~script760($component3, 2, 3, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
 ~script760($component4, 0, 1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
 ~script760($component5, 4, 5, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
@@ -49,7 +49,7 @@ if (~on_mobile = true) {
 $int21, $int22, $string0, $int23, $int24, $string1 = worldlist_start;
 while ($int21 > 0) {
 	if (~script961($int21, $int22) = 1) {
-		$int20 = ~script960($component0, $int20, $int12, $component2, $int21, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int17, $int18, $int19, $component11, $string0);
+		$int20 = ~worldswitcher_entry_draw($component0, $int20, $int12, $component2, $int21, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int17, $int18, $int19, $component11, $string0);
 		$int12 = calc($int12 + $int25);
 	}
 	$int21, $int22, $string0, $int23, $int24, $string1 = worldlist_next;
@@ -76,7 +76,7 @@ if (%varbit4597 > 0) {
 		$string0 = "Unavailable";
 		$int21 = 0;
 	}
-	~script960($component8, 0, 0, $component8, -1, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int26, $int18, $int19, $component11, $string0);
+	~worldswitcher_entry_draw($component8, 0, 0, $component8, -1, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int26, $int18, $int19, $component11, $string0);
 	if (%varbit4598 > 0) {
 		$int21, $int22, $string0, $int23, $int24, $string1 = worldlist_specific(%varbit4598);
 		if (~script961($int21, $int22) = 0) {
@@ -85,7 +85,7 @@ if (%varbit4597 > 0) {
 			$string0 = "Unavailable";
 			$int21 = 0;
 		}
-		~script960($component9, 0, 0, $component9, -1, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int26, $int18, $int19, $component11, $string0);
+		~worldswitcher_entry_draw($component9, 0, 0, $component9, -1, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int26, $int18, $int19, $component11, $string0);
 	} else {
 		~script893($component9);
 	}
@@ -100,7 +100,7 @@ if (%varbit4597 > 0) {
 			$string0 = "Unavailable";
 			$int21 = 0;
 		}
-		~script960($component9, 0, 0, $component9, -1, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int26, $int18, $int19, $component11, $string0);
+		~worldswitcher_entry_draw($component9, 0, 0, $component9, -1, $int21, $int22, $int23, $int24, $int13, $int14, $int15, $int16, $int26, $int18, $int19, $component11, $string0);
 	} else {
 		if_sethide(false, $component10);
 		~script893($component9);

@@ -17,7 +17,7 @@ if ($obj2 ! null) {
 cc_deleteall($component0);
 def_int $int6 = 0;
 if ((inv_total(93, agility_arena_ticket_2996) < $int3) | ($int5 = 0)) {
-	$int6 = ~script134($component0);
+	$int6 = ~v2_stone_button_filled($component0);
 	~script2036($component0, $int6, $obj1, ^red, $string1);
 	if_setonop(null, $component0);
 } else if ($int4 = 1) {

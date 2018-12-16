@@ -3,7 +3,7 @@
 if (string_length(%varcstring27) > 0) {
 	sound_synth(2266, 1, 0);
 	if (%varbit4931 < 10) {
-		bug_report(0, ~script1099(%varcstring27), ~script1099(%varcstring130));
+		bug_report(0, ~bugreport_parse(%varcstring27), ~bugreport_parse(%varcstring130));
 	}
 	if (~on_mobile = true) {
 		~script1984;

@@ -1,0 +1,12 @@
+// 930
+[proc,bankmain_toggleplaceholders](component $component0)
+if (%varbit3755 = 1) {
+	if_setgraphic("miscgraphics,9", $component0);
+	if_setop(1, "Disable", $component0);
+	if_setonop("bankmain_toggleplaceholders_op(event_opindex, $component0, 0)", $component0);
+} else {
+	if_setgraphic("miscgraphics,0", $component0);
+	if_setop(1, "Enable", $component0);
+	if_setonop("bankmain_toggleplaceholders_op(event_opindex, $component0, 1)", $component0);
+}
+return;

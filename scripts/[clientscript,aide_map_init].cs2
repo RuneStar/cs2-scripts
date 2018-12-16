@@ -17,6 +17,6 @@ cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 cc_setmodel(3062);
 cc_setmodelangle(0, 0, 512, 68, 0, 1526);
 cc_setmodelanim(646);
-~script2043($component0);
-if_setontimer("script2042($component0, cc_getid)", $component0);
+~aide_map_marker($component0);
+if_setontimer("aide_map_marker($component0, cc_getid)", $component0);
 return;

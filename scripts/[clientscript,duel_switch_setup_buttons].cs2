@@ -16,7 +16,7 @@ if (testbit(%var286, 3) = false) {
 	if_setonmouseover("v2_stone_button_in(event_com)", $component2);
 	if_setonmouseover("v2_stone_button_in(event_com)", $component3);
 	if_setonop("duel_switch_to_inv(event_com, $component6, $component7, $component4, $component5, $component1, $component2, $component3, $component8)", $component2);
-	if_setonop("script2486(event_com, $component6, $component7, $component4, $component5, $component1, $component2, $component3, $component8)", $component3);
+	if_setonop("duel_switch_to_worn(event_com, $component6, $component7, $component4, $component5, $component1, $component2, $component3, $component8)", $component3);
 }
 ~duel_switch_buttons($component0, $component1, $component2, $component3, $component8);
 if_sethide(false, $component5);
