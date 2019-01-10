@@ -116,7 +116,7 @@ if ((($component4 = null) | ($component5 = null)) | ($component6 = null)) {
 		cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_bottom);
 		cc_setgraphic("side_icons,8");
-		$string0 = append($string0, "<br>A House in Kourend is protecting the patch as a favour.");
+		$string0 = append($string0, "<br>The people of Hosidius are protecting the patch as a favour.");
 	} else if (testbit($int3, 3) = true) {
 		cc_create($component6, ^iftype_graphic, $int10);
 		$int10 = calc($int10 + 1);
@@ -173,7 +173,7 @@ if ((($component4 = null) | ($component5 = null)) | ($component6 = null)) {
 		cc_settext(tostring($int9));
 		$string0 = append($string0, "<br>Minimum yield: <tostring($int9)>");
 	}
-	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 179:223, $string0, 25, 512)", $component6);
-	if_setonmouseleave("deltooltip(179:223)", $component6);
+	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 179:265, $string0, 25, 512)", $component6);
+	if_setonmouseleave("deltooltip(179:265)", $component6);
 	return;
 }

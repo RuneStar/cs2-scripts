@@ -5,6 +5,7 @@ def_int $int2 = 0;
 def_obj $obj3 = null;
 def_int $int4 = 0;
 def_obj $obj5 = null;
+def_obj $obj6 = null;
 switch ($int0) {
 	case 6032 :
 		return(~script716(compost_6032), compost_6032);
@@ -20,6 +21,20 @@ switch ($int0) {
 		} else {
 			return(~script716(secateurs_5329), secateurs_5329);
 		}
+	case 22994 :
+		$int1 = ~script716(bottomless_compost_bucket_22997);
+		if ($int1 > 0) {
+			$obj6 = bottomless_compost_bucket_22997;
+		} else {
+			$obj6 = bottomless_compost_bucket_22994;
+		}
+		$int4 = ~script716(bottomless_compost_bucket_22994);
+		if (calc(^int_max - $int4) < $int1) {
+			$int4 = ^int_max;
+		} else {
+			$int4 = calc($int4 + $int1);
+		}
+		return($int4, $obj6);
 	case 6034 :
 		return(~script716(supercompost_6034), supercompost_6034);
 	case 6036 :

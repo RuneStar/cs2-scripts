@@ -4,7 +4,7 @@ cc_deleteall($component1);
 if_setscrollpos(0, 0, $component1);
 def_int $int7 = enum_getoutputcount(818);
 if_setontimer("script2257(event_com, $int7)", $component3);
-if_setonvartransmit("music_vartransmit(event_com, $component3, $int7){568, 20, 21, 22, 23, 24, 25, 298, 311, 346, 414, 464, 598, 662, 721, 906, 1009, 1338, 1681}", $component1);
+if_setonvartransmit("music_vartransmit(event_com, $component3, $int7){568, 20, 21, 22, 23, 24, 25, 298, 311, 346, 414, 464, 598, 662, 721, 906, 1009, 1338, 1681, 2065}", $component1);
 def_int $array0($int7);
 def_int $int8 = 0;
 while ($int8 < $int7) {

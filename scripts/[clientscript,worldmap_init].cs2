@@ -34,7 +34,7 @@ if (~toplevel_getcomponents ! 1132) {
 def_int $int26 = calc((4 + 1) * 21);
 if_setsize(0, $int26, ^setsize_minus, ^setsize_minus, $component20);
 if_setsize(6, $int26, ^setsize_minus, ^setsize_abs, $component10);
-def_int $array0(calc(~max(102, 31) + 1));
+def_int $array0(calc(~max(102, 32) + 1));
 cc_deleteall($component21);
 $int25 = 0;
 def_int $int27 = 16;
@@ -323,7 +323,7 @@ cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
 cc_setgraphic(struct_param(1, 459));
 if ($int28 >= 3) {
-	~quicksort_cctext(0, $component16, 1, 31);
+	~quicksort_cctext(0, $component16, 1, 32);
 }
 $int29 = calc((((((3 + $int29) + 2) + 26) + 2) + 16) + 3);
 if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $component12);

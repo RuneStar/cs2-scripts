@@ -16,7 +16,7 @@ $int4 = ~thinbox($component0, $int4);
 cc_create($component0, ^iftype_text, $int4);
 $int4 = calc($int4 + 1);
 cc_setsize(70, 30, ^setsize_abs, ^setsize_abs);
-cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setposition(5, 20, ^setpos_abs_left, ^setpos_abs_centre);
 if ($int3 >= $int1) {
 	cc_setcolour(^white);
 } else {
@@ -29,7 +29,7 @@ cc_settext($string0);
 cc_create($component0, ^iftype_graphic, $int4);
 $int4 = calc($int4 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(7 + ((70 - 36) / 2)), 35, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setposition(calc(7 + ((70 - 36) / 2)), -10, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 cc_setobject_nonum($obj2, 1);

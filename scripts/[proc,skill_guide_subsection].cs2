@@ -280,6 +280,8 @@ switch ($int0) {
 			return("Javelins", 1);
 		} else if ($int1 = 6) {
 			return("Shields", 1);
+		} else if ($int1 = 7) {
+			return("Other", 1);
 		} else {
 			return("", -1);
 		}
@@ -318,6 +320,8 @@ switch ($int0) {
 			return("Tithe Farm", 1);
 		} else if ($int1 = 11) {
 			return("Raids", 1);
+		} else if ($int1 = 12) {
+			return("Other", 1);
 		} else {
 			return("", -1);
 		}

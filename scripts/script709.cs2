@@ -1,9 +1,9 @@
 // 709
 script709(component $component0, component $component1, component $component2, component $component3, component $component4)
-def_int $array0(11);
+def_int $array0(12);
 def_int $int5 = 0;
 def_int $int6 = 0;
-while ($int5 < 11) {
+while ($int5 < 12) {
 	cc_create($component0, ^iftype_rectangle, $int6);
 	$int6 = calc($int6 + 1);
 	cc_setop(1, "Open <enum(int, string, 595, $int5)> Journal");
@@ -14,10 +14,10 @@ while ($int5 < 11) {
 	$array0($int5) = $int5;
 	$int5 = calc($int5 + 1);
 }
-~quicksort_intenum(0, 0, calc(11 - 1), 595);
+~quicksort_intenum(0, 0, calc(12 - 1), 595);
 def_int $int7 = 8;
 $int5 = 0;
-while ($int5 < 11) {
+while ($int5 < 12) {
 	if (cc_find($component0, $array0($int5)) = true) {
 		cc_setposition(0, $int7, ^setpos_abs_centre, ^setpos_abs_top);
 	}

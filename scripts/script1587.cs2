@@ -5,7 +5,11 @@ def_int $int3 = 0;
 if ((cc_find($component0, $int1) = true) & (.cc_find(549:13, $int1) = true)) {
 	if_settext("Reset streak:<br><.cc_gettext>", 549:24);
 	if_setsize(calc(parawidth(75, p11_full, if_gettext(549:24)) + 10), 50, ^setsize_abs, ^setsize_abs, 549:19);
-	if (paraheight(if_getwidth(549:24), p11_full, if_gettext(549:24)) > 2) {
+	if (paraheight(if_getwidth(549:24), p11_full, if_gettext(549:24)) > 4) {
+		if_setsize(if_getwidth(549:19), 80, ^setsize_abs, ^setsize_abs, 549:19);
+	} else if (paraheight(if_getwidth(549:24), p11_full, if_gettext(549:24)) > 3) {
+		if_setsize(if_getwidth(549:19), 70, ^setsize_abs, ^setsize_abs, 549:19);
+	} else if (paraheight(if_getwidth(549:24), p11_full, if_gettext(549:24)) > 2) {
 		if_setsize(if_getwidth(549:19), 60, ^setsize_abs, ^setsize_abs, 549:19);
 	}
 	$int2 = if_getscrolly(549:5);

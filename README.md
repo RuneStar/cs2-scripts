@@ -2736,7 +2736,19 @@
 [**2733**](scripts/[clientscript,collection_item_click].cs2) `[clientscript,collection_item_click]`  
 [**2734**](scripts/script2734.cs2)  
 [**2735**](scripts/[proc,collection_category_count].cs2) `[proc,collection_category_count]`  
-[**2736**](scripts/[clientscript,xmas18_cow_init].cs2) `[clientscript,xmas18_cow_init]`  
+[**2736**](scripts/script2736.cs2)  
 [**2737**](scripts/script2737.cs2)  
-[**2738**](scripts/[clientscript,xmas18_cowparts].cs2) `[clientscript,xmas18_cowparts]`  
-[**2739**](scripts/[clientscript,xmas18_rotate_cow].cs2) `[clientscript,xmas18_rotate_cow]`  
+[**2738**](scripts/script2738.cs2)  
+[**2739**](scripts/script2739.cs2)  
+[**2740**](scripts/script2740.cs2)  
+[**2741**](scripts/script2741.cs2)  
+[**2742**](scripts/script2742.cs2)  
+[**2743**](scripts/script2743.cs2)  
+[**2744**](scripts/script2744.cs2)  
+[**2745**](scripts/script2745.cs2)  
+[**2746**](scripts/script2746.cs2)  
+[**2747**](scripts/script2747.cs2)  
+[**2748**](scripts/script2748.cs2)  
+[**2749**](scripts/script2749.cs2)  
+[**2750**](scripts/script2750.cs2)  
+[**2751**](scripts/script2751.cs2)  

@@ -51,42 +51,44 @@ switch ($int0) {
 				case 21 :
 					return("Members: Saradomin sword", 70, 11838);
 				case 22 :
-					return("Members: Zamorak spear", 70, 11824);
+					return("Members: Zamorakian spear", 70, 11824);
 				case 23 :
-					return("Members: Abyssal whip & dagger", 70, 4151);
+					return("Members: Dragon hunter lance", 70, 22978);
 				case 24 :
-					return("Members: Abyssal bludgeon<br> (with 70 Strength)", 70, 13263);
+					return("Members: Abyssal whip & dagger", 70, 4151);
 				case 25 :
-					return("Members: Ahrim's staff<br> (with 70 Magic)", 70, 4710);
+					return("Members: Abyssal bludgeon<br> (with 70 Strength)", 70, 13263);
 				case 26 :
-					return("Members: Dharok's greataxe<br> (with 70 Strength)", 70, 4718);
+					return("Members: Ahrim's staff<br> (with 70 Magic)", 70, 4710);
 				case 27 :
-					return("Members: Torag's hammers<br> (with 70 Strength)", 70, 4747);
+					return("Members: Dharok's greataxe<br> (with 70 Strength)", 70, 4718);
 				case 28 :
-					return("Members: Verac's flail", 70, 4755);
+					return("Members: Torag's hammers<br> (with 70 Strength)", 70, 4747);
 				case 29 :
-					return("Members: Guthan's warspear", 70, 4726);
+					return("Members: Verac's flail", 70, 4755);
 				case 30 :
-					return("Members: Avernic defender<br> (with 70 Defence)", 70, 22322);
+					return("Members: Guthan's warspear", 70, 4726);
 				case 31 :
-					return("Members: Arclight", 75, 19675);
+					return("Members: Avernic defender<br> (with 70 Defence)", 70, 22322);
 				case 32 :
-					return("Members: Godswords", 75, 11808);
+					return("Members: Arclight", 75, 19675);
 				case 33 :
-					return("Members: Staff of the Dead<br> (with 75 Magic)", 75, 11791);
+					return("Members: Godswords", 75, 11808);
 				case 34 :
-					return("Members: Staff of Light<br> (with 75 Magic)", 75, 22296);
+					return("Members: Staff of the Dead<br> (with 75 Magic)", 75, 11791);
 				case 35 :
-					return("Members: Abyssal tentacle", 75, 12006);
+					return("Members: Staff of Light<br> (with 75 Magic)", 75, 22296);
 				case 36 :
-					return("Members: Ghrazi rapier", 75, 22324);
+					return("Members: Abyssal tentacle", 75, 12006);
 				case 37 :
-					return("Members: Blessed Saradomin sword", 75, 12808);
+					return("Members: Ghrazi rapier", 75, 22324);
 				case 38 :
-					return("Members: Scythe of Vitur<br> (with 75 Strength)", 75, 22325);
+					return("Members: Blessed Saradomin sword", 75, 12808);
 				case 39 :
-					return("Members: Elder maul<br> (with 75 Strength)", 75, 21003);
+					return("Members: Scythe of Vitur<br> (with 75 Strength)", 75, 22325);
 				case 40 :
+					return("Members: Elder maul<br> (with 75 Strength)", 75, 21003);
+				case 41 :
 					return("Members: Dinh's bulwark<br> (with 75 Defence)", 75, 21015);
 				else :
 					return("", -1, -1);
@@ -251,12 +253,14 @@ switch ($int0) {
 			} else if ($int2 = 9) {
 				return("Dragon darts", 60, 11230);
 			} else if ($int2 = 10) {
-				return("TokTz-Xil-Ul", 60, 6522);
+				return("Dragon knives", 60, 22804);
 			} else if ($int2 = 11) {
-				return("Dragon thrownaxes", 61, 20849);
+				return("TokTz-Xil-Ul", 60, 6522);
 			} else if ($int2 = 12) {
-				return("Black chinchompas", 65, 11959);
+				return("Dragon thrownaxes", 61, 20849);
 			} else if ($int2 = 13) {
+				return("Black chinchompas", 65, 11959);
+			} else if ($int2 = 14) {
 				return("Toxic blowpipe", 75, 12924);
 			} else {
 				return("", -1, -1);
@@ -377,8 +381,10 @@ switch ($int0) {
 			} else if ($int2 = 39) {
 				return("Members: Dragonfire ward<br>(with 75 Defence)", 70, 22002);
 			} else if ($int2 = 40) {
-				return("Members: Pegasian boots<br> (with 75 Defence)", 75, 13237);
+				return("Members: Boots of brimstone<br>(with 70 Defence and Magic)", 70, 22951);
 			} else if ($int2 = 41) {
+				return("Members: Pegasian boots<br> (with 75 Defence)", 75, 13237);
+			} else if ($int2 = 42) {
 				return("Members: Twisted buckler<br> (with 75 Defence)", 75, 21000);
 			} else {
 				return("", -1, -1);
@@ -509,13 +515,13 @@ switch ($int0) {
 					case 41 :
 						return("God spells<br>(after Mage Arena)", 60, 2416);
 					case 42 :
-						return("Trollheim Teleport<br>(after Eadgar's Ruse)", 61, 1391);
+						return("Trollheim teleport<br>(after Eadgar's Ruse)", 61, 1391);
 					case 43 :
 						return("Wind Wave", 62, 1391);
 					case 44 :
 						return("Charge fire orb", 63, 1391);
 					case 45 :
-						return("Teleport to Ape Atoll<br>(after Recipe for Disaster)", 64, 1391);
+						return("Ape Atoll teleport<br>(after Recipe for Disaster)", 64, 1391);
 					case 46 :
 						return("Water Wave", 65, 1391);
 					case 47 :
@@ -525,7 +531,7 @@ switch ($int0) {
 					case 49 :
 						return("Level 5 enchant", 68, 1391);
 					case 50 :
-						return("Teleport to Kourend<br>(after unlocking the spell)", 69, 1391);
+						return("Kourend Castle teleport<br>(after unlocking the spell)", 69, 1391);
 					case 51 :
 						return("Earth Wave", 70, 1391);
 					case 52 :
@@ -719,7 +725,7 @@ switch ($int0) {
 				}
 			case 3 :
 				if ($int2 = 0) {
-					return("Arceuus spells are unlocked<br>in Great Kourend.", -1, 7620);
+					return("Arceuus spells are unlocked<br>in Arceuus.", -1, 7620);
 				} else if ($int2 = 1) {
 					return("Home teleport (Dark Altar)", -1, 7620);
 				} else if ($int2 = 2) {
@@ -741,54 +747,56 @@ switch ($int0) {
 				} else if ($int2 = 10) {
 					return("Reanimate unicorns", 22, 13465);
 				} else if ($int2 = 11) {
-					return("Reanimate dogs", 26, 13468);
+					return("Battlefront teleport", 23, 13578);
 				} else if ($int2 = 12) {
-					return("Mind Altar teleport", 28, 13578);
+					return("Reanimate dogs", 26, 13468);
 				} else if ($int2 = 13) {
-					return("Reanimate chaos druids", 30, 13471);
+					return("Mind Altar teleport", 28, 13578);
 				} else if ($int2 = 14) {
-					return("Respawn teleport", 34, 13578);
+					return("Reanimate chaos druids", 30, 13471);
 				} else if ($int2 = 15) {
-					return("Reanimate giants", 37, 13474);
+					return("Respawn teleport", 34, 13578);
 				} else if ($int2 = 16) {
-					return("Salve Graveyard teleport", 40, 13578);
+					return("Reanimate giants", 37, 13474);
 				} else if ($int2 = 17) {
-					return("Reanimate ogres", 40, 13477);
+					return("Salve Graveyard teleport", 40, 13578);
 				} else if ($int2 = 18) {
-					return("Reanimate elves", 43, 13480);
+					return("Reanimate ogres", 40, 13477);
 				} else if ($int2 = 19) {
-					return("Reanimate trolls", 46, 13483);
+					return("Reanimate elves", 43, 13480);
 				} else if ($int2 = 20) {
-					return("Fenkenstrain's Castle teleport", 48, 13578);
+					return("Reanimate trolls", 46, 13483);
 				} else if ($int2 = 21) {
-					return("Reanimate horrors", 52, 13486);
+					return("Fenkenstrain's Castle teleport", 48, 13578);
 				} else if ($int2 = 22) {
-					return("Reanimate kalphite", 57, 13489);
+					return("Reanimate horrors", 52, 13486);
 				} else if ($int2 = 23) {
-					return("West Ardougne teleport", 61, 13578);
+					return("Reanimate kalphite", 57, 13489);
 				} else if ($int2 = 24) {
-					return("Reanimate dagannoth", 62, 13492);
+					return("West Ardougne teleport", 61, 13578);
 				} else if ($int2 = 25) {
-					return("Reanimate bloodveld", 65, 13495);
+					return("Reanimate dagannoth", 62, 13492);
 				} else if ($int2 = 26) {
-					return("Harmony Island teleport", 65, 13578);
+					return("Reanimate bloodveld", 65, 13495);
 				} else if ($int2 = 27) {
-					return("Reanimate TzHaar", 69, 13498);
+					return("Harmony Island teleport", 65, 13578);
 				} else if ($int2 = 28) {
-					return("Cemetery teleport", 71, 13578);
+					return("Reanimate TzHaar", 69, 13498);
 				} else if ($int2 = 29) {
-					return("Reanimate demons", 72, 13501);
+					return("Cemetery teleport", 71, 13578);
 				} else if ($int2 = 30) {
-					return("Reanimate aviansie", 78, 13504);
+					return("Reanimate demons", 72, 13501);
 				} else if ($int2 = 31) {
-					return("Resurrect crops", 78, 5370);
+					return("Reanimate aviansie", 78, 13504);
 				} else if ($int2 = 32) {
-					return("Barrows teleport", 83, 13578);
+					return("Resurrect crops", 78, 5370);
 				} else if ($int2 = 33) {
-					return("Reanimate abyssal demons", 85, 13507);
+					return("Barrows teleport", 83, 13578);
 				} else if ($int2 = 34) {
-					return("Ape Atoll teleport", 90, 13578);
+					return("Reanimate abyssal demons", 85, 13507);
 				} else if ($int2 = 35) {
+					return("Ape Atoll teleport", 90, 13578);
+				} else if ($int2 = 36) {
 					return("Reanimate dragons", 93, 13510);
 				} else {
 					return("", -1, -1);
@@ -825,8 +833,10 @@ switch ($int0) {
 				} else if ($int2 = 14) {
 					return("Ahrims robes<br> (with 70 Defence)", 70, 4712);
 				} else if ($int2 = 15) {
-					return("Eternal boots<br> (with 75 Defence)", 75, 13235);
+					return("Boots of brimstone<br> (with 70 Defence and Ranged)", 70, 22951);
 				} else if ($int2 = 16) {
+					return("Eternal boots<br> (with 75 Defence)", 75, 13235);
+				} else if ($int2 = 17) {
 					return("Ancestral robes<br> (with 65 Defence)", 75, 21021);
 				} else {
 					return("", -1, -1);
@@ -975,16 +985,18 @@ switch ($int0) {
 			} else if ($int2 = 27) {
 				return("Members: Armadyl armour (with 70 Ranged)", 70, 11826);
 			} else if ($int2 = 28) {
-				return("Members: Justiciar armour", 75, 22326);
+				return("Members: Boots of brimstone (with 70 Ranged and Magic)", 70, 22951);
 			} else if ($int2 = 29) {
-				return("Members: Serpentine helm", 75, 12931);
+				return("Members: Justiciar armour", 75, 22326);
 			} else if ($int2 = 30) {
-				return("Members: Guardian boots", 75, 21733);
+				return("Members: Serpentine helm", 75, 12931);
 			} else if ($int2 = 31) {
-				return("Members: Primordial boots<br> (with 75 Strength)", 75, 13239);
+				return("Members: Guardian boots", 75, 21733);
 			} else if ($int2 = 32) {
-				return("Members: Eternal boots<br> (with 75 Magic)", 75, 13235);
+				return("Members: Primordial boots<br> (with 75 Strength)", 75, 13239);
 			} else if ($int2 = 33) {
+				return("Members: Eternal boots<br> (with 75 Magic)", 75, 13235);
+			} else if ($int2 = 34) {
 				return("Members: Pegasian boots<br> (with 75 Ranged)", 75, 13237);
 			} else {
 				return("", -1, -1);
@@ -1166,7 +1178,7 @@ switch ($int0) {
 			} else if ($int2 = 42) {
 				return("Anchovy pizza: Restores 18 Hitpoints", -1, 2297);
 			} else if ($int2 = 43) {
-				return("Ugthanki kebab: Restores 18 Hitpoints<br>(Members)", -1, 1885);
+				return("Ugthanki kebab: Restores 19 Hitpoints<br>(Members)", -1, 1885);
 			} else if ($int2 = 44) {
 				return("Shark: Restores 20 Hitpoints<br>(Members)", -1, 385);
 			} else if ($int2 = 45) {
@@ -1298,11 +1310,15 @@ switch ($int0) {
 			} else if ($int2 = 14) {
 				return("Blessed spirit shield<br>(with 70 Defence)", 60, 12831);
 			} else if ($int2 = 15) {
-				return("Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)", 70, 12825);
+				return("Devout boots", 60, 22954);
 			} else if ($int2 = 16) {
-				return("Elysian spirit shield<br>(with 75 Defence)", 75, 12817);
+				return("Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)", 70, 12825);
 			} else if ($int2 = 17) {
+				return("Elysian spirit shield<br>(with 75 Defence)", 75, 12817);
+			} else if ($int2 = 18) {
 				return("Dragonbone necklace", 80, 22111);
+			} else if ($int2 = 19) {
+				return("Bonecrusher necklace", 80, 22986);
 			} else {
 				return("", -1, -1);
 			}
@@ -1425,134 +1441,138 @@ switch ($int0) {
 				case 14 :
 					return("Kourend Catacombs pillar jump shortcut", 28, 6515);
 				case 15 :
-					return("Corsair Cove Resource Area shortcut<br> (after Dragon Slayer)", 30, 6517);
+					return("Mount Karuulm lower cliffside climb", 29, 6517);
 				case 16 :
-					return("Draynor Manor stones to Champions' Guild", 31, 6515);
+					return("Corsair Cove Resource Area shortcut<br> (after Dragon Slayer)", 30, 6517);
 				case 17 :
-					return("Scale the Catherby cliff<br> (with 35 Strength and 35 Ranged)", 32, 6517);
+					return("Draynor Manor stones to Champions' Guild", 31, 6515);
 				case 18 :
-					return("Ardougne log balance shortcut", 33, 6515);
+					return("Scale the Catherby cliff<br> (with 35 Strength and 35 Ranged)", 32, 6517);
 				case 19 :
-					return("Kourend Catacombs Agility shortcut", 34, 6516);
+					return("Ardougne log balance shortcut", 33, 6515);
 				case 20 :
-					return("Escape from the water obelisk island<br> (with 22 Strength and 39 Ranged)", 36, 6517);
+					return("Kourend Catacombs Agility shortcut", 34, 6516);
 				case 21 :
-					return("Gnome Stronghold shortcut", 37, 6517);
+					return("Escape from the water obelisk island<br> (with 22 Strength and 39 Ranged)", 36, 6517);
 				case 22 :
-					return("Al Kharid Mining pit cliffside scramble", 38, 6517);
+					return("Gnome Stronghold shortcut", 37, 6517);
 				case 23 :
-					return("Scale Yanille wall<br> (with 38 Strength and 21 Ranged)", 39, 6517);
+					return("Al Kharid Mining pit cliffside scramble", 38, 6517);
 				case 24 :
-					return("Kourend lake isle jump", 40, 6514);
+					return("Scale Yanille wall<br> (with 38 Strength and 21 Ranged)", 39, 6517);
 				case 25 :
-					return("Trollheim easy cliffside scramble", 41, 6517);
+					return("Hosidius lake isle jump", 40, 6514);
 				case 26 :
-					return("Dwarven Mine narrow crevice", 42, 6516);
+					return("Trollheim easy cliffside scramble", 41, 6517);
 				case 27 :
-					return("Draynor narrow tunnel", 42, 6516);
+					return("Dwarven Mine narrow crevice", 42, 6516);
 				case 28 :
-					return("Trollheim medium cliffside scramble", 43, 6517);
+					return("Draynor narrow tunnel", 42, 6516);
 				case 29 :
-					return("Trollheim advanced cliffside scramble", 44, 6517);
+					return("Trollheim medium cliffside scramble", 43, 6517);
 				case 30 :
-					return("Kourend river jump", 45, 6514);
+					return("Trollheim advanced cliffside scramble", 44, 6517);
 				case 31 :
-					return("Cosmic Temple - medium narrow walkway", 46, 6516);
+					return("Hosidius river jump", 45, 6514);
 				case 32 :
-					return("Deep Wilderness - narrow tunnel", 46, 6516);
+					return("Cosmic Temple - medium narrow walkway", 46, 6516);
 				case 33 :
-					return("Trollheim hard cliffside scramble", 47, 6517);
+					return("Deep Wilderness - narrow tunnel", 46, 6516);
 				case 34 :
-					return("Log balance to Fremennik Province", 48, 6515);
+					return("Trollheim hard cliffside scramble", 47, 6517);
 				case 35 :
-					return("Arceuus essence mine boulder leap", 49, 6514);
+					return("Log balance to Fremennik Province", 48, 6515);
 				case 36 :
-					return("Stepping stone into Morytania near the Nature Grotto.", 50, 6514);
+					return("Arceuus essence mine boulder leap", 49, 6514);
 				case 37 :
-					return("Pipe from Edgeville dungeon to Varrock Sewers", 51, 6516);
+					return("Stepping stone into Morytania near the Nature Grotto.", 50, 6514);
 				case 38 :
-					return("Arceuus essence mine eastern scramble", 52, 6517);
+					return("Pipe from Edgeville dungeon to Varrock Sewers", 51, 6516);
 				case 39 :
-					return("Karamja crossing, south of volcano<br> (with 21 Strength and 42 Ranged)", 53, 6517);
+					return("Arceuus essence mine eastern scramble", 52, 6517);
 				case 40 :
-					return("Motherlode Mine dark tunnel", 54, 6516);
+					return("Karamja crossing, south of volcano<br> (with 21 Strength and 42 Ranged)", 53, 6517);
 				case 41 :
-					return("Stepping stone by Miscellania docks", 55, 6514);
+					return("Motherlode Mine dark tunnel", 54, 6516);
 				case 42 :
-					return("Rellekka east fence shortcut", 57, 6517);
+					return("Stepping stone by Miscellania docks", 55, 6514);
 				case 43 :
-					return("Port Phasmatys ectopool shortcut", 58, 6517);
+					return("Rellekka east fence shortcut", 57, 6517);
 				case 44 :
-					return("Elven overpass easy cliffside scramble", 59, 6517);
+					return("Port Phasmatys ectopool shortcut", 58, 6517);
 				case 45 :
-					return("Wilderness from the God Wars Dungeon area climb", 60, 6517);
+					return("Elven overpass easy cliffside scramble", 59, 6517);
 				case 46 :
-					return("Estuary crossing on Mos Le'Harmless", 60, 6514);
+					return("Wilderness from the God Wars Dungeon area climb", 60, 6517);
 				case 47 :
-					return("Pillars in the Wintertodt's Prison.", 60, 6514);
+					return("Estuary crossing on Mos Le'Harmless", 60, 6514);
 				case 48 :
-					return("Slayer Tower medium spiked chain climb", 61, 6517);
+					return("Pillars in the Wintertodt's Prison.", 60, 6514);
 				case 49 :
-					return("Slayer Dungeon narrow crevice", 62, 6516);
+					return("Slayer Tower medium spiked chain climb", 61, 6517);
 				case 50 :
-					return("Taverley dungeon lesser demon fence shortcut", 63, 6517);
+					return("Slayer Dungeon narrow crevice", 62, 6516);
 				case 51 :
-					return("Trollheim Wilderness route", 64, 6517);
+					return("Mount Karuulm upper cliffside climb", 62, 6517);
 				case 52 :
-					return("Rope to the Fossil Island volcano.", 64, 6517);
+					return("Taverley dungeon lesser demon fence shortcut", 63, 6517);
 				case 53 :
-					return("Temple on the Salve to Morytania shortcut", 65, 6517);
+					return("Trollheim Wilderness route", 64, 6517);
 				case 54 :
-					return("Revenant cave jump (easy)", 65, 6514);
+					return("Rope to the Fossil Island volcano.", 64, 6517);
 				case 55 :
-					return("Cosmic Temple advanced narrow walkway", 66, 6516);
+					return("Temple on the Salve to Morytania shortcut", 65, 6517);
 				case 56 :
-					return("Lumbridge Swamp to the Desert", 66, 6514);
+					return("Revenant cave jump (easy)", 65, 6514);
 				case 57 :
-					return("Heroes' Guild tunnel", 67, 6516);
+					return("Cosmic Temple advanced narrow walkway", 66, 6516);
 				case 58 :
-					return("Elven overpass medium cliffside scramble", 68, 6517);
+					return("Lumbridge Swamp to the Desert", 66, 6514);
 				case 59 :
-					return("Arceuus essence mine northern scramble", 69, 6517);
+					return("Heroes' Guild tunnel", 67, 6516);
 				case 60 :
-					return("Taverley Dungeon short-cuts to blue dragons", 70, 6516);
+					return("Elven overpass medium cliffside scramble", 68, 6517);
 				case 61 :
-					return("Fossil island hardwood shortcut", 70, 6516);
+					return("Arceuus essence mine northern scramble", 69, 6517);
 				case 62 :
-					return("Al Kharid Palace southern window", 70, 6516);
+					return("Taverley Dungeon short-cuts to blue dragons", 70, 6516);
 				case 63 :
-					return("Slayer Tower advanced spiked chain climb", 71, 6517);
+					return("Fossil island hardwood shortcut", 70, 6516);
 				case 64 :
-					return("Stronghold Slayer Cave narrow tunnel", 72, 6516);
+					return("Al Kharid Palace southern window", 70, 6516);
 				case 65 :
-					return("Troll Stronghold wall-climb", 73, 6517);
+					return("Slayer Tower advanced spiked chain climb", 71, 6517);
 				case 66 :
-					return("Arceuus essence mine western descent", 73, 6517);
+					return("Stronghold Slayer Cave narrow tunnel", 72, 6516);
 				case 67 :
-					return("Lava Dragon Isle jump", 74, 6514);
+					return("Troll Stronghold wall-climb", 73, 6517);
 				case 68 :
-					return("Revenant cave jump (medium)", 75, 6514);
+					return("Arceuus essence mine western descent", 73, 6517);
 				case 69 :
-					return("Island crossing near Zul-Andra", 76, 6514);
+					return("Lava Dragon Isle jump", 74, 6514);
 				case 70 :
-					return("Shilo Village river crossing", 77, 6514);
+					return("Revenant cave jump (medium)", 75, 6514);
 				case 71 :
-					return("Kharazi Jungle vine climb<br> (with Legends' Guild access)", 79, 6517);
+					return("Island crossing near Zul-Andra", 76, 6514);
 				case 72 :
-					return("Taverley Dungeon spiked blades jump", 80, 6514);
+					return("Shilo Village river crossing", 77, 6514);
 				case 73 :
-					return("Slayer Dungeon spiked blades jump", 81, 6514);
+					return("Kharazi Jungle vine climb<br> (with Legends' Guild access)", 79, 6517);
 				case 74 :
-					return("Lava Maze northern jump", 82, 6514);
+					return("Taverley Dungeon spiked blades jump", 80, 6514);
 				case 75 :
-					return("Brimhaven Dungeon eastern stepping stones", 83, 6514);
+					return("Slayer Dungeon spiked blades jump", 81, 6514);
 				case 76 :
-					return("Elven overpass advanced cliffside scramble", 85, 6517);
+					return("Lava Maze northern jump", 82, 6514);
 				case 77 :
-					return("Kalphite Lair shortcut", 86, 6516);
+					return("Brimhaven Dungeon eastern stepping stones", 83, 6514);
 				case 78 :
-					return("Brimhaven Dungeon vine to baby green dragons", 87, 6517);
+					return("Elven overpass advanced cliffside scramble", 85, 6517);
 				case 79 :
+					return("Kalphite Lair shortcut", 86, 6516);
+				case 80 :
+					return("Brimhaven Dungeon vine to baby green dragons", 87, 6517);
+				case 81 :
 					return("Revenant cave jump (hard)", 89, 6514);
 				else :
 					return("", -1, -1);
@@ -1665,7 +1685,7 @@ switch ($int0) {
 					case 43 :
 						return("Super antifire potion<br>Antifire potion & Crushed superior dragon bones<br>(after Dragon Slayer II)", 92, 21975);
 					case 44 :
-						return("Super anti-venom<br>Anti-venom & Torstol", 94, 269);
+						return("Anti-venom+<br>Anti-venom & Torstol", 94, 269);
 					case 45 :
 						return("Extended super antifires<br>Super antifire potion & lava scale shards<br>(after Dragon Slayer II)", 98, 3256);
 					else :
@@ -1923,10 +1943,12 @@ switch ($int0) {
 			} else if ($int2 = 5) {
 				return("Chaos druid tower north of Ardougne", 59, 565);
 			} else if ($int2 = 6) {
-				return("King Lathas' castle in Ardougne", 72, 383);
+				return("Lizardman Temple beneath Molch", 64, 13383);
 			} else if ($int2 = 7) {
-				return("Dorgesh-Kaan (rich chests)", 78, 1623);
+				return("King Lathas' castle in Ardougne", 72, 383);
 			} else if ($int2 = 8) {
+				return("Dorgesh-Kaan (rich chests)", 78, 1623);
+			} else if ($int2 = 9) {
 				return("Wilderness Rogues' Castle", 84, 1615);
 			} else {
 				return("", -1, -1);
@@ -1949,7 +1971,7 @@ switch ($int0) {
 			} else if ($int2 = 7) {
 				return("Sorceress's Garden minigame - Autumn<br>Al Kharid region", 45, 10854);
 			} else if ($int2 = 8) {
-				return("Can pick locks in the Piscarilius district.", 49, 13434);
+				return("Can pick locks in Port Piscarilius.", 49, 13434);
 			} else if ($int2 = 9) {
 				return("Can crack the wall safes in Rogues' Den", 50, 1623);
 			} else if ($int2 = 10) {
@@ -3064,31 +3086,39 @@ switch ($int0) {
 			} else if ($int2 = 17) {
 				return("Lobster - Lobster pot fishing", 40, 377);
 			} else if ($int2 = 18) {
-				return("Members: Bass - Big net fishing", 46, 363);
+				return("Members: Bluegill - Aerial fishing<br>(With 35 hunter)", 43, 22826);
 			} else if ($int2 = 19) {
-				return("Swordfish - Harpoon fishing", 50, 371);
+				return("Members: Bass - Big net fishing", 46, 363);
 			} else if ($int2 = 20) {
-				return("Members: Lava eel - Lava bait fishing", 53, 2148);
+				return("Swordfish - Harpoon fishing", 50, 371);
 			} else if ($int2 = 21) {
-				return("Members: Monkfish - Net fishing", 62, 7944);
+				return("Members: Lava eel - Lava bait fishing", 53, 2148);
 			} else if ($int2 = 22) {
-				return("Members: Karambwan - Vessel fishing", 65, 3142);
+				return("Members: Common tench - Aerial fishing<br>(With 51 hunter)", 56, 22829);
 			} else if ($int2 = 23) {
-				return("Members: Shark - Harpoon fishing", 76, 383);
+				return("Members: Monkfish - Net fishing", 62, 7944);
 			} else if ($int2 = 24) {
-				return("Members: Sea turtle - Trawler minigame", 79, 395);
+				return("Members: Karambwan - Vessel fishing", 65, 3142);
 			} else if ($int2 = 25) {
-				return("Members: Infernal eel - Lava bait fishing", 80, 21293);
+				return("Members: Mottled eel - Aerial fishing<br>(With 68 hunter)", 73, 22832);
 			} else if ($int2 = 26) {
-				return("Members: Manta ray - Trawler minigame", 81, 389);
+				return("Members: Shark - Harpoon fishing", 76, 383);
 			} else if ($int2 = 27) {
-				return("Members: Anglerfish - Sandworm bait fishing", 82, 13439);
+				return("Members: Sea turtle - Trawler minigame", 79, 395);
 			} else if ($int2 = 28) {
-				return("Members: Minnow - Net fishing<br>(after Fishing Contest)", 82, 10572);
+				return("Members: Infernal eel - Lava bait fishing", 80, 21293);
 			} else if ($int2 = 29) {
-				return("Members: Dark crab - Bait Pot fishing", 85, 11934);
+				return("Members: Manta ray - Trawler minigame", 81, 389);
 			} else if ($int2 = 30) {
+				return("Members: Anglerfish - Sandworm bait fishing", 82, 13439);
+			} else if ($int2 = 31) {
+				return("Members: Minnow - Net fishing<br>(after Fishing Contest)", 82, 10572);
+			} else if ($int2 = 32) {
+				return("Members: Dark crab - Bait Pot fishing", 85, 11934);
+			} else if ($int2 = 33) {
 				return("Members: Sacred eel - Swamp bait fishing", 87, 13339);
+			} else if ($int2 = 34) {
+				return("Members: Greater siren - Aerial fishing<br>(With 87 hunter)", 91, 22835);
 			} else {
 				return("", -1, -1);
 			}
@@ -3274,18 +3304,20 @@ switch ($int0) {
 			} else if ($int2 = 8) {
 				return("Members: Admiral pie", 70, 7198);
 			} else if ($int2 = 9) {
-				return("Members: Wild pie", 85, 7208);
+				return("Members: Dragonfruit pie", 73, 22795);
 			} else if ($int2 = 10) {
-				return("Members: Summer pie", 95, 7218);
+				return("Members: Wild pie", 85, 7208);
 			} else if ($int2 = 11) {
-				return("To make a pie:", -1, 7620);
+				return("Members: Summer pie", 95, 7218);
 			} else if ($int2 = 12) {
-				return("1. Mix flour and water to make pastry dough.", -1, 7620);
+				return("To make a pie:", -1, 7620);
 			} else if ($int2 = 13) {
-				return("2. Place the dough in an empty pie dish.", -1, 7620);
+				return("1. Mix flour and water to make pastry dough.", -1, 7620);
 			} else if ($int2 = 14) {
-				return("3. Use your choice of filling with the empty pie (refer to pie recipe book).", -1, 7620);
+				return("2. Place the dough in an empty pie dish.", -1, 7620);
 			} else if ($int2 = 15) {
+				return("3. Use your choice of filling with the empty pie (refer to pie recipe book).", -1, 7620);
+			} else if ($int2 = 16) {
 				return("4. Cook the pie by using it with a stove.", -1, 7620);
 			} else {
 				return("", -1, -1);
@@ -4002,6 +4034,12 @@ switch ($int0) {
 			} else {
 				return("", -1, -1);
 			}
+		} else if ($int1 = 7) {
+			if ($int2 = 0) {
+				return("Battlestaves", 40, 1391);
+			} else {
+				return("", -1, -1);
+			}
 		} else {
 			return("", -1, -1);
 		}
@@ -4044,53 +4082,61 @@ switch ($int0) {
 			} else if ($int2 = 17) {
 				return("Fever spiders", 42, 6709);
 			} else if ($int2 = 18) {
-				return("Infernal mages", 45, 4140);
+				return("Sulphur Lizards", 44, 23043);
 			} else if ($int2 = 19) {
-				return("Brine rats", 47, 11047);
+				return("Infernal mages", 45, 4140);
 			} else if ($int2 = 20) {
-				return("Bloodvelds", 50, 4141);
+				return("Brine rats", 47, 11047);
 			} else if ($int2 = 21) {
-				return("Jellies", 52, 4142);
+				return("Bloodvelds", 50, 4141);
 			} else if ($int2 = 22) {
-				return("Turoth", 55, 4143);
+				return("Jellies", 52, 4142);
 			} else if ($int2 = 23) {
-				return("Mutated zygomites", 57, 7420);
+				return("Turoth", 55, 4143);
 			} else if ($int2 = 24) {
-				return("Cave horrors", 58, 8900);
+				return("Mutated zygomites", 57, 7420);
 			} else if ($int2 = 25) {
-				return("Aberrant spectres", 60, 4144);
+				return("Cave horrors", 58, 8900);
 			} else if ($int2 = 26) {
-				return("Spiritual rangers", 63, 11845);
+				return("Aberrant spectres", 60, 4144);
 			} else if ($int2 = 27) {
-				return("Dust devils", 65, 4145);
+				return("Wyrms", 62, 23040);
 			} else if ($int2 = 28) {
-				return("Fossil Island wyverns", 66, 21507);
+				return("Spiritual rangers", 63, 11845);
 			} else if ($int2 = 29) {
-				return("Spiritual warriors", 68, 11846);
+				return("Dust devils", 65, 4145);
 			} else if ($int2 = 30) {
-				return("Kurask", 70, 4146);
+				return("Fossil Island wyverns", 66, 21507);
 			} else if ($int2 = 31) {
-				return("Skeletal wyverns", 72, 6811);
+				return("Spiritual warriors", 68, 11846);
 			} else if ($int2 = 32) {
-				return("Gargoyles", 75, 4147);
+				return("Kurask", 70, 4146);
 			} else if ($int2 = 33) {
-				return("Brutal black dragons", 77, 21391);
+				return("Skeletal wyverns", 72, 6811);
 			} else if ($int2 = 34) {
-				return("Nechryael", 80, 4148);
+				return("Gargoyles", 75, 4147);
 			} else if ($int2 = 35) {
-				return("Ancient wyverns", 82, 21508);
+				return("Brutal black dragons", 77, 21391);
 			} else if ($int2 = 36) {
-				return("Spiritual mages", 83, 11844);
+				return("Nechryael", 80, 4148);
 			} else if ($int2 = 37) {
-				return("Abyssal demons & sires", 85, 4149);
+				return("Ancient wyverns", 82, 21508);
 			} else if ($int2 = 38) {
-				return("Cave kraken", 87, 3272);
+				return("Spiritual mages", 83, 11844);
 			} else if ($int2 = 39) {
-				return("Dark beasts", 90, 6637);
+				return("Drakes", 84, 23041);
 			} else if ($int2 = 40) {
-				return("Cerberus", 91, 13247);
+				return("Abyssal demons & sires", 85, 4149);
 			} else if ($int2 = 41) {
+				return("Cave kraken", 87, 3272);
+			} else if ($int2 = 42) {
+				return("Dark beasts", 90, 6637);
+			} else if ($int2 = 43) {
+				return("Cerberus", 91, 13247);
+			} else if ($int2 = 44) {
 				return("Smoke devil", 93, 5349);
+			} else if ($int2 = 45) {
+				return("Hydras", 95, 23042);
 			} else {
 				return("", -1, -1);
 			}
@@ -4150,8 +4196,10 @@ switch ($int0) {
 			} else if ($int2 = 4) {
 				return("Zanaris master<br> (with level 70 combat)", 1, 4155);
 			} else if ($int2 = 5) {
-				return("Gnome Stronghold master<br> (with level 85 combat)", 1, 4155);
+				return("Mount Karuulm master<br> (with level 75 combat)", 1, 4155);
 			} else if ($int2 = 6) {
+				return("Gnome Stronghold master<br> (with level 85 combat)", 1, 4155);
+			} else if ($int2 = 7) {
 				return("Shilo Village master<br> (with level 100 combat)", 50, 4155);
 			} else {
 				return("", -1, -1);
@@ -4175,6 +4223,8 @@ switch ($int0) {
 				return("Strawberries<br>Payment: Apples(5)", 31, 5504);
 			} else if ($int2 = 6) {
 				return("Watermelons<br>Payment: Curry leaf x10", 47, 5982);
+			} else if ($int2 = 7) {
+				return("Snape grass<br>Payment: Jangerberries x5", 71, 231);
 			} else {
 				return("", -1, -1);
 			}
@@ -4225,6 +4275,8 @@ switch ($int0) {
 				return("Papaya trees<br>Payment: Pineapple x10", 57, 5972);
 			} else if ($int2 = 6) {
 				return("Palm trees<br>Payment: Papaya fruit x15", 68, 5974);
+			} else if ($int2 = 7) {
+				return("Dragonfruit trees<br>Payment: Coconut x15", 81, 22929);
 			} else {
 				return("", -1, -1);
 			}
@@ -4257,6 +4309,8 @@ switch ($int0) {
 				return("Woad", 25, 5738);
 			} else if ($int2 = 5) {
 				return("Limpwurt plants", 26, 225);
+			} else if ($int2 = 6) {
+				return("White lily<br>Protects all allotment crops", 58, 22932);
 			} else {
 				return("", -1, -1);
 			}
@@ -4310,14 +4364,30 @@ switch ($int0) {
 			} else if ($int2 = 6) {
 				return("Belladonna", 63, 2398);
 			} else if ($int2 = 7) {
-				return("Calquat trees<br>Payment: Poison ivy berries x8", 72, 5980);
+				return("Potato Cacti<br>Payment: Snape grass x8", 64, 3138);
 			} else if ($int2 = 8) {
-				return("Spirit trees<br>(1 planted at a time)", 83, 6063);
+				return("Hespori", 65, 23044);
 			} else if ($int2 = 9) {
-				return("Spirit trees<br>(2 planted at a time)", 91, 6063);
+				return("Calquat trees<br>Payment: Poison ivy berries x8", 72, 5980);
 			} else if ($int2 = 10) {
-				return("Spirit trees<br>(unlimited)", 99, 6063);
+				return("Anima plants have effects on all other farming patches", -1, 7620);
 			} else if ($int2 = 11) {
+				return("Anima: Kronos<br>Increases speed of growth", 76, 22938);
+			} else if ($int2 = 12) {
+				return("Anima: Iasor<br>Decreases chance of disease", 76, 22939);
+			} else if ($int2 = 13) {
+				return("Anima: Attas<br>Increases yield", 76, 22940);
+			} else if ($int2 = 14) {
+				return("Spirit trees<br>(1 planted at a time)", 83, 6063);
+			} else if ($int2 = 15) {
+				return("Celastrus trees<br>Payment: Potato Cactus x8", 85, 22935);
+			} else if ($int2 = 16) {
+				return("Redwood trees<br>Payment: Dragonfruit x6", 90, 19669);
+			} else if ($int2 = 17) {
+				return("Spirit trees<br>(2 planted at a time)", 91, 6063);
+			} else if ($int2 = 18) {
+				return("Spirit trees<br>(unlimited)", 99, 6063);
+			} else if ($int2 = 19) {
 				return("Payment: Monkey bar, ground suqah tooth & 5 monkey nuts.", -1, 7620);
 			} else {
 				return("", -1, -1);
@@ -4391,6 +4461,16 @@ switch ($int0) {
 				return("Buchu leaf", 39, 20908);
 			} else if ($int2 = 2) {
 				return("Noxifer", 55, 20902);
+			} else {
+				return("", -1, -1);
+			}
+		} else if ($int1 = 12) {
+			if ($int2 = 0) {
+				return("Farming Guild - Low tier<br>(with 60% Hosidius Favour)", 45, 23006);
+			} else if ($int2 = 1) {
+				return("Farming Guild - Mid tier<br>(with 60% Hosidius Favour)", 65, 23005);
+			} else if ($int2 = 2) {
+				return("Farming Guild - High tier<br>(with 60% Hosidius Favour)", 85, 23005);
 			} else {
 				return("", -1, -1);
 			}

@@ -1,6 +1,22 @@
 // 2267
 [proc,questlist_progress](int $int0)(int)
 switch ($int0) {
+	case 542 :
+		if (%varbit7856 >= 14) {
+			return(2);
+		} else if (%varbit7856 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 543 :
+		if (%varbit7796 >= 11) {
+			return(2);
+		} else if (%varbit7796 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
 	case 299 :
 		if (%var130 = 4) {
 			return(2);

@@ -1,14 +1,14 @@
 // 1203
 [clientscript,zeah_favour_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
-def_int $array0(47);
+def_int $array0(48);
 def_int $int13 = 0;
 def_int $int14 = 0;
-while ($int14 < 47) {
+while ($int14 < 48) {
 	$int13 = calc($int14 + 1);
 	$array0($int14) = $int13;
 	$int14 = calc($int14 + 1);
 }
-~zeah_favour_sort(0, 0, calc(47 - 1));
+~zeah_favour_sort(0, 0, calc(48 - 1));
 if (((((%varcint79 ! 3) & (%varcint79 ! 2)) & (%varcint79 ! 4)) & (%varcint79 ! 5)) & (%varcint79 ! 1)) {
 	%varcint79 = 3;
 }
@@ -35,7 +35,7 @@ $int19, $int24 = ~zeah_favour_init_list($int15, $int19, $int24, 5, %varbit4899, 
 $int20, $int25 = ~zeah_favour_init_list($int15, $int20, $int25, 1, %varbit4894, $component12);
 def_int $int26 = 0;
 $int14 = 0;
-while ($int14 < 47) {
+while ($int14 < 48) {
 	$int13 = $array0($int14);
 	$int26 = enum(int, int, 1269, $int13);
 	if ($int26 = 3) {

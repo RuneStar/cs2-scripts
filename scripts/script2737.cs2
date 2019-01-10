@@ -1,14 +1,16 @@
 // 2737
-script2737(component $component0, int $int1, component $component2)
-if (calc(clientclock - $int1) < 150) {
-	return;
-} else {
-	if (if_getwidth($component0) < if_getwidth($component2)) {
-		if_setsize(calc(if_getwidth($component0) + 3), 0, ^setsize_abs, ^setsize_minus, $component0);
-	} else {
-		if_setontimer(null, $component2);
-		if_settext("Pin the tail on the cow...", 623:17);
-		if_setontimer("xmas18_cowparts()", 623:5);
-	}
-	return;
+script2737(component $component0, component $component1)
+cc_deleteall($component1);
+def_int $int2 = 0;
+while ($int2 < 36) {
+	cc_create($component1, ^iftype_model, $int2);
+	cc_setposition(calc(50 * ($int2 % 6)), calc(50 * ($int2 / 6)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(50, 50, ^setsize_abs, ^setsize_abs);
+	cc_setop(1, "Rotate-right");
+	cc_setop(2, "Rotate-left");
+	cc_setonop("script2740(event_opindex, event_com, event_comid)");
+	$int2 = calc($int2 + 1);
 }
+~script2739($component1);
+if_setonvartransmit("script2738($component1){2067, 2068, 2069}", $component0);
+return;

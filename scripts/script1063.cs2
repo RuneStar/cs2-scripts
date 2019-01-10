@@ -9,6 +9,14 @@ switch ($int0) {
 		} else {
 			return(%varbit1438, secateurs_5329);
 		}
+	case 22994 :
+		if (%varbit7915 = 1) {
+			return(1, bottomless_compost_bucket_22994);
+		} else if (%varbit7915 > 1) {
+			return(1, bottomless_compost_bucket_22997);
+		} else {
+			return(0, bottomless_compost_bucket_22994);
+		}
 	case 6034 :
 		return(calc((pow(2, 8) * %varbit6267) + %varbit1443), supercompost_6034);
 	case 6036 :

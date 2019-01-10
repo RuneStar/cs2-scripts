@@ -6,7 +6,7 @@ def_int $int0 = 0;
 def_int $int1 = calc((40 - 32) / 2);
 def_int $int2 = 0;
 def_obj $obj3 = null;
-while ($int2 <= 40) {
+while ($int2 <= 41) {
 	cc_create(210:3, ^iftype_graphic, $int0);
 	$int0 = calc($int0 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -25,7 +25,7 @@ def_string $string1 = "";
 def_int $int4 = if_getwidth(210:3);
 def_int $int5 = calc($int4 - (36 + 10));
 $int2 = 0;
-while ($int2 <= 40) {
+while ($int2 <= 41) {
 	cc_create(210:3, ^iftype_text, $int0);
 	$int0 = calc($int0 + 1);
 	cc_setsize($int5, 40, ^setsize_abs, ^setsize_abs);
@@ -36,7 +36,7 @@ while ($int2 <= 40) {
 	cc_settextfont(p12_full);
 	$string1, $string0 = ~script632($string0);
 	cc_settext($string1);
-	if ($int2 < 40) {
+	if ($int2 < 41) {
 		cc_create(210:3, ^iftype_graphic, $int0);
 		$int0 = calc($int0 + 1);
 		cc_setgraphic("tradebacking");
@@ -46,7 +46,7 @@ while ($int2 <= 40) {
 	}
 	$int2 = calc($int2 + 1);
 }
-def_int $int6 = calc(40 * (40 + 1));
+def_int $int6 = calc(40 * (41 + 1));
 if ($int6 > if_getheight(210:3)) {
 	if_setscrollsize(0, $int6, 210:3);
 } else {
