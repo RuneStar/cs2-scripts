@@ -24,7 +24,7 @@ def_int $int17 = 16;
 if (~on_mobile = true) {
 	$int17 = 24;
 }
-while ($int16 <= 700) {
+while ($int16 <= 600) {
 	cc_create($component5, ^iftype_graphic, $int16);
 	cc_setsize(0, $int17, ^setsize_minus, ^setsize_abs);
 	cc_setop(1, "Switch");
