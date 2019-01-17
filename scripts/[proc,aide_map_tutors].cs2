@@ -1,9 +1,13 @@
 // 2041
-[proc,aide_map_tutors](boolean $boolean0, component $component1)
+[proc,aide_map_tutors](boolean $boolean0, component $component1, component $component2)
 if_sethide($boolean0, $component1);
 if ($boolean0 = true) {
-	cc_setcolour(0xaba346);
+	cc_settext("Show Tutors");
+	if_setop(1, "Show", $component2);
+	if_setonop("aide_map_tutors(false, $component2, cc_getid, $component1)", $component2);
 } else {
-	cc_setcolour(0xcbc376);
+	cc_settext("Hide Tutors");
+	if_setop(1, "Hide", $component2);
+	if_setonop("aide_map_tutors(true, $component2, cc_getid, $component1)", $component2);
 }
 return;
