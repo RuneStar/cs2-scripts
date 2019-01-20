@@ -35,15 +35,15 @@ if ($component3 ! null) {
 }
 ~script1044;
 if ($enum1 = 139) {
-	_3118(false);
-	_3125(false);
-	_3126(false);
+	setshowmouseovertext(false);
+	setshowmousecross(false);
+	setshowloadingmessages(false);
 	_3130(299, -1);
 	_3131(0);
 } else if ($enum1 = 1745) {
-	_3118(true);
-	_3125(true);
-	_3126(true);
+	setshowmouseovertext(true);
+	setshowmousecross(true);
+	setshowloadingmessages(true);
 	_3130(1625, 1);
 	_3131(1);
 	~script1490(601:6);
@@ -52,9 +52,9 @@ if ($enum1 = 139) {
 	~script868(601:28);
 	~script957(601:29);
 } else {
-	_3118(true);
-	_3125(true);
-	_3126(true);
+	setshowmouseovertext(true);
+	setshowmousecross(true);
+	setshowloadingmessages(true);
 	_3130(299, -1);
 	_3131(0);
 }

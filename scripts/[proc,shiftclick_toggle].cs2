@@ -1,11 +1,11 @@
 // 2359
 [proc,shiftclick_toggle](boolean $boolean0)
 if (~on_mobile = true) {
-	_3127($boolean0);
-	_3117(true);
+	settaptodrop($boolean0);
+	setshiftclickdrop(true);
 } else {
-	_3117($boolean0);
-	_3127(false);
+	setshiftclickdrop($boolean0);
+	settaptodrop(false);
 }
 ~script2386;
 return;
