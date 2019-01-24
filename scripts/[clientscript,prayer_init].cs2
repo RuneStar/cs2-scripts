@@ -50,8 +50,8 @@ cc_setgraphic("options_icons_small,2");
 .cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 .cc_settextshadow(true);
 .cc_settextfont(p12_full);
-~script2761;
-if_setonstattransmit("script2760(event_com, .cc_getid){prayer}", $component1);
+~prayer_levelupdate;
+if_setonstattransmit("prayer_levelupdate(event_com, .cc_getid){prayer}", $component1);
 def_string $string0 = "Enter";
 def_boolean $boolean15 = true;
 def_string $string1 = "Dismiss";
@@ -74,7 +74,7 @@ if (~on_mobile = true) {
 		cc_setfill(true);
 		$int10 = calc($int10 + 1);
 	}
-	~script2758($boolean15, $boolean16, $component2, $int8, $int9, $component3, $component4, $component5, $string0, $string1);
+	~prayer_infobutton($boolean15, $boolean16, $component2, $int8, $int9, $component3, $component4, $component5, $string0, $string1);
 } else {
 	if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, $component1);
 	if_sethide(true, $component3);

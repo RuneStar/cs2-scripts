@@ -1,0 +1,14 @@
+// 2766
+[proc,tol_pressure_valvelistener](component $component0, int $int1, int $int2)
+def_int $int3 = 0;
+if ($int1 = 1) {
+	$int3 = %varbit3356;
+} else if ($int1 = 2) {
+	$int3 = %varbit3357;
+}
+if ($int3 = $int2) {
+	if_setonop("tol_pressure_valveop(event_opindex, 3436)", $component0);
+} else {
+	if_setonop("tol_pressure_valveop(event_opindex, 2402)", $component0);
+}
+return;

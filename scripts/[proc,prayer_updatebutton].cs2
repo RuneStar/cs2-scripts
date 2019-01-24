@@ -36,7 +36,7 @@ if ($boolean0 = true) {
 	if_setop(1, "Activate", $component2);
 	cc_sethide(true);
 }
-if (~script464($int1) = 1) {
+if (~prayer_isavailable($int1) = 1) {
 	.cc_setgraphic(enum(int, graphic, 865, $int1));
 } else {
 	.cc_setgraphic(enum(int, graphic, 864, $int1));

@@ -1,0 +1,56 @@
+// 1482
+[proc,hidey_tabbuttons_draw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, string $string0)
+cc_deleteall($component0);
+if ($component0 = $component1) {
+	cc_create($component0, ^iftype_graphic, 0);
+	cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setgraphic("tabs_split,0");
+	cc_create($component0, ^iftype_graphic, 1);
+	cc_setsize(40, 20, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setgraphic("tabs_split,1");
+	cc_settiling(true);
+	cc_create($component0, ^iftype_graphic, 2);
+	cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+	cc_setgraphic("tabs_split,2");
+	cc_create($component0, ^iftype_text, 3);
+	cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0xffa82f);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_settext($string0);
+	if_setonmouseover(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_setonclick(null, $component0);
+	return;
+} else {
+	cc_create($component0, ^iftype_graphic, 0);
+	cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setgraphic("tabs_split,3");
+	cc_create($component0, ^iftype_graphic, 1);
+	cc_setsize(40, 20, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setgraphic("tabs_split,4");
+	cc_settiling(true);
+	cc_create($component0, ^iftype_graphic, 2);
+	cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+	cc_setgraphic("tabs_split,5");
+	cc_create($component0, ^iftype_text, 3);
+	cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_settext($string0);
+	if_setonmouseover("hidey_tabbuttons_hover(true, $component0)", $component0);
+	if_setonmouseleave("hidey_tabbuttons_hover(false, $component0)", $component0);
+	if_setonclick("hidey_tabbuttons($component0, $component2, $component3, $component4, $component5, $component6)", $component0);
+	return;
+}

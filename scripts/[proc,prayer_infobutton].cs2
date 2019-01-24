@@ -1,0 +1,25 @@
+// 2758
+[proc,prayer_infobutton](boolean $boolean0, boolean $boolean1, component $component2, int $int3, int $int4, component $component5, component $component6, component $component7, string $string0, string $string1)
+if_sethide($boolean0, $component6);
+~deltooltip_action($component7);
+%varcint218 = -1;
+cc_deleteall($component5);
+def_int $int8 = 0;
+if ($boolean0 = true) {
+	$int8 = ~options_button_off($component5, 0);
+} else {
+	$int8 = ~options_button_on($component5, 0);
+}
+cc_create($component5, ^iftype_text, $int8);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settext("Info");
+cc_setcolour(0xff981f);
+if_setonmouserepeat("script85(event_com, cc_getid, 16777215)", $component5);
+if_setonmouseleave("script85(event_com, cc_getid, 16750623)", $component5);
+if_setop(1, $string0, $component5);
+if_setonop("prayer_infomode($string0, $boolean0, $string1, $boolean1, $component2, $int3, $int4, event_com, $component6, $component7)", $component5);
+return;

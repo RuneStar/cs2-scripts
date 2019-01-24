@@ -1,0 +1,8 @@
+// 53
+[clientscript,tol_pressure_leverinit](int $int0, component $component1, component $component2, component $component3)
+~tol_pressure_leverresynch($int0, $component1, $component2, $component3);
+if_setonvartransmit("tol_pressure_leverresynch($int0, $component1, $component2, $component3){978}", $component1);
+if_setop(1, "Pull", $component1);
+if_setopbase("<col=ff9040>Lever</col>", $component1);
+if_setonop("tol_pressure_leverop(event_opindex, $int0, $component1, $component2, $component3)", $component1);
+return;

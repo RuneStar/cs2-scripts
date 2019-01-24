@@ -3,7 +3,7 @@
 if (($int0 = 1) & (.cc_find($component2, $int3) = true)) {
 	if (testbit(%varbit4102, $int1) = true) {
 		%varbit4102 = clearbit(%varbit4102, $int1);
-	} else if (~script464($int1) = 0) {
+	} else if (~prayer_isavailable($int1) = 0) {
 		return;
 	} else {
 		%varbit4102 = setbit(%varbit4102, $int1);
