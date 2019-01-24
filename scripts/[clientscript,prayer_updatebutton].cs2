@@ -1,6 +1,9 @@
 // 461
-[clientscript,prayer_updatebutton](int $int0, component $component1, int $int2, int $int3, component $component4)
-if ((cc_find($component1, $int2) = true) & (.cc_find($component1, $int3) = true)) {
-	~prayer_updatebutton($int0, $component1, $component4);
+[clientscript,prayer_updatebutton](boolean $boolean0, int $int1, component $component2, int $int3, int $int4, component $component5, component $component6)
+if ((cc_find($component2, $int3) = true) & (.cc_find($component2, $int4) = true)) {
+	~prayer_updatebutton($boolean0, $int1, $component2, $component5, $component6);
+}
+if (($boolean0 = false) & (%varbit5711 = 1)) {
+	~deltooltip_action($component6);
 }
 return;

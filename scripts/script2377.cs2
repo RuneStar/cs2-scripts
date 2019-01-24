@@ -1,14 +1,19 @@
 // 2377
 script2377(component $component0)
-if (~on_mobile = true) {
+def_enum $enum1 = ~toplevel_getcomponents;
+if ($enum1 = 1745) {
 	if (%varbit6254 = 0) {
-		if_setposition(65, 172, ^setpos_abs_right, ^setpos_abs_top, $component0);
+		if_setposition(58, 172, ^setpos_abs_right, ^setpos_abs_top, $component0);
+		if_settextalign(^settextalign_right, ^settextalign_top, 0, $component0);
 	} else {
 		if_setposition(-18, 153, ^setpos_abs_right, ^setpos_abs_top, $component0);
+		if_settextalign(^settextalign_centre, ^settextalign_top, 0, $component0);
 	}
-} else if (enum(enum, int, 1135, ~toplevel_getcomponents) > 0) {
+} else if (enum(enum, int, 1135, $enum1) > 0) {
 	if_setposition(-7, 194, ^setpos_abs_right, ^setpos_abs_top, $component0);
+	if_settextalign(^settextalign_centre, ^settextalign_top, 0, $component0);
 } else {
 	if_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_bottom, $component0);
+	if_settextalign(^settextalign_centre, ^settextalign_top, 0, $component0);
 }
 return;

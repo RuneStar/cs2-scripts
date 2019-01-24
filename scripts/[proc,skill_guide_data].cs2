@@ -4045,144 +4045,148 @@ switch ($int0) {
 		}
 	case 20 :
 		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return("Crawling hands", 5, 4133);
-			} else if ($int2 = 1) {
-				return("Cave bugs", 7, 4521);
-			} else if ($int2 = 2) {
-				return("Cave crawlers", 10, 4134);
-			} else if ($int2 = 3) {
-				return("Banshees", 15, 4135);
-			} else if ($int2 = 4) {
-				return("Cave slime", 17, 4520);
-			} else if ($int2 = 5) {
-				return("Rockslugs", 20, 4136);
-			} else if ($int2 = 6) {
-				return("Desert lizards", 22, 6695);
-			} else if ($int2 = 7) {
-				return("Cockatrice", 25, 4137);
-			} else if ($int2 = 8) {
-				return("Pyrefiends", 30, 4138);
-			} else if ($int2 = 9) {
-				return("Mogres", 32, 6661);
-			} else if ($int2 = 10) {
-				return("Harpie bug swarms", 33, 7050);
-			} else if ($int2 = 11) {
-				return("Wall beasts", 35, 4519);
-			} else if ($int2 = 12) {
-				return("Killerwatts", 37, 7160);
-			} else if ($int2 = 13) {
-				return("Molanisks", 39, 10997);
-			} else if ($int2 = 14) {
-				return("Basilisks", 40, 4139);
-			} else if ($int2 = 15) {
-				return("Sea snakes", 40, 5089);
-			} else if ($int2 = 16) {
-				return("Terror dogs", 40, 10591);
-			} else if ($int2 = 17) {
-				return("Fever spiders", 42, 6709);
-			} else if ($int2 = 18) {
-				return("Sulphur Lizards", 44, 23043);
-			} else if ($int2 = 19) {
-				return("Infernal mages", 45, 4140);
-			} else if ($int2 = 20) {
-				return("Brine rats", 47, 11047);
-			} else if ($int2 = 21) {
-				return("Bloodvelds", 50, 4141);
-			} else if ($int2 = 22) {
-				return("Jellies", 52, 4142);
-			} else if ($int2 = 23) {
-				return("Turoth", 55, 4143);
-			} else if ($int2 = 24) {
-				return("Mutated zygomites", 57, 7420);
-			} else if ($int2 = 25) {
-				return("Cave horrors", 58, 8900);
-			} else if ($int2 = 26) {
-				return("Aberrant spectres", 60, 4144);
-			} else if ($int2 = 27) {
-				return("Wyrms", 62, 23040);
-			} else if ($int2 = 28) {
-				return("Spiritual rangers", 63, 11845);
-			} else if ($int2 = 29) {
-				return("Dust devils", 65, 4145);
-			} else if ($int2 = 30) {
-				return("Fossil Island wyverns", 66, 21507);
-			} else if ($int2 = 31) {
-				return("Spiritual warriors", 68, 11846);
-			} else if ($int2 = 32) {
-				return("Kurask", 70, 4146);
-			} else if ($int2 = 33) {
-				return("Skeletal wyverns", 72, 6811);
-			} else if ($int2 = 34) {
-				return("Gargoyles", 75, 4147);
-			} else if ($int2 = 35) {
-				return("Brutal black dragons", 77, 21391);
-			} else if ($int2 = 36) {
-				return("Nechryael", 80, 4148);
-			} else if ($int2 = 37) {
-				return("Ancient wyverns", 82, 21508);
-			} else if ($int2 = 38) {
-				return("Spiritual mages", 83, 11844);
-			} else if ($int2 = 39) {
-				return("Drakes", 84, 23041);
-			} else if ($int2 = 40) {
-				return("Abyssal demons & sires", 85, 4149);
-			} else if ($int2 = 41) {
-				return("Cave kraken", 87, 3272);
-			} else if ($int2 = 42) {
-				return("Dark beasts", 90, 6637);
-			} else if ($int2 = 43) {
-				return("Cerberus", 91, 13247);
-			} else if ($int2 = 44) {
-				return("Smoke devil", 93, 5349);
-			} else if ($int2 = 45) {
-				return("Hydras", 95, 23042);
-			} else {
-				return("", -1, -1);
+			switch ($int2) {
+				case 0 :
+					return("Crawling hands", 5, 4133);
+				case 1 :
+					return("Cave bugs", 7, 4521);
+				case 2 :
+					return("Cave crawlers", 10, 4134);
+				case 3 :
+					return("Banshees", 15, 4135);
+				case 4 :
+					return("Cave slime", 17, 4520);
+				case 5 :
+					return("Rockslugs", 20, 4136);
+				case 6 :
+					return("Desert lizards", 22, 6695);
+				case 7 :
+					return("Cockatrice", 25, 4137);
+				case 8 :
+					return("Pyrefiends", 30, 4138);
+				case 9 :
+					return("Mogres", 32, 6661);
+				case 10 :
+					return("Harpie bug swarms", 33, 7050);
+				case 11 :
+					return("Wall beasts", 35, 4519);
+				case 12 :
+					return("Killerwatts", 37, 7160);
+				case 13 :
+					return("Molanisks", 39, 10997);
+				case 14 :
+					return("Basilisks", 40, 4139);
+				case 15 :
+					return("Sea snakes", 40, 5089);
+				case 16 :
+					return("Terror dogs", 40, 10591);
+				case 17 :
+					return("Fever spiders", 42, 6709);
+				case 18 :
+					return("Sulphur Lizards", 44, 23043);
+				case 19 :
+					return("Infernal mages", 45, 4140);
+				case 20 :
+					return("Brine rats", 47, 11047);
+				case 21 :
+					return("Bloodvelds", 50, 4141);
+				case 22 :
+					return("Jellies", 52, 4142);
+				case 23 :
+					return("Turoth", 55, 4143);
+				case 24 :
+					return("Mutated zygomites", 57, 7420);
+				case 25 :
+					return("Cave horrors", 58, 8900);
+				case 26 :
+					return("Aberrant spectres", 60, 4144);
+				case 27 :
+					return("Wyrms", 62, 23040);
+				case 28 :
+					return("Spiritual rangers", 63, 11845);
+				case 29 :
+					return("Dust devils", 65, 4145);
+				case 30 :
+					return("Fossil Island wyverns", 66, 21507);
+				case 31 :
+					return("Spiritual warriors", 68, 11846);
+				case 32 :
+					return("Kurask", 70, 4146);
+				case 33 :
+					return("Skeletal wyverns", 72, 6811);
+				case 34 :
+					return("Gargoyles", 75, 4147);
+				case 35 :
+					return("Brutal black dragons", 77, 21391);
+				case 36 :
+					return("Nechryael", 80, 4148);
+				case 37 :
+					return("Ancient wyverns", 82, 21508);
+				case 38 :
+					return("Spiritual mages", 83, 11844);
+				case 39 :
+					return("Drakes", 84, 23041);
+				case 40 :
+					return("Abyssal demons & sires", 85, 4149);
+				case 41 :
+					return("Cave kraken", 87, 3272);
+				case 42 :
+					return("Dark beasts", 90, 6637);
+				case 43 :
+					return("Cerberus", 91, 13247);
+				case 44 :
+					return("Smoke devil", 93, 5349);
+				case 45 :
+					return("Hydras", 95, 23042);
+				else :
+					return("", -1, -1);
 			}
 		} else if ($int1 = 1) {
-			if ($int2 = 0) {
-				return("Spiny helmet<br> (with 5 Defence)", 1, 4551);
-			} else if ($int2 = 1) {
-				return("Rock hammer & Rock Thrownhammer", 1, 4162);
-			} else if ($int2 = 2) {
-				return("Facemask", 10, 4164);
-			} else if ($int2 = 3) {
-				return("Earmuffs", 15, 4166);
-			} else if ($int2 = 4) {
-				return("Mirror shield<br> (with 20 Defence)", 25, 4156);
-			} else if ($int2 = 5) {
-				return("Fishing explosive", 32, 6660);
-			} else if ($int2 = 6) {
-				return("Harpie bug lantern<br> (not a light source)", 33, 7053);
-			} else if ($int2 = 7) {
-				return("Witchwood icon", 35, 8923);
-			} else if ($int2 = 8) {
-				return("Insulated boots", 37, 7159);
-			} else if ($int2 = 9) {
-				return("Slayer bell", 39, 10952);
-			} else if ($int2 = 10) {
-				return("Slayer gloves", 42, 6720);
-			} else if ($int2 = 11) {
-				return("Leaf-bladed spear and sword<br> (with 50 Attack)", 55, 4158);
-			} else if ($int2 = 12) {
-				return("Leaf-bladed battleaxe<br> (with 65 Attack)", 55, 20727);
-			} else if ($int2 = 13) {
-				return("Broad arrows<br> (with 50 Ranged)", 55, 4150);
-			} else if ($int2 = 14) {
-				return("Broad bolts<br> (with 61 Ranged)", 55, 4296);
-			} else if ($int2 = 15) {
-				return("Slayer's staff<br> (with 50 Magic)", 55, 4170);
-			} else if ($int2 = 16) {
-				return("Slayer's staff (e)<br> (with 75 Magic)", 55, 21255);
-			} else if ($int2 = 17) {
-				return("Fungicide spray", 57, 7421);
-			} else if ($int2 = 18) {
-				return("Nose peg", 60, 4168);
-			} else if ($int2 = 19) {
-				return("Amethyst broad bolts<br> (with 61 Ranged)", 65, 3902);
-			} else {
-				return("", -1, -1);
+			switch ($int2) {
+				case 0 :
+					return("Spiny helmet<br> (with 5 Defence)", 1, 4551);
+				case 1 :
+					return("Rock hammer & Rock Thrownhammer", 1, 4162);
+				case 2 :
+					return("Facemask", 10, 4164);
+				case 3 :
+					return("Earmuffs", 15, 4166);
+				case 4 :
+					return("Mirror shield<br> (with 20 Defence)", 25, 4156);
+				case 5 :
+					return("Fishing explosive", 32, 6660);
+				case 6 :
+					return("Harpie bug lantern<br> (not a light source)", 33, 7053);
+				case 7 :
+					return("Witchwood icon", 35, 8923);
+				case 8 :
+					return("Insulated boots", 37, 7159);
+				case 9 :
+					return("Slayer bell", 39, 10952);
+				case 10 :
+					return("Slayer gloves", 42, 6720);
+				case 11 :
+					return("Boots of Stone", 44, 23037);
+				case 12 :
+					return("Leaf-bladed spear and sword<br> (with 50 Attack)", 55, 4158);
+				case 13 :
+					return("Leaf-bladed battleaxe<br> (with 65 Attack)", 55, 20727);
+				case 14 :
+					return("Broad arrows<br> (with 50 Ranged)", 55, 4150);
+				case 15 :
+					return("Broad bolts<br> (with 61 Ranged)", 55, 4296);
+				case 16 :
+					return("Slayer's staff<br> (with 50 Magic)", 55, 4170);
+				case 17 :
+					return("Slayer's staff (e)<br> (with 75 Magic)", 55, 21255);
+				case 18 :
+					return("Fungicide spray", 57, 7421);
+				case 19 :
+					return("Nose peg", 60, 4168);
+				case 20 :
+					return("Amethyst broad bolts<br> (with 61 Ranged)", 65, 3902);
+				else :
+					return("", -1, -1);
 			}
 		} else if ($int1 = 2) {
 			if ($int2 = 0) {

@@ -1,16 +1,51 @@
 // 463
-[proc,prayer_updatebutton](int $int0, component $component1, component $component2)
-if (testbit(%varbit4101, $int0) = true) {
-	if_setop(1, "Deactivate", $component1);
+[proc,prayer_updatebutton](boolean $boolean0, int $int1, component $component2, component $component3, component $component4)
+switch ($int1) {
+	case 24, 27, 28 :
+		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer, defence}", $component2);
+		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){83, 1377, 1429, 284}", $component2);
+	case 25, 26 :
+		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer, defence}", $component2);
+		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){83, 1377, 1050, 284}", $component2);
+	else :
+		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer}", $component2);
+		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){83, 1377, 284}", $component2);
+}
+if_setonop("prayer_op(event_opindex, $boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4)", $component2);
+if (($int1 = 8) & (((~high_risk_world = 1) | (~deadman_world = 1)) | (%varbit5314 = 1))) {
+	.cc_settrans(100);
+	.cc_create($component2, ^iftype_graphic, 2);
+	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(5, 4, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setgraphic("pvpw_icons,1");
+} else {
+	.cc_settrans(0);
+}
+if_clearops($component2);
+if ($boolean0 = true) {
+	if_setop(2, "Info", $component2);
+	if (testbit(%varbit4101, $int1) = true) {
+		cc_sethide(false);
+	} else {
+		cc_sethide(true);
+	}
+} else if (testbit(%varbit4101, $int1) = true) {
+	if_setop(1, "Deactivate", $component2);
 	cc_sethide(false);
 } else {
-	if_setop(1, "Activate", $component1);
+	if_setop(1, "Activate", $component2);
 	cc_sethide(true);
 }
-if (~script464($int0) = 1) {
-	.cc_setgraphic(enum(int, graphic, 865, $int0));
+if (~script464($int1) = 1) {
+	.cc_setgraphic(enum(int, graphic, 865, $int1));
 } else {
-	.cc_setgraphic(enum(int, graphic, 864, $int0));
+	.cc_setgraphic(enum(int, graphic, 864, $int1));
 }
-~prayer_tooltips($component2, $component1, $int0);
+if (($boolean0 = false) & (%varbit5711 = 0)) {
+	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component4, ~script2762($int1), 25, if_getwidth($component3))", $component2);
+	if_setonmouseleave("deltooltip($component4)", $component2);
+} else {
+	if_setonmouserepeat(null, $component2);
+	if_setonmouseleave(null, $component2);
+}
 return;

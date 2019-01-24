@@ -1,0 +1,16 @@
+// 460
+script460(int $int0, int $int1, component $component2, component $component3)
+def_int $int4 = 0;
+if ($int0 = 1) {
+	$int4 = ~script633(%varbit3356);
+} else if ($int0 = 2) {
+	$int4 = ~script633(%varbit3357);
+}
+if ($int4 = 1) {
+	if_sethide(true, $component2);
+	if_sethide(false, $component3);
+} else {
+	if_sethide(false, $component2);
+	if_sethide(true, $component3);
+}
+return;

@@ -53,7 +53,7 @@
 [**50**](scripts/[clientscript,options_mousecam_init].cs2) `[clientscript,options_mousecam_init]`  
 [**51**](scripts/[clientscript,options_mousecam_resynch].cs2) `[clientscript,options_mousecam_resynch]`  
 [**52**](scripts/[clientscript,options_mousecam_op].cs2) `[clientscript,options_mousecam_op]`  
-[**53**](scripts/[clientscript,prayer_level].cs2) `[clientscript,prayer_level]`  
+[**53**](scripts/script53.cs2)  
 [**54**](scripts/[clientscript,poh_options_drawbutton].cs2) `[clientscript,poh_options_drawbutton]`  
 [**55**](scripts/script55.cs2)  
 [**56**](scripts/script56.cs2)  
@@ -459,8 +459,8 @@
 [**456**](scripts/[proc,orbs_update_prayer].cs2) `[proc,orbs_update_prayer]`  
 [**457**](scripts/[clientscript,orbs_toggle_runmode].cs2) `[clientscript,orbs_toggle_runmode]`  
 [**458**](scripts/[clientscript,prayer_init].cs2) `[clientscript,prayer_init]`  
-[**459**](scripts/[proc,prayer_level].cs2) `[proc,prayer_level]`  
-[**460**](scripts/[proc,prayer_setupbutton].cs2) `[proc,prayer_setupbutton]`  
+[**459**](scripts/script459.cs2)  
+[**460**](scripts/script460.cs2)  
 [**461**](scripts/[clientscript,prayer_updatebutton].cs2) `[clientscript,prayer_updatebutton]`  
 [**462**](scripts/[clientscript,prayer_op].cs2) `[clientscript,prayer_op]`  
 [**463**](scripts/[proc,prayer_updatebutton].cs2) `[proc,prayer_updatebutton]`  
@@ -1426,8 +1426,8 @@
 [**1423**](scripts/script1423.cs2)  
 [**1424**](scripts/script1424.cs2)  
 [**1425**](scripts/[proc,minmax].cs2) `[proc,minmax]`  
-[**1426**](scripts/[clientscript,wint_reset_timer].cs2) `[clientscript,wint_reset_timer]`  
-[**1427**](scripts/[clientscript,wint_countdown].cs2) `[clientscript,wint_countdown]`  
+[**1426**](scripts/script1426.cs2)  
+[**1427**](scripts/script1427.cs2)  
 [**1428**](scripts/script1428.cs2)  
 [**1429**](scripts/script1429.cs2)  
 [**1430**](scripts/script1430.cs2)  
@@ -1966,7 +1966,7 @@
 [**1963**](scripts/[clientscript,options_satooltips_resynch].cs2) `[clientscript,options_satooltips_resynch]`  
 [**1964**](scripts/[clientscript,options_satooltips_op].cs2) `[clientscript,options_satooltips_op]`  
 [**1965**](scripts/[proc,options_satooltips].cs2) `[proc,options_satooltips]`  
-[**1966**](scripts/[proc,prayer_tooltips].cs2) `[proc,prayer_tooltips]`  
+[**1966**](scripts/script1966.cs2)  
 [**1967**](scripts/[clientscript,vm_info_init].cs2) `[clientscript,vm_info_init]`  
 [**1968**](scripts/[proc,vm_kudos_get_status].cs2) `[proc,vm_kudos_get_status]`  
 [**1969**](scripts/script1969.cs2)  
@@ -2753,3 +2753,37 @@
 [**2750**](scripts/script2750.cs2)  
 [**2751**](scripts/script2751.cs2)  
 [**2752**](scripts/script2752.cs2)  
+[**2753**](scripts/script2753.cs2)  
+[**2754**](scripts/script2754.cs2)  
+[**2755**](scripts/script2755.cs2)  
+[**2756**](scripts/script2756.cs2)  
+[**2757**](scripts/script2757.cs2)  
+[**2758**](scripts/script2758.cs2)  
+[**2759**](scripts/script2759.cs2)  
+[**2760**](scripts/script2760.cs2)  
+[**2761**](scripts/script2761.cs2)  
+[**2762**](scripts/script2762.cs2)  
+[**2763**](scripts/script2763.cs2)  
+[**2764**](scripts/script2764.cs2)  
+[**2765**](scripts/script2765.cs2)  
+[**2766**](scripts/script2766.cs2)  
+[**2767**](scripts/script2767.cs2)  
+[**2768**](scripts/script2768.cs2)  
+[**2769**](scripts/script2769.cs2)  
+[**2770**](scripts/script2770.cs2)  
+[**2771**](scripts/script2771.cs2)  
+[**2772**](scripts/script2772.cs2)  
+[**2773**](scripts/script2773.cs2)  
+[**2774**](scripts/script2774.cs2)  
+[**2775**](scripts/script2775.cs2)  
+[**2776**](scripts/script2776.cs2)  
+[**2777**](scripts/script2777.cs2)  
+[**2778**](scripts/script2778.cs2)  
+[**2779**](scripts/script2779.cs2)  
+[**2780**](scripts/script2780.cs2)  
+[**2781**](scripts/script2781.cs2)  
+[**2782**](scripts/script2782.cs2)  
+[**2783**](scripts/script2783.cs2)  
+[**2784**](scripts/script2784.cs2)  
+[**2785**](scripts/script2785.cs2)  
+[**2786**](scripts/script2786.cs2)  

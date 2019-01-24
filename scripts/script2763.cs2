@@ -1,0 +1,297 @@
+// 2763
+script2763()
+if (%varbit3347 = 1) {
+	if_sethide(false, 510:112);
+	if (%varbit3351 >= 5) {
+		if_sethide(false, 510:19);
+	} else {
+		if_sethide(true, 510:19);
+	}
+	if (%varbit3351 >= 4) {
+		if_sethide(false, 510:25);
+	} else {
+		if_sethide(true, 510:25);
+	}
+	if (%varbit3351 >= 3) {
+		if_sethide(false, 510:17);
+	} else {
+		if_sethide(true, 510:17);
+	}
+	if_sethide(true, 510:15);
+	if (%varbit3351 >= 2) {
+		if_sethide(false, 510:12);
+	} else {
+		if_sethide(true, 510:12);
+	}
+	if_sethide(true, 510:10);
+	if (%varbit3351 >= 1) {
+		if_sethide(false, 510:7);
+	} else {
+		if_sethide(true, 510:7);
+	}
+	if_sethide(true, 510:5);
+	if_sethide(true, 510:102);
+	if_sethide(true, 510:120);
+} else {
+	if_sethide(true, 510:112);
+	if_sethide(true, 510:19);
+	if_sethide(true, 510:25);
+	if (%varbit3351 >= 3) {
+		if_sethide(true, 510:17);
+		if_sethide(false, 510:15);
+		if_sethide(false, 510:12);
+		if_sethide(true, 510:10);
+		if_sethide(false, 510:7);
+		if_sethide(true, 510:5);
+		if_sethide(false, 510:102);
+		if_sethide(true, 510:120);
+	} else if (%varbit3351 = 2) {
+		if_sethide(true, 510:17);
+		if_sethide(true, 510:15);
+		if_sethide(true, 510:12);
+		if_sethide(false, 510:10);
+		if_sethide(false, 510:7);
+		if_sethide(true, 510:5);
+		if_sethide(false, 510:102);
+		if_sethide(true, 510:120);
+	} else if (%varbit3351 <= 1) {
+		if_sethide(true, 510:15);
+		if_sethide(true, 510:17);
+		if_sethide(true, 510:10);
+		if_sethide(true, 510:12);
+		if_sethide(false, 510:5);
+		if_sethide(true, 510:7);
+		if_sethide(true, 510:102);
+		if_sethide(false, 510:120);
+	}
+}
+if (%varbit3348 = 1) {
+	if_sethide(false, 510:114);
+	if (%varbit3352 >= 5) {
+		if_sethide(false, 510:57);
+	} else {
+		if_sethide(true, 510:57);
+	}
+	if (%varbit3352 >= 4) {
+		if_sethide(false, 510:53);
+	} else {
+		if_sethide(true, 510:53);
+	}
+	if_sethide(true, 510:51);
+	if (%varbit3352 >= 3) {
+		if_sethide(false, 510:48);
+	} else {
+		if_sethide(true, 510:48);
+	}
+	if_sethide(true, 510:46);
+	if (%varbit3352 >= 2) {
+		if_sethide(false, 510:44);
+	} else {
+		if_sethide(true, 510:44);
+	}
+	if_sethide(true, 510:42);
+	if (%varbit3352 >= 1) {
+		if_sethide(false, 510:39);
+	} else {
+		if_sethide(true, 510:39);
+	}
+	if_sethide(true, 510:37);
+	if_sethide(true, 510:104);
+	if_sethide(true, 510:122);
+} else {
+	if_sethide(true, 510:114);
+	if_sethide(true, 510:57);
+	if (%varbit3352 >= 4) {
+		if_sethide(false, 510:51);
+		if_sethide(true, 510:53);
+		if_sethide(true, 510:46);
+		if_sethide(false, 510:48);
+		if_sethide(true, 510:42);
+		if_sethide(false, 510:44);
+		if_sethide(true, 510:37);
+		if_sethide(false, 510:39);
+		if_sethide(false, 510:104);
+		if_sethide(true, 510:122);
+	} else if (%varbit3352 = 3) {
+		if_sethide(true, 510:51);
+		if_sethide(true, 510:53);
+		if_sethide(false, 510:46);
+		if_sethide(true, 510:48);
+		if_sethide(true, 510:42);
+		if_sethide(false, 510:44);
+		if_sethide(true, 510:37);
+		if_sethide(false, 510:39);
+		if_sethide(false, 510:104);
+		if_sethide(true, 510:122);
+	} else if (%varbit3352 = 2) {
+		if_sethide(true, 510:51);
+		if_sethide(true, 510:53);
+		if_sethide(true, 510:46);
+		if_sethide(true, 510:48);
+		if_sethide(false, 510:42);
+		if_sethide(true, 510:44);
+		if_sethide(true, 510:37);
+		if_sethide(false, 510:39);
+		if_sethide(true, 510:104);
+		if_sethide(false, 510:122);
+	} else if (%varbit3352 <= 1) {
+		if_sethide(true, 510:51);
+		if_sethide(true, 510:53);
+		if_sethide(true, 510:46);
+		if_sethide(true, 510:48);
+		if_sethide(true, 510:42);
+		if_sethide(true, 510:44);
+		if_sethide(false, 510:37);
+		if_sethide(true, 510:39);
+		if_sethide(true, 510:104);
+		if_sethide(false, 510:122);
+	}
+}
+if (%varbit3349 = 1) {
+	if_sethide(false, 510:116);
+	if (%varbit3353 >= 5) {
+		if_sethide(false, 510:77);
+	} else {
+		if_sethide(true, 510:77);
+	}
+	if (%varbit3353 >= 4) {
+		if_sethide(false, 510:74);
+	} else {
+		if_sethide(true, 510:74);
+	}
+	if (%varbit3353 >= 3) {
+		if_sethide(false, 510:71);
+	} else {
+		if_sethide(true, 510:71);
+	}
+	if_sethide(true, 510:69);
+	if (%varbit3353 >= 2) {
+		if_sethide(false, 510:66);
+	} else {
+		if_sethide(true, 510:66);
+	}
+	if_sethide(true, 510:64);
+	if (%varbit3353 >= 1) {
+		if_sethide(false, 510:61);
+	} else {
+		if_sethide(true, 510:61);
+	}
+	if_sethide(true, 510:59);
+	if_sethide(true, 510:106);
+	if_sethide(true, 510:124);
+} else {
+	if_sethide(true, 510:116);
+	if_sethide(true, 510:77);
+	if_sethide(true, 510:74);
+	if (%varbit3353 >= 3) {
+		if_sethide(false, 510:69);
+		if_sethide(true, 510:71);
+		if_sethide(true, 510:64);
+		if_sethide(false, 510:66);
+		if_sethide(true, 510:59);
+		if_sethide(false, 510:61);
+		if_sethide(false, 510:106);
+		if_sethide(true, 510:124);
+	} else if (%varbit3353 = 2) {
+		if_sethide(true, 510:69);
+		if_sethide(true, 510:71);
+		if_sethide(false, 510:64);
+		if_sethide(true, 510:66);
+		if_sethide(true, 510:59);
+		if_sethide(false, 510:61);
+		if_sethide(true, 510:106);
+		if_sethide(false, 510:124);
+	} else if (%varbit3353 <= 1) {
+		if_sethide(true, 510:69);
+		if_sethide(true, 510:71);
+		if_sethide(true, 510:64);
+		if_sethide(true, 510:66);
+		if_sethide(false, 510:59);
+		if_sethide(true, 510:61);
+		if_sethide(true, 510:106);
+		if_sethide(false, 510:124);
+	}
+}
+if (%varbit3350 = 1) {
+	if_sethide(false, 510:118);
+	if (%varbit3355 >= 5) {
+		if_sethide(false, 510:100);
+	} else {
+		if_sethide(true, 510:100);
+	}
+	if (%varbit3355 >= 4) {
+		if_sethide(false, 510:97);
+	} else {
+		if_sethide(true, 510:97);
+	}
+	if_sethide(true, 510:95);
+	if (%varbit3355 >= 3) {
+		if_sethide(false, 510:92);
+	} else {
+		if_sethide(true, 510:92);
+	}
+	if_sethide(true, 510:90);
+	if (%varbit3355 >= 2) {
+		if_sethide(false, 510:87);
+	} else {
+		if_sethide(true, 510:87);
+	}
+	if_sethide(true, 510:85);
+	if (%varbit3355 >= 1) {
+		if_sethide(false, 510:82);
+	} else {
+		if_sethide(true, 510:82);
+	}
+	if_sethide(true, 510:80);
+	if_sethide(true, 510:108);
+	if_sethide(true, 510:126);
+} else {
+	if_sethide(true, 510:118);
+	if_sethide(true, 510:100);
+	if (%varbit3355 >= 4) {
+		if_sethide(false, 510:95);
+		if_sethide(true, 510:97);
+		if_sethide(true, 510:90);
+		if_sethide(false, 510:92);
+		if_sethide(true, 510:85);
+		if_sethide(false, 510:87);
+		if_sethide(true, 510:80);
+		if_sethide(false, 510:82);
+		if_sethide(false, 510:108);
+		if_sethide(true, 510:126);
+	} else if (%varbit3355 = 3) {
+		if_sethide(true, 510:95);
+		if_sethide(true, 510:97);
+		if_sethide(false, 510:90);
+		if_sethide(true, 510:92);
+		if_sethide(true, 510:85);
+		if_sethide(false, 510:87);
+		if_sethide(true, 510:80);
+		if_sethide(false, 510:82);
+		if_sethide(true, 510:108);
+		if_sethide(false, 510:126);
+	} else if (%varbit3355 = 2) {
+		if_sethide(true, 510:95);
+		if_sethide(true, 510:97);
+		if_sethide(true, 510:90);
+		if_sethide(true, 510:92);
+		if_sethide(false, 510:85);
+		if_sethide(true, 510:87);
+		if_sethide(true, 510:80);
+		if_sethide(false, 510:82);
+		if_sethide(true, 510:108);
+		if_sethide(false, 510:126);
+	} else if (%varbit3355 <= 1) {
+		if_sethide(true, 510:95);
+		if_sethide(true, 510:97);
+		if_sethide(true, 510:90);
+		if_sethide(true, 510:92);
+		if_sethide(true, 510:85);
+		if_sethide(true, 510:87);
+		if_sethide(false, 510:80);
+		if_sethide(true, 510:82);
+		if_sethide(true, 510:108);
+		if_sethide(false, 510:126);
+	}
+}
+return;

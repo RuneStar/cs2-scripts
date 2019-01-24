@@ -1,0 +1,14 @@
+// 1426
+script1426(int $int0, int $int1, int $int2, component $component3, component $component4)
+if ($int0 ! 1) {
+	return;
+} else {
+	sound_synth(2400, 1, 0);
+	if ($int1 = 1) {
+		%varbit3356 = calc(1 - %varbit3356);
+	} else if ($int1 = 2) {
+		%varbit3357 = calc(1 - %varbit3357);
+	}
+	~script460($int1, $int2, $component3, $component4);
+	return;
+}

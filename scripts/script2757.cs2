@@ -1,0 +1,17 @@
+// 2757
+script2757(component $component0, int $int1)
+def_int $int2 = calc($int1 - clientclock);
+if ($int2 <= 0) {
+	if_settext("", $component0);
+	return;
+} else {
+	def_int $int3 = calc($int2 / 50);
+	def_int $int4 = calc($int3 / 60);
+	$int3 = calc($int3 % 60);
+	if ($int3 > 10) {
+		if_settext("The Wintertodt returns in: <tostring($int4)>:<tostring($int3)>", $component0);
+	} else {
+		if_settext("The Wintertodt returns in: <tostring($int4)>:0<tostring($int3)>", $component0);
+	}
+	return;
+}
