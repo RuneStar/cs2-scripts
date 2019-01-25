@@ -30,7 +30,7 @@ if ($obj1 = null) {
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 	cc_settextshadow(true);
-	if (inv_total(93, $obj3) < $int5) {
+	if (inv_total(inv, $obj3) < $int5) {
 		cc_setcolour(0xff981f);
 	} else {
 		cc_setcolour(^green);

@@ -1,6 +1,6 @@
 // 298
 [clientscript,bankside_reorder](component $component0, component $component1, int $int2, int $int3, component $component4, component $component5, component $component6)
-def_int $int7 = inv_size(93);
+def_int $int7 = inv_size(inv);
 if (($int2 < 0) | ($int2 >= $int7)) {
 	return;
 } else if (($int3 < 0) | ($int3 >= $int7)) {
@@ -8,16 +8,16 @@ if (($int2 < 0) | ($int2 >= $int7)) {
 } else if ($component0 ! $component1) {
 	return;
 } else {
-	def_obj $obj8 = inv_getobj(93, $int2);
+	def_obj $obj8 = inv_getobj(inv, $int2);
 	if ($obj8 = null) {
 		return;
 	} else {
-		def_obj $obj9 = inv_getobj(93, $int3);
+		def_obj $obj9 = inv_getobj(inv, $int3);
 		if (cc_find($component0, $int3) = true) {
-			~bankside_drawitem($obj8, inv_getnum(93, $int2), $component0, $component4, 0, $component5, $component6);
+			~bankside_drawitem($obj8, inv_getnum(inv, $int2), $component0, $component4, 0, $component5, $component6);
 		}
 		if (cc_find($component0, $int2) = true) {
-			~bankside_drawitem($obj9, inv_getnum(93, $int3), $component0, $component4, 0, $component5, $component6);
+			~bankside_drawitem($obj9, inv_getnum(inv, $int3), $component0, $component4, 0, $component5, $component6);
 		}
 		if (((($obj8 = looting_bag_11941) | ($obj8 = looting_bag_22586)) | ($obj9 = looting_bag_11941)) | ($obj9 = looting_bag_22586)) {
 			cc_deleteall($component4);

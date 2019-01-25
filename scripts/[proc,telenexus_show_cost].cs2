@@ -42,7 +42,7 @@ if ($obj5 ! null) {
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(93, $obj5) - inv_total(619, $obj5)) >= $int6) {
+	if (calc(inv_total(inv, $obj5) - inv_total(619, $obj5)) >= $int6) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {
@@ -62,7 +62,7 @@ if ($obj7 ! null) {
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(93, $obj7) - inv_total(619, $obj7)) >= $int8) {
+	if (calc(inv_total(inv, $obj7) - inv_total(619, $obj7)) >= $int8) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {
@@ -82,7 +82,7 @@ if ($obj9 ! null) {
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(93, $obj9) - inv_total(619, $obj9)) >= $int10) {
+	if (calc(inv_total(inv, $obj9) - inv_total(619, $obj9)) >= $int10) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {
@@ -102,7 +102,7 @@ if ($obj11 ! null) {
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(93, $obj11) - inv_total(619, $obj11)) >= $int12) {
+	if (calc(inv_total(inv, $obj11) - inv_total(619, $obj11)) >= $int12) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {

@@ -2,7 +2,7 @@
 script781(component $component0, component $component1)
 cc_deleteall($component0);
 def_int $int2 = 0;
-def_int $int3 = inv_size(93);
+def_int $int3 = inv_size(inv);
 while ($int2 < $int3) {
 	cc_create($component0, ^iftype_graphic, $int2);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -25,7 +25,7 @@ while ($int2 < 4) {
 	$int2 = calc($int2 + 1);
 }
 ~script783($component0, $component1);
-if_setoninvtransmit("script782($component0, $component1){93}", $component0);
+if_setoninvtransmit("script782($component0, $component1){inv}", $component0);
 if_setonvartransmit("script782($component0, $component1){var563, var375}", $component0);
 if_setonstocktransmit("script782($component0, $component1)", $component0);
 return;

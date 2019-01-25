@@ -5,7 +5,7 @@ def_int $int3 = 0;
 def_int $int4 = 0;
 if ($int1 = 0) {
 	while ($int4 < 816) {
-		$obj2 = inv_getobj(95, $int4);
+		$obj2 = inv_getobj(bank, $int4);
 		if (oc_unplaceholder($obj2) ! $obj2) {
 			$int3 = calc($int3 + 1);
 		}

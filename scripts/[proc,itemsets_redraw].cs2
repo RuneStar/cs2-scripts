@@ -13,10 +13,10 @@ if ((map_members = false) & (oc_members(enum(int, namedobj, $enum0, -1)) = true)
 	def_int $int3 = 0;
 	def_obj $obj4 = enum(int, namedobj, $enum0, $int3);
 	while (($obj4 ! null) & (($int1 = 0) | ($int2 = 0))) {
-		if (inv_total(93, $obj4) <= 0) {
+		if (inv_total(inv, $obj4) <= 0) {
 			$int1 = 1;
 		}
-		if (inv_total(93, oc_cert($obj4)) <= 0) {
+		if (inv_total(inv, oc_cert($obj4)) <= 0) {
 			$int2 = 1;
 		}
 		$int3 = calc($int3 + 1);

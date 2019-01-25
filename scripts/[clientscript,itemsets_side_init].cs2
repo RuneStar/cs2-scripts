@@ -4,7 +4,7 @@ cc_deleteall($component0);
 def_int $int1 = calc(((42 - 36) * 3) - 2);
 def_int $int2 = calc((36 - 32) * 2);
 def_int $int3 = 0;
-def_int $int4 = inv_size(93);
+def_int $int4 = inv_size(inv);
 while ($int3 < $int4) {
 	cc_create($component0, ^iftype_graphic, $int3);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -14,5 +14,5 @@ while ($int3 < $int4) {
 	$int3 = calc($int3 + 1);
 }
 ~itemsets_side_draw($component0);
-if_setoninvtransmit("itemsets_side_draw($component0){93}", $component0);
+if_setoninvtransmit("itemsets_side_draw($component0){inv}", $component0);
 return;

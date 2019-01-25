@@ -47,7 +47,7 @@ if ($component3 = null) {
 	$string1 = ",";
 	cc_settext("<~script46($int7, $string1)> coins");
 	~poh_add_room_costupdate($int7);
-	cc_setoninvtransmit("poh_add_room_costupdate(event_com, event_comid, $int7){93}");
+	cc_setoninvtransmit("poh_add_room_costupdate(event_com, event_comid, $int7){inv}");
 	if_setop(1, $string0, $component3);
 	if_setonop("poh_add_room_op(event_com, $int1)", $component3);
 	if_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top, $component3);

@@ -2,7 +2,7 @@
 script1158(component $component0)
 cc_deleteall($component0);
 def_int $int1 = 0;
-def_int $int2 = inv_size(93);
+def_int $int2 = inv_size(inv);
 def_int $int3 = calc(((42 - 36) * 3) - 2);
 def_int $int4 = calc((36 - 32) * 2);
 while ($int1 < $int2) {
@@ -17,5 +17,5 @@ while ($int1 < $int2) {
 	$int1 = calc($int1 + 1);
 }
 ~script1160($component0);
-if_setoninvtransmit("script1159($component0){93}", $component0);
+if_setoninvtransmit("script1159($component0){inv}", $component0);
 return;

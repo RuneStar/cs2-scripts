@@ -27,14 +27,14 @@ while ($int1 < 5) {
 		}
 		$int2 = calc($int2 + 1);
 	}
-	if (((($boolean5 = true) & (cc_find(234:14, $int1) = true)) & (string_length(cc_getop(1)) = 0)) & (inv_total(93, enum(int, namedobj, 1244, $int1)) > 0)) {
+	if (((($boolean5 = true) & (cc_find(234:14, $int1) = true)) & (string_length(cc_getop(1)) = 0)) & (inv_total(inv, enum(int, namedobj, 1244, $int1)) > 0)) {
 		$int6 = 1;
 	}
 	if ($int1 = %varbit4842) {
 		if_sethide($boolean5, 234:16);
 		if_sethide($boolean5, 234:46);
 		if (cc_find(234:14, calc(5 + $int1)) = true) {
-			if (inv_total(93, enum(int, namedobj, 1244, $int1)) <= 0) {
+			if (inv_total(inv, enum(int, namedobj, 1244, $int1)) <= 0) {
 				cc_sethide(true);
 			} else {
 				cc_sethide(false);

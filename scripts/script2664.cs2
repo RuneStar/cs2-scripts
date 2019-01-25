@@ -110,19 +110,19 @@ if ($int11 = 1) {
 	}
 }
 def_string $string1 = "";
-if (($obj1 ! null) & (calc(inv_total(93, $obj1) - inv_total(619, $obj1)) < $int2)) {
+if (($obj1 ! null) & (calc(inv_total(inv, $obj1) - inv_total(619, $obj1)) < $int2)) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }
-if (($obj3 ! null) & (calc(inv_total(93, $obj3) - inv_total(619, $obj3)) < $int4)) {
+if (($obj3 ! null) & (calc(inv_total(inv, $obj3) - inv_total(619, $obj3)) < $int4)) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }
-if (($obj5 ! null) & (calc(inv_total(93, $obj5) - inv_total(619, $obj5)) < $int6)) {
+if (($obj5 ! null) & (calc(inv_total(inv, $obj5) - inv_total(619, $obj5)) < $int6)) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }
-if (($obj7 ! null) & (calc(inv_total(93, $obj7) - inv_total(619, $obj7)) < $int8)) {
+if (($obj7 ! null) & (calc(inv_total(inv, $obj7) - inv_total(619, $obj7)) < $int8)) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }

@@ -13,10 +13,10 @@ def_int $int16 = 0;
 def_int $int17 = 0;
 while ($int0 < $int1) {
 	if (cc_find($component3, $int0) = true) {
-		$obj13 = inv_getobj(95, $int0);
+		$obj13 = inv_getobj(bank, $int0);
 		if (~bankmain_filteritem($obj13) = 1) {
 			cc_sethide(false);
-			~bankmain_drawitem($obj13, inv_getnum(95, $int0), $component3, $component4, $component5, $component6, $component7);
+			~bankmain_drawitem($obj13, inv_getnum(bank, $int0), $component3, $component4, $component5, $component6, $component7);
 			$int15 = calc($int15 + 1);
 			$int14 = calc($int12 + ($int17 * 36));
 			cc_setposition(calc(51 + ($int16 * (36 + $int9))), $int14, ^setpos_abs_left, ^setpos_abs_top);

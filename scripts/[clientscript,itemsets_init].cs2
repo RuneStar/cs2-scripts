@@ -20,7 +20,7 @@ while ($enum6 ! null) {
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
 		~itemsets_redraw($enum6);
-		cc_setoninvtransmit("itemsets_redraw(event_com, event_comid, $enum6){93}");
+		cc_setoninvtransmit("itemsets_redraw(event_com, event_comid, $enum6){inv}");
 	} else {
 		cc_sethide(true);
 	}

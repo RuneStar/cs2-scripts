@@ -1,6 +1,6 @@
 // 1460
 [clientscript,lumbridge_alchemy_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-def_int $int6 = inv_size(93);
+def_int $int6 = inv_size(inv);
 def_int $int7 = 0;
 while ($int7 < $int6) {
 	cc_create($component4, ^iftype_graphic, $int7);
@@ -13,7 +13,7 @@ while ($int7 < $int6) {
 	$int7 = calc($int7 + 1);
 }
 ~lumbridge_alchemy_invtransmit($component4, $int6);
-if_setoninvtransmit("lumbridge_alchemy_invtransmit($component4, $int6){93}", $component0);
+if_setoninvtransmit("lumbridge_alchemy_invtransmit($component4, $int6){inv}", $component0);
 ~lumbridge_alchemy_vartransmit($component1, $component2, $component3, $component4, $component5, $int6);
 if_setonvartransmit("lumbridge_alchemy_vartransmit($component1, $component2, $component3, $component4, $component5, $int6){var318, var925}", $component0);
 return;

@@ -1,11 +1,11 @@
 // 716
 script716(obj $obj0)(int)
-def_int $int1 = inv_total(93, $obj0);
+def_int $int1 = inv_total(inv, $obj0);
 def_obj $obj2 = oc_cert($obj0);
 if ($obj2 = $obj0) {
 	return($int1);
 } else {
-	def_int $int3 = inv_total(93, $obj2);
+	def_int $int3 = inv_total(inv, $obj2);
 	if (calc(^int_max - $int1) < $int3) {
 		return(^int_max);
 	} else {

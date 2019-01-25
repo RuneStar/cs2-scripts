@@ -8,15 +8,15 @@ def_int $int6 = 0;
 while ($int6 < $int1) {
 	if (cc_find($component0, $int6) = true) {
 		cc_clearops;
-		$obj5 = inv_getobj(93, $int6);
+		$obj5 = inv_getobj(inv, $int6);
 		if (%varbit3459 = 1) {
 			cc_sethide(false);
-			~raids_storage_side_private_drawitem($obj5, inv_getnum(93, $int6));
+			~raids_storage_side_private_drawitem($obj5, inv_getnum(inv, $int6));
 			cc_setdragdeadzone(10);
 			cc_setdragdeadtime(10);
 		} else if ($obj5 ! null) {
 			cc_sethide(false);
-			cc_setobject($obj5, inv_getnum(93, $int6));
+			cc_setobject($obj5, inv_getnum(inv, $int6));
 			cc_setopbase("<col=ff9040><oc_name($obj5)></col>");
 			$int3 = 0;
 			$int2 = 0;

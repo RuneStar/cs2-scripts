@@ -41,7 +41,7 @@ while ($int9 <= 107) {
 	if ($int7 = 1) {
 		$obj8 = enum(int, namedobj, 708, $int9);
 		if ($obj8 ! null) {
-			if (inv_total(93, $obj8) = 0) {
+			if (inv_total(inv, $obj8) = 0) {
 				cc_sethide(false);
 			} else {
 				cc_sethide(true);
@@ -80,5 +80,5 @@ if ($int5 <= if_getheight(78:3)) {
 }
 if_setscrollpos(0, 0, 78:3);
 ~scrollbar_vertical(78:4, 78:3, 798, 795, 796, 797, 793, 794);
-if_setoninvtransmit("script474($int0, $int1, $int2, $int3){93}", 78:3);
+if_setoninvtransmit("script474($int0, $int1, $int2, $int3){inv}", 78:3);
 return;

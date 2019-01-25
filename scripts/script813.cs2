@@ -1,10 +1,10 @@
 // 813
 script813()(int)
-def_int $int0 = inv_total(93, %var1151);
+def_int $int0 = inv_total(inv, %var1151);
 def_int $int1 = 0;
 def_obj $obj2 = oc_cert(%var1151);
 if ($obj2 ! %var1151) {
-	$int1 = inv_total(93, $obj2);
+	$int1 = inv_total(inv, $obj2);
 	if (calc(^int_max - $int1) < $int0) {
 		$int0 = ^int_max;
 	} else {
@@ -13,7 +13,7 @@ if ($obj2 ! %var1151) {
 } else {
 	$obj2 = oc_uncert(%var1151);
 	if ($obj2 ! %var1151) {
-		$int1 = inv_total(93, $obj2);
+		$int1 = inv_total(inv, $obj2);
 		if (calc(^int_max - $int1) < $int0) {
 			$int0 = ^int_max;
 		} else {

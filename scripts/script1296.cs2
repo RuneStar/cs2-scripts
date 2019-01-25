@@ -53,9 +53,9 @@ if (stat(magic) >= $int12) {
 	if_setcolour(0xc80000, $component17);
 }
 if (($array0(0) ! null) & ($array1(0) > 0)) {
-	if_settext("<tostring(inv_total(93, dark_essence_block_13446))>/1", $component18);
+	if_settext("<tostring(inv_total(inv, dark_essence_block_13446))>/1", $component18);
 	if_setobject_nonum($array0(0), $array1(0), $component13);
-	if (inv_total(93, $array0(0)) < $array1(0)) {
+	if (inv_total(inv, $array0(0)) < $array1(0)) {
 		cc_create($component0, ^iftype_graphic, 0);
 		cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc(if_getx($component13) + 20), calc(if_gety($component13) + 16), ^setpos_abs_left, ^setpos_abs_top);

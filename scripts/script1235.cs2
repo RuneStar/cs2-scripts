@@ -62,7 +62,7 @@ def_string $string0 = "Invalid item.";
 while ($int29 > 0) {
 	$int29 = calc($int29 - 1);
 	if (cc_find(81:5, $int29) = true) {
-		if ((($inv0 = 93) & ($array0($int29) <= -1)) & (inv_getobj(93, $int29) ! null)) {
+		if ((($inv0 = inv) & ($array0($int29) <= -1)) & (inv_getobj(inv, $int29) ! null)) {
 			cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 81:7, $string0, 25, 512)");
 			cc_setonmouseleave("deltooltip(81:7)");
 		} else {

@@ -8,18 +8,18 @@ def_int $int3 = calc($int1 / 7);
 def_int $int4 = calc(($int3 - 36) / 2);
 def_int $int5 = calc(32 + 20);
 def_int $int6 = 0;
-def_int $int7 = inv_size(93);
+def_int $int7 = inv_size(inv);
 def_int $int8 = 0;
 def_obj $obj9 = null;
 while ($int6 < $int7) {
-	$obj9 = inv_getobj(93, $int6);
+	$obj9 = inv_getobj(inv, $int6);
 	cc_create($component0, ^iftype_graphic, calc($int6 * 2));
 	.cc_create($component0, ^iftype_text, calc(($int6 * 2) + 1));
 	if ($obj9 ! null) {
 		if (enum(obj, namedobj, 815, $obj9) ! null) {
 			cc_setposition(calc($int4 + (($int8 % 7) * $int3)), calc($int2 + (($int8 / 7) * $int5)), ^setpos_abs_left, ^setpos_abs_top);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-			cc_setobject($obj9, inv_getnum(93, $int6));
+			cc_setobject($obj9, inv_getnum(inv, $int6));
 			cc_setgraphicshadow(0x333333);
 			cc_setoutline(1);
 			cc_setop(1, "Imbue");

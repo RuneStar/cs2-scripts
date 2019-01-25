@@ -30,7 +30,7 @@ if_setonvartransmit("script665($component1){var1139, var1140}", $component0);
 cc_deleteall($component2);
 $int3 = calc(((if_getwidth($component2) - (10 + (7 * 36))) / 6) + 36);
 def_int $int4 = calc(((if_getheight($component2) - (30 + (4 * 32))) / 3) + 32);
-def_int $int5 = inv_size(93);
+def_int $int5 = inv_size(inv);
 def_int $int6 = 0;
 while ($int6 < $int5) {
 	cc_create($component2, ^iftype_graphic, $int6);
@@ -43,5 +43,5 @@ while ($int6 < $int5) {
 	$int6 = calc($int6 + 1);
 }
 ~script670($component2);
-if_setoninvtransmit("script669($component2){93}", $component0);
+if_setoninvtransmit("script669($component2){inv}", $component0);
 return;

@@ -2,7 +2,7 @@
 [clientscript,bankside_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 cc_deleteall($component3);
 def_int $int7 = 0;
-def_int $int8 = inv_size(93);
+def_int $int8 = inv_size(inv);
 while ($int7 < $int8) {
 	cc_create($component3, ^iftype_graphic, $int7);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -14,7 +14,7 @@ while ($int7 < $int8) {
 	$int7 = calc($int7 + 1);
 }
 ~bankside_build($component1, $component3, $component2, $component4);
-if_setoninvtransmit("bankside_build($component1, $component3, $component2, $component4){93, 516}", $component1);
+if_setoninvtransmit("bankside_build($component1, $component3, $component2, $component4){inv, 516}", $component1);
 if_setonvartransmit("bankside_build($component1, $component3, $component2, $component4){var304, var1666, var261}", $component1);
 ~bankside_lootingbag_draw($component5);
 if_setoninvtransmit("bankside_lootingbag_draw($component5){516}", $component4);

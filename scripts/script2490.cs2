@@ -61,7 +61,7 @@ cc_setop(1, "Enter quantity");
 cc_setonop("opsound(event_opindex, 2)");
 $int6 = ~duel_stake_textbox($component0, $int6, 32, calc($int4 - 2), calc($int1 - 64));
 if ($component0 = 481:19) {
-	cc_setoninvtransmit("script2493(event_com, event_comid, platinum_token_13204){93, 134}");
+	cc_setoninvtransmit("script2493(event_com, event_comid, platinum_token_13204){inv, 134}");
 	if (cc_find($component0, $int9) = true) {
 		cc_setop(1, "+10");
 	}
@@ -76,7 +76,7 @@ if ($component0 = 481:19) {
 	$int6 = ~duel_stake_setup_buttontext($component0, $int11, $int6, "+1k");
 	$int6 = ~duel_stake_setup_buttontext($component0, $int12, $int6, "...");
 } else {
-	cc_setoninvtransmit("script2493(event_com, event_comid, coins_995){93, 134}");
+	cc_setoninvtransmit("script2493(event_com, event_comid, coins_995){inv, 134}");
 	if (cc_find($component0, $int9) = true) {
 		cc_setop(1, "+100k");
 	}

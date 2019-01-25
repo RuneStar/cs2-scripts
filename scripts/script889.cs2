@@ -1,6 +1,6 @@
 // 889
 script889(component $component0, obj $obj1)
-def_int $int2 = inv_total(93, $obj1);
+def_int $int2 = inv_total(inv, $obj1);
 if ($int2 > 0) {
 	if_setcolour(^red, $component0);
 } else {

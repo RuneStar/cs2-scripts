@@ -6,7 +6,7 @@ if ($int3 = 1) {
 	if_setop(1, "Buy for <~script46($int3, ",")> tickets", $component0);
 }
 ~script2035($component0, $obj1, $obj2, $int3, 0, $string0);
-if_setoninvtransmit("script2034($component0, $obj1, $obj2, $string0, $int3, false){93}", $component0);
+if_setoninvtransmit("script2034($component0, $obj1, $obj2, $string0, $int3, false){inv}", $component0);
 if_setonmouserepeat("script2034($component0, $obj1, $obj2, $string0, $int3, true)", $component0);
 if_setonmouseleave("script2034($component0, $obj1, $obj2, $string0, $int3, false)", $component0);
 return;

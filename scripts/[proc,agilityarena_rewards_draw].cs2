@@ -8,7 +8,7 @@ if ($int1 = 1) {
 }
 cc_deleteall($component0);
 def_int $int4 = 0;
-if (inv_total(93, agility_arena_ticket_2996) < $int1) {
+if (inv_total(inv, agility_arena_ticket_2996) < $int1) {
 	$int4 = ~v2_stone_button_filled($component0);
 	cc_create($component0, ^iftype_text, $int4);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);

@@ -1,6 +1,6 @@
 // 1317
 script1317(int $int0, component $component1, component $component2, component $component3, component $component4)
-def_obj $obj5 = inv_getobj(95, $int0);
+def_obj $obj5 = inv_getobj(bank, $int0);
 if ($obj5 = null) {
 	return;
 } else if (oc_unplaceholder($obj5) ! $obj5) {
@@ -15,7 +15,7 @@ if ($obj5 = null) {
 	if_sethide(false, $component3);
 	cc_deleteall($component3);
 	def_int $int6 = 0;
-	def_int $int7 = inv_getnum(95, $int0);
+	def_int $int7 = inv_getnum(bank, $int0);
 	def_string $string0 = "<~script46($int7, ",")> <col=ffffff>x</col> <oc_name($obj5)>";
 	def_string $string1 = "Are you <col=ffffff>sure</col> you<br>want to destroy it?";
 	if ($int7 > 1) {

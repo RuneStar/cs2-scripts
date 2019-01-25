@@ -3,7 +3,7 @@
 ~bank_depositbox_layout($component0, $component2, $component3);
 cc_deleteall($component1);
 def_int $int10 = 0;
-def_int $int11 = inv_size(93);
+def_int $int11 = inv_size(inv);
 while ($int10 < $int11) {
 	cc_create($component1, ^iftype_graphic, $int10);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -15,7 +15,7 @@ while ($int10 < $int11) {
 	$int10 = calc($int10 + 1);
 }
 ~bank_depositbox_update($component1, $component8, $component9);
-if_setoninvtransmit("bank_depositbox_update($component1, $component8, $component9){93}", $component1);
+if_setoninvtransmit("bank_depositbox_update($component1, $component8, $component9){inv}", $component1);
 if_setonvartransmit("bank_depositbox_update($component1, $component8, $component9){var261, var1793, var1794}", $component1);
 if_setonmouseover("settrans($component5, 75)", $component4);
 if_setonmouseleave("settrans($component5, 0)", $component4);
