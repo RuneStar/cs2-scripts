@@ -52,7 +52,7 @@ while ($int7 < 29) {
 	}
 	cc_setgraphic("overlay_multiway");
 	~script501($int7, 3);
-	cc_setonvartransmit("script500(event_com, event_comid, $int7, 3){263}");
+	cc_setonvartransmit("script500(event_com, event_comid, $int7, 3){var263}");
 	$int7 = calc($int7 + 1);
 }
 return;

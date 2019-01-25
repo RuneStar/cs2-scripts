@@ -15,10 +15,10 @@ while ($int7 < $int8) {
 }
 ~bankside_build($component1, $component3, $component2, $component4);
 if_setoninvtransmit("bankside_build($component1, $component3, $component2, $component4){93, 516}", $component1);
-if_setonvartransmit("bankside_build($component1, $component3, $component2, $component4){304, 1666, 261}", $component1);
+if_setonvartransmit("bankside_build($component1, $component3, $component2, $component4){var304, var1666, var261}", $component1);
 ~bankside_lootingbag_draw($component5);
 if_setoninvtransmit("bankside_lootingbag_draw($component5){516}", $component4);
 ~bankside_switchview($component1, $component4);
-if_setonvartransmit("bankside_switchview(-1, $component1, $component4, -1){115}", $component0);
+if_setonvartransmit("bankside_switchview(-1, $component1, $component4, -1){var115}", $component0);
 if_setonop("bankside_switchview(event_opindex, $component1, $component4, 0)", $component6);
 return;

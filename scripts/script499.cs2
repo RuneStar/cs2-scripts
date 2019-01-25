@@ -96,7 +96,7 @@ if ($int10 <= 0) {
 		}
 		cc_setgraphic("overlay_multiway");
 		~script501($int20, $int8);
-		cc_setonvartransmit("script500(event_com, event_comid, $int20, $int8){261, 262}");
+		cc_setonvartransmit("script500(event_com, event_comid, $int20, $int8){var261, var262}");
 		$int20 = calc($int20 + 1);
 	}
 	return;

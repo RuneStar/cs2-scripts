@@ -2,7 +2,7 @@
 script694(component $component0, component $component1, int $int2, int $int3)
 if ($int3 = 1) {
 	if_setonop("opsound(event_opindex, 2)", $component0);
-	if_setonvartransmit("script694($component0, $component1, $int2, false){261}", $component0);
+	if_setonvartransmit("script694($component0, $component1, $int2, false){var261}", $component0);
 }
 if (%var261 = $int2) {
 	if_setcolour(^green, $component1);

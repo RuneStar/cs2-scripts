@@ -2,7 +2,7 @@
 [clientscript,toplevel_init](component $component0, enum $enum1)
 if_setonsubchange("toplevel_subchange(event_com, $enum1)", $component0);
 if_setonresize("toplevel_resize(event_com, $enum1)", $component0);
-if_setonvartransmit("toplevel_vartransmit(event_com, $enum1){1021, 1055, 1734, 1431, 1227, 439, 1141}", $component0);
+if_setonvartransmit("toplevel_vartransmit(event_com, $enum1){var1021, var1055, var1734, var1431, var1227, var439, var1141}", $component0);
 def_int $int2 = 0;
 def_component $component3 = enum(int, component, 1138, $int2);
 while ($component3 ! null) {

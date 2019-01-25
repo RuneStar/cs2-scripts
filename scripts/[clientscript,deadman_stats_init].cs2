@@ -5,7 +5,7 @@ def_stat $stat3 = enum(int, stat, 681, $int1);
 if_setop(1, "Protect", $component0);
 if_setopbase($string0, $component0);
 if_setonop("deadman_stats_click(event_opindex, $component0, $int1)", $component0);
-if_setonvartransmit("deadman_stats_vartransmit($component0, $int1){1295}", $component0);
+if_setonvartransmit("deadman_stats_vartransmit($component0, $int1){var1295}", $component0);
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0);
 cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);

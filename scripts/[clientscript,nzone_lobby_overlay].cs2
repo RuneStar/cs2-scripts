@@ -10,7 +10,7 @@ if_setontimer("nzone_lobby_hide(207:0)", 207:9);
 if ($int0 = 1) {
 	if_setonvartransmit(null, 207:9);
 } else {
-	if_setonvartransmit("nzone_lobby_partystatus(207:3, 207:5){1065, 1058}", 207:9);
+	if_setonvartransmit("nzone_lobby_partystatus(207:3, 207:5){var1065, var1058}", 207:9);
 }
 cc_create(207:8, ^iftype_rectangle, 0);
 cc_setsize(46, 55, ^setsize_abs, ^setsize_abs);
@@ -46,6 +46,6 @@ cc_setopbase("<col=ff9040>Coffer");
 .cc_setposition(8, 21, ^setpos_abs_right, ^setpos_abs_top);
 .cc_setgraphicshadow(0x333333);
 .cc_setoutline(1);
-.cc_setonvartransmit("nzone_lobby_coffer(event_com, cc_getid, event_comid){1058, 638}");
+.cc_setonvartransmit("nzone_lobby_coffer(event_com, cc_getid, event_comid){var1058, var638}");
 ~nzone_lobby_coffer;
 return;

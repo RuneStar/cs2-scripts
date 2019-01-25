@@ -1,7 +1,7 @@
 // 1614
 [clientscript,raids_storage_side_init](component $component0, component $component1, component $component2, component $component3, component $component4)
 ~raids_storage_side_setup($component1, $component2, $component3);
-if_setonvartransmit("raids_storage_side_setup($component1, $component2, $component3){499, 1429, 115}", $component4);
+if_setonvartransmit("raids_storage_side_setup($component1, $component2, $component3){var499, var1429, var115}", $component4);
 cc_deleteall($component4);
 def_int $int5 = calc(((42 - 36) * 3) - 2);
 def_int $int6 = calc((36 - 32) * 2);
@@ -17,5 +17,5 @@ while ($int7 < $int8) {
 }
 ~raids_storage_side_items($component4, $int7);
 if_setoninvtransmit("raids_storage_side_items($component4, $int7){93}", $component0);
-if_setonvartransmit("raids_storage_side_items($component4, $int7){115}", $component0);
+if_setonvartransmit("raids_storage_side_items($component4, $int7){var115}", $component0);
 return;

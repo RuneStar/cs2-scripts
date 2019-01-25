@@ -1,9 +1,9 @@
 // 1286
 [clientscript,glidermap_init](component $component0, component $component1, component $component2, component $component3)
 ~glidermap_hideshow($component1, $component2, $component3);
-if_setonvartransmit("glidermap_hideshow($component1, $component2, $component3){153, 416, 1339}", $component0);
+if_setonvartransmit("glidermap_hideshow($component1, $component2, $component3){var153, var416, var1339}", $component0);
 cc_deleteall($component0);
 cc_create($component0, ^iftype_model, 0);
 ~glidermap_fly;
-cc_setonvartransmit("glidermap_fly(event_com, event_comid){153}");
+cc_setonvartransmit("glidermap_fly(event_com, event_comid){var153}");
 return;

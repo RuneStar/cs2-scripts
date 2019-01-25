@@ -4,7 +4,7 @@ cc_deleteall($component1);
 if_setscrollpos(0, 0, $component1);
 def_int $int7 = enum_getoutputcount(818);
 if_setontimer("script2257(event_com, $int7)", $component3);
-if_setonvartransmit("music_vartransmit(event_com, $component3, $int7){568, 20, 21, 22, 23, 24, 25, 298, 311, 346, 414, 464, 598, 662, 721, 906, 1009, 1338, 1681, 2065}", $component1);
+if_setonvartransmit("music_vartransmit(event_com, $component3, $int7){var568, var20, var21, var22, var23, var24, var25, var298, var311, var346, var414, var464, var598, var662, var721, var906, var1009, var1338, var1681, var2065}", $component1);
 def_int $array0($int7);
 def_int $int8 = 0;
 while ($int8 < $int7) {
@@ -32,7 +32,7 @@ while ($int8 < $int7) {
 	$int8 = calc($int8 + 1);
 }
 ~music_optionbuttons($component4, $component5, $component6);
-if_setonvartransmit("music_optionbuttons_resynch($component4, $component5, $component6){18, 19}", $component0);
+if_setonvartransmit("music_optionbuttons_resynch($component4, $component5, $component6){var18, var19}", $component0);
 if_setonop("music_optionbuttons_setmode(event_opindex, 1, $component4, $component5, $component6)", $component4);
 if_setonop("music_optionbuttons_setmode(event_opindex, 0, $component4, $component5, $component6)", $component5);
 if_setonop("music_optionbuttons_setloop(event_opindex, $component4, $component5, $component6)", $component6);

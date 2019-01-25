@@ -22,7 +22,7 @@ while ($int9 ! -1) {
 	cc_setonmouseleave("clanwars_setup_mouseleave(event_com, event_comid, $component4)");
 	cc_setop(1, $string1);
 	cc_setonop("script583(event_opindex, $component3, event_comid, $int9)");
-	cc_setonvartransmit("script584($component3, event_comid, $int9){92}");
+	cc_setonvartransmit("script584($component3, event_comid, $int9){var92}");
 	cc_create($component3, ^iftype_graphic, calc(($int8 * 3) + 1));
 	cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);

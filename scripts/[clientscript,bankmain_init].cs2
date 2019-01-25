@@ -12,13 +12,13 @@ if_setonop("bankmain_search_toggle(event_opindex, $component0, $component1, $com
 cc_deleteall($component7);
 ~scrollbar_vertical($component7, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~bankmain_swapinsert($component9, $component10);
-if_setonvartransmit("bankmain_swapinsert($component9, $component10){304}", $component9);
+if_setonvartransmit("bankmain_swapinsert($component9, $component10){var304}", $component9);
 ~bankmain_toggleplaceholders($component11);
-if_setonvartransmit("bankmain_toggleplaceholders($component11){1052}", $component11);
+if_setonvartransmit("bankmain_toggleplaceholders($component11){var1052}", $component11);
 ~bankmain_itemnote($component12, $component13);
-if_setonvartransmit("bankmain_itemnote($component12, $component13){115}", $component12);
+if_setonvartransmit("bankmain_itemnote($component12, $component13){var115}", $component12);
 ~bankmain_quantity_buttons($component21, $component22, $component23, $component24, $component25);
-if_setonvartransmit("bankmain_quantity_buttons($component21, $component22, $component23, $component24, $component25){1666, 304}", $component26);
+if_setonvartransmit("bankmain_quantity_buttons($component21, $component22, $component23, $component24, $component25){var1666, var304}", $component26);
 cc_deleteall($component6);
 def_int $int28 = 0;
 def_int $int29 = 0;
@@ -70,7 +70,7 @@ while ($int29 <= 9) {
 }
 ~bankmain_menubutton(0, $component0, $component1, $component3, $component6, $component7, $component8, $component15, $component16, $component14, $component17, $component18, $component19, $component20, $component4, $component5);
 if_setoninvtransmit("bankmain_build($component0, $component1, $component3, $component6, $component7, $component8, $component15, $component16, $component14, $component17, $component18, $component19, $component20){95}", $component6);
-if_setonvartransmit("bankmain_build($component0, $component1, $component3, $component6, $component7, $component8, $component15, $component16, $component14, $component17, $component18, $component19, $component20){304, 115, 867, 1052, 1053, 1666}", $component6);
+if_setonvartransmit("bankmain_build($component0, $component1, $component3, $component6, $component7, $component8, $component15, $component16, $component14, $component17, $component18, $component19, $component20){var304, var115, var867, var1052, var1053, var1666}", $component6);
 %varcint51 = $int27;
 def_component $component31 = if_getlayer($component0);
 if ($component31 ! null) {

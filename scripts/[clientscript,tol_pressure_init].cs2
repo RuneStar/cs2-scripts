@@ -1,7 +1,7 @@
 // 1427
 [clientscript,tol_pressure_init](component $component0)
 ~tol_pressure_draw;
-if_setonvartransmit("tol_pressure_draw(){977, 978}", $component0);
+if_setonvartransmit("tol_pressure_draw(){var977, var978}", $component0);
 ~tol_pressure_valveinit(510:128, 1, 0, "Turn-left");
 ~tol_pressure_valveinit(510:129, 1, 0, "Turn-right");
 ~tol_pressure_valveinit(510:130, 1, 1, "Turn-left");

@@ -3,7 +3,7 @@ script446(component $component0, component $component1, component $component2, c
 if ($component0 ! null) {
 	if_setnoclickthrough(true, $component6);
 	if_setonstattransmit("script446(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7){hitpoints}", $component0);
-	if_setonvartransmit("script446(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7){102, 456}", $component0);
+	if_setonvartransmit("script446(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7){var102, var456}", $component0);
 	if_setonsubchange("script446(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7)", $component0);
 }
 ~orbs_update($component1, $component2, stat(hitpoints), stat_base(hitpoints));

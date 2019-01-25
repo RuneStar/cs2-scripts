@@ -1,7 +1,7 @@
 // 2346
 script2346(component $component0, component $component1, component $component2)
 if_settext("Points Available: <col=ffffff><tostring(%varbit6460)></col>", $component0);
-if_setonvartransmit("script2349($component0){1746}", $component0);
+if_setonvartransmit("script2349($component0){var1746}", $component0);
 if_setoninvtransmit("script2347($component2){612}", $component2);
 ~script2348($component2);
 cc_deleteall($component1);

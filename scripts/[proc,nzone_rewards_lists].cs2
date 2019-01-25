@@ -39,7 +39,7 @@ while ($obj7 ! null) {
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	~nzone_rewards_updatepotion($obj7);
-	cc_setonvartransmit("nzone_rewards_updatepotion(event_com, event_comid, $obj7){1066}");
+	cc_setonvartransmit("nzone_rewards_updatepotion(event_com, event_comid, $obj7){var1066}");
 	$int6 = calc($int6 + 1);
 	$obj7 = enum(int, namedobj, 814, $int6);
 }

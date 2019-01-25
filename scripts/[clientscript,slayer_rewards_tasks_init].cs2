@@ -2,5 +2,5 @@
 [clientscript,slayer_rewards_tasks_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 if_settext("You may spend points to <col=ffffff>Cancel</col> or <col=ffffff>Block</col> your current task.<br>If you <col=ffffff>cancel</col> it, you may be assigned that target again in future. <col=ff0000>(<tostring(30)> points)</col><br>If you <col=ffffff>block</col> it, you will not get that assignment again. <col=ff0000>(<tostring(100)> points)</col><br><col=ffffff>Neither</col> option will reset your current tally of completed Slayer tasks.", $component1);
 ~slayer_rewards_tasks_currenttask($component0, $component2, $component3, $component4, $component5, $component6, $component7);
-if_setonvartransmit("slayer_rewards_tasks_currenttask($component0, $component2, $component3, $component4, $component5, $component6, $component7){261, 262}", $component0);
+if_setonvartransmit("slayer_rewards_tasks_currenttask($component0, $component2, $component3, $component4, $component5, $component6, $component7){var261, var262}", $component0);
 return;

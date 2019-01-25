@@ -1,7 +1,7 @@
 // 1350
 [clientscript,questlist_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 ~questlist_qp($component3);
-if_setonvartransmit("questlist_qp($component3){101}", $component3);
+if_setonvartransmit("questlist_qp($component3){var101}", $component3);
 if (~on_mobile = true) {
 	if_sethide(true, $component7);
 	if_setsize(0, if_getheight($component3), ^setsize_minus, ^setsize_abs, $component3);
@@ -32,5 +32,5 @@ if ($int9 > if_getheight($component1)) {
 	~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 }
 ~questlist_showprogress($component4, $component5, $component6);
-if_setonvartransmit("questlist_showprogress($component4, $component5, $component6){101, 130, 29, 222, 31, 176, 32, 62, 160, 122, 71, 273, 107, 144, 63, 179, 146, 145, 178, 67, 939, 433, 293, 68, 655, 10, 964, 455, 399, 400, 869, 794, 314, 440, 622, 131, 80, 0, 335, 934, 299, 896, 641, 912, 844, 671, 810, 148, 435, 17, 11, 521, 347, 65, 553, 180, 408, 482, 437, 150, 635, 382, 223, 188, 5, 351, 445, 705, 387, 175, 139, 147, 465, 823, 604, 14, 365, 30, 423, 517, 574, 192, 905, 307, 112, 416, 165, 302, 714, 607, 678, 496, 328, 402, 730, 600, 76, 159, 874, 339, 602, 60, 116, 709, 616, 723, 320, 568, 449, 26, 359, 197, 226, 111, 200, 385, 317, 161, 162, 571, 212, 968, 970, 977, 980, 992, 994, 997, 1003, 1016, 1049, 1339, 492, 1318, 1329, 695, 77, 520, 976, 597, 267, 967, 1418, 1535, 1566, 1630, 1672, 1671, 1685, 1675, 1677, 1729, 1736, 1785, 2071, 2066}", $component0);
+if_setonvartransmit("questlist_showprogress($component4, $component5, $component6){var101, var130, var29, var222, var31, var176, var32, var62, var160, var122, var71, var273, var107, var144, var63, var179, var146, var145, var178, var67, var939, var433, var293, var68, var655, var10, var964, var455, var399, var400, var869, var794, var314, var440, var622, var131, var80, var0, var335, var934, var299, var896, var641, var912, var844, var671, var810, var148, var435, var17, var11, var521, var347, var65, var553, var180, var408, var482, var437, var150, var635, var382, var223, var188, var5, var351, var445, var705, var387, var175, var139, var147, var465, var823, var604, var14, var365, var30, var423, var517, var574, var192, var905, var307, var112, var416, var165, var302, var714, var607, var678, var496, var328, var402, var730, var600, var76, var159, var874, var339, var602, var60, var116, var709, var616, var723, var320, var568, var449, var26, var359, var197, var226, var111, var200, var385, var317, var161, var162, var571, var212, var968, var970, var977, var980, var992, var994, var997, var1003, var1016, var1049, var1339, var492, var1318, var1329, var695, var77, var520, var976, var597, var267, var967, var1418, var1535, var1566, var1630, var1672, var1671, var1685, var1675, var1677, var1729, var1736, var1785, var2071, var2066}", $component0);
 return;

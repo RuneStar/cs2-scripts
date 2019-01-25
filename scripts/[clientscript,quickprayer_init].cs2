@@ -44,10 +44,10 @@ while ($int9 < $int3) {
 		~quickprayer_icon_update($array0($int9));
 		if (($array0($int9) = 25) | ($array0($int9) = 26)) {
 			.cc_setonstattransmit("quickprayer_icon_update($array0($int9), event_com, event_comid){prayer, defence}");
-			.cc_setonvartransmit("quickprayer_icon_update($array0($int9), event_com, event_comid){1050}");
+			.cc_setonvartransmit("quickprayer_icon_update($array0($int9), event_com, event_comid){var1050}");
 		} else if ((($array0($int9) = 24) | ($array0($int9) = 27)) | ($array0($int9) = 28)) {
 			.cc_setonstattransmit("quickprayer_icon_update($array0($int9), event_com, event_comid){prayer, defence}");
-			.cc_setonvartransmit("quickprayer_icon_update($array0($int9), event_com, event_comid){1429}");
+			.cc_setonvartransmit("quickprayer_icon_update($array0($int9), event_com, event_comid){var1429}");
 		} else {
 			.cc_setonstattransmit("quickprayer_icon_update($array0($int9), event_com, event_comid){prayer}");
 		}
@@ -59,7 +59,7 @@ while ($int9 < $int3) {
 		.cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 		.cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);
 		~quickprayer_button_update($array0($int9));
-		cc_setonvartransmit("quickprayer_button_update($array0($int9), event_com, .cc_getid){84}");
+		cc_setonvartransmit("quickprayer_button_update($array0($int9), event_com, .cc_getid){var84}");
 		cc_setonop("quickprayer_button_op(event_opindex, $array0($int9), event_com, .cc_getid)");
 	}
 	$int9 = calc($int9 + 1);

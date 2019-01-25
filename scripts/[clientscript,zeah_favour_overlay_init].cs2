@@ -2,7 +2,7 @@
 [clientscript,zeah_favour_overlay_init](component $component0, component $component1, component $component2, component $component3, component $component4)
 ~zeah_favour_overlay_hideshow($component1);
 if_setonsubchange("zeah_favour_overlay_hideshow($component1)", $component0);
-if_setonvartransmit("zeah_favour_overlay_hideshow($component1){1227, 1055}", $component0);
+if_setonvartransmit("zeah_favour_overlay_hideshow($component1){var1227, var1055}", $component0);
 if_setnoclickthrough(false, $component4);
 if (~on_mobile = true) {
 	if_setonmouseover(null, $component1);

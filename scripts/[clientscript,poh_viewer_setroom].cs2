@@ -223,7 +223,7 @@ if ($component5 = null) {
 	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("tick");
 	~script1380($int0);
-	if_setonvartransmit("script1378(event_com, cc_getid, $int0){780}", $component5);
+	if_setonvartransmit("script1378(event_com, cc_getid, $int0){var780}", $component5);
 	if_setonmouserepeat("poh_viewer_room_hover(true, event_com, cc_getid, $string0)", $component5);
 	if_setonmouseleave("poh_viewer_room_hover(false, event_com, cc_getid, $string0)", $component5);
 	return;

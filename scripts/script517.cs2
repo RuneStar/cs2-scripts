@@ -34,6 +34,6 @@ cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($int1 - 2), calc($int3 - 2), ^setsize_abs, ^setsize_abs);
 cc_setfill(false);
 cc_setcolour(0x726451);
-if_setonvartransmit("script522(event_com){867, 1052, 1053}", $component0);
+if_setonvartransmit("script522(event_com){var867, var1052, var1053}", $component0);
 ~script523($component0);
 return;

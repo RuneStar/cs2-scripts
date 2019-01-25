@@ -10,7 +10,7 @@ cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 ~script1533($component0, $string0);
-if_setonvartransmit("script1532($component0, cc_getid, $string0){1430, 1432, 1429}", $component0);
+if_setonvartransmit("script1532($component0, cc_getid, $string0){var1430, var1432, var1429}", $component0);
 if ($int1 = 2) {
 	~script1531($component0, cc_getid, $string0);
 } else {
@@ -21,6 +21,6 @@ if ($int1 = 2) {
 }
 if ($component0 = 507:22) {
 	~raids_challenge_checkbox(507:39, $int1);
-	if_setonvartransmit("raids_challenge_checkbox(507:22, 507:39, $int1){1429}", 507:22);
+	if_setonvartransmit("raids_challenge_checkbox(507:22, 507:39, $int1){var1429}", 507:22);
 }
 return;

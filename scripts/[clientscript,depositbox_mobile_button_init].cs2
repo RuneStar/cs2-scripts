@@ -5,7 +5,7 @@ if (~on_mobile = false) {
 } else {
 	~depositbox_mobile_button_optext($component0);
 	if_setonop("depositbox_mobile_button_op(event_opindex, $component0, $component1, $component2, $component3)", $component0);
-	if_setonvartransmit("depositbox_mobile_button_update(){1793, 1794}", $component0);
+	if_setonvartransmit("depositbox_mobile_button_update(){var1793, var1794}", $component0);
 	~depositbox_mobile_button_update;
 	return;
 }

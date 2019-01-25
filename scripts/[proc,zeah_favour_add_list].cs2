@@ -20,5 +20,5 @@ def_int $int8 = interpolate(0, $int7, 0, 1000, 1000);
 cc_settext("<tostring(calc($int8 / 10))>.<tostring(calc($int8 % 10))>%");
 .cc_settext(enum(int, string, 1266, $int4));
 ~script1213($int7, $int3);
-cc_setonvartransmit("script1212(event_com, event_comid, .cc_getid, $int5, $int7){1317, 1318}");
+cc_setonvartransmit("script1212(event_com, event_comid, .cc_getid, $int5, $int7){var1317, var1318}");
 return($int1, $int2);

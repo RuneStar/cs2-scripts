@@ -2,5 +2,5 @@
 [clientscript,castlewars_waitingroom_init](component $component0, component $component1)
 ~script2249($component1, setbit(0, 3));
 ~castlewars_waitingroom_update($component0);
-if_setonvartransmit("castlewars_waitingroom_update($component0){380}", $component0);
+if_setonvartransmit("castlewars_waitingroom_update($component0){var380}", $component0);
 return;

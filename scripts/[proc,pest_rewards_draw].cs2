@@ -1,6 +1,6 @@
 // 2776
 [proc,pest_rewards_draw](int $int0, component $component1, component $component2, component $component3, component $component4)(int)
-if_setonvartransmit("pest_rewards_draw($int0, $component1, $component2, $component3, $component4){261}", $component1);
+if_setonvartransmit("pest_rewards_draw($int0, $component1, $component2, $component3, $component4){var261}", $component1);
 if_setonstattransmit("pest_rewards_draw($int0, $component1, $component2, $component3, $component4){attack, strength, defence, ranged, magic, hitpoints, prayer, herblore, mining, farming}", $component1);
 cc_deleteall($component2);
 def_int $int5 = 0;

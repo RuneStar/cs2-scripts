@@ -30,7 +30,7 @@ cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 if_setonmouseover("script85(event_com, .cc_getid, 16777215)", $component12);
 if_setonmouseleave("script85(event_com, .cc_getid, 16750623)", $component12);
 ~kourend_sidepanel_hudtoggle($component12, $component13);
-if_setonvartransmit("kourend_sidepanel_hudtoggle($component12, cc_getid, .cc_getid, $component13){1055}", $component12);
+if_setonvartransmit("kourend_sidepanel_hudtoggle($component12, cc_getid, .cc_getid, $component13){var1055}", $component12);
 if_setonop("kourend_sidepanel_hudop(event_opindex, $component12, cc_getid, .cc_getid, $component13)", $component12);
 if (~on_mobile = true) {
 	if_sethide(true, $component15);
