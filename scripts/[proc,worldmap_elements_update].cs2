@@ -2,14 +2,14 @@
 [proc,worldmap_elements_update](component $component0, int $int1, int $int2, int $int3, int $int4)
 def_int $int5 = 0;
 switch (worldmap_getcurrentmap) {
-	case 1 :
+	case ancient_cavern :
 		$int5 = ~script1753(1_27_83_41_54, 0_27_83_45_54, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_27_83_50_34, 1_27_83_50_31, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_27_83_16_13, 1_27_83_16_9, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 3 :
+	case asgarnia_ice_dungeon :
 		$int5 = ~script1753(0_47_149_48_25, 0_47_149_48_20, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_47_149_52_19, 1_47_149_52_21, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 5 :
+	case dorgeshkaan :
 		$int5 = ~script1753(0_42_82_48_30, 1_42_82_48_30, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_42_82_24_45, 1_42_82_22_45, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_42_82_35_45, 1_42_82_36_45, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
@@ -28,38 +28,38 @@ switch (worldmap_getcurrentmap) {
 		$int5 = ~script1753(1_42_82_34_5, 2_42_82_34_5, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_42_82_53_10, 2_42_82_53_10, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_42_82_52_44, 2_42_82_52_44, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 6 :
+	case dwarven_mines :
 		$int5 = ~script1753(0_58_88_16_61, 0_47_152_52_37, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_58_88_43_41, 1_58_88_43_42, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_47_152_48_16, 0_58_88_6_46, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 7 :
+	case godwars :
 		$int5 = ~script1753(2_45_82_33_52, 1_45_82_33_52, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_45_82_40_27, 0_45_82_40_26, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 8 :
+	case kalphite :
 		$int5 = ~script1753(2_54_148_54_25, 0_54_148_54_22, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 9 :
+	case karamja_underground :
 		$int5 = ~script1753(0_41_149_25_56, 2_41_149_20_59, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_41_148_12_44, 2_41_148_12_39, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_41_147_61_28, 0_42_147_8_28, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_44_148_24_37, 1_44_148_25_37, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(2_41_149_47_47, 0_41_149_49_47, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 10 :
+	case keldagrim :
 		$int5 = ~script1754(0_44_158_23_18, 0_44_158_21_29, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1754(0_44_158_39_31, 0_44_158_42_21, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_44_158_27_18, 0_45_159_7_47, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_44_158_22_11, 0_43_158_29_49, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 11 :
+	case miscellania_underground :
 		$int5 = ~script1753(0_39_160_12_49, 0_39_160_18_51, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 12 :
+	case misthalin_underground :
 		$int5 = ~script1753(0_48_153_23_40, 0_48_153_20_23, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 14 :
+	case morytania_underground :
 		$int5 = ~script1754(0_55_154_18_49, 0_55_154_18_53, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1754(0_55_154_21_49, 0_55_154_21_53, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1754(0_55_154_24_49, 0_55_154_24_53, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1754(0_55_154_8_55, 0_55_154_8_14, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 17 :
+	case slayer_cave :
 		$int5 = ~script1753(0_42_156_11_5, 1_42_156_15_5, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 18 :
+	case sos :
 		$int5 = ~script1754(0_29_81_7_54, 0_29_81_58_38, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1754(0_29_81_25_48, 0_29_81_3_59, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_29_81_46_38, 0_31_81_58_61, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
@@ -73,22 +73,22 @@ switch (worldmap_getcurrentmap) {
 		$int5 = ~script1754(0_33_82_38_30, 0_33_82_11_4, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_33_82_36_35, 0_36_81_54_31, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1754(0_36_81_61_28, 0_36_81_37_35, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 19 :
+	case stronghold_underground :
 		$int5 = ~script1753(0_35_156_40_32, 0_35_156_40_38, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_37_153_61_15, 0_38_153_3_14, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 20 :
+	case taverley_underground :
 		$int5 = ~script1753(0_45_153_1_33, 1_45_153_0_33, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_45_153_7_31, 1_45_153_8_31, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_44_153_58_55, 0_20_19_30_20, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 22 :
+	case troll_stronghold :
 		$int5 = ~script1753(2_44_157_27_61, 1_44_157_27_61, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(2_44_157_27_3, 1_44_157_27_3, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_44_157_37_14, 0_44_157_37_14, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_44_157_36_59, 0_44_157_36_59, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 23 :
+	case tzhaar_area :
 		$int5 = ~script1753(0_38_80_6_47, 0_37_79_45_62, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_39_80_0_4, 0_35_83_32_32, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 24 :
+	case undead_dungeon :
 		$int5 = ~script1753(0_49_71_27_16, 0_49_71_27_21, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_49_71_19_15, 0_49_71_25_15, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_49_71_5_21, 2_49_71_5_16, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
@@ -120,7 +120,7 @@ switch (worldmap_getcurrentmap) {
 		$int5 = ~script1753(1_49_71_41_33, 2_49_71_44_33, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_49_71_49_58, 0_49_72_13_35, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_49_72_13_51, 0_49_72_13_55, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 25 :
+	case waterbirth :
 		$int5 = ~script1753(0_39_158_51_31, 3_28_68_6_54, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(3_28_68_17_53, 2_28_68_17_53, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(3_28_68_31_52, 2_28_68_31_52, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
@@ -141,22 +141,22 @@ switch (worldmap_getcurrentmap) {
 		$int5 = ~script1753(1_30_68_37_20, 0_30_68_37_20, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_29_68_54_15, 0_45_69_19_33, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_29_68_57_15, 0_45_68_19_33, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 26 :
+	case wilderness_dungeons :
 		$int5 = ~script1753(0_47_160_59_12, 0_35_73_31_8, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_39_73_47_51, 0_39_73_13_15, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_47_161_40_32, 0_47_161_38_22, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_47_158_27_46, 3_47_158_41_53, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_47_158_54_19, 3_47_158_58_30, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 27 :
+	case yanille_underground :
 		$int5 = ~script1754(0_40_148_38_19, 0_40_149_39_19, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1754(0_40_149_18_49, 0_40_148_7_52, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1754(0_40_148_19_44, 0_40_149_18_44, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_40_148_61_25, 0_40_149_60_27, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_40_149_56_35, 0_40_148_56_32, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_40_148_18_34, 0_40_148_12_34, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 28 :
+	case zanaris :
 		$int5 = ~script1753(0_37_68_32_27, 0_37_68_28_27, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 30 :
+	case fossil_underground :
 		$int5 = ~script1753(1_58_160_4_3, enum(coordgrid, coordgrid, 1771, 1_58_160_4_3), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_58_160_42_1, enum(coordgrid, coordgrid, 1771, 1_58_160_42_1), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_58_160_60_27, enum(coordgrid, coordgrid, 1771, 1_58_160_60_27), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
@@ -171,7 +171,7 @@ switch (worldmap_getcurrentmap) {
 		$int5 = ~script1753(1_59_158_27_46, 3_59_158_26_47, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(3_59_158_37_47, 1_59_158_37_46, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_59_158_37_46, 3_59_158_37_47, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 32 :
+	case kourend_underground :
 		$int5 = ~script1753(3_22_157_29_46, 2_22_157_29_46, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(3_22_157_44_20, 2_22_157_44_20, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(2_22_157_50_47, 1_22_157_50_47, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
@@ -183,7 +183,7 @@ switch (worldmap_getcurrentmap) {
 		$int5 = ~script1753(2_23_155_7_30, 1_23_155_7_30, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(2_23_155_24_58, 1_23_155_24_58, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(2_23_155_39_58, 1_23_155_39_58, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-	case 33 :
+	case kebos_underground :
 		$int5 = ~script1753(0_20_159_49_30, 1_20_159_53_30, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_20_159_34_12, 2_20_159_38_12, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 }
