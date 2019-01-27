@@ -1708,10 +1708,10 @@
 [**1705**](scripts/script1705.cs2)  
 [**1706**](scripts/script1706.cs2)  
 [**1707**](scripts/[clientscript,worldmap_init].cs2) `[clientscript,worldmap_init]`  
-[**1708**](scripts/script1708.cs2)  
-[**1709**](scripts/script1709.cs2)  
-[**1710**](scripts/script1710.cs2)  
-[**1711**](scripts/script1711.cs2)  
+[**1708**](scripts/[clientscript,worldmap_maplist_open].cs2) `[clientscript,worldmap_maplist_open]`  
+[**1709**](scripts/[clientscript,worldmap_maplist_close].cs2) `[clientscript,worldmap_maplist_close]`  
+[**1710**](scripts/[proc,worldmap_maplist_close].cs2) `[proc,worldmap_maplist_close]`  
+[**1711**](scripts/[clientscript,worldmap_maplist_select].cs2) `[clientscript,worldmap_maplist_select]`  
 [**1712**](scripts/[proc,worldmap_loadmap].cs2) `[proc,worldmap_loadmap]`  
 [**1713**](scripts/script1713.cs2)  
 [**1714**](scripts/script1714.cs2)  
@@ -1757,7 +1757,7 @@
 [**1754**](scripts/script1754.cs2)  
 [**1755**](scripts/script1755.cs2)  
 [**1756**](scripts/script1756.cs2)  
-[**1757**](scripts/script1757.cs2)  
+[**1757**](scripts/[proc,worldmap_elements_marker].cs2) `[proc,worldmap_elements_marker]`  
 [**1758**](scripts/script1758.cs2)  
 [**1759**](scripts/script1759.cs2)  
 [**1760**](scripts/17.cs2) `17`  
@@ -2785,5 +2785,5 @@
 [**2782**](scripts/[clientscript,pest_rewards_select].cs2) `[clientscript,pest_rewards_select]`  
 [**2783**](scripts/[clientscript,pest_rewards_refuse].cs2) `[clientscript,pest_rewards_refuse]`  
 [**2784**](scripts/[proc,pest_rewards_costpoints].cs2) `[proc,pest_rewards_costpoints]`  
-[**2785**](scripts/script2785.cs2)  
+[**2785**](scripts/[proc,pest_rewards_costpts].cs2) `[proc,pest_rewards_costpts]`  
 [**2786**](scripts/script2786.cs2)  

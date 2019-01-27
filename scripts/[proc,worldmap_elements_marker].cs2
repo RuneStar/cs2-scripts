@@ -1,5 +1,5 @@
 // 1757
-script1757(coordgrid $coordgrid0, struct $struct1, component $component2, int $int3, int $int4, int $int5, int $int6, int $int7)(int)
+[proc,worldmap_elements_marker](coordgrid $coordgrid0, struct $struct1, component $component2, int $int3, int $int4, int $int5, int $int6, int $int7)(int)
 $coordgrid0 = ~worldmap_findcoordinmap(worldmap_getcurrentmap, $coordgrid0);
 if ($coordgrid0 = null) {
 	if (cc_find($component2, $int7) = true) {

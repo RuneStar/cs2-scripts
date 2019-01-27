@@ -7,7 +7,7 @@ cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
 cc_settextfont(p11_full);
 cc_settextshadow(false);
-cc_settext(~script2785($int11));
+cc_settext(~pest_rewards_costpts($int11));
 cc_setop(1, "<enum(stat, string, 680, $stat0)> XP: <~pest_rewards_costpoints($int11)>");
 if ($int10 = $int4) {
 	cc_setcolour(^white);

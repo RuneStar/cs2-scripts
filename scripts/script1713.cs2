@@ -3,7 +3,7 @@ script1713(maparea $maparea0, component $component1, int $int2, component $compo
 def_coordgrid $coordgrid9 = %varcint189;
 %varcint189 = -1;
 if (worldmap_getcurrentmap ! $maparea0) {
-	~script1710($component1, $component3);
+	~worldmap_maplist_close($component1, $component3);
 	if (worldmap_isloaded = false) {
 		return;
 	} else {
@@ -15,7 +15,7 @@ if (worldmap_getcurrentmap ! $maparea0) {
 } else if ($coordgrid9 = null) {
 	return;
 } else {
-	~script1710($component1, $component3);
+	~worldmap_maplist_close($component1, $component3);
 	if (worldmap_isloaded = false) {
 		return;
 	} else {
