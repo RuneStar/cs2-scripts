@@ -7,8 +7,12 @@ def_int $int4 = 0;
 def_obj $obj5 = null;
 def_obj $obj6 = null;
 switch ($int0) {
-	case 6032 :
-		return(~script716(compost_6032), compost_6032);
+	case 5341 :
+		return(~script716(rake_5341), rake_5341);
+	case 5343 :
+		return(~script716(seed_dibber_5343), seed_dibber_5343);
+	case 952 :
+		return(~script716(spade_952), spade_952);
 	case 5329 :
 		$int1 = ~script716(magic_secateurs_7409);
 		if ($int1 > 0) {
@@ -21,32 +25,6 @@ switch ($int0) {
 		} else {
 			return(~script716(secateurs_5329), secateurs_5329);
 		}
-	case 22994 :
-		$int1 = ~script716(bottomless_compost_bucket_22997);
-		if ($int1 > 0) {
-			$obj6 = bottomless_compost_bucket_22997;
-		} else {
-			$obj6 = bottomless_compost_bucket_22994;
-		}
-		$int4 = ~script716(bottomless_compost_bucket_22994);
-		if (calc(^int_max - $int4) < $int1) {
-			$int4 = ^int_max;
-		} else {
-			$int4 = calc($int4 + $int1);
-		}
-		return($int4, $obj6);
-	case 6034 :
-		return(~script716(supercompost_6034), supercompost_6034);
-	case 6036 :
-		return(~script716(plant_cure_6036), plant_cure_6036);
-	case 1925 :
-		return(~script716(bucket_1925), bucket_1925);
-	case 952 :
-		return(~script716(spade_952), spade_952);
-	case 21483 :
-		return(~script716(ultracompost_21483), ultracompost_21483);
-	case 5341 :
-		return(~script716(rake_5341), rake_5341);
 	case 6797 :
 		$int2 = enum_getoutputcount(136);
 		while ($int2 >= 0) {
@@ -69,8 +47,30 @@ switch ($int0) {
 		return($int4, $obj5);
 	case 5325 :
 		return(~script716(gardening_trowel_5325), gardening_trowel_5325);
-	case 5343 :
-		return(~script716(seed_dibber_5343), seed_dibber_5343);
+	case 6036 :
+		return(~script716(plant_cure_6036), plant_cure_6036);
+	case 22994 :
+		$int1 = ~script716(bottomless_compost_bucket_22997);
+		if ($int1 > 0) {
+			$obj6 = bottomless_compost_bucket_22997;
+		} else {
+			$obj6 = bottomless_compost_bucket_22994;
+		}
+		$int4 = ~script716(bottomless_compost_bucket_22994);
+		if (calc(^int_max - $int4) < $int1) {
+			$int4 = ^int_max;
+		} else {
+			$int4 = calc($int4 + $int1);
+		}
+		return($int4, $obj6);
+	case 1925 :
+		return(~script716(bucket_1925), bucket_1925);
+	case 6032 :
+		return(~script716(compost_6032), compost_6032);
+	case 6034 :
+		return(~script716(supercompost_6034), supercompost_6034);
+	case 21483 :
+		return(~script716(ultracompost_21483), ultracompost_21483);
 	else :
 		return(0, null);
 }

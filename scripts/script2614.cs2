@@ -5,14 +5,14 @@ if (stat(magic) < oc_param($obj0, 604)) {
 	return(0);
 } else {
 	switch ($component1) {
-		case 218:123 :
-			if (%varbit5438 > 0) {
+		case 218:137, 218:136 :
+			if (%varbit2451 = 1) {
 				if_settrans(150, $component1);
 			} else {
 				if_settrans(0, $component1);
 			}
-		case 218:136, 218:137 :
-			if (%varbit2451 = 1) {
+		case 218:123 :
+			if (%varbit5438 > 0) {
 				if_settrans(150, $component1);
 			} else {
 				if_settrans(0, $component1);

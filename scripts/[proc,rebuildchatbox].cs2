@@ -54,8 +54,10 @@ while (($int9 ! -1) & ($component8 ! null)) {
 	$int10, $int11, $int12, $string9, $string10, $string11 = chat_gethistory_byuid($int9);
 	if ((~panetest($int10, $int12, $string9) = 1) & (~filtertest($int10, $int11, $int2, $int12, $string9, $string11, $string0) = 1)) {
 		switch ($int10) {
-			case 1, 2 :
+			case 2, 1 :
 				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string9>:", "<$string1><$string11></col>");
+			case 90, 91 :
+				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string9>:", "<$string3><$string11></col>");
 			case 3, 7 :
 				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "From <$string9>:", "<$string2><$string11></col>");
 			case 101 :
@@ -72,17 +74,15 @@ while (($int9 ! -1) & ($component8 ! null)) {
 				$int6 = ~script199($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string8><$string11></col>");
 			case 9 :
 				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "[<$string5><$string10></col>] <$string9>:", "<$string6><$string11></col>");
+			case 14 :
+				$string11, $string12 = ~script2066($string11);
+				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string4>Broadcast:</col>", $string11);
 			case 107 :
 				if (calc(clientclock - $int11) > 500) {
 					$int6 = ~script199($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "jk :P");
 				} else {
 					$int6 = ~script199($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, $string11);
 				}
-			case 14 :
-				$string11, $string12 = ~script2066($string11);
-				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string4>Broadcast:</col>", $string11);
-			case 90, 91 :
-				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string9>:", "<$string3><$string11></col>");
 			else :
 				$int6 = ~script199($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, $string11);
 		}

@@ -2,16 +2,16 @@
 [clientscript,zeah_favour_update](component $component0, component $component1, int $int2)
 def_int $int3 = 0;
 switch ($int2) {
-	case 1 :
-		$int3 = %varbit4894;
-	case 2 :
-		$int3 = %varbit4895;
 	case 3 :
 		$int3 = %varbit4896;
+	case 2 :
+		$int3 = %varbit4895;
 	case 4 :
 		$int3 = %varbit4898;
 	case 5 :
 		$int3 = %varbit4899;
+	case 1 :
+		$int3 = %varbit4894;
 }
 if_setsize(scale($int3, 1000, 16384), 0, ^setsize_2, ^setsize_minus, $component0);
 if (($int3 > 0) & (if_getwidth($component0) < 2)) {

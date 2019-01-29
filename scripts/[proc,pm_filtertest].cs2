@@ -1,6 +1,14 @@
 // 91
 [proc,pm_filtertest](int $int0, int $int1, int $int2, string $string0)(int)
 switch ($int0) {
+	case 7 :
+		if ($int1 < %varcint175) {
+			return(0);
+		} else if ($int2 = 2) {
+			return(0);
+		} else {
+			return(1);
+		}
 	case 3 :
 		if ($int1 < %varcint175) {
 			return(0);
@@ -22,14 +30,6 @@ switch ($int0) {
 			return(1);
 		} else {
 			return(0);
-		}
-	case 7 :
-		if ($int1 < %varcint175) {
-			return(0);
-		} else if ($int2 = 2) {
-			return(0);
-		} else {
-			return(1);
 		}
 	else :
 		return(0);

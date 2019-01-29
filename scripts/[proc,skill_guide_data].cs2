@@ -200,6 +200,152 @@ switch ($int0) {
 		} else {
 			return("", -1, -1);
 		}
+	case 5 :
+		if ($int1 = 0) {
+			if ($int2 = 0) {
+				return("Bronze", 1, 1139);
+			} else if ($int2 = 1) {
+				return("Iron", 1, 1137);
+			} else if ($int2 = 2) {
+				return("Steel", 5, 1141);
+			} else if ($int2 = 3) {
+				return("Black", 10, 1151);
+			} else if ($int2 = 4) {
+				return("Members: White", 10, 6621);
+			} else if ($int2 = 5) {
+				return("Members: Slayer helm", 10, 11864);
+			} else if ($int2 = 6) {
+				return("Members: Xerician armour<br> (with 20 Magic)", 10, 13385);
+			} else if ($int2 = 7) {
+				return("Mithril", 20, 1143);
+			} else if ($int2 = 8) {
+				return("Members: Yak-hide", 20, 10822);
+			} else if ($int2 = 9) {
+				return("Members: Initiate armour<br> (after Recruitment Drive, with 10 Prayer)", 20, 5574);
+			} else if ($int2 = 10) {
+				return("Members: Shayzien armour", 20, 13379);
+			} else if ($int2 = 11) {
+				return("Adamantite", 30, 1145);
+			} else if ($int2 = 12) {
+				return("Members: Proselyte armour<br> (after Slug Menace, with 20 Prayer)", 30, 9672);
+			} else if ($int2 = 13) {
+				return("Members: Samurai armour", 35, 20035);
+			} else if ($int2 = 14) {
+				return("Rune", 40, 1147);
+			} else if ($int2 = 15) {
+				return("Members: Rock-shell armour<br> (after Fremennik Trials)", 40, 6128);
+			} else if ($int2 = 16) {
+				return("Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)", 42, 8839);
+			} else if ($int2 = 17) {
+				return("Members: Fremennik helmets<br> (after Fremennik Trials)", 45, 3751);
+			} else if ($int2 = 18) {
+				return("Members: Granite<br> (with 50 Strength)", 50, 3122);
+			} else if ($int2 = 19) {
+				return("Members: Helm of neitiznot<br> (after Fremennik Isles)", 55, 10828);
+			} else if ($int2 = 20) {
+				return("Members: Dragon", 60, 1149);
+			} else if ($int2 = 21) {
+				return("Members: Obsidian armour", 60, 21301);
+			} else if ($int2 = 22) {
+				return("Members: Bandos armour", 65, 11832);
+			} else if ($int2 = 23) {
+				return("Members: 3rd age fighter armour", 65, 10350);
+			} else if ($int2 = 24) {
+				return("Members: Ancestral robes<br> (with 75 Magic)", 65, 21021);
+			} else if ($int2 = 25) {
+				return("Members: Avernic defender<br> (with 70 Attack)", 70, 22322);
+			} else if ($int2 = 26) {
+				return("Members: Barrows armour", 70, 4745);
+			} else if ($int2 = 27) {
+				return("Members: Armadyl armour (with 70 Ranged)", 70, 11826);
+			} else if ($int2 = 28) {
+				return("Members: Boots of brimstone (with 70 Ranged and Magic)", 70, 22951);
+			} else if ($int2 = 29) {
+				return("Members: Justiciar armour", 75, 22326);
+			} else if ($int2 = 30) {
+				return("Members: Serpentine helm", 75, 12931);
+			} else if ($int2 = 31) {
+				return("Members: Guardian boots", 75, 21733);
+			} else if ($int2 = 32) {
+				return("Members: Primordial boots<br> (with 75 Strength)", 75, 13239);
+			} else if ($int2 = 33) {
+				return("Members: Eternal boots<br> (with 75 Magic)", 75, 13235);
+			} else if ($int2 = 34) {
+				return("Members: Pegasian boots<br> (with 75 Ranged)", 75, 13237);
+			} else {
+				return("", -1, -1);
+			}
+		} else if ($int1 = 1) {
+			if ($int2 = 0) {
+				return("Fighter torso", 40, 10551);
+			} else if ($int2 = 1) {
+				return("Runner boots", 40, 10552);
+			} else if ($int2 = 2) {
+				return("Penance gloves", 40, 10553);
+			} else if ($int2 = 3) {
+				return("Penance skirt<br> (with 60 Ranged)", 40, 10555);
+			} else if ($int2 = 4) {
+				return("Fighter hat", 45, 10548);
+			} else if ($int2 = 5) {
+				return("Ranger hat", 45, 10550);
+			} else if ($int2 = 6) {
+				return("Healer hat", 45, 10547);
+			} else if ($int2 = 7) {
+				return("Runner hat", 45, 10549);
+			} else {
+				return("", -1, -1);
+			}
+		} else if ($int1 = 2) {
+			if ($int2 = 0) {
+				return("Rigour<br> (with 74 Prayer)", 70, 3258);
+			} else if ($int2 = 1) {
+				return("Augury<br> (with 77 Prayer)", 70, 3258);
+			} else {
+				return("", -1, -1);
+			}
+		} else if ($int1 = 3) {
+			if ($int2 = 0) {
+				return("Members: Oak shield", 10, 22251);
+			} else if ($int2 = 1) {
+				return("Members: Willow shield", 30, 22254);
+			} else if ($int2 = 2) {
+				return("Members: Maple shield", 40, 22257);
+			} else if ($int2 = 3) {
+				return("Members: Yew shield", 40, 22260);
+			} else if ($int2 = 4) {
+				return("Members: Magic shield", 40, 22263);
+			} else if ($int2 = 5) {
+				return("Members: Redwood shield", 40, 22266);
+			} else if ($int2 = 6) {
+				return("Members: Spirit shield<br>(with 55 Prayer)", 45, 12829);
+			} else if ($int2 = 7) {
+				return("Members: Toktz-Ket-Xil", 60, 6524);
+			} else if ($int2 = 8) {
+				return("Members: Odium & Malediction wards", 60, 11926);
+			} else if ($int2 = 9) {
+				return("Members: Elf crystal (with 50 Agility)", 70, 4224);
+			} else if ($int2 = 10) {
+				return("Members: Blessed spirit shield<br>(with 60 Prayer)", 70, 12831);
+			} else if ($int2 = 11) {
+				return("Members: Dragonfire shield", 75, 11283);
+			} else if ($int2 = 12) {
+				return("Members: Dragonfire ward<br>(with 70 Ranged)", 75, 22002);
+			} else if ($int2 = 13) {
+				return("Members: Ancient Wyvern shield", 75, 21633);
+			} else if ($int2 = 14) {
+				return("Members: Elysian spirit shield<br>(with 75 Prayer)", 75, 12817);
+			} else if ($int2 = 15) {
+				return("Members: Arcane & Spectral spirit shields<br>(with 70 Prayer and 65 Magic)", 75, 12825);
+			} else if ($int2 = 16) {
+				return("Members: Twisted buckler<br> (with 75 Ranged)", 75, 21000);
+			} else if ($int2 = 17) {
+				return("Members: Dinh's bulwark<br> (with 75 Attack)", 75, 21015);
+			} else {
+				return("", -1, -1);
+			}
+		} else {
+			return("", -1, -1);
+		}
 	case 3 :
 		if ($int1 = 0) {
 			if ($int2 = 0) {
@@ -421,6 +567,122 @@ switch ($int0) {
 			}
 		} else if ($int1 = 6) {
 			return(~skill_guide_salamanders($int2));
+		} else {
+			return("", -1, -1);
+		}
+	case 7 :
+		if ($int1 = 0) {
+			if ($int2 = 0) {
+				return("Thick Skin", 1, 3258);
+			} else if ($int2 = 1) {
+				return("Burst of Strength", 4, 3258);
+			} else if ($int2 = 2) {
+				return("Clarity of Thought", 7, 3258);
+			} else if ($int2 = 3) {
+				return("Sharp Eye", 8, 3258);
+			} else if ($int2 = 4) {
+				return("Mystic Will", 9, 3258);
+			} else if ($int2 = 5) {
+				return("Rock Skin", 10, 3258);
+			} else if ($int2 = 6) {
+				return("Superhuman Strength", 13, 3258);
+			} else if ($int2 = 7) {
+				return("Improved Reflexes", 16, 3258);
+			} else if ($int2 = 8) {
+				return("Rapid Restore", 19, 3258);
+			} else if ($int2 = 9) {
+				return("Rapid Heal", 22, 3258);
+			} else if ($int2 = 10) {
+				return("Protect Item", 25, 3258);
+			} else if ($int2 = 11) {
+				return("Hawk Eye", 26, 3258);
+			} else if ($int2 = 12) {
+				return("Mystic Lore", 27, 3258);
+			} else if ($int2 = 13) {
+				return("Steel Skin", 28, 3258);
+			} else if ($int2 = 14) {
+				return("Ultimate Strength", 31, 3258);
+			} else if ($int2 = 15) {
+				return("Incredible Reflexes", 34, 3258);
+			} else if ($int2 = 16) {
+				return("Protect from Magic", 37, 3258);
+			} else if ($int2 = 17) {
+				return("Protect from Missiles", 40, 3258);
+			} else if ($int2 = 18) {
+				return("Protect from Melee", 43, 3258);
+			} else if ($int2 = 19) {
+				return("Eagle Eye", 44, 3258);
+			} else if ($int2 = 20) {
+				return("Mystic Might", 45, 3258);
+			} else if ($int2 = 21) {
+				return("Members: Retribution", 46, 3258);
+			} else if ($int2 = 22) {
+				return("Members: Redemption", 49, 3258);
+			} else if ($int2 = 23) {
+				return("Members: Smite", 52, 3258);
+			} else if ($int2 = 24) {
+				return("Members: Preserve", 55, 3258);
+			} else if ($int2 = 25) {
+				return("Members: Chivalry<br> (after King's Ransom)", 60, 3258);
+			} else if ($int2 = 26) {
+				return("Members: Piety<br> (after King's Ransom)", 70, 3258);
+			} else if ($int2 = 27) {
+				return("Members: Rigour<br> (with 70 Defence)", 74, 3258);
+			} else if ($int2 = 28) {
+				return("Members: Augury<br> (with 70 Defence)", 77, 3258);
+			} else {
+				return("", -1, -1);
+			}
+		} else if ($int1 = 1) {
+			if ($int2 = 0) {
+				return("Initiate armour<br> (after Recruitment Drive, with 20 Defence)", 10, 5574);
+			} else if ($int2 = 1) {
+				return("Proselyte armour<br> (after Slug Menace, with 30 Defence)", 20, 9672);
+			} else if ($int2 = 2) {
+				return("Vestment robe top", 20, 10458);
+			} else if ($int2 = 3) {
+				return("Vestment robe legs", 20, 10464);
+			} else if ($int2 = 4) {
+				return("Void Knight equipment<br>(with 42 combat stats)", 22, 8839);
+			} else if ($int2 = 5) {
+				return("Holy wraps", 31, 19997);
+			} else if ($int2 = 6) {
+				return("Holy sandals", 31, 12598);
+			} else if ($int2 = 7) {
+				return("Vestment cloak", 40, 10446);
+			} else if ($int2 = 8) {
+				return("Vestment mitre", 40, 10452);
+			} else if ($int2 = 9) {
+				return("Use completed prayer books<br>to bless holy and unholy symbols.", 50, 1716);
+			} else if ($int2 = 10) {
+				return("Use Bologa's grape blessings.", 50, 20747);
+			} else if ($int2 = 11) {
+				return("Spirit Shield<br>(with 45 Defence)", 55, 12829);
+			} else if ($int2 = 12) {
+				return("Vestment stole", 60, 10470);
+			} else if ($int2 = 13) {
+				return("Crozier", 60, 10440);
+			} else if ($int2 = 14) {
+				return("Blessed spirit shield<br>(with 70 Defence)", 60, 12831);
+			} else if ($int2 = 15) {
+				return("Devout boots", 60, 22954);
+			} else if ($int2 = 16) {
+				return("Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)", 70, 12825);
+			} else if ($int2 = 17) {
+				return("Elysian spirit shield<br>(with 75 Defence)", 75, 12817);
+			} else if ($int2 = 18) {
+				return("Dragonbone necklace", 80, 22111);
+			} else if ($int2 = 19) {
+				return("Bonecrusher necklace", 80, 22986);
+			} else {
+				return("", -1, -1);
+			}
+		} else if ($int1 = 2) {
+			if ($int2 = 0) {
+				return("Use superior dragon bones", 70, 22124);
+			} else {
+				return("", -1, -1);
+			}
 		} else {
 			return("", -1, -1);
 		}
@@ -926,152 +1188,6 @@ switch ($int0) {
 			else :
 				return("", -1, -1);
 		}
-	case 5 :
-		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return("Bronze", 1, 1139);
-			} else if ($int2 = 1) {
-				return("Iron", 1, 1137);
-			} else if ($int2 = 2) {
-				return("Steel", 5, 1141);
-			} else if ($int2 = 3) {
-				return("Black", 10, 1151);
-			} else if ($int2 = 4) {
-				return("Members: White", 10, 6621);
-			} else if ($int2 = 5) {
-				return("Members: Slayer helm", 10, 11864);
-			} else if ($int2 = 6) {
-				return("Members: Xerician armour<br> (with 20 Magic)", 10, 13385);
-			} else if ($int2 = 7) {
-				return("Mithril", 20, 1143);
-			} else if ($int2 = 8) {
-				return("Members: Yak-hide", 20, 10822);
-			} else if ($int2 = 9) {
-				return("Members: Initiate armour<br> (after Recruitment Drive, with 10 Prayer)", 20, 5574);
-			} else if ($int2 = 10) {
-				return("Members: Shayzien armour", 20, 13379);
-			} else if ($int2 = 11) {
-				return("Adamantite", 30, 1145);
-			} else if ($int2 = 12) {
-				return("Members: Proselyte armour<br> (after Slug Menace, with 20 Prayer)", 30, 9672);
-			} else if ($int2 = 13) {
-				return("Members: Samurai armour", 35, 20035);
-			} else if ($int2 = 14) {
-				return("Rune", 40, 1147);
-			} else if ($int2 = 15) {
-				return("Members: Rock-shell armour<br> (after Fremennik Trials)", 40, 6128);
-			} else if ($int2 = 16) {
-				return("Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)", 42, 8839);
-			} else if ($int2 = 17) {
-				return("Members: Fremennik helmets<br> (after Fremennik Trials)", 45, 3751);
-			} else if ($int2 = 18) {
-				return("Members: Granite<br> (with 50 Strength)", 50, 3122);
-			} else if ($int2 = 19) {
-				return("Members: Helm of neitiznot<br> (after Fremennik Isles)", 55, 10828);
-			} else if ($int2 = 20) {
-				return("Members: Dragon", 60, 1149);
-			} else if ($int2 = 21) {
-				return("Members: Obsidian armour", 60, 21301);
-			} else if ($int2 = 22) {
-				return("Members: Bandos armour", 65, 11832);
-			} else if ($int2 = 23) {
-				return("Members: 3rd age fighter armour", 65, 10350);
-			} else if ($int2 = 24) {
-				return("Members: Ancestral robes<br> (with 75 Magic)", 65, 21021);
-			} else if ($int2 = 25) {
-				return("Members: Avernic defender<br> (with 70 Attack)", 70, 22322);
-			} else if ($int2 = 26) {
-				return("Members: Barrows armour", 70, 4745);
-			} else if ($int2 = 27) {
-				return("Members: Armadyl armour (with 70 Ranged)", 70, 11826);
-			} else if ($int2 = 28) {
-				return("Members: Boots of brimstone (with 70 Ranged and Magic)", 70, 22951);
-			} else if ($int2 = 29) {
-				return("Members: Justiciar armour", 75, 22326);
-			} else if ($int2 = 30) {
-				return("Members: Serpentine helm", 75, 12931);
-			} else if ($int2 = 31) {
-				return("Members: Guardian boots", 75, 21733);
-			} else if ($int2 = 32) {
-				return("Members: Primordial boots<br> (with 75 Strength)", 75, 13239);
-			} else if ($int2 = 33) {
-				return("Members: Eternal boots<br> (with 75 Magic)", 75, 13235);
-			} else if ($int2 = 34) {
-				return("Members: Pegasian boots<br> (with 75 Ranged)", 75, 13237);
-			} else {
-				return("", -1, -1);
-			}
-		} else if ($int1 = 1) {
-			if ($int2 = 0) {
-				return("Fighter torso", 40, 10551);
-			} else if ($int2 = 1) {
-				return("Runner boots", 40, 10552);
-			} else if ($int2 = 2) {
-				return("Penance gloves", 40, 10553);
-			} else if ($int2 = 3) {
-				return("Penance skirt<br> (with 60 Ranged)", 40, 10555);
-			} else if ($int2 = 4) {
-				return("Fighter hat", 45, 10548);
-			} else if ($int2 = 5) {
-				return("Ranger hat", 45, 10550);
-			} else if ($int2 = 6) {
-				return("Healer hat", 45, 10547);
-			} else if ($int2 = 7) {
-				return("Runner hat", 45, 10549);
-			} else {
-				return("", -1, -1);
-			}
-		} else if ($int1 = 2) {
-			if ($int2 = 0) {
-				return("Rigour<br> (with 74 Prayer)", 70, 3258);
-			} else if ($int2 = 1) {
-				return("Augury<br> (with 77 Prayer)", 70, 3258);
-			} else {
-				return("", -1, -1);
-			}
-		} else if ($int1 = 3) {
-			if ($int2 = 0) {
-				return("Members: Oak shield", 10, 22251);
-			} else if ($int2 = 1) {
-				return("Members: Willow shield", 30, 22254);
-			} else if ($int2 = 2) {
-				return("Members: Maple shield", 40, 22257);
-			} else if ($int2 = 3) {
-				return("Members: Yew shield", 40, 22260);
-			} else if ($int2 = 4) {
-				return("Members: Magic shield", 40, 22263);
-			} else if ($int2 = 5) {
-				return("Members: Redwood shield", 40, 22266);
-			} else if ($int2 = 6) {
-				return("Members: Spirit shield<br>(with 55 Prayer)", 45, 12829);
-			} else if ($int2 = 7) {
-				return("Members: Toktz-Ket-Xil", 60, 6524);
-			} else if ($int2 = 8) {
-				return("Members: Odium & Malediction wards", 60, 11926);
-			} else if ($int2 = 9) {
-				return("Members: Elf crystal (with 50 Agility)", 70, 4224);
-			} else if ($int2 = 10) {
-				return("Members: Blessed spirit shield<br>(with 60 Prayer)", 70, 12831);
-			} else if ($int2 = 11) {
-				return("Members: Dragonfire shield", 75, 11283);
-			} else if ($int2 = 12) {
-				return("Members: Dragonfire ward<br>(with 70 Ranged)", 75, 22002);
-			} else if ($int2 = 13) {
-				return("Members: Ancient Wyvern shield", 75, 21633);
-			} else if ($int2 = 14) {
-				return("Members: Elysian spirit shield<br>(with 75 Prayer)", 75, 12817);
-			} else if ($int2 = 15) {
-				return("Members: Arcane & Spectral spirit shields<br>(with 70 Prayer and 65 Magic)", 75, 12825);
-			} else if ($int2 = 16) {
-				return("Members: Twisted buckler<br> (with 75 Ranged)", 75, 21000);
-			} else if ($int2 = 17) {
-				return("Members: Dinh's bulwark<br> (with 75 Attack)", 75, 21015);
-			} else {
-				return("", -1, -1);
-			}
-		} else {
-			return("", -1, -1);
-		}
 	case 6 :
 		if ($int1 = 0) {
 			switch ($int2) {
@@ -1209,122 +1325,6 @@ switch ($int0) {
 				return("Void Knight equipment<br>(with 42 combat stats and 22 Prayer)", 42, 8839);
 			} else if ($int2 = 1) {
 				return("Enchanted zenyte jewellery", 75, 19550);
-			} else {
-				return("", -1, -1);
-			}
-		} else {
-			return("", -1, -1);
-		}
-	case 7 :
-		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return("Thick Skin", 1, 3258);
-			} else if ($int2 = 1) {
-				return("Burst of Strength", 4, 3258);
-			} else if ($int2 = 2) {
-				return("Clarity of Thought", 7, 3258);
-			} else if ($int2 = 3) {
-				return("Sharp Eye", 8, 3258);
-			} else if ($int2 = 4) {
-				return("Mystic Will", 9, 3258);
-			} else if ($int2 = 5) {
-				return("Rock Skin", 10, 3258);
-			} else if ($int2 = 6) {
-				return("Superhuman Strength", 13, 3258);
-			} else if ($int2 = 7) {
-				return("Improved Reflexes", 16, 3258);
-			} else if ($int2 = 8) {
-				return("Rapid Restore", 19, 3258);
-			} else if ($int2 = 9) {
-				return("Rapid Heal", 22, 3258);
-			} else if ($int2 = 10) {
-				return("Protect Item", 25, 3258);
-			} else if ($int2 = 11) {
-				return("Hawk Eye", 26, 3258);
-			} else if ($int2 = 12) {
-				return("Mystic Lore", 27, 3258);
-			} else if ($int2 = 13) {
-				return("Steel Skin", 28, 3258);
-			} else if ($int2 = 14) {
-				return("Ultimate Strength", 31, 3258);
-			} else if ($int2 = 15) {
-				return("Incredible Reflexes", 34, 3258);
-			} else if ($int2 = 16) {
-				return("Protect from Magic", 37, 3258);
-			} else if ($int2 = 17) {
-				return("Protect from Missiles", 40, 3258);
-			} else if ($int2 = 18) {
-				return("Protect from Melee", 43, 3258);
-			} else if ($int2 = 19) {
-				return("Eagle Eye", 44, 3258);
-			} else if ($int2 = 20) {
-				return("Mystic Might", 45, 3258);
-			} else if ($int2 = 21) {
-				return("Members: Retribution", 46, 3258);
-			} else if ($int2 = 22) {
-				return("Members: Redemption", 49, 3258);
-			} else if ($int2 = 23) {
-				return("Members: Smite", 52, 3258);
-			} else if ($int2 = 24) {
-				return("Members: Preserve", 55, 3258);
-			} else if ($int2 = 25) {
-				return("Members: Chivalry<br> (after King's Ransom)", 60, 3258);
-			} else if ($int2 = 26) {
-				return("Members: Piety<br> (after King's Ransom)", 70, 3258);
-			} else if ($int2 = 27) {
-				return("Members: Rigour<br> (with 70 Defence)", 74, 3258);
-			} else if ($int2 = 28) {
-				return("Members: Augury<br> (with 70 Defence)", 77, 3258);
-			} else {
-				return("", -1, -1);
-			}
-		} else if ($int1 = 1) {
-			if ($int2 = 0) {
-				return("Initiate armour<br> (after Recruitment Drive, with 20 Defence)", 10, 5574);
-			} else if ($int2 = 1) {
-				return("Proselyte armour<br> (after Slug Menace, with 30 Defence)", 20, 9672);
-			} else if ($int2 = 2) {
-				return("Vestment robe top", 20, 10458);
-			} else if ($int2 = 3) {
-				return("Vestment robe legs", 20, 10464);
-			} else if ($int2 = 4) {
-				return("Void Knight equipment<br>(with 42 combat stats)", 22, 8839);
-			} else if ($int2 = 5) {
-				return("Holy wraps", 31, 19997);
-			} else if ($int2 = 6) {
-				return("Holy sandals", 31, 12598);
-			} else if ($int2 = 7) {
-				return("Vestment cloak", 40, 10446);
-			} else if ($int2 = 8) {
-				return("Vestment mitre", 40, 10452);
-			} else if ($int2 = 9) {
-				return("Use completed prayer books<br>to bless holy and unholy symbols.", 50, 1716);
-			} else if ($int2 = 10) {
-				return("Use Bologa's grape blessings.", 50, 20747);
-			} else if ($int2 = 11) {
-				return("Spirit Shield<br>(with 45 Defence)", 55, 12829);
-			} else if ($int2 = 12) {
-				return("Vestment stole", 60, 10470);
-			} else if ($int2 = 13) {
-				return("Crozier", 60, 10440);
-			} else if ($int2 = 14) {
-				return("Blessed spirit shield<br>(with 70 Defence)", 60, 12831);
-			} else if ($int2 = 15) {
-				return("Devout boots", 60, 22954);
-			} else if ($int2 = 16) {
-				return("Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)", 70, 12825);
-			} else if ($int2 = 17) {
-				return("Elysian spirit shield<br>(with 75 Defence)", 75, 12817);
-			} else if ($int2 = 18) {
-				return("Dragonbone necklace", 80, 22111);
-			} else if ($int2 = 19) {
-				return("Bonecrusher necklace", 80, 22986);
-			} else {
-				return("", -1, -1);
-			}
-		} else if ($int1 = 2) {
-			if ($int2 = 0) {
-				return("Use superior dragon bones", 70, 22124);
 			} else {
 				return("", -1, -1);
 			}
@@ -2325,148 +2325,224 @@ switch ($int0) {
 		} else {
 			return("", -1, -1);
 		}
-	case 12 :
+	case 19 :
 		if ($int1 = 0) {
 			if ($int2 = 0) {
-				return("Air runes", 1, 556);
+				return("15 Arrow shafts (Logs)", 1, 6443);
 			} else if ($int2 = 1) {
-				return("Mind runes", 2, 558);
+				return("Bronze arrows", 1, 882);
 			} else if ($int2 = 2) {
-				return("Water runes", 5, 555);
+				return("Bronze 'brutal' arrows", 7, 4773);
 			} else if ($int2 = 3) {
-				return("Members: Mist runes", 6, 4695);
+				return("30 Arrow shafts (Oak logs)", 15, 6443);
 			} else if ($int2 = 4) {
-				return("Earth runes", 9, 557);
+				return("Iron arrows", 15, 884);
 			} else if ($int2 = 5) {
-				return("Members: Dust runes", 10, 4696);
+				return("Iron 'brutal' arrows", 18, 4778);
 			} else if ($int2 = 6) {
-				return("Members: Mud runes", 13, 4698);
+				return("45 Arrow shafts (Willow logs)", 30, 6443);
 			} else if ($int2 = 7) {
-				return("Fire runes", 14, 554);
+				return("Steel arrows", 30, 886);
 			} else if ($int2 = 8) {
-				return("Members: Smoke runes", 15, 4697);
+				return("Steel 'brutal' arrows", 33, 4783);
 			} else if ($int2 = 9) {
-				return("Members: Steam runes", 19, 4694);
+				return("Black 'brutal' arrows", 38, 4788);
 			} else if ($int2 = 10) {
-				return("Body runes", 20, 559);
+				return("60 Arrow shafts (Maple logs)", 45, 6443);
 			} else if ($int2 = 11) {
-				return("Members: Lava runes", 23, 4699);
+				return("Mithril arrows", 45, 888);
 			} else if ($int2 = 12) {
-				return("Members: Cosmic runes", 27, 564);
+				return("Mithril 'brutal' arrows", 49, 4793);
 			} else if ($int2 = 13) {
-				return("Members: Chaos runes", 35, 562);
+				return("Broad arrows", 52, 4160);
 			} else if ($int2 = 14) {
-				return("Members: Astral runes", 40, 9075);
+				return("75 Arrow shafts (Yew logs)", 60, 6443);
 			} else if ($int2 = 15) {
-				return("Members: Nature runes", 44, 561);
+				return("Adamant arrows", 60, 890);
 			} else if ($int2 = 16) {
-				return("Members: Law runes", 54, 563);
+				return("Adamant 'brutal' arrows", 62, 4798);
 			} else if ($int2 = 17) {
-				return("Members: Death runes", 65, 560);
+				return("90 Arrow shafts (Magic logs)", 75, 6443);
 			} else if ($int2 = 18) {
-				return("Members: Blood runes", 77, 565);
+				return("Rune arrows", 75, 892);
 			} else if ($int2 = 19) {
-				return("Members: Soul runes", 90, 566);
+				return("Rune 'brutal' arrows", 77, 4803);
 			} else if ($int2 = 20) {
-				return("Members: Wrath runes", 95, 21880);
+				return("Amethyst arrows", 82, 21326);
+			} else if ($int2 = 21) {
+				return("105 Arrow shafts (Redwood logs)", 90, 6443);
+			} else if ($int2 = 22) {
+				return("Dragon arrows", 90, 11212);
 			} else {
 				return("", -1, -1);
 			}
 		} else if ($int1 = 1) {
 			if ($int2 = 0) {
-				return("As your Runecrafting skill develops, you will be able to craft multiple runes from one piece of essence. You only receive experience for each piece of essence crafted, not each rune crafted.", -1, 7620);
+				return("Shortbows", 5, 841);
 			} else if ($int2 = 1) {
-				return("2 Air runes per essence", 11, 556);
+				return("Longbows", 10, 839);
 			} else if ($int2 = 2) {
-				return("2 Mind runes per essence", 14, 558);
+				return("Oak shortbows", 20, 843);
 			} else if ($int2 = 3) {
-				return("2 Water runes per essence", 19, 555);
+				return("Oak longbows", 25, 845);
 			} else if ($int2 = 4) {
-				return("3 Air runes per essence", 22, 556);
+				return("Ogre composite bows", 30, 4827);
 			} else if ($int2 = 5) {
-				return("2 Earth runes per essence", 26, 557);
+				return("Willow shortbows", 35, 849);
 			} else if ($int2 = 6) {
-				return("3 Mind runes per essence", 28, 558);
+				return("Willow longbows", 40, 847);
 			} else if ($int2 = 7) {
-				return("4 Air runes per essence", 33, 556);
+				return("Maple shortbows", 50, 853);
 			} else if ($int2 = 8) {
-				return("2 Fire runes per essence", 35, 554);
+				return("Maple longbows", 55, 851);
 			} else if ($int2 = 9) {
-				return("3 Water runes per essence", 38, 555);
+				return("Yew shortbows", 65, 857);
 			} else if ($int2 = 10) {
-				return("4 Mind runes per essence", 42, 558);
+				return("Yew longbows", 70, 855);
 			} else if ($int2 = 11) {
-				return("5 Air runes per essence", 44, 556);
+				return("Magic shortbows", 80, 861);
 			} else if ($int2 = 12) {
-				return("2 Body runes per essence", 46, 559);
-			} else if ($int2 = 13) {
-				return("3 Earth runes per essence", 52, 557);
-			} else if ($int2 = 14) {
-				return("6 Air runes per essence", 55, 556);
-			} else if ($int2 = 15) {
-				return("5 Mind runes per essence", 56, 558);
-			} else if ($int2 = 16) {
-				return("4 Water runes per essence", 57, 555);
-			} else if ($int2 = 17) {
-				return("Members: 2 Cosmic runes per essence", 59, 564);
-			} else if ($int2 = 18) {
-				return("7 Air runes per essence", 66, 556);
-			} else if ($int2 = 19) {
-				return("6 Mind runes per essence", 70, 558);
-			} else if ($int2 = 20) {
-				return("3 Fire runes per essence", 70, 554);
-			} else if ($int2 = 21) {
-				return("Members: 2 Chaos runes per essence", 74, 562);
-			} else if ($int2 = 22) {
-				return("5 Water runes per essence", 76, 555);
-			} else if ($int2 = 23) {
-				return("8 Air runes per essence", 77, 556);
-			} else if ($int2 = 24) {
-				return("4 Earth runes per essence", 78, 557);
-			} else if ($int2 = 25) {
-				return("Members: 2 Astral runes per essence", 82, 9075);
-			} else if ($int2 = 26) {
-				return("7 Mind runes per essence", 84, 558);
-			} else if ($int2 = 27) {
-				return("9 Air runes per essence", 88, 556);
-			} else if ($int2 = 28) {
-				return("Members: 2 Nature runes per essence", 91, 561);
-			} else if ($int2 = 29) {
-				return("3 Body runes per essence", 92, 559);
-			} else if ($int2 = 30) {
-				return("6 Water runes per essence", 95, 555);
-			} else if ($int2 = 31) {
-				return("Members: 2 Law runes per essence", 95, 563);
-			} else if ($int2 = 32) {
-				return("8 Mind runes per essence", 98, 558);
-			} else if ($int2 = 33) {
-				return("10 Air runes per essence", 99, 556);
-			} else if ($int2 = 34) {
-				return("Members: 2 Death runes per essence", 99, 560);
+				return("Magic longbows", 85, 859);
 			} else {
 				return("", -1, -1);
 			}
 		} else if ($int1 = 2) {
 			if ($int2 = 0) {
-				return("Pouches come in various sizes which allow you to carry extra essence in them. As you use the pouches they degrade and store less essence, just speak to the Dark Mage at the centre of the Abyss to restore them.", -1, 7620);
+				return("Bronze bolts", 9, 877);
 			} else if ($int2 = 1) {
-				return("Small pouch: Holds 3 extra essence", 1, 5509);
+				return("Opal-tipped bronze bolts", 11, 879);
 			} else if ($int2 = 2) {
-				return("Medium pouch: Holds 6 extra essence", 25, 5510);
+				return("Blurite bolts<br>(after Knight's Sword quest)", 24, 9139);
 			} else if ($int2 = 3) {
-				return("Large pouch: Holds 9 extra essence", 50, 5512);
+				return("Jade-tipped blurite bolts", 26, 9335);
 			} else if ($int2 = 4) {
-				return("Giant pouch: Holds 12 extra essence", 75, 5514);
+				return("Kebbit-tipped hunting bolts", 32, 10158);
+			} else if ($int2 = 5) {
+				return("Iron bolts", 39, 9140);
+			} else if ($int2 = 6) {
+				return("Pearl-tipped iron bolts", 41, 880);
+			} else if ($int2 = 7) {
+				return("Long kebbit-tipped hunting bolts", 42, 10159);
+			} else if ($int2 = 8) {
+				return("Silver bolts", 43, 9145);
+			} else if ($int2 = 9) {
+				return("Steel bolts", 46, 9141);
+			} else if ($int2 = 10) {
+				return("Red topaz-tipped steel bolts", 48, 9336);
+			} else if ($int2 = 11) {
+				return("Barbed-tipped bolts", 51, 881);
+			} else if ($int2 = 12) {
+				return("Mithril bolts", 54, 9142);
+			} else if ($int2 = 13) {
+				return("Broad bolts", 55, 11875);
+			} else if ($int2 = 14) {
+				return("Sapphire-tipped mithril bolts", 56, 9337);
+			} else if ($int2 = 15) {
+				return("Emerald-tipped mithril bolts", 58, 9338);
+			} else if ($int2 = 16) {
+				return("Mithril grapple-tipped bolts", 59, 9418);
+			} else if ($int2 = 17) {
+				return("Adamantite bolts", 61, 9143);
+			} else if ($int2 = 18) {
+				return("Ruby-tipped adamantite bolts", 63, 9339);
+			} else if ($int2 = 19) {
+				return("Diamond-tipped adamantite bolts", 65, 9340);
+			} else if ($int2 = 20) {
+				return("Runite bolts", 69, 9144);
+			} else if ($int2 = 21) {
+				return("Dragonstone-tipped runite bolts", 71, 9341);
+			} else if ($int2 = 22) {
+				return("Onyx-tipped runite bolts", 73, 9342);
+			} else if ($int2 = 23) {
+				return("Amethyst broad bolts", 76, 21316);
+			} else if ($int2 = 24) {
+				return("Dragon bolts", 84, 21905);
 			} else {
 				return("", -1, -1);
 			}
 		} else if ($int1 = 3) {
 			if ($int2 = 0) {
-				return("Eternal boots (with 60 Magic)", 60, 13235);
+				return("Bronze darts", 10, 806);
 			} else if ($int2 = 1) {
-				return("Pegasian boots (with 60 Magic)", 60, 13237);
+				return("Iron darts", 22, 807);
 			} else if ($int2 = 2) {
-				return("Primordial boots (with 60 Magic)", 60, 13239);
+				return("Steel darts", 37, 808);
+			} else if ($int2 = 3) {
+				return("Mithril darts", 52, 809);
+			} else if ($int2 = 4) {
+				return("Toxic blowpipe", 53, 12926);
+			} else if ($int2 = 5) {
+				return("Adamant darts", 67, 810);
+			} else if ($int2 = 6) {
+				return("Rune darts", 81, 811);
+			} else if ($int2 = 7) {
+				return("Dragon darts", 95, 11230);
+			} else {
+				return("", -1, -1);
+			}
+		} else if ($int1 = 4) {
+			if ($int2 = 0) {
+				return("Bronze/wooden crossbows", 9, 9440);
+			} else if ($int2 = 1) {
+				return("Blurite/oak crossbows<br>(after Knight's Sword quest)", 24, 9442);
+			} else if ($int2 = 2) {
+				return("Iron/willow crossbows", 39, 9444);
+			} else if ($int2 = 3) {
+				return("Steel/teak crossbows", 46, 9446);
+			} else if ($int2 = 4) {
+				return("Mithril/maple crossbows", 54, 9448);
+			} else if ($int2 = 5) {
+				return("Adamantite/mahogany crossbows", 61, 9450);
+			} else if ($int2 = 6) {
+				return("Runite/yew crossbows", 69, 9452);
+			} else if ($int2 = 7) {
+				return("Dragon/magic crossbows", 78, 21952);
+			} else {
+				return("", -1, -1);
+			}
+		} else if ($int1 = 5) {
+			if ($int2 = 0) {
+				return("Bronze javelins", 3, 825);
+			} else if ($int2 = 1) {
+				return("Iron javelins", 17, 826);
+			} else if ($int2 = 2) {
+				return("Steel javelins", 32, 827);
+			} else if ($int2 = 3) {
+				return("Light ballistae", 47, 19478);
+			} else if ($int2 = 4) {
+				return("Mithril javelins", 47, 828);
+			} else if ($int2 = 5) {
+				return("Adamant javelins", 62, 829);
+			} else if ($int2 = 6) {
+				return("Heavy ballistae", 72, 19481);
+			} else if ($int2 = 7) {
+				return("Rune javelins", 77, 830);
+			} else if ($int2 = 8) {
+				return("Amethyst javelins", 84, 21318);
+			} else if ($int2 = 9) {
+				return("Dragon javelins", 92, 19484);
+			} else {
+				return("", -1, -1);
+			}
+		} else if ($int1 = 6) {
+			if ($int2 = 0) {
+				return("Oak shield", 27, 22251);
+			} else if ($int2 = 1) {
+				return("Willow shield", 42, 22254);
+			} else if ($int2 = 2) {
+				return("Maple shield", 57, 22257);
+			} else if ($int2 = 3) {
+				return("Yew shield", 72, 22260);
+			} else if ($int2 = 4) {
+				return("Magic shield", 87, 22263);
+			} else if ($int2 = 5) {
+				return("Redwood shield", 92, 22266);
+			} else {
+				return("", -1, -1);
+			}
+		} else if ($int1 = 7) {
+			if ($int2 = 0) {
+				return("Battlestaves", 40, 1391);
 			} else {
 				return("", -1, -1);
 			}
@@ -3819,224 +3895,148 @@ switch ($int0) {
 		} else {
 			return("", -1, -1);
 		}
-	case 19 :
+	case 12 :
 		if ($int1 = 0) {
 			if ($int2 = 0) {
-				return("15 Arrow shafts (Logs)", 1, 6443);
+				return("Air runes", 1, 556);
 			} else if ($int2 = 1) {
-				return("Bronze arrows", 1, 882);
+				return("Mind runes", 2, 558);
 			} else if ($int2 = 2) {
-				return("Bronze 'brutal' arrows", 7, 4773);
+				return("Water runes", 5, 555);
 			} else if ($int2 = 3) {
-				return("30 Arrow shafts (Oak logs)", 15, 6443);
+				return("Members: Mist runes", 6, 4695);
 			} else if ($int2 = 4) {
-				return("Iron arrows", 15, 884);
+				return("Earth runes", 9, 557);
 			} else if ($int2 = 5) {
-				return("Iron 'brutal' arrows", 18, 4778);
+				return("Members: Dust runes", 10, 4696);
 			} else if ($int2 = 6) {
-				return("45 Arrow shafts (Willow logs)", 30, 6443);
+				return("Members: Mud runes", 13, 4698);
 			} else if ($int2 = 7) {
-				return("Steel arrows", 30, 886);
+				return("Fire runes", 14, 554);
 			} else if ($int2 = 8) {
-				return("Steel 'brutal' arrows", 33, 4783);
+				return("Members: Smoke runes", 15, 4697);
 			} else if ($int2 = 9) {
-				return("Black 'brutal' arrows", 38, 4788);
+				return("Members: Steam runes", 19, 4694);
 			} else if ($int2 = 10) {
-				return("60 Arrow shafts (Maple logs)", 45, 6443);
+				return("Body runes", 20, 559);
 			} else if ($int2 = 11) {
-				return("Mithril arrows", 45, 888);
+				return("Members: Lava runes", 23, 4699);
 			} else if ($int2 = 12) {
-				return("Mithril 'brutal' arrows", 49, 4793);
+				return("Members: Cosmic runes", 27, 564);
 			} else if ($int2 = 13) {
-				return("Broad arrows", 52, 4160);
+				return("Members: Chaos runes", 35, 562);
 			} else if ($int2 = 14) {
-				return("75 Arrow shafts (Yew logs)", 60, 6443);
+				return("Members: Astral runes", 40, 9075);
 			} else if ($int2 = 15) {
-				return("Adamant arrows", 60, 890);
+				return("Members: Nature runes", 44, 561);
 			} else if ($int2 = 16) {
-				return("Adamant 'brutal' arrows", 62, 4798);
+				return("Members: Law runes", 54, 563);
 			} else if ($int2 = 17) {
-				return("90 Arrow shafts (Magic logs)", 75, 6443);
+				return("Members: Death runes", 65, 560);
 			} else if ($int2 = 18) {
-				return("Rune arrows", 75, 892);
+				return("Members: Blood runes", 77, 565);
 			} else if ($int2 = 19) {
-				return("Rune 'brutal' arrows", 77, 4803);
+				return("Members: Soul runes", 90, 566);
 			} else if ($int2 = 20) {
-				return("Amethyst arrows", 82, 21326);
-			} else if ($int2 = 21) {
-				return("105 Arrow shafts (Redwood logs)", 90, 6443);
-			} else if ($int2 = 22) {
-				return("Dragon arrows", 90, 11212);
+				return("Members: Wrath runes", 95, 21880);
 			} else {
 				return("", -1, -1);
 			}
 		} else if ($int1 = 1) {
 			if ($int2 = 0) {
-				return("Shortbows", 5, 841);
+				return("As your Runecrafting skill develops, you will be able to craft multiple runes from one piece of essence. You only receive experience for each piece of essence crafted, not each rune crafted.", -1, 7620);
 			} else if ($int2 = 1) {
-				return("Longbows", 10, 839);
+				return("2 Air runes per essence", 11, 556);
 			} else if ($int2 = 2) {
-				return("Oak shortbows", 20, 843);
+				return("2 Mind runes per essence", 14, 558);
 			} else if ($int2 = 3) {
-				return("Oak longbows", 25, 845);
+				return("2 Water runes per essence", 19, 555);
 			} else if ($int2 = 4) {
-				return("Ogre composite bows", 30, 4827);
+				return("3 Air runes per essence", 22, 556);
 			} else if ($int2 = 5) {
-				return("Willow shortbows", 35, 849);
+				return("2 Earth runes per essence", 26, 557);
 			} else if ($int2 = 6) {
-				return("Willow longbows", 40, 847);
+				return("3 Mind runes per essence", 28, 558);
 			} else if ($int2 = 7) {
-				return("Maple shortbows", 50, 853);
+				return("4 Air runes per essence", 33, 556);
 			} else if ($int2 = 8) {
-				return("Maple longbows", 55, 851);
+				return("2 Fire runes per essence", 35, 554);
 			} else if ($int2 = 9) {
-				return("Yew shortbows", 65, 857);
+				return("3 Water runes per essence", 38, 555);
 			} else if ($int2 = 10) {
-				return("Yew longbows", 70, 855);
+				return("4 Mind runes per essence", 42, 558);
 			} else if ($int2 = 11) {
-				return("Magic shortbows", 80, 861);
+				return("5 Air runes per essence", 44, 556);
 			} else if ($int2 = 12) {
-				return("Magic longbows", 85, 859);
+				return("2 Body runes per essence", 46, 559);
+			} else if ($int2 = 13) {
+				return("3 Earth runes per essence", 52, 557);
+			} else if ($int2 = 14) {
+				return("6 Air runes per essence", 55, 556);
+			} else if ($int2 = 15) {
+				return("5 Mind runes per essence", 56, 558);
+			} else if ($int2 = 16) {
+				return("4 Water runes per essence", 57, 555);
+			} else if ($int2 = 17) {
+				return("Members: 2 Cosmic runes per essence", 59, 564);
+			} else if ($int2 = 18) {
+				return("7 Air runes per essence", 66, 556);
+			} else if ($int2 = 19) {
+				return("6 Mind runes per essence", 70, 558);
+			} else if ($int2 = 20) {
+				return("3 Fire runes per essence", 70, 554);
+			} else if ($int2 = 21) {
+				return("Members: 2 Chaos runes per essence", 74, 562);
+			} else if ($int2 = 22) {
+				return("5 Water runes per essence", 76, 555);
+			} else if ($int2 = 23) {
+				return("8 Air runes per essence", 77, 556);
+			} else if ($int2 = 24) {
+				return("4 Earth runes per essence", 78, 557);
+			} else if ($int2 = 25) {
+				return("Members: 2 Astral runes per essence", 82, 9075);
+			} else if ($int2 = 26) {
+				return("7 Mind runes per essence", 84, 558);
+			} else if ($int2 = 27) {
+				return("9 Air runes per essence", 88, 556);
+			} else if ($int2 = 28) {
+				return("Members: 2 Nature runes per essence", 91, 561);
+			} else if ($int2 = 29) {
+				return("3 Body runes per essence", 92, 559);
+			} else if ($int2 = 30) {
+				return("6 Water runes per essence", 95, 555);
+			} else if ($int2 = 31) {
+				return("Members: 2 Law runes per essence", 95, 563);
+			} else if ($int2 = 32) {
+				return("8 Mind runes per essence", 98, 558);
+			} else if ($int2 = 33) {
+				return("10 Air runes per essence", 99, 556);
+			} else if ($int2 = 34) {
+				return("Members: 2 Death runes per essence", 99, 560);
 			} else {
 				return("", -1, -1);
 			}
 		} else if ($int1 = 2) {
 			if ($int2 = 0) {
-				return("Bronze bolts", 9, 877);
+				return("Pouches come in various sizes which allow you to carry extra essence in them. As you use the pouches they degrade and store less essence, just speak to the Dark Mage at the centre of the Abyss to restore them.", -1, 7620);
 			} else if ($int2 = 1) {
-				return("Opal-tipped bronze bolts", 11, 879);
+				return("Small pouch: Holds 3 extra essence", 1, 5509);
 			} else if ($int2 = 2) {
-				return("Blurite bolts<br>(after Knight's Sword quest)", 24, 9139);
+				return("Medium pouch: Holds 6 extra essence", 25, 5510);
 			} else if ($int2 = 3) {
-				return("Jade-tipped blurite bolts", 26, 9335);
+				return("Large pouch: Holds 9 extra essence", 50, 5512);
 			} else if ($int2 = 4) {
-				return("Kebbit-tipped hunting bolts", 32, 10158);
-			} else if ($int2 = 5) {
-				return("Iron bolts", 39, 9140);
-			} else if ($int2 = 6) {
-				return("Pearl-tipped iron bolts", 41, 880);
-			} else if ($int2 = 7) {
-				return("Long kebbit-tipped hunting bolts", 42, 10159);
-			} else if ($int2 = 8) {
-				return("Silver bolts", 43, 9145);
-			} else if ($int2 = 9) {
-				return("Steel bolts", 46, 9141);
-			} else if ($int2 = 10) {
-				return("Red topaz-tipped steel bolts", 48, 9336);
-			} else if ($int2 = 11) {
-				return("Barbed-tipped bolts", 51, 881);
-			} else if ($int2 = 12) {
-				return("Mithril bolts", 54, 9142);
-			} else if ($int2 = 13) {
-				return("Broad bolts", 55, 11875);
-			} else if ($int2 = 14) {
-				return("Sapphire-tipped mithril bolts", 56, 9337);
-			} else if ($int2 = 15) {
-				return("Emerald-tipped mithril bolts", 58, 9338);
-			} else if ($int2 = 16) {
-				return("Mithril grapple-tipped bolts", 59, 9418);
-			} else if ($int2 = 17) {
-				return("Adamantite bolts", 61, 9143);
-			} else if ($int2 = 18) {
-				return("Ruby-tipped adamantite bolts", 63, 9339);
-			} else if ($int2 = 19) {
-				return("Diamond-tipped adamantite bolts", 65, 9340);
-			} else if ($int2 = 20) {
-				return("Runite bolts", 69, 9144);
-			} else if ($int2 = 21) {
-				return("Dragonstone-tipped runite bolts", 71, 9341);
-			} else if ($int2 = 22) {
-				return("Onyx-tipped runite bolts", 73, 9342);
-			} else if ($int2 = 23) {
-				return("Amethyst broad bolts", 76, 21316);
-			} else if ($int2 = 24) {
-				return("Dragon bolts", 84, 21905);
+				return("Giant pouch: Holds 12 extra essence", 75, 5514);
 			} else {
 				return("", -1, -1);
 			}
 		} else if ($int1 = 3) {
 			if ($int2 = 0) {
-				return("Bronze darts", 10, 806);
+				return("Eternal boots (with 60 Magic)", 60, 13235);
 			} else if ($int2 = 1) {
-				return("Iron darts", 22, 807);
+				return("Pegasian boots (with 60 Magic)", 60, 13237);
 			} else if ($int2 = 2) {
-				return("Steel darts", 37, 808);
-			} else if ($int2 = 3) {
-				return("Mithril darts", 52, 809);
-			} else if ($int2 = 4) {
-				return("Toxic blowpipe", 53, 12926);
-			} else if ($int2 = 5) {
-				return("Adamant darts", 67, 810);
-			} else if ($int2 = 6) {
-				return("Rune darts", 81, 811);
-			} else if ($int2 = 7) {
-				return("Dragon darts", 95, 11230);
-			} else {
-				return("", -1, -1);
-			}
-		} else if ($int1 = 4) {
-			if ($int2 = 0) {
-				return("Bronze/wooden crossbows", 9, 9440);
-			} else if ($int2 = 1) {
-				return("Blurite/oak crossbows<br>(after Knight's Sword quest)", 24, 9442);
-			} else if ($int2 = 2) {
-				return("Iron/willow crossbows", 39, 9444);
-			} else if ($int2 = 3) {
-				return("Steel/teak crossbows", 46, 9446);
-			} else if ($int2 = 4) {
-				return("Mithril/maple crossbows", 54, 9448);
-			} else if ($int2 = 5) {
-				return("Adamantite/mahogany crossbows", 61, 9450);
-			} else if ($int2 = 6) {
-				return("Runite/yew crossbows", 69, 9452);
-			} else if ($int2 = 7) {
-				return("Dragon/magic crossbows", 78, 21952);
-			} else {
-				return("", -1, -1);
-			}
-		} else if ($int1 = 5) {
-			if ($int2 = 0) {
-				return("Bronze javelins", 3, 825);
-			} else if ($int2 = 1) {
-				return("Iron javelins", 17, 826);
-			} else if ($int2 = 2) {
-				return("Steel javelins", 32, 827);
-			} else if ($int2 = 3) {
-				return("Light ballistae", 47, 19478);
-			} else if ($int2 = 4) {
-				return("Mithril javelins", 47, 828);
-			} else if ($int2 = 5) {
-				return("Adamant javelins", 62, 829);
-			} else if ($int2 = 6) {
-				return("Heavy ballistae", 72, 19481);
-			} else if ($int2 = 7) {
-				return("Rune javelins", 77, 830);
-			} else if ($int2 = 8) {
-				return("Amethyst javelins", 84, 21318);
-			} else if ($int2 = 9) {
-				return("Dragon javelins", 92, 19484);
-			} else {
-				return("", -1, -1);
-			}
-		} else if ($int1 = 6) {
-			if ($int2 = 0) {
-				return("Oak shield", 27, 22251);
-			} else if ($int2 = 1) {
-				return("Willow shield", 42, 22254);
-			} else if ($int2 = 2) {
-				return("Maple shield", 57, 22257);
-			} else if ($int2 = 3) {
-				return("Yew shield", 72, 22260);
-			} else if ($int2 = 4) {
-				return("Magic shield", 87, 22263);
-			} else if ($int2 = 5) {
-				return("Redwood shield", 92, 22266);
-			} else {
-				return("", -1, -1);
-			}
-		} else if ($int1 = 7) {
-			if ($int2 = 0) {
-				return("Battlestaves", 40, 1391);
+				return("Primordial boots (with 60 Magic)", 60, 13239);
 			} else {
 				return("", -1, -1);
 			}

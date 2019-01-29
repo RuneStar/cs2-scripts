@@ -1,12 +1,12 @@
 // 463
 [proc,prayer_updatebutton](boolean $boolean0, int $int1, component $component2, component $component3, component $component4)
 switch ($int1) {
-	case 24, 27, 28 :
-		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer, defence}", $component2);
-		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var1429, var284}", $component2);
 	case 25, 26 :
 		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer, defence}", $component2);
 		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var1050, var284}", $component2);
+	case 24, 27, 28 :
+		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer, defence}", $component2);
+		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var1429, var284}", $component2);
 	else :
 		if_setonstattransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){prayer}", $component2);
 		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var284}", $component2);

@@ -45,6 +45,12 @@ if ($int15 <= -2) {
 		case 3 :
 			_3633(true);
 			_3630(false);
+		case 8 :
+			_3633(true);
+			_3632(true);
+		case 9 :
+			_3633(true);
+			_3632(false);
 		case 4 :
 			_3633(true);
 			_3636(true);
@@ -73,12 +79,6 @@ if ($int15 <= -2) {
 				else :
 					_3630(true);
 			}
-		case 8 :
-			_3633(true);
-			_3632(true);
-		case 9 :
-			_3633(true);
-			_3632(false);
 	}
 	_3639;
 	while ($int9 < $int15) {

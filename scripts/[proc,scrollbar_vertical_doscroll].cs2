@@ -4,32 +4,32 @@ def_int $int4 = ~max(calc(if_getscrollheight($component1) - if_getheight($compon
 $int2 = ~max(~min($int2, $int4), 0);
 if_setscrollpos(0, $int2, $component1);
 switch ($component1) {
-	case 12:13 :
-		%varcint51 = if_getscrolly($component1);
-	case 595:18 :
-		%varcint182 = if_getscrolly($component1);
-	case 429:11 :
-		%varcint9 = if_getscrolly($component1);
+	case 162:58 :
+		%varcint7 = if_getscrolly($component1);
 	case 399:8 :
 		%varcint10 = if_getscrolly($component1);
-	case 458:3, 592:2 :
-		%varcint58 = if_getscrolly($component1);
-	case 75:2 :
-		%varcint80 = if_getscrolly($component1);
+	case 429:11 :
+		%varcint9 = if_getscrolly($component1);
+	case 12:13 :
+		%varcint51 = if_getscrolly($component1);
+	case 381:7 :
+		%varcint0 = if_getscrolly($component1);
 	case 69:15 :
 		%varcint69 = if_getscrolly($component1);
-	case 129:13 :
-		%varcint138 = if_getscrolly($component1);
-	case 499:14, 500:10, 507:11 :
-		%varcint179 = if_getscrolly($component1);
+	case 592:2, 458:3 :
+		%varcint58 = if_getscrolly($component1);
 	case 345:11, 400:10 :
 		%varcint63 = if_getscrolly($component1);
 	case 179:5 :
 		%varcint77 = if_getscrolly($component1);
-	case 162:58 :
-		%varcint7 = if_getscrolly($component1);
-	case 381:7 :
-		%varcint0 = if_getscrolly($component1);
+	case 75:2 :
+		%varcint80 = if_getscrolly($component1);
+	case 129:13 :
+		%varcint138 = if_getscrolly($component1);
+	case 499:14, 507:11, 500:10 :
+		%varcint179 = if_getscrolly($component1);
+	case 595:18 :
+		%varcint182 = if_getscrolly($component1);
 }
 if ($int3 = 1) {
 	~scrollbar_vertical_setdragger($component0, $component1);

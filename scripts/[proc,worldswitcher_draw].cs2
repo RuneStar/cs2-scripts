@@ -9,8 +9,6 @@ if_setsize(16, $int5, ^setsize_abs, ^setsize_minus, $component1);
 ~script760($component10, 8, 9, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
 ~script760($component11, 6, 7, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
 switch (%varbit4596) {
-	case 1 :
-		worldlist_sort(0, true, 7, false);
 	case 2 :
 		worldlist_sort(7, false, 0, false);
 	case 3 :
@@ -19,14 +17,16 @@ switch (%varbit4596) {
 		worldlist_sort(2, false, 0, false);
 	case 5 :
 		worldlist_sort(2, true, 0, false);
-	case 6 :
-		worldlist_sort(3, false, 0, false);
-	case 7 :
-		worldlist_sort(3, true, 0, false);
 	case 8 :
 		worldlist_sort(1, false, 0, false);
 	case 9 :
 		worldlist_sort(1, true, 0, false);
+	case 6 :
+		worldlist_sort(3, false, 0, false);
+	case 7 :
+		worldlist_sort(3, true, 0, false);
+	case 1 :
+		worldlist_sort(0, true, 7, false);
 	else :
 		worldlist_sort(0, false, 7, false);
 }

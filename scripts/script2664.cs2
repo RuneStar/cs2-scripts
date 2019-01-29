@@ -27,22 +27,14 @@ if ($int11 = 1) {
 		$string0 = "<$string0><br>";
 	}
 	switch ($struct0) {
-		case 451 :
-			if (((%varbit4520 = 1) | (%varbit4521 = 1)) | (%varbit4522 = 1)) {
+		case 462, 464, 465, 468 :
+			if (%varbit2448 >= 190) {
 				$string0 = "<$string0><col=0dc10d>";
 			} else {
 				$string0 = "<$string0><col=ff0000>";
 				$int12 = 0;
 			}
-			$string0 = "<$string0>Complete the medium, hard or elite tier of the Varrock achievement diary.</col>";
-		case 455 :
-			if ((%varbit4517 = 1) | (%varbit4518 = 1)) {
-				$string0 = "<$string0><col=0dc10d>";
-			} else {
-				$string0 = "<$string0><col=ff0000>";
-				$int12 = 0;
-			}
-			$string0 = "<$string0>Complete the hard or elite tier of the Kandarin achievement diary.</col>";
+			$string0 = "<$string0>Completed Lunar Diplomacy.</col>";
 		case 456 :
 			if (%var165 >= 30) {
 				$string0 = "<$string0><col=0dc10d>";
@@ -59,22 +51,6 @@ if ($int11 = 1) {
 				$int12 = 0;
 			}
 			$string0 = "<$string0>Learned Watchtower Teleport spell.</col>";
-		case 458 :
-			if ((%varbit4501 = 1) | (%varbit4502 = 1)) {
-				$string0 = "<$string0><col=0dc10d>";
-			} else {
-				$string0 = "<$string0><col=ff0000>";
-				$int12 = 0;
-			}
-			$string0 = "<$string0>Complete the hard or elite tier of the Ardougne achievement diary.</col>";
-		case 459, 461, 466, 469, 470 :
-			if (%varbit358 >= 15) {
-				$string0 = "<$string0><col=0dc10d>";
-			} else {
-				$string0 = "<$string0><col=ff0000>";
-				$int12 = 0;
-			}
-			$string0 = "<$string0>Completed Desert Treasure.</col>";
 		case 460 :
 			if (%varbit1914 >= 50) {
 				$string0 = "<$string0><col=0dc10d>";
@@ -83,14 +59,14 @@ if ($int11 = 1) {
 				$int12 = 0;
 			}
 			$string0 = "<$string0>Saved Awowogei in Recipe for Disaster.</col>";
-		case 462, 464, 465, 468 :
-			if (%varbit2448 >= 190) {
+		case 459, 466, 461, 469, 470 :
+			if (%varbit358 >= 15) {
 				$string0 = "<$string0><col=0dc10d>";
 			} else {
 				$string0 = "<$string0><col=ff0000>";
 				$int12 = 0;
 			}
-			$string0 = "<$string0>Completed Lunar Diplomacy.</col>";
+			$string0 = "<$string0>Completed Desert Treasure.</col>";
 		case 463 :
 			if (%var261 = 1) {
 				$string0 = "<$string0><col=0dc10d>";
@@ -107,6 +83,30 @@ if ($int11 = 1) {
 				$int12 = 0;
 			}
 			$string0 = "<$string0>Complete Making Friends with My Arm.  </col>";
+		case 451 :
+			if (((%varbit4520 = 1) | (%varbit4521 = 1)) | (%varbit4522 = 1)) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0>Complete the medium, hard or elite tier of the Varrock achievement diary.</col>";
+		case 455 :
+			if ((%varbit4517 = 1) | (%varbit4518 = 1)) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0>Complete the hard or elite tier of the Kandarin achievement diary.</col>";
+		case 458 :
+			if ((%varbit4501 = 1) | (%varbit4502 = 1)) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0>Complete the hard or elite tier of the Ardougne achievement diary.</col>";
 	}
 }
 def_string $string1 = "";

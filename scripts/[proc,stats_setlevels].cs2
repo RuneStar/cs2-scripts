@@ -45,8 +45,8 @@ if (~deadman_world = 1) {
 					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
 					$string3 = append($string3, "|<col=7c0808>NONE</col>");
 				}
-			case defence :
-				$int10 = ~script2031(40);
+			case ranged :
+				$int10 = ~script2031(30);
 				if ($int10 > 0) {
 					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
 					$string3 = append($string3, "|<col=7c0808><~script46($int10, $string1)></col>");
@@ -55,8 +55,8 @@ if (~deadman_world = 1) {
 					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
 					$string3 = append($string3, "|<col=7c0808>NONE</col>");
 				}
-			case ranged :
-				$int10 = ~script2031(30);
+			case defence :
+				$int10 = ~script2031(40);
 				if ($int10 > 0) {
 					$string2 = append($string2, "|<col=7c0808>XP permitted:</col>");
 					$string3 = append($string3, "|<col=7c0808><~script46($int10, $string1)></col>");

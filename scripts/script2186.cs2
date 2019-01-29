@@ -33,20 +33,20 @@ switch ($int0) {
 		if (~deadman_world = 1) {
 			~deadman_1v1_tele;
 		}
-	case 104 :
-		~script2222;
 	case 9 :
 		if (~deadman_world = 1) {
 			~deadman_chest_tele;
 		}
-	case 105 :
-		~script2223;
 	case 12 :
 		if (~deadman_world = 1) {
 			~deadman_toplevel_close;
 		} else {
 			docheat("~1v1arena_restore");
 		}
+	case 104 :
+		~script2222;
+	case 105 :
+		~script2223;
 	else :
 		return;
 }

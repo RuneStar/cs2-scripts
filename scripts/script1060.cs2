@@ -38,16 +38,16 @@ if ($int2 <= 1) {
 			if_setop(2, "Remove-1", $component0);
 			if_setop(3, "Remove-X", $component0);
 			if_setop(4, "Remove-All", $component0);
-		case 2 :
-			if_setop(1, "Remove-All", $component0);
-			if_setop(2, "Remove-1", $component0);
-			if_setop(3, "Remove-5", $component0);
-			if_setop(4, "Remove-X", $component0);
 		case 3 :
 			if_setop(1, "Remove-X", $component0);
 			if_setop(2, "Remove-1", $component0);
 			if_setop(3, "Remove-5", $component0);
 			if_setop(4, "Remove-All", $component0);
+		case 2 :
+			if_setop(1, "Remove-All", $component0);
+			if_setop(2, "Remove-1", $component0);
+			if_setop(3, "Remove-5", $component0);
+			if_setop(4, "Remove-X", $component0);
 	}
 }
 return;

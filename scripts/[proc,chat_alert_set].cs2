@@ -1,12 +1,6 @@
 // 183
 [proc,chat_alert_set](int $int0, int $int1)
 switch ($int0) {
-	case 0 :
-		%varcint48 = $int1;
-		%varcint47 = $int1;
-		%varcint46 = $int1;
-		%varcint45 = $int1;
-		%varcint44 = $int1;
 	case 1 :
 		%varcint44 = $int1;
 	case 2 :
@@ -17,5 +11,11 @@ switch ($int0) {
 		%varcint47 = $int1;
 	case 5 :
 		%varcint48 = $int1;
+	case 0 :
+		%varcint48 = $int1;
+		%varcint47 = $int1;
+		%varcint46 = $int1;
+		%varcint45 = $int1;
+		%varcint44 = $int1;
 }
 return;

@@ -11,6 +11,14 @@ if (%varcint5 = 14) {
 		switch (%varcint5) {
 			case 1 :
 				return;
+			case 4, 5 :
+				if (ignore_count < 0) {
+					mes("Unable to update ignore list - system busy.");
+				} else if (%varcint5 = 4) {
+					ignore_add(%varcstring22);
+				} else if (%varcint5 = 5) {
+					ignore_del(%varcstring22);
+				}
 			case 2, 3, 6 :
 				if (friend_count < 0) {
 					mes("Unable to complete action - system busy.");
@@ -39,14 +47,6 @@ if (%varcint5 = 14) {
 						%varcint61 = clientclock;
 					}
 				}
-			case 4, 5 :
-				if (ignore_count < 0) {
-					mes("Unable to update ignore list - system busy.");
-				} else if (%varcint5 = 4) {
-					ignore_add(%varcstring22);
-				} else if (%varcint5 = 5) {
-					ignore_del(%varcstring22);
-				}
 			case 7 :
 				resume_countdialog(~script212(%varcstring22));
 			case 8 :
@@ -63,9 +63,6 @@ if (%varcint5 = 14) {
 					%varcstring129 = removetags(%varcstring22);
 					clan_joinchat(%varcstring22);
 				}
-			case 11 :
-				~meslayer_close(0, 1);
-				return;
 			case 12 :
 				if ($int1 > 10) {
 					$string0 = substring(%varcstring22, 0, 9);
@@ -85,14 +82,17 @@ if (%varcint5 = 14) {
 					~script95;
 					if_setontimer("script552(event_com, true)", 162:13);
 				}
+			case 11 :
+				~meslayer_close(0, 1);
+				return;
 			case 16 :
 				~script2061(%varcstring22);
 		}
 	} else {
 		switch (%varcint5) {
-			case 16 :
-				return;
 			case 7, 8, 9, 15 :
+				return;
+			case 16 :
 				return;
 		}
 	}

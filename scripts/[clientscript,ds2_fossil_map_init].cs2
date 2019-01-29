@@ -7,6 +7,11 @@ while ($int2 < 36) {
 	cc_setposition(calc(50 * ($int2 % 6)), calc(50 * ($int2 / 6)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(50, 50, ^setsize_abs, ^setsize_abs);
 	switch ($int2) {
+		case 4 :
+			cc_setmodel(35079);
+			cc_setmodelangle(0, 0, 512, 0, 0, 625);
+			cc_setop(10, "Check");
+			cc_setonop("ds2_fossil_map_stuck(event_opindex, 1024)");
 		case 17 :
 			cc_setmodel(35075);
 			cc_setmodelangle(0, 0, 512, 0, 0, 625);
@@ -14,11 +19,6 @@ while ($int2 < 36) {
 			cc_setonop("ds2_fossil_map_stuck(event_opindex, 1024)");
 		case 18 :
 			cc_setmodel(35067);
-			cc_setmodelangle(0, 0, 512, 0, 0, 625);
-			cc_setop(10, "Check");
-			cc_setonop("ds2_fossil_map_stuck(event_opindex, 1024)");
-		case 4 :
-			cc_setmodel(35079);
 			cc_setmodelangle(0, 0, 512, 0, 0, 625);
 			cc_setop(10, "Check");
 			cc_setonop("ds2_fossil_map_stuck(event_opindex, 1024)");

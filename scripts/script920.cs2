@@ -4,18 +4,41 @@ def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = -1;
 switch ($enum1) {
+	case 1131 :
+		$int3 = if_getheight(164:32);
+		$int2 = calc(if_getwidth(164:32) - 33);
+		if (calc(if_getwidth($component0) - if_getwidth(enum(component, component, $enum1, 161:29))) < 429) {
+			if_setposition(0, calc($int3 + if_getheight(164:47)), ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, 164:64));
+			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, 164:47);
+		} else {
+			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, 164:64));
+			if_setposition($int2, 0, ^setpos_abs_right, ^setpos_abs_bottom, 164:47);
+		}
+		if (%varbit4084 = 1) {
+			_2122(1178, enum(component, component, $enum1, 161:25));
+		} else {
+			_2122(2154, enum(component, component, $enum1, 161:25));
+		}
+	case 1130 :
+		if (%varbit4084 = 1) {
+			_2122(1178, enum(component, component, $enum1, 161:25));
+		} else {
+			_2122(2154, enum(component, component, $enum1, 161:25));
+		}
+	case 1129 :
+		_2122(1200, enum(component, component, $enum1, 161:25));
 	case 1745 :
 		if (%varbit6257 = 1) {
 			if_sethide(true, 601:30);
 		} else {
 			if_sethide(false, 601:30);
 			switch (%varbit6255) {
-				case 1 :
-					if_setgraphic(1717, 601:32);
-					if_setop(1, "Toggle tap-to-drop mode", 601:30);
 				case 2 :
 					if_setgraphic(1718, 601:32);
 					if_setop(1, "Toggle single-tap mode", 601:30);
+				case 1 :
+					if_setgraphic(1717, 601:32);
+					if_setop(1, "Toggle tap-to-drop mode", 601:30);
 				case 3 :
 					if_setgraphic(1716, 601:32);
 					if_setop(1, "Show Keyboard", 601:30);
@@ -32,28 +55,5 @@ switch ($enum1) {
 		~mobile_chatbox_resize;
 		if_sethide(~script633(%varbit6254), 601:21);
 		~script2526;
-	case 1129 :
-		_2122(1200, enum(component, component, $enum1, 161:25));
-	case 1130 :
-		if (%varbit4084 = 1) {
-			_2122(1178, enum(component, component, $enum1, 161:25));
-		} else {
-			_2122(2154, enum(component, component, $enum1, 161:25));
-		}
-	case 1131 :
-		$int3 = if_getheight(164:32);
-		$int2 = calc(if_getwidth(164:32) - 33);
-		if (calc(if_getwidth($component0) - if_getwidth(enum(component, component, $enum1, 161:29))) < 429) {
-			if_setposition(0, calc($int3 + if_getheight(164:47)), ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, 164:64));
-			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, 164:47);
-		} else {
-			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, 164:64));
-			if_setposition($int2, 0, ^setpos_abs_right, ^setpos_abs_bottom, 164:47);
-		}
-		if (%varbit4084 = 1) {
-			_2122(1178, enum(component, component, $enum1, 161:25));
-		} else {
-			_2122(2154, enum(component, component, $enum1, 161:25));
-		}
 }
 return;

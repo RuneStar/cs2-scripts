@@ -1,22 +1,6 @@
 // 2267
 [proc,questlist_progress](int $int0)(int)
 switch ($int0) {
-	case 542 :
-		if (%varbit7856 >= 14) {
-			return(2);
-		} else if (%varbit7856 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 543 :
-		if (%varbit7796 >= 11) {
-			return(2);
-		} else if (%varbit7796 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
 	case 299 :
 		if (%var130 = 4) {
 			return(2);
@@ -32,14 +16,6 @@ switch ($int0) {
 			return(1);
 		} else {
 			return(0);
-		}
-	case 301 :
-		if (%varbit6071 >= 60) {
-			return(2);
-		} else if (%varbit6071 > 0) {
-			return(0);
-		} else {
-			return(1);
 		}
 	case 302 :
 		if (%varbit2561 = 3) {
@@ -93,14 +69,6 @@ switch ($int0) {
 		if (%var122 = 7) {
 			return(2);
 		} else if (%var122 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 309 :
-		if (%varbit3468 = 135) {
-			return(2);
-		} else if (%varbit3468 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -177,114 +145,26 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 319 :
-		if (%var492 >= 4) {
+	case 309 :
+		if (%varbit3468 = 135) {
 			return(2);
-		} else if (%var492 = 0) {
+		} else if (%varbit3468 = 0) {
 			return(1);
 		} else {
 			return(0);
 		}
-	case 320 :
-		if (%varbit4982 >= 3) {
+	case 301 :
+		if (%varbit6071 >= 60) {
 			return(2);
-		} else if (%varbit4976 = 0) {
-			return(1);
-		} else {
+		} else if (%varbit6071 > 0) {
 			return(0);
-		}
-	case 321 :
-		if (%varbit5078 >= 3) {
-			return(2);
-		} else if (%varbit5078 = 0) {
-			return(1);
 		} else {
-			return(0);
-		}
-	case 322 :
-		if ((%var77 = 2) | (%var76 >= 6)) {
-			return(2);
-		} else if (%var77 = 0) {
 			return(1);
-		} else {
-			return(0);
-		}
-	case 323 :
-		if (%varbit821 = 1) {
-			return(2);
-		} else if (%varbit816 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 324 :
-		if (%varbit1391 = 2047) {
-			return(2);
-		} else if (%varbit1383 < 4) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 325 :
-		if (%varbit3330 >= 30) {
-			return(2);
-		} else if (%varbit3330 <= 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 326 :
-		if (%varbit1344 >= 3) {
-			return(2);
-		} else if (%varbit1344 <= 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 327 :
-		if (%var267 >= 8) {
-			return(2);
-		} else if (%var267 <= 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 328 :
-		if (%varbit3290 >= 3) {
-			return(2);
-		} else if (%varbit3290 <= 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 329 :
-		if (%varbit5347 >= 3) {
-			return(2);
-		} else if (%varbit5347 <= 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 330 :
-		if (%varbit6067 >= 4) {
-			return(2);
-		} else if (%varbit6067 <= 0) {
-			return(1);
-		} else {
-			return(0);
 		}
 	case 331 :
 		if (%varbit3185 = 240) {
 			return(2);
 		} else if (%varbit3185 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 332 :
-		if (%varbit3550 = 11) {
-			return(2);
-		} else if (%varbit3550 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -329,18 +209,18 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 338 :
-		if (%varbit3293 = 135) {
-			return(2);
-		} else if (%varbit3293 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
 	case 339 :
 		if (%varbit3274 = 130) {
 			return(2);
 		} else if (%varbit3274 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 449 :
+		if (%varbit487 > 12) {
+			return(2);
+		} else if (%varbit487 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -361,14 +241,6 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 342 :
-		if (%var314 = 80) {
-			return(2);
-		} else if (%var314 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
 	case 343 :
 		if (%varbit2258 = 13) {
 			return(2);
@@ -377,10 +249,10 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 344 :
-		if (%varbit6027 >= 11) {
+	case 342 :
+		if (%var314 = 80) {
 			return(2);
-		} else if (%varbit6027 = 0) {
+		} else if (%var314 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -405,22 +277,6 @@ switch ($int0) {
 		if (%var131 = 9) {
 			return(2);
 		} else if (%var131 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 348 :
-		if (%varbit6104 >= 215) {
-			return(2);
-		} else if (%varbit6104 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 349 :
-		if (%varbit3618 = 28) {
-			return(2);
-		} else if (%varbit3618 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -553,26 +409,18 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 366 :
-		if (%varbit5795 >= 50) {
-			return(2);
-		} else if (%varbit5795 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 367 :
-		if (%varbit3311 = 340) {
-			return(2);
-		} else if (%varbit3311 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
 	case 368 :
 		if (%var347 > 9) {
 			return(2);
 		} else if (%var347 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 446 :
+		if (%var65 = 10) {
+			return(2);
+		} else if (%var65 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -621,22 +469,6 @@ switch ($int0) {
 		if (%var150 = 160) {
 			return(2);
 		} else if (%var150 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 375 :
-		if (%var980 > 129) {
-			return(2);
-		} else if (%var980 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 376 :
-		if (%varbit2783 = 60) {
-			return(2);
-		} else if (%varbit2783 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -721,14 +553,6 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 387 :
-		if (%varbit3888 = 90) {
-			return(2);
-		} else if (%varbit3888 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
 	case 388 :
 		if (%var139 = 75) {
 			return(2);
@@ -761,14 +585,6 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 392 :
-		if (%varbit6528 >= 200) {
-			return(2);
-		} else if (%varbit6528 < 5) {
-			return(1);
-		} else {
-			return(0);
-		}
 	case 393 :
 		if (%varbit1383 > 3) {
 			return(2);
@@ -789,14 +605,6 @@ switch ($int0) {
 		if (%var365 > 8) {
 			return(2);
 		} else if (%var365 < 1) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 396 :
-		if (%varbit5027 > 190) {
-			return(2);
-		} else if (%varbit5027 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -865,14 +673,6 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 405 :
-		if (%varbit3534 = 80) {
-			return(2);
-		} else if (%varbit3534 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
 	case 406 :
 		if (%var416 > 275) {
 			return(2);
@@ -897,26 +697,10 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 409 :
-		if (%varbit6037 >= 13) {
-			return(2);
-		} else if (%varbit6037 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
 	case 410 :
 		if (%var714 >= 4) {
 			return(2);
 		} else if (%var714 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 411 :
-		if (%var714 >= 6) {
-			return(2);
-		} else if (%var714 < 4) {
 			return(1);
 		} else {
 			return(0);
@@ -993,6 +777,14 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
+	case 425 :
+		if (%varbit2610 = 14) {
+			return(2);
+		} else if (%varbit2610 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
 	case 421 :
 		if (%var339 = 85) {
 			return(2);
@@ -1021,14 +813,6 @@ switch ($int0) {
 		if (%var116 > 14) {
 			return(2);
 		} else if (%var116 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 425 :
-		if (%varbit2610 = 14) {
-			return(2);
-		} else if (%varbit2610 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -1073,22 +857,6 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 431 :
-		if (%varbit6358 >= 17) {
-			return(2);
-		} else if (%varbit6358 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
-	case 432 :
-		if (%varbit6396 >= 165) {
-			return(2);
-		} else if (%varbit6396 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
 	case 433 :
 		if (%varbit451 > 1) {
 			return(2);
@@ -1121,10 +889,10 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 437 :
-		if (%varbit3337 = 18) {
+	case 448 :
+		if (%var226 = 7) {
 			return(2);
-		} else if (%varbit3337 = 0) {
+		} else if (%var226 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -1169,14 +937,6 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 443 :
-		if (%varbit5619 >= 7) {
-			return(2);
-		} else if (%varbit5619 = 0) {
-			return(1);
-		} else {
-			return(0);
-		}
 	case 444 :
 		if (%varbit1051 = 11) {
 			return(2);
@@ -1193,10 +953,34 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 446 :
-		if (%var65 = 10) {
+	case 338 :
+		if (%varbit3293 = 135) {
 			return(2);
-		} else if (%var65 = 0) {
+		} else if (%varbit3293 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 367 :
+		if (%varbit3311 = 340) {
+			return(2);
+		} else if (%varbit3311 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 437 :
+		if (%varbit3337 = 18) {
+			return(2);
+		} else if (%varbit3337 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 375 :
+		if (%var980 > 129) {
+			return(2);
+		} else if (%var980 = 0) {
 			return(1);
 		} else {
 			return(0);
@@ -1209,18 +993,234 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
-	case 448 :
-		if (%var226 = 7) {
+	case 405 :
+		if (%varbit3534 = 80) {
 			return(2);
-		} else if (%var226 = 0) {
+		} else if (%varbit3534 = 0) {
 			return(1);
 		} else {
 			return(0);
 		}
-	case 449 :
-		if (%varbit487 > 12) {
+	case 332 :
+		if (%varbit3550 = 11) {
 			return(2);
-		} else if (%varbit487 = 0) {
+		} else if (%varbit3550 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 349 :
+		if (%varbit3618 = 28) {
+			return(2);
+		} else if (%varbit3618 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 376 :
+		if (%varbit2783 = 60) {
+			return(2);
+		} else if (%varbit2783 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 387 :
+		if (%varbit3888 = 90) {
+			return(2);
+		} else if (%varbit3888 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 396 :
+		if (%varbit5027 > 190) {
+			return(2);
+		} else if (%varbit5027 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 443 :
+		if (%varbit5619 >= 7) {
+			return(2);
+		} else if (%varbit5619 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 411 :
+		if (%var714 >= 6) {
+			return(2);
+		} else if (%var714 < 4) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 366 :
+		if (%varbit5795 >= 50) {
+			return(2);
+		} else if (%varbit5795 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 409 :
+		if (%varbit6037 >= 13) {
+			return(2);
+		} else if (%varbit6037 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 344 :
+		if (%varbit6027 >= 11) {
+			return(2);
+		} else if (%varbit6027 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 348 :
+		if (%varbit6104 >= 215) {
+			return(2);
+		} else if (%varbit6104 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 431 :
+		if (%varbit6358 >= 17) {
+			return(2);
+		} else if (%varbit6358 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 432 :
+		if (%varbit6396 >= 165) {
+			return(2);
+		} else if (%varbit6396 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 392 :
+		if (%varbit6528 >= 200) {
+			return(2);
+		} else if (%varbit6528 < 5) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 543 :
+		if (%varbit7796 >= 11) {
+			return(2);
+		} else if (%varbit7796 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 542 :
+		if (%varbit7856 >= 14) {
+			return(2);
+		} else if (%varbit7856 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 319 :
+		if (%var492 >= 4) {
+			return(2);
+		} else if (%var492 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 320 :
+		if (%varbit4982 >= 3) {
+			return(2);
+		} else if (%varbit4976 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 321 :
+		if (%varbit5078 >= 3) {
+			return(2);
+		} else if (%varbit5078 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 322 :
+		if ((%var77 = 2) | (%var76 >= 6)) {
+			return(2);
+		} else if (%var77 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 323 :
+		if (%varbit821 = 1) {
+			return(2);
+		} else if (%varbit816 = 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 324 :
+		if (%varbit1391 = 2047) {
+			return(2);
+		} else if (%varbit1383 < 4) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 325 :
+		if (%varbit3330 >= 30) {
+			return(2);
+		} else if (%varbit3330 <= 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 326 :
+		if (%varbit1344 >= 3) {
+			return(2);
+		} else if (%varbit1344 <= 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 327 :
+		if (%var267 >= 8) {
+			return(2);
+		} else if (%var267 <= 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 328 :
+		if (%varbit3290 >= 3) {
+			return(2);
+		} else if (%varbit3290 <= 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 329 :
+		if (%varbit5347 >= 3) {
+			return(2);
+		} else if (%varbit5347 <= 0) {
+			return(1);
+		} else {
+			return(0);
+		}
+	case 330 :
+		if (%varbit6067 >= 4) {
+			return(2);
+		} else if (%varbit6067 <= 0) {
 			return(1);
 		} else {
 			return(0);
