@@ -1,7 +1,7 @@
 // 1377
 [proc,poh_viewer_roomtooltip](int $int0, enum $enum1, enum $enum2, int $int3, string $string0)(string, int)
-def_coordgrid $coordgrid4 = enum(int, coordgrid, $enum1, $int0);
-def_obj $obj5 = enum(coordgrid, obj, $enum2, $coordgrid4);
+def_coord $coord4 = enum(int, coord, $enum1, $int0);
+def_obj $obj5 = enum(coord, obj, $enum2, $coord4);
 if ($obj5 ! 8245) {
 	if ($int3 > 0) {
 		$string0 = append($string0, ", <~script1299(oc_name($obj5), " ", " ")>");

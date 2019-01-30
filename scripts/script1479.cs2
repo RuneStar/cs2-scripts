@@ -1,11 +1,11 @@
 // 1479
 script1479(loc $loc0, int $int1, int $int2, int $int3)(int, int)
-def_coordgrid $coordgrid4 = enum(loc, coordgrid, 1368, $loc0);
-if ($coordgrid4 = null) {
+def_coord $coord4 = enum(loc, coord, 1368, $loc0);
+if ($coord4 = null) {
 	return(0, 0);
 } else {
-	def_int $int5 = coordx($coordgrid4);
-	def_int $int6 = coordy($coordgrid4);
+	def_int $int5 = coordx($coord4);
+	def_int $int6 = coordy($coord4);
 	def_int $int7 = 0;
 	if ($int5 = 1) {
 		$int7 = %var1365;
@@ -23,9 +23,9 @@ if ($coordgrid4 = null) {
 	if (testbit($int7, $int6) = false) {
 		return(0, 0);
 	} else {
-		def_coordgrid $coordgrid8 = enum(loc, coordgrid, 1525, $loc0);
-		if ($coordgrid8 ! null) {
-			if (inv_getobj(576, coordx($coordgrid8)) ! null) {
+		def_coord $coord8 = enum(loc, coord, 1525, $loc0);
+		if ($coord8 ! null) {
+			if (inv_getobj(576, coordx($coord8)) ! null) {
 				return(1, 1);
 			} else if (($loc0 = 29032) & (testbit($int2, 31) = true)) {
 				return(1, 1);
@@ -33,10 +33,10 @@ if ($coordgrid4 = null) {
 				return(1, 0);
 			}
 		} else {
-			$coordgrid8 = enum(loc, coordgrid, 1440, $loc0);
-			if ($coordgrid8 ! null) {
-				$int6 = coordy($coordgrid8);
-				$int5 = coordx($coordgrid8);
+			$coord8 = enum(loc, coord, 1440, $loc0);
+			if ($coord8 ! null) {
+				$int6 = coordy($coord8);
+				$int5 = coordx($coord8);
 				if ($int5 = 1) {
 					$int7 = $int1;
 				} else if ($int5 = 2) {

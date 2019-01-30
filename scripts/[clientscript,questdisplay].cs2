@@ -1,5 +1,5 @@
 // 1411
-[clientscript,questdisplay](coordgrid $coordgrid0, string $string0, string $string1, string $string2, string $string3)
+[clientscript,questdisplay](coord $coord0, string $string0, string $string1, string $string2, string $string3)
 if_settext($string0, 473:2);
 def_int $int1 = 0;
 $int1 = ~questdisplay_setup($int1, 473:4, ~quest_f2p_count, 2098, "Free Quests", $string1);
@@ -8,5 +8,5 @@ $int1 = ~questdisplay_setup($int1, 473:6, ~miniquest_count, 2100, "Miniquests", 
 if_setscrollpos(0, 0, 473:3);
 if_setscrollsize(0, $int1, 473:3);
 ~scrollbar_vertical(473:7, 473:3, 798, 795, 796, 797, 793, 794);
-if_settext("Quest points: <tostring(coordx($coordgrid0))> / <tostring(coordy($coordgrid0))>", 473:8);
+if_settext("Quest points: <tostring(coordx($coord0))> / <tostring(coordy($coord0))>", 473:8);
 return;

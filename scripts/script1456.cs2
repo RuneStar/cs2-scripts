@@ -10,7 +10,7 @@ if (($int6 < 0) | ($int7 < 0)) {
 } else {
 	def_int $int8 = 1;
 	def_component $component9 = null;
-	def_coordgrid $coordgrid10 = null;
+	def_coord $coord10 = null;
 	def_int $int11 = 0;
 	def_int $int12 = 0;
 	def_int $int13 = 0;
@@ -28,12 +28,12 @@ if (($int6 < 0) | ($int7 < 0)) {
 		if ($component9 = null) {
 			return;
 		} else {
-			$coordgrid10 = enum(int, coordgrid, 1512, $int8);
-			if ($coordgrid10 = null) {
+			$coord10 = enum(int, coord, 1512, $int8);
+			if ($coord10 = null) {
 				return;
 			} else {
-				$int11 = coordy($coordgrid10);
-				$int12 = coordx($coordgrid10);
+				$int11 = coordy($coord10);
+				$int12 = coordx($coord10);
 				$int13 = calc($int7 + (($int12 - 1) * $int5));
 				$int14 = calc($int6 + (($int11 - 1) * $int5));
 				if_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top, $component9);

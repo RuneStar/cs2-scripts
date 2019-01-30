@@ -1,6 +1,6 @@
 // 1713
 script1713(maparea $maparea0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
-def_coordgrid $coordgrid9 = %varcint189;
+def_coord $coord9 = %varcint189;
 %varcint189 = -1;
 if (worldmap_getcurrentmap ! $maparea0) {
 	~worldmap_maplist_close($component1, $component3);
@@ -12,25 +12,25 @@ if (worldmap_getcurrentmap ! $maparea0) {
 		}
 		return;
 	}
-} else if ($coordgrid9 = null) {
+} else if ($coord9 = null) {
 	return;
 } else {
 	~worldmap_maplist_close($component1, $component3);
 	if (worldmap_isloaded = false) {
 		return;
 	} else {
-		def_coordgrid $coordgrid10 = null;
+		def_coord $coord10 = null;
 		def_int $int11 = 0;
 		def_maparea $maparea12 = enum(int, maparea, 1697, $int11);
 		while ($maparea12 ! null) {
-			$coordgrid10 = ~worldmap_findcoordinmap($maparea12, $coordgrid9);
-			if ($coordgrid10 ! null) {
+			$coord10 = ~worldmap_findcoordinmap($maparea12, $coord9);
+			if ($coord10 ! null) {
 				if (worldmap_getcurrentmap ! $maparea12) {
 					if (cc_find($component1, $int2) = true) {
-						~worldmap_loadmap($maparea12, $coordgrid10, $component1, $component3, $component4, $component5, $component6, $component7, $component8);
+						~worldmap_loadmap($maparea12, $coord10, $component1, $component3, $component4, $component5, $component6, $component7, $component8);
 					}
 				} else {
-					worldmap_jumptosourcecoord($coordgrid10);
+					worldmap_jumptosourcecoord($coord10);
 				}
 				return;
 			} else {

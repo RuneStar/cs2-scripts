@@ -1,9 +1,9 @@
 // 1382
-script1382(int $int0, coordgrid $coordgrid1, coordgrid $coordgrid2, int $int3)
-def_int $int4 = coordx($coordgrid1);
-def_int $int5 = coordy($coordgrid1);
-def_int $int6 = coordx($coordgrid2);
-def_int $int7 = coordy($coordgrid2);
+script1382(int $int0, coord $coord1, coord $coord2, int $int3)
+def_int $int4 = coordx($coord1);
+def_int $int5 = coordy($coord1);
+def_int $int6 = coordx($coord2);
+def_int $int7 = coordy($coord2);
 def_int $int8 = calc(($int6 - $int4) + 1);
 def_int $int9 = calc(($int7 - $int5) + 1);
 def_int $int10 = $int8;
@@ -148,5 +148,5 @@ cc_setcolour(^yellow);
 cc_setfill(false);
 cc_settrans(255);
 if_sethide(true, $component23);
-~poh_viewer_setlevel($int3, coordz($coordgrid1), coordz($coordgrid2));
+~poh_viewer_setlevel($int3, coordz($coord1), coordz($coord2));
 return;

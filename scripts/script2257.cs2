@@ -22,14 +22,14 @@ $array0(17) = %var1338;
 $array0(18) = %var1681;
 $array0(19) = %var2065;
 def_int $int2 = 0;
-def_coordgrid $coordgrid3 = null;
+def_coord $coord3 = null;
 def_int $int4 = 0;
 def_int $int5 = 0;
 while ($int5 < $int1) {
 	$int2 = enum(int, int, 818, $int5);
-	$coordgrid3 = enum(int, coordgrid, 819, $int2);
-	if ($coordgrid3 ! null) {
-		if (testbit($array0(coordx($coordgrid3)), coordy($coordgrid3)) = true) {
+	$coord3 = enum(int, coord, 819, $int2);
+	if ($coord3 ! null) {
+		if (testbit($array0(coordx($coord3)), coordy($coord3)) = true) {
 			$int4 = calc($int4 + 1);
 		} else if (($int2 = 331) & (%varbit1028 > 35)) {
 			$int4 = calc($int4 + 1);

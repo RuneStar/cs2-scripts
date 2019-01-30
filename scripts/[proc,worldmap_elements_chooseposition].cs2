@@ -1,12 +1,12 @@
 // 1752
-[proc,worldmap_elements_chooseposition](coordgrid $coordgrid0, int $int1, component $component2, int $int3, int $int4, int $int5, int $int6)(int, int)
+[proc,worldmap_elements_chooseposition](coord $coord0, int $int1, component $component2, int $int3, int $int4, int $int5, int $int6)(int, int)
 def_int $int7 = 0;
 def_int $int8 = 0;
 if ($int1 = 1) {
-	$int7 = coordx($coordgrid0);
-	$int8 = coordy($coordgrid0);
+	$int7 = coordx($coord0);
+	$int8 = coordy($coord0);
 } else {
-	$int7, $int8 = worldmap_getdisplaycoord($coordgrid0);
+	$int7, $int8 = worldmap_getdisplaycoord($coord0);
 }
 def_int $int9 = if_getwidth($component2);
 def_int $int10 = if_getheight($component2);

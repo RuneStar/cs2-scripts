@@ -1,5 +1,5 @@
 // 1750
-[clientscript,worldmap_overlay](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, coordgrid $coordgrid6)
+[clientscript,worldmap_overlay](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, coord $coord6)
 def_maparea $maparea7 = worldmap_getcurrentmap;
 if (((worldmap_isloaded = false) | ($maparea7 = null)) | (if_getwidth($component0) <= 0)) {
 	~worldmap_overlay_clear($component0, $component1);
@@ -16,17 +16,17 @@ if (((worldmap_isloaded = false) | ($maparea7 = null)) | (if_getwidth($component
 		$int10, $int11 = worldmap_getdisplayposition;
 		def_int $int12 = 0;
 		def_int $int13 = 0;
-		def_coordgrid $coordgrid14 = null;
-		if ((%varcint188 ! $coordgrid6) & (%varcint188 ! -1)) {
-			$coordgrid14 = ~worldmap_findcoordinmap($maparea7, %varcint188);
-			if ($coordgrid14 ! null) {
-				$int12, $int13 = worldmap_getdisplaycoord($coordgrid6);
+		def_coord $coord14 = null;
+		if ((%varcint188 ! $coord6) & (%varcint188 ! -1)) {
+			$coord14 = ~worldmap_findcoordinmap($maparea7, %varcint188);
+			if ($coord14 ! null) {
+				$int12, $int13 = worldmap_getdisplaycoord($coord6);
 				if (((($int12 >= calc($int10 - 25)) & ($int12 <= calc($int10 + 25))) & ($int13 >= calc($int11 - 25))) & ($int13 <= calc($int11 + 25))) {
-					worldmap_jumptosourcecoord($coordgrid14);
+					worldmap_jumptosourcecoord($coord14);
 				}
 			}
 		}
-		if ((((($int10 = $int2) & ($int11 = $int3)) & ($int8 = $int4)) & ($int9 = $int5)) & (%varcint188 = $coordgrid6)) {
+		if ((((($int10 = $int2) & ($int11 = $int3)) & ($int8 = $int4)) & ($int9 = $int5)) & (%varcint188 = $coord6)) {
 			return;
 		} else {
 			if_setontimer("worldmap_overlay($component0, $component1, $int10, $int11, $int8, $int9, %varcint188)", $component0);

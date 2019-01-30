@@ -1,13 +1,13 @@
 // 1754
-script1754(coordgrid $coordgrid0, coordgrid $coordgrid1, boolean $boolean2, int $int3, component $component4, int $int5, int $int6, int $int7, int $int8, int $int9)(int)
+script1754(coord $coord0, coord $coord1, boolean $boolean2, int $int3, component $component4, int $int5, int $int6, int $int7, int $int8, int $int9)(int)
 def_int $int10 = calc($int9 + 1);
 def_int $int11 = calc($int9 + 2);
 def_int $int12 = 0;
 def_int $int13 = 0;
-$int12, $int13 = ~worldmap_elements_chooseposition($coordgrid0, $boolean2, $component4, $int5, $int6, $int7, $int8);
+$int12, $int13 = ~worldmap_elements_chooseposition($coord0, $boolean2, $component4, $int5, $int6, $int7, $int8);
 def_int $int14 = 0;
 def_int $int15 = 0;
-$int14, $int15 = ~worldmap_elements_chooseposition($coordgrid1, $boolean2, $component4, $int5, $int6, $int7, $int8);
+$int14, $int15 = ~worldmap_elements_chooseposition($coord1, $boolean2, $component4, $int5, $int6, $int7, $int8);
 def_int $int16 = calc($int12 + (($int14 - $int12) / 2));
 def_int $int17 = calc($int13 + (($int15 - $int13) / 2));
 def_int $int18 = calc($int14 - $int12);
@@ -74,7 +74,7 @@ if (cc_find($component4, $int10) = true) {
 	cc_setonmouseover("script1755(true, $component4, $int10, -1, $int11, 16776960)");
 	cc_setonmouseleave("script1755(false, $component4, $int10, -1, $int11, $colour24)");
 	cc_setop(1, "Scroll map");
-	cc_setonop("script1756(event_opindex, $coordgrid1, $boolean2)");
+	cc_setonop("script1756(event_opindex, $coord1, $boolean2)");
 }
 if (cc_find($component4, $int11) = true) {
 	cc_setposition($int16, $int17, ^setpos_abs_centre, ^setpos_abs_centre);

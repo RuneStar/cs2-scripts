@@ -21,15 +21,15 @@ $array0(17) = %var1338;
 $array0(18) = %var1681;
 $array0(19) = %var2065;
 def_int $int3 = 0;
-def_coordgrid $coordgrid4 = null;
+def_coord $coord4 = null;
 def_int $int5 = 0;
 def_int $int6 = 0;
 while ($int6 < $int2) {
 	if (cc_find($component0, $int6) = true) {
 		$int3 = enum(int, int, 818, $int6);
-		$coordgrid4 = enum(int, coordgrid, 819, $int3);
-		if ($coordgrid4 ! null) {
-			if (testbit($array0(coordx($coordgrid4)), coordy($coordgrid4)) = true) {
+		$coord4 = enum(int, coord, 819, $int3);
+		if ($coord4 ! null) {
+			if (testbit($array0(coordx($coord4)), coordy($coord4)) = true) {
 				~music_setcolour(0x0dc10d);
 				$int5 = calc($int5 + 1);
 			} else if (($int3 = 331) & (%varbit1028 > 35)) {

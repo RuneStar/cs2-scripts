@@ -1,7 +1,7 @@
 // 255
-[clientscript,nzone_game_overlay](coordgrid $coordgrid0, string $string0)
+[clientscript,nzone_game_overlay](coord $coord0, string $string0)
 if_sethide(false, 202:0);
-if_setontimer("nzone_game_hide(202:0, $coordgrid0)", 202:9);
+if_setontimer("nzone_game_hide(202:0, $coord0)", 202:9);
 cc_deleteall(202:8);
 cc_create(202:8, ^iftype_rectangle, 0);
 cc_setcolour(0x7f460f);

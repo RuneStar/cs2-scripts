@@ -1,12 +1,12 @@
 // 1712
-[proc,worldmap_loadmap](maparea $maparea0, coordgrid $coordgrid1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+[proc,worldmap_loadmap](maparea $maparea0, coord $coord1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 cc_settext(worldmap_getmapname($maparea0));
 if (worldmap_getcurrentmap ! $maparea0) {
 	worldmap_setmap($maparea0);
 }
-$coordgrid1 = ~worldmap_findcoordinmap($maparea0, $coordgrid1);
-if ($coordgrid1 ! null) {
-	worldmap_jumptosourcecoord_instant($coordgrid1);
+$coord1 = ~worldmap_findcoordinmap($maparea0, $coord1);
+if ($coord1 ! null) {
+	worldmap_jumptosourcecoord_instant($coord1);
 }
 if_setontimer("script1713($maparea0, $component2, cc_getid, $component3, $component4, $component5, $component6, $component7, $component8)", $component2);
 ~worldmap_overlay_clear($component4, $component6);

@@ -1,11 +1,11 @@
 // 1756
-script1756(int $int0, coordgrid $coordgrid1, int $int2)
-if (($int0 = 1) & ($coordgrid1 ! null)) {
+script1756(int $int0, coord $coord1, int $int2)
+if (($int0 = 1) & ($coord1 ! null)) {
 	sound_synth(2266, 1, 0);
 	if ($int2 = 0) {
-		worldmap_jumptosourcecoord($coordgrid1);
+		worldmap_jumptosourcecoord($coord1);
 	} else {
-		worldmap_jumptodisplaycoord($coordgrid1);
+		worldmap_jumptodisplaycoord($coord1);
 	}
 }
 return;

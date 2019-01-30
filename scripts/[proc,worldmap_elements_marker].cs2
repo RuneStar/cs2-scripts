@@ -1,7 +1,7 @@
 // 1757
-[proc,worldmap_elements_marker](coordgrid $coordgrid0, struct $struct1, component $component2, int $int3, int $int4, int $int5, int $int6, int $int7)(int)
-$coordgrid0 = ~worldmap_findcoordinmap(worldmap_getcurrentmap, $coordgrid0);
-if ($coordgrid0 = null) {
+[proc,worldmap_elements_marker](coord $coord0, struct $struct1, component $component2, int $int3, int $int4, int $int5, int $int6, int $int7)(int)
+$coord0 = ~worldmap_findcoordinmap(worldmap_getcurrentmap, $coord0);
+if ($coord0 = null) {
 	if (cc_find($component2, $int7) = true) {
 		cc_sethide(true);
 	}
@@ -9,7 +9,7 @@ if ($coordgrid0 = null) {
 } else {
 	def_int $int8 = 0;
 	def_int $int9 = 0;
-	$int8, $int9 = ~worldmap_elements_chooseposition($coordgrid0, 0, $component2, $int3, $int4, $int5, $int6);
+	$int8, $int9 = ~worldmap_elements_chooseposition($coord0, 0, $component2, $int3, $int4, $int5, $int6);
 	def_graphic $graphic10 = struct_param($struct1, 459);
 	def_int $int11 = struct_param($struct1, 462);
 	def_int $int12 = calc($int11 / 2);
@@ -63,7 +63,7 @@ if ($coordgrid0 = null) {
 	if (cc_find($component2, $int7) = true) {
 		cc_sethide(false);
 		cc_setop(1, "Focus");
-		cc_setonop("script1756(event_opindex, $coordgrid0, false)");
+		cc_setonop("script1756(event_opindex, $coord0, false)");
 		cc_setposition($int8, $int9, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setgraphic($graphic10);
 		cc_set2dangle($int13);
@@ -76,7 +76,7 @@ if ($coordgrid0 = null) {
 		cc_create($component2, ^iftype_graphic, $int7);
 		cc_sethide(false);
 		cc_setop(1, "Focus");
-		cc_setonop("script1756(event_opindex, $coordgrid0, false)");
+		cc_setonop("script1756(event_opindex, $coord0, false)");
 		cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int8, $int9, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setgraphic($graphic10);

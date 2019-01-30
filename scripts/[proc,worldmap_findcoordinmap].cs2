@@ -1,14 +1,14 @@
 // 1715
-[proc,worldmap_findcoordinmap](maparea $maparea0, coordgrid $coordgrid1)(coordgrid)
-if (($maparea0 = null) | ($coordgrid1 = null)) {
+[proc,worldmap_findcoordinmap](maparea $maparea0, coord $coord1)(coord)
+if (($maparea0 = null) | ($coord1 = null)) {
 	return(null);
-} else if (worldmap_coordinmap($maparea0, $coordgrid1) = true) {
-	return($coordgrid1);
+} else if (worldmap_coordinmap($maparea0, $coord1) = true) {
+	return($coord1);
 } else {
-	while (coordz($coordgrid1) > 0) {
-		$coordgrid1 = movecoord($coordgrid1, 0, -1, 0);
-		if (worldmap_coordinmap($maparea0, $coordgrid1) = true) {
-			return($coordgrid1);
+	while (coordz($coord1) > 0) {
+		$coord1 = movecoord($coord1, 0, -1, 0);
+		if (worldmap_coordinmap($maparea0, $coord1) = true) {
+			return($coord1);
 		}
 	}
 	return(null);

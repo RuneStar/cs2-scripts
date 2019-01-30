@@ -1,7 +1,7 @@
 // 252
 [clientscript,music_init_component](component $component0, int $int1, int $int2)
 def_int $int3 = 0;
-def_coordgrid $coordgrid4 = null;
+def_coord $coord4 = null;
 def_int $int5 = -1;
 def_int $int6 = -1;
 def_int $int7 = 0;
@@ -24,10 +24,10 @@ if (cc_find($component0, $int1) = true) {
 		cc_setop(1, "Play");
 		cc_setop(2, "Unlock hint");
 		cc_setopbase("<col=ff9040><$string0></col>");
-		$coordgrid4 = enum(int, coordgrid, 819, $int3);
-		if ($coordgrid4 ! null) {
-			$int6 = coordy($coordgrid4);
-			$int5 = coordx($coordgrid4);
+		$coord4 = enum(int, coord, 819, $int3);
+		if ($coord4 ! null) {
+			$int6 = coordy($coord4);
+			$int5 = coordx($coord4);
 			switch ($int5) {
 				case 1 :
 					$int7 = %var20;
