@@ -4,7 +4,7 @@ def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = enum(int, int, 273, $int8);
-while (($int9 ! -1) & ($int9 <= 44)) {
+while (($int9 ! -1) & ($int9 <= 45)) {
 	if ($int9 < 32) {
 		if (testbit(%var1076, $int9) = false) {
 			$int7 = calc($int7 + enum(int, int, 836, $int9));
@@ -43,7 +43,7 @@ if (($int6 > 0) & ($int7 > 0)) {
 	if_setonmouserepeat("options_button_on(event_com, 0)", $component0);
 	if_setonmouseleave("options_button_off(event_com, 0)", $component0);
 	if_setop(1, "Extend", $component0);
-	if_setonop("script414(null, calc(44 + 9), $string1, $component1, $component2, $component3, $component4, $component5, $int7)", $component0);
+	if_setonop("script414(null, calc(45 + 9), $string1, $component1, $component2, $component3, $component4, $component5, $int7)", $component0);
 } else {
 	cc_setcolour(0x7f4c0f);
 	cc_settext($string0);

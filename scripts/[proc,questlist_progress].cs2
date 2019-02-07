@@ -1225,6 +1225,14 @@ switch ($int0) {
 		} else {
 			return(0);
 		}
+	case 550 :
+		if (%varbit8063 >= 8) {
+			return(2);
+		} else if (%varbit8063 <= 0) {
+			return(1);
+		} else {
+			return(0);
+		}
 	else :
 		return(1);
 }
