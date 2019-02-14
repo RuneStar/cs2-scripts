@@ -2787,3 +2787,6 @@
 [**2784**](scripts/[proc,pest_rewards_costpoints].cs2) `[proc,pest_rewards_costpoints]`  
 [**2785**](scripts/[proc,pest_rewards_costpts].cs2) `[proc,pest_rewards_costpts]`  
 [**2786**](scripts/script2786.cs2)  
+[**2787**](scripts/script2787.cs2)  
+[**2788**](scripts/script2788.cs2)  
+[**2789**](scripts/script2789.cs2)  

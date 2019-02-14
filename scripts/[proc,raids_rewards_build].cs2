@@ -8,6 +8,11 @@ while ($int3 < $int1) {
 	$obj2 = inv_getobj(581, $int3);
 	if ($obj2 ! null) {
 		~raids_rewards_drawitem($obj2, inv_getnum(581, $int3), $int3);
+		if ($int3 < 3) {
+			cc_setposition(0, calc($int3 * (32 + 5)), ^setpos_abs_left, ^setpos_abs_top);
+		} else {
+			cc_setposition(calc(36 + 10), calc(($int3 - 2) * (32 + 5)), ^setpos_abs_left, ^setpos_abs_top);
+		}
 	} else {
 		cc_sethide(true);
 	}
