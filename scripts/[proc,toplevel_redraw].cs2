@@ -48,19 +48,19 @@ $component9 = enum(component, component, $enum1, $component9);
 if (($component9 ! null) & ($component7 ! null)) {
 	if (%varbit5432 = 1) {
 		if_setop(1, "Raiding Party", $component9);
-		if_setgraphic(1582, $component7);
+		if_setgraphic("sideicons_interface,18", $component7);
 	} else if (%varbit618 = 1) {
 		if_setop(1, "Kourend Tasks", $component9);
-		if_setgraphic(1414, $component7);
+		if_setgraphic("sideicons_interface,17", $component7);
 	} else if (%varbit3217 = 1) {
 		if_setop(1, "Minigames", $component9);
-		if_setgraphic(1053, $component7);
+		if_setgraphic("sideicons_interface,15", $component7);
 	} else if (%varbit3612 = 1) {
 		if_setop(1, "Achievement Diaries", $component9);
-		if_setgraphic(1299, $component7);
+		if_setgraphic("sideicons_interface,16", $component7);
 	} else {
 		if_setop(1, "Quest List", $component9);
-		if_setgraphic(776, $component7);
+		if_setgraphic("sideicons_interface,2", $component7);
 	}
 }
 $component7 = enum(int, component, 1139, 6);
@@ -68,13 +68,13 @@ $component7 = enum(component, component, $enum1, $component7);
 if ($component7 ! null) {
 	switch (%varbit4070) {
 		case 1 :
-			if_setgraphic(1583, $component7);
+			if_setgraphic("sideicons_interface,19", $component7);
 		case 2 :
-			if_setgraphic(1584, $component7);
+			if_setgraphic("sideicons_interface,20", $component7);
 		case 3 :
-			if_setgraphic(1711, $component7);
+			if_setgraphic("sideicons_interface,21", $component7);
 		else :
-			if_setgraphic(780, $component7);
+			if_setgraphic("sideicons_interface,6", $component7);
 	}
 }
 $component9 = enum(int, component, 1138, 6);
@@ -95,10 +95,10 @@ $component9 = enum(component, component, $enum1, $component9);
 if (($component9 ! null) & ($component7 ! null)) {
 	if (%varbit6516 = 0) {
 		if_setop(1, "Friends List", $component9);
-		if_setgraphic(782, $component7);
+		if_setgraphic("sideicons_interface,8", $component7);
 	} else {
 		if_setop(1, "Ignore List", $component9);
-		if_setgraphic(783, $component7);
+		if_setgraphic("sideicons_interface,9", $component7);
 	}
 }
 $component7 = enum(component, component, $enum1, 161:30);

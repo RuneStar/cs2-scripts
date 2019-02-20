@@ -1,6 +1,6 @@
 // 466
 [clientscript,quickprayer_init](int $int0, component $component1, component $component2)
-if_setgraphic(812, $component2);
+if_setgraphic("combatboxesmed,0", $component2);
 if_setontimer(null, $component2);
 cc_deleteall($component1);
 def_int $array0(calc(28 + 1));

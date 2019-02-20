@@ -51,7 +51,7 @@ if ($obj5 = null) {
 	$int6 = calc($int6 + 1);
 	.cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
 	.cc_setposition(0, 40, ^setpos_abs_centre, ^setpos_abs_centre);
-	.cc_setgraphic(812);
+	.cc_setgraphic("combatboxesmed,0");
 	.cc_create($component3, ^iftype_text, $int6);
 	$int6 = calc($int6 + 1);
 	.cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
@@ -75,10 +75,10 @@ if ($obj5 = null) {
 	$int6 = calc($int6 + 1);
 	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(($int8 / 2) - 18), -44, ^setpos_abs_centre, ^setpos_abs_centre);
-	def_graphic $graphic10 = 831;
+	def_graphic $graphic10 = "v2_stone_close_button,0";
 	cc_setgraphic($graphic10);
 	cc_setonmouseleave("script229(event_com, event_comid, $graphic10, null)");
-	$graphic10 = 832;
+	$graphic10 = "v2_stone_close_button,1";
 	cc_setonmouseover("script229(event_com, event_comid, $graphic10, null)");
 	cc_setop(1, "Close");
 	cc_setonop("bankmain_incinerator_close(1, $component3)");

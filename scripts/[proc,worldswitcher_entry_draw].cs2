@@ -76,35 +76,35 @@ if ($int5 <= 0) {
 	.cc_settext(tostring($int5));
 }
 if (testbit($int6, 2) = true) {
-	cc_setgraphic(1237);
+	cc_setgraphic("worldswitcher_stars,2");
 	if ($int18 = 0) {
 		.cc_setcolour(0xf0f000);
 	} else {
 		.cc_setcolour(0x7f7f7f);
 	}
 } else if (testbit($int6, 29) = true) {
-	cc_setgraphic(1238);
+	cc_setgraphic("worldswitcher_stars,3");
 	if ($int18 = 0) {
 		.cc_setcolour(0xf0f000);
 	} else {
 		.cc_setcolour(0x7f7f7f);
 	}
 } else if (testbit($int6, 25) = true) {
-	cc_setgraphic(1338);
+	cc_setgraphic("worldswitcher_stars,4");
 	if ($int18 = 0) {
 		.cc_setcolour(0xf0f000);
 	} else {
 		.cc_setcolour(0x7f7f7f);
 	}
 } else if (testbit($int6, 0) = true) {
-	cc_setgraphic(1131);
+	cc_setgraphic("worldswitcher_stars,1");
 	if ($int18 = 0) {
 		.cc_setcolour(0xf0f000);
 	} else {
 		.cc_setcolour(0x7f7f7f);
 	}
 } else {
-	cc_setgraphic(1130);
+	cc_setgraphic("worldswitcher_stars,0");
 	if ($int18 = 0) {
 		.cc_setcolour(0xe0e0e0);
 	} else {

@@ -4,7 +4,7 @@ if ($int0 ! 1) {
 	return;
 } else {
 	sound_synth(2266, 1, 0);
-	if_setgraphic(813, $component1);
+	if_setgraphic("combatboxesmed,1", $component1);
 	if_setontimer("quickprayer_close_timeout(event_com, calc(clientclock + 10))", $component1);
 	return;
 }

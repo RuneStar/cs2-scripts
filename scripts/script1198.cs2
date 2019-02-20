@@ -42,7 +42,7 @@ if (%varbit5557 = 0) {
 	}
 } else if (%varbit5557 = 1) {
 	if_sethide(false, $component22);
-	if_setgraphic(520, $component22);
+	if_setgraphic("cross_interface,5", $component22);
 	if_setop(6, "Activate", $component19);
 	if_settext("Deactivated", $component20);
 	if_setcolour(^red, $component20);

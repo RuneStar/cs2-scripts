@@ -32,7 +32,7 @@ if ((string_length($string0) <= 0) | (string_length($string1) <= 0)) {
 	.cc_setposition($int7, calc(%varcint49 + (($int9 - 15) / 2)), ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setgraphicshadow(0x333333);
 	.cc_settiling(true);
-	.cc_setgraphic(1094);
+	.cc_setgraphic("mapfunction_infoicon");
 	%varcint49 = calc((%varcint49 + $int9) + 3);
 	return;
 }

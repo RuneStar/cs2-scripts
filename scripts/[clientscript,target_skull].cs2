@@ -2,7 +2,7 @@
 [clientscript,target_skull](component $component0, component $component1, component $component2, component $component3)
 if (%varbit1538 = 0) {
 	if_settext("---", $component1);
-	if_setgraphic(1095, $component0);
+	if_setgraphic("headicons_pk_interface,6", $component0);
 	if_setobject_nonum(mysterious_emblem_12746, 1, $component2);
 	if_settrans(120, $component2);
 	if_settext("", $component3);
@@ -10,19 +10,19 @@ if (%varbit1538 = 0) {
 } else {
 	if (%varbit1538 = 1) {
 		if_settext("Wealth: V. Low", $component1);
-		if_setgraphic(1096, $component0);
+		if_setgraphic("headicons_pk_interface,7", $component0);
 	} else if (%varbit1538 = 2) {
 		if_settext("Wealth: Low", $component1);
-		if_setgraphic(528, $component0);
+		if_setgraphic("headicons_pk_interface,5", $component0);
 	} else if (%varbit1538 = 3) {
 		if_settext("Wealth: Medium", $component1);
-		if_setgraphic(527, $component0);
+		if_setgraphic("headicons_pk_interface,4", $component0);
 	} else if (%varbit1538 = 4) {
 		if_settext("Wealth: High", $component1);
-		if_setgraphic(526, $component0);
+		if_setgraphic("headicons_pk_interface,3", $component0);
 	} else {
 		if_settext("Wealth: V. High!", $component1);
-		if_setgraphic(525, $component0);
+		if_setgraphic("headicons_pk_interface,2", $component0);
 	}
 	def_obj $obj4 = enum(int, namedobj, 1701, %varbit4162);
 	if ($obj4 ! null) {

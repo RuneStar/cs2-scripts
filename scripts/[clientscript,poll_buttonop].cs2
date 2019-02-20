@@ -3,7 +3,7 @@
 if_resume_pausebutton($component1);
 sound_synth(2266, 1, 0);
 if ((cc_find($component0, $int2) = true) & (.cc_find($component0, $int3) = true)) {
-	cc_setgraphic(813);
+	cc_setgraphic("combatboxesmed,1");
 	.cc_setcolour(^white);
 	.cc_settext("Loading...");
 	cc_clearops;

@@ -2,10 +2,10 @@
 [clientscript,poll_buttonhover](int $int0, component $component1, int $int2, int $int3)
 if ((cc_find($component1, $int2) = true) & (.cc_find($component1, $int3) = true)) {
 	if ($int0 = 1) {
-		cc_setgraphic(813);
+		cc_setgraphic("combatboxesmed,1");
 		.cc_setcolour(^white);
 	} else {
-		cc_setgraphic(812);
+		cc_setgraphic("combatboxesmed,0");
 		.cc_setcolour(0xff981f);
 	}
 }

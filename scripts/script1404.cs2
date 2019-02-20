@@ -48,7 +48,7 @@ if ($component4 = null) {
 	cc_create($component4, ^iftype_graphic, 5);
 	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 	cc_setposition(12, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic(520);
+	cc_setgraphic("cross_interface,5");
 	if ($int3 = 1) {
 		cc_sethide(true);
 		cc_create($component4, ^iftype_text, 6);

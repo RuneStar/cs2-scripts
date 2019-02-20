@@ -3,7 +3,7 @@
 if (clientclock < $int1) {
 	return;
 } else {
-	if_setgraphic(812, $component0);
+	if_setgraphic("combatboxesmed,0", $component0);
 	if_setontimer(null, $component0);
 	return;
 }
