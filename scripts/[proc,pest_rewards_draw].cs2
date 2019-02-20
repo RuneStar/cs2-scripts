@@ -82,7 +82,7 @@ if ($int0 ! -1) {
 	cc_setonmouseleave("script2777(false, $string0, $component4)");
 	cc_setonop("script2774(event_opindex, $component1, $component2, $component3, $component4)");
 } else {
-	$int5 = ~script198($component4);
+	$int5 = ~v2_stone_button_in_filled($component4);
 	cc_create($component4, ^iftype_text, $int5);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

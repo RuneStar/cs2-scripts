@@ -1,0 +1,166 @@
+// 205
+[clientscript,duel_initworn]()
+def_int $int0 = 0;
+def_int $int1 = 0;
+cc_deleteall(482:63);
+cc_deleteall(482:91);
+while ($int0 < 11) {
+	cc_create(482:63, ^iftype_graphic, $int0);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	if ($int0 = 0) {
+		cc_setposition(if_getx(482:80), if_gety(482:80), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 0;
+	}
+	if ($int0 = 1) {
+		cc_setposition(if_getx(482:81), if_gety(482:81), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 1;
+	}
+	if ($int0 = 2) {
+		cc_setposition(if_getx(482:82), if_gety(482:82), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 2;
+	}
+	if ($int0 = 3) {
+		cc_setposition(if_getx(482:90), if_gety(482:90), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 13;
+	}
+	if ($int0 = 4) {
+		cc_setposition(if_getx(482:83), if_gety(482:83), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 3;
+	}
+	if ($int0 = 5) {
+		cc_setposition(if_getx(482:84), if_gety(482:84), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 4;
+	}
+	if ($int0 = 6) {
+		cc_setposition(if_getx(482:85), if_gety(482:85), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 5;
+	}
+	if ($int0 = 7) {
+		cc_setposition(if_getx(482:86), if_gety(482:86), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 7;
+	}
+	if ($int0 = 8) {
+		cc_setposition(if_getx(482:87), if_gety(482:87), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 9;
+	}
+	if ($int0 = 9) {
+		cc_setposition(if_getx(482:88), if_gety(482:88), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 10;
+	}
+	if ($int0 = 10) {
+		cc_setposition(if_getx(482:89), if_gety(482:89), ^setpos_abs_left, ^setpos_abs_top);
+		$int1 = 12;
+	}
+	if (inv_getobj(94, $int1) ! null) {
+		cc_setobject(inv_getobj(94, $int1), inv_getnum(94, $int1));
+		cc_setopbase("<col=ff981f><oc_name(inv_getobj(94, $int1))>");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		if ($int1 = 0) {
+			if_setgraphic(null, 482:80);
+		}
+		if ($int1 = 1) {
+			if_setgraphic(null, 482:81);
+		}
+		if ($int1 = 2) {
+			if_setgraphic(null, 482:82);
+		}
+		if ($int1 = 13) {
+			if_setgraphic(null, 482:90);
+		}
+		if ($int1 = 3) {
+			if_setgraphic(null, 482:83);
+		}
+		if ($int1 = 4) {
+			if_setgraphic(null, 482:84);
+		}
+		if ($int1 = 5) {
+			if_setgraphic(null, 482:85);
+		}
+		if ($int1 = 7) {
+			if_setgraphic(null, 482:86);
+		}
+		if ($int1 = 9) {
+			if_setgraphic(null, 482:87);
+		}
+		if ($int1 = 10) {
+			if_setgraphic(null, 482:88);
+		}
+		if ($int1 = 12) {
+			if_setgraphic(null, 482:89);
+		}
+	} else {
+		if ($int1 = 0) {
+			if_setgraphic("wornicons,0", 482:80);
+		}
+		if ($int1 = 1) {
+			if_setgraphic("wornicons,1", 482:81);
+		}
+		if ($int1 = 2) {
+			if_setgraphic("wornicons,2", 482:82);
+		}
+		if ($int1 = 13) {
+			if_setgraphic("wornicons,10", 482:90);
+		}
+		if ($int1 = 3) {
+			if_setgraphic("wornicons,3", 482:83);
+		}
+		if ($int1 = 4) {
+			if_setgraphic("wornicons,5", 482:84);
+		}
+		if ($int1 = 5) {
+			if_setgraphic("wornicons,6", 482:85);
+		}
+		if ($int1 = 7) {
+			if_setgraphic("wornicons,7", 482:86);
+		}
+		if ($int1 = 9) {
+			if_setgraphic("wornicons,8", 482:87);
+		}
+		if ($int1 = 10) {
+			if_setgraphic("wornicons,9", 482:88);
+		}
+		if ($int1 = 12) {
+			if_setgraphic("wornicons,4", 482:89);
+		}
+	}
+	cc_create(482:91, ^iftype_graphic, $int0);
+	cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic(937);
+	cc_sethide(true);
+	if ($int0 = 0) {
+		cc_setposition(calc(10 + if_getx(482:80)), if_gety(482:80), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int0 = 1) {
+		cc_setposition(calc(10 + if_getx(482:81)), if_gety(482:81), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int0 = 2) {
+		cc_setposition(calc(10 + if_getx(482:82)), if_gety(482:82), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int0 = 3) {
+		cc_setposition(calc(10 + if_getx(482:90)), if_gety(482:90), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int0 = 4) {
+		cc_setposition(calc(10 + if_getx(482:83)), if_gety(482:83), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int0 = 5) {
+		cc_setposition(calc(10 + if_getx(482:84)), if_gety(482:84), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int0 = 6) {
+		cc_setposition(calc(10 + if_getx(482:85)), if_gety(482:85), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int0 = 7) {
+		cc_setposition(calc(10 + if_getx(482:86)), if_gety(482:86), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int0 = 8) {
+		cc_setposition(calc(10 + if_getx(482:87)), if_gety(482:87), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int0 = 9) {
+		cc_setposition(calc(10 + if_getx(482:88)), if_gety(482:88), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int0 = 10) {
+		cc_setposition(calc(10 + if_getx(482:89)), if_gety(482:89), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	$int0 = calc($int0 + 1);
+}
+return;

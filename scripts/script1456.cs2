@@ -55,9 +55,9 @@ if (($int6 < 0) | ($int7 < 0)) {
 				cc_deleteall($component9);
 				if ($int16 = 1) {
 					if ($int8 = $int1) {
-						$int15 = ~script198($component9);
+						$int15 = ~v2_stone_button_in_filled($component9);
 					} else {
-						$int15 = ~script208($component9);
+						$int15 = ~v2_stone_button_out_filled($component9);
 					}
 					if_setonmouseover("script1455($component0, $int8, $boolean2)", $component9);
 					if_setonmouseleave("script1455($component0, -1, $boolean2)", $component9);

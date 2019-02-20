@@ -14,16 +14,16 @@ if (($int10 < 0) | ($int10 > $int11)) {
 		if (($int9 < 0) | ($int9 >= $int11)) {
 			return;
 		} else {
-			$int12 = ~script2669($int10);
-			~telenexus_set_slot($int10, ~script2669($int9));
-			~telenexus_set_slot($int9, ~script2669($int12));
+			$int12 = ~telenexus_get_slot_value($int10);
+			~telenexus_set_slot($int10, ~telenexus_get_slot_value($int9));
+			~telenexus_set_slot($int9, ~telenexus_get_slot_value($int12));
 			~script2273($component0, $component1, $component2, $component3, $component4, $component5, $component6, 0);
 		}
 	} else if ($component8 = 19:20) {
-		~telenexus_remove_tele(~script2669($int10));
+		~telenexus_remove_tele(~telenexus_get_slot_value($int10));
 		~script2273($component0, $component1, $component2, $component3, $component4, $component5, $component6, 0);
 	} else if ($component8 = 19:3) {
-		%varbit6669 = ~script2669($int10);
+		%varbit6669 = ~telenexus_get_slot_value($int10);
 		~telenexus_left_click($component8, 19:7, 19:8, 19:4, 19:6);
 	}
 	return;

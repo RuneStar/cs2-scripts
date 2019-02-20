@@ -2,9 +2,9 @@
 script2692(int $int0, int $int1)
 def_int $int2 = 0;
 if ($int0 = 1) {
-	$int2 = ~script198(100:33);
+	$int2 = ~v2_stone_button_in_filled(100:33);
 } else {
-	$int2 = ~script208(100:33);
+	$int2 = ~v2_stone_button_out_filled(100:33);
 }
 cc_create(100:33, ^iftype_text, $int2);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

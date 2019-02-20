@@ -8,7 +8,7 @@ if (%var1204 ! $int0) {
 	if_setonmouserepeat("script2287(true, $component1, $int6)", $component1);
 	if_setonmouseleave("script2287(false, $component1, $int6)", $component1);
 } else {
-	$int7 = ~script198($component1);
+	$int7 = ~v2_stone_button_in_filled($component1);
 	$int7 = ~script2283($component1, $int7, $int2, $graphic3, $int4, $int5, $string0, $string1);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);

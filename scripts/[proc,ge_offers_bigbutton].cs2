@@ -25,6 +25,6 @@ if ($int1 = 1) {
 	cc_setcolour(0xff981f);
 	if_setonmouserepeat("script85(event_com, $int2, 16777215)", $component0);
 	if_setonmouseleave("script85(event_com, $int2, 16750623)", $component0);
-	if_setonop("script542(event_opindex, $component0, $string0)", $component0);
+	if_setonop("ge_offers_bigbutton_op(event_opindex, $component0, $string0)", $component0);
 }
 return;

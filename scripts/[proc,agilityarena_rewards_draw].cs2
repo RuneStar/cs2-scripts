@@ -20,7 +20,7 @@ if (inv_total(inv, agility_arena_ticket_2996) < $int1) {
 	cc_settext($string1);
 	if_setonop(null, $component0);
 } else if ($int2 = 1) {
-	$int4 = ~script198($component0);
+	$int4 = ~v2_stone_button_in_filled($component0);
 	cc_create($component0, ^iftype_text, $int4);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
@@ -35,7 +35,7 @@ if (inv_total(inv, agility_arena_ticket_2996) < $int1) {
 		if_setonop("opsound(event_opindex, 2)", $component0);
 	}
 } else {
-	$int4 = ~script208($component0);
+	$int4 = ~v2_stone_button_out_filled($component0);
 	cc_create($component0, ^iftype_text, $int4);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);

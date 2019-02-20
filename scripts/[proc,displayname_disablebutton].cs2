@@ -1,6 +1,6 @@
 // 1677
 [proc,displayname_disablebutton](component $component0, string $string0)
-def_int $int1 = ~script198($component0);
+def_int $int1 = ~v2_stone_button_in_filled($component0);
 cc_create($component0, ^iftype_text, $int1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

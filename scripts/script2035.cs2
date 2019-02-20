@@ -21,11 +21,11 @@ if ((inv_total(inv, agility_arena_ticket_2996) < $int3) | ($int5 = 0)) {
 	~script2036($component0, $int6, $obj1, ^red, $string1);
 	if_setonop(null, $component0);
 } else if ($int4 = 1) {
-	$int6 = ~script198($component0);
+	$int6 = ~v2_stone_button_in_filled($component0);
 	~script2036($component0, $int6, $obj1, ^white, $string1);
 	if_setonop("opsound(event_opindex, 2)", $component0);
 } else {
-	$int6 = ~script208($component0);
+	$int6 = ~v2_stone_button_out_filled($component0);
 	~script2036($component0, $int6, $obj1, 0xff981f, $string1);
 	if_setonop("opsound(event_opindex, 2)", $component0);
 }

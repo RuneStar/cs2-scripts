@@ -3,9 +3,9 @@ script1724(component $component0, int $int1, int $colour2, string $string0)
 cc_deleteall($component0);
 def_int $int3 = 0;
 if ($int1 = 1) {
-	$int3 = ~script198($component0);
+	$int3 = ~v2_stone_button_in_filled($component0);
 } else {
-	$int3 = ~script208($component0);
+	$int3 = ~v2_stone_button_out_filled($component0);
 }
 cc_create($component0, ^iftype_graphic, $int3);
 $int3 = calc($int3 + 1);

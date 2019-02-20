@@ -3,9 +3,9 @@ script1560(component $component0, int $int1, int $int2, string $string0)(int)
 cc_deleteall($component0);
 def_int $int3 = 0;
 if ($int1 = 1) {
-	$int3 = ~script198($component0);
+	$int3 = ~v2_stone_button_in_filled($component0);
 } else {
-	$int3 = ~script208($component0);
+	$int3 = ~v2_stone_button_out_filled($component0);
 }
 cc_create($component0, ^iftype_text, $int3);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

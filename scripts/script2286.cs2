@@ -19,7 +19,7 @@ if (enum(int, component, 1913, %var1204) ! null) {
 	cc_settext("Confirm");
 } else {
 	if_settext("Select a membership package from the listed options.", $component0);
-	$int3 = ~script198($component1);
+	$int3 = ~v2_stone_button_in_filled($component1);
 	cc_create($component1, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);

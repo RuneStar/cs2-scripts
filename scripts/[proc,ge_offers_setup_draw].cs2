@@ -81,9 +81,9 @@ if (%var1151 ! -1) {
 			}
 		}
 		if ($int15 > 0) {
-			~script208($component13);
-			if_setonmouserepeat("script772(event_com)", $component13);
-			if_setonmouseleave("script97(event_com)", $component13);
+			~v2_stone_button_out_filled($component13);
+			if_setonmouserepeat("v2_stone_button_in_filled(event_com)", $component13);
+			if_setonmouseleave("v2_stone_button_out_filled(event_com)", $component13);
 			if_setonop("opsound(event_opindex, 2)", $component13);
 			if (cc_find($component0, $int14) = true) {
 				cc_settext("<col=ffffff>Confirm</col>");

@@ -3,7 +3,7 @@
 def_int $int4 = -1;
 def_int $colour5 = ^red;
 if ($int3 = 0) {
-	$int4 = ~script56($int2);
+	$int4 = ~area_task_complete($int2);
 	if ($int4 = 2) {
 		$colour5 = 0x0dc10d;
 	} else if ($int4 = 1) {

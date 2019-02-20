@@ -47,7 +47,7 @@ while (enum(int, int, 1740, $int5) > 0) {
 		cc_setcolour(0xcccccc);
 	} else {
 		if (compare($string1, "") ! 0) {
-			if (~script1969($int5) = 1) {
+			if (~vm_kudos_get_quest_status($int5) = 1) {
 				cc_settext("<$string0><br><str=ffffff><$string1>");
 			} else {
 				cc_settext("<$string0><br><$string1>");

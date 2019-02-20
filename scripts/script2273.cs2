@@ -30,7 +30,7 @@ cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_sethide(true);
 while ($int8 <= $int16) {
 	cc_create($component5, ^iftype_text, $int8);
-	$int15 = ~script2669($int8);
+	$int15 = ~telenexus_get_slot_value($int8);
 	$struct11 = enum(int, struct, 1377, $int15);
 	if ($struct11 = null) {
 		cc_sethide(true);

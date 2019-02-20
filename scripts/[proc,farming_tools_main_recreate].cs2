@@ -1,0 +1,35 @@
+// 2749
+[proc,farming_tools_main_recreate](component $component0, obj $obj1, int $int2, int $int3, string $string0)
+cc_deleteall($component0);
+def_int $int4 = 0;
+def_int $int5 = 0;
+if ($int3 = 0) {
+	$int4 = ~v2_stone_button_out_filled($component0);
+} else {
+	$int4 = ~v2_stone_button_in_filled($component0);
+}
+cc_create($component0, ^iftype_text, $int4);
+$int5 = $int4;
+$int4 = calc($int4 + 1);
+cc_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 16, ^setsize_minus, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_create($component0, ^iftype_text, $int4);
+$int4 = calc($int4 + 1);
+cc_setposition(10, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_create($component0, ^iftype_graphic, $int4);
+$int4 = calc($int4 + 1);
+cc_setposition(10, 20, ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+if_setonop("script487(event_com, cc_getid, 125, 0)", $component0);
+~farming_tools_main_update($component0, $obj1, $int2, $int5, $string0);
+if_setonvartransmit("farming_tools_main_update($component0, $obj1, $string0, $int2, $int5){var615, var2084, var439, var967}", $component0);
+return;

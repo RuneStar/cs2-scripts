@@ -3,12 +3,12 @@ script1743(int $int0, component $component1, component $component2)
 cc_deleteall($component2);
 def_int $int3 = 0;
 if ($int0 = 1) {
-	$int3 = ~script198($component2);
+	$int3 = ~v2_stone_button_in_filled($component2);
 	if_sethide(false, $component1);
 	if_setop(1, "Hide", $component2);
 	if_setonop("script1742(false, $component1, $component2)", $component2);
 } else {
-	$int3 = ~script208($component2);
+	$int3 = ~v2_stone_button_out_filled($component2);
 	if_sethide(true, $component1);
 	if_setop(1, "Show", $component2);
 	if_setonop("script1742(true, $component1, $component2)", $component2);

@@ -1,0 +1,8 @@
+// 953
+[clientscript,macro_pinball_score_init](component $component0, component $component1, component $component2, component $component3)
+~script1490($component0);
+~hud_clamp_init($component1);
+~script2249($component2, setbit(0, 1));
+~macro_pinball_score($component3);
+if_setonvartransmit("macro_pinball_score(event_com){var727}", $component3);
+return;

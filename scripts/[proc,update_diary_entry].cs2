@@ -2,7 +2,7 @@
 [proc,update_diary_entry](component $component0, int $int1, int $int2)
 def_int $int3 = -1;
 def_int $colour4 = ^red;
-$int3 = ~script56($int2);
+$int3 = ~area_task_complete($int2);
 if ($int3 = 2) {
 	$colour4 = 0x0dc10d;
 } else if ($int3 = 1) {

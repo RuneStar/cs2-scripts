@@ -36,7 +36,7 @@ if ($int2 = 1) {
 	if_setonop("script2693(event_opindex)", 100:33);
 } else {
 	cc_deleteall(100:33);
-	$int4 = ~script198(100:33);
+	$int4 = ~v2_stone_button_in_filled(100:33);
 	cc_create(100:33, ^iftype_text, $int4);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

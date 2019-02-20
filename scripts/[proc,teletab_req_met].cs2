@@ -1,0 +1,23 @@
+// 1293
+[proc,teletab_req_met](int $int0, int $int1, int $int2, int $int3, obj $obj4, int $int5, obj $obj6, int $int7, obj $obj8, int $int9, int $int10)(int)
+if (($int0 > 0) & (~magic_runecount(air_rune_556) < $int0)) {
+	return(0);
+} else if (($int1 > 0) & (~magic_runecount(water_rune_555) < $int1)) {
+	return(0);
+} else if (($int2 > 0) & (~magic_runecount(earth_rune_557) < $int2)) {
+	return(0);
+} else if (($int3 > 0) & (~magic_runecount(fire_rune_554) < $int3)) {
+	return(0);
+} else if (($int5 > 0) & (~magic_runecount($obj4) < $int5)) {
+	return(0);
+} else if (($int7 > 0) & (~magic_runecount($obj6) < $int7)) {
+	return(0);
+} else if (($int9 > 0) & (~magic_runecount($obj8) < $int9)) {
+	return(0);
+} else if (inv_total(inv, dark_essence_block_13446) = 0) {
+	return(0);
+} else if (stat(magic) < $int10) {
+	return(0);
+} else {
+	return(1);
+}

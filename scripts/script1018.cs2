@@ -2,9 +2,9 @@
 script1018(int $int0, int $colour1, component $component2, string $string0)(int)
 def_int $int3 = 0;
 if ($int0 = 1) {
-	$int3 = ~script198($component2);
+	$int3 = ~v2_stone_button_in_filled($component2);
 } else {
-	$int3 = ~script208($component2);
+	$int3 = ~v2_stone_button_out_filled($component2);
 }
 if_setop(1, $string0, $component2);
 cc_create($component2, ^iftype_text, $int3);

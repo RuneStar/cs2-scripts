@@ -1,0 +1,53 @@
+// 1062
+[proc,farming_tools_side_update](component $component0, obj $obj1, int $int2, string $string0)
+def_int $int3 = 0;
+def_obj $obj4 = null;
+$int3, $obj4 = ~script1064($obj1);
+def_int $colour5 = 0xbb0000;
+if ($int3 > 0) {
+	$colour5 = 0x20df20;
+}
+if ($obj1 = watering_can_6797) {
+	if ($obj4 = null) {
+		$obj4 = watering_can_6797;
+	}
+	$string0 = oc_name($obj4);
+}
+if ((cc_find($component0, $int2) = true) & (.cc_find($component0, calc($int2 + 1)) = true)) {
+	cc_settext($string0);
+	cc_setcolour($colour5);
+	.cc_setcolour($colour5);
+	.cc_settext(~magic_tostring($int3));
+}
+if (cc_find($component0, calc($int2 + 2)) = true) {
+	cc_setobject_nonum($obj4, $int3);
+}
+if_setopbase("<col=ff9040><oc_name($obj4)></col>", $component0);
+def_int $int6 = enum(obj, int, 2193, $obj1);
+if ($int6 <= 1) {
+	if_setop(1, "Store", $component0);
+} else {
+	switch (%varbit7792) {
+		case 0 :
+			if_setop(1, "Store-1", $component0);
+			if_setop(2, "Store-5", $component0);
+			if_setop(3, "Store-X", $component0);
+			if_setop(4, "Store-All", $component0);
+		case 1 :
+			if_setop(1, "Store-5", $component0);
+			if_setop(2, "Store-1", $component0);
+			if_setop(3, "Store-X", $component0);
+			if_setop(4, "Store-All", $component0);
+		case 3 :
+			if_setop(1, "Store-X", $component0);
+			if_setop(2, "Store-1", $component0);
+			if_setop(3, "Store-5", $component0);
+			if_setop(4, "Store-All", $component0);
+		case 2 :
+			if_setop(1, "Store-All", $component0);
+			if_setop(2, "Store-1", $component0);
+			if_setop(3, "Store-5", $component0);
+			if_setop(4, "Store-X", $component0);
+	}
+}
+return;
