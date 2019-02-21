@@ -24,7 +24,7 @@ while ($int2 <= 52) {
 		cc_setposition($int3, $int4, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(24, 24, ^setsize_abs, ^setsize_abs);
 		cc_setop(1, oc_param($obj5, 601));
-		cc_setoninvtransmit("autocast_spellhighlight(event_com, $int2, $obj5){inv, 94}");
+		cc_setoninvtransmit("autocast_spellhighlight(event_com, $int2, $obj5){inv, worn}");
 		cc_setonstattransmit("autocast_spellhighlight(event_com, $int2, $obj5){magic}");
 		cc_setonvartransmit("autocast_spellhighlight(event_com, $int2, $obj5){var638, var375, var1139, var1140, var1377}");
 		~autocast_spellhighlight($obj5);

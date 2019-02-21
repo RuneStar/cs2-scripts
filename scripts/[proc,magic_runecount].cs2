@@ -3,7 +3,7 @@
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_int $int3 = 0;
-def_obj $obj4 = inv_getobj(94, 3);
+def_obj $obj4 = inv_getobj(worn, 3);
 if (map_members = true) {
 	if (inv_total(inv, rune_pouch_12791) > 0) {
 		$int3 = %varbit1623;
@@ -100,7 +100,7 @@ switch ($obj0) {
 			return(^int_max);
 		} else if (~script234 = 1) {
 			return(inv_total(inv, fire_rune_11686));
-		} else if ((inv_getobj(94, 5) = tome_of_fire_20714) & (map_members = true)) {
+		} else if ((inv_getobj(worn, 5) = tome_of_fire_20714) & (map_members = true)) {
 			return(^int_max);
 		} else {
 			$int5 = inv_total(inv, fire_rune_554);

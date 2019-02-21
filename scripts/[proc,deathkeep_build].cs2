@@ -74,7 +74,7 @@ if ($int0 = 0) {
 					}
 					$int10 = calc($int10 + 1);
 				}
-				$int11 = calc(((^int_max - inv_total(94, $obj6)) - inv_total(inv, $obj6)) + $int12);
+				$int11 = calc(((^int_max - inv_total(worn, $obj6)) - inv_total(inv, $obj6)) + $int12);
 				$int11 = calc(0 - $int11);
 				if ($int11 > 0) {
 					cc_create(4:21, ^iftype_graphic, $int5);

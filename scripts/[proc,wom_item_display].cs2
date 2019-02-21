@@ -29,7 +29,7 @@ while ($enum14 ! null) {
 	while ($int8 < $int10) {
 		$obj11 = enum(int, namedobj, $enum14, $int8);
 		cc_create($component0, ^iftype_graphic, calc($int8 + $int3));
-		$int15 = calc((inv_total(bank, $obj11) + inv_total(inv, $obj11)) + inv_total(94, $obj11));
+		$int15 = calc((inv_total(bank, $obj11) + inv_total(inv, $obj11)) + inv_total(worn, $obj11));
 		if (($int15 > 0) & ($int16 = 1)) {
 			cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);

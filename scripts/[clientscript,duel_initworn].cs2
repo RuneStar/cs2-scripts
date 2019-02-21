@@ -51,9 +51,9 @@ while ($int0 < 11) {
 		cc_setposition(if_getx(482:89), if_gety(482:89), ^setpos_abs_left, ^setpos_abs_top);
 		$int1 = 12;
 	}
-	if (inv_getobj(94, $int1) ! null) {
-		cc_setobject(inv_getobj(94, $int1), inv_getnum(94, $int1));
-		cc_setopbase("<col=ff981f><oc_name(inv_getobj(94, $int1))>");
+	if (inv_getobj(worn, $int1) ! null) {
+		cc_setobject(inv_getobj(worn, $int1), inv_getnum(worn, $int1));
+		cc_setopbase("<col=ff981f><oc_name(inv_getobj(worn, $int1))>");
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
 		if ($int1 = 0) {

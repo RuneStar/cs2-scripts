@@ -1,7 +1,7 @@
 // 546
 [proc,wear_updateslot](component $component0, int $int1)
 if_clearops($component0);
-def_obj $obj2 = inv_getobj(94, $int1);
+def_obj $obj2 = inv_getobj(worn, $int1);
 if ($obj2 = null) {
 	cc_sethide(true);
 	.cc_sethide(false);
@@ -11,7 +11,7 @@ if ($obj2 = null) {
 } else {
 	cc_sethide(false);
 	.cc_sethide(true);
-	cc_setobject($obj2, inv_getnum(94, $int1));
+	cc_setobject($obj2, inv_getnum(worn, $int1));
 	if_setopbase("<col=ff9040><oc_name($obj2)></col>", $component0);
 	if_setop(1, "Remove", $component0);
 	def_string $string0 = "";
