@@ -1,0 +1,515 @@
+// 2791
+script2791(int $int0, int $int1)(string, int, int)
+def_string $string0 = "";
+def_string $string1 = "";
+switch ($int0) {
+	case 0 :
+		switch ($int1) {
+			case 0 :
+				$string0 = "You can see what each spell does by<br>moving your mouse over its icon.";
+				$string1 = "You can see what each spell does by<br>activating the spellbook's Info mode, then tapping the spells.";
+				return("To view the available spells, select the<br>spellbook icon on the side interface.<br><~text_device($string0, $string1)>", -1, 1391);
+			case 1 :
+				return("Home teleport (Lumbridge)", -1, 9712);
+			case 2 :
+				return("Wind Strike", 1, 3273);
+			case 3 :
+				return("Confusion", 3, 3274);
+			case 4 :
+				return("Water Strike", 5, 3275);
+			case 5 :
+				return("Level 1 enchant", 7, 3276);
+			case 6 :
+				return("Earth Strike", 9, 3277);
+			case 7 :
+				return("Weaken", 11, 3278);
+			case 8 :
+				return("Fire Strike", 13, 3279);
+			case 9 :
+				return("Bones to bananas", 15, 3280);
+			case 10 :
+				return("Wind Bolt", 17, 3281);
+			case 11 :
+				return("Curse", 19, 3282);
+			case 12 :
+				return("Bind", 20, 3283);
+			case 13 :
+				return("Low level alchemy", 21, 3284);
+			case 14 :
+				return("Water Bolt", 23, 3285);
+			case 15 :
+				return("Varrock teleport", 25, 3286);
+			case 16 :
+				return("Level 2 enchant", 27, 3287);
+			case 17 :
+				return("Earth Bolt", 29, 3288);
+			case 18 :
+				return("Lumbridge teleport", 31, 3289);
+			case 19 :
+				return("Telekinetic grab", 33, 3290);
+			case 20 :
+				return("Fire Bolt", 35, 3291);
+			case 21 :
+				return("Falador teleport", 37, 3292);
+			case 22 :
+				return("Crumble undead", 39, 3293);
+			case 23 :
+				return("Teleport to house", 40, 8828);
+			case 24 :
+				return("Wind Blast", 41, 3294);
+			case 25 :
+				return("Superheat item", 43, 3295);
+			case 26 :
+				return("Camelot teleport", 45, 3296);
+			case 27 :
+				return("Water Blast", 47, 3297);
+			case 28 :
+				return("Level 3 enchant", 49, 3298);
+			case 29 :
+				return("Iban blast<br>(after Underground Pass)", 50, 3299);
+			case 30 :
+				return("Snare", 50, 3300);
+			case 31 :
+				return("Magic dart<br>(with 55 Slayer)", 50, 4176);
+			case 32 :
+				return("Ardougne teleport<br>(after Plague City)", 51, 3301);
+			case 33 :
+				return("Earth Blast", 53, 3302);
+			case 34 :
+				return("High level alchemy", 55, 3303);
+			case 35 :
+				return("Charge water orb", 56, 3304);
+			case 36 :
+				return("Level 4 enchant", 57, 3305);
+			case 37 :
+				return("Watchtower teleport<br>(after Watchtower)", 58, 3306);
+			case 38 :
+				return("Fire Blast", 59, 3307);
+			case 39 :
+				return("Charge earth orb", 60, 3308);
+			case 40 :
+				return("Bones to peaches", 60, 6884);
+			case 41 :
+				return("Claws of Guthix<br>(after Mage Arena)", 60, 3309);
+			case 42 :
+				return("Flames of Zamorak<br>(after Mage Arena)", 60, 3310);
+			case 43 :
+				return("Saradomin Strike<br>(after Mage Arena)", 60, 3311);
+			case 44 :
+				return("Trollheim teleport<br>(after Eadgar's Ruse)", 61, 3312);
+			case 45 :
+				return("Wind Wave", 62, 3313);
+			case 46 :
+				return("Charge fire orb", 63, 3314);
+			case 47 :
+				return("Ape Atoll teleport<br>(after Recipe for Disaster)", 64, 7619);
+			case 48 :
+				return("Water Wave", 65, 3315);
+			case 49 :
+				return("Charge air orb", 66, 3316);
+			case 50 :
+				return("Vulnerability", 66, 3317);
+			case 51 :
+				return("Level 5 enchant", 68, 3318);
+			case 52 :
+				return("Kourend Castle teleport<br>(after unlocking the spell)", 69, 21836);
+			case 53 :
+				return("Earth Wave", 70, 3319);
+			case 54 :
+				return("Enfeeble", 73, 3320);
+			case 55 :
+				return("Teleother Lumbridge", 74, 4553);
+			case 56 :
+				return("Fire Wave", 75, 3321);
+			case 57 :
+				return("Entangle", 79, 3322);
+			case 58 :
+				return("Stun", 80, 3324);
+			case 59 :
+				return("Charge<br>(after Mage Arena)", 80, 3323);
+			case 60 :
+				return("Wind Surge", 81, 21876);
+			case 61 :
+				return("Teleother Falador", 82, 4554);
+			case 62 :
+				return("Water Surge", 85, 21877);
+			case 63 :
+				return("Tele block", 85, 4555);
+			case 64 :
+				return("Teleport to Bounty Target", 85, 17152);
+			case 65 :
+				return("Level 6 enchant", 87, 6567);
+			case 66 :
+				return("Earth Surge", 90, 21878);
+			case 67 :
+				return("Teleother Camelot", 90, 4556);
+			case 68 :
+				return("Level 7 enchant", 93, 19475);
+			case 69 :
+				return("Fire Surge", 95, 21879);
+			else :
+				return("", -1, -1);
+		}
+	case 1 :
+		switch ($int1) {
+			case 0 :
+				return("Ancient magicks are available after<br>completing the Desert Treasure quest.", -1, 4675);
+			case 1 :
+				return("Home teleport (Edgeville)", -1, 11142);
+			case 2 :
+				return("Smoke rush", 50, 4629);
+			case 3 :
+				return("Shadow rush", 52, 4630);
+			case 4 :
+				return("Paddewwa teleport", 54, 4631);
+			case 5 :
+				return("Blood rush", 56, 4632);
+			case 6 :
+				return("Ice rush", 58, 4633);
+			case 7 :
+				return("Senntisten teleport", 60, 4634);
+			case 8 :
+				return("Smoke burst", 62, 4635);
+			case 9 :
+				return("Shadow burst", 64, 4636);
+			case 10 :
+				return("Kharyll teleport", 66, 4637);
+			case 11 :
+				return("Blood burst", 68, 4638);
+			case 12 :
+				return("Ice burst", 70, 4639);
+			case 13 :
+				return("Lassar teleport", 72, 4640);
+			case 14 :
+				return("Smoke blitz", 74, 4641);
+			case 15 :
+				return("Shadow blitz", 76, 4642);
+			case 16 :
+				return("Dareeyak teleport", 78, 4643);
+			case 17 :
+				return("Blood blitz", 80, 4644);
+			case 18 :
+				return("Ice blitz", 82, 4645);
+			case 19 :
+				return("Carrallangar teleport", 84, 4646);
+			case 20 :
+				return("Teleport to Bounty Target", 85, 17152);
+			case 21 :
+				return("Smoke barrage", 86, 4647);
+			case 22 :
+				return("Shadow barrage", 88, 4648);
+			case 23 :
+				return("Annakarl teleport", 90, 4649);
+			case 24 :
+				return("Blood barrage", 92, 4650);
+			case 25 :
+				return("Ice barrage", 94, 4651);
+			case 26 :
+				return("Ghorrock teleport", 96, 4652);
+			else :
+				return("", -1, -1);
+		}
+	case 2 :
+		switch ($int1) {
+			case 0 :
+				return("Lunar spells are available after<br>completing the Lunar Diplomacy quest.", -1, 9084);
+			case 1 :
+				return("Home teleport (Lunar Isle)", -1, 11143);
+			case 2 :
+				return("Bake pie", 65, 9107);
+			case 3 :
+				return("Geomancy", 65, 6797);
+			case 4 :
+				return("Cure plant", 66, 9108);
+			case 5 :
+				return("Monster examine<br>(after Dream Mentor)", 66, 11144);
+			case 6 :
+				return("NPC Contact", 67, 9109);
+			case 7 :
+				return("Cure other", 68, 9110);
+			case 8 :
+				return("Humidify<br>(after Dream Mentor)", 68, 11145);
+			case 9 :
+				return("Moonclan teleport", 69, 9111);
+			case 10 :
+				return("Tele group Moonclan", 70, 9112);
+			case 11 :
+				return("Cure me", 71, 9113);
+			case 12 :
+				return("Hunter kit<br>(after Dream Mentor)", 71, 11146);
+			case 13 :
+				return("Ourania teleport", 71, 20759);
+			case 14 :
+				return("Waterbirth teleport", 72, 9114);
+			case 15 :
+				return("Tele group Waterbirth", 73, 9115);
+			case 16 :
+				return("Cure group", 74, 9116);
+			case 17 :
+				return("Stat spy<br>(after Dream Mentor)", 75, 11147);
+			case 18 :
+				return("Barbarian teleport", 75, 9117);
+			case 19 :
+				return("Tele group Barbarian", 76, 9118);
+			case 20 :
+				return("Spin Flax", 76, 20589);
+			case 21 :
+				return("Superglass make", 77, 9119);
+			case 22 :
+				return("Tan Leather", 78, 1741);
+			case 23 :
+				return("Khazard teleport", 78, 9120);
+			case 24 :
+				return("Tele group Khazard", 79, 9121);
+			case 25 :
+				return("Dream<br>(after Dream Mentor)", 79, 11148);
+			case 26 :
+				return("String jewellery", 80, 9122);
+			case 27 :
+				return("Stat restore pot share", 81, 9123);
+			case 28 :
+				return("Magic imbue", 82, 9124);
+			case 29 :
+				return("Fertile soil", 83, 9125);
+			case 30 :
+				return("Boost potion share", 84, 9126);
+			case 31 :
+				return("Fishing guild teleport", 85, 9127);
+			case 32 :
+				return("Teleport to Bounty Target", 85, 17152);
+			case 33 :
+				return("Tele group fishing guild", 86, 9128);
+			case 34 :
+				return("Plank make<br>(after Dream Mentor)", 86, 11149);
+			case 35 :
+				return("Catherby teleport", 87, 9129);
+			case 36 :
+				return("Tele group Catherby", 88, 9130);
+			case 37 :
+				return("Recharge Dragonstone", 89, 2529);
+			case 38 :
+				return("Ice plateau teleport", 89, 9131);
+			case 39 :
+				return("Tele group Ice plateau", 90, 9132);
+			case 40 :
+				return("Energy transfer", 91, 9133);
+			case 41 :
+				return("Heal other", 92, 9134);
+			case 42 :
+				return("Vengeance other", 93, 9135);
+			case 43 :
+				return("Vengeance", 94, 9136);
+			case 44 :
+				return("Heal group", 95, 9137);
+			case 45 :
+				return("Spellbook swap<br>(after Dream Mentor)", 96, 11150);
+			else :
+				return("", -1, -1);
+		}
+	case 3 :
+		switch ($int1) {
+			case 0 :
+				return("Arceuus spells are unlocked<br>in Arceuus.", -1, 13578);
+			case 1 :
+				return("Home teleport (Dark Altar)", -1, 21835);
+			case 2 :
+				return("Reanimate goblins", 3, 11997);
+			case 3 :
+				return("Lumbridge Graveyard teleport", 6, 20409);
+			case 4 :
+				return("Reanimate monkeys", 7, 2885);
+			case 5 :
+				return("Reanimate imps", 12, 6208);
+			case 6 :
+				return("Reanimate minotaurs", 16, 6888);
+			case 7 :
+				return("Draynor Manor teleport", 17, 20410);
+			case 8 :
+				return("Reanimate scorpions", 19, 15297);
+			case 9 :
+				return("Reanimate bears", 21, 15309);
+			case 10 :
+				return("Reanimate unicorns", 22, 15303);
+			case 11 :
+				return("Battlefront teleport", 23, 22779);
+			case 12 :
+				return("Reanimate dogs", 26, 15304);
+			case 13 :
+				return("Mind Altar teleport", 28, 20411);
+			case 14 :
+				return("Reanimate chaos druids", 30, 15344);
+			case 15 :
+				return("Respawn teleport", 34, 8092);
+			case 16 :
+				return("Reanimate giants", 37, 15345);
+			case 17 :
+				return("Salve Graveyard teleport", 40, 20412);
+			case 18 :
+				return("Reanimate ogres", 40, 15346);
+			case 19 :
+				return("Reanimate elves", 43, 8796);
+			case 20 :
+				return("Reanimate trolls", 46, 10511);
+			case 21 :
+				return("Fenkenstrain's Castle teleport", 48, 20413);
+			case 22 :
+				return("Reanimate horrors", 52, 20762);
+			case 23 :
+				return("Reanimate kalphite", 57, 20763);
+			case 24 :
+				return("West Ardougne teleport", 61, 20414);
+			case 25 :
+				return("Reanimate dagannoth", 62, 21826);
+			case 26 :
+				return("Reanimate bloodveld", 65, 21829);
+			case 27 :
+				return("Harmony Island teleport", 65, 20419);
+			case 28 :
+				return("Reanimate TzHaar", 69, 21832);
+			case 29 :
+				return("Cemetery teleport", 71, 20420);
+			case 30 :
+				return("Reanimate demons", 72, 20392);
+			case 31 :
+				return("Reanimate aviansie", 78, 20398);
+			case 32 :
+				return("Resurrect crops", 78, 20391);
+			case 33 :
+				return("Barrows teleport", 83, 20404);
+			case 34 :
+				return("Reanimate abyssal demons", 85, 20399);
+			case 35 :
+				return("Ape Atoll teleport", 90, 20427);
+			case 36 :
+				return("Reanimate dragons", 93, 20400);
+			else :
+				return("", -1, -1);
+		}
+	case 4 :
+		switch ($int1) {
+			case 0 :
+				return("Wizard boots", 20, 2579);
+			case 1 :
+				return("Xerician armour<br> (with 10 Defence)", 20, 13385);
+			case 2 :
+				return("Elder chaos druid robes", 40, 20517);
+			case 3 :
+				return("Mystic robes<br> (with 20 Defence)", 40, 4091);
+			case 4 :
+				return("Enchanted robes<br> (with 20 Defence)", 40, 7399);
+			case 5 :
+				return("Robes of darkness<br> (with 20 Defence)", 40, 20131);
+			case 6 :
+				return("Splitbark armour<br> (with 40 Defence)", 40, 3387);
+			case 7 :
+				return("Skeletal armour<br> (after The Fremmenik Trials, with 40 Defence)", 40, 6139);
+			case 8 :
+				return("Void Knight equipment<br>(with 42 combat stats and 22 Prayer)", 42, 8839);
+			case 9 :
+				return("Infinity robes<br> (with 25 Defence)", 50, 6916);
+			case 10 :
+				return("God capes<br> (after Mage Arena)", 60, 2413);
+			case 11 :
+				return("Lunar armour<br> (after Lunar Diplomacy, with 40 Defence)", 65, 9097);
+			case 12 :
+				return("3rd age robes<br> (with 30 Defence)", 65, 10338);
+			case 13 :
+				return("Occult necklace", 70, 12002);
+			case 14 :
+				return("Ahrims robes<br> (with 70 Defence)", 70, 4712);
+			case 15 :
+				return("Boots of brimstone<br> (with 70 Defence and Ranged)", 70, 22951);
+			case 16 :
+				return("Eternal boots<br> (with 75 Defence)", 75, 13235);
+			case 17 :
+				return("Ancestral robes<br> (with 65 Defence)", 75, 21021);
+			else :
+				return("", -1, -1);
+		}
+	case 5 :
+		switch ($int1) {
+			case 0 :
+				return("Opal-tipped crossbow bolts<br>1 cosmic + 2 air runes", 4, 9236);
+			case 1 :
+				return("Sapphire-tipped crossbow bolts<br>1 cosmic + 1 water + 1 mind rune", 7, 9240);
+			case 2 :
+				return("Jade-tipped crossbow bolts<br>1 cosmic + 2 earth runes", 14, 9237);
+			case 3 :
+				return("Pearl-tipped crossbow bolts<br>1 cosmic + 2 water runes", 24, 9238);
+			case 4 :
+				return("Emerald-tipped crossbow bolts<br>1 cosmic + 3 air + 1 nature rune", 27, 9241);
+			case 5 :
+				return("Red topaz-tipped crossbow bolts<br>1 cosmic + 2 blood runes", 29, 9239);
+			case 6 :
+				return("Ruby-tipped crossbow bolts<br>1 cosmic + 5 fire + 1 blood rune", 49, 9242);
+			case 7 :
+				return("Diamond-tipped crossbow bolts<br>1 cosmic + 10 earth + 2 law runes", 57, 9243);
+			case 8 :
+				return("Dragonstone-tipped crossbow bolts<br>1 cosmic + 15 earth + 1 soul rune", 68, 9244);
+			case 9 :
+				return("Onyx-tipped crossbow bolts<br>1 cosmic + 20 fire + 1 death rune", 87, 9245);
+			else :
+				return("", -1, -1);
+		}
+	case 6 :
+		switch ($int1) {
+			case 0 :
+				return("Battlestaves (with 30 Attack)", 30, 1391);
+			case 1 :
+				return("Bryophyta's staff (with 30 Attack)", 30, 22370);
+			case 2 :
+				return("Mystic staves (with 40 Attack)", 40, 1405);
+			case 3 :
+				return("Void Knight equipment<br>(with 42 combat stats and 22 Prayer)", 42, 8841);
+			case 4 :
+				return("Beginner wand", 45, 6908);
+			case 5 :
+				return("Apprentice wand", 50, 6910);
+			case 6 :
+				return("Ancient staff<br> (after Desert Treasure, with 50 Attack)", 50, 4675);
+			case 7 :
+				return("Slayer's staff<br> (with 55 Slayer)", 50, 4170);
+			case 8 :
+				return("Teacher wand", 55, 6912);
+			case 9 :
+				return("Master wand", 60, 6914);
+			case 10 :
+				return("Thammaron's Sceptre", 60, 22555);
+			case 11 :
+				return("God staves<br> (after Mage Arena)", 60, 2416);
+			case 12 :
+				return("TokTz-Mej-Tal<br> (with 60 Attack)", 60, 6526);
+			case 13 :
+				return("3rd age wand", 65, 12422);
+			case 14 :
+				return("Ahrim's staff<br> (with 70 Attack)", 70, 4710);
+			case 15 :
+				return("Staff of the Dead (with 75 Attack)", 75, 11791);
+			case 16 :
+				return("Staff of Light (with 75 Attack)", 75, 22296);
+			case 17 :
+				return("Trident of the Seas", 75, 11905);
+			case 18 :
+				return("Kodai Wand", 75, 21006);
+			case 19 :
+				return("Slayer's staff (e)<br> (with 55 Slayer)", 75, 21255);
+			case 20 :
+				return("Sanguinesti staff", 75, 22323);
+			else :
+				return("", -1, -1);
+		}
+	case 7 :
+		if ($int1 = 0) {
+			return("Tome of Fire", 50, 20714);
+		} else if ($int1 = 1) {
+			return("Make Ancient Wyvern shield", 66, 21633);
+		} else if ($int1 = 2) {
+			return("Wield Ancient Wyvern shield", 70, 21633);
+		} else {
+			return("", -1, -1);
+		}
+	case 8 :
+		return(~skill_guide_salamanders($int1));
+	else :
+		return("", -1, -1);
+}

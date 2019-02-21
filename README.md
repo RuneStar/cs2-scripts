@@ -2790,3 +2790,5 @@
 [**2787**](scripts/[clientscript,barrows_puzzle_init].cs2) `[clientscript,barrows_puzzle_init]`  
 [**2788**](scripts/[proc,barrows_puzzle_buttoninit].cs2) `[proc,barrows_puzzle_buttoninit]`  
 [**2789**](scripts/[clientscript,barrows_puzzle_buttonhover].cs2) `[clientscript,barrows_puzzle_buttonhover]`  
+[**2790**](scripts/script2790.cs2)  
+[**2791**](scripts/script2791.cs2)  

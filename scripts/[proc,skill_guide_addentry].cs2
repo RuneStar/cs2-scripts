@@ -13,24 +13,43 @@ if ($int0 > 0) {
 	cc_settext("");
 }
 cc_create($component3, ^iftype_graphic, $int6);
-cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(28, $int7, ^setpos_abs_left, ^setpos_abs_top);
-cc_setoutline(1);
-cc_setgraphicshadow(0x604e32);
-cc_setobject($obj1, -1);
+def_int $int8 = 36;
+def_int $int9 = 32;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 1;
+def_int $colour13 = 0x604e32;
+def_graphic $graphic14 = null;
+if (%varbit4371 = 4) {
+	$graphic14 = oc_param($obj1, 597);
+	if ($graphic14 ! null) {
+		$colour13 = ^black;
+		$int12 = 0;
+		$int11 = 0;
+		$int10 = 6;
+		$int9 = 24;
+		$int8 = 24;
+	}
+}
+cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(28 + $int10), calc($int7 + $int11), ^setpos_abs_left, ^setpos_abs_top);
+cc_setoutline($int12);
+cc_setgraphicshadow($colour13);
+if ($graphic14 ! null) {
+	cc_setgraphic($graphic14);
+} else {
+	cc_setobject($obj1, -1);
+}
 if (((%varbit4371 = 22) & ($int5 >= 1)) & ($int5 <= 11)) {
 	cc_setop(1, "Check materials");
 }
 cc_create($component2, ^iftype_text, calc(($int6 * 2) + 1));
-def_int $int8 = calc(paraheight($int4, p12_full, $string0) * 15);
-if ($int8 < 32) {
-	$int8 = 32;
-}
-cc_setsize($int4, $int8, ^setsize_abs, ^setsize_abs);
+$int9 = ~max(calc(paraheight($int4, p12_full, $string0) * 15), 32);
+cc_setsize($int4, $int9, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(if_getwidth($component2) - $int4), $int7, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_setcolour(0x46320a);
 cc_settextfont(p12_full);
 cc_settextshadow(false);
 cc_settext($string0);
-return(calc($int7 + $int8));
+return(calc($int7 + $int9));

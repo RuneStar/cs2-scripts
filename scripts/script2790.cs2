@@ -1,0 +1,24 @@
+// 2790
+script2790(int $int0)(string, int)
+switch ($int0) {
+	case 0 :
+		return("Normal Spells", 0);
+	case 1 :
+		return("Ancient Magicks", 1);
+	case 2 :
+		return("Lunar Spells", 1);
+	case 3 :
+		return("Arceuus Spells", 1);
+	case 4 :
+		return("Armour", 1);
+	case 5 :
+		return("Bolts", 1);
+	case 6 :
+		return("Weapons", 1);
+	case 7 :
+		return("Equipment", 1);
+	case 8 :
+		return("Salamanders", 1);
+	else :
+		return("", -1);
+}

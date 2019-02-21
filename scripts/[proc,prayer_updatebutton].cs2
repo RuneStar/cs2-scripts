@@ -12,15 +12,6 @@ switch ($int1) {
 		if_setonvartransmit("prayer_updatebutton($boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4){var83, var1377, var284}", $component2);
 }
 if_setonop("prayer_op(event_opindex, $boolean0, $int1, $component2, cc_getid, .cc_getid, $component3, $component4)", $component2);
-if (($int1 = 8) & (((~high_risk_world = 1) | (~deadman_world = 1)) | (%varbit5314 = 1))) {
-	.cc_settrans(100);
-	.cc_create($component2, ^iftype_graphic, 2);
-	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-	.cc_setposition(5, 4, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setgraphic("pvpw_icons,1");
-} else {
-	.cc_settrans(0);
-}
 if_clearops($component2);
 if ($boolean0 = true) {
 	if_setop(2, "Info", $component2);
@@ -47,5 +38,14 @@ if (($boolean0 = false) & (%varbit5711 = 0)) {
 } else {
 	if_setonmouserepeat(null, $component2);
 	if_setonmouseleave(null, $component2);
+}
+if (($int1 = 8) & (((~high_risk_world = 1) | (~deadman_world = 1)) | (%varbit5314 = 1))) {
+	.cc_settrans(100);
+	.cc_create($component2, ^iftype_graphic, 2);
+	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setgraphic("pvpw_icons,1");
+} else {
+	.cc_settrans(0);
 }
 return;
