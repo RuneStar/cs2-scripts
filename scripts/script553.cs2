@@ -8,28 +8,28 @@ def_string $string2 = "";
 def_int $int2 = -1;
 def_int $int3 = ^int_min;
 def_int $int4 = ^int_min;
-def_int $int5 = 0;
+def_int $chattype5 = ^chattype_gamemessage;
 def_int $int6 = 0;
-while ($int5 <= 107) {
-	if (chat_gethistorylength($int5) > 0) {
-		$int0, $int1, $int6, $string0, $string1, $string2 = chat_gethistory_bytypeandline($int5, 0);
+while ($chattype5 <= ^chattype_10sectimeout) {
+	if (chat_gethistorylength($chattype5) > 0) {
+		$int0, $int1, $int6, $string0, $string1, $string2 = chat_gethistory_bytypeandline($chattype5, 0);
 		if (($int1 > $int3) | ($int0 > $int2)) {
 			$int3 = $int1;
 			$int2 = $int0;
 		}
-		switch ($int5) {
-			case 3, 6, 7 :
+		switch ($chattype5) {
+			case ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat :
 				if ($int1 > $int4) {
 					$int4 = $int1;
 					%varcstring0 = removetags($string0);
 				}
-			case 14 :
+			case ^chattype_broadcast :
 				if ((($int0 ! -1) & ($int1 >= %varcint202)) & ($int1 > calc(clientclock - 3000))) {
 					%varcint55 = $int1;
 					if_setontimer("script664(false)", 162:0);
 				}
 		}
 	}
-	$int5 = calc($int5 + 1);
+	$chattype5 = calc($chattype5 + 1);
 }
 return($int2);

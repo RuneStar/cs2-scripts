@@ -47,8 +47,8 @@ def_string $string1 = "";
 def_int $int14 = 0;
 def_string $string2 = "";
 def_string $string3 = "";
-if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (chat_gethistorylength(14) > 0)) {
-	$int12, $int13, $int14, $string1, $string2, $string0 = chat_gethistory_bytypeandline(14, 0);
+if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (chat_gethistorylength(^chattype_broadcast) > 0)) {
+	$int12, $int13, $int14, $string1, $string2, $string0 = chat_gethistory_bytypeandline(^chattype_broadcast, 0);
 	if ($int12 ! -1) {
 		$string0, $string3 = ~script2066($string0);
 		$int7 = calc($int7 + ~script199($int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^yellow, true, $string0));
@@ -70,25 +70,25 @@ if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (c
 	}
 }
 $int12 = $int0;
-def_int $int15 = 0;
+def_int $chattype15 = ^chattype_gamemessage;
 if ((%var287 = 1) & ((%varcint41 ! -1) | (%varbit4089 = 0))) {
 	while ((($int12 ! -1) & ($component10 ! null)) & (calc($int7 - $int4) < 57)) {
-		$int15, $int13, $int14, $string1, $string2, $string0 = chat_gethistory_byuid($int12);
-		if (~pm_filtertest($int15, $int13, $int14, $string1) = 1) {
-			switch ($int15) {
-				case 3, 7 :
+		$chattype15, $int13, $int14, $string1, $string2, $string0 = chat_gethistory_byuid($int12);
+		if (~pm_filtertest($chattype15, $int13, $int14, $string1) = 1) {
+			switch ($chattype15) {
+				case ^chattype_privatechat, ^chattype_modprivatechat :
 					$int7 = calc($int7 + ~script203($int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true, "From <$string1>:", $string0));
-				case 6 :
+				case ^chattype_privatechatout :
 					$int7 = calc($int7 + ~script203($int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true, "To <$string1>:", $string0));
 				else :
 					$int7 = calc($int7 + ~script199($int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true, $string0));
-					if (($int15 = 5) & (%varbit1627 = 0)) {
+					if (($chattype15 = ^chattype_loginlogoutnotification) & (%varbit1627 = 0)) {
 						%varcint65 = calc(($int13 + 500) + 1);
 						if_setontimer("script664(false)", 162:0);
 					}
 			}
 			if_clearops($component10);
-			if ((($int15 = 3) | ($int15 = 6)) | ($int15 = 7)) {
+			if ((($chattype15 = ^chattype_privatechat) | ($chattype15 = ^chattype_privatechatout)) | ($chattype15 = ^chattype_modprivatechat)) {
 				if ($int14 = 1) {
 					if_setop(8, "Message", $component10);
 				} else {

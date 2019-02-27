@@ -43,7 +43,7 @@ if (((%varcint41 = 0) | (%varcint41 = 2)) & (string_length(chat_getmessagefilter
 	$component8 = enum(int, component, 579, $int7);
 }
 def_int $int9 = $int0;
-def_int $int10 = 0;
+def_int $chattype10 = ^chattype_gamemessage;
 def_int $int11 = -1;
 def_string $string9 = "";
 def_string $string10 = "";
@@ -51,33 +51,33 @@ def_string $string11 = "";
 def_string $string12 = "";
 def_int $int12 = 0;
 while (($int9 ! -1) & ($component8 ! null)) {
-	$int10, $int11, $int12, $string9, $string10, $string11 = chat_gethistory_byuid($int9);
-	if ((~panetest($int10, $int12, $string9) = 1) & (~filtertest($int10, $int11, $int2, $int12, $string9, $string11, $string0) = 1)) {
-		switch ($int10) {
-			case 2, 1 :
+	$chattype10, $int11, $int12, $string9, $string10, $string11 = chat_gethistory_byuid($int9);
+	if ((~panetest($chattype10, $int12, $string9) = 1) & (~filtertest($chattype10, $int11, $int2, $int12, $string9, $string11, $string0) = 1)) {
+		switch ($chattype10) {
+			case ^chattype_publicchat, ^chattype_modchat :
 				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string9>:", "<$string1><$string11></col>");
-			case 90, 91 :
+			case ^chattype_autotyper, ^chattype_modautotyper :
 				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string9>:", "<$string3><$string11></col>");
-			case 3, 7 :
+			case ^chattype_privatechat, ^chattype_modprivatechat :
 				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "From <$string9>:", "<$string2><$string11></col>");
-			case 101 :
+			case ^chattype_tradereq :
 				$int6 = ~script199($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string7><$string11></col>");
-			case 5 :
+			case ^chattype_loginlogoutnotification :
 				$int6 = ~script199($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string2><$string11></col>");
 				if (%varbit1627 = 0) {
 					%varcint65 = calc(($int11 + 500) + 1);
 					if_setontimer("script664(false)", 162:0);
 				}
-			case 6 :
+			case ^chattype_privatechatout :
 				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "To <$string9>:", "<$string2><$string11></col>");
-			case 103, 104 :
+			case ^chattype_chalreq_trade, ^chattype_chalreq_friendschat :
 				$int6 = ~script199($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string8><$string11></col>");
-			case 9 :
+			case ^chattype_friendschat :
 				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "[<$string5><$string10></col>] <$string9>:", "<$string6><$string11></col>");
-			case 14 :
+			case ^chattype_broadcast :
 				$string11, $string12 = ~script2066($string11);
 				$int6 = ~script203($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "<$string4>Broadcast:</col>", $string11);
-			case 107 :
+			case ^chattype_10sectimeout :
 				if (calc(clientclock - $int11) > 500) {
 					$int6 = ~script199($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, "jk :P");
 				} else {
@@ -87,8 +87,8 @@ while (($int9 ! -1) & ($component8 ! null)) {
 				$int6 = ~script199($int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4, $string11);
 		}
 		if_clearops($component8);
-		switch ($int10) {
-			case 1, 2, 3, 6, 7, 9, 90, 91, 106 :
+		switch ($chattype10) {
+			case ^chattype_modchat, ^chattype_publicchat, ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat, ^chattype_friendschat, ^chattype_autotyper, ^chattype_modautotyper, ^chattype_playerrelated :
 				if_setopbase("<col=ffffff><$string9></col>", $component8);
 				if_setonop("chat_op(event_opindex, event_opbase)", $component8);
 				if_setonmouserepeat(null, $component8);
@@ -101,23 +101,23 @@ while (($int9 ! -1) & ($component8 ! null)) {
 						if_setop(7, "Add ignore", $component8);
 					}
 					if_setop(8, "Report", $component8);
-					if ((($int10 = 9) & (clan_getchatcount > 0)) & (clan_getchatrank >= clan_getchatminkick)) {
+					if ((($chattype10 = ^chattype_friendschat) & (clan_getchatcount > 0)) & (clan_getchatrank >= clan_getchatminkick)) {
 						if_setop(9, "Kick", $component8);
 					}
 				}
-			case 101 :
+			case ^chattype_tradereq :
 				if_setopbase("<col=ffffff><$string9></col>", $component8);
 				if_setonop("chat_op(event_opindex, event_opbase)", $component8);
 				if_setonmouserepeat(null, $component8);
 				if_setonmouseleave(null, $component8);
 				if_setop(1, "Accept trade", $component8);
-			case 103, 104 :
+			case ^chattype_chalreq_trade, ^chattype_chalreq_friendschat :
 				if_setopbase("<col=ffffff><$string9></col>", $component8);
 				if_setonop("chat_op(event_opindex, event_opbase)", $component8);
 				if_setonmouserepeat(null, $component8);
 				if_setonmouseleave(null, $component8);
 				if_setop(2, "Accept challenge", $component8);
-			case 14 :
+			case ^chattype_broadcast :
 				if (string_length($string12) > 0) {
 					if_setop(6, "Open", $component8);
 					if_setop(7, "Check", $component8);
