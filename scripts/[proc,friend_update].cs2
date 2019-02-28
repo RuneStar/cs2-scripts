@@ -15,14 +15,14 @@ def_int $int13 = 15;
 def_boolean $boolean14 = null;
 def_int $int15 = friend_count;
 if ($int15 <= -2) {
-	if (%varcint203 = 1) {
+	if (%varbit8119 = 1) {
 		if_settext("Loading friends list<br>Please wait...", $component7);
 	} else {
 		if_settext("You must set a name<br>before using this.", $component7);
 	}
 	if_sethide(true, $component0);
 } else if ($int15 = -1) {
-	if (%varcint203 = 1) {
+	if (%varbit8119 = 1) {
 		if_settext("Loading friends list<br>Please wait...", $component7);
 	} else {
 		if_settext("You must set a name<br>before using this.", $component7);

@@ -27,7 +27,7 @@ if (%varcint5 = 14) {
 				} else if (%varcint5 = 3) {
 					friend_del(%varcstring22);
 				} else if (%varcint5 = 6) {
-					if ((%varcint203 = 0) | (%varcint203 = -1)) {
+					if (%varbit8119 = 0) {
 						~meslayer_close(1, 1);
 						mes("You must set a name before you can chat.");
 						return;
@@ -55,7 +55,7 @@ if (%varcint5 = 14) {
 			case 9, 15 :
 				resume_stringdialog(%varcstring22);
 			case 10 :
-				if ((%varcint203 = 0) | (%varcint203 = -1)) {
+				if (%varbit8119 = 0) {
 					~meslayer_close(1, 1);
 					mes("You must set a name before you can chat.");
 					return;
@@ -72,7 +72,7 @@ if (%varcint5 = 14) {
 				chat_setmessagefilter(lowercase($string0));
 				~rebuildchatbox(~script553);
 			case 13 :
-				if ((%varcint203 = 0) | (%varcint203 = -1)) {
+				if (%varbit8119 = 0) {
 					~meslayer_close(1, 1);
 					mes("You must set a name before you can chat.");
 					return;

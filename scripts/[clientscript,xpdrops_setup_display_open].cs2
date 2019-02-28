@@ -1,31 +1,31 @@
 // 1030
-[clientscript,xpdrops_setup_display_open](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22)
+[clientscript,xpdrops_setup_display_open](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24)
 sound_synth(2266, 1, 0);
 if_sethide(true, $component6);
 ~deltooltip_action($component6);
 ~xpdrops_setup_display_hoverdisable($component0);
 if_sethide(false, $component3);
-def_int $int23 = if_getx($component0);
-def_int $int24 = if_gety($component0);
-def_component $component25 = if_getlayer($component0);
-while ($component25 ! $component2) {
-	$int24 = calc(($int24 + if_gety($component25)) - if_getscrolly($component25));
-	$int23 = calc(($int23 + if_getx($component25)) - if_getscrollx($component25));
-	$component25 = if_getlayer($component25);
+def_int $int25 = if_getx($component0);
+def_int $int26 = if_gety($component0);
+def_component $component27 = if_getlayer($component0);
+while ($component27 ! $component2) {
+	$int26 = calc(($int26 + if_gety($component27)) - if_getscrolly($component27));
+	$int25 = calc(($int25 + if_getx($component27)) - if_getscrollx($component27));
+	$component27 = if_getlayer($component27);
 }
-$int24 = calc(($int24 + if_getheight($component0)) - 1);
-if_setposition($int23, $int24, ^setpos_abs_left, ^setpos_abs_top, $component4);
-def_int $int26 = 15;
+$int26 = calc(($int26 + if_getheight($component0)) - 1);
+if_setposition($int25, $int26, ^setpos_abs_left, ^setpos_abs_top, $component4);
+def_int $int28 = 15;
 if (~on_mobile = true) {
-	$int26 = scale(8, 5, $int26);
+	$int28 = scale(8, 5, $int28);
 }
 .cc_create($component1, ^iftype_rectangle, 0);
-.cc_setsize(0, calc($int26 + 2), ^setsize_minus, ^setsize_abs);
+.cc_setsize(0, calc($int28 + 2), ^setsize_minus, ^setsize_abs);
 .cc_setfill(true);
 .cc_setcolour(^white);
 .cc_settrans(200);
 .cc_sethide(true);
-def_int $int27 = 0;
+def_int $int29 = 0;
 if ($component1 = $component8) {
 	if_sethide(false, $component8);
 	if_sethide(true, $component10);
@@ -35,7 +35,8 @@ if ($component1 = $component8) {
 	if_sethide(true, $component18);
 	if_sethide(true, $component20);
 	if_sethide(true, $component22);
-	$int27 = ~script1031($component1, 1164, 3, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22);
+	if_sethide(true, $component24);
+	$int29 = ~script1031($component1, 1164, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);
 } else if ($component1 = $component10) {
 	if_sethide(true, $component8);
 	if_sethide(false, $component10);
@@ -45,7 +46,8 @@ if ($component1 = $component8) {
 	if_sethide(true, $component18);
 	if_sethide(true, $component20);
 	if_sethide(true, $component22);
-	$int27 = ~script1031($component1, 1165, 3, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22);
+	if_sethide(true, $component24);
+	$int29 = ~script1031($component1, 1165, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);
 } else if ($component1 = $component12) {
 	if_sethide(true, $component8);
 	if_sethide(true, $component10);
@@ -55,7 +57,8 @@ if ($component1 = $component8) {
 	if_sethide(true, $component18);
 	if_sethide(true, $component20);
 	if_sethide(true, $component22);
-	$int27 = ~script1031($component1, 1166, 4, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22);
+	if_sethide(true, $component24);
+	$int29 = ~script1031($component1, 1166, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);
 } else if ($component1 = $component14) {
 	if_sethide(true, $component8);
 	if_sethide(true, $component10);
@@ -65,7 +68,8 @@ if ($component1 = $component8) {
 	if_sethide(true, $component18);
 	if_sethide(true, $component20);
 	if_sethide(true, $component22);
-	$int27 = ~script1032($component1, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22);
+	if_sethide(true, $component24);
+	$int29 = ~script1032($component1, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);
 } else if ($component1 = $component16) {
 	if_sethide(true, $component8);
 	if_sethide(true, $component10);
@@ -75,7 +79,8 @@ if ($component1 = $component8) {
 	if_sethide(true, $component18);
 	if_sethide(true, $component20);
 	if_sethide(true, $component22);
-	$int27 = ~script1032($component1, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22);
+	if_sethide(true, $component24);
+	$int29 = ~script1032($component1, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);
 } else if ($component1 = $component18) {
 	if_sethide(true, $component8);
 	if_sethide(true, $component10);
@@ -85,7 +90,8 @@ if ($component1 = $component8) {
 	if_sethide(false, $component18);
 	if_sethide(true, $component20);
 	if_sethide(true, $component22);
-	$int27 = ~script1031($component1, 1168, 8, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22);
+	if_sethide(true, $component24);
+	$int29 = ~script1031($component1, 1168, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);
 } else if ($component1 = $component20) {
 	if_sethide(true, $component8);
 	if_sethide(true, $component10);
@@ -95,7 +101,8 @@ if ($component1 = $component8) {
 	if_sethide(true, $component18);
 	if_sethide(false, $component20);
 	if_sethide(true, $component22);
-	$int27 = ~script1031($component1, 1170, 2, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22);
+	if_sethide(true, $component24);
+	$int29 = ~script1031($component1, 1170, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);
 } else if ($component1 = $component22) {
 	if_sethide(true, $component8);
 	if_sethide(true, $component10);
@@ -105,17 +112,29 @@ if ($component1 = $component8) {
 	if_sethide(true, $component18);
 	if_sethide(true, $component20);
 	if_sethide(false, $component22);
-	$int27 = ~script1031($component1, 1140, 3, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22);
+	if_sethide(true, $component24);
+	$int29 = ~script1031($component1, 1140, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);
+} else if ($component1 = $component24) {
+	if_sethide(true, $component8);
+	if_sethide(true, $component10);
+	if_sethide(true, $component12);
+	if_sethide(true, $component14);
+	if_sethide(true, $component16);
+	if_sethide(true, $component18);
+	if_sethide(true, $component20);
+	if_sethide(true, $component22);
+	if_sethide(false, $component24);
+	$int29 = ~script1031($component1, 1625, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);
 }
-def_int $int28 = calc(($int27 * $int26) + 2);
-def_int $int29 = calc($int28 + 4);
-def_int $int30 = calc(if_getheight($component2) - $int24);
-if ($int29 > $int30) {
-	if_setsize(if_getwidth($component0), $int30, ^setsize_abs, ^setsize_abs, $component4);
+def_int $int30 = calc(($int29 * $int28) + 2);
+def_int $int31 = calc($int30 + 4);
+def_int $int32 = calc(if_getheight($component2) - $int26);
+if ($int31 > $int32) {
+	if_setsize(if_getwidth($component0), $int32, ^setsize_abs, ^setsize_abs, $component4);
 	if_setscrollpos(0, 0, $component1);
-	if_setscrollsize(0, $int28, $component1);
+	if_setscrollsize(0, $int30, $component1);
 } else {
-	if_setsize(if_getwidth($component0), $int29, ^setsize_abs, ^setsize_abs, $component4);
+	if_setsize(if_getwidth($component0), $int31, ^setsize_abs, ^setsize_abs, $component4);
 	if_setscrollpos(0, 0, $component1);
 	if_setscrollsize(0, 0, $component1);
 }

@@ -1105,7 +1105,7 @@
 [**1102**](scripts/[clientscript,bugreport_continue].cs2) `[clientscript,bugreport_continue]`  
 [**1103**](scripts/[clientscript,bugreport_submit].cs2) `[clientscript,bugreport_submit]`  
 [**1104**](scripts/[clientscript,snapshot_init].cs2) `[clientscript,snapshot_init]`  
-[**1105**](scripts/[clientscript,has_displayname].cs2) `[clientscript,has_displayname]`  
+[**1105**](scripts/[clientscript,skill_guide_sidepanelop].cs2) `[clientscript,skill_guide_sidepanelop]`  
 [**1106**](scripts/script1106.cs2)  
 [**1107**](scripts/[clientscript,options_hidepm_init].cs2) `[clientscript,options_hidepm_init]`  
 [**1108**](scripts/[clientscript,options_hidepm_resynch].cs2) `[clientscript,options_hidepm_resynch]`  
@@ -2494,12 +2494,12 @@
 [**2491**](scripts/[proc,duel_stake_setup_buttontext].cs2) `[proc,duel_stake_setup_buttontext]`  
 [**2492**](scripts/[proc,duel_stake_textbox].cs2) `[proc,duel_stake_textbox]`  
 [**2493**](scripts/script2493.cs2)  
-[**2494**](scripts/[proc,has_displayname].cs2) `[proc,has_displayname]`  
+[**2494**](scripts/[proc,skill_guide_subsection_prayer].cs2) `[proc,skill_guide_subsection_prayer]`  
 [**2495**](scripts/script2495.cs2)  
 [**2496**](scripts/script2496.cs2)  
 [**2497**](scripts/[clientscript,account_init].cs2) `[clientscript,account_init]`  
 [**2498**](scripts/[clientscript,account_info_update].cs2) `[clientscript,account_info_update]`  
-[**2499**](scripts/[proc,account_info_update].cs2) `[proc,account_info_update]`  
+[**2499**](scripts/[proc,skill_guide_data_prayer].cs2) `[proc,skill_guide_data_prayer]`  
 [**2500**](scripts/[clientscript,account_update_display].cs2) `[clientscript,account_update_display]`  
 [**2501**](scripts/[proc,account_update_display].cs2) `[proc,account_update_display]`  
 [**2502**](scripts/[proc,account_update_layout].cs2) `[proc,account_update_layout]`  

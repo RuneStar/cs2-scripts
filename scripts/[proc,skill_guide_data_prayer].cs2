@@ -1,0 +1,122 @@
+// 2499
+[proc,skill_guide_data_prayer](int $int0, int $int1)(string, int, int)
+switch ($int0) {
+	case 0 :
+		switch ($int1) {
+			case 0 :
+				return("While any of your prayers are active, your prayer points will drain. Once you have run out of prayer points, you will no longer be able to use prayers.<br>Visit an altar to recharge your prayer points.", -1, 3258);
+			case 1 :
+				return("Thick Skin", 1, 20803);
+			case 2 :
+				return("Burst of Strength", 4, 20804);
+			case 3 :
+				return("Clarity of Thought", 7, 20805);
+			case 4 :
+				return("Sharp Eye", 8, 20821);
+			case 5 :
+				return("Mystic Will", 9, 20822);
+			case 6 :
+				return("Rock Skin", 10, 20806);
+			case 7 :
+				return("Superhuman Strength", 13, 20807);
+			case 8 :
+				return("Improved Reflexes", 16, 20808);
+			case 9 :
+				return("Rapid Restore", 19, 20809);
+			case 10 :
+				return("Rapid Heal", 22, 20810);
+			case 11 :
+				return("Protect Item", 25, 20811);
+			case 12 :
+				return("Hawk Eye", 26, 20823);
+			case 13 :
+				return("Mystic Lore", 27, 20824);
+			case 14 :
+				return("Steel Skin", 28, 20812);
+			case 15 :
+				return("Ultimate Strength", 31, 20813);
+			case 16 :
+				return("Incredible Reflexes", 34, 20814);
+			case 17 :
+				return("Protect from Magic", 37, 20815);
+			case 18 :
+				return("Protect from Missiles", 40, 20816);
+			case 19 :
+				return("Protect from Melee", 43, 20817);
+			case 20 :
+				return("Eagle Eye", 44, 20825);
+			case 21 :
+				return("Mystic Might", 45, 20826);
+			case 22 :
+				return("Members: Retribution", 46, 20818);
+			case 23 :
+				return("Members: Redemption", 49, 20819);
+			case 24 :
+				return("Members: Smite", 52, 20820);
+			case 25 :
+				return("Members: Preserve", 55, 20831);
+			case 26 :
+				return("Members: Chivalry<br> (after King's Ransom)", 60, 20828);
+			case 27 :
+				return("Members: Piety<br> (after King's Ransom)", 70, 20829);
+			case 28 :
+				return("Members: Rigour<br> (with 70 Defence)", 74, 20827);
+			case 29 :
+				return("Members: Augury<br> (with 70 Defence)", 77, 20830);
+			else :
+				return("", -1, -1);
+		}
+	case 1 :
+		switch ($int1) {
+			case 0 :
+				return("Initiate armour<br> (after Recruitment Drive, with 20 Defence)", 10, 5574);
+			case 1 :
+				return("Proselyte armour<br> (after Slug Menace, with 30 Defence)", 20, 9672);
+			case 2 :
+				return("Vestment robe top", 20, 10458);
+			case 3 :
+				return("Vestment robe legs", 20, 10464);
+			case 4 :
+				return("Void Knight equipment<br>(with 42 combat stats)", 22, 8839);
+			case 5 :
+				return("Holy wraps", 31, 19997);
+			case 6 :
+				return("Holy sandals", 31, 12598);
+			case 7 :
+				return("Vestment cloak", 40, 10446);
+			case 8 :
+				return("Vestment mitre", 40, 10452);
+			case 9 :
+				return("Use completed prayer books<br>to bless holy and unholy symbols.", 50, 1716);
+			case 10 :
+				return("Use Bologa's grape blessings.", 50, 20747);
+			case 11 :
+				return("Spirit Shield<br>(with 45 Defence)", 55, 12829);
+			case 12 :
+				return("Vestment stole", 60, 10470);
+			case 13 :
+				return("Crozier", 60, 10440);
+			case 14 :
+				return("Blessed spirit shield<br>(with 70 Defence)", 60, 12831);
+			case 15 :
+				return("Devout boots", 60, 22954);
+			case 16 :
+				return("Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)", 70, 12825);
+			case 17 :
+				return("Elysian spirit shield<br>(with 75 Defence)", 75, 12817);
+			case 18 :
+				return("Dragonbone necklace", 80, 22111);
+			case 19 :
+				return("Bonecrusher necklace", 80, 22986);
+			else :
+				return("", -1, -1);
+		}
+	case 2 :
+		if ($int1 = 0) {
+			return("Use superior dragon bones", 70, 22124);
+		} else {
+			return("", -1, -1);
+		}
+	else :
+		return("", -1, -1);
+}

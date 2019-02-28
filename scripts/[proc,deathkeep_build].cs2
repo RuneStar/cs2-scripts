@@ -58,7 +58,7 @@ if ($int0 = 0) {
 			cc_setop(1, "Item:");
 			cc_setonop("deathkeep_infomessage(false, inv_getnum(468, $int4), oc_name($obj6))");
 			cc_setgraphicshadow(0x111111);
-			if (enum(obj, boolean, 879, $obj6) = true) {
+			if (enum(obj, boolean, 879, oc_uncert($obj6)) = true) {
 				cc_setoutline(2);
 				$int8 = 1;
 			} else {
@@ -85,7 +85,7 @@ if ($int0 = 0) {
 					cc_setop(1, "Item:");
 					cc_setonop("deathkeep_infomessage(false, $int11, oc_name($obj6))");
 					cc_setgraphicshadow(0x111111);
-					if (enum(obj, boolean, 879, $obj6) = true) {
+					if (enum(obj, boolean, 879, oc_uncert($obj6)) = true) {
 						cc_setoutline(2);
 						$int8 = 1;
 					} else {

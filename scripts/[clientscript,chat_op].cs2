@@ -11,20 +11,20 @@ if ($int0 = 1) {
 	~clan_sendkick($string1);
 } else if (friend_test($string1) = true) {
 	if (($int0 = 6) | ($int0 = 7)) {
-		if (%varcint203 = 1) {
+		if (%varbit8119 = 1) {
 			~meslayer_mode6($string1);
 		} else {
 			mes("You must set a name before you can do that.");
 		}
 	}
 } else if ($int0 = 6) {
-	if (%varcint203 = 1) {
+	if (%varbit8119 = 1) {
 		friend_add($string1);
 	} else {
 		mes("You must set a name before you can do that.");
 	}
 } else if ($int0 = 7) {
-	if (%varcint203 = 1) {
+	if (%varbit8119 = 1) {
 		ignore_add($string1);
 	} else {
 		mes("You must set a name before you can do that.");

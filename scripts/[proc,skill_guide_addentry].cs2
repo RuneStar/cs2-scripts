@@ -20,7 +20,16 @@ def_int $int11 = 0;
 def_int $int12 = 1;
 def_int $colour13 = 0x604e32;
 def_graphic $graphic14 = null;
-if (%varbit4371 = 4) {
+def_int $int15 = enum(obj, int, 496, $obj1);
+if ($int15 ! -1) {
+	$colour13 = ^black;
+	$int12 = 0;
+	$int11 = 0;
+	$int10 = 3;
+	$int9 = 30;
+	$int8 = 30;
+	$graphic14 = enum(int, graphic, 865, $int15);
+} else if (%varbit4371 = 4) {
 	$graphic14 = oc_param($obj1, 597);
 	if ($graphic14 ! null) {
 		$colour13 = ^black;
@@ -44,7 +53,7 @@ if (((%varbit4371 = 22) & ($int5 >= 1)) & ($int5 <= 11)) {
 	cc_setop(1, "Check materials");
 }
 cc_create($component2, ^iftype_text, calc(($int6 * 2) + 1));
-$int9 = ~max(calc(paraheight($int4, p12_full, $string0) * 15), 32);
+$int9 = ~max(~max(calc((paraheight($int4, p12_full, $string0) * 12) + 5), $int9), 32);
 cc_setsize($int4, $int9, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(if_getwidth($component2) - $int4), $int7, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);

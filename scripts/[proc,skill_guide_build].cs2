@@ -33,8 +33,10 @@ if ($int12 >= 2) {
 	while ($component11 ! null) {
 		if ($int9 < $int12) {
 			if_sethide(false, $component11);
+			if_setonop("skill_guide_sidepanelop(event_opindex, $int9, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7)", $component11);
 		} else {
 			if_sethide(true, $component11);
+			if_setonop(null, $component11);
 		}
 		$int9 = calc($int9 + 1);
 		$component11 = enum(int, component, 990, $int9);

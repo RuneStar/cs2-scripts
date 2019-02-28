@@ -1,0 +1,9 @@
+// 1105
+[clientscript,skill_guide_sidepanelop](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+if ($int0 ! 1) {
+	return;
+} else {
+	%varbit4372 = $int1;
+	~skill_guide_build($component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9);
+	return;
+}

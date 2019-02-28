@@ -2,7 +2,7 @@
 [clientscript,chatdefault_onkey](int $int0, char $char1)
 if ((if_gethide(162:55) = true) | (if_gethide(162:56) = true)) {
 	return;
-} else if (((%varcint203 = 0) | (%varcint203 = -1)) | (~script1701(-1, 162) = 0)) {
+} else if ((%varbit8119 = 0) | (~script1701(-1, 162) = 0)) {
 	return;
 } else {
 	def_int $int2 = string_length(%varcstring1);
