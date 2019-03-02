@@ -14,7 +14,7 @@ if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:13)) = fal
 			else :
 				%varcint181 = 0;
 		}
-		~script2333($int0, $int3);
+		~tob_partydetails_setsort($int0, $int3);
 	} else {
 		if_sethide(true, 50:30);
 		cc_create(50:27, ^iftype_text, 0);
@@ -49,6 +49,6 @@ if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:13)) = fal
 			~script1558(50:55, 50:0, 1939, -1, "<col=00ff00>Apply</col>");
 	}
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, 50:13);
-	if_setontimer("script2332(event_com, 50:13, 50:8, $string0, clientclock)", 50:0);
+	if_setontimer("tob_partydetails_autorefresh(event_com, 50:13, 50:8, $string0, clientclock)", 50:0);
 	return;
 }

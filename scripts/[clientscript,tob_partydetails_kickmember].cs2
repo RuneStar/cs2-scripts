@@ -1,0 +1,17 @@
+// 2319
+[clientscript,tob_partydetails_kickmember](int $int0, int $int1, component $component2, int $int3, int $int4, string $string0)
+if ($int0 ! 10) {
+	return;
+} else {
+	if ((cc_find($component2, $int3) = true) & (.cc_find(50:0, calc(enum_getoutputcount(1939) + $int1)) = true)) {
+		sound_synth(2266, 1, 0);
+		cc_settrans(200);
+		cc_setonmouserepeat(null);
+		cc_setonmouseleave(null);
+		cc_clearops;
+		cc_setonop(null);
+		cc_setontimer("tob_partydetails_timeout_kickmember(calc(clientclock + 80), $int1, event_com, event_comid, $string0, $int4)");
+		.cc_resume_pausebutton;
+	}
+	return;
+}

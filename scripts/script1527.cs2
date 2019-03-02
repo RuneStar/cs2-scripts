@@ -9,19 +9,19 @@ if (%varcint181 = $int2) {
 	cc_settrans(0);
 	if_setonmouserepeat("script1528(event_com, cc_getid, 120, 507:35, $string0)", $component0);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 0, 507:35)", $component0);
-	if_setonclick("script1529($int1, $int3)", $component0);
+	if_setonclick("raids_partydetails_clicksort($int1, $int3)", $component0);
 } else if (%varcint181 = $int1) {
 	cc_setgraphic("sortarrows,0");
 	cc_settrans(0);
 	if_setonmouserepeat("script1528(event_com, cc_getid, 120, 507:35, $string0)", $component0);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 0, 507:35)", $component0);
-	if_setonclick("script1529($int2, $int3)", $component0);
+	if_setonclick("raids_partydetails_clicksort($int2, $int3)", $component0);
 } else {
 	cc_setgraphic("sortarrows,0");
 	cc_settrans(100);
 	if_setonmouserepeat("script1528(event_com, cc_getid, 200, 507:35, $string0)", $component0);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 100, 507:35)", $component0);
-	if_setonclick("script1529($int1, $int3)", $component0);
+	if_setonclick("raids_partydetails_clicksort($int1, $int3)", $component0);
 }
 if_sethide(false, $component0);
 return;

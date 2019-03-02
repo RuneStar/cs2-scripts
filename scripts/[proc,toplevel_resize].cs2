@@ -45,9 +45,9 @@ if (%varbit4606 ! 0) {
 			if_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top, $component5);
 			if_setsize(calc($int6 + $int8), calc($int7 + $int9), ^setsize_minus, ^setsize_minus, $component4);
 			if_setsize(calc($int6 + $int8), calc($int7 + $int9), ^setsize_minus, ^setsize_minus, $component5);
-			~script910($enum1, enum(component, component, $enum1, 161:11), $component5, $int8, $int9);
+			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, 161:11), $component5, $int8, $int9);
 		} else {
-			~script910($enum1, enum(component, component, $enum1, 161:11), $component3, 0, 0);
+			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, 161:11), $component3, 0, 0);
 		}
 	}
 } else {
@@ -66,9 +66,9 @@ if (%varbit4606 ! 0) {
 			if_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top, $component5);
 			if_setsize(calc($int6 + $int8), calc($int7 + $int9), ^setsize_minus, ^setsize_minus, $component4);
 			if_setsize(calc($int6 + $int8), calc($int7 + $int9), ^setsize_minus, ^setsize_minus, $component5);
-			~script910($enum1, enum(component, component, $enum1, 161:11), $component5, $int8, $int9);
+			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, 161:11), $component5, $int8, $int9);
 		} else {
-			~script910($enum1, enum(component, component, $enum1, 161:11), $component3, 0, 0);
+			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, 161:11), $component3, 0, 0);
 		}
 	}
 }

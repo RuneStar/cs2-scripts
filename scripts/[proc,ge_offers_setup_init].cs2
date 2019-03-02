@@ -144,7 +144,7 @@ def_int $int29 = 0;
 def_int $int30 = 0;
 def_int $int31 = 0;
 def_int $int32 = 0;
-$int10, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32 = ~script807($int10, $component0, $component1, p11_full);
+$int10, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32 = ~ge_offers_initboxes($int10, $component0, $component1, p11_full);
 cc_create($component0, ^iftype_graphic, $int10);
 def_int $int33 = $int10;
 $int10 = calc($int10 + 1);

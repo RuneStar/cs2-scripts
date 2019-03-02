@@ -1,0 +1,22 @@
+// 667
+[proc,rune_pouch_drawpouch_slot](obj $obj0, int $int1)
+cc_clearops;
+cc_setontimer(null);
+if (($obj0 ! null) & ($int1 > 0)) {
+	cc_settrans(0);
+	cc_setobject($obj0, $int1);
+	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_setop(1, "Withdraw-1");
+	cc_setop(2, "Withdraw-5");
+	cc_setop(3, "Withdraw-All");
+	cc_setop(4, "Withdraw-X");
+	cc_setop(10, "Examine");
+	cc_setonop("script487(event_com, event_comid, 100, 0)");
+	cc_setondragcomplete("rune_pouch_pouchreorder(event_com, event_dragtarget, event_comid, event_dragtargetid)");
+} else {
+	cc_settrans(0);
+	cc_setobject(6512, 1);
+	cc_setonop(null);
+	cc_setondragcomplete(null);
+}
+return;

@@ -1,0 +1,6 @@
+// 1529
+[clientscript,raids_partydetails_clicksort](int $int0, int $int1)
+sound_synth(2266, 1, 0);
+%varcint181 = $int0;
+~raids_partydetails_setsort($int1);
+return;

@@ -27,7 +27,7 @@ if ((clientclock < %varcint223) & (~toplevel_getcomponents ! 1129)) {
 } else {
 	if_setontimer(null, 162:38);
 }
-if (~script921 = 0) {
+if (~toplevel_chatbox_maketransparent = 0) {
 	if_setnoclickthrough(true, 162:38);
 	if ($int1 = 0) {
 		cc_create(162:38, ^iftype_graphic, 0);
@@ -43,7 +43,7 @@ if (~script921 = 0) {
 		cc_setfill(true);
 	}
 	~script838(162:559, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1", 0);
-	if (~script2373 = 1) {
+	if (~toplevel_chatbox_controls_maketransparent = 1) {
 		if_settrans(255, 162:3);
 	} else {
 		if_settrans(0, 162:3);
