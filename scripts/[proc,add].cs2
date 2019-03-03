@@ -1,7 +1,7 @@
 // 673
 [proc,add](int $int0, int $int1)(int)
-if (calc(^int_max - $int0) < $int1) {
-	return(^int_max);
+if (calc(^max_32bit_int - $int0) < $int1) {
+	return(^max_32bit_int);
 } else {
 	return(calc($int0 + $int1));
 }

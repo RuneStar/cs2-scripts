@@ -11,7 +11,7 @@ if_setonmouseleave("decant_mouseover($component0, false, $obj2, $string0, $strin
 cc_create($component0, ^iftype_model, $int3);
 cc_setposition(0, -2, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(50, 44, ^setsize_abs, ^setsize_abs);
-cc_setobject_nonum($obj2, ^int_max);
+cc_setobject_nonum($obj2, ^max_32bit_int);
 $int3 = calc($int3 + 1);
 cc_create($component0, ^iftype_text, $int3);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);

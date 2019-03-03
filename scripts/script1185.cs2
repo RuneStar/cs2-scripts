@@ -8,7 +8,7 @@ if (%varbit4820 > %varbit4821) {
 } else {
 	$string0 = "<~script46(%varbit4820, ",")><br><~script46(%varbit4821, ",")>";
 }
-if (%varbit4822 >= ^int_max) {
+if (%varbit4822 >= ^max_32bit_int) {
 	if_settext("Your clan:<br>Opponents:<br>Starting soon...", $component0);
 	$string0 = append($string0, "<br>");
 } else if (%varbit4822 > 1) {

@@ -74,7 +74,7 @@ if_setonvartransmit("bankmain_build($component0, $component1, $component3, $comp
 %varcint51 = $int27;
 def_component $component31 = if_getlayer($component0);
 if ($component31 ! null) {
-	~bankmain_size_check($component0, $component31, ^int_min, ^int_min, $component7, $component6);
+	~bankmain_size_check($component0, $component31, ^min_32bit_int, ^min_32bit_int, $component7, $component6);
 }
 cc_deleteall($component18);
 cc_create($component18, ^iftype_model, 0);

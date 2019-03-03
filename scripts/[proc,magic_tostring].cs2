@@ -1,6 +1,6 @@
 // 20
 [proc,magic_tostring](int $int0)(string)
-if ($int0 >= ^int_max) {
+if ($int0 >= ^max_32bit_int) {
 	return("*");
 } else if ($int0 >= 10000000) {
 	return(append(tostring(calc($int0 / 1000000)), "M"));

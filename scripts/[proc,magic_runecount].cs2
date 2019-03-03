@@ -17,9 +17,9 @@ def_int $int5 = 0;
 switch ($obj0) {
 	case air_rune_556 :
 		if (%varbit4145 = 1) {
-			return(^int_max);
+			return(^max_32bit_int);
 		} else if (enum(obj, boolean, 988, $obj4) = true) {
-			return(^int_max);
+			return(^max_32bit_int);
 		} else if (~script234 = 1) {
 			return(inv_total(inv, air_rune_11688));
 		} else {
@@ -43,9 +43,9 @@ switch ($obj0) {
 		}
 	case water_rune_555 :
 		if (%varbit4145 = 1) {
-			return(^int_max);
+			return(^max_32bit_int);
 		} else if (enum(obj, boolean, 989, $obj4) = true) {
-			return(^int_max);
+			return(^max_32bit_int);
 		} else if (~script234 = 1) {
 			return(inv_total(inv, water_rune_11687));
 		} else {
@@ -69,9 +69,9 @@ switch ($obj0) {
 		}
 	case earth_rune_557 :
 		if (%varbit4145 = 1) {
-			return(^int_max);
+			return(^max_32bit_int);
 		} else if (enum(obj, boolean, 996, $obj4) = true) {
-			return(^int_max);
+			return(^max_32bit_int);
 		} else if (~script234 = 1) {
 			return(inv_total(inv, earth_rune_11689));
 		} else {
@@ -95,13 +95,13 @@ switch ($obj0) {
 		}
 	case fire_rune_554 :
 		if (%varbit4145 = 1) {
-			return(^int_max);
+			return(^max_32bit_int);
 		} else if (enum(obj, boolean, 997, $obj4) = true) {
-			return(^int_max);
+			return(^max_32bit_int);
 		} else if (~script234 = 1) {
 			return(inv_total(inv, fire_rune_11686));
 		} else if ((inv_getobj(worn, 5) = tome_of_fire_20714) & (map_members = true)) {
-			return(^int_max);
+			return(^max_32bit_int);
 		} else {
 			$int5 = inv_total(inv, fire_rune_554);
 			if (map_members = true) {
@@ -128,7 +128,7 @@ switch ($obj0) {
 			$int5 = inv_total(inv, nature_rune_561);
 			if (map_members = true) {
 				if ($obj4 = bryophytas_staff_22370) {
-					return(^int_max);
+					return(^max_32bit_int);
 				} else {
 					if (enum(int, namedobj, 982, $int1) = nature_rune_561) {
 						$int5 = ~add($int5, %varbit1624);
@@ -184,7 +184,7 @@ if (($obj6 ! null) & (~script234 = 1)) {
 	}
 } else if ((%varbit4145 = 1) & (enum(obj, int, 55, $obj0) ! 0)) {
 	if ((map_members = true) | (oc_members($obj0) = false)) {
-		return(^int_max);
+		return(^max_32bit_int);
 	} else {
 		return(0);
 	}

@@ -77,7 +77,7 @@ if (($inv14 = null) | (stockmarket_isofferempty($int13) = true)) {
 	}
 	def_int $int22 = 0;
 	if (cc_find($component0, $int7) = true) {
-		if (calc(^int_max / $int17) < $int19) {
+		if (calc(^max_32bit_int / $int17) < $int19) {
 			cc_settext("Lots of money");
 		} else {
 			$int22 = calc($int17 * $int19);

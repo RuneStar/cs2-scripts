@@ -4,13 +4,13 @@ def_string $string0 = "";
 def_string $string1 = ",";
 def_int $int3 = 0;
 if (($int1 >= 0) & ($int0 > 0)) {
-	if (calc(^int_max / $int0) < $int1) {
-		$int3 = ^int_max;
+	if (calc(^max_32bit_int / $int0) < $int1) {
+		$int3 = ^max_32bit_int;
 	} else {
 		$int3 = calc($int0 * $int1);
 	}
 	if ($int0 > 1) {
-		if (($int3 >= 0) & ($int3 < ^int_max)) {
+		if (($int3 >= 0) & ($int3 < ^max_32bit_int)) {
 			$string0 = "<~script46($int0, $string1)> x <~script46($int1, $string1)><br>= <~script46($int3, $string1)>";
 		} else {
 			$string0 = "<~script46($int0, $string1)> x <~script46($int1, $string1)>";

@@ -6,8 +6,8 @@ if ($obj2 = $obj0) {
 	return($int1);
 } else {
 	def_int $int3 = inv_total(inv, $obj2);
-	if (calc(^int_max - $int1) < $int3) {
-		return(^int_max);
+	if (calc(^max_32bit_int - $int1) < $int3) {
+		return(^max_32bit_int);
 	} else {
 		return(calc($int1 + $int3));
 	}

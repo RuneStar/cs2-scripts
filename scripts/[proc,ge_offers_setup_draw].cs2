@@ -66,7 +66,7 @@ if (%var1151 ! -1) {
 			cc_settext("<~script46(%varbit4398, $string0)> coins");
 		}
 	}
-	if ((%varbit4396 > 0) & (calc(^int_max / %varbit4396) < %varbit4398)) {
+	if ((%varbit4396 > 0) & (calc(^max_32bit_int / %varbit4396) < %varbit4398)) {
 		if (cc_find($component0, $int11) = true) {
 			cc_settext("<col=ff0000>Too much money!</col>");
 		}

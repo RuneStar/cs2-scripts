@@ -23,7 +23,7 @@ if ($obj1 ! null) {
 		cc_setmodel(2462);
 		cc_setmodelangle(0, -10, 440, 36, 0, 450);
 	} else {
-		cc_setobject_nonum($obj1, ^int_max);
+		cc_setobject_nonum($obj1, ^max_32bit_int);
 	}
 } else {
 	cc_create($component2, ^iftype_graphic, $int5);

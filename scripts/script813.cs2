@@ -5,8 +5,8 @@ def_int $int1 = 0;
 def_obj $obj2 = oc_cert(%var1151);
 if ($obj2 ! %var1151) {
 	$int1 = inv_total(inv, $obj2);
-	if (calc(^int_max - $int1) < $int0) {
-		$int0 = ^int_max;
+	if (calc(^max_32bit_int - $int1) < $int0) {
+		$int0 = ^max_32bit_int;
 	} else {
 		$int0 = calc($int0 + $int1);
 	}
@@ -14,8 +14,8 @@ if ($obj2 ! %var1151) {
 	$obj2 = oc_uncert(%var1151);
 	if ($obj2 ! %var1151) {
 		$int1 = inv_total(inv, $obj2);
-		if (calc(^int_max - $int1) < $int0) {
-			$int0 = ^int_max;
+		if (calc(^max_32bit_int - $int1) < $int0) {
+			$int0 = ^max_32bit_int;
 		} else {
 			$int0 = calc($int0 + $int1);
 		}

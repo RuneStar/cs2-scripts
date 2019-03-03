@@ -17,8 +17,8 @@ switch ($int0) {
 		$int1 = ~script716(magic_secateurs_7409);
 		if ($int1 > 0) {
 			$int4 = ~script716(secateurs_5329);
-			if (calc(^int_max - $int4) < $int1) {
-				return(^int_max, magic_secateurs_7409);
+			if (calc(^max_32bit_int - $int4) < $int1) {
+				return(^max_32bit_int, magic_secateurs_7409);
 			} else {
 				return(calc($int1 + $int4), magic_secateurs_7409);
 			}
@@ -32,8 +32,8 @@ switch ($int0) {
 			if ($obj3 ! null) {
 				$int1 = ~script716($obj3);
 				if ($int1 > 0) {
-					if (calc(^int_max - $int4) < $int1) {
-						$int4 = ^int_max;
+					if (calc(^max_32bit_int - $int4) < $int1) {
+						$int4 = ^max_32bit_int;
 					} else {
 						$int4 = calc($int4 + $int1);
 					}
@@ -57,8 +57,8 @@ switch ($int0) {
 			$obj6 = bottomless_compost_bucket_22994;
 		}
 		$int4 = ~script716(bottomless_compost_bucket_22994);
-		if (calc(^int_max - $int4) < $int1) {
-			$int4 = ^int_max;
+		if (calc(^max_32bit_int - $int4) < $int1) {
+			$int4 = ^max_32bit_int;
 		} else {
 			$int4 = calc($int4 + $int1);
 		}

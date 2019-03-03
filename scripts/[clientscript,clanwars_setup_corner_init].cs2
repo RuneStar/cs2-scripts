@@ -1,6 +1,6 @@
 // 587
 [clientscript,clanwars_setup_corner_init](component $component0, component $component1)
-%varcint59 = ^int_min;
+%varcint59 = ^min_32bit_int;
 cc_deleteall($component0);
 def_int $int2 = ~setup_continuous_border($component0, 0);
 cc_create($component0, ^iftype_text, $int2);

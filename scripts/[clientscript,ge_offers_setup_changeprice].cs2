@@ -5,7 +5,7 @@ if (($int1 ! 1) | (%var1151 = -1)) {
 } else {
 	def_int $int17 = 0;
 	if ($int0 = 1) {
-		if (%varbit4398 < ^int_max) {
+		if (%varbit4398 < ^max_32bit_int) {
 			%varbit4398 = calc(%varbit4398 + 1);
 		}
 		sound_synth(3929, 1, 0);
@@ -19,8 +19,8 @@ if (($int1 ! 1) | (%var1151 = -1)) {
 		if ($int17 <= 0) {
 			$int17 = 1;
 		}
-		if (calc(^int_max - $int17) < %varbit4398) {
-			%varbit4398 = ^int_max;
+		if (calc(^max_32bit_int - $int17) < %varbit4398) {
+			%varbit4398 = ^max_32bit_int;
 		} else {
 			%varbit4398 = calc(%varbit4398 + $int17);
 		}

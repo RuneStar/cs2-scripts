@@ -74,7 +74,7 @@ if (.cc_find($component9, $int13) = true) {
 		cc_setop(1, "New tab");
 		cc_setonop("opsound(event_opindex, 1)");
 		cc_setdragdeadzone(512);
-		cc_setdragdeadtime(^int_max);
+		cc_setdragdeadtime(^max_32bit_int);
 		.cc_setgraphic("banktabs,3");
 		$int16 = 1;
 	} else {

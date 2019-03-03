@@ -1,6 +1,6 @@
 // 1697
 script1697(int $int0, string $string0)(string)
-if ($int0 >= ^int_max) {
+if ($int0 >= ^max_32bit_int) {
 	return("*");
 } else if ($int0 >= 10000000) {
 	return(append(~script46(calc($int0 / 1000000), ","), "M"));

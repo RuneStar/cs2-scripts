@@ -87,13 +87,13 @@ while ($int10 < $int9) {
 		cc_settextfont(p11_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-		if (calc(^int_max / $int11) < $array0($int10)) {
-			$int12 = ^int_max;
+		if (calc(^max_32bit_int / $int11) < $array0($int10)) {
+			$int12 = ^max_32bit_int;
 		} else {
 			$int12 = calc($int11 * $array0($int10));
 		}
 		if ($int11 > 1) {
-			if (($int12 >= 0) & ($int12 < ^int_max)) {
+			if (($int12 >= 0) & ($int12 < ^max_32bit_int)) {
 				cc_settext("<~script46($int11, $string0)> x <~script46($array0($int10), $string0)><br>= <~script46($int12, $string0)>");
 			} else {
 				cc_settext("<~script46($int11, $string0)> x <~script46($array0($int10), $string0)>");

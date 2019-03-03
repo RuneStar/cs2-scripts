@@ -105,8 +105,8 @@ while ($int36 < $int28) {
 				$int34 = string_indexof_string("0123456789", substring($string1, calc($int32 - ($int33 + 1)), calc($int32 - $int33)), 0);
 				if ($int34 ! -1) {
 					$int34 = calc($int34 * pow(10, $int33));
-					if (calc(^int_max - $int34) < $int35) {
-						$int35 = ^int_max;
+					if (calc(^max_32bit_int - $int34) < $int35) {
+						$int35 = ^max_32bit_int;
 					} else {
 						$int35 = calc($int35 + $int34);
 					}
@@ -329,7 +329,7 @@ $int29 = calc((((((3 + $int29) + 2) + 26) + 2) + 16) + 3);
 if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $component12);
 def_int $int47 = calc(262 + $int29);
 ~worldmap_window_set($component0, $component2, $component24, $component3, $int47);
-~script1741($component0, $component2, $component24, $component3, ^int_min, ^int_min, $component21, $component22, $int29, $int47, $component11, $int39);
+~script1741($component0, $component2, $component24, $component3, ^min_32bit_int, ^min_32bit_int, $component21, $component22, $int29, $int47, $component11, $int39);
 if_setscrollpos(0, 0, $component16);
 $int26 = calc(($int28 * $int27) + 2);
 def_int $int48 = 124;
