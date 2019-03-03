@@ -1,5 +1,5 @@
 // 787
-[proc,ge_pricechecker_redraw]()
+[proc,ge_pricechecker_redraw]
 def_int $int0 = if_getwidth(464:2);
 def_int $int1 = calc($int0 / 5);
 def_int $int2 = calc((($int0 - (5 * $int1)) / 4) + $int1);
