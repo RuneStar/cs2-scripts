@@ -19,4 +19,3 @@ if (($int3 > 0) & (if_getwidth($component0) < 2)) {
 }
 def_int $int4 = scale($int3, 1000, 1000);
 if_settext("<tostring(calc($int4 / 10))>.<tostring(calc($int4 % 10))>%", $component1);
-return;

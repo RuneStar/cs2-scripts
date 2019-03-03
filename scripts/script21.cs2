@@ -33,4 +33,3 @@ if (map_members = false) {
 if_setscrollsize(0, $int2, $component0);
 if_setscrollpos(0, ~max(0, ~min($int2, if_getscrolly($component0))), $component0);
 ~scrollbar_resize($component1, $component0, if_getscrolly($component0));
-return;

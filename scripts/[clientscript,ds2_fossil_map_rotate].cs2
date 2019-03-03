@@ -15,4 +15,3 @@ $int4, $int5 = ~ds2_fossil_map_getslot($int2);
 $int5 = calc(($int5 + $int3) % 4);
 ~ds2_fossil_map_setslot($int2, $int4, $int5);
 ~ds2_fossil_map_redraw($component1);
-return;

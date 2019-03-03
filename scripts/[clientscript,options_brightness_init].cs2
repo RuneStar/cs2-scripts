@@ -9,4 +9,3 @@ if_setonop("options_brightness_op(event_opindex, 4, $component1, $component2, $c
 def_string $string0 = "Adjust Screen Brightness";
 if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component5, $string0, 25, 190)", $component0);
 if_setonmouseleave("deltooltip($component5)", $component0);
-return;

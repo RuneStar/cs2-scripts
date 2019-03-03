@@ -46,4 +46,3 @@ def_int $int4 = calc(($int2 + 30) + $int3);
 def_int $int5 = calc((if_getwidth(if_getlayer($component0)) - $int4) / 2);
 if_setposition($int5, if_gety($component0), ^setpos_abs_left, ^setpos_abs_top, $component0);
 if_setposition($int5, if_gety($component1), ^setpos_abs_right, ^setpos_abs_top, $component1);
-return;

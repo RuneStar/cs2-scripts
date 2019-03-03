@@ -2,4 +2,3 @@
 [clientscript,poh_viewer_preview_position](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5)
 def_int $int6 = calc((%varbit5330 - 1) % $int2);
 if_setposition(calc((($int6 % $int1) * $int3) - $int4), calc((($int6 / $int1) * $int3) - $int5), ^setpos_abs_left, ^setpos_abs_bottom, $component0);
-return;

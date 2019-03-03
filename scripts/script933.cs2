@@ -12,4 +12,3 @@ def_int $int5 = calc(180 - interpolate(0, $int3, 0, $int4, 125));
 cc_setmodelangle(0, 20, 0, 0, 0, $int5);
 .cc_setmodelangle(0, 20, 0, 0, 0, $int5);
 if_setontimer("script932(event_com, cc_getid, .cc_getid, $int1)", $component0);
-return;

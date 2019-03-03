@@ -30,4 +30,3 @@ if_setonmouseleave("script85(event_com, .cc_getid, 16750623)", $component3);
 if_setsize(calc(parawidth(if_getwidth($component0), p12_full, $string2) + 26), if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
 ~cws_set_toggle($component3, $int4, $int5, ~cws_cc_getvar($int4));
 if_setonvartransmit("cws_set_toggle($component3, cc_getid, $int4, $int5){var1045, var1046, var1047}", $component3);
-return;

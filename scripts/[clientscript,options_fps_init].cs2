@@ -9,4 +9,3 @@ if_setonop("options_fps_op(event_opindex, 0, $component1, $component2, $componen
 def_string $string0 = "Adjust Frames Per Second";
 if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component5, $string0, 25, 190)", $component0);
 if_setonmouseleave("deltooltip($component5)", $component0);
-return;

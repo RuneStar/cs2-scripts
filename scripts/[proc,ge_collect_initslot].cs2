@@ -108,4 +108,3 @@ def_inv $inv15 = enum(int, inv, 150, $int1);
 if_setonstocktransmit("ge_collect_drawslot($component0, $int1, $component2, $int11, $inv15, $int7, $int8, $int9, $int10, $int12, $int13, $int14)", $component0);
 if_setoninvtransmit("ge_collect_drawslot($component0, $int1, $component2, $int11, $inv15, $int7, $int8, $int9, $int10, $int12, $int13, $int14){$inv15}", $component0);
 if_setonmouseleave("deltooltip($component2)", $component0);
-return;

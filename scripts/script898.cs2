@@ -8,4 +8,3 @@ if ($int1 < 334) {
 }
 def_int $int2 = calc(180 - interpolate(0, invpow(($int1 - 334), 2), 0, invpow((1200 - 334), 2), 130));
 cc_setmodelangle(0, 0, 462, 0, 0, $int2);
-return;
