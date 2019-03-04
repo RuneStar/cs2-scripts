@@ -4,11 +4,10 @@ def_int $int0 = worldflags;
 if (testbit($int0, 29) = true) {
 	if (testbit($int0, 26) = true) {
 		return(3);
-	} else if (testbit($int0, 30) = true) {
-		return(2);
-	} else {
-		return(1);
 	}
-} else {
-	return(0);
+	if (testbit($int0, 30) = true) {
+		return(2);
+	}
+	return(1);
 }
+return(0);

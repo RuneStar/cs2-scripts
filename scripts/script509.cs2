@@ -33,18 +33,17 @@ while ($int0 < $int1) {
 }
 if ($int14 <= 0) {
 	return($int8, $int15);
-} else {
-	if ($int11 = 0) {
-		if (($int16 > 0) & (cc_find($component3, calc((816 + (9 * 2)) + $int2)) = true)) {
-			cc_sethide(false);
-			cc_setposition(calc(51 + ($int16 * (36 + $int9))), calc($int14 - 32), ^setpos_abs_left, ^setpos_abs_top);
-			$int16 = calc(8 - $int16);
-			cc_setsize(calc(($int16 * 36) + (($int16 - 1) * $int9)), 32, ^setsize_abs, ^setsize_abs);
-		}
-		if (($int12 > $int8) & (cc_find($component3, calc(((816 + 9) + $int2) - 1)) = true)) {
-			cc_setposition(51, $int8, ^setpos_abs_left, ^setpos_abs_top);
-			cc_sethide(false);
-		}
-	}
-	return($int14, $int15);
 }
+if ($int11 = 0) {
+	if (($int16 > 0) & (cc_find($component3, calc((816 + (9 * 2)) + $int2)) = true)) {
+		cc_sethide(false);
+		cc_setposition(calc(51 + ($int16 * (36 + $int9))), calc($int14 - 32), ^setpos_abs_left, ^setpos_abs_top);
+		$int16 = calc(8 - $int16);
+		cc_setsize(calc(($int16 * 36) + (($int16 - 1) * $int9)), 32, ^setsize_abs, ^setsize_abs);
+	}
+	if (($int12 > $int8) & (cc_find($component3, calc(((816 + 9) + $int2) - 1)) = true)) {
+		cc_setposition(51, $int8, ^setpos_abs_left, ^setpos_abs_top);
+		cc_sethide(false);
+	}
+}
+return($int14, $int15);

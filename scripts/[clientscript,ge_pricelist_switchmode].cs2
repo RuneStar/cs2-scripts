@@ -2,9 +2,7 @@
 [clientscript,ge_pricelist_switchmode](int $int0, inv $inv1, int $int2, int $int3)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	%varbit4440 = calc(1 - %varbit4440);
-	~ge_pricelist_draw($inv1, $int2, $int3);
-	return;
 }
+sound_synth(2266, 1, 0);
+%varbit4440 = calc(1 - %varbit4440);
+~ge_pricelist_draw($inv1, $int2, $int3);

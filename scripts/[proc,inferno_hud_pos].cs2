@@ -6,12 +6,10 @@ $int8 = ~max($int8, 150);
 $int8 = ~min($int8, 500);
 if ($int0 = $int8) {
 	return;
-} else {
-	if_setsize($int8, 38, ^setsize_abs, ^setsize_abs, $component1);
-	if_settextalign(^settextalign_left, ^settextalign_centre, 0, $component4);
-	if_setposition(10, 0, ^setpos_abs_left, ^setpos_abs_centre, $component4);
-	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component2);
-	if_setontimer("inferno_hud_pos($int8, $component1, $component2, $component3, $component4, $component5, $component6)", 596:0);
-	~inferno_hud_update($component5, $component6);
-	return;
 }
+if_setsize($int8, 38, ^setsize_abs, ^setsize_abs, $component1);
+if_settextalign(^settextalign_left, ^settextalign_centre, 0, $component4);
+if_setposition(10, 0, ^setpos_abs_left, ^setpos_abs_centre, $component4);
+if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component2);
+if_setontimer("inferno_hud_pos($int8, $component1, $component2, $component3, $component4, $component5, $component6)", 596:0);
+~inferno_hud_update($component5, $component6);

@@ -2,11 +2,9 @@
 script1535(component $component0, int $int1, int $int2, string $string0)
 if (clientclock < $int2) {
 	return;
-} else {
-	if (cc_find($component0, $int1) = true) {
-		cc_setcolour(0xff981f);
-		~script1533($component0, $string0);
-	}
-	~script1531($component0, $int1, $string0);
-	return;
 }
+if (cc_find($component0, $int1) = true) {
+	cc_setcolour(0xff981f);
+	~script1533($component0, $string0);
+}
+~script1531($component0, $int1, $string0);

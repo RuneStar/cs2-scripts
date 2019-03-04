@@ -18,51 +18,51 @@ if (string_length($string0) > 0) {
 			mes("You don't have permission to do that.");
 		}
 		return;
-	} else if (.cc_find(507:12, 0) = false) {
-		return;
-	} else {
-		sound_synth(2266, 1, 0);
-		if_sethide(true, 507:27);
-		if_sethide(false, 507:28);
-		cc_deleteall(507:28);
-		$int2 = ~thinbox(507:28, 0);
-		cc_create(507:28, ^iftype_text, $int2);
-		$int2 = calc($int2 + 1);
-		cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-		cc_setcolour(0xff981f);
-		cc_settextfont(p11_full);
-		cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
-		cc_settextshadow(true);
-		cc_settext($string0);
-		$int3 = calc((if_getwidth(507:28) - 216) / 2);
-		$stat8 = enum(int, stat, 681, $int7);
-		while ($stat8 ! null) {
-			$int6 = calc(15 + (($int4 % 5) * 25));
-			$int5 = calc($int3 + (($int4 / 5) * 44));
-			$string2, $string1 = ~script632($string1);
-			cc_create(507:28, ^iftype_graphic, $int2);
-			$int2 = calc($int2 + 1);
-			.cc_create(507:28, ^iftype_text, $int2);
-			$int2 = calc($int2 + 1);
-			cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-			.cc_setsize(40, 25, ^setsize_abs, ^setsize_abs);
-			cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
-			cc_setgraphic(enum(stat, graphic, 255, $stat8));
-			.cc_setcolour(0xff981f);
-			.cc_settextfont(p11_full);
-			.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
-			.cc_settextshadow(true);
-			.cc_settext($string2);
-			$string3 = "<$string0>:<br>Level <col=7f0000><$string2></col> <enum(stat, string, 680, $stat8)>";
-			.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 507:35, $string3, 25, 200)");
-			.cc_setonmouseleave("deltooltip(507:35)");
-			$int4 = calc($int4 + 1);
-			$int7 = calc($int7 + 1);
-			$stat8 = enum(int, stat, 681, $int7);
-		}
-		if_setonclick("raids_partydetails_closestats()", 507:28);
-		~raids_partydetails_setsort($int1);
 	}
+	if (.cc_find(507:12, 0) = false) {
+		return;
+	}
+	sound_synth(2266, 1, 0);
+	if_sethide(true, 507:27);
+	if_sethide(false, 507:28);
+	cc_deleteall(507:28);
+	$int2 = ~thinbox(507:28, 0);
+	cc_create(507:28, ^iftype_text, $int2);
+	$int2 = calc($int2 + 1);
+	cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+	cc_settextshadow(true);
+	cc_settext($string0);
+	$int3 = calc((if_getwidth(507:28) - 216) / 2);
+	$stat8 = enum(int, stat, 681, $int7);
+	while ($stat8 ! null) {
+		$int6 = calc(15 + (($int4 % 5) * 25));
+		$int5 = calc($int3 + (($int4 / 5) * 44));
+		$string2, $string1 = ~script632($string1);
+		cc_create(507:28, ^iftype_graphic, $int2);
+		$int2 = calc($int2 + 1);
+		.cc_create(507:28, ^iftype_text, $int2);
+		$int2 = calc($int2 + 1);
+		cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+		.cc_setsize(40, 25, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic(enum(stat, graphic, 255, $stat8));
+		.cc_setcolour(0xff981f);
+		.cc_settextfont(p11_full);
+		.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+		.cc_settextshadow(true);
+		.cc_settext($string2);
+		$string3 = "<$string0>:<br>Level <col=7f0000><$string2></col> <enum(stat, string, 680, $stat8)>";
+		.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 507:35, $string3, 25, 200)");
+		.cc_setonmouseleave("deltooltip(507:35)");
+		$int4 = calc($int4 + 1);
+		$int7 = calc($int7 + 1);
+		$stat8 = enum(int, stat, 681, $int7);
+	}
+	if_setonclick("raids_partydetails_closestats()", 507:28);
+	~raids_partydetails_setsort($int1);
 }

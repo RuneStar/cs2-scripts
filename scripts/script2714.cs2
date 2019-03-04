@@ -2,14 +2,12 @@
 script2714(int $int0, component $component1, int $int2)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if (cc_find($component1, $int2) = true) {
-		cc_setcolour(^red);
-		if_setonmouserepeat(null, $component1);
-		if_setonmouseleave(null, $component1);
-		if_setonop(null, $component1);
-		if_setontimer("script2715($component1, $int2, calc(clientclock + 20))", $component1);
-	}
-	return;
+}
+sound_synth(2266, 1, 0);
+if (cc_find($component1, $int2) = true) {
+	cc_setcolour(^red);
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setonop(null, $component1);
+	if_setontimer("script2715($component1, $int2, calc(clientclock + 20))", $component1);
 }

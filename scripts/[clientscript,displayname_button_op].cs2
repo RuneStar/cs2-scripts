@@ -2,12 +2,10 @@
 [clientscript,displayname_button_op](int $int0, component $component1, string $string0)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	~displayname_button_draw($component1, 1, $string0);
-	if_setonmouserepeat(null, $component1);
-	if_setonmouseleave(null, $component1);
-	if_setonop(null, $component1);
-	if_setontimer("displayname_button_reset(event_com, $string0, calc(clientclock + 40))", $component1);
-	return;
 }
+sound_synth(2266, 1, 0);
+~displayname_button_draw($component1, 1, $string0);
+if_setonmouserepeat(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setonop(null, $component1);
+if_setontimer("displayname_button_reset(event_com, $string0, calc(clientclock + 40))", $component1);

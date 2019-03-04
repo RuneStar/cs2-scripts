@@ -2,8 +2,7 @@
 [proc,mobile_setting_check]()(int)
 if (~on_mobile = false) {
 	return(1);
-} else {
-	mes("You can't modify that setting on this device.");
-	sound_synth(2277, 1, 0);
-	return(0);
 }
+mes("You can't modify that setting on this device.");
+sound_synth(2277, 1, 0);
+return(0);

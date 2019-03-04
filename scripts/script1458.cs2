@@ -2,14 +2,11 @@
 script1458(int $int0, int $int1, component $component2, component $component3, int $int4, boolean $boolean5)
 if (clientclock < $int1) {
 	return;
-} else {
-	if ((.cc_find($component3, $int4) = true) & (.cc_gethide = true)) {
-		.cc_sethide(false);
-	}
-	if (clientclock < $int0) {
-		return;
-	} else {
-		~script1456($component2, -1, $boolean5);
-		return;
-	}
 }
+if ((.cc_find($component3, $int4) = true) & (.cc_gethide = true)) {
+	.cc_sethide(false);
+}
+if (clientclock < $int0) {
+	return;
+}
+~script1456($component2, -1, $boolean5);

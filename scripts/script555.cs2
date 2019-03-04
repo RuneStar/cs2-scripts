@@ -2,9 +2,7 @@
 script555(component $component0, component $component1, int $int2)
 if (clientclock < $int2) {
 	return;
-} else {
-	if_setontimer(null, $component0);
-	if_sethide(false, $component1);
-	~script558($component1);
-	return;
 }
+if_setontimer(null, $component0);
+if_sethide(false, $component1);
+~script558($component1);

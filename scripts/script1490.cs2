@@ -3,10 +3,8 @@ script1490(component $component0)
 if (~on_mobile = false) {
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
 	return;
-} else {
-	def_component $component1 = if_getlayer($component0);
-	if ($component1 ! null) {
-		~script2236($component0, $component1, -1, -1);
-	}
-	return;
+}
+def_component $component1 = if_getlayer($component0);
+if ($component1 ! null) {
+	~script2236($component0, $component1, -1, -1);
 }

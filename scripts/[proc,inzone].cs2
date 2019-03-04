@@ -3,16 +3,13 @@
 def_int $int3 = coordx($coord2);
 if (($int3 < coordx($coord0)) | ($int3 > coordx($coord1))) {
 	return(0);
-} else {
-	$int3 = coordz($coord2);
-	if (($int3 < coordz($coord0)) | ($int3 > coordz($coord1))) {
-		return(0);
-	} else {
-		$int3 = coordy($coord2);
-		if (($int3 < coordy($coord0)) | ($int3 > coordy($coord1))) {
-			return(0);
-		} else {
-			return(1);
-		}
-	}
 }
+$int3 = coordz($coord2);
+if (($int3 < coordz($coord0)) | ($int3 > coordz($coord1))) {
+	return(0);
+}
+$int3 = coordy($coord2);
+if (($int3 < coordy($coord0)) | ($int3 > coordy($coord1))) {
+	return(0);
+}
+return(1);

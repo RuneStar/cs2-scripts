@@ -2,24 +2,32 @@
 script2076(coord $coord0)(int)
 if (~inzone(0_43_50_0_0, 0_43_50_63_63, $coord0) = 1) {
 	return(1);
-} else if (~inzone(0_43_53_0_0, 0_43_53_63_63, $coord0) = 1) {
-	return(2);
-} else if (~inzone(0_57_45_0_0, 0_57_45_63_63, $coord0) = 1) {
-	return(3);
-} else if (~inzone(0_46_49_0_0, 0_46_49_63_63, $coord0) = 1) {
-	return(4);
-} else if (~inzone(0_41_49_0_0, 0_41_49_63_63, $coord0) = 1) {
-	return(5);
-} else if (~inzone(0_57_54_0_0, 0_57_54_63_63, $coord0) = 1) {
-	return(6);
-} else if (~inzone(0_47_49_0_0, 0_47_49_63_63, $coord0) = 1) {
-	return(7);
-} else if (~inzone(0_46_47_0_0, 0_46_47_63_63, $coord0) = 1) {
-	return(8);
-} else if (~inzone(0_33_48_0_0, 0_33_48_63_63, $coord0) = 1) {
-	return(9);
-} else if (~inzone(0_40_44_0_0, 0_40_44_63_63, $coord0) = 1) {
-	return(10);
-} else {
-	return(0);
 }
+if (~inzone(0_43_53_0_0, 0_43_53_63_63, $coord0) = 1) {
+	return(2);
+}
+if (~inzone(0_57_45_0_0, 0_57_45_63_63, $coord0) = 1) {
+	return(3);
+}
+if (~inzone(0_46_49_0_0, 0_46_49_63_63, $coord0) = 1) {
+	return(4);
+}
+if (~inzone(0_41_49_0_0, 0_41_49_63_63, $coord0) = 1) {
+	return(5);
+}
+if (~inzone(0_57_54_0_0, 0_57_54_63_63, $coord0) = 1) {
+	return(6);
+}
+if (~inzone(0_47_49_0_0, 0_47_49_63_63, $coord0) = 1) {
+	return(7);
+}
+if (~inzone(0_46_47_0_0, 0_46_47_63_63, $coord0) = 1) {
+	return(8);
+}
+if (~inzone(0_33_48_0_0, 0_33_48_63_63, $coord0) = 1) {
+	return(9);
+}
+if (~inzone(0_40_44_0_0, 0_40_44_63_63, $coord0) = 1) {
+	return(10);
+}
+return(0);

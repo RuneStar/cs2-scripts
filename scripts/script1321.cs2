@@ -2,11 +2,9 @@
 script1321(int $int0, component $component1, int $int2)
 if ($int0 ! 1) {
 	return;
-} else {
-	if (cc_find($component1, $int2) = true) {
-		sound_synth(2266, 1, 0);
-		%varbit5102 = calc(1 - %varbit5102);
-		~script1323($component1);
-	}
-	return;
+}
+if (cc_find($component1, $int2) = true) {
+	sound_synth(2266, 1, 0);
+	%varbit5102 = calc(1 - %varbit5102);
+	~script1323($component1);
 }

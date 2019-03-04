@@ -3,17 +3,15 @@ script156(inv $inv0, int $int1, int $int2, component $component3, int $int4, com
 if ($int2 = -1) {
 	~script154($inv0, $int1, $component3, $int1, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
 	return;
-} else {
-	def_int $int6 = $int1;
-	while ($int6 ! $int2) {
-		if ($int6 > $int2) {
-			~script154($inv0, calc($int6 - 1), $component3, $int6, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
-			$int6 = calc($int6 - 1);
-		} else if ($int6 < $int2) {
-			~script154($inv0, calc($int6 + 1), $component3, $int6, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
-			$int6 = calc($int6 + 1);
-		}
-	}
-	~script154($inv0, $int1, $component3, $int2, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
-	return;
 }
+def_int $int6 = $int1;
+while ($int6 ! $int2) {
+	if ($int6 > $int2) {
+		~script154($inv0, calc($int6 - 1), $component3, $int6, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
+		$int6 = calc($int6 - 1);
+	} else if ($int6 < $int2) {
+		~script154($inv0, calc($int6 + 1), $component3, $int6, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
+		$int6 = calc($int6 + 1);
+	}
+}
+~script154($inv0, $int1, $component3, $int2, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);

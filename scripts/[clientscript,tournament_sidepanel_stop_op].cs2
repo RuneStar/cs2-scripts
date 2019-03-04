@@ -2,9 +2,7 @@
 [clientscript,tournament_sidepanel_stop_op](int $int0, component $component1)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	%var211 = 0;
-	~tournament_sidepanel_stop_redraw($component1);
-	return;
 }
+sound_synth(2266, 1, 0);
+%var211 = 0;
+~tournament_sidepanel_stop_redraw($component1);

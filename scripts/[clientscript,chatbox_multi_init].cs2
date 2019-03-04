@@ -65,18 +65,16 @@ if ($int2 < 110) {
 }
 if ($int2 > 350) {
 	return;
-} else {
-	def_int $int3 = calc(((479 - ($int2 + 111)) / 2) - 57);
-	if ($int3 < 2) {
-		$int3 = 2;
-	}
-	cc_create(219:1, ^iftype_graphic, calc($int0 + 1));
-	.cc_create(219:1, ^iftype_graphic, calc($int0 + 2));
-	cc_setsize(57, 13, ^setsize_abs, ^setsize_abs);
-	.cc_setsize(57, 13, ^setsize_abs, ^setsize_abs);
-	cc_setposition($int3, calc($int1 + 2), ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition(calc(479 - ($int3 + 57)), calc($int1 + 2), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("sworddecor,1");
-	.cc_setgraphic("sworddecor,0");
-	return;
 }
+def_int $int3 = calc(((479 - ($int2 + 111)) / 2) - 57);
+if ($int3 < 2) {
+	$int3 = 2;
+}
+cc_create(219:1, ^iftype_graphic, calc($int0 + 1));
+.cc_create(219:1, ^iftype_graphic, calc($int0 + 2));
+cc_setsize(57, 13, ^setsize_abs, ^setsize_abs);
+.cc_setsize(57, 13, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, calc($int1 + 2), ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(calc(479 - ($int3 + 57)), calc($int1 + 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("sworddecor,1");
+.cc_setgraphic("sworddecor,0");

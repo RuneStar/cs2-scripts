@@ -2,22 +2,22 @@
 [proc,toplevel_mainmodal_bg_calculate](enum $enum0, component $component1, component $component2, int $int3, int $int4)
 if ($component1 = null) {
 	return;
-} else if (~on_mobile = true) {
+}
+if (~on_mobile = true) {
 	~toplevel_mainmodal_bg_calculate_mobile($enum0, $component1);
 	return;
-} else if (((%varcint172 <= -1) | (%varcint173 <= -1)) | (if_hassub(enum(component, component, $enum0, 161:13)) = false)) {
+}
+if (((%varcint172 <= -1) | (%varcint173 <= -1)) | (if_hassub(enum(component, component, $enum0, 161:13)) = false)) {
 	cc_deleteall($component1);
 	return;
-} else {
-	def_int $int5 = if_getwidth($component2);
-	def_int $int6 = if_getheight($component2);
-	def_int $int7 = calc(($int5 - 512) / 2);
-	def_int $int8 = calc(($int6 - 334) / 2);
-	def_int $int9 = calc($int5 - ($int7 + 512));
-	def_int $int10 = calc($int6 - ($int8 + 334));
-	~toplevel_mainmodal_bg_build($component1, 0, %varcint172, %varcint173, 0, 0, ^setpos_abs_left, ^setpos_abs_top, 0, $int8, ^setsize_minus, ^setsize_abs);
-	~toplevel_mainmodal_bg_build($component1, 1, %varcint172, %varcint173, 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 0, calc($int10 + $int4), ^setsize_minus, ^setsize_abs);
-	~toplevel_mainmodal_bg_build($component1, 2, %varcint172, %varcint173, 0, $int8, ^setpos_abs_left, ^setpos_abs_top, $int7, 334, ^setsize_abs, ^setsize_abs);
-	~toplevel_mainmodal_bg_build($component1, 3, %varcint172, %varcint173, 0, $int8, ^setpos_abs_right, ^setpos_abs_top, calc($int9 + $int3), 334, ^setsize_abs, ^setsize_abs);
-	return;
 }
+def_int $int5 = if_getwidth($component2);
+def_int $int6 = if_getheight($component2);
+def_int $int7 = calc(($int5 - 512) / 2);
+def_int $int8 = calc(($int6 - 334) / 2);
+def_int $int9 = calc($int5 - ($int7 + 512));
+def_int $int10 = calc($int6 - ($int8 + 334));
+~toplevel_mainmodal_bg_build($component1, 0, %varcint172, %varcint173, 0, 0, ^setpos_abs_left, ^setpos_abs_top, 0, $int8, ^setsize_minus, ^setsize_abs);
+~toplevel_mainmodal_bg_build($component1, 1, %varcint172, %varcint173, 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 0, calc($int10 + $int4), ^setsize_minus, ^setsize_abs);
+~toplevel_mainmodal_bg_build($component1, 2, %varcint172, %varcint173, 0, $int8, ^setpos_abs_left, ^setpos_abs_top, $int7, 334, ^setsize_abs, ^setsize_abs);
+~toplevel_mainmodal_bg_build($component1, 3, %varcint172, %varcint173, 0, $int8, ^setpos_abs_right, ^setpos_abs_top, calc($int9 + $int3), 334, ^setsize_abs, ^setsize_abs);

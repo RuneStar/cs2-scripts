@@ -3,228 +3,226 @@
 def_component $component5 = enum(int, component, 1424, $int0);
 if ($component5 = null) {
 	return;
-} else {
-	if (testbit($int4, 30) = true) {
-		$int4 = clearbit($int4, 30);
-		$int3 = setbit($int3, 31);
-	}
-	if_sethide(true, $component5);
-	def_int $int6 = 0;
-	if (testbit($int3, 0) = true) {
-		$int6 = setbit($int6, 0);
-	}
-	if (testbit($int3, 1) = true) {
-		$int6 = setbit($int6, 1);
-	}
-	if (testbit($int3, 2) = true) {
-		$int6 = setbit($int6, 2);
-	}
-	def_int $int7 = 0;
-	if (testbit($int3, 3) = true) {
-		$int7 = setbit($int7, 0);
-	}
-	if (testbit($int3, 4) = true) {
-		$int7 = setbit($int7, 1);
-	}
-	if (testbit($int3, 5) = true) {
-		$int7 = setbit($int7, 2);
-	}
-	def_int $int8 = 0;
-	if (testbit($int3, 6) = true) {
-		$int8 = setbit($int8, 0);
-	}
-	if (testbit($int3, 7) = true) {
-		$int8 = setbit($int8, 1);
-	}
-	def_int $int9 = 0;
-	if (testbit($int3, 8) = true) {
-		$int9 = setbit($int9, 0);
-	}
-	if (testbit($int3, 9) = true) {
-		$int9 = setbit($int9, 1);
-	}
-	def_int $int10 = 0;
-	if (testbit($int3, 10) = true) {
-		$int10 = setbit($int10, 0);
-	}
-	if (testbit($int3, 11) = true) {
-		$int10 = setbit($int10, 1);
-	}
-	if (testbit($int3, 12) = true) {
-		$int10 = setbit($int10, 2);
-	}
-	if (testbit($int3, 13) = true) {
-		$int10 = setbit($int10, 3);
-	}
-	if (testbit($int3, 14) = true) {
-		$int10 = setbit($int10, 4);
-	}
-	def_int $int11 = 0;
-	if (testbit($int3, 15) = true) {
-		$int11 = setbit($int11, 0);
-	}
-	if (testbit($int3, 16) = true) {
-		$int11 = setbit($int11, 1);
-	}
-	if (testbit($int3, 17) = true) {
-		$int11 = setbit($int11, 2);
-	}
-	if (testbit($int4, 0) = true) {
-		$int11 = setbit($int11, 3);
-	}
-	if (testbit($int4, 1) = true) {
-		$int11 = setbit($int11, 4);
-	}
-	def_int $int12 = 0;
-	if (testbit($int3, 18) = true) {
-		$int12 = setbit($int12, 0);
-	}
-	if (testbit($int3, 19) = true) {
-		$int12 = setbit($int12, 1);
-	}
-	if (testbit($int3, 20) = true) {
-		$int12 = setbit($int12, 2);
-	}
-	if (testbit($int4, 2) = true) {
-		$int12 = setbit($int12, 3);
-	}
-	if (testbit($int4, 3) = true) {
-		$int12 = setbit($int12, 4);
-	}
-	def_int $int13 = 0;
-	if (testbit($int3, 21) = true) {
-		$int13 = setbit($int13, 0);
-	}
-	if (testbit($int3, 22) = true) {
-		$int13 = setbit($int13, 1);
-	}
-	if (testbit($int3, 23) = true) {
-		$int13 = setbit($int13, 2);
-	}
-	if (testbit($int4, 4) = true) {
-		$int13 = setbit($int13, 3);
-	}
-	if (testbit($int4, 5) = true) {
-		$int13 = setbit($int13, 4);
-	}
-	def_int $int14 = 0;
-	if (testbit($int3, 24) = true) {
-		$int14 = setbit($int14, 0);
-	}
-	if (testbit($int3, 25) = true) {
-		$int14 = setbit($int14, 1);
-	}
-	if (testbit($int4, 6) = true) {
-		$int14 = setbit($int14, 2);
-	}
-	if (testbit($int4, 7) = true) {
-		$int14 = setbit($int14, 3);
-	}
-	if (testbit($int4, 8) = true) {
-		$int14 = setbit($int14, 4);
-	}
-	def_int $int15 = 0;
-	if (testbit($int3, 26) = true) {
-		$int15 = setbit($int15, 0);
-	}
-	if (testbit($int3, 27) = true) {
-		$int15 = setbit($int15, 1);
-	}
-	if (testbit($int4, 9) = true) {
-		$int15 = setbit($int15, 2);
-	}
-	if (testbit($int4, 10) = true) {
-		$int15 = setbit($int15, 3);
-	}
-	if (testbit($int4, 11) = true) {
-		$int15 = setbit($int15, 4);
-	}
-	def_int $int16 = 0;
-	if (testbit($int3, 28) = true) {
-		$int16 = setbit($int16, 0);
-	}
-	if (testbit($int3, 29) = true) {
-		$int16 = setbit($int16, 1);
-	}
-	if (testbit($int4, 12) = true) {
-		$int16 = setbit($int16, 2);
-	}
-	if (testbit($int4, 13) = true) {
-		$int16 = setbit($int16, 3);
-	}
-	if (testbit($int4, 14) = true) {
-		$int16 = setbit($int16, 4);
-	}
-	def_int $int17 = 0;
-	if (testbit($int3, 30) = true) {
-		$int17 = setbit($int17, 0);
-	}
-	if (testbit($int3, 31) = true) {
-		$int17 = setbit($int17, 1);
-	}
-	if (testbit($int4, 15) = true) {
-		$int17 = setbit($int17, 2);
-	}
-	if (testbit($int4, 16) = true) {
-		$int17 = setbit($int17, 3);
-	}
-	if (testbit($int4, 17) = true) {
-		$int17 = setbit($int17, 4);
-	}
-	def_int $int18 = 0;
-	if (testbit($int4, 18) = true) {
-		$int18 = setbit($int18, 0);
-	}
-	if (testbit($int4, 19) = true) {
-		$int18 = setbit($int18, 1);
-	}
-	if (testbit($int4, 20) = true) {
-		$int18 = setbit($int18, 2);
-	}
-	if (testbit($int4, 21) = true) {
-		$int18 = setbit($int18, 3);
-	}
-	if (testbit($int4, 22) = true) {
-		$int18 = setbit($int18, 4);
-	}
-	def_obj $obj19 = enum(int, obj, 250, $int10);
-	if_setopbase("<col=ff9040><oc_name($obj19)></col>", $component5);
-	~script1385($int0, $int6, $int8, $int7);
-	cc_deleteall($component5);
-	cc_create($component5, ^iftype_graphic, 0);
-	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setgraphic(enum(int, graphic, 1423, $int10));
-	cc_set2dangle(calc((16384 * (4 - $int9)) % 65536));
-	cc_create($component5, ^iftype_graphic, 1);
-	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setgraphic("tradebacking_light");
-	cc_settiling(true);
-	cc_settrans(75);
-	cc_sethide(true);
-	def_string $string0 = "<oc_name($obj19)>:";
-	def_int $int20 = 0;
-	$string0, $int20 = ~poh_viewer_roomtooltip($int11, 1425, $enum1, $int20, $string0);
-	$string0, $int20 = ~poh_viewer_roomtooltip($int12, 1426, $enum1, $int20, $string0);
-	$string0, $int20 = ~poh_viewer_roomtooltip($int13, 1427, $enum1, $int20, $string0);
-	$string0, $int20 = ~poh_viewer_roomtooltip($int14, 1428, $enum1, $int20, $string0);
-	$string0, $int20 = ~poh_viewer_roomtooltip($int15, 1429, $enum1, $int20, $string0);
-	$string0, $int20 = ~poh_viewer_roomtooltip($int16, 1430, $enum1, $int20, $string0);
-	$string0, $int20 = ~poh_viewer_roomtooltip($int17, 1431, $enum1, $int20, $string0);
-	$string0, $int20 = ~poh_viewer_roomtooltip($int18, 1432, $enum1, $int20, $string0);
-	if ($int20 > 0) {
-		$string0 = append($string0, "</col>");
-	} else {
-		$string0 = append($string0, " <col=4f4f4f>(empty)</col>");
-	}
-	cc_create($component5, ^iftype_graphic, 2);
-	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("tick");
-	~script1380($int0);
-	if_setonvartransmit("script1378(event_com, cc_getid, $int0){var780}", $component5);
-	if_setonmouserepeat("poh_viewer_room_hover(true, event_com, cc_getid, $string0)", $component5);
-	if_setonmouseleave("poh_viewer_room_hover(false, event_com, cc_getid, $string0)", $component5);
-	return;
 }
+if (testbit($int4, 30) = true) {
+	$int4 = clearbit($int4, 30);
+	$int3 = setbit($int3, 31);
+}
+if_sethide(true, $component5);
+def_int $int6 = 0;
+if (testbit($int3, 0) = true) {
+	$int6 = setbit($int6, 0);
+}
+if (testbit($int3, 1) = true) {
+	$int6 = setbit($int6, 1);
+}
+if (testbit($int3, 2) = true) {
+	$int6 = setbit($int6, 2);
+}
+def_int $int7 = 0;
+if (testbit($int3, 3) = true) {
+	$int7 = setbit($int7, 0);
+}
+if (testbit($int3, 4) = true) {
+	$int7 = setbit($int7, 1);
+}
+if (testbit($int3, 5) = true) {
+	$int7 = setbit($int7, 2);
+}
+def_int $int8 = 0;
+if (testbit($int3, 6) = true) {
+	$int8 = setbit($int8, 0);
+}
+if (testbit($int3, 7) = true) {
+	$int8 = setbit($int8, 1);
+}
+def_int $int9 = 0;
+if (testbit($int3, 8) = true) {
+	$int9 = setbit($int9, 0);
+}
+if (testbit($int3, 9) = true) {
+	$int9 = setbit($int9, 1);
+}
+def_int $int10 = 0;
+if (testbit($int3, 10) = true) {
+	$int10 = setbit($int10, 0);
+}
+if (testbit($int3, 11) = true) {
+	$int10 = setbit($int10, 1);
+}
+if (testbit($int3, 12) = true) {
+	$int10 = setbit($int10, 2);
+}
+if (testbit($int3, 13) = true) {
+	$int10 = setbit($int10, 3);
+}
+if (testbit($int3, 14) = true) {
+	$int10 = setbit($int10, 4);
+}
+def_int $int11 = 0;
+if (testbit($int3, 15) = true) {
+	$int11 = setbit($int11, 0);
+}
+if (testbit($int3, 16) = true) {
+	$int11 = setbit($int11, 1);
+}
+if (testbit($int3, 17) = true) {
+	$int11 = setbit($int11, 2);
+}
+if (testbit($int4, 0) = true) {
+	$int11 = setbit($int11, 3);
+}
+if (testbit($int4, 1) = true) {
+	$int11 = setbit($int11, 4);
+}
+def_int $int12 = 0;
+if (testbit($int3, 18) = true) {
+	$int12 = setbit($int12, 0);
+}
+if (testbit($int3, 19) = true) {
+	$int12 = setbit($int12, 1);
+}
+if (testbit($int3, 20) = true) {
+	$int12 = setbit($int12, 2);
+}
+if (testbit($int4, 2) = true) {
+	$int12 = setbit($int12, 3);
+}
+if (testbit($int4, 3) = true) {
+	$int12 = setbit($int12, 4);
+}
+def_int $int13 = 0;
+if (testbit($int3, 21) = true) {
+	$int13 = setbit($int13, 0);
+}
+if (testbit($int3, 22) = true) {
+	$int13 = setbit($int13, 1);
+}
+if (testbit($int3, 23) = true) {
+	$int13 = setbit($int13, 2);
+}
+if (testbit($int4, 4) = true) {
+	$int13 = setbit($int13, 3);
+}
+if (testbit($int4, 5) = true) {
+	$int13 = setbit($int13, 4);
+}
+def_int $int14 = 0;
+if (testbit($int3, 24) = true) {
+	$int14 = setbit($int14, 0);
+}
+if (testbit($int3, 25) = true) {
+	$int14 = setbit($int14, 1);
+}
+if (testbit($int4, 6) = true) {
+	$int14 = setbit($int14, 2);
+}
+if (testbit($int4, 7) = true) {
+	$int14 = setbit($int14, 3);
+}
+if (testbit($int4, 8) = true) {
+	$int14 = setbit($int14, 4);
+}
+def_int $int15 = 0;
+if (testbit($int3, 26) = true) {
+	$int15 = setbit($int15, 0);
+}
+if (testbit($int3, 27) = true) {
+	$int15 = setbit($int15, 1);
+}
+if (testbit($int4, 9) = true) {
+	$int15 = setbit($int15, 2);
+}
+if (testbit($int4, 10) = true) {
+	$int15 = setbit($int15, 3);
+}
+if (testbit($int4, 11) = true) {
+	$int15 = setbit($int15, 4);
+}
+def_int $int16 = 0;
+if (testbit($int3, 28) = true) {
+	$int16 = setbit($int16, 0);
+}
+if (testbit($int3, 29) = true) {
+	$int16 = setbit($int16, 1);
+}
+if (testbit($int4, 12) = true) {
+	$int16 = setbit($int16, 2);
+}
+if (testbit($int4, 13) = true) {
+	$int16 = setbit($int16, 3);
+}
+if (testbit($int4, 14) = true) {
+	$int16 = setbit($int16, 4);
+}
+def_int $int17 = 0;
+if (testbit($int3, 30) = true) {
+	$int17 = setbit($int17, 0);
+}
+if (testbit($int3, 31) = true) {
+	$int17 = setbit($int17, 1);
+}
+if (testbit($int4, 15) = true) {
+	$int17 = setbit($int17, 2);
+}
+if (testbit($int4, 16) = true) {
+	$int17 = setbit($int17, 3);
+}
+if (testbit($int4, 17) = true) {
+	$int17 = setbit($int17, 4);
+}
+def_int $int18 = 0;
+if (testbit($int4, 18) = true) {
+	$int18 = setbit($int18, 0);
+}
+if (testbit($int4, 19) = true) {
+	$int18 = setbit($int18, 1);
+}
+if (testbit($int4, 20) = true) {
+	$int18 = setbit($int18, 2);
+}
+if (testbit($int4, 21) = true) {
+	$int18 = setbit($int18, 3);
+}
+if (testbit($int4, 22) = true) {
+	$int18 = setbit($int18, 4);
+}
+def_obj $obj19 = enum(int, obj, 250, $int10);
+if_setopbase("<col=ff9040><oc_name($obj19)></col>", $component5);
+~script1385($int0, $int6, $int8, $int7);
+cc_deleteall($component5);
+cc_create($component5, ^iftype_graphic, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic(enum(int, graphic, 1423, $int10));
+cc_set2dangle(calc((16384 * (4 - $int9)) % 65536));
+cc_create($component5, ^iftype_graphic, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking_light");
+cc_settiling(true);
+cc_settrans(75);
+cc_sethide(true);
+def_string $string0 = "<oc_name($obj19)>:";
+def_int $int20 = 0;
+$string0, $int20 = ~poh_viewer_roomtooltip($int11, 1425, $enum1, $int20, $string0);
+$string0, $int20 = ~poh_viewer_roomtooltip($int12, 1426, $enum1, $int20, $string0);
+$string0, $int20 = ~poh_viewer_roomtooltip($int13, 1427, $enum1, $int20, $string0);
+$string0, $int20 = ~poh_viewer_roomtooltip($int14, 1428, $enum1, $int20, $string0);
+$string0, $int20 = ~poh_viewer_roomtooltip($int15, 1429, $enum1, $int20, $string0);
+$string0, $int20 = ~poh_viewer_roomtooltip($int16, 1430, $enum1, $int20, $string0);
+$string0, $int20 = ~poh_viewer_roomtooltip($int17, 1431, $enum1, $int20, $string0);
+$string0, $int20 = ~poh_viewer_roomtooltip($int18, 1432, $enum1, $int20, $string0);
+if ($int20 > 0) {
+	$string0 = append($string0, "</col>");
+} else {
+	$string0 = append($string0, " <col=4f4f4f>(empty)</col>");
+}
+cc_create($component5, ^iftype_graphic, 2);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("tick");
+~script1380($int0);
+if_setonvartransmit("script1378(event_com, cc_getid, $int0){var780}", $component5);
+if_setonmouserepeat("poh_viewer_room_hover(true, event_com, cc_getid, $string0)", $component5);
+if_setonmouseleave("poh_viewer_room_hover(false, event_com, cc_getid, $string0)", $component5);

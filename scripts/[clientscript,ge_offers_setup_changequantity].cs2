@@ -2,57 +2,55 @@
 [clientscript,ge_offers_setup_changequantity](int $int0, int $int1, component $component2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, component $component15, int $int16)
 if (($int1 ! 1) | (%var1151 = -1)) {
 	return;
-} else {
-	def_int $int17 = ^max_32bit_int;
-	if (%var1151 = 13190) {
-		%varbit4396 = 1;
-		sound_synth(2266, 1, 0);
-	} else if (%varbit4397 = 1) {
-		$int17 = ~script813;
-		if ($int0 >= ^max_32bit_int) {
-			%varbit4396 = $int17;
-			sound_synth(3929, 1, 0);
-		} else if ($int0 > 0) {
-			if (($int0 > 1) & (%varbit4396 = 1)) {
-				$int0 = calc($int0 - 1);
-			}
-			if (calc($int17 - $int0) < %varbit4396) {
-				%varbit4396 = $int17;
-			} else {
-				%varbit4396 = calc(%varbit4396 + $int0);
-			}
-			sound_synth(3929, 1, 0);
-		} else {
-			if (%varbit4396 <= calc(0 - $int0)) {
-				%varbit4396 = 1;
-			} else {
-				%varbit4396 = calc(%varbit4396 + $int0);
-			}
-			sound_synth(3930, 1, 0);
-		}
-	} else {
-		if ($int0 >= ^max_32bit_int) {
-			$int0 = 1000;
-		}
-		if ($int0 > 0) {
-			if (($int0 > 1) & (%varbit4396 = 1)) {
-				$int0 = calc($int0 - 1);
-			}
-			if (calc(^max_32bit_int - $int0) < %varbit4396) {
-				%varbit4396 = ^max_32bit_int;
-			} else {
-				%varbit4396 = calc(%varbit4396 + $int0);
-			}
-			sound_synth(3929, 1, 0);
-		} else {
-			if (%varbit4396 <= calc(0 - $int0)) {
-				%varbit4396 = 1;
-			} else {
-				%varbit4396 = calc(%varbit4396 + $int0);
-			}
-			sound_synth(3930, 1, 0);
-		}
-	}
-	~ge_offers_setup_draw($component2, $int3, $int4, $int5, $int6, $int7, $int8, $int9, $int10, $int11, $int12, $int13, $int14, $component15, $int16);
-	return;
 }
+def_int $int17 = ^max_32bit_int;
+if (%var1151 = 13190) {
+	%varbit4396 = 1;
+	sound_synth(2266, 1, 0);
+} else if (%varbit4397 = 1) {
+	$int17 = ~script813;
+	if ($int0 >= ^max_32bit_int) {
+		%varbit4396 = $int17;
+		sound_synth(3929, 1, 0);
+	} else if ($int0 > 0) {
+		if (($int0 > 1) & (%varbit4396 = 1)) {
+			$int0 = calc($int0 - 1);
+		}
+		if (calc($int17 - $int0) < %varbit4396) {
+			%varbit4396 = $int17;
+		} else {
+			%varbit4396 = calc(%varbit4396 + $int0);
+		}
+		sound_synth(3929, 1, 0);
+	} else {
+		if (%varbit4396 <= calc(0 - $int0)) {
+			%varbit4396 = 1;
+		} else {
+			%varbit4396 = calc(%varbit4396 + $int0);
+		}
+		sound_synth(3930, 1, 0);
+	}
+} else {
+	if ($int0 >= ^max_32bit_int) {
+		$int0 = 1000;
+	}
+	if ($int0 > 0) {
+		if (($int0 > 1) & (%varbit4396 = 1)) {
+			$int0 = calc($int0 - 1);
+		}
+		if (calc(^max_32bit_int - $int0) < %varbit4396) {
+			%varbit4396 = ^max_32bit_int;
+		} else {
+			%varbit4396 = calc(%varbit4396 + $int0);
+		}
+		sound_synth(3929, 1, 0);
+	} else {
+		if (%varbit4396 <= calc(0 - $int0)) {
+			%varbit4396 = 1;
+		} else {
+			%varbit4396 = calc(%varbit4396 + $int0);
+		}
+		sound_synth(3930, 1, 0);
+	}
+}
+~ge_offers_setup_draw($component2, $int3, $int4, $int5, $int6, $int7, $int8, $int9, $int10, $int11, $int12, $int13, $int14, $component15, $int16);

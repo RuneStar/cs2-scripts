@@ -3,32 +3,31 @@ script2614(obj $obj0, component $component1)(int)
 if (stat(magic) < oc_param($obj0, 604)) {
 	if_settrans(0, $component1);
 	return(0);
-} else {
-	switch ($component1) {
-		case 218:137, 218:136 :
-			if (%varbit2451 = 1) {
-				if_settrans(150, $component1);
-			} else {
-				if_settrans(0, $component1);
-			}
-		case 218:123 :
-			if (%varbit5438 > 0) {
-				if_settrans(150, $component1);
-			} else {
-				if_settrans(0, $component1);
-			}
-		case 218:17 :
-			if ((((((((((inv_total(inv, explorers_ring_1_13125) > 0) | (inv_total(inv, explorers_ring_2_13126) > 0)) | (inv_total(inv, explorers_ring_3_13127) > 0)) | (inv_total(worn, explorers_ring_1_13125) > 0)) | (inv_total(worn, explorers_ring_2_13126) > 0)) | (inv_total(worn, explorers_ring_3_13127) > 0)) | (inv_total(inv, explorers_ring_4_13128) > 0)) | (inv_total(worn, explorers_ring_4_13128) > 0)) & (map_members = true)) & (%varbit4554 < 30)) {
-				return(1);
-			}
-		case 218:38 :
-			if ((((inv_total(inv, explorers_ring_4_13128) > 0) | (inv_total(worn, explorers_ring_4_13128) > 0)) & (map_members = true)) & (%varbit4554 < 30)) {
-				return(1);
-			}
-		case 218:68 :
-			if ((%varbit2010 = 0) | (%varbit5604 >= 5)) {
-				return(0);
-			}
-	}
-	return(~magic_spellbook_hasrunes($obj0));
 }
+switch ($component1) {
+	case 218:137, 218:136 :
+		if (%varbit2451 = 1) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
+		}
+	case 218:123 :
+		if (%varbit5438 > 0) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
+		}
+	case 218:17 :
+		if ((((((((((inv_total(inv, explorers_ring_1_13125) > 0) | (inv_total(inv, explorers_ring_2_13126) > 0)) | (inv_total(inv, explorers_ring_3_13127) > 0)) | (inv_total(worn, explorers_ring_1_13125) > 0)) | (inv_total(worn, explorers_ring_2_13126) > 0)) | (inv_total(worn, explorers_ring_3_13127) > 0)) | (inv_total(inv, explorers_ring_4_13128) > 0)) | (inv_total(worn, explorers_ring_4_13128) > 0)) & (map_members = true)) & (%varbit4554 < 30)) {
+			return(1);
+		}
+	case 218:38 :
+		if ((((inv_total(inv, explorers_ring_4_13128) > 0) | (inv_total(worn, explorers_ring_4_13128) > 0)) & (map_members = true)) & (%varbit4554 < 30)) {
+			return(1);
+		}
+	case 218:68 :
+		if ((%varbit2010 = 0) | (%varbit5604 >= 5)) {
+			return(0);
+		}
+}
+return(~magic_spellbook_hasrunes($obj0));

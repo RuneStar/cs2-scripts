@@ -2,8 +2,8 @@
 [proc,xpdrops_percentage_tostring](int $int0)(string)
 if ($int0 < 0) {
 	return("");
-} else if ($int0 >= 1000) {
-	return("- <col=ff0000>COMPLETE!</col>");
-} else {
-	return("<tostring(calc($int0 / 10))>.<tostring(calc($int0 % 10))>%");
 }
+if ($int0 >= 1000) {
+	return("- <col=ff0000>COMPLETE!</col>");
+}
+return("<tostring(calc($int0 / 10))>.<tostring(calc($int0 % 10))>%");

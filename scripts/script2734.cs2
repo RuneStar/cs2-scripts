@@ -2,6 +2,5 @@
 script2734(int $int0)(string)
 if ($int0 >= ^max_32bit_int) {
 	return("Lots! (<tostring($int0)>+)");
-} else {
-	return(~script46($int0, ","));
 }
+return(~script46($int0, ","));

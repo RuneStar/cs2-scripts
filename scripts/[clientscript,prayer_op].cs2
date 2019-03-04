@@ -6,17 +6,18 @@ if ($int0 = 1) {
 			%varbit4101 = clearbit(%varbit4101, $int2);
 			~prayer_updatebutton($boolean1, $int2, $component3, $component6, $component7);
 			return;
-		} else if (~prayer_isavailable($int2) = 0) {
+		}
+		if (~prayer_isavailable($int2) = 0) {
 			sound_synth(2673, 1, 0);
 			return;
-		} else if (stat(prayer) <= 0) {
+		}
+		if (stat(prayer) <= 0) {
 			sound_synth(2673, 1, 0);
 			mes("You need to recharge your Prayer at an altar.");
 			return;
-		} else {
-			%varbit4101 = setbit(%varbit4101, $int2);
-			~prayer_updatebutton($boolean1, $int2, $component3, $component6, $component7);
 		}
+		%varbit4101 = setbit(%varbit4101, $int2);
+		~prayer_updatebutton($boolean1, $int2, $component3, $component6, $component7);
 	}
 } else if ($int0 = 2) {
 	~deltooltip_action($component7);

@@ -4,16 +4,14 @@ def_int $int6 = if_getwidth($component0);
 def_int $int7 = if_getheight($component0);
 if (($int6 = $int4) & ($int7 = $int5)) {
 	return;
-} else {
-	def_int $int8 = calc($int7 - 10);
-	def_int $int9 = 800;
-	if ($int9 > $int8) {
-		$int9 = $int8;
-	}
-	def_int $int10 = if_getscrollheight($component2);
-	if_setsize(500, $int9, ^setsize_abs, ^setsize_abs, $component1);
-	~scrollbar_vertical_rebuild($component3, $component2);
-	~scrollbar_resize($component3, $component2, %varcint63);
-	if_setontimer("script1488($component0, $component1, $component2, $component3, $int6, $int7)", $component0);
-	return;
 }
+def_int $int8 = calc($int7 - 10);
+def_int $int9 = 800;
+if ($int9 > $int8) {
+	$int9 = $int8;
+}
+def_int $int10 = if_getscrollheight($component2);
+if_setsize(500, $int9, ^setsize_abs, ^setsize_abs, $component1);
+~scrollbar_vertical_rebuild($component3, $component2);
+~scrollbar_resize($component3, $component2, %varcint63);
+if_setontimer("script1488($component0, $component1, $component2, $component3, $int6, $int7)", $component0);

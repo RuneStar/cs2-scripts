@@ -2,32 +2,30 @@
 [clientscript,tob_partydetails_addapplicant](string $string0)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:13)) = false) {
 	return;
-} else {
-	def_int $int0 = ~max(0, calc(%varcint178 - 5));
-	def_int $int1 = calc($int0 * 20);
-	cc_create(50:41, ^iftype_rectangle, $int1);
-	cc_setsize(0, 13, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, -13, ^setpos_abs_centre, ^setpos_abs_top);
-	cc_setfill(true);
-	cc_setcolour(^black);
-	def_string $string1 = "";
-	def_string $string2 = "";
-	$string1, $string2 = ~script632($string0);
-	def_int $colour2 = 0xff981f;
-	if (compare(lowercase($string1), lowercase(removetags(chat_playername))) = 0) {
-		$colour2 = ^white;
-	}
-	def_int $int3 = 0;
-	$string0, $int3 = ~script2322(1, -1, 50:31, $int1, $int3, $colour2, $string0);
-	$string0, $int3 = ~script2322(2, 3, 50:32, $int1, $int3, $colour2, $string0);
-	$string0, $int3 = ~script2322(4, 5, 50:33, $int1, $int3, $colour2, $string0);
-	$string0, $int3 = ~script2322(6, 7, 50:34, $int1, $int3, $colour2, $string0);
-	$string0, $int3 = ~script2322(8, 9, 50:35, $int1, $int3, $colour2, $string0);
-	$string0, $int3 = ~script2322(10, 11, 50:36, $int1, $int3, $colour2, $string0);
-	$string0, $int3 = ~script2322(12, 13, 50:37, $int1, $int3, $colour2, $string0);
-	$string0, $int3 = ~script2322(14, 15, 50:38, $int1, $int3, $colour2, $string0);
-	$string0, $int3 = ~script2322(16, 17, 50:39, $int1, $int3, $colour2, $string0);
-	$string0, $int3 = ~script2322(18, 19, 50:40, $int1, $int3, $colour2, $string0);
-	%varcint178 = calc(%varcint178 + 1);
-	return;
 }
+def_int $int0 = ~max(0, calc(%varcint178 - 5));
+def_int $int1 = calc($int0 * 20);
+cc_create(50:41, ^iftype_rectangle, $int1);
+cc_setsize(0, 13, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, -13, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+def_string $string1 = "";
+def_string $string2 = "";
+$string1, $string2 = ~script632($string0);
+def_int $colour2 = 0xff981f;
+if (compare(lowercase($string1), lowercase(removetags(chat_playername))) = 0) {
+	$colour2 = ^white;
+}
+def_int $int3 = 0;
+$string0, $int3 = ~script2322(1, -1, 50:31, $int1, $int3, $colour2, $string0);
+$string0, $int3 = ~script2322(2, 3, 50:32, $int1, $int3, $colour2, $string0);
+$string0, $int3 = ~script2322(4, 5, 50:33, $int1, $int3, $colour2, $string0);
+$string0, $int3 = ~script2322(6, 7, 50:34, $int1, $int3, $colour2, $string0);
+$string0, $int3 = ~script2322(8, 9, 50:35, $int1, $int3, $colour2, $string0);
+$string0, $int3 = ~script2322(10, 11, 50:36, $int1, $int3, $colour2, $string0);
+$string0, $int3 = ~script2322(12, 13, 50:37, $int1, $int3, $colour2, $string0);
+$string0, $int3 = ~script2322(14, 15, 50:38, $int1, $int3, $colour2, $string0);
+$string0, $int3 = ~script2322(16, 17, 50:39, $int1, $int3, $colour2, $string0);
+$string0, $int3 = ~script2322(18, 19, 50:40, $int1, $int3, $colour2, $string0);
+%varcint178 = calc(%varcint178 + 1);

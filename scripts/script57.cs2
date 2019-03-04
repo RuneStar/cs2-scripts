@@ -2,17 +2,16 @@
 script57(int $int0, char $char1, component $component2, int $int3, component $component4, int $int5, int $colour6, int $int7, string $string0, string $string1)
 if (clientclock < $int7) {
 	return;
-} else if (~script1701(-1, 162) = 0) {
-	return;
-} else {
-	def_int $int8 = 0;
-	if (($int0 ! -1) & ($int0 = $int5)) {
-		$int8 = 1;
-	} else if (($char1 ! null) & ((string_indexof_char($string0, $char1) ! -1) | (string_indexof_char($string1, $char1) ! -1))) {
-		$int8 = 1;
-	} else {
-		return;
-	}
-	~script2153($component2, $int3, $component4, $int5, $colour6, $int7, $string0, $string1);
+}
+if (~script1701(-1, 162) = 0) {
 	return;
 }
+def_int $int8 = 0;
+if (($int0 ! -1) & ($int0 = $int5)) {
+	$int8 = 1;
+} else if (($char1 ! null) & ((string_indexof_char($string0, $char1) ! -1) | (string_indexof_char($string1, $char1) ! -1))) {
+	$int8 = 1;
+} else {
+	return;
+}
+~script2153($component2, $int3, $component4, $int5, $colour6, $int7, $string0, $string1);

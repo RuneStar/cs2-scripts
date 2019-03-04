@@ -2,12 +2,10 @@
 script2062(int $int0, int $int1)
 if (%varcint5 = 16) {
 	return;
-} else {
-	if ((%varcint200 >= 0) & (%varcint200 <= $int1)) {
-		%varcint201 = ~max(%varcint200, 1);
-	} else {
-		%varcint200 = $int1;
-	}
-	~script2055($int0, $int1);
-	return;
 }
+if ((%varcint200 >= 0) & (%varcint200 <= $int1)) {
+	%varcint201 = ~max(%varcint200, 1);
+} else {
+	%varcint200 = $int1;
+}
+~script2055($int0, $int1);

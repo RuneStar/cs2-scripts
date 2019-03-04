@@ -2,15 +2,14 @@
 [clientscript,options_minimaporbs_op](int $int0, component $component1, component $component2)
 if ($int0 ! 1) {
 	return;
-} else if (~mobile_setting_check = 0) {
-	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if (%varbit4084 = 0) {
-		%varbit4084 = 1;
-	} else {
-		%varbit4084 = 0;
-	}
-	~options_minimaporbs($component1, $component2);
+}
+if (~mobile_setting_check = 0) {
 	return;
 }
+sound_synth(2266, 1, 0);
+if (%varbit4084 = 0) {
+	%varbit4084 = 1;
+} else {
+	%varbit4084 = 0;
+}
+~options_minimaporbs($component1, $component2);

@@ -3,20 +3,18 @@
 def_int $int3 = inv_size(inv);
 if (($int1 < 0) | ($int1 >= $int3)) {
 	return;
-} else if (($int2 < 0) | ($int2 >= $int3)) {
+}
+if (($int2 < 0) | ($int2 >= $int3)) {
 	return;
-} else {
-	def_obj $obj4 = inv_getobj(inv, $int1);
-	if ($obj4 = null) {
-		return;
-	} else {
-		def_obj $obj5 = inv_getobj(inv, $int2);
-		if (cc_find($component0, $int2) = true) {
-			~raids_storage_side_private_drawitem($obj4, inv_getnum(inv, $int1));
-		}
-		if (cc_find($component0, $int1) = true) {
-			~raids_storage_side_private_drawitem($obj5, inv_getnum(inv, $int2));
-		}
-		return;
-	}
+}
+def_obj $obj4 = inv_getobj(inv, $int1);
+if ($obj4 = null) {
+	return;
+}
+def_obj $obj5 = inv_getobj(inv, $int2);
+if (cc_find($component0, $int2) = true) {
+	~raids_storage_side_private_drawitem($obj4, inv_getnum(inv, $int1));
+}
+if (cc_find($component0, $int1) = true) {
+	~raids_storage_side_private_drawitem($obj5, inv_getnum(inv, $int2));
 }

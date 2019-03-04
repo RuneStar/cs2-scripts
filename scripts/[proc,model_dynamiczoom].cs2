@@ -8,9 +8,7 @@ if ($int10 < 334) {
 }
 if ($int10 = $int1) {
 	return;
-} else {
-	def_int $int11 = calc($int3 - interpolate(0, invpow(($int10 - 334), 2), 0, invpow((1500 - 334), 2), ($int3 - $int4)));
-	if_setmodelangle($int5, $int6, $int7, $int8, $int9, $int11, $component2);
-	if_setontimer("model_dynamiczoom($component0, $int10, $component2, $int3, $int4, $int5, $int6, $int7, $int8, $int9)", $component0);
-	return;
 }
+def_int $int11 = calc($int3 - interpolate(0, invpow(($int10 - 334), 2), 0, invpow((1500 - 334), 2), ($int3 - $int4)));
+if_setmodelangle($int5, $int6, $int7, $int8, $int9, $int11, $component2);
+if_setontimer("model_dynamiczoom($component0, $int10, $component2, $int3, $int4, $int5, $int6, $int7, $int8, $int9)", $component0);

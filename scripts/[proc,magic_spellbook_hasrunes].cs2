@@ -3,21 +3,17 @@
 def_obj $obj1 = oc_param($obj0, 365);
 if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 366))) {
 	return(0);
-} else {
-	$obj1 = oc_param($obj0, 367);
-	if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 368))) {
-		return(0);
-	} else {
-		$obj1 = oc_param($obj0, 369);
-		if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 370))) {
-			return(0);
-		} else {
-			$obj1 = oc_param($obj0, 606);
-			if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 607))) {
-				return(0);
-			} else {
-				return(1);
-			}
-		}
-	}
 }
+$obj1 = oc_param($obj0, 367);
+if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 368))) {
+	return(0);
+}
+$obj1 = oc_param($obj0, 369);
+if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 370))) {
+	return(0);
+}
+$obj1 = oc_param($obj0, 606);
+if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 607))) {
+	return(0);
+}
+return(1);

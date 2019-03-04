@@ -2,20 +2,17 @@
 [clientscript,ds2_fossil_map_swap](component $component0, int $int1, component $component2, int $int3)
 if ($component2 ! $component0) {
 	return;
-} else {
-	def_int $int4 = 0;
-	def_int $int5 = 0;
-	$int4, $int5 = ~ds2_fossil_map_getslot($int1);
-	def_int $int6 = 0;
-	def_int $int7 = 0;
-	$int6, $int7 = ~ds2_fossil_map_getslot($int3);
-	if (($int4 = 0) | ($int6 = 0)) {
-		return;
-	} else {
-		~ds2_fossil_map_setslot($int3, $int4, $int5);
-		~ds2_fossil_map_setslot($int1, $int6, $int7);
-		sound_synth(2266, 1, 0);
-		~ds2_fossil_map_redraw($component0);
-		return;
-	}
 }
+def_int $int4 = 0;
+def_int $int5 = 0;
+$int4, $int5 = ~ds2_fossil_map_getslot($int1);
+def_int $int6 = 0;
+def_int $int7 = 0;
+$int6, $int7 = ~ds2_fossil_map_getslot($int3);
+if (($int4 = 0) | ($int6 = 0)) {
+	return;
+}
+~ds2_fossil_map_setslot($int3, $int4, $int5);
+~ds2_fossil_map_setslot($int1, $int6, $int7);
+sound_synth(2266, 1, 0);
+~ds2_fossil_map_redraw($component0);

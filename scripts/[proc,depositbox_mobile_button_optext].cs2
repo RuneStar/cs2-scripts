@@ -2,12 +2,10 @@
 [proc,depositbox_mobile_button_optext](component $component0)
 if ($component0 ! 192:17) {
 	return;
+}
+def_string $string0 = ",";
+if (%var1794 > 0) {
+	if_setop(1, "Default Quantity: <col=ff9040><~script46(%var1794, $string0)></col>", $component0);
 } else {
-	def_string $string0 = ",";
-	if (%var1794 > 0) {
-		if_setop(1, "Default Quantity: <col=ff9040><~script46(%var1794, $string0)></col>", $component0);
-	} else {
-		if_setop(1, "", $component0);
-	}
-	return;
+	if_setop(1, "", $component0);
 }

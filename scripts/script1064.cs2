@@ -19,12 +19,10 @@ switch ($int0) {
 			$int4 = ~script716(secateurs_5329);
 			if (calc(^max_32bit_int - $int4) < $int1) {
 				return(^max_32bit_int, magic_secateurs_7409);
-			} else {
-				return(calc($int1 + $int4), magic_secateurs_7409);
 			}
-		} else {
-			return(~script716(secateurs_5329), secateurs_5329);
+			return(calc($int1 + $int4), magic_secateurs_7409);
 		}
+		return(~script716(secateurs_5329), secateurs_5329);
 	case 6797 :
 		$int2 = enum_getoutputcount(136);
 		while ($int2 >= 0) {

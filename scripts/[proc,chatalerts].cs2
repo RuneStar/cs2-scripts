@@ -4,45 +4,42 @@ def_int $int1 = %varcint57;
 %varcint57 = clientclock;
 if (%varcint41 = 0) {
 	return;
-} else {
-	def_int $int2 = 0;
-	if (%varcint41 = -1) {
-		$int2 = 1;
+}
+def_int $int2 = 0;
+if (%varcint41 = -1) {
+	$int2 = 1;
+}
+def_int $chattype3 = ^chattype_gamemessage;
+def_int $int4 = -1;
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+def_int $int5 = 0;
+def_boolean $boolean6 = ~on_mobile;
+while ($int0 ! -1) {
+	$chattype3, $int4, $int5, $string0, $string1, $string2 = chat_gethistory_byuid($int0);
+	if ($int4 <= $int1) {
+		return;
 	}
-	def_int $chattype3 = ^chattype_gamemessage;
-	def_int $int4 = -1;
-	def_string $string0 = "";
-	def_string $string1 = "";
-	def_string $string2 = "";
-	def_int $int5 = 0;
-	def_boolean $boolean6 = ~on_mobile;
-	while ($int0 ! -1) {
-		$chattype3, $int4, $int5, $string0, $string1, $string2 = chat_gethistory_byuid($int0);
-		if ($int4 <= $int1) {
-			return;
-		} else {
-			if ((~filtertest($chattype3, $int4, $int2, $int5, $string0, $string2, removetags(chat_playername)) = 1) & (~script210($chattype3, $int5, $string0) = 0)) {
-				switch ($chattype3) {
-					case ^chattype_modchat, ^chattype_publicchat :
-						~chat_alert_enable(2);
-					case ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat :
-						~chat_alert_enable(3);
-					case ^chattype_loginlogoutnotification :
-						if ($boolean6 = false) {
-							~chat_alert_enable(3);
-						}
-					case ^chattype_tradereq, ^chattype_trade, ^chattype_chalreq_trade :
-						~chat_alert_enable(5);
-					case ^chattype_friendschat, ^chattype_friendschatnotification, ^chattype_chalreq_friendschat :
-						~chat_alert_enable(4);
-					else :
-						if (enum(int, boolean, 892, $chattype3) = true) {
-							~chat_alert_enable(1);
-						}
+	if ((~filtertest($chattype3, $int4, $int2, $int5, $string0, $string2, removetags(chat_playername)) = 1) & (~script210($chattype3, $int5, $string0) = 0)) {
+		switch ($chattype3) {
+			case ^chattype_modchat, ^chattype_publicchat :
+				~chat_alert_enable(2);
+			case ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat :
+				~chat_alert_enable(3);
+			case ^chattype_loginlogoutnotification :
+				if ($boolean6 = false) {
+					~chat_alert_enable(3);
 				}
-			}
-			$int0 = chat_getprevuid($int0);
+			case ^chattype_tradereq, ^chattype_trade, ^chattype_chalreq_trade :
+				~chat_alert_enable(5);
+			case ^chattype_friendschat, ^chattype_friendschatnotification, ^chattype_chalreq_friendschat :
+				~chat_alert_enable(4);
+			else :
+				if (enum(int, boolean, 892, $chattype3) = true) {
+					~chat_alert_enable(1);
+				}
 		}
 	}
-	return;
+	$int0 = chat_getprevuid($int0);
 }

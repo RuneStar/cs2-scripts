@@ -10,10 +10,10 @@ if (if_find($component0) = true) {
 		cc_settrans(255);
 		cc_setontimer(null);
 		return;
-	} else if (calc($int3 % 40) >= 20) {
+	}
+	if (calc($int3 % 40) >= 20) {
 		cc_settrans(255);
 		return;
-	} else {
-		cc_settrans(interpolate(0, $int4, 0, 750, 255));
 	}
+	cc_settrans(interpolate(0, $int4, 0, 750, 255));
 }

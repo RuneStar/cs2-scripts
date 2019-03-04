@@ -5,30 +5,29 @@
 .cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 if ($int3 < $int1) {
 	return($int4, $int5);
-} else {
-	cc_create($component0, ^iftype_text, $int4);
-	cc_setsize(80, $int2, ^setsize_minus, ^setsize_abs);
-	cc_setposition(5, $int5, ^setpos_abs_right, ^setpos_abs_centre);
-	cc_setcolour(0xff981f);
-	cc_setonmouserepeat("script85(event_com, event_comid, 16777215)");
-	cc_setonmouseleave("script85(event_com, event_comid, 16750623)");
-	cc_settextfont(p11_full);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settextshadow(true);
-	cc_setop(1, removetags($string0));
-	def_string $string1 = "";
-	def_string $string2 = "";
-	if ($int6 < 9) {
-		$string1 = tostring(calc($int6 + 1));
-		$string0 = "<col=ccccff><$string1>:</col> <$string0>";
-		.cc_setonkey("poh_jewellery_box_keypress(event_keypressed, event_comid, $component0, $int4, $string0, $string1, $string2)");
-	} else if ($int6 < 35) {
-		$string2 = enum(int, string, 1402, calc($int6 - 8));
-		$string1 = enum(int, string, 1401, calc($int6 - 8));
-		$string0 = "<col=ccccff><$string1>:</col> <$string0>";
-		.cc_setonkey("poh_jewellery_box_keypress(event_keypressed, event_comid, $component0, $int4, $string0, $string1, $string2)");
-	}
-	cc_settext($string0);
-	cc_setonop("poh_jewellery_box_op(event_opindex, $int6, $component0, $int4, $string0, $string1, $string2)");
-	return(calc($int4 + 1), calc($int5 + $int2));
 }
+cc_create($component0, ^iftype_text, $int4);
+cc_setsize(80, $int2, ^setsize_minus, ^setsize_abs);
+cc_setposition(5, $int5, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_setonmouserepeat("script85(event_com, event_comid, 16777215)");
+cc_setonmouseleave("script85(event_com, event_comid, 16750623)");
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_setop(1, removetags($string0));
+def_string $string1 = "";
+def_string $string2 = "";
+if ($int6 < 9) {
+	$string1 = tostring(calc($int6 + 1));
+	$string0 = "<col=ccccff><$string1>:</col> <$string0>";
+	.cc_setonkey("poh_jewellery_box_keypress(event_keypressed, event_comid, $component0, $int4, $string0, $string1, $string2)");
+} else if ($int6 < 35) {
+	$string2 = enum(int, string, 1402, calc($int6 - 8));
+	$string1 = enum(int, string, 1401, calc($int6 - 8));
+	$string0 = "<col=ccccff><$string1>:</col> <$string0>";
+	.cc_setonkey("poh_jewellery_box_keypress(event_keypressed, event_comid, $component0, $int4, $string0, $string1, $string2)");
+}
+cc_settext($string0);
+cc_setonop("poh_jewellery_box_op(event_opindex, $int6, $component0, $int4, $string0, $string1, $string2)");
+return(calc($int4 + 1), calc($int5 + $int2));

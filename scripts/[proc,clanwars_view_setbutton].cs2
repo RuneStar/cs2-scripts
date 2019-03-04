@@ -3,21 +3,19 @@
 if ((cc_find($component0, 0) = true) & (.cc_find($component0, 1) = true)) {
 	~clanwars_view_updatebutton($component0, $int1, $int2, $model3);
 	return;
-} else {
-	def_int $int4 = if_getwidth($component0);
-	def_int $int5 = if_getheight($component0);
-	cc_deleteall($component0);
-	cc_create($component0, ^iftype_rectangle, 0);
-	cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setfill(true);
-	cc_setcolour(^white);
-	cc_settrans(255);
-	.cc_create($component0, ^iftype_model, 1);
-	.cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
-	.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setmodelangle(0, 150, 80, 0, 0, 1500);
-	.cc_setmodelanim(2657);
-	~clanwars_view_updatebutton($component0, $int1, $int2, $model3);
-	return;
 }
+def_int $int4 = if_getwidth($component0);
+def_int $int5 = if_getheight($component0);
+cc_deleteall($component0);
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(255);
+.cc_create($component0, ^iftype_model, 1);
+.cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setmodelangle(0, 150, 80, 0, 0, 1500);
+.cc_setmodelanim(2657);
+~clanwars_view_updatebutton($component0, $int1, $int2, $model3);

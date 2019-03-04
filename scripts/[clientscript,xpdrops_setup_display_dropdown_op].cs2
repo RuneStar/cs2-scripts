@@ -2,32 +2,29 @@
 [clientscript,xpdrops_setup_display_dropdown_op](int $int0, int $int1, int $int2, int $int3, component $component4, component $component5, component $component6, int $int7, component $component8, int $int9, component $component10, int $int11, component $component12, int $int13, component $component14, int $int15, component $component16, int $int17, component $component18, int $int19, component $component20, int $int21, component $component22, int $int23)
 if ($int0 ! 1) {
 	return;
-} else {
-	$int2 = calc($int2 - 1);
-	if (($int2 < 0) | ($int2 >= $int3)) {
-		return;
-	} else {
-		if ($int1 = $int7) {
-			%varbit4692 = $int2;
-		} else if ($int1 = $int9) {
-			%varbit4693 = $int2;
-		} else if ($int1 = $int11) {
-			%varbit4694 = $int2;
-		} else if ($int1 = $int13) {
-			%varbit4697 = $int2;
-		} else if ($int1 = $int15) {
-			%varbit4698 = $int2;
-		} else if ($int1 = $int17) {
-			%varbit4695 = $int2;
-		} else if ($int1 = $int19) {
-			%varbit4696 = $int2;
-		} else if ($int1 = $int21) {
-			%varbit4722 = $int2;
-		} else if ($int1 = $int23) {
-			%varbit8120 = $int2;
-		}
-		~xpdrops_setup_display_update($component6, $component8, $component10, $component12, $component14, $component16, $component18, $component20, $component22);
-		~xpdrops_setup_display_dropdown_close($component4, $component5, $component6, $component8, $component10, $component12, $component14, $component16, $component18, $component20, $component22);
-		return;
-	}
 }
+$int2 = calc($int2 - 1);
+if (($int2 < 0) | ($int2 >= $int3)) {
+	return;
+}
+if ($int1 = $int7) {
+	%varbit4692 = $int2;
+} else if ($int1 = $int9) {
+	%varbit4693 = $int2;
+} else if ($int1 = $int11) {
+	%varbit4694 = $int2;
+} else if ($int1 = $int13) {
+	%varbit4697 = $int2;
+} else if ($int1 = $int15) {
+	%varbit4698 = $int2;
+} else if ($int1 = $int17) {
+	%varbit4695 = $int2;
+} else if ($int1 = $int19) {
+	%varbit4696 = $int2;
+} else if ($int1 = $int21) {
+	%varbit4722 = $int2;
+} else if ($int1 = $int23) {
+	%varbit8120 = $int2;
+}
+~xpdrops_setup_display_update($component6, $component8, $component10, $component12, $component14, $component16, $component18, $component20, $component22);
+~xpdrops_setup_display_dropdown_close($component4, $component5, $component6, $component8, $component10, $component12, $component14, $component16, $component18, $component20, $component22);

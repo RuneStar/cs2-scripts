@@ -8,24 +8,24 @@ if (if_find($component0) = true) {
 		%varcint197 = 33189;
 		cc_set2dangle(33189);
 		return;
-	} else if ($int1 = $int3) {
+	}
+	if ($int1 = $int3) {
 		if_setontimer(null, $component0);
 		return;
-	} else {
-		if ($int2 = 0) {
-			%varbit5799 = 45;
-		} else if ($int2 = 1) {
-			%varbit5799 = 45;
-		} else if ($int2 = 2) {
-			%varbit5799 = 45;
-		}
-		if ($int3 < $int1) {
-			$int4 = %varbit5799;
-		} else {
-			$int4 = calc(0 - %varbit5799);
-		}
-		$int5 = ~minmax(10120, 49220, calc($int3 + $int4));
-		cc_set2dangle($int5);
-		%varcint197 = $int5;
 	}
+	if ($int2 = 0) {
+		%varbit5799 = 45;
+	} else if ($int2 = 1) {
+		%varbit5799 = 45;
+	} else if ($int2 = 2) {
+		%varbit5799 = 45;
+	}
+	if ($int3 < $int1) {
+		$int4 = %varbit5799;
+	} else {
+		$int4 = calc(0 - %varbit5799);
+	}
+	$int5 = ~minmax(10120, 49220, calc($int3 + $int4));
+	cc_set2dangle($int5);
+	%varcint197 = $int5;
 }

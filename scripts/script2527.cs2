@@ -3,26 +3,24 @@ script2527
 def_enum $enum0 = ~toplevel_getcomponents;
 if ($enum0 ! 1745) {
 	return;
-} else {
-	def_component $component1 = enum(component, component, $enum0, 161:13);
-	def_int $int2 = if_getheight($component1);
-	def_int $int3 = if_getwidth($component1);
-	def_int $int4 = if_getheight(if_getlayer($component1));
-	def_int $int5 = if_getwidth(if_getlayer($component1));
-	def_int $int6 = 0;
-	def_int $int7 = calc(($int4 - 184) + 26);
-	def_int $int8 = calc(($int5 - 182) + 40);
-	if ($int2 >= $int7) {
-		$int6 = 1;
-	}
-	if (($int6 = 1) & (~script2518 = 1)) {
-		$int5 = $int8;
-	}
-	if (calc(($int3 + 204) - 3) >= $int5) {
-		~toplevel_sidebutton_switch(-1, $enum0);
-	} else if ((((%varcint41 = -1) & (if_hassub(162:560) = false)) & (%varbit6538 = 1)) & (~script2518 = 1)) {
-		~toplevel_sidebutton_switch(-1, $enum0);
-	}
-	~script2526;
-	return;
 }
+def_component $component1 = enum(component, component, $enum0, 161:13);
+def_int $int2 = if_getheight($component1);
+def_int $int3 = if_getwidth($component1);
+def_int $int4 = if_getheight(if_getlayer($component1));
+def_int $int5 = if_getwidth(if_getlayer($component1));
+def_int $int6 = 0;
+def_int $int7 = calc(($int4 - 184) + 26);
+def_int $int8 = calc(($int5 - 182) + 40);
+if ($int2 >= $int7) {
+	$int6 = 1;
+}
+if (($int6 = 1) & (~script2518 = 1)) {
+	$int5 = $int8;
+}
+if (calc(($int3 + 204) - 3) >= $int5) {
+	~toplevel_sidebutton_switch(-1, $enum0);
+} else if ((((%varcint41 = -1) & (if_hassub(162:560) = false)) & (%varbit6538 = 1)) & (~script2518 = 1)) {
+	~toplevel_sidebutton_switch(-1, $enum0);
+}
+~script2526;

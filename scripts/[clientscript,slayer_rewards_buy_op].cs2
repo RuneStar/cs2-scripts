@@ -32,13 +32,12 @@ if ($int0 <= 1) {
 	if_setop(1, "Back", $component7);
 	if_setonop("script319(false, event_opindex, $component3, $component4, $component5, $component6, $component7)", $component7);
 	return;
-} else if ($int0 >= 10) {
+}
+if ($int0 >= 10) {
 	return;
-} else {
-	if (cc_find($component1, $int2) = true) {
-		cc_settrans(75);
-		sound_synth(2266, 1, 0);
-		cc_setontimer("slayer_rewards_buy_release($component1, $int2, calc(clientclock + 10))");
-	}
-	return;
+}
+if (cc_find($component1, $int2) = true) {
+	cc_settrans(75);
+	sound_synth(2266, 1, 0);
+	cc_setontimer("slayer_rewards_buy_release($component1, $int2, calc(clientclock + 10))");
 }

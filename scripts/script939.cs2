@@ -4,18 +4,16 @@ def_int $int4 = if_getwidth($component0);
 def_int $int5 = if_getheight($component0);
 if (($int4 = $int1) & ($int5 = $int2)) {
 	return;
-} else {
-	if ($int4 > 700) {
-		if ($int5 > 500) {
-			if_setsize(700, 500, ^setsize_abs, ^setsize_abs, $component3);
-		} else {
-			if_setsize(700, 0, ^setsize_abs, ^setsize_minus, $component3);
-		}
-	} else if ($int5 > 500) {
-		if_setsize(0, 500, ^setsize_minus, ^setsize_abs, $component3);
-	} else {
-		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component3);
-	}
-	if_setontimer("script938($component0, $int4, $int5, $component3)", $component0);
-	return;
 }
+if ($int4 > 700) {
+	if ($int5 > 500) {
+		if_setsize(700, 500, ^setsize_abs, ^setsize_abs, $component3);
+	} else {
+		if_setsize(700, 0, ^setsize_abs, ^setsize_minus, $component3);
+	}
+} else if ($int5 > 500) {
+	if_setsize(0, 500, ^setsize_minus, ^setsize_abs, $component3);
+} else {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component3);
+}
+if_setontimer("script938($component0, $int4, $int5, $component3)", $component0);

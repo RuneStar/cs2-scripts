@@ -4,9 +4,7 @@ if (%varcint5 ! 11) {
 	~bankmain_build($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12);
 	~bankmain_search_setbutton($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12);
 	return;
-} else {
-	if ((if_gethide($component11) = true) & (calc(clientclock % 40) = 0)) {
-		~bankmain_build($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12);
-	}
-	return;
+}
+if ((if_gethide($component11) = true) & (calc(clientclock % 40) = 0)) {
+	~bankmain_build($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12);
 }

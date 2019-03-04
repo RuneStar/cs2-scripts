@@ -6,9 +6,8 @@ if ($int0 = $int1) {
 		if (~script1942 = 1) {
 			mes("You can't leave your team's chat channel during Wilderness Wars.");
 			return;
-		} else {
-			clan_leavechat;
 		}
+		clan_leavechat;
 	} else {
 		~meslayer_mode10;
 	}

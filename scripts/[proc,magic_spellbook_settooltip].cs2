@@ -3,171 +3,169 @@
 cc_deleteall($component4);
 if ($int0 = 0) {
 	return;
-} else {
-	def_int $int6 = oc_param($obj1, 604);
-	def_string $string0 = oc_param($obj1, 601);
-	def_string $string1 = oc_param($obj1, 602);
-	switch ($obj1) {
-		case 9136, 9135 :
-			if (%varbit2451 = 1) {
-				$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
-			}
-		case 9124 :
-			if (%varbit5438 > 0) {
-				$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
-			}
-		case 9125 :
-			if (%varbit5960 = 1) {
-				$string1 = "Fertilise a farming patch with super or ultra compost, consuming 2 volcanic ash to do so.";
-			}
-	}
-	def_obj $obj7 = oc_param($obj1, 365);
-	def_int $int8 = oc_param($obj1, 366);
-	def_obj $obj9 = oc_param($obj1, 367);
-	def_int $int10 = oc_param($obj1, 368);
-	def_obj $obj11 = oc_param($obj1, 369);
-	def_int $int12 = oc_param($obj1, 370);
-	def_obj $obj13 = oc_param($obj1, 606);
-	def_int $int14 = oc_param($obj1, 607);
-	def_int $int15 = calc(2 + (13 * paraheight(177, p12_full, "Level <tostring($int6)>: <$string0>")));
-	def_int $int16 = calc(2 + (13 * paraheight(177, p11_full, $string1)));
-	def_int $int17 = calc(((((2 + $int15) + $int16) + 32) + 14) + 2);
-	if ($obj7 = null) {
-		$int17 = calc(($int17 - 32) - 14);
-	}
-	def_int $int18 = 5;
-	if (($int3 ! -1) & (cc_find($component2, $int3) = true)) {
-		if (cc_gety < 130) {
-			$int18 = calc($int5 - $int17);
-			if ($int5 >= 261) {
-				$int18 = calc($int18 - 5);
-			}
+}
+def_int $int6 = oc_param($obj1, 604);
+def_string $string0 = oc_param($obj1, 601);
+def_string $string1 = oc_param($obj1, 602);
+switch ($obj1) {
+	case 9136, 9135 :
+		if (%varbit2451 = 1) {
+			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
-	} else if (if_gety($component2) < 130) {
+	case 9124 :
+		if (%varbit5438 > 0) {
+			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
+		}
+	case 9125 :
+		if (%varbit5960 = 1) {
+			$string1 = "Fertilise a farming patch with super or ultra compost, consuming 2 volcanic ash to do so.";
+		}
+}
+def_obj $obj7 = oc_param($obj1, 365);
+def_int $int8 = oc_param($obj1, 366);
+def_obj $obj9 = oc_param($obj1, 367);
+def_int $int10 = oc_param($obj1, 368);
+def_obj $obj11 = oc_param($obj1, 369);
+def_int $int12 = oc_param($obj1, 370);
+def_obj $obj13 = oc_param($obj1, 606);
+def_int $int14 = oc_param($obj1, 607);
+def_int $int15 = calc(2 + (13 * paraheight(177, p12_full, "Level <tostring($int6)>: <$string0>")));
+def_int $int16 = calc(2 + (13 * paraheight(177, p11_full, $string1)));
+def_int $int17 = calc(((((2 + $int15) + $int16) + 32) + 14) + 2);
+if ($obj7 = null) {
+	$int17 = calc(($int17 - 32) - 14);
+}
+def_int $int18 = 5;
+if (($int3 ! -1) & (cc_find($component2, $int3) = true)) {
+	if (cc_gety < 130) {
 		$int18 = calc($int5 - $int17);
 		if ($int5 >= 261) {
 			$int18 = calc($int18 - 5);
 		}
 	}
-	cc_create($component4, ^iftype_rectangle, 0);
-	cc_setposition(5, $int18, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(180, $int17, ^setsize_abs, ^setsize_abs);
-	cc_setfill(true);
-	cc_setcolour(^black);
-	cc_settrans(42);
-	cc_create($component4, ^iftype_rectangle, 1);
-	cc_setposition(6, calc($int18 + 1), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(179, calc($int17 - 1), ^setsize_abs, ^setsize_abs);
-	cc_setfill(false);
-	cc_setcolour(0x2e2b23);
-	cc_create($component4, ^iftype_rectangle, 2);
-	cc_setposition(5, $int18, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(179, calc($int17 - 1), ^setsize_abs, ^setsize_abs);
-	cc_setfill(false);
-	cc_setcolour(0x726451);
-	cc_create($component4, ^iftype_text, 3);
-	cc_setposition(7, calc($int18 + 2), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(177, $int15, ^setsize_abs, ^setsize_abs);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settextfont(p12_full);
-	cc_setcolour(0xff981f);
-	cc_settextshadow(false);
-	cc_settext("Level <tostring($int6)>: <$string0>");
-	cc_create($component4, ^iftype_text, 4);
-	cc_setposition(7, calc(($int18 + 2) + $int15), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(177, $int16, ^setsize_abs, ^setsize_abs);
+} else if (if_gety($component2) < 130) {
+	$int18 = calc($int5 - $int17);
+	if ($int5 >= 261) {
+		$int18 = calc($int18 - 5);
+	}
+}
+cc_create($component4, ^iftype_rectangle, 0);
+cc_setposition(5, $int18, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(180, $int17, ^setsize_abs, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(42);
+cc_create($component4, ^iftype_rectangle, 1);
+cc_setposition(6, calc($int18 + 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(179, calc($int17 - 1), ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x2e2b23);
+cc_create($component4, ^iftype_rectangle, 2);
+cc_setposition(5, $int18, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(179, calc($int17 - 1), ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x726451);
+cc_create($component4, ^iftype_text, 3);
+cc_setposition(7, calc($int18 + 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(177, $int15, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(p12_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(false);
+cc_settext("Level <tostring($int6)>: <$string0>");
+cc_create($component4, ^iftype_text, 4);
+cc_setposition(7, calc(($int18 + 2) + $int15), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(177, $int16, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(p11_full);
+cc_setcolour(0xaf6a1a);
+cc_settextshadow(false);
+cc_settext($string1);
+def_int $int19 = 1;
+if ($obj9 ! null) {
+	$int19 = 2;
+}
+if ($obj11 ! null) {
+	$int19 = 3;
+}
+if ($obj13 ! null) {
+	$int19 = 4;
+}
+def_int $int20 = calc((190 - ($int19 * 35)) / ($int19 + 1));
+def_int $int21 = 0;
+if ($obj7 ! null) {
+	cc_create($component4, ^iftype_graphic, 5);
+	cc_setposition($int20, calc((($int18 + 2) + $int15) + $int16), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject($obj7, -1);
+	cc_create($component4, ^iftype_text, 6);
+	cc_setposition($int20, calc(((($int18 + 2) + $int15) + $int16) + 32), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextfont(p11_full);
-	cc_setcolour(0xaf6a1a);
+	$int21 = ~magic_runecount($obj7);
+	if ($int21 >= $int8) {
+		cc_setcolour(^green);
+	} else {
+		cc_setcolour(^red);
+	}
 	cc_settextshadow(false);
-	cc_settext($string1);
-	def_int $int19 = 1;
-	if ($obj9 ! null) {
-		$int19 = 2;
+	cc_settext("<~magic_tostring($int21)>/<tostring($int8)>");
+}
+if ($obj9 ! null) {
+	cc_create($component4, ^iftype_graphic, 7);
+	cc_setposition(calc(($int20 * 2) + 35), calc((($int18 + 2) + $int15) + $int16), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject($obj9, -1);
+	cc_create($component4, ^iftype_text, 8);
+	cc_setposition(calc(($int20 * 2) + 35), calc(((($int18 + 2) + $int15) + $int16) + 32), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p11_full);
+	$int21 = ~magic_runecount($obj9);
+	if ($int21 >= $int10) {
+		cc_setcolour(^green);
+	} else {
+		cc_setcolour(^red);
 	}
-	if ($obj11 ! null) {
-		$int19 = 3;
+	cc_settextshadow(false);
+	cc_settext("<~magic_tostring($int21)>/<tostring($int10)>");
+}
+if ($obj11 ! null) {
+	cc_create($component4, ^iftype_graphic, 9);
+	cc_setposition(calc(($int20 * 3) + 70), calc((($int18 + 2) + $int15) + $int16), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject($obj11, -1);
+	cc_create($component4, ^iftype_text, 10);
+	cc_setposition(calc(($int20 * 3) + 70), calc(((($int18 + 2) + $int15) + $int16) + 32), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p11_full);
+	$int21 = ~magic_runecount($obj11);
+	if ($int21 >= $int12) {
+		cc_setcolour(^green);
+	} else {
+		cc_setcolour(^red);
 	}
-	if ($obj13 ! null) {
-		$int19 = 4;
+	cc_settextshadow(false);
+	cc_settext("<~magic_tostring($int21)>/<tostring($int12)>");
+}
+if ($obj13 ! null) {
+	cc_create($component4, ^iftype_graphic, 11);
+	cc_setposition(calc(($int20 * 4) + 105), calc((($int18 + 2) + $int15) + $int16), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject($obj13, -1);
+	cc_create($component4, ^iftype_text, 12);
+	cc_setposition(calc(($int20 * 4) + 105), calc(((($int18 + 2) + $int15) + $int16) + 32), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p11_full);
+	$int21 = ~magic_runecount($obj13);
+	if ($int21 >= $int14) {
+		cc_setcolour(^green);
+	} else {
+		cc_setcolour(^red);
 	}
-	def_int $int20 = calc((190 - ($int19 * 35)) / ($int19 + 1));
-	def_int $int21 = 0;
-	if ($obj7 ! null) {
-		cc_create($component4, ^iftype_graphic, 5);
-		cc_setposition($int20, calc((($int18 + 2) + $int15) + $int16), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
-		cc_setobject($obj7, -1);
-		cc_create($component4, ^iftype_text, 6);
-		cc_setposition($int20, calc(((($int18 + 2) + $int15) + $int16) + 32), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextfont(p11_full);
-		$int21 = ~magic_runecount($obj7);
-		if ($int21 >= $int8) {
-			cc_setcolour(^green);
-		} else {
-			cc_setcolour(^red);
-		}
-		cc_settextshadow(false);
-		cc_settext("<~magic_tostring($int21)>/<tostring($int8)>");
-	}
-	if ($obj9 ! null) {
-		cc_create($component4, ^iftype_graphic, 7);
-		cc_setposition(calc(($int20 * 2) + 35), calc((($int18 + 2) + $int15) + $int16), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
-		cc_setobject($obj9, -1);
-		cc_create($component4, ^iftype_text, 8);
-		cc_setposition(calc(($int20 * 2) + 35), calc(((($int18 + 2) + $int15) + $int16) + 32), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextfont(p11_full);
-		$int21 = ~magic_runecount($obj9);
-		if ($int21 >= $int10) {
-			cc_setcolour(^green);
-		} else {
-			cc_setcolour(^red);
-		}
-		cc_settextshadow(false);
-		cc_settext("<~magic_tostring($int21)>/<tostring($int10)>");
-	}
-	if ($obj11 ! null) {
-		cc_create($component4, ^iftype_graphic, 9);
-		cc_setposition(calc(($int20 * 3) + 70), calc((($int18 + 2) + $int15) + $int16), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
-		cc_setobject($obj11, -1);
-		cc_create($component4, ^iftype_text, 10);
-		cc_setposition(calc(($int20 * 3) + 70), calc(((($int18 + 2) + $int15) + $int16) + 32), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextfont(p11_full);
-		$int21 = ~magic_runecount($obj11);
-		if ($int21 >= $int12) {
-			cc_setcolour(^green);
-		} else {
-			cc_setcolour(^red);
-		}
-		cc_settextshadow(false);
-		cc_settext("<~magic_tostring($int21)>/<tostring($int12)>");
-	}
-	if ($obj13 ! null) {
-		cc_create($component4, ^iftype_graphic, 11);
-		cc_setposition(calc(($int20 * 4) + 105), calc((($int18 + 2) + $int15) + $int16), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(35, 32, ^setsize_abs, ^setsize_abs);
-		cc_setobject($obj13, -1);
-		cc_create($component4, ^iftype_text, 12);
-		cc_setposition(calc(($int20 * 4) + 105), calc(((($int18 + 2) + $int15) + $int16) + 32), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(35, 14, ^setsize_abs, ^setsize_abs);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextfont(p11_full);
-		$int21 = ~magic_runecount($obj13);
-		if ($int21 >= $int14) {
-			cc_setcolour(^green);
-		} else {
-			cc_setcolour(^red);
-		}
-		cc_settextshadow(false);
-		cc_settext("<~magic_tostring($int21)>/<tostring($int14)>");
-	}
-	return;
+	cc_settextshadow(false);
+	cc_settext("<~magic_tostring($int21)>/<tostring($int14)>");
 }

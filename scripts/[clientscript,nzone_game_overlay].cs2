@@ -58,21 +58,19 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 ~script262(202:3, %varbit3956);
 if (string_length($string0) <= 0) {
 	return;
-} else {
-	cc_create(202:5, ^iftype_rectangle, 0);
-	cc_setsize(0, 30, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top);
-	cc_setcolour(0x7f7fff);
-	cc_setfill(true);
-	cc_settrans(255);
-	.cc_create(202:5, ^iftype_text, 1);
-	.cc_setsize(16384, 30, ^setsize_2, ^setsize_abs);
-	.cc_setposition(16384, 2, ^setpos_3, ^setpos_abs_top);
-	.cc_setcolour(^white);
-	.cc_settextshadow(true);
-	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	.cc_settextfont(645);
-	.cc_settext($string0);
-	cc_setontimer("nzone_game_subtitle(event_com, cc_getid, .cc_getid, clientclock)");
-	return;
 }
+cc_create(202:5, ^iftype_rectangle, 0);
+cc_setsize(0, 30, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0x7f7fff);
+cc_setfill(true);
+cc_settrans(255);
+.cc_create(202:5, ^iftype_text, 1);
+.cc_setsize(16384, 30, ^setsize_2, ^setsize_abs);
+.cc_setposition(16384, 2, ^setpos_3, ^setpos_abs_top);
+.cc_setcolour(^white);
+.cc_settextshadow(true);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextfont(645);
+.cc_settext($string0);
+cc_setontimer("nzone_game_subtitle(event_com, cc_getid, .cc_getid, clientclock)");

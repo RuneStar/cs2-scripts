@@ -6,87 +6,86 @@ if ($coord0 = null) {
 		cc_sethide(true);
 	}
 	return(calc($int7 + 1));
-} else {
-	def_int $int8 = 0;
-	def_int $int9 = 0;
-	$int8, $int9 = ~worldmap_elements_chooseposition($coord0, 0, $component2, $int3, $int4, $int5, $int6);
-	def_graphic $graphic10 = struct_param($struct1, 459);
-	def_int $int11 = struct_param($struct1, 462);
-	def_int $int12 = calc($int11 / 2);
-	def_int $int13 = 0;
-	def_int $int14 = 0;
-	def_int $int15 = calc(if_getwidth($component2) / 2);
-	def_int $int16 = calc(if_getheight($component2) / 2);
-	if ($int8 < calc(0 - $int15)) {
-		$int8 = calc($int12 - $int15);
-		if ($int9 < calc(0 - $int16)) {
-			$int9 = calc($int12 - $int16);
-			$int13 = 16384;
-			$graphic10 = struct_param($struct1, 461);
-		} else if ($int9 > $int16) {
-			$int9 = calc($int16 - $int12);
-			$int13 = 32768;
-			$graphic10 = struct_param($struct1, 461);
-		} else {
-			$int13 = 32768;
-			$graphic10 = struct_param($struct1, 460);
-		}
-	} else if ($int8 > $int15) {
-		$int8 = calc($int15 - $int12);
-		if ($int9 < calc(0 - $int16)) {
-			$int9 = calc($int12 - $int16);
-			$int13 = 0;
-			$graphic10 = struct_param($struct1, 461);
-		} else if ($int9 > $int16) {
-			$int9 = calc($int16 - $int12);
-			$int13 = 49152;
-			$graphic10 = struct_param($struct1, 461);
-		} else {
-			$int13 = 0;
-			$graphic10 = struct_param($struct1, 460);
-		}
-	} else if ($int9 < calc(0 - $int16)) {
+}
+def_int $int8 = 0;
+def_int $int9 = 0;
+$int8, $int9 = ~worldmap_elements_chooseposition($coord0, 0, $component2, $int3, $int4, $int5, $int6);
+def_graphic $graphic10 = struct_param($struct1, 459);
+def_int $int11 = struct_param($struct1, 462);
+def_int $int12 = calc($int11 / 2);
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = calc(if_getwidth($component2) / 2);
+def_int $int16 = calc(if_getheight($component2) / 2);
+if ($int8 < calc(0 - $int15)) {
+	$int8 = calc($int12 - $int15);
+	if ($int9 < calc(0 - $int16)) {
 		$int9 = calc($int12 - $int16);
 		$int13 = 16384;
+		$graphic10 = struct_param($struct1, 461);
+	} else if ($int9 > $int16) {
+		$int9 = calc($int16 - $int12);
+		$int13 = 32768;
+		$graphic10 = struct_param($struct1, 461);
+	} else {
+		$int13 = 32768;
 		$graphic10 = struct_param($struct1, 460);
+	}
+} else if ($int8 > $int15) {
+	$int8 = calc($int15 - $int12);
+	if ($int9 < calc(0 - $int16)) {
+		$int9 = calc($int12 - $int16);
+		$int13 = 0;
+		$graphic10 = struct_param($struct1, 461);
 	} else if ($int9 > $int16) {
 		$int9 = calc($int16 - $int12);
 		$int13 = 49152;
+		$graphic10 = struct_param($struct1, 461);
+	} else {
+		$int13 = 0;
 		$graphic10 = struct_param($struct1, 460);
-	} else {
-		$int14 = 1;
-		$int13 = ~script1759;
 	}
-	if (testbit(%varbit5640, 4) = true) {
-		$int14 = 0;
-	}
-	if (cc_find($component2, $int7) = true) {
-		cc_sethide(false);
-		cc_setop(1, "Focus");
-		cc_setonop("script1756(event_opindex, $coord0, false)");
-		cc_setposition($int8, $int9, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setgraphic($graphic10);
-		cc_set2dangle($int13);
-		if ($int14 = 1) {
-			cc_setontimer("script1758(event_com, event_comid)");
-		} else {
-			cc_setontimer(null);
-		}
-	} else {
-		cc_create($component2, ^iftype_graphic, $int7);
-		cc_sethide(false);
-		cc_setop(1, "Focus");
-		cc_setonop("script1756(event_opindex, $coord0, false)");
-		cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int8, $int9, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setgraphic($graphic10);
-		cc_set2dangle($int13);
-		if ($int14 = 1) {
-			cc_setontimer("script1758(event_com, event_comid)");
-		} else {
-			cc_setontimer(null);
-		}
-	}
-	$int7 = calc($int7 + 1);
-	return($int7);
+} else if ($int9 < calc(0 - $int16)) {
+	$int9 = calc($int12 - $int16);
+	$int13 = 16384;
+	$graphic10 = struct_param($struct1, 460);
+} else if ($int9 > $int16) {
+	$int9 = calc($int16 - $int12);
+	$int13 = 49152;
+	$graphic10 = struct_param($struct1, 460);
+} else {
+	$int14 = 1;
+	$int13 = ~script1759;
 }
+if (testbit(%varbit5640, 4) = true) {
+	$int14 = 0;
+}
+if (cc_find($component2, $int7) = true) {
+	cc_sethide(false);
+	cc_setop(1, "Focus");
+	cc_setonop("script1756(event_opindex, $coord0, false)");
+	cc_setposition($int8, $int9, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setgraphic($graphic10);
+	cc_set2dangle($int13);
+	if ($int14 = 1) {
+		cc_setontimer("script1758(event_com, event_comid)");
+	} else {
+		cc_setontimer(null);
+	}
+} else {
+	cc_create($component2, ^iftype_graphic, $int7);
+	cc_sethide(false);
+	cc_setop(1, "Focus");
+	cc_setonop("script1756(event_opindex, $coord0, false)");
+	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int8, $int9, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setgraphic($graphic10);
+	cc_set2dangle($int13);
+	if ($int14 = 1) {
+		cc_setontimer("script1758(event_com, event_comid)");
+	} else {
+		cc_setontimer(null);
+	}
+}
+$int7 = calc($int7 + 1);
+return($int7);

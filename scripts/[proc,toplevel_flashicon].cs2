@@ -6,13 +6,11 @@ def_component $component4 = enum(int, component, 1139, $int3);
 $component4 = enum(component, component, $enum2, $component4);
 if ($component4 ! $component0) {
 	return;
+}
+if (calc(clientclock % 20) < 10) {
+	if_sethide(false, $component0);
+	~toplevel_sidebutton_highlight($component1);
 } else {
-	if (calc(clientclock % 20) < 10) {
-		if_sethide(false, $component0);
-		~toplevel_sidebutton_highlight($component1);
-	} else {
-		if_sethide(true, $component0);
-		if_setgraphic(null, $component1);
-	}
-	return;
+	if_sethide(true, $component0);
+	if_setgraphic(null, $component1);
 }

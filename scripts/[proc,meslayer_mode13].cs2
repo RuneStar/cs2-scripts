@@ -6,17 +6,15 @@ if (%varcint11 = 1) {
 if (%varbit8119 = 0) {
 	mes("You must set a name before you can chat.");
 	return;
-} else {
-	~meslayer_open(13);
-	%varcint62 = 0;
-	%varcstring28 = "";
-	~script95;
-	~script222("");
-	~script551;
-	def_string $string0 = "";
-	if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string0)", 162:45);
-	if (~on_mobile = true) {
-		~script1983(0, 80);
-	}
-	return;
+}
+~meslayer_open(13);
+%varcint62 = 0;
+%varcstring28 = "";
+~script95;
+~script222("");
+~script551;
+def_string $string0 = "";
+if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string0)", 162:45);
+if (~on_mobile = true) {
+	~script1983(0, 80);
 }

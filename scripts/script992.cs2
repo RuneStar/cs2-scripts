@@ -6,10 +6,8 @@ if (%varcint1 < calc(clientclock + $int4)) {
 	}
 	%varcint1 = calc(%varcint1 + 2);
 	return;
-} else {
-	%varcint1 = calc((clientclock + $int4) + 10);
-	if ((%varcint2 = 0) & (if_gethide($component2) = false)) {
-		~script2344($component0, $int1, $component2, $fontmetrics3, $string0, $string1);
-	}
-	return;
+}
+%varcint1 = calc((clientclock + $int4) + 10);
+if ((%varcint2 = 0) & (if_gethide($component2) = false)) {
+	~script2344($component0, $int1, $component2, $fontmetrics3, $string0, $string1);
 }

@@ -6,7 +6,6 @@ if (cc_find($component0, $int1) = true) {
 	if ($int3 < 40) {
 		cc_settrans(scale($int3, 40, 255));
 		return;
-	} else {
-		cc_deleteall($component0);
 	}
+	cc_deleteall($component0);
 }

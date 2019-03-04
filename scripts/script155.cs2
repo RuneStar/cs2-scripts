@@ -3,8 +3,6 @@ script155(inv $inv0, int $int1, int $int2, component $component3, int $int4, com
 if ($int2 = -1) {
 	~script154($inv0, $int1, $component3, $int1, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
 	return;
-} else {
-	~script154($inv0, $int1, $component3, $int2, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
-	~script154($inv0, $int2, $component3, $int1, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
-	return;
 }
+~script154($inv0, $int1, $component3, $int2, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
+~script154($inv0, $int2, $component3, $int1, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);

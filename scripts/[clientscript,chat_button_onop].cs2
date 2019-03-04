@@ -32,12 +32,11 @@ if ($int0 = 1) {
 } else if ($int0 = 3) {
 	if ($int1 = 1) {
 		return;
-	} else {
-		~chat_set_filter($int1, 0);
-		~redraw_chat_buttons;
-		~rebuildchatbox($int2);
-		~rebuildpmbox($int2);
 	}
+	~chat_set_filter($int1, 0);
+	~redraw_chat_buttons;
+	~rebuildchatbox($int2);
+	~rebuildpmbox($int2);
 } else if ($int0 = 4) {
 	~chat_set_filter($int1, 1);
 	~redraw_chat_buttons;

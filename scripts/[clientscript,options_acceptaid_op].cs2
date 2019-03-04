@@ -2,13 +2,11 @@
 [clientscript,options_acceptaid_op](int $int0, component $component1, component $component2)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if ((%varbit4180 = 0) & (%varbit1777 = 0)) {
-		%varbit4180 = 1;
-	} else {
-		%varbit4180 = 0;
-	}
-	~options_acceptaid($component1, $component2);
-	return;
 }
+sound_synth(2266, 1, 0);
+if ((%varbit4180 = 0) & (%varbit1777 = 0)) {
+	%varbit4180 = 1;
+} else {
+	%varbit4180 = 0;
+}
+~options_acceptaid($component1, $component2);

@@ -15,14 +15,13 @@ if ($stat23 = null) {
 		if_sethide(true, $component4);
 		if_setnoclickthrough(false, $component4);
 		return;
-	} else {
-		if_setop(6, "", $component11);
-		if_setop(6, "", $component12);
-		if_setop(6, "", $component13);
-		if_setnoclickthrough(false, $component11);
-		if_setnoclickthrough(false, $component12);
-		if_setnoclickthrough(false, $component13);
 	}
+	if_setop(6, "", $component11);
+	if_setop(6, "", $component12);
+	if_setop(6, "", $component13);
+	if_setnoclickthrough(false, $component11);
+	if_setnoclickthrough(false, $component12);
+	if_setnoclickthrough(false, $component13);
 } else {
 	if_setop(6, "Set to level", $component11);
 	if_setop(6, "Set to level", $component12);

@@ -4,15 +4,13 @@ def_int $int6 = if_getwidth($component1);
 def_int $int7 = if_getheight($component1);
 if (($int6 = $int2) & ($int7 = $int3)) {
 	return;
-} else {
-	def_int $int8 = calc($int7 - 3);
-	def_int $int9 = 800;
-	if ($int9 > $int8) {
-		$int9 = $int8;
-	}
-	if_setsize(488, $int9, ^setsize_abs, ^setsize_abs, $component0);
-	if_setposition(0, calc(($int7 - $int9) / 2), ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
-	~scrollbar_vertical_rebuild($component4, $component5);
-	if_setontimer("bankmain_size_check($component0, $component1, $int6, $int7, $component4, $component5)", $component0);
-	return;
 }
+def_int $int8 = calc($int7 - 3);
+def_int $int9 = 800;
+if ($int9 > $int8) {
+	$int9 = $int8;
+}
+if_setsize(488, $int9, ^setsize_abs, ^setsize_abs, $component0);
+if_setposition(0, calc(($int7 - $int9) / 2), ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
+~scrollbar_vertical_rebuild($component4, $component5);
+if_setontimer("bankmain_size_check($component0, $component1, $int6, $int7, $component4, $component5)", $component0);

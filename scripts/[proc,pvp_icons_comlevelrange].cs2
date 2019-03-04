@@ -10,13 +10,12 @@ if (~deadman_world = 1) {
 	if (%varbit4965 > 0) {
 		if_sethide(true, 90:59);
 		return;
-	} else {
-		$int2 = 3;
-		$int3 = 126;
-		if (%varcint78 = 2) {
-			if_settext("", 90:59);
-			return;
-		}
+	}
+	$int2 = 3;
+	$int3 = 126;
+	if (%varcint78 = 2) {
+		if_settext("", 90:59);
+		return;
 	}
 } else {
 	if ($int2 < 3) {

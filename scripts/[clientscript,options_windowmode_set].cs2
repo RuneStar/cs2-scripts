@@ -2,14 +2,13 @@
 [clientscript,options_windowmode_set](int $int0, component $component1, component $component2, component $component3)
 if (getwindowmode = $int0) {
 	return;
-} else if (($int0 ! 2) & (~mobile_setting_check = 0)) {
-	return;
-} else {
-	sound_synth(2266, 1, 0);
-	setwindowmode($int0);
-	if (getdefaultwindowmode ! $int0) {
-		setdefaultwindowmode($int0);
-	}
-	~options_windowmode_draw($component1, $component2, $component3);
+}
+if (($int0 ! 2) & (~mobile_setting_check = 0)) {
 	return;
 }
+sound_synth(2266, 1, 0);
+setwindowmode($int0);
+if (getdefaultwindowmode ! $int0) {
+	setdefaultwindowmode($int0);
+}
+~options_windowmode_draw($component1, $component2, $component3);

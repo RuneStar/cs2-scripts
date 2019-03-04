@@ -2,25 +2,23 @@
 [proc,camera_do_zoom](int $int0, int $int1)
 if (%varbit4606 ! 0) {
 	return;
-} else {
-	$int0 = ~min(896, $int0);
-	$int0 = ~max(128, $int0);
-	$int1 = ~min(896, $int1);
-	$int1 = ~max(128, $int1);
-	viewport_setfov($int0, $int1);
-	def_int $int2 = 0;
-	def_int $int3 = 0;
-	$int2, $int3 = viewport_geteffectivesize;
-	def_int $int4 = calc($int3 - 334);
-	if ($int4 < 0) {
-		$int4 = 0;
-	} else if ($int4 > 100) {
-		$int4 = 100;
-	}
-	def_int $int5 = calc($int0 + ((($int1 - $int0) * $int4) / 100));
-	cam_setfollowheight(calc(25 + ((25 * $int5) / 256)));
-	%varcint74 = $int1;
-	%varcint73 = $int0;
-	~script1049;
-	return;
 }
+$int0 = ~min(896, $int0);
+$int0 = ~max(128, $int0);
+$int1 = ~min(896, $int1);
+$int1 = ~max(128, $int1);
+viewport_setfov($int0, $int1);
+def_int $int2 = 0;
+def_int $int3 = 0;
+$int2, $int3 = viewport_geteffectivesize;
+def_int $int4 = calc($int3 - 334);
+if ($int4 < 0) {
+	$int4 = 0;
+} else if ($int4 > 100) {
+	$int4 = 100;
+}
+def_int $int5 = calc($int0 + ((($int1 - $int0) * $int4) / 100));
+cam_setfollowheight(calc(25 + ((25 * $int5) / 256)));
+%varcint74 = $int1;
+%varcint73 = $int0;
+~script1049;

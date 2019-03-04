@@ -6,8 +6,8 @@ if ($int1 < 0) {
 }
 if ($int1 <= 15) {
 	return("<col=00ff00><tostring($int0)>%</col>");
-} else if ($int1 <= 30) {
-	return("<col=ffff00><tostring($int0)>%</col>");
-} else {
-	return("<col=ff0000><tostring($int0)>%</col>");
 }
+if ($int1 <= 30) {
+	return("<col=ffff00><tostring($int0)>%</col>");
+}
+return("<col=ff0000><tostring($int0)>%</col>");

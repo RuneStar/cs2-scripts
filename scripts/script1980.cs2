@@ -2,7 +2,5 @@
 script1980(int $int0, int $int1)
 if (~on_mobile = false) {
 	return;
-} else {
-	~script1983($int0, $int1);
-	return;
 }
+~script1983($int0, $int1);

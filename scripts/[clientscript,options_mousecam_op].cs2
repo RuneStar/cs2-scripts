@@ -2,15 +2,14 @@
 [clientscript,options_mousecam_op](int $int0, component $component1, component $component2)
 if ($int0 ! 1) {
 	return;
-} else if (~mobile_setting_check = 0) {
-	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if (%varbit4134 = 1) {
-		%varbit4134 = 0;
-	} else {
-		%varbit4134 = 1;
-	}
-	~options_mousecam($component1, $component2);
+}
+if (~mobile_setting_check = 0) {
 	return;
 }
+sound_synth(2266, 1, 0);
+if (%varbit4134 = 1) {
+	%varbit4134 = 0;
+} else {
+	%varbit4134 = 1;
+}
+~options_mousecam($component1, $component2);

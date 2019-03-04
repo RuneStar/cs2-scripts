@@ -2,9 +2,7 @@
 [proc,welcome_screen_continue_text]
 if (~on_mobile = false) {
 	return;
-} else {
-	if (if_find(378:85) = true) {
-		cc_settext("TAP HERE TO PLAY");
-	}
-	return;
+}
+if (if_find(378:85) = true) {
+	cc_settext("TAP HERE TO PLAY");
 }

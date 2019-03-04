@@ -27,51 +27,50 @@ while ($int15 <= enum_getoutputcount(1375)) {
 	$struct18 = enum(int, struct, 1377, $int22);
 	if ($struct18 = null) {
 		return;
-	} else {
-		cc_create($component5, ^iftype_text, $int15);
-		if (~script2670($int22) = 0) {
-			cc_setsize(0, calc(18 + $int16), ^setsize_minus, ^setsize_abs);
-			cc_setposition(0, $int17, ^setpos_abs_left, ^setpos_abs_top);
-			cc_settextfont(p12_full);
-			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-			cc_settextshadow(true);
-			cc_settext("    <struct_param($struct18, 660)>");
-			cc_setopbase("Show cost");
-			cc_setop(1, struct_param($struct18, 660));
-			cc_setonop("telenexus_show_cost($component7, $struct18, cc_gety, $component5, $int15)");
-			$string0, $int21 = ~script2664($struct18);
-			cc_setondrag("telenexus_hide_cost($component7, $component5, 0)");
-			if ($int21 = 1) {
-				$int19 = calc($int19 + 1);
-				cc_setondragcomplete("script2360($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $struct18, event_dragtarget, $int22, $component8, $component9, $component10, $component11, $component12, $component13)");
-				cc_setcolour(0xff981f);
-				cc_setdragdeadtime(5);
-				cc_setdragdeadzone(5);
-			} else {
-				cc_setcolour(0xcccccc);
-			}
-			.cc_create($component4, ^iftype_graphic, $int20);
-			.cc_setsize(7, 11, ^setsize_abs, ^setsize_abs);
-			.cc_setposition(0, calc(($int17 + 2) + ($int16 / 2)), ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setgraphic(2148);
-			.cc_create($component3, ^iftype_rectangle, $int20);
-			.cc_setsize(0, calc(18 + $int16), ^setsize_minus, ^setsize_abs);
-			.cc_setposition(0, $int17, ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setfill(true);
-			if (calc($int20 % 2) = 0) {
-				.cc_setcolour(^white);
-				.cc_settrans(255);
-			} else {
-				.cc_setcolour(^black);
-				.cc_settrans(225);
-			}
-			$int20 = calc($int20 + 1);
-			$int17 = calc(cc_gety + cc_getheight);
-		} else {
-			cc_sethide(true);
-		}
-		$int15 = calc($int15 + 1);
 	}
+	cc_create($component5, ^iftype_text, $int15);
+	if (~script2670($int22) = 0) {
+		cc_setsize(0, calc(18 + $int16), ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $int17, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_settext("    <struct_param($struct18, 660)>");
+		cc_setopbase("Show cost");
+		cc_setop(1, struct_param($struct18, 660));
+		cc_setonop("telenexus_show_cost($component7, $struct18, cc_gety, $component5, $int15)");
+		$string0, $int21 = ~script2664($struct18);
+		cc_setondrag("telenexus_hide_cost($component7, $component5, 0)");
+		if ($int21 = 1) {
+			$int19 = calc($int19 + 1);
+			cc_setondragcomplete("script2360($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $struct18, event_dragtarget, $int22, $component8, $component9, $component10, $component11, $component12, $component13)");
+			cc_setcolour(0xff981f);
+			cc_setdragdeadtime(5);
+			cc_setdragdeadzone(5);
+		} else {
+			cc_setcolour(0xcccccc);
+		}
+		.cc_create($component4, ^iftype_graphic, $int20);
+		.cc_setsize(7, 11, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(0, calc(($int17 + 2) + ($int16 / 2)), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setgraphic(2148);
+		.cc_create($component3, ^iftype_rectangle, $int20);
+		.cc_setsize(0, calc(18 + $int16), ^setsize_minus, ^setsize_abs);
+		.cc_setposition(0, $int17, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setfill(true);
+		if (calc($int20 % 2) = 0) {
+			.cc_setcolour(^white);
+			.cc_settrans(255);
+		} else {
+			.cc_setcolour(^black);
+			.cc_settrans(225);
+		}
+		$int20 = calc($int20 + 1);
+		$int17 = calc(cc_gety + cc_getheight);
+	} else {
+		cc_sethide(true);
+	}
+	$int15 = calc($int15 + 1);
 }
 if_setscrollsize(0, $int17, $component1);
 if (($int14 = 1) | ($int17 < if_getheight($component1))) {

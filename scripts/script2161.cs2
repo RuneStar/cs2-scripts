@@ -2,12 +2,10 @@
 script2161(char $char0, component $component1, string $string0)
 if (($char0 = null) | (~script1701(608, -1) = 0)) {
 	return;
-} else {
-	if (string_indexof_char($string0, $char0) ! -1) {
-		~v2_stone_button_in($component1);
-		if_setonkey(null, $component1);
-		if_setontimer("script2162($component1, $string0, calc(clientclock + 40))", $component1);
-		if_resume_pausebutton($component1);
-	}
-	return;
+}
+if (string_indexof_char($string0, $char0) ! -1) {
+	~v2_stone_button_in($component1);
+	if_setonkey(null, $component1);
+	if_setontimer("script2162($component1, $string0, calc(clientclock + 40))", $component1);
+	if_resume_pausebutton($component1);
 }

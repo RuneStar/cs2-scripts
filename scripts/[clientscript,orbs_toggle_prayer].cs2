@@ -2,9 +2,7 @@
 [clientscript,orbs_toggle_prayer](int $int0, component $component1, component $component2, component $component3)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	%varbit4103 = calc(1 - %varbit4103);
-	~orbs_update_prayer($component1, $component2, $component3);
-	return;
 }
+sound_synth(2266, 1, 0);
+%varbit4103 = calc(1 - %varbit4103);
+~orbs_update_prayer($component1, $component2, $component3);

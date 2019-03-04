@@ -2,12 +2,10 @@
 [clientscript,worldswitcher_loading](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17)
 if (worldlist_fetch = false) {
 	return;
-} else {
-	if_setontimer(null, $component0);
-	if_settext("Current world - <tostring(map_world)>", $component1);
-	if_sethide(false, $component2);
-	~worldswitcher_draw($component2, $component3, $component4, $component5, $int6, $int7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17);
-	if_setonvartransmit("worldswitcher_draw($component2, $component3, $component4, $component5, $int6, $int7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17){var477}", $component0);
-	if_setonstattransmit("worldswitcher_draw($component2, $component3, $component4, $component5, $int6, $int7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17)", $component0);
-	return;
 }
+if_setontimer(null, $component0);
+if_settext("Current world - <tostring(map_world)>", $component1);
+if_sethide(false, $component2);
+~worldswitcher_draw($component2, $component3, $component4, $component5, $int6, $int7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17);
+if_setonvartransmit("worldswitcher_draw($component2, $component3, $component4, $component5, $int6, $int7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17){var477}", $component0);
+if_setonstattransmit("worldswitcher_draw($component2, $component3, $component4, $component5, $int6, $int7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17)", $component0);

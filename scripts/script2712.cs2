@@ -2,13 +2,11 @@
 script2712(component $component0, int $int1, int $int2, int $int3)
 if (clientclock < $int3) {
 	return;
-} else {
-	if (cc_find($component0, $int2) = true) {
-		cc_setcolour(0xff981f);
-		if_setonmouserepeat("script85(event_com, cc_getid, 16777215)", $component0);
-		if_setonmouseleave("script85(event_com, cc_getid, 16750623)", $component0);
-		if_setonop("script2711($component0, $int1, cc_getid)", $component0);
-	}
-	if_setontimer(null, $component0);
-	return;
 }
+if (cc_find($component0, $int2) = true) {
+	cc_setcolour(0xff981f);
+	if_setonmouserepeat("script85(event_com, cc_getid, 16777215)", $component0);
+	if_setonmouseleave("script85(event_com, cc_getid, 16750623)", $component0);
+	if_setonop("script2711($component0, $int1, cc_getid)", $component0);
+}
+if_setontimer(null, $component0);

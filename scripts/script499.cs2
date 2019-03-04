@@ -13,91 +13,89 @@ while (string_length($string0) > 0) {
 }
 if ($int10 <= 0) {
 	return;
+}
+def_int $int11 = 0;
+if ($int9 = 1) {
+	$int11 = calc($int10 / 2);
+	if (calc($int10 % 2) = 1) {
+		$int11 = calc($int11 + 1);
+	}
 } else {
-	def_int $int11 = 0;
-	if ($int9 = 1) {
-		$int11 = calc($int10 / 2);
-		if (calc($int10 % 2) = 1) {
-			$int11 = calc($int11 + 1);
-		}
+	$int11 = $int10;
+}
+def_int $int12 = calc(if_getwidth($component0) / $int11);
+def_int $int13 = 40;
+def_int $int14 = 0;
+if ($int12 <= $int13) {
+	$int13 = $int12;
+} else {
+	$int14 = calc(($int12 - $int13) / 2);
+}
+def_int $int15 = calc(($int12 - 25) / 2);
+def_int $int16 = calc(if_getheight($component0) - 20);
+if ($int9 = 1) {
+	$int16 = calc($int16 / 2);
+}
+def_int $int17 = calc((20 + $int16) - 25);
+def_int $int18 = 0;
+if ($int9 = 1) {
+	$int18 = calc($int17 + $int16);
+}
+def_int $int19 = $int10;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_model $model23 = null;
+def_int $int24 = 0;
+while ($int20 < $int10) {
+	if (($int9 = 1) & ($int20 >= $int11)) {
+		$int22 = calc(20 + $int16);
+		$int24 = 1;
+		$int21 = calc(($int20 - $int11) * $int12);
 	} else {
-		$int11 = $int10;
+		$int21 = calc($int20 * $int12);
+		$int22 = 20;
+		$int24 = 0;
 	}
-	def_int $int12 = calc(if_getwidth($component0) / $int11);
-	def_int $int13 = 40;
-	def_int $int14 = 0;
-	if ($int12 <= $int13) {
-		$int13 = $int12;
-	} else {
-		$int14 = calc(($int12 - $int13) / 2);
+	if (cc_find($component0, $int20) = true) {
+		cc_setsize($int13, $int16, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int21 + $int14), $int22, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	def_int $int15 = calc(($int12 - 25) / 2);
-	def_int $int16 = calc(if_getheight($component0) - 20);
-	if ($int9 = 1) {
-		$int16 = calc($int16 / 2);
-	}
-	def_int $int17 = calc((20 + $int16) - 25);
-	def_int $int18 = 0;
-	if ($int9 = 1) {
-		$int18 = calc($int17 + $int16);
-	}
-	def_int $int19 = $int10;
-	def_int $int20 = 0;
-	def_int $int21 = 0;
-	def_int $int22 = 0;
-	def_model $model23 = null;
-	def_int $int24 = 0;
-	while ($int20 < $int10) {
-		if (($int9 = 1) & ($int20 >= $int11)) {
-			$int22 = calc(20 + $int16);
-			$int24 = 1;
-			$int21 = calc(($int20 - $int11) * $int12);
-		} else {
-			$int21 = calc($int20 * $int12);
-			$int22 = 20;
-			$int24 = 0;
-		}
-		if (cc_find($component0, $int20) = true) {
-			cc_setsize($int13, $int16, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc($int21 + $int14), $int22, ^setpos_abs_left, ^setpos_abs_top);
-		}
-		cc_create($component0, ^iftype_model, $int19);
-		$int19 = calc($int19 + 1);
-		cc_setposition($int21, $int22, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize($int12, $int16, ^setsize_abs, ^setsize_abs);
-		cc_setmodel(enum(int, model, $enum2, $int20));
-		cc_setmodelangle(0, $int6, 0, $int7, 0, $int5);
-		if ($enum3 ! null) {
-			$model23 = enum(int, model, $enum3, $int20);
-			if ($model23 ! null) {
-				cc_create($component0, ^iftype_model, $int19);
-				$int19 = calc($int19 + 1);
-				cc_setposition($int21, $int22, ^setpos_abs_left, ^setpos_abs_top);
-				cc_setsize($int12, $int16, ^setsize_abs, ^setsize_abs);
-				cc_setmodel($model23);
-				cc_setmodelangle(0, $int6, 0, $int7, 0, $int5);
-			}
-		}
-		if ($model4 ! null) {
+	cc_create($component0, ^iftype_model, $int19);
+	$int19 = calc($int19 + 1);
+	cc_setposition($int21, $int22, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($int12, $int16, ^setsize_abs, ^setsize_abs);
+	cc_setmodel(enum(int, model, $enum2, $int20));
+	cc_setmodelangle(0, $int6, 0, $int7, 0, $int5);
+	if ($enum3 ! null) {
+		$model23 = enum(int, model, $enum3, $int20);
+		if ($model23 ! null) {
 			cc_create($component0, ^iftype_model, $int19);
 			$int19 = calc($int19 + 1);
 			cc_setposition($int21, $int22, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setsize($int12, $int16, ^setsize_abs, ^setsize_abs);
-			cc_setmodel($model4);
+			cc_setmodel($model23);
 			cc_setmodelangle(0, $int6, 0, $int7, 0, $int5);
 		}
-		cc_create($component0, ^iftype_graphic, $int19);
-		$int19 = calc($int19 + 1);
-		cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-		if ($int24 = 1) {
-			cc_setposition(calc($int21 + $int15), $int18, ^setpos_abs_left, ^setpos_abs_top);
-		} else {
-			cc_setposition(calc($int21 + $int15), $int17, ^setpos_abs_left, ^setpos_abs_top);
-		}
-		cc_setgraphic("overlay_multiway");
-		~script501($int20, $int8);
-		cc_setonvartransmit("script500(event_com, event_comid, $int20, $int8){var261, var262}");
-		$int20 = calc($int20 + 1);
 	}
-	return;
+	if ($model4 ! null) {
+		cc_create($component0, ^iftype_model, $int19);
+		$int19 = calc($int19 + 1);
+		cc_setposition($int21, $int22, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize($int12, $int16, ^setsize_abs, ^setsize_abs);
+		cc_setmodel($model4);
+		cc_setmodelangle(0, $int6, 0, $int7, 0, $int5);
+	}
+	cc_create($component0, ^iftype_graphic, $int19);
+	$int19 = calc($int19 + 1);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	if ($int24 = 1) {
+		cc_setposition(calc($int21 + $int15), $int18, ^setpos_abs_left, ^setpos_abs_top);
+	} else {
+		cc_setposition(calc($int21 + $int15), $int17, ^setpos_abs_left, ^setpos_abs_top);
+	}
+	cc_setgraphic("overlay_multiway");
+	~script501($int20, $int8);
+	cc_setonvartransmit("script500(event_com, event_comid, $int20, $int8){var261, var262}");
+	$int20 = calc($int20 + 1);
 }

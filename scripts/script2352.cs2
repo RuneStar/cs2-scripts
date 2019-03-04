@@ -6,10 +6,8 @@ if (~on_mobile = true) {
 	if_sethide(false, 261:22);
 	if_sethide(false, 261:36);
 	return;
-} else {
-	if_sethide(false, 261:32);
-	if_sethide(false, 261:35);
-	if_sethide(true, 261:22);
-	if_sethide(true, 261:36);
-	return;
 }
+if_sethide(false, 261:32);
+if_sethide(false, 261:35);
+if_sethide(true, 261:22);
+if_sethide(true, 261:36);

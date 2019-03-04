@@ -2,9 +2,7 @@
 [clientscript,tournament_sidepanel_changeactive](int $int0, component $component1, int $int2, int $int3)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	%var211 = $int3;
-	~tournament_sidepanel_setactive($component1, $int2, $int3);
-	return;
 }
+sound_synth(2266, 1, 0);
+%var211 = $int3;
+~tournament_sidepanel_setactive($component1, $int2, $int3);

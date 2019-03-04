@@ -17,9 +17,8 @@ if ((string_length($string1) > 0) & ($int0 = 1)) {
 	if ((($int1 = 1) | (string_indexof_string("0123456789", $string1, 0) ! -1)) & ($int2 < 10)) {
 		if (($int1 = 1) & ($int2 <= 0)) {
 			return($string0);
-		} else {
-			return(append($string0, $string1));
 		}
+		return(append($string0, $string1));
 	}
 }
 return($string0);

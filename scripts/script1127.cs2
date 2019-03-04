@@ -2,21 +2,19 @@
 script1127(int $int0, int $int1, int $int2, component $component3, component $component4, component $component5, int $int6, component $component7, int $int8)
 if ($int0 ! 1) {
 	return;
-} else {
-	$int2 = calc($int2 - 1);
-	if (~on_mobile = true) {
-		if (string_length(enum(int, string, 1879, $int2)) <= 0) {
-			return;
-		}
-	} else if (string_length(enum(int, string, 1246, $int2)) <= 0) {
+}
+$int2 = calc($int2 - 1);
+if (~on_mobile = true) {
+	if (string_length(enum(int, string, 1879, $int2)) <= 0) {
 		return;
 	}
-	if ($int1 = $int6) {
-		%var1107 = $int2;
-	} else if ($int1 = $int8) {
-		%var1306 = $int2;
-	}
-	~script1131($component5, $component7);
-	~script1129($component3, $component4, $component5, $component7);
+} else if (string_length(enum(int, string, 1246, $int2)) <= 0) {
 	return;
 }
+if ($int1 = $int6) {
+	%var1107 = $int2;
+} else if ($int1 = $int8) {
+	%var1306 = $int2;
+}
+~script1131($component5, $component7);
+~script1129($component3, $component4, $component5, $component7);

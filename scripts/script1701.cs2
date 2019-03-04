@@ -2,20 +2,18 @@
 script1701(int $int0, int $int1)(int)
 if (%varcint187 > clientclock) {
 	return(0);
-} else {
-	def_enum $enum2 = ~toplevel_getcomponents;
-	if (((%varcint190 = 1) & (if_hassub(enum(component, component, $enum2, 161:14)) = true)) & ($int1 ! 595)) {
-		return(0);
+}
+def_enum $enum2 = ~toplevel_getcomponents;
+if (((%varcint190 = 1) & (if_hassub(enum(component, component, $enum2, 161:14)) = true)) & ($int1 ! 595)) {
+	return(0);
+}
+if (($enum2 = 1132) & (if_hassub(165:27) = true)) {
+	if ($int0 = 16) {
+		$enum2 = $enum2;
+	} else if (($int1 = 595) & (%varcint190 = 1)) {
+		$enum2 = $enum2;
 	} else {
-		if (($enum2 = 1132) & (if_hassub(165:27) = true)) {
-			if ($int0 = 16) {
-				$enum2 = $enum2;
-			} else if (($int1 = 595) & (%varcint190 = 1)) {
-				$enum2 = $enum2;
-			} else {
-				return(0);
-			}
-		}
-		return(1);
+		return(0);
 	}
 }
+return(1);

@@ -2,13 +2,11 @@
 [clientscript,options_mouse_op](int $int0, component $component1, component $component2, component $component3)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if (%var170 <= 0) {
-		%var170 = 1;
-	} else {
-		%var170 = 0;
-	}
-	~options_mouse($component1, $component2, $component3);
-	return;
 }
+sound_synth(2266, 1, 0);
+if (%var170 <= 0) {
+	%var170 = 1;
+} else {
+	%var170 = 0;
+}
+~options_mouse($component1, $component2, $component3);

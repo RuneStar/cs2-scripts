@@ -2,21 +2,20 @@
 [clientscript,options_chattrans_op](int $int0, int $int1, component $component2, component $component3, component $component4)
 if ($int0 ! 1) {
 	return;
-} else if (~mobile_setting_check = 0) {
-	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if ($int1 = 1) {
-		if (%varbit2570 = 0) {
-			%varbit2570 = 1;
-		} else {
-			%varbit2570 = 0;
-		}
-	} else if (%varbit4608 = 0) {
-		%varbit4608 = 1;
-	} else {
-		%varbit4608 = 0;
-	}
-	~options_chattrans($component2, $component3, $component4);
+}
+if (~mobile_setting_check = 0) {
 	return;
 }
+sound_synth(2266, 1, 0);
+if ($int1 = 1) {
+	if (%varbit2570 = 0) {
+		%varbit2570 = 1;
+	} else {
+		%varbit2570 = 0;
+	}
+} else if (%varbit4608 = 0) {
+	%varbit4608 = 1;
+} else {
+	%varbit4608 = 0;
+}
+~options_chattrans($component2, $component3, $component4);

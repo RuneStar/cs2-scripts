@@ -34,111 +34,109 @@ if (($inv14 = null) | (stockmarket_isofferempty($int13) = true)) {
 		~script812(-1, -1, -1, 1, $int12);
 	}
 	return;
-} else {
-	def_int $int15 = stockmarket_getoffertype($int13);
-	def_obj $obj16 = stockmarket_getofferitem($int13);
-	if ($obj16 = null) {
-		$obj16 = 6512;
+}
+def_int $int15 = stockmarket_getoffertype($int13);
+def_obj $obj16 = stockmarket_getofferitem($int13);
+if ($obj16 = null) {
+	$obj16 = 6512;
+}
+def_int $int17 = stockmarket_getoffercount($int13);
+if ($int17 <= 0) {
+	$int17 = 1;
+}
+def_int $int18 = stockmarket_getoffercompletedcount($int13);
+def_int $int19 = stockmarket_getofferprice($int13);
+def_int $int20 = stockmarket_getoffercompletedgold($int13);
+def_boolean $boolean21 = stockmarket_isofferfinished($int13);
+def_string $string0 = ",";
+if ((cc_find($component0, $int1) = true) & (.cc_find($component0, $int2) = true)) {
+	.cc_sethide(false);
+	if ($int15 = 1) {
+		cc_settext("Sell offer");
+		.cc_setgraphic("ge_smallicons,7");
+	} else {
+		cc_settext("Buy offer");
+		.cc_setgraphic("ge_smallicons,6");
 	}
-	def_int $int17 = stockmarket_getoffercount($int13);
-	if ($int17 <= 0) {
-		$int17 = 1;
+}
+if (cc_find($component0, $int3) = true) {
+	cc_setobject_nonum($obj16, $int17);
+}
+if (cc_find($component0, $int4) = true) {
+	cc_settext(oc_name($obj16));
+}
+if (cc_find($component0, $int5) = true) {
+	cc_settext(~script46($int17, $string0));
+}
+if (cc_find($component0, $int6) = true) {
+	if ($int19 = 1) {
+		cc_settext("1 coin");
+	} else {
+		cc_settext("<~script46($int19, $string0)> coins");
 	}
-	def_int $int18 = stockmarket_getoffercompletedcount($int13);
-	def_int $int19 = stockmarket_getofferprice($int13);
-	def_int $int20 = stockmarket_getoffercompletedgold($int13);
-	def_boolean $boolean21 = stockmarket_isofferfinished($int13);
-	def_string $string0 = ",";
-	if ((cc_find($component0, $int1) = true) & (.cc_find($component0, $int2) = true)) {
-		.cc_sethide(false);
-		if ($int15 = 1) {
-			cc_settext("Sell offer");
-			.cc_setgraphic("ge_smallicons,7");
-		} else {
-			cc_settext("Buy offer");
-			.cc_setgraphic("ge_smallicons,6");
-		}
-	}
-	if (cc_find($component0, $int3) = true) {
-		cc_setobject_nonum($obj16, $int17);
-	}
-	if (cc_find($component0, $int4) = true) {
-		cc_settext(oc_name($obj16));
-	}
-	if (cc_find($component0, $int5) = true) {
-		cc_settext(~script46($int17, $string0));
-	}
-	if (cc_find($component0, $int6) = true) {
-		if ($int19 = 1) {
+}
+def_int $int22 = 0;
+if (cc_find($component0, $int7) = true) {
+	if (calc(^max_32bit_int / $int17) < $int19) {
+		cc_settext("Lots of money");
+	} else {
+		$int22 = calc($int17 * $int19);
+		if ($int22 = 1) {
 			cc_settext("1 coin");
 		} else {
-			cc_settext("<~script46($int19, $string0)> coins");
+			cc_settext("<~script46($int22, $string0)> coins");
 		}
 	}
-	def_int $int22 = 0;
-	if (cc_find($component0, $int7) = true) {
-		if (calc(^max_32bit_int / $int17) < $int19) {
-			cc_settext("Lots of money");
+}
+def_graphic $graphic23 = "ge_cancel,0";
+def_graphic $graphic24 = "ge_cancel,1";
+if (cc_find($component8, $int10) = true) {
+	if ($boolean21 = true) {
+		if ($int15 = 1) {
+			if ($int20 = 1) {
+				cc_settext("You sold a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f>one</col> coin.");
+			} else {
+				cc_settext("You sold a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
+			}
+		} else if ($int20 = 1) {
+			cc_settext("You bought a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f>one</col> coin.");
 		} else {
-			$int22 = calc($int17 * $int19);
-			if ($int22 = 1) {
-				cc_settext("1 coin");
-			} else {
-				cc_settext("<~script46($int22, $string0)> coins");
-			}
+			cc_settext("You bought a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
 		}
-	}
-	def_graphic $graphic23 = "ge_cancel,0";
-	def_graphic $graphic24 = "ge_cancel,1";
-	if (cc_find($component8, $int10) = true) {
-		if ($boolean21 = true) {
-			if ($int15 = 1) {
-				if ($int20 = 1) {
-					cc_settext("You sold a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f>one</col> coin.");
-				} else {
-					cc_settext("You sold a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
-				}
-			} else if ($int20 = 1) {
-				cc_settext("You bought a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f>one</col> coin.");
+		if (cc_find($component8, $int9) = true) {
+			cc_sethide(true);
+		}
+	} else {
+		if ($int15 = 1) {
+			if ($int20 = 1) {
+				cc_settext("You have sold a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f>one</col> coin.");
 			} else {
-				cc_settext("You bought a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
+				cc_settext("You have sold a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
 			}
-			if (cc_find($component8, $int9) = true) {
-				cc_sethide(true);
-			}
+		} else if ($int20 = 1) {
+			cc_settext("You have bought a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f>one</col> coin.");
 		} else {
-			if ($int15 = 1) {
-				if ($int20 = 1) {
-					cc_settext("You have sold a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f>one</col> coin.");
-				} else {
-					cc_settext("You have sold a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
-				}
-			} else if ($int20 = 1) {
-				cc_settext("You have bought a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f>one</col> coin.");
+			cc_settext("You have bought a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
+		}
+		if (cc_find($component8, $int9) = true) {
+			cc_sethide(false);
+			if (stockmarket_isofferstable($int13) = true) {
+				cc_settrans(0);
+				cc_setgraphic($graphic23);
+				cc_setonmouserepeat("script229(event_com, event_comid, $graphic24, null)");
+				cc_setonmouseleave("script229(event_com, event_comid, $graphic23, null)");
+				cc_setonop("opsound(event_opindex, 2)");
 			} else {
-				cc_settext("You have bought a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
-			}
-			if (cc_find($component8, $int9) = true) {
-				cc_sethide(false);
-				if (stockmarket_isofferstable($int13) = true) {
-					cc_settrans(0);
-					cc_setgraphic($graphic23);
-					cc_setonmouserepeat("script229(event_com, event_comid, $graphic24, null)");
-					cc_setonmouseleave("script229(event_com, event_comid, $graphic23, null)");
-					cc_setonop("opsound(event_opindex, 2)");
-				} else {
-					cc_settrans(120);
-					cc_setgraphic($graphic24);
-					cc_setonmouserepeat(null);
-					cc_setonmouseleave(null);
-					cc_setonop(null);
-				}
+				cc_settrans(120);
+				cc_setgraphic($graphic24);
+				cc_setonmouserepeat(null);
+				cc_setonmouseleave(null);
+				cc_setonop(null);
 			}
 		}
 	}
-	if (cc_find($component8, $int11) = true) {
-		cc_sethide(false);
-		~script812($int13, $int17, $int18, 0, $int12);
-	}
-	return;
+}
+if (cc_find($component8, $int11) = true) {
+	cc_sethide(false);
+	~script812($int13, $int17, $int18, 0, $int12);
 }

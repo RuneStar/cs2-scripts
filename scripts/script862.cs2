@@ -2,16 +2,14 @@
 script862(int $int0, component $component1, component $component2, int $int3)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	cc_deleteall($component1);
-	~options_button_on($component1, 0);
-	if_setcolour(^white, 127:13);
-	if_setonmouserepeat(null, 127:12);
-	if_setonmouseleave(null, 127:12);
-	if_setontimer("script863($component1, calc(clientclock + 20))", $component1);
-	if (cc_find($component2, $int3) = true) {
-		cc_resume_pausebutton;
-	}
-	return;
+}
+sound_synth(2266, 1, 0);
+cc_deleteall($component1);
+~options_button_on($component1, 0);
+if_setcolour(^white, 127:13);
+if_setonmouserepeat(null, 127:12);
+if_setonmouseleave(null, 127:12);
+if_setontimer("script863($component1, calc(clientclock + 20))", $component1);
+if (cc_find($component2, $int3) = true) {
+	cc_resume_pausebutton;
 }

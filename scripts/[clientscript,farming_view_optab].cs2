@@ -2,10 +2,8 @@
 [clientscript,farming_view_optab](int $int0, int $int1, component $component2, component $component3, component $component4)
 if ((($int0 ! 1) | ($int1 < 0)) | ($int1 > 5)) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	%varbit4776 = $int1;
-	%varcint77 = 0;
-	~farming_view_updatetabs($component2, $component3, $component4);
-	return;
 }
+sound_synth(2266, 1, 0);
+%varbit4776 = $int1;
+%varcint77 = 0;
+~farming_view_updatetabs($component2, $component3, $component4);

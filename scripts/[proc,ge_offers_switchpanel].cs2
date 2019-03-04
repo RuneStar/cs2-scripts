@@ -12,24 +12,21 @@ if ($inv8 = null) {
 		cc_settext("Grand Exchange");
 	}
 	return;
-} else {
-	if_sethide(false, $component2);
-	if_settrans(0, $component2);
-	if (stockmarket_isofferempty($int7) = true) {
-		if_sethide(true, $component3);
-		if_sethide(true, $component4);
-		if_sethide(false, $component5);
-		if (cc_find($component0, $int1) = true) {
-			cc_settext("Grand Exchange: Set up offer");
-		}
-		return;
-	} else {
-		if_sethide(true, $component3);
-		if_sethide(false, $component4);
-		if_sethide(true, $component5);
-		if (cc_find($component0, $int1) = true) {
-			cc_settext("Grand Exchange: Offer status");
-		}
-		return;
+}
+if_sethide(false, $component2);
+if_settrans(0, $component2);
+if (stockmarket_isofferempty($int7) = true) {
+	if_sethide(true, $component3);
+	if_sethide(true, $component4);
+	if_sethide(false, $component5);
+	if (cc_find($component0, $int1) = true) {
+		cc_settext("Grand Exchange: Set up offer");
 	}
+	return;
+}
+if_sethide(true, $component3);
+if_sethide(false, $component4);
+if_sethide(true, $component5);
+if (cc_find($component0, $int1) = true) {
+	cc_settext("Grand Exchange: Offer status");
 }

@@ -3,13 +3,13 @@ script2080(int $int0, int $int1)
 if (cc_find(257:0, 0) = true) {
 	if (clientclock < $int0) {
 		return;
-	} else if (clientclock >= $int1) {
+	}
+	if (clientclock >= $int1) {
 		cc_setontimer(null);
 		return;
-	} else {
-		cc_setcolour(0xf0a808);
-		cc_setfillcolour(0xf0a808);
-		cc_settrans(interpolate(255, 0, $int0, $int1, clientclock));
-		_1124(255);
 	}
+	cc_setcolour(0xf0a808);
+	cc_setfillcolour(0xf0a808);
+	cc_settrans(interpolate(255, 0, $int0, $int1, clientclock));
+	_1124(255);
 }

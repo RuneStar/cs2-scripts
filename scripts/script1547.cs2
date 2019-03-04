@@ -2,73 +2,71 @@
 script1547(int $int0)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:70)) = false) {
 	return;
+}
+cc_deleteall(500:10);
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+while ($int4 < $int0) {
+	$int3 = calc($int4 * 13);
+	$int2 = 0;
+	cc_create(500:10, ^iftype_rectangle, calc($int4 * 7));
+	cc_setsize(0, 13, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	$int1 = if_getwidth(500:7);
+	cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 1));
+	cc_setsize($int1, 13, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	$int2 = calc($int2 + $int1);
+	$int1 = if_getwidth(500:8);
+	cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 2));
+	cc_setsize($int1, 13, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	$int2 = calc($int2 + $int1);
+	cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 3));
+	cc_setsize($int2, 13, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 4));
+	cc_sethide(true);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 5));
+	cc_sethide(true);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 6));
+	cc_sethide(true);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	$int4 = calc($int4 + 1);
+}
+def_int $int5 = calc($int4 * 13);
+if ($int5 > if_getheight(500:10)) {
+	if_setscrollsize(0, $int5, 500:10);
+	~scrollbar_resize(500:11, 500:10, %varcint179);
 } else {
-	cc_deleteall(500:10);
-	def_int $int1 = 0;
-	def_int $int2 = 0;
-	def_int $int3 = 0;
-	def_int $int4 = 0;
-	while ($int4 < $int0) {
-		$int3 = calc($int4 * 13);
-		$int2 = 0;
-		cc_create(500:10, ^iftype_rectangle, calc($int4 * 7));
-		cc_setsize(0, 13, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
-		cc_setcolour(^white);
-		cc_setfill(true);
-		$int1 = if_getwidth(500:7);
-		cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 1));
-		cc_setsize($int1, 13, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setcolour(0xff981f);
-		cc_settextfont(p11_full);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextshadow(true);
-		$int2 = calc($int2 + $int1);
-		$int1 = if_getwidth(500:8);
-		cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 2));
-		cc_setsize($int1, 13, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setcolour(0xff981f);
-		cc_settextfont(p11_full);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextshadow(true);
-		$int2 = calc($int2 + $int1);
-		cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 3));
-		cc_setsize($int2, 13, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_top);
-		cc_setcolour(0xff981f);
-		cc_settextfont(p11_full);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextshadow(true);
-		cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 4));
-		cc_sethide(true);
-		cc_setcolour(0xff981f);
-		cc_settextfont(p11_full);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextshadow(true);
-		cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 5));
-		cc_sethide(true);
-		cc_setcolour(0xff981f);
-		cc_settextfont(p11_full);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextshadow(true);
-		cc_create(500:10, ^iftype_text, calc(($int4 * 7) + 6));
-		cc_sethide(true);
-		cc_setcolour(0xff981f);
-		cc_settextfont(p11_full);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settextshadow(true);
-		$int4 = calc($int4 + 1);
-	}
-	def_int $int5 = calc($int4 * 13);
-	if ($int5 > if_getheight(500:10)) {
-		if_setscrollsize(0, $int5, 500:10);
-		~scrollbar_resize(500:11, 500:10, %varcint179);
-	} else {
-		if_setscrollsize(0, 0, 500:10);
-		~scrollbar_resize(500:11, 500:10, 0);
-		%varcint179 = 0;
-	}
-	return;
+	if_setscrollsize(0, 0, 500:10);
+	~scrollbar_resize(500:11, 500:10, 0);
+	%varcint179 = 0;
 }

@@ -3,8 +3,6 @@ script2704(component $component0, component $component1, string $string0)
 if (%varcint2 = 1) {
 	~deltooltip_action($component1);
 	return;
-} else {
-	~tooltip_build($component0, -1, $component1, 512, $string0);
-	if_setontimer("script2705($component1, calc(clientclock + 240), $component0)", $component0);
-	return;
 }
+~tooltip_build($component0, -1, $component1, 512, $string0);
+if_setontimer("script2705($component1, calc(clientclock + 240), $component0)", $component0);

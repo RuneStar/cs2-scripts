@@ -2,12 +2,10 @@
 script2693(int $int0)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	~script2692(1, 1);
-	if_setonmouserepeat(null, 100:33);
-	if_setonmouseleave(null, 100:33);
-	if_setonop(null, 100:33);
-	if_setontimer("script2694(calc(clientclock + 40))", 100:33);
-	return;
 }
+sound_synth(2266, 1, 0);
+~script2692(1, 1);
+if_setonmouserepeat(null, 100:33);
+if_setonmouseleave(null, 100:33);
+if_setonop(null, 100:33);
+if_setontimer("script2694(calc(clientclock + 40))", 100:33);

@@ -4,9 +4,7 @@ sound_synth(2266, 1, 0);
 $component0 = if_getlayer($component0);
 if ($component0 = null) {
 	return;
-} else {
-	if (cc_find($component0, $int1) = true) {
-		cc_resume_pausebutton;
-	}
-	return;
+}
+if (cc_find($component0, $int1) = true) {
+	cc_resume_pausebutton;
 }

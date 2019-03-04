@@ -2,11 +2,9 @@
 [clientscript,poh_viewer_room_op](int $int0, component $component1, int $int2)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	%varbit5329 = $int2;
-	if (cc_find($component1, 2) = true) {
-		~script1380($int2);
-	}
-	return;
+}
+sound_synth(2266, 1, 0);
+%varbit5329 = $int2;
+if (cc_find($component1, 2) = true) {
+	~script1380($int2);
 }

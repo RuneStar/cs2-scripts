@@ -11,8 +11,6 @@ if (string_length(%varcstring27) > 0) {
 	if_close;
 	mes("Your bug report has been submitted. Thank you.");
 	return;
-} else {
-	sound_synth(2277, 1, 0);
-	mes("Please describe the bug.");
-	return;
 }
+sound_synth(2277, 1, 0);
+mes("Please describe the bug.");

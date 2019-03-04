@@ -5,175 +5,173 @@ def_component $component5 = enum(int, component, 1236, $int0);
 def_component $component6 = enum(int, component, 1237, $int0);
 if ((($component4 = null) | ($component5 = null)) | ($component6 = null)) {
 	return;
-} else {
-	def_int $int7 = calc(coordx($coord2) % 64);
-	def_int $int8 = calc(coordy($coord2) % 64);
-	if ($int8 <= 0) {
-		$int8 = 1;
-	}
-	if ($int7 > $int8) {
-		$int7 = $int8;
-	}
-	def_int $int9 = calc(coordx($coord2) / 64);
-	cc_deleteall($component4);
-	%varcint2 = 0;
-	def_int $int10 = 0;
-	if ((testbit($int3, 1) = true) | (testbit($int3, 0) = true)) {
-		cc_create($component4, ^iftype_rectangle, $int10);
-		$int10 = calc($int10 + 1);
-		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setfill(true);
-		cc_settrans(240);
-		if (testbit($int3, 1) = true) {
-			cc_setcolour(0xff3f3f);
-		} else {
-			cc_setcolour(0x7fff7f);
-		}
-	} else {
-		cc_create($component4, ^iftype_graphic, $int10);
-		$int10 = calc($int10 + 1);
-		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_settiling(true);
-		cc_setgraphic("tradebacking_light");
-	}
-	$int10 = ~thinbox($component4, $int10);
-	cc_deleteall($component6);
-	$int10 = 0;
-	cc_create($component6, ^iftype_text, $int10);
-	$int10 = calc($int10 + 1);
-	cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-	cc_settextfont(b12_full);
-	cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
-	cc_setcolour(0xff981f);
-	cc_settextshadow(true);
-	cc_settext(enum(int, string, 1233, $int0));
-	cc_create($component6, ^iftype_text, $int10);
-	$int10 = calc($int10 + 1);
-	cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
-	cc_settextfont(p12_full);
-	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-	cc_setcolour(0xff981f);
-	cc_settextshadow(true);
-	def_string $string0 = "";
-	if (($obj1 = bucket_1925) | ($obj1 = weeds_6055)) {
-		$string0 = enum(int, string, 1234, $int0);
-	} else {
-		$string0 = enum(obj, string, 1238, $obj1);
-	}
-	cc_settext($string0);
-	def_int $int11 = if_getheight($component6);
-	def_int $int12 = calc($int11 - 50);
-	def_int $int13 = calc($int12 - 4);
-	if ($int7 > 0) {
-		cc_create($component6, ^iftype_rectangle, $int10);
-		$int10 = calc($int10 + 1);
-		cc_setsize(10, $int12, ^setsize_abs, ^setsize_abs);
-		cc_setposition(10, 25, ^setpos_abs_left, ^setpos_abs_bottom);
-		cc_setfill(true);
-		cc_setcolour(^black);
-		cc_create($component6, ^iftype_rectangle, $int10);
-		$int10 = calc($int10 + 1);
-		cc_setsize(10, $int12, ^setsize_abs, ^setsize_abs);
-		cc_setposition(10, 25, ^setpos_abs_left, ^setpos_abs_bottom);
-		cc_setfill(false);
-		.cc_create($component6, ^iftype_rectangle, $int10);
-		$int10 = calc($int10 + 1);
-		.cc_setsize(6, interpolate(0, $int7, 0, $int8, $int13), ^setsize_abs, ^setsize_abs);
-		.cc_setposition(12, 27, ^setpos_abs_left, ^setpos_abs_bottom);
-		.cc_setfill(true);
-		$string0 = append($string0, " (State: <tostring($int7)> / <tostring($int8)>)");
-		if (testbit($int3, 1) = true) {
-			cc_setcolour(^red);
-			.cc_setcolour(^red);
-			$string0 = append($string0, "<br>The patch is <col=7f0000>dead</col>.");
-		} else if (testbit($int3, 0) = true) {
-			cc_setcolour(0xff981f);
-			.cc_setcolour(0xff981f);
-			$string0 = append($string0, "<br>The patch is <col=003f00>diseased</col>.");
-		} else {
-			cc_setcolour(0x00cf00);
-			.cc_setcolour(0x00cf00);
-		}
-	} else if ($obj1 = bucket_1925) {
-		$string0 = append($string0, " (empty)");
-	} else if ($obj1 = weeds_6055) {
-		$string0 = append($string0, " (weeds)");
-	}
-	if (testbit($int3, 2) = true) {
-		cc_create($component6, ^iftype_graphic, $int10);
-		$int10 = calc($int10 + 1);
-		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
-		cc_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_bottom);
-		cc_setgraphic("combat_shield");
-		$string0 = append($string0, "<br>A gardener is protecting this patch.");
-	} else if (testbit($int3, 8) = true) {
-		cc_create($component6, ^iftype_graphic, $int10);
-		$int10 = calc($int10 + 1);
-		cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
-		cc_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_bottom);
-		cc_setgraphic("side_icons,8");
-		$string0 = append($string0, "<br>The people of Hosidius are protecting the patch as a favour.");
-	} else if (testbit($int3, 3) = true) {
-		cc_create($component6, ^iftype_graphic, $int10);
-		$int10 = calc($int10 + 1);
-		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_bottom);
-		cc_setgraphicshadow(0x333333);
-		cc_setoutline(1);
-		cc_setobject_nonum(mixed_flowers_2472, 1);
-		$string0 = append($string0, "<br>A nearby flower patch is providing protection.");
-	}
-	if ((testbit($int3, 4) = true) | (coordz($coord2) = 1)) {
-		cc_create($component6, ^iftype_graphic, $int10);
-		$int10 = calc($int10 + 1);
-		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(5, 20, ^setpos_abs_right, ^setpos_abs_top);
-		cc_setgraphicshadow(0x333333);
-		cc_setoutline(1);
-		if (coordz($coord2) = 1) {
-			cc_setobject_nonum(watering_can_8_5340, 1);
-			$string0 = append($string0, "<br>The patch has been watered.");
-		} else {
-			cc_setobject_nonum(watering_can_5331, 1);
-			cc_settrans(125);
-			$string0 = append($string0, "<br>The patch is dry.");
-		}
-	}
-	if (((testbit($int3, 6) = true) | (testbit($int3, 5) = true)) | (testbit($int3, 7) = true)) {
-		cc_create($component6, ^iftype_graphic, $int10);
-		$int10 = calc($int10 + 1);
-		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(5, 20, ^setpos_abs_right, ^setpos_abs_bottom);
-		cc_setgraphicshadow(0x333333);
-		cc_setoutline(1);
-		if (testbit($int3, 7) = true) {
-			cc_setobject_nonum(ultracompost_21483, 1);
-			$string0 = append($string0, "<br>The patch has been treated with ultracompost.");
-		} else if (testbit($int3, 6) = true) {
-			cc_setobject_nonum(supercompost_6034, 1);
-			$string0 = append($string0, "<br>The patch has been treated with supercompost.");
-		} else {
-			cc_setobject_nonum(compost_6032, 1);
-			$string0 = append($string0, "<br>The patch has been treated with compost.");
-		}
-	}
-	if ($int9 > 0) {
-		cc_create($component6, ^iftype_text, $int10);
-		$int10 = calc($int10 + 1);
-		cc_setsize(50, 50, ^setsize_abs, ^setsize_abs);
-		cc_setposition(-35, -30, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_settextfont(645);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_setcolour(0xffb82f);
-		cc_settextshadow(true);
-		cc_settext(tostring($int9));
-		$string0 = append($string0, "<br>Minimum yield: <tostring($int9)>");
-	}
-	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 179:265, $string0, 25, 512)", $component6);
-	if_setonmouseleave("deltooltip(179:265)", $component6);
-	return;
 }
+def_int $int7 = calc(coordx($coord2) % 64);
+def_int $int8 = calc(coordy($coord2) % 64);
+if ($int8 <= 0) {
+	$int8 = 1;
+}
+if ($int7 > $int8) {
+	$int7 = $int8;
+}
+def_int $int9 = calc(coordx($coord2) / 64);
+cc_deleteall($component4);
+%varcint2 = 0;
+def_int $int10 = 0;
+if ((testbit($int3, 1) = true) | (testbit($int3, 0) = true)) {
+	cc_create($component4, ^iftype_rectangle, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setfill(true);
+	cc_settrans(240);
+	if (testbit($int3, 1) = true) {
+		cc_setcolour(0xff3f3f);
+	} else {
+		cc_setcolour(0x7fff7f);
+	}
+} else {
+	cc_create($component4, ^iftype_graphic, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settiling(true);
+	cc_setgraphic("tradebacking_light");
+}
+$int10 = ~thinbox($component4, $int10);
+cc_deleteall($component6);
+$int10 = 0;
+cc_create($component6, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settext(enum(int, string, 1233, $int0));
+cc_create($component6, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+def_string $string0 = "";
+if (($obj1 = bucket_1925) | ($obj1 = weeds_6055)) {
+	$string0 = enum(int, string, 1234, $int0);
+} else {
+	$string0 = enum(obj, string, 1238, $obj1);
+}
+cc_settext($string0);
+def_int $int11 = if_getheight($component6);
+def_int $int12 = calc($int11 - 50);
+def_int $int13 = calc($int12 - 4);
+if ($int7 > 0) {
+	cc_create($component6, ^iftype_rectangle, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setsize(10, $int12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(10, 25, ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setfill(true);
+	cc_setcolour(^black);
+	cc_create($component6, ^iftype_rectangle, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setsize(10, $int12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(10, 25, ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setfill(false);
+	.cc_create($component6, ^iftype_rectangle, $int10);
+	$int10 = calc($int10 + 1);
+	.cc_setsize(6, interpolate(0, $int7, 0, $int8, $int13), ^setsize_abs, ^setsize_abs);
+	.cc_setposition(12, 27, ^setpos_abs_left, ^setpos_abs_bottom);
+	.cc_setfill(true);
+	$string0 = append($string0, " (State: <tostring($int7)> / <tostring($int8)>)");
+	if (testbit($int3, 1) = true) {
+		cc_setcolour(^red);
+		.cc_setcolour(^red);
+		$string0 = append($string0, "<br>The patch is <col=7f0000>dead</col>.");
+	} else if (testbit($int3, 0) = true) {
+		cc_setcolour(0xff981f);
+		.cc_setcolour(0xff981f);
+		$string0 = append($string0, "<br>The patch is <col=003f00>diseased</col>.");
+	} else {
+		cc_setcolour(0x00cf00);
+		.cc_setcolour(0x00cf00);
+	}
+} else if ($obj1 = bucket_1925) {
+	$string0 = append($string0, " (empty)");
+} else if ($obj1 = weeds_6055) {
+	$string0 = append($string0, " (weeds)");
+}
+if (testbit($int3, 2) = true) {
+	cc_create($component6, ^iftype_graphic, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_setgraphic("combat_shield");
+	$string0 = append($string0, "<br>A gardener is protecting this patch.");
+} else if (testbit($int3, 8) = true) {
+	cc_create($component6, ^iftype_graphic, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_setgraphic("side_icons,8");
+	$string0 = append($string0, "<br>The people of Hosidius are protecting the patch as a favour.");
+} else if (testbit($int3, 3) = true) {
+	cc_create($component6, ^iftype_graphic, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setobject_nonum(mixed_flowers_2472, 1);
+	$string0 = append($string0, "<br>A nearby flower patch is providing protection.");
+}
+if ((testbit($int3, 4) = true) | (coordz($coord2) = 1)) {
+	cc_create($component6, ^iftype_graphic, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(5, 20, ^setpos_abs_right, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	if (coordz($coord2) = 1) {
+		cc_setobject_nonum(watering_can_8_5340, 1);
+		$string0 = append($string0, "<br>The patch has been watered.");
+	} else {
+		cc_setobject_nonum(watering_can_5331, 1);
+		cc_settrans(125);
+		$string0 = append($string0, "<br>The patch is dry.");
+	}
+}
+if (((testbit($int3, 6) = true) | (testbit($int3, 5) = true)) | (testbit($int3, 7) = true)) {
+	cc_create($component6, ^iftype_graphic, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(5, 20, ^setpos_abs_right, ^setpos_abs_bottom);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	if (testbit($int3, 7) = true) {
+		cc_setobject_nonum(ultracompost_21483, 1);
+		$string0 = append($string0, "<br>The patch has been treated with ultracompost.");
+	} else if (testbit($int3, 6) = true) {
+		cc_setobject_nonum(supercompost_6034, 1);
+		$string0 = append($string0, "<br>The patch has been treated with supercompost.");
+	} else {
+		cc_setobject_nonum(compost_6032, 1);
+		$string0 = append($string0, "<br>The patch has been treated with compost.");
+	}
+}
+if ($int9 > 0) {
+	cc_create($component6, ^iftype_text, $int10);
+	$int10 = calc($int10 + 1);
+	cc_setsize(50, 50, ^setsize_abs, ^setsize_abs);
+	cc_setposition(-35, -30, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settextfont(645);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_setcolour(0xffb82f);
+	cc_settextshadow(true);
+	cc_settext(tostring($int9));
+	$string0 = append($string0, "<br>Minimum yield: <tostring($int9)>");
+}
+if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 179:265, $string0, 25, 512)", $component6);
+if_setonmouseleave("deltooltip(179:265)", $component6);

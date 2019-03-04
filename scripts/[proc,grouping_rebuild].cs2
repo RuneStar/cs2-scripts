@@ -100,138 +100,117 @@ if (if_gethide(76:19) = true) {
 			cc_setsize($int5, if_getheight(76:17), ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 			return;
-		} else {
-			$string1 = "You are currently talking in the <col=ffffff><enum(int, string, 848, $int2)></col> channel.";
-			$int10 = calc((paraheight($int5, p12_full, $string1) * 12) + 5);
-			cc_setsize($int5, $int10, ^setsize_abs, ^setsize_abs);
-			cc_setposition(0, calc((if_getheight(76:17) - $int10) / 2), ^setpos_abs_left, ^setpos_abs_top);
-			cc_settext($string1);
-			cc_setonmouserepeat("script85(event_com, event_comid, 16758831)");
-			cc_setonmouseleave("script85(event_com, event_comid, 16750623)");
-			cc_setop(1, "View Channel");
-			cc_setonop("grouping_viewchannel($int2)");
-			return;
 		}
-	} else {
-		$int8 = clan_getchatrank;
-		$int7 = clan_getchatminkick;
-		$int9 = clan_getchatcount;
-		while ($int9 > 0) {
-			$int9 = calc($int9 - 1);
-			$int6 = clan_getchatuserrank($int9);
-			$int0 = clan_getchatuserworld($int9);
-			$string3 = clan_getchatusername($int9);
-			cc_create(76:17, ^iftype_text, $int1);
-			$int1 = calc($int1 + 1);
-			.cc_create(76:17, ^iftype_text, $int1);
-			$int1 = calc($int1 + 1);
-			cc_setsize(calc($int5 - 10), $int11, ^setsize_abs, ^setsize_abs);
-			.cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
-			cc_setposition(10, $int10, ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
-			cc_settextfont(p11_full);
-			.cc_settextfont(p11_full);
-			cc_setcolour(^white);
-			if ($int0 = map_world) {
-				.cc_setcolour(0x0dc10d);
-			} else {
-				.cc_setcolour(^yellow);
-			}
-			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-			.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
-			cc_settextshadow(true);
-			.cc_settextshadow(true);
-			cc_settext($string3);
-			.cc_settext("World <tostring($int0)>");
-			cc_create(76:17, ^iftype_graphic, $int1);
-			$int1 = calc($int1 + 1);
-			cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
-			cc_setposition(0, calc($int10 + 1), ^setpos_abs_left, ^setpos_abs_top);
-			cc_setgraphic(enum(int, graphic, 706, $int6));
-			cc_create(76:17, ^iftype_rectangle, $int1);
-			$int1 = calc($int1 + 1);
-			cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
-			cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
-			cc_setfill(true);
-			cc_settrans(255);
-			cc_setonop("clan_op($string3, event_opindex)");
-			if (clan_isself($int9) = false) {
-				if (clan_isfriend($int9) = true) {
-					cc_setop(9, "Remove friend <$string3>");
-				} else if (clan_isignore($int9) = true) {
-					cc_setop(10, "Remove ignore <$string3>");
-				} else {
-					cc_setop(7, "Add friend <$string3>");
-					cc_setop(8, "Add ignore <$string3>");
-				}
-			}
-			if (($int8 >= $int7) & ($int8 > $int6)) {
-				cc_setop(6, "Kick user <$string3>");
-			}
-			$int10 = calc($int10 + $int11);
-		}
-		if ($int10 > 0) {
-			$int4 = if_getscrolly(76:17);
-			if_setscrollsize(0, $int10, 76:17);
-			~scrollbar_resize(76:18, 76:17, $int4);
-		} else {
-			if_setscrollsize(0, 0, 76:17);
-			~scrollbar_resize(76:18, 76:17, 0);
-			cc_create(76:17, ^iftype_text, $int1);
-			$int1 = calc($int1 + 1);
-			cc_setsize($int5, if_getheight(76:17), ^setsize_abs, ^setsize_abs);
-			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-			cc_settextfont(p12_full);
-			cc_setcolour(0xff981f);
-			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-			cc_settextshadow(true);
-			cc_settext("The channel is empty.");
-		}
+		$string1 = "You are currently talking in the <col=ffffff><enum(int, string, 848, $int2)></col> channel.";
+		$int10 = calc((paraheight($int5, p12_full, $string1) * 12) + 5);
+		cc_setsize($int5, $int10, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, calc((if_getheight(76:17) - $int10) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settext($string1);
+		cc_setonmouserepeat("script85(event_com, event_comid, 16758831)");
+		cc_setonmouseleave("script85(event_com, event_comid, 16750623)");
+		cc_setop(1, "View Channel");
+		cc_setonop("grouping_viewchannel($int2)");
 		return;
 	}
-} else {
-	if_setgraphic("scrollbar_v2,0", 76:25);
-	if_sethide(true, 76:10);
-	if_setonclick(null, 76:10);
-	if_setonclick("grouping_dropdown(false)", 76:2);
-	if_sethide(true, 76:14);
-	$int5 = calc(if_getwidth(76:23) - 12);
-	$int10 = 3;
-	$int11 = 12;
-	if (~on_mobile = true) {
-		$int11 = scale(8, 5, $int11);
-	}
-	cc_create(76:23, ^iftype_rectangle, $int1);
-	$int1 = calc($int1 + 1);
-	cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setcolour(^white);
-	cc_setfill(true);
-	cc_settrans(230);
-	cc_sethide(true);
-	$int3 = 1;
-	$string2 = enum(int, string, 849, $int3);
-	while (string_length($string2) > 0) {
-		if (%varcint64 ! $int3) {
-			.cc_create(76:23, ^iftype_text, $int1);
-			$int1 = calc($int1 + 1);
-			.cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
-			.cc_setposition(6, $int10, ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setcolour(0xff981f);
-			.cc_settextfont(p11_full);
-			.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-			.cc_settextshadow(true);
-			.cc_settext(enum(int, string, 848, $int3));
-			.cc_setonmouseover("grouping_mouseover(event_com, event_comid, cc_getid, true)");
-			.cc_setonmouseleave("grouping_mouseover(event_com, event_comid, cc_getid, false)");
-			.cc_setop(1, "Select");
-			.cc_setonop("grouping_viewchannel($int3)");
-			$int10 = calc($int10 + $int11);
+	$int8 = clan_getchatrank;
+	$int7 = clan_getchatminkick;
+	$int9 = clan_getchatcount;
+	while ($int9 > 0) {
+		$int9 = calc($int9 - 1);
+		$int6 = clan_getchatuserrank($int9);
+		$int0 = clan_getchatuserworld($int9);
+		$string3 = clan_getchatusername($int9);
+		cc_create(76:17, ^iftype_text, $int1);
+		$int1 = calc($int1 + 1);
+		.cc_create(76:17, ^iftype_text, $int1);
+		$int1 = calc($int1 + 1);
+		cc_setsize(calc($int5 - 10), $int11, ^setsize_abs, ^setsize_abs);
+		.cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
+		cc_setposition(10, $int10, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p11_full);
+		.cc_settextfont(p11_full);
+		cc_setcolour(^white);
+		if ($int0 = map_world) {
+			.cc_setcolour(0x0dc10d);
+		} else {
+			.cc_setcolour(^yellow);
 		}
-		$int3 = calc($int3 + 1);
-		$string2 = enum(int, string, 849, $int3);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		.cc_settextshadow(true);
+		cc_settext($string3);
+		.cc_settext("World <tostring($int0)>");
+		cc_create(76:17, ^iftype_graphic, $int1);
+		$int1 = calc($int1 + 1);
+		cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, calc($int10 + 1), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic(enum(int, graphic, 706, $int6));
+		cc_create(76:17, ^iftype_rectangle, $int1);
+		$int1 = calc($int1 + 1);
+		cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setfill(true);
+		cc_settrans(255);
+		cc_setonop("clan_op($string3, event_opindex)");
+		if (clan_isself($int9) = false) {
+			if (clan_isfriend($int9) = true) {
+				cc_setop(9, "Remove friend <$string3>");
+			} else if (clan_isignore($int9) = true) {
+				cc_setop(10, "Remove ignore <$string3>");
+			} else {
+				cc_setop(7, "Add friend <$string3>");
+				cc_setop(8, "Add ignore <$string3>");
+			}
+		}
+		if (($int8 >= $int7) & ($int8 > $int6)) {
+			cc_setop(6, "Kick user <$string3>");
+		}
+		$int10 = calc($int10 + $int11);
 	}
-	if (%varcint64 ! 0) {
+	if ($int10 > 0) {
+		$int4 = if_getscrolly(76:17);
+		if_setscrollsize(0, $int10, 76:17);
+		~scrollbar_resize(76:18, 76:17, $int4);
+	} else {
+		if_setscrollsize(0, 0, 76:17);
+		~scrollbar_resize(76:18, 76:17, 0);
+		cc_create(76:17, ^iftype_text, $int1);
+		$int1 = calc($int1 + 1);
+		cc_setsize($int5, if_getheight(76:17), ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_setcolour(0xff981f);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_settext("The channel is empty.");
+	}
+	return;
+}
+if_setgraphic("scrollbar_v2,0", 76:25);
+if_sethide(true, 76:10);
+if_setonclick(null, 76:10);
+if_setonclick("grouping_dropdown(false)", 76:2);
+if_sethide(true, 76:14);
+$int5 = calc(if_getwidth(76:23) - 12);
+$int10 = 3;
+$int11 = 12;
+if (~on_mobile = true) {
+	$int11 = scale(8, 5, $int11);
+}
+cc_create(76:23, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(230);
+cc_sethide(true);
+$int3 = 1;
+$string2 = enum(int, string, 849, $int3);
+while (string_length($string2) > 0) {
+	if (%varcint64 ! $int3) {
 		.cc_create(76:23, ^iftype_text, $int1);
 		$int1 = calc($int1 + 1);
 		.cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
@@ -240,14 +219,31 @@ if (if_gethide(76:19) = true) {
 		.cc_settextfont(p11_full);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_settextshadow(true);
-		.cc_settext("(none)");
+		.cc_settext(enum(int, string, 848, $int3));
 		.cc_setonmouseover("grouping_mouseover(event_com, event_comid, cc_getid, true)");
 		.cc_setonmouseleave("grouping_mouseover(event_com, event_comid, cc_getid, false)");
 		.cc_setop(1, "Select");
-		.cc_setonop("grouping_viewchannel(0)");
+		.cc_setonop("grouping_viewchannel($int3)");
 		$int10 = calc($int10 + $int11);
 	}
-	if_setscrollsize(0, $int10, 76:23);
-	~scrollbar_resize(76:24, 76:23, if_getscrolly(76:23));
-	return;
+	$int3 = calc($int3 + 1);
+	$string2 = enum(int, string, 849, $int3);
 }
+if (%varcint64 ! 0) {
+	.cc_create(76:23, ^iftype_text, $int1);
+	$int1 = calc($int1 + 1);
+	.cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(6, $int10, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setcolour(0xff981f);
+	.cc_settextfont(p11_full);
+	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	.cc_settextshadow(true);
+	.cc_settext("(none)");
+	.cc_setonmouseover("grouping_mouseover(event_com, event_comid, cc_getid, true)");
+	.cc_setonmouseleave("grouping_mouseover(event_com, event_comid, cc_getid, false)");
+	.cc_setop(1, "Select");
+	.cc_setonop("grouping_viewchannel(0)");
+	$int10 = calc($int10 + $int11);
+}
+if_setscrollsize(0, $int10, 76:23);
+~scrollbar_resize(76:24, 76:23, if_getscrolly(76:23));

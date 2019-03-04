@@ -6,18 +6,16 @@ if (%var211 = 0) {
 	if_setonmouseleave(null, $component0);
 	if_setonop(null, $component0);
 	return;
-} else {
-	def_int $int1 = ~options_button_off($component0, 0);
-	cc_create($component0, ^iftype_text, $int1);
-	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_settextfont(p12_full);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settextshadow(true);
-	cc_settext("Stop");
-	cc_setcolour(0xff981f);
-	if_setonmouserepeat("script85(event_com, $int1, 16777215)", $component0);
-	if_setonmouseleave("script85(event_com, $int1, 16750623)", $component0);
-	if_setonop("tournament_sidepanel_stop_op(event_opindex, $component0)", $component0);
-	return;
 }
+def_int $int1 = ~options_button_off($component0, 0);
+cc_create($component0, ^iftype_text, $int1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Stop");
+cc_setcolour(0xff981f);
+if_setonmouserepeat("script85(event_com, $int1, 16777215)", $component0);
+if_setonmouseleave("script85(event_com, $int1, 16750623)", $component0);
+if_setonop("tournament_sidepanel_stop_op(event_opindex, $component0)", $component0);

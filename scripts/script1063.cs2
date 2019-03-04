@@ -10,15 +10,13 @@ switch ($int0) {
 	case 5329 :
 		if (%varbit1848 = 1) {
 			return(%varbit1438, magic_secateurs_7409);
-		} else {
-			return(%varbit1438, secateurs_5329);
 		}
+		return(%varbit1438, secateurs_5329);
 	case 6797 :
 		if (%varbit1439 <= 0) {
 			return(0, null);
-		} else {
-			return(1, enum(int, namedobj, 136, %varbit1439));
 		}
+		return(1, enum(int, namedobj, 136, %varbit1439));
 	case 5325 :
 		return(%varbit1440, gardening_trowel_5325);
 	case 6036 :
@@ -26,11 +24,11 @@ switch ($int0) {
 	case 22994 :
 		if (%varbit7915 = 1) {
 			return(1, bottomless_compost_bucket_22994);
-		} else if (%varbit7915 > 1) {
-			return(1, bottomless_compost_bucket_22997);
-		} else {
-			return(0, bottomless_compost_bucket_22994);
 		}
+		if (%varbit7915 > 1) {
+			return(1, bottomless_compost_bucket_22997);
+		}
+		return(0, bottomless_compost_bucket_22994);
 	case 1925 :
 		return(calc(((pow(2, 8) * %varbit6265) + (pow(2, 5) * %varbit4731)) + %varbit1441), bucket_1925);
 	case 6032 :

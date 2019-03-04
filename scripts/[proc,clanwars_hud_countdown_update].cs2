@@ -4,8 +4,6 @@ if (%varbit4286 <= 0) {
 	if_sethide(true, $component1);
 	if_setontimer(null, $component0);
 	return;
-} else {
-	if_sethide(false, $component1);
-	~clanwars_hud_countdown_redraw($component0, $component1, calc((%varbit4286 * 30) - 20));
-	return;
 }
+if_sethide(false, $component1);
+~clanwars_hud_countdown_redraw($component0, $component1, calc((%varbit4286 * 30) - 20));

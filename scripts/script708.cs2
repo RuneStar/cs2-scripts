@@ -5,9 +5,8 @@ def_inv $inv1 = enum(int, inv, 150, $int0);
 while ($inv1 ! null) {
 	if ((inv_getnum($inv1, 0) > 0) | (inv_getnum($inv1, 1) > 0)) {
 		return(1);
-	} else {
-		$int0 = calc($int0 + 1);
-		$inv1 = enum(int, inv, 150, $int0);
 	}
+	$int0 = calc($int0 + 1);
+	$inv1 = enum(int, inv, 150, $int0);
 }
 return(0);

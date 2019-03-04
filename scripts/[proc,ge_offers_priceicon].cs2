@@ -5,12 +5,10 @@ if (string_length($string0) <= 0) {
 	cc_settrans(255);
 	if_sethide(true, $component0);
 	return;
-} else {
-	cc_settrans(0);
-	if_sethide(false, $component0);
-	def_int $int1 = calc(21 + parawidth(150, p11_full, if_gettext($component0)));
-	def_int $int2 = calc((150 - $int1) / 2);
-	cc_setposition(calc(15 + $int2), if_gety($component0), ^setpos_abs_left, ^setpos_abs_top);
-	if_setsize(calc(150 - $int2), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
-	return;
 }
+cc_settrans(0);
+if_sethide(false, $component0);
+def_int $int1 = calc(21 + parawidth(150, p11_full, if_gettext($component0)));
+def_int $int2 = calc((150 - $int1) / 2);
+cc_setposition(calc(15 + $int2), if_gety($component0), ^setpos_abs_left, ^setpos_abs_top);
+if_setsize(calc(150 - $int2), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);

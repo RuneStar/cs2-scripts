@@ -2,6 +2,5 @@
 [proc,add](int $int0, int $int1)(int)
 if (calc(^max_32bit_int - $int0) < $int1) {
 	return(^max_32bit_int);
-} else {
-	return(calc($int0 + $int1));
 }
+return(calc($int0 + $int1));

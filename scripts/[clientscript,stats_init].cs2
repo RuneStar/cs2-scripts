@@ -43,16 +43,14 @@ if_setonvartransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .c
 ~stats_setlevels($stat4, $component0, $component1, $string0);
 if ((($boolean5 = false) | (map_members = true)) | (%varcint103 = 1)) {
 	return;
-} else {
-	cc_create($component0, ^iftype_graphic, 6);
-	cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic("miscgraphics,4");
-	cc_settrans(90);
-	cc_create($component0, ^iftype_graphic, 7);
-	cc_setposition(28, -2, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic("miscgraphics,6");
-	cc_settrans(90);
-	return;
 }
+cc_create($component0, ^iftype_graphic, 6);
+cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,4");
+cc_settrans(90);
+cc_create($component0, ^iftype_graphic, 7);
+cc_setposition(28, -2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,6");
+cc_settrans(90);

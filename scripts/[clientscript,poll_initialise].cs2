@@ -2,14 +2,12 @@
 [clientscript,poll_initialise](component $component0, component $component1, component $component2, component $component3, string $string0, string $string1)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:13)) = false) {
 	return;
-} else {
-	~steelborder($component0, 0, $string0);
-	cc_deleteall($component2);
-	%varcint49 = 0;
-	%varcint43 = 0;
-	if_sethide(true, $component2);
-	if_sethide(false, $component3);
-	if_settext($string1, $component3);
-	cc_deleteall($component1);
-	return;
 }
+~steelborder($component0, 0, $string0);
+cc_deleteall($component2);
+%varcint49 = 0;
+%varcint43 = 0;
+if_sethide(true, $component2);
+if_sethide(false, $component3);
+if_settext($string1, $component3);
+cc_deleteall($component1);

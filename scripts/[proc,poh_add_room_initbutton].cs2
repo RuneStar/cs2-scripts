@@ -3,53 +3,52 @@
 def_component $component3 = enum(int, component, 984, $int1);
 if ($component3 = null) {
 	return($int0);
-} else {
-	if_sethide(false, $component3);
-	def_int $int4 = if_getwidth($component3);
-	def_int $int5 = if_getheight($component3);
-	cc_deleteall($component3);
-	def_int $int6 = 0;
-	cc_create($component3, ^iftype_rectangle, $int6);
-	$int6 = calc($int6 + 1);
-	cc_setsize(238, $int5, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setfill(false);
-	cc_setcolour(0x333300);
-	cc_create($component3, ^iftype_text, $int6);
-	$int6 = calc($int6 + 1);
-	def_string $string1 = "<$string0>: Lvl <tostring($int2)>";
-	def_int $int7 = calc(parawidth(512, p12_full, $string1) + 10);
-	if ($int7 < 162) {
-		$int7 = 162;
-	}
-	cc_setsize($int7, $int5, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc(238 - $int7), 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont(p12_full);
-	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	cc_settextshadow(true);
-	cc_settext($string1);
-	cc_setcolour(0xccccff);
-	if_setonmouseover("script85(event_com, cc_getid, 15658751)", $component3);
-	if_setonmouseleave("script85(event_com, cc_getid, 13421823)", $component3);
-	cc_create($component3, ^iftype_text, $int6);
-	$int6 = calc($int6 + 1);
-	cc_setsize(calc($int4 - 238), $int5, ^setsize_abs, ^setsize_abs);
-	cc_setposition(238, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settextfont(p12_full);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settextshadow(true);
-	def_obj $obj8 = enum(int, obj, 250, $int1);
-	if ($obj8 ! null) {
-		$int7 = oc_cost($obj8);
-	} else {
-		$int7 = 0;
-	}
-	$string1 = ",";
-	cc_settext("<~script46($int7, $string1)> coins");
-	~poh_add_room_costupdate($int7);
-	cc_setoninvtransmit("poh_add_room_costupdate(event_com, event_comid, $int7){inv}");
-	if_setop(1, $string0, $component3);
-	if_setonop("poh_add_room_op(event_com, $int1)", $component3);
-	if_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top, $component3);
-	return(calc(($int0 + $int5) + 1));
 }
+if_sethide(false, $component3);
+def_int $int4 = if_getwidth($component3);
+def_int $int5 = if_getheight($component3);
+cc_deleteall($component3);
+def_int $int6 = 0;
+cc_create($component3, ^iftype_rectangle, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize(238, $int5, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(0x333300);
+cc_create($component3, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+def_string $string1 = "<$string0>: Lvl <tostring($int2)>";
+def_int $int7 = calc(parawidth(512, p12_full, $string1) + 10);
+if ($int7 < 162) {
+	$int7 = 162;
+}
+cc_setsize($int7, $int5, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(238 - $int7), 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string1);
+cc_setcolour(0xccccff);
+if_setonmouseover("script85(event_com, cc_getid, 15658751)", $component3);
+if_setonmouseleave("script85(event_com, cc_getid, 13421823)", $component3);
+cc_create($component3, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize(calc($int4 - 238), $int5, ^setsize_abs, ^setsize_abs);
+cc_setposition(238, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+def_obj $obj8 = enum(int, obj, 250, $int1);
+if ($obj8 ! null) {
+	$int7 = oc_cost($obj8);
+} else {
+	$int7 = 0;
+}
+$string1 = ",";
+cc_settext("<~script46($int7, $string1)> coins");
+~poh_add_room_costupdate($int7);
+cc_setoninvtransmit("poh_add_room_costupdate(event_com, event_comid, $int7){inv}");
+if_setop(1, $string0, $component3);
+if_setonop("poh_add_room_op(event_com, $int1)", $component3);
+if_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top, $component3);
+return(calc(($int0 + $int5) + 1));

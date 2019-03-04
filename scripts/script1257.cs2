@@ -2,8 +2,6 @@
 script1257(int $int0, component $component1, int $int2, obj $obj3, obj $obj4, string $string0)
 if (clientclock < $int0) {
 	return;
-} else {
-	if_setontimer(null, $component1);
-	~script1253($component1, $int2, $obj3, $obj4, $string0);
-	return;
 }
+if_setontimer(null, $component1);
+~script1253($component1, $int2, $obj3, $obj4, $string0);

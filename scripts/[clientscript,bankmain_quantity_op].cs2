@@ -2,11 +2,9 @@
 [clientscript,bankmain_quantity_op](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6)
 if ($int0 ! 1) {
 	return;
-} else {
-	if (%varbit6590 ! $int6) {
-		sound_synth(2266, 1, 0);
-	}
-	%varbit6590 = $int6;
-	~bankmain_quantity_buttons($component1, $component2, $component3, $component4, $component5);
-	return;
 }
+if (%varbit6590 ! $int6) {
+	sound_synth(2266, 1, 0);
+}
+%varbit6590 = $int6;
+~bankmain_quantity_buttons($component1, $component2, $component3, $component4, $component5);

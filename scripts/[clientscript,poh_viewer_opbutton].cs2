@@ -2,32 +2,30 @@
 [clientscript,poh_viewer_opbutton](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if ($component1 = $component9) {
-		%varbit5330 = calc((pow((7 + 2), 2) * 3) + 1);
-	} else if ($component1 = $component10) {
-		%varbit5332 = 1;
-	} else if ($component1 = $component11) {
-		%varbit5331 = calc((%varbit5331 + 1) % 4);
-		if (cc_find($component1, 0) = true) {
-			cc_setgraphic("miscgraphics3,1");
-			cc_setontimer("poh_viewer_rotate_timeout(event_com, event_comid, calc(clientclock + 10))");
-		}
-	} else if ($component1 = $component12) {
-		%varbit5331 = calc((%varbit5331 + 3) % 4);
-		if (cc_find($component1, 0) = true) {
-			cc_setgraphic("miscgraphics3,1");
-			cc_setontimer("poh_viewer_rotate_timeout(event_com, event_comid, calc(clientclock + 10))");
-		}
-	} else if ($component1 = $component13) {
-		%varbit5333 = 0;
-	} else if ($component1 = $component14) {
-		%varbit5330 = 0;
-		%varbit5332 = 0;
-	} else if ($component1 = $component15) {
-		%varbit5332 = 0;
-	}
-	~poh_viewer_sideupdate($component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16);
-	return;
 }
+sound_synth(2266, 1, 0);
+if ($component1 = $component9) {
+	%varbit5330 = calc((pow((7 + 2), 2) * 3) + 1);
+} else if ($component1 = $component10) {
+	%varbit5332 = 1;
+} else if ($component1 = $component11) {
+	%varbit5331 = calc((%varbit5331 + 1) % 4);
+	if (cc_find($component1, 0) = true) {
+		cc_setgraphic("miscgraphics3,1");
+		cc_setontimer("poh_viewer_rotate_timeout(event_com, event_comid, calc(clientclock + 10))");
+	}
+} else if ($component1 = $component12) {
+	%varbit5331 = calc((%varbit5331 + 3) % 4);
+	if (cc_find($component1, 0) = true) {
+		cc_setgraphic("miscgraphics3,1");
+		cc_setontimer("poh_viewer_rotate_timeout(event_com, event_comid, calc(clientclock + 10))");
+	}
+} else if ($component1 = $component13) {
+	%varbit5333 = 0;
+} else if ($component1 = $component14) {
+	%varbit5330 = 0;
+	%varbit5332 = 0;
+} else if ($component1 = $component15) {
+	%varbit5332 = 0;
+}
+~poh_viewer_sideupdate($component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16);

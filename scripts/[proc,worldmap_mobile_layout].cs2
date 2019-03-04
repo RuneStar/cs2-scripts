@@ -2,15 +2,13 @@
 [proc,worldmap_mobile_layout]
 if (~on_mobile = false) {
 	return;
-} else {
-	if_setposition(6, 6, ^setpos_abs_right, ^setpos_abs_bottom, 595:6);
-	if_setposition(5, 44, ^setpos_abs_right, ^setpos_abs_top, 595:9);
-	if_setposition(6, 6, ^setpos_abs_left, ^setpos_abs_bottom, 595:13);
-	if_setposition(0, 6, ^setpos_abs_centre, ^setpos_abs_top, 595:21);
-	if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_top, 595:29);
-	if_setposition(53, 0, ^setpos_abs_right, ^setpos_abs_centre, 595:28);
-	if_setposition(93, 0, ^setpos_abs_right, ^setpos_abs_centre, 595:27);
-	if_setposition(134, 0, ^setpos_abs_right, ^setpos_abs_centre, 595:26);
-	if_setposition(15, 10, ^setpos_abs_right, ^setpos_abs_top, 595:37);
-	return;
 }
+if_setposition(6, 6, ^setpos_abs_right, ^setpos_abs_bottom, 595:6);
+if_setposition(5, 44, ^setpos_abs_right, ^setpos_abs_top, 595:9);
+if_setposition(6, 6, ^setpos_abs_left, ^setpos_abs_bottom, 595:13);
+if_setposition(0, 6, ^setpos_abs_centre, ^setpos_abs_top, 595:21);
+if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_top, 595:29);
+if_setposition(53, 0, ^setpos_abs_right, ^setpos_abs_centre, 595:28);
+if_setposition(93, 0, ^setpos_abs_right, ^setpos_abs_centre, 595:27);
+if_setposition(134, 0, ^setpos_abs_right, ^setpos_abs_centre, 595:26);
+if_setposition(15, 10, ^setpos_abs_right, ^setpos_abs_top, 595:37);

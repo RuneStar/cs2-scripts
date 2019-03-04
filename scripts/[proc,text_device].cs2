@@ -2,6 +2,5 @@
 [proc,text_device](string $string0, string $string1)(string)
 if (~on_mobile = true) {
 	return($string1);
-} else {
-	return($string0);
 }
+return($string0);

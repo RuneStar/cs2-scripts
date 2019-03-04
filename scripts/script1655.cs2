@@ -6,11 +6,9 @@ if ($boolean0 = true) {
 	cc_setontimer(null);
 	cc_setonkey("script1684(event_keytyped, event_com, event_comid, $component2, $component3, $component4, $component5)");
 	return;
-} else {
-	%varcint214 = 0;
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component2);
-	~script2219($component3, $component4, $component5);
-	cc_setontimer("script2092($component3, $component4, $component5)");
-	cc_setonkey("script1668(event_keytyped, event_com, event_comid, $component2, $component3, $component4, $component5)");
-	return;
 }
+%varcint214 = 0;
+if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component2);
+~script2219($component3, $component4, $component5);
+cc_setontimer("script2092($component3, $component4, $component5)");
+cc_setonkey("script1668(event_keytyped, event_com, event_comid, $component2, $component3, $component4, $component5)");

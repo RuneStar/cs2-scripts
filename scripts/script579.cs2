@@ -2,11 +2,10 @@
 script579(int $int0, int $int1, enum $enum2, component $component3, component $component4, component $component5, int $int6)
 if ($int0 ! 1) {
 	return;
-} else if (($int1 < 0) | ($int1 >= $int6)) {
-	return;
-} else {
-	sound_synth(2266, 1, 0);
-	~script573($enum2, $int1);
-	~script581($enum2, $component3, $component4, $component5, $int6);
+}
+if (($int1 < 0) | ($int1 >= $int6)) {
 	return;
 }
+sound_synth(2266, 1, 0);
+~script573($enum2, $int1);
+~script581($enum2, $component3, $component4, $component5, $int6);

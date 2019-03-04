@@ -2,11 +2,9 @@
 [clientscript,br_tournament_submit](int $int0, component $component1, int $int2, string $string0)
 if (clientclock < $int0) {
 	return;
-} else {
-	resume_namedialog($string0);
-	if (cc_find($component1, $int2) = true) {
-		cc_setcolour(^white);
-		cc_setontimer(null);
-	}
-	return;
+}
+resume_namedialog($string0);
+if (cc_find($component1, $int2) = true) {
+	cc_setcolour(^white);
+	cc_setontimer(null);
 }

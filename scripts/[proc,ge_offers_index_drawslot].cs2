@@ -105,10 +105,9 @@ if (stockmarket_isofferempty($int9) = true) {
 			}
 		}
 		return;
-	} else {
-		$int29 = inv_total($inv0, $obj28);
-		$int36 = 1;
 	}
+	$int29 = inv_total($inv0, $obj28);
+	$int36 = 1;
 } else {
 	$int29 = stockmarket_getoffercount($int9);
 	$obj28 = stockmarket_getofferitem($int9);

@@ -2,12 +2,10 @@
 script742
 if (~on_mobile = false) {
 	return;
+}
+def_boolean $boolean0 = batterycharging;
+if ($boolean0 = true) {
+	mes("Battery IS charging");
 } else {
-	def_boolean $boolean0 = batterycharging;
-	if ($boolean0 = true) {
-		mes("Battery IS charging");
-	} else {
-		mes("Battery IS NOT charging");
-	}
-	return;
+	mes("Battery IS NOT charging");
 }

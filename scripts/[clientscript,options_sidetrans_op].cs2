@@ -2,15 +2,14 @@
 [clientscript,options_sidetrans_op](int $int0, component $component1, component $component2)
 if ($int0 ! 1) {
 	return;
-} else if (~mobile_setting_check = 0) {
-	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if (%varbit4609 = 0) {
-		%varbit4609 = 1;
-	} else {
-		%varbit4609 = 0;
-	}
-	~options_sidetrans($component1, $component2);
+}
+if (~mobile_setting_check = 0) {
 	return;
 }
+sound_synth(2266, 1, 0);
+if (%varbit4609 = 0) {
+	%varbit4609 = 1;
+} else {
+	%varbit4609 = 0;
+}
+~options_sidetrans($component1, $component2);

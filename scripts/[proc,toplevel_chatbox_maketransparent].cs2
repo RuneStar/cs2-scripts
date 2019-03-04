@@ -2,10 +2,11 @@
 [proc,toplevel_chatbox_maketransparent]()(int)
 if (~script922 = 0) {
 	return(0);
-} else if (~on_mobile = true) {
-	return(1);
-} else if (%varbit4608 = 0) {
-	return(0);
-} else {
+}
+if (~on_mobile = true) {
 	return(1);
 }
+if (%varbit4608 = 0) {
+	return(0);
+}
+return(1);

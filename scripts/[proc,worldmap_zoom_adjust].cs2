@@ -2,29 +2,27 @@
 [proc,worldmap_zoom_adjust](int $int0, component $component1, component $component2)
 if (worldmap_isloaded = false) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	def_int $int3 = worldmap_getzoom;
-	def_int $int4 = -1;
-	if ($int0 = 1) {
-		if ($int3 < 50) {
-			$int4 = 50;
-		} else if ($int3 < 75) {
-			$int4 = 75;
-		} else if ($int3 < 100) {
-			$int4 = 100;
-		} else {
-			$int4 = 200;
-		}
-	} else if ($int3 > 100) {
-		$int4 = 100;
-	} else if ($int3 > 75) {
-		$int4 = 75;
-	} else if ($int3 > 50) {
-		$int4 = 50;
-	} else {
-		$int4 = 25;
-	}
-	~worldmap_applyzoom($int4, $component1, $component2);
-	return;
 }
+sound_synth(2266, 1, 0);
+def_int $int3 = worldmap_getzoom;
+def_int $int4 = -1;
+if ($int0 = 1) {
+	if ($int3 < 50) {
+		$int4 = 50;
+	} else if ($int3 < 75) {
+		$int4 = 75;
+	} else if ($int3 < 100) {
+		$int4 = 100;
+	} else {
+		$int4 = 200;
+	}
+} else if ($int3 > 100) {
+	$int4 = 100;
+} else if ($int3 > 75) {
+	$int4 = 75;
+} else if ($int3 > 50) {
+	$int4 = 50;
+} else {
+	$int4 = 25;
+}
+~worldmap_applyzoom($int4, $component1, $component2);

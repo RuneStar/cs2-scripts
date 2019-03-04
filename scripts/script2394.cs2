@@ -6,42 +6,40 @@ if (cc_find($component0, $int1) = true) {
 	if ($int4 < 90) {
 		cc_settrans(calc(255 - scale($int4, 90, 255)));
 		return;
-	} else {
-		cc_settrans(0);
-		if ($int4 < 70) {
-			return;
-		} else {
-			.cc_create($component3, ^iftype_model, 0);
-			.cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
-			.cc_setposition(-130, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-			.cc_setnpchead(8431);
-			.cc_setmodelanim(8167);
-			._1127(false);
-			.cc_setmodelangle(0, 0, 27, 2047, 0, 550);
-			.cc_setontimer("script2395(event_com, event_comid, 2047, 1786, 27, 550, clientclock)");
-			.cc_create($component3, ^iftype_model, 1);
-			.cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
-			.cc_setposition(130, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-			.cc_setnpchead(742);
-			.cc_setmodelanim(579);
-			._1127(false);
-			.cc_setmodelangle(0, 0, 105, 0, 0, 650);
-			.cc_setontimer("script2395(event_com, event_comid, 0, 213, 105, 650, clientclock)");
-			.cc_create($component3, ^iftype_text, 2);
-			.cc_setsize(0, 80, ^setsize_minus, ^setsize_abs);
-			.cc_setposition(0, 90, ^setpos_abs_centre, ^setpos_abs_centre);
-			.cc_setcolour(0x680038);
-			.cc_settextfont(645);
-			.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-			.cc_settextshadow(true);
-			.cc_settext("Snowflake & My Arm<br>forever");
-			.cc_create($component3, ^iftype_rectangle, 3);
-			.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-			.cc_setcolour(^black);
-			.cc_setfill(true);
-			.cc_settrans(0);
-			cc_setontimer("script2403(event_com, event_comid, clientclock, $component3, .cc_getid)");
-		}
 	}
+	cc_settrans(0);
+	if ($int4 < 70) {
+		return;
+	}
+	.cc_create($component3, ^iftype_model, 0);
+	.cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(-130, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setnpchead(8431);
+	.cc_setmodelanim(8167);
+	._1127(false);
+	.cc_setmodelangle(0, 0, 27, 2047, 0, 550);
+	.cc_setontimer("script2395(event_com, event_comid, 2047, 1786, 27, 550, clientclock)");
+	.cc_create($component3, ^iftype_model, 1);
+	.cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(130, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setnpchead(742);
+	.cc_setmodelanim(579);
+	._1127(false);
+	.cc_setmodelangle(0, 0, 105, 0, 0, 650);
+	.cc_setontimer("script2395(event_com, event_comid, 0, 213, 105, 650, clientclock)");
+	.cc_create($component3, ^iftype_text, 2);
+	.cc_setsize(0, 80, ^setsize_minus, ^setsize_abs);
+	.cc_setposition(0, 90, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setcolour(0x680038);
+	.cc_settextfont(645);
+	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	.cc_settextshadow(true);
+	.cc_settext("Snowflake & My Arm<br>forever");
+	.cc_create($component3, ^iftype_rectangle, 3);
+	.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setcolour(^black);
+	.cc_setfill(true);
+	.cc_settrans(0);
+	cc_setontimer("script2403(event_com, event_comid, clientclock, $component3, .cc_getid)");
 }

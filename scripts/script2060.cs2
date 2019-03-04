@@ -2,9 +2,7 @@
 script2060(int $int0, int $int1, int $int2)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if_setontimer("script2062($int1, $int2)", 270:11);
-	~meslayer_skillmulti("Enter amount (1 - <tostring($int2)>):");
-	return;
 }
+sound_synth(2266, 1, 0);
+if_setontimer("script2062($int1, $int2)", 270:11);
+~meslayer_skillmulti("Enter amount (1 - <tostring($int2)>):");

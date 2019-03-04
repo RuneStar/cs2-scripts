@@ -17,8 +17,6 @@ if ((string_length(%varcstring24) > 0) | (%varcint224 = 0)) {
 	%varcstring24 = "";
 	%varcint11 = 0;
 	return;
-} else {
-	sound_synth(2277, 1, 0);
-	mes("Please enter the name of the player you wish to report.");
-	return;
 }
+sound_synth(2277, 1, 0);
+mes("Please enter the name of the player you wish to report.");

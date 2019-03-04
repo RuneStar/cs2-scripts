@@ -2,18 +2,15 @@
 script319(int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6)
 if ($int1 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	cc_deleteall($component5);
-	if_setonop(null, $component6);
-	if ($int0 = 1) {
-		if_settext("Requesting...", $component4);
-		if_setontimer("script320(calc(clientclock + 45), $component2, $component3, $component5, $component6)", $component5);
-		return;
-	} else {
-		if_settext("", $component4);
-		if_sethide(false, $component2);
-		if_sethide(true, $component3);
-		return;
-	}
 }
+sound_synth(2266, 1, 0);
+cc_deleteall($component5);
+if_setonop(null, $component6);
+if ($int0 = 1) {
+	if_settext("Requesting...", $component4);
+	if_setontimer("script320(calc(clientclock + 45), $component2, $component3, $component5, $component6)", $component5);
+	return;
+}
+if_settext("", $component4);
+if_sethide(false, $component2);
+if_sethide(true, $component3);

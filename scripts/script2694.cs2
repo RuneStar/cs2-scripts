@@ -2,10 +2,8 @@
 script2694(int $int0)
 if (clientclock < $int0) {
 	return;
-} else {
-	~script2692(0, 0);
-	if_setonmouserepeat("script2691(true, false)", 100:33);
-	if_setonmouseleave("script2691(false, false)", 100:33);
-	if_setonop("script2693(event_opindex)", 100:33);
-	return;
 }
+~script2692(0, 0);
+if_setonmouserepeat("script2691(true, false)", 100:33);
+if_setonmouseleave("script2691(false, false)", 100:33);
+if_setonop("script2693(event_opindex)", 100:33);

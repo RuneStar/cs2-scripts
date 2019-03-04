@@ -2,32 +2,44 @@
 [proc,skill_guide_subsection_hunter](int $int0)(string, int)
 if ($int0 = 0) {
 	return("Tracking", 1);
-} else if ($int0 = 1) {
-	return("Birds", 1);
-} else if ($int0 = 2) {
-	return("Butterflies", 1);
-} else if ($int0 = 3) {
-	return("Implings", 1);
-} else if ($int0 = 4) {
-	return("Deadfall", 1);
-} else if ($int0 = 5) {
-	return("Box Trap", 1);
-} else if ($int0 = 6) {
-	return("Net Trap", 1);
-} else if ($int0 = 7) {
-	return("Pitfalls", 1);
-} else if ($int0 = 8) {
-	return("Aerial", 1);
-} else if ($int0 = 9) {
-	return("Traps", 1);
-} else if ($int0 = 10) {
-	return("Clothing", 1);
-} else if ($int0 = 11) {
-	return("Raids", 1);
-} else if ($int0 = 12) {
-	return("Birdhouses", 1);
-} else if ($int0 = 13) {
-	return("Other", 1);
-} else {
-	return("", -1);
 }
+if ($int0 = 1) {
+	return("Birds", 1);
+}
+if ($int0 = 2) {
+	return("Butterflies", 1);
+}
+if ($int0 = 3) {
+	return("Implings", 1);
+}
+if ($int0 = 4) {
+	return("Deadfall", 1);
+}
+if ($int0 = 5) {
+	return("Box Trap", 1);
+}
+if ($int0 = 6) {
+	return("Net Trap", 1);
+}
+if ($int0 = 7) {
+	return("Pitfalls", 1);
+}
+if ($int0 = 8) {
+	return("Aerial", 1);
+}
+if ($int0 = 9) {
+	return("Traps", 1);
+}
+if ($int0 = 10) {
+	return("Clothing", 1);
+}
+if ($int0 = 11) {
+	return("Raids", 1);
+}
+if ($int0 = 12) {
+	return("Birdhouses", 1);
+}
+if ($int0 = 13) {
+	return("Other", 1);
+}
+return("", -1);

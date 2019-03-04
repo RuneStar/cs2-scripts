@@ -2,8 +2,6 @@
 [proc,deadman_tournament_timer_resynch](component $component0, int $int1)
 if (%varbit6462 = 1) {
 	return;
-} else {
-	$int1 = calc(clientclock + ($int1 * 30));
-	if_setontimer("deadman_tournament_timer_update($component0, $int1)", $component0);
-	return;
 }
+$int1 = calc(clientclock + ($int1 * 30));
+if_setontimer("deadman_tournament_timer_update($component0, $int1)", $component0);

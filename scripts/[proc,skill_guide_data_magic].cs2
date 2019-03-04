@@ -501,13 +501,14 @@ switch ($int0) {
 	case 7 :
 		if ($int1 = 0) {
 			return("Tome of Fire", 50, 20714);
-		} else if ($int1 = 1) {
-			return("Make Ancient Wyvern shield", 66, 21633);
-		} else if ($int1 = 2) {
-			return("Wield Ancient Wyvern shield", 70, 21633);
-		} else {
-			return("", -1, -1);
 		}
+		if ($int1 = 1) {
+			return("Make Ancient Wyvern shield", 66, 21633);
+		}
+		if ($int1 = 2) {
+			return("Wield Ancient Wyvern shield", 70, 21633);
+		}
+		return("", -1, -1);
 	case 8 :
 		return(~skill_guide_salamanders($int1));
 	else :

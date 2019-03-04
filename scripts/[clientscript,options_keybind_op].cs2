@@ -2,10 +2,9 @@
 [clientscript,options_keybind_op](int $int0, component $component1, component $component2)
 if ($int0 ! 1) {
 	return;
-} else if (~mobile_setting_check = 0) {
-	return;
-} else {
-	sound_synth(2266, 1, 0);
-	~options_keybind($component1, $component2);
+}
+if (~mobile_setting_check = 0) {
 	return;
 }
+sound_synth(2266, 1, 0);
+~options_keybind($component1, $component2);

@@ -2,7 +2,5 @@
 script1619(component $component0, int $int1)
 if (clientclock < $int1) {
 	return;
-} else {
-	~script1617($component0);
-	return;
 }
+~script1617($component0);

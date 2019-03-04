@@ -2,9 +2,7 @@
 script2369(int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
 if ($int1 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	%var261 = ~min(6, ~max(1, calc(%var261 + $int0)));
-	~script2371($component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9);
-	return;
 }
+sound_synth(2266, 1, 0);
+%var261 = ~min(6, ~max(1, calc(%var261 + $int0)));
+~script2371($component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9);

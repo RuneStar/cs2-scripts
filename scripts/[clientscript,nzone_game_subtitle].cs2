@@ -17,9 +17,11 @@ if ($int6 < 50) {
 		cc_setposition(interpolate(0, pow($int6, 2), 0, $int4, 16384), cc_gety, ^setpos_3, ^setpos_abs_top);
 	}
 	return;
-} else if ($int6 < $int5) {
+}
+if ($int6 < $int5) {
 	return;
-} else if ($int6 < calc(50 * 3)) {
+}
+if ($int6 < calc(50 * 3)) {
 	if ($int6 = $int5) {
 		sound_synth(2201, 1, 0);
 	}
@@ -31,12 +33,10 @@ if ($int6 < 50) {
 		cc_setposition(interpolate(0, pow($int6, 2), 0, $int4, 16384), cc_gety, ^setpos_5, ^setpos_abs_top);
 	}
 	return;
-} else {
-	if (cc_find($component0, $int1) = true) {
-		cc_delete;
-	}
-	if (cc_find($component0, $int2) = true) {
-		cc_delete;
-	}
-	return;
+}
+if (cc_find($component0, $int1) = true) {
+	cc_delete;
+}
+if (cc_find($component0, $int2) = true) {
+	cc_delete;
 }

@@ -2,8 +2,6 @@
 [clientscript,combat_interface_opbutton](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5)
 if ($int4 ! 1) {
 	return;
-} else {
-	%var43 = $int5;
-	~combat_interface_setbuttons($int0, $int1, $int2, $int3);
-	return;
 }
+%var43 = $int5;
+~combat_interface_setbuttons($int0, $int1, $int2, $int3);

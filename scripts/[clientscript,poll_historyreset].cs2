@@ -2,10 +2,8 @@
 [clientscript,poll_historyreset](component $component0, int $int1, int $int2, string $string0)
 if (clientclock < $int2) {
 	return;
-} else {
-	if (cc_find($component0, $int1) = true) {
-		cc_settext($string0);
-		cc_setontimer(null);
-	}
-	return;
+}
+if (cc_find($component0, $int1) = true) {
+	cc_settext($string0);
+	cc_setontimer(null);
 }

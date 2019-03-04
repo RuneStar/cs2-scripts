@@ -8,10 +8,8 @@ if ($int1 = 1) {
 	cc_setonmouseleave(null);
 	if_setonop(null, $component0);
 	return;
-} else {
-	.cc_setontimer(null);
-	cc_setonmouseover("cc_settrans(event_com, event_comid, 225, null)");
-	cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
-	if_setonop("clanwars_view_op(event_opindex, $int2, $model3)", $component0);
-	return;
 }
+.cc_setontimer(null);
+cc_setonmouseover("cc_settrans(event_com, event_comid, 225, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+if_setonop("clanwars_view_op(event_opindex, $int2, $model3)", $component0);

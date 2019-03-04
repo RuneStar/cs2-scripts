@@ -2,11 +2,9 @@
 [clientscript,snapshot_onkey](int $int0, char $char1)
 if (~script1701(553, -1) = 0) {
 	return;
-} else {
-	if (($int0 = 84) & (~on_mobile = true)) {
-		~script1984;
-	}
-	%varcstring24 = ~script74(2, $int0, $char1, %varcstring24);
-	if_settext("<escape(%varcstring24)><col=ffff00>|", 553:5);
-	return;
 }
+if (($int0 = 84) & (~on_mobile = true)) {
+	~script1984;
+}
+%varcstring24 = ~script74(2, $int0, $char1, %varcstring24);
+if_settext("<escape(%varcstring24)><col=ffff00>|", 553:5);

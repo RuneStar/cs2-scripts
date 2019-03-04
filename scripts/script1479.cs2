@@ -3,63 +3,58 @@ script1479(loc $loc0, int $int1, int $int2, int $int3)(int, int)
 def_coord $coord4 = enum(loc, coord, 1368, $loc0);
 if ($coord4 = null) {
 	return(0, 0);
-} else {
-	def_int $int5 = coordx($coord4);
-	def_int $int6 = coordy($coord4);
-	def_int $int7 = 0;
-	if ($int5 = 1) {
-		$int7 = %var1365;
-	} else if ($int5 = 2) {
-		$int7 = %var1366;
-	} else if ($int5 = 3) {
-		$int7 = %var1367;
-	} else if ($int5 = 4) {
-		$int7 = %var1368;
-	} else if ($int5 = 5) {
-		$int7 = %var1369;
-	} else {
-		return(0, 0);
-	}
-	if (testbit($int7, $int6) = false) {
-		return(0, 0);
-	} else {
-		def_coord $coord8 = enum(loc, coord, 1525, $loc0);
-		if ($coord8 ! null) {
-			if (inv_getobj(576, coordx($coord8)) ! null) {
-				return(1, 1);
-			} else if (($loc0 = 29032) & (testbit($int2, 31) = true)) {
-				return(1, 1);
-			} else {
-				return(1, 0);
-			}
-		} else {
-			$coord8 = enum(loc, coord, 1440, $loc0);
-			if ($coord8 ! null) {
-				$int6 = coordy($coord8);
-				$int5 = coordx($coord8);
-				if ($int5 = 1) {
-					$int7 = $int1;
-				} else if ($int5 = 2) {
-					$int7 = $int2;
-				} else if ($int5 = 3) {
-					$int7 = $int3;
-				} else {
-					return(0, 0);
-				}
-				if (testbit($int7, $int6) = true) {
-					return(1, 1);
-				} else {
-					return(1, 0);
-				}
-			} else if ($loc0 = 29057) {
-				if ((testbit($int3, 10) = true) | (testbit($int3, 12) = true)) {
-					return(1, 1);
-				} else {
-					return(1, 0);
-				}
-			} else {
-				return(0, 0);
-			}
-		}
-	}
 }
+def_int $int5 = coordx($coord4);
+def_int $int6 = coordy($coord4);
+def_int $int7 = 0;
+if ($int5 = 1) {
+	$int7 = %var1365;
+} else if ($int5 = 2) {
+	$int7 = %var1366;
+} else if ($int5 = 3) {
+	$int7 = %var1367;
+} else if ($int5 = 4) {
+	$int7 = %var1368;
+} else if ($int5 = 5) {
+	$int7 = %var1369;
+} else {
+	return(0, 0);
+}
+if (testbit($int7, $int6) = false) {
+	return(0, 0);
+}
+def_coord $coord8 = enum(loc, coord, 1525, $loc0);
+if ($coord8 ! null) {
+	if (inv_getobj(576, coordx($coord8)) ! null) {
+		return(1, 1);
+	}
+	if (($loc0 = 29032) & (testbit($int2, 31) = true)) {
+		return(1, 1);
+	}
+	return(1, 0);
+}
+$coord8 = enum(loc, coord, 1440, $loc0);
+if ($coord8 ! null) {
+	$int6 = coordy($coord8);
+	$int5 = coordx($coord8);
+	if ($int5 = 1) {
+		$int7 = $int1;
+	} else if ($int5 = 2) {
+		$int7 = $int2;
+	} else if ($int5 = 3) {
+		$int7 = $int3;
+	} else {
+		return(0, 0);
+	}
+	if (testbit($int7, $int6) = true) {
+		return(1, 1);
+	}
+	return(1, 0);
+}
+if ($loc0 = 29057) {
+	if ((testbit($int3, 10) = true) | (testbit($int3, 12) = true)) {
+		return(1, 1);
+	}
+	return(1, 0);
+}
+return(0, 0);

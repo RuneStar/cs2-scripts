@@ -13,7 +13,8 @@ if ($int1 <= 60) {
 		.cc_setmodel(7428);
 	}
 	return;
-} else if ($int1 <= 90) {
+}
+if ($int1 <= 90) {
 	$int1 = calc($int1 - 60);
 	if (cc_find($component0, 0) = true) {
 		cc_settrans(calc(15 + ($int1 * 8)));
@@ -23,7 +24,5 @@ if ($int1 <= 60) {
 		.cc_setmodel(16238);
 	}
 	return;
-} else {
-	cc_deleteall($component0);
-	return;
 }
+cc_deleteall($component0);

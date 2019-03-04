@@ -2,14 +2,12 @@
 script397(int $int0, int $int1, int $int2)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2871, 1, 0);
-	if ($int1 = 1) {
-		%varbit3985 = calc((%varbit3985 + $int2) % 4);
-	} else if ($int1 = 2) {
-		%varbit3986 = calc((%varbit3986 + $int2) % 4);
-	} else if ($int1 = 3) {
-		%varbit3987 = calc((%varbit3987 + $int2) % 4);
-	}
-	return;
+}
+sound_synth(2871, 1, 0);
+if ($int1 = 1) {
+	%varbit3985 = calc((%varbit3985 + $int2) % 4);
+} else if ($int1 = 2) {
+	%varbit3986 = calc((%varbit3986 + $int2) % 4);
+} else if ($int1 = 3) {
+	%varbit3987 = calc((%varbit3987 + $int2) % 4);
 }

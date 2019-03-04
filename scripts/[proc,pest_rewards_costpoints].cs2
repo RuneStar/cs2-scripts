@@ -2,6 +2,5 @@
 [proc,pest_rewards_costpoints](int $int0)(string)
 if ($int0 = 1) {
 	return("1 point");
-} else {
-	return("<tostring($int0)> points");
 }
+return("<tostring($int0)> points");

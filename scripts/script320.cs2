@@ -2,11 +2,9 @@
 script320(int $int0, component $component1, component $component2, component $component3, component $component4)
 if (clientclock < $int0) {
 	return;
-} else {
-	if_setontimer(null, $component3);
-	cc_deleteall($component3);
-	if_setonop(null, $component4);
-	if_sethide(false, $component1);
-	if_sethide(true, $component2);
-	return;
 }
+if_setontimer(null, $component3);
+cc_deleteall($component3);
+if_setonop(null, $component4);
+if_sethide(false, $component1);
+if_sethide(true, $component2);

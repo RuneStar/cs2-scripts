@@ -13,13 +13,11 @@ if ($boolean2 = false) {
 }
 if ($boolean0 = true) {
 	return;
+}
+if (~script1942 = 1) {
+	if_setonvartransmit("script1943(){var1601, var1602}", 90:14);
+	~script1944;
 } else {
-	if (~script1942 = 1) {
-		if_setonvartransmit("script1943(){var1601, var1602}", 90:14);
-		~script1944;
-	} else {
-		if_setonvartransmit("deadman_tournament_hudupdate(){var1542, var1293}", 90:14);
-		~deadman_tournament_hudupdate;
-	}
-	return;
+	if_setonvartransmit("deadman_tournament_hudupdate(){var1542, var1293}", 90:14);
+	~deadman_tournament_hudupdate;
 }

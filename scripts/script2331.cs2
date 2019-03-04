@@ -2,16 +2,14 @@
 script2331(int $int0, int $int1, component $component2, int $int3, int $int4, string $string0)
 if (clientclock < $int0) {
 	return;
-} else {
-	if (cc_find($component2, $int3) = true) {
-		cc_setontimer(null);
-		cc_settrans($int4);
-		cc_setonmouserepeat("cc_settrans(event_com, event_comid, $int4, null)");
-		cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
-		cc_setop(1, "Accept");
-		cc_setop(10, "Reject");
-		cc_setopbase("<col=ff9040><$string0></col>");
-		cc_setonop("script2330(event_opindex, $int1, event_com, event_comid, $string0, $int4)");
-	}
-	return;
+}
+if (cc_find($component2, $int3) = true) {
+	cc_setontimer(null);
+	cc_settrans($int4);
+	cc_setonmouserepeat("cc_settrans(event_com, event_comid, $int4, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+	cc_setop(1, "Accept");
+	cc_setop(10, "Reject");
+	cc_setopbase("<col=ff9040><$string0></col>");
+	cc_setonop("script2330(event_opindex, $int1, event_com, event_comid, $string0, $int4)");
 }

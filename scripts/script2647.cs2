@@ -3,11 +3,9 @@ script2647(component $component0)
 if (%var281 ! 200) {
 	if_setgraphic("orb_frame,0", $component0);
 	return;
+}
+if (calc(clientclock % 20) < 10) {
+	if_setgraphic("orb_frame,2", $component0);
 } else {
-	if (calc(clientclock % 20) < 10) {
-		if_setgraphic("orb_frame,2", $component0);
-	} else {
-		if_setgraphic("orb_frame,0", $component0);
-	}
-	return;
+	if_setgraphic("orb_frame,0", $component0);
 }

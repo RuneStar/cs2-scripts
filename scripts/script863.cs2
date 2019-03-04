@@ -2,12 +2,10 @@
 script863(component $component0, int $int1)
 if (clientclock < $int1) {
 	return;
-} else {
-	cc_deleteall($component0);
-	~options_button_off($component0, 0);
-	if_setcolour(0xa6a692, 127:13);
-	if_setonmouserepeat("script45(127:13, 16777215)", 127:12);
-	if_setonmouseleave("script45(127:13, 10921618)", 127:12);
-	if_setontimer(null, $component0);
-	return;
 }
+cc_deleteall($component0);
+~options_button_off($component0, 0);
+if_setcolour(0xa6a692, 127:13);
+if_setonmouserepeat("script45(127:13, 16777215)", 127:12);
+if_setonmouseleave("script45(127:13, 10921618)", 127:12);
+if_setontimer(null, $component0);

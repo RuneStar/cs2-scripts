@@ -2,18 +2,16 @@
 [clientscript,cc_fade](component $component0, int $int1, int $int2, int $int3, int $int4)
 if ($int4 = 0) {
 	return;
-} else {
-	if ($int3 < 0) {
-		$int3 = 0;
-	} else if ($int3 > 255) {
-		$int3 = 255;
+}
+if ($int3 < 0) {
+	$int3 = 0;
+} else if ($int3 > 255) {
+	$int3 = 255;
+}
+def_int $int5 = $int1;
+while ($int5 <= $int2) {
+	if (cc_find($component0, $int5) = true) {
+		cc_setontimer("cc_fade_timer(event_com, event_comid, $int3, $int4)");
 	}
-	def_int $int5 = $int1;
-	while ($int5 <= $int2) {
-		if (cc_find($component0, $int5) = true) {
-			cc_setontimer("cc_fade_timer(event_com, event_comid, $int3, $int4)");
-		}
-		$int5 = calc($int5 + 1);
-	}
-	return;
+	$int5 = calc($int5 + 1);
 }

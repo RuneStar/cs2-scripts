@@ -3,11 +3,9 @@
 if (%varbit4150 = $int0) {
 	.cc_setgraphic("banktabs,2");
 	return;
-} else {
-	.cc_setgraphic("banktabs,0");
-	def_graphic $graphic1 = "banktabs,1";
-	cc_setonmouserepeat("script229(event_com, .cc_getid, $graphic1, null)");
-	$graphic1 = "banktabs,0";
-	cc_setonmouseleave("script229(event_com, .cc_getid, $graphic1, null)");
-	return;
 }
+.cc_setgraphic("banktabs,0");
+def_graphic $graphic1 = "banktabs,1";
+cc_setonmouserepeat("script229(event_com, .cc_getid, $graphic1, null)");
+$graphic1 = "banktabs,0";
+cc_setonmouseleave("script229(event_com, .cc_getid, $graphic1, null)");

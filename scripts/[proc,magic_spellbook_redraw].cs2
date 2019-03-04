@@ -47,149 +47,147 @@ if ($enum14 ! 1985) {
 }
 if ($enum14 = null) {
 	return;
+}
+def_int $int15 = enum_getoutputcount($enum14);
+def_int $array0($int15);
+def_int $int16 = 0;
+def_obj $obj17 = null;
+def_int $int18 = 0;
+if (($boolean10 = false) & (%varbit6718 = 1)) {
+	while ($int18 < $int15) {
+		$obj17 = enum(int, obj, $enum14, $int18);
+		if_sethide(false, oc_param($obj17, 596));
+		$array0($int16) = $int18;
+		$int16 = calc($int16 + 1);
+		$int18 = calc($int18 + 1);
+	}
 } else {
-	def_int $int15 = enum_getoutputcount($enum14);
-	def_int $array0($int15);
-	def_int $int16 = 0;
-	def_obj $obj17 = null;
-	def_int $int18 = 0;
-	if (($boolean10 = false) & (%varbit6718 = 1)) {
-		while ($int18 < $int15) {
-			$obj17 = enum(int, obj, $enum14, $int18);
+	while ($int18 < $int15) {
+		$obj17 = enum(int, obj, $enum14, $int18);
+		if (~script2619($obj17) = 1) {
 			if_sethide(false, oc_param($obj17, 596));
 			$array0($int16) = $int18;
 			$int16 = calc($int16 + 1);
-			$int18 = calc($int18 + 1);
-		}
-	} else {
-		while ($int18 < $int15) {
-			$obj17 = enum(int, obj, $enum14, $int18);
-			if (~script2619($obj17) = 1) {
-				if_sethide(false, oc_param($obj17, 596));
-				$array0($int16) = $int18;
-				$int16 = calc($int16 + 1);
-			} else {
-				if_sethide(true, oc_param($obj17, 596));
-			}
-			$int18 = calc($int18 + 1);
-		}
-	}
-	if ($int16 >= 2) {
-		~magic_spellbook_sort(0, 0, calc($int16 - 1), $enum14);
-	} else if ($int16 <= 0) {
-		cc_create($component0, ^iftype_text, 0);
-		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setcolour(0xff981f);
-		cc_settextfont(p12_full);
-		cc_settextshadow(true);
-		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_settext("No spells match your selected filters.");
-		return;
-	}
-	def_int $int19 = 24;
-	def_int $int20 = 0;
-	def_int $int21 = 0;
-	def_int $int22 = 0;
-	def_int $int23 = 0;
-	def_int $int24 = $int12;
-	if ($boolean10 = true) {
-		if ($int16 <= 15) {
-			$int20 = 3;
-			$int19 = 40;
-		} else if ($int16 <= 20) {
-			$int20 = 4;
-			$int19 = 40;
 		} else {
-			$int20 = ~max(4, ~min(7, calc(($int16 + 8) / 9)));
-		}
-		$int23 = ~max(0, ~min(scale(5, 7, $int19), calc(($int11 - ($int19 * $int20)) / ($int20 - 1))));
-		$int21 = ~max(1, calc(($int16 + ($int20 - 1)) / $int20));
-		if ($int21 >= 2) {
-			$int22 = ~max(0, ~min($int23, calc(($int12 - ($int19 * $int21)) / ($int21 - 1))));
-		}
-		$int24 = calc(($int21 * $int19) + (($int21 - 1) * $int22));
-		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
-	} else if (%varbit6718 = 1) {
-		switch (%varbit4070) {
-			case 1 :
-				$int22 = 4;
-				$int23 = 20;
-				$int21 = 7;
-				$int20 = 4;
-				if_setposition(2, 8, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-			case 2 :
-				$int22 = 5;
-				$int23 = 6;
-				$int21 = 8;
-				$int20 = 6;
-				if_setposition(0, 8, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-			case 3 :
-				$int22 = 5;
-				$int23 = 21;
-				$int21 = 9;
-				$int20 = 4;
-				if_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-			else :
-				$int22 = 0;
-				$int23 = 0;
-				$int21 = 10;
-				$int20 = 7;
-				if_setposition(1, 15, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-		}
-		$int24 = calc(($int21 * $int19) + (($int21 - 1) * $int22));
-	} else {
-		if ($int16 <= 28) {
-			$int20 = 4;
-		} else {
-			$int20 = ~max(4, ~min(7, calc(($int16 + 8) / 9)));
-		}
-		$int23 = ~max(0, ~min($int19, calc(($int11 - ($int19 * $int20)) / ($int20 - 1))));
-		$int21 = ~max(1, calc(($int16 + ($int20 - 1)) / $int20));
-		if ($int21 >= 2) {
-			$int22 = ~max(0, ~min($int23, calc(($int12 - ($int19 * $int21)) / ($int21 - 1))));
-		}
-		$int24 = ~max(calc(($int21 * $int19) + (($int21 - 1) * $int22)), calc($int12 - 30));
-		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
-	}
-	if_setsize(calc(($int20 * $int19) + (($int20 - 1) * $int23)), $int24, ^setsize_abs, ^setsize_abs, $component0);
-	def_component $component25 = null;
-	def_int $int26 = calc($int19 + $int23);
-	def_int $int27 = calc($int19 + $int22);
-	def_int $int28 = 0;
-	def_int $int29 = 0;
-	$int18 = 0;
-	while ($int18 < $int16) {
-		$obj17 = enum(int, obj, $enum14, $array0($int18));
-		$component25 = oc_param($obj17, 596);
-		if_setsize($int19, $int19, ^setsize_abs, ^setsize_abs, $component25);
-		$int29 = calc(($int18 / $int20) * $int27);
-		$int28 = calc(($int18 % $int20) * $int26);
-		if_setposition($int28, $int29, ^setpos_abs_left, ^setpos_abs_top, $component25);
-		if (~script2614($obj17, $component25) = 1) {
-			if ($int19 >= 40) {
-				if_setgraphic(oc_param($obj17, 599), $component25);
-			} else {
-				if_setgraphic(oc_param($obj17, 597), $component25);
-			}
-		} else if ($int19 >= 40) {
-			if_setgraphic(oc_param($obj17, 600), $component25);
-		} else {
-			if_setgraphic(oc_param($obj17, 598), $component25);
-		}
-		~script2615($component25);
-		if ($boolean10 = true) {
-			cc_create($component1, ^iftype_graphic, $int18);
-			cc_setsize($int19, $int19, ^setsize_abs, ^setsize_abs);
-			cc_setposition($int28, $int29, ^setpos_abs_left, ^setpos_abs_top);
-			cc_setobject($obj17, 1);
-			cc_settrans(255);
-			cc_setonclick("script2612($obj17, $component1, $component2, $int12)");
-		} else {
-			if_setonmouserepeat("magic_spellbook_settooltip(true, $obj17, event_com, -1, $component2, $int12)", $component25);
-			if_setonmouseleave("magic_spellbook_settooltip(false, $obj17, event_com, -1, $component2, $int12)", $component25);
+			if_sethide(true, oc_param($obj17, 596));
 		}
 		$int18 = calc($int18 + 1);
 	}
+}
+if ($int16 >= 2) {
+	~magic_spellbook_sort(0, 0, calc($int16 - 1), $enum14);
+} else if ($int16 <= 0) {
+	cc_create($component0, ^iftype_text, 0);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext("No spells match your selected filters.");
 	return;
+}
+def_int $int19 = 24;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_int $int23 = 0;
+def_int $int24 = $int12;
+if ($boolean10 = true) {
+	if ($int16 <= 15) {
+		$int20 = 3;
+		$int19 = 40;
+	} else if ($int16 <= 20) {
+		$int20 = 4;
+		$int19 = 40;
+	} else {
+		$int20 = ~max(4, ~min(7, calc(($int16 + 8) / 9)));
+	}
+	$int23 = ~max(0, ~min(scale(5, 7, $int19), calc(($int11 - ($int19 * $int20)) / ($int20 - 1))));
+	$int21 = ~max(1, calc(($int16 + ($int20 - 1)) / $int20));
+	if ($int21 >= 2) {
+		$int22 = ~max(0, ~min($int23, calc(($int12 - ($int19 * $int21)) / ($int21 - 1))));
+	}
+	$int24 = calc(($int21 * $int19) + (($int21 - 1) * $int22));
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
+} else if (%varbit6718 = 1) {
+	switch (%varbit4070) {
+		case 1 :
+			$int22 = 4;
+			$int23 = 20;
+			$int21 = 7;
+			$int20 = 4;
+			if_setposition(2, 8, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+		case 2 :
+			$int22 = 5;
+			$int23 = 6;
+			$int21 = 8;
+			$int20 = 6;
+			if_setposition(0, 8, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+		case 3 :
+			$int22 = 5;
+			$int23 = 21;
+			$int21 = 9;
+			$int20 = 4;
+			if_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+		else :
+			$int22 = 0;
+			$int23 = 0;
+			$int21 = 10;
+			$int20 = 7;
+			if_setposition(1, 15, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+	}
+	$int24 = calc(($int21 * $int19) + (($int21 - 1) * $int22));
+} else {
+	if ($int16 <= 28) {
+		$int20 = 4;
+	} else {
+		$int20 = ~max(4, ~min(7, calc(($int16 + 8) / 9)));
+	}
+	$int23 = ~max(0, ~min($int19, calc(($int11 - ($int19 * $int20)) / ($int20 - 1))));
+	$int21 = ~max(1, calc(($int16 + ($int20 - 1)) / $int20));
+	if ($int21 >= 2) {
+		$int22 = ~max(0, ~min($int23, calc(($int12 - ($int19 * $int21)) / ($int21 - 1))));
+	}
+	$int24 = ~max(calc(($int21 * $int19) + (($int21 - 1) * $int22)), calc($int12 - 30));
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
+}
+if_setsize(calc(($int20 * $int19) + (($int20 - 1) * $int23)), $int24, ^setsize_abs, ^setsize_abs, $component0);
+def_component $component25 = null;
+def_int $int26 = calc($int19 + $int23);
+def_int $int27 = calc($int19 + $int22);
+def_int $int28 = 0;
+def_int $int29 = 0;
+$int18 = 0;
+while ($int18 < $int16) {
+	$obj17 = enum(int, obj, $enum14, $array0($int18));
+	$component25 = oc_param($obj17, 596);
+	if_setsize($int19, $int19, ^setsize_abs, ^setsize_abs, $component25);
+	$int29 = calc(($int18 / $int20) * $int27);
+	$int28 = calc(($int18 % $int20) * $int26);
+	if_setposition($int28, $int29, ^setpos_abs_left, ^setpos_abs_top, $component25);
+	if (~script2614($obj17, $component25) = 1) {
+		if ($int19 >= 40) {
+			if_setgraphic(oc_param($obj17, 599), $component25);
+		} else {
+			if_setgraphic(oc_param($obj17, 597), $component25);
+		}
+	} else if ($int19 >= 40) {
+		if_setgraphic(oc_param($obj17, 600), $component25);
+	} else {
+		if_setgraphic(oc_param($obj17, 598), $component25);
+	}
+	~script2615($component25);
+	if ($boolean10 = true) {
+		cc_create($component1, ^iftype_graphic, $int18);
+		cc_setsize($int19, $int19, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int28, $int29, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject($obj17, 1);
+		cc_settrans(255);
+		cc_setonclick("script2612($obj17, $component1, $component2, $int12)");
+	} else {
+		if_setonmouserepeat("magic_spellbook_settooltip(true, $obj17, event_com, -1, $component2, $int12)", $component25);
+		if_setonmouseleave("magic_spellbook_settooltip(false, $obj17, event_com, -1, $component2, $int12)", $component25);
+	}
+	$int18 = calc($int18 + 1);
 }

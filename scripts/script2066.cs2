@@ -4,11 +4,9 @@ def_string $string1 = "";
 $string0, $string1 = ~script632($string0);
 if (string_length($string1) <= 0) {
 	return($string0, "");
-} else {
-	$string1 = enum(int, string, 63, string_indexof_string("0123456789", substring($string1, 0, 1), 0));
-	if (string_length($string1) <= 0) {
-		return($string0, "");
-	} else {
-		return("<img=12> <$string0>", $string1);
-	}
 }
+$string1 = enum(int, string, 63, string_indexof_string("0123456789", substring($string1, 0, 1), 0));
+if (string_length($string1) <= 0) {
+	return($string0, "");
+}
+return("<img=12> <$string0>", $string1);

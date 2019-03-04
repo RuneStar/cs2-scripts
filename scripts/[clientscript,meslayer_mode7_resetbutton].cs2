@@ -2,8 +2,6 @@
 [clientscript,meslayer_mode7_resetbutton](component $component0, int $int1, string $string0, string $string1)
 if (clientclock < $int1) {
 	return;
-} else {
-	~meslayer_button_draw($component0, 0, $string0);
-	if_setonclick("meslayer_mode7_button(event_com, $string0, $string1)", $component0);
-	return;
 }
+~meslayer_button_draw($component0, 0, $string0);
+if_setonclick("meslayer_mode7_button(event_com, $string0, $string1)", $component0);

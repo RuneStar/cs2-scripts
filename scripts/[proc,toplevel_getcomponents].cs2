@@ -2,16 +2,20 @@
 [proc,toplevel_getcomponents]()(int)
 if (if_gettop = 601) {
 	return(1745);
-} else if (if_gettop = 161) {
-	return(1130);
-} else if (if_gettop = 164) {
-	return(1131);
-} else if (if_gettop = 548) {
-	return(1129);
-} else if (if_gettop = 165) {
-	return(1132);
-} else if (if_gettop = 80) {
-	return(139);
-} else {
-	return(-1);
 }
+if (if_gettop = 161) {
+	return(1130);
+}
+if (if_gettop = 164) {
+	return(1131);
+}
+if (if_gettop = 548) {
+	return(1129);
+}
+if (if_gettop = 165) {
+	return(1132);
+}
+if (if_gettop = 80) {
+	return(139);
+}
+return(-1);

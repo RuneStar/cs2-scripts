@@ -2,12 +2,14 @@
 [proc,skill_guide_salamanders](int $int0)(string, int, int)
 if ($int0 = 0) {
 	return("Swamp lizard<br> (with 30 Attack, 30 Ranged & 30 Magic)", 30, 10149);
-} else if ($int0 = 1) {
-	return("Orange salamander<br> (with 50 Attack, 50 Ranged & 50 Magic)", 50, 10146);
-} else if ($int0 = 2) {
-	return("Red salamander<br> (with 60 Attack, 60 Ranged & 60 Magic)", 60, 10147);
-} else if ($int0 = 3) {
-	return("Black salamander<br> (with 70 Attack, 70 Ranged & 70 Magic)", 70, 10148);
-} else {
-	return("", -1, -1);
 }
+if ($int0 = 1) {
+	return("Orange salamander<br> (with 50 Attack, 50 Ranged & 50 Magic)", 50, 10146);
+}
+if ($int0 = 2) {
+	return("Red salamander<br> (with 60 Attack, 60 Ranged & 60 Magic)", 60, 10147);
+}
+if ($int0 = 3) {
+	return("Black salamander<br> (with 70 Attack, 70 Ranged & 70 Magic)", 70, 10148);
+}
+return("", -1, -1);

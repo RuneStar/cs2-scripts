@@ -2,8 +2,6 @@
 [clientscript,toplevel_compass_op](int $int0)
 if ((($int0 ! 1) | (%varbit542 = 1)) | (%varbit4606 ! 0)) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	cam_forceangle(calc(225 + randominc(5)), 0);
-	return;
 }
+sound_synth(2266, 1, 0);
+cam_forceangle(calc(225 + randominc(5)), 0);

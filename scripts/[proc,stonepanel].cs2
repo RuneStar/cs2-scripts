@@ -22,12 +22,11 @@ $int2 = calc($int2 + 1);
 $int2 = calc($int2 + 1);
 if ($int0 < 6) {
 	return($int2);
-} else {
-	~create_graphic($component1, $int2, 995, 0, calc($int0 - 20), ^setpos_abs_left, ^setpos_abs_top, $int3, 32, ^setsize_abs, ^setsize_abs);
-	$int2 = calc($int2 + 1);
-	~create_graphic($component1, $int2, 996, 0, calc($int0 - 18), ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
-	$int2 = calc($int2 + 1);
-	~create_graphic($component1, $int2, 997, $int5, calc($int0 - 18), ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
-	$int2 = calc($int2 + 1);
-	return($int2);
 }
+~create_graphic($component1, $int2, 995, 0, calc($int0 - 20), ^setpos_abs_left, ^setpos_abs_top, $int3, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, 996, 0, calc($int0 - 18), ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, 997, $int5, calc($int0 - 18), ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+return($int2);

@@ -6,15 +6,16 @@ if (cc_find(28:1, $int0) = true) {
 	if ($int2 <= 0) {
 		cc_setposition(0, scale(18, 50, 16384), ^setpos_abs_centre, ^setpos_3);
 		return;
-	} else if ($int2 <= 18) {
+	}
+	if ($int2 <= 18) {
 		cc_setposition(0, scale(calc(18 - $int2), 50, 16384), ^setpos_abs_centre, ^setpos_3);
 		return;
-	} else if ($int2 <= 22) {
+	}
+	if ($int2 <= 22) {
 		cc_setposition(0, calc((18 - $int2) * (cc_getheight / 4)), ^setpos_abs_centre, ^setpos_abs_top);
 		return;
-	} else {
-		cc_sethide(true);
-		cc_settext("");
-		cc_setontimer(null);
 	}
+	cc_sethide(true);
+	cc_settext("");
+	cc_setontimer(null);
 }

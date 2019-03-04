@@ -2,8 +2,6 @@
 script732
 if (~on_mobile = false) {
 	return;
-} else {
-	def_int $int0 = batterylevel;
-	mes("Battery level: <tostring($int0)>");
-	return;
 }
+def_int $int0 = batterylevel;
+mes("Battery level: <tostring($int0)>");

@@ -2,17 +2,16 @@
 [clientscript,options_clickthroughchat_op](int $int0, component $component1, component $component2)
 if ($int0 ! 1) {
 	return;
-} else if (~on_mobile = false) {
+}
+if (~on_mobile = false) {
 	mes("You can't modify that setting on this device.");
 	sound_synth(2277, 1, 0);
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if (%varbit2570 = 0) {
-		%varbit2570 = 1;
-	} else {
-		%varbit2570 = 0;
-	}
-	~options_clickthroughchat($component1, $component2);
-	return;
 }
+sound_synth(2266, 1, 0);
+if (%varbit2570 = 0) {
+	%varbit2570 = 1;
+} else {
+	%varbit2570 = 0;
+}
+~options_clickthroughchat($component1, $component2);

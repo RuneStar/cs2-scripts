@@ -2,13 +2,11 @@
 script2171(component $component0, int $int1)
 if ($int1 ! 1) {
 	return;
-} else {
-	def_int $int2 = enum(component, int, 1896, $component0);
-	if (%varbit6275 = $int2) {
-		%varbit6275 = 0;
-	} else {
-		%varbit6275 = $int2;
-	}
-	~script2173;
-	return;
 }
+def_int $int2 = enum(component, int, 1896, $component0);
+if (%varbit6275 = $int2) {
+	%varbit6275 = 0;
+} else {
+	%varbit6275 = $int2;
+}
+~script2173;

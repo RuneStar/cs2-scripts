@@ -3,50 +3,48 @@
 if (testbit(%varbit5640, 3) = true) {
 	~deltooltip_action(595:38);
 	return;
-} else if (%varcint2 = 1) {
+}
+if (%varcint2 = 1) {
 	return;
-} else {
-	def_string $string0 = enum(category, string, 1713, mec_category(_6697));
-	if (string_length($string0) <= 0) {
-		return;
-	} else {
-		def_int $int2 = 150;
-		def_component $component3 = if_getlayer(595:38);
-		if ($component3 ! null) {
-			$int2 = ~min($int2, if_getwidth($component3));
-		}
-		$int2 = calc($int2 - 4);
-		def_int $int4 = calc(4 + parawidth($int2, p12_full, $string0));
-		def_int $int5 = calc(7 + (12 * paraheight($int2, p12_full, $string0)));
-		if_setsize($int4, $int5, ^setsize_abs, ^setsize_abs, 595:38);
-		def_int $int6 = calc($int0 + 5);
-		def_int $int7 = calc($int1 + 20);
-		if ($component3 ! null) {
-			$int6 = ~min($int6, calc(if_getwidth($component3) - $int4));
-			if ($int7 > calc(if_getheight($component3) - $int5)) {
-				$int7 = calc($int1 - ($int5 + 5));
-			}
-		}
-		if_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top, 595:38);
-		cc_deleteall(595:38);
-		cc_create(595:38, ^iftype_rectangle, 0);
-		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setfill(true);
-		cc_setcolour(0xffffa0);
-		cc_create(595:38, ^iftype_rectangle, 1);
-		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setfill(false);
-		cc_setcolour(^black);
-		cc_create(595:38, ^iftype_text, 2);
-		cc_setsize(4, 1, ^setsize_minus, ^setsize_minus);
-		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
-		cc_settext($string0);
-		cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-		cc_settextfont(p12_full);
-		cc_setcolour(^black);
-		%varcint2 = 1;
-		return;
+}
+def_string $string0 = enum(category, string, 1713, mec_category(_6697));
+if (string_length($string0) <= 0) {
+	return;
+}
+def_int $int2 = 150;
+def_component $component3 = if_getlayer(595:38);
+if ($component3 ! null) {
+	$int2 = ~min($int2, if_getwidth($component3));
+}
+$int2 = calc($int2 - 4);
+def_int $int4 = calc(4 + parawidth($int2, p12_full, $string0));
+def_int $int5 = calc(7 + (12 * paraheight($int2, p12_full, $string0)));
+if_setsize($int4, $int5, ^setsize_abs, ^setsize_abs, 595:38);
+def_int $int6 = calc($int0 + 5);
+def_int $int7 = calc($int1 + 20);
+if ($component3 ! null) {
+	$int6 = ~min($int6, calc(if_getwidth($component3) - $int4));
+	if ($int7 > calc(if_getheight($component3) - $int5)) {
+		$int7 = calc($int1 - ($int5 + 5));
 	}
 }
+if_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top, 595:38);
+cc_deleteall(595:38);
+cc_create(595:38, ^iftype_rectangle, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_setcolour(0xffffa0);
+cc_create(595:38, ^iftype_rectangle, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(false);
+cc_setcolour(^black);
+cc_create(595:38, ^iftype_text, 2);
+cc_setsize(4, 1, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settext($string0);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextfont(p12_full);
+cc_setcolour(^black);
+%varcint2 = 1;

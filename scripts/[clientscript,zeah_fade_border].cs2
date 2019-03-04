@@ -3,9 +3,7 @@
 if (if_gettrans($component0) < 240) {
 	if_settrans(calc(if_gettrans($component0) + 5), $component0);
 	return;
-} else {
-	if_setcolour(enum(int, int, 1279, $int1), $component0);
-	if_setontimer(null, $component0);
-	if_settrans(0, $component0);
-	return;
 }
+if_setcolour(enum(int, int, 1279, $int1), $component0);
+if_setontimer(null, $component0);
+if_settrans(0, $component0);

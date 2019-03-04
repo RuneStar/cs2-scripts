@@ -7,10 +7,8 @@ if ((if_getwidth($component0) = 0) & (%varbit5811 ! 0)) {
 if (%varbit5811 = 0) {
 	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $component0);
 	return;
-} else {
-	if_settext("Oxygen Level: <tostring(calc(%varbit5811 / 10))>%", $component1);
-	if ((%varbit5811 <= 100) & (%varcint198 ! 1)) {
-		if_setontimer("script1999($component2, $component1, clientclock, 250)", $component1);
-	}
-	return;
+}
+if_settext("Oxygen Level: <tostring(calc(%varbit5811 / 10))>%", $component1);
+if ((%varbit5811 <= 100) & (%varcint198 ! 1)) {
+	if_setontimer("script1999($component2, $component1, clientclock, 250)", $component1);
 }

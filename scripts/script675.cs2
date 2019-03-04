@@ -2,13 +2,11 @@
 script675(int $int0, component $component1, component $component2)
 if ($int0 ! 1) {
 	return;
-} else {
-	sound_synth(2266, 1, 0);
-	if (%varbit1627 <= 0) {
-		%varbit1627 = 1;
-	} else {
-		%varbit1627 = 0;
-	}
-	~script676($component1, $component2);
-	return;
 }
+sound_synth(2266, 1, 0);
+if (%varbit1627 <= 0) {
+	%varbit1627 = 1;
+} else {
+	%varbit1627 = 0;
+}
+~script676($component1, $component2);

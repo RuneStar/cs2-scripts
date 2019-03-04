@@ -6,8 +6,6 @@ if (%varcint225 = $int0) {
 	%varcint225 = -1;
 	if_setontimer(null, $component1);
 	return;
-} else {
-	%varcint225 = $int0;
-	if_setontimer("script2613($component1, $component2, $int3)", $component1);
-	return;
 }
+%varcint225 = $int0;
+if_setontimer("script2613($component1, $component2, $int3)", $component1);
