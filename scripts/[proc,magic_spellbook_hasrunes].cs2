@@ -1,19 +1,19 @@
 // 2620
 [proc,magic_spellbook_hasrunes](obj $obj0)(int)
-def_obj $obj1 = oc_param($obj0, 365);
-if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 366))) {
+def_obj $obj1 = oc_param($obj0, magic_runetype_1);
+if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, magic_runecount_1))) {
 	return(0);
 }
-$obj1 = oc_param($obj0, 367);
-if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 368))) {
+$obj1 = oc_param($obj0, magic_runetype_2);
+if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, magic_runecount_2))) {
 	return(0);
 }
-$obj1 = oc_param($obj0, 369);
-if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 370))) {
+$obj1 = oc_param($obj0, magic_runetype_3);
+if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, magic_runecount_3))) {
 	return(0);
 }
-$obj1 = oc_param($obj0, 606);
-if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, 607))) {
+$obj1 = oc_param($obj0, magic_runetype_4);
+if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, magic_runecount_4))) {
 	return(0);
 }
 return(1);

@@ -4,9 +4,9 @@ cc_deleteall($component4);
 if ($int0 = 0) {
 	return;
 }
-def_int $int6 = oc_param($obj1, 604);
-def_string $string0 = oc_param($obj1, 601);
-def_string $string1 = oc_param($obj1, 602);
+def_int $int6 = oc_param($obj1, spell_levelreq);
+def_string $string0 = oc_param($obj1, spell_name);
+def_string $string1 = oc_param($obj1, spell_desc);
 switch ($obj1) {
 	case 9136, 9135 :
 		if (%varbit2451 = 1) {
@@ -21,14 +21,14 @@ switch ($obj1) {
 			$string1 = "Fertilise a farming patch with super or ultra compost, consuming 2 volcanic ash to do so.";
 		}
 }
-def_obj $obj7 = oc_param($obj1, 365);
-def_int $int8 = oc_param($obj1, 366);
-def_obj $obj9 = oc_param($obj1, 367);
-def_int $int10 = oc_param($obj1, 368);
-def_obj $obj11 = oc_param($obj1, 369);
-def_int $int12 = oc_param($obj1, 370);
-def_obj $obj13 = oc_param($obj1, 606);
-def_int $int14 = oc_param($obj1, 607);
+def_obj $obj7 = oc_param($obj1, magic_runetype_1);
+def_int $int8 = oc_param($obj1, magic_runecount_1);
+def_obj $obj9 = oc_param($obj1, magic_runetype_2);
+def_int $int10 = oc_param($obj1, magic_runecount_2);
+def_obj $obj11 = oc_param($obj1, magic_runetype_3);
+def_int $int12 = oc_param($obj1, magic_runecount_3);
+def_obj $obj13 = oc_param($obj1, magic_runetype_4);
+def_int $int14 = oc_param($obj1, magic_runecount_4);
 def_int $int15 = calc(2 + (13 * paraheight(177, p12_full, "Level <tostring($int6)>: <$string0>")));
 def_int $int16 = calc(2 + (13 * paraheight(177, p11_full, $string1)));
 def_int $int17 = calc(((((2 + $int15) + $int16) + 32) + 14) + 2);

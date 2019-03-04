@@ -41,20 +41,20 @@ if (cc_find($component0, 0) = true) {
 }
 if (cc_find($component0, 1) = true) {
 	cc_sethide(false);
-	cc_settext("Level <tostring(oc_param($obj1, 604))>: <oc_param($obj1, 601)>");
+	cc_settext("Level <tostring(oc_param($obj1, spell_levelreq))>: <oc_param($obj1, spell_name)>");
 }
 if (cc_find($component0, 2) = true) {
 	cc_sethide(false);
-	cc_settext(oc_param($obj1, 602));
+	cc_settext(oc_param($obj1, spell_desc));
 }
-def_obj $obj2 = oc_param($obj1, 365);
-def_int $int3 = oc_param($obj1, 366);
-def_obj $obj4 = oc_param($obj1, 367);
-def_int $int5 = oc_param($obj1, 368);
-def_obj $obj6 = oc_param($obj1, 369);
-def_int $int7 = oc_param($obj1, 370);
-def_obj $obj8 = oc_param($obj1, 606);
-def_int $int9 = oc_param($obj1, 607);
+def_obj $obj2 = oc_param($obj1, magic_runetype_1);
+def_int $int3 = oc_param($obj1, magic_runecount_1);
+def_obj $obj4 = oc_param($obj1, magic_runetype_2);
+def_int $int5 = oc_param($obj1, magic_runecount_2);
+def_obj $obj6 = oc_param($obj1, magic_runetype_3);
+def_int $int7 = oc_param($obj1, magic_runecount_3);
+def_obj $obj8 = oc_param($obj1, magic_runetype_4);
+def_int $int9 = oc_param($obj1, magic_runecount_4);
 def_int $int10 = 4;
 if ($obj8 = null) {
 	if ($obj6 = null) {

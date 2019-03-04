@@ -1,6 +1,6 @@
 // 2619
 script2619(obj $obj0)(int)
-def_int $int1 = oc_param($obj0, 605);
+def_int $int1 = oc_param($obj0, spell_type);
 if ($int1 = 0) {
 	if (%varbit6605 = 1) {
 		return(0);
@@ -13,7 +13,7 @@ if ($int1 = 0) {
 	return(0);
 }
 if (%varbit6607 = 1) {
-	$int1 = oc_param($obj0, 604);
+	$int1 = oc_param($obj0, spell_levelreq);
 	if ((stat_base(magic) < $int1) & (stat(magic) < $int1)) {
 		return(0);
 	}

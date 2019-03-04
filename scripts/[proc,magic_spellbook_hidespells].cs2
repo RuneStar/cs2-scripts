@@ -3,7 +3,7 @@
 def_int $int1 = 0;
 def_obj $obj2 = enum(int, obj, $enum0, $int1);
 while ($obj2 ! null) {
-	if_sethide(true, oc_param($obj2, 596));
+	if_sethide(true, oc_param($obj2, spell_button));
 	$int1 = calc($int1 + 1);
 	$obj2 = enum(int, obj, $enum0, $int1);
 }
