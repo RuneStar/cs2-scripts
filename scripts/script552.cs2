@@ -1,6 +1,6 @@
 // 552
 script552(component $component0, int $int1)
-if (string_length(%varcstring28) <= 0) {
+if (string_length(%varcstring358) <= 0) {
 	if_setontimer(null, $component0);
 	%varcint62 = 0;
 	~script95;
@@ -18,5 +18,5 @@ if (chat_getfilter_public ! 4) {
 	~rebuildchatbox(~script553);
 }
 if ((calc(clientclock - %varcint61) >= 150) | ($int1 = 1)) {
-	~chat_sendpublic(1, %varcstring28);
+	~chat_sendpublic(1, %varcstring358);
 }

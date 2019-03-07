@@ -12,10 +12,10 @@ if (%varbit5605 = 1) {
 	~displayname_statusstatic($component0);
 	~displayname_button_init($component1, "Another name");
 	if ((%varbit5606 = 1) & (%varbit5607 = 0)) {
-		if (string_length(%varcstring137) <= 0) {
-			%varcstring137 = "-";
+		if (string_length(%varcstring229) <= 0) {
+			%varcstring229 = "-";
 		}
-		~displayname_button_init($component2, "<col=00ff00><%varcstring137></col>");
+		~displayname_button_init($component2, "<col=00ff00><%varcstring229></col>");
 	} else {
 		~displayname_disablebutton($component2, "---");
 	}

@@ -6,7 +6,7 @@ if ((if_gethide(162:55) = true) | (if_gethide(162:56) = true)) {
 if ((%varbit8119 = 0) | (~script1701(-1, 162) = 0)) {
 	return;
 }
-def_int $int2 = string_length(%varcstring1);
+def_int $int2 = string_length(%varcstring335);
 def_int $int3 = 0;
 def_int $int4 = 0;
 if ((~on_mobile = true) & (%varcint41 = 4)) {
@@ -21,7 +21,7 @@ if ((($int3 = 1) & (string_indexof_char("`", $char1) ! -1)) & ($int2 = 0)) {
 if ($int0 = 84) {
 	~script1984;
 	if ($int2 > 0) {
-		if ((string_indexof_string(%varcstring1, "/", 0) = 0) | ($int4 = 1)) {
+		if ((string_indexof_string(%varcstring335, "/", 0) = 0) | ($int4 = 1)) {
 			if (clan_getchatcount > 0) {
 				if (($int2 <= 1) & ($int4 = 0)) {
 					return;
@@ -30,16 +30,16 @@ if ($int0 = 84) {
 					clan_leavechat;
 				} else {
 					if ($int4 = 1) {
-						%varcstring1 = append("/", %varcstring1);
+						%varcstring335 = append("/", %varcstring335);
 					}
-					~chat_sendpublic(2, %varcstring1);
+					~chat_sendpublic(2, %varcstring335);
 				}
 			} else {
-				~chat_sendpublic(0, %varcstring1);
+				~chat_sendpublic(0, %varcstring335);
 			}
-		} else if (string_indexof_string(%varcstring1, "::", 0) = 0) {
+		} else if (string_indexof_string(%varcstring335, "::", 0) = 0) {
 			if ($int2 > 2) {
-				if (string_indexof_string(%varcstring1, "::toggleroof", 0) = 0) {
+				if (string_indexof_string(%varcstring335, "::toggleroof", 0) = 0) {
 					if (getremoveroofs = true) {
 						setremoveroofs(false);
 						mes("Roofs will only be removed selectively.");
@@ -47,21 +47,21 @@ if ($int0 = 84) {
 						setremoveroofs(true);
 						mes("Roofs are now all hidden.");
 					}
-				} else if (string_indexof_string(%varcstring1, "::bank", 0) = 0) {
+				} else if (string_indexof_string(%varcstring335, "::bank", 0) = 0) {
 					~chat_sendpublic(0, "Hey, everyone, I just tried to do something very silly!");
 				} else {
-					%varcstring1 = ~script224(%varcstring1);
-					$int2 = string_length(%varcstring1);
-					docheat(substring(%varcstring1, 2, $int2));
+					%varcstring335 = ~script224(%varcstring335);
+					$int2 = string_length(%varcstring335);
+					docheat(substring(%varcstring335, 2, $int2));
 				}
 			} else {
-				~chat_sendpublic(0, %varcstring1);
+				~chat_sendpublic(0, %varcstring335);
 			}
 		} else {
-			~chat_sendpublic(0, %varcstring1);
+			~chat_sendpublic(0, %varcstring335);
 		}
-		~chatout_add(%varcstring1);
-		%varcstring1 = "";
+		~chatout_add(%varcstring335);
+		%varcstring335 = "";
 	}
 } else if ($int0 = 104) {
 	if ($int3 = 1) {
@@ -73,9 +73,9 @@ if ($int0 = 84) {
 	}
 } else {
 	if ($int0 = 80) {
-		if (string_length(%varcstring0) > 0) {
-			if (friend_test(%varcstring0) = true) {
-				~meslayer_mode6(%varcstring0);
+		if (string_length(%varcstring356) > 0) {
+			if (friend_test(%varcstring356) = true) {
+				~meslayer_mode6(%varcstring356);
 				return;
 			}
 			if (%varcint60 > clientclock) {
@@ -92,6 +92,6 @@ if ($int0 = 84) {
 		mes("You haven't received any messages to which you can reply.");
 		return;
 	}
-	%varcstring1 = ~script74(0, $int0, $char1, %varcstring1);
+	%varcstring335 = ~script74(0, $int0, $char1, %varcstring335);
 }
 ~script223;

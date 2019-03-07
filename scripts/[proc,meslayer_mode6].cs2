@@ -8,9 +8,9 @@ if (%varcint11 = 1) {
 	mes("You can't do that right now.");
 	return;
 }
-%varcstring23 = $string0;
+%varcstring360 = $string0;
 ~meslayer_open(6);
-if_settext("Enter message to send to <%varcstring23>", 162:44);
+if_settext("Enter message to send to <%varcstring360>", 162:44);
 ~script222("");
 def_string $string1 = "";
 if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string1)", 162:45);

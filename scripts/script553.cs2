@@ -21,7 +21,7 @@ while ($chattype5 <= ^chattype_10sectimeout) {
 			case ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat :
 				if ($int1 > $int4) {
 					$int4 = $int1;
-					%varcstring0 = removetags($string0);
+					%varcstring356 = removetags($string0);
 				}
 			case ^chattype_broadcast :
 				if ((($int0 ! -1) & ($int1 >= %varcint202)) & ($int1 > calc(clientclock - 3000))) {

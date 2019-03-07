@@ -6,7 +6,7 @@ if (%varcint5 = 14) {
 }
 def_int $int0 = -1;
 def_string $string0 = "";
-def_int $int1 = string_length(%varcstring22);
+def_int $int1 = string_length(%varcstring359);
 if ($int1 > 0) {
 	switch (%varcint5) {
 		case 1 :
@@ -15,17 +15,17 @@ if ($int1 > 0) {
 			if (ignore_count < 0) {
 				mes("Unable to update ignore list - system busy.");
 			} else if (%varcint5 = 4) {
-				ignore_add(%varcstring22);
+				ignore_add(%varcstring359);
 			} else if (%varcint5 = 5) {
-				ignore_del(%varcstring22);
+				ignore_del(%varcstring359);
 			}
 		case 2, 3, 6 :
 			if (friend_count < 0) {
 				mes("Unable to complete action - system busy.");
 			} else if (%varcint5 = 2) {
-				friend_add(%varcstring22);
+				friend_add(%varcstring359);
 			} else if (%varcint5 = 3) {
-				friend_del(%varcstring22);
+				friend_del(%varcstring359);
 			} else if (%varcint5 = 6) {
 				if (%varbit8119 = 0) {
 					~meslayer_close(1, 1);
@@ -40,32 +40,32 @@ if ($int1 > 0) {
 					~rebuildpmbox($int0);
 				}
 				if (%varbit4394 = 1) {
-					friend_del(%varcstring23);
+					friend_del(%varcstring360);
 				} else {
-					chat_sendprivate(%varcstring23, %varcstring22);
+					chat_sendprivate(%varcstring360, %varcstring359);
 				}
 				%varcint61 = clientclock;
 			}
 		case 7 :
-			resume_countdialog(~script212(%varcstring22));
+			resume_countdialog(~script212(%varcstring359));
 		case 8 :
-			%varcstring128 = removetags(%varcstring22);
-			resume_namedialog(%varcstring22);
+			%varcstring361 = removetags(%varcstring359);
+			resume_namedialog(%varcstring359);
 		case 9, 15 :
-			resume_stringdialog(%varcstring22);
+			resume_stringdialog(%varcstring359);
 		case 10 :
 			if (%varbit8119 = 0) {
 				~meslayer_close(1, 1);
 				mes("You must set a name before you can chat.");
 				return;
 			}
-			%varcstring129 = removetags(%varcstring22);
-			clan_joinchat(%varcstring22);
+			%varcstring362 = removetags(%varcstring359);
+			clan_joinchat(%varcstring359);
 		case 12 :
 			if ($int1 > 10) {
-				$string0 = substring(%varcstring22, 0, 9);
+				$string0 = substring(%varcstring359, 0, 9);
 			} else {
-				$string0 = %varcstring22;
+				$string0 = %varcstring359;
 			}
 			chat_setmessagefilter(lowercase($string0));
 			~rebuildchatbox(~script553);
@@ -76,14 +76,14 @@ if ($int1 > 0) {
 				return;
 			}
 			%varcint62 = 0;
-			%varcstring28 = %varcstring22;
+			%varcstring358 = %varcstring359;
 			~script95;
 			if_setontimer("script552(event_com, true)", 162:13);
 		case 11 :
 			~meslayer_close(0, 1);
 			return;
 		case 16 :
-			~script2061(%varcstring22);
+			~script2061(%varcstring359);
 	}
 } else {
 	switch (%varcint5) {

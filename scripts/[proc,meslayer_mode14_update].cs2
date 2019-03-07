@@ -4,11 +4,11 @@
 cc_deleteall(162:53);
 def_int $int2 = if_getwidth(162:53);
 def_int $int3 = if_getheight(162:53);
-if (string_length(%varcstring22) <= 0) {
+if (string_length(%varcstring359) <= 0) {
 	~script753($int2, $int3, "Start typing the name of an item to search for it.");
 	return;
 }
-def_int $int4 = oc_find($boolean0, %varcstring22);
+def_int $int4 = oc_find($boolean0, %varcstring359);
 if ($int4 < 0) {
 	~script753($int2, $int3, "Too many matches found. Please refine your search.");
 	return;

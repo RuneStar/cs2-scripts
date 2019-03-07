@@ -8,9 +8,9 @@ if (($int0 = 84) & (~on_mobile = true)) {
 }
 def_string $string0 = "";
 if ($component2 = $component5) {
-	%varcstring27 = ~script74(5, $int0, $char1, %varcstring27);
-	$string0 = %varcstring27;
-	if (string_length(%varcstring27) > 0) {
+	%varcstring372 = ~script74(5, $int0, $char1, %varcstring372);
+	$string0 = %varcstring372;
+	if (string_length(%varcstring372) > 0) {
 		if_setop(1, "Submit", $component7);
 		if_setonop("bugreport_submit()", $component7);
 		if_setonclick(null, $component7);
@@ -20,8 +20,8 @@ if ($component2 = $component5) {
 		if_setonclick("bugreport_submit()", $component7);
 	}
 } else if ($component2 = $component6) {
-	%varcstring130 = ~script74(5, $int0, $char1, %varcstring130);
-	$string0 = %varcstring130;
+	%varcstring373 = ~script74(5, $int0, $char1, %varcstring373);
+	$string0 = %varcstring373;
 } else {
 	return;
 }

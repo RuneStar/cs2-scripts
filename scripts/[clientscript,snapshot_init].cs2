@@ -2,10 +2,10 @@
 [clientscript,snapshot_init](int $int0, int $int1, string $string0)
 ~chatdefault_stopinput;
 if ($int1 = 1) {
-	%varcstring24 = $string0;
+	%varcstring370 = $string0;
 }
 if_setonkey("snapshot_onkey(event_keytyped, event_keypressed)", 553:5);
-if_settext("<escape(%varcstring24)><col=ffff00>|", 553:5);
+if_settext("<escape(%varcstring370)><col=ffff00>|", 553:5);
 %varcint224 = $int0;
 %varcint140 = 1;
 %varcint6 = 0;

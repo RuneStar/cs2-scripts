@@ -1,9 +1,9 @@
 // 1103
 [clientscript,bugreport_submit]
-if (string_length(%varcstring27) > 0) {
+if (string_length(%varcstring372) > 0) {
 	sound_synth(2266, 1, 0);
 	if (%varbit4931 < 10) {
-		bug_report(0, ~bugreport_parse(%varcstring27), ~bugreport_parse(%varcstring130));
+		bug_report(0, ~bugreport_parse(%varcstring372), ~bugreport_parse(%varcstring373));
 	}
 	if (~on_mobile = true) {
 		~script1984;

@@ -1,20 +1,20 @@
 // 1123
 [clientscript,snapshot_rules_send](int $int0)
-if ((string_length(%varcstring24) > 0) | (%varcint224 = 0)) {
+if ((string_length(%varcstring370) > 0) | (%varcint224 = 0)) {
 	sound_synth(2266, 1, 0);
-	if ((%varcint224 = 0) | (($int0 = 7) & (compare(%varcstring24, %varcstring136) = 0))) {
+	if ((%varcint224 = 0) | (($int0 = 7) & (compare(%varcstring370, %varcstring371) = 0))) {
 		mes("Thank-you, your abuse report has been received.");
 	} else {
-		chat_sendabusereport(%varcstring24, $int0, %varcint6);
+		chat_sendabusereport(%varcstring370, $int0, %varcint6);
 	}
 	if (%varcint140 = 1) {
-		ignore_add(%varcstring24);
+		ignore_add(%varcstring370);
 	}
 	if ($int0 = 7) {
-		%varcstring136 = %varcstring24;
+		%varcstring371 = %varcstring370;
 	}
 	if_close;
-	%varcstring24 = "";
+	%varcstring370 = "";
 	%varcint11 = 0;
 	return;
 }
