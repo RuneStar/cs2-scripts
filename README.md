@@ -2792,6 +2792,6 @@
 [**2789**](scripts/[clientscript,barrows_puzzle_buttonhover].cs2) `[clientscript,barrows_puzzle_buttonhover]`  
 [**2790**](scripts/[proc,skill_guide_subsection_magic].cs2) `[proc,skill_guide_subsection_magic]`  
 [**2791**](scripts/[proc,skill_guide_data_magic].cs2) `[proc,skill_guide_data_magic]`  
-[**2792**](scripts/script2792.cs2)  
-[**2793**](scripts/script2793.cs2)  
-[**2794**](scripts/script2794.cs2)  
+[**2792**](scripts/[proc,orbs_spec_draw_button].cs2) `[proc,orbs_spec_draw_button]`  
+[**2793**](scripts/[clientscript,orbs_toggle_spec_op].cs2) `[clientscript,orbs_toggle_spec_op]`  
+[**2794**](scripts/[clientscript,orbs_blocked_spec_op].cs2) `[clientscript,orbs_blocked_spec_op]`  
