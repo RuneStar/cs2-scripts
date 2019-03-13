@@ -3,43 +3,33 @@
 def_graphic $graphic6 = "orb_frame,1";
 def_graphic $graphic7 = "orb_frame,0";
 if_clearops($component5);
-if (map_members = false) {
-	if (%varbit5314 = 0) {
-		if_sethide(true, $component5);
-		if_setonmouserepeat(null, $component5);
-		if_setonmouseleave(null, $component5);
-		if_setonop(null, $component5);
-		if_setgraphic($graphic7, $component4);
-		if_setgraphic("orb_filler,5", $component3);
-		if_settrans(50, $component3);
-	} else if (enum(obj, int, 906, inv_getobj(worn, 3)) <= 0) {
-		if_sethide(true, $component5);
-		if_setonmouserepeat(null, $component5);
-		if_setonmouseleave(null, $component5);
-		if_setonop(null, $component5);
-		if_setgraphic($graphic7, $component4);
-		if_setgraphic("orb_filler,5", $component3);
-		if_settrans(50, $component3);
-	} else if (%varbit8121 = 1) {
-		if_sethide(false, $component5);
-		if_setonmouserepeat(null, $component5);
-		if_setonmouseleave(null, $component5);
-		if_setop(2, "Use", $component5);
-		if_setonop("orbs_blocked_spec_op(event_opindex)", $component5);
-		if_setgraphic($graphic7, $component4);
-		if_setgraphic("orb_filler,5", $component3);
-		if_settrans(50, $component3);
+if (((map_members = false) & (%varbit5314 = 0)) | (enum(obj, int, 906, inv_getobj(worn, 3)) <= 0)) {
+	if_sethide(true, $component5);
+	if_setonmouserepeat(null, $component5);
+	if_setonmouseleave(null, $component5);
+	if_setonop(null, $component5);
+	if_setgraphic($graphic7, $component4);
+	if_setgraphic("orb_filler,5", $component3);
+	if_settrans(50, $component3);
+} else if (%varbit8121 = 1) {
+	if_sethide(false, $component5);
+	if_setonmouserepeat(null, $component5);
+	if_setonmouseleave(null, $component5);
+	if_setop(2, "Use", $component5);
+	if_setonop("orbs_blocked_spec_op(event_opindex)", $component5);
+	if_setgraphic($graphic7, $component4);
+	if_setgraphic("orb_filler,5", $component3);
+	if_settrans(50, $component3);
+} else {
+	if_sethide(false, $component5);
+	if_setonmouserepeat("script44($component4, $graphic6)", $component5);
+	if_setonmouseleave("script44($component4, $graphic7)", $component5);
+	if_setop(1, "Use", $component5);
+	if_setonop("orbs_toggle_spec_op(event_opindex, null, $component1, $component2, $component3, $component4, $component5)", $component5);
+	if (%var301 > 0) {
+		if_setgraphic("orb_filler,10", $component3);
 	} else {
-		if_sethide(false, $component5);
-		if_setonmouserepeat("script44($component4, $graphic6)", $component5);
-		if_setonmouseleave("script44($component4, $graphic7)", $component5);
-		if_setop(1, "Use", $component5);
-		if_setonop("orbs_toggle_spec_op(event_opindex, null, $component1, $component2, $component3, $component4, $component5)", $component5);
-		if (%var301 > 0) {
-			if_setgraphic("orb_filler,10", $component3);
-		} else {
-			if_setgraphic("orb_filler,9", $component3);
-		}
-		if_settrans(25, $component3);
+		if_setgraphic("orb_filler,9", $component3);
 	}
+	if_settrans(25, $component3);
 }
