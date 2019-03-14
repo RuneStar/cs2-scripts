@@ -140,7 +140,7 @@ def_int $int6 = enum_getoutputcount(1937);
 if ($int0 >= calc($int6 - 1)) {
 	switch (%varcint180) {
 		case 0, 1, 2, 3, 4, 5, 6, 7, 12, 13 :
-		else :
+		case default :
 			%varcint180 = 1;
 	}
 	~tob_partylist_setsort;

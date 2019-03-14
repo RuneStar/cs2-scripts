@@ -63,7 +63,7 @@ switch ($int0) {
 				return("Members: Rigour<br> (with 70 Defence)", 74, 20827);
 			case 29 :
 				return("Members: Augury<br> (with 70 Defence)", 77, 20830);
-			else :
+			case default :
 				return("", -1, -1);
 		}
 	case 1 :
@@ -108,7 +108,7 @@ switch ($int0) {
 				return("Dragonbone necklace", 80, 22111);
 			case 19 :
 				return("Bonecrusher necklace", 80, 22986);
-			else :
+			case default :
 				return("", -1, -1);
 		}
 	case 2 :
@@ -116,6 +116,6 @@ switch ($int0) {
 			return("Use superior dragon bones", 70, 22124);
 		}
 		return("", -1, -1);
-	else :
+	case default :
 		return("", -1, -1);
 }

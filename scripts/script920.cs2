@@ -42,7 +42,7 @@ switch ($enum1) {
 				case 3 :
 					if_setgraphic(1716, 601:32);
 					if_setop(1, "Show Keyboard", 601:30);
-				else :
+				case default :
 					if_setgraphic(1715, 601:32);
 					if_setop(1, "", 601:30);
 			}

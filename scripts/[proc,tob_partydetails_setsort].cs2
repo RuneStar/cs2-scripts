@@ -42,7 +42,7 @@ if ($int2 >= 2) {
 			~tob_partydetails_sort(0, 0, calc($int2 - 1), 17);
 		case 6, 7 :
 			~tob_partydetails_sort(0, 0, calc($int2 - 1), 19);
-		else :
+		case default :
 			~tob_partydetails_sort(0, 0, calc($int2 - 1), 1);
 	}
 }
@@ -101,7 +101,7 @@ switch (%varcint181) {
 			}
 			$int5 = calc($int5 + 13);
 		}
-	else :
+	case default :
 		while ($int4 < $int2) {
 			if ((cc_find(50:41, calc($array0($int4) * 20)) = true) & (.cc_find(50:41, calc(($array0($int4) * 20) + 1)) = true)) {
 				if (calc($int4 % 2) = 0) {

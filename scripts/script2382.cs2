@@ -17,7 +17,7 @@ switch (%var75) {
 		if_setmodelanim(8179, $component0);
 	case 6 :
 		if_setmodelanim(8180, $component0);
-	else :
+	case default :
 		if_sethide(false, $component1);
 		return;
 }

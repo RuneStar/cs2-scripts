@@ -147,7 +147,7 @@ switch ($int0) {
 				return("Level 7 enchant", 93, 19475);
 			case 69 :
 				return("Fire Surge", 95, 21879);
-			else :
+			case default :
 				return("", -1, -1);
 		}
 	case 1 :
@@ -206,7 +206,7 @@ switch ($int0) {
 				return("Ice barrage", 94, 4651);
 			case 26 :
 				return("Ghorrock teleport", 96, 4652);
-			else :
+			case default :
 				return("", -1, -1);
 		}
 	case 2 :
@@ -303,7 +303,7 @@ switch ($int0) {
 				return("Heal group", 95, 9137);
 			case 45 :
 				return("Spellbook swap<br>(after Dream Mentor)", 96, 11150);
-			else :
+			case default :
 				return("", -1, -1);
 		}
 	case 3 :
@@ -382,7 +382,7 @@ switch ($int0) {
 				return("Ape Atoll teleport", 90, 20427);
 			case 36 :
 				return("Reanimate dragons", 93, 20400);
-			else :
+			case default :
 				return("", -1, -1);
 		}
 	case 4 :
@@ -423,7 +423,7 @@ switch ($int0) {
 				return("Eternal boots<br> (with 75 Defence)", 75, 13235);
 			case 17 :
 				return("Ancestral robes<br> (with 65 Defence)", 75, 21021);
-			else :
+			case default :
 				return("", -1, -1);
 		}
 	case 5 :
@@ -448,7 +448,7 @@ switch ($int0) {
 				return("Dragonstone-tipped crossbow bolts<br>1 cosmic + 15 earth + 1 soul rune", 68, 9244);
 			case 9 :
 				return("Onyx-tipped crossbow bolts<br>1 cosmic + 20 fire + 1 death rune", 87, 9245);
-			else :
+			case default :
 				return("", -1, -1);
 		}
 	case 6 :
@@ -495,7 +495,7 @@ switch ($int0) {
 				return("Slayer's staff (e)<br> (with 55 Slayer)", 75, 21255);
 			case 20 :
 				return("Sanguinesti staff", 75, 22323);
-			else :
+			case default :
 				return("", -1, -1);
 		}
 	case 7 :
@@ -511,6 +511,6 @@ switch ($int0) {
 		return("", -1, -1);
 	case 8 :
 		return(~skill_guide_salamanders($int1));
-	else :
+	case default :
 		return("", -1, -1);
 }

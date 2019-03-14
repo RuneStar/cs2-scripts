@@ -27,7 +27,7 @@ if ($int1 >= 2) {
 			~raids_partylist_sort(0, 0, calc($int1 - 1), 8, 1937);
 		case 12, 13 :
 			~raids_partylist_sort(0, 0, calc($int1 - 1), 9, 1937);
-		else :
+		case default :
 			~raids_partylist_sort(0, 0, calc($int1 - 1), 6, 1937);
 	}
 }
@@ -49,7 +49,7 @@ switch (%varcint180) {
 			}
 			$int4 = calc($int4 + 18);
 		}
-	else :
+	case default :
 		while ($int3 < $int1) {
 			$component5 = enum(int, component, 1937, $array0($int3));
 			if ($component5 ! null) {

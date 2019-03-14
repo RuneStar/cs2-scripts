@@ -38,7 +38,7 @@ switch ($int1) {
 		.cc_setcolour(0xff981f);
 		.cc_settext("Concluded");
 		if_setop(10, "Results", $component0);
-	else :
+	case default :
 		cc_setcolour(^red);
 		.cc_setcolour(^yellow);
 		.cc_settext("Aborted");

@@ -80,7 +80,7 @@ if ((%var287 = 1) & ((%varcint41 ! -1) | (%varbit4089 = 0))) {
 					$int7 = calc($int7 + ~script203($int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true, "From <$string1>:", $string0));
 				case ^chattype_privatechatout :
 					$int7 = calc($int7 + ~script203($int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true, "To <$string1>:", $string0));
-				else :
+				case default :
 					$int7 = calc($int7 + ~script199($int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true, $string0));
 					if (($chattype15 = ^chattype_loginlogoutnotification) & (%varbit1627 = 0)) {
 						%varcint65 = calc(($int13 + 500) + 1);

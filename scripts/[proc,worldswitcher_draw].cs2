@@ -27,7 +27,7 @@ switch (%varbit4596) {
 		worldlist_sort(3, true, 0, false);
 	case 1 :
 		worldlist_sort(0, true, 7, false);
-	else :
+	case default :
 		worldlist_sort(0, false, 7, false);
 }
 def_int $int16 = 0;

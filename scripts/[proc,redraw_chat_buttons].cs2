@@ -32,7 +32,7 @@ while ($int0 <= 5) {
 			if_settext("<col=00ffff>Hide", enum(int, component, 684, $int0));
 		case 4 :
 			if_settext("<col=00afff>Autochat", enum(int, component, 684, $int0));
-		else :
+		case default :
 			if_settext("On", enum(int, component, 684, $int0));
 	}
 	$int0 = calc($int0 + 1);

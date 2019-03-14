@@ -35,7 +35,7 @@ while ($int0 ! -1) {
 				~chat_alert_enable(5);
 			case ^chattype_friendschat, ^chattype_friendschatnotification, ^chattype_chalreq_friendschat :
 				~chat_alert_enable(4);
-			else :
+			case default :
 				if (enum(int, boolean, 892, $chattype3) = true) {
 					~chat_alert_enable(1);
 				}

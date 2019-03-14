@@ -32,7 +32,7 @@ while ($int2 < 36) {
 			cc_setmodelangle(0, 0, 512, 0, 0, 625);
 			cc_setop(10, "Check");
 			cc_setonop("ds2_fossil_map_stuck(event_opindex, 1024)");
-		else :
+		case default :
 			cc_setop(1, "Rotate-right");
 			cc_setop(2, "Rotate-left");
 			cc_setonop("ds2_fossil_map_rotate(event_opindex, event_com, event_comid)");

@@ -9,6 +9,6 @@ switch (%varbit6590) {
 		return(tostring(~max(1, %varbit3960)));
 	case 4 :
 		return("All");
-	else :
+	case default :
 		return("1");
 }

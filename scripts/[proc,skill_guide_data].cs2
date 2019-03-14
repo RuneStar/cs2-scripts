@@ -90,7 +90,7 @@ switch ($int0) {
 					return("Members: Dinh's bulwark<br> (with 75 Defence)", 75, 21015);
 				case 42 :
 					return("Members: Ferocious Gloves<br> (with 80 Defence)", 80, 22981);
-				else :
+				case default :
 					return("", -1, -1);
 			}
 		}
@@ -768,7 +768,7 @@ switch ($int0) {
 					return("Teal hit splats are venom damage. (Members)", -1, 7620);
 				case 5 :
 					return("Orange hit splats are disease damage. (Members)", -1, 7620);
-				else :
+				case default :
 					return("", -1, -1);
 			}
 		}
@@ -1227,7 +1227,7 @@ switch ($int0) {
 					return("Karuulm Dungeon pipe", 88, 6516);
 				case 82 :
 					return("Revenant cave jump (hard)", 89, 6514);
-				else :
+				case default :
 					return("", -1, -1);
 			}
 		}
@@ -1343,7 +1343,7 @@ switch ($int0) {
 						return("Anti-venom+<br>Anti-venom & Torstol", 94, 269);
 					case 45 :
 						return("Extended super antifires<br>Super antifire potion & lava scale shards<br>(after Dragon Slayer II)", 98, 3256);
-					else :
+					case default :
 						return("", -1, -1);
 				}
 			case 1 :
@@ -1552,7 +1552,7 @@ switch ($int0) {
 					return("Use the Herb Sack reward item, purchased from Slayer Masters.", 58, 13226);
 				}
 				return("", -1, -1);
-			else :
+			case default :
 				return("", -1, -1);
 		}
 	case 10 :
@@ -2220,7 +2220,7 @@ switch ($int0) {
 					return("Craft a birdhouse trap from magic logs.", 75, 22201);
 				case 11 :
 					return("Craft a birdhouse trap from redwood logs.", 90, 22204);
-				else :
+				case default :
 					return("", -1, -1);
 			}
 		}
@@ -4718,7 +4718,7 @@ switch ($int0) {
 					return("Smoke devil", 93, 5349);
 				case 45 :
 					return("Hydras", 95, 23042);
-				else :
+				case default :
 					return("", -1, -1);
 			}
 		}
@@ -4766,7 +4766,7 @@ switch ($int0) {
 					return("Nose peg", 60, 4168);
 				case 20 :
 					return("Amethyst broad bolts<br> (with 61 Ranged)", 65, 3902);
-				else :
+				case default :
 					return("", -1, -1);
 			}
 		}
@@ -5164,6 +5164,6 @@ switch ($int0) {
 		return(~skill_guide_data_construction($int1, $int2));
 	case 23 :
 		return(~skill_guide_data_hunter($int1, $int2));
-	else :
+	case default :
 		return("", -1, -1);
 }

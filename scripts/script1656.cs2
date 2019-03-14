@@ -3,7 +3,7 @@ script1656(component $component0, component $component1, component $component2, 
 ~scrollbar_vertical($component10, $component9, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 switch (%varcint185) {
 	case 0, 1, 2, 3, 6, 7, 4, 5, 8, 9 :
-	else :
+	case default :
 		%varcint185 = 0;
 }
 ~script1658($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
