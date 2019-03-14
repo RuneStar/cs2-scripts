@@ -1,20 +1,20 @@
 // 1186
-[clientscript,kourend_sidepanel_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
+[clientscript,kourend_sidepanel_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14)
 cc_deleteall($component0);
-def_int $int17 = 0;
-def_int $int18 = 0;
-$int17, $int18 = ~kourend_sidepanel_build($component0, $component1, $component2, 3, $int17, $int18);
-$int17, $int18 = ~kourend_sidepanel_build($component0, $component3, $component4, 2, $int17, $int18);
-$int17, $int18 = ~kourend_sidepanel_build($component0, $component5, $component6, 4, $int17, $int18);
-$int17, $int18 = ~kourend_sidepanel_build($component0, $component7, $component8, 5, $int17, $int18);
-$int17, $int18 = ~kourend_sidepanel_build($component0, $component9, $component10, 1, $int17, $int18);
+def_int $int15 = 0;
+def_int $int16 = 0;
+$int15, $int16 = ~kourend_sidepanel_build($component0, $component1, $component2, 3, $int15, $int16);
+$int15, $int16 = ~kourend_sidepanel_build($component0, $component3, $component4, 2, $int15, $int16);
+$int15, $int16 = ~kourend_sidepanel_build($component0, $component5, $component6, 4, $int15, $int16);
+$int15, $int16 = ~kourend_sidepanel_build($component0, $component7, $component8, 5, $int15, $int16);
+$int15, $int16 = ~kourend_sidepanel_build($component0, $component9, $component10, 1, $int15, $int16);
 def_string $string0 = "View tasks";
 if_setop(1, $string0, $component11);
-if_setsize(calc(parawidth(190, p12_full, $string0) + 10), if_getheight($component11), ^setsize_abs, ^setsize_abs, $component11);
+if_setsize(calc(parawidth(190, p11_full, $string0) + 10), if_getheight($component11), ^setsize_abs, ^setsize_abs, $component11);
 ~kourend_sidepanel_tasks_default($component11, $string0);
 $string0 = "Favour Overlay";
 if_setopbase("<col=ff9040><$string0></col>", $component12);
-if_setsize(calc(parawidth(190, p12_full, $string0) + 20), if_getheight($component12), ^setsize_abs, ^setsize_abs, $component12);
+if_setsize(calc(parawidth(190, p11_full, $string0) + 20), if_getheight($component12), ^setsize_abs, ^setsize_abs, $component12);
 cc_create($component12, ^iftype_graphic, 0);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
@@ -22,7 +22,7 @@ cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setcolour(0xff981f);
-.cc_settextfont(p12_full);
+.cc_settextfont(p11_full);
 .cc_settextshadow(true);
 .cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 .cc_settext($string0);
@@ -32,8 +32,3 @@ if_setonmouseleave("script85(event_com, .cc_getid, 16750623)", $component12);
 ~kourend_sidepanel_hudtoggle($component12, $component13);
 if_setonvartransmit("kourend_sidepanel_hudtoggle($component12, cc_getid, .cc_getid, $component13){var1055}", $component12);
 if_setonop("kourend_sidepanel_hudop(event_opindex, $component12, cc_getid, .cc_getid, $component13)", $component12);
-if (~on_mobile = true) {
-	if_sethide(true, $component15);
-	if_setsize(0, if_getheight($component14), ^setsize_minus, ^setsize_abs, $component14);
-	if_sethide(false, $component16);
-}

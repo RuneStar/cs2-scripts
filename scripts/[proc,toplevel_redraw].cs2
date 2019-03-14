@@ -46,21 +46,24 @@ $component7 = enum(int, component, 1139, 2);
 $component7 = enum(component, component, $enum1, $component7);
 $component9 = enum(component, component, $enum1, $component9);
 if (($component9 ! null) & ($component7 ! null)) {
-	if (%varbit5432 = 1) {
-		if_setop(1, "Raiding Party", $component9);
-		if_setgraphic("sideicons_interface,18", $component7);
-	} else if (%varbit618 = 1) {
-		if_setop(1, "Kourend Tasks", $component9);
-		if_setgraphic("sideicons_interface,17", $component7);
-	} else if (%varbit3217 = 1) {
-		if_setop(1, "Minigames", $component9);
-		if_setgraphic("sideicons_interface,15", $component7);
-	} else if (%varbit3612 = 1) {
-		if_setop(1, "Achievement Diaries", $component9);
-		if_setgraphic("sideicons_interface,16", $component7);
-	} else {
-		if_setop(1, "Quest List", $component9);
-		if_setgraphic("sideicons_interface,2", $component7);
+	switch_int (%varbit8168) {
+		case 1 :
+			if_setop(1, "Achievement Diaries", $component9);
+			if_setgraphic("sideicons_interface,16", $component7);
+		case 2 :
+			if (%varbit5432 = 1) {
+				if_setop(1, "Raiding Party", $component9);
+				if_setgraphic("sideicons_interface,18", $component7);
+			} else {
+				if_setop(1, "Minigames", $component9);
+				if_setgraphic("sideicons_interface,15", $component7);
+			}
+		case 3 :
+			if_setop(1, "Kourend Tasks", $component9);
+			if_setgraphic("sideicons_interface,17", $component7);
+		case default :
+			if_setop(1, "Quest List", $component9);
+			if_setgraphic("sideicons_interface,2", $component7);
 	}
 }
 $component7 = enum(int, component, 1139, 6);

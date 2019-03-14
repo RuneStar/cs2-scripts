@@ -2795,3 +2795,13 @@
 [**2792**](scripts/[proc,orbs_spec_draw_button].cs2) `[proc,orbs_spec_draw_button]`  
 [**2793**](scripts/[clientscript,orbs_toggle_spec_op].cs2) `[clientscript,orbs_toggle_spec_op]`  
 [**2794**](scripts/[clientscript,orbs_blocked_spec_op].cs2) `[clientscript,orbs_blocked_spec_op]`  
+[**2795**](scripts/script2795.cs2)  
+[**2796**](scripts/script2796.cs2)  
+[**2797**](scripts/script2797.cs2)  
+[**2798**](scripts/script2798.cs2)  
+[**2799**](scripts/script2799.cs2)  
+[**2800**](scripts/script2800.cs2)  
+[**2801**](scripts/script2801.cs2)  
+[**2802**](scripts/script2802.cs2)  
+[**2803**](scripts/script2803.cs2)  
+[**2804**](scripts/script2804.cs2)  
