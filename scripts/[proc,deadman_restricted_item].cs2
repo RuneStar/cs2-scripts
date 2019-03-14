@@ -6,7 +6,7 @@ if ($int1 = 0) {
 }
 def_int $int2 = 0;
 $int2 = ~deadman_mode;
-switch ($int2) {
+switch_int ($int2) {
 	case 0 :
 		if ($int1 ! 0) {
 			return(1);

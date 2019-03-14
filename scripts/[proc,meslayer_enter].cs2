@@ -8,7 +8,7 @@ def_int $int0 = -1;
 def_string $string0 = "";
 def_int $int1 = string_length(%varcstring359);
 if ($int1 > 0) {
-	switch (%varcint5) {
+	switch_int (%varcint5) {
 		case 1 :
 			return;
 		case 4, 5 :
@@ -86,7 +86,7 @@ if ($int1 > 0) {
 			~script2061(%varcstring359);
 	}
 } else {
-	switch (%varcint5) {
+	switch_int (%varcint5) {
 		case 7, 8, 9, 15 :
 			return;
 		case 16 :

@@ -27,7 +27,7 @@ def_int $int6 = enum(obj, int, 2193, $obj1);
 if ($int6 <= 1) {
 	if_setop(1, "Store", $component0);
 } else {
-	switch (%varbit7792) {
+	switch_int (%varbit7792) {
 		case 0 :
 			if_setop(1, "Store-1", $component0);
 			if_setop(2, "Store-5", $component0);

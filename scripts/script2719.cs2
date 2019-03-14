@@ -36,7 +36,7 @@ if (string_length($string1) > 0) {
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext($string1);
-	switch ($int1) {
+	switch_int ($int1) {
 		case 1 :
 			~script2720(618:8, $int3, $component8);
 			$int3 = calc($int3 + 1);

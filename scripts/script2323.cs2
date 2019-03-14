@@ -9,7 +9,7 @@ if_sethide(false, 50:7);
 def_int $int3 = calc(%varcint178 - 5);
 if ($int3 > 0) {
 	if_sethide(false, 50:30);
-	switch (%varcint181) {
+	switch_int (%varcint181) {
 		case 0, 1, 2, 3, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 6, 7 :
 		case default :
 			%varcint181 = 0;
@@ -34,7 +34,7 @@ if_sethide(false, 50:8);
 ~script2324(50:47, $int1, $int0, "Preferred size");
 ~script2324(50:51, $int2, $int0, "Preferred level");
 if_sethide(false, 50:55);
-switch ($int0) {
+switch_int ($int0) {
 	case 2 :
 		~script1558(50:55, 50:0, 1939, -1, "<col=ff0000>Disband</col>");
 		if_sethide(false, 50:46);

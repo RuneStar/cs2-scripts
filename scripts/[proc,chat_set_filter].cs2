@@ -1,6 +1,6 @@
 // 184
 [proc,chat_set_filter](int $int0, int $int1)
-switch ($int0) {
+switch_int ($int0) {
 	case 2 :
 		chat_setfilter($int1, chat_getfilter_private, chat_getfilter_trade);
 	case 3 :

@@ -4,7 +4,7 @@ if (~on_mobile = false) {
 	if_sethide(false, 300:18);
 	if_sethide(true, $component5);
 }
-switch (%varbit6348) {
+switch_int (%varbit6348) {
 	case 0 :
 		~options_button_off($component1, 0);
 		~options_button_off($component2, 0);

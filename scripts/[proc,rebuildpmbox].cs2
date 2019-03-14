@@ -75,7 +75,7 @@ if ((%var287 = 1) & ((%varcint41 ! -1) | (%varbit4089 = 0))) {
 	while ((($int12 ! -1) & ($component10 ! null)) & (calc($int7 - $int4) < 57)) {
 		$chattype15, $int13, $int14, $string1, $string2, $string0 = chat_gethistory_byuid($int12);
 		if (~pm_filtertest($chattype15, $int13, $int14, $string1) = 1) {
-			switch ($chattype15) {
+			switch_int ($chattype15) {
 				case ^chattype_privatechat, ^chattype_modprivatechat :
 					$int7 = calc($int7 + ~script203($int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true, "From <$string1>:", $string0));
 				case ^chattype_privatechatout :

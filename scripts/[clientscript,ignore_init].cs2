@@ -4,7 +4,7 @@
 if_settext("Ignore List - World <tostring(map_world)>", $component2);
 cc_deleteall($component7);
 ~scrollbar_vertical($component7, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-switch (%varcint184) {
+switch_int (%varcint184) {
 	case 0, 1, 2, 3 :
 	case default :
 		%varcint184 = 0;

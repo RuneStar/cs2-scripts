@@ -1,6 +1,6 @@
 // 2578
 [proc,bankmain_quantity_buttons](component $component0, component $component1, component $component2, component $component3, component $component4)
-switch (%varbit6590) {
+switch_int (%varbit6590) {
 	case 0 :
 		~options_button_on($component0, 0);
 		~options_button_off($component1, 0);

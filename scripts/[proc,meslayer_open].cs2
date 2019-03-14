@@ -6,7 +6,7 @@ if_sethide(false, 162:40);
 if (~on_mobile = true) {
 	~mobile_chatbox_resize;
 	if_sethide(false, 162:42);
-	switch ($int0) {
+	switch_int ($int0) {
 		case 8, 10 :
 			if_sethide(false, 162:41);
 			if_setposition(0, if_gety(162:44), ^setpos_abs_centre, ^setpos_abs_top, 162:41);

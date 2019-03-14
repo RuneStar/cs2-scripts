@@ -9,7 +9,7 @@ def_int $int15 = if_getwidth($component5);
 def_int $int16 = if_getheight($component5);
 if (cc_find($component5, $int0) = true) {
 	cc_setgraphic(null);
-	switch ($int0) {
+	switch_int ($int0) {
 		case 0 :
 			$int13 = calc($int13 + ($int2 - $int4));
 			$int12 = calc($int12 + ($int1 - $int3));

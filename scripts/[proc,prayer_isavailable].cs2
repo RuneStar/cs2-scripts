@@ -3,7 +3,7 @@
 if ((stat_base(prayer) < enum(int, int, 861, $int0)) & (%varbit5314 = 0)) {
 	return(0);
 }
-switch ($int0) {
+switch_int ($int0) {
 	case 25 :
 		if ((((map_members = false) | (stat_base(defence) < 65)) | (%varbit3909 < 8)) & (%varbit5314 = 0)) {
 			return(0);

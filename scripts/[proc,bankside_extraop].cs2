@@ -1,7 +1,7 @@
 // 2576
 [proc,bankside_extraop](obj $obj0)(string)
 def_string $string0 = oc_param($obj0, 595);
-switch ($obj0) {
+switch_obj ($obj0) {
 	case small_pouch_5509 :
 		if (testbit(%var261, 0) = true) {
 			$string0 = "Empty";

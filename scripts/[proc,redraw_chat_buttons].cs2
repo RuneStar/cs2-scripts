@@ -23,7 +23,7 @@ if (%varbit26 = 1) {
 }
 def_int $int1 = 0;
 while ($int0 <= 5) {
-	switch (~chat_get_filter($int0)) {
+	switch_int (~chat_get_filter($int0)) {
 		case 1 :
 			if_settext("<col=ffff00>Friends", enum(int, component, 684, $int0));
 		case 2 :

@@ -22,7 +22,7 @@ while ($int0 ! -1) {
 		return;
 	}
 	if ((~filtertest($chattype3, $int4, $int2, $int5, $string0, $string2, removetags(chat_playername)) = 1) & (~script210($chattype3, $int5, $string0) = 0)) {
-		switch ($chattype3) {
+		switch_int ($chattype3) {
 			case ^chattype_modchat, ^chattype_publicchat :
 				~chat_alert_enable(2);
 			case ^chattype_privatechat, ^chattype_privatechatout, ^chattype_modprivatechat :

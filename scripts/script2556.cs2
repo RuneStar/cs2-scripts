@@ -7,7 +7,7 @@ def_int $int7 = 0;
 def_string $string0 = "";
 def_graphic $graphic8 = null;
 while ($int7 < 5) {
-	switch ($int7) {
+	switch_int ($int7) {
 		case 0 :
 			$graphic8 = "oge_title,0";
 			$string0 = "Explore a world three times larger!";

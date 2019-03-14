@@ -138,7 +138,7 @@ def_component $component4 = null;
 def_int $int5 = 0;
 def_int $int6 = enum_getoutputcount(1937);
 if ($int0 >= calc($int6 - 1)) {
-	switch (%varcint180) {
+	switch_int (%varcint180) {
 		case 0, 1, 2, 3, 4, 5, 6, 7, 12, 13 :
 		case default :
 			%varcint180 = 1;

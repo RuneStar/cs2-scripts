@@ -4,7 +4,7 @@ if (stat(magic) < oc_param($obj0, spell_levelreq)) {
 	if_settrans(0, $component1);
 	return(0);
 }
-switch ($component1) {
+switch_component ($component1) {
 	case 218:137, 218:136 :
 		if (%varbit2451 = 1) {
 			if_settrans(150, $component1);

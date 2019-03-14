@@ -34,7 +34,7 @@ if (~deadman_world = 1) {
 		}
 	}
 	if (($int8 = 0) & (%var1588 > 0)) {
-		switch ($stat0) {
+		switch_stat ($stat0) {
 			case attack, strength, magic :
 				$int10 = ~script2031(20);
 				if ($int10 > 0) {

@@ -3,7 +3,7 @@ script920(component $component0, enum $enum1)
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = -1;
-switch ($enum1) {
+switch_enum ($enum1) {
 	case 1131 :
 		$int3 = if_getheight(164:32);
 		$int2 = calc(if_getwidth(164:32) - 33);
@@ -32,7 +32,7 @@ switch ($enum1) {
 			if_sethide(true, 601:30);
 		} else {
 			if_sethide(false, 601:30);
-			switch (%varbit6255) {
+			switch_int (%varbit6255) {
 				case 2 :
 					if_setgraphic(1718, 601:32);
 					if_setop(1, "Toggle single-tap mode", 601:30);

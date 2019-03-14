@@ -29,7 +29,7 @@ if ($int2 <= 1) {
 	if_setop(1, "Remove", $component0);
 } else {
 	if_setop(9, "Banknotes", $component0);
-	switch (%varbit7792) {
+	switch_int (%varbit7792) {
 		case 0 :
 			if_setop(1, "Remove-1", $component0);
 			if_setop(2, "Remove-5", $component0);

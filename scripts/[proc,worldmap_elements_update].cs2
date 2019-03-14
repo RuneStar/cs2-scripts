@@ -1,7 +1,7 @@
 // 1702
 [proc,worldmap_elements_update](component $component0, int $int1, int $int2, int $int3, int $int4)
 def_int $int5 = 0;
-switch (worldmap_getcurrentmap) {
+switch_maparea (worldmap_getcurrentmap) {
 	case ancient_cavern :
 		$int5 = ~script1753(1_27_83_41_54, 0_27_83_45_54, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(0_27_83_50_34, 1_27_83_50_31, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);

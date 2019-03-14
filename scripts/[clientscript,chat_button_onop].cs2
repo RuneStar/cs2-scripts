@@ -48,7 +48,7 @@ if ($int0 = 1) {
 	~rebuildchatbox($int2);
 	~rebuildpmbox($int2);
 } else if ($int1 = 2) {
-	switch ($int0) {
+	switch_int ($int0) {
 		case 6 :
 			~chat_set_filter($int1, 3);
 			~redraw_chat_buttons;

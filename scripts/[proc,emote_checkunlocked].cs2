@@ -2,7 +2,7 @@
 [proc,emote_checkunlocked](int $int0)(int)
 def_int $int1 = 1;
 def_stat $stat2 = null;
-switch ($int0) {
+switch_int ($int0) {
 	case 22, 23 :
 		if (%varbit532 >= 7) {
 			return(1);

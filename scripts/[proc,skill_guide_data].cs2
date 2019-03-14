@@ -1,9 +1,9 @@
 // 661
 [proc,skill_guide_data](int $int0, int $int1, int $int2)(string, int, int)
-switch ($int0) {
+switch_int ($int0) {
 	case 1 :
 		if ($int1 = 0) {
-			switch ($int2) {
+			switch_int ($int2) {
 				case 0 :
 					return("Bronze", 1, 1205);
 				case 1 :
@@ -755,7 +755,7 @@ switch ($int0) {
 		return(~skill_guide_data_magic($int1, $int2));
 	case 6 :
 		if ($int1 = 0) {
-			switch ($int2) {
+			switch_int ($int2) {
 				case 0 :
 					return("Hitpoints are used to tell you how healthy your character is. A character who reaches 0 Hitpoints has died, but will reappear in their chosen respawn location (normally Lumbridge).", -1, 7620);
 				case 1 :
@@ -1060,7 +1060,7 @@ switch ($int0) {
 			return("", -1, -1);
 		}
 		if ($int1 = 2) {
-			switch ($int2) {
+			switch_int ($int2) {
 				case 0 :
 					return("Falador Agility shortcut", 5, 6517);
 				case 1 :
@@ -1248,9 +1248,9 @@ switch ($int0) {
 		}
 		return("", -1, -1);
 	case 9 :
-		switch ($int1) {
+		switch_int ($int1) {
 			case 0 :
-				switch ($int2) {
+				switch_int ($int2) {
 					case 0 :
 						return("You must complete the Druidic Ritual quest before you can use Herblore.", -1, 7620);
 					case 1 :
@@ -2195,7 +2195,7 @@ switch ($int0) {
 			return("", -1, -1);
 		}
 		if ($int1 = 7) {
-			switch ($int2) {
+			switch_int ($int2) {
 				case 0 :
 					return("Craft a birdhouse trap from normal logs.", 5, 21512);
 				case 1 :
@@ -4625,7 +4625,7 @@ switch ($int0) {
 		return("", -1, -1);
 	case 20 :
 		if ($int1 = 0) {
-			switch ($int2) {
+			switch_int ($int2) {
 				case 0 :
 					return("Crawling hands", 5, 4133);
 				case 1 :
@@ -4723,7 +4723,7 @@ switch ($int0) {
 			}
 		}
 		if ($int1 = 1) {
-			switch ($int2) {
+			switch_int ($int2) {
 				case 0 :
 					return("Spiny helmet<br> (with 5 Defence)", 1, 4551);
 				case 1 :

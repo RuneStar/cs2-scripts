@@ -14,7 +14,7 @@ if (map_members = true) {
 	$obj4 = null;
 }
 def_int $int5 = 0;
-switch ($obj0) {
+switch_obj ($obj0) {
 	case air_rune_556 :
 		if (%varbit4145 = 1) {
 			return(^max_32bit_int);
@@ -151,14 +151,14 @@ switch ($obj0) {
 		}
 		return(0);
 	case zamorak_staff_2417 :
-		switch ($obj4) {
+		switch_obj ($obj4) {
 			case zamorak_staff_2417, staff_of_the_dead_11791, toxic_staff_uncharged_12902, toxic_staff_of_the_dead_12904 :
 				return(1);
 			case default :
 				return(0);
 		}
 	case slayers_staff_4170 :
-		switch ($obj4) {
+		switch_obj ($obj4) {
 			case slayers_staff_4170, slayers_staff_e_21255, staff_of_the_dead_11791, toxic_staff_uncharged_12902, toxic_staff_of_the_dead_12904, staff_of_light_22296 :
 				return(1);
 			case default :

@@ -6,7 +6,7 @@ script1658(component $component0, component $component1, component $component2, 
 ~script1659($component6, 4, 5, 4, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, "Sort by world");
 ~script1659($component7, 0, 1, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, "Legacy sort");
 _3644;
-switch (%varcint185) {
+switch_int (%varcint185) {
 	case 1 :
 		_3645(false);
 	case 2 :
@@ -15,7 +15,7 @@ switch (%varcint185) {
 		_3646(false);
 	case 6 :
 		_3657(true);
-		switch (%varcint206) {
+		switch_int (%varcint206) {
 			case 3 :
 				_3646(false);
 			case 4 :
@@ -35,7 +35,7 @@ switch (%varcint185) {
 		}
 	case 7 :
 		_3657(false);
-		switch (%varcint206) {
+		switch_int (%varcint206) {
 			case 3 :
 				_3646(false);
 			case 4 :
@@ -60,7 +60,7 @@ switch (%varcint185) {
 	case 4 :
 		_3652(true);
 		_3647(true);
-		switch (%varcint206) {
+		switch_int (%varcint206) {
 			case 3 :
 				_3646(false);
 			case 6 :
@@ -79,7 +79,7 @@ switch (%varcint185) {
 	case 5 :
 		_3652(true);
 		_3647(false);
-		switch (%varcint206) {
+		switch_int (%varcint206) {
 			case 3 :
 				_3646(false);
 			case 6 :

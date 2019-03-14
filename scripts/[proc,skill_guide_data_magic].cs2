@@ -2,9 +2,9 @@
 [proc,skill_guide_data_magic](int $int0, int $int1)(string, int, int)
 def_string $string0 = "";
 def_string $string1 = "";
-switch ($int0) {
+switch_int ($int0) {
 	case 0 :
-		switch ($int1) {
+		switch_int ($int1) {
 			case 0 :
 				$string0 = "You can see what each spell does by<br>moving your mouse over its icon.";
 				$string1 = "You can see what each spell does by<br>activating the spellbook's Info mode, then tapping the spells.";
@@ -151,7 +151,7 @@ switch ($int0) {
 				return("", -1, -1);
 		}
 	case 1 :
-		switch ($int1) {
+		switch_int ($int1) {
 			case 0 :
 				return("Ancient magicks are available after<br>completing the Desert Treasure quest.", -1, 4675);
 			case 1 :
@@ -210,7 +210,7 @@ switch ($int0) {
 				return("", -1, -1);
 		}
 	case 2 :
-		switch ($int1) {
+		switch_int ($int1) {
 			case 0 :
 				return("Lunar spells are available after<br>completing the Lunar Diplomacy quest.", -1, 9084);
 			case 1 :
@@ -307,7 +307,7 @@ switch ($int0) {
 				return("", -1, -1);
 		}
 	case 3 :
-		switch ($int1) {
+		switch_int ($int1) {
 			case 0 :
 				return("Arceuus spells are unlocked<br>in Arceuus.", -1, 13578);
 			case 1 :
@@ -386,7 +386,7 @@ switch ($int0) {
 				return("", -1, -1);
 		}
 	case 4 :
-		switch ($int1) {
+		switch_int ($int1) {
 			case 0 :
 				return("Wizard boots", 20, 2579);
 			case 1 :
@@ -427,7 +427,7 @@ switch ($int0) {
 				return("", -1, -1);
 		}
 	case 5 :
-		switch ($int1) {
+		switch_int ($int1) {
 			case 0 :
 				return("Opal-tipped crossbow bolts<br>1 cosmic + 2 air runes", 4, 9236);
 			case 1 :
@@ -452,7 +452,7 @@ switch ($int0) {
 				return("", -1, -1);
 		}
 	case 6 :
-		switch ($int1) {
+		switch_int ($int1) {
 			case 0 :
 				return("Battlestaves (with 30 Attack)", 30, 1391);
 			case 1 :

@@ -36,7 +36,7 @@ if ($int15 <= -2) {
 	if_settext("", $component7);
 	if_sethide(false, $component0);
 	_3628;
-	switch (%varcint183) {
+	switch_int (%varcint183) {
 		case 1 :
 			_3629(false);
 		case 2 :
@@ -55,7 +55,7 @@ if ($int15 <= -2) {
 			_3633(true);
 			_3636(true);
 			_3631(true);
-			switch (%varcint205) {
+			switch_int (%varcint205) {
 				case 3 :
 					_3630(false);
 				case 8 :
@@ -69,7 +69,7 @@ if ($int15 <= -2) {
 			_3633(true);
 			_3636(true);
 			_3631(false);
-			switch (%varcint205) {
+			switch_int (%varcint205) {
 				case 3 :
 					_3630(false);
 				case 8 :

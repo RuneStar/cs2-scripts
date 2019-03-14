@@ -111,7 +111,7 @@ if ($boolean10 = true) {
 	$int24 = calc(($int21 * $int19) + (($int21 - 1) * $int22));
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
 } else if (%varbit6718 = 1) {
-	switch (%varbit4070) {
+	switch_int (%varbit4070) {
 		case 1 :
 			$int22 = 4;
 			$int23 = 20;
