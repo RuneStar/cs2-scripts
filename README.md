@@ -494,7 +494,7 @@
 [**491**](scripts/[proc,bankside_switchview].cs2) `[proc,bankside_switchview]`  
 [**492**](scripts/[clientscript,bankside_lootingbag_draw].cs2) `[clientscript,bankside_lootingbag_draw]`  
 [**493**](scripts/[proc,bankside_lootingbag_draw].cs2) `[proc,bankside_lootingbag_draw]`  
-[**494**](scripts/script494.cs2)  
+[**494**](scripts/[clientscript,pvp_icons_killdeathratio].cs2) `[clientscript,pvp_icons_killdeathratio]`  
 [**495**](scripts/[clientscript,wilderness_lootingbag_setup].cs2) `[clientscript,wilderness_lootingbag_setup]`  
 [**496**](scripts/[clientscript,wilderness_lootingbag_draw].cs2) `[clientscript,wilderness_lootingbag_draw]`  
 [**497**](scripts/[proc,wilderness_lootingbag_draw].cs2) `[proc,wilderness_lootingbag_draw]`  
@@ -813,7 +813,7 @@
 [**810**](scripts/[proc,ge_textbox].cs2) `[proc,ge_textbox]`  
 [**811**](scripts/script811.cs2)  
 [**812**](scripts/script812.cs2)  
-[**813**](scripts/script813.cs2)  
+[**813**](scripts/[proc,ge_offers_checkavailable].cs2) `[proc,ge_offers_checkavailable]`  
 [**814**](scripts/script814.cs2)  
 [**815**](scripts/script815.cs2)  
 [**816**](scripts/script816.cs2)  
@@ -833,7 +833,7 @@
 [**830**](scripts/script830.cs2)  
 [**831**](scripts/[clientscript,zoom_init].cs2) `[clientscript,zoom_init]`  
 [**832**](scripts/[clientscript,zoom_outline].cs2) `[clientscript,zoom_outline]`  
-[**833**](scripts/script833.cs2)  
+[**833**](scripts/[clientscript,zoom_slider_ondrag].cs2) `[clientscript,zoom_slider_ondrag]`  
 [**834**](scripts/[clientscript,if_setnoclickthrough].cs2) `[clientscript,if_setnoclickthrough]`  
 [**835**](scripts/[proc,options_button_off].cs2) `[proc,options_button_off]`  
 [**836**](scripts/[proc,options_button_on].cs2) `[proc,options_button_on]`  
@@ -1043,13 +1043,13 @@
 [**1040**](scripts/[clientscript,orbs_xpdrops_op].cs2) `[clientscript,orbs_xpdrops_op]`  
 [**1041**](scripts/[clientscript,orbs_xpdrops_update].cs2) `[clientscript,orbs_xpdrops_update]`  
 [**1042**](scripts/[proc,orbs_xpdrops_update].cs2) `[proc,orbs_xpdrops_update]`  
-[**1043**](scripts/script1043.cs2)  
+[**1043**](scripts/[clientscript,zoom_slider_dragcomplete].cs2) `[clientscript,zoom_slider_dragcomplete]`  
 [**1044**](scripts/script1044.cs2)  
 [**1045**](scripts/[proc,max].cs2) `[proc,max]`  
 [**1046**](scripts/[proc,min].cs2) `[proc,min]`  
 [**1047**](scripts/script1047.cs2)  
 [**1048**](scripts/script1048.cs2)  
-[**1049**](scripts/script1049.cs2)  
+[**1049**](scripts/[proc,zoom_position_slider].cs2) `[proc,zoom_position_slider]`  
 [**1050**](scripts/[clientscript,toplevel_compass_op].cs2) `[clientscript,toplevel_compass_op]`  
 [**1051**](scripts/[clientscript,spinmodel].cs2) `[clientscript,spinmodel]`  
 [**1052**](scripts/[clientscript,mourning_toad_init].cs2) `[clientscript,mourning_toad_init]`  
@@ -1089,7 +1089,7 @@
 [**1086**](scripts/[proc,stonebutton_url_draw].cs2) `[proc,stonebutton_url_draw]`  
 [**1087**](scripts/[clientscript,stonebutton_url_click].cs2) `[clientscript,stonebutton_url_click]`  
 [**1088**](scripts/[clientscript,stonebutton_url_clickrelease].cs2) `[clientscript,stonebutton_url_clickrelease]`  
-[**1089**](scripts/script1089.cs2)  
+[**1089**](scripts/[clientscript,slayer_rewards_extend_init].cs2) `[clientscript,slayer_rewards_extend_init]`  
 [**1090**](scripts/[proc,slayer_rewards_unlock_draw].cs2) `[proc,slayer_rewards_unlock_draw]`  
 [**1091**](scripts/script1091.cs2)  
 [**1092**](scripts/script1092.cs2)  
@@ -2036,7 +2036,7 @@
 [**2033**](scripts/[proc,agilityarena_rewards_gracefulbutton_init].cs2) `[proc,agilityarena_rewards_gracefulbutton_init]`  
 [**2034**](scripts/[clientscript,agilityarena_rewards_gracefulbutton_draw].cs2) `[clientscript,agilityarena_rewards_gracefulbutton_draw]`  
 [**2035**](scripts/[proc,agilityarena_rewards_gracefulbutton_draw].cs2) `[proc,agilityarena_rewards_gracefulbutton_draw]`  
-[**2036**](scripts/script2036.cs2)  
+[**2036**](scripts/[proc,agilityarena_rewards_gracefulbutton_drawcomponents].cs2) `[proc,agilityarena_rewards_gracefulbutton_drawcomponents]`  
 [**2037**](scripts/[clientscript,agilityarena_rewards_gracefulcancel].cs2) `[clientscript,agilityarena_rewards_gracefulcancel]`  
 [**2038**](scripts/[proc,agilityarena_rewards_gracefulcancel].cs2) `[proc,agilityarena_rewards_gracefulcancel]`  
 [**2039**](scripts/[clientscript,aide_map_init].cs2) `[clientscript,aide_map_init]`  
@@ -2795,7 +2795,7 @@
 [**2792**](scripts/[proc,orbs_spec_draw_button].cs2) `[proc,orbs_spec_draw_button]`  
 [**2793**](scripts/[clientscript,orbs_toggle_spec_op].cs2) `[clientscript,orbs_toggle_spec_op]`  
 [**2794**](scripts/[clientscript,orbs_blocked_spec_op].cs2) `[clientscript,orbs_blocked_spec_op]`  
-[**2795**](scripts/script2795.cs2)  
+[**2795**](scripts/[clientscript,itemsets_info_init].cs2) `[clientscript,itemsets_info_init]`  
 [**2796**](scripts/script2796.cs2)  
 [**2797**](scripts/script2797.cs2)  
 [**2798**](scripts/script2798.cs2)  

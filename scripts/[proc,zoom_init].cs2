@@ -6,8 +6,8 @@ if (%varbit6357 = 0) {
 } else if (%varbit6357 = 1) {
 	if_sethide(false, $component2);
 }
-if_setondrag("script833($component4, $component3, event_mousex)", $component4);
-if_setondragcomplete("script1043($component4, $component3, event_mousex)", $component4);
+if_setondrag("zoom_slider_ondrag($component4, $component3, event_mousex)", $component4);
+if_setondragcomplete("zoom_slider_dragcomplete($component4, $component3, event_mousex)", $component4);
 def_string $string0 = "<~text_device("Click", "Tap")> here to enable zooming using <~text_device("the mouse scroll wheel", "the pinch gesture")>.";
 if (%varbit6357 = 0) {
 	$string0 = "<~text_device("Click", "Tap")> here to disable zooming using <~text_device("the mouse scroll wheel", "the pinch gesture")>.";
