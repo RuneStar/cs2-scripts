@@ -7,9 +7,14 @@ if_setonchattransmit("chat_onchattransmit()", 162:0);
 if_setonfriendtransmit("chat_onchattransmit()", 162:0);
 if_setonclantransmit("rebuildchatbox()", 162:0);
 if_setonmisctransmit("script664(true)", 162:0);
-%varcstring335 = "";
 %varcint42 = -1;
-%varcint41 = 0;
+%varcstring335 = "";
+switch_int (%varcint41) {
+	case 0, 1, 2, 3, 4, 5, 1337 :
+		%varcint41 = %varcint41;
+	case default :
+		%varcint41 = 0;
+}
 %varcint4 = 0;
 %varcint3 = -1;
 %varcstring355 = "";

@@ -18,7 +18,7 @@ $int1 = ~max($int1, 0);
 def_int $int2 = calc($int1 / 60);
 def_int $int3 = calc($int1 % 60);
 if ($int3 < 10) {
-	if_settext("<tostring($int2)>:0<tostring($int3)>", 90:21);
+	if_settext("<tostring($int2)>:0<tostring($int3)>", 90:28);
 } else {
-	if_settext("<tostring($int2)>:<tostring($int3)>", 90:21);
+	if_settext("<tostring($int2)>:<tostring($int3)>", 90:28);
 }

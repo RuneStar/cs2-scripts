@@ -1,0 +1,7 @@
+// 2805
+script2805(string $string0)
+if_settext($string0, 90:12);
+if_sethide(false, 90:9);
+~script2807($string0);
+if_setsize(0, 60, ^setsize_abs, ^setsize_abs, 90:9);
+if_setontimer("script2808(clientclock)", 90:8);

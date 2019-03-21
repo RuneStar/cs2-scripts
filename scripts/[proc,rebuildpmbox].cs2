@@ -13,7 +13,7 @@ if (enum(enum, int, 1136, $enum6) > 0) {
 		$int3 = 102;
 		$setposv2 = ^setpos_abs_top;
 	}
-	if ((%varcint41 = -1) & (~script922 = 1)) {
+	if ((%varcint41 = 1337) & (~script922 = 1)) {
 		$int4 = calc($int4 + $int5);
 	} else {
 		$int4 = calc($int4 + if_getheight(enum(component, component, $enum6, 161:29)));
@@ -71,7 +71,7 @@ if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (c
 }
 $int12 = $int0;
 def_int $chattype15 = ^chattype_gamemessage;
-if ((%var287 = 1) & ((%varcint41 ! -1) | (%varbit4089 = 0))) {
+if ((%var287 = 1) & ((%varcint41 ! 1337) | (%varbit4089 = 0))) {
 	while ((($int12 ! -1) & ($component10 ! null)) & (calc($int7 - $int4) < 57)) {
 		$chattype15, $int13, $int14, $string1, $string2, $string0 = chat_gethistory_byuid($int12);
 		if (~pm_filtertest($chattype15, $int13, $int14, $string1) = 1) {

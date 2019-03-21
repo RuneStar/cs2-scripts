@@ -6,7 +6,7 @@ if (%varcint41 = 0) {
 	return;
 }
 def_int $int2 = 0;
-if (%varcint41 = -1) {
+if (%varcint41 = 1337) {
 	$int2 = 1;
 }
 def_int $chattype3 = ^chattype_gamemessage;
@@ -36,7 +36,7 @@ while ($int0 ! -1) {
 			case ^chattype_friendschat, ^chattype_friendschatnotification, ^chattype_chalreq_friendschat :
 				~chat_alert_enable(4);
 			case default :
-				if (enum(int, boolean, 892, $chattype3) = true) {
+				if ((enum(int, boolean, 892, $chattype3) = true) & ($chattype3 ! ^chattype_108)) {
 					~chat_alert_enable(1);
 				}
 		}

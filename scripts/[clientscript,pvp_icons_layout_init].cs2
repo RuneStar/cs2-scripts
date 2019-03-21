@@ -1,8 +1,9 @@
 // 865
-[clientscript,pvp_icons_layout_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, int $int9)
+[clientscript,pvp_icons_layout_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, int $int9, component $component10)
 ~script1490($component1);
 ~hud_clamp_init($component2);
 ~script2249($component8, setbit(0, 2));
+~script2249($component10, setbit(setbit(0, 3), 2));
 ~script2249($component3, setbit(0, 2));
 ~script1486($component4, ^setpos_abs_right, 1, 0);
 ~script2249($component5, setbit(0, 3));
@@ -12,5 +13,5 @@ if_setontimer("pvp_icons_layout(false)", $component0);
 if_setonresize("pvp_icons_layout(true)", $component0);
 if_setonsubchange("pvp_icons_layout(true)", $component0);
 if_setonvartransmit("pvp_icons_layout(true){var1293, var1434, var1542, var1676, var1327, var1377, var1378, var1601, var1602}", $component0);
-if_setonmouseleave("deltooltip(90:63)", 90:56);
+if_setonmouseleave("deltooltip(90:70)", 90:63);
 ~pvp_icons_layout;

@@ -10,7 +10,7 @@ def_int $int3 = ^min_32bit_int;
 def_int $int4 = ^min_32bit_int;
 def_int $chattype5 = ^chattype_gamemessage;
 def_int $int6 = 0;
-while ($chattype5 <= ^chattype_10sectimeout) {
+while ($chattype5 <= ^chattype_108) {
 	if (chat_gethistorylength($chattype5) > 0) {
 		$int0, $int1, $int6, $string0, $string1, $string2 = chat_gethistory_bytypeandline($chattype5, 0);
 		if (($int1 > $int3) | ($int0 > $int2)) {
