@@ -50,7 +50,7 @@ if (calc($int6 % 6) > 0) {
 $int10 = calc($int10 * $int4);
 if ($int10 > if_getheight(557:2)) {
 	if_setscrollsize(0, $int10, 557:2);
-	~scrollbar_vertical(557:3, 557:2, 798, 795, 796, 797, 793, 794);
+	~scrollbar_vertical(557:3, 557:2, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 	~scrollbar_resize(557:3, 557:2, $int8);
 } else {
 	if_setscrollsize(0, 0, 557:2);

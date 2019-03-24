@@ -7,5 +7,5 @@ $int1 = ~questdisplay_setup($int1, 473:5, ~quest_members_count, 2099, "Members' 
 $int1 = ~questdisplay_setup($int1, 473:6, ~miniquest_count, 2100, "Miniquests", $string3);
 if_setscrollpos(0, 0, 473:3);
 if_setscrollsize(0, $int1, 473:3);
-~scrollbar_vertical(473:7, 473:3, 798, 795, 796, 797, 793, 794);
+~scrollbar_vertical(473:7, 473:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 if_settext("Quest points: <tostring(coordx($coord0))> / <tostring(coordy($coord0))>", 473:8);

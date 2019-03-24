@@ -51,8 +51,8 @@ while ($int6 < $int5) {
 	$int7 = calc($int5 + $int6);
 	cc_create($component1, ^iftype_graphic, $int7);
 	.cc_create($component3, ^iftype_graphic, $int7);
-	cc_setgraphic(937);
-	.cc_setgraphic(937);
+	cc_setgraphic("exclamation_mark");
+	.cc_setgraphic("exclamation_mark");
 	cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
 	cc_sethide(false);

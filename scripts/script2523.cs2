@@ -5,12 +5,12 @@ def_int $int3 = calc($int1 * 20);
 if ($int3 <= $int2) {
 	if_setscrollpos(0, 0, 119:3);
 	if_setscrollsize(0, 0, 119:3);
-	~scrollbar_vertical(119:179, 119:3, 798, 795, 796, 797, 793, 794);
+	~scrollbar_vertical(119:179, 119:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 	return;
 }
 $int3 = calc($int3 + scale(1, 3, $int2));
 if_setscrollsize(0, $int3, 119:3);
-~scrollbar_vertical(119:179, 119:3, 798, 795, 796, 797, 793, 794);
+~scrollbar_vertical(119:179, 119:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 if ($int0 = 1) {
 	if_setscrollpos(0, 0, 119:3);
 } else if (cc_find(119:179, 1) = true) {
