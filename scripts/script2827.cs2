@@ -1,0 +1,44 @@
+// 2827
+script2827(component $component0, component $component1, int $int2, int $int3, int $int4, int $int5)
+if (cc_find($component0, $int2) = true) {
+	cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
+}
+if (cc_find($component1, $int2) = true) {
+	cc_setposition(calc($int4 - 7), calc($int5 + 32), ^setpos_abs_left, ^setpos_abs_top);
+}
+def_int $int6 = 0;
+def_int $int7 = 0;
+if ((cc_find($component0, $int2) = true) & (.cc_find($component0, $int3) = true)) {
+	if ($int3 = 70) {
+		if (~script2828($int2) ! -1) {
+			cc_sethide(true);
+		} else {
+			$int6 = .cc_getx;
+			$int7 = .cc_gety;
+			cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(calc($int6 + 60), $int7, ^setpos_abs_left, ^setpos_abs_top);
+		}
+	} else {
+		$int6 = cc_getx;
+		$int7 = cc_gety;
+		cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+	}
+}
+if ((cc_find($component1, $int2) = true) & (.cc_find($component1, $int3) = true)) {
+	if ($int3 = 70) {
+		if (~script2828($int2) ! -1) {
+			cc_sethide(true);
+		} else {
+			$int6 = .cc_getx;
+			$int7 = .cc_gety;
+			cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(calc($int6 + 60), $int7, ^setpos_abs_left, ^setpos_abs_top);
+		}
+	} else {
+		$int6 = cc_getx;
+		$int7 = cc_gety;
+		cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+	}
+}
