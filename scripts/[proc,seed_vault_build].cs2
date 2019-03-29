@@ -1,5 +1,5 @@
 // 2820
-script2820(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+[proc,seed_vault_build](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 %varcint374 = clientclock;
 cc_deleteall($component0);
 cc_deleteall($component1);
@@ -123,12 +123,12 @@ while ($int8 < 70) {
 			.cc_setposition(calc($int18 + ($int15 / 2)), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
 			cc_setdragdeadtime(5);
 			cc_setdragdeadzone(5);
-			cc_setondrag("script2824($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
-			.cc_setondrag("script2825($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
+			cc_setondrag("seed_vault_drag_obj($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
+			.cc_setondrag("seed_vault_drag_text($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
 			.cc_setdragdeadtime(5);
 			.cc_setdragdeadzone(5);
-			cc_setondragcomplete("script2827($component0, $component1, event_comid, event_dragtargetid, cc_getx, cc_gety)");
-			.cc_setondragcomplete("script2827($component0, $component1, event_comid, event_dragtargetid, cc_getx, cc_gety)");
+			cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comid, event_dragtargetid, cc_getx, cc_gety)");
+			.cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comid, event_dragtargetid, cc_getx, cc_gety)");
 			$int18 = calc(($int18 + $int15) + $int10);
 		}
 		if (calc(($int18 + $int15) + $int10) > if_getwidth($component0)) {
