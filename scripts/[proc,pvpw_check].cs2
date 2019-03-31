@@ -1,6 +1,6 @@
 // 383
 [proc,pvpw_check]()(int)
-if (testbit(worldflags, 2) = true) {
+if (testbit(worldflags, 2) = ^true) {
 	return(1);
 }
 return(0);

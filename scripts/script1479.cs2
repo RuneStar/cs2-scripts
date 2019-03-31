@@ -20,7 +20,7 @@ if ($int5 = 1) {
 } else {
 	return(0, 0);
 }
-if (testbit($int7, $int6) = false) {
+if (testbit($int7, $int6) = ^false) {
 	return(0, 0);
 }
 def_coord $coord8 = enum(loc, coord, 1525, $loc0);
@@ -28,7 +28,7 @@ if ($coord8 ! null) {
 	if (inv_getobj(576, coordx($coord8)) ! null) {
 		return(1, 1);
 	}
-	if (($loc0 = 29032) & (testbit($int2, 31) = true)) {
+	if (($loc0 = 29032) & (testbit($int2, 31) = ^true)) {
 		return(1, 1);
 	}
 	return(1, 0);
@@ -46,13 +46,13 @@ if ($coord8 ! null) {
 	} else {
 		return(0, 0);
 	}
-	if (testbit($int7, $int6) = true) {
+	if (testbit($int7, $int6) = ^true) {
 		return(1, 1);
 	}
 	return(1, 0);
 }
 if ($loc0 = 29057) {
-	if ((testbit($int3, 10) = true) | (testbit($int3, 12) = true)) {
+	if ((testbit($int3, 10) = ^true) | (testbit($int3, 12) = ^true)) {
 		return(1, 1);
 	}
 	return(1, 0);

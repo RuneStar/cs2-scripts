@@ -10,13 +10,13 @@ if ($component1 = $component9) {
 	%varbit5332 = 1;
 } else if ($component1 = $component11) {
 	%varbit5331 = calc((%varbit5331 + 1) % 4);
-	if (cc_find($component1, 0) = true) {
+	if (cc_find($component1, 0) = ^true) {
 		cc_setgraphic("miscgraphics3,1");
 		cc_setontimer("poh_viewer_rotate_timeout(event_com, event_comid, calc(clientclock + 10))");
 	}
 } else if ($component1 = $component12) {
 	%varbit5331 = calc((%varbit5331 + 3) % 4);
-	if (cc_find($component1, 0) = true) {
+	if (cc_find($component1, 0) = ^true) {
 		cc_setgraphic("miscgraphics3,1");
 		cc_setontimer("poh_viewer_rotate_timeout(event_com, event_comid, calc(clientclock + 10))");
 	}

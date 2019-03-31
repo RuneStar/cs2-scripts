@@ -19,7 +19,7 @@ if_settextfont($fontmetrics7, $component2);
 def_int $int10 = 0;
 def_component $component11 = enum(int, component, 1163, $int10);
 while ($component11 ! null) {
-	if (cc_find($component11, 0) = true) {
+	if (cc_find($component11, 0) = ^true) {
 		cc_setcolour(enum(int, int, 1169, %varbit4695));
 		~xpdrops_setdropsize($component11, $int8, $fontmetrics6, $fontmetrics7, cc_gettext);
 	}

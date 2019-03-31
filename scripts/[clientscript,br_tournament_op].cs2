@@ -1,6 +1,6 @@
 // 1419
 [clientscript,br_tournament_op](int $int0, component $component1, int $int2, string $string0)
-if (cc_find($component1, $int2) = true) {
+if (cc_find($component1, $int2) = ^true) {
 	sound_synth(2266, 1, 0);
 	cc_setcolour(0x8f8f8f);
 	cc_setontimer("br_tournament_submit(calc(clientclock + 30), $string0, $component1, $int2)");

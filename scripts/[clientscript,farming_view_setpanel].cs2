@@ -18,14 +18,14 @@ def_int $int9 = calc(coordx($coord2) / 64);
 cc_deleteall($component4);
 %varcint2 = 0;
 def_int $int10 = 0;
-if ((testbit($int3, 1) = true) | (testbit($int3, 0) = true)) {
+if ((testbit($int3, 1) = ^true) | (testbit($int3, 0) = ^true)) {
 	cc_create($component4, ^iftype_rectangle, $int10);
 	$int10 = calc($int10 + 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setfill(true);
 	cc_settrans(240);
-	if (testbit($int3, 1) = true) {
+	if (testbit($int3, 1) = ^true) {
 		cc_setcolour(0xff3f3f);
 	} else {
 		cc_setcolour(0x7fff7f);
@@ -86,11 +86,11 @@ if ($int7 > 0) {
 	.cc_setposition(12, 27, ^setpos_abs_left, ^setpos_abs_bottom);
 	.cc_setfill(true);
 	$string0 = append($string0, " (State: <tostring($int7)> / <tostring($int8)>)");
-	if (testbit($int3, 1) = true) {
+	if (testbit($int3, 1) = ^true) {
 		cc_setcolour(^red);
 		.cc_setcolour(^red);
 		$string0 = append($string0, "<br>The patch is <col=7f0000>dead</col>.");
-	} else if (testbit($int3, 0) = true) {
+	} else if (testbit($int3, 0) = ^true) {
 		cc_setcolour(0xff981f);
 		.cc_setcolour(0xff981f);
 		$string0 = append($string0, "<br>The patch is <col=003f00>diseased</col>.");
@@ -103,21 +103,21 @@ if ($int7 > 0) {
 } else if ($obj1 = weeds_6055) {
 	$string0 = append($string0, " (weeds)");
 }
-if (testbit($int3, 2) = true) {
+if (testbit($int3, 2) = ^true) {
 	cc_create($component6, ^iftype_graphic, $int10);
 	$int10 = calc($int10 + 1);
 	cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_setgraphic("combat_shield");
 	$string0 = append($string0, "<br>A gardener is protecting this patch.");
-} else if (testbit($int3, 8) = true) {
+} else if (testbit($int3, 8) = ^true) {
 	cc_create($component6, ^iftype_graphic, $int10);
 	$int10 = calc($int10 + 1);
 	cc_setsize(33, 36, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_setgraphic("side_icons,8");
 	$string0 = append($string0, "<br>The people of Hosidius are protecting the patch as a favour.");
-} else if (testbit($int3, 3) = true) {
+} else if (testbit($int3, 3) = ^true) {
 	cc_create($component6, ^iftype_graphic, $int10);
 	$int10 = calc($int10 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -127,7 +127,7 @@ if (testbit($int3, 2) = true) {
 	cc_setobject_nonum(mixed_flowers_2472, 1);
 	$string0 = append($string0, "<br>A nearby flower patch is providing protection.");
 }
-if ((testbit($int3, 4) = true) | (coordz($coord2) = 1)) {
+if ((testbit($int3, 4) = ^true) | (coordz($coord2) = 1)) {
 	cc_create($component6, ^iftype_graphic, $int10);
 	$int10 = calc($int10 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -143,17 +143,17 @@ if ((testbit($int3, 4) = true) | (coordz($coord2) = 1)) {
 		$string0 = append($string0, "<br>The patch is dry.");
 	}
 }
-if (((testbit($int3, 6) = true) | (testbit($int3, 5) = true)) | (testbit($int3, 7) = true)) {
+if (((testbit($int3, 6) = ^true) | (testbit($int3, 5) = ^true)) | (testbit($int3, 7) = ^true)) {
 	cc_create($component6, ^iftype_graphic, $int10);
 	$int10 = calc($int10 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(5, 20, ^setpos_abs_right, ^setpos_abs_bottom);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	if (testbit($int3, 7) = true) {
+	if (testbit($int3, 7) = ^true) {
 		cc_setobject_nonum(ultracompost_21483, 1);
 		$string0 = append($string0, "<br>The patch has been treated with ultracompost.");
-	} else if (testbit($int3, 6) = true) {
+	} else if (testbit($int3, 6) = ^true) {
 		cc_setobject_nonum(supercompost_6034, 1);
 		$string0 = append($string0, "<br>The patch has been treated with supercompost.");
 	} else {

@@ -15,10 +15,10 @@ if ($obj8 = null) {
 	return;
 }
 def_obj $obj9 = inv_getobj(inv, $int3);
-if (cc_find($component0, $int3) = true) {
+if (cc_find($component0, $int3) = ^true) {
 	~bankside_drawitem($obj8, inv_getnum(inv, $int2), $component0, $component4, 0, $component5, $component6);
 }
-if (cc_find($component0, $int2) = true) {
+if (cc_find($component0, $int2) = ^true) {
 	~bankside_drawitem($obj9, inv_getnum(inv, $int3), $component0, $component4, 0, $component5, $component6);
 }
 if (((($obj8 = looting_bag_11941) | ($obj8 = looting_bag_22586)) | ($obj9 = looting_bag_11941)) | ($obj9 = looting_bag_22586)) {

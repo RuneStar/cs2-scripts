@@ -1,6 +1,6 @@
 // 1141
 [clientscript,deadman_stats_vartransmit](component $component0, int $int1)
-if (testbit(%var1295, calc($int1 - 1)) = true) {
+if (testbit(%var1295, calc($int1 - 1)) = ^true) {
 	~deadman_stats_set_protect($component0, $int1);
 } else {
 	~deadman_stats_set_unprotect($component0, $int1);

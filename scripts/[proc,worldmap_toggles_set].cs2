@@ -1,6 +1,6 @@
 // 1720
 [proc,worldmap_toggles_set](int $int0, int $int1, component $component2, component $component3, component $component4)
-if (testbit(%varbit5640, $int1) = true) {
+if (testbit(%varbit5640, $int1) = ^true) {
 	.cc_setop(1, "Enable");
 	cc_sethide(false);
 } else {
@@ -12,7 +12,7 @@ switch_int ($int1) {
 	case 0, 1, 4 :
 		~worldmap_overlay_clear($component2, $component3);
 	case 2 :
-		if (testbit(%varbit5640, 2) = true) {
+		if (testbit(%varbit5640, 2) = ^true) {
 			$boolean5 = false;
 		}
 		worldmap_disableelementcategory(1129, $boolean5);

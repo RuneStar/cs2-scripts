@@ -11,7 +11,7 @@ $int12 = if_getwidth($component1);
 ~scrollbar_vertical_rebuild($component7, $component6);
 def_int $int14 = ~min(200, calc((($int12 - $int8) / 2) - 54));
 if_setsize($int14, 20, ^setsize_abs, ^setsize_abs, $component10);
-if (.cc_find($component10, $int11) = true) {
+if (.cc_find($component10, $int11) = ^true) {
 	~script1739($int14);
 }
 if_setontimer("script1740($component0, $component1, $component2, $component3, $int12, $int13, $component6, $component7, $int8, $int9, $component10, $int11)", $component0);

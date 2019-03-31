@@ -1,5 +1,5 @@
 // 2817
 [proc,seed_vault_catselect](component $component0, component $component1, component $component2)
-if ((.cc_find($component0, %varbit8171) = true) & (cc_find($component2, 1) = true)) {
+if ((.cc_find($component0, %varbit8171) = ^true) & (cc_find($component2, 1) = ^true)) {
 	~scrollbar_vertical_doscroll($component2, $component1, .cc_gety, 1);
 }

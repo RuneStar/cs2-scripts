@@ -60,7 +60,7 @@ $array0(26) = $int26;
 $array0(27) = $int27;
 while ($int28 > 0) {
 	$int28 = calc($int28 - 1);
-	if (cc_find(335:28, $int28) = true) {
+	if (cc_find(335:28, $int28) = ^true) {
 		~trade_tooltip(invother_getnum(90, $int28), $array0($int28), 335:32);
 	}
 }

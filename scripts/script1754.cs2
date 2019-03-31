@@ -25,8 +25,8 @@ if ($int18 < 0) {
 	$boolean20 = true;
 	$int19 = calc(0 - $int19);
 }
-if (cc_find($component4, $int9) = true) {
-	if (testbit(%varbit5640, 1) = true) {
+if (cc_find($component4, $int9) = ^true) {
+	if (testbit(%varbit5640, 1) = ^true) {
 		cc_sethide(true);
 	} else {
 		cc_sethide(false);
@@ -34,7 +34,7 @@ if (cc_find($component4, $int9) = true) {
 	cc_setposition(calc($int12 + 1), calc($int13 + 1), ^setpos_abs_centre, ^setpos_abs_centre);
 } else {
 	cc_create($component4, ^iftype_rectangle, $int9);
-	if (testbit(%varbit5640, 1) = true) {
+	if (testbit(%varbit5640, 1) = ^true) {
 		cc_sethide(true);
 	} else {
 		cc_sethide(false);
@@ -48,8 +48,8 @@ def_int $int21 = 0;
 def_int $int22 = 0;
 def_int $int23 = 0;
 def_int $colour24 = ^black;
-if (cc_find($component4, $int10) = true) {
-	if (testbit(%varbit5640, 1) = true) {
+if (cc_find($component4, $int10) = ^true) {
+	if (testbit(%varbit5640, 1) = ^true) {
 		cc_sethide(true);
 	} else {
 		cc_sethide(false);
@@ -62,7 +62,7 @@ if (cc_find($component4, $int10) = true) {
 	$int21 = ~max(calc($int21 - 48), 0);
 	$colour24 = ~script246($int21, $int22, $int23);
 	cc_create($component4, ^iftype_rectangle, $int10);
-	if (testbit(%varbit5640, 1) = true) {
+	if (testbit(%varbit5640, 1) = ^true) {
 		cc_sethide(true);
 	} else {
 		cc_sethide(false);
@@ -76,7 +76,7 @@ if (cc_find($component4, $int10) = true) {
 	cc_setop(1, "Scroll map");
 	cc_setonop("script1756(event_opindex, $coord1, $boolean2)");
 }
-if (cc_find($component4, $int11) = true) {
+if (cc_find($component4, $int11) = ^true) {
 	cc_setposition($int16, $int17, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize($int18, $int19, ^setsize_abs, ^setsize_abs);
 } else {

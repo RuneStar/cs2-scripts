@@ -3,7 +3,7 @@
 if ($int0 ! 1) {
 	return;
 }
-if ((cc_find($component1, $int2) = true) & (.cc_find($component1, $int3) = true)) {
+if ((cc_find($component1, $int2) = ^true) & (.cc_find($component1, $int3) = ^true)) {
 	sound_synth(2266, 1, 0);
 	%varbit619 = calc(1 - %varbit619);
 	~kourend_sidepanel_hudtoggle($component1, $component4);

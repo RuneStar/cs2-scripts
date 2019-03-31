@@ -1,8 +1,8 @@
 // 9
 [clientscript,tt_reward_highlight](int $int0, component $component1, component $component2)
-if (cc_find($component1, $int0) = true) {
+if (cc_find($component1, $int0) = ^true) {
 	cc_settrans(100);
-	if (.cc_find($component2, $int0) = true) {
+	if (.cc_find($component2, $int0) = ^true) {
 		.cc_setcolour(0xfcd393);
 	}
 }

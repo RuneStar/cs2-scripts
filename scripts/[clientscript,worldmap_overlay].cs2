@@ -51,7 +51,7 @@ def_int $int27 = scale(calc($int18 - $int24), $int25, $int19);
 def_int $int28 = scale(calc($int21 - $int15), $int26, $int20);
 def_int $int29 = scale(calc($int17 - $int18), $int25, $int19);
 def_int $int30 = scale(calc($int15 - $int16), $int26, $int20);
-if ((cc_find($component1, 0) = true) & (.cc_find($component1, 1) = true)) {
+if ((cc_find($component1, 0) = ^true) & (.cc_find($component1, 1) = ^true)) {
 	cc_setposition($int27, $int28, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setposition($int27, $int28, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int29, $int30, ^setsize_abs, ^setsize_abs);

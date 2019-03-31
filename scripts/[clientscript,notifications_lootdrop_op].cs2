@@ -5,12 +5,12 @@ if ($int1 = 1) {
 		sound_synth(2266, 1, 0);
 		%varbit5400 = 0;
 		%varbit5399 = 0;
-		if (cc_find($component3, $int4) = true) {
+		if (cc_find($component3, $int4) = ^true) {
 			~notifications_lootdrop_redraw($component3);
 		}
 	} else if ($int0 = 2) {
 		sound_synth(2266, 1, 0);
-		if (cc_find($component3, $int4) = true) {
+		if (cc_find($component3, $int4) = ^true) {
 			cc_setcolour(^white);
 			cc_settext("Set a value...");
 			if_setonmouserepeat(null, $component3);
@@ -27,12 +27,12 @@ if ($int1 = 1) {
 		}
 		%varbit5400 = $int2;
 		%varbit5399 = 1;
-		if (cc_find($component3, $int4) = true) {
+		if (cc_find($component3, $int4) = ^true) {
 			~notifications_lootdrop_redraw($component3);
 		}
 	} else {
 		sound_synth(2266, 1, 0);
-		if (cc_find($component3, $int4) = true) {
+		if (cc_find($component3, $int4) = ^true) {
 			cc_setcolour(^white);
 			cc_settext("Set a value...");
 			if_setonmouserepeat(null, $component3);

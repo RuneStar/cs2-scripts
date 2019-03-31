@@ -12,9 +12,9 @@ if ($obj5 = null) {
 	return;
 }
 def_obj $obj6 = inv_getobj(583, $int2);
-if (cc_find($component0, $int2) = true) {
+if (cc_find($component0, $int2) = ^true) {
 	~raids_storage_private_drawitem($obj5, inv_getnum(583, $int1), 0, $component3);
 }
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	~raids_storage_private_drawitem($obj6, inv_getnum(583, $int2), 0, $component3);
 }

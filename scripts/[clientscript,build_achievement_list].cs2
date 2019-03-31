@@ -20,7 +20,7 @@ while ($int3 < 12) {
 def_int $int5 = 8;
 $int3 = 0;
 while ($int3 < 12) {
-	if (cc_find($component0, $array0($int3)) = true) {
+	if (cc_find($component0, $array0($int3)) = ^true) {
 		cc_setposition(0, $int5, ^setpos_abs_centre, ^setpos_abs_top);
 	}
 	$int4 = ~setup_diary_entry($component0, $array0($int3), $int4, $int5);

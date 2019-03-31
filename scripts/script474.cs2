@@ -4,27 +4,27 @@ def_int $int4 = 0;
 def_obj $obj5 = null;
 def_int $int6 = 0;
 while ($int6 <= 108) {
-	if (cc_find(78:3, $int6) = true) {
+	if (cc_find(78:3, $int6) = ^true) {
 		if ($int6 < 32) {
-			if (testbit($int0, $int6) = true) {
+			if (testbit($int0, $int6) = ^true) {
 				$int4 = 1;
 			} else {
 				$int4 = 0;
 			}
 		} else if ($int6 < 64) {
-			if (testbit($int1, calc($int6 - 32)) = true) {
+			if (testbit($int1, calc($int6 - 32)) = ^true) {
 				$int4 = 1;
 			} else {
 				$int4 = 0;
 			}
 		} else if ($int6 < 96) {
-			if (testbit($int2, calc($int6 - 64)) = true) {
+			if (testbit($int2, calc($int6 - 64)) = ^true) {
 				$int4 = 1;
 			} else {
 				$int4 = 0;
 			}
 		} else if ($int6 < 128) {
-			if (testbit($int3, calc($int6 - 96)) = true) {
+			if (testbit($int3, calc($int6 - 96)) = ^true) {
 				$int4 = 1;
 			} else {
 				$int4 = 0;

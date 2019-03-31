@@ -18,17 +18,17 @@ if (%varbit4170 = 1) {
 	~script524($component0, 2);
 }
 if (((((((((%varbit4171 > 0) | (%varbit4172 > 0)) | (%varbit4173 > 0)) | (%varbit4174 > 0)) | (%varbit4175 > 0)) | (%varbit4176 > 0)) | (%varbit4177 > 0)) | (%varbit4178 > 0)) | (%varbit4179 > 0)) {
-	if (cc_find($component0, 3) = true) {
+	if (cc_find($component0, 3) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($component0, 7) = true) {
+	if (cc_find($component0, 7) = ^true) {
 		cc_setgraphic("options_radio_buttons,1");
 	}
-	if (cc_find($component0, 11) = true) {
+	if (cc_find($component0, 11) = ^true) {
 		cc_settext("<str>Hide tab bar</str>");
 	}
 } else {
-	if (cc_find($component0, 11) = true) {
+	if (cc_find($component0, 11) = ^true) {
 		cc_settext("Hide tab bar");
 	}
 	if (%varbit4170 = 3) {

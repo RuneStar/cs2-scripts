@@ -32,7 +32,7 @@ if ($int2 > 1) {
 def_int $int10 = 20;
 $int9 = 0;
 while ($int9 < $int2) {
-	if (cc_find($component0, calc($array0($int9) % $int7)) = true) {
+	if (cc_find($component0, calc($array0($int9) % $int7)) = ^true) {
 		cc_setposition(0, $int10, ^setpos_abs_centre, ^setpos_abs_top);
 	}
 	$int10 = calc($int10 + $int8);

@@ -47,7 +47,7 @@ cc_create($component0, ^iftype_rectangle, 7);
 cc_setposition(38, 7, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(17, 2, ^setsize_abs, ^setsize_abs);
 cc_setcolour(^red);
-if (testbit(%var1295, calc($int1 - 1)) = true) {
+if (testbit(%var1295, calc($int1 - 1)) = ^true) {
 	~deadman_stats_set_protect($component0, $int1);
 } else {
 	~deadman_stats_set_unprotect($component0, $int1);

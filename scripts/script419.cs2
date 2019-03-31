@@ -11,14 +11,14 @@ def_int $int6 = inv_size($inv0);
 def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = 2;
-def_boolean $boolean10 = false;
+def_int $bit10 = ^false;
 while ($int7 < $int6) {
 	$obj4 = inv_getobj($inv0, $int7);
 	if ($obj4 ! null) {
 		if ($int7 < 31) {
-			$boolean10 = testbit($int1, $int7);
+			$bit10 = testbit($int1, $int7);
 		} else {
-			$boolean10 = testbit($int2, calc($int7 - 31));
+			$bit10 = testbit($int2, calc($int7 - 31));
 		}
 		cc_create(592:2, ^iftype_rectangle, $int8);
 		cc_setsize($int5, 61, ^setsize_abs, ^setsize_abs);
@@ -30,7 +30,7 @@ while ($int7 < $int6) {
 		} else if ($obj4 = back_10166) {
 			cc_setop(1, "Back");
 		} else {
-			if ($boolean10 = true) {
+			if ($bit10 = ^true) {
 				cc_setop(1, "Take");
 			}
 			cc_setop(10, "Examine");
@@ -59,7 +59,7 @@ while ($int7 < $int6) {
 		cc_setcolour(^black);
 		cc_settrans(164);
 		cc_setfill(true);
-		if ($boolean10 = true) {
+		if ($bit10 = ^true) {
 			cc_sethide(true);
 		}
 		$int8 = calc($int8 + 1);

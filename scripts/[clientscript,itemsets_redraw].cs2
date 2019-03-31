@@ -1,5 +1,5 @@
 // 823
 [clientscript,itemsets_redraw](component $component0, int $int1, enum $enum2)
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	~itemsets_redraw($enum2);
 }

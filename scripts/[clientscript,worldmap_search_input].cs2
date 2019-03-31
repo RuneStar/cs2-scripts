@@ -3,7 +3,7 @@
 if (~script1701(-1, 595) = 0) {
 	return;
 }
-if (((%varcint190 = 1) & (cc_find($component2, $int3) = true)) & (.cc_find($component2, $int4) = true)) {
+if (((%varcint190 = 1) & (cc_find($component2, $int3) = ^true)) & (.cc_find($component2, $int4) = ^true)) {
 	if ($int0 = 84) {
 		if ($coord5 ! null) {
 			sound_synth(2266, 1, 0);

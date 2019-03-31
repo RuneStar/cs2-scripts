@@ -16,7 +16,7 @@ while ($int1 <= 13) {
 	if (string_length($string1) <= 0) {
 		$string1 = "-";
 	}
-	if (cc_find($component0, $int1) = true) {
+	if (cc_find($component0, $int1) = ^true) {
 		cc_settext($string1);
 	}
 	$int1 = calc($int1 + 1);

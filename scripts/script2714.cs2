@@ -4,7 +4,7 @@ if ($int0 ! 1) {
 	return;
 }
 sound_synth(2266, 1, 0);
-if (cc_find($component1, $int2) = true) {
+if (cc_find($component1, $int2) = ^true) {
 	cc_setcolour(^red);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);

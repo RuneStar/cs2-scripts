@@ -7,7 +7,7 @@ if (worldmap_getcurrentmap ! $maparea0) {
 	if (worldmap_isloaded = false) {
 		return;
 	}
-	if (cc_find($component1, $int2) = true) {
+	if (cc_find($component1, $int2) = ^true) {
 		~worldmap_loadmap(worldmap_getcurrentmap, null, $component1, $component3, $component4, $component5, $component6, $component7, $component8);
 	}
 	return;
@@ -26,7 +26,7 @@ while ($maparea12 ! null) {
 	$coord10 = ~worldmap_findcoordinmap($maparea12, $coord9);
 	if ($coord10 ! null) {
 		if (worldmap_getcurrentmap ! $maparea12) {
-			if (cc_find($component1, $int2) = true) {
+			if (cc_find($component1, $int2) = ^true) {
 				~worldmap_loadmap($maparea12, $coord10, $component1, $component3, $component4, $component5, $component6, $component7, $component8);
 			}
 		} else {

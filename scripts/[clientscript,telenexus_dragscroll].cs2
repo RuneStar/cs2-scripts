@@ -6,7 +6,7 @@ def_int $int10 = if_getheight($component0);
 def_int $int11 = if_getscrollheight($component0);
 def_int $int12 = 76;
 def_int $int13 = 15;
-if (cc_find($component1, $int2) = true) {
+if (cc_find($component1, $int2) = ^true) {
 	$int13 = cc_getheight;
 }
 if ($int4 < calc($int12 + $int13)) {

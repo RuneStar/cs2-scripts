@@ -96,7 +96,7 @@ while ($loc18 ! null) {
 		cc_setposition(54, $int10, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("tick");
 	}
-	if (($int7 ! -1) & (cc_find($component0, $int7) = true)) {
+	if (($int7 ! -1) & (cc_find($component0, $int7) = ^true)) {
 		cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
 	}
 	$int15 = calc($int15 + $int8);

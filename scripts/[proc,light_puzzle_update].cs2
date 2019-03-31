@@ -10,7 +10,7 @@ def_int $int7 = calc(($int2 - (36 * $int6)) / ($int6 + 1));
 def_int $int8 = calc(((if_getheight($component0) - (32 * $int6)) - $int5) / ($int6 + 1));
 cc_deleteall($component0);
 while ($int1 < 25) {
-	if (testbit(%var1356, $int1) = true) {
+	if (testbit(%var1356, $int1) = ^true) {
 		$obj4 = 20356;
 	} else {
 		$obj4 = 20357;

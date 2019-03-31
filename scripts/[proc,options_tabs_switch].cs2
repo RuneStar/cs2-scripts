@@ -23,7 +23,7 @@ if ($component1 = $component4) {
 }
 def_int $int7 = 0;
 while ($int7 < 4) {
-	if (cc_find($component2, calc($int7 * 2)) = true) {
+	if (cc_find($component2, calc($int7 * 2)) = ^true) {
 		if ($int7 = $int0) {
 			cc_setgraphic("options_boxes,1");
 		} else {

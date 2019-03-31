@@ -5,7 +5,7 @@ if ((($int0 < 1) | ($component2 = null)) | ($int0 > 31)) {
 }
 def_string $string0 = "";
 def_string $string1 = "";
-if (cc_find($component2, 6) = true) {
+if (cc_find($component2, 6) = ^true) {
 	if ($int0 <= 9) {
 		$string0 = tostring($int0);
 	} else {

@@ -58,7 +58,7 @@ def_int $int13 = 0;
 def_int $int14 = 0;
 def_int $int15 = 0;
 while ($int15 < $int0) {
-	if ((cc_find($component2, $int15) = true) & (.cc_find($component2, calc($int0 + $int15)) = true)) {
+	if ((cc_find($component2, $int15) = ^true) & (.cc_find($component2, calc($int0 + $int15)) = ^true)) {
 		$obj9 = inv_getobj(90, $int15);
 		if ($obj9 ! null) {
 			$int10 = inv_getnum(90, $int15);
@@ -122,7 +122,7 @@ $array1(26) = %varcint136;
 $array1(27) = %varcint137;
 $int15 = 0;
 while ($int15 < $int0) {
-	if ((cc_find($component4, $int15) = true) & (.cc_find($component4, calc($int0 + $int15)) = true)) {
+	if ((cc_find($component4, $int15) = ^true) & (.cc_find($component4, calc($int0 + $int15)) = ^true)) {
 		$obj9 = invother_getobj(90, $int15);
 		if ($obj9 ! null) {
 			$int10 = invother_getnum(90, $int15);

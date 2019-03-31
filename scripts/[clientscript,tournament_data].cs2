@@ -1,48 +1,48 @@
 // 976
 [clientscript,tournament_data](component $component0, int $int1, string $string0)
 if ($int1 = -1) {
-	if (cc_find($component0, 0) = true) {
+	if (cc_find($component0, 0) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($component0, 1) = true) {
+	if (cc_find($component0, 1) = ^true) {
 		cc_settext("");
 	}
-	if (cc_find($component0, 2) = true) {
+	if (cc_find($component0, 2) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($component0, 3) = true) {
+	if (cc_find($component0, 3) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($component0, 4) = true) {
+	if (cc_find($component0, 4) = ^true) {
 		cc_settext("");
 	}
-	if (cc_find($component0, 5) = true) {
+	if (cc_find($component0, 5) = ^true) {
 		cc_settext("");
 	}
-	if (cc_find($component0, 6) = true) {
+	if (cc_find($component0, 6) = ^true) {
 		cc_settext("");
 	}
 	return;
 }
-if (cc_find($component0, 0) = true) {
+if (cc_find($component0, 0) = ^true) {
 	cc_sethide(false);
 }
-if (cc_find($component0, 1) = true) {
+if (cc_find($component0, 1) = ^true) {
 	cc_settext($string0);
 }
-if (cc_find($component0, 2) = true) {
+if (cc_find($component0, 2) = ^true) {
 	cc_sethide(false);
 }
-def_boolean $boolean2 = testbit($int1, 30);
+def_int $bit2 = testbit($int1, 30);
 $int1 = clearbit($int1, 30);
 def_int $int3 = calc($int1 & 1023);
 $int1 = calc($int1 / pow(2, 10));
 def_int $int4 = calc($int1 & 1023);
 $int1 = calc($int1 / pow(2, 10));
 def_int $int5 = calc($int1 & 1023);
-if (cc_find($component0, 3) = true) {
+if (cc_find($component0, 3) = ^true) {
 	cc_sethide(false);
-	if ($boolean2 = true) {
+	if ($bit2 = ^true) {
 		cc_setcolour(0x009f00);
 	} else {
 		cc_setcolour(0x7f0000);
@@ -53,12 +53,12 @@ if (cc_find($component0, 3) = true) {
 		cc_setsize(25, interpolate(0, $int3, 0, 99, 16384), ^setsize_abs, ^setsize_2);
 	}
 }
-if (cc_find($component0, 4) = true) {
+if (cc_find($component0, 4) = ^true) {
 	cc_settext(tostring($int3));
 }
-if (cc_find($component0, 5) = true) {
+if (cc_find($component0, 5) = ^true) {
 	cc_settext("<tostring($int4)>%");
 }
-if (cc_find($component0, 6) = true) {
+if (cc_find($component0, 6) = ^true) {
 	cc_settext(tostring($int5));
 }

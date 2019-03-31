@@ -3,7 +3,7 @@ script756(component $component0, int $int1, int $int2)
 def_int $int3 = 0;
 def_int $int4 = 0;
 def_int $int5 = 0;
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	$int4 = clientclock;
 	$int5 = calc($int4 - $int2);
 	if ($int5 >= 750) {

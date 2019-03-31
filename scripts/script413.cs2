@@ -1,6 +1,6 @@
 // 413
 script413(int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, string $string0)
-if ((($int0 < 32) & (testbit(%var1076, $int0) = true)) | (($int0 >= 32) & (testbit(%var1344, calc($int0 % 32)) = true))) {
+if ((($int0 < 32) & (testbit(%var1076, $int0) = ^true)) | (($int0 >= 32) & (testbit(%var1344, calc($int0 % 32)) = ^true))) {
 	if ($int0 = 35) {
 		if (%varbit5362 = 1) {
 			cc_setgraphic("options_radio_buttons,5");

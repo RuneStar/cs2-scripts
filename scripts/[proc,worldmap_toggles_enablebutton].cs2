@@ -14,7 +14,7 @@ cc_create($component1, ^iftype_graphic, $int2);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(1, calc(($int0 * 21) + 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("clickcross,5");
-if (.cc_find($component1, $int0) = true) {
+if (.cc_find($component1, $int0) = ^true) {
 	.cc_setopbase("<col=ff9040><$string0></col>");
 	.cc_setonop("worldmap_toggles_op(event_opindex, $component1, $int0, $int2, $component4, $component5, $component6)");
 	.cc_setonvartransmit("worldmap_toggles_vartransmit($component1, $int0, $int2, $component4, $component5, $component6){var1568}");

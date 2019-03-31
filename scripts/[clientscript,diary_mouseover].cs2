@@ -12,21 +12,21 @@ if ($int3 = 0) {
 		$colour5 = ^red;
 	}
 }
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	if ($int3 = 1) {
 		cc_settrans(200);
 	} else {
 		cc_settrans(255);
 	}
 }
-if (cc_find($component0, calc($int1 + 1)) = true) {
+if (cc_find($component0, calc($int1 + 1)) = ^true) {
 	if ($int3 = 1) {
 		cc_setcolour(^white);
 	} else {
 		cc_setcolour($colour5);
 	}
 }
-if (cc_find($component0, calc($int1 + 2)) = true) {
+if (cc_find($component0, calc($int1 + 2)) = ^true) {
 	if ($int3 = 1) {
 		cc_setcolour(^white);
 	} else {

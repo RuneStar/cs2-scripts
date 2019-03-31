@@ -1,6 +1,6 @@
 // 845
 [clientscript,options_windowmode_mouseleave](component $component0, component $component1, graphic $graphic2, int $int3)
-if (cc_find($component0, $int3) = true) {
+if (cc_find($component0, $int3) = ^true) {
 	cc_setgraphic($graphic2);
 }
 ~deltooltip_action($component1);

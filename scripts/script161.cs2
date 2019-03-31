@@ -1,6 +1,6 @@
 // 161
 script161(inv $inv0, int $int1, component $component2, int $int3, int $int4, component $component5, int $int6, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8)
-if (cc_find($component2, $int3) = true) {
+if (cc_find($component2, $int3) = ^true) {
 	if (invother_getobj($inv0, $int1) ! null) {
 		if ($int6 = 1) {
 			cc_setobject(invother_getobj($inv0, $int1), invother_getnum($inv0, $int1));

@@ -8,7 +8,7 @@ def_int $array0(100);
 def_int $int1 = 0;
 def_int $int2 = 0;
 while (($int2 = 0) & ($int1 < 100)) {
-	if (cc_find(507:11, calc($int1 * 8)) = true) {
+	if (cc_find(507:11, calc($int1 * 8)) = ^true) {
 		$array0($int1) = $int1;
 		$int1 = calc($int1 + 1);
 	} else {
@@ -33,40 +33,40 @@ if ((((%varcint181 = 3) | (%varcint181 = 5)) | (%varcint181 = 7)) | (%varcint181
 	$int3 = $int1;
 	while ($int3 > 0) {
 		$int3 = calc($int3 - 1);
-		if (cc_find(507:11, calc($array0($int3) * 8)) = true) {
+		if (cc_find(507:11, calc($array0($int3) * 8)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 			~raids_partydetails_entry_init($int3, $array0($int3), $int0, true);
 		}
-		if (cc_find(507:11, calc(($array0($int3) * 8) + 1)) = true) {
+		if (cc_find(507:11, calc(($array0($int3) * 8) + 1)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find(507:11, calc(($array0($int3) * 8) + 2)) = true) {
+		if (cc_find(507:11, calc(($array0($int3) * 8) + 2)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find(507:11, calc(($array0($int3) * 8) + 3)) = true) {
+		if (cc_find(507:11, calc(($array0($int3) * 8) + 3)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find(507:11, calc(($array0($int3) * 8) + 4)) = true) {
+		if (cc_find(507:11, calc(($array0($int3) * 8) + 4)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
 		$int4 = calc($int4 + 14);
 	}
 } else {
 	while ($int3 < $int1) {
-		if (cc_find(507:11, calc($array0($int3) * 8)) = true) {
+		if (cc_find(507:11, calc($array0($int3) * 8)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 			~raids_partydetails_entry_init($int3, $array0($int3), $int0, true);
 		}
-		if (cc_find(507:11, calc(($array0($int3) * 8) + 1)) = true) {
+		if (cc_find(507:11, calc(($array0($int3) * 8) + 1)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find(507:11, calc(($array0($int3) * 8) + 2)) = true) {
+		if (cc_find(507:11, calc(($array0($int3) * 8) + 2)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find(507:11, calc(($array0($int3) * 8) + 3)) = true) {
+		if (cc_find(507:11, calc(($array0($int3) * 8) + 3)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find(507:11, calc(($array0($int3) * 8) + 4)) = true) {
+		if (cc_find(507:11, calc(($array0($int3) * 8) + 4)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
 		$int4 = calc($int4 + 14);

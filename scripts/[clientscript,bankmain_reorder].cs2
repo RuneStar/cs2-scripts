@@ -9,7 +9,7 @@ if ($component2 = $component6) {
 }
 def_int $int9 = ~script516($int3);
 if (((($component2 ! $component0) | ($int3 < 0)) | ($int3 >= 816)) | (~script516($int1) ! $int9)) {
-	if (cc_find($component0, $int1) = true) {
+	if (cc_find($component0, $int1) = ^true) {
 		cc_settrans(200);
 		cc_setontimer("script488(event_com, event_comid, $int4, calc(clientclock + 10))");
 	}
@@ -21,16 +21,16 @@ if ($obj10 = null) {
 }
 def_obj $obj11 = inv_getobj(bank, $int3);
 if ((((%varbit3959 = 0) | ($int3 = calc($int1 + 1))) | ($int3 = calc($int1 - 1))) | (($obj11 = null) & ($int9 = 0))) {
-	if (cc_find($component0, $int3) = true) {
+	if (cc_find($component0, $int3) = ^true) {
 		~bankmain_drawitem($obj10, inv_getnum(bank, $int1), $component0, $component5, $component6, $component7, $component8);
 	}
-	if (cc_find($component0, $int1) = true) {
+	if (cc_find($component0, $int1) = ^true) {
 		~bankmain_drawitem($obj11, inv_getnum(bank, $int3), $component0, $component5, $component6, $component7, $component8);
 	}
 	return;
 }
 if (($obj11 = null) | (~bankmain_searching = 1)) {
-	if (cc_find($component0, $int1) = true) {
+	if (cc_find($component0, $int1) = ^true) {
 		cc_settrans(200);
 		cc_setontimer("script488(event_com, event_comid, $int4, calc(clientclock + 10))");
 	}
@@ -41,7 +41,7 @@ def_int $int13 = -1;
 if ($int3 < $int1) {
 	$int12 = $int1;
 	while ($int12 > $int3) {
-		if (cc_find($component0, $int12) = true) {
+		if (cc_find($component0, $int12) = ^true) {
 			$int13 = calc($int12 - 1);
 			~bankmain_drawitem(inv_getobj(bank, $int13), inv_getnum(bank, $int13), $component0, $component5, $component6, $component7, $component8);
 		}
@@ -50,13 +50,13 @@ if ($int3 < $int1) {
 } else {
 	$int12 = $int1;
 	while ($int12 < $int3) {
-		if (cc_find($component0, $int12) = true) {
+		if (cc_find($component0, $int12) = ^true) {
 			$int13 = calc($int12 + 1);
 			~bankmain_drawitem(inv_getobj(bank, $int13), inv_getnum(bank, $int13), $component0, $component5, $component6, $component7, $component8);
 		}
 		$int12 = calc($int12 + 1);
 	}
 }
-if (cc_find($component0, $int3) = true) {
+if (cc_find($component0, $int3) = ^true) {
 	~bankmain_drawitem($obj10, inv_getnum(bank, $int1), $component0, $component5, $component6, $component7, $component8);
 }

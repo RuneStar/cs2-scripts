@@ -2,11 +2,11 @@
 [clientscript,scrollbar_vertical_drag](component $component0, component $component1, int $int2, int $int3)
 def_int $int4 = 0;
 def_int $int5 = 0;
-if (cc_find($component0, 1) = true) {
-	if (.cc_find($component0, 2) = true) {
+if (cc_find($component0, 1) = ^true) {
+	if (.cc_find($component0, 2) = ^true) {
 		.cc_setposition(0, calc($int2 + 16), ^setpos_abs_centre, ^setpos_abs_top);
 	}
-	if (.cc_find($component0, 3) = true) {
+	if (.cc_find($component0, 3) = ^true) {
 		.cc_setposition(0, calc((($int2 + 16) + cc_getheight) - 5), ^setpos_abs_centre, ^setpos_abs_top);
 	}
 	$int4 = calc((if_getheight($component0) - 32) - cc_getheight);

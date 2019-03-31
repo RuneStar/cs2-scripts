@@ -1,7 +1,7 @@
 // 154
 script154(inv $inv0, int $int1, component $component2, int $int3, int $int4, component $component5, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8)
 def_string $string9 = "";
-if (cc_find($component2, $int3) = true) {
+if (cc_find($component2, $int3) = ^true) {
 	if (inv_getobj($inv0, $int1) ! null) {
 		$string9 = "<col=ff981f><oc_name(inv_getobj($inv0, $int1))>";
 		cc_setobject(inv_getobj($inv0, $int1), inv_getnum($inv0, $int1));

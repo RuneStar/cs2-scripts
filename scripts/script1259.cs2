@@ -3,7 +3,7 @@ script1259(int $int0, component $component1, int $int2, string $string0)
 if (clientclock < $int0) {
 	return;
 }
-if (cc_find($component1, $int2) = true) {
+if (cc_find($component1, $int2) = ^true) {
 	cc_settext($string0);
 	cc_setontimer(null);
 }

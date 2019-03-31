@@ -2,7 +2,7 @@
 [proc,worldmap_elements_marker](coord $coord0, struct $struct1, component $component2, int $int3, int $int4, int $int5, int $int6, int $int7)(int)
 $coord0 = ~worldmap_findcoordinmap(worldmap_getcurrentmap, $coord0);
 if ($coord0 = null) {
-	if (cc_find($component2, $int7) = true) {
+	if (cc_find($component2, $int7) = ^true) {
 		cc_sethide(true);
 	}
 	return(calc($int7 + 1));
@@ -57,10 +57,10 @@ if ($int8 < calc(0 - $int15)) {
 	$int14 = 1;
 	$int13 = ~script1759;
 }
-if (testbit(%varbit5640, 4) = true) {
+if (testbit(%varbit5640, 4) = ^true) {
 	$int14 = 0;
 }
-if (cc_find($component2, $int7) = true) {
+if (cc_find($component2, $int7) = ^true) {
 	cc_sethide(false);
 	cc_setop(1, "Focus");
 	cc_setonop("script1756(event_opindex, $coord0, false)");

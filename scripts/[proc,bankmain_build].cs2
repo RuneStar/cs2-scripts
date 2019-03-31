@@ -40,7 +40,7 @@ if ($int13 = 1) {
 def_int $int15 = 816;
 def_int $int16 = calc(816 + (9 * 3));
 while ($int15 <= $int16) {
-	if (cc_find($component3, $int15) = true) {
+	if (cc_find($component3, $int15) = ^true) {
 		cc_sethide(true);
 	}
 	$int15 = calc($int15 + 1);
@@ -59,7 +59,7 @@ def_int $int26 = 0;
 def_string $string0 = "";
 if ((%varbit4150 <= 0) | (%varbit4150 > 9)) {
 	while ($int15 < 816) {
-		if (cc_find($component3, $int15) = true) {
+		if (cc_find($component3, $int15) = ^true) {
 			cc_sethide(true);
 		}
 		if (inv_getobj(bank, $int15) ! null) {
@@ -157,7 +157,7 @@ $int27, $int28 = ~script513(%varbit4150);
 def_int $int29 = 0;
 def_int $int30 = 0;
 while ($int15 < 816) {
-	if (cc_find($component3, $int15) = true) {
+	if (cc_find($component3, $int15) = ^true) {
 		$obj20 = inv_getobj(bank, $int15);
 		if ($obj20 ! null) {
 			$int24 = calc($int24 + 1);

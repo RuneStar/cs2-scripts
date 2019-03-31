@@ -3,19 +3,19 @@
 def_string $string0 = oc_param($obj0, 595);
 switch_obj ($obj0) {
 	case small_pouch_5509 :
-		if (testbit(%var261, 0) = true) {
+		if (testbit(%var261, 0) = ^true) {
 			$string0 = "Empty";
 		}
 	case medium_pouch_5510, medium_pouch_5511 :
-		if (testbit(%var261, 1) = true) {
+		if (testbit(%var261, 1) = ^true) {
 			$string0 = "Empty";
 		}
 	case large_pouch_5512, large_pouch_5513 :
-		if (testbit(%var261, 2) = true) {
+		if (testbit(%var261, 2) = ^true) {
 			$string0 = "Empty";
 		}
 	case giant_pouch_5514, giant_pouch_5515 :
-		if (testbit(%var261, 3) = true) {
+		if (testbit(%var261, 3) = ^true) {
 			$string0 = "Empty";
 		}
 }

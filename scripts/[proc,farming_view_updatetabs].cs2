@@ -2,7 +2,7 @@
 [proc,farming_view_updatetabs](component $component0, component $component1, component $component2)
 def_int $int3 = 0;
 while ($int3 <= 5) {
-	if ((cc_find($component0, calc($int3 * 2)) = true) & (.cc_find($component0, calc(($int3 * 2) + 1)) = true)) {
+	if ((cc_find($component0, calc($int3 * 2)) = ^true) & (.cc_find($component0, calc(($int3 * 2) + 1)) = ^true)) {
 		.cc_setcolour(0xff981f);
 		if (%varbit4776 = $int3) {
 			cc_setgraphic("combatboxes,3");

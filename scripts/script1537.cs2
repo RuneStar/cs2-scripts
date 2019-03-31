@@ -4,14 +4,14 @@ def_string $string0 = ~string_prependzero(3, tostring(%varbit5426));
 def_string $string1 = ~string_prependzero(4, tostring(%varbit5427));
 def_int $int0 = 0;
 while ($int0 < %varcint178) {
-	if ((cc_find(507:11, calc(($int0 * 8) + 5)) = true) & (.cc_find(507:11, calc(($int0 * 8) + 2)) = true)) {
+	if ((cc_find(507:11, calc(($int0 * 8) + 5)) = ^true) & (.cc_find(507:11, calc(($int0 * 8) + 2)) = ^true)) {
 		if (compare(cc_gettext, $string0) < 0) {
 			.cc_setcolour(^red);
 		} else {
 			.cc_setcolour(0xff981f);
 		}
 	}
-	if ((cc_find(507:11, calc(($int0 * 8) + 6)) = true) & (.cc_find(507:11, calc(($int0 * 8) + 3)) = true)) {
+	if ((cc_find(507:11, calc(($int0 * 8) + 6)) = ^true) & (.cc_find(507:11, calc(($int0 * 8) + 3)) = ^true)) {
 		if (compare(cc_gettext, $string1) < 0) {
 			.cc_setcolour(^red);
 		} else {

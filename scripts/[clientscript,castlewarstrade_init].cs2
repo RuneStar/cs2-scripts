@@ -5,7 +5,7 @@ def_int $int2 = 0;
 def_obj $obj3 = enum(int, namedobj, 852, $int2);
 while ($obj3 ! null) {
 	cc_create($component0, ^iftype_graphic, $int2);
-	if ((map_members = false) & (oc_members($obj3) = true)) {
+	if ((map_members = ^false) & (oc_members($obj3) = ^true)) {
 		cc_sethide(true);
 	} else {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);

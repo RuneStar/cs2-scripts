@@ -1,19 +1,19 @@
 // 2115
 script2115(int $int0, component $component1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8)
-if ((($int0 = 1) & (cc_find($component1, $int3) = true)) & (.cc_find($component1, $int2) = true)) {
+if ((($int0 = 1) & (cc_find($component1, $int3) = ^true)) & (.cc_find($component1, $int2) = ^true)) {
 	sound_synth(2266, 1, 0);
 	%varbit1777 = $int4;
 	~script2096($component1, $int2, $int3, $int4, $component5, $component6, $component7, $component8);
-	if ((($component1 ! $component5) & (cc_find($component5, $int3) = true)) & (.cc_find($component5, $int2) = true)) {
+	if ((($component1 ! $component5) & (cc_find($component5, $int3) = ^true)) & (.cc_find($component5, $int2) = ^true)) {
 		~script2096($component5, $int2, $int3, 0, $component5, $component6, $component7, $component8);
 	}
-	if ((($component1 ! $component6) & (cc_find($component6, $int3) = true)) & (.cc_find($component6, $int2) = true)) {
+	if ((($component1 ! $component6) & (cc_find($component6, $int3) = ^true)) & (.cc_find($component6, $int2) = ^true)) {
 		~script2096($component6, $int2, $int3, 1, $component5, $component6, $component7, $component8);
 	}
-	if ((($component1 ! $component7) & (cc_find($component7, $int3) = true)) & (.cc_find($component7, $int2) = true)) {
+	if ((($component1 ! $component7) & (cc_find($component7, $int3) = ^true)) & (.cc_find($component7, $int2) = ^true)) {
 		~script2096($component7, $int2, $int3, 3, $component5, $component6, $component7, $component8);
 	}
-	if ((($component1 ! $component8) & (cc_find($component8, $int3) = true)) & (.cc_find($component8, $int2) = true)) {
+	if ((($component1 ! $component8) & (cc_find($component8, $int3) = ^true)) & (.cc_find($component8, $int2) = ^true)) {
 		~script2096($component8, $int2, $int3, 2, $component5, $component6, $component7, $component8);
 	}
 }

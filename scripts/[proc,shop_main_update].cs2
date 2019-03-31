@@ -4,7 +4,7 @@ def_obj $obj5 = null;
 def_int $int6 = -1;
 def_int $int7 = 0;
 while ($int7 < $int1) {
-	if (cc_find($component0, calc($int7 + 1)) = true) {
+	if (cc_find($component0, calc($int7 + 1)) = ^true) {
 		$obj5 = inv_getobj($inv2, $int7);
 		if ($obj5 ! null) {
 			cc_sethide(false);
@@ -22,7 +22,7 @@ while ($int7 < $int1) {
 				} else {
 					cc_setop(9, "");
 				}
-				if (.cc_find(300:16, 0) = true) {
+				if (.cc_find(300:16, 0) = ^true) {
 					.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 					.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 					.cc_setgraphic("prayerglow");

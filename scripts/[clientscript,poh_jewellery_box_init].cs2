@@ -43,12 +43,12 @@ $int14, $int2 = ~poh_jewellery_box_addbutton(590:3, 1, $int3, $int0, $int14, $in
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:3, 1, $int3, $int0, $int14, $int2, 4, "Barbarian Outpost");
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:3, 1, $int3, $int0, $int14, $int2, 5, "Corporeal Beast");
 def_string $string1 = "Tears of Guthix";
-if (testbit($int1, 0) = false) {
+if (testbit($int1, 0) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:3, 1, $int3, $int0, $int14, $int2, 6, $string1);
 $string1 = "Wintertodt Camp";
-if (testbit($int1, 1) = false) {
+if (testbit($int1, 1) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:3, 1, $int3, $int0, $int14, $int2, 7, $string1);
@@ -65,26 +65,26 @@ $int14, $int2 = ~poh_jewellery_box_addbutton(590:5, 2, $int3, $int0, $int14, $in
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:5, 2, $int3, $int0, $int14, $int2, 14, "Crafting Guild");
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:5, 2, $int3, $int0, $int14, $int2, 15, "Cooking Guild");
 $string1 = "Woodcutting Guild";
-if (testbit($int1, 1) = false) {
+if (testbit($int1, 1) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:5, 2, $int3, $int0, $int14, $int2, 16, $string1);
 $string1 = "Farming Guild";
-if (testbit($int1, 1) = false) {
+if (testbit($int1, 1) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:5, 2, $int3, $int0, $int14, $int2, 17, $string1);
 $int14 = ~poh_jewellery_box_prepbox(590:6, 3, ring_of_wealth_5_11980, $int0, "Ring of Wealth");
 $int2, $int3 = ~poh_jewellerybox_getbuttonspacing(590:6, 4);
 $string1 = "Miscellania";
-if (testbit($int1, 2) = false) {
+if (testbit($int1, 2) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:6, 3, $int3, $int0, $int14, $int2, 18, $string1);
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:6, 3, $int3, $int0, $int14, $int2, 19, "Grand Exchange");
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:6, 3, $int3, $int0, $int14, $int2, 20, "Falador Park");
 $string1 = "Dondakan's Rock";
-if (testbit($int1, 3) = false) {
+if (testbit($int1, 3) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(590:6, 3, $int3, $int0, $int14, $int2, 21, $string1);

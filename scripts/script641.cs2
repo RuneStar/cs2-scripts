@@ -10,7 +10,7 @@ def_enum $enum8 = null;
 def_int $int9 = 0;
 while ($int9 <= 41) {
 	cc_create($component0, ^iftype_graphic, $int9);
-	if ((($int9 < 32) & (testbit(%var864, $int9) = true)) | (($int9 >= 32) & (testbit(%var1416, calc($int9 - 32)) = true))) {
+	if ((($int9 < 32) & (testbit(%var864, $int9) = ^true)) | (($int9 >= 32) & (testbit(%var1416, calc($int9 - 32)) = ^true))) {
 		if ($int9 = 11) {
 			$enum8 = 1686;
 		} else if ($int9 = 15) {

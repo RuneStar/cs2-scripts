@@ -12,7 +12,7 @@ while ($int3 <= $int9) {
 	$component4 = ~wom_get_tab($int3);
 	$component5 = ~wom_get_text($int3);
 	$string0 = enum(int, string, 2071, $int3);
-	if ((map_members = false) & (compare($string0, "Free") ! 0)) {
+	if ((map_members = ^false) & (compare($string0, "Free") ! 0)) {
 		$string0 = "";
 	}
 	if ($component4 = null) {

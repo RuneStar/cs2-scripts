@@ -8,7 +8,7 @@ if ($inv8 = null) {
 	if_sethide(false, $component3);
 	if_sethide(true, $component4);
 	if_sethide(true, $component5);
-	if (cc_find($component0, $int1) = true) {
+	if (cc_find($component0, $int1) = ^true) {
 		cc_settext("Grand Exchange");
 	}
 	return;
@@ -19,7 +19,7 @@ if (stockmarket_isofferempty($int7) = true) {
 	if_sethide(true, $component3);
 	if_sethide(true, $component4);
 	if_sethide(false, $component5);
-	if (cc_find($component0, $int1) = true) {
+	if (cc_find($component0, $int1) = ^true) {
 		cc_settext("Grand Exchange: Set up offer");
 	}
 	return;
@@ -27,6 +27,6 @@ if (stockmarket_isofferempty($int7) = true) {
 if_sethide(true, $component3);
 if_sethide(false, $component4);
 if_sethide(true, $component5);
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	cc_settext("Grand Exchange: Offer status");
 }

@@ -4,7 +4,7 @@ if (clientclock < $int0) {
 	return;
 }
 resume_namedialog($string0);
-if (cc_find($component1, $int2) = true) {
+if (cc_find($component1, $int2) = ^true) {
 	cc_setcolour(^white);
 	cc_setontimer(null);
 }

@@ -27,8 +27,8 @@ if ($int20 < 0) {
 	$int21 = calc(0 - $int21);
 	$boolean22 = true;
 }
-if ((cc_find($component4, $int9) = true) & (.cc_find($component4, $int10) = true)) {
-	if (testbit(%varbit5640, 1) = true) {
+if ((cc_find($component4, $int9) = ^true) & (.cc_find($component4, $int10) = ^true)) {
+	if (testbit(%varbit5640, 1) = ^true) {
 		cc_sethide(true);
 		.cc_sethide(true);
 	} else {
@@ -40,7 +40,7 @@ if ((cc_find($component4, $int9) = true) & (.cc_find($component4, $int10) = true
 } else {
 	cc_create($component4, ^iftype_rectangle, $int9);
 	.cc_create($component4, ^iftype_rectangle, $int10);
-	if (testbit(%varbit5640, 1) = true) {
+	if (testbit(%varbit5640, 1) = ^true) {
 		cc_sethide(true);
 		.cc_sethide(true);
 	} else {
@@ -60,8 +60,8 @@ def_int $int23 = 0;
 def_int $int24 = 0;
 def_int $int25 = 0;
 def_int $colour26 = ^black;
-if ((cc_find($component4, $int11) = true) & (.cc_find($component4, $int12) = true)) {
-	if (testbit(%varbit5640, 1) = true) {
+if ((cc_find($component4, $int11) = ^true) & (.cc_find($component4, $int12) = ^true)) {
+	if (testbit(%varbit5640, 1) = ^true) {
 		cc_sethide(true);
 		.cc_sethide(true);
 	} else {
@@ -78,7 +78,7 @@ if ((cc_find($component4, $int11) = true) & (.cc_find($component4, $int12) = tru
 	$colour26 = ~script246($int23, $int24, $int25);
 	cc_create($component4, ^iftype_rectangle, $int11);
 	.cc_create($component4, ^iftype_rectangle, $int12);
-	if (testbit(%varbit5640, 1) = true) {
+	if (testbit(%varbit5640, 1) = ^true) {
 		cc_sethide(true);
 		.cc_sethide(true);
 	} else {
@@ -102,7 +102,7 @@ if ((cc_find($component4, $int11) = true) & (.cc_find($component4, $int12) = tru
 	cc_setonop("script1756(event_opindex, $coord1, $boolean2)");
 	.cc_setonop("script1756(event_opindex, $coord0, $boolean2)");
 }
-if (cc_find($component4, $int13) = true) {
+if (cc_find($component4, $int13) = ^true) {
 	cc_setposition($int18, $int19, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize($int20, $int21, ^setsize_abs, ^setsize_abs);
 } else {

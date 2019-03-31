@@ -18,7 +18,7 @@ if ($int4 = 0) {
 	return;
 }
 if ($component1 ! $component0) {
-	if (cc_find($component0, $int2) = true) {
+	if (cc_find($component0, $int2) = ^true) {
 		cc_settrans(255);
 		cc_setontimer("script488(event_com, event_comid, 0, calc(clientclock + 30))");
 	}
@@ -41,9 +41,9 @@ if ($int3 = 0) {
 } else {
 	return;
 }
-if (cc_find($component0, $int2) = true) {
+if (cc_find($component0, $int2) = ^true) {
 	~rune_pouch_drawpouch_slot(enum(int, namedobj, 982, $int6), $int7);
 }
-if (cc_find($component0, $int3) = true) {
+if (cc_find($component0, $int3) = ^true) {
 	~rune_pouch_drawpouch_slot(enum(int, namedobj, 982, $int4), $int5);
 }

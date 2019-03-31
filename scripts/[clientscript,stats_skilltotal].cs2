@@ -5,7 +5,7 @@ if_settext("Total level:<br><tostring($int2)>", $component0);
 if_clearops($component0);
 def_string $string0 = "";
 def_string $string1 = "";
-if ((map_members = true) | (%varcint103 = 1)) {
+if ((map_members = ^true) | (%varcint103 = 1)) {
 	$string0 = "Total XP:";
 	$string1 = ~stats_tostring_totalxp(~stats_totalxp);
 } else {

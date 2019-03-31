@@ -33,7 +33,7 @@ def_int $int9 = 0;
 while ($int9 < $int3) {
 	$int8 = calc(($int9 / 5) * 37);
 	$int7 = calc(($int9 % 5) * 37);
-	if (cc_find($component1, $array0($int9)) = true) {
+	if (cc_find($component1, $array0($int9)) = ^true) {
 		cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setop(1, "Toggle");
 		cc_setopbase("<col=ff9040><enum(int, string, 860, $array0($int9))>");

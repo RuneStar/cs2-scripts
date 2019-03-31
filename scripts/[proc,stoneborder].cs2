@@ -42,7 +42,7 @@ if (~on_mobile = true) {
 	$int13 = 32;
 	$int14 = 32;
 }
-if (testbit($int1, 0) = false) {
+if (testbit($int1, 0) = ^false) {
 	~create_graphic($component0, 13, $graphic9, $int11, $int12, ^setpos_abs_left, ^setpos_abs_top, $int13, $int14, ^setsize_abs, ^setsize_abs);
 	cc_setonmouseleave("script229(event_com, event_comid, $graphic9, null)");
 	cc_setonmouseover("script229(event_com, event_comid, $graphic10, null)");

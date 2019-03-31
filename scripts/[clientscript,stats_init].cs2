@@ -41,7 +41,7 @@ if (~on_mobile = true) {
 if_setonstattransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .cc_getid, $component1){$stat4, attack, strength, defence, ranged, magic}", $component0);
 if_setonvartransmit("stats_setlevels($stat4, $component0, $string0, cc_getid, .cc_getid, $component1){var427, var1588, var1437, var1438, var1439, var1436, var1435, var1440, var1453, var1447, var1452, var1443, var1449, var1441, var1442, var1444, var1450, var1457, var1445, var1446, var1454, var1455, var1456, var1451, var1448}", $component0);
 ~stats_setlevels($stat4, $component0, $component1, $string0);
-if ((($boolean5 = false) | (map_members = true)) | (%varcint103 = 1)) {
+if ((($boolean5 = false) | (map_members = ^true)) | (%varcint103 = 1)) {
 	return;
 }
 cc_create($component0, ^iftype_graphic, 6);

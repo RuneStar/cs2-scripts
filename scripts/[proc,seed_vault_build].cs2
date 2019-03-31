@@ -118,7 +118,7 @@ while ($int8 < 70) {
 		}
 		$int18 = $array2($int19);
 		$int14 = $array1($int19);
-		if ((cc_find($component0, $int8) = true) & (.cc_find($component1, $int8) = true)) {
+		if ((cc_find($component0, $int8) = ^true) & (.cc_find($component1, $int8) = ^true)) {
 			cc_setposition(calc(($int18 + ($int15 / 2)) + (($int10 - 36) / 2)), $int14, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setposition(calc($int18 + ($int15 / 2)), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
 			cc_setdragdeadtime(5);

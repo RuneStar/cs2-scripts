@@ -1,10 +1,10 @@
 // 623
 script623(component $component0, int $int1, int $int2, int $int3)
 sound_synth(2266, 1, 0);
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	cc_settrans(220);
 	cc_setontimer("script488(event_com, event_comid, 255, calc(clientclock + 25))");
 }
-if (cc_find(400:2, calc(($int2 * 32) + $int3)) = true) {
+if (cc_find(400:2, calc(($int2 * 32) + $int3)) = ^true) {
 	cc_resume_pausebutton;
 }

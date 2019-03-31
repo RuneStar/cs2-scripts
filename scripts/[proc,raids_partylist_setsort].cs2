@@ -11,7 +11,7 @@ def_int $array0(40);
 def_int $int0 = 0;
 def_int $int1 = 0;
 while ($int1 < 40) {
-	if (cc_find(enum(int, component, 1537, $int0), 0) = true) {
+	if (cc_find(enum(int, component, 1537, $int0), 0) = ^true) {
 		$array0($int0) = $int0;
 		$int0 = calc($int0 + 1);
 	}
@@ -46,7 +46,7 @@ if (((((((%varcint180 = 1) | (%varcint180 = 3)) | (%varcint180 = 5)) | (%varcint
 		$component4 = enum(int, component, 1537, $array0($int2));
 		if ($component4 ! null) {
 			if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-			if ((cc_find($component4, 0) = true) & (.cc_find($component4, 3) = true)) {
+			if ((cc_find($component4, 0) = ^true) & (.cc_find($component4, 3) = ^true)) {
 				~raids_partylist_entry_init($int2, $component4, $array0($int2), 499:14, .cc_gettext);
 			}
 		}
@@ -57,7 +57,7 @@ if (((((((%varcint180 = 1) | (%varcint180 = 3)) | (%varcint180 = 5)) | (%varcint
 		$component4 = enum(int, component, 1537, $array0($int2));
 		if ($component4 ! null) {
 			if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-			if ((cc_find($component4, 0) = true) & (.cc_find($component4, 3) = true)) {
+			if ((cc_find($component4, 0) = ^true) & (.cc_find($component4, 3) = ^true)) {
 				~raids_partylist_entry_init($int2, $component4, $array0($int2), 499:14, .cc_gettext);
 			}
 		}

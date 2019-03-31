@@ -25,46 +25,46 @@ if (stockmarket_isofferempty($int9) = true) {
 		$obj28 = inv_getobj($inv0, 1);
 	}
 	if ($obj28 = null) {
-		if (cc_find($component8, $int15) = true) {
+		if (cc_find($component8, $int15) = ^true) {
 			cc_settext("Empty");
 		}
-		if (cc_find($component8, $int12) = true) {
+		if (cc_find($component8, $int12) = ^true) {
 			cc_sethide(true);
 		}
-		if (cc_find($component8, $int16) = true) {
+		if (cc_find($component8, $int16) = ^true) {
 			cc_sethide(true);
 		}
-		if (cc_find($component8, $int17) = true) {
+		if (cc_find($component8, $int17) = ^true) {
 			cc_sethide(true);
 		}
-		if (cc_find($component8, $int18) = true) {
+		if (cc_find($component8, $int18) = ^true) {
 			cc_sethide(true);
 		}
-		if (cc_find($component8, $int19) = true) {
+		if (cc_find($component8, $int19) = ^true) {
 			cc_sethide(true);
 		}
-		if (cc_find($component8, $int20) = true) {
+		if (cc_find($component8, $int20) = ^true) {
 			cc_sethide(true);
 		}
-		if (cc_find($component8, $int21) = true) {
+		if (cc_find($component8, $int21) = ^true) {
 			cc_sethide(true);
 		}
-		if (cc_find($component8, $int22) = true) {
+		if (cc_find($component8, $int22) = ^true) {
 			cc_sethide(true);
 		}
-		if (cc_find($component8, $int23) = true) {
+		if (cc_find($component8, $int23) = ^true) {
 			cc_sethide(true);
 		}
-		if (cc_find($component8, $int24) = true) {
+		if (cc_find($component8, $int24) = ^true) {
 			cc_sethide(true);
 		}
-		if (cc_find($component8, $int10) = true) {
+		if (cc_find($component8, $int10) = ^true) {
 			cc_sethide(false);
 		}
-		if (cc_find($component8, $int11) = true) {
+		if (cc_find($component8, $int11) = ^true) {
 			cc_sethide(false);
 		}
-		if ((cc_find($component8, $int13) = true) & (.cc_find($component8, $int14) = true)) {
+		if ((cc_find($component8, $int13) = ^true) & (.cc_find($component8, $int14) = ^true)) {
 			cc_sethide(false);
 			.cc_sethide(false);
 			if ($int37 = 1) {
@@ -79,7 +79,7 @@ if (stockmarket_isofferempty($int9) = true) {
 				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component27, $string1, 25, 512)");
 				$string1 = "Offer to SELL items.";
 				.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component27, $string1, 25, 512)");
-				if ((cc_find($component8, $int25) = true) & (.cc_find($component8, $int26) = true)) {
+				if ((cc_find($component8, $int25) = ^true) & (.cc_find($component8, $int26) = ^true)) {
 					cc_sethide(false);
 					.cc_sethide(false);
 					cc_setgraphic($graphic32);
@@ -96,7 +96,7 @@ if (stockmarket_isofferempty($int9) = true) {
 				.cc_setonmouseleave(null);
 				cc_setonmouserepeat(null);
 				.cc_setonmouserepeat(null);
-				if ((cc_find($component8, $int25) = true) & (.cc_find($component8, $int26) = true)) {
+				if ((cc_find($component8, $int25) = ^true) & (.cc_find($component8, $int26) = ^true)) {
 					cc_sethide(false);
 					.cc_sethide(false);
 					cc_setgraphic($graphic33);
@@ -119,29 +119,29 @@ if (stockmarket_isofferempty($int9) = true) {
 		$string0 = "Buy";
 	}
 }
-if (cc_find($component8, $int15) = true) {
+if (cc_find($component8, $int15) = ^true) {
 	cc_settext($string0);
 }
-if (cc_find($component8, $int10) = true) {
+if (cc_find($component8, $int10) = ^true) {
 	cc_sethide(true);
 }
-if (cc_find($component8, $int11) = true) {
+if (cc_find($component8, $int11) = ^true) {
 	cc_sethide(true);
 }
-if (cc_find($component8, $int13) = true) {
+if (cc_find($component8, $int13) = ^true) {
 	cc_sethide(true);
 }
-if (cc_find($component8, $int14) = true) {
+if (cc_find($component8, $int14) = ^true) {
 	cc_sethide(true);
 }
-if (cc_find($component8, $int25) = true) {
+if (cc_find($component8, $int25) = ^true) {
 	cc_sethide(true);
 }
-if (cc_find($component8, $int26) = true) {
+if (cc_find($component8, $int26) = ^true) {
 	cc_sethide(true);
 }
 def_string $string2 = ",";
-if (cc_find($component8, $int12) = true) {
+if (cc_find($component8, $int12) = ^true) {
 	cc_sethide(false);
 	cc_settrans(255);
 	cc_setonmouseover("cc_settrans($component8, $int12, 245, null)");
@@ -165,10 +165,10 @@ if (cc_find($component8, $int12) = true) {
 	}
 	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component27, $string1, 25, 512)");
 }
-if (cc_find($component8, $int16) = true) {
+if (cc_find($component8, $int16) = ^true) {
 	cc_sethide(false);
 }
-if (cc_find($component8, $int17) = true) {
+if (cc_find($component8, $int17) = ^true) {
 	cc_sethide(false);
 	cc_setobject($obj28, $int29);
 }
@@ -177,7 +177,7 @@ def_string $string3 = "";
 def_int $int39 = 0;
 def_int $int40 = 0;
 def_string $string4 = "";
-if (cc_find($component8, $int18) = true) {
+if (cc_find($component8, $int18) = ^true) {
 	cc_sethide(false);
 	$string3 = oc_name($obj28);
 	$int38 = cc_getwidth;
@@ -194,7 +194,7 @@ if (cc_find($component8, $int18) = true) {
 	}
 	cc_settext($string3);
 }
-if (cc_find($component8, $int19) = true) {
+if (cc_find($component8, $int19) = ^true) {
 	if ($int31 > 0) {
 		cc_sethide(false);
 		if ($int31 = 1) {
@@ -206,19 +206,19 @@ if (cc_find($component8, $int19) = true) {
 		cc_sethide(true);
 	}
 }
-if (cc_find($component8, $int20) = true) {
+if (cc_find($component8, $int20) = ^true) {
 	cc_sethide(false);
 }
-if (cc_find($component8, $int21) = true) {
+if (cc_find($component8, $int21) = ^true) {
 	cc_sethide(false);
 }
-if (cc_find($component8, $int23) = true) {
+if (cc_find($component8, $int23) = ^true) {
 	cc_sethide(false);
 }
-if (cc_find($component8, $int24) = true) {
+if (cc_find($component8, $int24) = ^true) {
 	cc_sethide(false);
 }
-if (cc_find($component8, $int22) = true) {
+if (cc_find($component8, $int22) = ^true) {
 	cc_sethide(false);
 	~script812($int9, $int29, $int30, $int36, $int1);
 }

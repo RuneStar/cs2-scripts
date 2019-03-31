@@ -1,6 +1,6 @@
 // 2686
 script2686(component $component0, int $int1, int $int2, int $int3, int $int4, string $string0, string $string1)
-if (($int1 ! -1) & (cc_find($component0, $int1) = true)) {
+if (($int1 ! -1) & (cc_find($component0, $int1) = ^true)) {
 	cc_resume_pausebutton;
 	cc_setonkey("script2685(event_keytyped, event_keypressed, event_com, event_comid, $int2, $string0, $string1, $int3, calc(clientclock + 20))");
 }

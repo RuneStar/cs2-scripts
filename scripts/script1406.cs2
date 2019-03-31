@@ -59,7 +59,7 @@ if ($int7 > if_getheight(458:3)) {
 	%varcint58 = 0;
 }
 ~scrollbar_vertical(458:35, 458:3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if (cc_find(458:35, 1) = true) {
+if (cc_find(458:35, 1) = ^true) {
 	~scrollbar_vertical_doscroll(458:35, 458:3, %varcint58, 1);
 }
 $int7 = $int4;

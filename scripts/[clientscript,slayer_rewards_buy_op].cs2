@@ -36,7 +36,7 @@ if ($int0 <= 1) {
 if ($int0 >= 10) {
 	return;
 }
-if (cc_find($component1, $int2) = true) {
+if (cc_find($component1, $int2) = ^true) {
 	cc_settrans(75);
 	sound_synth(2266, 1, 0);
 	cc_setontimer("slayer_rewards_buy_release($component1, $int2, calc(clientclock + 10))");

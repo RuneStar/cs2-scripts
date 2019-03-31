@@ -1,6 +1,6 @@
 // 1736
 [clientscript,worldmap_search_start](component $component0, int $int1, int $int2)
-if ((cc_find($component0, $int1) = true) & (.cc_find($component0, $int2) = true)) {
+if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
 	sound_synth(2266, 1, 0);
 	cc_setgraphic("tradebacking");
 	cc_setonmouserepeat(null);

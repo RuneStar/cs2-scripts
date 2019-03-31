@@ -3,7 +3,7 @@ script2327(int $int0, component $component1, int $int2, int $int3, string $strin
 if ($int0 ! 1) {
 	return;
 }
-if ((cc_find($component1, $int2) = true) & (.cc_find(50:0, enum(component, int, 1939, $component1)) = true)) {
+if ((cc_find($component1, $int2) = ^true) & (.cc_find(50:0, enum(component, int, 1939, $component1)) = ^true)) {
 	sound_synth(2266, 1, 0);
 	cc_setcolour(0x7f7f7f);
 	cc_settext("...");

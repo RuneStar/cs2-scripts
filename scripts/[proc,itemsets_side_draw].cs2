@@ -5,7 +5,7 @@ def_int $int2 = 0;
 def_int $int3 = inv_size(inv);
 while ($int3 > 0) {
 	$int3 = calc($int3 - 1);
-	if (cc_find($component0, $int3) = true) {
+	if (cc_find($component0, $int3) = ^true) {
 		cc_clearops;
 		cc_setontimer(null);
 		$obj1 = inv_getobj(inv, $int3);
@@ -13,7 +13,7 @@ while ($int3 > 0) {
 			cc_sethide(false);
 			cc_setobject($obj1, inv_getnum(inv, $int3));
 			if ((enum(obj, enum, 1034, $obj1) ! null) | (enum(obj, enum, 1034, oc_uncert($obj1)) ! null)) {
-				if ((map_members = false) & (oc_members($obj1) = true)) {
+				if ((map_members = ^false) & (oc_members($obj1) = ^true)) {
 					cc_settrans(130);
 					cc_setonop(null);
 				} else {

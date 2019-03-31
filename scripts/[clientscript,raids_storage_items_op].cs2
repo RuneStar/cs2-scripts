@@ -4,7 +4,7 @@ if ($int0 = 10) {
 	return;
 }
 sound_synth(2266, 1, 0);
-if (cc_find($component1, $int2) = true) {
+if (cc_find($component1, $int2) = ^true) {
 	cc_settrans(125);
 	cc_setontimer("script488(event_com, event_comid, 0, calc(clientclock + 10))");
 }

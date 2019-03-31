@@ -6,14 +6,14 @@ def_graphic $graphic2 = "banktabs,0";
 def_graphic $graphic3 = "banktabs,1";
 while ($int0 < 5) {
 	if (%varbit4842 = $int0) {
-		if (cc_find(234:14, $int0) = true) {
+		if (cc_find(234:14, $int0) = ^true) {
 			cc_setgraphic("banktabs,2");
 			cc_setop(1, "View tab");
 			cc_setonop(null);
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
 		}
-	} else if (cc_find(234:14, $int0) = true) {
+	} else if (cc_find(234:14, $int0) = ^true) {
 		if (inv_total(inv, enum(int, namedobj, 1244, $int0)) <= 0) {
 			cc_setgraphic("banktabs,3");
 			cc_setop(1, "");
@@ -28,7 +28,7 @@ while ($int0 < 5) {
 			cc_setonmouseleave("script229(234:14, $int0, $graphic2, null)");
 		}
 	}
-	if (cc_find(234:14, calc(5 + $int0)) = true) {
+	if (cc_find(234:14, calc(5 + $int0)) = ^true) {
 		if (inv_total(inv, enum(int, namedobj, 1244, $int0)) <= 0) {
 			cc_sethide(true);
 		} else {

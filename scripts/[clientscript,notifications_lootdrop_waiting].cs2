@@ -7,6 +7,6 @@ if (%varcint5 = 7) {
 	if_setontimer("notifications_lootdrop_waiting($component0, $int1, calc(clientclock + 100))", $component0);
 	return;
 }
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	~notifications_lootdrop_redraw($component0);
 }

@@ -1,14 +1,14 @@
 // 973
 [proc,tournament_sidepanel_setactive](component $component0, int $int1, int $int2)
 if (%var211 = $int2) {
-	if (cc_find($component0, $int1) = true) {
+	if (cc_find($component0, $int1) = ^true) {
 		cc_settrans(175);
 	}
 	if_setonmouserepeat(null, $component0);
 	if_setonmouseleave(null, $component0);
 	if_setonop(null, $component0);
 } else {
-	if (cc_find($component0, $int1) = true) {
+	if (cc_find($component0, $int1) = ^true) {
 		cc_settrans(255);
 	}
 	if_setonmouserepeat("cc_settrans(event_com, $int1, 200, null)", $component0);

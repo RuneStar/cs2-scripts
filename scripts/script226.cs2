@@ -6,18 +6,18 @@ def_int $int3 = calc(((if_getwidth(557:2) - 20) - (6 * 36)) / 5);
 def_int $int4 = calc(32 + 36);
 def_int $int5 = 0;
 def_int $int6 = 0;
-def_boolean $boolean7 = false;
+def_int $bit7 = ^false;
 def_int $int8 = 0;
 def_obj $obj9 = null;
 while ($int5 <= 37) {
 	cc_create(557:2, ^iftype_graphic, calc($int5 * 2));
 	.cc_create(557:2, ^iftype_text, calc(($int5 * 2) + 1));
 	if ($int5 < 32) {
-		$boolean7 = testbit($int0, $int5);
+		$bit7 = testbit($int0, $int5);
 	} else {
-		$boolean7 = testbit($int1, calc($int5 - 32));
+		$bit7 = testbit($int1, calc($int5 - 32));
 	}
-	if ($boolean7 = true) {
+	if ($bit7 = ^true) {
 		$obj9 = enum(int, namedobj, 767, $int5);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		.cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);

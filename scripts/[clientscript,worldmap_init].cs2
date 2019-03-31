@@ -95,7 +95,7 @@ def_int $int36 = 0;
 def_int $int37 = 0;
 $int26 = 0;
 while ($int36 < $int28) {
-	if (cc_find($component21, calc(($array0($int36) * 4) + 3)) = true) {
+	if (cc_find($component21, calc(($array0($int36) * 4) + 3)) = ^true) {
 		$string1, $string0 = ~script632(cc_gettext);
 		$int32 = string_length($string1);
 		if (($int32 > 0) & (compare($string1, tostring($int31)) ! 0)) {
@@ -131,7 +131,7 @@ while ($int36 < $int28) {
 			$int31 = $int35;
 		}
 	}
-	if (cc_find($component21, calc($array0($int36) * 4)) = true) {
+	if (cc_find($component21, calc($array0($int36) * 4)) = ^true) {
 		cc_setposition(0, $int26, ^setpos_abs_centre, ^setpos_abs_top);
 	}
 	if (~on_mobile = true) {
@@ -139,10 +139,10 @@ while ($int36 < $int28) {
 	} else {
 		$int37 = $int26;
 	}
-	if (cc_find($component21, calc(($array0($int36) * 4) + 1)) = true) {
+	if (cc_find($component21, calc(($array0($int36) * 4) + 1)) = ^true) {
 		cc_setposition(1, $int37, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find($component21, calc(($array0($int36) * 4) + 2)) = true) {
+	if (cc_find($component21, calc(($array0($int36) * 4) + 2)) = ^true) {
 		cc_setposition(0, $int26, ^setpos_abs_right, ^setpos_abs_top);
 	}
 	$int36 = calc($int36 + 1);
@@ -358,7 +358,7 @@ if (~on_mobile = false) {
 }
 while ($int28 > 0) {
 	$int28 = calc($int28 - 1);
-	if (cc_find($component16, $array0($int28)) = true) {
+	if (cc_find($component16, $array0($int28)) = ^true) {
 		cc_setposition(0, calc($int28 * $int27), ^setpos_abs_centre, ^setpos_abs_top);
 	}
 }

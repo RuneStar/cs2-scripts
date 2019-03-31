@@ -22,7 +22,7 @@ if ($model4 ! null) {
 .cc_settextfont(q8_full);
 .cc_settextshadow(true);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if (testbit($int1, $int0) = true) {
+if (testbit($int1, $int0) = ^true) {
 	.cc_settext("<str><enum(int, string, 1470, $int0)></str>");
 } else {
 	.cc_settext(enum(int, string, 1470, $int0));

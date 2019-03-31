@@ -15,12 +15,12 @@ if_setonop("prayer_op(event_opindex, $boolean0, $int1, $component2, cc_getid, .c
 if_clearops($component2);
 if ($boolean0 = true) {
 	if_setop(2, "Info", $component2);
-	if (testbit(%varbit4101, $int1) = true) {
+	if (testbit(%varbit4101, $int1) = ^true) {
 		cc_sethide(false);
 	} else {
 		cc_sethide(true);
 	}
-} else if (testbit(%varbit4101, $int1) = true) {
+} else if (testbit(%varbit4101, $int1) = ^true) {
 	if_setop(1, "Deactivate", $component2);
 	cc_sethide(false);
 } else {

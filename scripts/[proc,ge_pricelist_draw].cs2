@@ -21,7 +21,7 @@ def_int $int15 = -1;
 def_int $int16 = -1;
 $int3 = 0;
 if (%varbit4440 = 1) {
-	if (cc_find(237:4, $int2) = true) {
+	if (cc_find(237:4, $int2) = ^true) {
 		cc_setgraphic("options_radio_buttons,0");
 	}
 	$int10 = calc(32 + 10);
@@ -34,7 +34,7 @@ if (%varbit4440 = 1) {
 		if ($obj7 ! null) {
 			$int15 = calc((($int3 / 5) * $int12) + 20);
 			$int14 = calc($int11 + (($int3 % 5) * $int13));
-			if (cc_find(237:2, $int3) = true) {
+			if (cc_find(237:2, $int3) = ^true) {
 				cc_sethide(false);
 				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 				cc_setposition(calc($int14 + 5), calc($int15 + 5), ^setpos_abs_left, ^setpos_abs_top);
@@ -64,13 +64,13 @@ if (%varbit4440 = 1) {
 			} else {
 				cc_settext("<~script46($int8, ",")> coins");
 			}
-		} else if (cc_find(237:2, $int3) = true) {
+		} else if (cc_find(237:2, $int3) = ^true) {
 			cc_sethide(true);
 		}
 		$int3 = calc($int3 + 1);
 	}
 } else {
-	if (cc_find(237:4, $int2) = true) {
+	if (cc_find(237:4, $int2) = ^true) {
 		cc_setgraphic("options_radio_buttons,2");
 	}
 	$int5 = calc($int4 / 2);
@@ -97,7 +97,7 @@ if (%varbit4440 = 1) {
 				$int14 = $int5;
 			}
 			$int16 = calc($int15 + 2);
-			if (cc_find(237:2, $int3) = true) {
+			if (cc_find(237:2, $int3) = ^true) {
 				cc_sethide(false);
 				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 				cc_setposition($int14, $int16, ^setpos_abs_left, ^setpos_abs_top);
@@ -135,7 +135,7 @@ if (%varbit4440 = 1) {
 			} else {
 				cc_settext("<col=ffffff><~script46($int8, ",")> coins</col>");
 			}
-		} else if (cc_find(237:2, $int3) = true) {
+		} else if (cc_find(237:2, $int3) = ^true) {
 			cc_sethide(true);
 		}
 		$int3 = calc($int3 + 1);

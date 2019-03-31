@@ -13,7 +13,7 @@ if (enum(int, inv, 150, $int2) = null) {
 }
 def_int $int4 = 0;
 while ($int4 < 4) {
-	if (cc_find($component1, $int4) = true) {
+	if (cc_find($component1, $int4) = ^true) {
 		if ($int3 = 1) {
 			cc_settrans(240);
 			cc_setontimer("script811(event_com, event_comid, calc((clientclock + 3) - ($int4 * 2)), 240, 250)");
@@ -30,7 +30,7 @@ def_obj $obj7 = null;
 $int4 = inv_size(inv);
 while ($int4 > 0) {
 	$int4 = calc($int4 - 1);
-	if (cc_find($component0, $int4) = true) {
+	if (cc_find($component0, $int4) = ^true) {
 		cc_clearops;
 		cc_setposition(calc($int5 + (($int4 % 4) * 42)), calc($int6 + (($int4 / 4) * 36)), ^setpos_abs_left, ^setpos_abs_top);
 		$obj7 = inv_getobj(inv, $int4);

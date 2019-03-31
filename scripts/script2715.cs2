@@ -3,7 +3,7 @@ script2715(component $component0, int $int1, int $int2)
 if (clientclock < $int2) {
 	return;
 }
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	cc_setcolour(0xff981f);
 	if_setonmouserepeat("script85(event_com, cc_getid, 16777215)", $component0);
 	if_setonmouseleave("script85(event_com, cc_getid, 16750623)", $component0);

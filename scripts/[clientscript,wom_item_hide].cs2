@@ -1,6 +1,6 @@
 // 18
 [clientscript,wom_item_hide](int $int0, component $component1, int $int2, component $component3)
-if (($int2 = 1) & (cc_find($component1, $int0) = true)) {
+if (($int2 = 1) & (cc_find($component1, $int0) = ^true)) {
 	~chatdefault_opt_item;
 	~script21($component1, $component3);
 }

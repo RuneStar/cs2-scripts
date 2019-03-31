@@ -19,10 +19,10 @@ if ($int7 = $int2) {
 	if_sethide(false, $component5);
 	if_setop(1, "View", $component5);
 	if_setonop("poh_viewer_room_op(event_opindex, event_com, $int0)", $component5);
-	if (cc_find(422:5, calc((($int2 * $int4) + ($int8 * $int3)) + $int6)) = true) {
+	if (cc_find(422:5, calc((($int2 * $int4) + ($int8 * $int3)) + $int6)) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($component5, 1) = true) {
+	if (cc_find($component5, 1) = ^true) {
 		cc_sethide(true);
 	}
 } else if (($int7 = 1) & ($int2 = 2)) {
@@ -31,10 +31,10 @@ if ($int7 = $int2) {
 		if_sethide(false, $component5);
 		if_clearops($component5);
 		if_setonop(null, $component5);
-		if (cc_find(422:5, calc((($int2 * $int4) + ($int8 * $int3)) + $int6)) = true) {
+		if (cc_find(422:5, calc((($int2 * $int4) + ($int8 * $int3)) + $int6)) = ^true) {
 			cc_sethide(false);
 		}
-		if (cc_find($component5, 1) = true) {
+		if (cc_find($component5, 1) = ^true) {
 			cc_sethide(false);
 		}
 	} else {

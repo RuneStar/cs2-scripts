@@ -1,7 +1,7 @@
 // 2298
 [proc,tob_hud_statusrefresh](int $int0, int $int1, component $component2, component $component3, component $component4, string $string0)
 def_int $int5 = 0;
-if (($int1 ! 0) & (cc_find($component2, 0) = true)) {
+if (($int1 ! 0) & (cc_find($component2, 0) = ^true)) {
 	if_sethide(false, $component2);
 	if ((string_length($string0) <= 0) | (compare($string0, "null") = 0)) {
 		$string0 = "-";
@@ -15,14 +15,14 @@ if (($int1 ! 0) & (cc_find($component2, 0) = true)) {
 	if_setonmouserepeat("tooltip_mouserepeat($component2, -1, $component4, $string0, 25, 512)", $component2);
 	if_setonmouseleave("deltooltip($component4)", $component2);
 	if ($int1 = 31) {
-		if (.cc_find($component3, 0) = true) {
+		if (.cc_find($component3, 0) = ^true) {
 			.cc_setgraphic("orb_filler,3");
 		}
 		cc_setcolour(0x7f0000);
 		if_setsize(26, 26, ^setsize_abs, ^setsize_abs, $component3);
 		if_setonstattransmit(null, $component2);
 	} else {
-		if (.cc_find($component3, 0) = true) {
+		if (.cc_find($component3, 0) = ^true) {
 			.cc_setgraphic("orb_filler,1");
 		}
 		if ($int1 = 30) {

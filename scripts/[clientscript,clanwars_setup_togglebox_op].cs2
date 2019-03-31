@@ -4,11 +4,11 @@ if ((($int0 ! 1) | ($int3 < 0)) | ($int3 >= 32)) {
 	return;
 }
 sound_synth(2266, 1, 0);
-if (testbit(%var92, $int3) = true) {
+if (testbit(%var92, $int3) = ^true) {
 	%var92 = clearbit(%var92, $int3);
 } else {
 	%var92 = setbit(%var92, $int3);
 }
-if ((cc_find($component1, calc($int2 + 1)) = true) & (.cc_find($component1, calc($int2 + 2)) = true)) {
+if ((cc_find($component1, calc($int2 + 1)) = ^true) & (.cc_find($component1, calc($int2 + 2)) = ^true)) {
 	~clanwars_setup_togglebox_update($component1, $int3);
 }

@@ -10,12 +10,12 @@ def_int $int8 = -1;
 def_string $string0 = "";
 def_string $string1 = "";
 while ($int7 < $int3) {
-	if (cc_find($component1, $array0($int7)) = true) {
+	if (cc_find($component1, $array0($int7)) = ^true) {
 		$string0 = cc_gettext;
 	} else {
 		$string0 = "";
 	}
-	if (cc_find($component1, $int5) = true) {
+	if (cc_find($component1, $int5) = ^true) {
 		$string1 = cc_gettext;
 	} else {
 		$string1 = "";

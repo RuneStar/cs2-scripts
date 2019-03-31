@@ -12,16 +12,16 @@ if ($int3 < 15) {
 		return;
 	}
 	if ($int5 <= clientclock) {
-		if (cc_find($component0, $int1) = true) {
+		if (cc_find($component0, $int1) = ^true) {
 			cc_setondrag("bankmain_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc(clientclock + 2))");
 			return;
 		}
 	} else if (calc($int5 - clientclock) < 5) {
-		if (cc_find($component0, $int1) = true) {
+		if (cc_find($component0, $int1) = ^true) {
 			cc_setondrag("bankmain_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc($int5 + 2))");
 			return;
 		}
-	} else if (cc_find($component0, $int1) = true) {
+	} else if (cc_find($component0, $int1) = ^true) {
 		cc_setondrag("bankmain_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc($int5 + 1))");
 	}
 	if ($int3 < 5) {

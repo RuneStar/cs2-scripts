@@ -1,8 +1,8 @@
 // 2649
 script2649(component $component0, int $int1, int $int2, graphic $graphic3, int $int4)
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	cc_setgraphic($graphic3);
 }
-if (cc_find($component0, $int2) = true) {
+if (cc_find($component0, $int2) = ^true) {
 	cc_setcolour(0xff981f);
 }

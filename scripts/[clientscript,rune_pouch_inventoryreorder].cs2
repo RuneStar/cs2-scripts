@@ -5,7 +5,7 @@ if (($int2 < 0) | ($int2 >= $int6)) {
 	return;
 }
 if ($component1 ! $component0) {
-	if (cc_find($component0, $int2) = true) {
+	if (cc_find($component0, $int2) = ^true) {
 		cc_settrans($int4);
 		cc_setontimer("script488(event_com, event_comid, $int5, calc(clientclock + 30))");
 	}
@@ -19,9 +19,9 @@ if ($obj7 = null) {
 	return;
 }
 def_obj $obj8 = inv_getobj(inv, $int3);
-if (cc_find($component0, $int3) = true) {
+if (cc_find($component0, $int3) = ^true) {
 	~rune_pouch_drawinventory_slot($obj7, inv_getnum(inv, $int2));
 }
-if (cc_find($component0, $int2) = true) {
+if (cc_find($component0, $int2) = ^true) {
 	~rune_pouch_drawinventory_slot($obj8, inv_getnum(inv, $int3));
 }

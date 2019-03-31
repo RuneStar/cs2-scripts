@@ -14,12 +14,12 @@ if (enum(int, int, 1167, %varbit4694) > 0) {
 	$component6 = enum(int, component, 1163, $int5);
 	while ($component6 ! null) {
 		if_sethide(true, $component6);
-		if (cc_find($component6, 0) = true) {
+		if (cc_find($component6, 0) = ^true) {
 			cc_settext("");
 			cc_sethide(true);
 		}
 		while ($int7 <= 5) {
-			if (cc_find($component6, $int7) = true) {
+			if (cc_find($component6, $int7) = ^true) {
 				cc_delete;
 			}
 			$int7 = calc($int7 + 1);

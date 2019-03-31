@@ -14,7 +14,7 @@ if (~script1942 = 1) {
 def_int $int9 = ~tournament_beta_world;
 def_obj $obj10 = enum(int, namedobj, $enum8, $int7);
 while ($obj10 ! null) {
-	if (cc_find($component0, $int7) = true) {
+	if (cc_find($component0, $int7) = ^true) {
 		if (($int4 = 1) | (string_indexof_string(lowercase(oc_name($obj10)), $string0, 0) ! -1)) {
 			cc_sethide(false);
 			$int6 = calc(($int5 / 10) * $int3);
@@ -31,7 +31,7 @@ def_int $int11 = 0;
 if ($int9 = 1) {
 	$obj10 = enum(int, namedobj, 1906, $int11);
 	while ($obj10 ! null) {
-		if (cc_find($component0, $int7) = true) {
+		if (cc_find($component0, $int7) = ^true) {
 			if (($int4 = 1) | (string_indexof_string(lowercase(oc_name($obj10)), $string0, 0) ! -1)) {
 				cc_sethide(false);
 				$int6 = calc(($int5 / 10) * $int3);
@@ -46,7 +46,7 @@ if ($int9 = 1) {
 		$obj10 = enum(int, namedobj, 1906, $int11);
 	}
 }
-if (cc_find($component0, $int7) = true) {
+if (cc_find($component0, $int7) = ^true) {
 	if ($int5 > 0) {
 		cc_sethide(true);
 	} else {

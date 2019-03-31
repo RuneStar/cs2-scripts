@@ -12,7 +12,7 @@ def_int $int15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
 while ($int0 < $int1) {
-	if (cc_find($component3, $int0) = true) {
+	if (cc_find($component3, $int0) = ^true) {
 		$obj13 = inv_getobj(bank, $int0);
 		if (~bankmain_filteritem($obj13) = 1) {
 			cc_sethide(false);
@@ -35,13 +35,13 @@ if ($int14 <= 0) {
 	return($int8, $int15);
 }
 if ($int11 = 0) {
-	if (($int16 > 0) & (cc_find($component3, calc((816 + (9 * 2)) + $int2)) = true)) {
+	if (($int16 > 0) & (cc_find($component3, calc((816 + (9 * 2)) + $int2)) = ^true)) {
 		cc_sethide(false);
 		cc_setposition(calc(51 + ($int16 * (36 + $int9))), calc($int14 - 32), ^setpos_abs_left, ^setpos_abs_top);
 		$int16 = calc(8 - $int16);
 		cc_setsize(calc(($int16 * 36) + (($int16 - 1) * $int9)), 32, ^setsize_abs, ^setsize_abs);
 	}
-	if (($int12 > $int8) & (cc_find($component3, calc(((816 + 9) + $int2) - 1)) = true)) {
+	if (($int12 > $int8) & (cc_find($component3, calc(((816 + 9) + $int2) - 1)) = ^true)) {
 		cc_setposition(51, $int8, ^setpos_abs_left, ^setpos_abs_top);
 		cc_sethide(false);
 	}

@@ -1,6 +1,6 @@
 // 585
 [proc,clanwars_setup_togglebox_update](int $int0, int $int1)
-if (testbit(%var92, $int1) = true) {
+if (testbit(%var92, $int1) = ^true) {
 	cc_setgraphic("options_radio_buttons,2");
 	.cc_setcolour(^white);
 } else {

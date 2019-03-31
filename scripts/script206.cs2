@@ -5,49 +5,49 @@ def_string $string1 = "";
 if (%varbit642 > 0) {
 	$string0 = "<$string0>Some worn items will be taken off.<br>";
 }
-if ((testbit(%var286, 7) = true) | (testbit(%var286, 13) = true)) {
+if ((testbit(%var286, 7) = ^true) | (testbit(%var286, 13) = ^true)) {
 	$string0 = "<$string0>Boosted stats will be restored.<br>";
 }
-if (testbit(%var286, 9) = true) {
+if (testbit(%var286, 9) = ^true) {
 	$string0 = "<$string0>Existing prayers will be stopped.<br>";
 }
-if (testbit(%var286, 0) = true) {
+if (testbit(%var286, 0) = ^true) {
 	$string1 = "<$string1>You cannot forfeit the duel.<br>";
 }
-if (testbit(%var286, 1) = true) {
+if (testbit(%var286, 1) = ^true) {
 	$string1 = "<$string1>You cannot move.<br>";
 }
-if (testbit(%var286, 2) = true) {
+if (testbit(%var286, 2) = ^true) {
 	$string1 = "<$string1>You cannot switch weapons.<br>";
 }
-if (testbit(%var286, 4) = true) {
+if (testbit(%var286, 4) = ^true) {
 	$string1 = "<$string1>You cannot use Ranged attacks <col=ff0000>or salamanders<col=ffffff>.<br>";
 }
-if (testbit(%var286, 5) = true) {
+if (testbit(%var286, 5) = ^true) {
 	$string1 = "<$string1>You cannot use Melee attacks <col=ff0000>or salamanders<col=ffffff>.<br>";
 }
-if (testbit(%var286, 6) = true) {
+if (testbit(%var286, 6) = ^true) {
 	$string1 = "<$string1>You cannot use Magic attacks <col=ff0000>or salamanders<col=ffffff>.<br>";
 }
-if (testbit(%var286, 13) = true) {
+if (testbit(%var286, 13) = ^true) {
 	$string1 = "<$string1>You cannot use special attacks.<br>";
 }
-if (testbit(%var286, 12) = true) {
+if (testbit(%var286, 12) = ^true) {
 	$string1 = "<$string1>You can only attack with 'fun' weapons.<br>";
 }
-if (testbit(%var286, 7) = true) {
+if (testbit(%var286, 7) = ^true) {
 	$string1 = "<$string1>You cannot use potions or drinks.<br>";
 }
-if (testbit(%var286, 8) = true) {
+if (testbit(%var286, 8) = ^true) {
 	$string1 = "<$string1>You cannot use food.<br>";
 }
-if (testbit(%var286, 9) = true) {
+if (testbit(%var286, 9) = ^true) {
 	$string1 = "<$string1>You cannot use Prayer.<br>";
 }
-if (testbit(%var286, 10) = true) {
+if (testbit(%var286, 10) = ^true) {
 	$string1 = "<$string1>There will be obstacles in the arena.<br>";
 }
-if ((testbit(%var286, 17) = true) | (testbit(%var286, 19) = true)) {
+if ((testbit(%var286, 17) = ^true) | (testbit(%var286, 19) = ^true)) {
 	$string1 = "<$string1>You can't use 2H weapons such as bows.<br>";
 }
 if_settext($string0, 476:68);

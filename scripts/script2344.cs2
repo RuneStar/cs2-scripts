@@ -62,7 +62,7 @@ if_setsize($int9, $int5, ^setsize_abs, ^setsize_abs, $component2);
 def_int $int14 = if_getx($component0);
 def_int $int15 = if_gety($component0);
 def_int $int16 = 0;
-if (($int1 ! -1) & (cc_find($component0, $int1) = true)) {
+if (($int1 ! -1) & (cc_find($component0, $int1) = ^true)) {
 	$int16 = cc_getheight;
 	$int15 = calc(($int15 + cc_gety) - if_getscrolly($component0));
 	$int14 = calc(($int14 + cc_getx) - if_getscrollx($component0));

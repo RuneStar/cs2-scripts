@@ -15,7 +15,7 @@ cc_setobject($obj2, inv_getnum(worn, $int1));
 if_setopbase("<col=ff9040><oc_name($obj2)></col>", $component0);
 if_setop(1, "Remove", $component0);
 def_string $string0 = "";
-if ((map_members = true) | (oc_members($obj2) = false)) {
+if ((map_members = ^true) | (oc_members($obj2) = ^false)) {
 	$string0 = oc_param($obj2, 451);
 	if (string_length($string0) > 0) {
 		if_setop(2, $string0, $component0);

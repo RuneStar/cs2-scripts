@@ -13,13 +13,13 @@ if ($int1 = 6797) {
 	}
 	$string0 = oc_name($obj5);
 }
-if ((cc_find($component0, $int3) = true) & (.cc_find($component0, calc($int3 + 1)) = true)) {
+if ((cc_find($component0, $int3) = ^true) & (.cc_find($component0, calc($int3 + 1)) = ^true)) {
 	cc_settext($string0);
 	cc_setcolour($colour6);
 	.cc_setcolour($colour6);
 	.cc_settext("<tostring($int4)>/<tostring($int2)>");
 }
-if (cc_find($component0, calc($int3 + 2)) = true) {
+if (cc_find($component0, calc($int3 + 2)) = ^true) {
 	cc_setobject_nonum($obj5, $int4);
 }
 if_setopbase("<col=ff9040><oc_name($obj5)></col>", $component0);

@@ -1,6 +1,6 @@
 // 1744
 [clientscript,worldmap_hovertoggle](component $component0, int $int1, int $int2, int $int3)
-if ((cc_find($component0, $int1) = true) & (.cc_find($component0, $int1) = true)) {
+if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int1) = ^true)) {
 	cc_settrans($int3);
 	.cc_settrans($int3);
 }

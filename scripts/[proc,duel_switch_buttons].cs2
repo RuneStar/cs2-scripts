@@ -10,13 +10,13 @@ if_setonmouseleave("duel_mouseout_buttons(event_com, $component4)", $component3)
 if ($component0 ! $component1) {
 	if_setonmouseover("v2_stone_button_in(event_com)", $component1);
 }
-if (($component0 ! $component2) & (testbit(%var286, 3) = true)) {
+if (($component0 ! $component2) & (testbit(%var286, 3) = ^true)) {
 	if_setonmouseover("v2_stone_button_in(event_com)", $component2);
 }
-if (($component0 ! $component3) & (testbit(%var286, 3) = true)) {
+if (($component0 ! $component3) & (testbit(%var286, 3) = ^true)) {
 	if_setonmouseover("v2_stone_button_in(event_com)", $component3);
 }
-if (($component0 = $component1) | (testbit(%var286, 3) = true)) {
+if (($component0 = $component1) | (testbit(%var286, 3) = ^true)) {
 	~v2_stone_button_in($component0);
 	if_setonmouseover(null, $component0);
 	if_setonmouseleave("deltooltip($component4)", $component0);

@@ -4,7 +4,7 @@ if (clientclock < $int7) {
 	return;
 }
 if_setontimer(null, $component0);
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	cc_setcolour($colour2);
 	cc_settrans($int3);
 }

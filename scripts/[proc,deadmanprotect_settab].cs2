@@ -1,11 +1,11 @@
 // 1276
 [proc,deadmanprotect_settab](int $int0)
 def_int $int1 = 0;
-while (cc_find(226:4, $int1) = true) {
+while (cc_find(226:4, $int1) = ^true) {
 	cc_setgraphic("banktabs_small,1");
 	$int1 = calc($int1 + 2);
 }
-if (cc_find(226:4, calc($int0 * 2)) = true) {
+if (cc_find(226:4, calc($int0 * 2)) = ^true) {
 	cc_setgraphic("banktabs_small,0");
 }
 %varcint139 = $int0;

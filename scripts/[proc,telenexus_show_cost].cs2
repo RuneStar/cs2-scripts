@@ -14,7 +14,7 @@ def_stat $stat13 = struct_param($struct1, 672);
 def_int $int14 = struct_param($struct1, 673);
 def_int $int15 = 0;
 def_int $int16 = 0;
-if (cc_find($component3, 0) = true) {
+if (cc_find($component3, 0) = ^true) {
 	cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
 	cc_sethide(false);
 }

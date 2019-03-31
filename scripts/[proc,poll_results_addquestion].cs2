@@ -169,7 +169,7 @@ while ($int41 < $int1) {
 	$string1, $string0 = ~script632($string0);
 	if ($int41 = 0) {
 		$string2 = $string1;
-	} else if ((((((($int41 = 1) & (($int1 = 2) | (($int1 = 3) & ($array0(40) = 2)))) & ($int0 = -1)) & (compare(lowercase($string2), "yes") = 0)) & (compare(lowercase($string1), "no") = 0)) & ($array1(0) >= calc(75 * 10))) & (cc_find(345:11, $int37) = true)) {
+	} else if ((((((($int41 = 1) & (($int1 = 2) | (($int1 = 3) & ($array0(40) = 2)))) & ($int0 = -1)) & (compare(lowercase($string2), "yes") = 0)) & (compare(lowercase($string1), "no") = 0)) & ($array1(0) >= calc(75 * 10))) & (cc_find(345:11, $int37) = ^true)) {
 		cc_setcolour(^green);
 	}
 	$int39 = calc((paraheight($array0(39), p11_full, $string1) * 10) + 2);
@@ -184,7 +184,7 @@ while ($int41 < $int1) {
 	.cc_setposition($int43, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($array0(39), $int39, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(95, $int39, ^setsize_abs, ^setsize_abs);
-	if (testbit($int2, $int41) = true) {
+	if (testbit($int2, $int41) = ^true) {
 		cc_setcolour(0xffff7f);
 		.cc_setcolour(0xffff7f);
 	} else if ($int41 = $array0(40)) {
@@ -225,13 +225,13 @@ while ($int41 < $int1) {
 }
 %varcint49 = calc(%varcint49 + 3);
 $int39 = calc(%varcint49 - $int38);
-if (cc_find(345:11, $int37) = true) {
+if (cc_find(345:11, $int37) = ^true) {
 	cc_setsize($int35, $int39, ^setsize_abs, ^setsize_abs);
 }
-if (cc_find(345:11, calc($int37 + 1)) = true) {
+if (cc_find(345:11, calc($int37 + 1)) = ^true) {
 	cc_setsize($int35, $int39, ^setsize_abs, ^setsize_abs);
 }
-if (cc_find(345:11, calc($int37 + 2)) = true) {
+if (cc_find(345:11, calc($int37 + 2)) = ^true) {
 	cc_setsize(calc($int35 - 2), calc($int39 - 2), ^setsize_abs, ^setsize_abs);
 }
 %varcint49 = calc(%varcint49 + 3);

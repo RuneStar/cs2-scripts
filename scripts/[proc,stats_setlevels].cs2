@@ -68,7 +68,7 @@ if (~deadman_world = 1) {
 		}
 	}
 }
-if (.cc_find($component1, 5) = true) {
+if (.cc_find($component1, 5) = ^true) {
 	if ($int9 = 1) {
 		.cc_sethide(false);
 	} else {
@@ -86,7 +86,7 @@ if (.cc_find($component1, 5) = true) {
 		.cc_sethide(true);
 	}
 }
-if ((($boolean3 = true) & (map_members = false)) & (%varcint103 = 0)) {
+if ((($boolean3 = true) & (map_members = ^false)) & (%varcint103 = 0)) {
 	$string2 = "<col=ff0000><$string0>:</col>";
 	$string3 = "<col=ff0000>Members Only</col>";
 }

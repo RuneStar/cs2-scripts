@@ -7,7 +7,7 @@ def_int $int14 = calc(paraheight($int13, p12_full, $string1) * $int5);
 if (($setposv7 = ^setpos_abs_top) & ($int8 = 103)) {
 	$int6 = calc($int6 - $int14);
 }
-if ((cc_find($component2, calc($int0 * 2)) = true) & (.cc_find($component2, calc(($int0 * 2) + 1)) = true)) {
+if ((cc_find($component2, calc($int0 * 2)) = ^true) & (.cc_find($component2, calc(($int0 * 2) + 1)) = ^true)) {
 	if_setsize($int11, $int14, ^setsize_abs, ^setsize_abs, $component1);
 	if_setposition($int4, $int6, ^setpos_abs_left, $setposv7, $component1);
 	cc_sethide(false);

@@ -20,7 +20,7 @@ if ($int0 = 3) {
 } else {
 	return;
 }
-if (cc_find($component1, 0) = true) {
+if (cc_find($component1, 0) = ^true) {
 	cc_setcolour(^white);
 	cc_setontimer("script1233(event_com, event_comid, $int0, calc(clientclock + 30))");
 }

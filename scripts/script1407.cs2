@@ -10,12 +10,12 @@ def_int $int7 = -1;
 def_string $string0 = "";
 def_string $string1 = "";
 while ($int6 < $int2) {
-	if (cc_find(enum(int, component, 1461, $array0($int6)), 0) = true) {
+	if (cc_find(enum(int, component, 1461, $array0($int6)), 0) = ^true) {
 		$string0 = cc_gettext;
 	} else {
 		$string0 = "";
 	}
-	if (cc_find(enum(int, component, 1461, $int4), 0) = true) {
+	if (cc_find(enum(int, component, 1461, $int4), 0) = ^true) {
 		$string1 = cc_gettext;
 	} else {
 		$string1 = "";

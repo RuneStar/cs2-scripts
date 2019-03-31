@@ -5,7 +5,7 @@ def_int $int12 = calc(paraheight($int11, p12_full, $string0) * $int5);
 if (($setposv7 = ^setpos_abs_top) & ($int8 = 103)) {
 	$int6 = calc($int6 - $int12);
 }
-if (cc_find($component2, calc($int0 * 2)) = true) {
+if (cc_find($component2, calc($int0 * 2)) = ^true) {
 	if_setsize($int11, $int12, ^setsize_abs, ^setsize_abs, $component1);
 	if_setposition($int4, $int6, ^setpos_abs_left, $setposv7, $component1);
 	cc_sethide(false);
@@ -15,7 +15,7 @@ if (cc_find($component2, calc($int0 * 2)) = true) {
 	cc_setcolour($colour9);
 	cc_settextshadow($boolean10);
 }
-if (cc_find($component2, calc(($int0 * 2) + 1)) = true) {
+if (cc_find($component2, calc(($int0 * 2) + 1)) = ^true) {
 	cc_settext("");
 	cc_sethide(true);
 }

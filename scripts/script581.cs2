@@ -10,24 +10,24 @@ def_int $int8 = $int4;
 while ($int8 > 0) {
 	$int8 = calc($int8 - 1);
 	if ($int8 = $int6) {
-		if (cc_find($component2, calc(($int8 * 3) + $int5)) = true) {
+		if (cc_find($component2, calc(($int8 * 3) + $int5)) = ^true) {
 			cc_setonop(null);
 		}
-		if (cc_find($component2, calc((($int8 * 3) + $int5) + 1)) = true) {
+		if (cc_find($component2, calc((($int8 * 3) + $int5) + 1)) = ^true) {
 			cc_setgraphic("options_radio_buttons,2");
 		}
-		if (cc_find($component2, calc((($int8 * 3) + $int5) + 2)) = true) {
+		if (cc_find($component2, calc((($int8 * 3) + $int5) + 2)) = ^true) {
 			cc_setcolour(^white);
 		}
 		$int7 = calc($int8 * 17);
 	} else {
-		if (cc_find($component2, calc(($int8 * 3) + $int5)) = true) {
+		if (cc_find($component2, calc(($int8 * 3) + $int5)) = ^true) {
 			cc_setonop("script579(event_opindex, $int8, $enum0, $component1, $component2, $component3, $int4)");
 		}
-		if (cc_find($component2, calc((($int8 * 3) + $int5) + 1)) = true) {
+		if (cc_find($component2, calc((($int8 * 3) + $int5) + 1)) = ^true) {
 			cc_setgraphic("options_radio_buttons,0");
 		}
-		if (cc_find($component2, calc((($int8 * 3) + $int5) + 2)) = true) {
+		if (cc_find($component2, calc((($int8 * 3) + $int5) + 2)) = ^true) {
 			cc_setcolour(0xff981f);
 		}
 	}

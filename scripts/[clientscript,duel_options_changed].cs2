@@ -5,7 +5,7 @@ def_component $component3 = 482:116;
 if (($int1 >= 14) & ($int1 <= 27)) {
 	$component3 = 482:91;
 }
-if (($int2 ! -1) & (cc_find($component3, $int2) = true)) {
+if (($int2 ! -1) & (cc_find($component3, $int2) = ^true)) {
 	cc_sethide(false);
 	cc_setontimer("script756($component3, $int2, clientclock)");
 }

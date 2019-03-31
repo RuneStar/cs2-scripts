@@ -187,6 +187,6 @@ switch_maparea (worldmap_getcurrentmap) {
 		$int5 = ~script1753(3_59_158_37_47, 1_59_158_37_46, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_59_158_37_46, 3_59_158_37_47, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 }
-if (testbit(%varbit5640, 0) = false) {
+if (testbit(%varbit5640, 0) = ^false) {
 	$int5 = ~worldmap_elements_marker(%varcint188, 1, $component0, $int1, $int2, $int3, $int4, $int5);
 }

@@ -1,6 +1,6 @@
 // 1437
 script1437(component $component0, int $int1)
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	sound_synth(2266, 1, 0);
 	cc_resume_pausebutton;
 }

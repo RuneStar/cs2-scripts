@@ -8,7 +8,7 @@ if ($int0 = 1) {
 } else {
 	return;
 }
-if ((cc_find($component2, $int3) = true) & (.cc_find(50:0, $int5) = true)) {
+if ((cc_find($component2, $int3) = ^true) & (.cc_find(50:0, $int5) = ^true)) {
 	sound_synth(2266, 1, 0);
 	cc_settrans(200);
 	cc_setonmouserepeat(null);

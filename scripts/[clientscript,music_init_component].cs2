@@ -10,7 +10,7 @@ def_int $int8 = 15;
 if (~on_mobile = true) {
 	$int8 = scale(4, 3, $int8);
 }
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	cc_setontimer(null);
 	$int3 = enum(int, int, 818, $int1);
 	if ($int3 ! 0) {
@@ -68,7 +68,7 @@ if (cc_find($component0, $int1) = true) {
 				case 19 :
 					$int7 = %var2065;
 			}
-			if (testbit($int7, $int6) = true) {
+			if (testbit($int7, $int6) = ^true) {
 				~music_setcolour(0x0dc10d);
 			} else if (($int3 = 331) & (%varbit1028 > 35)) {
 				~music_setcolour(0x0dc10d);

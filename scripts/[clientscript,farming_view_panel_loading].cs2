@@ -1,6 +1,6 @@
 // 1118
 [clientscript,farming_view_panel_loading](component $component0)
-if (cc_find($component0, 0) = true) {
+if (cc_find($component0, 0) = ^true) {
 	return;
 }
 cc_create($component0, ^iftype_text, ~thinbox($component0, 0));

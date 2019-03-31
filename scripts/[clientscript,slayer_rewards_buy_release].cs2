@@ -3,7 +3,7 @@
 if (clientclock < $int2) {
 	return;
 }
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	cc_settrans(0);
 	cc_setontimer(null);
 }

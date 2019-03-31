@@ -3,7 +3,7 @@
 cc_setontimer(null);
 cc_clearops;
 cc_setop(10, "Examine");
-if ((map_members = false) & (oc_members(enum(int, namedobj, $enum0, -1)) = true)) {
+if ((map_members = ^false) & (oc_members(enum(int, namedobj, $enum0, -1)) = ^true)) {
 	cc_settrans(130);
 	cc_setonop(null);
 	return;

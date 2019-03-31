@@ -1,6 +1,6 @@
 // 960
 [proc,worldswitcher_entry_draw](component $component0, int $int1, int $int2, component $component3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, component $component17, string $string0)(int)
-if (($int4 ! -1) & (.cc_find($component3, $int4) = true)) {
+if (($int4 ! -1) & (.cc_find($component3, $int4) = ^true)) {
 	.cc_sethide(false);
 	.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
 	if (string_length($string0) > 0) {
@@ -17,9 +17,9 @@ def_int $int18 = 0;
 def_int $int19 = 0;
 if (map_world = $int5) {
 	$int18 = 1;
-} else if (testbit($int6, 7) = true) {
+} else if (testbit($int6, 7) = ^true) {
 	$int19 = enum(int, int, 1496, $int5);
-	if (testbit($int6, 0) = true) {
+	if (testbit($int6, 0) = ^true) {
 		if ($int15 < $int19) {
 			$int18 = 1;
 		}
@@ -35,7 +35,7 @@ cc_setfill(true);
 if ($int18 = 0) {
 	cc_setcolour(^white);
 	cc_settrans(255);
-	if (($int4 ! -1) & (.cc_find($component3, $int4) = true)) {
+	if (($int4 ! -1) & (.cc_find($component3, $int4) = ^true)) {
 		.cc_setonmouseover("cc_settrans($component0, cc_getid, 200, null)");
 		.cc_setonmouseleave("cc_settrans($component0, cc_getid, 255, $component17)");
 		.cc_setonop("logout_op(event_opindex, 6, $int5)");
@@ -51,7 +51,7 @@ if ($int18 = 0) {
 		cc_setcolour(^black);
 	}
 	cc_settrans(175);
-	if (($int4 ! -1) & (.cc_find($component3, $int4) = true)) {
+	if (($int4 ! -1) & (.cc_find($component3, $int4) = ^true)) {
 		.cc_setonmouseleave("deltooltip($component17)");
 		.cc_setonop(null);
 	} else {
@@ -75,28 +75,28 @@ if ($int5 <= 0) {
 } else {
 	.cc_settext(tostring($int5));
 }
-if (testbit($int6, 2) = true) {
+if (testbit($int6, 2) = ^true) {
 	cc_setgraphic("worldswitcher_stars,2");
 	if ($int18 = 0) {
 		.cc_setcolour(0xf0f000);
 	} else {
 		.cc_setcolour(0x7f7f7f);
 	}
-} else if (testbit($int6, 29) = true) {
+} else if (testbit($int6, 29) = ^true) {
 	cc_setgraphic("worldswitcher_stars,3");
 	if ($int18 = 0) {
 		.cc_setcolour(0xf0f000);
 	} else {
 		.cc_setcolour(0x7f7f7f);
 	}
-} else if (testbit($int6, 25) = true) {
+} else if (testbit($int6, 25) = ^true) {
 	cc_setgraphic("worldswitcher_stars,4");
 	if ($int18 = 0) {
 		.cc_setcolour(0xf0f000);
 	} else {
 		.cc_setcolour(0x7f7f7f);
 	}
-} else if (testbit($int6, 0) = true) {
+} else if (testbit($int6, 0) = ^true) {
 	cc_setgraphic("worldswitcher_stars,1");
 	if ($int18 = 0) {
 		.cc_setcolour(0xf0f000);
@@ -152,7 +152,7 @@ cc_setsize($int14, $int9, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, $int2, ^setpos_abs_right, ^setpos_abs_top);
 if ($int18 = 1) {
 	cc_setcolour(0x7f7f7f);
-} else if (((testbit($int6, 2) = true) | (testbit($int6, 29) = true)) | (testbit($int6, 25) = true)) {
+} else if (((testbit($int6, 2) = ^true) | (testbit($int6, 29) = ^true)) | (testbit($int6, 25) = ^true)) {
 	cc_setcolour(^red);
 } else {
 	cc_setcolour(0xff981f);

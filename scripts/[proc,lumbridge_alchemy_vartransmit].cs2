@@ -34,7 +34,7 @@ if (%varbit4554 < 30) {
 def_int $int6 = $int5;
 while ($int6 > 0) {
 	$int6 = calc($int6 - 1);
-	if (cc_find($component3, $int6) = true) {
+	if (cc_find($component3, $int6) = ^true) {
 		cc_setop(1, $string0);
 	}
 }

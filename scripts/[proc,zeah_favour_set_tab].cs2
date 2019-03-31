@@ -6,19 +6,19 @@ if_sethide(true, $component10);
 if_sethide(true, $component11);
 if_sethide(true, $component12);
 def_graphic $graphic13 = "banktabs,0";
-if (cc_find($component3, 0) = true) {
+if (cc_find($component3, 0) = ^true) {
 	cc_setgraphic($graphic13);
 }
-if (cc_find($component4, 0) = true) {
+if (cc_find($component4, 0) = ^true) {
 	cc_setgraphic($graphic13);
 }
-if (cc_find($component5, 0) = true) {
+if (cc_find($component5, 0) = ^true) {
 	cc_setgraphic($graphic13);
 }
-if (cc_find($component6, 0) = true) {
+if (cc_find($component6, 0) = ^true) {
 	cc_setgraphic($graphic13);
 }
-if (cc_find($component7, 0) = true) {
+if (cc_find($component7, 0) = ^true) {
 	cc_setgraphic($graphic13);
 }
 if_setonmouserepeat("zeah_favour_tab_mouserepeat(event_com, $component2, 3)", $component3);
@@ -57,7 +57,7 @@ if (%varcint79 = 3) {
 	return;
 }
 if_sethide(false, $component15);
-if (cc_find($component14, 0) = true) {
+if (cc_find($component14, 0) = ^true) {
 	cc_setgraphic("banktabs,2");
 }
 if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component2, enum(int, string, 1264, %varcint79), 25, 512)", $component14);

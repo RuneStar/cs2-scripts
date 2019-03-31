@@ -2,9 +2,9 @@
 script1279(int $int0)(int, int, int)
 def_stat $stat1 = enum(int, stat, 681, $int0);
 def_int $int2 = stat_base($stat1);
-def_boolean $boolean3 = testbit(%var1295, calc($int0 - 1));
+def_int $bit3 = testbit(%var1295, calc($int0 - 1));
 def_int $int4 = 50;
-if ($boolean3 = true) {
+if ($bit3 = ^true) {
 	if (%varcint139 < 3) {
 		return($int2, $int2, 0);
 	}

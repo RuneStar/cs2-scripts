@@ -4,7 +4,7 @@ if ($int0 ! 1) {
 	return;
 }
 sound_synth(2266, 1, 0);
-if (cc_find($component1, $int2) = true) {
+if (cc_find($component1, $int2) = ^true) {
 	cc_setcolour(^white);
 	cc_settrans(200);
 }
@@ -13,6 +13,6 @@ if_setonop(null, $component1);
 if_setonmouserepeat(null, $component1);
 if_setonmouseleave(null, $component1);
 if_setontimer("raids_partylist_reset($component1, $int2, $int3, $int4, $int5, $int6, $int7, $string0, calc(clientclock + 80), $component8)", $component1);
-if (cc_find($component8, $int7) = true) {
+if (cc_find($component8, $int7) = ^true) {
 	cc_resume_pausebutton;
 }

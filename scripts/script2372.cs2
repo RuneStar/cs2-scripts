@@ -11,16 +11,16 @@ def_int $int10 = 0;
 if ($int2 ! %varcint222) {
 	$enum3 = ~toplevel_getcomponents;
 	if ($enum3 = 1745) {
-		if ((testbit($int1, 0) = true) | (testbit($int1, 4) = true)) {
+		if ((testbit($int1, 0) = ^true) | (testbit($int1, 4) = ^true)) {
 			$int4 = 1;
 		}
-		if (testbit($int1, 1) = true) {
+		if (testbit($int1, 1) = ^true) {
 			$int5 = 1;
 		}
-		if (testbit($int1, 2) = true) {
+		if (testbit($int1, 2) = ^true) {
 			$int6 = 1;
 		}
-		if (testbit($int1, 3) = true) {
+		if (testbit($int1, 3) = ^true) {
 			$int7 = 1;
 		}
 		if (($int4 = 1) & (~script2518 = 1)) {
@@ -38,7 +38,7 @@ if ($int2 ! %varcint222) {
 		} else {
 			$int7 = 0;
 		}
-		if (($int4 = 1) & (((((testbit($int1, 4) = false) | (%varcint41 ! 1337)) | (if_hassub(162:560) = true)) | (if_hassub(162:561) = true)) | (if_gethide(162:40) = false))) {
+		if (($int4 = 1) & (((((testbit($int1, 4) = ^false) | (%varcint41 ! 1337)) | (if_hassub(162:560) = true)) | (if_hassub(162:561) = true)) | (if_gethide(162:40) = false))) {
 			$int9 = if_getwidth(enum(component, component, $enum3, 164:64));
 		}
 		if ($int5 = 1) {

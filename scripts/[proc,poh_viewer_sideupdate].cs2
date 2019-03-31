@@ -5,7 +5,7 @@ def_int $int16 = $int15;
 if (%varbit5330 > $int15) {
 	while ($int16 > 0) {
 		$int16 = calc($int16 - 1);
-		if (cc_find(422:5, $int16) = true) {
+		if (cc_find(422:5, $int16) = ^true) {
 			cc_clearops;
 			cc_setop(1, "Select");
 			cc_setonop("opsound(event_opindex, 2)");
@@ -17,7 +17,7 @@ if (%varbit5330 > $int15) {
 } else if ((%varbit5332 = 0) & (%varbit5330 = 0)) {
 	while ($int16 > 0) {
 		$int16 = calc($int16 - 1);
-		if (cc_find(422:5, $int16) = true) {
+		if (cc_find(422:5, $int16) = ^true) {
 			cc_clearops;
 			cc_setop(6, "Add room");
 			cc_setonop("opsound(event_opindex, 64)");
@@ -29,7 +29,7 @@ if (%varbit5330 > $int15) {
 } else {
 	while ($int16 > 0) {
 		$int16 = calc($int16 - 1);
-		if (cc_find(422:5, $int16) = true) {
+		if (cc_find(422:5, $int16) = ^true) {
 			cc_clearops;
 			cc_setonop(null);
 			cc_setcolour(0xafafaf);
@@ -43,7 +43,7 @@ if (%varbit5333 <= 0) {
 	if_settext("---", $component0);
 	if_setgraphic(null, $component1);
 	if_set2dangle(0, $component1);
-	if (cc_find($component17, 0) = true) {
+	if (cc_find($component17, 0) = ^true) {
 		cc_setgraphic(null);
 		cc_set2dangle(0);
 	}
@@ -67,7 +67,7 @@ def_graphic $graphic19 = enum(int, graphic, 1423, %varbit5333);
 if_setgraphic($graphic19, $component1);
 def_int $int20 = calc((16384 * (4 - %varbit5331)) % 65536);
 if_set2dangle($int20, $component1);
-if (cc_find($component17, 0) = true) {
+if (cc_find($component17, 0) = ^true) {
 	if (%varbit5330 ! 0) {
 		cc_setgraphic($graphic19);
 		cc_set2dangle($int20);
@@ -77,36 +77,36 @@ if (cc_find($component17, 0) = true) {
 	}
 }
 def_int $int21 = 255;
-if (testbit(%varbit5335, 0) = true) {
+if (testbit(%varbit5335, 0) = ^true) {
 	$int21 = 150;
 	if (%varbit5331 = 1) {
-		if (testbit(%varbit5334, 3) = true) {
+		if (testbit(%varbit5334, 3) = ^true) {
 			$int21 = 0;
 		}
 	} else if (%varbit5331 = 2) {
 		$int21 = 0;
 	} else if (%varbit5331 = 3) {
-		if (testbit(%varbit5334, 1) = true) {
+		if (testbit(%varbit5334, 1) = ^true) {
 			$int21 = 0;
 		}
-	} else if (testbit(%varbit5334, 0) = true) {
+	} else if (testbit(%varbit5334, 0) = ^true) {
 		$int21 = 0;
 	}
 }
 if_settrans($int21, $component2);
 $int21 = 255;
-if (testbit(%varbit5335, 2) = true) {
+if (testbit(%varbit5335, 2) = ^true) {
 	$int21 = 150;
 	if (%varbit5331 = 1) {
-		if (testbit(%varbit5334, 1) = true) {
+		if (testbit(%varbit5334, 1) = ^true) {
 			$int21 = 0;
 		}
 	} else if (%varbit5331 = 2) {
-		if (testbit(%varbit5334, 0) = true) {
+		if (testbit(%varbit5334, 0) = ^true) {
 			$int21 = 0;
 		}
 	} else if (%varbit5331 = 3) {
-		if (testbit(%varbit5334, 3) = true) {
+		if (testbit(%varbit5334, 3) = ^true) {
 			$int21 = 0;
 		}
 	} else {
@@ -115,37 +115,37 @@ if (testbit(%varbit5335, 2) = true) {
 }
 if_settrans($int21, $component3);
 $int21 = 255;
-if (testbit(%varbit5335, 1) = true) {
+if (testbit(%varbit5335, 1) = ^true) {
 	$int21 = 150;
 	if (%varbit5331 = 1) {
-		if (testbit(%varbit5334, 0) = true) {
+		if (testbit(%varbit5334, 0) = ^true) {
 			$int21 = 0;
 		}
 	} else if (%varbit5331 = 2) {
-		if (testbit(%varbit5334, 3) = true) {
+		if (testbit(%varbit5334, 3) = ^true) {
 			$int21 = 0;
 		}
 	} else if (%varbit5331 = 3) {
 		$int21 = 0;
-	} else if (testbit(%varbit5334, 1) = true) {
+	} else if (testbit(%varbit5334, 1) = ^true) {
 		$int21 = 0;
 	}
 }
 if_settrans($int21, $component4);
 $int21 = 255;
-if (testbit(%varbit5335, 3) = true) {
+if (testbit(%varbit5335, 3) = ^true) {
 	$int21 = 150;
 	if (%varbit5331 = 1) {
 		$int21 = 0;
 	} else if (%varbit5331 = 2) {
-		if (testbit(%varbit5334, 1) = true) {
+		if (testbit(%varbit5334, 1) = ^true) {
 			$int21 = 0;
 		}
 	} else if (%varbit5331 = 3) {
-		if (testbit(%varbit5334, 0) = true) {
+		if (testbit(%varbit5334, 0) = ^true) {
 			$int21 = 0;
 		}
-	} else if (testbit(%varbit5334, 3) = true) {
+	} else if (testbit(%varbit5334, 3) = ^true) {
 		$int21 = 0;
 	}
 }

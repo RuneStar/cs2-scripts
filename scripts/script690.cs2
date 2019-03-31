@@ -23,7 +23,7 @@ while ($int11 < $int1) {
 	if (($enum8 ! null) & ($enum9 ! null)) {
 		$obj10 = inv_getobj($inv7, $int11);
 		~script1485($int11, enum(obj, int, $enum9, $obj10));
-		if (cc_find($component0, $int11) = true) {
+		if (cc_find($component0, $int11) = ^true) {
 			if (%var261 = 8) {
 				cc_clearops;
 				cc_setonop(null);
@@ -32,7 +32,7 @@ while ($int11 < $int1) {
 				cc_setonop("script691(event_opindex, event_com, event_comid, $int1, $int2, $int3, $int4)");
 			}
 		}
-		if (($int11 < $int2) & (cc_find($component0, calc($int1 + $int11)) = true)) {
+		if (($int11 < $int2) & (cc_find($component0, calc($int1 + $int11)) = ^true)) {
 			$obj10 = enum(int, namedobj, $enum8, $int11);
 			if ($obj10 ! null) {
 				cc_setmodel(oc_param($obj10, 186));
@@ -42,7 +42,7 @@ while ($int11 < $int1) {
 		}
 	} else {
 		~script1485($int11, -1);
-		if (($int11 < $int2) & (cc_find($component0, calc($int1 + $int11)) = true)) {
+		if (($int11 < $int2) & (cc_find($component0, calc($int1 + $int11)) = ^true)) {
 			cc_setmodel(null);
 		}
 	}

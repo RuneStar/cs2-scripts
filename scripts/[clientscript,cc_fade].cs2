@@ -10,7 +10,7 @@ if ($int3 < 0) {
 }
 def_int $int5 = $int1;
 while ($int5 <= $int2) {
-	if (cc_find($component0, $int5) = true) {
+	if (cc_find($component0, $int5) = ^true) {
 		cc_setontimer("cc_fade_timer(event_com, event_comid, $int3, $int4)");
 	}
 	$int5 = calc($int5 + 1);

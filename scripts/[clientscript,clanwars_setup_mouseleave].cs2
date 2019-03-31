@@ -1,6 +1,6 @@
 // 586
 [clientscript,clanwars_setup_mouseleave](component $component0, int $int1, component $component2)
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	cc_settrans(255);
 }
 ~deltooltip_action($component2);

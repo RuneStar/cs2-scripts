@@ -4,7 +4,7 @@ def_int $int3 = 0;
 def_int $int4 = 0;
 if (%varcint225 ! -1) {
 	while ($int4 = 0) {
-		if (cc_find($component0, $int3) = true) {
+		if (cc_find($component0, $int3) = ^true) {
 			if (cc_getinvobject = %varcint225) {
 				~magic_spellbook_settooltip(1, %varcint225, $component0, $int3, $component1, $int2);
 				return;

@@ -3,13 +3,13 @@
 def_string $string0 = "Resizable mode chatbox:<br>Opaque";
 if (%varbit4608 = 0) {
 	if_setgraphic("options_boxes,0", $component0);
-	if (cc_find($component1, 0) = true) {
+	if (cc_find($component1, 0) = ^true) {
 		cc_setcolour(0x8f8f8f);
 	}
-	if (cc_find($component1, 1) = true) {
+	if (cc_find($component1, 1) = ^true) {
 		cc_setcolour(0x8f8f8f);
 	}
-	if (cc_find($component1, 2) = true) {
+	if (cc_find($component1, 2) = ^true) {
 		cc_setgraphic("options_radio_buttons,0");
 	}
 	if_setonmouserepeat(null, $component1);
@@ -17,20 +17,20 @@ if (%varbit4608 = 0) {
 	if_setonop(null, $component1);
 } else {
 	if_setgraphic("options_boxes,1", $component0);
-	if (cc_find($component1, 0) = true) {
+	if (cc_find($component1, 0) = ^true) {
 		cc_setcolour(0xff981f);
 	}
-	if (cc_find($component1, 1) = true) {
+	if (cc_find($component1, 1) = ^true) {
 		cc_setcolour(0xff981f);
 	}
 	if (%varbit2570 = 1) {
 		$string0 = "Resizable mode chatbox:<br>Transparent<br><~text_device("Click", "Tap")>-through is blocked";
-		if (cc_find($component1, 2) = true) {
+		if (cc_find($component1, 2) = ^true) {
 			cc_setgraphic("options_radio_buttons,1");
 		}
 	} else {
 		$string0 = "Resizable mode chatbox:<br>Transparent<br><~text_device("Click", "Tap")>-through is permitted";
-		if (cc_find($component1, 2) = true) {
+		if (cc_find($component1, 2) = ^true) {
 			cc_setgraphic("options_radio_buttons,2");
 		}
 	}

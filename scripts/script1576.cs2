@@ -4,6 +4,6 @@ if (calc(clientclock % 50) = 0) {
 	return;
 }
 def_int $int4 = calc((clientclock - $int3) / 50);
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	~script1575(calc($int2 + $int4), $int2, $int3);
 }

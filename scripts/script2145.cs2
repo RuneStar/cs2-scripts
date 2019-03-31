@@ -4,7 +4,7 @@ def_obj $obj1 = null;
 def_int $int2 = inv_size(inv);
 while ($int2 > 0) {
 	$int2 = calc($int2 - 1);
-	if (cc_find($component0, $int2) = true) {
+	if (cc_find($component0, $int2) = ^true) {
 		$obj1 = inv_getobj(inv, $int2);
 		cc_clearops;
 		cc_setontimer(null);

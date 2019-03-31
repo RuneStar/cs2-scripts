@@ -3,7 +3,7 @@ script2331(int $int0, int $int1, component $component2, int $int3, int $int4, st
 if (clientclock < $int0) {
 	return;
 }
-if (cc_find($component2, $int3) = true) {
+if (cc_find($component2, $int3) = ^true) {
 	cc_setontimer(null);
 	cc_settrans($int4);
 	cc_setonmouserepeat("cc_settrans(event_com, event_comid, $int4, null)");

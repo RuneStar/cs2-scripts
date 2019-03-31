@@ -3,7 +3,7 @@
 if ($int7 ! %varcint374) {
 	return;
 }
-if ((cc_find($component0, $int2) = true) & (.cc_find($component1, $int2) = true)) {
+if ((cc_find($component0, $int2) = ^true) & (.cc_find($component1, $int2) = ^true)) {
 	.cc_setposition(calc($int3 - 7), calc($int4 + 32), ^setpos_abs_left, ^setpos_abs_top);
 }
 ~seed_vault_doscroll($component5, $component6, $int4);

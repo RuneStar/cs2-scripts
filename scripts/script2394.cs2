@@ -1,7 +1,7 @@
 // 2394
 script2394(component $component0, int $int1, int $int2, component $component3)
 def_int $int4 = 0;
-if (cc_find($component0, $int1) = true) {
+if (cc_find($component0, $int1) = ^true) {
 	$int4 = calc(clientclock - $int2);
 	if ($int4 < 90) {
 		cc_settrans(calc(255 - scale($int4, 90, 255)));

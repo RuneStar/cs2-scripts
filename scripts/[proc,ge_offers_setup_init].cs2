@@ -173,33 +173,33 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 ~ge_offers_setup_draw($component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35);
 if_setonvartransmit("ge_offers_setup_draw($component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35){var1151, var563, var1043}", $component0);
 if_setoninvtransmit("ge_offers_setup_draw($component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35){inv}", $component0);
-if (cc_find($component0, $int12) = true) {
+if (cc_find($component0, $int12) = ^true) {
 	cc_setonop("ge_offers_setup_changequantity(-1, event_opindex, $component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35)");
 }
-if (cc_find($component0, $int13) = true) {
+if (cc_find($component0, $int13) = ^true) {
 	cc_setonop("ge_offers_setup_changequantity(1, event_opindex, $component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35)");
 }
-if (cc_find($component0, $int14) = true) {
+if (cc_find($component0, $int14) = ^true) {
 	cc_setonop("ge_offers_setup_changequantity(1, event_opindex, $component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35)");
 }
-if (cc_find($component0, $int15) = true) {
+if (cc_find($component0, $int15) = ^true) {
 	cc_setonop("ge_offers_setup_changequantity(10, event_opindex, $component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35)");
 }
-if (cc_find($component0, $int16) = true) {
+if (cc_find($component0, $int16) = ^true) {
 	cc_setonop("ge_offers_setup_changequantity(100, event_opindex, $component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35)");
 }
-if (cc_find($component0, $int17) = true) {
+if (cc_find($component0, $int17) = ^true) {
 	cc_setonop("ge_offers_setup_changequantity(^max_32bit_int, event_opindex, $component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35)");
 }
-if (cc_find($component0, $int19) = true) {
+if (cc_find($component0, $int19) = ^true) {
 	cc_setonop("ge_offers_setup_changeprice(-1, event_opindex, $component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35)");
 }
-if (cc_find($component0, $int20) = true) {
+if (cc_find($component0, $int20) = ^true) {
 	cc_setonop("ge_offers_setup_changeprice(1, event_opindex, $component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35)");
 }
-if (cc_find($component0, $int21) = true) {
+if (cc_find($component0, $int21) = ^true) {
 	cc_setonop("ge_offers_setup_changeprice(-5, event_opindex, $component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35)");
 }
-if (cc_find($component0, $int24) = true) {
+if (cc_find($component0, $int24) = ^true) {
 	cc_setonop("ge_offers_setup_changeprice(5, event_opindex, $component0, $int11, $int17, $int34, $int25, $int26, $int27, $int28, $int29, $int30, $int31, $int32, $int33, $component2, $int35)");
 }

@@ -6,11 +6,11 @@ if ($int0 ! 1) {
 	}
 	return;
 }
-if (cc_find($component3, $int4) = true) {
+if (cc_find($component3, $int4) = ^true) {
 	cc_settrans(120);
 	cc_setontimer("script488(event_com, event_comid, 0, calc(clientclock + 10))");
 }
 sound_synth(2266, 1, 0);
-if (cc_find(458:2, $int1) = true) {
+if (cc_find(458:2, $int1) = ^true) {
 	cc_resume_pausebutton;
 }

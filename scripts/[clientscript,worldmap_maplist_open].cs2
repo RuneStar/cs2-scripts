@@ -7,8 +7,8 @@ def_int $int4 = 0;
 def_maparea $maparea5 = null;
 while ($int4 <= 32) {
 	$maparea5 = enum(int, maparea, 1697, $int4);
-	if (((($maparea5 ! null) & (cc_find($component2, calc($int4 + 1)) = true)) & ($int3 ! -1)) & (~worldmap_findcoordinmap($maparea5, %varcint188) ! null)) {
-		if (.cc_find($component2, $int3) = true) {
+	if (((($maparea5 ! null) & (cc_find($component2, calc($int4 + 1)) = ^true)) & ($int3 ! -1)) & (~worldmap_findcoordinmap($maparea5, %varcint188) ! null)) {
+		if (.cc_find($component2, $int3) = ^true) {
 			.cc_sethide(false);
 			if (~on_mobile = false) {
 				.cc_setposition(1, calc(cc_gety - 1), ^setpos_abs_left, ^setpos_abs_top);
@@ -20,6 +20,6 @@ while ($int4 <= 32) {
 	}
 	$int4 = calc($int4 + 1);
 }
-if (($int3 ! -1) & (cc_find($component2, $int3) = true)) {
+if (($int3 ! -1) & (cc_find($component2, $int3) = ^true)) {
 	cc_sethide(true);
 }
