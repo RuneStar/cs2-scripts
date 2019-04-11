@@ -1,7 +1,5 @@
 // 1481
-[proc,hidey_tabbuttons](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-if_sethide(true, 493:4);
-if_sethide(true, 493:5);
+[proc,hidey_tabbuttons](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 if_sethide(true, 493:6);
 if_sethide(true, 493:7);
 if_sethide(true, 493:8);
@@ -10,25 +8,33 @@ if_sethide(true, 493:10);
 if_sethide(true, 493:11);
 if_sethide(true, 493:12);
 if_sethide(true, 493:13);
+if_sethide(true, 493:14);
+if_sethide(true, 493:15);
+if_sethide(true, 493:4);
+if_sethide(true, 493:5);
 if ($component0 = $component2) {
-	if_sethide(false, 493:6);
-	if_sethide(false, 493:7);
-} else if ($component0 = $component3) {
 	if_sethide(false, 493:8);
 	if_sethide(false, 493:9);
-} else if ($component0 = $component4) {
+} else if ($component0 = $component3) {
 	if_sethide(false, 493:10);
 	if_sethide(false, 493:11);
-} else if ($component0 = $component5) {
+} else if ($component0 = $component4) {
 	if_sethide(false, 493:12);
 	if_sethide(false, 493:13);
+} else if ($component0 = $component5) {
+	if_sethide(false, 493:14);
+	if_sethide(false, 493:15);
+} else if ($component0 = $component1) {
+	if_sethide(false, 493:6);
+	if_sethide(false, 493:7);
 } else {
-	$component0 = $component1;
+	$component0 = $component6;
 	if_sethide(false, 493:4);
 	if_sethide(false, 493:5);
 }
-~hidey_tabbuttons_draw($component1, $component0, $component1, $component2, $component3, $component4, $component5, "Easy");
-~hidey_tabbuttons_draw($component2, $component0, $component1, $component2, $component3, $component4, $component5, "Medium");
-~hidey_tabbuttons_draw($component3, $component0, $component1, $component2, $component3, $component4, $component5, "Hard");
-~hidey_tabbuttons_draw($component4, $component0, $component1, $component2, $component3, $component4, $component5, "Elite");
-~hidey_tabbuttons_draw($component5, $component0, $component1, $component2, $component3, $component4, $component5, "Master");
+~hidey_tabbuttons_draw($component1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, "Easy");
+~hidey_tabbuttons_draw($component2, $component0, $component1, $component2, $component3, $component4, $component5, $component6, "Medium");
+~hidey_tabbuttons_draw($component3, $component0, $component1, $component2, $component3, $component4, $component5, $component6, "Hard");
+~hidey_tabbuttons_draw($component4, $component0, $component1, $component2, $component3, $component4, $component5, $component6, "Elite");
+~hidey_tabbuttons_draw($component5, $component0, $component1, $component2, $component3, $component4, $component5, $component6, "Master");
+~hidey_tabbuttons_draw($component6, $component0, $component1, $component2, $component3, $component4, $component5, $component6, "Beginner");
