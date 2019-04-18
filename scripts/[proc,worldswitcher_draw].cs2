@@ -49,7 +49,7 @@ def_string $string1 = "";
 $int25, $int26, $string0, $int27, $int28, $string1 = worldlist_start;
 while ($int25 > 0) {
 	if (~script961($int25, $int26) = 1) {
-		$int24 = ~worldswitcher_entry_draw($component2, $int24, $int16, $component3, $int25, $int25, $int26, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int21, $int22, $int23, $component15, $string0);
+		$int24 = ~worldswitcher_entry_draw($component2, $int24, $int16, $component3, $int25, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int21, $int22, $int23, $component15);
 		$int16 = calc($int16 + $int4);
 	}
 	$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_next;
@@ -77,7 +77,7 @@ if (%varbit4597 > 0) {
 		$string0 = "Unavailable";
 		$int25 = 0;
 	}
-	~worldswitcher_entry_draw($component12, 0, 0, $component12, -1, $int25, $int26, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15, $string0);
+	~worldswitcher_entry_draw($component12, 0, 0, $component12, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
 	if (%varbit4598 > 0) {
 		$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4598);
 		if (~script961($int25, $int26) = 0) {
@@ -86,7 +86,7 @@ if (%varbit4597 > 0) {
 			$string0 = "Unavailable";
 			$int25 = 0;
 		}
-		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $int25, $int26, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15, $string0);
+		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
 	} else {
 		~script893($component13);
 	}
@@ -101,7 +101,7 @@ if (%varbit4597 > 0) {
 			$string0 = "Unavailable";
 			$int25 = 0;
 		}
-		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $int25, $int26, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15, $string0);
+		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
 	} else {
 		if_sethide(false, $component14);
 		~script893($component13);

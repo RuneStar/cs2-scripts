@@ -61,7 +61,7 @@ switch_int ($int0) {
 		if ($int3 = 2) {
 			return(0);
 		}
-		if (((%var287 = 1) & ($int2 = 0)) & (~script210($int0, $int3, $string0) = 0)) {
+		if (((%var287 = 1) & ($int2 = 0)) & (~script210($int0, $string0, $int3) = 0)) {
 			return(0);
 		}
 		if (chat_getfilter_private = 0) {
@@ -89,7 +89,7 @@ switch_int ($int0) {
 		if ((($int0 = 5) & (%varbit1627 = 0)) & (calc(clientclock - $int1) >= 500)) {
 			return(0);
 		}
-		if (((%var287 = 1) & ($int2 = 0)) & (~script210($int0, $int3, $string0) = 0)) {
+		if (((%var287 = 1) & ($int2 = 0)) & (~script210($int0, $string0, $int3) = 0)) {
 			return(0);
 		}
 		if (chat_getfilter_private ! 2) {

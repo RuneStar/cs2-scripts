@@ -1,11 +1,11 @@
 // 687
 [clientscript,ironman_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
-~steelborder($component2, 0, "<text_gender("Iron Man", "Iron Woman")> Setup");
+~steelborder($component2, "<text_gender("Iron Man", "Iron Woman")> Setup", 0);
 if_settext("<text_gender("Iron Man", "Iron Woman")> Mode", $component3);
-~script2094($component4, 0, $component4, $component5, $component6, $component7, "None", "No <text_gender("Iron Man", "Iron Woman")> restrictions will apply to this account.");
-~script2094($component5, 1, $component4, $component5, $component6, $component7, "Standard <text_gender("Iron Man", "Iron Woman")>", "An <text_gender("Iron Man", "Iron Woman")> cannot trade, stake, receive PK loot, scavenge dropped items, nor play certain multiplayer minigames.");
-~script2094($component6, 3, $component4, $component5, $component6, $component7, "Hardcore <text_gender("Iron Man", "Iron Woman")>", "In addition to the standard <text_gender("Iron Man", "Iron Woman")> rules, a Hardcore <text_gender("Iron Man", "Iron Woman")> only has 1 life. A dangerous death will result in being downgraded to a standard <text_gender("Iron Man", "Iron Woman")>.");
-~script2094($component7, 2, $component4, $component5, $component6, $component7, "Ultimate <text_gender("Iron Man", "Iron Woman")>", "In addition to the standard <text_gender("Iron Man", "Iron Woman")> rules, an Ultimate <text_gender("Iron Man", "Iron Woman")> cannot use banks, nor retain any items on death in dangerous areas.");
+~script2094($component4, 0, "None", "No <text_gender("Iron Man", "Iron Woman")> restrictions will apply to this account.", $component4, $component5, $component6, $component7);
+~script2094($component5, 1, "Standard <text_gender("Iron Man", "Iron Woman")>", "An <text_gender("Iron Man", "Iron Woman")> cannot trade, stake, receive PK loot, scavenge dropped items, nor play certain multiplayer minigames.", $component4, $component5, $component6, $component7);
+~script2094($component6, 3, "Hardcore <text_gender("Iron Man", "Iron Woman")>", "In addition to the standard <text_gender("Iron Man", "Iron Woman")> rules, a Hardcore <text_gender("Iron Man", "Iron Woman")> only has 1 life. A dangerous death will result in being downgraded to a standard <text_gender("Iron Man", "Iron Woman")>.", $component4, $component5, $component6, $component7);
+~script2094($component7, 2, "Ultimate <text_gender("Iron Man", "Iron Woman")>", "In addition to the standard <text_gender("Iron Man", "Iron Woman")> rules, an Ultimate <text_gender("Iron Man", "Iron Woman")> cannot use banks, nor retain any items on death in dangerous areas.", $component4, $component5, $component6, $component7);
 cc_deleteall($component8);
 def_int $int15 = 0;
 .cc_create($component8, ^iftype_rectangle, $int15);
@@ -31,6 +31,6 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settext("<col=ffffff>Deactivation settings</col><br>Avoid accidentally downgrading your <text_gender("Iron Man", "Iron Woman")> status.");
 ~script2121($component1, $component8, $component9, $component10, $component11, $component12, $component13, $component14);
 if_setonvartransmit("script2120($component1, $component8, .cc_getid, $component9, $component10, $component11, $component12, $component13, $component14){var499, var281}", $component0);
-~script2116($component12, 1, $component12, $component13, "PIN");
-~script2116($component13, 0, $component12, $component13, "Permanent");
+~script2116($component12, 1, "PIN", $component12, $component13);
+~script2116($component13, 0, "Permanent", $component12, $component13);
 if_sethide(true, $component10);

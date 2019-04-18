@@ -30,7 +30,7 @@ if ((%varbit6669 = 0) | ($struct14 = null)) {
 	if_setonmouseover("telenexus_tick_mouseover($component3, $component4, $graphic12)", $component4);
 	if_setonmouseleave("telenexus_tick_mouseleave($component3, $component4, $graphic11)", $component4);
 } else {
-	$string0, $int13 = ~script2664($struct14);
+	$int13, $string0 = ~script2664($struct14);
 	if_sethide(false, $component2);
 	if_sethide(true, $component1);
 	if_setgraphic($graphic11, $component3);
@@ -77,7 +77,7 @@ if ((%varbit6669 = 0) | ($struct14 = null)) {
 		cc_setonmouseover(null);
 		cc_setonmouseleave(null);
 	}
-	$string0, $int13 = ~script2664(struct_param($struct14, 679));
+	$int13, $string0 = ~script2664(struct_param($struct14, 679));
 	cc_create($component2, ^iftype_text, 3);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);

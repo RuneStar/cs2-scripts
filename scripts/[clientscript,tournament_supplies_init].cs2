@@ -69,6 +69,6 @@ if (~bankmain_searching = 1) {
 	~meslayer_close(1, 1);
 }
 ~tournament_supplies_search_off($component3, $component4, $component5, $int8, $int9);
-~tournament_supplies_switchlayer($component2, $component1, $component2, $component6, $component3, $component4, $component5, $int8, $int9, "Items", "Load-outs");
+~tournament_supplies_switchlayer($component2, $component1, $component2, "Items", $component6, "Load-outs", $component3, $component4, $component5, $int8, $int9);
 ~tournament_supplies_previewarea($component7);
 if_setoninvtransmit("tournament_supplies_previewarea($component7){207}", $component7);

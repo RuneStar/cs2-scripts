@@ -19,7 +19,7 @@ while ($obj7 ! null) {
 }
 def_string $string0 = "These items will give you a benefit in future Nightmare Zone dreams, and cannot be used elsewhere.<br><br>Dominic's potions are sold by the dose. When you purchase a dose, it is automatically stored in Dominic's barrels until you collect it.<br><br>The figures in <col=ffffff>white</col> show the number of doses you've got stored already.";
 $int2 = if_getwidth($component1);
-def_int $int8 = calc((paraheight($int2, p12_full, $string0) * 12) + 5);
+def_int $int8 = calc((paraheight($string0, $int2, p12_full) * 12) + 5);
 $int3 = calc($int2 / 7);
 $int4 = calc(($int3 - 36) / 2);
 $int5 = calc(32 + 40);

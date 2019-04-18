@@ -1,9 +1,9 @@
 // 203
 script203(int $int0, component $component1, component $component2, int $int3, int $int4, int $int5, int $int6, int $setposv7, int $int8, int $colour9, boolean $boolean10, string $string0, string $string1)(int)
 def_int $int11 = calc($int3 - $int4);
-def_int $int12 = calc(parawidth(^max_32bit_int, p12_full, $string0) + 3);
+def_int $int12 = calc(parawidth($string0, ^max_32bit_int, p12_full) + 3);
 def_int $int13 = calc($int11 - $int12);
-def_int $int14 = calc(paraheight($int13, p12_full, $string1) * $int5);
+def_int $int14 = calc(paraheight($string1, $int13, p12_full) * $int5);
 if (($setposv7 = ^setpos_abs_top) & ($int8 = 103)) {
 	$int6 = calc($int6 - $int14);
 }

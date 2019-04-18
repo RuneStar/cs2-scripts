@@ -29,7 +29,7 @@ while ($loc18 ! null) {
 		$int7 = -1;
 	}
 	$string0 = enum(loc, string, 1531, $loc18);
-	$int8 = calc((paraheight(143, p12_full, $string0) * 12) + 9);
+	$int8 = calc((paraheight($string0, 143, p12_full) * 12) + 9);
 	if ($int8 < 20) {
 		$int8 = 20;
 	}
@@ -38,7 +38,7 @@ while ($loc18 ! null) {
 	$loc18 = enum(int, loc, $enum2, $int17);
 	if ($loc18 ! null) {
 		$string1 = enum(loc, string, 1531, $loc18);
-		$int9 = calc((paraheight(143, p12_full, $string1) * 12) + 9);
+		$int9 = calc((paraheight($string1, 143, p12_full) * 12) + 9);
 		$int12, $int14 = ~script1479($loc18, $int3, $int4, $int5);
 		if ($int8 < $int9) {
 			$int8 = $int9;

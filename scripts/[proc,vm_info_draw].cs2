@@ -28,13 +28,13 @@ while (enum(int, int, 1740, $int5) > 0) {
 		$int6 = calc($int6 + 1);
 		cc_create($component3, ^iftype_text, $int6);
 		cc_settext(enum(int, string, 1744, $int5));
-		cc_setsize(40, calc(15 * paraheight(cc_getwidth, p12_full, cc_gettext)), ^setsize_minus, ^setsize_abs);
+		cc_setsize(40, calc(15 * paraheight(cc_gettext, cc_getwidth, p12_full)), ^setsize_minus, ^setsize_abs);
 		cc_setposition(15, $int7, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 		cc_setcolour(0xff981f);
 		cc_settextshadow(true);
-		$int7 = calc($int7 + (15 * paraheight(cc_getwidth, p12_full, cc_gettext)));
+		$int7 = calc($int7 + (15 * paraheight(cc_gettext, cc_getwidth, p12_full)));
 		$int6 = calc($int6 + 1);
 	}
 	cc_create($component1, ^iftype_text, $int5);
@@ -62,7 +62,7 @@ while (enum(int, int, 1740, $int5) > 0) {
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextshadow(true);
-	$int8 = paraheight(cc_getwidth, p12_full, cc_gettext);
+	$int8 = paraheight(cc_gettext, cc_getwidth, p12_full);
 	cc_setsize(20, calc(18 * $int8), ^setsize_minus, ^setsize_abs);
 	if ($int10 = 1) {
 		.cc_create($component4, ^iftype_rectangle, $int9);

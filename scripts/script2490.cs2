@@ -71,10 +71,10 @@ if ($component0 = 481:19) {
 	if (cc_find($component0, $int11) = ^true) {
 		cc_setop(1, "+1k");
 	}
-	$int6 = ~duel_stake_setup_buttontext($component0, $int9, $int6, "+10");
-	$int6 = ~duel_stake_setup_buttontext($component0, $int10, $int6, "+100");
-	$int6 = ~duel_stake_setup_buttontext($component0, $int11, $int6, "+1k");
-	$int6 = ~duel_stake_setup_buttontext($component0, $int12, $int6, "...");
+	$int6 = ~duel_stake_setup_buttontext($component0, $int9, "+10", $int6);
+	$int6 = ~duel_stake_setup_buttontext($component0, $int10, "+100", $int6);
+	$int6 = ~duel_stake_setup_buttontext($component0, $int11, "+1k", $int6);
+	$int6 = ~duel_stake_setup_buttontext($component0, $int12, "...", $int6);
 } else {
 	cc_setoninvtransmit("script2493(event_com, event_comid, coins_995){inv, 134}");
 	if (cc_find($component0, $int9) = ^true) {
@@ -86,8 +86,8 @@ if ($component0 = 481:19) {
 	if (cc_find($component0, $int11) = ^true) {
 		cc_setop(1, "+10m");
 	}
-	$int6 = ~duel_stake_setup_buttontext($component0, $int9, $int6, "+100k");
-	$int6 = ~duel_stake_setup_buttontext($component0, $int10, $int6, "+1m");
-	$int6 = ~duel_stake_setup_buttontext($component0, $int11, $int6, "+10m");
-	$int6 = ~duel_stake_setup_buttontext($component0, $int12, $int6, "...");
+	$int6 = ~duel_stake_setup_buttontext($component0, $int9, "+100k", $int6);
+	$int6 = ~duel_stake_setup_buttontext($component0, $int10, "+1m", $int6);
+	$int6 = ~duel_stake_setup_buttontext($component0, $int11, "+10m", $int6);
+	$int6 = ~duel_stake_setup_buttontext($component0, $int12, "...", $int6);
 }

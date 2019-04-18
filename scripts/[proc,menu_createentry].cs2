@@ -1,6 +1,6 @@
 // 218
 [proc,menu_createentry](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, string $string0)(int, int)
-def_int $int6 = calc((paraheight($int2, p12_full, $string0) * 14) + 2);
+def_int $int6 = calc((paraheight($string0, $int2, p12_full) * 14) + 2);
 if (~on_mobile = true) {
 	$int6 = scale(4, 3, $int6);
 }

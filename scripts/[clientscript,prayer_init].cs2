@@ -74,7 +74,7 @@ if (~on_mobile = true) {
 		cc_setfill(true);
 		$int10 = calc($int10 + 1);
 	}
-	~prayer_infobutton($boolean15, $boolean16, $component2, $int8, $int9, $component3, $component4, $component5, $string0, $string1);
+	~prayer_infobutton($string0, $boolean15, $string1, $boolean16, $component2, $int8, $int9, $component3, $component4, $component5);
 } else {
 	if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, $component1);
 	if_sethide(true, $component3);

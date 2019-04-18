@@ -4,7 +4,7 @@ script569(component $component0, component $component1, component $component2, c
 ~script1486($component2, ^setpos_abs_centre, 1, 0);
 cc_deleteall($component3);
 def_string $string0 = "Step over the line to fight!";
-def_int $int4 = calc(parawidth(512, quill_oblique_large, $string0) + 15);
+def_int $int4 = calc(parawidth($string0, 512, quill_oblique_large) + 15);
 if_setsize($int4, 40, ^setsize_abs, ^setsize_abs, $component3);
 cc_create($component3, ^iftype_graphic, 0);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);

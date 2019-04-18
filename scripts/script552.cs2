@@ -18,5 +18,5 @@ if (chat_getfilter_public ! 4) {
 	~rebuildchatbox(~script553);
 }
 if ((calc(clientclock - %varcint61) >= 150) | ($int1 = 1)) {
-	~chat_sendpublic(1, %varcstring358);
+	~chat_sendpublic(%varcstring358, 1);
 }

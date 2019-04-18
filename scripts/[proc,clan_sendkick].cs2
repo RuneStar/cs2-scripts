@@ -4,5 +4,5 @@ if (~script1942 = 1) {
 	mes("You can't kick players from your team during Wilderness Wars.");
 	return;
 }
-~chat_sendpublic(2, "-Attempting to kick player from friends chat...");
+~chat_sendpublic("-Attempting to kick player from friends chat...", 2);
 clan_kickuser($string0);

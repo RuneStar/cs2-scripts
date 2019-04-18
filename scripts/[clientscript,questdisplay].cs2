@@ -2,9 +2,9 @@
 [clientscript,questdisplay](coord $coord0, string $string0, string $string1, string $string2, string $string3)
 if_settext($string0, 473:2);
 def_int $int1 = 0;
-$int1 = ~questdisplay_setup($int1, 473:4, ~quest_f2p_count, 2098, "Free Quests", $string1);
-$int1 = ~questdisplay_setup($int1, 473:5, ~quest_members_count, 2099, "Members' Quests", $string2);
-$int1 = ~questdisplay_setup($int1, 473:6, ~miniquest_count, 2100, "Miniquests", $string3);
+$int1 = ~questdisplay_setup($int1, "Free Quests", $string1, 473:4, ~quest_f2p_count, 2098);
+$int1 = ~questdisplay_setup($int1, "Members' Quests", $string2, 473:5, ~quest_members_count, 2099);
+$int1 = ~questdisplay_setup($int1, "Miniquests", $string3, 473:6, ~miniquest_count, 2100);
 if_setscrollpos(0, 0, 473:3);
 if_setscrollsize(0, $int1, 473:3);
 ~scrollbar_vertical(473:7, 473:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");

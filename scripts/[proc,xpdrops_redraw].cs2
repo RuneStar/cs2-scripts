@@ -13,7 +13,7 @@ if ((%varbit4693 = 1) & (~on_mobile = false)) {
 	$fontmetrics7 = b12_full;
 	$fontmetrics6 = b12_full;
 }
-def_int $int9 = calc((28 + parawidth(512, $fontmetrics6, "+8,888,888,888")) + 2);
+def_int $int9 = calc((28 + parawidth("+8,888,888,888", 512, $fontmetrics6)) + 2);
 if_setsize($int9, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
 if_settextfont($fontmetrics7, $component2);
 def_int $int10 = 0;

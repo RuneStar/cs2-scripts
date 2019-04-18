@@ -53,7 +53,7 @@ while ($int11 < $int0) {
 		cc_settextshadow(true);
 		$string0 = ~script769($obj12, inv_getnum(90, $int11));
 		if ($int9 > $int7) {
-			if (parawidth(512, p12_full, $string0) > $int2) {
+			if (parawidth($string0, 512, p12_full) > $int2) {
 				cc_settextfont(p11_full);
 			} else {
 				cc_settextfont(p12_full);
@@ -64,9 +64,9 @@ while ($int11 < $int0) {
 				cc_setposition($int1, calc(($int17 / 2) * 12), ^setpos_abs_left, ^setpos_abs_top);
 			}
 		} else {
-			if (parawidth(512, p12_full, $string0) > $int1) {
+			if (parawidth($string0, 512, p12_full) > $int1) {
 				cc_settextfont(p11_full);
-			} else if (parawidth(512, b12_full, $string0) > $int1) {
+			} else if (parawidth($string0, 512, b12_full) > $int1) {
 				cc_settextfont(p12_full);
 			} else {
 				cc_settextfont(b12_full);
@@ -86,7 +86,7 @@ while ($int11 < $int0) {
 		cc_settextshadow(true);
 		$string0 = ~script769($obj12, invother_getnum(90, $int11));
 		if ($int10 > $int7) {
-			if (parawidth(512, p12_full, $string0) > $int2) {
+			if (parawidth($string0, 512, p12_full) > $int2) {
 				cc_settextfont(p11_full);
 			} else {
 				cc_settextfont(p12_full);
@@ -100,9 +100,9 @@ while ($int11 < $int0) {
 				$int15 = $int2;
 			}
 		} else {
-			if (parawidth(512, p12_full, $string0) > $int1) {
+			if (parawidth($string0, 512, p12_full) > $int1) {
 				cc_settextfont(p11_full);
-			} else if (parawidth(512, b12_full, $string0) > $int1) {
+			} else if (parawidth($string0, 512, b12_full) > $int1) {
 				cc_settextfont(p12_full);
 			} else {
 				cc_settextfont(b12_full);

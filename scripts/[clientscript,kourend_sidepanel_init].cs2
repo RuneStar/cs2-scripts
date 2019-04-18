@@ -10,11 +10,11 @@ $int15, $int16 = ~kourend_sidepanel_build($component0, $component7, $component8,
 $int15, $int16 = ~kourend_sidepanel_build($component0, $component9, $component10, 1, $int15, $int16);
 def_string $string0 = "View tasks";
 if_setop(1, $string0, $component11);
-if_setsize(calc(parawidth(190, p11_full, $string0) + 10), if_getheight($component11), ^setsize_abs, ^setsize_abs, $component11);
+if_setsize(calc(parawidth($string0, 190, p11_full) + 10), if_getheight($component11), ^setsize_abs, ^setsize_abs, $component11);
 ~kourend_sidepanel_tasks_default($component11, $string0);
 $string0 = "Favour Overlay";
 if_setopbase("<col=ff9040><$string0></col>", $component12);
-if_setsize(calc(parawidth(190, p11_full, $string0) + 20), if_getheight($component12), ^setsize_abs, ^setsize_abs, $component12);
+if_setsize(calc(parawidth($string0, 190, p11_full) + 20), if_getheight($component12), ^setsize_abs, ^setsize_abs, $component12);
 cc_create($component12, ^iftype_graphic, 0);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);

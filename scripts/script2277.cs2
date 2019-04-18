@@ -6,7 +6,7 @@ if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:13)) = fal
 if (%varcint179 > 0) {
 	%varcint179 = calc(%varcint179 + 10);
 }
-def_int $int0 = calc((paraheight(if_getwidth(66:6), b12_full, $string0) * 12) + 5);
+def_int $int0 = calc((paraheight($string0, if_getwidth(66:6), b12_full) * 12) + 5);
 cc_create(66:6, ^iftype_text, %varcint178);
 %varcint178 = calc(%varcint178 + 1);
 cc_setsize(0, $int0, ^setsize_minus, ^setsize_abs);

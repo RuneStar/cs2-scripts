@@ -39,7 +39,7 @@ while ($int15 <= enum_getoutputcount(1375)) {
 		cc_setopbase("Show cost");
 		cc_setop(1, struct_param($struct18, 660));
 		cc_setonop("telenexus_show_cost($component7, $struct18, cc_gety, $component5, $int15)");
-		$string0, $int21 = ~script2664($struct18);
+		$int21, $string0 = ~script2664($struct18);
 		cc_setondrag("telenexus_hide_cost($component7, $component5, 0)");
 		if ($int21 = 1) {
 			$int19 = calc($int19 + 1);

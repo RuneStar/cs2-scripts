@@ -72,17 +72,17 @@ if ($int0 = $int8) {
 }
 def_int $int11 = 0;
 if ($int1 <= 0) {
-	$int11 = ~script1391(422:44, 0, $int0, $int1, $int2, $int8, "Dungeon");
+	$int11 = ~script1391(422:44, 0, "Dungeon", $int0, $int1, $int2, $int8);
 } else {
 	$int11 = ~script1392(422:44, "Dungeon");
 }
 def_int $int12 = 0;
 if ($int2 >= 2) {
-	$int12 = ~script1391(422:46, 2, $int0, $int1, $int2, $int8, "Upstairs");
+	$int12 = ~script1391(422:46, 2, "Upstairs", $int0, $int1, $int2, $int8);
 } else {
 	$int12 = ~script1392(422:46, "Upstairs");
 }
-def_int $int13 = calc(if_getwidth(if_getlayer(422:45)) - (($int11 + ~script1391(422:45, 1, $int0, $int1, $int2, $int8, "Ground")) + $int12));
+def_int $int13 = calc(if_getwidth(if_getlayer(422:45)) - (($int11 + ~script1391(422:45, 1, "Ground", $int0, $int1, $int2, $int8)) + $int12));
 if_setposition(calc($int11 + ($int13 / 2)), 0, ^setpos_abs_left, ^setpos_abs_centre, 422:45);
 ~script1390(1, %varcint141, $int0, $int3, $int4);
 ~script1390(2, %varcint142, $int0, $int3, $int4);

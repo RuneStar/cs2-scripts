@@ -14,7 +14,7 @@ if ((((%varcint5 = 6) | (%varcint5 = 9)) | (%varcint5 = 11)) | (%varcint5 = 13))
 if (string_length(%varcstring359) < $int0) {
 	$string1 = append($string1, "*");
 }
-if (parawidth(^max_32bit_int, b12_full, $string1) > if_getwidth(162:45)) {
+if (parawidth($string1, ^max_32bit_int, b12_full) > if_getwidth(162:45)) {
 	if_settextalign(^settextalign_right, ^settextalign_centre, 0, 162:45);
 } else {
 	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, 162:45);

@@ -19,6 +19,6 @@ if (((%varcint190 = 1) & (cc_find($component2, $int3) = ^true)) & (.cc_find($com
 		~script1984;
 		return;
 	}
-	%varcstring363 = ~script74(4, $int0, $char1, %varcstring363);
-	~worldmap_search_update($component2, "");
+	%varcstring363 = ~script74(%varcstring363, 4, $int0, $char1);
+	~worldmap_search_update("", $component2);
 }

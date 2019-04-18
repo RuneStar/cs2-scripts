@@ -11,8 +11,8 @@ if (%varbit5422 < 131071) {
 } else {
 	$string3 = "<col=ffa82f>Lots!</col>";
 }
-def_int $int1 = ~max(calc((parawidth(512, p12_full, $string0) + 3) + parawidth(512, p12_full, $string1)), calc((parawidth(512, p12_full, $string2) + 3) + parawidth(512, p12_full, $string3)));
-$int1 = ~max($int1, calc((parawidth(512, p12_full, $string4) + 3) + parawidth(512, p12_full, $string5)));
+def_int $int1 = ~max(calc((parawidth($string0, 512, p12_full) + 3) + parawidth($string1, 512, p12_full)), calc((parawidth($string2, 512, p12_full) + 3) + parawidth($string3, 512, p12_full)));
+$int1 = ~max($int1, calc((parawidth($string4, 512, p12_full) + 3) + parawidth($string5, 512, p12_full)));
 if_setsize(calc($int1 + 8), 49, ^setsize_abs, ^setsize_abs, $component0);
 cc_settext("<$string0><br><$string2><br><$string4>");
 .cc_settext("<$string1><br><$string3><br><$string5>");

@@ -4,7 +4,7 @@ def_graphic $graphic1 = "tradebacking_dark";
 def_graphic $graphic2 = "tradebacking";
 cc_setgraphic($graphic1);
 %varcstring363 = "";
-~worldmap_search_update($component0, "Search");
+~worldmap_search_update("Search", $component0);
 cc_setonmouserepeat("script229(event_com, event_comid, $graphic2, null)");
 cc_setonmouseleave("script229(event_com, event_comid, $graphic1, null)");
 cc_setop(1, "Search");

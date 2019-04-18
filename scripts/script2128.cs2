@@ -4,7 +4,7 @@ if (($int0 < 1) | ($int0 > 4)) {
 	return;
 }
 sound_synth(2266, 1, 0);
-~script2127(1, $component1, $component2, $component3, $component4, "<col=ff0000>Please wait..</col>");
+~script2127(1, $component1, "<col=ff0000>Please wait..</col>", $component2, $component3, $component4);
 if_setonmouserepeat(null, $component1);
 if_setonmouseleave(null, $component1);
 if_setonop(null, $component1);

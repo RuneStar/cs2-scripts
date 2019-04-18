@@ -52,13 +52,13 @@ if (%varbit5333 <= 0) {
 	if_settrans(255, $component4);
 	if_settrans(255, $component5);
 	if_settext("Select a room on the map.", $component6);
-	~poh_viewer_disablebutton($component7, 0, "Move");
-	~poh_viewer_disablebutton($component8, 0, "Rotate");
+	~poh_viewer_disablebutton($component7, "Move", 0);
+	~poh_viewer_disablebutton($component8, "Rotate", 0);
 	~poh_viewer_disablerotate($component9, "miscgraphics3,2");
 	~poh_viewer_disablerotate($component10, "miscgraphics3,3");
-	~poh_viewer_disablebutton($component11, 0, "Delete");
-	~poh_viewer_disablebutton($component12, 0, "Cancel");
-	~poh_viewer_disablebutton($component13, 0, "Done");
+	~poh_viewer_disablebutton($component11, "Delete", 0);
+	~poh_viewer_disablebutton($component12, "Cancel", 0);
+	~poh_viewer_disablebutton($component13, "Done", 0);
 	return;
 }
 def_obj $obj18 = enum(int, obj, 250, %varbit5333);
@@ -152,31 +152,31 @@ if (testbit(%varbit5335, 3) = ^true) {
 if_settrans($int21, $component5);
 if (%varbit5330 > $int15) {
 	if_settext("Use the map to select a position for the room.", $component6);
-	~poh_viewer_disablebutton($component7, 1, "Move");
-	~poh_viewer_disablebutton($component8, 0, "Rotate");
+	~poh_viewer_disablebutton($component7, "Move", 1);
+	~poh_viewer_disablebutton($component8, "Rotate", 0);
 	~poh_viewer_disablerotate($component9, "miscgraphics3,2");
 	~poh_viewer_disablerotate($component10, "miscgraphics3,3");
-	~poh_viewer_disablebutton($component11, 0, "Delete");
-	~poh_viewer_enablebutton($component12, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, "Cancel");
-	~poh_viewer_disablebutton($component13, 0, "Done");
+	~poh_viewer_disablebutton($component11, "Delete", 0);
+	~poh_viewer_enablebutton($component12, "Cancel", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14);
+	~poh_viewer_disablebutton($component13, "Done", 0);
 	return;
 }
 if (%varbit5332 = 1) {
 	if_settext("Choose an orientation for the room, then select 'Done'.", $component6);
-	~poh_viewer_disablebutton($component7, 0, "Move");
-	~poh_viewer_disablebutton($component8, 1, "Rotate");
-	~poh_viewer_enablerotate($component9, "miscgraphics3,2", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, "Clockwise");
-	~poh_viewer_enablerotate($component10, "miscgraphics3,3", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, "Counter-clockwise");
-	~poh_viewer_disablebutton($component11, 0, "Delete");
-	~poh_viewer_enablebutton($component12, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, "Cancel");
-	~poh_viewer_enablebutton($component13, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, "Done");
+	~poh_viewer_disablebutton($component7, "Move", 0);
+	~poh_viewer_disablebutton($component8, "Rotate", 1);
+	~poh_viewer_enablerotate($component9, "Clockwise", "miscgraphics3,2", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14);
+	~poh_viewer_enablerotate($component10, "Counter-clockwise", "miscgraphics3,3", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14);
+	~poh_viewer_disablebutton($component11, "Delete", 0);
+	~poh_viewer_enablebutton($component12, "Cancel", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14);
+	~poh_viewer_enablebutton($component13, "Done", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14);
 	return;
 }
 if_settext("Use the options to edit the room.", $component6);
-~poh_viewer_enablebutton($component7, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, "Move");
-~poh_viewer_enablebutton($component8, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, "Rotate");
+~poh_viewer_enablebutton($component7, "Move", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14);
+~poh_viewer_enablebutton($component8, "Rotate", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14);
 ~poh_viewer_disablerotate($component9, "miscgraphics3,2");
 ~poh_viewer_disablerotate($component10, "miscgraphics3,3");
-~poh_viewer_enablebutton($component11, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, "Delete");
-~poh_viewer_disablebutton($component12, 0, "Cancel");
-~poh_viewer_disablebutton($component13, 0, "Done");
+~poh_viewer_enablebutton($component11, "Delete", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14);
+~poh_viewer_disablebutton($component12, "Cancel", 0);
+~poh_viewer_disablebutton($component13, "Done", 0);

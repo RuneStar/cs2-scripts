@@ -9,7 +9,7 @@ if ($boolean10 = true) {
 	$int11 = calc(190 - 6);
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component3);
 	if_sethide(false, $component4);
-	$int13 = calc(~max(parawidth(190, p11_full, $string0), parawidth(190, p11_full, $string1)) + 14);
+	$int13 = calc(~max(parawidth($string0, 190, p11_full), parawidth($string1, 190, p11_full)) + 14);
 	if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $component5);
 	if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $component6);
 	$int13 = calc((190 - ($int13 * 2)) / 3);
@@ -26,7 +26,7 @@ if ($boolean10 = true) {
 	$int11 = calc(190 - 6);
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component3);
 	if_sethide(false, $component4);
-	if_setsize(calc(parawidth(190, p11_full, $string1) + 14), 0, ^setsize_abs, ^setsize_minus, $component6);
+	if_setsize(calc(parawidth($string1, 190, p11_full) + 14), 0, ^setsize_abs, ^setsize_minus, $component6);
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component6);
 }
 cc_deleteall($component0);

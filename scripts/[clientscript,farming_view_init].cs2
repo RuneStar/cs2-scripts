@@ -1,12 +1,12 @@
 // 1112
 [clientscript,farming_view_init](component $component0, component $component1, component $component2)
 cc_deleteall($component0);
-~farming_view_createtab(0, $component0, "Allotments");
-~farming_view_createtab(1, $component0, "Herbs");
-~farming_view_createtab(2, $component0, "Hops");
-~farming_view_createtab(3, $component0, "Bushes");
-~farming_view_createtab(4, $component0, "Trees");
-~farming_view_createtab(5, $component0, "Special");
+~farming_view_createtab(0, "Allotments", $component0);
+~farming_view_createtab(1, "Herbs", $component0);
+~farming_view_createtab(2, "Hops", $component0);
+~farming_view_createtab(3, "Bushes", $component0);
+~farming_view_createtab(4, "Trees", $component0);
+~farming_view_createtab(5, "Special", $component0);
 if_setsize(calc((5 + 1) * 72), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
 ~farming_view_updatetabs($component0, $component1, $component2);
 if_setonvartransmit("farming_view_updatetabs($component0, $component1, $component2){var19}", $component0);

@@ -1,17 +1,17 @@
 // 1055
 [clientscript,farming_tools_main_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13)
-~farming_tools_main_create($component1, rake_5341, enum(obj, int, 2193, rake_5341), "Farming rake");
-~farming_tools_main_create($component2, seed_dibber_5343, enum(obj, int, 2193, seed_dibber_5343), "Seed dibber");
-~farming_tools_main_create($component3, spade_952, enum(obj, int, 2193, spade_952), "Spade");
-~farming_tools_main_create($component4, secateurs_5329, enum(obj, int, 2193, secateurs_5329), "Secateurs");
-~farming_tools_main_create($component5, watering_can_6797, enum(obj, int, 2193, watering_can_6797), "Watering Can");
-~farming_tools_main_create($component6, gardening_trowel_5325, enum(obj, int, 2193, gardening_trowel_5325), "Gardening trowel");
-~farming_tools_main_create($component7, plant_cure_6036, enum(obj, int, 2193, plant_cure_6036), "Plant Cure");
-~farming_tools_main_create($component12, bottomless_compost_bucket_22994, enum(obj, int, 2193, bottomless_compost_bucket_22994), "Bottomless bucket");
-~farming_tools_main_create($component8, bucket_1925, enum(obj, int, 2193, bucket_1925), "Empty buckets");
-~farming_tools_main_create($component9, compost_6032, enum(obj, int, 2193, compost_6032), "Normal Compost");
-~farming_tools_main_create($component10, supercompost_6034, enum(obj, int, 2193, supercompost_6034), "Supercompost");
-~farming_tools_main_create($component11, ultracompost_21483, enum(obj, int, 2193, ultracompost_21483), "Ultracompost");
+~farming_tools_main_create($component1, rake_5341, "Farming rake", enum(obj, int, 2193, rake_5341));
+~farming_tools_main_create($component2, seed_dibber_5343, "Seed dibber", enum(obj, int, 2193, seed_dibber_5343));
+~farming_tools_main_create($component3, spade_952, "Spade", enum(obj, int, 2193, spade_952));
+~farming_tools_main_create($component4, secateurs_5329, "Secateurs", enum(obj, int, 2193, secateurs_5329));
+~farming_tools_main_create($component5, watering_can_6797, "Watering Can", enum(obj, int, 2193, watering_can_6797));
+~farming_tools_main_create($component6, gardening_trowel_5325, "Gardening trowel", enum(obj, int, 2193, gardening_trowel_5325));
+~farming_tools_main_create($component7, plant_cure_6036, "Plant Cure", enum(obj, int, 2193, plant_cure_6036));
+~farming_tools_main_create($component12, bottomless_compost_bucket_22994, "Bottomless bucket", enum(obj, int, 2193, bottomless_compost_bucket_22994));
+~farming_tools_main_create($component8, bucket_1925, "Empty buckets", enum(obj, int, 2193, bucket_1925));
+~farming_tools_main_create($component9, compost_6032, "Normal Compost", enum(obj, int, 2193, compost_6032));
+~farming_tools_main_create($component10, supercompost_6034, "Supercompost", enum(obj, int, 2193, supercompost_6034));
+~farming_tools_main_create($component11, ultracompost_21483, "Ultracompost", enum(obj, int, 2193, ultracompost_21483));
 cc_deleteall($component13);
 def_int $int14 = 0;
 cc_create($component13, ^iftype_graphic, $int14);

@@ -22,7 +22,7 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(parawidth(if_getwidth($component1), b12_full, $string0), 20, ^setsize_abs, ^setsize_abs);
+cc_setsize(parawidth($string0, if_getwidth($component1), b12_full), 20, ^setsize_abs, ^setsize_abs);
 cc_deleteall($component2);
 while ($int7 < $int8) {
 	if ($int4 > if_getwidth($component2)) {
@@ -79,7 +79,7 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
-cc_setsize(parawidth(if_getwidth($component1), p11_full, $string0), 20, ^setsize_abs, ^setsize_abs);
+cc_setsize(parawidth($string0, if_getwidth($component1), p11_full), 20, ^setsize_abs, ^setsize_abs);
 $string0 = ~collection_category_count($struct0);
 if (string_length($string0) ! 0) {
 	cc_create($component1, ^iftype_text, 2);
@@ -89,5 +89,5 @@ if (string_length($string0) ! 0) {
 	cc_settextshadow(true);
 	cc_setcolour(0xff981f);
 	cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
-	cc_setsize(parawidth(if_getwidth($component1), p11_full, $string0), 20, ^setsize_abs, ^setsize_abs);
+	cc_setsize(parawidth($string0, if_getwidth($component1), p11_full), 20, ^setsize_abs, ^setsize_abs);
 }

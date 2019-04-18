@@ -18,7 +18,7 @@ cc_setcolour(0x333300);
 cc_create($component3, ^iftype_text, $int6);
 $int6 = calc($int6 + 1);
 def_string $string1 = "<$string0>: Lvl <tostring($int2)>";
-def_int $int7 = calc(parawidth(512, p12_full, $string1) + 10);
+def_int $int7 = calc(parawidth($string1, 512, p12_full) + 10);
 if ($int7 < 162) {
 	$int7 = 162;
 }

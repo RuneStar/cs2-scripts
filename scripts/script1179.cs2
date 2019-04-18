@@ -13,19 +13,19 @@ if_settext($string1, 522:20);
 if_settext($string2, 522:22);
 if_settext($string3, 522:24);
 if_settext($string4, 522:26);
-def_int $int0 = calc(paraheight(if_getwidth(522:20), p12_full, $string1) * 12);
+def_int $int0 = calc(paraheight($string1, if_getwidth(522:20), p12_full) * 12);
 if ($int0 > if_getheight(522:18)) {
 	if_setscrollsize(0, $int0, 522:19);
 }
-$int0 = calc(paraheight(if_getwidth(522:22), p12_full, $string2) * 12);
+$int0 = calc(paraheight($string2, if_getwidth(522:22), p12_full) * 12);
 if ($int0 > if_getheight(522:18)) {
 	if_setscrollsize(0, $int0, 522:21);
 }
-$int0 = calc(paraheight(if_getwidth(522:24), p12_full, $string3) * 12);
+$int0 = calc(paraheight($string3, if_getwidth(522:24), p12_full) * 12);
 if ($int0 > if_getheight(522:18)) {
 	if_setscrollsize(0, $int0, 522:23);
 }
-$int0 = calc(paraheight(if_getwidth(522:26), p12_full, $string4) * 12);
+$int0 = calc(paraheight($string4, if_getwidth(522:26), p12_full) * 12);
 if ($int0 > if_getheight(522:18)) {
 	if_setscrollsize(0, $int0, 522:25);
 }

@@ -93,7 +93,7 @@ if ((($boolean3 = true) & (map_members = ^false)) & (%varcint103 = 0)) {
 if (~on_mobile = true) {
 	if_setonop("stats_op(event_opindex, event_com, -1, $component2, $string2, $string3, p12_full)", $component1);
 	if ((%varcint218 = $component1) & (%varcint217 = -1)) {
-		~script2344($component1, -1, $component2, p12_full, $string2, $string3);
+		~script2344($component1, -1, $component2, $string2, $string3, p12_full);
 	}
 } else {
 	if_setonmouserepeat("script992(event_com, -1, $component2, $string2, $string3, p12_full, calc(25 / 5))", $component1);

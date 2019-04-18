@@ -3,7 +3,7 @@
 if (clientclock < $int0) {
 	return;
 }
-~raids_sidepanel_drawbutton(0, $component1, $string0);
+~raids_sidepanel_drawbutton(0, $string0, $component1);
 if_setonmouserepeat("raids_sidepanel_drawbutton(true, $string0, $component1)", $component1);
 if_setonmouseleave("raids_sidepanel_drawbutton(false, $string0, $component1)", $component1);
 if_setonop("raids_sidepanel_opbutton(event_opindex, $string0, $component1)", $component1);

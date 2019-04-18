@@ -3,7 +3,7 @@ script306(component $component0)
 cc_deleteall($component0);
 def_string $string0 = "Click on an item to imbue it.";
 def_int $int1 = if_getwidth($component0);
-def_int $int2 = calc((paraheight($int1, p12_full, $string0) * 12) + 5);
+def_int $int2 = calc((paraheight($string0, $int1, p12_full) * 12) + 5);
 def_int $int3 = calc($int1 / 7);
 def_int $int4 = calc(($int3 - 36) / 2);
 def_int $int5 = calc(32 + 20);

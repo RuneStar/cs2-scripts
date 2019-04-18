@@ -8,9 +8,9 @@ def_string $string2 = "";
 $string1, $string2 = ~script632($string0);
 if (%varcint178 = 0) {
 	if (string_length($string1) > 0) {
-		~steelborder(50:1, 0, "Party of <$string1>");
+		~steelborder(50:1, "Party of <$string1>", 0);
 	} else {
-		~steelborder(50:1, 0, "Leaderless party");
+		~steelborder(50:1, "Leaderless party", 0);
 	}
 }
 def_int $colour1 = 0xff981f;
@@ -41,14 +41,14 @@ if (($int0 = 2) & (string_length($string1) > 0)) {
 	cc_setonop("tob_partydetails_kickmember(event_opindex, %varcint178, event_com, event_comid, $string1, $int4)");
 }
 def_int $int5 = 0;
-$string0, $int5 = ~script2318(1, 50:31, $int2, $int5, $int3, $colour1, $string0);
-$string0, $int5 = ~script2318(2, 50:32, $int2, $int5, $int3, $colour1, $string0);
-$string0, $int5 = ~script2318(3, 50:33, $int2, $int5, $int3, $colour1, $string0);
-$string0, $int5 = ~script2318(4, 50:34, $int2, $int5, $int3, $colour1, $string0);
-$string0, $int5 = ~script2318(5, 50:35, $int2, $int5, $int3, $colour1, $string0);
-$string0, $int5 = ~script2318(6, 50:36, $int2, $int5, $int3, $colour1, $string0);
-$string0, $int5 = ~script2318(7, 50:37, $int2, $int5, $int3, $colour1, $string0);
-$string0, $int5 = ~script2318(8, 50:38, $int2, $int5, $int3, $colour1, $string0);
-$string0, $int5 = ~script2318(9, 50:39, $int2, $int5, $int3, $colour1, $string0);
-$string0, $int5 = ~script2318(10, 50:40, $int2, $int5, $int3, $colour1, $string0);
+$string0, $int5 = ~script2318(1, 50:31, $string0, $int2, $int5, $int3, $colour1);
+$string0, $int5 = ~script2318(2, 50:32, $string0, $int2, $int5, $int3, $colour1);
+$string0, $int5 = ~script2318(3, 50:33, $string0, $int2, $int5, $int3, $colour1);
+$string0, $int5 = ~script2318(4, 50:34, $string0, $int2, $int5, $int3, $colour1);
+$string0, $int5 = ~script2318(5, 50:35, $string0, $int2, $int5, $int3, $colour1);
+$string0, $int5 = ~script2318(6, 50:36, $string0, $int2, $int5, $int3, $colour1);
+$string0, $int5 = ~script2318(7, 50:37, $string0, $int2, $int5, $int3, $colour1);
+$string0, $int5 = ~script2318(8, 50:38, $string0, $int2, $int5, $int3, $colour1);
+$string0, $int5 = ~script2318(9, 50:39, $string0, $int2, $int5, $int3, $colour1);
+$string0, $int5 = ~script2318(10, 50:40, $string0, $int2, $int5, $int3, $colour1);
 %varcint178 = calc(%varcint178 + 1);

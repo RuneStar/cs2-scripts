@@ -1,7 +1,7 @@
 // 799
 [clientscript,ge_pricelist](inv $inv0, string $string0)
 cc_deleteall(237:1);
-~steelborder(237:1, 0, "Grand Exchange: <$string0>");
+~steelborder(237:1, "Grand Exchange: <$string0>", 0);
 cc_deleteall(237:3);
 ~scrollbar_vertical(237:3, 237:2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 cc_deleteall(237:4);
@@ -9,7 +9,7 @@ cc_create(237:4, ^iftype_graphic, 0);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 def_string $string1 = "Column view";
-def_int $int1 = calc(parawidth(512, p12_full, $string1) + 20);
+def_int $int1 = calc(parawidth($string1, 512, p12_full) + 20);
 if_setsize($int1, 17, ^setsize_abs, ^setsize_abs, 237:4);
 .cc_create(237:4, ^iftype_text, 1);
 .cc_setsize($int1, 17, ^setsize_abs, ^setsize_abs);

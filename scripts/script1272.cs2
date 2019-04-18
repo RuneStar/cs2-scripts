@@ -29,7 +29,7 @@ if ($int3 > 0) {
 	$string0 = append($string0, " (<~script46($int3, ",")>)");
 }
 if_setop(6, $string0, $component0);
-def_int $int6 = parawidth(calc(if_getwidth(if_getlayer($component0)) - 40), p12_full, $string0);
+def_int $int6 = parawidth($string0, calc(if_getwidth(if_getlayer($component0)) - 40), p12_full);
 cc_create($component0, ^iftype_text, $int5);
 cc_setsize($int6, 0, ^setsize_abs, ^setsize_minus);
 cc_setposition(8, 0, ^setpos_abs_right, ^setpos_abs_centre);

@@ -4,24 +4,24 @@
 ~barrows_overlay_reward($component9);
 if_setonvartransmit("barrows_overlay_reward($component9){var453}", $component0);
 cc_deleteall($component10);
-def_int $int11 = ~script1071(0, $component10, "Ahrim");
-def_int $int12 = ~script1071(1, $component10, "Dharok");
+def_int $int11 = ~script1071("Ahrim", 0, $component10);
+def_int $int12 = ~script1071("Dharok", 1, $component10);
 if ($int12 > $int11) {
 	$int11 = $int12;
 }
-$int12 = ~script1071(2, $component10, "Guthan");
+$int12 = ~script1071("Guthan", 2, $component10);
 if ($int12 > $int11) {
 	$int11 = $int12;
 }
-$int12 = ~script1071(3, $component10, "Karil");
+$int12 = ~script1071("Karil", 3, $component10);
 if ($int12 > $int11) {
 	$int11 = $int12;
 }
-$int12 = ~script1071(4, $component10, "Torag");
+$int12 = ~script1071("Torag", 4, $component10);
 if ($int12 > $int11) {
 	$int11 = $int12;
 }
-$int12 = ~script1071(5, $component10, "Verac");
+$int12 = ~script1071("Verac", 5, $component10);
 if ($int12 > $int11) {
 	$int11 = $int12;
 }

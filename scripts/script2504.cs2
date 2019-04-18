@@ -1,7 +1,7 @@
 // 2504
 script2504(component $component0, component $component1, component $component2, string $string0, string $string1)
 if (~on_mobile = true) {
-	~script2638($component0, $component1, $component2, $string0, $string1);
+	~script2638($string0, $string1, $component0, $component1, $component2);
 } else {
-	~script2637($component0, $component1, $string0, $string1);
+	~script2637($string0, $string1, $component0, $component1);
 }

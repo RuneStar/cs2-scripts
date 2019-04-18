@@ -4,7 +4,7 @@ script1422(component $component0, component $component1, component $component2, 
 ~script1486($component2, ^setpos_abs_right, 1, 0);
 if_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top, $component3);
 def_string $string0 = "Coffer";
-if_setsize(calc(parawidth(512, p12_full, $string0) + 10), 58, ^setsize_abs, ^setsize_abs, $component3);
+if_setsize(calc(parawidth($string0, 512, p12_full) + 10), 58, ^setsize_abs, ^setsize_abs, $component3);
 cc_deleteall($component3);
 def_int $int4 = ~thinbox($component3, 0);
 cc_create($component3, ^iftype_text, $int4);

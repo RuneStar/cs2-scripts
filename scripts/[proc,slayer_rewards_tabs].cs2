@@ -3,10 +3,10 @@
 cc_deleteall($component0);
 def_int $int6 = 0;
 def_int $int7 = 0;
-$int6, $int7 = ~slayer_rewards_tab($component0, $component1, $int6, $int7, $component1, $component2, $component3, $component4, $component5, "Unlock");
-$int6, $int7 = ~slayer_rewards_tab($component0, $component2, $int6, $int7, $component1, $component2, $component3, $component4, $component5, "Extend");
-$int6, $int7 = ~slayer_rewards_tab($component0, $component3, $int6, $int7, $component1, $component2, $component3, $component4, $component5, "Buy");
-$int6, $int7 = ~slayer_rewards_tab($component0, $component4, $int6, $int7, $component1, $component2, $component3, $component4, $component5, "Tasks");
+$int6, $int7 = ~slayer_rewards_tab($component0, $component1, "Unlock", $int6, $int7, $component1, $component2, $component3, $component4, $component5);
+$int6, $int7 = ~slayer_rewards_tab($component0, $component2, "Extend", $int6, $int7, $component1, $component2, $component3, $component4, $component5);
+$int6, $int7 = ~slayer_rewards_tab($component0, $component3, "Buy", $int6, $int7, $component1, $component2, $component3, $component4, $component5);
+$int6, $int7 = ~slayer_rewards_tab($component0, $component4, "Tasks", $int6, $int7, $component1, $component2, $component3, $component4, $component5);
 cc_create($component0, ^iftype_text, $int6);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
 cc_setsize($int7, 0, ^setsize_minus, ^setsize_minus);

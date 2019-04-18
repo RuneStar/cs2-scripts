@@ -5,7 +5,7 @@ if (($component4 ! null) & ($int3 > if_getwidth($component4))) {
 	$int3 = if_getwidth($component4);
 }
 $int3 = calc($int3 - 4);
-if_setsize(calc(4 + parawidth($int3, p12_full, $string0)), calc(7 + (12 * paraheight($int3, p12_full, $string0))), ^setsize_abs, ^setsize_abs, $component2);
+if_setsize(calc(4 + parawidth($string0, $int3, p12_full)), calc(7 + (12 * paraheight($string0, $int3, p12_full))), ^setsize_abs, ^setsize_abs, $component2);
 def_int $int5 = if_getx($component0);
 def_int $int6 = if_gety($component0);
 def_int $int7 = 0;

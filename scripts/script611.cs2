@@ -5,8 +5,8 @@ if ((string_length($string0) <= 0) | (string_length($string1) <= 0)) {
 	return;
 }
 def_int $int7 = calc($int1 - (15 + $int6));
-def_int $int8 = parawidth($int7, $fontmetrics4, $string0);
-def_int $int9 = calc((paraheight($int7, $fontmetrics4, $string0) * $int5) + $int6);
+def_int $int8 = parawidth($string0, $int7, $fontmetrics4);
+def_int $int9 = calc((paraheight($string0, $int7, $fontmetrics4) * $int5) + $int6);
 if ($int9 < 15) {
 	$int9 = 15;
 }

@@ -1,8 +1,8 @@
 // 1664
 script1664(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-~script1665($component0, 2, 3, $component0, $component1, $component2, $component3, $component4, $component5, "Sort by name");
-~script1665($component1, 6, 7, $component0, $component1, $component2, $component3, $component4, $component5, "Sort by rank");
-~script1665($component2, 0, 1, $component0, $component1, $component2, $component3, $component4, $component5, "Legacy sort");
+~script1665($component0, 2, 3, "Sort by name", $component0, $component1, $component2, $component3, $component4, $component5);
+~script1665($component1, 6, 7, "Sort by rank", $component0, $component1, $component2, $component3, $component4, $component5);
+~script1665($component2, 0, 1, "Legacy sort", $component0, $component1, $component2, $component3, $component4, $component5);
 if_settext("<~text_device("Right-click", "Long press")> on white text to change options.", 94:8);
 cc_deleteall($component3);
 def_int $int6 = if_getwidth($component0);
@@ -108,7 +108,7 @@ if ($int16 <= -2) {
 		.cc_create($component3, ^iftype_graphic, $int10);
 		$int10 = calc($int10 + 1);
 		.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(calc(parawidth($int9, b12_full, $string0) + 9), calc($int11 + (($int12 - 14) / 2)), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc(parawidth($string0, $int9, b12_full) + 9), calc($int11 + (($int12 - 14) / 2)), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setgraphic("friends_changed_name");
 		.cc_setgraphicshadow(0x333333);
 		if (string_length($string1) > 0) {

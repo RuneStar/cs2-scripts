@@ -1,8 +1,8 @@
 // 498
 [clientscript,killdeathratio_init](string $string0, string $string1)
 def_int $int0 = if_getwidth(380:3);
-def_int $int1 = paraheight($int0, p12_full, $string0);
-def_int $int2 = paraheight($int0, p12_full, $string1);
+def_int $int1 = paraheight($string0, $int0, p12_full);
+def_int $int2 = paraheight($string1, $int0, p12_full);
 if ($int2 > $int1) {
 	$int1 = $int2;
 }

@@ -12,10 +12,10 @@ if (~on_mobile = true) {
 	if_setsize(0, 36, ^setsize_minus, ^setsize_abs, 162:44);
 	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_centre, 162:45);
 	if_setsize(0, 20, ^setsize_minus, ^setsize_abs, 162:45);
-	~meslayer_button_draw(162:46, 0, "B");
+	~meslayer_button_draw(162:46, "B", 0);
 	if_setonclick("meslayer_mode7_button(event_com, "B", $string0)", 162:46);
-	~meslayer_button_draw(162:47, 0, "M");
+	~meslayer_button_draw(162:47, "M", 0);
 	if_setonclick("meslayer_mode7_button(event_com, "M", $string0)", 162:47);
-	~meslayer_button_draw(162:48, 0, "K");
+	~meslayer_button_draw(162:48, "K", 0);
 	if_setonclick("meslayer_mode7_button(event_com, "K", $string0)", 162:48);
 }

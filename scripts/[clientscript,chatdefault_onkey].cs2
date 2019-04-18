@@ -32,10 +32,10 @@ if ($int0 = 84) {
 					if ($int4 = 1) {
 						%varcstring335 = append("/", %varcstring335);
 					}
-					~chat_sendpublic(2, %varcstring335);
+					~chat_sendpublic(%varcstring335, 2);
 				}
 			} else {
-				~chat_sendpublic(0, %varcstring335);
+				~chat_sendpublic(%varcstring335, 0);
 			}
 		} else if (string_indexof_string(%varcstring335, "::", 0) = 0) {
 			if ($int2 > 2) {
@@ -48,17 +48,17 @@ if ($int0 = 84) {
 						mes("Roofs are now all hidden.");
 					}
 				} else if (string_indexof_string(%varcstring335, "::bank", 0) = 0) {
-					~chat_sendpublic(0, "Hey, everyone, I just tried to do something very silly!");
+					~chat_sendpublic("Hey, everyone, I just tried to do something very silly!", 0);
 				} else {
 					%varcstring335 = ~script224(%varcstring335);
 					$int2 = string_length(%varcstring335);
 					docheat(substring(%varcstring335, 2, $int2));
 				}
 			} else {
-				~chat_sendpublic(0, %varcstring335);
+				~chat_sendpublic(%varcstring335, 0);
 			}
 		} else {
-			~chat_sendpublic(0, %varcstring335);
+			~chat_sendpublic(%varcstring335, 0);
 		}
 		~chatout_add(%varcstring335);
 		%varcstring335 = "";
@@ -92,6 +92,6 @@ if ($int0 = 84) {
 		mes("You haven't received any messages to which you can reply.");
 		return;
 	}
-	%varcstring335 = ~script74(0, $int0, $char1, %varcstring335);
+	%varcstring335 = ~script74(%varcstring335, 0, $int0, $char1);
 }
 ~script223;

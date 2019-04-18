@@ -16,6 +16,6 @@ if ($int1 ! -1) {
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 	cc_sethide(true);
-	cc_settext("<~string_prependzero(13, removetags($string1))><tostring($int3)>");
+	cc_settext("<~string_prependzero(removetags($string1), 13)><tostring($int3)>");
 }
 return($string0, calc($int4 + $int6));

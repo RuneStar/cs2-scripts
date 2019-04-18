@@ -1,6 +1,6 @@
 // 1589
 [clientscript,raids_storage_shared_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-~raids_storage_drawbutton($component5, p11_full, "Private");
+~raids_storage_drawbutton("Private", $component5, p11_full);
 ~raids_storage_shared_warning($component1);
 if_setonvartransmit("raids_storage_shared_warning($component1){var499}", $component1);
 ~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

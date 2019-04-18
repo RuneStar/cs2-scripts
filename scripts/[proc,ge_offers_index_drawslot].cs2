@@ -182,11 +182,11 @@ if (cc_find($component8, $int18) = ^true) {
 	$string3 = oc_name($obj28);
 	$int38 = cc_getwidth;
 	$int39 = string_length($string3);
-	if (($int39 > 0) & (parawidth($int38, p11_full, $string3) > $int38)) {
+	if (($int39 > 0) & (parawidth($string3, $int38, p11_full) > $int38)) {
 		while (($int39 > 1) & ($int40 = 0)) {
 			$int39 = calc($int39 - 1);
 			$string4 = append(substring($string3, 0, $int39), "...");
-			if (parawidth($int38, p11_full, $string4) <= $int38) {
+			if (parawidth($string4, $int38, p11_full) <= $int38) {
 				$int40 = 1;
 				$string3 = $string4;
 			}

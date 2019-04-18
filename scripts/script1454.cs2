@@ -3,7 +3,7 @@ script1454(boolean $boolean0, string $string0, string $string1)
 def_component $component1 = 106:1;
 def_component $component2 = 106:2;
 def_component $component3 = 106:17;
-~steelborder($component1, 0, $string0);
+~steelborder($component1, $string0, 0);
 if_setonvartransmit("script1455($component2, -1, $boolean0){var1139, var1140}", $component2);
 if_setoninvtransmit("script1455($component2, -1, $boolean0){inv}", $component2);
 ~script1456($component2, -1, $boolean0);

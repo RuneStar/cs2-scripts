@@ -27,26 +27,26 @@ if ($int3 > 0) {
 	cc_settext("No current applicants");
 }
 if_sethide(false, 50:42);
-~script1558(50:42, 50:0, 1939, -1, "Back");
+~script1558(50:42, "Back", 50:0, 1939, -1);
 def_string $string0 = "Refresh";
 if_sethide(false, 50:8);
-~script1558(50:8, 50:0, 1939, -1, $string0);
-~script2324(50:47, $int1, $int0, "Preferred size");
-~script2324(50:51, $int2, $int0, "Preferred level");
+~script1558(50:8, $string0, 50:0, 1939, -1);
+~script2324(50:47, "Preferred size", $int1, $int0);
+~script2324(50:51, "Preferred level", $int2, $int0);
 if_sethide(false, 50:55);
 switch_int ($int0) {
 	case 2 :
-		~script1558(50:55, 50:0, 1939, -1, "<col=ff0000>Disband</col>");
+		~script1558(50:55, "<col=ff0000>Disband</col>", 50:0, 1939, -1);
 		if_sethide(false, 50:46);
-		~script1558(50:46, 50:0, 1939, -1, "<col=ffff00>Unblock</col>");
+		~script1558(50:46, "<col=ffff00>Unblock</col>", 50:0, 1939, -1);
 	case 1 :
-		~script1558(50:55, 50:0, 1939, -1, "<col=ff0000>Leave</col>");
+		~script1558(50:55, "<col=ff0000>Leave</col>", 50:0, 1939, -1);
 	case 3 :
-		~script1558(50:55, 50:0, 1939, -1, "<col=ff0000>Withdraw</col>");
+		~script1558(50:55, "<col=ff0000>Withdraw</col>", 50:0, 1939, -1);
 	case 4 :
-		~script1558(50:55, 50:0, 1939, -1, "<col=7f7f7f><str=9f9f9f>Apply</str></col>");
+		~script1558(50:55, "<col=7f7f7f><str=9f9f9f>Apply</str></col>", 50:0, 1939, -1);
 	case default :
-		~script1558(50:55, 50:0, 1939, -1, "<col=00ff00>Apply</col>");
+		~script1558(50:55, "<col=00ff00>Apply</col>", 50:0, 1939, -1);
 }
 if_setsize(0, 0, ^setsize_minus, ^setsize_minus, 50:13);
 if_setontimer("tob_partydetails_autorefresh(event_com, 50:13, 50:8, $string0, clientclock)", 50:0);

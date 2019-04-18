@@ -10,7 +10,7 @@ if (~on_mobile = true) {
 if ($int0 = 1) {
 	~chatdefault_stopinput;
 }
-~script219($component1, $component2, $component3, 33, $string0);
+~script219($component1, $component2, $component3, $string0, 33);
 cc_deleteall($component4);
 def_int $int5 = if_getwidth($component2);
 def_int $int6 = 0;
@@ -19,11 +19,11 @@ def_int $int8 = string_indexof_string($string1, "|", 0);
 def_string $string2 = "";
 while ($int8 ! -1) {
 	$string2 = substring($string1, 0, $int8);
-	$int6, $int7 = ~menu_createentry($component2, $component4, $int5, $int6, $int7, $int0, $string2);
+	$int6, $int7 = ~menu_createentry($string2, $component2, $component4, $int5, $int6, $int7, $int0);
 	$string1 = substring($string1, calc($int8 + 1), string_length($string1));
 	$int8 = string_indexof_string($string1, "|", 0);
 }
-$int6, $int7 = ~menu_createentry($component2, $component4, $int5, $int6, $int7, $int0, $string1);
+$int6, $int7 = ~menu_createentry($string1, $component2, $component4, $int5, $int6, $int7, $int0);
 if_setscrollsize(0, $int7, $component2);
 if_setscrollpos(0, 0, $component2);
 if ($int7 > if_getheight($component2)) {

@@ -1,125 +1,125 @@
 // 2499
-[proc,skill_guide_data_prayer](int $int0, int $int1)(string, int, int)
+[proc,skill_guide_data_prayer](int $int0, int $int1)(int, int, string)
 switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return("While any of your prayers are active, your prayer points will drain. Once you have run out of prayer points, you will no longer be able to use prayers.<br>Visit an altar to recharge your prayer points.", -1, 3258);
+				return(-1, 3258, "While any of your prayers are active, your prayer points will drain. Once you have run out of prayer points, you will no longer be able to use prayers.<br>Visit an altar to recharge your prayer points.");
 			case 1 :
-				return("Thick Skin", 1, 20803);
+				return(1, 20803, "Thick Skin");
 			case 2 :
-				return("Burst of Strength", 4, 20804);
+				return(4, 20804, "Burst of Strength");
 			case 3 :
-				return("Clarity of Thought", 7, 20805);
+				return(7, 20805, "Clarity of Thought");
 			case 4 :
-				return("Sharp Eye", 8, 20821);
+				return(8, 20821, "Sharp Eye");
 			case 5 :
-				return("Mystic Will", 9, 20822);
+				return(9, 20822, "Mystic Will");
 			case 6 :
-				return("Rock Skin", 10, 20806);
+				return(10, 20806, "Rock Skin");
 			case 7 :
-				return("Superhuman Strength", 13, 20807);
+				return(13, 20807, "Superhuman Strength");
 			case 8 :
-				return("Improved Reflexes", 16, 20808);
+				return(16, 20808, "Improved Reflexes");
 			case 9 :
-				return("Rapid Restore", 19, 20809);
+				return(19, 20809, "Rapid Restore");
 			case 10 :
-				return("Rapid Heal", 22, 20810);
+				return(22, 20810, "Rapid Heal");
 			case 11 :
-				return("Protect Item", 25, 20811);
+				return(25, 20811, "Protect Item");
 			case 12 :
-				return("Hawk Eye", 26, 20823);
+				return(26, 20823, "Hawk Eye");
 			case 13 :
-				return("Mystic Lore", 27, 20824);
+				return(27, 20824, "Mystic Lore");
 			case 14 :
-				return("Steel Skin", 28, 20812);
+				return(28, 20812, "Steel Skin");
 			case 15 :
-				return("Ultimate Strength", 31, 20813);
+				return(31, 20813, "Ultimate Strength");
 			case 16 :
-				return("Incredible Reflexes", 34, 20814);
+				return(34, 20814, "Incredible Reflexes");
 			case 17 :
-				return("Protect from Magic", 37, 20815);
+				return(37, 20815, "Protect from Magic");
 			case 18 :
-				return("Protect from Missiles", 40, 20816);
+				return(40, 20816, "Protect from Missiles");
 			case 19 :
-				return("Protect from Melee", 43, 20817);
+				return(43, 20817, "Protect from Melee");
 			case 20 :
-				return("Eagle Eye", 44, 20825);
+				return(44, 20825, "Eagle Eye");
 			case 21 :
-				return("Mystic Might", 45, 20826);
+				return(45, 20826, "Mystic Might");
 			case 22 :
-				return("Members: Retribution", 46, 20818);
+				return(46, 20818, "Members: Retribution");
 			case 23 :
-				return("Members: Redemption", 49, 20819);
+				return(49, 20819, "Members: Redemption");
 			case 24 :
-				return("Members: Smite", 52, 20820);
+				return(52, 20820, "Members: Smite");
 			case 25 :
-				return("Members: Preserve", 55, 20831);
+				return(55, 20831, "Members: Preserve");
 			case 26 :
-				return("Members: Chivalry<br> (after King's Ransom)", 60, 20828);
+				return(60, 20828, "Members: Chivalry<br> (after King's Ransom)");
 			case 27 :
-				return("Members: Piety<br> (after King's Ransom)", 70, 20829);
+				return(70, 20829, "Members: Piety<br> (after King's Ransom)");
 			case 28 :
-				return("Members: Rigour<br> (with 70 Defence)", 74, 20827);
+				return(74, 20827, "Members: Rigour<br> (with 70 Defence)");
 			case 29 :
-				return("Members: Augury<br> (with 70 Defence)", 77, 20830);
+				return(77, 20830, "Members: Augury<br> (with 70 Defence)");
 			case default :
-				return("", -1, -1);
+				return(-1, -1, "");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return("Initiate armour<br> (after Recruitment Drive, with 20 Defence)", 10, 5574);
+				return(10, 5574, "Initiate armour<br> (after Recruitment Drive, with 20 Defence)");
 			case 1 :
-				return("Proselyte armour<br> (after Slug Menace, with 30 Defence)", 20, 9672);
+				return(20, 9672, "Proselyte armour<br> (after Slug Menace, with 30 Defence)");
 			case 2 :
-				return("Vestment robe top", 20, 10458);
+				return(20, 10458, "Vestment robe top");
 			case 3 :
-				return("Vestment robe legs", 20, 10464);
+				return(20, 10464, "Vestment robe legs");
 			case 4 :
-				return("Void Knight equipment<br>(with 42 combat stats)", 22, 8839);
+				return(22, 8839, "Void Knight equipment<br>(with 42 combat stats)");
 			case 5 :
-				return("Holy wraps", 31, 19997);
+				return(31, 19997, "Holy wraps");
 			case 6 :
-				return("Holy sandals", 31, 12598);
+				return(31, 12598, "Holy sandals");
 			case 7 :
-				return("Vestment cloak", 40, 10446);
+				return(40, 10446, "Vestment cloak");
 			case 8 :
-				return("Vestment mitre", 40, 10452);
+				return(40, 10452, "Vestment mitre");
 			case 9 :
-				return("Use completed prayer books<br>to bless holy and unholy symbols.", 50, 1716);
+				return(50, 1716, "Use completed prayer books<br>to bless holy and unholy symbols.");
 			case 10 :
-				return("Use Bologa's grape blessings.", 50, 20747);
+				return(50, 20747, "Use Bologa's grape blessings.");
 			case 11 :
-				return("Spirit Shield<br>(with 45 Defence)", 55, 12829);
+				return(55, 12829, "Spirit Shield<br>(with 45 Defence)");
 			case 12 :
-				return("Vestment stole", 60, 10470);
+				return(60, 10470, "Vestment stole");
 			case 13 :
-				return("Crozier", 60, 10440);
+				return(60, 10440, "Crozier");
 			case 14 :
-				return("Blessed spirit shield<br>(with 70 Defence)", 60, 12831);
+				return(60, 12831, "Blessed spirit shield<br>(with 70 Defence)");
 			case 15 :
-				return("Devout boots", 60, 22954);
+				return(60, 22954, "Devout boots");
 			case 16 :
-				return("3rd age Druidic robes", 65, 23336);
+				return(65, 23336, "3rd age Druidic robes");
 			case 17 :
-				return("3rd Age Druidic staff<br>(with 65 attack)", 65, 23342);
+				return(65, 23342, "3rd Age Druidic staff<br>(with 65 attack)");
 			case 18 :
-				return("Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)", 70, 12825);
+				return(70, 12825, "Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)");
 			case 19 :
-				return("Elysian spirit shield<br>(with 75 Defence)", 75, 12817);
+				return(75, 12817, "Elysian spirit shield<br>(with 75 Defence)");
 			case 20 :
-				return("Dragonbone necklace", 80, 22111);
+				return(80, 22111, "Dragonbone necklace");
 			case 21 :
-				return("Bonecrusher necklace", 80, 22986);
+				return(80, 22986, "Bonecrusher necklace");
 			case default :
-				return("", -1, -1);
+				return(-1, -1, "");
 		}
 	case 2 :
 		if ($int1 = 0) {
-			return("Use superior dragon bones", 70, 22124);
+			return(70, 22124, "Use superior dragon bones");
 		}
-		return("", -1, -1);
+		return(-1, -1, "");
 	case default :
-		return("", -1, -1);
+		return(-1, -1, "");
 }

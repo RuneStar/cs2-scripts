@@ -102,7 +102,7 @@ if (if_gethide(76:14) = true) {
 			return;
 		}
 		$string1 = "You are currently talking in the <col=ffffff><enum(int, string, 848, $int2)></col> channel.";
-		$int10 = calc((paraheight($int5, p12_full, $string1) * 12) + 5);
+		$int10 = calc((paraheight($string1, $int5, p12_full) * 12) + 5);
 		cc_setsize($int5, $int10, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, calc((if_getheight(76:12) - $int10) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settext($string1);

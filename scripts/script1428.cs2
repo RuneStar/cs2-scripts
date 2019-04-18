@@ -1,7 +1,7 @@
 // 1428
 script1428(component $component0, component $component1)
 def_string $string0 = "Incinerator";
-def_int $int2 = calc(parawidth(512, p12_full, $string0) + 22);
+def_int $int2 = calc(parawidth($string0, 512, p12_full) + 22);
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
@@ -21,7 +21,7 @@ if_setopbase("<col=ff9040><$string0></col>", $component0);
 if_setonvartransmit("script1322($component0, cc_getid){var1052}", $component0);
 if_setonop("script1321(event_opindex, $component0, cc_getid)", $component0);
 $string0 = "'Deposit worn items' button";
-def_int $int3 = calc(parawidth(512, p12_full, $string0) + 22);
+def_int $int3 = calc(parawidth($string0, 512, p12_full) + 22);
 cc_deleteall($component1);
 cc_create($component1, ^iftype_graphic, 0);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);

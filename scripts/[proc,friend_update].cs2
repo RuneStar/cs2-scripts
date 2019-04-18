@@ -1,9 +1,9 @@
 // 125
 [proc,friend_update](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
-~script1669($component1, 2, 3, 2, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, "Sort by name");
-~script1669($component2, 8, 9, 9, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, "Sort by last world change");
-~script1669($component3, 4, 5, 4, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, "Sort by world");
-~script1669($component4, 0, 1, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, "Legacy sort");
+~script1669($component1, 2, 3, 2, "Sort by name", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+~script1669($component2, 8, 9, 9, "Sort by last world change", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+~script1669($component3, 4, 5, 4, "Sort by world", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+~script1669($component4, 0, 1, 0, "Legacy sort", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
 cc_deleteall($component5);
 def_int $int9 = 0;
 def_int $int10 = 0;
@@ -105,7 +105,7 @@ if ($int15 <= -2) {
 		.cc_create($component5, ^iftype_graphic, $int10);
 		$int10 = calc($int10 + 1);
 		.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(calc(parawidth(190, p12_full, $string0) + 3), calc($int12 + (($int13 - 14) / 2)), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc(parawidth($string0, 190, p12_full) + 3), calc($int12 + (($int13 - 14) / 2)), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setgraphic("friends_changed_name");
 		.cc_setgraphicshadow(0x333333);
 		if (string_length($string1) > 0) {

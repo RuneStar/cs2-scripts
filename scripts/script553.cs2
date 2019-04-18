@@ -12,7 +12,7 @@ def_int $chattype5 = ^chattype_gamemessage;
 def_int $int6 = 0;
 while ($chattype5 <= ^chattype_108) {
 	if (chat_gethistorylength($chattype5) > 0) {
-		$int0, $int1, $int6, $string0, $string1, $string2 = chat_gethistory_bytypeandline($chattype5, 0);
+		$int0, $int1, $string0, $string1, $string2, $int6 = chat_gethistory_bytypeandline($chattype5, 0);
 		if (($int1 > $int3) | ($int0 > $int2)) {
 			$int3 = $int1;
 			$int2 = $int0;

@@ -5,9 +5,9 @@ if (%varcint2 = 1) {
 	return;
 }
 if (string_length($string0) > 0) {
-	~script2344($component1, -1, $component0, p12_full, $string1, $string0);
+	~script2344($component1, -1, $component0, $string1, $string0, p12_full);
 	if_setontimer("xpdrops_tooltip_mobile_remove($component0, calc(clientclock + 240), $component2)", $component2);
 } else if (string_length($string1) > 0) {
-	~tooltip_build($component1, -1, $component0, 512, $string1);
+	~tooltip_build($component1, -1, $component0, $string1, 512);
 	if_setontimer("xpdrops_tooltip_mobile_remove($component0, calc(clientclock + 240), $component2)", $component2);
 }

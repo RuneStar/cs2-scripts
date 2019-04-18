@@ -34,7 +34,7 @@ if (string_length($string1) > 0) {
 	$string1 = append($string1, "<br>");
 }
 $string1 = append($string1, $string4);
-$int4 = parawidth(512, p11_full, $string4);
+$int4 = parawidth($string4, 512, p11_full);
 if ($int5 < $int4) {
 	$int5 = $int4;
 }
@@ -69,7 +69,7 @@ if (((($int7 > 0) | ($int8 > 0)) | ($int9 > 0)) | ($int10 > 0)) {
 		$string4 = ~script46(%varbit4290, $string3);
 	}
 	$string1 = append($string1, append("<br>", $string4));
-	$int4 = parawidth(512, p11_full, $string4);
+	$int4 = parawidth($string4, 512, p11_full);
 	if ($int5 < $int4) {
 		$int5 = $int4;
 	}
@@ -101,7 +101,7 @@ if (((($int7 > 0) | ($int8 > 0)) | ($int9 > 0)) | ($int10 > 0)) {
 			$string4 = ~script46(%varbit4575, $string3);
 		}
 		$string1 = append($string1, append("<br>", $string4));
-		$int4 = parawidth(512, p11_full, $string4);
+		$int4 = parawidth($string4, 512, p11_full);
 		if ($int5 < $int4) {
 			$int5 = $int4;
 		}
@@ -121,11 +121,11 @@ if (((($int7 > 0) | ($int8 > 0)) | ($int9 > 0)) | ($int10 > 0)) {
 	} else if (($int10 > 0) & (cc_find($component1, calc($int2 + 3)) = ^true)) {
 		$string5 = ~script213;
 	}
-	$int6 = parawidth(512, p11_full, $string5);
+	$int6 = parawidth($string5, 512, p11_full);
 }
-def_int $int11 = parawidth(512, p11_full, $string0);
-def_int $int12 = parawidth(512, p11_full, $string1);
-def_int $int13 = parawidth(512, p11_full, $string2);
+def_int $int11 = parawidth($string0, 512, p11_full);
+def_int $int12 = parawidth($string1, 512, p11_full);
+def_int $int13 = parawidth($string2, 512, p11_full);
 $int4 = calc(((($int11 + 4) + $int12) + 4) + $int13);
 if ($int6 > $int4) {
 	$int11 = calc($int11 + ($int6 - $int4));

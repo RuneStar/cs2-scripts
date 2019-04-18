@@ -21,4 +21,4 @@ if (.cc_find($component1, $int0) = ^true) {
 	~worldmap_toggles_set($component1, $int0, $component4, $component5, $component6);
 }
 $int2 = calc($int2 + 1);
-return($int2, ~max($int3, calc(25 + parawidth(512, p12_full, $string0))));
+return($int2, ~max($int3, calc(25 + parawidth($string0, 512, p12_full))));

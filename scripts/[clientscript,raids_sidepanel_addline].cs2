@@ -23,13 +23,13 @@ def_string $string4 = "";
 if (cc_find(500:10, calc(($int0 * 7) + 1)) = ^true) {
 	$int2 = cc_getwidth;
 	$int1 = string_length($string1);
-	if (($int1 > 0) & (parawidth(512, p11_full, $string1) > $int2)) {
+	if (($int1 > 0) & (parawidth($string1, 512, p11_full) > $int2)) {
 		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 500:15, $string2, 25, 190)");
 		cc_setonmouseleave("deltooltip(500:15)");
 		while (($int1 > 1) & ($int3 = 0)) {
 			$int1 = calc($int1 - 1);
 			$string4 = append(substring($string1, 0, $int1), "...");
-			if (parawidth(512, p11_full, $string4) <= $int2) {
+			if (parawidth($string4, 512, p11_full) <= $int2) {
 				$int3 = 1;
 				$string1 = $string4;
 			}
@@ -50,8 +50,8 @@ if (cc_find(500:10, calc(($int0 * 7) + 4)) = ^true) {
 	cc_settext($string2);
 }
 if (cc_find(500:10, calc(($int0 * 7) + 5)) = ^true) {
-	cc_settext(append_num(~string_prependzero(3, $string3), $int0));
+	cc_settext(append_num(~string_prependzero($string3, 3), $int0));
 }
 if (cc_find(500:10, calc(($int0 * 7) + 6)) = ^true) {
-	cc_settext(append_num(~string_prependzero(4, $string0), $int0));
+	cc_settext(append_num(~string_prependzero($string0, 4), $int0));
 }

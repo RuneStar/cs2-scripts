@@ -67,7 +67,7 @@ cc_deleteall($component3);
 $int5 = 0;
 if ($int0 ! -1) {
 	$string0 = enum(int, string, 2285, $int0);
-	~script2778(0, $component4, $string0);
+	~script2778(0, $string0, $component4);
 	while ($int5 < $int0) {
 		cc_create($component3, ^iftype_rectangle, $int5);
 		cc_sethide(true);

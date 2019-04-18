@@ -16,7 +16,7 @@ if (~on_mobile = true) {
 	if_setop(1, "Toggle Total XP", $component0);
 	if_setonop("stats_op(event_opindex, event_com, -1, $component1, $string0, $string1, p12_full)", $component0);
 	if ((%varcint218 = $component0) & (%varcint217 = -1)) {
-		~script2344($component0, -1, $component1, p12_full, $string0, $string1);
+		~script2344($component0, -1, $component1, $string0, $string1, p12_full);
 	}
 } else {
 	if_setonmouserepeat("script992(event_com, -1, $component1, $string0, $string1, p12_full, calc(25 / 5))", $component0);

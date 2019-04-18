@@ -7,11 +7,11 @@ def_int $int7 = string_indexof_string($string0, "|", 0);
 def_string $string1 = "";
 while ($int7 ! -1) {
 	$string1 = substring($string0, 0, $int7);
-	$int4, $int5, $int6 = ~script1329($component0, $component1, $component2, $int4, $int5, $int6, $string1);
+	$int4, $int5, $int6 = ~script1329($string1, $component0, $component1, $component2, $int4, $int5, $int6);
 	$string0 = substring($string0, calc($int7 + 1), string_length($string0));
 	$int7 = string_indexof_string($string0, "|", 0);
 }
-$int4, $int5, $int6 = ~script1329($component0, $component1, $component2, $int4, $int5, $int6, $string0);
+$int4, $int5, $int6 = ~script1329($string0, $component0, $component1, $component2, $int4, $int5, $int6);
 if (calc($int6 + 38) > if_getheight($component0)) {
 	if_setscrollsize(0, calc($int6 + 50), $component0);
 	if_setscrollpos(0, 0, $component0);

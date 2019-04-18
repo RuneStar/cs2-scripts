@@ -3,7 +3,7 @@
 cc_deleteall(300:1);
 cc_deleteall(300:16);
 cc_deleteall(300:17);
-~steelborder(300:1, 0, $string0);
+~steelborder(300:1, $string0, 0);
 def_int $int3 = calc(((if_getwidth(300:16) - (8 * 36)) / 7) + 36);
 def_int $int4 = inv_size($inv0);
 def_int $int5 = 0;

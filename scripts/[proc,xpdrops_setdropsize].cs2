@@ -2,7 +2,7 @@
 [proc,xpdrops_setdropsize](component $component0, int $int1, fontmetrics $fontmetrics2, fontmetrics $fontmetrics3, string $string0)
 def_int $int4 = 0;
 if (string_length($string0) > 0) {
-	$int4 = parawidth(512, $fontmetrics2, $string0);
+	$int4 = parawidth($string0, 512, $fontmetrics2);
 }
 def_int $int5 = calc($int1 - 1);
 def_int $int6 = 0;

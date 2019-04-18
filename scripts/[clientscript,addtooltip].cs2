@@ -15,7 +15,7 @@ if (%varcint2 = 0) {
 		$int3 = if_getwidth(if_getlayer($component1));
 	}
 	$int3 = calc($int3 - 4);
-	if_setsize(calc(4 + parawidth($int3, p12_full, $string0)), calc(4 + (13 * paraheight($int3, p12_full, $string0))), ^setsize_abs, ^setsize_abs, $component1);
+	if_setsize(calc(4 + parawidth($string0, $int3, p12_full)), calc(4 + (13 * paraheight($string0, $int3, p12_full))), ^setsize_abs, ^setsize_abs, $component1);
 	$int4 = calc(if_getx($component0) + 5);
 	$int5 = calc((if_gety($component0) + if_getheight($component0)) + 5);
 	if (if_getlayer($component1) ! null) {

@@ -4,7 +4,7 @@ def_int $int4 = calc(clientclock - $int3);
 if ($int4 >= 500) {
 	if_setontimer(null, $component0);
 	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $component1);
-	~script890($component2, $component0, enum(component, int, 1939, $component2), $string0);
+	~script890($component2, $string0, $component0, enum(component, int, 1939, $component2));
 } else {
 	if_setsize(scale(~max(0, calc(500 - $int4)), 500, 16384), 0, ^setsize_2, ^setsize_minus, $component1);
 }

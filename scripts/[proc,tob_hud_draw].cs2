@@ -74,11 +74,11 @@ if (~instance_check(coord) = 1) {
 			if_setontimer(null, $component5);
 			if_settext("", $component6);
 		}
-		~tob_hud_statusrefresh(0, %varbit6442, $component8, $component9, $component19, %varcstring330);
-		~tob_hud_statusrefresh(1, %varbit6443, $component10, $component11, $component19, %varcstring331);
-		~tob_hud_statusrefresh(2, %varbit6444, $component12, $component13, $component19, %varcstring332);
-		~tob_hud_statusrefresh(3, %varbit6445, $component14, $component15, $component19, %varcstring333);
-		~tob_hud_statusrefresh(4, %varbit6446, $component16, $component17, $component19, %varcstring334);
+		~tob_hud_statusrefresh(0, %varbit6442, %varcstring330, $component8, $component9, $component19);
+		~tob_hud_statusrefresh(1, %varbit6443, %varcstring331, $component10, $component11, $component19);
+		~tob_hud_statusrefresh(2, %varbit6444, %varcstring332, $component12, $component13, $component19);
+		~tob_hud_statusrefresh(3, %varbit6445, %varcstring333, $component14, $component15, $component19);
+		~tob_hud_statusrefresh(4, %varbit6446, %varcstring334, $component16, $component17, $component19);
 		if (%varbit6441 = 0) {
 			if_sethide(false, $component18);
 			if_setsize(34, 209, ^setsize_abs, ^setsize_abs, $component7);

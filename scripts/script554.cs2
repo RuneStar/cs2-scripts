@@ -3,7 +3,7 @@ script554(int $int0, string $string0)
 cc_deleteall(92:3);
 cc_deleteall(92:4);
 def_int $int1 = if_getwidth(92:3);
-def_int $int2 = calc((paraheight($int1, p12_full, $string0) * 12) + 5);
+def_int $int2 = calc((paraheight($string0, $int1, p12_full) * 12) + 5);
 cc_create(92:3, ^iftype_text, 0);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize($int1, $int2, ^setsize_abs, ^setsize_abs);

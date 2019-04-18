@@ -12,7 +12,7 @@ while ($int14 < 48) {
 if (((((%varcint79 ! 3) & (%varcint79 ! 2)) & (%varcint79 ! 4)) & (%varcint79 ! 5)) & (%varcint79 ! 1)) {
 	%varcint79 = 3;
 }
-def_int $int15 = calc(parawidth(512, b12_full, "Favour") + 15);
+def_int $int15 = calc(parawidth("Favour", 512, b12_full) + 15);
 cc_deleteall($component8);
 cc_deleteall($component9);
 cc_deleteall($component10);

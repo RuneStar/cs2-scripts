@@ -9,5 +9,5 @@ if (%varcint1 < calc(clientclock + $int3)) {
 }
 %varcint1 = calc((clientclock + $int3) + 10);
 if ((%varcint2 = 0) & (if_gethide($component2) = false)) {
-	~tooltip_build($component0, $int1, $component2, $int4, $string0);
+	~tooltip_build($component0, $int1, $component2, $string0, $int4);
 }

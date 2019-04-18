@@ -5,7 +5,7 @@ if ($int1 = 1) {
 } else {
 	if_setop(1, "Buy for <~script46($int1, ",")> tickets", $component0);
 }
-~agilityarena_rewards_draw($component0, $int1, 0, $component2, $string0);
+~agilityarena_rewards_draw($component0, $string0, $int1, 0, $component2);
 if_setoninvtransmit("agilityarena_rewards_draw($component0, $string0, $int1, false, $component2){inv}", $component0);
 if_setonmouserepeat("agilityarena_rewards_draw($component0, $string0, $int1, true, $component2)", $component0);
 if_setonmouseleave("agilityarena_rewards_draw($component0, $string0, $int1, false, $component2)", $component0);

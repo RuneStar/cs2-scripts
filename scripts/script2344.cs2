@@ -25,12 +25,12 @@ def_int $int12 = string_length($string4);
 def_int $int13 = string_length($string5);
 while (($int12 > 0) | ($int13 > 0)) {
 	if ($int12 > 0) {
-		$int7 = parawidth(^max_32bit_int, $fontmetrics3, $string4);
+		$int7 = parawidth($string4, ^max_32bit_int, $fontmetrics3);
 	} else {
 		$int7 = 0;
 	}
 	if ($int13 > 0) {
-		$int8 = parawidth(^max_32bit_int, $fontmetrics3, $string5);
+		$int8 = parawidth($string5, ^max_32bit_int, $fontmetrics3);
 	} else {
 		$int8 = 0;
 	}

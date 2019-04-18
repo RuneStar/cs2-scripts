@@ -69,7 +69,7 @@ while ($category30 ! null) {
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settext($string0);
-	$int29 = ~max($int29, parawidth(512, p12_full, $string0));
+	$int29 = ~max($int29, parawidth($string0, 512, p12_full));
 	cc_create($component21, ^iftype_text, $int25);
 	$int25 = calc($int25 + 1);
 	cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
@@ -126,7 +126,7 @@ while ($int36 < $int28) {
 			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 			$string0 = enum(int, string, 1715, $int35);
 			cc_settext($string0);
-			$int29 = ~max($int29, parawidth(512, p12_full, $string0));
+			$int29 = ~max($int29, parawidth($string0, 512, p12_full));
 			$int26 = calc($int26 + 20);
 			$int31 = $int35;
 		}
@@ -308,7 +308,7 @@ while ($maparea45 ! null) {
 	cc_setonmouseover("xpdrops_setup_display_dropdown_hover(true, event_com, event_comid, .cc_getid, 16750623)");
 	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comid, .cc_getid, 16750623)");
 	cc_setonop("worldmap_maplist_select(event_opindex, $maparea45, $component12, $component13, $component4, $component6, $component7, $component18, $component19)");
-	$int29 = ~max($int29, parawidth(512, $fontmetrics43, $string0));
+	$int29 = ~max($int29, parawidth($string0, 512, $fontmetrics43));
 	$coord41 = ~worldmap_findcoordinmap($maparea45, %varcint188);
 	if ($coord41 ! null) {
 		$coord42 = $coord41;

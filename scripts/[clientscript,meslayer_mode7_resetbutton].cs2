@@ -3,5 +3,5 @@
 if (clientclock < $int1) {
 	return;
 }
-~meslayer_button_draw($component0, 0, $string0);
+~meslayer_button_draw($component0, $string0, 0);
 if_setonclick("meslayer_mode7_button(event_com, $string0, $string1)", $component0);

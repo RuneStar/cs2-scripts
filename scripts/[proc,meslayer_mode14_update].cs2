@@ -8,7 +8,7 @@ if (string_length(%varcstring359) <= 0) {
 	~script753($int2, $int3, "Start typing the name of an item to search for it.");
 	return;
 }
-def_int $int4 = oc_find($boolean0, %varcstring359);
+def_int $int4 = oc_find(%varcstring359, $boolean0);
 if ($int4 < 0) {
 	~script753($int2, $int3, "Too many matches found. Please refine your search.");
 	return;

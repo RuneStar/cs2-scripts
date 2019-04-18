@@ -8,7 +8,7 @@ if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int2) = ^tru
 	cc_setop(1, "Quit");
 	cc_setonop("worldmap_search_off($component0, cc_getid, .cc_getid)");
 	%varcstring363 = "";
-	~worldmap_search_update($component0, "");
+	~worldmap_search_update("", $component0);
 	~script1983(0, 25);
 	_3140;
 }

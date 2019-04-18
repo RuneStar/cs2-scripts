@@ -44,11 +44,11 @@ if ($component0 = $component2) {
 		cc_setonop("script2607(event_opindex, event_com, event_comid)");
 		$int11 = calc($int11 + 1);
 	}
-	$int11 = ~script2604(0, $component8, $int11, "Show <col=ffffff>Combat</col> spells");
-	$int11 = ~script2604(1, $component8, $int11, "Show <col=ffffff>Teleport</col> spells");
-	$int11 = ~script2604(2, $component8, $int11, "Show <col=ffffff>Utility</col> spells");
-	$int11 = ~script2604(3, $component8, $int11, "Show spells you lack the Magic level to cast");
-	$int11 = ~script2604(4, $component8, $int11, "Show spells you lack the runes to cast");
+	$int11 = ~script2604(0, "Show <col=ffffff>Combat</col> spells", $component8, $int11);
+	$int11 = ~script2604(1, "Show <col=ffffff>Teleport</col> spells", $component8, $int11);
+	$int11 = ~script2604(2, "Show <col=ffffff>Utility</col> spells", $component8, $int11);
+	$int11 = ~script2604(3, "Show spells you lack the Magic level to cast", $component8, $int11);
+	$int11 = ~script2604(4, "Show spells you lack the runes to cast", $component8, $int11);
 } else {
 	if ($boolean1 = true) {
 		if_sethide(false, $component2);

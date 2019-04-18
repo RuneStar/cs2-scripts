@@ -3,7 +3,7 @@
 if_setscrollpos(0, 0, 263:1);
 cc_deleteall(263:1);
 def_int $int1 = if_getwidth(263:1);
-def_int $int2 = paraheight($int1, q8_full, $string0);
+def_int $int2 = paraheight($string0, $int1, q8_full);
 def_int $int3 = 16;
 if ($int2 = 2) {
 	$int3 = 31;

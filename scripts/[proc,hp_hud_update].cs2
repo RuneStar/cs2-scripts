@@ -6,7 +6,7 @@ if (compare($string0, "") = 0) {
 } else {
 	if_sethide(false, $component2);
 	if_settext($string0, $component3);
-	if_setsize(~max(80, calc(parawidth(512, p11_full, $string0) + 15)), if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
+	if_setsize(~max(80, calc(parawidth($string0, 512, p11_full) + 15)), if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
 }
 def_string $string1 = "<tostring(%varbit6099)> / <tostring(%varbit6100)>";
 if_settext($string1, $component0);

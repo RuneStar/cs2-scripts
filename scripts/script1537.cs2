@@ -1,7 +1,7 @@
 // 1537
 script1537
-def_string $string0 = ~string_prependzero(3, tostring(%varbit5426));
-def_string $string1 = ~string_prependzero(4, tostring(%varbit5427));
+def_string $string0 = ~string_prependzero(tostring(%varbit5426), 3);
+def_string $string1 = ~string_prependzero(tostring(%varbit5427), 4);
 def_int $int0 = 0;
 while ($int0 < %varcint178) {
 	if ((cc_find(507:11, calc(($int0 * 8) + 5)) = ^true) & (.cc_find(507:11, calc(($int0 * 8) + 2)) = ^true)) {

@@ -22,8 +22,8 @@ def_string $string1 = "Are you <col=ffffff>sure</col> you<br>want to destroy it?
 if ($int7 > 1) {
 	$string1 = "Are you <col=ffffff>sure</col> you want<br>to destroy <col=ffffff>all of them</col>?";
 }
-def_int $int8 = calc(parawidth(512, p12_full, $string0) + 67);
-def_int $int9 = calc(parawidth(512, p12_full, $string1) + 170);
+def_int $int8 = calc(parawidth($string0, 512, p12_full) + 67);
+def_int $int9 = calc(parawidth($string1, 512, p12_full) + 170);
 if ($int8 < $int9) {
 	$int8 = $int9;
 }

@@ -28,6 +28,6 @@ cc_sethide(true);
 if_sethide(true, 364:65);
 cc_create(364:3, ^iftype_rectangle, enum(component, int, 1938, 364:65));
 cc_sethide(true);
-~script1558(364:63, 364:3, 1938, -1, "Refresh");
+~script1558(364:63, "Refresh", 364:3, 1938, -1);
 ~tob_partylist_setpartybutton;
 if_setonvartransmit("tob_partylist_setpartybutton(){var1740}", 364:65);

@@ -44,7 +44,7 @@ switch_int (%varcint180) {
 			if ($component5 ! null) {
 				if_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top, $component5);
 				if ((cc_find($component5, 0) = ^true) & (.cc_find($component5, 3) = ^true)) {
-					~raids_partylist_entry_init($int3, $component5, $array0($int3), 364:16, .cc_gettext);
+					~raids_partylist_entry_init($int3, $component5, $array0($int3), .cc_gettext, 364:16);
 				}
 			}
 			$int4 = calc($int4 + 18);
@@ -55,7 +55,7 @@ switch_int (%varcint180) {
 			if ($component5 ! null) {
 				if_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top, $component5);
 				if ((cc_find($component5, 0) = ^true) & (.cc_find($component5, 3) = ^true)) {
-					~raids_partylist_entry_init($int3, $component5, $array0($int3), 364:16, .cc_gettext);
+					~raids_partylist_entry_init($int3, $component5, $array0($int3), .cc_gettext, 364:16);
 				}
 			}
 			$int3 = calc($int3 + 1);

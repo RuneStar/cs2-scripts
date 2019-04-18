@@ -9,9 +9,9 @@ cc_setcolour(0xff981f);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-~script2325($int1, $string0);
+~script2325($string0, $int1);
 if ($int2 = 2) {
-	~script2326($component0, cc_getid, $int1, $string0);
+	~script2326($component0, cc_getid, $string0, $int1);
 } else {
 	if_setonmouserepeat(null, $component0);
 	if_setonmouseleave(null, $component0);

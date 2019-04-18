@@ -2,8 +2,8 @@
 [proc,nzone_game_points_set](component $component0, int $int1)
 def_string $string0 = ",";
 $string0 = "Points:<br><~script46($int1, $string0)>";
-def_int $int2 = calc(parawidth(512, p11_full, $string0) + 8);
-def_int $int3 = calc(((paraheight(512, p11_full, $string0) * 10) + 2) + 8);
+def_int $int2 = calc(parawidth($string0, 512, p11_full) + 8);
+def_int $int3 = calc(((paraheight($string0, 512, p11_full) * 10) + 2) + 8);
 if (cc_find($component0, 0) = ^true) {
 	cc_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top);
 	cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);

@@ -1,6 +1,6 @@
 // 1392
 script1392(component $component0, string $string0)(int)
-def_int $int1 = calc(parawidth(512, p11_full, $string0) + 10);
+def_int $int1 = calc(parawidth($string0, 512, p11_full) + 10);
 if_setsize($int1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
 cc_deleteall($component0);
 def_int $int2 = ~options_button_off($component0, 0);
