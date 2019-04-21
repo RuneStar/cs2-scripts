@@ -17,7 +17,7 @@ $int10, $int11 = worldmap_getdisplayposition;
 def_int $int12 = 0;
 def_int $int13 = 0;
 def_coord $coord14 = null;
-if ((%varcint188 ! $coord6) & (%varcint188 ! -1)) {
+if ((%varcint188 ! $coord6) & (%varcint188 ! null)) {
 	$coord14 = ~worldmap_findcoordinmap($maparea7, %varcint188);
 	if ($coord14 ! null) {
 		$int12, $int13 = worldmap_getdisplaycoord($coord6);

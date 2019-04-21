@@ -1,6 +1,6 @@
 // 1004
 [clientscript,xpdrops_stattransmit](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, int $int20, int $int21, int $int22, int $int23, int $int24, int $int25, int $int26, int $int27, int $int28, int $int29, int $int30, int $int31, int $int32, int $int33)
-if (($int0 = 1) & (%varcint207 = -1)) {
+if (($int0 = 1) & (%varcint207 = null)) {
 	return;
 }
 def_int $int34 = calc(23 + 1);
@@ -9,13 +9,13 @@ def_int $array1($int34);
 def_int $int35 = 0;
 def_int $int36 = 0;
 if ($int0 = 1) {
-	while (%varcint207 ! -1) {
+	while (%varcint207 ! null) {
 		$array0($int35) = enum(int, stat, 681, coordx(%varcint207));
 		$array1($int35) = coordy(%varcint207);
 		if (($array0($int35) ! null) & ($array1($int35) > 0)) {
 			$int35 = calc($int35 + 1);
 		}
-		%varcint213 = -1;
+		%varcint213 = null;
 		%varcint212 = %varcint213;
 		%varcint211 = %varcint212;
 		%varcint210 = %varcint211;

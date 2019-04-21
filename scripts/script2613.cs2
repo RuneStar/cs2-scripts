@@ -2,7 +2,7 @@
 script2613(component $component0, component $component1, int $int2)
 def_int $int3 = 0;
 def_int $int4 = 0;
-if (%varcint225 ! -1) {
+if (%varcint225 ! null) {
 	while ($int4 = 0) {
 		if (cc_find($component0, $int3) = ^true) {
 			if (cc_getinvobject = %varcint225) {
@@ -15,5 +15,5 @@ if (%varcint225 ! -1) {
 		$int3 = calc($int3 + 1);
 	}
 }
-%varcint225 = -1;
+%varcint225 = null;
 if_setontimer(null, $component0);

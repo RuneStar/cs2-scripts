@@ -1,7 +1,7 @@
 // 1713
 script1713(maparea $maparea0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 def_coord $coord9 = %varcint189;
-%varcint189 = -1;
+%varcint189 = null;
 if (worldmap_getcurrentmap ! $maparea0) {
 	~worldmap_maplist_close($component1, $component3);
 	if (worldmap_isloaded = false) {
