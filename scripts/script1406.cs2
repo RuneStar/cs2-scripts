@@ -19,8 +19,7 @@ def_int $int3 = ^max_32bit_int;
 def_int $int4 = 0;
 def_int $int5 = 4;
 if ($int0 <= 3) {
-	$int5 = 18;
-	$int4 = 36;
+	$int4, $int5 = 36, 18;
 	cc_deleteall(458:3);
 	cc_create(458:3, ^iftype_text, 0);
 	cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
@@ -45,8 +44,7 @@ while (($int2 <= $int0) & ($int2 < $int3)) {
 	if ($int1 = 0) {
 		~script1631($int2, $array0($int2), $component6);
 	}
-	$int2 = calc($int2 + 1);
-	$int7 = calc(($int7 + if_getheight($component6)) + $int5);
+	$int7, $int2 = calc(($int7 + if_getheight($component6)) + $int5), calc($int2 + 1);
 }
 if ($int2 > 1) {
 	$int7 = calc($int7 - $int5);
@@ -70,8 +68,7 @@ while ($int2 <= $int0) {
 	if ($int1 = 0) {
 		~script1631($int2, $array0($int2), $component6);
 	}
-	$int2 = calc($int2 + 1);
-	$int7 = calc(($int7 + if_getheight($component6)) + $int5);
+	$int7, $int2 = calc(($int7 + if_getheight($component6)) + $int5), calc($int2 + 1);
 }
 while ($int2 <= 31) {
 	if_sethide(true, enum(int, component, 1461, $int2));

@@ -11,32 +11,26 @@ if (cc_find($component5, $int0) = ^true) {
 	cc_setgraphic(null);
 	switch_int ($int0) {
 		case 0 :
-			$int13 = calc($int13 + ($int2 - $int4));
-			$int12 = calc($int12 + ($int1 - $int3));
+			$int12, $int13 = calc($int12 + ($int1 - $int3)), calc($int13 + ($int2 - $int4));
 		case 1 :
 			$int11 = calc($int11 - ($int2 - $int4));
 		case 2 :
 			$int14 = calc($int1 - $int3);
-			$int12 = calc($int12 + $int14);
-			$int10 = calc($int10 + $int14);
+			$int10, $int12 = calc($int10 + $int14), calc($int12 + $int14);
 		case 3 :
 			$int10 = calc($int10 - ($int1 - $int3));
 		case 4 :
 			$int14 = calc($int1 - $int3);
-			$int12 = calc($int12 + $int14);
-			$int10 = calc($int10 + $int14);
+			$int10, $int12 = calc($int10 + $int14), calc($int12 + $int14);
 			$int14 = calc($int2 - $int4);
-			$int13 = calc($int13 + $int14);
-			$int11 = calc($int11 + $int14);
+			$int11, $int13 = calc($int11 + $int14), calc($int13 + $int14);
 		case 5 :
 			$int10 = calc($int10 - ($int1 - $int3));
 			$int14 = calc($int2 - $int4);
-			$int13 = calc($int13 + $int14);
-			$int11 = calc($int11 + $int14);
+			$int11, $int13 = calc($int11 + $int14), calc($int13 + $int14);
 		case 6 :
 			$int14 = calc($int1 - $int3);
-			$int12 = calc($int12 + $int14);
-			$int10 = calc($int10 + $int14);
+			$int10, $int12 = calc($int10 + $int14), calc($int12 + $int14);
 			$int11 = calc($int11 - ($int2 - $int4));
 		case 7 :
 			$int10 = calc($int10 - ($int1 - $int3));
@@ -58,8 +52,7 @@ if (cc_find($component5, $int0) = ^true) {
 	}
 	$int10 = ~max(~min($int10, calc($int15 - $int9)), 0);
 	$int11 = ~max(~min($int11, calc($int16 - 280)), 0);
-	$int13 = ~max(~min($int13, $int11), 0);
-	$int12 = ~max(~min($int12, $int10), 0);
+	$int12, $int13 = ~max(~min($int12, $int10), 0), ~max(~min($int13, $int11), 0);
 	if_setposition($int12, $int13, ^setpos_abs_left, ^setpos_abs_top, $component7);
 	if_setsize($int10, $int11, ^setsize_minus, ^setsize_minus, $component7);
 	if_sethide(false, $component7);

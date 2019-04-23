@@ -57,9 +57,7 @@ if ($int16 <= -2) {
 			_3630(true);
 	}
 	_3639;
-	$int8 = calc(if_getwidth($component1) - 5);
-	$int7 = calc($int6 - 5);
-	$int9 = if_getwidth($component3);
+	$int9, $int7, $int8 = if_getwidth($component3), calc($int6 - 5), calc(if_getwidth($component1) - 5);
 	while ($int14 < $int16) {
 		$string0, $string1 = friend_getname($int14);
 		cc_create($component3, ^iftype_rectangle, $int10);
@@ -126,8 +124,7 @@ if ($int16 <= -2) {
 			cc_setonmouseover("deltooltip($component5)");
 			.cc_sethide(true);
 		}
-		$int11 = calc($int11 + $int12);
-		$int14 = calc($int14 + 1);
+		$int14, $int11 = calc($int14 + 1), calc($int11 + $int12);
 	}
 	if ($int16 >= 1) {
 		$int11 = calc($int11 + 5);

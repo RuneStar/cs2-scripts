@@ -45,20 +45,11 @@ if (%varbit1497 = 2) {
 	$int25 = 13;
 }
 if (%varbit4991 = 2) {
-	$int19 = $int17;
-	$int7 = $int13;
-	$int6 = $int12;
-	$int5 = $int11;
+	$int5, $int6, $int7, $int19 = $int11, $int12, $int13, $int17;
 } else if (%varbit4991 = 1) {
-	$int19 = $int17;
-	$int7 = $int10;
-	$int6 = $int9;
-	$int5 = $int8;
+	$int5, $int6, $int7, $int19 = $int8, $int9, $int10, $int17;
 } else {
-	$int19 = $int18;
-	$int7 = $int22;
-	$int6 = $int21;
-	$int5 = $int20;
+	$int5, $int6, $int7, $int19 = $int20, $int21, $int22, $int18;
 }
 if ($int20 < $int5) {
 	$int20 = calc($int20 + 1);

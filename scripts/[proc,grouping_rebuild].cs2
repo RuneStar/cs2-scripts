@@ -112,14 +112,11 @@ if (if_gethide(76:14) = true) {
 		cc_setonop("grouping_viewchannel($int2)");
 		return;
 	}
-	$int8 = clan_getchatrank;
-	$int7 = clan_getchatminkick;
+	$int7, $int8 = clan_getchatminkick, clan_getchatrank;
 	$int9 = clan_getchatcount;
 	while ($int9 > 0) {
 		$int9 = calc($int9 - 1);
-		$int6 = clan_getchatuserrank($int9);
-		$int0 = clan_getchatuserworld($int9);
-		$string3 = clan_getchatusername($int9);
+		$string3, $int0, $int6 = clan_getchatusername($int9), clan_getchatuserworld($int9), clan_getchatuserrank($int9);
 		cc_create(76:12, ^iftype_text, $int1);
 		$int1 = calc($int1 + 1);
 		.cc_create(76:12, ^iftype_text, $int1);

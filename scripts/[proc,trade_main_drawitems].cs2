@@ -78,8 +78,7 @@ while ($int15 < $int0) {
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
 		}
-		$int11 = calc($int15 / 4);
-		$int12 = calc($int15 % 4);
+		$int12, $int11 = calc($int15 % 4), calc($int15 / 4);
 		$int13 = $array0($int12);
 		$int14 = calc($int11 * (32 + $int7));
 		cc_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top);
@@ -137,8 +136,7 @@ while ($int15 < $int0) {
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
 		}
-		$int11 = calc($int15 / 4);
-		$int12 = calc($int15 % 4);
+		$int12, $int11 = calc($int15 % 4), calc($int15 / 4);
 		$int13 = $array0($int12);
 		$int14 = calc($int11 * (32 + $int7));
 		cc_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top);

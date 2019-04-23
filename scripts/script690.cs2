@@ -8,8 +8,7 @@ if (%var261 = 8) {
 }
 def_enum $enum8 = null;
 def_enum $enum9 = null;
-$enum9 = enum(int, enum, 1865, %var261);
-$enum8 = enum(int, enum, 1864, %var261);
+$enum8, $enum9 = enum(int, enum, 1864, %var261), enum(int, enum, 1865, %var261);
 if ((%var261 = 7) | (%var261 = 8)) {
 	if_sethide(true, $component5);
 	if_sethide(false, $component6);

@@ -225,8 +225,7 @@ while ($int41 < $int1) {
 	} else {
 		.cc_settext("(<~script46($array0($int41), $string1)>)");
 	}
-	%varcint49 = calc(%varcint49 + $int39);
-	$int41 = calc($int41 + 1);
+	$int41, %varcint49 = calc($int41 + 1), calc(%varcint49 + $int39);
 }
 %varcint49 = calc(%varcint49 + 3);
 $int39 = calc(%varcint49 - $int38);

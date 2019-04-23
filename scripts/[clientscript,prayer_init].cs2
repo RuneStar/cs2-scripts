@@ -20,8 +20,7 @@ while ($int10 <= 28) {
 		.cc_create($component7, ^iftype_graphic, 1);
 		.cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		$int9 = .cc_getid;
-		$int8 = cc_getid;
+		$int8, $int9 = cc_getid, .cc_getid;
 		~prayer_updatebutton(false, $int10, $component7, $component2, $component5);
 	}
 	$int10 = calc($int10 + 1);

@@ -133,16 +133,14 @@ def_int $int20 = 0;
 def_string $string1 = "";
 def_int $int21 = string_length($string0);
 if ($int21 <= 0) {
-	$int21 = 1;
-	$string0 = "-";
+	$string0, $int21 = "-", 1;
 }
 if (($int21 > 0) & (parawidth($string0, 512, p11_full) > $int14)) {
 	while (($int21 > 1) & ($int20 = 0)) {
 		$int21 = calc($int21 - 1);
 		$string1 = append(substring($string0, 0, $int21), "...");
 		if (parawidth($string1, 512, p11_full) <= $int14) {
-			$int20 = 1;
-			$string0 = $string1;
+			$string0, $int20 = $string1, 1;
 		}
 	}
 }

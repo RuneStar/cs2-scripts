@@ -38,24 +38,14 @@ if ($int3 > $int4) {
 } else {
 	$int2 = $int4;
 }
-$int6 = calc(%varbit5317 + 8);
-$int5 = calc(%varbit5317 - 8);
+$int5, $int6 = calc(%varbit5317 - 8), calc(%varbit5317 + 8);
 if ($int2 <= $int5) {
-	$int15 = $int14;
-	$int9 = $int18;
-	$int8 = $int17;
-	$int7 = $int16;
+	$int7, $int8, $int9, $int15 = $int16, $int17, $int18, $int14;
 } else if ($int2 >= $int6) {
-	$int15 = $int13;
-	$int9 = $int12;
-	$int8 = $int11;
-	$int7 = $int10;
+	$int7, $int8, $int9, $int15 = $int10, $int11, $int12, $int13;
 } else {
 	$int2 = calc($int2 - $int5);
-	$int15 = $int13;
-	$int9 = interpolate(0, $int2, 0, 16, $int12);
-	$int8 = interpolate(0, $int2, 0, 16, $int11);
-	$int7 = interpolate(0, $int2, 0, 16, $int10);
+	$int7, $int8, $int9, $int15 = interpolate(0, $int2, 0, 16, $int10), interpolate(0, $int2, 0, 16, $int11), interpolate(0, $int2, 0, 16, $int12), $int13;
 }
 if ($int16 < $int7) {
 	$int16 = calc($int16 + 1);

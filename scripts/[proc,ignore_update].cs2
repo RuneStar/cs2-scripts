@@ -70,8 +70,7 @@ if ($int12 < 0) {
 			.cc_sethide(true);
 			cc_setonop("ignore_op(event_opindex, event_opbase, null, -1, -1, "null", "null")");
 		}
-		$int9 = calc($int9 + $int10);
-		$int7 = calc($int7 + 1);
+		$int7, $int9 = calc($int7 + 1), calc($int9 + $int10);
 	}
 	if ($int12 >= 1) {
 		$int9 = calc($int9 + 5);

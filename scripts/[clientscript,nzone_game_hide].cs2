@@ -3,8 +3,7 @@
 def_int $int2 = coordx(coord);
 def_int $int3 = coordx($coord1);
 if (($int2 >= $int3) & ($int2 < calc($int3 + 128))) {
-	$int3 = coordy($coord1);
-	$int2 = coordy(coord);
+	$int2, $int3 = coordy(coord), coordy($coord1);
 	if (($int2 >= $int3) & ($int2 < calc($int3 + 128))) {
 		if_sethide(false, $component0);
 		return;

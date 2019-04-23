@@ -45,8 +45,7 @@ while ($int10 < $int9) {
 	cc_create(464:2, ^iftype_graphic, $int10);
 	$obj8 = inv_getobj(90, $int10);
 	if ($obj8 ! null) {
-		$int7 = calc(($int10 / 5) * $int3);
-		$int6 = calc(($int10 % 5) * $int2);
+		$int6, $int7 = calc(($int10 % 5) * $int2), calc(($int10 / 5) * $int3);
 		$int5 = $int7;
 		cc_sethide(false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -73,11 +72,9 @@ def_string $string0 = ",";
 def_int $int13 = $int10;
 $int10 = 0;
 while ($int10 < $int9) {
-	$int11 = inv_getnum(90, $int10);
-	$obj8 = inv_getobj(90, $int10);
+	$obj8, $int11 = inv_getobj(90, $int10), inv_getnum(90, $int10);
 	if (($obj8 ! null) & ($int11 > 0)) {
-		$int7 = calc(($int10 / 5) * $int3);
-		$int6 = calc(($int10 % 5) * $int2);
+		$int6, $int7 = calc(($int10 % 5) * $int2), calc(($int10 / 5) * $int3);
 		cc_create(464:2, ^iftype_text, $int13);
 		$int13 = calc($int13 + 1);
 		cc_sethide(false);

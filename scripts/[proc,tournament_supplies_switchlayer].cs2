@@ -4,13 +4,9 @@ def_string $string2 = "";
 def_component $component9 = null;
 def_string $string3 = "";
 if ($component0 = $component2) {
-	$string3 = $string1;
-	$component9 = $component3;
-	$string2 = $string0;
+	$string2, $component9, $string3 = $string0, $component3, $string1;
 } else {
-	$string3 = $string0;
-	$component9 = $component2;
-	$string2 = $string1;
+	$string2, $component9, $string3 = $string1, $component2, $string0;
 }
 if_sethide(false, $component0);
 if_sethide(true, $component9);

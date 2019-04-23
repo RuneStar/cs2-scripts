@@ -142,9 +142,7 @@ if (~on_mobile = true) {
 }
 def_int $int24 = 0;
 while ($int24 < $int15) {
-	$int17 = clan_getchatuserrank($int24);
-	$int16 = clan_getchatuserworld($int24);
-	$string0 = clan_getchatusername($int24);
+	$string0, $int16, $int17 = clan_getchatusername($int24), clan_getchatuserworld($int24), clan_getchatuserrank($int24);
 	cc_create($component8, ^iftype_text, $int21);
 	$int21 = calc($int21 + 1);
 	cc_setsize($int20, $int23, ^setsize_minus, ^setsize_abs);
@@ -194,8 +192,7 @@ while ($int24 < $int15) {
 	.cc_setopbase("<col=ff9040><$string0></col>");
 	cc_setonop("clan_op(event_opbase, event_opindex)");
 	.cc_setonop("clan_op(event_opbase, event_opindex)");
-	$int22 = calc($int22 + $int23);
-	$int24 = calc($int24 + 1);
+	$int24, $int22 = calc($int24 + 1), calc($int22 + $int23);
 }
 if ($int15 >= 1) {
 	$int22 = calc($int22 + 5);

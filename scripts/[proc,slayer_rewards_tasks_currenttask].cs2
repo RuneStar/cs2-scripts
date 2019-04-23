@@ -6,19 +6,16 @@ def_int $int8 = 0;
 def_string $string0 = "Creature";
 if (%var262 = 98) {
 	if (%var261 > 0) {
-		$string0 = enum(int, string, 1174, %var263);
-		$int8 = 1;
+		$int8, $string0 = 1, enum(int, string, 1174, %var263);
 		if_settext("<tostring(%var261)> x <$string0>", $component1);
 	} else if (%var261 = -1) {
-		$string0 = enum(int, string, 1174, %var263);
-		$int8 = 1;
+		$int8, $string0 = 1, enum(int, string, 1174, %var263);
 		if_settext($string0, $component1);
 	} else {
 		if_settext("None", $component1);
 	}
 } else if ((%var261 > 0) & (%var262 ! 0)) {
-	$string0 = enum(int, string, 693, %var262);
-	$int8 = 1;
+	$int8, $string0 = 1, enum(int, string, 693, %var262);
 	if_settext("<tostring(%var261)> x <$string0>", $component1);
 } else {
 	if_settext("None", $component1);

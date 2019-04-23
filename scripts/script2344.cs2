@@ -4,9 +4,7 @@ def_fontmetrics $fontmetrics4 = p12_full;
 def_int $int5 = 12;
 def_int $int6 = 4;
 if ($fontmetrics3 = p11_full) {
-	$int6 = 2;
-	$int5 = 10;
-	$fontmetrics4 = p11_full;
+	$fontmetrics4, $int5, $int6 = p11_full, 10, 2;
 } else if ($fontmetrics3 = b12_full) {
 	$fontmetrics4 = b12_full;
 }
@@ -39,11 +37,9 @@ while (($int12 > 0) | ($int13 > 0)) {
 		$int10 = $int9;
 	}
 	if ($int11 > 0) {
-		$string3 = append($string3, append("<br>", $string5));
-		$string2 = append($string2, append("<br>", $string4));
+		$string2, $string3 = append($string2, append("<br>", $string4)), append($string3, append("<br>", $string5));
 	} else {
-		$string3 = append($string3, $string5);
-		$string2 = append($string2, $string4);
+		$string2, $string3 = append($string2, $string4), append($string3, $string5);
 	}
 	$int11 = calc($int11 + 1);
 	if ((string_length($string0) > 0) | (string_length($string1) > 0)) {
@@ -52,27 +48,22 @@ while (($int12 > 0) | ($int13 > 0)) {
 		$int12 = string_length($string4);
 		$int13 = string_length($string5);
 	} else {
-		$int13 = 0;
-		$int12 = 0;
+		$int12, $int13 = 0, 0;
 	}
 }
-$int5 = calc((($int11 * $int5) + ($int6 - 1)) + 4);
-$int9 = calc($int10 + 4);
+$int9, $int5 = calc($int10 + 4), calc((($int11 * $int5) + ($int6 - 1)) + 4);
 if_setsize($int9, $int5, ^setsize_abs, ^setsize_abs, $component2);
 def_int $int14 = if_getx($component0);
 def_int $int15 = if_gety($component0);
 def_int $int16 = 0;
 if (($int1 ! -1) & (cc_find($component0, $int1) = ^true)) {
-	$int16 = cc_getheight;
-	$int15 = calc(($int15 + cc_gety) - if_getscrolly($component0));
-	$int14 = calc(($int14 + cc_getx) - if_getscrollx($component0));
+	$int14, $int15, $int16 = calc(($int14 + cc_getx) - if_getscrollx($component0)), calc(($int15 + cc_gety) - if_getscrolly($component0)), cc_getheight;
 } else {
 	$int16 = if_getheight($component0);
 }
 def_component $component17 = if_getlayer($component0);
 while ($component17 ! null) {
-	$int15 = calc(($int15 + if_gety($component17)) - if_getscrolly($component17));
-	$int14 = calc(($int14 + if_getx($component17)) - if_getscrollx($component17));
+	$int14, $int15 = calc(($int14 + if_getx($component17)) - if_getscrollx($component17)), calc(($int15 + if_gety($component17)) - if_getscrolly($component17));
 	$component17 = if_getlayer($component17);
 }
 def_int $int18 = calc($int14 + 5);

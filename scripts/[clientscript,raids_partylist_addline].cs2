@@ -30,8 +30,7 @@ if (string_length($string0) > 0) {
 	if_setopbase("<col=ff9040><removetags($string1)></col>", $component1);
 	$string2, $string0 = ~script632($string0);
 	$string3, $string0 = ~script632($string0);
-	$string5 = ~string_prependzero($string3, 3);
-	$string4 = ~string_prependzero($string2, 3);
+	$string4, $string5 = ~string_prependzero($string2, 3), ~string_prependzero($string3, 3);
 	$int3 = if_getwidth(499:7);
 	cc_create($component1, ^iftype_text, 1);
 	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);

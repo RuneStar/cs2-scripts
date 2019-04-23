@@ -35,8 +35,7 @@ while ($int7 <= 35) {
 		} else {
 			.cc_settext("<str><col=8f8f8f><enum(int, string, 804, $int7)></col></str>");
 		}
-		$int6 = calc($int6 + 17);
-		$int5 = calc($int5 + 17);
+		$int5, $int6 = calc($int5 + 17), calc($int6 + 17);
 	}
 	$int7 = calc($int7 + 1);
 }

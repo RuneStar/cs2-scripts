@@ -22,22 +22,11 @@ def_int $colour13 = 0x604e32;
 def_graphic $graphic14 = null;
 def_int $int15 = enum(obj, int, 496, $obj1);
 if ($int15 ! -1) {
-	$colour13 = ^black;
-	$int12 = 0;
-	$int11 = 0;
-	$int10 = 3;
-	$int9 = 30;
-	$int8 = 30;
-	$graphic14 = enum(int, graphic, 865, $int15);
+	$graphic14, $int8, $int9, $int10, $int11, $int12, $colour13 = enum(int, graphic, 865, $int15), 30, 30, 3, 0, 0, ^black;
 } else if (%varbit4371 = 4) {
 	$graphic14 = oc_param($obj1, spell_graphic1_on);
 	if ($graphic14 ! null) {
-		$colour13 = ^black;
-		$int12 = 0;
-		$int11 = 0;
-		$int10 = 6;
-		$int9 = 24;
-		$int8 = 24;
+		$int8, $int9, $int10, $int11, $int12, $colour13 = 24, 24, 6, 0, 0, ^black;
 	}
 }
 cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);

@@ -3,11 +3,9 @@
 def_string $string0 = "";
 def_string $string1 = "";
 if ($component0 = $component5) {
-	$string1 = %varcstring373;
-	$string0 = %varcstring372;
+	$string0, $string1 = %varcstring372, %varcstring373;
 } else if ($component0 = $component6) {
-	$string1 = %varcstring372;
-	$string0 = %varcstring373;
+	$string0, $string1 = %varcstring373, %varcstring372;
 } else {
 	return;
 }

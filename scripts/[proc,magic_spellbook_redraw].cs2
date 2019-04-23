@@ -5,8 +5,7 @@ def_int $int12 = 261;
 def_int $int13 = 0;
 if ($boolean10 = true) {
 	if_setsize(6, 240, ^setsize_minus, ^setsize_abs, $component3);
-	$int12 = 240;
-	$int11 = calc(190 - 6);
+	$int11, $int12 = calc(190 - 6), 240;
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component3);
 	if_sethide(false, $component4);
 	$int13 = calc(~max(parawidth($string0, 190, p11_full), parawidth($string1, 190, p11_full)) + 14);
@@ -22,8 +21,7 @@ if ($boolean10 = true) {
 	~script2603(null, $boolean10, $component5, $component6, $component0, $component1, $component7, $component8, $component9, $component2, $string0, $string1);
 } else {
 	if_setsize(6, 240, ^setsize_minus, ^setsize_abs, $component3);
-	$int12 = 240;
-	$int11 = calc(190 - 6);
+	$int11, $int12 = calc(190 - 6), 240;
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component3);
 	if_sethide(false, $component4);
 	if_setsize(calc(parawidth($string1, 190, p11_full) + 14), 0, ^setsize_abs, ^setsize_minus, $component6);
@@ -95,11 +93,9 @@ def_int $int23 = 0;
 def_int $int24 = $int12;
 if ($boolean10 = true) {
 	if ($int16 <= 15) {
-		$int20 = 3;
-		$int19 = 40;
+		$int19, $int20 = 40, 3;
 	} else if ($int16 <= 20) {
-		$int20 = 4;
-		$int19 = 40;
+		$int19, $int20 = 40, 4;
 	} else {
 		$int20 = ~max(4, ~min(7, calc(($int16 + 8) / 9)));
 	}
@@ -113,28 +109,16 @@ if ($boolean10 = true) {
 } else if (%varbit6718 = 1) {
 	switch_int (%varbit4070) {
 		case 1 :
-			$int22 = 4;
-			$int23 = 20;
-			$int21 = 7;
-			$int20 = 4;
+			$int20, $int21, $int23, $int22 = 4, 7, 20, 4;
 			if_setposition(2, 8, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 		case 2 :
-			$int22 = 5;
-			$int23 = 6;
-			$int21 = 8;
-			$int20 = 6;
+			$int20, $int21, $int23, $int22 = 6, 8, 6, 5;
 			if_setposition(0, 8, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 		case 3 :
-			$int22 = 5;
-			$int23 = 21;
-			$int21 = 9;
-			$int20 = 4;
+			$int20, $int21, $int23, $int22 = 4, 9, 21, 5;
 			if_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 		case default :
-			$int22 = 0;
-			$int23 = 0;
-			$int21 = 10;
-			$int20 = 7;
+			$int20, $int21, $int23, $int22 = 7, 10, 0, 0;
 			if_setposition(1, 15, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 	}
 	$int24 = calc(($int21 * $int19) + (($int21 - 1) * $int22));
@@ -163,8 +147,7 @@ while ($int18 < $int16) {
 	$obj17 = enum(int, obj, $enum14, $array0($int18));
 	$component25 = oc_param($obj17, spell_button);
 	if_setsize($int19, $int19, ^setsize_abs, ^setsize_abs, $component25);
-	$int29 = calc(($int18 / $int20) * $int27);
-	$int28 = calc(($int18 % $int20) * $int26);
+	$int28, $int29 = calc(($int18 % $int20) * $int26), calc(($int18 / $int20) * $int27);
 	if_setposition($int28, $int29, ^setpos_abs_left, ^setpos_abs_top, $component25);
 	if (~script2614($obj17, $component25) = 1) {
 		if ($int19 >= 40) {

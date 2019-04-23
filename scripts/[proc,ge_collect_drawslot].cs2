@@ -24,8 +24,7 @@ if (stockmarket_isofferempty($int1) = true) {
 	}
 	if_setonmouserepeat(null, $component0);
 } else {
-	$int13 = stockmarket_getoffercount($int1);
-	$obj12 = stockmarket_getofferitem($int1);
+	$obj12, $int13 = stockmarket_getofferitem($int1), stockmarket_getoffercount($int1);
 	$int14 = stockmarket_getoffercompletedcount($int1);
 	if (stockmarket_getoffertype($int1) = 1) {
 		if (cc_find($component0, $int10) = ^true) {

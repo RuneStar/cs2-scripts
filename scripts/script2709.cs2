@@ -61,6 +61,5 @@ while ($int7 < $int8) {
 	} else {
 		cc_sethide(true);
 	}
-	$int3 = calc($int3 + 1);
-	$int7 = calc($int7 + 1);
+	$int7, $int3 = calc($int7 + 1), calc($int3 + 1);
 }

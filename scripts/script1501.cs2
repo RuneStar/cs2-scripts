@@ -3,8 +3,7 @@ script1501(int $int0, int $int1, int $int2, component $component3, int $int4)
 if ($int1 = 1) {
 	if ($int0 = 1) {
 		sound_synth(2266, 1, 0);
-		%varbit5412 = 0;
-		%varbit5411 = 0;
+		%varbit5411, %varbit5412 = 0, 0;
 		if (cc_find($component3, $int4) = ^true) {
 			~script1500($component3);
 		}
@@ -25,8 +24,7 @@ if ($int1 = 1) {
 		if ($int2 > 500000000) {
 			$int2 = 500000000;
 		}
-		%varbit5412 = $int2;
-		%varbit5411 = 1;
+		%varbit5411, %varbit5412 = 1, $int2;
 		if (cc_find($component3, $int4) = ^true) {
 			~script1500($component3);
 		}

@@ -5,8 +5,7 @@ def_int $int3 = 0;
 def_int $int4 = -1;
 switch_enum ($enum1) {
 	case 1131 :
-		$int3 = if_getheight(164:32);
-		$int2 = calc(if_getwidth(164:32) - 33);
+		$int2, $int3 = calc(if_getwidth(164:32) - 33), if_getheight(164:32);
 		if (calc(if_getwidth($component0) - if_getwidth(enum(component, component, $enum1, 161:29))) < 429) {
 			if_setposition(0, calc($int3 + if_getheight(164:47)), ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, 164:64));
 			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, 164:47);

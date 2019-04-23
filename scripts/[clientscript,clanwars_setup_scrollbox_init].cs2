@@ -42,8 +42,7 @@ while (string_length($string0) > 0) {
 	} else {
 		cc_settext($string0);
 	}
-	$int10 = calc($int10 + 17);
-	$int11 = calc($int11 + 1);
+	$int11, $int10 = calc($int11 + 1), calc($int10 + 17);
 	$string0 = enum(int, string, $enum0, $int11);
 	if ((($int9 = 0) & ($enum0 = 929)) & ($int10 >= calc(12 * 17))) {
 		$string0 = "";

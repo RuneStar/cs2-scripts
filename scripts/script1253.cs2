@@ -5,8 +5,7 @@ def_obj $obj4 = $obj2;
 def_string $string1 = "<col=ff0000>Not owned</col>";
 if ($int1 >= 3) {
 	if_setop(1, "Take", $component0);
-	$string1 = "<col=00ff00>Complete</col>";
-	$obj4 = $obj3;
+	$obj4, $string1 = $obj3, "<col=00ff00>Complete</col>";
 } else if ($int1 = 2) {
 	if_setop(1, "Take", $component0);
 	$string1 = "Incomplete";

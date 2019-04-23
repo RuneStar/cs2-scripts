@@ -10,16 +10,13 @@ def_int $int5 = if_getx($component0);
 def_int $int6 = if_gety($component0);
 def_int $int7 = 0;
 if (($int1 ! -1) & (cc_find($component0, $int1) = ^true)) {
-	$int7 = cc_getheight;
-	$int6 = calc(($int6 + cc_gety) - if_getscrolly($component0));
-	$int5 = calc(($int5 + cc_getx) - if_getscrollx($component0));
+	$int5, $int6, $int7 = calc(($int5 + cc_getx) - if_getscrollx($component0)), calc(($int6 + cc_gety) - if_getscrolly($component0)), cc_getheight;
 } else {
 	$int7 = if_getheight($component0);
 }
 def_component $component8 = if_getlayer($component0);
 while ($component8 ! null) {
-	$int6 = calc(($int6 + if_gety($component8)) - if_getscrolly($component8));
-	$int5 = calc(($int5 + if_getx($component8)) - if_getscrollx($component8));
+	$int5, $int6 = calc(($int5 + if_getx($component8)) - if_getscrollx($component8)), calc(($int6 + if_gety($component8)) - if_getscrolly($component8));
 	$component8 = if_getlayer($component8);
 }
 def_int $int9 = calc($int5 + 5);

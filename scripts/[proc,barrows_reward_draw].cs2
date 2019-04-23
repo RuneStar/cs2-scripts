@@ -12,8 +12,7 @@ while ($int6 < $int1) {
 	if ($obj5 ! null) {
 		cc_sethide(false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		$int3 = calc($int6 % 3);
-		$int4 = calc($int6 / 3);
+		$int4, $int3 = calc($int6 / 3), calc($int6 % 3);
 		if ($int4 < 2) {
 			if ($int3 = 0) {
 				cc_setposition(0, calc($int4 * $int2), ^setpos_abs_left, ^setpos_abs_top);

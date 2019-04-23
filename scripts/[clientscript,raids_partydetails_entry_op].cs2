@@ -39,8 +39,7 @@ if (string_length($string0) > 0) {
 	$int3 = calc((if_getwidth(507:28) - 216) / 2);
 	$stat8 = enum(int, stat, 681, $int7);
 	while ($stat8 ! null) {
-		$int6 = calc(15 + (($int4 % 5) * 25));
-		$int5 = calc($int3 + (($int4 / 5) * 44));
+		$int5, $int6 = calc($int3 + (($int4 / 5) * 44)), calc(15 + (($int4 % 5) * 25));
 		$string2, $string1 = ~script632($string1);
 		cc_create(507:28, ^iftype_graphic, $int2);
 		$int2 = calc($int2 + 1);
@@ -59,8 +58,7 @@ if (string_length($string0) > 0) {
 		$string3 = "<$string0>:<br>Level <col=7f0000><$string2></col> <enum(stat, string, 680, $stat8)>";
 		.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 507:35, $string3, 25, 200)");
 		.cc_setonmouseleave("deltooltip(507:35)");
-		$int4 = calc($int4 + 1);
-		$int7 = calc($int7 + 1);
+		$int7, $int4 = calc($int7 + 1), calc($int4 + 1);
 		$stat8 = enum(int, stat, 681, $int7);
 	}
 	if_setonclick("raids_partydetails_closestats()", 507:28);

@@ -36,14 +36,11 @@ while ($obj19 ! null) {
 	if ((($enum1 = null) | (enum(obj, boolean, $enum1, $obj19) = true)) & (($boolean0 = false) | (~deadman_restricted_item($obj19) = 0))) {
 		$int14 = calc($int18 % 3);
 		if ($int14 = 0) {
-			$int16 = $int13;
-			$int15 = $int9;
+			$int15, $int16 = $int9, $int13;
 		} else if ($int14 = 1) {
-			$int16 = $int12;
-			$int15 = $int8;
+			$int15, $int16 = $int8, $int12;
 		} else {
-			$int16 = $int11;
-			$int15 = $int7;
+			$int15, $int16 = $int7, $int11;
 		}
 		cc_create(162:53, ^iftype_rectangle, $int6);
 		if ($int6 = 0) {

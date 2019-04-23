@@ -63,8 +63,7 @@ if ($stat7 ! null) {
 } else if (%varbit4697 = 30) {
 	if_setgraphic(null, $component1);
 	if_settext("", $component2);
-	$string2 = "";
-	$string1 = "";
+	$string1, $string2 = "", "";
 	~deltooltip_action($component6);
 } else {
 	$boolean9 = true;
@@ -181,12 +180,10 @@ if ($stat8 ! null) {
 	} else {
 		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component4);
 		if_setcolour(0x606060, $component4);
-		$string2 = "";
-		$string1 = "Use the setup menu to set a Total XP goal.";
+		$string1, $string2 = "Use the setup menu to set a Total XP goal.", "";
 	}
 } else {
-	$string2 = "";
-	$string1 = "";
+	$string1, $string2 = "", "";
 	~deltooltip_action($component6);
 }
 ~script2504($string2, $string1, $component6, $component3, $component0);

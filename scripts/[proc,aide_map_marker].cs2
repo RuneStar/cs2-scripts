@@ -13,8 +13,7 @@ if (((($int2 < 0) | ($int2 > 384)) | ($int3 < 0)) | ($int3 > 384)) {
 cc_sethide(false);
 def_int $int4 = 75;
 def_int $int5 = 235;
-$int5 = calc($int5 - scale($int3, 384, 188));
-$int4 = calc($int4 + scale($int3, 384, 85));
+$int4, $int5 = calc($int4 + scale($int3, 384, 85)), calc($int5 - scale($int3, 384, 188));
 def_int $int6 = calc(295 - scale($int3, 384, 53));
 $int4 = calc($int4 + scale($int2, 384, $int6));
 $int6 = calc(70 - scale($int3, 384, 20));

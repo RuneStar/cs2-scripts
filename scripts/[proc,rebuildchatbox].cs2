@@ -17,16 +17,9 @@ def_string $string6 = "<col=7f0000>";
 def_string $string7 = "<col=7f007f>";
 def_string $string8 = "<col=7e3200>";
 if (~toplevel_chatbox_maketransparent = 1) {
-	$boolean4 = true;
-	$colour3 = ^white;
-	$string4 = "<col=30ff30>";
-	$string3 = "<col=4040ff>";
-	$string2 = "<col=bf2020>";
-	$string1 = "<col=9090ff>";
-	$string8 = "<col=ff20df>";
-	$string7 = "<col=df20ff>";
-	$string6 = "<col=ef5050>";
-	$string5 = "<col=9070ff>";
+	$colour3, $boolean4 = ^white, true;
+	$string1, $string2, $string3, $string4 = "<col=9090ff>", "<col=bf2020>", "<col=4040ff>", "<col=30ff30>";
+	$string5, $string6, $string7, $string8 = "<col=9070ff>", "<col=ef5050>", "<col=df20ff>", "<col=ff20df>";
 }
 def_int $int5 = 0;
 def_int $int6 = 0;
@@ -180,5 +173,4 @@ while ($int7 > 0) {
 }
 if_setscrollsize(0, $int14, 162:58);
 ~scrollbar_resize(162:559, 162:58, calc(%varcint7 + ($int14 - %varcint8)));
-%varcint8 = $int14;
-%varcint7 = if_getscrolly(162:58);
+%varcint7, %varcint8 = if_getscrolly(162:58), $int14;

@@ -98,8 +98,7 @@ while ($int11 < $int2) {
 		cc_setop(1, "Select");
 	}
 	cc_setonop("script623(event_com, event_comid, $int0, $int11)");
-	%varcint49 = calc(%varcint49 + $int8);
-	$int11 = calc($int11 + 1);
+	$int11, %varcint49 = calc($int11 + 1), calc(%varcint49 + $int8);
 }
 %varcint49 = calc(%varcint49 + 4);
 $int8 = calc(%varcint49 - $int7);

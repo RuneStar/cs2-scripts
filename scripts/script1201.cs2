@@ -8,11 +8,9 @@ if ($int5 > 1000) {
 def_int $int6 = 0;
 def_int $int7 = 0;
 if ($int5 <= 500) {
-	$int7 = interpolate(0, $int5, 0, 500, 255);
-	$int6 = 255;
+	$int6, $int7 = 255, interpolate(0, $int5, 0, 500, 255);
 } else {
-	$int7 = 255;
-	$int6 = interpolate(0, calc(1000 - $int5), 0, 500, 255);
+	$int6, $int7 = interpolate(0, calc(1000 - $int5), 0, 500, 255), 255;
 }
 def_int $colour8 = ~script246($int6, $int7, 0);
 cc_setcolour($colour8);

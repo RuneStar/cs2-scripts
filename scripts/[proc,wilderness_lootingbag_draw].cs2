@@ -40,8 +40,7 @@ while ($int5 < $int1) {
 	cc_create(81:5, ^iftype_graphic, $int5);
 	$obj2 = inv_getobj($inv0, $int5);
 	if ($obj2 ! null) {
-		$int4 = calc($int4 + 1);
-		$int3 = inv_getnum($inv0, $int5);
+		$int3, $int4 = inv_getnum($inv0, $int5), calc($int4 + 1);
 		cc_sethide(false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc(($int5 % 4) * (36 + 8)), calc(($int5 / 4) * 32), ^setpos_abs_left, ^setpos_abs_top);

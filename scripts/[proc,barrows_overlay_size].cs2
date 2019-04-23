@@ -28,19 +28,15 @@ def_int $int18 = 20;
 def_int $setposh19 = ^setpos_abs_left;
 if ($int15 > 0) {
 	if ($enum11 = 1745) {
-		$int16 = 220;
-		$int15 = 45;
-		$int18 = 60;
-		$int17 = 180;
+		$int15, $int16 = 45, 220;
+		$int17, $int18 = 180, 60;
 		$setposh19 = ^setpos_abs_right;
 	} else {
 		$int15 = 18;
 	}
 	if_setposition($int15, $int17, ^setpos_abs_right, ^setpos_abs_top, $component8);
 	if_setposition($int16, $int18, $setposh19, ^setpos_abs_top, $component9);
-	$setposh14 = ^setpos_abs_left;
-	$setposh13 = ^setpos_abs_right;
-	$colour12 = 0xa0a0a0;
+	$colour12, $setposh13, $setposh14 = 0xa0a0a0, ^setpos_abs_right, ^setpos_abs_left;
 } else {
 	if_setposition(10, 8, ^setpos_abs_right, ^setpos_abs_bottom, $component8);
 	if_setposition(10, 28, ^setpos_abs_right, ^setpos_abs_bottom, $component9);

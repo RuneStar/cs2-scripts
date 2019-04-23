@@ -1,8 +1,7 @@
 // 1425
 [proc,minmax](int $int0, int $int1, int $int2)(int)
 if ($int1 <= $int0) {
-	$int1 = $int0;
-	$int0 = $int1;
+	$int0, $int1 = $int1, $int0;
 }
 $int2 = ~min($int1, $int2);
 $int2 = ~max($int0, $int2);

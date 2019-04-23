@@ -22,12 +22,9 @@ def_int $int14 = 0;
 def_int $int15 = 0;
 def_int $int16 = 0;
 if (($int8 >= 7) & ($int9 >= 7)) {
-	$int14 = calc(7 * $int11);
-	$int13 = $int11;
-	$int12 = $int11;
+	$int12, $int13, $int14 = $int11, $int11, calc(7 * $int11);
 } else {
-	$int13 = calc(($int5 - 1) * $int11);
-	$int12 = calc(($int4 - 1) * $int11);
+	$int12, $int13 = calc(($int4 - 1) * $int11), calc(($int5 - 1) * $int11);
 	$int14 = calc(($int10 + 2) * $int11);
 	$int15 = calc((7 + 2) * $int11);
 	$int16 = calc(($int12 + $int14) - $int15);
@@ -57,8 +54,7 @@ while ($int22 < $int18) {
 	cc_create(422:5, ^iftype_rectangle, $int21);
 	$int21 = calc($int21 + 1);
 	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
-	$int20 = calc($int22 / $int17);
-	$int19 = calc($int22 % $int17);
+	$int19, $int20 = calc($int22 % $int17), calc($int22 / $int17);
 	cc_setposition(calc(($int19 * $int11) - $int12), calc(($int20 * $int11) - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setfill(false);
 	cc_sethide(true);
@@ -69,8 +65,7 @@ while ($int22 < $int18) {
 	cc_create(422:5, ^iftype_rectangle, $int21);
 	$int21 = calc($int21 + 1);
 	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
-	$int20 = calc($int22 / $int17);
-	$int19 = calc($int22 % $int17);
+	$int19, $int20 = calc($int22 % $int17), calc($int22 / $int17);
 	cc_setposition(calc(($int19 * $int11) - $int12), calc(($int20 * $int11) - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setfill(false);
 	cc_sethide(true);
@@ -81,8 +76,7 @@ while ($int22 < $int18) {
 	cc_create(422:5, ^iftype_rectangle, $int21);
 	$int21 = calc($int21 + 1);
 	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
-	$int20 = calc($int22 / $int17);
-	$int19 = calc($int22 % $int17);
+	$int19, $int20 = calc($int22 % $int17), calc($int22 / $int17);
 	cc_setposition(calc(($int19 * $int11) - $int12), calc(($int20 * $int11) - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setfill(false);
 	cc_sethide(true);

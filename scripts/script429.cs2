@@ -4,8 +4,7 @@ if ($int4 = 1) {
 	if_setoninvtransmit("script429($obj0, $obj1, $obj2, event_com, false){inv}", $component3);
 }
 if (($obj0 = enchanted_gem_4155) & (inv_total(inv, eternal_gem_21270) > 0)) {
-	$obj1 = slayer_ring_eternal_21268;
-	$obj0 = eternal_gem_21270;
+	$obj0, $obj1 = eternal_gem_21270, slayer_ring_eternal_21268;
 }
 if ((($obj0 = null) | (inv_total(inv, $obj0) > 0)) & ((inv_total(inv, gold_bar_2357) > 0) | ((map_members = ^true) & (inv_total(inv, perfect_gold_bar_2365) > 0)))) {
 	if_setobject($obj1, 1, $component3);

@@ -49,13 +49,10 @@ def_model $model23 = null;
 def_int $int24 = 0;
 while ($int20 < $int10) {
 	if (($int9 = 1) & ($int20 >= $int11)) {
-		$int22 = calc(20 + $int16);
-		$int24 = 1;
+		$int24, $int22 = 1, calc(20 + $int16);
 		$int21 = calc(($int20 - $int11) * $int12);
 	} else {
-		$int21 = calc($int20 * $int12);
-		$int22 = 20;
-		$int24 = 0;
+		$int24, $int22, $int21 = 0, 20, calc($int20 * $int12);
 	}
 	if (cc_find($component0, $int20) = ^true) {
 		cc_setsize($int13, $int16, ^setsize_abs, ^setsize_abs);

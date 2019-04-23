@@ -52,8 +52,7 @@ def_int $int17 = if_gety($component0);
 def_int $int18 = 0;
 def_component $component19 = if_getlayer($component0);
 while ($component19 ! $component3) {
-	$int17 = calc(($int17 + if_gety($component19)) - if_getscrolly($component19));
-	$int16 = calc(($int16 + if_getx($component19)) - if_getscrollx($component19));
+	$int16, $int17 = calc(($int16 + if_getx($component19)) - if_getscrollx($component19)), calc(($int17 + if_gety($component19)) - if_getscrolly($component19));
 	$component19 = if_getlayer($component19);
 }
 if (~on_mobile = true) {

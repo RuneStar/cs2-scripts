@@ -106,13 +106,10 @@ if (stockmarket_isofferempty($int9) = true) {
 		}
 		return;
 	}
-	$int29 = inv_total($inv0, $obj28);
-	$int36 = 1;
+	$int36, $int29 = 1, inv_total($inv0, $obj28);
 } else {
-	$int29 = stockmarket_getoffercount($int9);
-	$obj28 = stockmarket_getofferitem($int9);
-	$int31 = stockmarket_getofferprice($int9);
-	$int30 = stockmarket_getoffercompletedcount($int9);
+	$obj28, $int29 = stockmarket_getofferitem($int9), stockmarket_getoffercount($int9);
+	$int30, $int31 = stockmarket_getoffercompletedcount($int9), stockmarket_getofferprice($int9);
 	if (stockmarket_getoffertype($int9) = 1) {
 		$string0 = "Sell";
 	} else {
@@ -179,16 +176,14 @@ def_int $int40 = 0;
 def_string $string4 = "";
 if (cc_find($component8, $int18) = ^true) {
 	cc_sethide(false);
-	$string3 = oc_name($obj28);
-	$int38 = cc_getwidth;
+	$int38, $string3 = cc_getwidth, oc_name($obj28);
 	$int39 = string_length($string3);
 	if (($int39 > 0) & (parawidth($string3, $int38, p11_full) > $int38)) {
 		while (($int39 > 1) & ($int40 = 0)) {
 			$int39 = calc($int39 - 1);
 			$string4 = append(substring($string3, 0, $int39), "...");
 			if (parawidth($string4, $int38, p11_full) <= $int38) {
-				$int40 = 1;
-				$string3 = $string4;
+				$string3, $int40 = $string4, 1;
 			}
 		}
 	}

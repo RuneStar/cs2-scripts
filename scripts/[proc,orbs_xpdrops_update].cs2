@@ -4,9 +4,7 @@ def_graphic $graphic1 = "orb_xp,0";
 def_graphic $graphic2 = "orb_xp,2";
 def_string $string0 = "Show";
 if (%varbit4702 = 1) {
-	$string0 = "Hide";
-	$graphic2 = "orb_xp,3";
-	$graphic1 = "orb_xp,1";
+	$graphic1, $graphic2, $string0 = "orb_xp,1", "orb_xp,3", "Hide";
 	if_setonop("orbs_xpdrops_op(event_opindex, event_com, 0)", $component0);
 } else {
 	if_setonop("orbs_xpdrops_op(event_opindex, event_com, 1)", $component0);

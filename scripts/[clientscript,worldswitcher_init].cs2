@@ -5,8 +5,7 @@ def_int $int19 = 11;
 if (~on_mobile = true) {
 	if_setsize(0, 190, ^setsize_minus, ^setsize_abs, $component2);
 	if_setsize(0, 48, ^setsize_minus, ^setsize_abs, $component13);
-	$int19 = 21;
-	$int18 = 24;
+	$int18, $int19 = 24, 21;
 } else {
 	if_setsize(0, 206, ^setsize_minus, ^setsize_abs, $component2);
 	if_setsize(0, 32, ^setsize_minus, ^setsize_abs, $component13);

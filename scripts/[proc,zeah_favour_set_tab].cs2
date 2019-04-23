@@ -39,20 +39,15 @@ if_setonop("zeah_favour_set_tab(1, $component0, $component1, $component2, $compo
 def_component $component14 = null;
 def_component $component15 = null;
 if (%varcint79 = 3) {
-	$component15 = $component8;
-	$component14 = $component3;
+	$component14, $component15 = $component3, $component8;
 } else if (%varcint79 = 2) {
-	$component15 = $component9;
-	$component14 = $component4;
+	$component14, $component15 = $component4, $component9;
 } else if (%varcint79 = 4) {
-	$component15 = $component10;
-	$component14 = $component5;
+	$component14, $component15 = $component5, $component10;
 } else if (%varcint79 = 5) {
-	$component15 = $component11;
-	$component14 = $component6;
+	$component14, $component15 = $component6, $component11;
 } else if (%varcint79 = 1) {
-	$component15 = $component12;
-	$component14 = $component7;
+	$component14, $component15 = $component7, $component12;
 } else {
 	return;
 }

@@ -5,8 +5,7 @@ if ($component5 = null) {
 	return;
 }
 if (testbit($int4, 30) = ^true) {
-	$int4 = clearbit($int4, 30);
-	$int3 = setbit($int3, 31);
+	$int3, $int4 = setbit($int3, 31), clearbit($int4, 30);
 }
 if_sethide(true, $component5);
 def_int $int6 = 0;

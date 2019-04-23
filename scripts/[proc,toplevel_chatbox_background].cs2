@@ -80,8 +80,7 @@ if ($int1 = 0) {
 			.cc_setfill(true);
 			cc_settrans(251);
 			.cc_settrans(250);
-			$int3 = calc($int3 - $int2);
-			$int4 = calc($int4 + 1);
+			$int4, $int3 = calc($int4 + 1), calc($int3 - $int2);
 		}
 	} else {
 		cc_create(162:38, ^iftype_rectangle, $int4);

@@ -3,8 +3,5 @@
 if (clientclock < $int0) {
 	return;
 }
-%varcint194 = $int4;
-%varcint193 = $int3;
-%varcint192 = $int2;
-%varcint191 = $int1;
+%varcint191, %varcint192, %varcint193, %varcint194 = $int1, $int2, $int3, $int4;
 ~worldmap_window_set($component5, $component6, $component7, $component8, $int9);

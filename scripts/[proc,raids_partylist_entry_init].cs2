@@ -3,8 +3,7 @@
 def_int $colour4 = ^white;
 def_int $int5 = 235;
 if (calc($int0 % 2) = 0) {
-	$int5 = 255;
-	$colour4 = ^black;
+	$colour4, $int5 = ^black, 255;
 }
 cc_setcolour($colour4);
 cc_settrans($int5);

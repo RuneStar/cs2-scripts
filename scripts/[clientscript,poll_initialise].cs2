@@ -5,8 +5,7 @@ if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:13)) = fal
 }
 ~steelborder($component0, $string0, 0);
 cc_deleteall($component2);
-%varcint49 = 0;
-%varcint43 = 0;
+%varcint43, %varcint49 = 0, 0;
 if_sethide(true, $component2);
 if_sethide(false, $component3);
 if_settext($string1, $component3);

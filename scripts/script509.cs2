@@ -24,8 +24,7 @@ while ($int0 < $int1) {
 			if ($int16 < $int10) {
 				$int16 = calc($int16 + 1);
 			} else {
-				$int17 = calc($int17 + 1);
-				$int16 = 0;
+				$int16, $int17 = 0, calc($int17 + 1);
 			}
 		}
 	}

@@ -6,9 +6,7 @@ if ($int1 = 1) {
 }
 if_setonkey("snapshot_onkey(event_keytyped, event_keypressed)", 553:5);
 if_settext("<escape(%varcstring370)><col=ffff00>|", 553:5);
-%varcint224 = $int0;
-%varcint140 = 1;
-%varcint6 = 0;
+%varcint6, %varcint140, %varcint224 = 0, 1, $int0;
 if ((playermod = true) | (staffmodlevel > 0)) {
 	%varcint140 = 0;
 	if_setcolour(^white, 553:14);

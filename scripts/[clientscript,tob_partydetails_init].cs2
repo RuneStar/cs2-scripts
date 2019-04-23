@@ -47,22 +47,19 @@ def_int $int15 = 5;
 while ($int15 > 0) {
 	cc_create($component0, ^iftype_rectangle, $int14);
 	cc_sethide(true);
-	$int14 = calc($int14 + 1);
-	$int15 = calc($int15 - 1);
+	$int15, $int14 = calc($int15 - 1), calc($int14 + 1);
 }
 $int15 = 10;
 while ($int15 > 0) {
 	cc_create($component0, ^iftype_rectangle, $int14);
 	cc_sethide(true);
-	$int14 = calc($int14 + 1);
-	$int15 = calc($int15 - 1);
+	$int15, $int14 = calc($int15 - 1), calc($int14 + 1);
 }
 $int15 = 10;
 while ($int15 > 0) {
 	cc_create($component0, ^iftype_rectangle, $int14);
 	cc_sethide(true);
-	$int14 = calc($int14 + 1);
-	$int15 = calc($int15 - 1);
+	$int15, $int14 = calc($int15 - 1), calc($int14 + 1);
 }
 if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component3);
 if_setontimer(null, $component0);

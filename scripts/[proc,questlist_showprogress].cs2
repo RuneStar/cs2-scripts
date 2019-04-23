@@ -20,8 +20,7 @@ while ($int5 < $int6) {
 	}
 	$int5 = calc($int5 + 1);
 }
-$int6 = ~quest_members_count;
-$int5 = 0;
+$int5, $int6 = 0, ~quest_members_count;
 while ($int5 < $int6) {
 	if (cc_find($component1, $int5) = ^true) {
 		$int3 = ~questlist_members_progress($int5);
@@ -38,8 +37,7 @@ while ($int5 < $int6) {
 	}
 	$int5 = calc($int5 + 1);
 }
-$int6 = ~miniquest_count;
-$int5 = 0;
+$int5, $int6 = 0, ~miniquest_count;
 while ($int5 < $int6) {
 	if (cc_find($component2, $int5) = ^true) {
 		$int3 = ~script1359($int5);

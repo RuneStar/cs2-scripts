@@ -145,8 +145,7 @@ if ($int15 <= -2) {
 			}
 			cc_setcolour(^yellow);
 		}
-		$int12 = calc($int12 + $int13);
-		$int9 = calc($int9 + 1);
+		$int9, $int12 = calc($int9 + 1), calc($int12 + $int13);
 	}
 	if ($int15 >= 1) {
 		$int12 = calc($int12 + 5);

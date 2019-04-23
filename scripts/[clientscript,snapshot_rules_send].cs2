@@ -14,8 +14,7 @@ if ((string_length(%varcstring370) > 0) | (%varcint224 = 0)) {
 		%varcstring371 = %varcstring370;
 	}
 	if_close;
-	%varcstring370 = "";
-	%varcint11 = 0;
+	%varcint11, %varcstring370 = 0, "";
 	return;
 }
 sound_synth(2277, 1, 0);

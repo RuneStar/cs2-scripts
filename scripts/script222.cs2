@@ -8,8 +8,7 @@ if ((((%varcint5 = 6) | (%varcint5 = 9)) | (%varcint5 = 11)) | (%varcint5 = 13))
 	$int0 = 10;
 } else if (%varcint5 = 14) {
 	$int0 = 25;
-	%varcint66 = 20;
-	$string1 = append("<col=000000><$string0></col> ", $string1);
+	$string1, %varcint66 = append("<col=000000><$string0></col> ", $string1), 20;
 }
 if (string_length(%varcstring359) < $int0) {
 	$string1 = append($string1, "*");

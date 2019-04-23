@@ -49,8 +49,7 @@ while ($int5 < $int0) {
 	.cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
 	.cc_settextshadow(true);
 	.cc_settext($string2);
-	$int5 = calc($int5 + 1);
-	$int2 = calc($int2 + $int3);
+	$int2, $int5 = calc($int2 + $int3), calc($int5 + 1);
 	if ($int5 < $int0) {
 		$int2 = calc($int2 + 10);
 	}

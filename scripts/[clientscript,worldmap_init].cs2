@@ -99,8 +99,7 @@ while ($int36 < $int28) {
 		$string1, $string0 = ~script632(cc_gettext);
 		$int32 = string_length($string1);
 		if (($int32 > 0) & (compare($string1, tostring($int31)) ! 0)) {
-			$int35 = 0;
-			$int33 = 0;
+			$int33, $int35 = 0, 0;
 			while (($int33 < $int32) & ($int33 < 10)) {
 				$int34 = string_indexof_string("0123456789", substring($string1, calc($int32 - ($int33 + 1)), calc($int32 - $int33)), 0);
 				if ($int34 ! -1) {
@@ -127,8 +126,7 @@ while ($int36 < $int28) {
 			$string0 = enum(int, string, 1715, $int35);
 			cc_settext($string0);
 			$int29 = ~max($int29, parawidth($string0, 512, p12_full));
-			$int26 = calc($int26 + 20);
-			$int31 = $int35;
+			$int31, $int26 = $int35, calc($int26 + 20);
 		}
 	}
 	if (cc_find($component21, calc($array0($int36) * 4)) = ^true) {
@@ -145,8 +143,7 @@ while ($int36 < $int28) {
 	if (cc_find($component21, calc(($array0($int36) * 4) + 2)) = ^true) {
 		cc_setposition(0, $int26, ^setpos_abs_right, ^setpos_abs_top);
 	}
-	$int36 = calc($int36 + 1);
-	$int26 = calc($int26 + $int27);
+	$int26, $int36 = calc($int26 + $int27), calc($int36 + 1);
 }
 if ($int28 > 0) {
 	$int26 = calc($int26 + 1);
@@ -280,9 +277,7 @@ def_coord $coord41 = null;
 def_coord $coord42 = null;
 def_fontmetrics $fontmetrics43 = null;
 def_fontmetrics $fontmetrics44 = null;
-$int28 = 0;
-$int29 = 0;
-$string0 = "";
+$string0, $int29, $int28 = "", 0, 0;
 def_maparea $maparea45 = enum(int, maparea, 1697, $int28);
 while ($maparea45 ! null) {
 	$array0($int28) = $int25;
@@ -292,11 +287,9 @@ while ($maparea45 ! null) {
 	cc_setsize(0, $int27, ^setsize_minus, ^setsize_abs);
 	cc_setcolour(0xff981f);
 	if ($maparea45 = main) {
-		$fontmetrics44 = p12_full;
-		$fontmetrics43 = p12_full;
+		$fontmetrics43, $fontmetrics44 = p12_full, p12_full;
 	} else {
-		$fontmetrics44 = p11_full;
-		$fontmetrics43 = p11_full;
+		$fontmetrics43, $fontmetrics44 = p11_full, p11_full;
 	}
 	cc_settextfont($fontmetrics44);
 	cc_settextshadow(true);
@@ -311,8 +304,7 @@ while ($maparea45 ! null) {
 	$int29 = ~max($int29, parawidth($string0, 512, $fontmetrics43));
 	$coord41 = ~worldmap_findcoordinmap($maparea45, %varcint188);
 	if ($coord41 ! null) {
-		$coord42 = $coord41;
-		$maparea40 = $maparea45;
+		$maparea40, $coord42 = $maparea45, $coord41;
 	}
 	$maparea45 = enum(int, maparea, 1697, $int28);
 }

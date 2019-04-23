@@ -6,8 +6,7 @@ if (($int12 = $int4) & ($int13 = $int5)) {
 	return;
 }
 ~worldmap_window_set($component0, $component1, $component2, $component3, $int9);
-$int13 = if_getheight($component1);
-$int12 = if_getwidth($component1);
+$int12, $int13 = if_getwidth($component1), if_getheight($component1);
 ~scrollbar_vertical_rebuild($component7, $component6);
 def_int $int14 = ~min(200, calc((($int12 - $int8) / 2) - 54));
 if_setsize($int14, 20, ^setsize_abs, ^setsize_abs, $component10);

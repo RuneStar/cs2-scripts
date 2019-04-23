@@ -34,7 +34,6 @@ while ($int9 ! -1) {
 	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	.cc_settext($string1);
 	~clanwars_setup_togglebox_update($component3, $int9);
-	$int7 = calc($int7 + 17);
-	$int8 = calc($int8 + 1);
+	$int8, $int7 = calc($int8 + 1), calc($int7 + 17);
 	$int9 = enum(int, int, $enum0, $int8);
 }

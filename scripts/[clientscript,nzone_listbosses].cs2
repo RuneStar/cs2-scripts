@@ -97,8 +97,7 @@ while ($int15 < 62) {
 				.cc_setcolour(0xff981f);
 				.cc_settext("<str><col=8f8f8f><enum(int, string, 802, $int10)></col></str>");
 			}
-			$int13 = calc($int13 + 17);
-			$int12 = calc($int12 + 1);
+			$int12, $int13 = calc($int12 + 1), calc($int13 + 17);
 		}
 	}
 	$int15 = calc($int15 + 1);

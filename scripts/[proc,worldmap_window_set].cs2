@@ -9,8 +9,7 @@ if (~toplevel_getcomponents = 1132) {
 }
 %varcint191 = ~max(~min(%varcint191, calc(if_getwidth($component0) - $int4)), 0);
 %varcint192 = ~max(~min(%varcint192, calc(if_getheight($component0) - 280)), 0);
-%varcint194 = ~max(~min(%varcint194, %varcint192), 0);
-%varcint193 = ~max(~min(%varcint193, %varcint191), 0);
+%varcint193, %varcint194 = ~max(~min(%varcint193, %varcint191), 0), ~max(~min(%varcint194, %varcint192), 0);
 if_setposition(%varcint193, %varcint194, ^setpos_abs_left, ^setpos_abs_top, $component1);
 if_setsize(%varcint191, %varcint192, ^setsize_minus, ^setsize_minus, $component1);
 def_int $int5 = calc(%varcint191 + (6 * 2));

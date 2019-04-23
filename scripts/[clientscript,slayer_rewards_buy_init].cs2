@@ -13,8 +13,7 @@ def_int $int16 = 0;
 def_int $int17 = 0;
 def_obj $obj18 = enum(int, namedobj, 840, $int17);
 while ($obj18 ! null) {
-	$int14 = calc(($int17 / 5) * $int11);
-	$int13 = calc(($int17 % 5) * $int10);
+	$int13, $int14 = calc(($int17 % 5) * $int10), calc(($int17 / 5) * $int11);
 	cc_create($component1, ^iftype_graphic, $int17);
 	.cc_create($component2, ^iftype_text, $int17);
 	cc_setposition(calc($int13 + $int12), $int14, ^setpos_abs_left, ^setpos_abs_top);

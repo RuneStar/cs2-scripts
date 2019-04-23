@@ -47,11 +47,9 @@ if (enum(int, boolean, 1810, $int0) = true) {
 		$int12 = 1;
 	}
 } else {
-	$int12 = 1;
-	$int1 = 1;
+	$int1, $int12 = 1, 1;
 }
-%varcint201 = $int12;
-%varcint200 = $int12;
+%varcint200, %varcint201 = $int12, $int12;
 ~script2055($int0, $int1);
 def_int $int13 = 10;
 if ($obj3 = null) {
@@ -89,14 +87,11 @@ if ($int13 > 1) {
 		$int16 = calc(($int14 - ($int15 * $int13)) / $int17);
 		$int18 = calc($int18 + (2 * ~max(0, (7 - $int13))));
 		if ($int16 < $int18) {
-			$int16 = $int18;
-			$int15 = calc(($int14 - ($int18 * $int17)) / $int13);
+			$int15, $int16 = calc(($int14 - ($int18 * $int17)) / $int13), $int18;
 		}
 	}
 	$int19 = calc($int15 + $int16);
-	$int22 = calc(75 - 3);
-	$setposv21 = ^setpos_abs_bottom;
-	$int20 = 14;
+	$int20, $setposv21, $int22 = 14, ^setpos_abs_bottom, calc(75 - 3);
 	while ($int23 < $int13) {
 		cc_create(270:13, ^iftype_text, $int23);
 		cc_setposition(calc($int23 * $int19), 0, ^setpos_abs_left, ^setpos_abs_bottom);

@@ -72,19 +72,13 @@ if (%varbit4597 > 0) {
 	if_sethide(true, $component14);
 	$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4597);
 	if (~script961($int25, $int26) = 0) {
-		$int28 = 0;
-		$int27 = -1;
-		$string0 = "Unavailable";
-		$int25 = 0;
+		$int25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
 	}
 	~worldswitcher_entry_draw($component12, 0, 0, $component12, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
 	if (%varbit4598 > 0) {
 		$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4598);
 		if (~script961($int25, $int26) = 0) {
-			$int28 = 0;
-			$int27 = -1;
-			$string0 = "Unavailable";
-			$int25 = 0;
+			$int25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
 		}
 		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
 	} else {
@@ -96,10 +90,7 @@ if (%varbit4597 > 0) {
 		if_sethide(true, $component14);
 		$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4598);
 		if (~script961($int25, $int26) = 0) {
-			$int28 = 0;
-			$int27 = -1;
-			$string0 = "Unavailable";
-			$int25 = 0;
+			$int25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
 		}
 		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
 	} else {

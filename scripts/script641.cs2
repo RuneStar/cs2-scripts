@@ -55,8 +55,7 @@ while ($int11 < $int12) {
 	} else {
 		cc_sethide(true);
 	}
-	$int11 = calc($int11 + 1);
-	$int9 = calc($int9 + 1);
+	$int9, $int11 = calc($int9 + 1), calc($int11 + 1);
 }
 if ($int6 > 0) {
 	$int7 = calc($int7 + 32);

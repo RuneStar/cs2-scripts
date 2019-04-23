@@ -9,8 +9,7 @@ def_int $int25 = if_getx($component0);
 def_int $int26 = if_gety($component0);
 def_component $component27 = if_getlayer($component0);
 while ($component27 ! $component2) {
-	$int26 = calc(($int26 + if_gety($component27)) - if_getscrolly($component27));
-	$int25 = calc(($int25 + if_getx($component27)) - if_getscrollx($component27));
+	$int25, $int26 = calc(($int25 + if_getx($component27)) - if_getscrollx($component27)), calc(($int26 + if_gety($component27)) - if_getscrolly($component27));
 	$component27 = if_getlayer($component27);
 }
 $int26 = calc(($int26 + if_getheight($component0)) - 1);

@@ -75,8 +75,7 @@ if ($int1 > 0) {
 				mes("You must set a name before you can chat.");
 				return;
 			}
-			%varcint62 = 0;
-			%varcstring358 = %varcstring359;
+			%varcstring358, %varcint62 = %varcstring359, 0;
 			~script95;
 			if_setontimer("script552(event_com, true)", 162:13);
 		case 11 :

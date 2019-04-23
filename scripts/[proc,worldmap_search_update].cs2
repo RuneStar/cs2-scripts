@@ -11,8 +11,7 @@ def_coord $coord6 = null;
 if (string_length($string0) > 0) {
 	.cc_settext($string0);
 	cc_setonkey(null);
-	%varcint187 = calc(clientclock + 2);
-	%varcint190 = 0;
+	%varcint190, %varcint187 = 0, calc(clientclock + 2);
 } else {
 	$int3 = string_length(%varcstring363);
 	if ($int3 > 0) {

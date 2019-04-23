@@ -15,13 +15,7 @@ if ($int0 = 1) {
 		if (($array0($int35) ! null) & ($array1($int35) > 0)) {
 			$int35 = calc($int35 + 1);
 		}
-		%varcint213 = null;
-		%varcint212 = %varcint213;
-		%varcint211 = %varcint212;
-		%varcint210 = %varcint211;
-		%varcint209 = %varcint210;
-		%varcint208 = %varcint209;
-		%varcint207 = %varcint208;
+		%varcint207, %varcint208, %varcint209, %varcint210, %varcint211, %varcint212, %varcint213 = %varcint208, %varcint209, %varcint210, %varcint211, %varcint212, %varcint213, null;
 	}
 } else {
 	$int36 = calc(stat_xp(fishing) - $int25);
@@ -177,13 +171,9 @@ def_component $component47 = null;
 def_string $string0 = "";
 if ((($int35 > 0) & ($int16 > 0)) & (calc(clientclock - %varcint76) > 10)) {
 	if ((%varbit4693 = 1) & (~on_mobile = false)) {
-		$int41 = 25;
-		$fontmetrics40 = p12_full;
-		$fontmetrics39 = p12_full;
+		$fontmetrics39, $fontmetrics40, $int41 = p12_full, p12_full, 25;
 	} else if ((%varbit4693 = 2) & (~on_mobile = false)) {
-		$int41 = 25;
-		$fontmetrics40 = b12_full;
-		$fontmetrics39 = b12_full;
+		$fontmetrics39, $fontmetrics40, $int41 = b12_full, b12_full, 25;
 	}
 	$int42 = if_getheight($component8);
 	if ($int42 < 100) {

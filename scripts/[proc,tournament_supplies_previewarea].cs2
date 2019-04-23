@@ -56,8 +56,7 @@ while ($int8 < $int9) {
 	} else {
 		cc_sethide(true);
 	}
-	$int4 = calc($int4 + 1);
-	$int8 = calc($int8 + 1);
+	$int8, $int4 = calc($int8 + 1), calc($int4 + 1);
 }
 if ($int1 = 0) {
 	cc_create($component0, ^iftype_text, $int8);

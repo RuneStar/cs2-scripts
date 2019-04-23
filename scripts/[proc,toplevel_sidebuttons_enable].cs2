@@ -6,8 +6,7 @@ def_int $int3 = 0;
 def_component $component4 = enum(int, component, 1138, $int3);
 def_component $component5 = enum(int, component, 1139, $int3);
 while (($component4 ! null) & ($component5 ! null)) {
-	$component5 = enum(component, component, $enum0, $component5);
-	$component4 = enum(component, component, $enum0, $component4);
+	$component4, $component5 = enum(component, component, $enum0, $component4), enum(component, component, $enum0, $component5);
 	if (($component4 ! null) & ($component5 ! null)) {
 		if ($int3 = calc(%varbit3756 - 1)) {
 			if_sethide(false, $component4);
@@ -24,6 +23,5 @@ while (($component4 ! null) & ($component5 ! null)) {
 		}
 	}
 	$int3 = calc($int3 + 1);
-	$component5 = enum(int, component, 1139, $int3);
-	$component4 = enum(int, component, 1138, $int3);
+	$component4, $component5 = enum(int, component, 1138, $int3), enum(int, component, 1139, $int3);
 }

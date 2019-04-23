@@ -43,8 +43,7 @@ if (($component7 ! null) & ($component8 ! null)) {
 ~toplevel_sidebuttons_enable($enum1);
 def_component $component9 = enum(int, component, 1138, 2);
 $component7 = enum(int, component, 1139, 2);
-$component7 = enum(component, component, $enum1, $component7);
-$component9 = enum(component, component, $enum1, $component9);
+$component9, $component7 = enum(component, component, $enum1, $component9), enum(component, component, $enum1, $component7);
 if (($component9 ! null) & ($component7 ! null)) {
 	switch_int (%varbit8168) {
 		case 1 :
@@ -93,8 +92,7 @@ if ($component9 ! null) {
 }
 $component9 = enum(int, component, 1138, 9);
 $component7 = enum(int, component, 1139, 9);
-$component7 = enum(component, component, $enum1, $component7);
-$component9 = enum(component, component, $enum1, $component9);
+$component9, $component7 = enum(component, component, $enum1, $component9), enum(component, component, $enum1, $component7);
 if (($component9 ! null) & ($component7 ! null)) {
 	if (%varbit6516 = 0) {
 		if_setop(1, "Friends List", $component9);

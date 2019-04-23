@@ -3,8 +3,7 @@
 if ($int1 = 1) {
 	if ($int0 = 1) {
 		sound_synth(2266, 1, 0);
-		%varbit5400 = 0;
-		%varbit5399 = 0;
+		%varbit5399, %varbit5400 = 0, 0;
 		if (cc_find($component3, $int4) = ^true) {
 			~notifications_lootdrop_redraw($component3);
 		}
@@ -25,8 +24,7 @@ if ($int1 = 1) {
 		if ($int2 > 500000000) {
 			$int2 = 500000000;
 		}
-		%varbit5400 = $int2;
-		%varbit5399 = 1;
+		%varbit5399, %varbit5400 = 1, $int2;
 		if (cc_find($component3, $int4) = ^true) {
 			~notifications_lootdrop_redraw($component3);
 		}

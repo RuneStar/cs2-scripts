@@ -13,8 +13,7 @@ if_setontimer("script1713($maparea0, $component2, cc_getid, $component3, $compon
 def_int $int9 = 0;
 def_int $int10 = 0;
 $int9, $int10 = worldmap_getconfigsize($maparea0);
-$int10 = ~max($int10, 1);
-$int9 = ~max($int9, 1);
+$int9, $int10 = ~max($int9, 1), ~max($int10, 1);
 def_int $int11 = 200;
 def_int $int12 = 200;
 if ($int9 > $int10) {

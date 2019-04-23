@@ -18,8 +18,7 @@ while ($int7 < $int4) {
 	if (cc_find(422:5, $int5) = ^true) {
 		cc_sethide($boolean6);
 	}
-	$int5 = calc($int5 + 1);
-	$int7 = calc($int7 + 1);
+	$int7, $int5 = calc($int7 + 1), calc($int5 + 1);
 }
 if ($int0 = 1) {
 	$boolean6 = false;
@@ -31,16 +30,14 @@ while ($int7 < $int4) {
 	if (cc_find(422:5, $int5) = ^true) {
 		cc_sethide($boolean6);
 	}
-	$int5 = calc($int5 + 1);
-	$int7 = calc($int7 + 1);
+	$int7, $int5 = calc($int7 + 1), calc($int5 + 1);
 }
 $int7 = 0;
 while ($int7 < $int4) {
 	if (cc_find(422:5, $int5) = ^true) {
 		cc_sethide(true);
 	}
-	$int5 = calc($int5 + 1);
-	$int7 = calc($int7 + 1);
+	$int7, $int5 = calc($int7 + 1), calc($int5 + 1);
 }
 def_int $int8 = -1;
 def_int $int9 = calc(%varbit5330 - 1);

@@ -40,8 +40,7 @@ while ($int6 < $int2) {
 	if (cc_find($component1, $array0($int6)) = ^true) {
 		cc_setposition(0, $int7, ^setpos_abs_centre, ^setpos_abs_top);
 	}
-	$int7 = calc($int7 + 18);
-	$int6 = calc($int6 + 1);
+	$int6, $int7 = calc($int6 + 1), calc($int7 + 18);
 }
 cc_create($component1, ^iftype_text, $int6);
 cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);

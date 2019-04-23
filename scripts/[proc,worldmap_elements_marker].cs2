@@ -20,42 +20,27 @@ def_int $int16 = calc(if_getheight($component2) / 2);
 if ($int8 < calc(0 - $int15)) {
 	$int8 = calc($int12 - $int15);
 	if ($int9 < calc(0 - $int16)) {
-		$int9 = calc($int12 - $int16);
-		$int13 = 16384;
-		$graphic10 = struct_param($struct1, 461);
+		$graphic10, $int13, $int9 = struct_param($struct1, 461), 16384, calc($int12 - $int16);
 	} else if ($int9 > $int16) {
-		$int9 = calc($int16 - $int12);
-		$int13 = 32768;
-		$graphic10 = struct_param($struct1, 461);
+		$graphic10, $int13, $int9 = struct_param($struct1, 461), 32768, calc($int16 - $int12);
 	} else {
-		$int13 = 32768;
-		$graphic10 = struct_param($struct1, 460);
+		$graphic10, $int13 = struct_param($struct1, 460), 32768;
 	}
 } else if ($int8 > $int15) {
 	$int8 = calc($int15 - $int12);
 	if ($int9 < calc(0 - $int16)) {
-		$int9 = calc($int12 - $int16);
-		$int13 = 0;
-		$graphic10 = struct_param($struct1, 461);
+		$graphic10, $int13, $int9 = struct_param($struct1, 461), 0, calc($int12 - $int16);
 	} else if ($int9 > $int16) {
-		$int9 = calc($int16 - $int12);
-		$int13 = 49152;
-		$graphic10 = struct_param($struct1, 461);
+		$graphic10, $int13, $int9 = struct_param($struct1, 461), 49152, calc($int16 - $int12);
 	} else {
-		$int13 = 0;
-		$graphic10 = struct_param($struct1, 460);
+		$graphic10, $int13 = struct_param($struct1, 460), 0;
 	}
 } else if ($int9 < calc(0 - $int16)) {
-	$int9 = calc($int12 - $int16);
-	$int13 = 16384;
-	$graphic10 = struct_param($struct1, 460);
+	$graphic10, $int13, $int9 = struct_param($struct1, 460), 16384, calc($int12 - $int16);
 } else if ($int9 > $int16) {
-	$int9 = calc($int16 - $int12);
-	$int13 = 49152;
-	$graphic10 = struct_param($struct1, 460);
+	$graphic10, $int13, $int9 = struct_param($struct1, 460), 49152, calc($int16 - $int12);
 } else {
-	$int14 = 1;
-	$int13 = ~script1759;
+	$int13, $int14 = ~script1759, 1;
 }
 if (testbit(%varbit5640, 4) = ^true) {
 	$int14 = 0;

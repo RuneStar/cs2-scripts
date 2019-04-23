@@ -24,16 +24,13 @@ if (%varbit4440 = 1) {
 	if (cc_find(237:4, $int2) = ^true) {
 		cc_setgraphic("options_radio_buttons,0");
 	}
-	$int10 = calc(32 + 10);
-	$int9 = calc(36 + 10);
-	$int12 = calc($int10 + 35);
-	$int11 = calc(($int4 - (5 * $int9)) / 6);
+	$int9, $int10 = calc(36 + 10), calc(32 + 10);
+	$int11, $int12 = calc(($int4 - (5 * $int9)) / 6), calc($int10 + 35);
 	$int13 = calc($int11 + $int9);
 	while ($int3 < $int1) {
 		$obj7 = inv_getobj($inv0, $int3);
 		if ($obj7 ! null) {
-			$int15 = calc((($int3 / 5) * $int12) + 20);
-			$int14 = calc($int11 + (($int3 % 5) * $int13));
+			$int14, $int15 = calc($int11 + (($int3 % 5) * $int13)), calc((($int3 / 5) * $int12) + 20);
 			if (cc_find(237:2, $int3) = ^true) {
 				cc_sethide(false);
 				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
