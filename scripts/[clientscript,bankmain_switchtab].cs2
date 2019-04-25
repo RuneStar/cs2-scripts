@@ -1,5 +1,5 @@
 // 504
-[clientscript,bankmain_switchtab](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, int $int13, int $int14)
+[clientscript,bankmain_switchtab](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, int $int13, int $int14, component $component15, component $component16, component $component17, component $component18)
 if ($int13 ! 1) {
 	return;
 }
@@ -8,5 +8,5 @@ if (($int14 >= 0) & ($int14 <= 9)) {
 		sound_synth(2266, 1, 0);
 	}
 	%varbit4150 = $int14;
-	~bankmain_build($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12);
+	~bankmain_build($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component15, $component16, $component17, $component18);
 }

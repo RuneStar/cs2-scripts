@@ -1,0 +1,9 @@
+// 2839
+script2839(component $component0)
+if (%varbit8352 = 1) {
+	cc_setgraphic("options_radio_buttons,1");
+	if_setop(1, "Show", $component0);
+} else {
+	cc_setgraphic("options_radio_buttons,2");
+	if_setop(1, "Hide", $component0);
+}

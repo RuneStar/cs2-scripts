@@ -8,12 +8,7 @@ if (($obj0 = enchanted_gem_4155) & (inv_total(inv, eternal_gem_21270) > 0)) {
 }
 if ((($obj0 = null) | (inv_total(inv, $obj0) > 0)) & ((inv_total(inv, gold_bar_2357) > 0) | ((map_members = ^true) & (inv_total(inv, perfect_gold_bar_2365) > 0)))) {
 	if_setobject($obj1, 1, $component3);
-	if_setopbase("<col=ff9040><oc_name($obj1)>", $component3);
-	if_setop(1, "Make-1", $component3);
-	if_setop(2, "Make-5", $component3);
-	if_setop(3, "Make-10", $component3);
-	if_setop(4, "Make-X", $component3);
-	if_setop(5, "Make-All", $component3);
+	if_setop(1, "Make <col=ff9040><oc_name($obj1)></col>", $component3);
 } else {
 	if_setobject($obj2, 1, $component3);
 	if_clearops($component3);
