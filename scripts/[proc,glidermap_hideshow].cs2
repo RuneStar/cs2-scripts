@@ -1,6 +1,6 @@
 // 1288
 [proc,glidermap_hideshow](component $component0, component $component1, component $component2)
-if (%var153 ! -1) {
+if (%var153 ! null) {
 	if_sethide(true, $component0);
 } else {
 	if_sethide(false, $component0);

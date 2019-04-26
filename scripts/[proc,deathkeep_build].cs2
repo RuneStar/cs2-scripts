@@ -1,5 +1,5 @@
 // 1601
-[proc,deathkeep_build](int $int0, int $int1, int $int2, int $int3, string $string0, string $string1)
+[proc,deathkeep_build](int $int0, string $string0, int $int1, int $int2, boolean $boolean3, string $string1)
 if_settext($string1, 4:23);
 def_int $int4 = 0;
 def_int $int5 = 0;
@@ -100,7 +100,7 @@ if ($int0 = 0) {
 		$int4 = calc($int4 + 1);
 	}
 	$string2 = "The normal amount of items kept is three.<br><br>";
-	if ($int3 = 1) {
+	if ($boolean3 = true) {
 		$string2 = append($string2, "You're an <col=ff3333>Ultimate Iron Man<col=ff981f>, so you will always keep zero items.");
 	} else if ($int1 = 0) {
 		$string2 = append($string2, "You're marked with a <col=ff3333>PK skull<col=ff981f>. This reduces the items you keep from three to zero!");

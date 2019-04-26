@@ -9,7 +9,7 @@ if ($coord0 = null) {
 }
 def_int $int8 = 0;
 def_int $int9 = 0;
-$int8, $int9 = ~worldmap_elements_chooseposition($coord0, 0, $component2, $int3, $int4, $int5, $int6);
+$int8, $int9 = ~worldmap_elements_chooseposition($coord0, false, $component2, $int3, $int4, $int5, $int6);
 def_graphic $graphic10 = struct_param($struct1, 459);
 def_int $int11 = struct_param($struct1, 462);
 def_int $int12 = calc($int11 / 2);

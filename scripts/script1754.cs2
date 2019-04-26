@@ -53,7 +53,7 @@ if (cc_find($component4, $int10) = ^true) {
 	}
 	cc_setposition($int12, $int13, ^setpos_abs_centre, ^setpos_abs_centre);
 } else {
-	$int21, $int22, $int23 = ~script2(16776960);
+	$int21, $int22, $int23 = ~script2(^yellow);
 	$int21, $int22, $int23 = ~max(calc($int21 - 48), 0), ~max(calc($int22 - 48), 0), ~max(calc($int23 - 48), 0);
 	$colour24 = ~script246($int21, $int22, $int23);
 	cc_create($component4, ^iftype_rectangle, $int10);

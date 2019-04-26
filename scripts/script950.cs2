@@ -1,5 +1,5 @@
 // 950
-script950(int $int0, int $int1, int $colour2, int $int3, int $int4, int $int5)
+script950(int $colour0, int $int1, int $colour2, int $int3, int $int4, int $int5)
 if ($int5 <= 0) {
 	if_setcolour($colour2, 174:1);
 	if_settrans($int3, 174:1);
@@ -9,7 +9,7 @@ if ($int5 <= 0) {
 def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
-$int6, $int7, $int8 = ~script2($int0);
+$int6, $int7, $int8 = ~script2($colour0);
 def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;

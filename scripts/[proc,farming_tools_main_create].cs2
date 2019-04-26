@@ -1,5 +1,5 @@
 // 1057
-[proc,farming_tools_main_create](component $component0, obj $obj1, int $int2, string $string0)
+[proc,farming_tools_main_create](component $component0, obj $obj1, string $string0, int $int2)
 if_setonmouserepeat("farming_tools_main_recreate($component0, $obj1, $string0, $int2, true)", $component0);
 if_setonmouseleave("farming_tools_main_recreate($component0, $obj1, $string0, $int2, false)", $component0);
 ~farming_tools_main_recreate($component0, $obj1, $string0, $int2, 0);

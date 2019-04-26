@@ -1,12 +1,12 @@
 // 1551
-[proc,raids_sidepanel_entry_setup](int $int0, int $int1)
+[proc,raids_sidepanel_entry_setup](int $int0, boolean $boolean1)
 def_int $int2 = 235;
 if (calc($int0 % 2) = 0) {
 	$int2 = 255;
 }
 cc_settrans($int2);
 cc_clearops;
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	if ((clan_getchatcount > 0) & (clan_getchatrank >= clan_getchatminkick)) {
 		cc_setop(6, "Kick");
 		cc_setonmouserepeat("cc_settrans(event_com, event_comid, 220, null)");

@@ -1,5 +1,5 @@
 // 541
-[proc,ge_offers_bigbutton](component $component0, int $int1, string $string0)
+[proc,ge_offers_bigbutton](component $component0, string $string0, int $int1)
 if_setsize(calc(parawidth($string0, 512, p11_full) + 10), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
 cc_deleteall($component0);
 def_int $int2 = 0;

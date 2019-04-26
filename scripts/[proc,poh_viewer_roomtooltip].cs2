@@ -1,5 +1,5 @@
 // 1377
-[proc,poh_viewer_roomtooltip](int $int0, enum $enum1, enum $enum2, int $int3, string $string0)(string, int)
+[proc,poh_viewer_roomtooltip](string $string0, int $int0, enum $enum1, enum $enum2, int $int3)(string, int)
 def_coord $coord4 = enum(int, coord, $enum1, $int0);
 def_obj $obj5 = enum(coord, obj, $enum2, $coord4);
 if ($obj5 ! 8245) {

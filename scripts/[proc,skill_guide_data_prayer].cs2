@@ -1,5 +1,5 @@
 // 2499
-[proc,skill_guide_data_prayer](int $int0, int $int1)(int, int, string)
+[proc,skill_guide_data_prayer](int $int0, int $int1)(int, obj, string)
 switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
@@ -64,62 +64,62 @@ switch_int ($int0) {
 			case 29 :
 				return(77, 20830, "Members: Augury<br> (with 70 Defence)");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(10, 5574, "Initiate armour<br> (after Recruitment Drive, with 20 Defence)");
+				return(10, initiate_sallet_5574, "Initiate armour<br> (after Recruitment Drive, with 20 Defence)");
 			case 1 :
-				return(20, 9672, "Proselyte armour<br> (after Slug Menace, with 30 Defence)");
+				return(20, proselyte_sallet_9672, "Proselyte armour<br> (after Slug Menace, with 30 Defence)");
 			case 2 :
-				return(20, 10458, "Vestment robe top");
+				return(20, saradomin_robe_top_10458, "Vestment robe top");
 			case 3 :
-				return(20, 10464, "Vestment robe legs");
+				return(20, saradomin_robe_legs_10464, "Vestment robe legs");
 			case 4 :
-				return(22, 8839, "Void Knight equipment<br>(with 42 combat stats)");
+				return(22, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats)");
 			case 5 :
-				return(31, 19997, "Holy wraps");
+				return(31, holy_wraps_19997, "Holy wraps");
 			case 6 :
-				return(31, 12598, "Holy sandals");
+				return(31, holy_sandals_12598, "Holy sandals");
 			case 7 :
-				return(40, 10446, "Vestment cloak");
+				return(40, saradomin_cloak_10446, "Vestment cloak");
 			case 8 :
-				return(40, 10452, "Vestment mitre");
+				return(40, saradomin_mitre_10452, "Vestment mitre");
 			case 9 :
-				return(50, 1716, "Use completed prayer books<br>to bless holy and unholy symbols.");
+				return(50, unblessed_symbol_1716, "Use completed prayer books<br>to bless holy and unholy symbols.");
 			case 10 :
-				return(50, 20747, "Use Bologa's grape blessings.");
+				return(50, bologas_blessing_20747, "Use Bologa's grape blessings.");
 			case 11 :
-				return(55, 12829, "Spirit Shield<br>(with 45 Defence)");
+				return(55, spirit_shield_12829, "Spirit Shield<br>(with 45 Defence)");
 			case 12 :
-				return(60, 10470, "Vestment stole");
+				return(60, saradomin_stole_10470, "Vestment stole");
 			case 13 :
-				return(60, 10440, "Crozier");
+				return(60, saradomin_crozier_10440, "Crozier");
 			case 14 :
-				return(60, 12831, "Blessed spirit shield<br>(with 70 Defence)");
+				return(60, blessed_spirit_shield_12831, "Blessed spirit shield<br>(with 70 Defence)");
 			case 15 :
-				return(60, 22954, "Devout boots");
+				return(60, devout_boots_22954, "Devout boots");
 			case 16 :
-				return(65, 23336, "3rd age Druidic robes");
+				return(65, 3rd_age_druidic_robe_top_23336, "3rd age Druidic robes");
 			case 17 :
-				return(65, 23342, "3rd Age Druidic staff<br>(with 65 attack)");
+				return(65, 3rd_age_druidic_staff_23342, "3rd Age Druidic staff<br>(with 65 attack)");
 			case 18 :
-				return(70, 12825, "Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)");
+				return(70, arcane_spirit_shield_12825, "Arcane & Spectral spirit shields<br>(with 75 Defence and 65 Magic)");
 			case 19 :
-				return(75, 12817, "Elysian spirit shield<br>(with 75 Defence)");
+				return(75, elysian_spirit_shield_12817, "Elysian spirit shield<br>(with 75 Defence)");
 			case 20 :
-				return(80, 22111, "Dragonbone necklace");
+				return(80, dragonbone_necklace_22111, "Dragonbone necklace");
 			case 21 :
-				return(80, 22986, "Bonecrusher necklace");
+				return(80, bonecrusher_necklace_22986, "Bonecrusher necklace");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 2 :
 		if ($int1 = 0) {
-			return(70, 22124, "Use superior dragon bones");
+			return(70, superior_dragon_bones_22124, "Use superior dragon bones");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case default :
-		return(-1, -1, "");
+		return(-1, null, "");
 }

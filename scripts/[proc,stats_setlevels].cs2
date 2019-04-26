@@ -1,5 +1,5 @@
 // 395
-[proc,stats_setlevels](stat $stat0, component $component1, component $component2, string $string0)
+[proc,stats_setlevels](stat $stat0, component $component1, string $string0, component $component2)
 def_boolean $boolean3 = enum(stat, boolean, 1497, $stat0);
 cc_settext(tostring(stat($stat0)));
 def_int $int4 = stat_base($stat0);

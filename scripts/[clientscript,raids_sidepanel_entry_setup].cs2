@@ -1,5 +1,5 @@
 // 1550
-[clientscript,raids_sidepanel_entry_setup](component $component0, int $int1, int $int2, int $int3)
+[clientscript,raids_sidepanel_entry_setup](component $component0, int $int1, int $int2, boolean $boolean3)
 if (cc_find($component0, $int1) = ^true) {
-	~raids_sidepanel_entry_setup($int2, $int3);
+	~raids_sidepanel_entry_setup($int2, $boolean3);
 }

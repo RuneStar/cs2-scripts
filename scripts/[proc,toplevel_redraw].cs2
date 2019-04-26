@@ -12,7 +12,7 @@ if ($component2 ! null) {
 }
 $component2 = enum(component, component, $enum1, 161:26);
 if ($component2 ! null) {
-	if ((%varbit542 = 1) | (%varbit4606 ! 0)) {
+	if ((%varbit542 = ^true) | (%varbit4606 ! 0)) {
 		if_sethide(true, $component2);
 	} else {
 		if_sethide(false, $component2);
@@ -114,14 +114,14 @@ if ($component7 ! null) {
 }
 $component7 = enum(component, component, $enum1, 161:16);
 if ((~on_mobile = true) & ($component7 ! null)) {
-	if (%varbit6254 = 0) {
+	if (%varbit6254 = ^false) {
 		if_setposition(36, 163, ^setpos_abs_right, ^setpos_abs_top, $component7);
 	} else {
 		if_setposition(4, 115, ^setpos_abs_right, ^setpos_abs_top, $component7);
 	}
 }
 if ($component7 ! null) {
-	if ((%varbit4605 = 1) & (%varbit542 = 0)) {
+	if ((%varbit4605 = 1) & (%varbit542 = ^false)) {
 		if_sethide(false, $component7);
 	} else {
 		if_sethide(true, $component7);

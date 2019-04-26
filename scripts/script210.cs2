@@ -1,5 +1,5 @@
 // 210
-script210(int $int0, int $int1, string $string0)(int)
+script210(int $chattype0, string $string0, int $int1)(int)
 if (%varcint41 ! 5) {
 	return(0);
 }
@@ -7,12 +7,12 @@ if (string_length(%varcstring357) <= 0) {
 	return(0);
 }
 def_string $string1 = "";
-if (((((($int0 = 2) | ($int0 = 1)) | ($int0 = 3)) | ($int0 = 6)) | ($int0 = 7)) | ($int0 = 9)) {
+if (((((($chattype0 = ^chattype_publicchat) | ($chattype0 = ^chattype_modchat)) | ($chattype0 = ^chattype_privatechat)) | ($chattype0 = ^chattype_privatechatout)) | ($chattype0 = ^chattype_modprivatechat)) | ($chattype0 = ^chattype_friendschat)) {
 	$string1 = removetags($string0);
 	if (compare($string1, removetags(chat_playername)) = 0) {
 		return(1);
 	} else if (compare($string1, removetags(%varcstring357)) = 0) {
-		if (($int0 = 1) | ($int0 = 7)) {
+		if (($chattype0 = ^chattype_modchat) | ($chattype0 = ^chattype_modprivatechat)) {
 			return(1);
 		} else if (chat_getfilter_trade = 0) {
 			return(1);

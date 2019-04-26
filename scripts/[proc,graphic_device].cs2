@@ -1,6 +1,6 @@
 // 2151
-[proc,graphic_device](int $int0, int $int1)(int)
+[proc,graphic_device](graphic $graphic0, graphic $graphic1)(graphic)
 if (~on_mobile = true) {
-	return($int1);
+	return($graphic1);
 }
-return($int0);
+return($graphic0);

@@ -1,5 +1,5 @@
 // 1720
-[proc,worldmap_toggles_set](int $int0, int $int1, component $component2, component $component3, component $component4)
+[proc,worldmap_toggles_set](component $component0, int $int1, component $component2, component $component3, component $component4)
 if (testbit(%varbit5640, $int1) = ^true) {
 	.cc_setop(1, "Enable");
 	cc_sethide(false);

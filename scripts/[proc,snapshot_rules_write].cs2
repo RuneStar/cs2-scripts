@@ -1,5 +1,5 @@
 // 1121
-[proc,snapshot_rules_write](int $int0, int $int1, int $int2, component $component3, int $int4, int $int5, int $int6, int $int7, string $string0)(int, int, int)
+[proc,snapshot_rules_write](int $int0, string $string0, int $int1, int $int2, component $component3, int $int4, int $int5, int $int6, int $int7)(int, int, int)
 def_int $int8 = calc(if_getwidth($component3) / 2);
 if ($int2 = 1) {
 	$int8 = calc($int8 + 15);

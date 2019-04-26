@@ -1,12 +1,12 @@
 // 460
-[proc,tol_pressure_leverresynch](int $int0, int $int1, component $component2, component $component3)
-def_int $int4 = 0;
+[proc,tol_pressure_leverresynch](int $int0, component $component1, component $component2, component $component3)
+def_boolean $boolean4 = false;
 if ($int0 = 1) {
-	$int4 = ~script633(%varbit3356);
+	$boolean4 = ~script633(%varbit3356);
 } else if ($int0 = 2) {
-	$int4 = ~script633(%varbit3357);
+	$boolean4 = ~script633(%varbit3357);
 }
-if ($int4 = 1) {
+if ($boolean4 = true) {
 	if_sethide(true, $component2);
 	if_sethide(false, $component3);
 } else {

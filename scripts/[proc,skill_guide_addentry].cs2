@@ -1,5 +1,5 @@
 // 657
-[proc,skill_guide_addentry](int $int0, obj $obj1, component $component2, component $component3, int $int4, int $int5, int $int6, int $int7, string $string0)(int)
+[proc,skill_guide_addentry](int $int0, obj $obj1, string $string0, component $component2, component $component3, int $int4, int $int5, int $int6, int $int7)(int)
 cc_create($component2, ^iftype_text, calc($int6 * 2));
 cc_setsize(26, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);

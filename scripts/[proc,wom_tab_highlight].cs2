@@ -4,13 +4,13 @@ def_component $component0 = null;
 def_component $component1 = null;
 def_component $component2 = null;
 def_int $int3 = 0;
-def_int $int4 = -1;
-def_int $int5 = ~wom_get_tab(%varbit6610);
+def_component $component4 = null;
+def_component $component5 = ~wom_get_tab(%varbit6610);
 def_int $int6 = enum_getoutputcount(2071);
 while ($int3 < $int6) {
-	$int4 = ~wom_get_tab($int3);
-	$component0, $component1, $component2 = ~wom_get_graphics($int4);
-	if ($int5 = $int4) {
+	$component4 = ~wom_get_tab($int3);
+	$component0, $component1, $component2 = ~wom_get_graphics($component4);
+	if ($component5 = $component4) {
 		if_setgraphic("tabs_split,0", $component0);
 		if_setgraphic("tabs_split,1", $component1);
 		if_setgraphic("tabs_split,2", $component2);

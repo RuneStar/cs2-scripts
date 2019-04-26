@@ -7,7 +7,7 @@ if ($enum3 = null) {
 def_graphic $graphic4 = null;
 def_graphic $graphic5 = null;
 if ($enum3 = 1745) {
-	if (%varbit6254 = 0) {
+	if (%varbit6254 = ^false) {
 		if_setposition(0, 17, ^setpos_abs_right, ^setpos_abs_bottom, $component0);
 	} else {
 		if_setposition(62, 37, ^setpos_abs_right, ^setpos_abs_top, $component0);
@@ -44,7 +44,7 @@ if (if_hassub(enum(component, component, $enum3, 161:14)) = true) {
 	if_clearops($component2);
 	if ($enum3 = 1745) {
 		if_setop(1, "Fullscreen", $component2);
-		if (%varbit6254 = 0) {
+		if (%varbit6254 = ^false) {
 			if_setop(3, "Minimise", $component2);
 		} else {
 			if_setop(3, "Restore", $component2);

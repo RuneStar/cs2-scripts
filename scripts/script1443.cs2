@@ -4,7 +4,7 @@ if (clientclock < $int1) {
 	return;
 }
 if_settext("Accept", $component0);
-if_setcolour(~duel_colour_variation(3394560), $component0);
-if_setonmouseover("script45(event_com, ~duel_colour_variation(10087936))", $component0);
-if_setonmouseleave("script45(event_com, ~duel_colour_variation(3394560))", $component0);
+if_setcolour(~duel_colour_variation(0x33cc00), $component0);
+if_setonmouseover("script45(event_com, ~duel_colour_variation(0x99ee00))", $component0);
+if_setonmouseleave("script45(event_com, ~duel_colour_variation(0x33cc00))", $component0);
 if_setontimer(null, $component0);

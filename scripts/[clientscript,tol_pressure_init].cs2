@@ -2,11 +2,11 @@
 [clientscript,tol_pressure_init](component $component0)
 ~tol_pressure_draw;
 if_setonvartransmit("tol_pressure_draw(){var977, var978}", $component0);
-~tol_pressure_valveinit("Turn-left", 510:128, 1, 0);
-~tol_pressure_valveinit("Turn-right", 510:129, 1, 0);
-~tol_pressure_valveinit("Turn-left", 510:130, 1, 1);
-~tol_pressure_valveinit("Turn-right", 510:131, 1, 1);
-~tol_pressure_valveinit("Turn-left", 510:132, 2, 0);
-~tol_pressure_valveinit("Turn-right", 510:133, 2, 0);
-~tol_pressure_valveinit("Turn-left", 510:134, 2, 1);
-~tol_pressure_valveinit("Turn-right", 510:135, 2, 1);
+~tol_pressure_valveinit("Turn-left", 510:128, 1, ^false);
+~tol_pressure_valveinit("Turn-right", 510:129, 1, ^false);
+~tol_pressure_valveinit("Turn-left", 510:130, 1, ^true);
+~tol_pressure_valveinit("Turn-right", 510:131, 1, ^true);
+~tol_pressure_valveinit("Turn-left", 510:132, 2, ^false);
+~tol_pressure_valveinit("Turn-right", 510:133, 2, ^false);
+~tol_pressure_valveinit("Turn-left", 510:134, 2, ^true);
+~tol_pressure_valveinit("Turn-right", 510:135, 2, ^true);

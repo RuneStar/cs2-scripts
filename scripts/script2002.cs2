@@ -1,5 +1,5 @@
 // 2002
-script2002(component $component0, component $component1, int $int2, int $int3, int $colour4, int $int5, int $int6, int $int7)
+script2002(component $component0, component $component1, int $colour2, int $int3, int $colour4, int $int5, int $int6, int $int7)
 if ($int7 <= 0) {
 	if_setcolour($colour4, $component1);
 	if_settrans($int5, $component1);
@@ -9,7 +9,7 @@ if ($int7 <= 0) {
 def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 0;
-$int8, $int9, $int10 = ~script2($int2);
+$int8, $int9, $int10 = ~script2($colour2);
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $int13 = 0;

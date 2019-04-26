@@ -1,8 +1,8 @@
 // 2758
-[proc,prayer_infobutton](boolean $boolean0, boolean $boolean1, component $component2, int $int3, int $int4, component $component5, component $component6, component $component7, string $string0, string $string1)
+[proc,prayer_infobutton](string $string0, boolean $boolean0, string $string1, boolean $boolean1, component $component2, int $int3, int $int4, component $component5, component $component6, component $component7)
 if_sethide($boolean0, $component6);
 ~deltooltip_action($component7);
-%varcint218 = -1;
+%varcint218 = null;
 cc_deleteall($component5);
 def_int $int8 = 0;
 if ($boolean0 = true) {

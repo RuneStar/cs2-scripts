@@ -1,5 +1,5 @@
 // 1482
-[proc,hidey_tabbuttons_draw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, string $string0)
+[proc,hidey_tabbuttons_draw](component $component0, string $string0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 cc_deleteall($component0);
 if ($component0 = $component1) {
 	cc_create($component0, ^iftype_graphic, 0);

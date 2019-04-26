@@ -1,19 +1,19 @@
 // 1064
-script1064(int $int0)(int, obj)
+script1064(obj $obj0)(int, obj)
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_obj $obj3 = null;
 def_int $int4 = 0;
 def_obj $obj5 = null;
 def_obj $obj6 = null;
-switch_int ($int0) {
-	case 5341 :
+switch_obj ($obj0) {
+	case rake_5341 :
 		return(~script716(rake_5341), rake_5341);
-	case 5343 :
+	case seed_dibber_5343 :
 		return(~script716(seed_dibber_5343), seed_dibber_5343);
-	case 952 :
+	case spade_952 :
 		return(~script716(spade_952), spade_952);
-	case 5329 :
+	case secateurs_5329 :
 		$int1 = ~script716(magic_secateurs_7409);
 		if ($int1 > 0) {
 			$int4 = ~script716(secateurs_5329);
@@ -23,7 +23,7 @@ switch_int ($int0) {
 			return(calc($int1 + $int4), magic_secateurs_7409);
 		}
 		return(~script716(secateurs_5329), secateurs_5329);
-	case 6797 :
+	case watering_can_6797 :
 		$int2 = enum_getoutputcount(136);
 		while ($int2 >= 0) {
 			$obj3 = enum(int, namedobj, 136, $int2);
@@ -43,11 +43,11 @@ switch_int ($int0) {
 			$int2 = calc($int2 - 1);
 		}
 		return($int4, $obj5);
-	case 5325 :
+	case gardening_trowel_5325 :
 		return(~script716(gardening_trowel_5325), gardening_trowel_5325);
-	case 6036 :
+	case plant_cure_6036 :
 		return(~script716(plant_cure_6036), plant_cure_6036);
-	case 22994 :
+	case bottomless_compost_bucket_22994 :
 		$int1 = ~script716(bottomless_compost_bucket_22997);
 		if ($int1 > 0) {
 			$obj6 = bottomless_compost_bucket_22997;
@@ -61,13 +61,13 @@ switch_int ($int0) {
 			$int4 = calc($int4 + $int1);
 		}
 		return($int4, $obj6);
-	case 1925 :
+	case bucket_1925 :
 		return(~script716(bucket_1925), bucket_1925);
-	case 6032 :
+	case compost_6032 :
 		return(~script716(compost_6032), compost_6032);
-	case 6034 :
+	case supercompost_6034 :
 		return(~script716(supercompost_6034), supercompost_6034);
-	case 21483 :
+	case ultracompost_21483 :
 		return(~script716(ultracompost_21483), ultracompost_21483);
 	case default :
 		return(0, null);

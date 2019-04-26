@@ -1,5 +1,5 @@
 // 1686
-[proc,poh_jewellery_box_prepbox](component $component0, int $int1, obj $obj2, int $int3, string $string0)(int)
+[proc,poh_jewellery_box_prepbox](component $component0, int $int1, string $string0, obj $obj2, int $int3)(int)
 cc_deleteall($component0);
 def_int $int4 = 0;
 cc_create($component0, ^iftype_graphic, $int4);

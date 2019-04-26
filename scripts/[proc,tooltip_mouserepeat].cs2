@@ -1,5 +1,5 @@
 // 837
-[proc,tooltip_mouserepeat](component $component0, int $int1, component $component2, int $int3, int $int4, string $string0)
+[proc,tooltip_mouserepeat](component $component0, int $int1, component $component2, string $string0, int $int3, int $int4)
 if (%varcint1 < calc(clientclock + $int3)) {
 	if (%varcint1 < clientclock) {
 		%varcint1 = clientclock;

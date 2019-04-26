@@ -1,6 +1,6 @@
 // 2764
-[proc,tol_pressure_valveinit](component $component0, int $int1, int $int2, string $string0)
+[proc,tol_pressure_valveinit](string $string0, component $component0, int $int1, int $bit2)
 if_setop(1, $string0, $component0);
 if_setopbase("<col=ff9040>Valve</col>", $component0);
-~tol_pressure_valvelistener($component0, $int1, $int2);
-if_setonvartransmit("tol_pressure_valvelistener($component0, $int1, $int2){var978}", $component0);
+~tol_pressure_valvelistener($component0, $int1, $bit2);
+if_setonvartransmit("tol_pressure_valvelistener($component0, $int1, $bit2){var978}", $component0);

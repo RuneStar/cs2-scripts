@@ -1,9 +1,9 @@
 // 1444
-[proc,duel_colour_variation](int $int0)(int)
+[proc,duel_colour_variation](int $colour0)(int)
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_int $int3 = 0;
-$int1, $int2, $int3 = ~script2($int0);
+$int1, $int2, $int3 = ~script2($colour0);
 def_int $int4 = calc(random(30) - random(30));
 $int1 = ~minmax(0, 255, calc($int1 + $int4));
 $int4 = calc(random(30) - random(30));

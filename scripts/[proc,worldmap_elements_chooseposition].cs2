@@ -1,8 +1,8 @@
 // 1752
-[proc,worldmap_elements_chooseposition](coord $coord0, int $int1, component $component2, int $int3, int $int4, int $int5, int $int6)(int, int)
+[proc,worldmap_elements_chooseposition](coord $coord0, boolean $boolean1, component $component2, int $int3, int $int4, int $int5, int $int6)(int, int)
 def_int $int7 = 0;
 def_int $int8 = 0;
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	$int7 = coordx($coord0);
 	$int8 = coordy($coord0);
 } else {

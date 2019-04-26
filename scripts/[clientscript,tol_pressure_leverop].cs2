@@ -1,5 +1,5 @@
 // 1426
-[clientscript,tol_pressure_leverop](int $int0, int $int1, int $int2, component $component3, component $component4)
+[clientscript,tol_pressure_leverop](int $int0, int $int1, component $component2, component $component3, component $component4)
 if ($int0 ! 1) {
 	return;
 }
@@ -9,4 +9,4 @@ if ($int1 = 1) {
 } else if ($int1 = 2) {
 	%varbit3357 = calc(1 - %varbit3357);
 }
-~tol_pressure_leverresynch($int1, $int2, $component3, $component4);
+~tol_pressure_leverresynch($int1, $component2, $component3, $component4);

@@ -1,5 +1,5 @@
 // 2310
-script2310(int $int0, int $colour1, int $int2, int $int3, int $int4, string $string0)
+script2310(int $colour0, int $colour1, int $int2, int $int3, int $int4, string $string0)
 if ($int4 = 1) {
 	cc_setcolour($colour1);
 	cc_settrans($int3);
@@ -20,7 +20,7 @@ if ($int4 = 1) {
 def_int $int5 = -1;
 def_int $int6 = -1;
 def_int $int7 = -1;
-$int5, $int6, $int7 = ~script2($int0);
+$int5, $int6, $int7 = ~script2($colour0);
 def_int $int8 = -1;
 def_int $int9 = -1;
 def_int $int10 = -1;

@@ -1,6 +1,6 @@
 // 1630
 [proc,options_shiftclickdrop](component $component0, component $component1, component $component2)
-if_setgraphic(~graphic_device(1165, 1566), $component1);
+if_setgraphic(~graphic_device("options_icons,36", "options_icons,44"), $component1);
 def_string $string0 = "<~text_device("Shift click", "Tap")> to drop items (currently off)";
 if (%varbit5542 = 1) {
 	~shiftclick_toggle(true);

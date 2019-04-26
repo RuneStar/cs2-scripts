@@ -1,27 +1,27 @@
 // 1063
-script1063(int $int0)(int, namedobj)
-switch_int ($int0) {
-	case 5341 :
+script1063(obj $obj0)(int, obj)
+switch_obj ($obj0) {
+	case rake_5341 :
 		return(%varbit1435, rake_5341);
-	case 5343 :
+	case seed_dibber_5343 :
 		return(%varbit1436, seed_dibber_5343);
-	case 952 :
+	case spade_952 :
 		return(%varbit1437, spade_952);
-	case 5329 :
+	case secateurs_5329 :
 		if (%varbit1848 = 1) {
 			return(%varbit1438, magic_secateurs_7409);
 		}
 		return(%varbit1438, secateurs_5329);
-	case 6797 :
+	case watering_can_6797 :
 		if (%varbit1439 <= 0) {
 			return(0, null);
 		}
 		return(1, enum(int, namedobj, 136, %varbit1439));
-	case 5325 :
+	case gardening_trowel_5325 :
 		return(%varbit1440, gardening_trowel_5325);
-	case 6036 :
+	case plant_cure_6036 :
 		return(%varbit6268, plant_cure_6036);
-	case 22994 :
+	case bottomless_compost_bucket_22994 :
 		if (%varbit7915 = 1) {
 			return(1, bottomless_compost_bucket_22994);
 		}
@@ -29,13 +29,13 @@ switch_int ($int0) {
 			return(1, bottomless_compost_bucket_22997);
 		}
 		return(0, bottomless_compost_bucket_22994);
-	case 1925 :
+	case bucket_1925 :
 		return(calc(((pow(2, 8) * %varbit6265) + (pow(2, 5) * %varbit4731)) + %varbit1441), bucket_1925);
-	case 6032 :
+	case compost_6032 :
 		return(calc((pow(2, 8) * %varbit6266) + %varbit1442), compost_6032);
-	case 6034 :
+	case supercompost_6034 :
 		return(calc((pow(2, 8) * %varbit6267) + %varbit1443), supercompost_6034);
-	case 21483 :
+	case ultracompost_21483 :
 		return(%varbit5732, ultracompost_21483);
 	case default :
 		return(0, null);

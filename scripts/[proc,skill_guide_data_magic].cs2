@@ -1,5 +1,5 @@
 // 2791
-[proc,skill_guide_data_magic](int $int0, int $int1)(int, int, string)
+[proc,skill_guide_data_magic](int $int0, int $int1)(int, obj, string)
 def_string $string0 = "";
 def_string $string1 = "";
 switch_int ($int0) {
@@ -8,7 +8,7 @@ switch_int ($int0) {
 			case 0 :
 				$string0 = "You can see what each spell does by<br>moving your mouse over its icon.";
 				$string1 = "You can see what each spell does by<br>activating the spellbook's Info mode, then tapping the spells.";
-				return(-1, 1391, "To view the available spells, select the<br>spellbook icon on the side interface.<br><~text_device($string0, $string1)>");
+				return(-1, battlestaff_1391, "To view the available spells, select the<br>spellbook icon on the side interface.<br><~text_device($string0, $string1)>");
 			case 1 :
 				return(-1, 9712, "Home teleport (Lumbridge)");
 			case 2 :
@@ -136,7 +136,7 @@ switch_int ($int0) {
 			case 63 :
 				return(85, 4555, "Tele block");
 			case 64 :
-				return(85, 17152, "Teleport to Bounty Target");
+				return(85, dead_orb_17152, "Teleport to Bounty Target");
 			case 65 :
 				return(87, 6567, "Level 6 enchant");
 			case 66 :
@@ -148,12 +148,12 @@ switch_int ($int0) {
 			case 69 :
 				return(95, 21879, "Fire Surge");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, 4675, "Ancient magicks are available after<br>completing the Desert Treasure quest.");
+				return(-1, ancient_staff_4675, "Ancient magicks are available after<br>completing the Desert Treasure quest.");
 			case 1 :
 				return(-1, 11142, "Home teleport (Edgeville)");
 			case 2 :
@@ -193,7 +193,7 @@ switch_int ($int0) {
 			case 19 :
 				return(84, 4646, "Carrallangar teleport");
 			case 20 :
-				return(85, 17152, "Teleport to Bounty Target");
+				return(85, dead_orb_17152, "Teleport to Bounty Target");
 			case 21 :
 				return(86, 4647, "Smoke barrage");
 			case 22 :
@@ -207,18 +207,18 @@ switch_int ($int0) {
 			case 26 :
 				return(96, 4652, "Ghorrock teleport");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 2 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, 9084, "Lunar spells are available after<br>completing the Lunar Diplomacy quest.");
+				return(-1, lunar_staff_9084, "Lunar spells are available after<br>completing the Lunar Diplomacy quest.");
 			case 1 :
 				return(-1, 11143, "Home teleport (Lunar Isle)");
 			case 2 :
 				return(65, 9107, "Bake pie");
 			case 3 :
-				return(65, 6797, "Geomancy");
+				return(65, watering_can_6797, "Geomancy");
 			case 4 :
 				return(66, 9108, "Cure plant");
 			case 5 :
@@ -256,7 +256,7 @@ switch_int ($int0) {
 			case 21 :
 				return(77, 9119, "Superglass make");
 			case 22 :
-				return(78, 1741, "Tan Leather");
+				return(78, leather_1741, "Tan Leather");
 			case 23 :
 				return(78, 9120, "Khazard teleport");
 			case 24 :
@@ -276,7 +276,7 @@ switch_int ($int0) {
 			case 31 :
 				return(85, 9127, "Fishing guild teleport");
 			case 32 :
-				return(85, 17152, "Teleport to Bounty Target");
+				return(85, dead_orb_17152, "Teleport to Bounty Target");
 			case 33 :
 				return(86, 9128, "Tele group fishing guild");
 			case 34 :
@@ -286,7 +286,7 @@ switch_int ($int0) {
 			case 36 :
 				return(88, 9130, "Tele group Catherby");
 			case 37 :
-				return(89, 2529, "Recharge Dragonstone");
+				return(89, dead_orb_2529, "Recharge Dragonstone");
 			case 38 :
 				return(89, 9131, "Ice plateau teleport");
 			case 39 :
@@ -304,7 +304,7 @@ switch_int ($int0) {
 			case 45 :
 				return(96, 11150, "Spellbook swap<br>(after Dream Mentor)");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 3 :
 		switch_int ($int1) {
@@ -313,7 +313,7 @@ switch_int ($int0) {
 			case 1 :
 				return(-1, 21835, "Home teleport (Dark Altar)");
 			case 2 :
-				return(3, 11997, "Reanimate goblins");
+				return(3, easter_11997, "Reanimate goblins");
 			case 3 :
 				return(6, 20409, "Lumbridge Graveyard teleport");
 			case 4 :
@@ -359,13 +359,13 @@ switch_int ($int0) {
 			case 24 :
 				return(61, 20414, "West Ardougne teleport");
 			case 25 :
-				return(62, 21826, "Reanimate dagannoth");
+				return(62, redundant_hat_21826, "Reanimate dagannoth");
 			case 26 :
-				return(65, 21829, "Reanimate bloodveld");
+				return(65, redundant_top_21829, "Reanimate bloodveld");
 			case 27 :
 				return(65, 20419, "Harmony Island teleport");
 			case 28 :
-				return(69, 21832, "Reanimate TzHaar");
+				return(69, redundant_leggings_21832, "Reanimate TzHaar");
 			case 29 :
 				return(71, 20420, "Cemetery teleport");
 			case 30 :
@@ -383,134 +383,134 @@ switch_int ($int0) {
 			case 36 :
 				return(93, 20400, "Reanimate dragons");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 4 :
 		switch_int ($int1) {
 			case 0 :
-				return(20, 2579, "Wizard boots");
+				return(20, wizard_boots_2579, "Wizard boots");
 			case 1 :
-				return(20, 13385, "Xerician armour<br> (with 10 Defence)");
+				return(20, xerician_hat_13385, "Xerician armour<br> (with 10 Defence)");
 			case 2 :
-				return(40, 20517, "Elder chaos druid robes");
+				return(40, elder_chaos_top_20517, "Elder chaos druid robes");
 			case 3 :
-				return(40, 4091, "Mystic robes<br> (with 20 Defence)");
+				return(40, mystic_robe_top_4091, "Mystic robes<br> (with 20 Defence)");
 			case 4 :
-				return(40, 7399, "Enchanted robes<br> (with 20 Defence)");
+				return(40, enchanted_top_7399, "Enchanted robes<br> (with 20 Defence)");
 			case 5 :
-				return(40, 20131, "Robes of darkness<br> (with 20 Defence)");
+				return(40, robe_top_of_darkness_20131, "Robes of darkness<br> (with 20 Defence)");
 			case 6 :
-				return(40, 3387, "Splitbark armour<br> (with 40 Defence)");
+				return(40, splitbark_body_3387, "Splitbark armour<br> (with 40 Defence)");
 			case 7 :
-				return(40, 6139, "Skeletal armour<br> (after The Fremmenik Trials, with 40 Defence)");
+				return(40, skeletal_top_6139, "Skeletal armour<br> (after The Fremmenik Trials, with 40 Defence)");
 			case 8 :
-				return(42, 8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 			case 9 :
-				return(50, 6916, "Infinity robes<br> (with 25 Defence)");
+				return(50, infinity_top_6916, "Infinity robes<br> (with 25 Defence)");
 			case 10 :
-				return(60, 2413, "God capes<br> (after Mage Arena)");
+				return(60, guthix_cape_2413, "God capes<br> (after Mage Arena)");
 			case 11 :
-				return(65, 9097, "Lunar armour<br> (after Lunar Diplomacy, with 40 Defence)");
+				return(65, lunar_torso_9097, "Lunar armour<br> (after Lunar Diplomacy, with 40 Defence)");
 			case 12 :
-				return(65, 10338, "3rd age robes<br> (with 30 Defence)");
+				return(65, 3rd_age_robe_top_10338, "3rd age robes<br> (with 30 Defence)");
 			case 13 :
-				return(70, 12002, "Occult necklace");
+				return(70, occult_necklace_12002, "Occult necklace");
 			case 14 :
-				return(70, 4712, "Ahrims robes<br> (with 70 Defence)");
+				return(70, ahrims_robetop_4712, "Ahrims robes<br> (with 70 Defence)");
 			case 15 :
-				return(70, 22951, "Boots of brimstone<br> (with 70 Defence and Ranged)");
+				return(70, boots_of_brimstone_22951, "Boots of brimstone<br> (with 70 Defence and Ranged)");
 			case 16 :
-				return(75, 13235, "Eternal boots<br> (with 75 Defence)");
+				return(75, eternal_boots_13235, "Eternal boots<br> (with 75 Defence)");
 			case 17 :
-				return(75, 21021, "Ancestral robes<br> (with 65 Defence)");
+				return(75, ancestral_robe_top_21021, "Ancestral robes<br> (with 65 Defence)");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 5 :
 		switch_int ($int1) {
 			case 0 :
-				return(4, 9236, "Opal-tipped crossbow bolts<br>1 cosmic + 2 air runes");
+				return(4, opal_bolts_e_9236, "Opal-tipped crossbow bolts<br>1 cosmic + 2 air runes");
 			case 1 :
-				return(7, 9240, "Sapphire-tipped crossbow bolts<br>1 cosmic + 1 water + 1 mind rune");
+				return(7, sapphire_bolts_e_9240, "Sapphire-tipped crossbow bolts<br>1 cosmic + 1 water + 1 mind rune");
 			case 2 :
-				return(14, 9237, "Jade-tipped crossbow bolts<br>1 cosmic + 2 earth runes");
+				return(14, jade_bolts_e_9237, "Jade-tipped crossbow bolts<br>1 cosmic + 2 earth runes");
 			case 3 :
-				return(24, 9238, "Pearl-tipped crossbow bolts<br>1 cosmic + 2 water runes");
+				return(24, pearl_bolts_e_9238, "Pearl-tipped crossbow bolts<br>1 cosmic + 2 water runes");
 			case 4 :
-				return(27, 9241, "Emerald-tipped crossbow bolts<br>1 cosmic + 3 air + 1 nature rune");
+				return(27, emerald_bolts_e_9241, "Emerald-tipped crossbow bolts<br>1 cosmic + 3 air + 1 nature rune");
 			case 5 :
-				return(29, 9239, "Red topaz-tipped crossbow bolts<br>1 cosmic + 2 blood runes");
+				return(29, topaz_bolts_e_9239, "Red topaz-tipped crossbow bolts<br>1 cosmic + 2 blood runes");
 			case 6 :
-				return(49, 9242, "Ruby-tipped crossbow bolts<br>1 cosmic + 5 fire + 1 blood rune");
+				return(49, ruby_bolts_e_9242, "Ruby-tipped crossbow bolts<br>1 cosmic + 5 fire + 1 blood rune");
 			case 7 :
-				return(57, 9243, "Diamond-tipped crossbow bolts<br>1 cosmic + 10 earth + 2 law runes");
+				return(57, diamond_bolts_e_9243, "Diamond-tipped crossbow bolts<br>1 cosmic + 10 earth + 2 law runes");
 			case 8 :
-				return(68, 9244, "Dragonstone-tipped crossbow bolts<br>1 cosmic + 15 earth + 1 soul rune");
+				return(68, dragonstone_bolts_e_9244, "Dragonstone-tipped crossbow bolts<br>1 cosmic + 15 earth + 1 soul rune");
 			case 9 :
-				return(87, 9245, "Onyx-tipped crossbow bolts<br>1 cosmic + 20 fire + 1 death rune");
+				return(87, onyx_bolts_e_9245, "Onyx-tipped crossbow bolts<br>1 cosmic + 20 fire + 1 death rune");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 6 :
 		switch_int ($int1) {
 			case 0 :
-				return(30, 1391, "Battlestaves (with 30 Attack)");
+				return(30, battlestaff_1391, "Battlestaves (with 30 Attack)");
 			case 1 :
-				return(30, 22370, "Bryophyta's staff (with 30 Attack)");
+				return(30, bryophytas_staff_22370, "Bryophyta's staff (with 30 Attack)");
 			case 2 :
-				return(40, 1405, "Mystic staves (with 40 Attack)");
+				return(40, mystic_air_staff_1405, "Mystic staves (with 40 Attack)");
 			case 3 :
-				return(42, 8841, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				return(42, void_knight_mace_8841, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 			case 4 :
-				return(45, 6908, "Beginner wand");
+				return(45, beginner_wand_6908, "Beginner wand");
 			case 5 :
-				return(50, 6910, "Apprentice wand");
+				return(50, apprentice_wand_6910, "Apprentice wand");
 			case 6 :
-				return(50, 4675, "Ancient staff<br> (after Desert Treasure, with 50 Attack)");
+				return(50, ancient_staff_4675, "Ancient staff<br> (after Desert Treasure, with 50 Attack)");
 			case 7 :
-				return(50, 4170, "Slayer's staff<br> (with 55 Slayer)");
+				return(50, slayers_staff_4170, "Slayer's staff<br> (with 55 Slayer)");
 			case 8 :
-				return(55, 6912, "Teacher wand");
+				return(55, teacher_wand_6912, "Teacher wand");
 			case 9 :
-				return(60, 6914, "Master wand");
+				return(60, master_wand_6914, "Master wand");
 			case 10 :
-				return(60, 22555, "Thammaron's Sceptre");
+				return(60, thammarons_sceptre_22555, "Thammaron's Sceptre");
 			case 11 :
-				return(60, 2416, "God staves<br> (after Mage Arena)");
+				return(60, guthix_staff_2416, "God staves<br> (after Mage Arena)");
 			case 12 :
-				return(60, 6526, "TokTz-Mej-Tal<br> (with 60 Attack)");
+				return(60, toktz_mej_tal_6526, "TokTz-Mej-Tal<br> (with 60 Attack)");
 			case 13 :
-				return(65, 12422, "3rd age wand");
+				return(65, 3rd_age_wand_12422, "3rd age wand");
 			case 14 :
-				return(70, 4710, "Ahrim's staff<br> (with 70 Attack)");
+				return(70, ahrims_staff_4710, "Ahrim's staff<br> (with 70 Attack)");
 			case 15 :
-				return(75, 11791, "Staff of the Dead (with 75 Attack)");
+				return(75, staff_of_the_dead_11791, "Staff of the Dead (with 75 Attack)");
 			case 16 :
-				return(75, 22296, "Staff of Light (with 75 Attack)");
+				return(75, staff_of_light_22296, "Staff of Light (with 75 Attack)");
 			case 17 :
-				return(75, 11905, "Trident of the Seas");
+				return(75, trident_of_the_seas_full_11905, "Trident of the Seas");
 			case 18 :
-				return(75, 21006, "Kodai Wand");
+				return(75, kodai_wand_21006, "Kodai Wand");
 			case 19 :
-				return(75, 21255, "Slayer's staff (e)<br> (with 55 Slayer)");
+				return(75, slayers_staff_e_21255, "Slayer's staff (e)<br> (with 55 Slayer)");
 			case 20 :
-				return(75, 22323, "Sanguinesti staff");
+				return(75, sanguinesti_staff_22323, "Sanguinesti staff");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 7 :
 		if ($int1 = 0) {
-			return(50, 20714, "Tome of Fire");
+			return(50, tome_of_fire_20714, "Tome of Fire");
 		}
 		if ($int1 = 1) {
-			return(66, 21633, "Make Ancient Wyvern shield");
+			return(66, ancient_wyvern_shield_21633, "Make Ancient Wyvern shield");
 		}
 		if ($int1 = 2) {
-			return(70, 21633, "Wield Ancient Wyvern shield");
+			return(70, ancient_wyvern_shield_21633, "Wield Ancient Wyvern shield");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 8 :
 		return(~skill_guide_salamanders($int1));
 	case default :
-		return(-1, -1, "");
+		return(-1, null, "");
 }

@@ -1,5 +1,5 @@
 // 2793
-[clientscript,orbs_toggle_spec_op](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6)
+[clientscript,orbs_toggle_spec_op](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 if ($int0 ! 1) {
 	return;
 }
@@ -8,4 +8,4 @@ if (%var301 = 0) {
 } else if (%var301 ! 2) {
 	%var301 = 0;
 }
-~orbs_spec_draw_button($int1, $component2, $component3, $component4, $component5, $component6);
+~orbs_spec_draw_button($component1, $component2, $component3, $component4, $component5, $component6);

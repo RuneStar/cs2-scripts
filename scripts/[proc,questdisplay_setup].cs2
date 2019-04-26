@@ -1,5 +1,5 @@
 // 1412
-[proc,questdisplay_setup](int $int0, component $component1, int $int2, enum $enum3, string $string0, string $string1)(int)
+[proc,questdisplay_setup](int $int0, string $string0, string $string1, component $component1, int $int2, enum $enum3)(int)
 cc_deleteall($component1);
 if_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top, $component1);
 def_int $int4 = string_length($string1);

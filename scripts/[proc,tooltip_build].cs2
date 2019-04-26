@@ -1,5 +1,5 @@
 // 2701
-[proc,tooltip_build](component $component0, int $int1, component $component2, int $int3, string $string0)
+[proc,tooltip_build](component $component0, int $int1, component $component2, string $string0, int $int3)
 def_component $component4 = if_getlayer($component2);
 if (($component4 ! null) & ($int3 > if_getwidth($component4))) {
 	$int3 = if_getwidth($component4);

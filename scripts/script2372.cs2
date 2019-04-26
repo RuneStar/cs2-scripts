@@ -45,7 +45,7 @@ if ($int2 ! %varcint222) {
 			$int10 = if_getwidth(enum(component, component, $enum3, 164:64));
 		}
 		if ($int6 = 1) {
-			if (%varbit6254 = 0) {
+			if (%varbit6254 = ^false) {
 				$int10 = ~max($int10, 182);
 			} else {
 				$int10 = ~max($int10, 120);

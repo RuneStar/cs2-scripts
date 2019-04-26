@@ -1,5 +1,5 @@
 // 2298
-[proc,tob_hud_statusrefresh](int $int0, int $int1, component $component2, component $component3, component $component4, string $string0)
+[proc,tob_hud_statusrefresh](int $int0, int $int1, string $string0, component $component2, component $component3, component $component4)
 def_int $int5 = 0;
 if (($int1 ! 0) & (cc_find($component2, 0) = ^true)) {
 	if_sethide(false, $component2);

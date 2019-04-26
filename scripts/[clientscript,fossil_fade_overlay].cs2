@@ -1,5 +1,5 @@
 // 2000
-[clientscript,fossil_fade_overlay](component $component0, component $component1, int $int2, int $int3, int $colour4, int $int5, int $int6)
+[clientscript,fossil_fade_overlay](component $component0, component $component1, int $colour2, int $int3, int $colour4, int $int5, int $int6)
 if ($int3 < 0) {
 	$int3 = 0;
 } else if ($int3 > 255) {
@@ -16,5 +16,5 @@ if ($int6 <= 0) {
 	if_setontimer(null, $component0);
 	return;
 }
-~script2002($component0, $component1, $int2, $int3, $colour4, $int5, $int6, $int6);
-if_setontimer("fossil_fade_overlay_update($component0, $component1, $int2, $int3, $colour4, $int5, $int6, calc(clientclock + $int6))", $component0);
+~script2002($component0, $component1, $colour2, $int3, $colour4, $int5, $int6, $int6);
+if_setontimer("fossil_fade_overlay_update($component0, $component1, $colour2, $int3, $colour4, $int5, $int6, calc(clientclock + $int6))", $component0);

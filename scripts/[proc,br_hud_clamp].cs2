@@ -1,5 +1,5 @@
 // 1349
-[proc,br_hud_clamp](int $int0, component $component1, component $component2)
+[proc,br_hud_clamp](component $component0, component $component1, component $component2)
 ~hud_clamp($component1);
 if (enum(enum, int, 1135, ~toplevel_getcomponents) > 0) {
 	if_setposition(-7, 200, ^setpos_abs_right, ^setpos_abs_top, $component2);

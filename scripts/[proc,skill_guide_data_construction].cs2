@@ -1,1401 +1,1401 @@
 // 659
-[proc,skill_guide_data_construction](int $int0, int $int1)(int, int, string)
+[proc,skill_guide_data_construction](int $int0, int $int1)(int, obj, string)
 switch_int ($int0) {
 	case 0 :
 		switch_int ($int1) {
 			case 0 :
-				return(1, 8170, "Garden");
+				return(1, pond_8170, "Garden");
 			case 1 :
-				return(1, 8315, "Parlour");
+				return(1, mahogany_armchair_8315, "Parlour");
 			case 2 :
-				return(5, 8222, "Kitchen");
+				return(5, fancy_range_8222, "Kitchen");
 			case 3 :
-				return(10, 8121, "Dining room");
+				return(10, opulent_table_8121, "Dining room");
 			case 4 :
-				return(15, 8379, "Workshop");
+				return(15, bench_with_lathe_8379, "Workshop");
 			case 5 :
-				return(20, 8037, "Bedroom");
+				return(20, gilded_4_poster_8037, "Bedroom");
 			case 6 :
-				return(25, 8255, "Hall (skill trophies)");
+				return(25, marble_staircase_8255, "Hall (skill trophies)");
 			case 7 :
-				return(30, 8163, "Games room");
+				return(30, dartboard_8163, "Games room");
 			case 8 :
-				return(32, 8027, "Combat room");
+				return(32, balance_beam_8027, "Combat room");
 			case 9 :
-				return(35, 8259, "Hall (quest trophies)");
+				return(35, marble_spiral_8259, "Hall (quest trophies)");
 			case 10 :
-				return(37, 12706, "Menagerie");
+				return(37, mahogany_house_12706, "Menagerie");
 			case 11 :
-				return(40, 8340, "Study");
+				return(40, mahogany_demon_8340, "Study");
 			case 12 :
-				return(42, 9822, "Costume room");
+				return(42, magical_cape_rack_9822, "Costume room");
 			case 13 :
-				return(45, 8068, "Chapel");
+				return(45, gilded_altar_8068, "Chapel");
 			case 14 :
-				return(50, 8333, "Portal chamber");
+				return(50, scrying_pool_8333, "Portal chamber");
 			case 15 :
-				return(55, 8195, "Formal garden");
+				return(55, posh_fountain_8195, "Formal garden");
 			case 16 :
-				return(60, 8363, "Throne room");
+				return(60, demonic_throne_8363, "Throne room");
 			case 17 :
-				return(65, 8302, "Oubliette");
+				return(65, spikes_8302, "Oubliette");
 			case 18 :
-				return(65, 20653, "Superior garden");
+				return(65, superior_garden_20653, "Superior garden");
 			case 19 :
-				return(70, 8123, "Dungeon");
+				return(70, steel_plated_door_8123, "Dungeon");
 			case 20 :
-				return(72, 22705, "Portal nexus");
+				return(72, marble_portal_nexus_22705, "Portal nexus");
 			case 21 :
-				return(75, 8151, "Treasure room");
+				return(75, mahogany_chest_8151, "Treasure room");
 			case 22 :
-				return(80, 20625, "Achievement Gallery");
+				return(80, marble_adventure_log_20625, "Achievement Gallery");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 1 :
 		if ($int1 = 0) {
-			return(3, 8325, "Clay fireplace");
+			return(3, clay_fireplace_8325, "Clay fireplace");
 		}
 		if ($int1 = 1) {
-			return(5, 8216, "Firepit");
+			return(5, firepit_8216, "Firepit");
 		}
 		if ($int1 = 2) {
-			return(7, 8230, "Pump and drain");
+			return(7, pump_and_drain_8230, "Pump and drain");
 		}
 		if ($int1 = 3) {
-			return(11, 8217, "Firepit with hook");
+			return(11, firepit_with_hook_8217, "Firepit with hook");
 		}
 		if ($int1 = 4) {
-			return(15, 8389, "Repair bench");
+			return(15, repair_bench_8389, "Repair bench");
 		}
 		if ($int1 = 5) {
-			return(16, 8392, "Pluming stand");
+			return(16, pluming_stand_8392, "Pluming stand");
 		}
 		if ($int1 = 6) {
-			return(16, 8380, "Crafting table 1");
+			return(16, crafting_table_1_8380, "Crafting table 1");
 		}
 		if ($int1 = 7) {
-			return(17, 8218, "Firepit with pot");
+			return(17, firepit_with_pot_8218, "Firepit with pot");
 		}
 		if ($int1 = 8) {
-			return(17, 8375, "Wooden workbench");
+			return(17, wooden_workbench_8375, "Wooden workbench");
 		}
 		if ($int1 = 9) {
-			return(24, 8219, "Small oven");
+			return(24, small_oven_8219, "Small oven");
 		}
 		if ($int1 = 10) {
-			return(25, 8381, "Crafting table 2");
+			return(25, crafting_table_2_8381, "Crafting table 2");
 		}
 		if ($int1 = 11) {
-			return(27, 8231, "Pump and tub");
+			return(27, pump_and_tub_8231, "Pump and tub");
 		}
 		if ($int1 = 12) {
-			return(29, 8220, "Large oven");
+			return(29, large_oven_8220, "Large oven");
 		}
 		if ($int1 = 13) {
-			return(32, 8376, "Oak workbench");
+			return(32, oak_workbench_8376, "Oak workbench");
 		}
 		if ($int1 = 14) {
-			return(33, 8326, "Stone fireplace");
+			return(33, stone_fireplace_8326, "Stone fireplace");
 		}
 		if ($int1 = 15) {
-			return(34, 8382, "Crafting table 3");
+			return(34, crafting_table_3_8382, "Crafting table 3");
 		}
 		if ($int1 = 16) {
-			return(34, 8221, "Steel range");
+			return(34, steel_range_8221, "Steel range");
 		}
 		if ($int1 = 17) {
-			return(35, 8390, "Whetstone");
+			return(35, whetstone_8390, "Whetstone");
 		}
 		if ($int1 = 18) {
-			return(41, 8393, "Shield easel");
+			return(41, shield_easel_8393, "Shield easel");
 		}
 		if ($int1 = 19) {
-			return(42, 8222, "Fancy range");
+			return(42, fancy_range_8222, "Fancy range");
 		}
 		if ($int1 = 20) {
-			return(42, 8383, "Crafting table 4");
+			return(42, crafting_table_4_8383, "Crafting table 4");
 		}
 		if ($int1 = 21) {
-			return(46, 8377, "Steel framed workbench");
+			return(46, steel_framed_bench_8377, "Steel framed workbench");
 		}
 		if ($int1 = 22) {
-			return(47, 8232, "Sink");
+			return(47, sink_8232, "Sink");
 		}
 		if ($int1 = 23) {
-			return(55, 8391, "Armour stand");
+			return(55, armour_stand_8391, "Armour stand");
 		}
 		if ($int1 = 24) {
-			return(62, 8378, "Workbench with vice");
+			return(62, bench_with_vice_8378, "Workbench with vice");
 		}
 		if ($int1 = 25) {
-			return(63, 8327, "Marble fireplace");
+			return(63, marble_fireplace_8327, "Marble fireplace");
 		}
 		if ($int1 = 26) {
-			return(66, 8394, "Banner easel");
+			return(66, banner_easel_8394, "Banner easel");
 		}
 		if ($int1 = 27) {
-			return(77, 8379, "Workbench with lathe");
+			return(77, bench_with_lathe_8379, "Workbench with lathe");
 		}
 		if ($int1 = 28) {
-			return(80, 20617, "Ancient altar");
+			return(80, ancient_altar_20617, "Ancient altar");
 		}
 		if ($int1 = 29) {
-			return(80, 20618, "Lunar altar");
+			return(80, lunar_altar_20618, "Lunar altar");
 		}
 		if ($int1 = 30) {
-			return(80, 20619, "Dark altar");
+			return(80, dark_altar_20619, "Dark altar");
 		}
 		if ($int1 = 31) {
-			return(90, 20620, "Occult altar<br> (upgrade from Ancient)");
+			return(90, occult_altar_20620, "Occult altar<br> (upgrade from Ancient)");
 		}
 		if ($int1 = 32) {
-			return(90, 20621, "Occult altar<br> (upgrade from Lunar)");
+			return(90, occult_altar_20621, "Occult altar<br> (upgrade from Lunar)");
 		}
 		if ($int1 = 33) {
-			return(90, 20622, "Occult altar<br> (upgrade from Dark)");
+			return(90, occult_altar_20622, "Occult altar<br> (upgrade from Dark)");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 2 :
 		if ($int1 = 0) {
-			return(1, 8309, "Crude wooden chair");
+			return(1, crude_wooden_chair_8309, "Crude wooden chair");
 		}
 		if ($int1 = 1) {
-			return(8, 8310, "Wooden chair");
+			return(8, wooden_chair_8310, "Wooden chair");
 		}
 		if ($int1 = 2) {
-			return(10, 8115, "Wooden dining table");
+			return(10, wood_dining_table_8115, "Wooden dining table");
 		}
 		if ($int1 = 3) {
-			return(10, 8108, "Wooden dining bench");
+			return(10, wooden_bench_8108, "Wooden dining bench");
 		}
 		if ($int1 = 4) {
-			return(12, 8246, "Wooden kitchen table");
+			return(12, wood_kitchen_table_8246, "Wooden kitchen table");
 		}
 		if ($int1 = 5) {
-			return(14, 8311, "Rocking chair");
+			return(14, rocking_chair_8311, "Rocking chair");
 		}
 		if ($int1 = 6) {
-			return(19, 8312, "Oak chair");
+			return(19, oak_chair_8312, "Oak chair");
 		}
 		if ($int1 = 7) {
-			return(20, 8031, "Wooden bed");
+			return(20, wooden_bed_8031, "Wooden bed");
 		}
 		if ($int1 = 8) {
-			return(22, 8116, "Oak dining table");
+			return(22, oak_dining_table_8116, "Oak dining table");
 		}
 		if ($int1 = 9) {
-			return(22, 8109, "Oak dining bench");
+			return(22, oak_bench_8109, "Oak dining bench");
 		}
 		if ($int1 = 10) {
-			return(26, 8313, "Oak armchair");
+			return(26, oak_armchair_8313, "Oak armchair");
 		}
 		if ($int1 = 11) {
-			return(30, 8032, "Oak bed");
+			return(30, oak_bed_8032, "Oak bed");
 		}
 		if ($int1 = 12) {
-			return(31, 8117, "Carved oak dining table");
+			return(31, carved_oak_table_8117, "Carved oak dining table");
 		}
 		if ($int1 = 13) {
-			return(31, 8110, "Carved oak dining bench");
+			return(31, carved_oak_bench_8110, "Carved oak dining bench");
 		}
 		if ($int1 = 14) {
-			return(32, 8247, "Oak kitchen table");
+			return(32, oak_kitchen_table_8247, "Oak kitchen table");
 		}
 		if ($int1 = 15) {
-			return(34, 8033, "Large oak bed");
+			return(34, large_oak_bed_8033, "Large oak bed");
 		}
 		if ($int1 = 16) {
-			return(35, 8314, "Teak armchair");
+			return(35, teak_armchair_8314, "Teak armchair");
 		}
 		if ($int1 = 17) {
-			return(38, 8118, "Teak dining table");
+			return(38, teak_table_8118, "Teak dining table");
 		}
 		if ($int1 = 18) {
-			return(38, 8111, "Teak dining bench");
+			return(38, teak_dining_bench_8111, "Teak dining bench");
 		}
 		if ($int1 = 19) {
-			return(40, 8034, "Teak bed");
+			return(40, teak_bed_8034, "Teak bed");
 		}
 		if ($int1 = 20) {
-			return(44, 8112, "Carved teak dining bench");
+			return(44, carved_teak_bench_8112, "Carved teak dining bench");
 		}
 		if ($int1 = 21) {
-			return(45, 8119, "Carved teak dining table");
+			return(45, carved_teak_table_8119, "Carved teak dining table");
 		}
 		if ($int1 = 22) {
-			return(45, 8035, "Large teak bed");
+			return(45, large_teak_bed_8035, "Large teak bed");
 		}
 		if ($int1 = 23) {
-			return(50, 8315, "Mahogany armchair");
+			return(50, mahogany_armchair_8315, "Mahogany armchair");
 		}
 		if ($int1 = 24) {
-			return(52, 8120, "Mahogany dining table");
+			return(52, mahogany_table_8120, "Mahogany dining table");
 		}
 		if ($int1 = 25) {
-			return(52, 8113, "Mahogany dining bench");
+			return(52, mahogany_bench_8113, "Mahogany dining bench");
 		}
 		if ($int1 = 26) {
-			return(52, 8248, "Teak kitchen table");
+			return(52, teak_kitchen_table_8248, "Teak kitchen table");
 		}
 		if ($int1 = 27) {
-			return(53, 8036, "Mahogany four-poster bed");
+			return(53, 4_poster_8036, "Mahogany four-poster bed");
 		}
 		if ($int1 = 28) {
-			return(60, 8357, "Oak throne");
+			return(60, oak_throne_8357, "Oak throne");
 		}
 		if ($int1 = 29) {
-			return(60, 8037, "Gilded mahogany four-poster bed");
+			return(60, gilded_4_poster_8037, "Gilded mahogany four-poster bed");
 		}
 		if ($int1 = 30) {
-			return(61, 8114, "Gilded mahogany dining bench");
+			return(61, gilded_bench_8114, "Gilded mahogany dining bench");
 		}
 		if ($int1 = 31) {
-			return(67, 8358, "Teak throne");
+			return(67, teak_throne_8358, "Teak throne");
 		}
 		if ($int1 = 32) {
-			return(72, 8121, "Gilded mahogany and marble table");
+			return(72, opulent_table_8121, "Gilded mahogany and marble table");
 		}
 		if ($int1 = 33) {
-			return(74, 8359, "Mahogany throne");
+			return(74, mahogany_throne_8359, "Mahogany throne");
 		}
 		if ($int1 = 34) {
-			return(81, 8360, "Gilded mahogany throne");
+			return(81, gilded_throne_8360, "Gilded mahogany throne");
 		}
 		if ($int1 = 35) {
-			return(88, 8361, "Skeleton throne");
+			return(88, skeleton_throne_8361, "Skeleton throne");
 		}
 		if ($int1 = 36) {
-			return(95, 8362, "Crystal throne");
+			return(95, crystal_throne_8362, "Crystal throne");
 		}
 		if ($int1 = 37) {
-			return(99, 8363, "Demonic throne");
+			return(99, demonic_throne_8363, "Demonic throne");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 3 :
 		if ($int1 = 0) {
-			return(4, 8319, "Wooden bookcase");
+			return(4, wooden_bookcase_8319, "Wooden bookcase");
 		}
 		if ($int1 = 1) {
-			return(6, 8223, "Wooden shelves 1");
+			return(6, wooden_shelves_1_8223, "Wooden shelves 1");
 		}
 		if ($int1 = 2) {
-			return(7, 8239, "Beer barrel");
+			return(7, beer_barrel_8239, "Beer barrel");
 		}
 		if ($int1 = 3) {
-			return(9, 8233, "Wooden larder");
+			return(9, wooden_larder_8233, "Wooden larder");
 		}
 		if ($int1 = 4) {
-			return(12, 8240, "Cider barrel");
+			return(12, cider_barrel_8240, "Cider barrel");
 		}
 		if ($int1 = 5) {
-			return(12, 8224, "Wooden shelves 2");
+			return(12, wooden_shelves_2_8224, "Wooden shelves 2");
 		}
 		if ($int1 = 6) {
-			return(15, 8384, "Tool store 1");
+			return(15, tool_store_1_8384, "Tool store 1");
 		}
 		if ($int1 = 7) {
-			return(18, 8241, "Asgarnian Ale barrel");
+			return(18, asgarnian_ale_8241, "Asgarnian Ale barrel");
 		}
 		if ($int1 = 8) {
-			return(20, 8038, "Shoe box");
+			return(20, shoe_box_8038, "Shoe box");
 		}
 		if ($int1 = 9) {
-			return(21, 8045, "Wooden shaving stand");
+			return(21, shaving_stand_8045, "Wooden shaving stand");
 		}
 		if ($int1 = 10) {
-			return(23, 8225, "Wooden shelves 3");
+			return(23, wooden_shelves_3_8225, "Wooden shelves 3");
 		}
 		if ($int1 = 11) {
-			return(25, 8385, "Tool store 2");
+			return(25, tool_store_2_8385, "Tool store 2");
 		}
 		if ($int1 = 12) {
-			return(26, 8242, "Greenman's Ale barrel");
+			return(26, greenmans_ale_8242, "Greenman's Ale barrel");
 		}
 		if ($int1 = 13) {
-			return(27, 8039, "Oak chest of drawers");
+			return(27, oak_drawers_8039, "Oak chest of drawers");
 		}
 		if ($int1 = 14) {
-			return(29, 8320, "Oak bookcase");
+			return(29, oak_bookcase_8320, "Oak bookcase");
 		}
 		if ($int1 = 15) {
-			return(29, 8046, "Oak shaving stand");
+			return(29, oak_shaving_stand_8046, "Oak shaving stand");
 		}
 		if ($int1 = 16) {
-			return(33, 8234, "Oak larder");
+			return(33, oak_larder_8234, "Oak larder");
 		}
 		if ($int1 = 17) {
-			return(34, 8226, "Oak shelves 1");
+			return(34, oak_shelves_1_8226, "Oak shelves 1");
 		}
 		if ($int1 = 18) {
-			return(35, 8386, "Tool store 3");
+			return(35, tool_store_3_8386, "Tool store 3");
 		}
 		if ($int1 = 19) {
-			return(36, 8243, "Dragon Bitter barrel");
+			return(36, dragon_bitter_8243, "Dragon Bitter barrel");
 		}
 		if ($int1 = 20) {
-			return(37, 12704, "Oak pet house (3 pets)");
+			return(37, oak_house_12704, "Oak pet house (3 pets)");
 		}
 		if ($int1 = 21) {
-			return(37, 8047, "Oak dresser");
+			return(37, oak_dresser_8047, "Oak dresser");
 		}
 		if ($int1 = 22) {
-			return(39, 8040, "Oak wardrobe (bedroom)");
+			return(39, oak_wardrobe_8040, "Oak wardrobe (bedroom)");
 		}
 		if ($int1 = 23) {
-			return(40, 8321, "Mahogany bookcase");
+			return(40, mahogany_bookcase_8321, "Mahogany bookcase");
 		}
 		if ($int1 = 24) {
-			return(42, 9829, "Oak wardrobe (costume room)");
+			return(42, oak_wardrobe_9829, "Oak wardrobe (costume room)");
 		}
 		if ($int1 = 25) {
-			return(43, 8235, "Teak larder");
+			return(43, teak_larder_8235, "Teak larder");
 		}
 		if ($int1 = 26) {
-			return(44, 9823, "Oak fancy dress box");
+			return(44, oak_costume_box_9823, "Oak fancy dress box");
 		}
 		if ($int1 = 27) {
-			return(44, 8387, "Tool store 4");
+			return(44, tool_store_4_8387, "Tool store 4");
 		}
 		if ($int1 = 28) {
-			return(45, 8227, "Oak shelves 2");
+			return(45, oak_shelves_2_8227, "Oak shelves 2");
 		}
 		if ($int1 = 29) {
-			return(46, 9826, "Oak armour case");
+			return(46, oak_armour_case_9826, "Oak armour case");
 		}
 		if ($int1 = 30) {
-			return(46, 8048, "Teak dresser");
+			return(46, teak_dresser_8048, "Teak dresser");
 		}
 		if ($int1 = 31) {
-			return(48, 8244, "Chef's Delight barrel");
+			return(48, chefs_delight_8244, "Chef's Delight barrel");
 		}
 		if ($int1 = 32) {
-			return(48, 9839, "Oak treasure chest");
+			return(48, oak_treasure_chest_9839, "Oak treasure chest");
 		}
 		if ($int1 = 33) {
-			return(48, 12705, "Teak pet house (5 pets)");
+			return(48, teak_house_12705, "Teak pet house (5 pets)");
 		}
 		if ($int1 = 34) {
-			return(50, 9836, "Oak toy box");
+			return(50, oak_toy_box_9836, "Oak toy box");
 		}
 		if ($int1 = 35) {
-			return(51, 9830, "Carved oak wardrobe (costume room)");
+			return(51, carved_oak_wardrobe_9830, "Carved oak wardrobe (costume room)");
 		}
 		if ($int1 = 36) {
-			return(51, 8041, "Teak chest of drawers");
+			return(51, teak_drawers_8041, "Teak chest of drawers");
 		}
 		if ($int1 = 37) {
-			return(54, 9817, "Oak cape rack");
+			return(54, oak_cape_rack_9817, "Oak cape rack");
 		}
 		if ($int1 = 38) {
-			return(55, 8388, "Tool store 5");
+			return(55, tool_store_5_8388, "Tool store 5");
 		}
 		if ($int1 = 39) {
-			return(56, 8228, "Teak shelves 1");
+			return(56, teak_shelves_1_8228, "Teak shelves 1");
 		}
 		if ($int1 = 40) {
-			return(56, 8049, "Fancy teak dresser");
+			return(56, fancy_teak_dresser_8049, "Fancy teak dresser");
 		}
 		if ($int1 = 41) {
-			return(58, 21213, "Servant's moneybag");
+			return(58, servants_moneybag_21213, "Servant's moneybag");
 		}
 		if ($int1 = 42) {
-			return(59, 12706, "Mahogany pet house (7 pets)");
+			return(59, mahogany_house_12706, "Mahogany pet house (7 pets)");
 		}
 		if ($int1 = 43) {
-			return(60, 9831, "Teak wardrobe (costume room)");
+			return(60, teak_wardrobe_9831, "Teak wardrobe (costume room)");
 		}
 		if ($int1 = 44) {
-			return(62, 9824, "Teak fancy dress box");
+			return(62, teak_costume_box_9824, "Teak fancy dress box");
 		}
 		if ($int1 = 45) {
-			return(63, 9818, "Teak cape rack");
+			return(63, teak_cape_rack_9818, "Teak cape rack");
 		}
 		if ($int1 = 46) {
-			return(63, 8042, "Teak wardrobe (bedroom)");
+			return(63, teak_wardrobe_8042, "Teak wardrobe (bedroom)");
 		}
 		if ($int1 = 47) {
-			return(64, 9827, "Teak armour case");
+			return(64, teak_armour_case_9827, "Teak armour case");
 		}
 		if ($int1 = 48) {
-			return(64, 8050, "Mahogany dresser");
+			return(64, mahogany_dresser_8050, "Mahogany dresser");
 		}
 		if ($int1 = 49) {
-			return(66, 9840, "Teak treasure chest");
+			return(66, teak_treasure_chest_9840, "Teak treasure chest");
 		}
 		if ($int1 = 50) {
-			return(67, 8229, "Teak shelves 2");
+			return(67, teak_shelves_2_8229, "Teak shelves 2");
 		}
 		if ($int1 = 51) {
-			return(68, 9837, "Teak toy box");
+			return(68, teak_toy_box_9837, "Teak toy box");
 		}
 		if ($int1 = 52) {
-			return(69, 9832, "Carved teak wardrobe (costume room)");
+			return(69, carved_teak_wardrobe_9832, "Carved teak wardrobe (costume room)");
 		}
 		if ($int1 = 53) {
-			return(70, 12707, "Consecrated pet house (9 pets)");
+			return(70, consecrated_house_12707, "Consecrated pet house (9 pets)");
 		}
 		if ($int1 = 54) {
-			return(72, 9819, "Mahogany cape rack");
+			return(72, mahogany_cape_rack_9819, "Mahogany cape rack");
 		}
 		if ($int1 = 55) {
-			return(74, 8051, "Gilded Mahogany dresser");
+			return(74, gilded_dresser_8051, "Gilded Mahogany dresser");
 		}
 		if ($int1 = 56) {
-			return(75, 8043, "Mahogany wardrobe (bedroom)");
+			return(75, mahogany_wardrobe_8043, "Mahogany wardrobe (bedroom)");
 		}
 		if ($int1 = 57) {
-			return(78, 9833, "Mahogany wardrobe (costume room)");
+			return(78, mahogany_wardrobe_9833, "Mahogany wardrobe (costume room)");
 		}
 		if ($int1 = 58) {
-			return(80, 9825, "Mahogany fancy dress box");
+			return(80, mahogany_cos_box_9825, "Mahogany fancy dress box");
 		}
 		if ($int1 = 59) {
-			return(81, 20626, "Basic jewellery box");
+			return(81, basic_jewellery_box_20626, "Basic jewellery box");
 		}
 		if ($int1 = 60) {
-			return(81, 9820, "Gilded mahogany cape rack");
+			return(81, gilded_cape_rack_9820, "Gilded mahogany cape rack");
 		}
 		if ($int1 = 61) {
-			return(81, 12708, "Desecrated pet house (12 pets)");
+			return(81, desecrated_house_12708, "Desecrated pet house (12 pets)");
 		}
 		if ($int1 = 62) {
-			return(82, 9828, "Mahogany armour case");
+			return(82, mahogany_armour_case_9828, "Mahogany armour case");
 		}
 		if ($int1 = 63) {
-			return(84, 9841, "Mahogany treasure chest");
+			return(84, mahogany_treasure_chest_9841, "Mahogany treasure chest");
 		}
 		if ($int1 = 64) {
-			return(86, 20627, "Fancy jewellery box");
+			return(86, fancy_jewellery_box_20627, "Fancy jewellery box");
 		}
 		if ($int1 = 65) {
-			return(86, 9838, "Mahogany toy box");
+			return(86, mahogany_toy_box_9838, "Mahogany toy box");
 		}
 		if ($int1 = 66) {
-			return(87, 9834, "Gilded mahogany wardrobe (costume room)");
+			return(87, gilded_wardrobe_9834, "Gilded mahogany wardrobe (costume room)");
 		}
 		if ($int1 = 67) {
-			return(87, 8044, "Gilded mahogany wardrobe (bedroom)");
+			return(87, gilded_wardrobe_8044, "Gilded mahogany wardrobe (bedroom)");
 		}
 		if ($int1 = 68) {
-			return(90, 9821, "Marble cape rack");
+			return(90, marble_cape_rack_9821, "Marble cape rack");
 		}
 		if ($int1 = 69) {
-			return(91, 20628, "Ornate jewellery box");
+			return(91, ornate_jewellery_box_20628, "Ornate jewellery box");
 		}
 		if ($int1 = 70) {
-			return(92, 12709, "Natural pet house (many pets)");
+			return(92, nature_house_12709, "Natural pet house (many pets)");
 		}
 		if ($int1 = 71) {
-			return(96, 9835, "Marble wardrobe (costume room)");
+			return(96, marble_wardrobe_9835, "Marble wardrobe (costume room)");
 		}
 		if ($int1 = 72) {
-			return(99, 9822, "Magic stone cape rack");
+			return(99, magical_cape_rack_9822, "Magic stone cape rack");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 4 :
 		if ($int1 = 0) {
-			return(2, 8316, "Brown rug");
+			return(2, brown_rug_8316, "Brown rug");
 		}
 		if ($int1 = 1) {
-			return(2, 8322, "Torn curtains");
+			return(2, torn_curtains_8322, "Torn curtains");
 		}
 		if ($int1 = 2) {
-			return(13, 8317, "Rug");
+			return(13, rug_8317, "Rug");
 		}
 		if ($int1 = 3) {
-			return(18, 8323, "Curtains");
+			return(18, curtains_8323, "Curtains");
 		}
 		if ($int1 = 4) {
-			return(25, 8052, "Oak clock");
+			return(25, oak_clock_8052, "Oak clock");
 		}
 		if ($int1 = 5) {
-			return(40, 8334, "Oak lectern");
+			return(40, oak_lectern_8334, "Oak lectern");
 		}
 		if ($int1 = 6) {
-			return(40, 8324, "Opulent curtains");
+			return(40, opulent_curtains_8324, "Opulent curtains");
 		}
 		if ($int1 = 7) {
-			return(41, 8341, "Globe");
+			return(41, globe_8341, "Globe");
 		}
 		if ($int1 = 8) {
-			return(43, 8354, "Alchemical chart");
+			return(43, alchemical_chart_8354, "Alchemical chart");
 		}
 		if ($int1 = 9) {
-			return(44, 8348, "Wooden telescope");
+			return(44, wooden_telescope_8348, "Wooden telescope");
 		}
 		if ($int1 = 10) {
-			return(47, 8335, "Oak eagle lectern");
+			return(47, eagle_lectern_8335, "Oak eagle lectern");
 		}
 		if ($int1 = 11) {
-			return(47, 8336, "Oak demon lectern");
+			return(47, demon_lectern_8336, "Oak demon lectern");
 		}
 		if ($int1 = 12) {
-			return(50, 8342, "Ornamental globe");
+			return(50, ornamental_globe_8342, "Ornamental globe");
 		}
 		if ($int1 = 13) {
-			return(55, 8053, "Teak clock");
+			return(55, teak_clock_8053, "Teak clock");
 		}
 		if ($int1 = 14) {
-			return(57, 8337, "Teak eagle lectern");
+			return(57, teak_eagle_lectern_8337, "Teak eagle lectern");
 		}
 		if ($int1 = 15) {
-			return(57, 8338, "Teak demon lectern");
+			return(57, teak_demon_lectern_8338, "Teak demon lectern");
 		}
 		if ($int1 = 16) {
-			return(59, 8343, "Lunar globe");
+			return(59, lunar_globe_8343, "Lunar globe");
 		}
 		if ($int1 = 17) {
-			return(63, 8355, "Astronomical chart");
+			return(63, astronomical_chart_8355, "Astronomical chart");
 		}
 		if ($int1 = 18) {
-			return(64, 8349, "Teak telescope");
+			return(64, teak_telescope_8349, "Teak telescope");
 		}
 		if ($int1 = 19) {
-			return(65, 8318, "Opulent rug");
+			return(65, opulent_rug_8318, "Opulent rug");
 		}
 		if ($int1 = 20) {
-			return(67, 8339, "Mahogany eagle lectern");
+			return(67, mahogany_eagle_8339, "Mahogany eagle lectern");
 		}
 		if ($int1 = 21) {
-			return(67, 8340, "Mahogany demon lectern");
+			return(67, mahogany_demon_8340, "Mahogany demon lectern");
 		}
 		if ($int1 = 22) {
-			return(68, 8344, "Celestial globe");
+			return(68, celestial_globe_8344, "Celestial globe");
 		}
 		if ($int1 = 23) {
-			return(72, 8128, "Dungeon candles");
+			return(72, candles_8128, "Dungeon candles");
 		}
 		if ($int1 = 24) {
-			return(72, 8125, "Decorative dungeon bloodstain");
+			return(72, decorative_blood_8125, "Decorative dungeon bloodstain");
 		}
 		if ($int1 = 25) {
-			return(77, 8345, "Armillary sphere");
+			return(77, armillary_sphere_8345, "Armillary sphere");
 		}
 		if ($int1 = 26) {
-			return(83, 8356, "Infernal chart");
+			return(83, infernal_chart_8356, "Infernal chart");
 		}
 		if ($int1 = 27) {
-			return(83, 8126, "Decorative dungeon pipe");
+			return(83, decorative_pipe_8126, "Decorative dungeon pipe");
 		}
 		if ($int1 = 28) {
-			return(84, 8129, "Dungeon torches");
+			return(84, torches_8129, "Dungeon torches");
 		}
 		if ($int1 = 29) {
-			return(84, 8350, "Mahogany 'scope");
+			return(84, mahogany_telescope_8350, "Mahogany 'scope");
 		}
 		if ($int1 = 30) {
-			return(85, 8054, "Gilded mahogany clock");
+			return(85, gilded_clock_8054, "Gilded mahogany clock");
 		}
 		if ($int1 = 31) {
-			return(86, 8346, "Small orrery");
+			return(86, small_orrery_8346, "Small orrery");
 		}
 		if ($int1 = 32) {
-			return(94, 8127, "Hanging dungeon skeleton");
+			return(94, hanging_skeleton_8127, "Hanging dungeon skeleton");
 		}
 		if ($int1 = 33) {
-			return(94, 8130, "Dungeon skull torches");
+			return(94, skull_torches_8130, "Dungeon skull torches");
 		}
 		if ($int1 = 34) {
-			return(95, 8347, "Large orrery");
+			return(95, large_orrery_8347, "Large orrery");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 5 :
 		switch_int ($int1) {
 			case 0 :
-				return(16, 8102, "Oak wall decoration");
+				return(16, oak_decoration_8102, "Oak wall decoration");
 			case 1 :
-				return(28, 8085, "Suit of armour");
+				return(28, suit_of_armour_8085, "Suit of armour");
 			case 2 :
-				return(35, 8086, "Small portrait");
+				return(35, small_portrait_8086, "Small portrait");
 			case 3 :
-				return(36, 8267, "Mounted bass");
+				return(36, mounted_bass_8267, "Mounted bass");
 			case 4 :
-				return(36, 8103, "Teak wall decoration");
+				return(36, teak_decoration_8103, "Teak wall decoration");
 			case 5 :
-				return(38, 8087, "Minor Slayer monster head");
+				return(38, minor_head_8087, "Minor Slayer monster head");
 			case 6 :
-				return(38, 8294, "Small map");
+				return(38, small_map_8294, "Small map");
 			case 7 :
-				return(41, 8095, "Rune display cases");
+				return(41, rune_display_case_8095, "Rune display cases");
 			case 8 :
-				return(42, 8090, "Mounted sword");
+				return(42, mounted_sword_8090, "Mounted sword");
 			case 9 :
-				return(44, 8091, "Small landscape");
+				return(44, small_landscape_8091, "Small landscape");
 			case 10 :
-				return(47, 8282, "Mounted Anti-Dragon Shield");
+				return(47, anti_dragon_shield_8282, "Mounted Anti-Dragon Shield");
 			case 11 :
-				return(47, 8283, "Mounted Amulet of Glory");
+				return(47, amulet_of_glory_8283, "Mounted Amulet of Glory");
 			case 12 :
-				return(47, 8284, "Mounted Cape of Legends");
+				return(47, cape_of_legends_8284, "Mounted Cape of Legends");
 			case 13 :
-				return(47, 21913, "Mounted Mythical Cape");
+				return(47, mythical_cape_21913, "Mounted Mythical Cape");
 			case 14 :
-				return(55, 8093, "Large portrait");
+				return(55, large_portrait_8093, "Large portrait");
 			case 15 :
-				return(56, 8104, "Gilded mahogany wall decoration");
+				return(56, gilded_decoration_8104, "Gilded mahogany wall decoration");
 			case 16 :
-				return(56, 8268, "Mounted swordfish");
+				return(56, mounted_swordfish_8268, "Mounted swordfish");
 			case 17 :
-				return(58, 8295, "Medium map");
+				return(58, medium_map_8295, "Medium map");
 			case 18 :
-				return(58, 8088, "Medium Slayer monster head");
+				return(58, medium_head_8088, "Medium Slayer monster head");
 			case 19 :
-				return(65, 8094, "Large landscape");
+				return(65, large_landscape_8094, "Large landscape");
 			case 20 :
-				return(66, 8105, "Round wall-mounted shield");
+				return(66, round_shield_8105, "Round wall-mounted shield");
 			case 21 :
-				return(72, 22708, "Mounted Xeric's Talisman");
+				return(72, mounted_xerics_talisman_22708, "Mounted Xeric's Talisman");
 			case 22 :
-				return(76, 8269, "Mounted shark");
+				return(76, mounted_shark_8269, "Mounted shark");
 			case 23 :
-				return(76, 8106, "Square wall-mounted shield");
+				return(76, square_shield_8106, "Square wall-mounted shield");
 			case 24 :
-				return(78, 8089, "Major Slayer monster head");
+				return(78, major_head_8089, "Major Slayer monster head");
 			case 25 :
-				return(78, 8296, "Large map");
+				return(78, large_map_8296, "Large map");
 			case 26 :
-				return(80, 20633, "Quest list");
+				return(80, quest_list_20633, "Quest list");
 			case 27 :
-				return(80, 20630, "Mounted emblem");
+				return(80, mounted_emblem_20630, "Mounted emblem");
 			case 28 :
-				return(80, 20631, "Mounted coins");
+				return(80, mounted_coins_20631, "Mounted coins");
 			case 29 :
-				return(80, 20632, "Cape hanger");
+				return(80, cape_hanger_20632, "Cape hanger");
 			case 30 :
-				return(82, 22709, "Mounted Digsite Pendant");
+				return(82, mounted_digsite_pendant_22709, "Mounted Digsite Pendant");
 			case 31 :
-				return(82, 21912, "Mounted Vorkath head");
+				return(82, vorkaths_head_21912, "Mounted Vorkath head");
 			case 32 :
-				return(82, 23081, "Mounted Alchemical Hydra head");
+				return(82, alchemical_hydra_head_23081, "Mounted Alchemical Hydra head");
 			case 33 :
-				return(83, 20623, "Mahogany adventure log");
+				return(83, mahogany_adventure_log_20623, "Mahogany adventure log");
 			case 34 :
-				return(86, 8107, "Wall-mounted kiteshield");
+				return(86, kite_shield_8107, "Wall-mounted kiteshield");
 			case 35 :
-				return(87, 20629, "Boss lair display");
+				return(87, boss_lair_display_20629, "Boss lair display");
 			case 36 :
-				return(88, 20624, "Gilded adventure log");
+				return(88, gilded_adventure_log_20624, "Gilded adventure log");
 			case 37 :
-				return(93, 20625, "Marble adventure log");
+				return(93, marble_adventure_log_20625, "Marble adventure log");
 			case default :
-				return(-1, -1, "");
+				return(-1, null, "");
 		}
 	case 6 :
 		if ($int1 = 0) {
-			return(30, 8162, "Hoop-and-stick game");
+			return(30, hoop_and_stick_8162, "Hoop-and-stick game");
 		}
 		if ($int1 = 1) {
-			return(32, 8023, "Boxing ring");
+			return(32, boxing_ring_8023, "Boxing ring");
 		}
 		if ($int1 = 2) {
-			return(34, 8028, "Boxing glove rack");
+			return(34, glove_rack_8028, "Boxing glove rack");
 		}
 		if ($int1 = 3) {
-			return(34, 8165, "Oak prize chest");
+			return(34, oak_prize_chest_8165, "Oak prize chest");
 		}
 		if ($int1 = 4) {
-			return(37, 8156, "Lesser magical balance");
+			return(37, magical_balance_1_8156, "Lesser magical balance");
 		}
 		if ($int1 = 5) {
-			return(39, 8159, "Jester game");
+			return(39, jester_8159, "Jester game");
 		}
 		if ($int1 = 6) {
-			return(39, 8153, "Clay attack stone");
+			return(39, clay_attack_stone_8153, "Clay attack stone");
 		}
 		if ($int1 = 7) {
-			return(41, 8024, "Fencing ring");
+			return(41, fencing_ring_8024, "Fencing ring");
 		}
 		if ($int1 = 8) {
-			return(44, 8029, "Weapons rack");
+			return(44, weapons_rack_8029, "Weapons rack");
 		}
 		if ($int1 = 9) {
-			return(44, 8166, "Teak prize chest");
+			return(44, teak_prize_chest_8166, "Teak prize chest");
 		}
 		if ($int1 = 10) {
-			return(48, 20745, "Combat dummy");
+			return(48, combat_dummy_20745, "Combat dummy");
 		}
 		if ($int1 = 11) {
-			return(49, 8160, "Treasure hunt fairy house");
+			return(49, treasure_hunt_8160, "Treasure hunt fairy house");
 		}
 		if ($int1 = 12) {
-			return(51, 8025, "Combat ring");
+			return(51, combat_ring_8025, "Combat ring");
 		}
 		if ($int1 = 13) {
-			return(53, 20746, "Combat dummy (Undead and slayer)");
+			return(53, undead_combat_dummy_20746, "Combat dummy (Undead and slayer)");
 		}
 		if ($int1 = 14) {
-			return(54, 8163, "Dartboard");
+			return(54, dartboard_8163, "Dartboard");
 		}
 		if ($int1 = 15) {
-			return(54, 8030, "Extra weapons rack");
+			return(54, extra_weapons_rack_8030, "Extra weapons rack");
 		}
 		if ($int1 = 16) {
-			return(54, 8167, "Mahogany prize chest");
+			return(54, mahogany_chest_8167, "Mahogany prize chest");
 		}
 		if ($int1 = 17) {
-			return(57, 8157, "Medium balance");
+			return(57, magical_balance_2_8157, "Medium balance");
 		}
 		if ($int1 = 18) {
-			return(59, 8154, "Limestone attack stone");
+			return(59, attack_stone_8154, "Limestone attack stone");
 		}
 		if ($int1 = 19) {
-			return(59, 8161, "Hangman game");
+			return(59, hangman_game_8161, "Hangman game");
 		}
 		if ($int1 = 20) {
-			return(63, 12718, "Simple pet arena");
+			return(63, simple_arena_12718, "Simple pet arena");
 		}
 		if ($int1 = 21) {
-			return(71, 8026, "Ranging pedestals");
+			return(71, ranging_pedestals_8026, "Ranging pedestals");
 		}
 		if ($int1 = 22) {
-			return(73, 12719, "Advanced pet arena");
+			return(73, advanced_arena_12719, "Advanced pet arena");
 		}
 		if ($int1 = 23) {
-			return(77, 8158, "Greater magical balance");
+			return(77, magical_balance_3_8158, "Greater magical balance");
 		}
 		if ($int1 = 24) {
-			return(79, 8155, "Marble attack stone");
+			return(79, marble_att_stone_8155, "Marble attack stone");
 		}
 		if ($int1 = 25) {
-			return(81, 8164, "Archery target");
+			return(81, archery_target_8164, "Archery target");
 		}
 		if ($int1 = 26) {
-			return(81, 8027, "Balance beam");
+			return(81, balance_beam_8027, "Balance beam");
 		}
 		if ($int1 = 27) {
-			return(83, 12720, "Glorious pet arena");
+			return(83, glorious_arena_12720, "Glorious pet arena");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 7 :
 		if ($int1 = 0) {
-			return(1, 8168, "Exit portal");
+			return(1, exit_portal_8168, "Exit portal");
 		}
 		if ($int1 = 1) {
-			return(1, 8096, "Low-level plants");
+			return(1, low_level_plants_8096, "Low-level plants");
 		}
 		if ($int1 = 2) {
-			return(5, 8169, "Decorative rock");
+			return(5, decorative_rock_8169, "Decorative rock");
 		}
 		if ($int1 = 3) {
-			return(5, 8173, "Tree");
+			return(5, tree_8173, "Tree");
 		}
 		if ($int1 = 4) {
-			return(6, 8097, "Mid-level plants");
+			return(6, mid_level_plants_8097, "Mid-level plants");
 		}
 		if ($int1 = 5) {
-			return(10, 8170, "Pond");
+			return(10, pond_8170, "Pond");
 		}
 		if ($int1 = 6) {
-			return(10, 8174, "Nice tree");
+			return(10, nice_tree_8174, "Nice tree");
 		}
 		if ($int1 = 7) {
-			return(12, 8098, "High-level plants");
+			return(12, high_level_plants_8098, "High-level plants");
 		}
 		if ($int1 = 8) {
-			return(15, 8171, "Imp statue");
+			return(15, imp_statue_8171, "Imp statue");
 		}
 		if ($int1 = 9) {
-			return(15, 8175, "Oak tree");
+			return(15, oak_tree_8175, "Oak tree");
 		}
 		if ($int1 = 10) {
-			return(30, 8176, "Willow tree");
+			return(30, willow_tree_8176, "Willow tree");
 		}
 		if ($int1 = 11) {
-			return(37, 12710, "Grassland pet habitat");
+			return(37, grassland_habitat_12710, "Grassland pet habitat");
 		}
 		if ($int1 = 12) {
-			return(40, 20634, "Tip jar");
+			return(40, tip_jar_20634, "Tip jar");
 		}
 		if ($int1 = 13) {
-			return(45, 8177, "Maple tree");
+			return(45, maple_tree_8177, "Maple tree");
 		}
 		if ($int1 = 14) {
-			return(47, 12711, "Forest pet habitat");
+			return(47, forest_habitat_12711, "Forest pet habitat");
 		}
 		if ($int1 = 15) {
-			return(55, 8196, "Boundary stones");
+			return(55, boundary_stones_8196, "Boundary stones");
 		}
 		if ($int1 = 16) {
-			return(56, 8203, "Thorny hedge");
+			return(56, thorny_hedge_8203, "Thorny hedge");
 		}
 		if ($int1 = 17) {
-			return(57, 12712, "Desert pet habitat");
+			return(57, desert_habitat_12712, "Desert pet habitat");
 		}
 		if ($int1 = 18) {
-			return(59, 8197, "Wooden fence");
+			return(59, wooden_fence_8197, "Wooden fence");
 		}
 		if ($int1 = 19) {
-			return(60, 8204, "Nice hedge");
+			return(60, nice_hedge_8204, "Nice hedge");
 		}
 		if ($int1 = 20) {
-			return(60, 8178, "Yew tree");
+			return(60, yew_tree_8178, "Yew tree");
 		}
 		if ($int1 = 21) {
-			return(63, 8198, "Stone wall");
+			return(63, stone_wall_8198, "Stone wall");
 		}
 		if ($int1 = 22) {
-			return(64, 8205, "Small box hedge");
+			return(64, small_box_hedge_8205, "Small box hedge");
 		}
 		if ($int1 = 23) {
-			return(65, 8192, "Gazebo");
+			return(65, gazebo_8192, "Gazebo");
 		}
 		if ($int1 = 24) {
-			return(65, 20639, "Restoration pool");
+			return(65, restoration_pool_20639, "Restoration pool");
 		}
 		if ($int1 = 25) {
-			return(65, 20644, "Zen theme");
+			return(65, zen_theme_20644, "Zen theme");
 		}
 		if ($int1 = 26) {
-			return(65, 20638, "Topiary bush");
+			return(65, topiary_bush_20638, "Topiary bush");
 		}
 		if ($int1 = 27) {
-			return(66, 8213, "Sunflower");
+			return(66, sunflower_8213, "Sunflower");
 		}
 		if ($int1 = 28) {
-			return(66, 8210, "Rosemary");
+			return(66, rosemary_8210, "Rosemary");
 		}
 		if ($int1 = 29) {
-			return(66, 20649, "Teak garden bench");
+			return(66, teak_garden_bench_20649, "Teak garden bench");
 		}
 		if ($int1 = 30) {
-			return(67, 8199, "Iron railings");
+			return(67, iron_railings_8199, "Iron railings");
 		}
 		if ($int1 = 31) {
-			return(67, 12713, "Polar pet habitat");
+			return(67, polar_habitat_12713, "Polar pet habitat");
 		}
 		if ($int1 = 32) {
-			return(68, 8206, "Topiary hedge");
+			return(68, topiary_hedge_8206, "Topiary hedge");
 		}
 		if ($int1 = 33) {
-			return(70, 8172, "Dungeon entrance");
+			return(70, dungeon_entrance_8172, "Dungeon entrance");
 		}
 		if ($int1 = 34) {
-			return(70, 20640, "Revitalisation pool");
+			return(70, revitalisation_pool_20640, "Revitalisation pool");
 		}
 		if ($int1 = 35) {
-			return(71, 8214, "Marigolds");
+			return(71, marigolds_8214, "Marigolds");
 		}
 		if ($int1 = 36) {
-			return(71, 8211, "Daffodils");
+			return(71, daffodils_8211, "Daffodils");
 		}
 		if ($int1 = 37) {
-			return(71, 8200, "Picket fence");
+			return(71, picket_fence_8200, "Picket fence");
 		}
 		if ($int1 = 38) {
-			return(71, 8193, "Small fountain");
+			return(71, small_fountain_8193, "Small fountain");
 		}
 		if ($int1 = 39) {
-			return(72, 8207, "Fancy hedge");
+			return(72, fancy_hedge_8207, "Fancy hedge");
 		}
 		if ($int1 = 40) {
-			return(75, 8179, "Magic tree");
+			return(75, magic_tree_8179, "Magic tree");
 		}
 		if ($int1 = 41) {
-			return(75, 20645, "Otherworldly theme");
+			return(75, otherworldly_theme_20645, "Otherworldly theme");
 		}
 		if ($int1 = 42) {
-			return(75, 20635, "Spirit tree");
+			return(75, spirit_tree_20635, "Spirit tree");
 		}
 		if ($int1 = 43) {
-			return(75, 8194, "Large fountain");
+			return(75, large_fountain_8194, "Large fountain");
 		}
 		if ($int1 = 44) {
-			return(75, 8201, "Garden fence");
+			return(75, garden_fence_8201, "Garden fence");
 		}
 		if ($int1 = 45) {
-			return(75, 20647, "Redwood fence");
+			return(75, redwood_fence_20647, "Redwood fence");
 		}
 		if ($int1 = 46) {
-			return(76, 8208, "Tall fancy hedge");
+			return(76, tall_fancy_hedge_8208, "Tall fancy hedge");
 		}
 		if ($int1 = 47) {
-			return(76, 8215, "Roses");
+			return(76, roses_8215, "Roses");
 		}
 		if ($int1 = 48) {
-			return(76, 8212, "Bluebells");
+			return(76, bluebells_8212, "Bluebells");
 		}
 		if ($int1 = 49) {
-			return(77, 12714, "Volcanic pet habitat");
+			return(77, volcanic_habitat_12714, "Volcanic pet habitat");
 		}
 		if ($int1 = 50) {
-			return(77, 20650, "Gnome bench");
+			return(77, gnome_bench_20650, "Gnome bench");
 		}
 		if ($int1 = 51) {
-			return(79, 8202, "Marble wall");
+			return(79, marble_wall_8202, "Marble wall");
 		}
 		if ($int1 = 52) {
-			return(80, 21788, "Obelisk");
+			return(80, obelisk_21788, "Obelisk");
 		}
 		if ($int1 = 53) {
-			return(80, 20641, "Rejuvenation pool");
+			return(80, rejuvenation_pool_20641, "Rejuvenation pool");
 		}
 		if ($int1 = 54) {
-			return(80, 8209, "Tall box hedge");
+			return(80, tall_box_hedge_8209, "Tall box hedge");
 		}
 		if ($int1 = 55) {
-			return(81, 8195, "Posh fountain");
+			return(81, posh_fountain_8195, "Posh fountain");
 		}
 		if ($int1 = 56) {
-			return(83, 20648, "Obsidian fence");
+			return(83, obsidian_fence_20648, "Obsidian fence");
 		}
 		if ($int1 = 57) {
-			return(85, 20636, "Fairy ring");
+			return(85, fairy_ring_20636, "Fairy ring");
 		}
 		if ($int1 = 58) {
-			return(85, 20642, "Fancy rejuvenation pool");
+			return(85, fancy_rejuvenation_pool_20642, "Fancy rejuvenation pool");
 		}
 		if ($int1 = 59) {
-			return(85, 20646, "Volcanic theme");
+			return(85, volcanic_theme_20646, "Volcanic theme");
 		}
 		if ($int1 = 60) {
-			return(88, 20651, "Marble garden bench<br> (decoration only)");
+			return(88, marble_decorative_bench_20651, "Marble garden bench<br> (decoration only)");
 		}
 		if ($int1 = 61) {
-			return(90, 20643, "Ornate rejuvenation pool");
+			return(90, ornate_rejuvenation_pool_20643, "Ornate rejuvenation pool");
 		}
 		if ($int1 = 62) {
-			return(95, 20637, "Spirit tree & fairy ring");
+			return(95, spirit_tree_fairy_ring_20637, "Spirit tree & fairy ring");
 		}
 		if ($int1 = 63) {
-			return(98, 20652, "Obsidian garden bench<br> (decoration only)");
+			return(98, obsidian_decorative_bench_20652, "Obsidian garden bench<br> (decoration only)");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 8 :
 		if ($int1 = 0) {
-			return(61, 8370, "Throne room floor decoration");
+			return(61, floor_decoration_8370, "Throne room floor decoration");
 		}
 		if ($int1 = 1) {
-			return(65, 8297, "Oak cage");
+			return(65, oak_cage_8297, "Oak cage");
 		}
 		if ($int1 = 2) {
-			return(65, 8302, "Oubliette spikes");
+			return(65, spikes_8302, "Oubliette spikes");
 		}
 		if ($int1 = 3) {
-			return(68, 8371, "Steel cage");
+			return(68, steel_cage_8371, "Steel cage");
 		}
 		if ($int1 = 4) {
-			return(70, 8298, "Oak and steel cage");
+			return(70, oak_and_steel_cage_8298, "Oak and steel cage");
 		}
 		if ($int1 = 5) {
-			return(70, 8131, "Skeleton guard");
+			return(70, skeleton_guard_8131, "Skeleton guard");
 		}
 		if ($int1 = 6) {
-			return(71, 8303, "Tentacle pool");
+			return(71, tentacle_pool_8303, "Tentacle pool");
 		}
 		if ($int1 = 7) {
-			return(72, 8143, "Spike trap");
+			return(72, spike_trap_8143, "Spike trap");
 		}
 		if ($int1 = 8) {
-			return(74, 8372, "Large trapdoor");
+			return(74, trapdoor_8372, "Large trapdoor");
 		}
 		if ($int1 = 9) {
-			return(74, 8122, "Oak dungeon door");
+			return(74, oak_door_8122, "Oak dungeon door");
 		}
 		if ($int1 = 10) {
-			return(74, 8132, "Guard dog");
+			return(74, guard_dog_8132, "Guard dog");
 		}
 		if ($int1 = 11) {
-			return(75, 8148, "Wooden dungeon treasure crate");
+			return(75, wooden_crate_8148, "Wooden dungeon treasure crate");
 		}
 		if ($int1 = 12) {
-			return(75, 8138, "Demon");
+			return(75, demon_8138, "Demon");
 		}
 		if ($int1 = 13) {
-			return(75, 8299, "Steel cage");
+			return(75, steel_cage_8299, "Steel cage");
 		}
 		if ($int1 = 14) {
-			return(76, 8144, "Man trap");
+			return(76, man_trap_8144, "Man trap");
 		}
 		if ($int1 = 15) {
-			return(77, 8304, "Oubliette flame pit");
+			return(77, flame_pit_8304, "Oubliette flame pit");
 		}
 		if ($int1 = 16) {
-			return(78, 8133, "Hobgoblin guard");
+			return(78, hobgoblin_guard_8133, "Hobgoblin guard");
 		}
 		if ($int1 = 17) {
-			return(79, 8149, "Oak dungeon treasure chest");
+			return(79, oak_chest_8149, "Oak dungeon treasure chest");
 		}
 		if ($int1 = 18) {
-			return(80, 8300, "Spiked cage");
+			return(80, spiked_cage_8300, "Spiked cage");
 		}
 		if ($int1 = 19) {
-			return(80, 8145, "Tangle vine");
+			return(80, tangle_vine_8145, "Tangle vine");
 		}
 		if ($int1 = 20) {
-			return(80, 8139, "Kalphite soldier");
+			return(80, kalphite_soldier_8139, "Kalphite soldier");
 		}
 		if ($int1 = 21) {
-			return(82, 8373, "Lesser magic cage");
+			return(82, lesser_magic_cage_8373, "Lesser magic cage");
 		}
 		if ($int1 = 22) {
-			return(82, 8134, "Baby red dragon");
+			return(82, baby_red_dragon_8134, "Baby red dragon");
 		}
 		if ($int1 = 23) {
-			return(83, 8150, "Teak dungeon treasure chest");
+			return(83, teak_chest_8150, "Teak dungeon treasure chest");
 		}
 		if ($int1 = 24) {
-			return(83, 8305, "Rocnar");
+			return(83, rocnar_8305, "Rocnar");
 		}
 		if ($int1 = 25) {
-			return(84, 8123, "Steel-plated oak door");
+			return(84, steel_plated_door_8123, "Steel-plated oak door");
 		}
 		if ($int1 = 26) {
-			return(84, 8146, "Marble trap");
+			return(84, marble_trap_8146, "Marble trap");
 		}
 		if ($int1 = 27) {
-			return(85, 8140, "Tok-Xil");
+			return(85, tok_xil_8140, "Tok-Xil");
 		}
 		if ($int1 = 28) {
-			return(85, 8301, "Bone cage");
+			return(85, bone_cage_8301, "Bone cage");
 		}
 		if ($int1 = 29) {
-			return(86, 8135, "Huge spider");
+			return(86, huge_spider_8135, "Huge spider");
 		}
 		if ($int1 = 30) {
-			return(87, 8151, "Mahogany dungeon treasure chest");
+			return(87, mahogany_chest_8151, "Mahogany dungeon treasure chest");
 		}
 		if ($int1 = 31) {
-			return(88, 8147, "Teleport trap");
+			return(88, teleport_trap_8147, "Teleport trap");
 		}
 		if ($int1 = 32) {
-			return(89, 8374, "Greater magic cage");
+			return(89, greater_magic_cage_8374, "Greater magic cage");
 		}
 		if ($int1 = 33) {
-			return(90, 8136, "Troll guard");
+			return(90, troll_guard_8136, "Troll guard");
 		}
 		if ($int1 = 34) {
-			return(90, 8141, "Dagannoth");
+			return(90, dagannoth_8141, "Dagannoth");
 		}
 		if ($int1 = 35) {
-			return(91, 8152, "Magic dungeon treasure chest");
+			return(91, magic_chest_8152, "Magic dungeon treasure chest");
 		}
 		if ($int1 = 36) {
-			return(94, 8124, "Marble dungeon door");
+			return(94, marble_door_8124, "Marble dungeon door");
 		}
 		if ($int1 = 37) {
-			return(94, 8137, "Hellhound");
+			return(94, hellhound_8137, "Hellhound");
 		}
 		if ($int1 = 38) {
-			return(95, 8142, "Steel dragon");
+			return(95, steel_dragon_8142, "Steel dragon");
 		}
 		if ($int1 = 39) {
-			return(99, 21911, "Rune dragon<br>(after Dragon Slayer II)");
+			return(99, rune_dragon_21911, "Rune dragon<br>(after Dragon Slayer II)");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 9 :
 		if ($int1 = 0) {
-			return(45, 8062, "Oak altar");
+			return(45, oak_altar_8062, "Oak altar");
 		}
 		if ($int1 = 1) {
-			return(45, 8070, "Steel torches (chapel)");
+			return(45, steel_torches_8070, "Steel torches (chapel)");
 		}
 		if ($int1 = 2) {
-			return(48, 8055, "Symbol of Saradomin");
+			return(48, saradomin_symbol_8055, "Symbol of Saradomin");
 		}
 		if ($int1 = 3) {
-			return(48, 8057, "Symbol of Guthix");
+			return(48, guthix_symbol_8057, "Symbol of Guthix");
 		}
 		if ($int1 = 4) {
-			return(48, 8056, "Symbol of Zamorak");
+			return(48, zamorak_symbol_8056, "Symbol of Zamorak");
 		}
 		if ($int1 = 5) {
-			return(49, 8069, "Wooden torches (chapel)");
+			return(49, wooden_torches_8069, "Wooden torches (chapel)");
 		}
 		if ($int1 = 6) {
-			return(49, 8079, "Chapel windchimes");
+			return(49, windchimes_8079, "Chapel windchimes");
 		}
 		if ($int1 = 7) {
-			return(49, 8082, "Small chapel statue");
+			return(49, small_statues_8082, "Small chapel statue");
 		}
 		if ($int1 = 8) {
-			return(49, 8076, "Shuttered chapel window");
+			return(49, shuttered_window_8076, "Shuttered chapel window");
 		}
 		if ($int1 = 9) {
-			return(50, 8063, "Teak altar");
+			return(50, teak_altar_8063, "Teak altar");
 		}
 		if ($int1 = 10) {
-			return(53, 8071, "Steel candlesticks");
+			return(53, steel_candlesticks_8071, "Steel candlesticks");
 		}
 		if ($int1 = 11) {
-			return(56, 8064, "Cloth-covered teak altar");
+			return(56, cloth_covered_altar_8064, "Cloth-covered teak altar");
 		}
 		if ($int1 = 12) {
-			return(57, 8072, "Gold candlesticks");
+			return(57, gold_candlesticks_8072, "Gold candlesticks");
 		}
 		if ($int1 = 13) {
-			return(58, 8080, "Chapel bells");
+			return(58, bells_8080, "Chapel bells");
 		}
 		if ($int1 = 14) {
-			return(59, 8058, "Icon of Saradomin");
+			return(59, saradomin_icon_8058, "Icon of Saradomin");
 		}
 		if ($int1 = 15) {
-			return(59, 8060, "Icon of Guthix");
+			return(59, guthix_icon_8060, "Icon of Guthix");
 		}
 		if ($int1 = 16) {
-			return(59, 8059, "Icon of Zamorak");
+			return(59, zamorak_icon_8059, "Icon of Zamorak");
 		}
 		if ($int1 = 17) {
-			return(60, 8065, "Cloth-covered mahogany altar");
+			return(60, mahogany_altar_8065, "Cloth-covered mahogany altar");
 		}
 		if ($int1 = 18) {
-			return(61, 8073, "Oak incense burners");
+			return(61, incense_burners_8073, "Oak incense burners");
 		}
 		if ($int1 = 19) {
-			return(64, 8066, "Limestone altar");
+			return(64, limestone_altar_8066, "Limestone altar");
 		}
 		if ($int1 = 20) {
-			return(65, 8074, "Mahogany incense burners");
+			return(65, mahogany_burners_8074, "Mahogany incense burners");
 		}
 		if ($int1 = 21) {
-			return(69, 8083, "Medium chapel statue");
+			return(69, medium_statues_8083, "Medium chapel statue");
 		}
 		if ($int1 = 22) {
-			return(69, 8081, "Chapel organ");
+			return(69, organ_8081, "Chapel organ");
 		}
 		if ($int1 = 23) {
-			return(69, 8077, "Decorative chapel window");
+			return(69, decorative_window_8077, "Decorative chapel window");
 		}
 		if ($int1 = 24) {
-			return(69, 8075, "Marble incense burner");
+			return(69, marble_burners_8075, "Marble incense burner");
 		}
 		if ($int1 = 25) {
-			return(70, 8067, "Marble altar");
+			return(70, marble_altar_8067, "Marble altar");
 		}
 		if ($int1 = 26) {
-			return(71, 8061, "Icon of Bob the Cat");
+			return(71, icon_of_bob_8061, "Icon of Bob the Cat");
 		}
 		if ($int1 = 27) {
-			return(75, 8068, "Gilded marble altar");
+			return(75, gilded_altar_8068, "Gilded marble altar");
 		}
 		if ($int1 = 28) {
-			return(89, 8084, "Large chapel statue");
+			return(89, large_statues_8084, "Large chapel statue");
 		}
 		if ($int1 = 29) {
-			return(89, 8078, "Stained-glass chapel window");
+			return(89, stained_glass_8078, "Stained-glass chapel window");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 10 :
 		if ($int1 = 0) {
-			return(30, 21037, "Small storage unit");
+			return(30, small_storage_unit_21037, "Small storage unit");
 		}
 		if ($int1 = 1) {
-			return(60, 21038, "Medium storage unit");
+			return(60, medium_storage_unit_21038, "Medium storage unit");
 		}
 		if ($int1 = 2) {
-			return(90, 21039, "Large storage unit");
+			return(90, large_storage_unit_21039, "Large storage unit");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 11 :
 		if ($int1 = 0) {
-			return(5, 8236, "Cat blanket");
+			return(5, cat_blanket_8236, "Cat blanket");
 		}
 		if ($int1 = 1) {
-			return(12, 23416, "STASH units (beginner)");
+			return(12, stash_units_beginner_23416, "STASH units (beginner)");
 		}
 		if ($int1 = 2) {
-			return(19, 8237, "Cat basket");
+			return(19, cat_basket_8237, "Cat basket");
 		}
 		if ($int1 = 3) {
-			return(26, 8099, "Rope bell pull");
+			return(26, rope_bell_pull_8099, "Rope bell pull");
 		}
 		if ($int1 = 4) {
-			return(27, 8249, "Oak staircase");
+			return(27, oak_staircase_8249, "Oak staircase");
 		}
 		if ($int1 = 5) {
-			return(27, 20532, "STASH units (easy)");
+			return(27, stash_units_easy_20532, "STASH units (easy)");
 		}
 		if ($int1 = 6) {
-			return(33, 8238, "Cushioned cat basket");
+			return(33, cushioned_basket_8238, "Cushioned cat basket");
 		}
 		if ($int1 = 7) {
-			return(35, 22606, "Fire of Eternal Light<br>(with 66 Firemaking)");
+			return(35, fire_of_eternal_light_22606, "Fire of Eternal Light<br>(with 66 Firemaking)");
 		}
 		if ($int1 = 8) {
-			return(35, 22608, "Fire of Nourishment<br>(with 66 Firemaking)");
+			return(35, fire_of_nourishment_22608, "Fire of Nourishment<br>(with 66 Firemaking)");
 		}
 		if ($int1 = 9) {
-			return(37, 8100, "Teak bell pull");
+			return(37, bell_pull_8100, "Teak bell pull");
 		}
 		if ($int1 = 10) {
-			return(37, 12722, "Oak pet feeder");
+			return(37, oak_feeder_12722, "Oak pet feeder");
 		}
 		if ($int1 = 11) {
-			return(38, 12721, "Pet list (for one-off pets)");
+			return(38, pet_list_12721, "Pet list (for one-off pets)");
 		}
 		if ($int1 = 12) {
-			return(39, 12715, "Oak pet scratching post");
+			return(39, oak_scratching_post_12715, "Oak pet scratching post");
 		}
 		if ($int1 = 13) {
-			return(42, 8351, "Crystal ball");
+			return(42, crystal_ball_8351, "Crystal ball");
 		}
 		if ($int1 = 14) {
-			return(42, 20533, "STASH units (medium)");
+			return(42, stash_units_medium_20533, "STASH units (medium)");
 		}
 		if ($int1 = 15) {
-			return(48, 8252, "Teak staircase");
+			return(48, teak_staircase_8252, "Teak staircase");
 		}
 		if ($int1 = 16) {
-			return(48, 12723, "Teak pet feeder");
+			return(48, teak_feeder_12723, "Teak pet feeder");
 		}
 		if ($int1 = 17) {
-			return(49, 12716, "Teak pet scratching post");
+			return(49, teak_scratching_post_12716, "Teak pet scratching post");
 		}
 		if ($int1 = 18) {
-			return(50, 8328, "Teak portal frame");
+			return(50, teak_portal_8328, "Teak portal frame");
 		}
 		if ($int1 = 19) {
-			return(50, 8331, "Teleport focus");
+			return(50, teleport_focus_8331, "Teleport focus");
 		}
 		if ($int1 = 20) {
-			return(50, 22607, "Fire of Dehumidification<br>(with 66 Firemaking)");
+			return(50, fire_of_dehumidification_22607, "Fire of Dehumidification<br>(with 66 Firemaking)");
 		}
 		if ($int1 = 21) {
-			return(54, 8352, "Elemental sphere");
+			return(54, elemental_sphere_8352, "Elemental sphere");
 		}
 		if ($int1 = 22) {
-			return(55, 20534, "STASH units (hard)");
+			return(55, stash_units_hard_20534, "STASH units (hard)");
 		}
 		if ($int1 = 23) {
-			return(59, 12724, "Mahogany pet feeder");
+			return(59, mahogany_feeder_12724, "Mahogany pet feeder");
 		}
 		if ($int1 = 24) {
-			return(59, 12717, "Mahogany pet scratching post");
+			return(59, mahogany_scratching_post_12717, "Mahogany pet scratching post");
 		}
 		if ($int1 = 25) {
-			return(60, 8101, "Gilded teak bell pull");
+			return(60, posh_bell_pull_8101, "Gilded teak bell pull");
 		}
 		if ($int1 = 26) {
-			return(60, 22609, "Fire of Unseasonal Warmth<br>(with 66 Firemaking)");
+			return(60, fire_of_unseasonal_warmth_22609, "Fire of Unseasonal Warmth<br>(with 66 Firemaking)");
 		}
 		if ($int1 = 27) {
-			return(65, 8332, "Greater teleport focus");
+			return(65, greater_focus_8332, "Greater teleport focus");
 		}
 		if ($int1 = 28) {
-			return(65, 8329, "Mahogany portal frame");
+			return(65, mahogany_portal_8329, "Mahogany portal frame");
 		}
 		if ($int1 = 29) {
-			return(66, 8353, "Crystal of power");
+			return(66, crystal_of_power_8353, "Crystal of power");
 		}
 		if ($int1 = 30) {
-			return(67, 8258, "Limestone spiral staircase");
+			return(67, spiral_staircase_8258, "Limestone spiral staircase");
 		}
 		if ($int1 = 31) {
-			return(68, 8306, "Oak oubliette ladder");
+			return(68, oak_ladder_8306, "Oak oubliette ladder");
 		}
 		if ($int1 = 32) {
-			return(68, 8364, "Oak lever");
+			return(68, oak_lever_8364, "Oak lever");
 		}
 		if ($int1 = 33) {
-			return(72, 22705, "Marble portal nexus");
+			return(72, marble_portal_nexus_22705, "Marble portal nexus");
 		}
 		if ($int1 = 34) {
-			return(77, 20535, "STASH units (elite)");
+			return(77, stash_units_elite_20535, "STASH units (elite)");
 		}
 		if ($int1 = 35) {
-			return(78, 8307, "Teak oubliette ladder");
+			return(78, teak_ladder_8307, "Teak oubliette ladder");
 		}
 		if ($int1 = 36) {
-			return(78, 8365, "Teak lever");
+			return(78, teak_lever_8365, "Teak lever");
 		}
 		if ($int1 = 37) {
-			return(80, 8330, "Marble portal frame");
+			return(80, marble_portal_8330, "Marble portal frame");
 		}
 		if ($int1 = 38) {
-			return(80, 8333, "Scrying pool");
+			return(80, scrying_pool_8333, "Scrying pool");
 		}
 		if ($int1 = 39) {
-			return(82, 8255, "Marble staircase");
+			return(82, marble_staircase_8255, "Marble staircase");
 		}
 		if ($int1 = 40) {
-			return(82, 22706, "Gilded portal nexus");
+			return(82, gilded_portal_nexus_22706, "Gilded portal nexus");
 		}
 		if ($int1 = 41) {
-			return(88, 8308, "Mahogany oubliette ladder");
+			return(88, mahogany_ladder_8308, "Mahogany oubliette ladder");
 		}
 		if ($int1 = 42) {
-			return(88, 8366, "Mahogany lever");
+			return(88, mahogany_lever_8366, "Mahogany lever");
 		}
 		if ($int1 = 43) {
-			return(88, 20536, "STASH units (master)");
+			return(88, stash_units_master_20536, "STASH units (master)");
 		}
 		if ($int1 = 44) {
-			return(92, 22707, "Crystalline portal nexus");
+			return(92, crystalline_portal_nexus_22707, "Crystalline portal nexus");
 		}
 		if ($int1 = 45) {
-			return(97, 8259, "Marble spiral");
+			return(97, marble_spiral_8259, "Marble spiral");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 12 :
 		if ($int1 = 0) {
 			return(-1, 7620, "Servants can be hired at the<br>Ardougne Domestic Service Agency.");
 		}
 		if ($int1 = 1) {
-			return(20, 17, "Rick");
+			return(20, grail_bell_17, "Rick");
 		}
 		if ($int1 = 2) {
-			return(25, 17, "Maid");
+			return(25, grail_bell_17, "Maid");
 		}
 		if ($int1 = 3) {
-			return(30, 17, "Cook");
+			return(30, grail_bell_17, "Cook");
 		}
 		if ($int1 = 4) {
-			return(40, 17, "Butler");
+			return(40, grail_bell_17, "Butler");
 		}
 		if ($int1 = 5) {
-			return(50, 17, "Demon butler");
+			return(50, grail_bell_17, "Demon butler");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case 13 :
 		if ($int1 = 0) {
-			return(1, 2347, "Maximum rooms: <tostring(calc(33 - 10))>");
+			return(1, hammer_2347, "Maximum rooms: <tostring(calc(33 - 10))>");
 		}
 		if ($int1 = 1) {
-			return(1, 8794, "Maximum dimensions: 3x3");
+			return(1, saw_8794, "Maximum dimensions: 3x3");
 		}
 		if ($int1 = 2) {
-			return(15, 8794, "Maximum dimensions: 4x4");
+			return(15, saw_8794, "Maximum dimensions: 4x4");
 		}
 		if ($int1 = 3) {
-			return(30, 8794, "Maximum dimensions: 5x5");
+			return(30, saw_8794, "Maximum dimensions: 5x5");
 		}
 		if ($int1 = 4) {
-			return(45, 8794, "Maximum dimensions: 6x6");
+			return(45, saw_8794, "Maximum dimensions: 6x6");
 		}
 		if ($int1 = 5) {
-			return(50, 2347, "Maximum rooms: <tostring(calc(33 - 9))>");
+			return(50, hammer_2347, "Maximum rooms: <tostring(calc(33 - 9))>");
 		}
 		if ($int1 = 6) {
-			return(56, 2347, "Maximum rooms: <tostring(calc(33 - 8))>");
+			return(56, hammer_2347, "Maximum rooms: <tostring(calc(33 - 8))>");
 		}
 		if ($int1 = 7) {
-			return(60, 8794, "Maximum dimensions: 7x7");
+			return(60, saw_8794, "Maximum dimensions: 7x7");
 		}
 		if ($int1 = 8) {
-			return(62, 2347, "Maximum rooms: <tostring(calc(33 - 7))>");
+			return(62, hammer_2347, "Maximum rooms: <tostring(calc(33 - 7))>");
 		}
 		if ($int1 = 9) {
-			return(68, 2347, "Maximum rooms: <tostring(calc(33 - 6))>");
+			return(68, hammer_2347, "Maximum rooms: <tostring(calc(33 - 6))>");
 		}
 		if ($int1 = 10) {
-			return(74, 2347, "Maximum rooms: <tostring(calc(33 - 5))>");
+			return(74, hammer_2347, "Maximum rooms: <tostring(calc(33 - 5))>");
 		}
 		if ($int1 = 11) {
-			return(80, 2347, "Maximum rooms: <tostring(calc(33 - 4))>");
+			return(80, hammer_2347, "Maximum rooms: <tostring(calc(33 - 4))>");
 		}
 		if ($int1 = 12) {
-			return(86, 2347, "Maximum rooms: <tostring(calc(33 - 3))>");
+			return(86, hammer_2347, "Maximum rooms: <tostring(calc(33 - 3))>");
 		}
 		if ($int1 = 13) {
-			return(92, 2347, "Maximum rooms: <tostring(calc(33 - 2))>");
+			return(92, hammer_2347, "Maximum rooms: <tostring(calc(33 - 2))>");
 		}
 		if ($int1 = 14) {
-			return(96, 2347, "Maximum rooms: <tostring(calc(33 - 1))>");
+			return(96, hammer_2347, "Maximum rooms: <tostring(calc(33 - 1))>");
 		}
 		if ($int1 = 15) {
-			return(99, 2347, "Maximum rooms: <tostring(33)>");
+			return(99, hammer_2347, "Maximum rooms: <tostring(33)>");
 		}
-		return(-1, -1, "");
+		return(-1, null, "");
 	case default :
-		return(-1, -1, "");
+		return(-1, null, "");
 }

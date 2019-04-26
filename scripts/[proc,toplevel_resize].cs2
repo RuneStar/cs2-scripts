@@ -94,7 +94,7 @@ if ($component18 ! null) {
 		}
 	}
 	if (~on_mobile = true) {
-		if (%varbit6254 = 0) {
+		if (%varbit6254 = ^false) {
 			$int19 = calc(182 + 4);
 		} else {
 			$int19 = calc(120 + 4);
@@ -108,7 +108,7 @@ $component18 = enum(component, component, $enum1, 161:7);
 $int19 = 0;
 if ($component18 ! null) {
 	if (~on_mobile = true) {
-		if (%varbit6254 = 0) {
+		if (%varbit6254 = ^false) {
 			$int19 = 182;
 		} else {
 			$int19 = 120;

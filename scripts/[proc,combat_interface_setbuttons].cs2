@@ -1,68 +1,68 @@
 // 324
-[proc,combat_interface_setbuttons](int $int0, int $int1, int $int2, int $int3)
+[proc,combat_interface_setbuttons](graphic $graphic0, graphic $graphic1, graphic $graphic2, graphic $graphic3)
 if (%var43 = 0) {
-	if ($int0 ! -1) {
+	if ($graphic0 ! null) {
 		~options_button_on(593:4, 0);
 	}
-	if ($int1 ! -1) {
+	if ($graphic1 ! null) {
 		~options_button_off(593:8, 0);
 	}
-	if ($int2 ! -1) {
+	if ($graphic2 ! null) {
 		~options_button_off(593:12, 0);
 	}
-	if ($int3 ! -1) {
+	if ($graphic3 ! null) {
 		~options_button_off(593:16, 0);
 	}
 } else if (%var43 = 1) {
-	if ($int0 ! -1) {
+	if ($graphic0 ! null) {
 		~options_button_off(593:4, 0);
 	}
-	if ($int1 ! -1) {
+	if ($graphic1 ! null) {
 		~options_button_on(593:8, 0);
 	}
-	if ($int2 ! -1) {
+	if ($graphic2 ! null) {
 		~options_button_off(593:12, 0);
 	}
-	if ($int3 ! -1) {
+	if ($graphic3 ! null) {
 		~options_button_off(593:16, 0);
 	}
 } else if (%var43 = 2) {
-	if ($int0 ! -1) {
+	if ($graphic0 ! null) {
 		~options_button_off(593:4, 0);
 	}
-	if ($int1 ! -1) {
+	if ($graphic1 ! null) {
 		~options_button_off(593:8, 0);
 	}
-	if ($int2 ! -1) {
+	if ($graphic2 ! null) {
 		~options_button_on(593:12, 0);
 	}
-	if ($int3 ! -1) {
+	if ($graphic3 ! null) {
 		~options_button_off(593:16, 0);
 	}
 } else if (%var43 = 3) {
-	if ($int0 ! -1) {
+	if ($graphic0 ! null) {
 		~options_button_off(593:4, 0);
 	}
-	if ($int1 ! -1) {
+	if ($graphic1 ! null) {
 		~options_button_off(593:8, 0);
 	}
-	if ($int2 ! -1) {
+	if ($graphic2 ! null) {
 		~options_button_off(593:12, 0);
 	}
-	if ($int3 ! -1) {
+	if ($graphic3 ! null) {
 		~options_button_on(593:16, 0);
 	}
 } else {
-	if ($int0 ! -1) {
+	if ($graphic0 ! null) {
 		~options_button_off(593:4, 0);
 	}
-	if ($int1 ! -1) {
+	if ($graphic1 ! null) {
 		~options_button_off(593:8, 0);
 	}
-	if ($int2 ! -1) {
+	if ($graphic2 ! null) {
 		~options_button_off(593:12, 0);
 	}
-	if ($int3 ! -1) {
+	if ($graphic3 ! null) {
 		~options_button_off(593:16, 0);
 	}
 }

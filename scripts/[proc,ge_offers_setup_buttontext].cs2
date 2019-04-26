@@ -1,5 +1,5 @@
 // 774
-[proc,ge_offers_setup_buttontext](component $component0, int $int1, int $int2, string $string0)(int)
+[proc,ge_offers_setup_buttontext](component $component0, int $int1, string $string0, int $int2)(int)
 if (cc_find($component0, $int1) = ^true) {
 	.cc_create($component0, ^iftype_text, $int2);
 	$int2 = calc($int2 + 1);

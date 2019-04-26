@@ -1,5 +1,5 @@
 // 228
-[proc,steelborder](component $component0, int $int1, string $string0)(int)
+[proc,steelborder](component $component0, string $string0, int $int1)(int)
 cc_deleteall($component0);
 ~create_graphic($component0, 0, "tradebacking", 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 2, 2, ^setsize_minus, ^setsize_minus);
 cc_create($component0, ^iftype_text, 1);

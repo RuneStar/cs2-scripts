@@ -1,5 +1,5 @@
 // 1611
-[proc,raids_storage_drawbutton](component $component0, fontmetrics $fontmetrics1, string $string0)(int)
+[proc,raids_storage_drawbutton](string $string0, component $component0, fontmetrics $fontmetrics1)(int)
 cc_deleteall($component0);
 def_int $int2 = ~options_button_off($component0, 0);
 cc_create($component0, ^iftype_text, $int2);

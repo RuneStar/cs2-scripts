@@ -1,5 +1,5 @@
 // 1099
-[proc,bugreport_parse](int $int0, string $string0)(string)
+[proc,bugreport_parse](string $string0, int $int0)(string)
 $string0 = escape($string0);
 def_int $int1 = string_length($string0);
 def_int $int2 = 0;
