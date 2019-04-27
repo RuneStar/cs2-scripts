@@ -28,14 +28,14 @@ if (%var328 < 15) {
 if ((%var176 < 2) | (%var176 > 9)) {
 	$int12 = setbit($int12, 0);
 }
-if_sethide(~script633(testbit($int12, 1)), $component5);
-if_sethide(~script633(testbit($int12, 2)), $component2);
-if_sethide(~script633(testbit($int12, 3)), $component8);
-if_sethide(~script633(testbit($int12, 4)), $component4);
-if_sethide(~script633(testbit($int12, 5)), $component6);
-if_sethide(~script633(testbit($int12, 6)), $component1);
-if_sethide(~script633(testbit($int12, 7)), $component7);
-if_sethide(~script633(testbit($int12, 8)), $component3);
-if_sethide(~script633(testbit($int12, 9)), $component0);
-if_sethide(~script633(testbit($int12, 0)), $component9);
-if_sethide(~script633(testbit($int12, 10)), $component10);
+if_sethide(~int_to_bool(testbit($int12, 1)), $component5);
+if_sethide(~int_to_bool(testbit($int12, 2)), $component2);
+if_sethide(~int_to_bool(testbit($int12, 3)), $component8);
+if_sethide(~int_to_bool(testbit($int12, 4)), $component4);
+if_sethide(~int_to_bool(testbit($int12, 5)), $component6);
+if_sethide(~int_to_bool(testbit($int12, 6)), $component1);
+if_sethide(~int_to_bool(testbit($int12, 7)), $component7);
+if_sethide(~int_to_bool(testbit($int12, 8)), $component3);
+if_sethide(~int_to_bool(testbit($int12, 9)), $component0);
+if_sethide(~int_to_bool(testbit($int12, 0)), $component9);
+if_sethide(~int_to_bool(testbit($int12, 10)), $component10);

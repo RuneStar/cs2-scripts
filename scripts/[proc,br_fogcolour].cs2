@@ -23,14 +23,14 @@ def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;
 def_int $int12 = 0;
-$int10, $int11, $int12 = ~script2(0x882000);
+$int10, $int11, $int12 = ~hex_to_rgb(0x882000);
 def_int $int13 = 100;
 def_int $int14 = 255;
 def_int $int15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
 def_int $int18 = 0;
-$int16, $int17, $int18 = ~script2($colour0);
+$int16, $int17, $int18 = ~hex_to_rgb($colour0);
 $int3 = invpow(pow(calc(coordx(coord) - %varbit5320), 2), 2);
 $int4 = invpow(pow(calc(coordy(coord) - %varbit5316), 2), 2);
 if ($int3 > $int4) {

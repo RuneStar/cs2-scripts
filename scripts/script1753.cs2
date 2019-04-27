@@ -71,7 +71,7 @@ if ((cc_find($component4, $int11) = ^true) & (.cc_find($component4, $int12) = ^t
 	cc_setposition($int14, $int15, ^setpos_abs_centre, ^setpos_abs_centre);
 	.cc_setposition($int16, $int17, ^setpos_abs_centre, ^setpos_abs_centre);
 } else {
-	$int23, $int24, $int25 = ~script2(^yellow);
+	$int23, $int24, $int25 = ~hex_to_rgb(^yellow);
 	$int23, $int24, $int25 = ~max(calc($int23 - 48), 0), ~max(calc($int24 - 48), 0), ~max(calc($int25 - 48), 0);
 	$colour26 = ~script246($int23, $int24, $int25);
 	cc_create($component4, ^iftype_rectangle, $int11);

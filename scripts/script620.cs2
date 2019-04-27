@@ -4,7 +4,7 @@ if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:13)) = fal
 	return;
 }
 def_int $int2 = calc($int0 / 256);
-def_boolean $boolean3 = ~script633(testbit($int0, 1));
+def_boolean $boolean3 = ~int_to_bool(testbit($int0, 1));
 def_int $int4 = calc(($int0 & 252) / 4);
 if (testbit($int0, 0) = ^true) {
 	%varcint63 = %varcint49;

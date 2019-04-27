@@ -8,7 +8,7 @@ if (%varbit4611 = 1) {
 ~toplevel_resize($component0, $enum1);
 def_component $component2 = enum(component, component, $enum1, 161:17);
 if ($component2 ! null) {
-	if_sethide(~script633(%varbit542), $component2);
+	if_sethide(~int_to_bool(%varbit542), $component2);
 }
 $component2 = enum(component, component, $enum1, 161:26);
 if ($component2 ! null) {

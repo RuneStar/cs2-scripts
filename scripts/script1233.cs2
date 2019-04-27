@@ -15,6 +15,6 @@ if (cc_find($component0, $int1) = ^true) {
 	if ($int5 > 30) {
 		$int5 = 30;
 	}
-	$int6, $int7, $int8 = ~script2($colour4);
+	$int6, $int7, $int8 = ~hex_to_rgb($colour4);
 	cc_setcolour(~script246(calc($int6 + interpolate(0, $int5, 0, 30, (255 - $int6))), calc($int7 + interpolate(0, $int5, 0, 30, (255 - $int7))), calc($int8 + interpolate(0, $int5, 0, 30, (255 - $int8)))));
 }

@@ -2,7 +2,7 @@
 
 [**0**](scripts/[clientscript,tt_rewards_init].cs2) `[clientscript,tt_rewards_init]`  
 [**1**](scripts/script1.cs2)  
-[**2**](scripts/script2.cs2)  
+[**2**](scripts/[proc,hex_to_rgb].cs2) `[proc,hex_to_rgb]`  
 [**3**](scripts/[proc,target_world].cs2) `[proc,target_world]`  
 [**4**](scripts/script4.cs2)  
 [**5**](scripts/script5.cs2)  
@@ -633,7 +633,7 @@
 [**630**](scripts/[clientscript,ignore_update].cs2) `[clientscript,ignore_update]`  
 [**631**](scripts/[clientscript,friend_update].cs2) `[clientscript,friend_update]`  
 [**632**](scripts/script632.cs2)  
-[**633**](scripts/script633.cs2)  
+[**633**](scripts/[proc,int_to_bool].cs2) `[proc,int_to_bool]`  
 [**634**](scripts/[proc,displayname_draw].cs2) `[proc,displayname_draw]`  
 [**635**](scripts/[clientscript,displayname_lookup].cs2) `[clientscript,displayname_lookup]`  
 [**636**](scripts/script636.cs2)  

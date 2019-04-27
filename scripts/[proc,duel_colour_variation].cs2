@@ -3,7 +3,7 @@
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_int $int3 = 0;
-$int1, $int2, $int3 = ~script2($colour0);
+$int1, $int2, $int3 = ~hex_to_rgb($colour0);
 def_int $int4 = calc(random(30) - random(30));
 $int1 = ~minmax(0, 255, calc($int1 + $int4));
 $int4 = calc(random(30) - random(30));
