@@ -16,7 +16,7 @@ if ($int1 >= 3) {
 	if_setop(1, "Unlock", $component0);
 }
 if_setopbase("<col=ff9040><oc_name($obj4)></col>", $component0);
-~script1255(0, $component0, $string0, $string1, $obj4);
+~script1255(false, $component0, $string0, $string1, $obj4);
 if_setonmouserepeat("script1254(true, $component0, $string0, $string1, $obj4)", $component0);
 if_setonmouseleave("script1254(false, $component0, $string0, $string1, $obj4)", $component0);
 if_setonop("script1256(event_opindex, $component0, $int1, $string0, $obj2, $obj3, $obj4)", $component0);

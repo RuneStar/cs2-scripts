@@ -1,8 +1,8 @@
 // 2138
-script2138(int $int0, component $component1, string $string0)
+script2138(boolean $boolean0, component $component1, string $string0)
 cc_deleteall($component1);
 def_int $int2 = 0;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	$int2 = ~v2_stone_button_in_filled($component1);
 } else {
 	$int2 = ~v2_stone_button_out_filled($component1);

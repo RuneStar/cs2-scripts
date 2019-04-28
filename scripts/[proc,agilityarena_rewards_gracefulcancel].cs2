@@ -1,8 +1,8 @@
 // 2038
-[proc,agilityarena_rewards_gracefulcancel](component $component0, string $string0, int $int1)
+[proc,agilityarena_rewards_gracefulcancel](component $component0, string $string0, boolean $boolean1)
 cc_deleteall($component0);
 def_int $int2 = 0;
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	$int2 = ~options_button_on($component0, $int2);
 } else {
 	$int2 = ~options_button_off($component0, $int2);
@@ -13,7 +13,7 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	cc_setcolour(^white);
 } else {
 	cc_setcolour(0xff981f);

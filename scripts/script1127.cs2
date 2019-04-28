@@ -1,5 +1,5 @@
 // 1127
-script1127(int $int0, int $int1, int $int2, component $component3, component $component4, component $component5, int $int6, component $component7, int $int8)
+script1127(int $int0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 if ($int0 ! 1) {
 	return;
 }
@@ -11,9 +11,9 @@ if (~on_mobile = true) {
 } else if (string_length(enum(int, string, 1246, $int2)) <= 0) {
 	return;
 }
-if ($int1 = $int6) {
+if ($component1 = $component6) {
 	%var1107 = $int2;
-} else if ($int1 = $int8) {
+} else if ($component1 = $component8) {
 	%var1306 = $int2;
 }
 ~script1131($component5, $component7);

@@ -1,5 +1,5 @@
 // 2332
-[clientscript,tob_partydetails_autorefresh](component $component0, component $component1, component $component2, int $int3, string $string0)
+[clientscript,tob_partydetails_autorefresh](component $component0, component $component1, component $component2, string $string0, int $int3)
 def_int $int4 = calc(clientclock - $int3);
 if ($int4 >= 500) {
 	if_setontimer(null, $component0);

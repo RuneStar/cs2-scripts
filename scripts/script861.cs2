@@ -9,8 +9,8 @@ if_setcolour(0xa6a692, 127:13);
 if_setontimer(null, 127:12);
 if ($obj0 ! null) {
 	if_settext("Remove this key", 127:13);
-	if_setonmouserepeat("script45(127:13, 16777215)", 127:12);
-	if_setonmouseleave("script45(127:13, 10921618)", 127:12);
+	if_setonmouserepeat("script45(127:13, ^white)", 127:12);
+	if_setonmouseleave("script45(127:13, 0xa6a692)", 127:12);
 	if_setop(1, "Remove", 127:12);
 	if_setopbase("<col=ff9040><oc_name($obj0)></col>", 127:12);
 	if_setonop("script862(event_opindex, event_com, cc_getlayer, cc_getid)", 127:12);

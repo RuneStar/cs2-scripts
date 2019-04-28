@@ -1,7 +1,7 @@
 // 1018
-script1018(int $int0, int $colour1, string $string0, component $component2)(int)
+script1018(boolean $boolean0, int $colour1, string $string0, component $component2)(int)
 def_int $int3 = 0;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	$int3 = ~v2_stone_button_in_filled($component2);
 } else {
 	$int3 = ~v2_stone_button_out_filled($component2);

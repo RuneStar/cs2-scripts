@@ -19,8 +19,8 @@ if ($int2 = 1) {
 cc_settrans(255);
 cc_setop(1, "Send report");
 cc_setonop("snapshot_rules_send($int1)");
-cc_setonmouseover("snapshot_rules_hover(event_com, event_comid, 16711680)");
-cc_setonmouseleave("snapshot_rules_hover(event_com, event_comid, 16777215)");
+cc_setonmouseover("snapshot_rules_hover(event_com, event_comid, ^red)");
+cc_setonmouseleave("snapshot_rules_hover(event_com, event_comid, ^white)");
 .cc_create($component3, ^iftype_text, $int4);
 $int4 = calc($int4 + 1);
 .cc_setsize(15, $int7, ^setsize_abs, ^setsize_abs);

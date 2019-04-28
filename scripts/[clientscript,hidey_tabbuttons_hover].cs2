@@ -1,6 +1,6 @@
 // 1483
-[clientscript,hidey_tabbuttons_hover](int $int0, component $component1)
-if ($int0 = 1) {
+[clientscript,hidey_tabbuttons_hover](boolean $boolean0, component $component1)
+if ($boolean0 = true) {
 	if (cc_find($component1, 0) = ^true) {
 		cc_setgraphic("tabs_split,0");
 	}

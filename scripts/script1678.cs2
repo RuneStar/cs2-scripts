@@ -7,7 +7,7 @@ if ((clienttype = 3) & (%varbit6713 = 0)) {
 }
 if_sethide(false, $component0);
 if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component1);
-~script1682($component0, 0);
+~script1682($component0, false);
 if_setonmouserepeat("script1681(event_com, true)", $component0);
 if_setonmouseleave("script1681(event_com, false)", $component0);
 if_setonop("script1679(event_opindex, event_com, $component1)", $component0);

@@ -1,9 +1,9 @@
 // 1544
-[clientscript,raids_sidepanel_resetbutton](int $int0, component $component1, string $string0)
+[clientscript,raids_sidepanel_resetbutton](int $int0, string $string0, component $component1)
 if (clientclock < $int0) {
 	return;
 }
-~raids_sidepanel_drawbutton(0, $string0, $component1);
+~raids_sidepanel_drawbutton(false, $string0, $component1);
 if_setonmouserepeat("raids_sidepanel_drawbutton(true, $string0, $component1)", $component1);
 if_setonmouseleave("raids_sidepanel_drawbutton(false, $string0, $component1)", $component1);
 if_setonop("raids_sidepanel_opbutton(event_opindex, $string0, $component1)", $component1);

@@ -8,11 +8,11 @@ if (%varbit3264 < $int1) {
 } else {
 	if (%varbit3264 = $int1) {
 		if_setcolour(^yellow, $component0);
-		if_setonmouseleave("script45($component0, 16776960)", $component0);
+		if_setonmouseleave("script45($component0, ^yellow)", $component0);
 	} else {
 		if_setcolour(^green, $component0);
-		if_setonmouseleave("script45($component0, 65280)", $component0);
+		if_setonmouseleave("script45($component0, ^green)", $component0);
 	}
-	if_setonmouserepeat("script45($component0, 16777215)", $component0);
+	if_setonmouserepeat("script45($component0, ^white)", $component0);
 	if_setonop("opsound(event_opindex, 2)", $component0);
 }

@@ -1,8 +1,8 @@
 // 1368
-script1368(component $component0, int $int1, int $int2, int $int3, int $int4, int $int5)
+script1368(component $component0, int $int1, int $int2, int $bit3, boolean $boolean4, int $int5)
 def_int $int6 = 0;
 if (cc_find($component0, $int1) = ^true) {
-	if (($int3 = 1) & (($int4 = 0) | ($int5 > 0))) {
+	if (($bit3 = ^true) & (($boolean4 = false) | ($int5 > 0))) {
 		cc_setcolour(^blue);
 		cc_setonmouseover(null);
 		cc_setonmouseleave(null);

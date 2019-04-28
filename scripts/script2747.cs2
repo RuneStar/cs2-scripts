@@ -1,5 +1,5 @@
 // 2747
-script2747(component $component0, string $string0, int $int1, int $int2)
+script2747(component $component0, string $string0, boolean $boolean1, int $int2)
 cc_deleteall($component0);
 def_int $int3 = 0;
 if_setonvartransmit("script2745($component0, $string0, false, $int2){var675}", $component0);
@@ -20,7 +20,7 @@ if (%varbit7792 = $int2) {
 cc_create($component0, ^iftype_text, $int3);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-if ($int1 = 0) {
+if ($boolean1 = false) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(^white);

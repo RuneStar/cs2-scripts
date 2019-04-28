@@ -22,6 +22,6 @@ cc_settextshadow(true);
 cc_settext($string3);
 if_setop(1, $string3, $component1);
 cc_setcolour(0xff981f);
-if_setonmouserepeat("script85(event_com, $int10, 16777215)", $component1);
-if_setonmouseleave("script85(event_com, $int10, 16750623)", $component1);
+if_setonmouserepeat("script85(event_com, $int10, ^white)", $component1);
+if_setonmouseleave("script85(event_com, $int10, 0xff981f)", $component1);
 if_setonop("tournament_supplies_switchlayer($component9, $component1, $component2, $string0, $component3, $string1, $component4, $component5, $component6, $int7, $int8)", $component1);

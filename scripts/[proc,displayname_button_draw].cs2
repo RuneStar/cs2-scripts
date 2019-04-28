@@ -1,8 +1,8 @@
 // 1676
-[proc,displayname_button_draw](component $component0, string $string0, int $int1)
+[proc,displayname_button_draw](component $component0, string $string0, boolean $boolean1)
 cc_deleteall($component0);
 def_int $int2 = 0;
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	$int2 = ~v2_stone_button_in_filled($component0);
 } else {
 	$int2 = ~v2_stone_button_out_filled($component0);

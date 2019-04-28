@@ -55,7 +55,7 @@ if ($boolean2 = true) {
 	if ($int1 > 2) {
 		if_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_centre, 270:11);
 		$int3 = calc(($int3 + if_getwidth(270:11)) + 5);
-		~script2058(0, $string0, 270:11);
+		~script2058(false, $string0, 270:11);
 		if_setonmouseover("script2057(true, $string0, event_com)", 270:11);
 		if_setonmouseleave("script2057(false, $string0, event_com)", 270:11);
 		if_setop(1, "Other quantity", 270:11);

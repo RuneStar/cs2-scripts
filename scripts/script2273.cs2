@@ -1,5 +1,5 @@
 // 2273
-script2273(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, int $int7)
+script2273(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, boolean $boolean7)
 cc_deleteall($component3);
 cc_deleteall($component4);
 cc_deleteall($component5);
@@ -72,7 +72,7 @@ while ($int8 <= $int16) {
 	$int8 = calc($int8 + 1);
 }
 if_setscrollsize(0, $int10, $component1);
-if (($int7 = 1) | ($int10 < if_getheight($component1))) {
+if (($boolean7 = true) | ($int10 < if_getheight($component1))) {
 	if_setscrollpos(0, 0, $component1);
 	~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 } else {

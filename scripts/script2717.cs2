@@ -20,8 +20,8 @@ if ($boolean0 = true) {
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext("Show");
-	if_setonmouseover("script85(event_com, cc_getid, 16777215)", $component1);
-	if_setonmouseleave("script85(event_com, cc_getid, 16750623)", $component1);
+	if_setonmouseover("script85(event_com, cc_getid, ^white)", $component1);
+	if_setonmouseleave("script85(event_com, cc_getid, 0xff981f)", $component1);
 	if_setop(1, "Show", $component1);
 	if_setonop("script2716(false, $component1, $component2, $component3)", $component1);
 } else {
@@ -40,8 +40,8 @@ if ($boolean0 = true) {
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext("Hide");
-	if_setonmouseover("script85(event_com, cc_getid, 16777215)", $component2);
-	if_setonmouseleave("script85(event_com, cc_getid, 16750623)", $component2);
+	if_setonmouseover("script85(event_com, cc_getid, ^white)", $component2);
+	if_setonmouseleave("script85(event_com, cc_getid, 0xff981f)", $component2);
 	if_setop(1, "Hide", $component2);
 	if_setonop("script2716(true, $component1, $component2, $component3)", $component2);
 }

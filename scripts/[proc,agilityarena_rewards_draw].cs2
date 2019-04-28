@@ -1,5 +1,5 @@
 // 1595
-[proc,agilityarena_rewards_draw](component $component0, string $string0, int $int1, int $int2, component $component3)
+[proc,agilityarena_rewards_draw](component $component0, string $string0, int $int1, boolean $boolean2, component $component3)
 def_string $string1 = "";
 if ($int1 = 1) {
 	$string1 = "<$string0><br>1 ticket";
@@ -19,7 +19,7 @@ if (inv_total(inv, agility_arena_ticket_2996) < $int1) {
 	cc_settextshadow(true);
 	cc_settext($string1);
 	if_setonop(null, $component0);
-} else if ($int2 = 1) {
+} else if ($boolean2 = true) {
 	$int4 = ~v2_stone_button_in_filled($component0);
 	cc_create($component0, ^iftype_text, $int4);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);

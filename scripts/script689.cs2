@@ -1,7 +1,7 @@
 // 689
-script689(int $int0, component $component1, int $int2, int $int3, int $int4, int $int5, component $component6, component $component7)
+script689(boolean $boolean0, component $component1, int $int2, int $int3, int $int4, int $int5, component $component6, component $component7)
 def_int $int8 = calc(%varcint110 + 50);
-if (($int0 = 1) | (clientclock <= $int8)) {
+if (($boolean0 = true) | (clientclock <= $int8)) {
 	if_setontimer(null, $component1);
 	~script690($component1, $int2, $int3, $int4, $int5, $component6, $component7);
 } else {

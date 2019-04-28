@@ -1,8 +1,8 @@
 // 2058
-script2058(int $int0, string $string0, component $component1)
+script2058(boolean $boolean0, string $string0, component $component1)
 cc_deleteall($component1);
 def_int $int2 = 0;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	$int2 = ~script2044($component1, $int2);
 } else {
 	$int2 = ~script2045($component1, $int2);

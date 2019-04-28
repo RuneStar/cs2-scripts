@@ -2,7 +2,7 @@
 [clientscript,worldmap_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24)
 ~script1490($component1);
 if_setonscrollwheel("worldmap_zoom_scroll(event_mousey, $component18, $component19)", $component4);
-~script1743(0, $component6, $component8);
+~script1743(false, $component6, $component8);
 cc_deleteall($component0);
 def_int $int25 = 0;
 if (~toplevel_getcomponents ! 1132) {
@@ -240,7 +240,7 @@ $int25, $int38 = ~worldmap_toggles_enablebutton(3, $component10, $int25, $int38,
 $int25, $int38 = ~worldmap_toggles_enablebutton(4, $component10, $int25, $int38, $component4, $component7, $component23);
 $int29 = ~max($int29, calc($int38 + 6));
 if_setsize($int29, 50, ^setsize_abs, ^setsize_minus, $component5);
-~worldmap_key_toggle(0, $int29, $component3, $component5, $component9);
+~worldmap_key_toggle(false, $int29, $component3, $component5, $component9);
 cc_deleteall($component11);
 $int25 = 0;
 cc_create($component11, ^iftype_graphic, $int25);
@@ -298,8 +298,8 @@ while ($maparea45 ! null) {
 	cc_settext($string0);
 	cc_setop(1, "Select");
 	cc_setopbase("<col=ff9040><$string0></col>");
-	cc_setonmouseover("xpdrops_setup_display_dropdown_hover(true, event_com, event_comid, .cc_getid, 16750623)");
-	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comid, .cc_getid, 16750623)");
+	cc_setonmouseover("xpdrops_setup_display_dropdown_hover(true, event_com, event_comid, .cc_getid, 0xff981f)");
+	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comid, .cc_getid, 0xff981f)");
 	cc_setonop("worldmap_maplist_select(event_opindex, $maparea45, $component12, $component13, $component4, $component6, $component7, $component18, $component19)");
 	$int29 = ~max($int29, parawidth($string0, 512, $fontmetrics43));
 	$coord41 = ~worldmap_findcoordinmap($maparea45, %varcint188);

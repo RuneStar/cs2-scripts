@@ -1,6 +1,6 @@
 // 428
-script428(obj $obj0, component $component1, component $component2, component $component3, int $int4)
-if ($int4 = 1) {
+script428(obj $obj0, component $component1, component $component2, component $component3, boolean $boolean4)
+if ($boolean4 = true) {
 	if_setoninvtransmit("script428($obj0, event_com, $component2, $component3, false){inv}", $component1);
 }
 if (inv_total(inv, $obj0) > 0) {

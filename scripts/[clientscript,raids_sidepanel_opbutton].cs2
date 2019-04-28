@@ -1,10 +1,10 @@
 // 1543
-[clientscript,raids_sidepanel_opbutton](int $int0, component $component1, string $string0)
+[clientscript,raids_sidepanel_opbutton](int $int0, string $string0, component $component1)
 if ($int0 ! 1) {
 	return;
 }
 sound_synth(2266, 1, 0);
-~raids_sidepanel_drawbutton(1, "<col=ffffff>---</col>", $component1);
+~raids_sidepanel_drawbutton(true, "<col=ffffff>---</col>", $component1);
 if_setonmouserepeat(null, $component1);
 if_setonmouseleave(null, $component1);
 if_setonop(null, $component1);

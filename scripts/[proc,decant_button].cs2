@@ -1,7 +1,7 @@
 // 2206
-[proc,decant_button](component $component0, int $int1, obj $obj2, string $string0, string $string1)
+[proc,decant_button](component $component0, boolean $boolean1, obj $obj2, string $string0, string $string1)
 def_int $int3 = 0;
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	$int3 = ~script2044($component0, $int3);
 } else {
 	$int3 = ~script2045($component0, $int3);

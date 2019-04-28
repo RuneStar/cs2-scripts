@@ -25,12 +25,12 @@ if (string_length($string1) > 0) {
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	if ($int1 = 6) {
 		cc_setcolour(^red);
-		if_setonmouseleave("script85(event_com, cc_getid, 16711680)", $component8);
+		if_setonmouseleave("script85(event_com, cc_getid, ^red)", $component8);
 	} else {
 		cc_setcolour(0xff981f);
-		if_setonmouseleave("script85(event_com, cc_getid, 16750623)", $component8);
+		if_setonmouseleave("script85(event_com, cc_getid, 0xff981f)", $component8);
 	}
-	if_setonmouseover("script85(event_com, cc_getid, 16777215)", $component8);
+	if_setonmouseover("script85(event_com, cc_getid, ^white)", $component8);
 	if_setonop("opsound(event_opindex, 2)", $component8);
 	cc_settextshadow(true);
 	cc_settextfont(p11_full);

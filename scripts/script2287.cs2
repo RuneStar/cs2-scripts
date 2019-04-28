@@ -1,7 +1,7 @@
 // 2287
-script2287(int $int0, component $component1, int $int2)
+script2287(boolean $boolean0, component $component1, int $int2)
 if (cc_find($component1, $int2) = ^true) {
-	if ($int0 = 1) {
+	if ($boolean0 = true) {
 		cc_setgraphic("tradebacking_light");
 		cc_settrans(~max(0, calc(cc_gettrans - 40)));
 		cc_setontimer(null);

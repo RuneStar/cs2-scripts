@@ -1,7 +1,7 @@
 // 2558
-script2558(int $int0, int $int1, int $int2)
+script2558(int $int0, int $int1, boolean $boolean2)
 cc_deleteall(275:10);
-if ($int2 = 1) {
+if ($boolean2 = true) {
 	cc_create(275:10, ^iftype_rectangle, 0);
 	cc_setsize(0, 33, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, $int1, ^setpos_abs_left, ^setpos_abs_top);

@@ -12,8 +12,8 @@ cc_setsize(0, $int6, ^setsize_minus, ^setsize_abs);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(p12_full);
 cc_setcolour(0x46320a);
-cc_setonmouseover("script85(event_com, event_comid, 7758394)");
-cc_setonmouseleave("script85(event_com, event_comid, 4600330)");
+cc_setonmouseover("script85(event_com, event_comid, 0x76623a)");
+cc_setonmouseleave("script85(event_com, event_comid, 0x46320a)");
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
 cc_settext($string0);
 def_string $string1 = "";
@@ -27,7 +27,7 @@ if (($int5 = 1) & ($int3 < 36)) {
 		$string2 = enum(int, string, 1402, calc($int3 - 9));
 	}
 	$string0 = append("<col=735a28><$string1></col>: ", $string0);
-	.cc_setonkey("script57(event_keytyped, event_keypressed, $component0, cc_getid, null, -1, $string1, $string2, 4600330, 0)");
+	.cc_setonkey("script57(event_keytyped, event_keypressed, $component0, cc_getid, null, -1, $string1, $string2, 0x46320a, 0)");
 }
 cc_settext($string0);
 return($int3, calc($int4 + $int6));

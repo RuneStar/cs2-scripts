@@ -19,8 +19,8 @@ while ($int8 <= enum_getoutputcount(2304)) {
 	cc_settextshadow(true);
 	cc_settext(enum(int, string, 2305, $int7));
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	cc_setonmouseover("script85($component0, $int8, 16777215)");
-	cc_setonmouseleave("script85($component0, $int8, 16750623)");
+	cc_setonmouseover("script85($component0, $int8, ^white)");
+	cc_setonmouseleave("script85($component0, $int8, 0xff981f)");
 	cc_setonop("seed_vault_catop($component2, $int7, $component3, $component4)");
 	cc_setonvartransmit("seed_vault_catvar($component2, $component3, $component4){var2194}");
 	cc_setop(1, "Select");

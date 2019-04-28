@@ -16,6 +16,6 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settext("Stop");
 cc_setcolour(0xff981f);
-if_setonmouserepeat("script85(event_com, $int1, 16777215)", $component0);
-if_setonmouseleave("script85(event_com, $int1, 16750623)", $component0);
+if_setonmouserepeat("script85(event_com, $int1, ^white)", $component0);
+if_setonmouseleave("script85(event_com, $int1, 0xff981f)", $component0);
 if_setonop("tournament_sidepanel_stop_op(event_opindex, $component0)", $component0);

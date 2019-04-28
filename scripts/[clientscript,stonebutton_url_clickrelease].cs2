@@ -4,4 +4,4 @@ if (clientclock < $int0) {
 	return;
 }
 if_setontimer(null, $component1);
-~stonebutton_url_draw(0, 1, $component1, $string0, $string1);
+~stonebutton_url_draw(false, true, $component1, $string0, $string1);

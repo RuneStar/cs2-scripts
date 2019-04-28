@@ -1,8 +1,8 @@
 // 1560
-script1560(component $component0, string $string0, int $int1, int $int2)(int)
+script1560(component $component0, string $string0, boolean $boolean1, int $int2)(int)
 cc_deleteall($component0);
 def_int $int3 = 0;
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	$int3 = ~v2_stone_button_in_filled($component0);
 } else {
 	$int3 = ~v2_stone_button_out_filled($component0);

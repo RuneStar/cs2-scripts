@@ -1,8 +1,8 @@
 // 2127
-script2127(int $int0, component $component1, string $string0, component $component2, component $component3, component $component4)
+script2127(boolean $boolean0, component $component1, string $string0, component $component2, component $component3, component $component4)
 cc_deleteall($component1);
 def_int $int5 = 0;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	$int5 = ~v2_stone_button_in_filled($component1);
 } else {
 	$int5 = ~v2_stone_button_out_filled($component1);

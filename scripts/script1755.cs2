@@ -1,12 +1,12 @@
 // 1755
-script1755(int $int0, component $component1, int $int2, int $int3, int $int4, int $colour5)
+script1755(boolean $boolean0, component $component1, int $int2, int $int3, int $int4, int $colour5)
 if (cc_find($component1, $int2) = ^true) {
 	cc_setcolour($colour5);
 }
 if (($int3 ! -1) & (cc_find($component1, $int3) = ^true)) {
 	cc_setcolour($colour5);
 }
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	if (cc_find($component1, $int4) = ^true) {
 		cc_sethide(false);
 	}

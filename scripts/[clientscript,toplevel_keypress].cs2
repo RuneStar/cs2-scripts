@@ -1,9 +1,9 @@
 // 905
-[clientscript,toplevel_keypress](int $int0, enum $enum1, int $int2)
+[clientscript,toplevel_keypress](int $int0, enum $enum1, boolean $boolean2)
 if ((if_gettop = 80) & (%varbit1463 = 1)) {
 	~script2186($int0);
 } else if ((if_gettop = 165) & (%varbit6331 = 1)) {
 	~deadman_map_keypress($int0);
 } else {
-	~toplevel_keypress($int0, $enum1, $int2);
+	~toplevel_keypress($int0, $enum1, $boolean2);
 }

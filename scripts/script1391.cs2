@@ -29,12 +29,12 @@ if ($int1 = $int2) {
 } else {
 	if ($int1 = $int5) {
 		cc_setcolour(^yellow);
-		if_setonmouseleave("script85(event_com, $int7, 16776960)", $component0);
+		if_setonmouseleave("script85(event_com, $int7, ^yellow)", $component0);
 	} else {
 		cc_setcolour(0xff981f);
-		if_setonmouseleave("script85(event_com, $int7, 16750623)", $component0);
+		if_setonmouseleave("script85(event_com, $int7, 0xff981f)", $component0);
 	}
-	if_setonmouserepeat("script85(event_com, $int7, 16777215)", $component0);
+	if_setonmouserepeat("script85(event_com, $int7, ^white)", $component0);
 	if_setonop("poh_viewer_setlevel(true, $int1, $int3, $int4)", $component0);
 	if_setop(1, $string0, $component0);
 }

@@ -13,8 +13,8 @@ cc_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_top);
 .cc_settext($string0);
 if ($component1 ! $component8) {
 	cc_setgraphic("combatboxesmed,0");
-	cc_setonmouseover("script85(event_com, .cc_getid, 16777215)");
-	cc_setonmouseleave("script85(event_com, .cc_getid, 16750623)");
+	cc_setonmouseover("script85(event_com, .cc_getid, ^white)");
+	cc_setonmouseleave("script85(event_com, .cc_getid, 0xff981f)");
 	cc_setop(1, $string0);
 	cc_setonop("slayer_rewards_tabs($component0, $component4, $component5, $component6, $component7, $component1)");
 } else {

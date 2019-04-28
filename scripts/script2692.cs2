@@ -1,7 +1,7 @@
 // 2692
-script2692(int $int0, int $int1)
+script2692(boolean $boolean0, boolean $boolean1)
 def_int $int2 = 0;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	$int2 = ~v2_stone_button_in_filled(100:33);
 } else {
 	$int2 = ~v2_stone_button_out_filled(100:33);
@@ -12,7 +12,7 @@ cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(b12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	cc_setcolour(^white);
 	cc_settext("...");
 	if_clearops(100:33);

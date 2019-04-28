@@ -1,7 +1,7 @@
 // 1101
-[proc,bugreport_drawbutton](int $int0, component $component1, string $string0)
+[proc,bugreport_drawbutton](boolean $boolean0, component $component1, string $string0)
 def_int $int2 = 0;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	$int2 = ~v2_stone_button_in_filled($component1);
 } else {
 	$int2 = ~v2_stone_button_out_filled($component1);
@@ -9,7 +9,7 @@ if ($int0 = 1) {
 cc_create($component1, ^iftype_text, $int2);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	cc_setcolour(0xffa82f);
 } else {
 	cc_setcolour(0xff981f);

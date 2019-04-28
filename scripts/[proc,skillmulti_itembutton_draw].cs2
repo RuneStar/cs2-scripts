@@ -1,5 +1,5 @@
 // 2054
-[proc,skillmulti_itembutton_draw](int $int0, obj $obj1, component $component2, int $int3, int $int4)
+[proc,skillmulti_itembutton_draw](boolean $boolean0, obj $obj1, component $component2, int $int3, int $int4)
 if_setsize($int3, $int4, ^setsize_abs, ^setsize_abs, $component2);
 cc_deleteall($component2);
 def_int $int5 = 0;
@@ -8,7 +8,7 @@ while ($int5 <= 28) {
 	cc_sethide(true);
 	$int5 = calc($int5 + 1);
 }
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	$int5 = ~script2044($component2, $int5);
 } else {
 	$int5 = ~script2045($component2, $int5);

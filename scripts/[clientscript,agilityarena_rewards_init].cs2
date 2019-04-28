@@ -20,7 +20,7 @@ cc_deleteall($component10);
 ~agilityarena_rewards_gracefulbutton_init($component17, null, null, "Whole set", 250);
 def_string $string0 = "Dismiss";
 if_setsize(calc(50 + parawidth($string0, 512, p12_full)), if_getheight($component18), ^setsize_abs, ^setsize_abs, $component18);
-~agilityarena_rewards_gracefulcancel($component18, $string0, 0);
+~agilityarena_rewards_gracefulcancel($component18, $string0, false);
 if_setonmouserepeat("agilityarena_rewards_gracefulcancel($component18, $string0, true)", $component18);
 if_setonmouseleave("agilityarena_rewards_gracefulcancel($component18, $string0, false)", $component18);
 if_setop(1, $string0, $component18);

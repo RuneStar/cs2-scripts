@@ -2,5 +2,5 @@
 [clientscript,scrollbar_vertical_up](component $component0, component $component1)
 def_int $int2 = calc(if_getscrolly($component1) - 4);
 if (cc_find($component0, 1) = ^true) {
-	~scrollbar_vertical_doscroll($component0, $component1, $int2, 1);
+	~scrollbar_vertical_doscroll($component0, $component1, $int2, true);
 }

@@ -1,6 +1,6 @@
 // 2048
 [proc,skillmulti_itembutton_init](int $int0, obj $obj1, string $string0, component $component2, int $int3, int $int4, int $int5, int $int6)
-~skillmulti_itembutton_draw(0, $obj1, $component2, $int5, $int6);
+~skillmulti_itembutton_draw(false, $obj1, $component2, $int5, $int6);
 if_setonmouseover("skillmulti_itembutton_hover(true, $obj1, $component2, $int5, $int6)", $component2);
 if_setonmouseleave("skillmulti_itembutton_hover(false, $obj1, $component2, $int5, $int6)", $component2);
 def_string $string1 = enum(int, string, 1812, $int0);

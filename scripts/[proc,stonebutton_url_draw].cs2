@@ -1,7 +1,7 @@
 // 1086
-[proc,stonebutton_url_draw](int $int0, int $int1, component $component2, string $string0, string $string1)
+[proc,stonebutton_url_draw](boolean $boolean0, boolean $boolean1, component $component2, string $string0, string $string1)
 def_int $int3 = 0;
-if (($int0 = 1) | ($int1 = 0)) {
+if (($boolean0 = true) | ($boolean1 = false)) {
 	$int3 = ~v2_stone_button_in_filled($component2);
 } else {
 	$int3 = ~v2_stone_button_out_filled($component2);
@@ -9,9 +9,9 @@ if (($int0 = 1) | ($int1 = 0)) {
 cc_create($component2, ^iftype_text, $int3);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-if ($int1 = 0) {
+if ($boolean1 = false) {
 	cc_setcolour(^white);
-} else if ($int0 = 1) {
+} else if ($boolean0 = true) {
 	cc_setcolour(0xffa82f);
 } else {
 	cc_setcolour(0xff981f);
@@ -20,7 +20,7 @@ cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext($string0);
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	if_setonmouseover("stonebutton_url_draw(true, true, $component2, $string0, $string1)", $component2);
 	if_setonmouseleave("stonebutton_url_draw(false, true, $component2, $string0, $string1)", $component2);
 	if_setonclick("stonebutton_url_click($component2, $string0, $string1)", $component2);

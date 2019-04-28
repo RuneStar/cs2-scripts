@@ -1,7 +1,7 @@
 // 433
-[clientscript,grouping_dropdown](int $int0)
+[clientscript,grouping_dropdown](boolean $boolean0)
 sound_synth(2266, 1, 0);
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	if_sethide(false, 76:14);
 } else {
 	if_sethide(true, 76:14);

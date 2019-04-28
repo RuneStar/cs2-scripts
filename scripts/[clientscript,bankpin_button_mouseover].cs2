@@ -1,7 +1,7 @@
 // 684
-[clientscript,bankpin_button_mouseover](int $int0, component $component1, int $int2, int $int3)
+[clientscript,bankpin_button_mouseover](boolean $boolean0, component $component1, int $int2, int $int3)
 if ((cc_find($component1, $int2) = ^true) & (.cc_find($component1, $int3) = ^true)) {
-	if ($int0 = 1) {
+	if ($boolean0 = true) {
 		cc_settrans(255);
 		.cc_sethide(false);
 	} else {

@@ -23,15 +23,15 @@ while ($int48 <= 23) {
 	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, calc($int48 * 25), ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setfill(true);
-	cc_setonmouseover("script1015(event_com, event_comid, 16777215, 225)");
+	cc_setonmouseover("script1015(event_com, event_comid, ^white, 225)");
 	if (calc($int48 % 2) = 0) {
 		cc_setcolour(^white);
 		cc_settrans(255);
-		cc_setonmouseleave("script1015(event_com, event_comid, 16777215, 255)");
+		cc_setonmouseleave("script1015(event_com, event_comid, ^white, 255)");
 	} else {
 		cc_setcolour(^black);
 		cc_settrans(225);
-		cc_setonmouseleave("script1015(event_com, event_comid, 0, 225)");
+		cc_setonmouseleave("script1015(event_com, event_comid, ^black, 225)");
 	}
 	cc_setop(1, "Configure");
 	if ($int48 < 23) {
@@ -105,14 +105,14 @@ cc_settextshadow(true);
 ~script1016($component31);
 ~script1016($component32);
 def_string $string0 = "Discard";
-~script1018(0, 0xff2020, $string0, $component45);
-if_setonmouseover("script1017(true, 16719904, $string0, event_com)", $component45);
-if_setonmouseleave("script1017(false, 16719904, $string0, event_com)", $component45);
+~script1018(false, 0xff2020, $string0, $component45);
+if_setonmouseover("script1017(true, 0xff2020, $string0, event_com)", $component45);
+if_setonmouseleave("script1017(false, 0xff2020, $string0, event_com)", $component45);
 if_setonop("script1023(event_opindex, -1, null, $component3, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36, $component37, $component38, $component39, $component40, $component41, $component42, $component43, $component44, $component45, $component46)", $component45);
 $string0 = "Save";
-$int48 = ~script1018(0, ^green, $string0, $component46);
-if_setonmouseover("script1017(true, 65280, $string0, event_com)", $component46);
-if_setonmouseleave("script1017(false, 65280, $string0, event_com)", $component46);
-if_setonop("script1019(event_opindex, event_com, $int48, 65280)", $component46);
+$int48 = ~script1018(false, ^green, $string0, $component46);
+if_setonmouseover("script1017(true, ^green, $string0, event_com)", $component46);
+if_setonmouseleave("script1017(false, ^green, $string0, event_com)", $component46);
+if_setonop("script1019(event_opindex, event_com, $int48, ^green)", $component46);
 ~script1026($component3, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36, $component37, $component38, $component39, $component40, $component41, $component42, $component43, $component44, $component45, $component46);
 if_setonvartransmit("script1025($component3, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36, $component37, $component38, $component39, $component40, $component41, $component42, $component43, $component44, $component45, $component46){var638, var261, var262, var1228, var1229, var1230, var1231, var1232, var1233, var1234, var1235, var1236, var1237, var1238, var1239, var1240, var1241, var1242, var1243, var1244, var1245, var1246, var1247, var1248, var1249, var1250, var1251, var1252, var1253, var1254, var1255, var1256, var1257, var1258, var1259, var1260, var1261, var1262, var1263, var1264, var1265, var1266, var1267, var1268, var1269, var1270, var1271, var1272, var1273, var1274, var1275}", $component2);

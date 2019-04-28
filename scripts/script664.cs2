@@ -1,8 +1,8 @@
 // 664
-script664(int $int0)
+script664(boolean $boolean0)
 def_int $int1 = clientclock;
 def_int $int2 = -1;
-if ((($int0 = 1) | ($int1 = %varcint65)) | (calc($int1 % 25) = 0)) {
+if ((($boolean0 = true) | ($int1 = %varcint65)) | (calc($int1 % 25) = 0)) {
 	$int2 = ~script553;
 	if ($int1 = %varcint65) {
 		~rebuildchatbox($int2);

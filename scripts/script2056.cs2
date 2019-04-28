@@ -8,9 +8,9 @@ if ($component2 ! 270:12) {
 if ($int0 = 1) {
 	~script2047($component2);
 	$string0 = "<col=ffffff><$string0></col>";
-	~script2058(1, $string0, $component2);
+	~script2058(true, $string0, $component2);
 } else {
-	~script2058(0, $string0, $component2);
+	~script2058(false, $string0, $component2);
 	if_setonmouseover("script2057(true, $string0, $component2)", $component2);
 	if_setonmouseleave("script2057(false, $string0, $component2)", $component2);
 	if_setop(1, $string0, $component2);

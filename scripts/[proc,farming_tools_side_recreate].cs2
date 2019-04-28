@@ -1,9 +1,9 @@
 // 2751
-[proc,farming_tools_side_recreate](component $component0, obj $obj1, string $string0, int $int2)
+[proc,farming_tools_side_recreate](component $component0, obj $obj1, string $string0, boolean $boolean2)
 cc_deleteall($component0);
 def_int $int3 = 0;
 def_int $int4 = 0;
-if ($int2 = 0) {
+if ($boolean2 = false) {
 	$int3 = ~v2_stone_button_out_filled($component0);
 } else {
 	$int3 = ~v2_stone_button_in_filled($component0);

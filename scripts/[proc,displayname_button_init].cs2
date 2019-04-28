@@ -1,6 +1,6 @@
 // 1672
 [proc,displayname_button_init](component $component0, string $string0)
-~displayname_button_draw($component0, $string0, 0);
+~displayname_button_draw($component0, $string0, false);
 if_setop(1, removetags($string0), $component0);
 if_setonmouserepeat("displayname_button_draw(event_com, $string0, true)", $component0);
 if_setonmouseleave("displayname_button_draw(event_com, $string0, false)", $component0);

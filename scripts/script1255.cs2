@@ -1,7 +1,7 @@
 // 1255
-script1255(int $int0, component $component1, string $string0, string $string1, obj $obj2)
+script1255(boolean $boolean0, component $component1, string $string0, string $string1, obj $obj2)
 def_int $int3 = 0;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	$int3 = ~v2_stone_button_in_filled($component1);
 } else {
 	$int3 = ~v2_stone_button_out_filled($component1);

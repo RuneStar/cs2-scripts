@@ -5,7 +5,7 @@ if (cc_find($component1, 1) = ^true) {
 	if ((%varcint80 < 0) | (%varcint80 >= if_getscrollheight($component0))) {
 		%varcint80 = 0;
 	}
-	~scrollbar_vertical_doscroll($component1, $component0, %varcint80, 1);
+	~scrollbar_vertical_doscroll($component1, $component0, %varcint80, true);
 } else {
 	%varcint80 = 0;
 }

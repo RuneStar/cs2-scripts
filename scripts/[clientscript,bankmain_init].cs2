@@ -50,8 +50,8 @@ while ($int33 <= 9) {
 	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 	cc_settextfont(p11_full);
 	cc_setcolour(0xe4d8a2);
-	cc_setonmouserepeat("script85(event_com, event_comid, 16777215)");
-	cc_setonmouseleave("script85(event_com, event_comid, 14997666)");
+	cc_setonmouserepeat("script85(event_com, event_comid, ^white)");
+	cc_setonmouseleave("script85(event_com, event_comid, 0xe4d8a2)");
 	cc_settextshadow(true);
 	cc_settext("Tab <tostring($int33)>");
 	cc_setop(1, "View tab");
@@ -68,7 +68,7 @@ while ($int33 <= 9) {
 	cc_settrans(255);
 	$int33 = calc($int33 + 1);
 }
-~bankmain_menubutton(0, $component0, $component1, $component3, $component6, $component7, $component8, $component15, $component16, $component14, $component17, $component18, $component19, $component20, $component4, $component5, $component27, $component28, $component29, $component30);
+~bankmain_menubutton(false, $component0, $component1, $component3, $component6, $component7, $component8, $component15, $component16, $component14, $component17, $component18, $component19, $component20, $component4, $component5, $component27, $component28, $component29, $component30);
 if_setoninvtransmit("bankmain_build($component0, $component1, $component3, $component6, $component7, $component8, $component15, $component16, $component14, $component17, $component18, $component19, $component20, $component27, $component28, $component29, $component30){bank}", $component6);
 if_setonvartransmit("bankmain_build($component0, $component1, $component3, $component6, $component7, $component8, $component15, $component16, $component14, $component17, $component18, $component19, $component20, $component27, $component28, $component29, $component30){var304, var115, var867, var1052, var1053, var1666, var1141}", $component6);
 %varcint51 = $int31;

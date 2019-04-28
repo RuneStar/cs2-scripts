@@ -1,8 +1,8 @@
 // 754
-[clientscript,meslayer_mode14_select](int $int0, int $int1)
+[clientscript,meslayer_mode14_select](obj $obj0, int $int1)
 if ($int1 ! 84) {
 	return;
 }
-resume_objdialog($int0);
+resume_objdialog($obj0);
 sound_synth(2266, 1, 0);
 ~meslayer_close(1, 1);

@@ -4,7 +4,7 @@ if ($int0 ! 1) {
 	return;
 }
 sound_synth(2266, 1, 0);
-~displayname_button_draw($component1, $string0, 1);
+~displayname_button_draw($component1, $string0, true);
 if_setonmouserepeat(null, $component1);
 if_setonmouseleave(null, $component1);
 if_setonop(null, $component1);

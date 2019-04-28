@@ -1,4 +1,4 @@
 // 1084
 [clientscript,stonebutton_url](component $component0, string $string0, string $string1)
 if_setsize(calc(parawidth($string0, ^max_32bit_int, p11_full) + 28), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
-~stonebutton_url_draw(0, 1, $component0, $string0, $string1);
+~stonebutton_url_draw(false, true, $component0, $string0, $string1);

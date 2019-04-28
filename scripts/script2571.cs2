@@ -1,9 +1,9 @@
 // 2571
-script2571(component $component0, string $string0, int $int1)
+script2571(component $component0, string $string0, boolean $boolean1)
 cc_deleteall($component0);
 def_int $int2 = 0;
 def_int $int3 = 0;
-if ($int1 = 1) {
+if ($boolean1 = true) {
 	$int2 = ~script2044($component0, $int2);
 } else {
 	$int2 = ~script2045($component0, $int2);

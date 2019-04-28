@@ -1,8 +1,8 @@
 // 1733
-[proc,worldmap_key_toggle](int $int0, int $int1, component $component2, component $component3, component $component4)
+[proc,worldmap_key_toggle](boolean $boolean0, int $int1, component $component2, component $component3, component $component4)
 cc_deleteall($component4);
 def_int $int5 = 0;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	if_sethide(false, $component3);
 	if_setsize(calc($int1 + 12), 50, ^setsize_minus, ^setsize_minus, $component2);
 	$int5 = ~v2_stone_button_in_filled($component4);

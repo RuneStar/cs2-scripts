@@ -1,5 +1,5 @@
 // 2271
-script2271(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14)
+script2271(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, boolean $boolean14)
 cc_deleteall($component3);
 cc_deleteall($component4);
 cc_deleteall($component5);
@@ -73,7 +73,7 @@ while ($int15 <= enum_getoutputcount(1375)) {
 	$int15 = calc($int15 + 1);
 }
 if_setscrollsize(0, $int17, $component1);
-if (($int14 = 1) | ($int17 < if_getheight($component1))) {
+if (($boolean14 = true) | ($int17 < if_getheight($component1))) {
 	if_setscrollpos(0, 0, $component1);
 	~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 } else {

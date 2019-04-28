@@ -53,8 +53,8 @@ if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (c
 		if (string_length($string3) > 0) {
 			if_setop(6, "Open", $component10);
 			if_setop(7, "Check", $component10);
-			if_setonmouserepeat("chat_recol(if_getlayer($component10), $int9, 16777215)", $component10);
-			if_setonmouseleave("chat_recol(if_getlayer($component10), $int9, 16776960)", $component10);
+			if_setonmouserepeat("chat_recol(if_getlayer($component10), $int9, ^white)", $component10);
+			if_setonmouseleave("chat_recol(if_getlayer($component10), $int9, ^yellow)", $component10);
 		} else {
 			if_setonmouserepeat(null, $component10);
 			if_setonmouseleave(null, $component10);

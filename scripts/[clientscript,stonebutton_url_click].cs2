@@ -1,5 +1,5 @@
 // 1087
 [clientscript,stonebutton_url_click](component $component0, string $string0, string $string1)
-~stonebutton_url_draw(-1, 0, $component0, $string0, $string1);
+~stonebutton_url_draw(null, false, $component0, $string0, $string1);
 if_setontimer("stonebutton_url_clickrelease(calc(clientclock + 20), $component0, $string0, $string1)", $component0);
-~script2399($string1, true, 1);
+~script2399($string1, true, true);

@@ -47,8 +47,8 @@ while ($int11 < 4) {
 			if_setposition(2, $int10, ^setpos_abs_left, ^setpos_abs_top, $component6);
 			if_setposition(20, $int10, ^setpos_abs_left, ^setpos_abs_top, $component7);
 			if_setopbase("<col=ff981f><if_gettext($component7)></col>", $component5);
-			if_setonmouseover("script45($component7, 16744319)", $component5);
-			if_setonmouseleave("script45($component7, 16727871)", $component5);
+			if_setonmouseover("script45($component7, 0xff7f7f)", $component5);
+			if_setonmouseleave("script45($component7, 0xff3f3f)", $component5);
 			$boolean12 = false;
 			$int10 = calc(($int10 + $int9) + 3);
 		} else {
@@ -116,8 +116,8 @@ while ($int13 < $int15) {
 	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 	cc_settext($string0);
 	if_setopbase("<col=ff981f><$string0></col>", $array0($int13));
-	if_setonmouseover("script85($component0, cc_getid, 16744319)", $array0($int13));
-	if_setonmouseleave("script85($component0, cc_getid, 16727871)", $array0($int13));
+	if_setonmouseover("script85($component0, cc_getid, 0xff7f7f)", $array0($int13));
+	if_setonmouseleave("script85($component0, cc_getid, 0xff3f3f)", $array0($int13));
 	$int10 = calc(($int10 + $int9) + 3);
 	$int13 = calc($int13 + 1);
 }
@@ -128,8 +128,8 @@ if (string_length($string0) > 0) {
 	if_setsize($int8, $int9, ^setsize_abs, ^setsize_abs, 381:139);
 	if_setposition(20, $int10, ^setpos_abs_left, ^setpos_abs_top, 381:139);
 	if_setcolour(0xff3f3f, 381:139);
-	if_setonmouseover("script45(event_com, 16744319)", 381:139);
-	if_setonmouseleave("script45(event_com, 16727871)", 381:139);
+	if_setonmouseover("script45(event_com, 0xff7f7f)", 381:139);
+	if_setonmouseleave("script45(event_com, 0xff3f3f)", 381:139);
 	$int10 = calc(($int10 + $int9) + 3);
 } else {
 	if_sethide(true, 381:139);

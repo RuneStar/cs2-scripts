@@ -1,6 +1,6 @@
 // 1004
-[clientscript,xpdrops_stattransmit](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, int $int20, int $int21, int $int22, int $int23, int $int24, int $int25, int $int26, int $int27, int $int28, int $int29, int $int30, int $int31, int $int32, int $int33)
-if (($int0 = 1) & (%varcint207 = null)) {
+[clientscript,xpdrops_stattransmit](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, int $int20, int $int21, int $int22, int $int23, int $int24, int $int25, int $int26, int $int27, int $int28, int $int29, int $int30, int $int31, int $int32, int $int33)
+if (($boolean0 = true) & (%varcint207 = null)) {
 	return;
 }
 def_int $int34 = calc(23 + 1);
@@ -8,7 +8,7 @@ def_stat $array0($int34);
 def_int $array1($int34);
 def_int $int35 = 0;
 def_int $int36 = 0;
-if ($int0 = 1) {
+if ($boolean0 = true) {
 	while (%varcint207 ! null) {
 		$array0($int35) = enum(int, stat, 681, coordx(%varcint207));
 		$array1($int35) = coordy(%varcint207);
@@ -181,7 +181,7 @@ if ((($int35 > 0) & ($int16 > 0)) & (calc(clientclock - %varcint76) > 10)) {
 	}
 	$int43 = calc((($int41 * enum(int, int, 1171, %varbit4722)) / $int42) + 1);
 	while ($int37 < $int35) {
-		if (($int38 = 0) & ($int0 = 0)) {
+		if (($int38 = 0) & ($boolean0 = false)) {
 			%varcint72 = $array0($int37);
 			$int38 = 1;
 		}
@@ -210,7 +210,7 @@ if ((($int35 > 0) & ($int16 > 0)) & (calc(clientclock - %varcint76) > 10)) {
 				$int37 = calc($int37 + 1);
 			}
 			$string0 = ~script46($int46, ",");
-			if ($int0 = 1) {
+			if ($boolean0 = true) {
 				$string0 = "<img=11> <$string0>";
 			}
 			if (cc_find($component47, 0) = ^true) {
@@ -228,7 +228,7 @@ if ((($int35 > 0) & ($int16 > 0)) & (calc(clientclock - %varcint76) > 10)) {
 	}
 	~xpdrops_showpanel($component1, $component3, $component8, $component9);
 }
-if ($int0 = 0) {
+if ($boolean0 = false) {
 	~xpdrops_setbar($component3, $component4, $component5, $component6, $component7, $component8, $component9);
 	~script1003($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $int10);
 }

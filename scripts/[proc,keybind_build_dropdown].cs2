@@ -12,8 +12,8 @@ while (($int4 = 0) | (enum(int, int, 1160, $int4) ! 0)) {
 	cc_settextshadow(false);
 	cc_setcolour(0xff981f);
 	cc_setop(1, "Select");
-	cc_setonmouseover("script85(event_com, event_comid, 16777215)");
-	cc_setonmouseleave("script85(event_com, event_comid, 16747039)");
+	cc_setonmouseover("script85(event_com, event_comid, ^white)");
+	cc_setonmouseleave("script85(event_com, event_comid, 0xff8a1f)");
 	cc_setonop("keybind_dropdown_select(event_com, event_comid, $component1)");
 	$int4 = calc($int4 + 1);
 	if (($int4 ! 0) & (calc($int4 % 2) = 0)) {
