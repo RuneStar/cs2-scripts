@@ -39,22 +39,22 @@ if ($stat7 ! null) {
 	if ($int11 = -1) {
 		$int15 = calc($int12 - $int10);
 		if ($int15 >= 0) {
-			$string3 = ~script46($int15, $string0);
+			$string3 = ~tostring_spacer($int15, $string0);
 			if_settext("+<$string3>", $component2);
 			$string1 = "<enum(stat, string, 680, $stat7)> tracker:|Tracking from:|Total XP:";
-			$string2 = "<$string3>|<~script46($int10, $string0)>|<~script46($int12, $string0)>";
+			$string2 = "<$string3>|<~tostring_spacer($int10, $string0)>|<~tostring_spacer($int12, $string0)>";
 		} else {
 			if_settext("N/A", $component2);
 			$string1 = "Your <enum(stat, string, 680, $stat7)> tracker is invalid.<br>Set a lower starting point.";
 		}
 	} else {
-		$string3 = ~script46($int12, $string0);
+		$string3 = ~tostring_spacer($int12, $string0);
 		if_settext($string3, $component2);
 		$int13 = stat_base($stat7);
 		if ($int13 < 99) {
 			$int14 = enum(int, int, 256, calc($int13 + 1));
 			$string1 = "<enum(stat, string, 680, $stat7)> XP:|<col=7f7f7f>Next level:</col>|Remaining:";
-			$string2 = "<$string3>|<col=7f7f7f><~script46($int14, $string0)></col>|<~script46(calc($int14 - $int12), $string0)>";
+			$string2 = "<$string3>|<col=7f7f7f><~tostring_spacer($int14, $string0)></col>|<~tostring_spacer(calc($int14 - $int12), $string0)>";
 		} else {
 			$string1 = "<enum(stat, string, 680, $stat7)> XP:";
 			$string2 = $string3;
@@ -73,11 +73,11 @@ if ($stat7 ! null) {
 		$int15 = calc($int16 % 1000);
 		$int18 = calc(($int17 * pow(10, 6)) + ($int16 / 1000));
 		if ($int18 > %var1228) {
-			$string3 = "<~script46(calc($int18 - %var1228), $string0)><$string0><~script47($int15)>";
+			$string3 = "<~tostring_spacer(calc($int18 - %var1228), $string0)><$string0><~script47($int15)>";
 			if_settext("+<$string3>", $component2);
 			$string1 = "Total XP tracker:|Tracking from:|Total XP:";
 			if (%var1228 > 0) {
-				$string2 = "<$string3>|<~script46(%var1228, $string0)><$string0>000|<~stats_tostring_totalxp($int17, $int16)>";
+				$string2 = "<$string3>|<~tostring_spacer(%var1228, $string0)><$string0>000|<~stats_tostring_totalxp($int17, $int16)>";
 			} else {
 				$string2 = "<$string3>|0|<~stats_tostring_totalxp($int17, $int16)>";
 			}
@@ -86,7 +86,7 @@ if ($stat7 ! null) {
 			if_settext("+<$string3>", $component2);
 			$string1 = "Total XP tracker:|Tracking from:|Total XP:";
 			if (%var1228 > 0) {
-				$string2 = "<$string3>|<~script46(%var1228, $string0)><$string0>000|<~stats_tostring_totalxp($int17, $int16)>";
+				$string2 = "<$string3>|<~tostring_spacer(%var1228, $string0)><$string0>000|<~stats_tostring_totalxp($int17, $int16)>";
 			} else {
 				$string2 = "<$string3>|0|<~stats_tostring_totalxp($int17, $int16)>";
 			}
@@ -122,10 +122,10 @@ if ($stat8 ! null) {
 	if (($int11 ! -1) & ($int11 > $int10)) {
 		$int21 = ~xpdrops_setbar_progress($component4, $int10, $int12, $int11, 1);
 		$string1 = "<enum(stat, string, 680, $stat8)> goal|<col=7f7f7f>Start:</col>|Current:|<col=7f7f7f>End:</col>";
-		$string2 = "<~xpdrops_percentage_tostring($int21)>|<col=7f7f7f><~script46($int10, $string0)></col>|<~script46($int12, $string0)>|<col=7f7f7f><~script46($int11, $string0)></col>";
+		$string2 = "<~xpdrops_percentage_tostring($int21)>|<col=7f7f7f><~tostring_spacer($int10, $string0)></col>|<~tostring_spacer($int12, $string0)>|<col=7f7f7f><~tostring_spacer($int11, $string0)></col>";
 		if ($int12 < $int11) {
 			$string1 = append($string1, "|Remaining:");
-			$string2 = append($string2, "|<~script46(calc($int11 - $int12), $string0)>");
+			$string2 = append($string2, "|<~tostring_spacer(calc($int11 - $int12), $string0)>");
 		}
 	} else {
 		$int13 = stat_base($stat8);
@@ -137,10 +137,10 @@ if ($stat8 ! null) {
 		$int21 = ~xpdrops_setbar_progress($component4, enum(int, int, 256, $int13), $int12, $int14, 0);
 		if ($int13 < 99) {
 			$string1 = "<enum(stat, string, 680, $stat8)>|Current XP:|<col=7f7f7f>Next level:</col>|Remaining:";
-			$string2 = "<~xpdrops_percentage_tostring($int21)>|<~script46($int12, $string0)>|<col=7f7f7f><~script46($int14, $string0)></col>|<~script46(calc($int14 - $int12), $string0)>";
+			$string2 = "<~xpdrops_percentage_tostring($int21)>|<~tostring_spacer($int12, $string0)>|<col=7f7f7f><~tostring_spacer($int14, $string0)></col>|<~tostring_spacer(calc($int14 - $int12), $string0)>";
 		} else {
 			$string1 = "<enum(stat, string, 680, $stat8)> XP:";
-			$string2 = ~script46($int12, $string0);
+			$string2 = ~tostring_spacer($int12, $string0);
 		}
 	}
 } else if (%varbit4698 = 30) {
@@ -169,9 +169,9 @@ if ($stat8 ! null) {
 		}
 		$string1 = "Total XP goal|<col=7f7f7f>Start:</col>|Current:|<col=7f7f7f>End:</col>";
 		if (%var1228 > 0) {
-			$string2 = "<~xpdrops_percentage_tostring($int21)>|<col=7f7f7f><~script46(%var1228, $string0)><$string0>000</col>|<~stats_tostring_totalxp($int17, $int16)>|<col=7f7f7f><~script46(%var1252, $string0)><$string0>000</col>";
+			$string2 = "<~xpdrops_percentage_tostring($int21)>|<col=7f7f7f><~tostring_spacer(%var1228, $string0)><$string0>000</col>|<~stats_tostring_totalxp($int17, $int16)>|<col=7f7f7f><~tostring_spacer(%var1252, $string0)><$string0>000</col>";
 		} else {
-			$string2 = "<~xpdrops_percentage_tostring($int21)>|<col=7f7f7f>0</col>|<~stats_tostring_totalxp($int17, $int16)>|<col=7f7f7f><~script46(%var1252, $string0)><$string0>000</col>";
+			$string2 = "<~xpdrops_percentage_tostring($int21)>|<col=7f7f7f>0</col>|<~stats_tostring_totalxp($int17, $int16)>|<col=7f7f7f><~tostring_spacer(%var1252, $string0)><$string0>000</col>";
 		}
 		if (($int23 > 0) | ($int24 > 0)) {
 			$string1 = append($string1, "|Remaining:");

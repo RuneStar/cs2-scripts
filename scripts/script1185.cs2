@@ -2,11 +2,11 @@
 script1185(component $component0, component $component1)
 def_string $string0 = "";
 if (%varbit4820 > %varbit4821) {
-	$string0 = "<col=ffffff><~script46(%varbit4820, ",")></col><br><~script46(%varbit4821, ",")>";
+	$string0 = "<col=ffffff><~tostring_spacer(%varbit4820, ",")></col><br><~tostring_spacer(%varbit4821, ",")>";
 } else if (%varbit4820 < %varbit4821) {
-	$string0 = "<~script46(%varbit4820, ",")><br><col=ffffff><~script46(%varbit4821, ",")></col>";
+	$string0 = "<~tostring_spacer(%varbit4820, ",")><br><col=ffffff><~tostring_spacer(%varbit4821, ",")></col>";
 } else {
-	$string0 = "<~script46(%varbit4820, ",")><br><~script46(%varbit4821, ",")>";
+	$string0 = "<~tostring_spacer(%varbit4820, ",")><br><~tostring_spacer(%varbit4821, ",")>";
 }
 if (%varbit4822 >= ^max_32bit_int) {
 	if_settext("Your clan:<br>Opponents:<br>Starting soon...", $component0);

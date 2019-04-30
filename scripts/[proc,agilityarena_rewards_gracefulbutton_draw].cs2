@@ -4,7 +4,7 @@ def_string $string1 = "";
 if ($int3 = 1) {
 	$string1 = "<$string0><br>1 ticket";
 } else {
-	$string1 = "<$string0><br><~script46($int3, ",")> tickets";
+	$string1 = "<$string0><br><~tostring_spacer($int3, ",")> tickets";
 }
 def_int $int5 = 0;
 if ($obj2 ! null) {

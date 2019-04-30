@@ -3,9 +3,9 @@
 def_int $int6 = 0;
 if ($int1 = 995) {
 	$int6 = 1;
-	if_settext(~script46($int2, ","), $component5);
+	if_settext(~tostring_spacer($int2, ","), $component5);
 } else {
-	if_settext(~script46($int2, ","), $component4);
+	if_settext(~tostring_spacer($int2, ","), $component4);
 }
 if (cc_find($component0, $int6) = ^true) {
 	cc_sethide(false);

@@ -26,7 +26,7 @@ cc_setposition(3, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setgraphic("bankbuttons,7");
 def_string $string0 = "Release all placeholders";
 if ($int3 > 0) {
-	$string0 = append($string0, " (<~script46($int3, ",")>)");
+	$string0 = append($string0, " (<~tostring_spacer($int3, ",")>)");
 }
 if_setop(6, $string0, $component0);
 def_int $int6 = parawidth($string0, calc(if_getwidth(if_getlayer($component0)) - 40), p12_full);

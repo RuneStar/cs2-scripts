@@ -28,9 +28,9 @@ if (($int6 > 0) & ($int7 > 0)) {
 		if ($int7 < 2) {
 			$int7 = 2;
 		}
-		$string0 = "Extend remaining <tostring($int6)> tasks: <~script46($int7, ",")> points";
+		$string0 = "Extend remaining <tostring($int6)> tasks: <~tostring_spacer($int7, ",")> points";
 	} else {
-		$string0 = "Extend remaining task: <~script46($int7, ",")> points";
+		$string0 = "Extend remaining task: <~tostring_spacer($int7, ",")> points";
 	}
 	cc_setcolour(0xff981f);
 	cc_settext($string0);

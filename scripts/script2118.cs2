@@ -21,7 +21,7 @@ if (%varbit1776 = $int4) {
 if (cc_find($component0, $int2) = ^true) {
 	if ($component0 = $component6) {
 		if ($int7 < 1000) {
-			cc_settext("<col=ffffff>Permanent</col><br>Your <text_gender("Iron Man", "Iron Woman")> restrictions can <col=ff0000>never</col> be removed. This option is available only with a skill total of <col=ff0000><~script46(1000, ",")></col>.");
+			cc_settext("<col=ffffff>Permanent</col><br>Your <text_gender("Iron Man", "Iron Woman")> restrictions can <col=ff0000>never</col> be removed. This option is available only with a skill total of <col=ff0000><~tostring_spacer(1000, ",")></col>.");
 		} else {
 			cc_settext("<col=ffffff>Permanent</col><br>Your <text_gender("Iron Man", "Iron Woman")> restrictions can <col=ff0000>never</col> be removed. Do not choose this option unless you are <col=ff0000>really sure</col> you want to be an <text_gender("Iron Man", "Iron Woman")> <col=ff0000>forever</col>.");
 		}

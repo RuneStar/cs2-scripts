@@ -1,13 +1,13 @@
 // 1511
 [proc,raids_overlay_databox](component $component0)
 def_string $string0 = "Total:";
-def_string $string1 = ~script46(%varbit5431, ",");
+def_string $string1 = ~tostring_spacer(%varbit5431, ",");
 def_string $string2 = "<chat_playername>:";
 def_string $string3 = "";
 def_string $string4 = "Time:";
 def_string $string5 = ~script2275(%varbit6386);
 if (%varbit5422 < 131071) {
-	$string3 = ~script46(%varbit5422, ",");
+	$string3 = ~tostring_spacer(%varbit5422, ",");
 } else {
 	$string3 = "<col=ffa82f>Lots!</col>";
 }

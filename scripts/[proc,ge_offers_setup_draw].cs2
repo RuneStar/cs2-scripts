@@ -57,13 +57,13 @@ if (%var1151 ! null) {
 		cc_settext(oc_name(%var1151));
 	}
 	if (cc_find($component0, $int9) = ^true) {
-		cc_settext(~script46(%varbit4396, $string0));
+		cc_settext(~tostring_spacer(%varbit4396, $string0));
 	}
 	if (cc_find($component0, $int10) = ^true) {
 		if (%varbit4398 = 1) {
 			cc_settext("1 coin");
 		} else {
-			cc_settext("<~script46(%varbit4398, $string0)> coins");
+			cc_settext("<~tostring_spacer(%varbit4398, $string0)> coins");
 		}
 	}
 	if ((%varbit4396 > 0) & (calc(^max_32bit_int / %varbit4396) < %varbit4398)) {
@@ -77,7 +77,7 @@ if (%var1151 ! null) {
 			if ($int15 = 1) {
 				cc_settext("1 coin");
 			} else {
-				cc_settext("<~script46($int15, $string0)> coins");
+				cc_settext("<~tostring_spacer($int15, $string0)> coins");
 			}
 		}
 		if ($int15 > 0) {

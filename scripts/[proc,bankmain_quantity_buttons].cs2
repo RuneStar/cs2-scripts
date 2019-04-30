@@ -59,7 +59,7 @@ switch_int (%varbit6590) {
 }
 def_string $string0 = ",";
 if (%varbit3960 > 0) {
-	if_setop(1, "Default quantity: <~script46(%varbit3960, $string0)>", $component3);
+	if_setop(1, "Default quantity: <~tostring_spacer(%varbit3960, $string0)>", $component3);
 } else {
 	if_setop(1, "", $component3);
 }

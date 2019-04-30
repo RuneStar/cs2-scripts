@@ -1,6 +1,6 @@
 // 1603
 [clientscript,deathkeep_infomessage](boolean $boolean0, int $int1, string $string0)
-def_string $string1 = "<col=0000ff><~script46($int1, ",")> x <$string0></col> - ";
+def_string $string1 = "<col=0000ff><~tostring_spacer($int1, ",")> x <$string0></col> - ";
 if ($int1 > 1) {
 	if ($boolean0 = true) {
 		$string1 = append($string1, "You will keep these items should you die.");

@@ -66,13 +66,13 @@ if (cc_find($component0, $int4) = ^true) {
 	cc_settext(oc_name($obj16));
 }
 if (cc_find($component0, $int5) = ^true) {
-	cc_settext(~script46($int17, $string0));
+	cc_settext(~tostring_spacer($int17, $string0));
 }
 if (cc_find($component0, $int6) = ^true) {
 	if ($int19 = 1) {
 		cc_settext("1 coin");
 	} else {
-		cc_settext("<~script46($int19, $string0)> coins");
+		cc_settext("<~tostring_spacer($int19, $string0)> coins");
 	}
 }
 def_int $int22 = 0;
@@ -84,7 +84,7 @@ if (cc_find($component0, $int7) = ^true) {
 		if ($int22 = 1) {
 			cc_settext("1 coin");
 		} else {
-			cc_settext("<~script46($int22, $string0)> coins");
+			cc_settext("<~tostring_spacer($int22, $string0)> coins");
 		}
 	}
 }
@@ -94,14 +94,14 @@ if (cc_find($component8, $int10) = ^true) {
 	if ($boolean21 = true) {
 		if ($int15 = 1) {
 			if ($int20 = 1) {
-				cc_settext("You sold a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f>one</col> coin.");
+				cc_settext("You sold a total of <col=ffb83f><~tostring_spacer($int18, $string0)></col><br>for a total price of <col=ffb83f>one</col> coin.");
 			} else {
-				cc_settext("You sold a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
+				cc_settext("You sold a total of <col=ffb83f><~tostring_spacer($int18, $string0)></col><br>for a total price of <col=ffb83f><~tostring_spacer($int20, $string0)></col> coins.");
 			}
 		} else if ($int20 = 1) {
-			cc_settext("You bought a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f>one</col> coin.");
+			cc_settext("You bought a total of <col=ffb83f><~tostring_spacer($int18, $string0)></col><br>for a total price of <col=ffb83f>one</col> coin.");
 		} else {
-			cc_settext("You bought a total of <col=ffb83f><~script46($int18, $string0)></col><br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
+			cc_settext("You bought a total of <col=ffb83f><~tostring_spacer($int18, $string0)></col><br>for a total price of <col=ffb83f><~tostring_spacer($int20, $string0)></col> coins.");
 		}
 		if (cc_find($component8, $int9) = ^true) {
 			cc_sethide(true);
@@ -109,14 +109,14 @@ if (cc_find($component8, $int10) = ^true) {
 	} else {
 		if ($int15 = 1) {
 			if ($int20 = 1) {
-				cc_settext("You have sold a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f>one</col> coin.");
+				cc_settext("You have sold a total of <col=ffb83f><~tostring_spacer($int18, $string0)></col> so far<br>for a total price of <col=ffb83f>one</col> coin.");
 			} else {
-				cc_settext("You have sold a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
+				cc_settext("You have sold a total of <col=ffb83f><~tostring_spacer($int18, $string0)></col> so far<br>for a total price of <col=ffb83f><~tostring_spacer($int20, $string0)></col> coins.");
 			}
 		} else if ($int20 = 1) {
-			cc_settext("You have bought a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f>one</col> coin.");
+			cc_settext("You have bought a total of <col=ffb83f><~tostring_spacer($int18, $string0)></col> so far<br>for a total price of <col=ffb83f>one</col> coin.");
 		} else {
-			cc_settext("You have bought a total of <col=ffb83f><~script46($int18, $string0)></col> so far<br>for a total price of <col=ffb83f><~script46($int20, $string0)></col> coins.");
+			cc_settext("You have bought a total of <col=ffb83f><~tostring_spacer($int18, $string0)></col> so far<br>for a total price of <col=ffb83f><~tostring_spacer($int20, $string0)></col> coins.");
 		}
 		if (cc_find($component8, $int9) = ^true) {
 			cc_sethide(false);

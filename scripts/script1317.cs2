@@ -17,7 +17,7 @@ if_sethide(false, $component3);
 cc_deleteall($component3);
 def_int $int6 = 0;
 def_int $int7 = inv_getnum(bank, $int0);
-def_string $string0 = "<~script46($int7, ",")> <col=ffffff>x</col> <oc_name($obj5)>";
+def_string $string0 = "<~tostring_spacer($int7, ",")> <col=ffffff>x</col> <oc_name($obj5)>";
 def_string $string1 = "Are you <col=ffffff>sure</col> you<br>want to destroy it?";
 if ($int7 > 1) {
 	$string1 = "Are you <col=ffffff>sure</col> you want<br>to destroy <col=ffffff>all of them</col>?";

@@ -13,7 +13,7 @@ if (($obj6 ! null) & ($int7 > 0)) {
 	if_setgraphic("bankbuttons,7", $component3);
 	if_setop(1, "Unlock", $component2);
 	if ($int7 > 1) {
-		if_settext("Fee to unlock:<br><col=ffffff><~script46($int7, ",")> x <oc_name($obj6)></col>", $component5);
+		if_settext("Fee to unlock:<br><col=ffffff><~tostring_spacer($int7, ",")> x <oc_name($obj6)></col>", $component5);
 	} else {
 		if_settext("Fee to unlock:<br><col=ffffff><oc_name($obj6)></col>", $component5);
 	}

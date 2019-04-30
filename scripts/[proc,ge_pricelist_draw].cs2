@@ -59,7 +59,7 @@ if (%varbit4440 = 1) {
 			if ($int8 = 1) {
 				cc_settext("1 coin");
 			} else {
-				cc_settext("<~script46($int8, ",")> coins");
+				cc_settext("<~tostring_spacer($int8, ",")> coins");
 			}
 		} else if (cc_find(237:2, $int3) = ^true) {
 			cc_sethide(true);
@@ -130,7 +130,7 @@ if (%varbit4440 = 1) {
 			if ($int8 = 1) {
 				cc_settext("<col=ffffff>1 coin</col>");
 			} else {
-				cc_settext("<col=ffffff><~script46($int8, ",")> coins</col>");
+				cc_settext("<col=ffffff><~tostring_spacer($int8, ",")> coins</col>");
 			}
 		} else if (cc_find(237:2, $int3) = ^true) {
 			cc_sethide(true);

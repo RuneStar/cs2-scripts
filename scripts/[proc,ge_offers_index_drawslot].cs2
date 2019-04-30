@@ -149,15 +149,15 @@ if (cc_find($component8, $int12) = ^true) {
 		$string1 = "Collect your items.";
 	} else if (stockmarket_getoffertype($int9) = 1) {
 		if (stockmarket_isofferfinished($int9) = true) {
-			$string1 = "Sold: <oc_name($obj28)><br><~script46($int30, $string2)> / <~script46($int29, $string2)>";
+			$string1 = "Sold: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
 		} else {
-			$string1 = "Selling: <oc_name($obj28)><br><~script46($int30, $string2)> / <~script46($int29, $string2)>";
+			$string1 = "Selling: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
 			cc_setop(2, "Abort offer");
 		}
 	} else if (stockmarket_isofferfinished($int9) = true) {
-		$string1 = "Bought: <oc_name($obj28)><br><~script46($int30, $string2)> / <~script46($int29, $string2)>";
+		$string1 = "Bought: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
 	} else {
-		$string1 = "Buying: <oc_name($obj28)><br><~script46($int30, $string2)> / <~script46($int29, $string2)>";
+		$string1 = "Buying: <oc_name($obj28)><br><~tostring_spacer($int30, $string2)> / <~tostring_spacer($int29, $string2)>";
 		cc_setop(2, "Abort offer");
 	}
 	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component27, $string1, 25, 512)");
@@ -195,7 +195,7 @@ if (cc_find($component8, $int19) = ^true) {
 		if ($int31 = 1) {
 			cc_settext("1 coin");
 		} else {
-			cc_settext("<~script46($int31, ",")> coins");
+			cc_settext("<~tostring_spacer($int31, ",")> coins");
 		}
 	} else {
 		cc_sethide(true);

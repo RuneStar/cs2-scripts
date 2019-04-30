@@ -6,7 +6,7 @@ def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
 if ($int0 > 0) {
-	$string1 = append(~script46($int0, $string0), $string0);
+	$string1 = append(~tostring_spacer($int0, $string0), $string0);
 	$int2 = calc($int1 / 1000000);
 	$int3 = calc(($int1 % 1000000) / 1000);
 	$int4 = calc($int1 % 1000);
@@ -14,6 +14,6 @@ if ($int0 > 0) {
 	$string1 = append(append($string1, ~script47($int3)), $string0);
 	$string1 = append($string1, ~script47($int4));
 } else {
-	$string1 = ~script46($int1, $string0);
+	$string1 = ~tostring_spacer($int1, $string0);
 }
 return($string1);

@@ -5,5 +5,5 @@ if ($int0 = -1) {
 } else if ($int0 = 0) {
 	mes("Your coffer is empty. You can deposit money into the pouch at the eastern side of the enclosure.");
 } else {
-	mes("You have <~script46($int0, ",")> coins in the coffer.");
+	mes("You have <~tostring_spacer($int0, ",")> coins in the coffer.");
 }

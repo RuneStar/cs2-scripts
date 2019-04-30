@@ -32,9 +32,9 @@ if (stockmarket_isofferempty($int1) = true) {
 			cc_setgraphic("ge_smallicons,7");
 		}
 		if (stockmarket_isofferfinished($int1) = true) {
-			$string0 = "Sold: <oc_name($obj12)><br><~script46($int14, $string1)> / <~script46($int13, $string1)>";
+			$string0 = "Sold: <oc_name($obj12)><br><~tostring_spacer($int14, $string1)> / <~tostring_spacer($int13, $string1)>";
 		} else {
-			$string0 = "Selling: <oc_name($obj12)><br><~script46($int14, $string1)> / <~script46($int13, $string1)>";
+			$string0 = "Selling: <oc_name($obj12)><br><~tostring_spacer($int14, $string1)> / <~tostring_spacer($int13, $string1)>";
 		}
 	} else {
 		if (cc_find($component0, $int10) = ^true) {
@@ -42,9 +42,9 @@ if (stockmarket_isofferempty($int1) = true) {
 			cc_setgraphic("ge_smallicons,6");
 		}
 		if (stockmarket_isofferfinished($int1) = true) {
-			$string0 = "Bought: <oc_name($obj12)><br><~script46($int14, $string1)> / <~script46($int13, $string1)>";
+			$string0 = "Bought: <oc_name($obj12)><br><~tostring_spacer($int14, $string1)> / <~tostring_spacer($int13, $string1)>";
 		} else {
-			$string0 = "Buying: <oc_name($obj12)><br><~script46($int14, $string1)> / <~script46($int13, $string1)>";
+			$string0 = "Buying: <oc_name($obj12)><br><~tostring_spacer($int14, $string1)> / <~tostring_spacer($int13, $string1)>";
 		}
 	}
 	if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component2, $string0, 25, 512)", $component0);

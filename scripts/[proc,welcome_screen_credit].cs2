@@ -3,9 +3,9 @@
 def_string $string0 = "";
 def_int $int1 = 0;
 if (%var1780 > 1) {
-	$string0 = "You have <col=00ff00><~script46(%var1780, ",")></col> days of Old School RuneScape membership remaining.";
+	$string0 = "You have <col=00ff00><~tostring_spacer(%var1780, ",")></col> days of Old School RuneScape membership remaining.";
 } else if (%var1780 = 1) {
-	$string0 = "You have <col=00ff00><~script46(%var1780, ",")></col> day of Old School RuneScape membership remaining.";
+	$string0 = "You have <col=00ff00><~tostring_spacer(%var1780, ",")></col> day of Old School RuneScape membership remaining.";
 } else if (%varcint103 = 1) {
 	$string0 = "You have no Old School RuneScape membership credit remaining.<br><br><col=ff9040>Subscribe to retain your membership status!</col>";
 } else if (%varcint103 = 0) {

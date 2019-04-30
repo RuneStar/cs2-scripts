@@ -1,5 +1,5 @@
 // 46
-script46(int $int0, string $string0)(string)
+[proc,tostring_spacer](int $int0, string $string0)(string)
 def_int $int1 = calc($int0 / 1000000000);
 def_int $int2 = calc(($int0 - ($int1 * 1000000000)) / 1000000);
 def_int $int3 = calc(($int0 - (($int1 * 1000000000) + ($int2 * 1000000))) / 1000);

@@ -135,7 +135,7 @@ while ($int9 > 0) {
 			.cc_settext("<col=ff0000>Already unlocked</col>");
 			.cc_settextshadow(false);
 		} else if ($int14 > 1) {
-			.cc_settext("<~script46($int14, ",")> points");
+			.cc_settext("<~tostring_spacer($int14, ",")> points");
 		} else if ($int14 = 1) {
 			.cc_settext("1 point");
 		} else if ($int14 = 0) {

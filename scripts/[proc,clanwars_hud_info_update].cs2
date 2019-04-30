@@ -26,9 +26,9 @@ if (string_length($string0) > 0) {
 }
 $string0 = append($string0, $string4);
 if (%varbit4289 = 2) {
-	$string4 = ~script46(%varbit4288, $string3);
+	$string4 = ~tostring_spacer(%varbit4288, $string3);
 } else {
-	$string4 = ~script46(%varbit4287, $string3);
+	$string4 = ~tostring_spacer(%varbit4287, $string3);
 }
 if (string_length($string1) > 0) {
 	$string1 = append($string1, "<br>");
@@ -39,9 +39,9 @@ if ($int5 < $int4) {
 	$int5 = $int4;
 }
 if (%varbit4289 = 2) {
-	$string4 = ~script46(%varbit4287, $string3);
+	$string4 = ~tostring_spacer(%varbit4287, $string3);
 } else {
-	$string4 = ~script46(%varbit4288, $string3);
+	$string4 = ~tostring_spacer(%varbit4288, $string3);
 }
 if (string_length($string2) > 0) {
 	$string2 = append($string2, "<br>");
@@ -61,12 +61,12 @@ if (((($int7 > 0) | ($int8 > 0)) | ($int9 > 0)) | ($int10 > 0)) {
 		if (%varbit4291 >= 65535) {
 			$string4 = "Lots!";
 		} else {
-			$string4 = ~script46(%varbit4291, $string3);
+			$string4 = ~tostring_spacer(%varbit4291, $string3);
 		}
 	} else if (%varbit4290 >= 65535) {
 		$string4 = "Lots!";
 	} else {
-		$string4 = ~script46(%varbit4290, $string3);
+		$string4 = ~tostring_spacer(%varbit4290, $string3);
 	}
 	$string1 = append($string1, append("<br>", $string4));
 	$int4 = parawidth($string4, 512, p11_full);
@@ -77,12 +77,12 @@ if (((($int7 > 0) | ($int8 > 0)) | ($int9 > 0)) | ($int10 > 0)) {
 		if (%varbit4290 >= 65535) {
 			$string4 = "Lots!";
 		} else {
-			$string4 = ~script46(%varbit4290, $string3);
+			$string4 = ~tostring_spacer(%varbit4290, $string3);
 		}
 	} else if (%varbit4291 >= 65535) {
 		$string4 = "Lots!";
 	} else {
-		$string4 = ~script46(%varbit4291, $string3);
+		$string4 = ~tostring_spacer(%varbit4291, $string3);
 	}
 	$string2 = append($string2, append("<br>", $string4));
 	if (($int8 > 0) | ($int9 > 0)) {
@@ -96,9 +96,9 @@ if (((($int7 > 0) | ($int8 > 0)) | ($int9 > 0)) | ($int10 > 0)) {
 		}
 		$string0 = append($string0, append("<br>", $string4));
 		if (%varbit4289 = 2) {
-			$string4 = ~script46(%varbit4576, $string3);
+			$string4 = ~tostring_spacer(%varbit4576, $string3);
 		} else {
-			$string4 = ~script46(%varbit4575, $string3);
+			$string4 = ~tostring_spacer(%varbit4575, $string3);
 		}
 		$string1 = append($string1, append("<br>", $string4));
 		$int4 = parawidth($string4, 512, p11_full);
@@ -106,18 +106,18 @@ if (((($int7 > 0) | ($int8 > 0)) | ($int9 > 0)) | ($int10 > 0)) {
 			$int5 = $int4;
 		}
 		if (%varbit4289 = 2) {
-			$string4 = ~script46(%varbit4575, $string3);
+			$string4 = ~tostring_spacer(%varbit4575, $string3);
 		} else {
-			$string4 = ~script46(%varbit4576, $string3);
+			$string4 = ~tostring_spacer(%varbit4576, $string3);
 		}
 		$string2 = append($string2, append("<br>", $string4));
 	}
 	if ($int8 > 0) {
-		$string5 = "Victory: <~script46($int8, $string3)> points";
+		$string5 = "Victory: <~tostring_spacer($int8, $string3)> points";
 	} else if ($int9 > 0) {
-		$string5 = "Victory: <~script46($int9, $string3)> points";
+		$string5 = "Victory: <~tostring_spacer($int9, $string3)> points";
 	} else if ($int7 > 0) {
-		$string5 = "Victory: <~script46($int7, $string3)> kills";
+		$string5 = "Victory: <~tostring_spacer($int7, $string3)> kills";
 	} else if (($int10 > 0) & (cc_find($component1, calc($int2 + 3)) = ^true)) {
 		$string5 = ~script213;
 	}

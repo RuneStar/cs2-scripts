@@ -91,12 +91,12 @@ while ($int10 < $int9) {
 		}
 		if ($int11 > 1) {
 			if (($int12 >= 0) & ($int12 < ^max_32bit_int)) {
-				cc_settext("<~script46($int11, $string0)> x <~script46($array0($int10), $string0)><br>= <~script46($int12, $string0)>");
+				cc_settext("<~tostring_spacer($int11, $string0)> x <~tostring_spacer($array0($int10), $string0)><br>= <~tostring_spacer($int12, $string0)>");
 			} else {
-				cc_settext("<~script46($int11, $string0)> x <~script46($array0($int10), $string0)>");
+				cc_settext("<~tostring_spacer($int11, $string0)> x <~tostring_spacer($array0($int10), $string0)>");
 			}
 		} else {
-			cc_settext(~script46($array0($int10), $string0));
+			cc_settext(~tostring_spacer($array0($int10), $string0));
 		}
 	}
 	$int10 = calc($int10 + 1);

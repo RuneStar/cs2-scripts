@@ -211,7 +211,7 @@ while ($int41 < $int1) {
 	if ($array0(41) = 1) {
 		.cc_settext("-");
 	} else if ($int41 ! $array0(40)) {
-		.cc_settext("<tostring(calc($array1($int41) / 10))>.<tostring(calc($array1($int41) % 10))>% (<~script46($array0($int41), $string1)>)");
+		.cc_settext("<tostring(calc($array1($int41) / 10))>.<tostring(calc($array1($int41) % 10))>% (<~tostring_spacer($array0($int41), $string1)>)");
 		cc_create(345:11, ^iftype_graphic, %varcint43);
 		%varcint43 = calc(%varcint43 + 1);
 		cc_setposition($int44, calc(%varcint49 + (($int39 - 11) / 2)), ^setpos_abs_left, ^setpos_abs_top);
@@ -223,7 +223,7 @@ while ($int41 < $int1) {
 		}
 		cc_settiling(true);
 	} else {
-		.cc_settext("(<~script46($array0($int41), $string1)>)");
+		.cc_settext("(<~tostring_spacer($array0($int41), $string1)>)");
 	}
 	$int41, %varcint49 = calc($int41 + 1), calc(%varcint49 + $int39);
 }

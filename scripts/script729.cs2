@@ -1,10 +1,10 @@
 // 729
 script729
-if_settext(~script46(inv_total(inv, old_school_bond_untradeable_13192), ","), 64:5);
-if_settext(~script46(inv_total(inv, coins_995), ","), 64:12);
+if_settext(~tostring_spacer(inv_total(inv, old_school_bond_untradeable_13192), ","), 64:5);
+if_settext(~tostring_spacer(inv_total(inv, coins_995), ","), 64:12);
 if_settext(tostring(%varcint67), 64:25);
-if_settext(~script46(%varcint68, ","), 64:31);
-if_settext(~script46(calc(%varcint67 * %varcint68), ","), 64:36);
+if_settext(~tostring_spacer(%varcint68, ","), 64:31);
+if_settext(~tostring_spacer(calc(%varcint67 * %varcint68), ","), 64:36);
 if (calc(%varcint67 * %varcint68) > inv_total(inv, coins_995)) {
 	if_settext("You do not have enough coins for this transaction.", 64:26);
 	~script730;

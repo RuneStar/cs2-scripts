@@ -6,9 +6,9 @@ if (cc_find($component0, $int1) = ^true) {
 if (.cc_find($component0, $int3) = ^true) {
 	if ($int6 >= 2) {
 		if ($boolean4 = true) {
-			.cc_settext("<col=ffffff><oc_name($obj5)></col><br>x <~script46($int6, ",")>");
+			.cc_settext("<col=ffffff><oc_name($obj5)></col><br>x <~tostring_spacer($int6, ",")>");
 		} else {
-			.cc_settext("<col=ffb83f><oc_name($obj5)></col><br>x <~script46($int6, ",")>");
+			.cc_settext("<col=ffb83f><oc_name($obj5)></col><br>x <~tostring_spacer($int6, ",")>");
 		}
 	} else if ($boolean4 = true) {
 		.cc_settext("<col=ffffff><oc_name($obj5)></col>");

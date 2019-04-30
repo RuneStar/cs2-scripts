@@ -55,5 +55,5 @@ if ((cc_find($component0, 3) = ^true) & (.cc_find($component0, 5) = ^true)) {
 	}
 	$int3 = interpolate(0, $int3, 0, $int2, 255);
 	.cc_setcolour(~script246(255, $int3, $int3));
-	.cc_settext(~script46($int1, ","));
+	.cc_settext(~tostring_spacer($int1, ","));
 }

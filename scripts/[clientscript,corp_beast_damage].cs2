@@ -3,5 +3,5 @@
 if (%varbit999 >= 4000) {
 	if_settext("Damage: Lots!", $component0);
 } else {
-	if_settext("Damage: <~script46(%varbit999, ",")>", $component0);
+	if_settext("Damage: <~tostring_spacer(%varbit999, ",")>", $component0);
 }

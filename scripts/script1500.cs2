@@ -8,7 +8,7 @@ if ((%varbit5411 = 0) | (%varbit5412 <= 0)) {
 	if_setonmouseleave("script85(event_com, cc_getid, 0x9f9f9f)", $component0);
 	if (%varbit5412 > 0) {
 		if (%varbit5412 > 1) {
-			$string0 = "Enable (<~script46(%varbit5412, ",")> coins)";
+			$string0 = "Enable (<~tostring_spacer(%varbit5412, ",")> coins)";
 		}
 		if_setop(1, $string0, $component0);
 	} else {
@@ -19,7 +19,7 @@ if ((%varbit5411 = 0) | (%varbit5412 <= 0)) {
 } else {
 	cc_setcolour(0xff981f);
 	if (%varbit5412 ! 1) {
-		cc_settext("<~script46(%varbit5412, ",")> coins");
+		cc_settext("<~tostring_spacer(%varbit5412, ",")> coins");
 	} else {
 		cc_settext("1 coin");
 	}

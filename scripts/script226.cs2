@@ -32,7 +32,7 @@ while ($int5 <= 37) {
 		.cc_settextfont(p11_full);
 		.cc_setcolour(0x46320a);
 		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-		.cc_settext(~script46(enum(int, int, 768, $int5), ","));
+		.cc_settext(~tostring_spacer(enum(int, int, 768, $int5), ","));
 		$int6 = calc($int6 + 1);
 		if ($int5 = $int2) {
 			$int8 = cc_gety;

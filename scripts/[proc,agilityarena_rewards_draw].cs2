@@ -4,7 +4,7 @@ def_string $string1 = "";
 if ($int1 = 1) {
 	$string1 = "<$string0><br>1 ticket";
 } else {
-	$string1 = "<$string0><br><~script46($int1, ",")> tickets";
+	$string1 = "<$string0><br><~tostring_spacer($int1, ",")> tickets";
 }
 cc_deleteall($component0);
 def_int $int4 = 0;

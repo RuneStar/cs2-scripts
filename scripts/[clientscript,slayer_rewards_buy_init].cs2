@@ -30,7 +30,7 @@ while ($obj18 ! null) {
 	.cc_settextfont(p12_full);
 	.cc_settextshadow(true);
 	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	.cc_settext(~script46(enum(obj, int, 842, $obj18), ","));
+	.cc_settext(~tostring_spacer(enum(obj, int, 842, $obj18), ","));
 	if (($obj18 = herb_sack_13226) | ($obj18 = rune_pouch_12791)) {
 		cc_setop(2, "Buy 1");
 	} else if ($int16 = 1) {

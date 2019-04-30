@@ -6,15 +6,15 @@ def_string $string2 = "";
 if (oc_stackable($obj2) = false) {
 	$string2 = append($string2, "<col=ff9040><oc_name($obj2)> <col=ffffff> x <col=fff000><tostring($int1)><br>");
 } else if ($int1 < 100000) {
-	$string0 = ~script46($int1, ",");
+	$string0 = ~tostring_spacer($int1, ",");
 	$string2 = append($string2, "<col=ff9040><oc_name($obj2)><col=ffffff> x <col=ffff00><$string0><br>");
 } else if ($int1 < 10000000) {
-	$string0 = ~script46($int1, ",");
-	$string1 = ~script46(calc($int1 / 1000), ",");
+	$string0 = ~tostring_spacer($int1, ",");
+	$string1 = ~tostring_spacer(calc($int1 / 1000), ",");
 	$string2 = append($string2, "<col=ff9040><oc_name($obj2)><col=ffffff> x <col=ffffff><$string1>K (<$string0>)<br>");
 } else {
-	$string0 = ~script46($int1, ",");
-	$string1 = ~script46(calc($int1 / 1000000), ",");
+	$string0 = ~tostring_spacer($int1, ",");
+	$string1 = ~tostring_spacer(calc($int1 / 1000000), ",");
 	$string2 = append($string2, "<col=ff9040><oc_name($obj2)><col=ffffff> x <col=00ff80><$string1>M (<$string0>)<br>");
 }
 return($string2);
