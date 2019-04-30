@@ -31,7 +31,7 @@ if ($int4 = 1) {
 		}
 	} else if ($setposh1 ! ^setpos_abs_centre) {
 		$setposh7 = ^setpos_abs_centre;
-		if (getwindowmode ! 1) {
+		if (getwindowmode ! ^windowmode_fixed) {
 			$int5 = 4;
 		} else {
 			$int5 = 23;
@@ -47,7 +47,7 @@ if ($int4 = 1) {
 		$int6 = 4;
 	}
 } else {
-	if ((~on_mobile = false) & (($setposh1 = ^setpos_abs_left) | (($setposh1 = ^setpos_abs_centre) & (getwindowmode = 1)))) {
+	if ((~on_mobile = false) & (($setposh1 = ^setpos_abs_left) | (($setposh1 = ^setpos_abs_centre) & (getwindowmode = ^windowmode_fixed)))) {
 		$int5 = 23;
 	} else {
 		$int5 = 4;

@@ -2,7 +2,7 @@
 [clientscript,chat_button_onop](int $int0, int $int1)
 def_int $int2 = ~script553;
 if ($int0 = 1) {
-	if ((getwindowmode = 2) & (%varcint41 = $int1)) {
+	if ((getwindowmode = ^windowmode_resizable) & (%varcint41 = $int1)) {
 		%varcint41 = 1337;
 	} else {
 		%varcint41 = $int1;

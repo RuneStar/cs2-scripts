@@ -5,13 +5,13 @@ def_boolean $boolean0 = false;
 if (%varcint41 = 1337) {
 	if (~script922 = 1) {
 		$boolean0 = true;
-	} else if (getwindowmode = 1) {
+	} else if (getwindowmode = ^windowmode_fixed) {
 		%varcint41 = 0;
 		~chat_alert_set(0, 0);
 	}
 }
 if_sethide($boolean0, 162:37);
-if ((%varbit6374 = 1) & (getwindowmode ! 1)) {
+if ((%varbit6374 = 1) & (getwindowmode ! ^windowmode_fixed)) {
 	if_setposition(1, 0, ^setpos_abs_right, ^setpos_abs_top, 162:58);
 	if_setposition(-1, 0, ^setpos_abs_left, ^setpos_abs_top, 162:559);
 } else {

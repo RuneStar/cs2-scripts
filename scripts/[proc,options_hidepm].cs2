@@ -1,7 +1,7 @@
 // 1111
-[proc,options_hidepm](component $component0, component $component1, component $component2, int $int3)
+[proc,options_hidepm](component $component0, component $component1, component $component2, int $windowmode3)
 def_string $string0 = "Hide private chat when the chatbox is hidden<br>(not applicable)";
-if ((%var287 = 0) | (getwindowmode = 1)) {
+if ((%var287 = 0) | (getwindowmode = ^windowmode_fixed)) {
 	if_setgraphic("options_boxes,0", $component0);
 	if_settrans(100, $component1);
 	if_setonop(null, $component0);
@@ -18,4 +18,4 @@ if ((%var287 = 0) | (getwindowmode = 1)) {
 }
 if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component2, $string0, 25, 190)", $component0);
 %varcint2 = 0;
-if_setontimer("options_hidepm_checkwindowmode($int3, $component0, $component1, $component2)", $component0);
+if_setontimer("options_hidepm_checkwindowmode($windowmode3, $component0, $component1, $component2)", $component0);

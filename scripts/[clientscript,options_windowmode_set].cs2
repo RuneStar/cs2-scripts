@@ -1,14 +1,14 @@
 // 847
-[clientscript,options_windowmode_set](int $int0, component $component1, component $component2, component $component3)
-if (getwindowmode = $int0) {
+[clientscript,options_windowmode_set](int $windowmode0, component $component1, component $component2, component $component3)
+if (getwindowmode = $windowmode0) {
 	return;
 }
-if (($int0 ! 2) & (~mobile_setting_check = 0)) {
+if (($windowmode0 ! ^windowmode_resizable) & (~mobile_setting_check = 0)) {
 	return;
 }
 sound_synth(2266, 1, 0);
-setwindowmode($int0);
-if (getdefaultwindowmode ! $int0) {
-	setdefaultwindowmode($int0);
+setwindowmode($windowmode0);
+if (getdefaultwindowmode ! $windowmode0) {
+	setdefaultwindowmode($windowmode0);
 }
 ~options_windowmode_draw($component1, $component2, $component3);

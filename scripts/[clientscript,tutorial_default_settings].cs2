@@ -1,7 +1,7 @@
 // 2644
 [clientscript,tutorial_default_settings]
-setwindowmode(2);
-setdefaultwindowmode(2);
+setwindowmode(^windowmode_resizable);
+setdefaultwindowmode(^windowmode_resizable);
 setremoveroofs(true);
 if (~on_mobile = true) {
 	~camera_do_zoom(320, 320);
