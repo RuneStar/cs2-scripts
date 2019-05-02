@@ -38,8 +38,8 @@ if ($int5 = 1) {
 		.cc_setgraphic("options_radio_buttons,0");
 		.cc_settrans(0);
 		cc_setcolour(0xff981f);
-		cc_setonmouserepeat("script85(event_com, event_comid, ^white)");
-		cc_setonmouseleave("script85(event_com, event_comid, 0xff981f)");
+		cc_setonmouserepeat("cc_colour_swapper(event_com, event_comid, ^white)");
+		cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xff981f)");
 		cc_setonop("script1469(event_opindex, 0, $component0, $int1, $int2, $component3, $component4)");
 	}
 } else {
@@ -55,8 +55,8 @@ if ($int5 = 1) {
 		.cc_setgraphic("options_radio_buttons,0");
 		.cc_settrans(0);
 		cc_setcolour(0xff981f);
-		cc_setonmouserepeat("script85(event_com, event_comid, ^white)");
-		cc_setonmouseleave("script85(event_com, event_comid, 0xff981f)");
+		cc_setonmouserepeat("cc_colour_swapper(event_com, event_comid, ^white)");
+		cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xff981f)");
 		cc_setonop("script1469(event_opindex, 1, $component0, $int1, $int2, $component3, $component4)");
 	}
 }

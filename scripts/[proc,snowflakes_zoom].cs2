@@ -1,0 +1,14 @@
+// 933
+[proc,snowflakes_zoom](component $component0, int $int1)
+def_int $int2 = $int1;
+if ($int2 < 334) {
+	$int2 = 334;
+} else if ($int2 > 1500) {
+	$int2 = 1500;
+}
+def_int $int3 = invpow(calc($int2 - 334), 2);
+def_int $int4 = invpow(calc(1500 - 334), 2);
+def_int $int5 = calc(180 - interpolate(0, $int3, 0, $int4, 125));
+cc_setmodelangle(0, 20, 0, 0, 0, $int5);
+.cc_setmodelangle(0, 20, 0, 0, 0, $int5);
+if_setontimer("snowflakes_zoom(event_com, cc_getid, .cc_getid, $int1)", $component0);

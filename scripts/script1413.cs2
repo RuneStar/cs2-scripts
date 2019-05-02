@@ -5,6 +5,6 @@ if (clientclock < $int3) {
 }
 if_setmodel($model1, $component0);
 if_sethide(true, $component2);
-if_setonmouserepeat("script69(false, $component2)", $component0);
-if_setonmouseleave("script69(true, $component2)", $component0);
+if_setonmouserepeat("comp_sethide(false, $component2)", $component0);
+if_setonmouseleave("comp_sethide(true, $component2)", $component0);
 if_setontimer(null, $component0);

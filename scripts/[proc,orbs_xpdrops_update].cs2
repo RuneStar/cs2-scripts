@@ -11,5 +11,5 @@ if (%varbit4702 = 1) {
 }
 if_setop(1, $string0, $component0);
 if_setgraphic($graphic1, $component0);
-if_setonmouserepeat("script44(event_com, $graphic2)", $component0);
-if_setonmouseleave("script44(event_com, $graphic1)", $component0);
+if_setonmouserepeat("graphic_swapper(event_com, $graphic2)", $component0);
+if_setonmouseleave("graphic_swapper(event_com, $graphic1)", $component0);

@@ -1,0 +1,45 @@
+// 2851
+[proc,cocktail_show_cocktails](component $component0, component $component1, component $component2, component $component3)
+cc_deleteall($component0);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_struct $struct8 = null;
+def_int $int9 = 0;
+while ($int7 < enum_getoutputcount(2323)) {
+	$struct8 = enum(int, struct, 2323, $int7);
+	$int9 = ~cocktail_check_inv($struct8);
+	cc_create($component0, ^iftype_model, $int4);
+	if ($int9 = 1) {
+		cc_setobject(struct_param($struct8, 733), 1);
+	} else {
+		cc_setobject(wizard_blizzard_9489, 1);
+	}
+	cc_setsize(70, 70, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(((117 * $int5) + (117 / 2)) - (70 / 2)), calc(95 * $int6), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setmodelangle(0, 0, 0, 0, 0, 400);
+	cc_setop(1, "Create");
+	cc_setonop("cocktail_show_ingredients($component2, $struct8, $component3)");
+	cc_create($component1, ^iftype_text, $int4);
+	cc_setposition(calc(((117 * $int5) + (117 / 2)) - (100 / 2)), calc((95 * $int6) + 70), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(100, 16, ^setsize_abs, ^setsize_abs);
+	if ($int9 = 1) {
+		cc_setcolour(^green);
+	} else {
+		cc_setcolour(^red);
+	}
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
+	cc_settext(struct_param($struct8, 732));
+	cc_setop(1, "Create");
+	cc_setonop("cocktail_show_ingredients($component2, $struct8, $component3)");
+	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + 1);
+	if ($int5 = 4) {
+		$int5 = 0;
+		$int6 = calc($int6 + 1);
+	}
+	$int7 = calc($int7 + 1);
+}

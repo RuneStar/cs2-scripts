@@ -72,10 +72,10 @@ if (stockmarket_isofferempty($int9) = true) {
 				.cc_setop(1, "Create <col=ff9040>Sell</col> offer");
 				cc_setonop("script805(event_opindex, $int9, 0, $component2, $int3, $component4, $component5, $component6, $component7, $component27)");
 				.cc_setonop("script805(event_opindex, $int9, 1, $component2, $int3, $component4, $component5, $component6, $component7, $component27)");
-				cc_setonmouseover("script229($component8, $int25, $graphic33, null)");
-				.cc_setonmouseover("script229($component8, $int26, $graphic35, null)");
-				cc_setonmouseleave("script229($component8, $int25, $graphic32, $component27)");
-				.cc_setonmouseleave("script229($component8, $int26, $graphic34, $component27)");
+				cc_setonmouseover("cc_graphic_swapper($component8, $int25, $graphic33, null)");
+				.cc_setonmouseover("cc_graphic_swapper($component8, $int26, $graphic35, null)");
+				cc_setonmouseleave("cc_graphic_swapper($component8, $int25, $graphic32, $component27)");
+				.cc_setonmouseleave("cc_graphic_swapper($component8, $int26, $graphic34, $component27)");
 				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component27, $string1, 25, 512)");
 				$string1 = "Offer to SELL items.";
 				.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component27, $string1, 25, 512)");

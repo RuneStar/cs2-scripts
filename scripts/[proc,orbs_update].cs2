@@ -23,8 +23,8 @@ if ($int5 <= 0) {
 		$colour4 = ^red;
 	}
 } else if ($int2 > $int5) {
-	$colour4 = ~script246(calc(255 - ((255 * ($int2 - $int5)) / $int5)), 255, 0);
+	$colour4 = ~rgb_to_hex(calc(255 - ((255 * ($int2 - $int5)) / $int5)), 255, 0);
 } else {
-	$colour4 = ~script246(255, calc(($int2 * 255) / $int5), 0);
+	$colour4 = ~rgb_to_hex(255, calc(($int2 * 255) / $int5), 0);
 }
 if_setcolour($colour4, $component0);

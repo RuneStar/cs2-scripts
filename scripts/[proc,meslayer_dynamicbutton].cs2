@@ -7,5 +7,5 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(false);
 cc_setcolour(^blue);
-cc_setonmouseover("script85(event_com, event_comid, ^white)");
-cc_setonmouseleave("script85(event_com, event_comid, ^blue)");
+cc_setonmouseover("cc_colour_swapper(event_com, event_comid, ^white)");
+cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, ^blue)");

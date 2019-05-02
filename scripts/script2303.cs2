@@ -5,4 +5,4 @@ if ($int1 > 45) {
 	$int1 = calc(90 - $int1);
 }
 def_int $int2 = scale(invpow(calc($int1 * 255), 2), invpow(11475, 2), 255);
-if_setcolour(~script246(255, $int2, $int2), $component0);
+if_setcolour(~rgb_to_hex(255, $int2, $int2), $component0);

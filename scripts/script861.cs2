@@ -9,8 +9,8 @@ if_setcolour(0xa6a692, 127:13);
 if_setontimer(null, 127:12);
 if ($obj0 ! null) {
 	if_settext("Remove this key", 127:13);
-	if_setonmouserepeat("script45(127:13, ^white)", 127:12);
-	if_setonmouseleave("script45(127:13, 0xa6a692)", 127:12);
+	if_setonmouserepeat("text_colour_swapper(127:13, ^white)", 127:12);
+	if_setonmouseleave("text_colour_swapper(127:13, 0xa6a692)", 127:12);
 	if_setop(1, "Remove", 127:12);
 	if_setopbase("<col=ff9040><oc_name($obj0)></col>", 127:12);
 	if_setonop("script862(event_opindex, event_com, cc_getlayer, cc_getid)", 127:12);
@@ -28,8 +28,8 @@ if_setmodel(5626, 127:18);
 if_sethide(true, 127:19);
 if_setontimer(null, 127:18);
 if ($obj1 ! null) {
-	if_setonmouserepeat("script69(false, 127:19)", 127:18);
-	if_setonmouseleave("script69(true, 127:19)", 127:18);
+	if_setonmouserepeat("comp_sethide(false, 127:19)", 127:18);
+	if_setonmouseleave("comp_sethide(true, 127:19)", 127:18);
 	if_setop(1, "Previous:", 127:18);
 	if_setopbase("<col=ff9040><oc_name($obj1)></col>", 127:18);
 	if_setonop("script864(event_opindex, event_com, 5626, 5627, 127:19, cc_getlayer, cc_getid)", 127:18);
@@ -51,8 +51,8 @@ if_setmodel(5625, 127:15);
 if_sethide(true, 127:16);
 if_setontimer(null, 127:15);
 if ($obj2 ! null) {
-	if_setonmouserepeat("script69(false, 127:16)", 127:15);
-	if_setonmouseleave("script69(true, 127:16)", 127:15);
+	if_setonmouserepeat("comp_sethide(false, 127:16)", 127:15);
+	if_setonmouseleave("comp_sethide(true, 127:16)", 127:15);
 	if_setop(1, "Next:", 127:15);
 	if_setopbase("<col=ff9040><oc_name($obj2)></col>", 127:15);
 	if_setonop("script864(event_opindex, event_com, 5625, 5629, 127:16, cc_getlayer, cc_getid)", 127:15);

@@ -6,8 +6,8 @@ if (%var1781 > 0) {
 	} else {
 		if_settext("You have <col=00ff00><~tostring_spacer(%var1781, ",")> unread messages</col><br>in your message centre.", $component1);
 	}
-	if_setonmouserepeat("script69(false, $component2)", $component0);
-	if_setonmouseleave("script69(true, $component2)", $component0);
+	if_setonmouserepeat("comp_sethide(false, $component2)", $component0);
+	if_setonmouseleave("comp_sethide(true, $component2)", $component0);
 	if_setop(1, "View Inbox", $component0);
 } else {
 	if_settext("You have no unread messages<br>in your message centre.", $component1);

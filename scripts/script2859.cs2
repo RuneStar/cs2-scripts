@@ -1,9 +1,0 @@
-// 2859
-script2859(component $component0)
-if (calc(clientclock % 50) ! 0) {
-	return;
-}
-if (calc(%varcint375 + 3000) < clientclock) {
-	%varbit8354 = calc(%varbit8354 + 1);
-	~script2861($component0);
-}

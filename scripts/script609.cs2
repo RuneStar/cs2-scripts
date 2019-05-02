@@ -25,7 +25,7 @@ if ($int12 > 64) {
 } else {
 	$int12 = calc($int12 / 2);
 }
-def_int $colour13 = ~script246($int10, $int11, $int12);
+def_int $colour13 = ~rgb_to_hex($int10, $int11, $int12);
 def_string $string1 = "";
 $string1, $string0 = ~script632($string0);
 while (string_length($string1) > 0) {

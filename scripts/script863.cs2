@@ -6,6 +6,6 @@ if (clientclock < $int1) {
 cc_deleteall($component0);
 ~options_button_off($component0, 0);
 if_setcolour(0xa6a692, 127:13);
-if_setonmouserepeat("script45(127:13, ^white)", 127:12);
-if_setonmouseleave("script45(127:13, 0xa6a692)", 127:12);
+if_setonmouserepeat("text_colour_swapper(127:13, ^white)", 127:12);
+if_setonmouseleave("text_colour_swapper(127:13, 0xa6a692)", 127:12);
 if_setontimer(null, $component0);

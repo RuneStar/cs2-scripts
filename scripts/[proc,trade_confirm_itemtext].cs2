@@ -1,0 +1,22 @@
+// 769
+[proc,trade_confirm_itemtext](obj $obj0, int $int1)(string)
+if (($obj0 = null) | ($int1 = 0)) {
+	return("");
+}
+if ($int1 = 1) {
+	return(oc_name($obj0));
+}
+def_string $string0 = "";
+if ($int1 < 100000) {
+	$string0 = ~tostring_spacer($int1, ",");
+	return("<oc_name($obj0)><col=ffffff> x <col=ffff00><$string0>");
+}
+def_string $string1 = "";
+if ($int1 < 10000000) {
+	$string0 = ~tostring_spacer($int1, ",");
+	$string1 = ~tostring_spacer(calc($int1 / 1000), ",");
+	return("<oc_name($obj0)><col=ffffff> x <col=ffffff><$string1>K (<$string0>)");
+}
+$string0 = ~tostring_spacer($int1, ",");
+$string1 = ~tostring_spacer(calc($int1 / 1000000), ",");
+return("<oc_name($obj0)><col=ffffff> x <col=00ff80><$string1>M (<$string0>)");

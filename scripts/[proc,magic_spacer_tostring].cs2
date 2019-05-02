@@ -1,0 +1,12 @@
+// 1697
+[proc,magic_spacer_tostring](int $int0, string $string0)(string)
+if ($int0 >= ^max_32bit_int) {
+	return("*");
+}
+if ($int0 >= 10000000) {
+	return(append(~tostring_spacer(calc($int0 / 1000000), ","), "M"));
+}
+if ($int0 >= 10000) {
+	return(append(~tostring_spacer(calc($int0 / 1000), ","), "K"));
+}
+return(tostring($int0));

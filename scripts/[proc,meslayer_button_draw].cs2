@@ -21,7 +21,7 @@ if ($int1 = 1) {
 	if_setonmouseleave(null, $component0);
 } else {
 	cc_setcolour(0x4f2f1f);
-	if_setonmouserepeat("script85(event_com, $int2, 0x8f8f8f)", $component0);
-	if_setonmouseleave("script85(event_com, $int2, 0x4f2f1f)", $component0);
+	if_setonmouserepeat("cc_colour_swapper(event_com, $int2, 0x8f8f8f)", $component0);
+	if_setonmouseleave("cc_colour_swapper(event_com, $int2, 0x4f2f1f)", $component0);
 	if_setontimer(null, $component0);
 }

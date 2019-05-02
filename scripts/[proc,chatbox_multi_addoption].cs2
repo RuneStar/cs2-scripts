@@ -8,6 +8,6 @@ cc_settextshadow(false);
 cc_settextfont(q8_full);
 cc_settextalign(^settextalign_centre, $settextalignv3, 0);
 cc_settext($string0);
-cc_setonmouseover("script85(event_com, event_comid, ^white)");
-cc_setonmouseleave("script85(event_com, event_comid, ^black)");
+cc_setonmouseover("cc_colour_swapper(event_com, event_comid, ^white)");
+cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, ^black)");
 cc_setonkey("script57(event_keytyped, event_keypressed, event_com, event_comid, null, -1, tostring($int0), "", ^black, 0)");

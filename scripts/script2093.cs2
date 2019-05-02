@@ -18,42 +18,42 @@ if ($int1 <= 60) {
 	$int1 = calc($int1 - 30);
 	cc_settrans(calc(15 - ($int1 / 2)));
 	$int4 = calc(255 - scale($int1, 30, 255));
-	cc_setcolour(~script246(calc(255 - scale($int1, 30, 127)), $int4, $int4));
+	cc_setcolour(~rgb_to_hex(calc(255 - scale($int1, 30, 127)), $int4, $int4));
 	.cc_setmodelangle(0, 60, 30, $int3, 0, calc(80 - scale($int1, 30, 20)));
 	return;
 }
 if ($int1 <= 90) {
 	.cc_setmodel($model2);
 	$int1 = calc($int1 - 60);
-	cc_setcolour(~script246(calc(128 - scale($int1, 30, 128)), 0, 0));
+	cc_setcolour(~rgb_to_hex(calc(128 - scale($int1, 30, 128)), 0, 0));
 	.cc_setmodelangle(0, 60, 30, $int3, 0, calc(60 + scale($int1, 30, 20)));
 	return;
 }
 if ($int1 <= 120) {
 	.cc_setmodel($model2);
 	$int1 = calc($int1 - 90);
-	cc_setcolour(~script246(scale($int1, 30, 128), $int1, 0));
+	cc_setcolour(~rgb_to_hex(scale($int1, 30, 128), $int1, 0));
 	.cc_setmodelangle(0, 60, 30, $int3, 0, calc(80 - scale($int1, 30, 20)));
 	return;
 }
 if ($int1 <= 150) {
 	.cc_setmodel($model2);
 	$int1 = calc($int1 - 120);
-	cc_setcolour(~script246(calc(128 - scale($int1, 30, 128)), calc(30 - $int1), 0));
+	cc_setcolour(~rgb_to_hex(calc(128 - scale($int1, 30, 128)), calc(30 - $int1), 0));
 	.cc_setmodelangle(0, 60, 30, $int3, 0, calc(60 + scale($int1, 30, 20)));
 	return;
 }
 if ($int1 <= 180) {
 	.cc_setmodel($model2);
 	$int1 = calc($int1 - 150);
-	cc_setcolour(~script246(scale($int1, 30, 96), 0, 0));
+	cc_setcolour(~rgb_to_hex(scale($int1, 30, 96), 0, 0));
 	.cc_setmodelangle(0, 60, 30, $int3, 0, calc(80 + ($int1 * 50)));
 	return;
 }
 if ($int1 <= 210) {
 	.cc_setmodel(16238);
 	$int1 = calc($int1 - 180);
-	cc_setcolour(~script246(calc(96 - scale($int1, 30, 96)), 0, 0));
+	cc_setcolour(~rgb_to_hex(calc(96 - scale($int1, 30, 96)), 0, 0));
 	return;
 }
 if ($int1 <= 270) {

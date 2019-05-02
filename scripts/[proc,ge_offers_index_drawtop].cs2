@@ -6,8 +6,8 @@ if (~script708 = 1) {
 	if (cc_find($component2, $int3) = ^true) {
 		cc_sethide(false);
 		cc_setgraphic($graphic6);
-		cc_setonmouserepeat("script229(event_com, event_comid, $graphic7, null)");
-		cc_setonmouseleave("script229(event_com, event_comid, $graphic6, null)");
+		cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic7, null)");
+		cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic6, null)");
 	}
 	if (cc_find($component2, $int4) = ^true) {
 		cc_sethide(false);

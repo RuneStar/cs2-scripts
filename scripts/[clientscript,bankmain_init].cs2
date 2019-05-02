@@ -50,8 +50,8 @@ while ($int33 <= 9) {
 	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 	cc_settextfont(p11_full);
 	cc_setcolour(0xe4d8a2);
-	cc_setonmouserepeat("script85(event_com, event_comid, ^white)");
-	cc_setonmouseleave("script85(event_com, event_comid, 0xe4d8a2)");
+	cc_setonmouserepeat("cc_colour_swapper(event_com, event_comid, ^white)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xe4d8a2)");
 	cc_settextshadow(true);
 	cc_settext("Tab <tostring($int33)>");
 	cc_setop(1, "View tab");

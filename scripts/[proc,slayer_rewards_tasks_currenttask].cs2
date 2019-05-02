@@ -35,8 +35,8 @@ cc_setgraphic("combatboxesmed,0");
 .cc_settext("Cancel task");
 if ($int8 = 1) {
 	.cc_setcolour(0xff981f);
-	cc_setonmouseover("script85(event_com, .cc_getid, ^white)");
-	cc_setonmouseleave("script85(event_com, .cc_getid, 0xff981f)");
+	cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 	cc_setop(1, "Cancel");
 	cc_setonop("slayer_rewards_tasks_canceltask($string0, false, $component2, $component3, $component4, $component5, $component6)");
 } else {
@@ -57,8 +57,8 @@ cc_setgraphic("combatboxesmed,0");
 .cc_settext("Block task");
 if (((($int8 = 1) & (%var262 ! 97)) & (%var262 ! 105)) & (%var262 ! 98)) {
 	.cc_setcolour(0xff981f);
-	cc_setonmouseover("script85(event_com, .cc_getid, ^white)");
-	cc_setonmouseleave("script85(event_com, .cc_getid, 0xff981f)");
+	cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 	cc_setop(1, "Block");
 	cc_setonop("slayer_rewards_tasks_canceltask($string0, true, $component2, $component3, $component4, $component5, $component6)");
 } else {

@@ -2,7 +2,7 @@
 script2312(int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12)
 def_int $int13 = calc($int0 - clientclock);
 if ($int13 <= 0) {
-	cc_setcolour(~script246($int9, $int10, $int11));
+	cc_setcolour(~rgb_to_hex($int9, $int10, $int11));
 	cc_settrans($int12);
 	if ($int12 >= 255) {
 		cc_sethide(true);
@@ -37,6 +37,6 @@ if ($int12 > $int4) {
 } else if ($int12 < $int4) {
 	$int8 = ~max($int8, $int12);
 }
-cc_setcolour(~script246($int5, $int6, $int7));
+cc_setcolour(~rgb_to_hex($int5, $int6, $int7));
 cc_settrans($int8);
 cc_sethide(false);

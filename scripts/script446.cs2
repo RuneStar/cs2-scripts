@@ -28,9 +28,9 @@ if (%var102 > 0) {
 }
 def_graphic $graphic8 = "orb_frame,1";
 if (((%var102 > 0) | (%var456 > 0)) & (~toplevel_check_sidepanel(3) = true)) {
-	if_setonmouserepeat("script44($component6, $graphic8)", $component7);
+	if_setonmouserepeat("graphic_swapper($component6, $graphic8)", $component7);
 	$graphic8 = "orb_frame,0";
-	if_setonmouseleave("script44($component6, $graphic8)", $component7);
+	if_setonmouseleave("graphic_swapper($component6, $graphic8)", $component7);
 	if_sethide(false, $component7);
 } else {
 	if_setgraphic("orb_frame,0", $component6);

@@ -9,9 +9,9 @@ if ($component0 ! null) {
 }
 def_graphic $graphic7 = "orb_frame,1";
 if (~toplevel_check_sidepanel(5) = true) {
-	if_setonmouserepeat("script44($component5, $graphic7)", $component6);
+	if_setonmouserepeat("graphic_swapper($component5, $graphic7)", $component6);
 	$graphic7 = "orb_frame,0";
-	if_setonmouseleave("script44($component5, $graphic7)", $component6);
+	if_setonmouseleave("graphic_swapper($component5, $graphic7)", $component6);
 	if_sethide(false, $component6);
 } else {
 	if_setgraphic("orb_frame,0", $component5);

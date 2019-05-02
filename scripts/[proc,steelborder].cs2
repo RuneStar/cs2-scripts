@@ -36,8 +36,8 @@ if (~on_mobile = true) {
 }
 if (testbit($int1, 0) = ^false) {
 	~create_graphic($component0, 11, $graphic3, $int5, $int6, ^setpos_abs_right, ^setpos_abs_top, $int7, $int8, ^setsize_abs, ^setsize_abs);
-	cc_setonmouseleave("script229(event_com, event_comid, $graphic3, null)");
-	cc_setonmouseover("script229(event_com, event_comid, $graphic4, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic3, null)");
+	cc_setonmouseover("cc_graphic_swapper(event_com, event_comid, $graphic4, null)");
 	cc_setop(1, "Close");
 	cc_setonop("closebutton_click()");
 	cc_setonkey("closebutton_key(event_keytyped)");

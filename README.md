@@ -44,8 +44,8 @@
 [**41**](scripts/[proc,deltooltip_action].cs2) `[proc,deltooltip_action]`  
 [**42**](scripts/[proc,camera_do_zoom].cs2) `[proc,camera_do_zoom]`  
 [**43**](scripts/[clientscript,zoom_mouse_toggle].cs2) `[clientscript,zoom_mouse_toggle]`  
-[**44**](scripts/script44.cs2)  
-[**45**](scripts/script45.cs2)  
+[**44**](scripts/[clientscript,graphic_swapper].cs2) `[clientscript,graphic_swapper]`  
+[**45**](scripts/[clientscript,text_colour_swapper].cs2) `[clientscript,text_colour_swapper]`  
 [**46**](scripts/[proc,tostring_spacer].cs2) `[proc,tostring_spacer]`  
 [**47**](scripts/script47.cs2)  
 [**48**](scripts/script48.cs2)  
@@ -67,9 +67,9 @@
 [**64**](scripts/script64.cs2)  
 [**65**](scripts/[clientscript,set_spinner].cs2) `[clientscript,set_spinner]`  
 [**66**](scripts/[clientscript,spinner].cs2) `[clientscript,spinner]`  
-[**67**](scripts/script67.cs2)  
-[**68**](scripts/script68.cs2)  
-[**69**](scripts/script69.cs2)  
+[**67**](scripts/[clientscript,model_swapper].cs2) `[clientscript,model_swapper]`  
+[**68**](scripts/[clientscript,text_swapper].cs2) `[clientscript,text_swapper]`  
+[**69**](scripts/[clientscript,comp_sethide].cs2) `[clientscript,comp_sethide]`  
 [**70**](scripts/script70.cs2)  
 [**71**](scripts/[proc,toplevel_sidebutton_op].cs2) `[proc,toplevel_sidebutton_op]`  
 [**72**](scripts/[proc,scrollbar_resize].cs2) `[proc,scrollbar_resize]`  
@@ -85,7 +85,7 @@
 [**82**](scripts/[clientscript,orbs_update_prayer].cs2) `[clientscript,orbs_update_prayer]`  
 [**83**](scripts/[clientscript,splitpm_changed].cs2) `[clientscript,splitpm_changed]`  
 [**84**](scripts/[proc,rebuildchatbox].cs2) `[proc,rebuildchatbox]`  
-[**85**](scripts/script85.cs2)  
+[**85**](scripts/[clientscript,cc_colour_swapper].cs2) `[clientscript,cc_colour_swapper]`  
 [**86**](scripts/[clientscript,chat_op].cs2) `[clientscript,chat_op]`  
 [**87**](scripts/[clientscript,macro_pinball_score].cs2) `[clientscript,macro_pinball_score]`  
 [**88**](scripts/[clientscript,private_op].cs2) `[clientscript,private_op]`  
@@ -142,7 +142,7 @@
 [**139**](scripts/[clientscript,raids_partydetails_autorefresh].cs2) `[clientscript,raids_partydetails_autorefresh]`  
 [**140**](scripts/[clientscript,barrows_overlay_size].cs2) `[clientscript,barrows_overlay_size]`  
 [**141**](scripts/[proc,ge_collect_all_init].cs2) `[proc,ge_collect_all_init]`  
-[**142**](scripts/script142.cs2)  
+[**142**](scripts/[clientscript,trade_confirm_init].cs2) `[clientscript,trade_confirm_init]`  
 [**143**](scripts/[clientscript,cam_forceangle].cs2) `[clientscript,cam_forceangle]`  
 [**144**](scripts/[clientscript,bank_depositbox_init].cs2) `[clientscript,bank_depositbox_init]`  
 [**145**](scripts/[clientscript,bank_depositbox_update].cs2) `[clientscript,bank_depositbox_update]`  
@@ -229,7 +229,7 @@
 [**226**](scripts/script226.cs2)  
 [**227**](scripts/[clientscript,steelborder].cs2) `[clientscript,steelborder]`  
 [**228**](scripts/[proc,steelborder].cs2) `[proc,steelborder]`  
-[**229**](scripts/script229.cs2)  
+[**229**](scripts/[clientscript,cc_graphic_swapper].cs2) `[clientscript,cc_graphic_swapper]`  
 [**230**](scripts/[clientscript,makeover_clothes_setup].cs2) `[clientscript,makeover_clothes_setup]`  
 [**231**](scripts/[proc,scrollbar_vertical_rebuild].cs2) `[proc,scrollbar_vertical_rebuild]`  
 [**232**](scripts/[clientscript,bankmain_menubutton].cs2) `[clientscript,bankmain_menubutton]`  
@@ -246,7 +246,7 @@
 [**243**](scripts/[proc,autocast_spellpos].cs2) `[proc,autocast_spellpos]`  
 [**244**](scripts/[clientscript,cc_settrans].cs2) `[clientscript,cc_settrans]`  
 [**245**](scripts/[clientscript,deadman_tournament_fogcolour].cs2) `[clientscript,deadman_tournament_fogcolour]`  
-[**246**](scripts/script246.cs2)  
+[**246**](scripts/[proc,rgb_to_hex].cs2) `[proc,rgb_to_hex]`  
 [**247**](scripts/[proc,inzone].cs2) `[proc,inzone]`  
 [**248**](scripts/[clientscript,nzone_rewards_init].cs2) `[clientscript,nzone_rewards_init]`  
 [**249**](scripts/[proc,steelbox].cs2) `[proc,steelbox]`  
@@ -599,7 +599,7 @@
 [**596**](scripts/[proc,clanwars_hud_countdown_update].cs2) `[proc,clanwars_hud_countdown_update]`  
 [**597**](scripts/[clientscript,clanwars_hud_countdown_tick].cs2) `[clientscript,clanwars_hud_countdown_tick]`  
 [**598**](scripts/[proc,clanwars_hud_countdown_redraw].cs2) `[proc,clanwars_hud_countdown_redraw]`  
-[**599**](scripts/script599.cs2)  
+[**599**](scripts/[clientscript,cc_text_swapper].cs2) `[clientscript,cc_text_swapper]`  
 [**600**](scripts/[clientscript,if_settextalign].cs2) `[clientscript,if_settextalign]`  
 [**601**](scripts/[proc,poll_storequestion].cs2) `[proc,poll_storequestion]`  
 [**602**](scripts/[proc,poll_retrievequestion].cs2) `[proc,poll_retrievequestion]`  
@@ -718,8 +718,8 @@
 [**715**](scripts/[proc,thinbox].cs2) `[proc,thinbox]`  
 [**716**](scripts/script716.cs2)  
 [**717**](scripts/[clientscript,anma_reward_init].cs2) `[clientscript,anma_reward_init]`  
-[**718**](scripts/script718.cs2)  
-[**719**](scripts/script719.cs2)  
+[**718**](scripts/[clientscript,object_swapper].cs2) `[clientscript,object_swapper]`  
+[**719**](scripts/[clientscript,cc_object_swapper].cs2) `[clientscript,cc_object_swapper]`  
 [**720**](scripts/[clientscript,cc_fade].cs2) `[clientscript,cc_fade]`  
 [**721**](scripts/[clientscript,cc_fade_timer].cs2) `[clientscript,cc_fade_timer]`  
 [**722**](scripts/script722.cs2)  
@@ -732,7 +732,7 @@
 [**729**](scripts/script729.cs2)  
 [**730**](scripts/script730.cs2)  
 [**731**](scripts/script731.cs2)  
-[**732**](scripts/script732.cs2)  
+[**732**](scripts/[clientscript,cocktail_update_if].cs2) `[clientscript,cocktail_update_if]`  
 [**733**](scripts/script733.cs2)  
 [**734**](scripts/script734.cs2)  
 [**735**](scripts/[clientscript,inferno_hud_init].cs2) `[clientscript,inferno_hud_init]`  
@@ -766,9 +766,9 @@
 [**764**](scripts/script764.cs2)  
 [**765**](scripts/[clientscript,trade_slot_changed].cs2) `[clientscript,trade_slot_changed]`  
 [**766**](scripts/script766.cs2)  
-[**767**](scripts/script767.cs2)  
-[**768**](scripts/script768.cs2)  
-[**769**](scripts/script769.cs2)  
+[**767**](scripts/[clientscript,trade_confirm_redraw].cs2) `[clientscript,trade_confirm_redraw]`  
+[**768**](scripts/[proc,trade_confirm_redraw].cs2) `[proc,trade_confirm_redraw]`  
+[**769**](scripts/[proc,trade_confirm_itemtext].cs2) `[proc,trade_confirm_itemtext]`  
 [**770**](scripts/[proc,stonepanel].cs2) `[proc,stonepanel]`  
 [**771**](scripts/script771.cs2)  
 [**772**](scripts/[clientscript,v2_stone_button_in_filled].cs2) `[clientscript,v2_stone_button_in_filled]`  
@@ -813,8 +813,8 @@
 [**811**](scripts/script811.cs2)  
 [**812**](scripts/script812.cs2)  
 [**813**](scripts/[proc,ge_offers_checkavailable].cs2) `[proc,ge_offers_checkavailable]`  
-[**814**](scripts/script814.cs2)  
-[**815**](scripts/script815.cs2)  
+[**814**](scripts/[clientscript,confirmdestroy_init].cs2) `[clientscript,confirmdestroy_init]`  
+[**815**](scripts/[proc,confirmdestroy_setupbutton].cs2) `[proc,confirmdestroy_setupbutton]`  
 [**816**](scripts/script816.cs2)  
 [**817**](scripts/script817.cs2)  
 [**818**](scripts/script818.cs2)  
@@ -931,8 +931,8 @@
 [**929**](scripts/[clientscript,bankmain_toggleplaceholders].cs2) `[clientscript,bankmain_toggleplaceholders]`  
 [**930**](scripts/[proc,bankmain_toggleplaceholders].cs2) `[proc,bankmain_toggleplaceholders]`  
 [**931**](scripts/script931.cs2)  
-[**932**](scripts/script932.cs2)  
-[**933**](scripts/script933.cs2)  
+[**932**](scripts/[clientscript,snowflakes_zoom].cs2) `[clientscript,snowflakes_zoom]`  
+[**933**](scripts/[proc,snowflakes_zoom].cs2) `[proc,snowflakes_zoom]`  
 [**934**](scripts/[clientscript,myq3_blackout_init].cs2) `[clientscript,myq3_blackout_init]`  
 [**935**](scripts/[clientscript,myq3_blackout_borders].cs2) `[clientscript,myq3_blackout_borders]`  
 [**936**](scripts/[proc,myq3_blackout_borders].cs2) `[proc,myq3_blackout_borders]`  
@@ -1317,7 +1317,7 @@
 [**1315**](scripts/script1315.cs2)  
 [**1316**](scripts/script1316.cs2)  
 [**1317**](scripts/script1317.cs2)  
-[**1318**](scripts/script1318.cs2)  
+[**1318**](scripts/[clientscript,bankmain_incinerator_enableop].cs2) `[clientscript,bankmain_incinerator_enableop]`  
 [**1319**](scripts/[clientscript,bankmain_incinerator_close].cs2) `[clientscript,bankmain_incinerator_close]`  
 [**1320**](scripts/[proc,stat_f2plevel].cs2) `[proc,stat_f2plevel]`  
 [**1321**](scripts/script1321.cs2)  
@@ -1650,8 +1650,8 @@
 [**1648**](scripts/[clientscript,options_followerops_resynch].cs2) `[clientscript,options_followerops_resynch]`  
 [**1649**](scripts/[clientscript,options_followerops_op].cs2) `[clientscript,options_followerops_op]`  
 [**1650**](scripts/[proc,options_followerops].cs2) `[proc,options_followerops]`  
-[**1651**](scripts/script1651.cs2)  
-[**1652**](scripts/script1652.cs2)  
+[**1651**](scripts/[clientscript,confirmdestroy_triggerbutton].cs2) `[clientscript,confirmdestroy_triggerbutton]`  
+[**1652**](scripts/[clientscript,confirmdestroy_resetbutton].cs2) `[clientscript,confirmdestroy_resetbutton]`  
 [**1653**](scripts/script1653.cs2)  
 [**1654**](scripts/script1654.cs2)  
 [**1655**](scripts/script1655.cs2)  
@@ -1696,7 +1696,7 @@
 [**1694**](scripts/script1694.cs2)  
 [**1695**](scripts/[clientscript,oculus_close].cs2) `[clientscript,oculus_close]`  
 [**1696**](scripts/[proc,agilityarena_rewards_initbutton].cs2) `[proc,agilityarena_rewards_initbutton]`  
-[**1697**](scripts/script1697.cs2)  
+[**1697**](scripts/[proc,magic_spacer_tostring].cs2) `[proc,magic_spacer_tostring]`  
 [**1698**](scripts/script1698.cs2)  
 [**1699**](scripts/[clientscript,orbs_worldmap_setup].cs2) `[clientscript,orbs_worldmap_setup]`  
 [**1700**](scripts/[proc,orbs_worldmap_setup].cs2) `[proc,orbs_worldmap_setup]`  
@@ -2847,16 +2847,16 @@
 [**2845**](scripts/script2845.cs2)  
 [**2846**](scripts/script2846.cs2)  
 [**2847**](scripts/script2847.cs2)  
-[**2848**](scripts/script2848.cs2)  
+[**2848**](scripts/[clientscript,cocktail_init_if].cs2) `[clientscript,cocktail_init_if]`  
 [**2849**](scripts/script2849.cs2)  
 [**2850**](scripts/script2850.cs2)  
-[**2851**](scripts/script2851.cs2)  
-[**2853**](scripts/script2853.cs2)  
-[**2854**](scripts/script2854.cs2)  
-[**2855**](scripts/script2855.cs2)  
-[**2856**](scripts/script2856.cs2)  
-[**2857**](scripts/script2857.cs2)  
-[**2858**](scripts/script2858.cs2)  
-[**2859**](scripts/script2859.cs2)  
-[**2860**](scripts/script2860.cs2)  
-[**2861**](scripts/script2861.cs2)  
+[**2851**](scripts/[proc,cocktail_show_cocktails].cs2) `[proc,cocktail_show_cocktails]`  
+[**2853**](scripts/[clientscript,cocktail_show_ingredients].cs2) `[clientscript,cocktail_show_ingredients]`  
+[**2854**](scripts/[proc,cocktail_show_ingredients].cs2) `[proc,cocktail_show_ingredients]`  
+[**2855**](scripts/[proc,cocktail_create_ingredient].cs2) `[proc,cocktail_create_ingredient]`  
+[**2856**](scripts/[proc,cocktail_return_dummy].cs2) `[proc,cocktail_return_dummy]`  
+[**2857**](scripts/[proc,cocktail_check_inv].cs2) `[proc,cocktail_check_inv]`  
+[**2858**](scripts/[clientscript,clock_build].cs2) `[clientscript,clock_build]`  
+[**2859**](scripts/[clientscript,clock_fake_update].cs2) `[clientscript,clock_fake_update]`  
+[**2860**](scripts/[clientscript,clock_update].cs2) `[clientscript,clock_update]`  
+[**2861**](scripts/[proc,clock_set].cs2) `[proc,clock_set]`  

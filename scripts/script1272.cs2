@@ -39,8 +39,8 @@ cc_settextfont(p12_full);
 cc_settext($string0);
 if ($int3 > 0) {
 	cc_setcolour(0xff981f);
-	if_setonmouseover("script85(event_com, $int5, ^white)", $component0);
-	if_setonmouseleave("script85(event_com, $int5, 0xff981f)", $component0);
+	if_setonmouseover("cc_colour_swapper(event_com, $int5, ^white)", $component0);
+	if_setonmouseleave("cc_colour_swapper(event_com, $int5, 0xff981f)", $component0);
 	if_setonop("script1273(event_opindex, $component0)", $component0);
 } else {
 	cc_setcolour(0x8f8f8f);

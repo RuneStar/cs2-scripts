@@ -1,0 +1,8 @@
+// 229
+[clientscript,cc_graphic_swapper](component $component0, int $int1, graphic $graphic2, component $component3)
+if (cc_find($component0, $int1) = ^true) {
+	cc_setgraphic($graphic2);
+}
+if ($component3 ! null) {
+	~deltooltip_action($component3);
+}

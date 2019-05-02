@@ -1,0 +1,5 @@
+// 719
+[clientscript,cc_object_swapper](component $component0, int $int1, obj $obj2, int $int3)
+if (cc_find($component0, $int1) = ^true) {
+	cc_setobject($obj2, $int3);
+}

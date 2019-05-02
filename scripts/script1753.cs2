@@ -73,7 +73,7 @@ if ((cc_find($component4, $int11) = ^true) & (.cc_find($component4, $int12) = ^t
 } else {
 	$int23, $int24, $int25 = ~hex_to_rgb(^yellow);
 	$int23, $int24, $int25 = ~max(calc($int23 - 48), 0), ~max(calc($int24 - 48), 0), ~max(calc($int25 - 48), 0);
-	$colour26 = ~script246($int23, $int24, $int25);
+	$colour26 = ~rgb_to_hex($int23, $int24, $int25);
 	cc_create($component4, ^iftype_rectangle, $int11);
 	.cc_create($component4, ^iftype_rectangle, $int12);
 	if (testbit(%varbit5640, 1) = ^true) {

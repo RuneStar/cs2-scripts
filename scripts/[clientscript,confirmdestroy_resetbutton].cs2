@@ -1,0 +1,5 @@
+// 1652
+[clientscript,confirmdestroy_resetbutton](component $component0, string $string0, int $int1, string $string1, int $int2)
+if (clientclock >= $int2) {
+	~confirmdestroy_setupbutton($component0, $string0, $int1, $string1);
+}

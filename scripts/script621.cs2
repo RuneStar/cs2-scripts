@@ -77,8 +77,8 @@ while ($int11 < $int2) {
 	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	.cc_settextshadow(true);
 	.cc_setcolour(0xff981f);
-	cc_setonmouserepeat("script85(event_com, .cc_getid, ^white)");
-	cc_setonmouseleave("script85(event_com, .cc_getid, 0xff981f)");
+	cc_setonmouserepeat("cc_colour_swapper(event_com, .cc_getid, ^white)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 	.cc_settext($string1);
 	.cc_create(400:10, ^iftype_graphic, %varcint43);
 	%varcint43 = calc(%varcint43 + 1);

@@ -106,8 +106,8 @@ if (if_gethide(76:14) = true) {
 		cc_setsize($int5, $int10, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, calc((if_getheight(76:12) - $int10) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settext($string1);
-		cc_setonmouserepeat("script85(event_com, event_comid, 0xffb82f)");
-		cc_setonmouseleave("script85(event_com, event_comid, 0xff981f)");
+		cc_setonmouserepeat("cc_colour_swapper(event_com, event_comid, 0xffb82f)");
+		cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xff981f)");
 		cc_setop(1, "View Channel");
 		cc_setonop("grouping_viewchannel($int2)");
 		return;

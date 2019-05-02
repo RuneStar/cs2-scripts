@@ -23,8 +23,8 @@ if (~toplevel_check_sidepanel(11) = false) {
 	} else {
 		if_setgraphic($graphic8, $component5);
 		if_setontimer(null, $component5);
-		if_setonmouserepeat("script44($component5, $graphic7)", $component6);
-		if_setonmouseleave("script44($component5, $graphic8)", $component6);
+		if_setonmouserepeat("graphic_swapper($component5, $graphic7)", $component6);
+		if_setonmouseleave("graphic_swapper($component5, $graphic8)", $component6);
 	}
 }
 ~orbs_update($component1, $component2, runenergy_visible, 100);

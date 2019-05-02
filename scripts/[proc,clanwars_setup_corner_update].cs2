@@ -26,8 +26,8 @@ if (%varbit4285 ! $int3) {
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
 		cc_settext("Accept");
-		if_setonmouserepeat("script85($component2, $int4, ^white)", $component2);
-		if_setonmouseleave("script85($component2, $int4, 0xff981f)", $component2);
+		if_setonmouserepeat("cc_colour_swapper($component2, $int4, ^white)", $component2);
+		if_setonmouseleave("cc_colour_swapper($component2, $int4, 0xff981f)", $component2);
 	}
 }
 if ((%varbit4271 = 1) & (%varbit4272 = 1)) {

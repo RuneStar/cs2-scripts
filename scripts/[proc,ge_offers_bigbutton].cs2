@@ -23,7 +23,7 @@ if ($int1 = 1) {
 	if_setonop(null, $component0);
 } else {
 	cc_setcolour(0xff981f);
-	if_setonmouserepeat("script85(event_com, $int2, ^white)", $component0);
-	if_setonmouseleave("script85(event_com, $int2, 0xff981f)", $component0);
+	if_setonmouserepeat("cc_colour_swapper(event_com, $int2, ^white)", $component0);
+	if_setonmouseleave("cc_colour_swapper(event_com, $int2, 0xff981f)", $component0);
 	if_setonop("ge_offers_bigbutton_op(event_opindex, $component0, $string0)", $component0);
 }

@@ -63,8 +63,8 @@ while (((($int8 <= $int0) & ($int9 ! -1)) & ($int10 ! -1)) & ($int11 ! -1)) {
 	cc_setsize(15, 14, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, calc($int8 * $int14), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("reset,0");
-	cc_setonmouseover("script229($component5, $int8, $graphic13, null)");
-	cc_setonmouseleave("script229($component5, $int8, $graphic12, null)");
+	cc_setonmouseover("cc_graphic_swapper($component5, $int8, $graphic13, null)");
+	cc_setonmouseleave("cc_graphic_swapper($component5, $int8, $graphic12, null)");
 	cc_setonop("script1587($component5, $int8)");
 	cc_setop(1, "Reset Streak");
 	$string0 = substring($string0, calc($int9 + 1), string_length($string0));

@@ -11,8 +11,8 @@ if ($obj6 ! null) {
 	$int7 = inv_getnum($inv1, $int0);
 	cc_sethide(false);
 	cc_clearops;
-	cc_setonmouserepeat("script229(event_com, $int3, $graphic5, null)");
-	cc_setonmouseleave("script229(event_com, $int3, $graphic4, null)");
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, $int3, $graphic5, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, $int3, $graphic4, null)");
 	if (oc_cert($obj6) ! $obj6) {
 		if ($int7 = 1) {
 			cc_setop(1, "Collect-item");

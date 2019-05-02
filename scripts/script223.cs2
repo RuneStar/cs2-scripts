@@ -34,8 +34,8 @@ if (%varbit8119 = 1) {
 	if_settextalign(^settextalign_centre, ^settextalign_bottom, 0, 162:57);
 	if_setop(10, "Configure", 162:57);
 	if_setopbase("<col=ff9040>Display name</col>", 162:57);
-	if_setonmouserepeat("script45(event_com, $colour1)", 162:57);
-	if_setonmouseleave("script45(event_com, $colour0)", 162:57);
+	if_setonmouserepeat("text_colour_swapper(event_com, $colour1)", 162:57);
+	if_setonmouseleave("text_colour_swapper(event_com, $colour0)", 162:57);
 	if_setonop("opsound(event_opindex, 1024)", 162:57);
 }
 if_settext($string2, 162:57);

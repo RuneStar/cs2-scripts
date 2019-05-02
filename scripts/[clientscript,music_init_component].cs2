@@ -73,7 +73,7 @@ if (cc_find($component0, $int1) = ^true) {
 		} else {
 			~music_setcolour(0x0dc10d);
 		}
-		cc_setonmouseover("script85(event_com, event_comid, ^white)");
+		cc_setonmouseover("cc_colour_swapper(event_com, event_comid, ^white)");
 	} else {
 		cc_sethide(true);
 	}

@@ -22,8 +22,8 @@ if (((map_members = ^false) & (%varbit5314 = 0)) | (enum(obj, int, 906, inv_geto
 	if_settrans(50, $component3);
 } else {
 	if_sethide(false, $component5);
-	if_setonmouserepeat("script44($component4, $graphic6)", $component5);
-	if_setonmouseleave("script44($component4, $graphic7)", $component5);
+	if_setonmouserepeat("graphic_swapper($component4, $graphic6)", $component5);
+	if_setonmouseleave("graphic_swapper($component4, $graphic7)", $component5);
 	if_setop(1, "Use", $component5);
 	if_setonop("orbs_toggle_spec_op(event_opindex, null, $component1, $component2, $component3, $component4, $component5)", $component5);
 	if (%var301 > 0) {

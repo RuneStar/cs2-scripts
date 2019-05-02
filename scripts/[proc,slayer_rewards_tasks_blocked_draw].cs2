@@ -75,8 +75,8 @@ cc_setgraphic("combatboxesmed,0");
 .cc_settext("Unblock task");
 if ($int8 ! 0) {
 	.cc_setcolour(0xff981f);
-	cc_setonmouseover("script85(event_com, .cc_getid, ^white)");
-	cc_setonmouseleave("script85(event_com, .cc_getid, 0xff981f)");
+	cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
 	cc_setop(1, "Unblock");
 	cc_setonop("slayer_rewards_tasks_unblocktask($int8, $int9, $component3, $component4, $component5, $component6, $component7)");
 } else {

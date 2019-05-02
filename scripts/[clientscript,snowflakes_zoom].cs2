@@ -1,0 +1,6 @@
+// 932
+[clientscript,snowflakes_zoom](component $component0, int $int1, int $int2, int $int3)
+def_int $int4 = if_getheight($component0);
+if ((($int4 ! $int3) & (cc_find($component0, $int1) = ^true)) & (.cc_find($component0, $int2) = ^true)) {
+	~snowflakes_zoom($component0, $int4);
+}

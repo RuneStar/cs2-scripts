@@ -10,4 +10,4 @@ if_setontimer("clanwars_hud_countdown_tick($component0, $component1, cc_getid, $
 if ($int2 > 500) {
 	$int2 = 500;
 }
-cc_setcolour(~script246(255, interpolate(0, $int2, 0, 500, 152), interpolate(0, $int2, 0, 500, 31)));
+cc_setcolour(~rgb_to_hex(255, interpolate(0, $int2, 0, 500, 152), interpolate(0, $int2, 0, 500, 31)));

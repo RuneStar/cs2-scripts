@@ -161,8 +161,8 @@ while ($model10 ! null) {
 		.cc_setcolour(^blue);
 	} else {
 		.cc_setcolour(0x333300);
-		.cc_setonmouseover("script85($component1, $int3, ^white)");
-		.cc_setonmouseleave("script85($component1, $int3, 0x333300)");
+		.cc_setonmouseover("cc_colour_swapper($component1, $int3, ^white)");
+		.cc_setonmouseleave("cc_colour_swapper($component1, $int3, 0x333300)");
 	}
 	.cc_setop(1, "Select");
 	.cc_setopbase("<col=ff9040><$string0></col>");

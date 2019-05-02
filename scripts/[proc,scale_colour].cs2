@@ -14,5 +14,5 @@ $int7, $int8, $int9 = ~hex_to_rgb($colour1);
 $int10 = calc($int4 + scale($int2, $int3, ($int7 - $int4)));
 $int11 = calc($int5 + scale($int2, $int3, ($int8 - $int5)));
 $int12 = calc($int6 + scale($int2, $int3, ($int9 - $int6)));
-def_int $colour13 = ~script246($int10, $int11, $int12);
+def_int $colour13 = ~rgb_to_hex($int10, $int11, $int12);
 return($colour13);

@@ -1,0 +1,41 @@
+// 2855
+[proc,cocktail_create_ingredient](obj $obj0, int $int1, int $int2, component $component3, component $component4, int $int5, int $int6, int $int7)(int)
+if ($obj0 = null) {
+	return($int2);
+}
+def_int $int8 = calc(5 - $int6);
+$int8 = calc(($int5 / 2) * $int8);
+def_int $int9 = 1;
+if (inv_total(inv, $obj0) < $int1) {
+	$int9 = 0;
+}
+cc_create($component3, ^iftype_model, $int2);
+cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(((($int5 * $int7) + ($int5 / 2)) - (35 / 2)) + $int8), calc(5 + 16), ^setpos_abs_left, ^setpos_abs_top);
+if (inv_total(inv, $obj0) < $int1) {
+	cc_setobject(~cocktail_return_dummy($obj0), 1);
+} else {
+	cc_setobject($obj0, 1);
+}
+$int2 = calc($int2 + 1);
+cc_create($component3, ^iftype_text, $int2);
+cc_setsize($int5, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(($int5 * $int7) + $int8), calc((5 + 16) + 35), ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
+if ($int9 = 1) {
+	cc_settext("<col=00ff00><tostring(inv_total(inv, $obj0))>/<tostring($int1)>");
+} else {
+	cc_settext("<col=ff0000><tostring(inv_total(inv, $obj0))>/<tostring($int1)>");
+}
+$int2 = calc($int2 + 1);
+cc_create($component3, ^iftype_text, $int2);
+cc_setsize($int5, calc(16 * 2), ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(($int5 * $int7) + $int8), calc((5 + (16 * 2)) + 35), ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 10);
+cc_settext(oc_name($obj0));
+return(calc($int2 + 1));

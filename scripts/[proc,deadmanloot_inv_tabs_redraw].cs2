@@ -24,8 +24,8 @@ while ($int0 < 5) {
 			cc_setgraphic("banktabs,0");
 			cc_setop(1, "View tab");
 			cc_setonop("deadmanloot_inv_switch($int0)");
-			cc_setonmouserepeat("script229(234:14, $int0, $graphic3, null)");
-			cc_setonmouseleave("script229(234:14, $int0, $graphic2, null)");
+			cc_setonmouserepeat("cc_graphic_swapper(234:14, $int0, $graphic3, null)");
+			cc_setonmouseleave("cc_graphic_swapper(234:14, $int0, $graphic2, null)");
 		}
 	}
 	if (cc_find(234:14, calc(5 + $int0)) = ^true) {

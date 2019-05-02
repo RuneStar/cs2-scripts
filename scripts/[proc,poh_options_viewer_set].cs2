@@ -3,8 +3,8 @@
 if (%varbit2176 = 1) {
 	cc_settrans(0);
 	.cc_setcolour(0xff981f);
-	if_setonmouserepeat("script85(event_com, .cc_getid, ^white)", $component0);
-	if_setonmouseleave("script85(event_com, .cc_getid, 0xff981f)", $component0);
+	if_setonmouserepeat("cc_colour_swapper(event_com, .cc_getid, ^white)", $component0);
+	if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $component0);
 	if_setonop("opsound(event_opindex, 2)", $component0);
 } else {
 	cc_settrans(120);

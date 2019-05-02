@@ -8,5 +8,5 @@ cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settext("Okay");
-if_setonmouserepeat("script85($component0, cc_getid, ^white)", $component0);
-if_setonmouseleave("script85($component0, cc_getid, 0xff981f)", $component0);
+if_setonmouserepeat("cc_colour_swapper($component0, cc_getid, ^white)", $component0);
+if_setonmouseleave("cc_colour_swapper($component0, cc_getid, 0xff981f)", $component0);

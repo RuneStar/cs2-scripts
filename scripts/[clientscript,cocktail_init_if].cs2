@@ -1,0 +1,17 @@
+// 2848
+[clientscript,cocktail_init_if](component $component0, component $component1, component $component2, component $component3, component $component4)
+cc_deleteall($component0);
+if_setonmouseover("script2849($component0)", $component0);
+if_setonmouseleave("script2850($component0)", $component0);
+if_setonvartransmit("cocktail_update_if($component1, $component2, $component3, $component4){var675}", $component4);
+if_setoninvtransmit("cocktail_update_if($component1, $component2, $component3, $component4){inv}", $component4);
+def_int $int5 = ~v2_stone_button_filled($component0);
+cc_create($component0, ^iftype_text, $int5);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
+cc_settext("Create");
+~cocktail_show_cocktails($component1, $component2, $component3, $component4);

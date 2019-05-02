@@ -1,0 +1,21 @@
+// 1651
+[clientscript,confirmdestroy_triggerbutton](int $int0, char $char1, component $component2, string $string0, int $int3, string $string1, int $int4)
+if (($int0 = 1) | (($char1 ! null) & (string_indexof_char($string1, $char1) ! -1))) {
+	if (($int0 ! 1) & (~script1701(584, -1) = 0)) {
+		return;
+	}
+	sound_synth(2266, 1, 0);
+	if (cc_find($component2, $int4) = ^true) {
+		cc_setcolour(^white);
+		cc_settext("...");
+	}
+	if_setonmouserepeat(null, $component2);
+	if_setonmouseleave(null, $component2);
+	if_clearops($component2);
+	if_setonop(null, $component2);
+	if_setonkey(null, $component2);
+	if_setontimer("confirmdestroy_resetbutton($component2, $string0, $int3, $string1, calc(clientclock + 40))", $component2);
+	if (cc_find(584:0, $int3) = ^true) {
+		cc_resume_pausebutton;
+	}
+}

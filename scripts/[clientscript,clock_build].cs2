@@ -1,0 +1,12 @@
+// 2858
+[clientscript,clock_build](component $component0)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+cc_setcolour(0xff981f);
+cc_settextfont(b12_full);
+cc_setontimer("clock_fake_update($component0)");
+cc_setonvartransmit("clock_update($component0){var1042}");

@@ -1,0 +1,18 @@
+// 1318
+[clientscript,bankmain_incinerator_enableop](int $int0, component $component1, int $int2, int $int3, int $int4)
+if (clientclock < $int4) {
+	return;
+}
+if ((cc_find($component1, $int2) = ^true) & (.cc_find($component1, $int3) = ^true)) {
+	cc_setontimer(null);
+	.cc_settext("Destroy");
+	.cc_setcolour(0xff981f);
+	cc_setonmouserepeat("cc_colour_swapper($component1, $int3, ^red)");
+	cc_setonmouseleave("cc_colour_swapper($component1, $int3, 0xff981f)");
+	if ($int0 > 1) {
+		cc_setop(1, "Destroy ALL");
+	} else {
+		cc_setop(1, "Destroy");
+	}
+	cc_setonop("bankmain_incinerator_close(event_opindex, $component1)");
+}

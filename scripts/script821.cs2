@@ -123,8 +123,8 @@ if (cc_find($component8, $int10) = ^true) {
 			if (stockmarket_isofferstable($int13) = true) {
 				cc_settrans(0);
 				cc_setgraphic($graphic23);
-				cc_setonmouserepeat("script229(event_com, event_comid, $graphic24, null)");
-				cc_setonmouseleave("script229(event_com, event_comid, $graphic23, null)");
+				cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic24, null)");
+				cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic23, null)");
 				cc_setonop("opsound(event_opindex, 2)");
 			} else {
 				cc_settrans(120);

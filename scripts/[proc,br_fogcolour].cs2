@@ -62,7 +62,7 @@ if ($int18 < $int9) {
 } else if ($int18 > $int9) {
 	$int18 = calc($int18 - 1);
 }
-if_setcolour(~script246($int16, $int17, $int18), 90:1);
+if_setcolour(~rgb_to_hex($int16, $int17, $int18), 90:1);
 if ($int1 < $int15) {
 	$int1 = calc($int1 + 1);
 } else if ($int1 > $int15) {
