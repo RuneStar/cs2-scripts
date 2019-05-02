@@ -742,7 +742,6 @@
 [**739**](scripts/[proc,inferno_hud_update].cs2) `[proc,inferno_hud_update]`  
 [**740**](scripts/[proc,scrollbar_vertical_setdragger].cs2) `[proc,scrollbar_vertical_setdragger]`  
 [**741**](scripts/[clientscript,pest_activity_init].cs2) `[clientscript,pest_activity_init]`  
-[**742**](scripts/script742.cs2)  
 [**743**](scripts/script743.cs2)  
 [**744**](scripts/script744.cs2)  
 [**745**](scripts/[proc,quicksort_questlist].cs2) `[proc,quicksort_questlist]`  
@@ -2848,3 +2847,16 @@
 [**2845**](scripts/script2845.cs2)  
 [**2846**](scripts/script2846.cs2)  
 [**2847**](scripts/script2847.cs2)  
+[**2848**](scripts/script2848.cs2)  
+[**2849**](scripts/script2849.cs2)  
+[**2850**](scripts/script2850.cs2)  
+[**2851**](scripts/script2851.cs2)  
+[**2853**](scripts/script2853.cs2)  
+[**2854**](scripts/script2854.cs2)  
+[**2855**](scripts/script2855.cs2)  
+[**2856**](scripts/script2856.cs2)  
+[**2857**](scripts/script2857.cs2)  
+[**2858**](scripts/script2858.cs2)  
+[**2859**](scripts/script2859.cs2)  
+[**2860**](scripts/script2860.cs2)  
+[**2861**](scripts/script2861.cs2)  

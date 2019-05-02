@@ -17,7 +17,8 @@ def_int $int9 = 15;
 if (~on_mobile = true) {
 	$int9 = scale(4, 3, $int9);
 }
-if_setscrollsize(0, calc((3 + ($int7 * $int9)) + 3), $component1);
+def_int $int10 = calc((3 + ($int7 * $int9)) + 3);
+if_setscrollsize(0, $int10, $component1);
 if ($int7 > 1) {
 	~music_sort(0, 0, calc($int7 - 1));
 }
@@ -25,9 +26,9 @@ $int8 = 0;
 while ($int8 < $int7) {
 	if (cc_find($component1, $array0($int8)) = ^true) {
 		cc_sethide(false);
-		cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
-		cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setontimer("music_init_component(event_com, event_comid, $int8)");
+		cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setontimer("music_init_component(event_com, event_comid, $int8, $int9)");
 	}
 	$int8 = calc($int8 + 1);
 }
@@ -37,4 +38,6 @@ if_setonop("music_optionbuttons_setmode(event_opindex, 1, $component4, $componen
 if_setonop("music_optionbuttons_setmode(event_opindex, 0, $component4, $component5, $component6)", $component5);
 if_setonop("music_optionbuttons_setloop(event_opindex, $component4, $component5, $component6)", $component6);
 cc_deleteall($component2);
+%varcint75 = ~max(0, ~min(calc($int10 - if_getheight($component1)), %varcint75));
 ~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($component2, $component1, %varcint75);

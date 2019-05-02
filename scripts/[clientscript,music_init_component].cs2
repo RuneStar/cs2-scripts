@@ -1,75 +1,71 @@
 // 252
-[clientscript,music_init_component](component $component0, int $int1, int $int2)
-def_int $int3 = 0;
-def_coord $coord4 = null;
-def_int $int5 = -1;
+[clientscript,music_init_component](component $component0, int $int1, int $int2, int $int3)
+def_int $int4 = 0;
+def_coord $coord5 = null;
 def_int $int6 = -1;
-def_int $int7 = 0;
+def_int $int7 = -1;
+def_int $int8 = 0;
 def_string $string0 = "";
-def_int $int8 = 15;
-if (~on_mobile = true) {
-	$int8 = scale(4, 3, $int8);
-}
 if (cc_find($component0, $int1) = ^true) {
 	cc_setontimer(null);
-	$int3 = enum(int, int, 818, $int1);
-	if ($int3 ! 0) {
-		cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, calc(3 + ($int2 * $int8)), ^setpos_abs_centre, ^setpos_abs_top);
+	$int4 = enum(int, int, 818, $int1);
+	if ($int4 ! 0) {
+		cc_setsize(0, $int3, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, calc(3 + ($int2 * $int3)), ^setpos_abs_centre, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-		$string0 = enum(int, string, 812, $int3);
+		$string0 = enum(int, string, 812, $int4);
 		cc_settext($string0);
 		cc_setop(1, "Play");
 		cc_setop(2, "Unlock hint");
 		cc_setopbase("<col=ff9040><$string0></col>");
-		$coord4 = enum(int, coord, 819, $int3);
-		if ($coord4 ! null) {
-			$int5, $int6 = coordx($coord4), coordy($coord4);
-			switch_int ($int5) {
+		$coord5 = enum(int, coord, 819, $int4);
+		if ($coord5 ! null) {
+			$int6, $int7 = coordx($coord5), coordy($coord5);
+			switch_int ($int6) {
 				case 1 :
-					$int7 = %var20;
+					$int8 = %var20;
 				case 2 :
-					$int7 = %var21;
+					$int8 = %var21;
 				case 3 :
-					$int7 = %var22;
+					$int8 = %var22;
 				case 4 :
-					$int7 = %var23;
+					$int8 = %var23;
 				case 5 :
-					$int7 = %var24;
+					$int8 = %var24;
 				case 6 :
-					$int7 = %var25;
+					$int8 = %var25;
 				case 7 :
-					$int7 = %var298;
+					$int8 = %var298;
 				case 8 :
-					$int7 = %var311;
+					$int8 = %var311;
 				case 9 :
-					$int7 = %var346;
+					$int8 = %var346;
 				case 10 :
-					$int7 = %var414;
+					$int8 = %var414;
 				case 11 :
-					$int7 = %var464;
+					$int8 = %var464;
 				case 12 :
-					$int7 = %var598;
+					$int8 = %var598;
 				case 13 :
-					$int7 = %var662;
+					$int8 = %var662;
 				case 14 :
-					$int7 = %var721;
+					$int8 = %var721;
 				case 15 :
-					$int7 = %var906;
+					$int8 = %var906;
 				case 16 :
-					$int7 = %var1009;
+					$int8 = %var1009;
 				case 17 :
-					$int7 = %var1338;
+					$int8 = %var1338;
 				case 18 :
-					$int7 = %var1681;
+					$int8 = %var1681;
 				case 19 :
-					$int7 = %var2065;
+					$int8 = %var2065;
 			}
-			if (testbit($int7, $int6) = ^true) {
+			if (testbit($int8, $int7) = ^true) {
 				~music_setcolour(0x0dc10d);
-			} else if (($int3 = 331) & (%varbit1028 > 35)) {
+			} else if (($int4 = 331) & (%varbit1028 > 35)) {
 				~music_setcolour(0x0dc10d);
 			} else {
 				~music_setcolour(^red);

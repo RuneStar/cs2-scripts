@@ -1,0 +1,12 @@
+// 2850
+script2850(component $component0)
+cc_deleteall($component0);
+def_int $int1 = ~v2_stone_button_filled($component0);
+cc_create($component0, ^iftype_text, $int1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
+cc_settext("Create");

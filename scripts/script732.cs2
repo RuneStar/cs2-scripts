@@ -1,7 +1,4 @@
 // 732
-script732
-if (~on_mobile = false) {
-	return;
-}
-def_int $int0 = batterylevel;
-mes("Battery level: <tostring($int0)>");
+script732(component $component0, component $component1, component $component2, component $component3)
+~script2851($component0, $component1, $component2, $component3);
+~script2854($component2, enum(int, struct, 2323, calc(%varbit8353 - 1)), $component3);
