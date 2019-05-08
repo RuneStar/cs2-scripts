@@ -5,7 +5,7 @@ if (~inzone(0_16_140_0_0, 3_55_161_63_63, $coord1) = 1) {
 	$coord1 = movecoord($coord1, 0, 0, -6400);
 }
 def_int $int2 = calc(coordx($coord1) - coordx(0_45_49_32_0));
-def_int $int3 = calc(coordy($coord1) - coordy(0_45_49_32_0));
+def_int $int3 = calc(coordz($coord1) - coordz(0_45_49_32_0));
 if (((($int2 < 0) | ($int2 > 384)) | ($int3 < 0)) | ($int3 > 384)) {
 	cc_sethide(true);
 	return;

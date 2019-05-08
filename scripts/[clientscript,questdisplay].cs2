@@ -8,4 +8,4 @@ $int1 = ~questdisplay_setup($int1, "Miniquests", $string3, 473:6, ~miniquest_cou
 if_setscrollpos(0, 0, 473:3);
 if_setscrollsize(0, $int1, 473:3);
 ~scrollbar_vertical(473:7, 473:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-if_settext("Quest points: <tostring(coordx($coord0))> / <tostring(coordy($coord0))>", 473:8);
+if_settext("Quest points: <tostring(coordx($coord0))> / <tostring(coordz($coord0))>", 473:8);

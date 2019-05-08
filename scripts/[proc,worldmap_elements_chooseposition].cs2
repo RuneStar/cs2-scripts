@@ -4,7 +4,7 @@ def_int $int7 = 0;
 def_int $int8 = 0;
 if ($boolean1 = true) {
 	$int7 = coordx($coord0);
-	$int8 = coordy($coord0);
+	$int8 = coordz($coord0);
 } else {
 	$int7, $int8 = worldmap_getdisplaycoord($coord0);
 }

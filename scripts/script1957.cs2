@@ -42,7 +42,7 @@ if (%varbit5703 = 1) {
 	$int5, $int6, $int7, $int19 = $int11, $int12, $int13, $int17;
 } else if (%varbit5701 >= 2) {
 	$int3 = invpow(pow(calc(coordx(coord) - coordx(0_49_57_29_25)), 2), 2);
-	$int4 = invpow(pow(calc(coordy(coord) - coordy(0_49_57_29_25)), 2), 2);
+	$int4 = invpow(pow(calc(coordz(coord) - coordz(0_49_57_29_25)), 2), 2);
 	if ($int3 > $int4) {
 		$int2 = $int3;
 	} else {

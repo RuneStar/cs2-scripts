@@ -29,7 +29,7 @@ while ($int5 < $int1) {
 	$int2 = enum(int, int, 818, $int5);
 	$coord3 = enum(int, coord, 819, $int2);
 	if ($coord3 ! null) {
-		if (testbit($array0(coordx($coord3)), coordy($coord3)) = ^true) {
+		if (testbit($array0(coordx($coord3)), coordz($coord3)) = ^true) {
 			$int4 = calc($int4 + 1);
 		} else if (($int2 = 331) & (%varbit1028 > 35)) {
 			$int4 = calc($int4 + 1);

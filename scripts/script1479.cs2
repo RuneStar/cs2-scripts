@@ -5,7 +5,7 @@ if ($coord4 = null) {
 	return(0, 0);
 }
 def_int $int5 = coordx($coord4);
-def_int $int6 = coordy($coord4);
+def_int $int6 = coordz($coord4);
 def_int $int7 = 0;
 if ($int5 = 1) {
 	$int7 = %var1365;
@@ -37,7 +37,7 @@ if ($coord8 ! null) {
 }
 $coord8 = enum(loc, coord, 1440, $loc0);
 if ($coord8 ! null) {
-	$int5, $int6 = coordx($coord8), coordy($coord8);
+	$int5, $int6 = coordx($coord8), coordz($coord8);
 	if ($int5 = 1) {
 		$int7 = $int1;
 	} else if ($int5 = 2) {

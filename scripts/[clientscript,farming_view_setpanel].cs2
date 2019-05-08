@@ -7,7 +7,7 @@ if ((($component4 = null) | ($component5 = null)) | ($component6 = null)) {
 	return;
 }
 def_int $int7 = calc(coordx($coord2) % 64);
-def_int $int8 = calc(coordy($coord2) % 64);
+def_int $int8 = calc(coordz($coord2) % 64);
 if ($int8 <= 0) {
 	$int8 = 1;
 }
@@ -127,14 +127,14 @@ if (testbit($int3, 2) = ^true) {
 	cc_setobject_nonum(mixed_flowers_2472, 1);
 	$string0 = append($string0, "<br>A nearby flower patch is providing protection.");
 }
-if ((testbit($int3, 4) = ^true) | (coordz($coord2) = 1)) {
+if ((testbit($int3, 4) = ^true) | (coordy($coord2) = 1)) {
 	cc_create($component6, ^iftype_graphic, $int10);
 	$int10 = calc($int10 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(5, 20, ^setpos_abs_right, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	if (coordz($coord2) = 1) {
+	if (coordy($coord2) = 1) {
 		cc_setobject_nonum(watering_can_8_5340, 1);
 		$string0 = append($string0, "<br>The patch has been watered.");
 	} else {

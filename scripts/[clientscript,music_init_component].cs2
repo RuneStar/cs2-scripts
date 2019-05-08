@@ -22,7 +22,7 @@ if (cc_find($component0, $int1) = ^true) {
 		cc_setopbase("<col=ff9040><$string0></col>");
 		$coord5 = enum(int, coord, 819, $int4);
 		if ($coord5 ! null) {
-			$int6, $int7 = coordx($coord5), coordy($coord5);
+			$int6, $int7 = coordx($coord5), coordz($coord5);
 			switch_int ($int6) {
 				case 1 :
 					$int8 = %var20;
