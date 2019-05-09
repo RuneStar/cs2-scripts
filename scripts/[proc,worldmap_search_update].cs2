@@ -1,6 +1,6 @@
 // 1738
 [proc,worldmap_search_update](string $string0, component $component0)
-def_int $int1 = -1;
+def_mapelement $mapelement1 = null;
 def_coord $coord2 = null;
 def_int $int3 = 0;
 def_int $int4 = 0;
@@ -16,9 +16,9 @@ if (string_length($string0) > 0) {
 	$int3 = string_length(%varcstring363);
 	if ($int3 > 0) {
 		if ($int3 > 1) {
-			$int1, $coord2 = worldmap_listelement_start;
-			while (($coord6 = null) & ($int1 ! -1)) {
-				$string1 = mec_text($int1);
+			$mapelement1, $coord2 = worldmap_listelement_start;
+			while (($coord6 = null) & ($mapelement1 ! null)) {
+				$string1 = mec_text($mapelement1);
 				$int4 = string_length($string1);
 				if ($int4 > 0) {
 					$string1 = ~script1299($string1, "<br>", " ");
@@ -35,7 +35,7 @@ if (string_length($string0) > 0) {
 						$coord6 = $coord2;
 					}
 				}
-				$int1, $coord2 = worldmap_listelement_next;
+				$mapelement1, $coord2 = worldmap_listelement_next;
 			}
 		}
 		if ($coord6 ! null) {
