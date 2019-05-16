@@ -1,0 +1,19 @@
+// 2852
+[proc,seed_vault_size_check](component $component0, component $component1, int $int2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8)
+def_int $int9 = if_getwidth($component1);
+def_int $int10 = if_getheight($component1);
+if (($int9 = $int2) & ($int10 = $int3)) {
+	return;
+}
+def_int $int11 = calc($int10 - 3);
+def_int $int12 = 800;
+if ($int12 > $int11) {
+	$int12 = $int11;
+}
+if_setsize(500, $int12, ^setsize_abs, ^setsize_abs, $component0);
+if_setposition(0, calc(($int10 - $int12) / 2), ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
+~scrollbar_vertical_rebuild($component5, $component4);
+~scrollbar_vertical_rebuild($component7, $component6);
+cc_deleteall($component8);
+~stoneborder($component8, "Seed Vault", 0);
+if_setontimer("seed_vault_size_check($component0, $component1, $int9, $int10, $component4, $component5, $component6, $component7, $component8)", $component0);

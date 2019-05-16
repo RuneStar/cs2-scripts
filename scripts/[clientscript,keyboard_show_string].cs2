@@ -1,0 +1,6 @@
+// 1817
+[clientscript,keyboard_show_string](int $int0, int $int1, string $string0)
+if (~on_mobile = false) {
+	return;
+}
+~keyboard_show_string($int0, $int1, $string0);

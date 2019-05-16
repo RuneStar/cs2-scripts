@@ -7,7 +7,7 @@ def_string $string1 = "";
 if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string1)", 162:45);
 if_setondialogabort("meslayer_ondialogabort()", 162:45);
 if (~on_mobile = true) {
-	~script1983(1, 10);
+	~keyboard_show(1, 10);
 	if_setposition(0, -18, ^setpos_abs_centre, ^setpos_abs_centre, 162:44);
 	if_setsize(0, 36, ^setsize_minus, ^setsize_abs, 162:44);
 	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_centre, 162:45);

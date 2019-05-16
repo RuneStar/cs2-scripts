@@ -1,0 +1,23 @@
+// 1999
+[clientscript,fossil_warning_flasher](component $component0, component $component1, int $int2, int $int3)
+%varcint198 = 1;
+if ((%varbit5811 >= 100) | (%varbit5811 = 0)) {
+	if_settrans(255, $component0);
+	if_setontimer(null, $component1);
+	%varcint198 = 0;
+	return;
+}
+def_int $int4 = 1;
+def_int $int5 = 100;
+def_int $int6 = 255;
+def_int $int7 = 180;
+if (%varbit5811 < 50) {
+	$int4 = 2;
+	$int5 = calc(%varbit5811 * 2);
+}
+if_settrans($int3, $component0);
+if (calc(clientclock % $int5) <= calc($int5 / 2)) {
+	$int4 = calc(0 - $int4);
+}
+$int3 = ~minmax($int7, $int6, calc($int3 + $int4));
+if_setontimer("fossil_warning_flasher($component0, $component1, $int2, $int3)", $component1);

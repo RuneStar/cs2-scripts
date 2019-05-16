@@ -1,0 +1,47 @@
+// 398
+[clientscript,fairyrings_rotate](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5)
+def_int $int6 = 0;
+if ($int0 = 1) {
+	$int6 = calc(2048 - (%varbit3985 * 512));
+} else if ($int0 = 2) {
+	$int6 = calc(2048 - (%varbit3986 * 512));
+} else if ($int0 = 3) {
+	$int6 = calc(2048 - (%varbit3987 * 512));
+} else {
+	return;
+}
+def_int $int7 = if_getmodelangle_z($component1);
+if (($int7 < 0) | ($int7 >= 2048)) {
+	$int7 = 0;
+}
+def_int $int8 = 0;
+if ($int7 ! $int6) {
+	if ($int6 < $int7) {
+		$int6 = calc($int6 + 2048);
+	}
+	$int8 = calc($int6 - $int7);
+	if ($int8 < 1024) {
+		if ($int8 > 10) {
+			$int7 = calc($int7 + 10);
+		} else {
+			$int7 = $int6;
+		}
+	} else if ($int8 < 2038) {
+		$int7 = calc($int7 + 2038);
+	} else {
+		$int7 = $int6;
+	}
+}
+$int7 = calc($int7 % 2048);
+if ($int7 < 0) {
+	if ($int7 < -2048) {
+		$int7 = 0;
+	} else {
+		$int7 = calc($int7 + 2048);
+	}
+}
+if_setmodelangle(0, 0, 0, 0, $int7, 1000, $component1);
+if_setmodelangle(0, 0, 0, 0, $int7, 1000, $component2);
+if_setmodelangle(0, 0, 0, 0, $int7, 1000, $component3);
+if_setmodelangle(0, 0, 0, 0, $int7, 1000, $component4);
+if_setmodelangle(0, 0, 0, 0, $int7, 1000, $component5);

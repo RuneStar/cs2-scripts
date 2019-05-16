@@ -11,5 +11,5 @@ if (if_gettop = 80) {
 if_setsize(calc($int0 - 20), calc($int1 - 10), ^setsize_abs, ^setsize_abs, 90:12);
 def_string $string0 = if_gettext(90:12);
 if (compare($string0, "") ! 0) {
-	~script2807($string0);
+	~deadman_broadcast_message_sizing($string0);
 }

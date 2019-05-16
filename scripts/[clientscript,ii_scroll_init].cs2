@@ -1,0 +1,8 @@
+// 2534
+[clientscript,ii_scroll_init](component $component0, component $component1)
+if (~on_mobile = true) {
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, $component1);
+} else {
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, $component1);
+}
+~script2249($component0, setbit(0, 1));

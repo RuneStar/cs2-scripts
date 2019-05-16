@@ -1,0 +1,38 @@
+// 1743
+[proc,worldmap_overview_toggle](boolean $boolean0, component $component1, component $component2)
+cc_deleteall($component2);
+def_int $int3 = 0;
+if ($boolean0 = true) {
+	$int3 = ~v2_stone_button_in_filled($component2);
+	if_sethide(false, $component1);
+	if_setop(1, "Hide", $component2);
+	if_setonop("worldmap_overview_toggle(false, $component1, $component2)", $component2);
+} else {
+	$int3 = ~v2_stone_button_out_filled($component2);
+	if_sethide(true, $component1);
+	if_setop(1, "Show", $component2);
+	if_setonop("worldmap_overview_toggle(true, $component1, $component2)", $component2);
+}
+if_setopbase("<col=ff9040>Overview</col>", $component2);
+cc_create($component2, ^iftype_model, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setmodel(3374);
+cc_setmodelangle(0, 0, 512, 1536, 0, 950);
+cc_create($component2, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+.cc_create($component2, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(8, 15, ^setsize_abs, ^setsize_abs);
+.cc_setsize(6, 13, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+.cc_setfill(true);
+cc_setcolour(^white);
+.cc_setcolour(^white);
+cc_settrans(255);
+.cc_settrans(255);
+if_setonmouserepeat("worldmap_hovertoggle(event_com, cc_getid, .cc_getid, 245)", $component2);
+if_setonmouseleave("worldmap_hovertoggle(event_com, cc_getid, .cc_getid, 255)", $component2);

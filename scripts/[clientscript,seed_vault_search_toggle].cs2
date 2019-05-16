@@ -1,0 +1,11 @@
+// 2865
+[clientscript,seed_vault_search_toggle](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+%varbit8171 = 0;
+if (~seed_vault_searching = 1) {
+	~meslayer_close(1, 1);
+	~seed_vault_search_setbutton($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7);
+	~seed_vault_build($component0, $component1, $component2, $component3, $component4, $component5, $component6);
+	return;
+}
+~meslayer_mode11;
+~seed_vault_search_setbutton($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7);

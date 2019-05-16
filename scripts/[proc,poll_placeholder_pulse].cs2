@@ -1,0 +1,7 @@
+// 617
+[proc,poll_placeholder_pulse](component $component0, int $int1)
+def_int $int2 = calc((clientclock - $int1) % 50);
+if ($int2 >= 25) {
+	$int2 = calc(49 - $int2);
+}
+if_setcolour(~rgb_to_hex(255, calc(152 + interpolate(0, $int2, 0, 24, 103)), calc(31 + interpolate(0, $int2, 0, 24, 224))), $component0);

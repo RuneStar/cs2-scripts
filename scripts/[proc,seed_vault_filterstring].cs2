@@ -1,0 +1,7 @@
+// 2864
+[proc,seed_vault_filterstring]()(string)
+def_string $string0 = lowercase(%varcstring359);
+if (string_length($string0) <= 16) {
+	return($string0);
+}
+return(substring($string0, 0, 15));

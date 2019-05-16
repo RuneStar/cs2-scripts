@@ -1,0 +1,5 @@
+// 1634
+[clientscript,motherlode_hud_update](component $component0, int $int1)
+if (cc_find($component0, $int1) = ^true) {
+	~motherlode_hud_update($component0);
+}

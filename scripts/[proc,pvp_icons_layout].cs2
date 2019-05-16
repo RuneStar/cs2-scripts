@@ -84,7 +84,7 @@ if (~pvpw_check = 1) {
 			if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, 90:66);
 			~pvp_icons_comlevelrange(~wilderness_level);
 			if_sethide(false, 90:68);
-			if_settext(~script1182, 90:68);
+			if_settext(~deadman_skullduration, 90:68);
 		} else {
 			if_setsize(57, 55, ^setsize_abs, ^setsize_abs, 90:61);
 			if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, 90:67);
@@ -98,7 +98,7 @@ if (~pvpw_check = 1) {
 		if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, 90:67);
 		if_sethide(true, 90:66);
 		if_sethide(false, 90:68);
-		if_settext(~script1182, 90:68);
+		if_settext(~deadman_skullduration, 90:68);
 	} else {
 		if_setsize(57, 55, ^setsize_abs, ^setsize_abs, 90:61);
 		if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, 90:67);
@@ -106,7 +106,7 @@ if (~pvpw_check = 1) {
 		if_sethide(true, 90:68);
 	}
 	~script866(true);
-} else if (~script1942 = 1) {
+} else if (~wildwars_world = 1) {
 	if_setsize(57, 55, ^setsize_abs, ^setsize_abs, 90:61);
 	$int5 = 13;
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, 90:67);
@@ -122,8 +122,8 @@ if (~pvpw_check = 1) {
 		}
 		if_sethide(false, 90:1);
 		_2125(2, 90:1);
-		if_setontimer("script1956()", 90:1);
-		~script1957;
+		if_setontimer("wildwars_fogcolour()", 90:1);
+		~wildwars_fogcolour;
 	} else {
 		if_setontimer(null, 90:1);
 		if_sethide(true, 90:1);

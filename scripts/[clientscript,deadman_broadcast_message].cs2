@@ -1,0 +1,7 @@
+// 2805
+[clientscript,deadman_broadcast_message](string $string0)
+if_settext($string0, 90:12);
+if_sethide(false, 90:9);
+~deadman_broadcast_message_sizing($string0);
+if_setsize(0, 60, ^setsize_abs, ^setsize_abs, 90:9);
+if_setontimer("deadman_broadcast_message_timer(clientclock)", 90:8);

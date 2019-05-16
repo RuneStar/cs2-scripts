@@ -1,0 +1,9 @@
+// 889
+[clientscript,ii_impling_count](component $component0, obj $obj1)
+def_int $int2 = inv_total(inv, $obj1);
+if ($int2 > 0) {
+	if_setcolour(^red, $component0);
+} else {
+	if_setcolour(0xb5b54a, $component0);
+}
+if_settext(tostring($int2), $component0);

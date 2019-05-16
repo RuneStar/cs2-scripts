@@ -160,7 +160,7 @@ while ($int18 < $int16) {
 	} else {
 		if_setgraphic(oc_param($obj17, spell_graphic1_off), $component25);
 	}
-	~script2615($component25);
+	~magic_spellbook_modifyops($component25);
 	if ($boolean10 = true) {
 		cc_create($component1, ^iftype_graphic, $int18);
 		cc_setsize($int19, $int19, ^setsize_abs, ^setsize_abs);

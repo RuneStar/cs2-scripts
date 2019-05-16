@@ -1,0 +1,9 @@
+// 614
+[clientscript,poll_resetlink](component $component0, int $int1, int $int2, string $string0, string $string1, int $int3)
+if (clientclock < $int3) {
+	return;
+}
+if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
+	cc_setontimer(null);
+	~poll_setuplink($component0, $int1, $int2, $string0, $string1);
+}

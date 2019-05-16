@@ -1,0 +1,34 @@
+// 1661
+[clientscript,keyboard_key](component $component0, string $string0)
+cc_deleteall($component0);
+def_int $int1 = 0;
+cc_create($component0, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+if (if_getwidth($component0) <= 32) {
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setgraphic("options_icons,47");
+} else {
+	cc_setsize(16, 0, ^setsize_abs, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setgraphic(1612);
+	cc_create($component0, ^iftype_graphic, $int1);
+	$int1 = calc($int1 + 1);
+	cc_setsize(32, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setgraphic(1613);
+	cc_create($component0, ^iftype_graphic, $int1);
+	$int1 = calc($int1 + 1);
+	cc_setsize(16, 0, ^setsize_abs, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+	cc_setgraphic(1614);
+}
+cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0x202020);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(b12_full);
+cc_settextshadow(false);
+cc_settext($string0);

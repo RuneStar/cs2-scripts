@@ -1,0 +1,25 @@
+// 2778
+[proc,pest_rewards_confirmdraw](boolean $boolean0, string $string0, component $component1)
+def_int $int2 = -1;
+if ($boolean0 = true) {
+	$int2 = ~v2_stone_button_in_filled($component1);
+} else {
+	$int2 = ~v2_stone_button_out_filled($component1);
+}
+cc_create($component1, ^iftype_text, $int2);
+def_int $int3 = calc($int2 + 1);
+.cc_create($component1, ^iftype_text, $int3);
+cc_setsize(0, 8, ^setsize_minus, ^setsize_minus);
+.cc_setsize(0, 8, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+.cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+.cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+cc_settextfont(p12_full);
+.cc_settextfont(p11_full);
+cc_settextshadow(true);
+.cc_settextshadow(true);
+cc_settext("Confirm");
+.cc_settext($string0);

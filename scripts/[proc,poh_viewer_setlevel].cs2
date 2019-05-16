@@ -52,8 +52,8 @@ def_component $component10 = enum(int, component, 1424, -1);
 if ($int0 = $int8) {
 	if_sethide(false, $component10);
 	if ((((cc_find($component10, 1) = ^true) | (cc_find($component10, 2) = ^true)) | (cc_find($component10, 3) = ^true)) & (cc_gettrans >= 255)) {
-		if_setontimer("script1393(event_com, clientclock)", $component10);
-		~script1394($component10, clientclock);
+		if_setontimer("poh_viewer_preview_pulse(event_com, clientclock)", $component10);
+		~poh_viewer_preview_pulse($component10, clientclock);
 	}
 } else {
 	if_sethide(true, $component10);

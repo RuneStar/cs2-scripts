@@ -1,0 +1,19 @@
+// 756
+[clientscript,cc_flasher](component $component0, int $int1, int $int2)
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+if (cc_find($component0, $int1) = ^true) {
+	$int4 = clientclock;
+	$int5 = calc($int4 - $int2);
+	if ($int5 >= 750) {
+		cc_settrans(255);
+		cc_setontimer(null);
+		return;
+	}
+	if (calc($int4 % 40) >= 20) {
+		cc_settrans(255);
+		return;
+	}
+	cc_settrans(interpolate(0, $int5, 0, 750, 255));
+}

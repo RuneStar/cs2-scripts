@@ -1,0 +1,13 @@
+// 1838
+[proc,keyboard_show_string](int $int0, int $int1, string $string0)
+if (~on_mobile = false) {
+	return;
+}
+%varcint215 = $int0;
+%varcint216 = $int1;
+switch_int ($int0) {
+	case 0 :
+		_6522($string0, $int1);
+	case 1 :
+		_6523($string0, $int1);
+}

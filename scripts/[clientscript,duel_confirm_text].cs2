@@ -1,0 +1,77 @@
+// 206
+[clientscript,duel_confirm_text]
+def_string $string0 = "";
+def_string $string1 = "";
+if (%varbit642 > 0) {
+	$string0 = "<$string0>Some worn items will be taken off.<br>";
+}
+if ((testbit(%var286, 7) = ^true) | (testbit(%var286, 13) = ^true)) {
+	$string0 = "<$string0>Boosted stats will be restored.<br>";
+}
+if (testbit(%var286, 9) = ^true) {
+	$string0 = "<$string0>Existing prayers will be stopped.<br>";
+}
+if (testbit(%var286, 0) = ^true) {
+	$string1 = "<$string1>You cannot forfeit the duel.<br>";
+}
+if (testbit(%var286, 1) = ^true) {
+	$string1 = "<$string1>You cannot move.<br>";
+}
+if (testbit(%var286, 2) = ^true) {
+	$string1 = "<$string1>You cannot switch weapons.<br>";
+}
+if (testbit(%var286, 4) = ^true) {
+	$string1 = "<$string1>You cannot use Ranged attacks <col=ff0000>or salamanders<col=ffffff>.<br>";
+}
+if (testbit(%var286, 5) = ^true) {
+	$string1 = "<$string1>You cannot use Melee attacks <col=ff0000>or salamanders<col=ffffff>.<br>";
+}
+if (testbit(%var286, 6) = ^true) {
+	$string1 = "<$string1>You cannot use Magic attacks <col=ff0000>or salamanders<col=ffffff>.<br>";
+}
+if (testbit(%var286, 13) = ^true) {
+	$string1 = "<$string1>You cannot use special attacks.<br>";
+}
+if (testbit(%var286, 12) = ^true) {
+	$string1 = "<$string1>You can only attack with 'fun' weapons.<br>";
+}
+if (testbit(%var286, 7) = ^true) {
+	$string1 = "<$string1>You cannot use potions or drinks.<br>";
+}
+if (testbit(%var286, 8) = ^true) {
+	$string1 = "<$string1>You cannot use food.<br>";
+}
+if (testbit(%var286, 9) = ^true) {
+	$string1 = "<$string1>You cannot use Prayer.<br>";
+}
+if (testbit(%var286, 10) = ^true) {
+	$string1 = "<$string1>There will be obstacles in the arena.<br>";
+}
+if ((testbit(%var286, 17) = ^true) | (testbit(%var286, 19) = ^true)) {
+	$string1 = "<$string1>You can't use 2H weapons such as bows.<br>";
+}
+if_settext($string0, 476:68);
+if_settext($string1, 476:70);
+if_setsize(100, calc(11 * paraheight(if_gettext(476:66), 100, p11_full)), ^setsize_abs, ^setsize_abs, 476:66);
+if_setsize(132, calc(11 * paraheight($string0, 132, p11_full)), ^setsize_abs, ^setsize_abs, 476:68);
+if_setsize(132, calc(11 * paraheight($string1, 132, p11_full)), ^setsize_abs, ^setsize_abs, 476:70);
+if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, 476:71);
+if (if_gethide(476:71) = true) {
+	if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, 476:65);
+} else {
+	if_setposition(2, calc((if_gety(476:71) + if_getheight(476:71)) + 2), ^setpos_abs_left, ^setpos_abs_top, 476:65);
+}
+if_setposition(2, calc((if_gety(476:65) + if_getheight(476:65)) + 2), ^setpos_abs_left, ^setpos_abs_top, 476:66);
+if_setposition(2, calc((if_gety(476:66) + if_getheight(476:66)) + 2), ^setpos_abs_left, ^setpos_abs_top, 476:67);
+if_setposition(2, calc((if_gety(476:67) + if_getheight(476:67)) + 2), ^setpos_abs_left, ^setpos_abs_top, 476:68);
+if_setposition(2, calc((if_gety(476:68) + if_getheight(476:68)) + 2), ^setpos_abs_left, ^setpos_abs_top, 476:69);
+if_setposition(2, calc((if_gety(476:69) + if_getheight(476:69)) + 2), ^setpos_abs_left, ^setpos_abs_top, 476:70);
+def_int $int0 = calc((if_gety(476:70) + if_getheight(476:70)) + 2);
+if ($int0 > if_getheight(476:62)) {
+	if_setscrollsize(0, $int0, 476:63);
+	if_sethide(false, 476:64);
+	~scrollbar_vertical(476:64, 476:63, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+} else {
+	if_sethide(true, 476:64);
+	if_setscrollpos(0, 0, 476:63);
+}

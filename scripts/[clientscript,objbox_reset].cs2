@@ -1,0 +1,9 @@
+// 2870
+[clientscript,objbox_reset](int $int0, component $component1, int $int2, string $string0)
+if (clientclock < $int0) {
+	return;
+}
+if (cc_find($component1, $int2) = ^true) {
+	cc_setontimer(null);
+	cc_settext($string0);
+}

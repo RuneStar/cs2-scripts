@@ -37,7 +37,7 @@ if (($int6 > 0) & ($int7 > 0)) {
 	if_setonmouserepeat("options_button_on(event_com, 0)", $component0);
 	if_setonmouseleave("options_button_off(event_com, 0)", $component0);
 	if_setop(1, "Extend", $component0);
-	if_setonop("script414(null, calc(45 + 9), $string1, $component1, $component2, $component3, $component4, $component5, $int7)", $component0);
+	if_setonop("slayer_rewards_unlock_confirm(null, calc(45 + 9), $string1, $component1, $component2, $component3, $component4, $component5, $int7)", $component0);
 } else {
 	cc_setcolour(0x7f4c0f);
 	cc_settext($string0);

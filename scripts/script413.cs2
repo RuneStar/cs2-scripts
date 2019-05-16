@@ -9,7 +9,7 @@ if ((($int0 < 32) & (testbit(%var1076, $int0) = ^true)) | (($int0 >= 32) & (test
 			cc_setgraphic("options_radio_buttons,6");
 			.cc_setop(1, "Disable");
 		}
-		.cc_setonop("script414(false, $int0, $string0, $component1, $component2, $component3, $component4, $component5, -1)");
+		.cc_setonop("slayer_rewards_unlock_confirm(false, $int0, $string0, $component1, $component2, $component3, $component4, $component5, -1)");
 		return;
 	}
 	if ($int0 = 43) {
@@ -20,13 +20,13 @@ if ((($int0 < 32) & (testbit(%var1076, $int0) = ^true)) | (($int0 >= 32) & (test
 			cc_setgraphic("options_radio_buttons,6");
 			.cc_setop(1, "Disable");
 		}
-		.cc_setonop("script414(false, $int0, $string0, $component1, $component2, $component3, $component4, $component5, -1)");
+		.cc_setonop("slayer_rewards_unlock_confirm(false, $int0, $string0, $component1, $component2, $component3, $component4, $component5, -1)");
 		return;
 	}
 	cc_setgraphic("options_radio_buttons,6");
 	if (enum(int, boolean, 854, $int0) = true) {
 		.cc_setop(1, "Disable");
-		.cc_setonop("script414(false, $int0, $string0, $component1, $component2, $component3, $component4, $component5, -1)");
+		.cc_setonop("slayer_rewards_unlock_confirm(false, $int0, $string0, $component1, $component2, $component3, $component4, $component5, -1)");
 	} else {
 		.cc_setop(1, "");
 		.cc_setonop(null);
@@ -34,5 +34,5 @@ if ((($int0 < 32) & (testbit(%var1076, $int0) = ^true)) | (($int0 >= 32) & (test
 } else {
 	cc_setgraphic("options_radio_buttons,4");
 	.cc_setop(1, "Unlock");
-	.cc_setonop("script414(true, $int0, $string0, $component1, $component2, $component3, $component4, $component5, -1)");
+	.cc_setonop("slayer_rewards_unlock_confirm(true, $int0, $string0, $component1, $component2, $component3, $component4, $component5, -1)");
 }

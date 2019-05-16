@@ -10,13 +10,13 @@ if (((%varcint190 = 1) & (cc_find($component2, $int3) = ^true)) & (.cc_find($com
 			worldmap_jumptodisplaycoord($coord5);
 			~worldmap_search_off($component2);
 		}
-		~script1984;
+		~keyboard_hide;
 		return;
 	}
 	if ($int0 = 13) {
 		sound_synth(2266, 1, 0);
 		~worldmap_search_off($component2);
-		~script1984;
+		~keyboard_hide;
 		return;
 	}
 	%varcstring363 = ~script74(%varcstring363, 4, $int0, $char1);

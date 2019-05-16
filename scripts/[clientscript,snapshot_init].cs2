@@ -19,6 +19,6 @@ if ((playermod = true) | (staffmodlevel > 0)) {
 }
 ~snapshot_toggle(553:12, %varcint140);
 if (~on_mobile = true) {
-	~script1983(0, 12);
-	if_setonclick("script2752(0, 12)", 553:5);
+	~keyboard_show(0, 12);
+	if_setonclick("snapshot_openkeyboard(0, 12)", 553:5);
 }

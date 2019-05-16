@@ -1,0 +1,7 @@
+// 558
+[proc,clanwars_confirm_challenge_redraw](component $component0)
+if (%varbit4285 = 1) {
+	~clanwars_confirm_pressed($component0, "Waiting");
+} else {
+	~clanwars_confirm_notpressed($component0);
+}

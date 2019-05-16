@@ -13,5 +13,5 @@ if (string_length(chat_getmessagefilter) > 0) {
 def_string $string0 = "";
 if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string0)", 162:45);
 if (~on_mobile = true) {
-	~script1983(0, 10);
+	~keyboard_show(0, 10);
 }

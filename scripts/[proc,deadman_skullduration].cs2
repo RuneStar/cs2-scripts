@@ -1,0 +1,12 @@
+// 1182
+[proc,deadman_skullduration]()(string)
+if (%varbit4854 <= 0) {
+	return("");
+}
+if (%varbit4854 >= 255) {
+	return("<enum(int, string, 1245, %varbit4855)> Ages!");
+}
+if (calc(%varbit4854 % 2) = 1) {
+	return("<enum(int, string, 1245, %varbit4855)> <tostring(calc(%varbit4854 / 2))>:30");
+}
+return("<enum(int, string, 1245, %varbit4855)> <tostring(calc(%varbit4854 / 2))>:00");

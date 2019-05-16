@@ -1,0 +1,8 @@
+// 555
+[clientscript,clanwars_confirm_challenge_wait](component $component0, component $component1, int $int2)
+if (clientclock < $int2) {
+	return;
+}
+if_setontimer(null, $component0);
+if_sethide(false, $component1);
+~clanwars_confirm_challenge_redraw($component1);

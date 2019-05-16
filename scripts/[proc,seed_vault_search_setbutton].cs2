@@ -1,0 +1,20 @@
+// 2866
+[proc,seed_vault_search_setbutton](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+if (~seed_vault_searching = 1) {
+	~v2_stone_button_in($component7);
+	if_setonmouseover(null, $component7);
+	if_setonmouseleave(null, $component7);
+	if (cc_find($component7, 0) = ^true) {
+		cc_setcolour(0xdb1515);
+	}
+	if (%varcint5 = 11) {
+		if_setontimer("seed_vault_search_refresh($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7)", $component7);
+	} else {
+		if_setontimer(null, $component7);
+	}
+} else {
+	~v2_stone_button($component7);
+	if_setonmouseleave("v2_stone_button($component7)", $component7);
+	if_setonmouseover("v2_stone_button_in($component7)", $component7);
+	if_setontimer(null, $component7);
+}

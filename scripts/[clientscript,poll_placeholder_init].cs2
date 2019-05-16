@@ -1,0 +1,5 @@
+// 615
+[clientscript,poll_placeholder_init](component $component0)
+def_int $int1 = clientclock;
+if_setontimer("poll_placeholder_pulse($component0, $int1)", $component0);
+~poll_placeholder_pulse($component0, $int1);

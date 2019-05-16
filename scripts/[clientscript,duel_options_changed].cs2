@@ -7,6 +7,6 @@ if (($int1 >= 14) & ($int1 <= 27)) {
 }
 if (($int2 ! -1) & (cc_find($component3, $int2) = ^true)) {
 	cc_sethide(false);
-	cc_setontimer("script756($component3, $int2, clientclock)");
+	cc_setontimer("cc_flasher($component3, $int2, clientclock)");
 }
 ~duel_wait_button($component0, 5);

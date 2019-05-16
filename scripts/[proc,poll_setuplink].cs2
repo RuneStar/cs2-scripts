@@ -1,0 +1,8 @@
+// 612
+[proc,poll_setuplink](component $component0, int $int1, int $int2, string $string0, string $string1)
+.cc_setcolour(0xffa82f);
+.cc_settext($string0);
+cc_setonclick("poll_clicklink($component0, $int1, $int2, $string0, $string1)");
+cc_setonmouseleave("cc_text_swapper($component0, $int2, $string0)");
+$string0 = "<u=ffa82f><$string0></u>";
+cc_setonmouseover("cc_text_swapper($component0, $int2, $string0)");

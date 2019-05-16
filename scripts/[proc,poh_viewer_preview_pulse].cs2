@@ -1,0 +1,19 @@
+// 1394
+[proc,poh_viewer_preview_pulse](component $component0, int $int1)
+def_int $int2 = calc((clientclock - $int1) % 40);
+def_int $int3 = 0;
+if ($int2 <= 20) {
+	$int3 = calc(120 + interpolate(0, $int2, 0, 20, 100));
+} else {
+	$int3 = calc(120 + (100 - interpolate(0, ($int2 - 20), 0, 20, 100)));
+}
+def_int $int4 = calc($int3 + 30);
+if (cc_find($component0, 1) = ^true) {
+	cc_settrans($int4);
+}
+if (cc_find($component0, 2) = ^true) {
+	cc_settrans($int3);
+}
+if (cc_find($component0, 3) = ^true) {
+	cc_settrans($int4);
+}

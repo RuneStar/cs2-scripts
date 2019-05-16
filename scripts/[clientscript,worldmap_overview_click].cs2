@@ -1,0 +1,9 @@
+// 1714
+[clientscript,worldmap_overview_click](int $int0, int $int1, int $int2, component $component3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11)
+if ((worldmap_isloaded = false) | (clientclock < $int2)) {
+	return;
+}
+def_int $int12 = calc($int8 + scale($int0, $int4, $int6));
+def_int $int13 = calc($int11 - scale($int1, $int5, $int7));
+worldmap_jumptodisplaycoord(movecoord(0_0_0_0_0, $int12, 0, $int13));
+if_setonclickrepeat("worldmap_overview_click(event_mousex, event_mousey, calc(clientclock + 10), event_com, $int4, $int5, $int6, $int7, $int8, $int9, $int10, $int11)", $component3);

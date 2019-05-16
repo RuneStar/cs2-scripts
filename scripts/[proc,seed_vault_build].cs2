@@ -18,7 +18,7 @@ while ($int8 < 89) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	.cc_create($component1, ^iftype_text, $int8);
 	.cc_setsize($int10, 30, ^setsize_abs, ^setsize_abs);
-	if (($obj9 ! null) & (~script2863($obj9) = 1)) {
+	if (($obj9 ! null) & (~seed_vault_filteritem($obj9) = 1)) {
 		cc_setop(10, "Examine");
 		cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
 		cc_setgraphicshadow(0x333333);
@@ -69,7 +69,7 @@ while ($int8 < 89) {
 				.cc_setop(8, "Withdraw-Notes");
 			}
 		}
-		if (~script2862 = 0) {
+		if (~seed_vault_searching = 0) {
 			if (~script2828($int8) ! -1) {
 				$array0(0) = calc($array0(0) + 1);
 				cc_setop(7, "Remove-Favourite");
@@ -93,7 +93,7 @@ while ($int8 < 89) {
 	}
 	$int8 = calc($int8 + 1);
 }
-if (~script2862 = 0) {
+if (~seed_vault_searching = 0) {
 	$array0(0) = calc($array0(0) + 1);
 }
 def_int $int12 = 0;
@@ -107,7 +107,7 @@ if (~on_mobile = true) {
 }
 def_int $int17 = calc(if_getwidth($component4) / ($int10 + $int15));
 def_int $array1(calc($int7 + 1));
-if (~script2862 = 1) {
+if (~seed_vault_searching = 1) {
 	cc_create($component2, ^iftype_text, 0);
 	cc_setsize(5, 20, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, $int14, ^setpos_abs_left, ^setpos_abs_top);
@@ -152,9 +152,9 @@ $int14 = 0;
 def_int $int19 = -1;
 while ($int8 < 89) {
 	$obj9 = inv_getobj(626, $int8);
-	if (($obj9 ! null) & (~script2863($obj9) = 1)) {
+	if (($obj9 ! null) & (~seed_vault_filteritem($obj9) = 1)) {
 		$int19 = oc_param(oc_unplaceholder($obj9), 709);
-		if ((~script2862 = 1) & (~script2863($obj9) = 1)) {
+		if ((~seed_vault_searching = 1) & (~seed_vault_filteritem($obj9) = 1)) {
 			$int19 = 0;
 		} else if (~script2828($int8) ! -1) {
 			$int19 = 0;
@@ -164,7 +164,7 @@ while ($int8 < 89) {
 		if ((cc_find($component0, $int8) = ^true) & (.cc_find($component1, $int8) = ^true)) {
 			cc_setposition(calc(($int18 + ($int15 / 2)) + (($int10 - 36) / 2)), $int14, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setposition(calc($int18 + ($int15 / 2)), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
-			if (~script2862 = 0) {
+			if (~seed_vault_searching = 0) {
 				cc_setdragdeadtime(5);
 				cc_setdragdeadzone(5);
 				cc_setondrag("seed_vault_drag_obj($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
@@ -193,7 +193,7 @@ while ($int8 < 89) {
 	}
 	$int8 = calc($int8 + 1);
 }
-if (~script2862 = 0) {
+if (~seed_vault_searching = 0) {
 	cc_create($component0, ^iftype_graphic, $int8);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setobject_nonum(6117, 0);

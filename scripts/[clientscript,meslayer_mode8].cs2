@@ -10,8 +10,8 @@ if_setondialogabort("meslayer_ondialogabort()", 162:45);
 if (string_length(%varcstring361) > 0) {
 	~meslayer_dynamicbutton;
 	cc_settext("<col=000000>Last name:</col> <%varcstring361>");
-	cc_setonclick("script682(8, %varcstring361)");
+	cc_setonclick("meslayer_lastname_click(8, %varcstring361)");
 }
 if (~on_mobile = true) {
-	~script1983(0, 12);
+	~keyboard_show(0, 12);
 }

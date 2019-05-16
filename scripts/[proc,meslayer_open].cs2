@@ -11,12 +11,12 @@ if (~on_mobile = true) {
 			if_sethide(false, 162:41);
 			if_setposition(0, if_gety(162:44), ^setpos_abs_centre, ^setpos_abs_top, 162:41);
 			if_setsize(20, if_gety(162:44), ^setsize_minus, ^setsize_minus, 162:41);
-			if_setonclick("script2727()", 162:41);
+			if_setonclick("meslayer_keyboard_show()", 162:41);
 		case 14 :
 			if_sethide(false, 162:41);
 			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, 162:41);
 			if_setsize(20, 20, ^setsize_minus, ^setsize_abs, 162:41);
-			if_setonclick("script2727()", 162:41);
+			if_setonclick("meslayer_keyboard_show()", 162:41);
 		case 1 :
 			if_sethide(true, 162:41);
 			if_setonclick(null, 162:41);
@@ -24,7 +24,7 @@ if (~on_mobile = true) {
 			if_sethide(false, 162:41);
 			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 162:41);
 			if_setsize(20, 20, ^setsize_minus, ^setsize_minus, 162:41);
-			if_setonclick("script2727()", 162:41);
+			if_setonclick("meslayer_keyboard_show()", 162:41);
 	}
 	~script2526;
 } else {

@@ -119,7 +119,7 @@ while ($int11 < $int0) {
 			.cc_setcolour(^red);
 			.cc_setfill(true);
 			.cc_settrans(255);
-			.cc_setontimer("script766(event_com, event_comid, $int20)");
+			.cc_setontimer("trade_slot_flasher(event_com, event_comid, $int20)");
 			$int19 = calc($int19 + 1);
 			.cc_create($component5, ^iftype_rectangle, $int19);
 			.cc_setsize($int14, 12, ^setsize_abs, ^setsize_abs);
@@ -127,7 +127,7 @@ while ($int11 < $int0) {
 			.cc_setcolour(0x990000);
 			.cc_setfill(false);
 			.cc_settrans(255);
-			.cc_setontimer("script766(event_com, event_comid, $int20)");
+			.cc_setontimer("trade_slot_flasher(event_com, event_comid, $int20)");
 			$int19 = calc($int19 + 1);
 		}
 		$int18 = calc($int18 + 1);
@@ -185,7 +185,7 @@ while ($int21 > 0) {
 	.cc_setfill(false);
 	cc_settrans(255);
 	.cc_settrans(255);
-	cc_setontimer("script766(event_com, event_comid, $int22)");
-	.cc_setontimer("script766(event_com, event_comid, $int22)");
+	cc_setontimer("trade_slot_flasher(event_com, event_comid, $int22)");
+	.cc_setontimer("trade_slot_flasher(event_com, event_comid, $int22)");
 	$int18 = calc($int18 + 1);
 }
