@@ -1,51 +1,52 @@
 // 2814
-script2814(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+script2814(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
 cc_deleteall($component0);
 cc_deleteall($component1);
-def_int $int7 = 0;
-def_int $int8 = 0;
-def_int $int9 = 0;
+cc_deleteall($component6);
+~script2852($component8, $component9, ^min_32bit_int, ^min_32bit_int, $component3, $component4, $component5, $component6, $component7);
 def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
 if (~on_mobile = true) {
-	$int9 = 20;
+	$int12 = 20;
 }
-while ($int8 <= enum_getoutputcount(2304)) {
-	$int7 = enum(int, int, 2304, $int8);
-	cc_create($component0, ^iftype_text, $int8);
-	cc_setsize(5, calc(20 + $int9), ^setsize_minus, ^setsize_abs);
-	cc_setposition(5, $int10, ^setpos_abs_left, ^setpos_abs_top);
+while ($int11 <= enum_getoutputcount(2304)) {
+	$int10 = enum(int, int, 2304, $int11);
+	cc_create($component0, ^iftype_text, $int11);
+	cc_setsize(5, calc(20 + $int12), ^setsize_minus, ^setsize_abs);
+	cc_setposition(5, $int13, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
-	cc_settext(enum(int, string, 2305, $int7));
+	cc_settext(enum(int, string, 2305, $int10));
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	cc_setonmouseover("cc_colour_swapper($component0, $int8, ^white)");
-	cc_setonmouseleave("cc_colour_swapper($component0, $int8, 0xff981f)");
-	cc_setonop("seed_vault_catop($component2, $int7, $component3, $component4)");
+	cc_setonmouseover("cc_colour_swapper($component0, $int11, ^white)");
+	cc_setonmouseleave("cc_colour_swapper($component0, $int11, 0xff981f)");
+	cc_setonop("seed_vault_catop($component2, $int10, $component3, $component4)");
 	cc_setonvartransmit("seed_vault_catvar($component2, $component3, $component4){var2194}");
 	cc_setop(1, "Select");
-	.cc_create($component1, ^iftype_rectangle, $int8);
-	.cc_setsize(0, calc(20 + $int9), ^setsize_minus, ^setsize_abs);
-	.cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_create($component1, ^iftype_rectangle, $int11);
+	.cc_setsize(0, calc(20 + $int12), ^setsize_minus, ^setsize_abs);
+	.cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setfill(true);
-	if (calc($int8 % 2) = 0) {
+	if (calc($int11 % 2) = 0) {
 		.cc_setcolour(^white);
 		.cc_settrans(255);
 	} else {
 		.cc_setcolour(^black);
 		.cc_settrans(225);
 	}
-	$int10 = calc(cc_gety + cc_getheight);
-	$int8 = calc($int8 + 1);
+	$int13 = calc(cc_gety + cc_getheight);
+	$int11 = calc($int11 + 1);
 }
-def_int $int11 = 0;
-if ($int10 > if_getheight($component5)) {
-	$int11 = if_getscrolly($component5);
-	if_setscrollsize(0, $int10, $component5);
-	~scrollbar_vertical($component6, $component5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-	~scrollbar_resize($component6, $component5, $int11);
+def_int $int14 = 0;
+if ($int13 > if_getheight($component5)) {
+	$int14 = if_getscrolly($component5);
+	if_setscrollsize(0, $int13, $component5);
 } else {
 	if_setscrollsize(0, 0, $component5);
-	if_setscrollpos(0, 0, $component5);
-	~scrollbar_vertical($component6, $component5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	$int14 = 0;
 }
+~scrollbar_vertical($component6, $component5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($component6, $component5, $int14);

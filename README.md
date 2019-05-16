@@ -742,6 +742,7 @@
 [**739**](scripts/[proc,inferno_hud_update].cs2) `[proc,inferno_hud_update]`  
 [**740**](scripts/[proc,scrollbar_vertical_setdragger].cs2) `[proc,scrollbar_vertical_setdragger]`  
 [**741**](scripts/[clientscript,pest_activity_init].cs2) `[clientscript,pest_activity_init]`  
+[**742**](scripts/script742.cs2)  
 [**743**](scripts/script743.cs2)  
 [**744**](scripts/script744.cs2)  
 [**745**](scripts/[proc,quicksort_questlist].cs2) `[proc,quicksort_questlist]`  
@@ -2851,6 +2852,7 @@
 [**2849**](scripts/script2849.cs2)  
 [**2850**](scripts/script2850.cs2)  
 [**2851**](scripts/[proc,cocktail_show_cocktails].cs2) `[proc,cocktail_show_cocktails]`  
+[**2852**](scripts/script2852.cs2)  
 [**2853**](scripts/[clientscript,cocktail_show_ingredients].cs2) `[clientscript,cocktail_show_ingredients]`  
 [**2854**](scripts/[proc,cocktail_show_ingredients].cs2) `[proc,cocktail_show_ingredients]`  
 [**2855**](scripts/[proc,cocktail_create_ingredient].cs2) `[proc,cocktail_create_ingredient]`  
@@ -2860,3 +2862,12 @@
 [**2859**](scripts/[clientscript,clock_fake_update].cs2) `[clientscript,clock_fake_update]`  
 [**2860**](scripts/[clientscript,clock_update].cs2) `[clientscript,clock_update]`  
 [**2861**](scripts/[proc,clock_set].cs2) `[proc,clock_set]`  
+[**2862**](scripts/script2862.cs2)  
+[**2863**](scripts/script2863.cs2)  
+[**2864**](scripts/script2864.cs2)  
+[**2865**](scripts/script2865.cs2)  
+[**2866**](scripts/script2866.cs2)  
+[**2867**](scripts/script2867.cs2)  
+[**2868**](scripts/script2868.cs2)  
+[**2869**](scripts/script2869.cs2)  
+[**2870**](scripts/script2870.cs2)  

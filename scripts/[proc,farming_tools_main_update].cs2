@@ -28,7 +28,9 @@ if_setop(10, "Examine", $component0);
 if ($int2 <= 1) {
 	if_setop(1, "Remove", $component0);
 } else {
-	if_setop(9, "Banknotes", $component0);
+	if (oc_cert($obj5) ! $obj5) {
+		if_setop(9, "Banknotes", $component0);
+	}
 	switch_int (%varbit7792) {
 		case 0 :
 			if_setop(1, "Remove-1", $component0);

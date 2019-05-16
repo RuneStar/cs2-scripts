@@ -12,57 +12,77 @@ def_int $int8 = 0;
 def_obj $obj9 = null;
 def_int $int10 = 50;
 def_int $int11 = 40;
-while ($int8 < 70) {
+while ($int8 < 89) {
 	$obj9 = inv_getobj(626, $int8);
 	cc_create($component0, ^iftype_graphic, $int8);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	.cc_create($component1, ^iftype_text, $int8);
 	.cc_setsize($int10, 30, ^setsize_abs, ^setsize_abs);
-	if ($obj9 ! null) {
-		cc_setobject($obj9, inv_total(626, $obj9));
-		if (%var2195 = ^max_32bit_int) {
-			cc_setop(1, "Withdraw-All");
-		} else if (%var2195 > 1) {
-			cc_setop(1, "Withdraw-<tostring(%var2195)>");
-		}
-		cc_setop(2, "Withdraw-1");
-		cc_setop(3, "Withdraw-5");
-		cc_setop(4, "Withdraw-10");
-		cc_setop(5, "Withdraw-X");
-		cc_setop(6, "Withdraw-All");
+	if (($obj9 ! null) & (~script2863($obj9) = 1)) {
 		cc_setop(10, "Examine");
 		cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		.cc_settext(oc_name($obj9));
-		if (%var2195 = ^max_32bit_int) {
-			cc_setop(1, "Withdraw-All");
-		} else if (%var2195 > 1) {
-			.cc_setop(1, "Withdraw-<tostring(%var2195)>");
+		if (oc_unplaceholder($obj9) ! $obj9) {
+			cc_setobject($obj9, 0);
+			cc_settrans(120);
+			cc_setop(8, "Remove-Placeholder");
+			cc_setop(9, "Remove-All-Placeholders");
+		} else {
+			cc_setobject($obj9, inv_total(626, $obj9));
+			if (%var2195 = ^max_32bit_int) {
+				cc_setop(1, "Withdraw-All");
+			} else if (%var2195 > 1) {
+				cc_setop(1, "Withdraw-<tostring(%var2195)>");
+			}
+			cc_setop(2, "Withdraw-1");
+			cc_setop(3, "Withdraw-5");
+			cc_setop(4, "Withdraw-10");
+			cc_setop(5, "Withdraw-X");
+			cc_setop(6, "Withdraw-All");
+			if ((oc_stackable($obj9) = false) & (oc_cert($obj9) ! $obj9)) {
+				cc_setop(8, "Withdraw-Notes");
+			}
 		}
-		.cc_setop(2, "Withdraw-1");
-		.cc_setop(3, "Withdraw-5");
-		.cc_setop(4, "Withdraw-10");
-		.cc_setop(5, "Withdraw-X");
-		.cc_setop(6, "Withdraw-All");
 		.cc_setop(10, "Examine");
 		.cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
 		.cc_settextfont(p11_full);
 		.cc_settextshadow(true);
 		.cc_setcolour(0xff981f);
 		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-		if (~script2828($int8) ! -1) {
-			$array0(0) = calc($array0(0) + 1);
-			cc_setop(7, "Remove-Favourite");
-			.cc_setop(7, "Remove-Favourite");
+		.cc_settext(oc_name($obj9));
+		if (oc_unplaceholder($obj9) ! $obj9) {
+			.cc_setop(8, "Remove-Placeholder");
+			.cc_setop(9, "Remove-All-Placeholders");
 		} else {
-			$array0(oc_param($obj9, 709)) = calc($array0(oc_param($obj9, 709)) + 1);
-			if (~script2831 > 0) {
-				cc_setop(7, "Favourite");
-				.cc_setop(7, "Favourite");
+			if (%var2195 = ^max_32bit_int) {
+				.cc_setop(1, "Withdraw-All");
+			} else if (%var2195 > 1) {
+				.cc_setop(1, "Withdraw-<tostring(%var2195)>");
+			}
+			.cc_setop(2, "Withdraw-1");
+			.cc_setop(3, "Withdraw-5");
+			.cc_setop(4, "Withdraw-10");
+			.cc_setop(5, "Withdraw-X");
+			.cc_setop(6, "Withdraw-All");
+			if ((oc_stackable($obj9) = false) & (oc_cert($obj9) ! $obj9)) {
+				.cc_setop(8, "Withdraw-Notes");
+			}
+		}
+		if (~script2862 = 0) {
+			if (~script2828($int8) ! -1) {
+				$array0(0) = calc($array0(0) + 1);
+				cc_setop(7, "Remove-Favourite");
+				.cc_setop(7, "Remove-Favourite");
 			} else {
-				cc_setop(7, "");
-				.cc_setop(7, "");
+				$array0(oc_param(oc_unplaceholder($obj9), 709)) = calc($array0(oc_param(oc_unplaceholder($obj9), 709)) + 1);
+				if (~script2831 > 0) {
+					cc_setop(7, "Favourite");
+					.cc_setop(7, "Favourite");
+				} else {
+					cc_setop(7, "");
+					.cc_setop(7, "");
+				}
 			}
 		}
 	} else {
@@ -73,47 +93,70 @@ while ($int8 < 70) {
 	}
 	$int8 = calc($int8 + 1);
 }
-$array0(0) = calc($array0(0) + 1);
+if (~script2862 = 0) {
+	$array0(0) = calc($array0(0) + 1);
+}
 def_int $int12 = 0;
 def_int $int13 = 0;
 def_int $int14 = 5;
 def_int $int15 = 15;
 def_int $int16 = 20;
 if (~on_mobile = true) {
-	$int16 = 20;
+	$int15 = 20;
+	$int16 = 25;
 }
 def_int $int17 = calc(if_getwidth($component4) / ($int10 + $int15));
 def_int $array1(calc($int7 + 1));
-while ($int12 <= $int7) {
-	$int13 = enum(int, int, 2304, $int12);
-	cc_create($component2, ^iftype_text, $int12);
+if (~script2862 = 1) {
+	cc_create($component2, ^iftype_text, 0);
 	cc_setsize(5, 20, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, $int14, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(0xff981f);
 	cc_settextfont(b12_full);
 	cc_settextshadow(true);
-	cc_settext(enum(int, string, 2305, $int13));
+	cc_settext("Search results: <lowercase(%varcstring359)>");
 	cc_setposition(5, $int14, ^setpos_abs_left, ^setpos_abs_top);
 	$int14 = calc((cc_gety + cc_getheight) + 2);
-	.cc_create($component3, ^iftype_graphic, $int12);
+	.cc_create($component3, ^iftype_graphic, 0);
 	.cc_setgraphic("tradebacking_dark");
 	.cc_settiling(true);
 	.cc_setsize(4, 2, ^setsize_minus, ^setsize_abs);
 	.cc_setposition(2, $int14, ^setpos_abs_left, ^setpos_abs_top);
-	$array1($int12) = calc($int14 + 15);
-	$int14 = calc($int14 + ((1 + (($array0($int12) - 1) / $int17)) * (($int16 + 32) + $int11)));
-	$int12 = calc($int12 + 1);
+	$array1(0) = calc($int14 + 15);
+} else {
+	while ($int12 <= $int7) {
+		$int13 = enum(int, int, 2304, $int12);
+		cc_create($component2, ^iftype_text, $int12);
+		cc_setsize(5, 20, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $int14, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour(0xff981f);
+		cc_settextfont(b12_full);
+		cc_settextshadow(true);
+		cc_settext(enum(int, string, 2305, $int13));
+		cc_setposition(5, $int14, ^setpos_abs_left, ^setpos_abs_top);
+		$int14 = calc((cc_gety + cc_getheight) + 2);
+		.cc_create($component3, ^iftype_graphic, $int12);
+		.cc_setgraphic("tradebacking_dark");
+		.cc_settiling(true);
+		.cc_setsize(4, 2, ^setsize_minus, ^setsize_abs);
+		.cc_setposition(2, $int14, ^setpos_abs_left, ^setpos_abs_top);
+		$array1($int12) = calc($int14 + 15);
+		$int14 = calc($int14 + ((1 + (($array0($int12) - 1) / $int17)) * (($int16 + 32) + $int11)));
+		$int12 = calc($int12 + 1);
+	}
 }
 $int8 = 0;
 def_int $array2(calc($int7 + 1));
 def_int $int18 = 0;
 $int14 = 0;
 def_int $int19 = -1;
-while ($int8 < 70) {
+while ($int8 < 89) {
 	$obj9 = inv_getobj(626, $int8);
-	if ($obj9 ! null) {
-		$int19 = oc_param($obj9, 709);
-		if (~script2828($int8) ! -1) {
+	if (($obj9 ! null) & (~script2863($obj9) = 1)) {
+		$int19 = oc_param(oc_unplaceholder($obj9), 709);
+		if ((~script2862 = 1) & (~script2863($obj9) = 1)) {
+			$int19 = 0;
+		} else if (~script2828($int8) ! -1) {
 			$int19 = 0;
 		}
 		$int18 = $array2($int19);
@@ -121,14 +164,25 @@ while ($int8 < 70) {
 		if ((cc_find($component0, $int8) = ^true) & (.cc_find($component1, $int8) = ^true)) {
 			cc_setposition(calc(($int18 + ($int15 / 2)) + (($int10 - 36) / 2)), $int14, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setposition(calc($int18 + ($int15 / 2)), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
-			cc_setdragdeadtime(5);
-			cc_setdragdeadzone(5);
-			cc_setondrag("seed_vault_drag_obj($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
-			.cc_setondrag("seed_vault_drag_text($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
-			.cc_setdragdeadtime(5);
-			.cc_setdragdeadzone(5);
-			cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comid, event_dragtargetid, cc_getx, cc_gety)");
-			.cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comid, event_dragtargetid, cc_getx, cc_gety)");
+			if (~script2862 = 0) {
+				cc_setdragdeadtime(5);
+				cc_setdragdeadzone(5);
+				cc_setondrag("seed_vault_drag_obj($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
+				.cc_setondrag("seed_vault_drag_text($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
+				.cc_setdragdeadtime(5);
+				.cc_setdragdeadzone(5);
+				cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comid, event_dragtargetid, cc_getx, cc_gety)");
+				.cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comid, event_dragtargetid, cc_getx, cc_gety)");
+			} else {
+				cc_setdragdeadtime(10000);
+				cc_setdragdeadzone(10000);
+				.cc_setdragdeadtime(10000);
+				.cc_setdragdeadzone(10000);
+				cc_setondrag(null);
+				.cc_setondrag(null);
+				cc_setondragcomplete(null);
+				.cc_setondragcomplete(null);
+			}
 			$int18 = calc(($int18 + $int15) + $int10);
 		}
 		if (calc(($int18 + $int15) + $int10) > if_getwidth($component0)) {
@@ -139,35 +193,41 @@ while ($int8 < 70) {
 	}
 	$int8 = calc($int8 + 1);
 }
-cc_create($component0, ^iftype_graphic, $int8);
-cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setobject_nonum(6117, 0);
-cc_settrans(120);
-.cc_create($component1, ^iftype_text, $int8);
-.cc_setsize($int10, 30, ^setsize_abs, ^setsize_abs);
-if (~script2831 > 7) {
-	.cc_settext("Add Favourites");
-} else if (~script2831 > 0) {
-	.cc_settext("Add/Remove Favourites");
+if (~script2862 = 0) {
+	cc_create($component0, ^iftype_graphic, $int8);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject_nonum(6117, 0);
+	cc_settrans(120);
+	.cc_create($component1, ^iftype_text, $int8);
+	.cc_setsize($int10, 30, ^setsize_abs, ^setsize_abs);
+	if (~script2831 > 7) {
+		.cc_settext("Add Favourites");
+	} else if (~script2831 > 0) {
+		.cc_settext("Add/Remove Favourites");
+	} else {
+		.cc_settext("Remove Favourites");
+	}
+	.cc_settextfont(p11_full);
+	.cc_settextshadow(true);
+	.cc_setcolour(0xff981f);
+	.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+	$int18 = $array2(0);
+	$int14 = $array1(0);
+	cc_setposition(calc(($int18 + ($int15 / 2)) + (($int10 - 36) / 2)), $int14, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(calc($int18 + ($int15 / 2)), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
 } else {
-	.cc_settext("Remove Favourites");
+	$int7 = 0;
 }
-.cc_settextfont(p11_full);
-.cc_settextshadow(true);
-.cc_setcolour(0xff981f);
-.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-$int18 = $array2(0);
-$int14 = $array1(0);
-cc_setposition(calc(($int18 + ($int15 / 2)) + (($int10 - 36) / 2)), $int14, ^setpos_abs_left, ^setpos_abs_top);
-.cc_setposition(calc($int18 + ($int15 / 2)), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
+~scrollbar_vertical_rebuild($component5, $component4);
 def_int $int20 = 0;
 def_int $int21 = calc((($array1($int7) + $int16) + 32) + $int11);
 if ($int21 > if_getheight($component4)) {
-	$int20 = if_getscrolly($component4);
+	if (%varcint376 > 0) {
+		$int20 = %varcint376;
+	}
 	if_setscrollsize(0, $int21, $component4);
+	~scrollbar_resize($component5, $component4, $int20);
 } else {
 	if_setscrollsize(0, 0, $component4);
-	$int20 = 0;
+	~scrollbar_resize($component5, $component4, 0);
 }
-~scrollbar_vertical($component5, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~scrollbar_resize($component5, $component4, $int20);

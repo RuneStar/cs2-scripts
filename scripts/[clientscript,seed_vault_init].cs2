@@ -1,5 +1,12 @@
 // 2818
-[clientscript,seed_vault_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+[clientscript,seed_vault_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+def_int $int8 = %varcint376;
+if (~script2862 = 1) {
+	~meslayer_close(1, 1);
+}
+~scrollbar_vertical($component5, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~seed_vault_build($component0, $component1, $component2, $component3, $component4, $component5, $component6);
+if_setonop("script2865($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7)", $component7);
 if_setoninvtransmit("seed_vault_build($component0, $component1, $component2, $component3, $component4, $component5, $component6){626}", $component4);
 if_setonvartransmit("seed_vault_build($component0, $component1, $component2, $component3, $component4, $component5, $component6){var2195, var2196, var2197}", $component4);
+%varcint376 = $int8;
