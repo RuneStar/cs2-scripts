@@ -1,6 +1,9 @@
 // 2248
 [proc,deadman_mode]()(int)
 def_int $int0 = worldflags;
+if (testbit($int0, 25) = ^true) {
+	return(3);
+}
 if (testbit($int0, 29) = ^true) {
 	if (testbit($int0, 26) = ^true) {
 		return(3);
