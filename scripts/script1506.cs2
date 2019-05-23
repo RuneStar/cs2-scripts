@@ -1,6 +1,6 @@
 // 1506
 script1506
-def_int $int0 = batterylevel;
+def_int $int0 = mobile_batterylevel;
 if ($int0 > 75) {
 	cc_setgraphic(1640);
 } else if ($int0 > 50) {
@@ -10,7 +10,7 @@ if ($int0 > 75) {
 } else {
 	cc_setgraphic(1643);
 }
-if (batterycharging = true) {
+if (mobile_batterycharging = true) {
 	.cc_sethide(false);
 } else {
 	.cc_sethide(true);

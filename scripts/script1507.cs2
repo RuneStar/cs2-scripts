@@ -12,7 +12,7 @@ cc_setgraphic(1644);
 .cc_settextshadow(false);
 .cc_settextfont(p11_full);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-.cc_settext(tostring(~min(100, ~max(0, batterylevel))));
+.cc_settext(tostring(~min(100, ~max(0, mobile_batterylevel))));
 sound_synth(2266, 1, 0);
 if_setontimer("script1973(event_com, calc(clientclock + 150))", $component0);
 if_setonclick("script1973(event_com, -1)", $component0);
