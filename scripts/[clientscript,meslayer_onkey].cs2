@@ -1,6 +1,6 @@
 // 112
 [clientscript,meslayer_onkey](int $int0, char $char1, string $string0)
-if (~script1701(-1, 162) = 0) {
+if (~keypress_permit(-1, 162) = 0) {
 	return;
 }
 if ($int0 = 84) {

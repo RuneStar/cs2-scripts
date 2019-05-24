@@ -1701,7 +1701,7 @@
 [**1698**](scripts/script1698.cs2)  
 [**1699**](scripts/[clientscript,orbs_worldmap_setup].cs2) `[clientscript,orbs_worldmap_setup]`  
 [**1700**](scripts/[proc,orbs_worldmap_setup].cs2) `[proc,orbs_worldmap_setup]`  
-[**1701**](scripts/script1701.cs2)  
+[**1701**](scripts/[proc,keypress_permit].cs2) `[proc,keypress_permit]`  
 [**1702**](scripts/[proc,worldmap_elements_update].cs2) `[proc,worldmap_elements_update]`  
 [**1703**](scripts/[opworldmapelement1,13].cs2) `[opworldmapelement1,13]`  
 [**1704**](scripts/[opworldmapelement1,14].cs2) `[opworldmapelement1,14]`  
@@ -2082,7 +2082,7 @@
 [**2079**](scripts/[proc,vm_kudos_update].cs2) `[proc,vm_kudos_update]`  
 [**2080**](scripts/script2080.cs2)  
 [**2081**](scripts/script2081.cs2)  
-[**2082**](scripts/script2082.cs2)  
+[**2082**](scripts/[proc,kots_world].cs2) `[proc,kots_world]`  
 [**2083**](scripts/script2083.cs2)  
 [**2084**](scripts/[proc,deadman_finallocation].cs2) `[proc,deadman_finallocation]`  
 [**2085**](scripts/script2085.cs2)  
@@ -2257,7 +2257,7 @@
 [**2254**](scripts/[clientscript,bugreport_back].cs2) `[clientscript,bugreport_back]`  
 [**2255**](scripts/[proc,music_sort].cs2) `[proc,music_sort]`  
 [**2256**](scripts/[proc,zoom_init].cs2) `[proc,zoom_init]`  
-[**2257**](scripts/script2257.cs2)  
+[**2257**](scripts/[clientscript,music_init_counter].cs2) `[clientscript,music_init_counter]`  
 [**2258**](scripts/[clientscript,options_chatscrollside_init].cs2) `[clientscript,options_chatscrollside_init]`  
 [**2259**](scripts/[clientscript,options_chatscrollside_resynch].cs2) `[clientscript,options_chatscrollside_resynch]`  
 [**2260**](scripts/[clientscript,options_chatscrollside_op].cs2) `[clientscript,options_chatscrollside_op]`  
@@ -2530,7 +2530,7 @@
 [**2527**](scripts/[proc,mobile_mainmodal_open].cs2) `[proc,mobile_mainmodal_open]`  
 [**2528**](scripts/script2528.cs2)  
 [**2529**](scripts/[proc,deadman_restricted_item].cs2) `[proc,deadman_restricted_item]`  
-[**2530**](scripts/script2530.cs2)  
+[**2530**](scripts/[clientscript,poh_ranging_init].cs2) `[clientscript,poh_ranging_init]`  
 [**2531**](scripts/[clientscript,corp_beast_init].cs2) `[clientscript,corp_beast_init]`  
 [**2532**](scripts/[clientscript,boardgames_overlay_init].cs2) `[clientscript,boardgames_overlay_init]`  
 [**2533**](scripts/[clientscript,gnomeball_init].cs2) `[clientscript,gnomeball_init]`  

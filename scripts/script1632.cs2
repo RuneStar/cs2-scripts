@@ -3,7 +3,7 @@ script1632(char $char0, int $int1, component $component2, string $string0, strin
 if (clientclock < $int3) {
 	return;
 }
-if (~script1701(458, -1) = 0) {
+if (~keypress_permit(458, -1) = 0) {
 	return;
 }
 if (($char0 ! null) & ((string_indexof_char($string0, $char0) ! -1) | (string_indexof_char($string1, $char0) ! -1))) {

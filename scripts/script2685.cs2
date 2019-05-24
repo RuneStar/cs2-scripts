@@ -3,7 +3,7 @@ script2685(int $int0, char $char1, component $component2, int $int3, int $int4, 
 if (clientclock < $int6) {
 	return;
 }
-if (~script1701(-1, 162) = 0) {
+if (~keypress_permit(-1, 162) = 0) {
 	return;
 }
 def_int $int7 = 0;

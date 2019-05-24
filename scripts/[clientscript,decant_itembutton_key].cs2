@@ -1,6 +1,6 @@
 // 2522
 [clientscript,decant_itembutton_key](component $component0, char $char1, int $int2, string $string0, obj $obj3, string $string1)
-if (~script1701(582, -1) = 1) {
+if (~keypress_permit(582, -1) = 1) {
 	if (($int2 = 13) & (%varbit4681 = 1)) {
 		if_close;
 		return;

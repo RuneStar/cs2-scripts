@@ -4,7 +4,7 @@ if (clientclock < $int8) {
 	return;
 }
 if ($boolean0 = false) {
-	if (~script1701(-1, 162) = 0) {
+	if (~keypress_permit(-1, 162) = 0) {
 		return;
 	} else if (($int1 ! -1) & ($int1 = $int3)) {
 		$boolean0 = true;
