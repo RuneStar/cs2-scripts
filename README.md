@@ -710,7 +710,7 @@
 [**707**](scripts/[proc,ge_collect_all_draw].cs2) `[proc,ge_collect_all_draw]`  
 [**708**](scripts/script708.cs2)  
 [**709**](scripts/[clientscript,build_achievement_list].cs2) `[clientscript,build_achievement_list]`  
-[**710**](scripts/script710.cs2)  
+[**710**](scripts/[clientscript,deadman_spectator_map_close].cs2) `[clientscript,deadman_spectator_map_close]`  
 [**711**](scripts/[proc,stoneborder].cs2) `[proc,stoneborder]`  
 [**712**](scripts/[clientscript,stonebox].cs2) `[clientscript,stonebox]`  
 [**713**](scripts/[proc,stonebox].cs2) `[proc,stonebox]`  
@@ -1240,12 +1240,12 @@
 [**1237**](scripts/script1237.cs2)  
 [**1238**](scripts/script1238.cs2)  
 [**1239**](scripts/script1239.cs2)  
-[**1240**](scripts/script1240.cs2)  
-[**1241**](scripts/script1241.cs2)  
-[**1242**](scripts/script1242.cs2)  
-[**1243**](scripts/script1243.cs2)  
-[**1244**](scripts/script1244.cs2)  
-[**1245**](scripts/script1245.cs2)  
+[**1240**](scripts/[clientscript,forget_green_counter].cs2) `[clientscript,forget_green_counter]`  
+[**1241**](scripts/[clientscript,forget_yellow_counter].cs2) `[clientscript,forget_yellow_counter]`  
+[**1242**](scripts/[clientscript,forget_init_tracks].cs2) `[clientscript,forget_init_tracks]`  
+[**1243**](scripts/[clientscript,forget_init_switches].cs2) `[clientscript,forget_init_switches]`  
+[**1244**](scripts/[clientscript,forget_set_switches].cs2) `[clientscript,forget_set_switches]`  
+[**1245**](scripts/[proc,forget_set_switch].cs2) `[proc,forget_set_switch]`  
 [**1246**](scripts/script1246.cs2)  
 [**1247**](scripts/script1247.cs2)  
 [**1248**](scripts/script1248.cs2)  
@@ -2070,9 +2070,9 @@
 [**2067**](scripts/[proc,v2_stone_button_in].cs2) `[proc,v2_stone_button_in]`  
 [**2068**](scripts/[proc,toplevel_keypress].cs2) `[proc,toplevel_keypress]`  
 [**2069**](scripts/[clientscript,orbs_update_specenergy].cs2) `[clientscript,orbs_update_specenergy]`  
-[**2070**](scripts/script2070.cs2)  
-[**2071**](scripts/script2071.cs2)  
-[**2072**](scripts/script2072.cs2)  
+[**2070**](scripts/[clientscript,deadman_spectator_enable].cs2) `[clientscript,deadman_spectator_enable]`  
+[**2071**](scripts/[clientscript,deadman_spectator_update].cs2) `[clientscript,deadman_spectator_update]`  
+[**2072**](scripts/[proc,deadman_spectator_chat].cs2) `[proc,deadman_spectator_chat]`  
 [**2073**](scripts/script2073.cs2)  
 [**2074**](scripts/script2074.cs2)  
 [**2075**](scripts/script2075.cs2)  
@@ -2179,15 +2179,15 @@
 [**2176**](scripts/[clientscript,logout_layout_update].cs2) `[clientscript,logout_layout_update]`  
 [**2177**](scripts/script2177.cs2)  
 [**2178**](scripts/script2178.cs2)  
-[**2179**](scripts/script2179.cs2)  
-[**2180**](scripts/script2180.cs2)  
-[**2181**](scripts/script2181.cs2)  
-[**2182**](scripts/script2182.cs2)  
-[**2183**](scripts/script2183.cs2)  
-[**2184**](scripts/script2184.cs2)  
-[**2185**](scripts/script2185.cs2)  
+[**2179**](scripts/[proc,deadman_spectator_names].cs2) `[proc,deadman_spectator_names]`  
+[**2180**](scripts/[clientscript,deadman_spectator_single].cs2) `[clientscript,deadman_spectator_single]`  
+[**2181**](scripts/[clientscript,deadman_spectator_double].cs2) `[clientscript,deadman_spectator_double]`  
+[**2182**](scripts/[proc,deadman_spectator_stats].cs2) `[proc,deadman_spectator_stats]`  
+[**2183**](scripts/[proc,deadman_spectator_inventory].cs2) `[proc,deadman_spectator_inventory]`  
+[**2184**](scripts/[proc,deadman_spectator_inventory_dummy].cs2) `[proc,deadman_spectator_inventory_dummy]`  
+[**2185**](scripts/[clientscript,deadman_spectator_map].cs2) `[clientscript,deadman_spectator_map]`  
 [**2186**](scripts/script2186.cs2)  
-[**2187**](scripts/script2187.cs2)  
+[**2187**](scripts/[proc,deadman_freecam_enable].cs2) `[proc,deadman_freecam_enable]`  
 [**2188**](scripts/[proc,deadman_overlay_hide].cs2) `[proc,deadman_overlay_hide]`  
 [**2189**](scripts/[proc,deadman_map_enable].cs2) `[proc,deadman_map_enable]`  
 [**2190**](scripts/[proc,deadman_area_switch].cs2) `[proc,deadman_area_switch]`  
@@ -2202,7 +2202,7 @@
 [**2199**](scripts/[proc,update_diary_entry].cs2) `[proc,update_diary_entry]`  
 [**2200**](scripts/[proc,diary_completion_info].cs2) `[proc,diary_completion_info]`  
 [**2201**](scripts/[clientscript,diary_mouseover].cs2) `[clientscript,diary_mouseover]`  
-[**2202**](scripts/script2202.cs2)  
+[**2202**](scripts/[clientscript,deadman_spectator_temp_name].cs2) `[clientscript,deadman_spectator_temp_name]`  
 [**2203**](scripts/[proc,deadman_map_keypress].cs2) `[proc,deadman_map_keypress]`  
 [**2204**](scripts/[proc,deadman_1v1_tele].cs2) `[proc,deadman_1v1_tele]`  
 [**2205**](scripts/[clientscript,decant_init].cs2) `[clientscript,decant_init]`  
