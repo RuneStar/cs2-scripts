@@ -1,14 +1,14 @@
 // 1098
-[clientscript,bugreport_keypress](int $int0, char $char1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+[clientscript,bugreport_keypress](int $key0, char $char1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 if (~keypress_permit(156, -1) = 0) {
 	return;
 }
-if (($int0 = 84) & (~on_mobile = true)) {
+if (($key0 = ^key_return) & (~on_mobile = true)) {
 	~keyboard_hide;
 }
 def_string $string0 = "";
 if ($component2 = $component5) {
-	%varcstring372 = ~script74(%varcstring372, 5, $int0, $char1);
+	%varcstring372 = ~script74(%varcstring372, 5, $key0, $char1);
 	$string0 = %varcstring372;
 	if (string_length(%varcstring372) > 0) {
 		if_setop(1, "Submit", $component7);
@@ -20,7 +20,7 @@ if ($component2 = $component5) {
 		if_setonclick("bugreport_submit()", $component7);
 	}
 } else if ($component2 = $component6) {
-	%varcstring373 = ~script74(%varcstring373, 5, $int0, $char1);
+	%varcstring373 = ~script74(%varcstring373, 5, $key0, $char1);
 	$string0 = %varcstring373;
 } else {
 	return;

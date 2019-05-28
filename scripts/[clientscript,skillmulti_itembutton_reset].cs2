@@ -1,11 +1,11 @@
 // 2053
-[clientscript,skillmulti_itembutton_reset](int $int0, obj $obj1, component $component2, string $string0, int $int3, int $int4, int $int5)
+[clientscript,skillmulti_itembutton_reset](int $int0, obj $obj1, component $component2, string $string0, int $key3, int $int4, int $int5)
 if (clientclock < $int0) {
 	return;
 }
 ~skillmulti_itembutton_draw(false, $obj1, $component2, $int4, $int5);
 if_setonmouseover("skillmulti_itembutton_hover(true, $obj1, $component2, $int4, $int5)", $component2);
 if_setonmouseleave("skillmulti_itembutton_hover(false, $obj1, $component2, $int4, $int5)", $component2);
-if_setonop("skillmulti_itembutton_op(event_opindex, $obj1, $component2, $string0, $int3, $int4, $int5)", $component2);
-if_setonkey("skillmulti_itembutton_key(event_keypressed, event_keytyped, $obj1, $component2, $string0, $int3, $int4, $int5)", $component2);
+if_setonop("skillmulti_itembutton_op(event_opindex, $obj1, $component2, $string0, $key3, $int4, $int5)", $component2);
+if_setonkey("skillmulti_itembutton_key(event_keypressed, event_keytyped, $obj1, $component2, $string0, $key3, $int4, $int5)", $component2);
 if_setontimer(null, $component2);

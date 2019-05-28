@@ -1,5 +1,5 @@
 // 73
-[clientscript,chatdefault_onkey](int $int0, char $char1)
+[clientscript,chatdefault_onkey](int $key0, char $char1)
 if ((if_gethide(162:55) = true) | (if_gethide(162:56) = true)) {
 	return;
 }
@@ -18,7 +18,7 @@ if (staffmodlevel > 0) {
 if ((($int3 = 1) & (string_indexof_char("`", $char1) ! -1)) & ($int2 = 0)) {
 	return;
 }
-if ($int0 = 84) {
+if ($key0 = ^key_return) {
 	~keyboard_hide;
 	if ($int2 > 0) {
 		if ((string_indexof_string(%varcstring335, "/", 0) = 0) | ($int4 = 1)) {
@@ -63,16 +63,16 @@ if ($int0 = 84) {
 		~chatout_add(%varcstring335);
 		%varcstring335 = "";
 	}
-} else if ($int0 = 104) {
+} else if ($key0 = ^key_page_up) {
 	if ($int3 = 1) {
 		~chatout_scrollup;
 	}
-} else if ($int0 = 105) {
+} else if ($key0 = ^key_page_down) {
 	if ($int3 = 1) {
 		~chatout_scrolldown;
 	}
 } else {
-	if ($int0 = 80) {
+	if ($key0 = ^key_tab) {
 		if (string_length(%varcstring356) > 0) {
 			if (friend_test(%varcstring356) = true) {
 				~meslayer_mode6(%varcstring356);
@@ -92,6 +92,6 @@ if ($int0 = 84) {
 		mes("You haven't received any messages to which you can reply.");
 		return;
 	}
-	%varcstring335 = ~script74(%varcstring335, 0, $int0, $char1);
+	%varcstring335 = ~script74(%varcstring335, 0, $key0, $char1);
 }
 ~script223;

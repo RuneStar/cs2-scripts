@@ -1,51 +1,51 @@
 // 2186
-script2186(int $int0)
-switch_int ($int0) {
-	case 1 :
+script2186(int $key0)
+switch_int ($key0) {
+	case ^key_f1 :
 		if (~deadman_world = 1) {
 			~script2187;
 		}
-	case 2 :
+	case ^key_f2 :
 		if (~deadman_world = 1) {
 			~deadman_overlay_hide;
 		}
-	case 3 :
+	case ^key_f3 :
 		if (~deadman_world = 1) {
 			~deadman_map_enable;
 		}
-	case 4 :
+	case ^key_f4 :
 		if (~deadman_world = 1) {
 			~deadman_area_switch;
 		}
-	case 5 :
+	case ^key_f5 :
 		if (~deadman_world = 1) {
 			~script2191;
 		}
-	case 6 :
+	case ^key_f6 :
 		if (~deadman_world = 1) {
 			~script2192;
 		}
-	case 7 :
+	case ^key_f7 :
 		if (~deadman_world = 1) {
 			~deadman_arenas_tele;
 		}
-	case 8 :
+	case ^key_f8 :
 		if (~deadman_world = 1) {
 			~deadman_1v1_tele;
 		}
-	case 9 :
+	case ^key_f9 :
 		if (~deadman_world = 1) {
 			~deadman_chest_tele;
 		}
-	case 12 :
+	case ^key_f12 :
 		if (~deadman_world = 1) {
 			~deadman_toplevel_close;
 		} else {
 			docheat("~1v1arena_restore");
 		}
-	case 104 :
+	case ^key_page_up :
 		~script2222;
-	case 105 :
+	case ^key_page_down :
 		~script2223;
 	case default :
 		return;

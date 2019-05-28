@@ -1,24 +1,24 @@
 // 2220
-[clientscript,oculus_controls](int $int0, component $component1, int $int2)
+[clientscript,oculus_controls](int $key0, component $component1, int $int2)
 if (~keypress_permit(16, -1) = 0) {
 	return;
 }
-switch_int ($int0) {
-	case 13 :
+switch_int ($key0) {
+	case ^key_escape :
 		sound_synth(2266, 1, 0);
 		if_close;
-	case 83 :
+	case ^key_space :
 		if (cc_find($component1, $int2) = ^true) {
 			sound_synth(2266, 1, 0);
 			cc_resume_pausebutton;
 		}
-	case 104 :
+	case ^key_page_up :
 		if (%varcint204 < 15) {
 			sound_synth(2266, 1, 0);
 			%varcint204 = ~max(3, calc(%varcint204 + 1));
 			_3129(%varcint204, 2);
 		}
-	case 105 :
+	case ^key_page_down :
 		if (%varcint204 > 3) {
 			sound_synth(2266, 1, 0);
 			%varcint204 = ~min(15, calc(%varcint204 - 1));

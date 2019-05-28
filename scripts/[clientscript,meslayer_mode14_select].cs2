@@ -1,6 +1,6 @@
 // 754
-[clientscript,meslayer_mode14_select](obj $obj0, int $int1)
-if ($int1 ! 84) {
+[clientscript,meslayer_mode14_select](obj $obj0, int $key1)
+if ($key1 ! ^key_return) {
 	return;
 }
 resume_objdialog($obj0);

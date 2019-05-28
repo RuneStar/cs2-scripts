@@ -1,5 +1,5 @@
 // 2068
-[proc,toplevel_keypress](int $int0, enum $enum1, boolean $boolean2)
+[proc,toplevel_keypress](int $key0, enum $enum1, boolean $boolean2)
 if (~keypress_permit(-1, -1) = 0) {
 	return;
 }
@@ -7,7 +7,7 @@ def_component $component3 = enum(component, component, $enum1, 161:13);
 def_component $component4 = enum(int, component, 1137, 3);
 def_component $component5 = enum(component, component, $enum1, 161:14);
 $component4 = enum(component, component, $enum1, $component4);
-if (($int0 = 13) & (%varbit4681 = 1)) {
+if (($key0 = ^key_escape) & (%varbit4681 = 1)) {
 	if (($component5 ! null) & (if_hassub($component5) = true)) {
 		return;
 	}
@@ -21,7 +21,7 @@ if (($int0 = 13) & (%varbit4681 = 1)) {
 		return;
 	}
 }
-def_int $int6 = ~keybind_get_slot($int0);
+def_int $int6 = ~keybind_get_slot($key0);
 if (($int6 = -1) | ($int6 = calc(%varbit3756 - 1))) {
 	return;
 }

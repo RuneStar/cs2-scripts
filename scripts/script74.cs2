@@ -1,7 +1,7 @@
 // 74
-script74(string $string0, int $int0, int $int1, char $char2)(string)
+script74(string $string0, int $int0, int $key1, char $char2)(string)
 def_int $int3 = string_length($string0);
-if ($int1 = 85) {
+if ($key1 = ^key_backspace) {
 	if ($int3 > 0) {
 		return(substring($string0, 0, calc($int3 - 1)));
 	}
@@ -16,7 +16,7 @@ if ($int0 = 3) {
 	$int4 = 500;
 }
 if (char_isprintable($char2) = false) {
-	if (($int0 = 5) & ($int1 = 84)) {
+	if (($int0 = 5) & ($key1 = ^key_return)) {
 		if ($int3 >= $int4) {
 			return($string0);
 		}
