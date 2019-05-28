@@ -1,6 +1,6 @@
 // 90
 [proc,filtertest](int $chattype0, string $string0, string $string1, int $int1, int $int2, string $string2, int $int3)(int)
-if ($chattype0 = -1) {
+if ($chattype0 = null) {
 	return(0);
 }
 if ((enum(int, boolean, 892, $chattype0) = true) & ($chattype0 ! ^chattype_playerrelated)) {
