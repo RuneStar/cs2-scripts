@@ -44,7 +44,7 @@ while ($obj19 ! null) {
 		}
 		cc_create(162:53, ^iftype_rectangle, $int6);
 		if ($int6 = 0) {
-			cc_setonkey("meslayer_mode14_select($obj19, event_keytyped)");
+			cc_setonkey("meslayer_mode14_select($obj19, event_keypressed)");
 		}
 		$int6 = calc($int6 + 1);
 		cc_setsize($int5, 32, ^setsize_abs, ^setsize_abs);

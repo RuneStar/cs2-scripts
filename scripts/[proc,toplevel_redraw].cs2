@@ -1,9 +1,9 @@
 // 907
 [proc,toplevel_redraw](component $component0, enum $enum1)
 if (%varbit4611 = 1) {
-	if_setonkey("toplevel_keypress(event_keytyped, $enum1, false)", $component0);
+	if_setonkey("toplevel_keypress(event_keypressed, $enum1, false)", $component0);
 } else {
-	if_setonkey("toplevel_keypress(event_keytyped, $enum1, true)", $component0);
+	if_setonkey("toplevel_keypress(event_keypressed, $enum1, true)", $component0);
 }
 ~toplevel_resize($component0, $enum1);
 def_component $component2 = enum(component, component, $enum1, 161:17);

@@ -30,7 +30,7 @@ if (string_length($string0) <= 0) {
 	}
 	cc_setop(1, "Continue");
 	cc_setonop("objbox_listener(true, null, null, ^key_space, $string1, event_com, event_comid, 0, $string2, $component0, 0)");
-	cc_setonkey("objbox_listener(false, event_keytyped, event_keypressed, ^key_space, $string1, event_com, event_comid, 0, $string2, $component0, 0)");
+	cc_setonkey("objbox_listener(false, event_keypressed, event_keytyped, ^key_space, $string1, event_com, event_comid, 0, $string2, $component0, 0)");
 	if ($component0 ! null) {
 		if_setonclick("objbox_listener(true, null, null, ^key_space, $string1, event_com, cc_getid, 0, $string2, $component0, 0)", $component0);
 	}
@@ -55,8 +55,8 @@ if (string_length($string0) <= 0) {
 	.cc_setop(1, $string0);
 	$string1 = "1";
 	cc_setonop("objbox_listener(true, null, null, ^key_escape, $string1, event_com, event_comid, 0, $string2, null, 0)");
-	cc_setonkey("objbox_listener(false, event_keytyped, event_keypressed, ^key_escape, $string1, event_com, event_comid, 0, $string2, null, 0)");
+	cc_setonkey("objbox_listener(false, event_keypressed, event_keytyped, ^key_escape, $string1, event_com, event_comid, 0, $string2, null, 0)");
 	$string1 = "2";
 	.cc_setonop("objbox_listener(true, null, null, ^key_space, $string1, event_com, event_comid, 1, $string0, null, 0)");
-	.cc_setonkey("objbox_listener(false, event_keytyped, event_keypressed, ^key_space, $string1, event_com, event_comid, 1, $string0, null, 0)");
+	.cc_setonkey("objbox_listener(false, event_keypressed, event_keytyped, ^key_space, $string1, event_com, event_comid, 1, $string0, null, 0)");
 }

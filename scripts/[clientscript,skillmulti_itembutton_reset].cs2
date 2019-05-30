@@ -7,5 +7,5 @@ if (clientclock < $int0) {
 if_setonmouseover("skillmulti_itembutton_hover(true, $obj1, $component2, $int4, $int5)", $component2);
 if_setonmouseleave("skillmulti_itembutton_hover(false, $obj1, $component2, $int4, $int5)", $component2);
 if_setonop("skillmulti_itembutton_op(event_opindex, $obj1, $component2, $string0, $key3, $int4, $int5)", $component2);
-if_setonkey("skillmulti_itembutton_key(event_keypressed, event_keytyped, $obj1, $component2, $string0, $key3, $int4, $int5)", $component2);
+if_setonkey("skillmulti_itembutton_key(event_keytyped, event_keypressed, $obj1, $component2, $string0, $key3, $int4, $int5)", $component2);
 if_setontimer(null, $component2);

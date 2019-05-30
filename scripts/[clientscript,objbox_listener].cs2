@@ -22,7 +22,7 @@ if ((cc_find($component4, $int5) = ^true) & (.cc_find($component4, $int6) = ^tru
 	cc_settext($string2);
 	cc_setontimer("objbox_reset($int8, $component4, $int5, $string1)");
 	cc_setonop("objbox_listener(true, null, null, $key3, $string0, event_com, $int5, $int6, $string1, $component7, $int8)");
-	cc_setonkey("objbox_listener(false, event_keytyped, event_keypressed, $key3, $string0, event_com, $int5, $int6, $string1, $component7, $int8)");
+	cc_setonkey("objbox_listener(false, event_keypressed, event_keytyped, $key3, $string0, event_com, $int5, $int6, $string1, $component7, $int8)");
 	if ($component7 ! null) {
 		if_setonclick("objbox_listener(true, null, null, $key3, $string0, event_com, $int5, $int6, $string1, $component7, $int8)", $component7);
 	}

@@ -46,7 +46,7 @@ if (string_length($string0) > 0) {
 	} else {
 		.cc_settext("<col=ff0000>*</col>");
 	}
-	cc_setonkey("worldmap_search_input(event_keytyped, event_keypressed, $component0, cc_getid, .cc_getid, $coord6)");
+	cc_setonkey("worldmap_search_input(event_keypressed, event_keytyped, $component0, cc_getid, .cc_getid, $coord6)");
 	%varcint190 = 1;
 }
 ~script1739(if_getwidth($component0));

@@ -12,5 +12,5 @@ if (cc_find($component2, 6) = ^true) {
 		$string0, $string1 = enum(int, string, 1401, calc($int0 - 9)), enum(int, string, 1402, calc($int0 - 9));
 	}
 	cc_settext("<$string0>:");
-	if_setonkey("script1632(event_keypressed, $int1, event_com, $string0, $string1, 0)", $component2);
+	if_setonkey("script1632(event_keytyped, $int1, event_com, $string0, $string1, 0)", $component2);
 }

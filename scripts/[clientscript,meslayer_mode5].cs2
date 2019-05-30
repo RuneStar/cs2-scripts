@@ -7,7 +7,7 @@ if (%varcint11 = 1) {
 if_settext("Enter name of player to delete from list", 162:44);
 ~script222("");
 def_string $string0 = "";
-if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string0)", 162:45);
+if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string0)", 162:45);
 if (~on_mobile = true) {
 	~keyboard_show(0, 12);
 }

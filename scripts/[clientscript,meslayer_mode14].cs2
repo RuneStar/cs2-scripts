@@ -6,7 +6,7 @@ if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, 162:45);
 if_sethide(false, 162:49);
 ~scrollbar_vertical(162:54, 162:53, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~script222($string0);
-if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string0)", 162:45);
+if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string0)", 162:45);
 ~meslayer_mode14_update($boolean0, $enum1);
 if_setontimer("meslayer_mode14_update($boolean0, $enum1)", 162:40);
 if_setondialogabort("meslayer_ondialogabort()", 162:45);

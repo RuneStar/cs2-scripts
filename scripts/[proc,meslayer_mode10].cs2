@@ -11,7 +11,7 @@ if (%varbit8119 = 0) {
 if_settext("Enter the player name whose channel you wish to join:", 162:44);
 ~script222("");
 def_string $string0 = "";
-if_setonkey("meslayer_onkey(event_keytyped, event_keypressed, $string0)", 162:45);
+if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string0)", 162:45);
 ~script680;
 if (string_length(%varcstring362) > 0) {
 	~meslayer_dynamicbutton;
