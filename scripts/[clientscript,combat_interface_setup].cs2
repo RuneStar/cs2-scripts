@@ -17,20 +17,26 @@ def_int $int11 = 97;
 def_int $int12 = 44;
 def_int $int13 = 44;
 if (~on_mobile = true) {
-	$int4 = 36;
 	$int6 = 4;
 	$int1 = 88;
 	$int2 = 47;
 	$int8 = 4;
 	$int9 = 5;
 	$int13 = $int2;
-	$int4 = $int2;
+	if ((%varbit357 = 18) | (%varbit357 = 21)) {
+		$int4 = calc($int2 - 4);
+	} else {
+		$int4 = $int2;
+	}
 	$int5 = 20;
 	$int12 = 50;
 	$int11 = calc((3 * $int3) + (2 * $int7));
+	if_settextalign(^settextalign_centre, ^settextalign_bottom, 0, 593:2);
+} else {
+	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, 593:2);
 }
 if ((%varbit357 = 18) | (%varbit357 = 21)) {
-	if_sethide(false, 593:19);
+	if_sethide(false, 593:20);
 	$array0(0) = $int9;
 	$array0(1) = $int9;
 	$array0(2) = $int9;
@@ -40,25 +46,25 @@ if ((%varbit357 = 18) | (%varbit357 = 21)) {
 	$array1(2) = calc($int0 + (2 * ($int3 + $int7)));
 	$array1(3) = calc($int0 + (3 * ($int3 + $int7)));
 	$int10 = calc($int0 + (3 * ($int3 + $int7)));
-	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:3);
-	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:7);
-	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:11);
-	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:15);
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:4);
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:8);
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:12);
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:16);
-	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:5);
-	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:9);
-	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:13);
-	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:17);
-	if_setsize(33, 23, ^setsize_abs, ^setsize_abs, 593:5);
-	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:6);
-	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:10);
-	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:14);
-	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:18);
+	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:5);
+	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:9);
+	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:13);
+	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:17);
+	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:6);
+	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:10);
+	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:14);
+	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:18);
+	if_setsize(33, 23, ^setsize_abs, ^setsize_abs, 593:6);
+	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:7);
+	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:11);
+	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:15);
+	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:19);
 } else {
-	if_sethide(true, 593:19);
+	if_sethide(true, 593:20);
 	$array0(0) = $int9;
 	$array0(1) = calc(($int9 + $int1) + $int6);
 	$array0(2) = $int9;
@@ -68,42 +74,42 @@ if ((%varbit357 = 18) | (%varbit357 = 21)) {
 	$array1(2) = calc(($int0 + $int2) + $int8);
 	$array1(3) = calc(($int0 + $int2) + $int8);
 	$int10 = calc($int0 + (2 * ($int2 + $int8)));
-	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:3);
-	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:7);
-	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:11);
-	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:15);
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:4);
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:8);
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:12);
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:16);
+	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:5);
+	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:9);
+	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:13);
+	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:17);
 	if (%varbit357 = 8) {
-		if_setposition(0, -6, ^setpos_abs_centre, ^setpos_abs_centre, 593:5);
-		if_setsize(30, 30, ^setsize_abs, ^setsize_abs, 593:5);
+		if_setposition(0, -6, ^setpos_abs_centre, ^setpos_abs_centre, 593:6);
+		if_setsize(30, 30, ^setsize_abs, ^setsize_abs, 593:6);
 	} else {
-		if_setposition(0, -6, ^setpos_abs_centre, ^setpos_abs_centre, 593:5);
-		if_setsize(34, 24, ^setsize_abs, ^setsize_abs, 593:5);
+		if_setposition(0, -6, ^setpos_abs_centre, ^setpos_abs_centre, 593:6);
+		if_setsize(34, 24, ^setsize_abs, ^setsize_abs, 593:6);
 	}
-	if_setposition(0, -6, ^setpos_abs_centre, ^setpos_abs_centre, 593:9);
-	if_setposition(0, -6, ^setpos_abs_centre, ^setpos_abs_centre, 593:13);
-	if_setposition(0, -6, ^setpos_abs_centre, ^setpos_abs_centre, 593:17);
-	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_centre, 593:6);
-	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_centre, 593:10);
-	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_centre, 593:14);
-	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_centre, 593:18);
+	if_setposition(0, -6, ^setpos_abs_centre, ^setpos_abs_centre, 593:10);
+	if_setposition(0, -6, ^setpos_abs_centre, ^setpos_abs_centre, 593:14);
+	if_setposition(0, -6, ^setpos_abs_centre, ^setpos_abs_centre, 593:18);
+	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_centre, 593:7);
+	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_centre, 593:11);
+	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_centre, 593:15);
+	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_centre, 593:19);
 }
-if_setsize(calc($int6 + (2 * $int1)), $int13, ^setsize_abs, ^setsize_abs, 593:29);
-if_setposition(0, $int10, ^setpos_abs_centre, ^setpos_abs_top, 593:29);
-if_setsize(calc($int6 + (2 * $int1)), $int4, ^setsize_abs, ^setsize_abs, 593:34);
-if_setposition(0, calc(($int10 + $int13) + $int8), ^setpos_abs_centre, ^setpos_abs_top, 593:34);
-if_setsize($int1, $int11, ^setsize_abs, ^setsize_abs, 593:19);
-if_setposition(calc(($int9 + $int1) + $int6), $int0, ^setpos_abs_left, ^setpos_abs_top, 593:19);
-if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, 593:25);
+if_setsize(calc($int6 + (2 * $int1)), $int13, ^setsize_abs, ^setsize_abs, 593:30);
+if_setposition(0, $int10, ^setpos_abs_centre, ^setpos_abs_top, 593:30);
+if_setsize(calc($int6 + (2 * $int1)), $int4, ^setsize_abs, ^setsize_abs, 593:35);
+if_setposition(0, calc(($int10 + $int13) + $int8), ^setpos_abs_centre, ^setpos_abs_top, 593:35);
+if_setsize($int1, $int11, ^setsize_abs, ^setsize_abs, 593:20);
+if_setposition(calc(($int9 + $int1) + $int6), $int0, ^setpos_abs_left, ^setpos_abs_top, 593:20);
 if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, 593:26);
-if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, 593:20);
+if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, 593:27);
 if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, 593:21);
-if_setsize(if_getwidth(593:36), $int5, ^setsize_abs, ^setsize_abs, 593:36);
-if_setsize(if_getwidth(593:40), calc($int5 + 2), ^setsize_abs, ^setsize_abs, 593:40);
+if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, 593:22);
 if_setsize(if_getwidth(593:37), $int5, ^setsize_abs, ^setsize_abs, 593:37);
+if_setsize(if_getwidth(593:41), calc($int5 + 2), ^setsize_abs, ^setsize_abs, 593:41);
+if_setsize(if_getwidth(593:38), $int5, ^setsize_abs, ^setsize_abs, 593:38);
 def_string $string0 = "";
 def_string $string1 = "";
 def_string $string2 = "";
@@ -241,62 +247,62 @@ if (%varbit357 = 1) {
 ~combat_interface_setbuttons($graphic14, $graphic15, $graphic16, $graphic17);
 def_int $int18 = 0;
 if ($graphic14 ! null) {
-	if_sethide(false, 593:3);
-	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:3);
+	if_sethide(false, 593:4);
+	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:4);
 	$int18 = calc($int18 + 1);
-	if_setgraphic($graphic14, 593:5);
-	if_settext($string0, 593:6);
-	if_setop(1, $string0, 593:3);
-	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 0)", 593:3);
-	if_setonmouseleave("deltooltip(593:41)", 593:3);
+	if_setgraphic($graphic14, 593:6);
+	if_settext($string0, 593:7);
+	if_setop(1, $string0, 593:4);
+	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 0)", 593:4);
+	if_setonmouseleave("deltooltip(593:42)", 593:4);
 	if (string_length($string4) > 0) {
-		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 593:41, $string4, 25, 140)", 593:3);
+		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 593:42, $string4, 25, 140)", 593:4);
 	}
 } else {
-	if_sethide(true, 593:3);
+	if_sethide(true, 593:4);
 }
 if ($graphic15 ! null) {
-	if_sethide(false, 593:7);
-	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:7);
+	if_sethide(false, 593:8);
+	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:8);
 	$int18 = calc($int18 + 1);
-	if_setgraphic($graphic15, 593:9);
-	if_settext($string1, 593:10);
-	if_setop(1, $string1, 593:7);
-	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 1)", 593:7);
-	if_setonmouseleave("deltooltip(593:41)", 593:7);
+	if_setgraphic($graphic15, 593:10);
+	if_settext($string1, 593:11);
+	if_setop(1, $string1, 593:8);
+	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 1)", 593:8);
+	if_setonmouseleave("deltooltip(593:42)", 593:8);
 	if (string_length($string5) > 0) {
-		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 593:41, $string5, 25, 140)", 593:7);
+		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 593:42, $string5, 25, 140)", 593:8);
 	}
 } else {
-	if_sethide(true, 593:7);
+	if_sethide(true, 593:8);
 }
 if ($graphic16 ! null) {
-	if_sethide(false, 593:11);
-	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:11);
+	if_sethide(false, 593:12);
+	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:12);
 	$int18 = calc($int18 + 1);
-	if_setgraphic($graphic16, 593:13);
-	if_settext($string2, 593:14);
-	if_setop(1, $string2, 593:11);
-	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 2)", 593:11);
-	if_setonmouseleave("deltooltip(593:41)", 593:11);
+	if_setgraphic($graphic16, 593:14);
+	if_settext($string2, 593:15);
+	if_setop(1, $string2, 593:12);
+	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 2)", 593:12);
+	if_setonmouseleave("deltooltip(593:42)", 593:12);
 	if (string_length($string6) > 0) {
-		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 593:41, $string6, 25, 140)", 593:11);
+		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 593:42, $string6, 25, 140)", 593:12);
 	}
 } else {
-	if_sethide(true, 593:11);
+	if_sethide(true, 593:12);
 }
 if ($graphic17 ! null) {
-	if_sethide(false, 593:15);
-	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:15);
+	if_sethide(false, 593:16);
+	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:16);
 	$int18 = calc($int18 + 1);
-	if_setgraphic($graphic17, 593:17);
-	if_settext($string3, 593:18);
-	if_setop(1, $string3, 593:15);
-	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 3)", 593:15);
-	if_setonmouseleave("deltooltip(593:41)", 593:15);
+	if_setgraphic($graphic17, 593:18);
+	if_settext($string3, 593:19);
+	if_setop(1, $string3, 593:16);
+	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 3)", 593:16);
+	if_setonmouseleave("deltooltip(593:42)", 593:16);
 	if (string_length($string7) > 0) {
-		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 593:41, $string7, 25, 140)", 593:15);
+		if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 593:42, $string7, 25, 140)", 593:16);
 	}
 } else {
-	if_sethide(true, 593:15);
+	if_sethide(true, 593:16);
 }

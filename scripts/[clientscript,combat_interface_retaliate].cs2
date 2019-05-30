@@ -1,11 +1,11 @@
 // 325
 [clientscript,combat_interface_retaliate]
 if (%var172 = 0) {
-	~options_button_on(593:31, 0);
-	if_setgraphic("combat_autoretaliate,1", 593:32);
-	if_settext("Auto Retaliate<br>(On)", 593:33);
+	~options_button_on(593:32, 0);
+	if_setgraphic("combat_autoretaliate,1", 593:33);
+	if_settext("Auto Retaliate<br>(On)", 593:34);
 } else {
-	~options_button_off(593:31, 0);
-	if_setgraphic("combat_autoretaliate,0", 593:32);
-	if_settext("Auto Retaliate<br>(Off)", 593:33);
+	~options_button_off(593:32, 0);
+	if_setgraphic("combat_autoretaliate,0", 593:33);
+	if_settext("Auto Retaliate<br>(Off)", 593:34);
 }
