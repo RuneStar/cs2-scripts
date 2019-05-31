@@ -1,0 +1,11 @@
+// 2021
+[proc,volcanic_mine_set_chambertext]
+if (%varbit5941 < 2) {
+	if_settext("A: -", 611:24);
+	if_settext("B: -", 611:25);
+	if_settext("C: -", 611:26);
+} else {
+	if_settext("A: <~volcanic_mine_chambercolour(testbit(%varbit5936, 0))>", 611:24);
+	if_settext("B: <~volcanic_mine_chambercolour(testbit(%varbit5936, 1))>", 611:25);
+	if_settext("C: <~volcanic_mine_chambercolour(testbit(%varbit5936, 2))>", 611:26);
+}

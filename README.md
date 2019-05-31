@@ -95,7 +95,7 @@
 [**92**](scripts/[clientscript,v2_stone_button].cs2) `[clientscript,v2_stone_button]`  
 [**93**](scripts/[clientscript,v2_stone_button_filled].cs2) `[clientscript,v2_stone_button_filled]`  
 [**94**](scripts/[clientscript,v2_stone_button_in].cs2) `[clientscript,v2_stone_button_in]`  
-[**95**](scripts/script95.cs2)  
+[**95**](scripts/[proc,chat_autotyper_updateop].cs2) `[proc,chat_autotyper_updateop]`  
 [**96**](scripts/[proc,chat_sendpublic].cs2) `[proc,chat_sendpublic]`  
 [**97**](scripts/[clientscript,v2_stone_button_out_filled].cs2) `[clientscript,v2_stone_button_out_filled]`  
 [**98**](scripts/[proc,create_graphic].cs2) `[proc,create_graphic]`  
@@ -174,7 +174,7 @@
 [**171**](scripts/script171.cs2)  
 [**172**](scripts/[proc,bank_depositbox_drawslot].cs2) `[proc,bank_depositbox_drawslot]`  
 [**173**](scripts/[clientscript,chat_button_select].cs2) `[clientscript,chat_button_select]`  
-[**174**](scripts/script174.cs2)  
+[**174**](scripts/[clientscript,chat_button_deselect].cs2) `[clientscript,chat_button_deselect]`  
 [**175**](scripts/[clientscript,chat_button_onop].cs2) `[clientscript,chat_button_onop]`  
 [**176**](scripts/[clientscript,tournament_sidepanel_init].cs2) `[clientscript,tournament_sidepanel_init]`  
 [**177**](scripts/[clientscript,raids_storage_items_op].cs2) `[clientscript,raids_storage_items_op]`  
@@ -552,7 +552,7 @@
 [**549**](scripts/script549.cs2)  
 [**550**](scripts/[proc,meslayer_mode13].cs2) `[proc,meslayer_mode13]`  
 [**551**](scripts/script551.cs2)  
-[**552**](scripts/script552.cs2)  
+[**552**](scripts/[clientscript,chat_autotyper].cs2) `[clientscript,chat_autotyper]`  
 [**553**](scripts/script553.cs2)  
 [**554**](scripts/[clientscript,clanwars_confirm_setup].cs2) `[clientscript,clanwars_confirm_setup]`  
 [**555**](scripts/[clientscript,clanwars_confirm_challenge_wait].cs2) `[clientscript,clanwars_confirm_challenge_wait]`  
@@ -1295,7 +1295,7 @@
 [**1292**](scripts/[clientscript,teletab_init].cs2) `[clientscript,teletab_init]`  
 [**1293**](scripts/[proc,teletab_req_met].cs2) `[proc,teletab_req_met]`  
 [**1294**](scripts/[clientscript,teletab_runecost].cs2) `[clientscript,teletab_runecost]`  
-[**1295**](scripts/script1295.cs2)  
+[**1295**](scripts/[clientscript,teletab_blank_runecost].cs2) `[clientscript,teletab_blank_runecost]`  
 [**1296**](scripts/script1296.cs2)  
 [**1297**](scripts/[clientscript,slayer_rewards_unlock_draw].cs2) `[clientscript,slayer_rewards_unlock_draw]`  
 [**1298**](scripts/[proc,slayer_rewards_unlock_desc].cs2) `[proc,slayer_rewards_unlock_desc]`  
@@ -2016,16 +2016,16 @@
 [**2013**](scripts/[clientscript,fossil_pool_init].cs2) `[clientscript,fossil_pool_init]`  
 [**2014**](scripts/[clientscript,fossil_pool_update].cs2) `[clientscript,fossil_pool_update]`  
 [**2015**](scripts/[clientscript,fossil_pool_progress_update].cs2) `[clientscript,fossil_pool_progress_update]`  
-[**2016**](scripts/script2016.cs2)  
-[**2017**](scripts/script2017.cs2)  
+[**2016**](scripts/[clientscript,volcanic_mine_hud_init].cs2) `[clientscript,volcanic_mine_hud_init]`  
+[**2017**](scripts/[clientscript,mesoverlay_checkheight].cs2) `[clientscript,mesoverlay_checkheight]`  
 [**2018**](scripts/[proc,mesoverlay_draw].cs2) `[proc,mesoverlay_draw]`  
-[**2019**](scripts/script2019.cs2)  
-[**2020**](scripts/script2020.cs2)  
-[**2021**](scripts/script2021.cs2)  
-[**2022**](scripts/script2022.cs2)  
-[**2023**](scripts/script2023.cs2)  
-[**2024**](scripts/script2024.cs2)  
-[**2025**](scripts/script2025.cs2)  
+[**2019**](scripts/[clientscript,volcanic_mine_updatehud].cs2) `[clientscript,volcanic_mine_updatehud]`  
+[**2020**](scripts/[proc,volcanic_mine_set_venttext].cs2) `[proc,volcanic_mine_set_venttext]`  
+[**2021**](scripts/[proc,volcanic_mine_set_chambertext].cs2) `[proc,volcanic_mine_set_chambertext]`  
+[**2022**](scripts/[proc,volcanic_mine_set_otherinfo].cs2) `[proc,volcanic_mine_set_otherinfo]`  
+[**2023**](scripts/[proc,volcanic_mine_ventcolour].cs2) `[proc,volcanic_mine_ventcolour]`  
+[**2024**](scripts/[proc,volcanic_mine_chambercolour].cs2) `[proc,volcanic_mine_chambercolour]`  
+[**2025**](scripts/[clientscript,volcanic_mine_setup_timer].cs2) `[clientscript,volcanic_mine_setup_timer]`  
 [**2026**](scripts/script2026.cs2)  
 [**2027**](scripts/script2027.cs2)  
 [**2028**](scripts/script2028.cs2)  
@@ -2083,7 +2083,7 @@
 [**2080**](scripts/script2080.cs2)  
 [**2081**](scripts/script2081.cs2)  
 [**2082**](scripts/[proc,kots_world].cs2) `[proc,kots_world]`  
-[**2083**](scripts/script2083.cs2)  
+[**2083**](scripts/[proc,kots_remaining_time].cs2) `[proc,kots_remaining_time]`  
 [**2084**](scripts/[proc,deadman_finallocation].cs2) `[proc,deadman_finallocation]`  
 [**2085**](scripts/script2085.cs2)  
 [**2086**](scripts/script2086.cs2)  
@@ -2186,7 +2186,7 @@
 [**2183**](scripts/[proc,deadman_spectator_inventory].cs2) `[proc,deadman_spectator_inventory]`  
 [**2184**](scripts/[proc,deadman_spectator_inventory_dummy].cs2) `[proc,deadman_spectator_inventory_dummy]`  
 [**2185**](scripts/[clientscript,deadman_spectator_map].cs2) `[clientscript,deadman_spectator_map]`  
-[**2186**](scripts/script2186.cs2)  
+[**2186**](scripts/[proc,spectator_keypress].cs2) `[proc,spectator_keypress]`  
 [**2187**](scripts/[proc,deadman_freecam_enable].cs2) `[proc,deadman_freecam_enable]`  
 [**2188**](scripts/[proc,deadman_overlay_hide].cs2) `[proc,deadman_overlay_hide]`  
 [**2189**](scripts/[proc,deadman_map_enable].cs2) `[proc,deadman_map_enable]`  

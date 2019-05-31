@@ -76,8 +76,8 @@ if ($int1 > 0) {
 				return;
 			}
 			%varcstring358, %varcint62 = %varcstring359, 0;
-			~script95;
-			if_setontimer("script552(event_com, true)", 162:13);
+			~chat_autotyper_updateop;
+			if_setontimer("chat_autotyper(event_com, true)", 162:13);
 		case 11 :
 			~meslayer_close(0, 1);
 			return;

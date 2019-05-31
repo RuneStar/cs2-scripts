@@ -152,7 +152,7 @@ if (~pvpw_check = 1) {
 	if_sethide(true, 90:68);
 	if_sethide(true, 90:1);
 	if (~kots_world = 1) {
-		$int3 = ~script2083;
+		$int3 = ~kots_remaining_time;
 		$int5 = 0;
 		if ($int3 > 0) {
 			if_setsize(57, 55, ^setsize_abs, ^setsize_abs, 90:61);
@@ -162,10 +162,10 @@ if (~pvpw_check = 1) {
 			if_sethide(false, 90:68);
 			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, 90:68);
 			if ($int3 >= 6000) {
-				$int3 = calc(100 + ~script2083);
+				$int3 = calc(100 + ~kots_remaining_time);
 				if_settext("<tostring(calc($int3 / 6000))>h <tostring(calc(($int3 % 6000) / 100))>m", 90:68);
 			} else if ($int3 > 100) {
-				$int3 = calc(100 + ~script2083);
+				$int3 = calc(100 + ~kots_remaining_time);
 				if_settext("<tostring(~max(1, calc(($int3 % 6000) / 100)))>min", 90:68);
 			} else {
 				if_settext("1min", 90:68);

@@ -1,13 +1,13 @@
 // 552
-script552(component $component0, boolean $boolean1)
+[clientscript,chat_autotyper](component $component0, boolean $boolean1)
 if (string_length(%varcstring358) <= 0) {
 	if_setontimer(null, $component0);
 	%varcint62 = 0;
-	~script95;
+	~chat_autotyper_updateop;
 	return;
 }
 if ($boolean1 = true) {
-	if_setontimer("script552(event_com, false)", $component0);
+	if_setontimer("chat_autotyper(event_com, false)", $component0);
 }
 if (%varcint62 = 1) {
 	return;
