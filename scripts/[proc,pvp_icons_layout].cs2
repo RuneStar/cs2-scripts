@@ -30,7 +30,7 @@ if (~pvpw_check = 1) {
 	if ((%varbit5320 > 0) & (%varbit5316 > 0)) {
 		if_sethide(false, 90:1);
 		_2125(2, 90:1);
-		if_setontimer("br_fogcolour()", 90:1);
+		if_setontimer("br_fogcolour", 90:1);
 		~br_fogcolour;
 	} else {
 		if_setontimer(null, 90:1);
@@ -60,7 +60,7 @@ if (~pvpw_check = 1) {
 		}
 		if_sethide(false, 90:1);
 		_2125(2, 90:1);
-		if_setontimer("deadman_tournament_fogcolour()", 90:1);
+		if_setontimer("deadman_tournament_fogcolour", 90:1);
 		~deadman_tournament_fogcolour;
 	} else {
 		if_setontimer(null, 90:1);
@@ -122,7 +122,7 @@ if (~pvpw_check = 1) {
 		}
 		if_sethide(false, 90:1);
 		_2125(2, 90:1);
-		if_setontimer("wildwars_fogcolour()", 90:1);
+		if_setontimer("wildwars_fogcolour", 90:1);
 		~wildwars_fogcolour;
 	} else {
 		if_setontimer(null, 90:1);

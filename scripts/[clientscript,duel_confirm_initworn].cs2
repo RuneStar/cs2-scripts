@@ -2,7 +2,7 @@
 [clientscript,duel_confirm_initworn]
 def_int $int0 = 0;
 def_int $int1 = 0;
-if_setonvartransmit("duel_confirm_worn(){var286}", 476:39);
+if_setonvartransmit("duel_confirm_worn{var286}", 476:39);
 while ($int0 < 11) {
 	cc_create(476:11, ^iftype_graphic, $int0);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);

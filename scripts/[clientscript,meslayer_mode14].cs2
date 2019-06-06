@@ -9,7 +9,7 @@ if_sethide(false, 162:49);
 if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string0)", 162:45);
 ~meslayer_mode14_update($boolean0, $enum1);
 if_setontimer("meslayer_mode14_update($boolean0, $enum1)", 162:40);
-if_setondialogabort("meslayer_ondialogabort()", 162:45);
+if_setondialogabort("meslayer_ondialogabort", 162:45);
 if (~on_mobile = true) {
 	~keyboard_show(0, 25);
 }

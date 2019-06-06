@@ -39,7 +39,7 @@ if (testbit($int1, 0) = ^false) {
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic3, null)");
 	cc_setonmouseover("cc_graphic_swapper(event_com, event_comid, $graphic4, null)");
 	cc_setop(1, "Close");
-	cc_setonop("closebutton_click()");
+	cc_setonop("closebutton_click");
 	cc_setonkey("closebutton_key(event_keypressed)");
 }
 return($int2);

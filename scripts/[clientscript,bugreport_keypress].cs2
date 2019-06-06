@@ -12,12 +12,12 @@ if ($component2 = $component5) {
 	$string0 = %varcstring372;
 	if (string_length(%varcstring372) > 0) {
 		if_setop(1, "Submit", $component7);
-		if_setonop("bugreport_submit()", $component7);
+		if_setonop("bugreport_submit", $component7);
 		if_setonclick(null, $component7);
 	} else {
 		if_clearops($component7);
 		if_setonop(null, $component7);
-		if_setonclick("bugreport_submit()", $component7);
+		if_setonclick("bugreport_submit", $component7);
 	}
 } else if ($component2 = $component6) {
 	%varcstring373 = ~script74(%varcstring373, 5, $key0, $char1);

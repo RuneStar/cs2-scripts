@@ -18,7 +18,7 @@ $string0 = "Submit";
 ~bugreport_drawbutton(false, $component12, $string0);
 if_setonmouseover("bugreport_drawbutton(true, event_com, $string0)", $component12);
 if_setonmouseleave("bugreport_drawbutton(false, event_com, $string0)", $component12);
-if_setonclick("bugreport_submit()", $component12);
+if_setonclick("bugreport_submit", $component12);
 if_clearops($component12);
 if_setonop(null, $component12);
 ~scrollbar_vertical($component6, $component5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

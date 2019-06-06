@@ -45,7 +45,7 @@ cc_setgraphic("open_buttons,2");
 cc_setonmouserepeat("script2564(event_com, event_comid, true)");
 cc_setonmouseleave("script2564(event_com, event_comid, false)");
 cc_setop(1, "Close");
-cc_setonop("script2565()");
+cc_setonop("script2565");
 cc_create($component1, ^iftype_text, 2);
 cc_setsize(0, 33, ^setsize_minus, ^setsize_abs);
 cc_setposition(52, 5, ^setpos_abs_centre, ^setpos_abs_top);
