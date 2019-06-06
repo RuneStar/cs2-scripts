@@ -1,0 +1,9 @@
+// 689
+[clientscript,trail_slidepuzzle_synch](boolean $boolean0, component $component1, int $int2, int $int3, int $int4, int $int5, component $component6, component $component7)
+def_int $int8 = calc(%varcint110 + 50);
+if (($boolean0 = true) | (clientclock <= $int8)) {
+	if_setontimer(null, $component1);
+	~trail_slidepuzzle_synch($component1, $int2, $int3, $int4, $int5, $component6, $component7);
+} else {
+	if_setontimer("script2123($int8, $component1, $int2, $int3, $int4, $int5, $component6, $component7)", $component1);
+}

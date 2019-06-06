@@ -1,0 +1,16 @@
+// 1990
+[clientscript,gravestone_retrieval_buttonreset](int $int0, component $component1, component $component2, component $component3, component $component4)
+if (clientclock < $int0) {
+	return;
+}
+if ($component3 ! null) {
+	if_sethide(false, $component3);
+}
+if ($component4 ! null) {
+	if_sethide(true, $component4);
+}
+if_setgraphic("miscgraphics,0", $component1);
+if_setontimer(null, $component1);
+if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $component2, $component3, $component4)", $component1);
+if_setonmouseleave("gravestone_retrieval_buttonhover(false, $component2, $component3, $component4)", $component1);
+if_setonop("gravestone_retrieval_buttonop(event_opindex, $component1, $component2, $component3, $component4)", $component1);

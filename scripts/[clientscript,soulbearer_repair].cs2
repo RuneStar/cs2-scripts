@@ -1,5 +1,5 @@
 // 1300
-script1300
+[clientscript,soulbearer_repair]
 def_enum $enum0 = ~toplevel_getcomponents;
 if ($enum0 = null) {
 	return;
@@ -20,5 +20,5 @@ cc_setfill(true);
 .cc_setmodel(29280);
 .cc_setmodelangle(0, 300, 100, 1536, 0, 10100);
 .cc_setmodelanim(4517);
-cc_setontimer("script1301(event_com, cc_getid, .cc_getid, clientclock)");
-~script1302($component1, 0);
+cc_setontimer("soulbearer_repair_update(event_com, cc_getid, .cc_getid, clientclock)");
+~soulbearer_repair_update($component1, 0);

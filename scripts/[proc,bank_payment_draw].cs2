@@ -1,5 +1,5 @@
 // 1456
-script1456(component $component0, int $int1, boolean $boolean2)
+[proc,bank_payment_draw](component $component0, int $int1, boolean $boolean2)
 def_int $int3 = if_getheight($component0);
 def_int $int4 = if_getwidth($component0);
 def_int $int5 = 44;
@@ -59,8 +59,8 @@ while ($int8 <= 14) {
 		} else {
 			$int15 = ~v2_stone_button_out_filled($component9);
 		}
-		if_setonmouseover("script1455($component0, $int8, $boolean2)", $component9);
-		if_setonmouseleave("script1455($component0, -1, $boolean2)", $component9);
+		if_setonmouseover("bank_payment_draw($component0, $int8, $boolean2)", $component9);
+		if_setonmouseleave("bank_payment_draw($component0, -1, $boolean2)", $component9);
 	} else {
 		$int15 = ~v2_stone_button_filled($component9);
 	}

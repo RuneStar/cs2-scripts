@@ -1,5 +1,5 @@
 // 136
-script136
+[clientscript,abyssalsire_overseer]
 def_enum $enum0 = ~toplevel_getcomponents;
 if ($enum0 = null) {
 	return;
@@ -26,5 +26,5 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setmodel(7428);
 cc_setmodelangle(0, 120, 0, 0, 0, 2000);
 cc_setmodelanim(2260);
-cc_setontimer("script137(event_com, clientclock)");
-~script1106($component1, 0);
+cc_setontimer("abyssalsire_overseer_update(event_com, clientclock)");
+~abyssalsire_overseer_update($component1, 0);

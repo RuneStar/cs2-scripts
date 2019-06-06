@@ -1,0 +1,30 @@
+// 1987
+[proc,gravestone_retrieval_unlockstatus](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5)
+if (cc_find($component0, $int1) = ^true) {
+	cc_settext(enum(int, string, 1753, %var261));
+}
+if_sethide(false, $component4);
+if_sethide(true, $component5);
+if_setgraphic("miscgraphics,0", $component2);
+if_setontimer(null, $component2);
+def_obj $obj6 = enum(int, namedobj, 1756, %var261);
+def_int $int7 = enum(int, int, 1757, %var261);
+if (($obj6 ! null) & ($int7 > 0)) {
+	if_setgraphic("bankbuttons,7", $component3);
+	if_setop(1, "Unlock", $component2);
+	if ($int7 > 1) {
+		if_settext("Fee to unlock:<br><col=ffffff><~tostring_spacer($int7, ",")> x <oc_name($obj6)></col>", $component5);
+	} else {
+		if_settext("Fee to unlock:<br><col=ffffff><oc_name($obj6)></col>", $component5);
+	}
+	if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $component3, $component4, $component5)", $component2);
+	if_setonmouseleave("gravestone_retrieval_buttonhover(false, $component3, $component4, $component5)", $component2);
+	if_setonop("gravestone_retrieval_buttonop(event_opindex, $component2, $component3, $component4, $component5)", $component2);
+} else {
+	if_setgraphic("bankbuttons,0", $component3);
+	if_setop(1, "Take-All", $component2);
+	if_settext("", $component5);
+	if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $component3, null, null)", $component2);
+	if_setonmouseleave("gravestone_retrieval_buttonhover(false, $component3, null, null)", $component2);
+	if_setonop("gravestone_retrieval_buttonop(event_opindex, $component2, $component3, null, null)", $component2);
+}

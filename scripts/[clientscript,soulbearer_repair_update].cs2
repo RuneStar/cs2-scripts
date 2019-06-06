@@ -1,0 +1,5 @@
+// 1301
+[clientscript,soulbearer_repair_update](component $component0, int $int1, int $int2, int $int3)
+if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
+	~soulbearer_repair_update($component0, calc(clientclock - $int3));
+}

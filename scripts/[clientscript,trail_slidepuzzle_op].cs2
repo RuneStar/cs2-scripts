@@ -1,0 +1,62 @@
+// 691
+[clientscript,trail_slidepuzzle_op](int $int0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6)
+if ($int0 ! 1) {
+	return;
+}
+def_int $int7 = ~trail_slidepuzzle_getint($int2);
+if ($int7 = -1) {
+	return;
+}
+def_int $int8 = calc($int2 % 5);
+def_int $int9 = calc($int2 / 5);
+def_int $int10 = -1;
+def_int $int11 = -1;
+if ($int8 > 0) {
+	$int10 = calc(($int8 - 1) + ($int9 * 5));
+	$int11 = ~trail_slidepuzzle_getint($int10);
+	if ($int11 = -1) {
+		sound_synth(1859, 1, 0);
+		~trail_slidepuzzle_setint($int10, $int7);
+		~trail_slidepuzzle_setint($int2, -1);
+		~trail_slidepuzzle_position($component1, $int3, $int4, $int5, $int6);
+		%varcint110 = clientclock;
+		return;
+	}
+}
+if ($int8 < calc(5 - 1)) {
+	$int10 = calc(($int8 + 1) + ($int9 * 5));
+	$int11 = ~trail_slidepuzzle_getint($int10);
+	if ($int11 = -1) {
+		sound_synth(1859, 1, 0);
+		~trail_slidepuzzle_setint($int10, $int7);
+		~trail_slidepuzzle_setint($int2, -1);
+		~trail_slidepuzzle_position($component1, $int3, $int4, $int5, $int6);
+		%varcint110 = clientclock;
+		return;
+	}
+}
+if ($int9 > 0) {
+	$int10 = calc($int8 + (($int9 - 1) * 5));
+	$int11 = ~trail_slidepuzzle_getint($int10);
+	if ($int11 = -1) {
+		sound_synth(1859, 1, 0);
+		~trail_slidepuzzle_setint($int10, $int7);
+		~trail_slidepuzzle_setint($int2, -1);
+		~trail_slidepuzzle_position($component1, $int3, $int4, $int5, $int6);
+		%varcint110 = clientclock;
+		return;
+	}
+}
+if ($int9 < calc(5 - 1)) {
+	$int10 = calc($int8 + (($int9 + 1) * 5));
+	$int11 = ~trail_slidepuzzle_getint($int10);
+	if ($int11 = -1) {
+		sound_synth(1859, 1, 0);
+		~trail_slidepuzzle_setint($int10, $int7);
+		~trail_slidepuzzle_setint($int2, -1);
+		~trail_slidepuzzle_position($component1, $int3, $int4, $int5, $int6);
+		%varcint110 = clientclock;
+		return;
+	}
+}
+sound_synth(2304, 1, 0);

@@ -6,7 +6,7 @@ if_settext($string0, 162:44);
 def_string $string1 = "";
 if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string1)", 162:45);
 if_setondialogabort("meslayer_ondialogabort", 162:45);
-~script680;
+~meslayer_initlastnames;
 if (string_length(%varcstring361) > 0) {
 	~meslayer_dynamicbutton;
 	cc_settext("<col=000000>Last name:</col> <%varcstring361>");

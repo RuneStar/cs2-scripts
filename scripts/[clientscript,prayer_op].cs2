@@ -23,7 +23,7 @@ if ($int0 = 1) {
 	~deltooltip_action($component7);
 	if (($boolean1 = true) & (%varcint218 ! $component3)) {
 		sound_synth(2266, 1, 0);
-		~tooltip_build($component3, -1, $component7, ~script2762($int2), if_getwidth($component6));
+		~tooltip_build($component3, -1, $component7, ~prayer_gettooltiptext($int2), if_getwidth($component6));
 		%varcint218 = $component3;
 	} else {
 		%varcint218 = null;

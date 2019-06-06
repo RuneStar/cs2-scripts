@@ -1,5 +1,5 @@
 // 688
-script688(component $component0, component $component1, component $component2)
+[clientscript,trail_slidepuzzle_init](component $component0, component $component1, component $component2)
 def_int $int3 = calc(37 + ((if_getwidth($component0) - (5 * 37)) / (5 - 1)));
 def_int $int4 = calc(37 + ((if_getheight($component0) - (5 * 37)) / (5 - 1)));
 def_int $int5 = pow(5, 2);
@@ -20,6 +20,6 @@ while ($int7 < $int6) {
 	cc_setmodelangle(0, 0, 513, 0, 0, 1800);
 	$int7 = calc($int7 + 1);
 }
-~script690($component0, $int5, $int6, $int3, $int4, $component1, $component2);
-if_setoninvtransmit("script689(false, $component0, $int5, $int6, $int3, $int4, $component1, $component2){140, 221, 222}", $component0);
-if_setonvartransmit("script689(true, $component0, $int5, $int6, $int3, $int4, $component1, $component2){var261}", $component0);
+~trail_slidepuzzle_synch($component0, $int5, $int6, $int3, $int4, $component1, $component2);
+if_setoninvtransmit("trail_slidepuzzle_synch(false, $component0, $int5, $int6, $int3, $int4, $component1, $component2){140, 221, 222}", $component0);
+if_setonvartransmit("trail_slidepuzzle_synch(true, $component0, $int5, $int6, $int3, $int4, $component1, $component2){var261}", $component0);
