@@ -370,10 +370,10 @@ switch_int ($int0) {
 		}
 		if ($int1 = 2) {
 			if ($int2 = 0) {
-				return(70, 20827, "Rigour<br> (with 74 Prayer)");
+				return(70, rigour_20827, "Rigour<br> (with 74 Prayer)");
 			}
 			if ($int2 = 1) {
-				return(70, 20830, "Augury<br> (with 77 Prayer)");
+				return(70, augury_20830, "Augury<br> (with 77 Prayer)");
 			}
 			return(-1, null, "");
 		}
@@ -1324,7 +1324,7 @@ switch_int ($int0) {
 					case 32 :
 						return(76, potato_cactus_3138, "Magic potion<br>Lantadyme & potato cactus");
 					case 33 :
-						return(77, 3961, "Stamina potion<br>Amylase & super energy potion");
+						return(77, amylase_crystal_x5_3961, "Stamina potion<br>Amylase & super energy potion");
 					case 34 :
 						return(78, jangerberries_247, "Zamorak brew<br>Torstol & jangerberries");
 					case 35 :
@@ -1338,9 +1338,9 @@ switch_int ($int0) {
 					case 39 :
 						return(82, poison_ivy_berries_6018, "Weapon poison(++)<br>Coconut milk, nightshade & poison ivy berries");
 					case 40 :
-						return(84, 3256, "Extended antifire potion<br>Antifire potion & lava scale shards");
+						return(84, lava_scale_shard_x5_3256, "Extended antifire potion<br>Antifire potion & lava scale shards");
 					case 41 :
-						return(87, 3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
+						return(87, zulrahs_scales_x4_3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
 					case 42 :
 						return(90, torstol_269, "Super combat potion<br>Super attack potion, Super defence potion, Super strength potion & Torstol");
 					case 43 :
@@ -1348,7 +1348,7 @@ switch_int ($int0) {
 					case 44 :
 						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
 					case 45 :
-						return(98, 3256, "Extended super antifires<br>Super antifire potion & lava scale shards<br>(after Dragon Slayer II)");
+						return(98, lava_scale_shard_x5_3256, "Extended super antifires<br>Super antifire potion & lava scale shards<br>(after Dragon Slayer II)");
 					case default :
 						return(-1, null, "");
 				}
@@ -2169,7 +2169,7 @@ switch_int ($int0) {
 		}
 		if ($int1 = 6) {
 			if ($int2 = 0) {
-				return(21, 9414, "Silver crossbow bolts");
+				return(21, silver_bolts_unf_x5_9414, "Silver crossbow bolts");
 			}
 			if ($int2 = 1) {
 				return(54, water_battlestaff_1395, "Water battlestaff");
@@ -2190,13 +2190,13 @@ switch_int ($int0) {
 				return(66, air_battlestaff_1397, "Air battlestaff");
 			}
 			if ($int2 = 7) {
-				return(83, 4768, "Amethyst bolt tips");
+				return(83, amethyst_bolt_tips_x5_4768, "Amethyst bolt tips");
 			}
 			if ($int2 = 8) {
 				return(85, amethyst_arrowtips_21350, "Amethyst arrowtips");
 			}
 			if ($int2 = 9) {
-				return(87, 13220, "Amethyst javelin heads");
+				return(87, amethyst_javelin_heads_x5_13220, "Amethyst javelin heads");
 			}
 			return(-1, null, "");
 		}
@@ -2234,7 +2234,7 @@ switch_int ($int0) {
 	case 19 :
 		if ($int1 = 0) {
 			if ($int2 = 0) {
-				return(1, 6443, "15 Arrow shafts (Logs)");
+				return(1, arrow_shaft_x5_6443, "15 Arrow shafts (Logs)");
 			}
 			if ($int2 = 1) {
 				return(1, bronze_arrow_882, "Bronze arrows");
@@ -2243,7 +2243,7 @@ switch_int ($int0) {
 				return(7, bronze_brutal_4773, "Bronze 'brutal' arrows");
 			}
 			if ($int2 = 3) {
-				return(15, 6443, "30 Arrow shafts (Oak logs)");
+				return(15, arrow_shaft_x5_6443, "30 Arrow shafts (Oak logs)");
 			}
 			if ($int2 = 4) {
 				return(15, iron_arrow_884, "Iron arrows");
@@ -2252,7 +2252,7 @@ switch_int ($int0) {
 				return(18, iron_brutal_4778, "Iron 'brutal' arrows");
 			}
 			if ($int2 = 6) {
-				return(30, 6443, "45 Arrow shafts (Willow logs)");
+				return(30, arrow_shaft_x5_6443, "45 Arrow shafts (Willow logs)");
 			}
 			if ($int2 = 7) {
 				return(30, steel_arrow_886, "Steel arrows");
@@ -2264,7 +2264,7 @@ switch_int ($int0) {
 				return(38, black_brutal_4788, "Black 'brutal' arrows");
 			}
 			if ($int2 = 10) {
-				return(45, 6443, "60 Arrow shafts (Maple logs)");
+				return(45, arrow_shaft_x5_6443, "60 Arrow shafts (Maple logs)");
 			}
 			if ($int2 = 11) {
 				return(45, mithril_arrow_888, "Mithril arrows");
@@ -2276,7 +2276,7 @@ switch_int ($int0) {
 				return(52, broad_arrows_4160, "Broad arrows");
 			}
 			if ($int2 = 14) {
-				return(60, 6443, "75 Arrow shafts (Yew logs)");
+				return(60, arrow_shaft_x5_6443, "75 Arrow shafts (Yew logs)");
 			}
 			if ($int2 = 15) {
 				return(60, adamant_arrow_890, "Adamant arrows");
@@ -2285,7 +2285,7 @@ switch_int ($int0) {
 				return(62, adamant_brutal_4798, "Adamant 'brutal' arrows");
 			}
 			if ($int2 = 17) {
-				return(75, 6443, "90 Arrow shafts (Magic logs)");
+				return(75, arrow_shaft_x5_6443, "90 Arrow shafts (Magic logs)");
 			}
 			if ($int2 = 18) {
 				return(75, rune_arrow_892, "Rune arrows");
@@ -2297,7 +2297,7 @@ switch_int ($int0) {
 				return(82, amethyst_arrow_21326, "Amethyst arrows");
 			}
 			if ($int2 = 21) {
-				return(90, 6443, "105 Arrow shafts (Redwood logs)");
+				return(90, arrow_shaft_x5_6443, "105 Arrow shafts (Redwood logs)");
 			}
 			if ($int2 = 22) {
 				return(90, dragon_arrow_11212, "Dragon arrows");
@@ -2760,7 +2760,7 @@ switch_int ($int0) {
 				return(6, bronze_longsword_1291, "Bronze longswords<br>2 bars");
 			}
 			if ($int2 = 15) {
-				return(6, 3072, "Members: Bronze javelin heads<br>1 bar makes 5");
+				return(6, bronze_javelin_heads_x5_3072, "Members: Bronze javelin heads<br>1 bar makes 5");
 			}
 			if ($int2 = 16) {
 				return(7, bronze_full_helm_1155, "Bronze full helms<br>2 bars");
@@ -2856,7 +2856,7 @@ switch_int ($int0) {
 				return(21, iron_longsword_1293, "Iron longswords<br>2 bars");
 			}
 			if ($int2 = 14) {
-				return(21, 3082, "Members: Iron javelin heads<br>1 bar makes 5");
+				return(21, iron_javelin_heads_x5_3082, "Members: Iron javelin heads<br>1 bar makes 5");
 			}
 			if ($int2 = 15) {
 				return(22, iron_full_helm_1153, "Iron full helms<br>2 bars");
@@ -2949,7 +2949,7 @@ switch_int ($int0) {
 				return(36, steel_longsword_1295, "Steel longswords<br>2 bars");
 			}
 			if ($int2 = 15) {
-				return(36, 3090, "Members: Steel javelin heads<br>1 bar makes 5");
+				return(36, steel_javelin_heads_x5_3090, "Members: Steel javelin heads<br>1 bar makes 5");
 			}
 			if ($int2 = 16) {
 				return(36, steel_studs_2370, "Members: Steel studs<br>1 bar");
@@ -3039,7 +3039,7 @@ switch_int ($int0) {
 				return(56, mithril_longsword_1299, "Mithril longswords<br>2 bars");
 			}
 			if ($int2 = 14) {
-				return(56, 3246, "Members: Mithril javelin heads<br>1 bar makes 5");
+				return(56, mithril_javelin_heads_x5_3246, "Members: Mithril javelin heads<br>1 bar makes 5");
 			}
 			if ($int2 = 15) {
 				return(57, mithril_full_helm_1159, "Mithril full helms<br>2 bars");
@@ -3126,7 +3126,7 @@ switch_int ($int0) {
 				return(76, adamant_longsword_1301, "Adamant longswords<br>2 bars");
 			}
 			if ($int2 = 14) {
-				return(76, 3909, "Members: Adamant javelin heads<br>1 bar makes 5");
+				return(76, adamant_javelin_heads_x5_3909, "Members: Adamant javelin heads<br>1 bar makes 5");
 			}
 			if ($int2 = 15) {
 				return(77, adamant_full_helm_1161, "Adamant full helms<br>2 bars");
@@ -3210,7 +3210,7 @@ switch_int ($int0) {
 				return(91, rune_longsword_1303, "Rune longswords<br>2 bars");
 			}
 			if ($int2 = 14) {
-				return(91, 3917, "Members: Rune javelin heads<br>1 bar makes 5");
+				return(91, rune_javelin_heads_x5_3917, "Members: Rune javelin heads<br>1 bar makes 5");
 			}
 			if ($int2 = 15) {
 				return(92, rune_full_helm_1163, "Rune full helms<br>2 bars");
@@ -3455,7 +3455,7 @@ switch_int ($int0) {
 				return(82, raw_anglerfish_13439, "Members: Anglerfish - Sandworm bait fishing");
 			}
 			if ($int2 = 31) {
-				return(82, 10572, "Members: Minnow - Net fishing<br>(after Fishing Contest)");
+				return(82, minnow_x3_10572, "Members: Minnow - Net fishing<br>(after Fishing Contest)");
 			}
 			if ($int2 = 32) {
 				return(85, raw_dark_crab_11934, "Members: Dark crab - Bait Pot fishing");
@@ -4767,7 +4767,7 @@ switch_int ($int0) {
 				case 14 :
 					return(55, broad_arrows_4150, "Broad arrows<br> (with 50 Ranged)");
 				case 15 :
-					return(55, 4296, "Broad bolts<br> (with 61 Ranged)");
+					return(55, broad_bolts_x5_4296, "Broad bolts<br> (with 61 Ranged)");
 				case 16 :
 					return(55, slayers_staff_4170, "Slayer's staff<br> (with 50 Magic)");
 				case 17 :
@@ -4777,7 +4777,7 @@ switch_int ($int0) {
 				case 19 :
 					return(60, nose_peg_4168, "Nose peg");
 				case 20 :
-					return(65, 3902, "Amethyst broad bolts<br> (with 61 Ranged)");
+					return(65, amethyst_broad_bolts_x5_3902, "Amethyst broad bolts<br> (with 61 Ranged)");
 				case default :
 					return(-1, null, "");
 			}
