@@ -1,6 +1,6 @@
 // 934
 [clientscript,myq3_blackout_init](component $component0, component $component1)
-_2127(true, $component1);
+if_setmodeltransparent(true, $component1);
 cc_deleteall($component0);
 cc_create($component0, ^iftype_rectangle, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_abs);
