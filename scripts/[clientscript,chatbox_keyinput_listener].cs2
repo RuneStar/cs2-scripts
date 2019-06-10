@@ -1,0 +1,17 @@
+// 57
+[clientscript,chatbox_keyinput_listener](int $key0, char $char1, component $component2, int $int3, component $component4, int $key5, string $string0, string $string1, int $colour6, int $int7)
+if (clientclock < $int7) {
+	return;
+}
+if (~keypress_permit(-1, 162) = 0) {
+	return;
+}
+def_int $int8 = 0;
+if (($key0 ! null) & ($key0 = $key5)) {
+	$int8 = 1;
+} else if (($char1 ! null) & ((string_indexof_char($string0, $char1) ! -1) | (string_indexof_char($string1, $char1) ! -1))) {
+	$int8 = 1;
+} else {
+	return;
+}
+~script2153($component2, $int3, $component4, $key5, $string0, $string1, $colour6, $int7);

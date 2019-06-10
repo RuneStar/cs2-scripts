@@ -1,0 +1,9 @@
+// 2132
+[clientscript,fossil_driftnet_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+if_sethide(true, $component1);
+~script2136($component6, "Cancel", $component1);
+~script2136($component7, "Discard all", $component1);
+~script2136($component8, "Bank all", $component1);
+~script2133($component3, "Discard all", "bankbuttons,6", "Are you sure you want to <col=ff0000>destroy</col><br>everything you've caught?", $component1, $component2, $component7, $component8);
+~script2133($component4, "Bank all", "bankbuttons,5", "Pay <tostring(5)> numulites to <col=ffffff>bank</col><br>everything you've caught?", $component1, $component2, $component8, $component7);
+~script2133($component5, "Take all", "bankbuttons,0", "", null, null, null, null);

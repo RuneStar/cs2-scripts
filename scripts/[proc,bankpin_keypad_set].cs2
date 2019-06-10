@@ -1,0 +1,83 @@
+// 653
+[proc,bankpin_keypad_set](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18)
+if ($int0 = 3) {
+	if_settext("Finally, the FOURTH digit.", $component18);
+	if_settext("*", $component14);
+	if_settext("*", $component15);
+	if_settext("*", $component16);
+	if_settext("?", $component17);
+} else if ($int0 = 2) {
+	if_settext("Time for the THIRD digit.", $component18);
+	if_settext("*", $component14);
+	if_settext("*", $component15);
+	if_settext("?", $component16);
+	if_settext("?", $component17);
+} else if ($int0 = 1) {
+	if_settext("Now click the SECOND digit.", $component18);
+	if_settext("*", $component14);
+	if_settext("?", $component15);
+	if_settext("?", $component16);
+	if_settext("?", $component17);
+} else if ($int0 = 0) {
+	if_settext("First click the FIRST digit.", $component18);
+	if_settext("?", $component14);
+	if_settext("?", $component15);
+	if_settext("?", $component16);
+	if_settext("?", $component17);
+} else {
+	if_settext("Submitting...", $component18);
+	if_settext("*", $component14);
+	if_settext("*", $component15);
+	if_settext("*", $component16);
+	if_settext("*", $component17);
+	cc_deleteall($component4);
+	cc_deleteall($component5);
+	cc_deleteall($component6);
+	cc_deleteall($component7);
+	cc_deleteall($component8);
+	cc_deleteall($component9);
+	cc_deleteall($component10);
+	cc_deleteall($component11);
+	cc_deleteall($component12);
+	cc_deleteall($component13);
+	if_setonop(null, $component2);
+	if_clearops($component2);
+	if_setonop(null, $component3);
+	if_clearops($component3);
+	return;
+}
+def_component $array0(10);
+$array0(0) = $component4;
+$array0(1) = $component5;
+$array0(2) = $component6;
+$array0(3) = $component7;
+$array0(4) = $component8;
+$array0(5) = $component9;
+$array0(6) = $component10;
+$array0(7) = $component11;
+$array0(8) = $component12;
+$array0(9) = $component13;
+def_int $int19 = 0;
+def_component $component20 = null;
+def_int $int21 = 20;
+while ($int21 > 0) {
+	$int21 = calc($int21 - 1);
+	$int19 = random(9);
+	$component20 = $array0(9);
+	$array0(9) = $array0($int19);
+	$array0($int19) = $component20;
+}
+~bankpin_button_setup($array0(0), 0, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~bankpin_button_setup($array0(1), 1, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~bankpin_button_setup($array0(2), 2, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~bankpin_button_setup($array0(3), 3, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~bankpin_button_setup($array0(4), 4, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~bankpin_button_setup($array0(5), 5, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~bankpin_button_setup($array0(6), 6, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~bankpin_button_setup($array0(7), 7, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~bankpin_button_setup($array0(8), 8, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+~bankpin_button_setup($array0(9), 9, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
+if_setop(1, if_gettext($component2), $component2);
+if_setonop("bankpin_otherbutton(12345, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18)", $component2);
+if_setop(1, if_gettext($component3), $component3);
+if_setonop("bankpin_otherbutton(54321, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18)", $component3);

@@ -1,0 +1,11 @@
+// 2142
+[proc,fossil_driftnet_store_update]
+cc_setobject_always_num(drift_net_21652, %varbit243);
+if (%varbit243 > 0) {
+	cc_settrans(0);
+	cc_setonop("script487(event_com, event_comid, 100, 0)");
+} else {
+	cc_settrans(100);
+	cc_setonop(null);
+}
+cc_setontimer(null);

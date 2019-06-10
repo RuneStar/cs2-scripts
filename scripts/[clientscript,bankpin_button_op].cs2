@@ -7,7 +7,7 @@ sound_synth(1041, 1, 0);
 if ($int1 = 3) {
 	$int2 = calc($int2 + $int0);
 	resume_countdialog(tostring($int2));
-	~script653(-1, -1, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);
+	~bankpin_keypad_set(-1, -1, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);
 	return;
 }
 if ($int1 = 2) {
@@ -19,4 +19,4 @@ if ($int1 = 2) {
 } else {
 	return;
 }
-~script653(calc($int1 + 1), $int2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);
+~bankpin_keypad_set(calc($int1 + 1), $int2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19);

@@ -1,0 +1,35 @@
+// 2713
+[clientscript,1v1arena_hud_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5)
+~1v1arena_hud_toggle(false, $component1, $component2, $component3);
+def_string $string0 = "Spectator";
+cc_deleteall($component4);
+def_int $int6 = ~options_button_off($component4, 0);
+cc_create($component4, ^iftype_text, $int6);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+if_setop(1, $string0, $component4);
+cc_setcolour(0xff981f);
+if_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, ^white)", $component4);
+if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff981f)", $component4);
+if_setonop("1v1arena_hud_button(event_opindex, $component4, cc_getid)", $component4);
+if_setontimer(null, $component4);
+$string0 = "Start All";
+cc_deleteall($component5);
+$int6 = ~options_button_off($component5, 0);
+cc_create($component5, ^iftype_text, $int6);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+if_setop(1, $string0, $component5);
+cc_setcolour(0xff981f);
+if_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, ^white)", $component5);
+if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff981f)", $component5);
+if_setonop("1v1arena_hud_button(event_opindex, $component5, cc_getid)", $component5);
+if_setontimer(null, $component5);

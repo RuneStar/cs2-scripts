@@ -6,8 +6,8 @@ def_int $int3 = 0;
 if (enum(int, component, 1913, %var1204) ! null) {
 	if_settext("The required Old School Bonds will be taken from your account.<br>Select <col=ffffff>Confirm</col> to continue.", $component0);
 	$int2, $int3 = ~script2274($component1, $int3);
-	if_setonmouserepeat("script2287(true, $component1, $int2)", $component1);
-	if_setonmouseleave("script2287(false, $component1, $int2)", $component1);
+	if_setonmouserepeat("bondif_redeem_hover(true, $component1, $int2)", $component1);
+	if_setonmouseleave("bondif_redeem_hover(false, $component1, $int2)", $component1);
 	cc_create($component1, ^iftype_text, $int3);
 	$int3 = calc($int3 + 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

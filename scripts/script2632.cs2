@@ -6,8 +6,8 @@ if (clienttype ! 3) {
 	if_sethide(false, $component1);
 	if_setposition(94, 30, ^setpos_abs_left, ^setpos_abs_top, $component0);
 	$int4, $int5 = ~script2274($component1, 0);
-	if_setonmouserepeat("script2287(true, $component1, $int4)", $component1);
-	if_setonmouseleave("script2287(false, $component1, $int4)", $component1);
+	if_setonmouserepeat("bondif_redeem_hover(true, $component1, $int4)", $component1);
+	if_setonmouseleave("bondif_redeem_hover(false, $component1, $int4)", $component1);
 	if_setop(1, "Buy", $component1);
 	if_setopbase("Old School Bonds", $component1);
 	if_setonop("opsound(event_opindex, 2)", $component1);
@@ -32,8 +32,8 @@ if (clienttype ! 3) {
 if_sethide(false, $component2);
 if_setposition(0, 72, ^setpos_abs_centre, ^setpos_abs_top, $component3);
 $int4, $int5 = ~script2274($component2, 0);
-if_setonmouserepeat("script2287(true, $component2, $int4)", $component2);
-if_setonmouseleave("script2287(false, $component2, $int4)", $component2);
+if_setonmouserepeat("bondif_redeem_hover(true, $component2, $int4)", $component2);
+if_setonmouseleave("bondif_redeem_hover(false, $component2, $int4)", $component2);
 if_setop(1, "Buy", $component2);
 if_setopbase("Membership", $component2);
 if_setonop("opsound(event_opindex, 2)", $component2);

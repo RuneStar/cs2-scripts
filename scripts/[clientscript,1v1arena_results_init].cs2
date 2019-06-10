@@ -1,0 +1,25 @@
+// 2710
+[clientscript,1v1arena_results_init](component $component0)
+def_string $string0 = "Clear";
+cc_deleteall($component0);
+def_int $int1 = 0;
+.cc_create($component0, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+.cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+.cc_sethide(true);
+$int1 = ~options_button_off($component0, $int1);
+cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+if_setop(1, $string0, $component0);
+cc_setcolour(0xff981f);
+if_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, ^white)", $component0);
+if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff981f)", $component0);
+if_setonop("1v1arena_clear_opbutton($component0, .cc_getid, cc_getid)", $component0);
+if_setontimer(null, $component0);

@@ -1,0 +1,9 @@
+// 2723
+[clientscript,1v1arena_spectator_endhint](component $component0, int $int1, int $int2)
+if (clientclock < $int2) {
+	return;
+}
+if (cc_find($component0, $int1) = ^true) {
+	cc_setontimer(null);
+	cc_delete;
+}

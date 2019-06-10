@@ -55,9 +55,9 @@
 [**52**](scripts/[clientscript,options_mousecam_op].cs2) `[clientscript,options_mousecam_op]`  
 [**53**](scripts/[clientscript,tol_pressure_leverinit].cs2) `[clientscript,tol_pressure_leverinit]`  
 [**54**](scripts/[clientscript,poh_options_drawbutton].cs2) `[clientscript,poh_options_drawbutton]`  
-[**55**](scripts/script55.cs2)  
+[**55**](scripts/[clientscript,chatbox_keyinput_init].cs2) `[clientscript,chatbox_keyinput_init]`  
 [**56**](scripts/[proc,area_task_complete].cs2) `[proc,area_task_complete]`  
-[**57**](scripts/script57.cs2)  
+[**57**](scripts/[clientscript,chatbox_keyinput_listener].cs2) `[clientscript,chatbox_keyinput_listener]`  
 [**58**](scripts/[clientscript,chatbox_multi_init].cs2) `[clientscript,chatbox_multi_init]`  
 [**59**](scripts/[proc,chatbox_multi_addoption].cs2) `[proc,chatbox_multi_addoption]`  
 [**60**](scripts/[clientscript,dream_bank_init].cs2) `[clientscript,dream_bank_init]`  
@@ -333,7 +333,7 @@
 [**330**](scripts/script330.cs2)  
 [**331**](scripts/script331.cs2)  
 [**332**](scripts/script332.cs2)  
-[**333**](scripts/script333.cs2)  
+[**333**](scripts/[clientscript,bankpin_keypad_init].cs2) `[clientscript,bankpin_keypad_init]`  
 [**334**](scripts/[clientscript,godwars_hideshow_init].cs2) `[clientscript,godwars_hideshow_init]`  
 [**335**](scripts/[clientscript,godwars_hideshow].cs2) `[clientscript,godwars_hideshow]`  
 [**336**](scripts/[proc,godwars_hideshow].cs2) `[proc,godwars_hideshow]`  
@@ -653,7 +653,7 @@
 [**650**](scripts/[clientscript,poh_add_room_costupdate].cs2) `[clientscript,poh_add_room_costupdate]`  
 [**651**](scripts/[proc,poh_add_room_costupdate].cs2) `[proc,poh_add_room_costupdate]`  
 [**652**](scripts/[clientscript,poh_add_room_op].cs2) `[clientscript,poh_add_room_op]`  
-[**653**](scripts/script653.cs2)  
+[**653**](scripts/[proc,bankpin_keypad_set].cs2) `[proc,bankpin_keypad_set]`  
 [**654**](scripts/[clientscript,skill_guide_init].cs2) `[clientscript,skill_guide_init]`  
 [**655**](scripts/[clientscript,skill_guide_build].cs2) `[clientscript,skill_guide_build]`  
 [**656**](scripts/[proc,skill_guide_build].cs2) `[proc,skill_guide_build]`  
@@ -734,7 +734,7 @@
 [**731**](scripts/script731.cs2)  
 [**732**](scripts/[clientscript,cocktail_update_if].cs2) `[clientscript,cocktail_update_if]`  
 [**733**](scripts/script733.cs2)  
-[**734**](scripts/script734.cs2)  
+[**734**](scripts/[clientscript,bondif_redeem_init].cs2) `[clientscript,bondif_redeem_init]`  
 [**735**](scripts/[clientscript,inferno_hud_init].cs2) `[clientscript,inferno_hud_init]`  
 [**736**](scripts/[clientscript,inferno_hud_pos].cs2) `[clientscript,inferno_hud_pos]`  
 [**737**](scripts/[proc,inferno_hud_pos].cs2) `[proc,inferno_hud_pos]`  
@@ -1656,18 +1656,18 @@
 [**1653**](scripts/script1653.cs2)  
 [**1654**](scripts/script1654.cs2)  
 [**1655**](scripts/script1655.cs2)  
-[**1656**](scripts/script1656.cs2)  
-[**1657**](scripts/script1657.cs2)  
-[**1658**](scripts/script1658.cs2)  
+[**1656**](scripts/[clientscript,chatchannel_current_init].cs2) `[clientscript,chatchannel_current_init]`  
+[**1657**](scripts/[clientscript,chatchannel_current_build].cs2) `[clientscript,chatchannel_current_build]`  
+[**1658**](scripts/[proc,chatchannel_current_build].cs2) `[proc,chatchannel_current_build]`  
 [**1659**](scripts/script1659.cs2)  
 [**1660**](scripts/script1660.cs2)  
 [**1661**](scripts/[clientscript,keyboard_key].cs2) `[clientscript,keyboard_key]`  
-[**1662**](scripts/script1662.cs2)  
-[**1663**](scripts/script1663.cs2)  
-[**1664**](scripts/script1664.cs2)  
+[**1662**](scripts/[clientscript,chatchannel_setup_init].cs2) `[clientscript,chatchannel_setup_init]`  
+[**1663**](scripts/[clientscript,chatchannel_setup_build].cs2) `[clientscript,chatchannel_setup_build]`  
+[**1664**](scripts/[proc,chatchannel_setup_build].cs2) `[proc,chatchannel_setup_build]`  
 [**1665**](scripts/script1665.cs2)  
 [**1666**](scripts/script1666.cs2)  
-[**1667**](scripts/script1667.cs2)  
+[**1667**](scripts/[clientscript,chatchannel_setup_setrank].cs2) `[clientscript,chatchannel_setup_setrank]`  
 [**1668**](scripts/script1668.cs2)  
 [**1669**](scripts/script1669.cs2)  
 [**1670**](scripts/script1670.cs2)  
@@ -2010,9 +2010,9 @@
 [**2007**](scripts/[clientscript,fossil_storage_build].cs2) `[clientscript,fossil_storage_build]`  
 [**2008**](scripts/[proc,fossil_storage_build].cs2) `[proc,fossil_storage_build]`  
 [**2009**](scripts/[proc,fossil_storage_get].cs2) `[proc,fossil_storage_get]`  
-[**2010**](scripts/script2010.cs2)  
-[**2011**](scripts/script2011.cs2)  
-[**2012**](scripts/script2012.cs2)  
+[**2010**](scripts/[clientscript,fossil_volcanic_shop_init].cs2) `[clientscript,fossil_volcanic_shop_init]`  
+[**2011**](scripts/[clientscript,fossil_volcanic_shop_points].cs2) `[clientscript,fossil_volcanic_shop_points]`  
+[**2012**](scripts/[proc,fossil_volcanic_shop_points].cs2) `[proc,fossil_volcanic_shop_points]`  
 [**2013**](scripts/[clientscript,fossil_pool_init].cs2) `[clientscript,fossil_pool_init]`  
 [**2014**](scripts/[clientscript,fossil_pool_update].cs2) `[clientscript,fossil_pool_update]`  
 [**2015**](scripts/[clientscript,fossil_pool_progress_update].cs2) `[clientscript,fossil_pool_progress_update]`  
@@ -2088,9 +2088,9 @@
 [**2085**](scripts/script2085.cs2)  
 [**2086**](scripts/script2086.cs2)  
 [**2087**](scripts/[clientscript,tob_hud_init].cs2) `[clientscript,tob_hud_init]`  
-[**2088**](scripts/script2088.cs2)  
-[**2089**](scripts/script2089.cs2)  
-[**2090**](scripts/script2090.cs2)  
+[**2088**](scripts/[clientscript,trail_rewardscreen_init].cs2) `[clientscript,trail_rewardscreen_init]`  
+[**2089**](scripts/[clientscript,trail_rewardscreen_draw].cs2) `[clientscript,trail_rewardscreen_draw]`  
+[**2090**](scripts/[proc,trail_rewardscreen_draw].cs2) `[proc,trail_rewardscreen_draw]`  
 [**2091**](scripts/[clientscript,xpdrops_fake].cs2) `[clientscript,xpdrops_fake]`  
 [**2092**](scripts/[clientscript,oculus_flashers].cs2) `[clientscript,oculus_flashers]`  
 [**2093**](scripts/script2093.cs2)  
@@ -2132,7 +2132,7 @@
 [**2129**](scripts/script2129.cs2)  
 [**2130**](scripts/script2130.cs2)  
 [**2131**](scripts/script2131.cs2)  
-[**2132**](scripts/script2132.cs2)  
+[**2132**](scripts/[clientscript,fossil_driftnet_init].cs2) `[clientscript,fossil_driftnet_init]`  
 [**2133**](scripts/script2133.cs2)  
 [**2134**](scripts/script2134.cs2)  
 [**2135**](scripts/script2135.cs2)  
@@ -2140,9 +2140,9 @@
 [**2137**](scripts/script2137.cs2)  
 [**2138**](scripts/script2138.cs2)  
 [**2139**](scripts/script2139.cs2)  
-[**2140**](scripts/script2140.cs2)  
-[**2141**](scripts/script2141.cs2)  
-[**2142**](scripts/script2142.cs2)  
+[**2140**](scripts/[clientscript,fossil_driftnet_store_init].cs2) `[clientscript,fossil_driftnet_store_init]`  
+[**2141**](scripts/[clientscript,fossil_driftnet_store_update].cs2) `[clientscript,fossil_driftnet_store_update]`  
+[**2142**](scripts/[proc,fossil_driftnet_store_update].cs2) `[proc,fossil_driftnet_store_update]`  
 [**2143**](scripts/script2143.cs2)  
 [**2144**](scripts/script2144.cs2)  
 [**2145**](scripts/script2145.cs2)  
@@ -2152,7 +2152,7 @@
 [**2149**](scripts/[clientscript,options_functionmode_op].cs2) `[clientscript,options_functionmode_op]`  
 [**2150**](scripts/[proc,options_functionmode].cs2) `[proc,options_functionmode]`  
 [**2151**](scripts/[proc,graphic_device].cs2) `[proc,graphic_device]`  
-[**2152**](scripts/script2152.cs2)  
+[**2152**](scripts/[clientscript,chatbox_keyinput_clicklistener].cs2) `[clientscript,chatbox_keyinput_clicklistener]`  
 [**2153**](scripts/script2153.cs2)  
 [**2154**](scripts/[clientscript,logout_layout_init].cs2) `[clientscript,logout_layout_init]`  
 [**2155**](scripts/script2155.cs2)  
@@ -2287,7 +2287,7 @@
 [**2284**](scripts/script2284.cs2)  
 [**2285**](scripts/script2285.cs2)  
 [**2286**](scripts/script2286.cs2)  
-[**2287**](scripts/script2287.cs2)  
+[**2287**](scripts/[clientscript,bondif_redeem_hover].cs2) `[clientscript,bondif_redeem_hover]`  
 [**2288**](scripts/script2288.cs2)  
 [**2289**](scripts/[clientscript,raids_overlay_timer].cs2) `[clientscript,raids_overlay_timer]`  
 [**2290**](scripts/[clientscript,raids_challenge_build_list].cs2) `[clientscript,raids_challenge_build_list]`  
@@ -2473,8 +2473,8 @@
 [**2470**](scripts/[clientscript,meslayer_mode7_button].cs2) `[clientscript,meslayer_mode7_button]`  
 [**2471**](scripts/[clientscript,meslayer_mode7_resetbutton].cs2) `[clientscript,meslayer_mode7_resetbutton]`  
 [**2472**](scripts/script2472.cs2)  
-[**2473**](scripts/script2473.cs2)  
-[**2474**](scripts/script2474.cs2)  
+[**2473**](scripts/[clientscript,model_transparent_init].cs2) `[clientscript,model_transparent_init]`  
+[**2474**](scripts/[clientscript,model_transparent_dynamiczoom_init].cs2) `[clientscript,model_transparent_dynamiczoom_init]`  
 [**2475**](scripts/[clientscript,cc_outline_off].cs2) `[clientscript,cc_outline_off]`  
 [**2476**](scripts/[clientscript,duel_info].cs2) `[clientscript,duel_info]`  
 [**2477**](scripts/[clientscript,duel_stake_inv_cash].cs2) `[clientscript,duel_stake_inv_cash]`  
@@ -2539,8 +2539,8 @@
 [**2536**](scripts/[clientscript,barbassault_healer_init].cs2) `[clientscript,barbassault_healer_init]`  
 [**2537**](scripts/[clientscript,duel_hud_init].cs2) `[clientscript,duel_hud_init]`  
 [**2538**](scripts/[clientscript,agilityarena_overlay_init].cs2) `[clientscript,agilityarena_overlay_init]`  
-[**2539**](scripts/script2539.cs2)  
-[**2540**](scripts/script2540.cs2)  
+[**2539**](scripts/[clientscript,br_lobbyoverlay_init].cs2) `[clientscript,br_lobbyoverlay_init]`  
+[**2540**](scripts/[clientscript,brew_lobby_overlay_init].cs2) `[clientscript,brew_lobby_overlay_init]`  
 [**2541**](scripts/[clientscript,brew_game_overlay_init].cs2) `[clientscript,brew_game_overlay_init]`  
 [**2542**](scripts/[proc,toplevel_mainmodal_bg_calculate_mobile].cs2) `[proc,toplevel_mainmodal_bg_calculate_mobile]`  
 [**2543**](scripts/script2543.cs2)  
@@ -2628,7 +2628,7 @@
 [**2625**](scripts/[proc,wom_get_graphics].cs2) `[proc,wom_get_graphics]`  
 [**2626**](scripts/[proc,wom_get_tab].cs2) `[proc,wom_get_tab]`  
 [**2627**](scripts/[proc,wom_get_text].cs2) `[proc,wom_get_text]`  
-[**2628**](scripts/script2628.cs2)  
+[**2628**](scripts/[clientscript,bondif_mobile_init].cs2) `[clientscript,bondif_mobile_init]`  
 [**2629**](scripts/script2629.cs2)  
 [**2630**](scripts/script2630.cs2)  
 [**2631**](scripts/script2631.cs2)  
@@ -2707,23 +2707,23 @@
 [**2704**](scripts/script2704.cs2)  
 [**2705**](scripts/script2705.cs2)  
 [**2706**](scripts/script2706.cs2)  
-[**2707**](scripts/script2707.cs2)  
-[**2708**](scripts/script2708.cs2)  
-[**2709**](scripts/script2709.cs2)  
-[**2710**](scripts/script2710.cs2)  
-[**2711**](scripts/script2711.cs2)  
-[**2712**](scripts/script2712.cs2)  
-[**2713**](scripts/script2713.cs2)  
-[**2714**](scripts/script2714.cs2)  
-[**2715**](scripts/script2715.cs2)  
-[**2716**](scripts/script2716.cs2)  
-[**2717**](scripts/script2717.cs2)  
-[**2718**](scripts/script2718.cs2)  
-[**2719**](scripts/script2719.cs2)  
+[**2707**](scripts/[clientscript,1v1arena_review_init].cs2) `[clientscript,1v1arena_review_init]`  
+[**2708**](scripts/[clientscript,1v1arena_review_draw].cs2) `[clientscript,1v1arena_review_draw]`  
+[**2709**](scripts/[proc,1v1arena_review_draw].cs2) `[proc,1v1arena_review_draw]`  
+[**2710**](scripts/[clientscript,1v1arena_results_init].cs2) `[clientscript,1v1arena_results_init]`  
+[**2711**](scripts/[clientscript,1v1arena_clear_opbutton].cs2) `[clientscript,1v1arena_clear_opbutton]`  
+[**2712**](scripts/[clientscript,1v1arena_clear_resetbutton].cs2) `[clientscript,1v1arena_clear_resetbutton]`  
+[**2713**](scripts/[clientscript,1v1arena_hud_init].cs2) `[clientscript,1v1arena_hud_init]`  
+[**2714**](scripts/[clientscript,1v1arena_hud_button].cs2) `[clientscript,1v1arena_hud_button]`  
+[**2715**](scripts/[clientscript,1v1arena_hud_resetbutton].cs2) `[clientscript,1v1arena_hud_resetbutton]`  
+[**2716**](scripts/[clientscript,1v1arena_hud_toggle].cs2) `[clientscript,1v1arena_hud_toggle]`  
+[**2717**](scripts/[proc,1v1arena_hud_toggle].cs2) `[proc,1v1arena_hud_toggle]`  
+[**2718**](scripts/[clientscript,1v1arena_hud_transmit].cs2) `[clientscript,1v1arena_hud_transmit]`  
+[**2719**](scripts/[proc,1v1arena_hud_buildplayer].cs2) `[proc,1v1arena_hud_buildplayer]`  
 [**2720**](scripts/script2720.cs2)  
-[**2721**](scripts/script2721.cs2)  
-[**2722**](scripts/script2722.cs2)  
-[**2723**](scripts/script2723.cs2)  
+[**2721**](scripts/[proc,1v1arena_hud_buildarena].cs2) `[proc,1v1arena_hud_buildarena]`  
+[**2722**](scripts/[clientscript,1v1arena_spectator_init].cs2) `[clientscript,1v1arena_spectator_init]`  
+[**2723**](scripts/[clientscript,1v1arena_spectator_endhint].cs2) `[clientscript,1v1arena_spectator_endhint]`  
 [**2724**](scripts/script2724.cs2)  
 [**2725**](scripts/script2725.cs2)  
 [**2726**](scripts/script2726.cs2)  

@@ -1,0 +1,6 @@
+// 2012
+[proc,fossil_volcanic_shop_points](component $component0, int $int1)
+if_settext("Points: <col=ffa82f><~tostring_spacer(%var261, ",")></col>", $component0);
+if ($int1 = 1) {
+	sound_synth(73, 1, 0);
+}

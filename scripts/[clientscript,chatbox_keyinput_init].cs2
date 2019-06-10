@@ -1,0 +1,6 @@
+// 55
+[clientscript,chatbox_keyinput_init](component $component0, component $component1, int $key2, int $colour3, string $string0, string $string1)
+if_setonkey("chatbox_keyinput_listener(event_keypressed, event_keytyped, event_com, -1, $component1, $key2, $string0, $string1, $colour3, 0)", $component0);
+if (($component1 ! null) & (~on_mobile = true)) {
+	if_setonclick("chatbox_keyinput_clicklistener($component0, -1, event_com, $key2, $string0, $string1, $colour3, 0)", $component1);
+}

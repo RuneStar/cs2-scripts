@@ -1,0 +1,47 @@
+// 2721
+[proc,1v1arena_hud_buildarena](component $component0, int $int1)
+cc_deleteall($component0);
+def_int $int2 = 0;
+cc_create($component0, ^iftype_rectangle, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_settrans(200);
+if_setonmouserepeat("cc_settrans(event_com, cc_getid, 150, null)", $component0);
+if_setonmouseleave("cc_settrans(event_com, cc_getid, 200, null)", $component0);
+.cc_create($component0, ^iftype_text, $int2);
+$int2 = calc($int2 + 1);
+.cc_setsize(0, 30, ^setsize_minus, ^setsize_abs);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_settextshadow(true);
+.cc_settextfont(b12_full);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+switch_int ($int1) {
+	case 0 :
+		cc_setcolour(^black);
+		.cc_setcolour(0x9f9f9f);
+		.cc_settext("---");
+		if_clearops($component0);
+	case 1 :
+		cc_setcolour(^green);
+		.cc_setcolour(^yellow);
+		.cc_settext("Ready");
+		if_setop(10, "Start fight", $component0);
+	case 2 :
+		cc_setcolour(^yellow);
+		.cc_setcolour(^red);
+		.cc_settext("Fighting");
+		if_setop(10, "Abort fight", $component0);
+	case 4, 5 :
+		cc_setcolour(^white);
+		.cc_setcolour(0xff981f);
+		.cc_settext("Concluded");
+		if_setop(10, "Results", $component0);
+	case default :
+		cc_setcolour(^red);
+		.cc_setcolour(^yellow);
+		.cc_settext("Aborted");
+		if_setop(10, "Reset", $component0);
+}
+~thinbox($component0, $int2);

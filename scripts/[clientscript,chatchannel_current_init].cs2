@@ -1,0 +1,12 @@
+// 1656
+[clientscript,chatchannel_current_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
+~scrollbar_vertical($component10, $component9, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+switch_int (%varcint185) {
+	case 0, 1, 2, 3, 6, 7, 4, 5, 8, 9 :
+	case default :
+		%varcint185 = 0;
+}
+~chatchannel_current_build($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
+if_setonclantransmit("chatchannel_current_build($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15)", $component0);
+if_setonfriendtransmit("chatchannel_current_build($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15)", $component0);
+if_setonvartransmit("chatchannel_current_build($component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15){var1021, var1431, var93}", $component0);
