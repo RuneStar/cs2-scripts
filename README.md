@@ -499,7 +499,7 @@
 [**496**](scripts/[clientscript,wilderness_lootingbag_draw].cs2) `[clientscript,wilderness_lootingbag_draw]`  
 [**497**](scripts/[proc,wilderness_lootingbag_draw].cs2) `[proc,wilderness_lootingbag_draw]`  
 [**498**](scripts/[clientscript,killdeathratio_init].cs2) `[clientscript,killdeathratio_init]`  
-[**499**](scripts/script499.cs2)  
+[**499**](scripts/[proc,makeover_drawmodels].cs2) `[proc,makeover_drawmodels]`  
 [**500**](scripts/script500.cs2)  
 [**501**](scripts/script501.cs2)  
 [**502**](scripts/[clientscript,makeover_hair_setup].cs2) `[clientscript,makeover_hair_setup]`  
@@ -1327,11 +1327,11 @@
 [**1324**](scripts/[clientscript,snapshot_mute].cs2) `[clientscript,snapshot_mute]`  
 [**1325**](scripts/[clientscript,snapshot_ignore].cs2) `[clientscript,snapshot_ignore]`  
 [**1326**](scripts/[proc,snapshot_toggle].cs2) `[proc,snapshot_toggle]`  
-[**1327**](scripts/script1327.cs2)  
-[**1328**](scripts/script1328.cs2)  
-[**1329**](scripts/script1329.cs2)  
-[**1330**](scripts/script1330.cs2)  
-[**1331**](scripts/script1331.cs2)  
+[**1327**](scripts/[clientscript,ii_tracker_build].cs2) `[clientscript,ii_tracker_build]`  
+[**1328**](scripts/[proc,ii_tracker_build_split].cs2) `[proc,ii_tracker_build_split]`  
+[**1329**](scripts/[proc,ii_tracker_build_element].cs2) `[proc,ii_tracker_build_element]`  
+[**1330**](scripts/[clientscript,ii_tracker_tab_select].cs2) `[clientscript,ii_tracker_tab_select]`  
+[**1331**](scripts/[proc,ii_tracker_tab_select].cs2) `[proc,ii_tracker_tab_select]`  
 [**1332**](scripts/script1332.cs2)  
 [**1333**](scripts/[clientscript,light_puzzle_init].cs2) `[clientscript,light_puzzle_init]`  
 [**1334**](scripts/[proc,light_puzzle_button_setup].cs2) `[proc,light_puzzle_button_setup]`  

@@ -12,19 +12,19 @@ if (%varbit3945 = 1) {
 	$enum5 = 791;
 	$enum6 = 792;
 	if (%varbit3944 = 1) {
-		~script499($component3, 787, 788, null, null, 800, 60, 0, 1, 1);
+		~makeover_drawmodels($component3, 787, 788, null, null, 800, 60, 0, 1, 1);
 	} else {
-		~script499($component3, 778, 779, null, null, 720, 60, 0, 1, 1);
+		~makeover_drawmodels($component3, 778, 779, null, null, 720, 60, 0, 1, 1);
 	}
 } else {
 	if_sethide(false, $component0);
 	if_sethide(true, $component3);
 	if (%varbit3944 = 1) {
-		~script499($component1, 781, 782, null, female_arms_332, 600, 135, 0, 1, 0);
-		~script499($component2, 784, 785, null, female_torso_456, 650, 135, 0, 2, 0);
+		~makeover_drawmodels($component1, 781, 782, null, female_arms_332, 600, 135, 0, 1, 0);
+		~makeover_drawmodels($component2, 784, 785, null, female_torso_456, 650, 135, 0, 2, 0);
 	} else {
-		~script499($component1, 771, 772, 773, male_arms_151, 780, 135, 0, 1, 1);
-		~script499($component2, 775, 776, null, male_torso_292, 780, 135, 0, 2, 1);
+		~makeover_drawmodels($component1, 771, 772, 773, male_arms_151, 780, 135, 0, 1, 1);
+		~makeover_drawmodels($component2, 775, 776, null, male_torso_292, 780, 135, 0, 2, 1);
 	}
 }
 def_int $int7 = 0;
