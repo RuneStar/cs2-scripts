@@ -27,6 +27,9 @@ if (map_world = $int5) {
 		$int18 = 1;
 	}
 }
+if ((~script2872($int6) = 1) & (%varbit8374 = 0)) {
+	$int18 = 1;
+}
 cc_create($component0, ^iftype_rectangle, $int1);
 $int1 = calc($int1 + 1);
 cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);

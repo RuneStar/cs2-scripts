@@ -2871,3 +2871,5 @@
 [**2868**](scripts/[clientscript,objbox_setbuttons].cs2) `[clientscript,objbox_setbuttons]`  
 [**2869**](scripts/[clientscript,objbox_listener].cs2) `[clientscript,objbox_listener]`  
 [**2870**](scripts/[clientscript,objbox_reset].cs2) `[clientscript,objbox_reset]`  
+[**2871**](scripts/script2871.cs2)  
+[**2872**](scripts/script2872.cs2)  
