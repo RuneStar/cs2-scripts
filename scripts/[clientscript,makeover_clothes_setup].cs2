@@ -20,11 +20,11 @@ if (%varbit3945 = 1) {
 	if_sethide(false, $component0);
 	if_sethide(true, $component3);
 	if (%varbit3944 = 1) {
-		~script499($component1, 781, 782, null, 332, 600, 135, 0, 1, 0);
-		~script499($component2, 784, 785, null, 456, 650, 135, 0, 2, 0);
+		~script499($component1, 781, 782, null, female_arms_332, 600, 135, 0, 1, 0);
+		~script499($component2, 784, 785, null, female_torso_456, 650, 135, 0, 2, 0);
 	} else {
-		~script499($component1, 771, 772, 773, 151, 780, 135, 0, 1, 1);
-		~script499($component2, 775, 776, null, 292, 780, 135, 0, 2, 1);
+		~script499($component1, 771, 772, 773, male_arms_151, 780, 135, 0, 1, 1);
+		~script499($component2, 775, 776, null, male_torso_292, 780, 135, 0, 2, 1);
 	}
 }
 def_int $int7 = 0;
