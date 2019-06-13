@@ -47,7 +47,7 @@ def_string $string3 = "";
 if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (chat_gethistorylength(^chattype_broadcast) > 0)) {
 	$int12, $int13, $string1, $string2, $string0, $int14 = chat_gethistory_bytypeandline(^chattype_broadcast, 0);
 	if ($int12 ! -1) {
-		$string0, $string3 = ~script2066($string0);
+		$string0, $string3 = ~chat_broadcast_parseurl($string0);
 		$int7 = calc($int7 + ~script199($string0, $int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^yellow, true));
 		if_clearops($component10);
 		if (string_length($string3) > 0) {

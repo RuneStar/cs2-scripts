@@ -1,6 +1,6 @@
 // 0
 [clientscript,tt_rewards_init](component $component0, component $component1, component $component2, component $component3, component $component4)
-if_setonvartransmit("script5($component1, $component0, $component3, $component2, $component4){var702}", $component2);
+if_setonvartransmit("tt_reward_selected($component1, $component0, $component3, $component2, $component4){var702}", $component2);
 cc_deleteall($component0);
 cc_deleteall($component1);
 if_sethide(true, $component2);
@@ -16,7 +16,7 @@ while ($int5 < 9) {
 	cc_setposition(calc($int7 + ((($int7 * 2) + 36) * ($int5 % 3))), $int8, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setobject_nonum(enum(int, obj, 1382, $int5), 0);
 	cc_setop(1, "Details");
-	cc_setonop("script4(event_comid, $component1, $component0, $component3, $component2, $component4)");
+	cc_setonop("tt_reward_selected_onclick(event_comid, $component1, $component0, $component3, $component2, $component4)");
 	cc_setonmouseover("tt_reward_highlight(event_comid, $component1, $component0)");
 	cc_setonmouseleave("tt_reward_highlight_off(event_comid, $component1, $component0)");
 	cc_create($component0, ^iftype_text, $int5);

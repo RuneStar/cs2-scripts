@@ -1,0 +1,5 @@
+// 1069
+[clientscript,saradomin_light_effect_update](component $component0, int $int1, int $int2, int $int3)
+if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
+	~saradomin_light_effect_update($component0, calc(clientclock - $int3));
+}

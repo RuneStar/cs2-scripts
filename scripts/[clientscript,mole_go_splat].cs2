@@ -1,5 +1,5 @@
 // 896
-script896(int $int0)
+[clientscript,mole_go_splat](int $int0)
 def_enum $enum1 = ~toplevel_getcomponents;
 if ($enum1 = null) {
 	return;
@@ -14,5 +14,5 @@ cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setmodel(12027);
 cc_setmodelanim(3320);
-~script898($component2);
+~mole_splat_zoom($component2);
 cc_setontimer("script897(event_com, event_comid, calc(clientclock + $int0))");

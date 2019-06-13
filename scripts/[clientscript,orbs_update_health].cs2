@@ -1,10 +1,10 @@
 // 446
-script446(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+[clientscript,orbs_update_health](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 if ($component0 ! null) {
 	if_setnoclickthrough(true, $component7);
-	if_setonstattransmit("script446(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8){hitpoints}", $component0);
-	if_setonvartransmit("script446(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8){var102, var456}", $component0);
-	if_setonsubchange("script446(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8)", $component0);
+	if_setonstattransmit("orbs_update_health(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8){hitpoints}", $component0);
+	if_setonvartransmit("orbs_update_health(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8){var102, var456}", $component0);
+	if_setonsubchange("orbs_update_health(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8)", $component0);
 }
 ~orbs_update($component1, $component2, stat(hitpoints), stat_base(hitpoints));
 if ((%var102 > 0) | (%var456 > 0)) {

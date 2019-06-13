@@ -68,7 +68,7 @@ while (($int9 ! -1) & ($component8 ! null)) {
 			case ^chattype_friendschat :
 				$int6 = ~script203("[<$string5><$string10></col>] <$string9>:", "<$string6><$string11></col>", $int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_broadcast :
-				$string11, $string12 = ~script2066($string11);
+				$string11, $string12 = ~chat_broadcast_parseurl($string11);
 				$int6 = ~script203("<$string4>Broadcast:</col>", $string11, $int7, $component8, 162:58, $int1, 3, 14, $int5, ^setpos_abs_top, 103, $colour3, $boolean4);
 			case ^chattype_10sectimeout :
 				if (calc(clientclock - $int11) > 500) {

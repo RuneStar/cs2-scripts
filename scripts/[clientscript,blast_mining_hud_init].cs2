@@ -1,0 +1,11 @@
+// 1698
+[clientscript,blast_mining_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
+~script2249($component0, setbit(0, 3));
+~script1486($component1, ^setpos_abs_centre, 1, 0);
+if_setobject_nonum(coal_453, 0, $component3);
+if_setobject_nonum(gold_ore_444, 0, $component4);
+if_setobject_nonum(mithril_ore_447, 0, $component5);
+if_setobject_nonum(adamantite_ore_449, 0, $component6);
+if_setobject_nonum(runite_ore_451, 0, $component7);
+~blast_mining_hud_update($component8, $component9, $component10, $component11, $component12);
+if_setonvartransmit("blast_mining_hud_update($component8, $component9, $component10, $component11, $component12){var694, var203}", $component2);

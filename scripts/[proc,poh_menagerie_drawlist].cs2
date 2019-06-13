@@ -1,5 +1,5 @@
 // 641
-script641(component $component0, component $component1, int $int2)
+[proc,poh_menagerie_drawlist](component $component0, component $component1, int $int2)
 cc_deleteall($component0);
 def_int $int3 = if_getwidth($component0);
 def_int $int4 = if_getheight($component0);
@@ -36,7 +36,7 @@ while ($int9 <= 41) {
 		} else {
 			$enum8 = null;
 		}
-		$int7 = ~script642(enum(int, namedobj, 985, $int9), $enum8, $int5, $int6);
+		$int7 = ~poh_menagerie_drawpet(enum(int, namedobj, 985, $int9), $enum8, $int5, $int6);
 		$int6 = calc($int6 + 1);
 	} else {
 		cc_sethide(true);
@@ -50,7 +50,7 @@ while ($int11 < $int12) {
 	cc_create($component0, ^iftype_graphic, $int9);
 	$obj10 = inv_getobj(517, $int11);
 	if ($obj10 ! null) {
-		$int7 = ~script642($obj10, null, $int5, $int6);
+		$int7 = ~poh_menagerie_drawpet($obj10, null, $int5, $int6);
 		$int6 = calc($int6 + 1);
 	} else {
 		cc_sethide(true);
