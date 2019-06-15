@@ -3,7 +3,7 @@ script1070(component $component0, int $int1)
 if ($int1 <= 50) {
 	.cc_settrans(calc(255 - ($int1 * 4)));
 	cc_setmodelangle(0, 0, 512, calc((48 + ($int1 * 40)) % 2048), 0, calc(1050 - ($int1 * 20)));
-	cc_setmodel(29403);
+	cc_setmodel(saradomins_light_29403);
 	return;
 }
 if ($int1 <= 70) {
