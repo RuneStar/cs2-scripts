@@ -1,5 +1,5 @@
 // 865
-[clientscript,pvp_icons_layout_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, int $int9, component $component10)
+[clientscript,pvp_icons_layout_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, int $int9, component $component10, component $component11)
 ~script1490($component1);
 ~hud_clamp_init($component2);
 ~script2249($component8, setbit(0, 2));
@@ -13,5 +13,16 @@ if_setontimer("pvp_icons_layout(false)", $component0);
 if_setonresize("pvp_icons_layout(true)", $component0);
 if_setonsubchange("pvp_icons_layout(true)", $component0);
 if_setonvartransmit("pvp_icons_layout(true){var1293, var1434, var1542, var1676, var1327, var1377, var1378, var1601, var1602}", $component0);
-if_setonmouseleave("deltooltip(90:70)", 90:63);
+if_setonmouseleave("deltooltip(90:69)", 90:62);
+cc_deleteall($component11);
+cc_create($component11, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_sethide(false);
+cc_setcolour(^yellow);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextshadow(true);
+cc_setonvartransmit("script2873(event_com, event_comid){var1105, var1320, var718, var1327}");
+~script2874;
 ~pvp_icons_layout;

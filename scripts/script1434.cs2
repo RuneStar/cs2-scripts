@@ -1,23 +1,23 @@
 // 1434
 script1434(boolean $boolean0, enum $enum1, boolean $boolean2)
-if_sethide($boolean0, 90:20);
-if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, 90:20);
-if_sethide($boolean2, 90:25);
+if_sethide($boolean0, 90:19);
+if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, 90:19);
+if_sethide($boolean2, 90:24);
 if ($boolean2 = false) {
-	if_setonvartransmit("deadman_tournament_timer_resynch(event_com){var1434, var1542, var1676, var1601, var1602}", 90:25);
-	if_setonvartransmit("script1636(event_com){var1293, var1542, var1601, var1602}", 90:29);
+	if_setonvartransmit("deadman_tournament_timer_resynch(event_com){var1434, var1542, var1676, var1601, var1602}", 90:24);
+	if_setonvartransmit("script1636(event_com){var1293, var1542, var1601, var1602}", 90:28);
 } else {
-	if_setontimer(null, 90:25);
-	if_setonvartransmit(null, 90:25);
-	if_setonvartransmit(null, 90:29);
+	if_setontimer(null, 90:24);
+	if_setonvartransmit(null, 90:24);
+	if_setonvartransmit(null, 90:28);
 }
 if ($boolean0 = true) {
 	return;
 }
 if (~wildwars_world = 1) {
-	if_setonvartransmit("wildwars_hudupdate{var1601, var1602}", 90:21);
+	if_setonvartransmit("wildwars_hudupdate{var1601, var1602}", 90:20);
 	~wildwars_hudupdate;
 } else {
-	if_setonvartransmit("deadman_tournament_hudupdate{var1542, var1293}", 90:21);
+	if_setonvartransmit("deadman_tournament_hudupdate{var1542, var1293}", 90:20);
 	~deadman_tournament_hudupdate;
 }

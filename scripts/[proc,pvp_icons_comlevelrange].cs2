@@ -8,13 +8,13 @@ def_int $int2 = calc(%varcint52 - $int1);
 def_int $int3 = calc(%varcint52 + $int1);
 if (~deadman_world = 1) {
 	if (%varbit4965 > 0) {
-		if_sethide(true, 90:66);
+		if_sethide(true, 90:65);
 		return;
 	}
 	$int2 = 3;
 	$int3 = 126;
 	if (%varcint78 = 2) {
-		if_settext("", 90:66);
+		if_settext("", 90:65);
 		return;
 	}
 } else {
@@ -25,4 +25,4 @@ if (~deadman_world = 1) {
 		$int3 = 126;
 	}
 }
-if_settext("<tostring($int2)>-<tostring($int3)>", 90:66);
+if_settext("<tostring($int2)>-<tostring($int3)>", 90:65);

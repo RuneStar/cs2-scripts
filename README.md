@@ -494,7 +494,6 @@
 [**491**](scripts/[proc,bankside_switchview].cs2) `[proc,bankside_switchview]`  
 [**492**](scripts/[clientscript,bankside_lootingbag_draw].cs2) `[clientscript,bankside_lootingbag_draw]`  
 [**493**](scripts/[proc,bankside_lootingbag_draw].cs2) `[proc,bankside_lootingbag_draw]`  
-[**494**](scripts/[clientscript,pvp_icons_killdeathratio].cs2) `[clientscript,pvp_icons_killdeathratio]`  
 [**495**](scripts/[clientscript,wilderness_lootingbag_setup].cs2) `[clientscript,wilderness_lootingbag_setup]`  
 [**496**](scripts/[clientscript,wilderness_lootingbag_draw].cs2) `[clientscript,wilderness_lootingbag_draw]`  
 [**497**](scripts/[proc,wilderness_lootingbag_draw].cs2) `[proc,wilderness_lootingbag_draw]`  
@@ -2873,3 +2872,5 @@
 [**2870**](scripts/[clientscript,objbox_reset].cs2) `[clientscript,objbox_reset]`  
 [**2871**](scripts/script2871.cs2)  
 [**2872**](scripts/script2872.cs2)  
+[**2873**](scripts/script2873.cs2)  
+[**2874**](scripts/script2874.cs2)  
