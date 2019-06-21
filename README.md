@@ -1080,7 +1080,7 @@
 [**1078**](scripts/[clientscript,poh_options_doors_onop].cs2) `[clientscript,poh_options_doors_onop]`  
 [**1079**](scripts/[clientscript,poh_options_tele_onop].cs2) `[clientscript,poh_options_tele_onop]`  
 [**1080**](scripts/script1080.cs2)  
-[**1081**](scripts/script1081.cs2)  
+[**1081**](scripts/[clientscript,openurl_raw].cs2) `[clientscript,openurl_raw]`  
 [**1082**](scripts/[clientscript,options_button_off].cs2) `[clientscript,options_button_off]`  
 [**1083**](scripts/[clientscript,options_button_on].cs2) `[clientscript,options_button_on]`  
 [**1084**](scripts/[clientscript,stonebutton_url].cs2) `[clientscript,stonebutton_url]`  
@@ -2398,7 +2398,7 @@
 [**2396**](scripts/[clientscript,orbs_update_store].cs2) `[clientscript,orbs_update_store]`  
 [**2397**](scripts/script2397.cs2)  
 [**2398**](scripts/script2398.cs2)  
-[**2399**](scripts/script2399.cs2)  
+[**2399**](scripts/[proc,openurl_raw].cs2) `[proc,openurl_raw]`  
 [**2400**](scripts/[clientscript,options_fps_init].cs2) `[clientscript,options_fps_init]`  
 [**2401**](scripts/[clientscript,options_fps_op].cs2) `[clientscript,options_fps_op]`  
 [**2402**](scripts/[clientscript,nzone_game_init].cs2) `[clientscript,nzone_game_init]`  
@@ -2796,7 +2796,7 @@
 [**2794**](scripts/[clientscript,orbs_blocked_spec_op].cs2) `[clientscript,orbs_blocked_spec_op]`  
 [**2795**](scripts/[clientscript,itemsets_info_init].cs2) `[clientscript,itemsets_info_init]`  
 [**2796**](scripts/script2796.cs2)  
-[**2797**](scripts/script2797.cs2)  
+[**2797**](scripts/[clientscript,journal_list_init].cs2) `[clientscript,journal_list_init]`  
 [**2798**](scripts/script2798.cs2)  
 [**2799**](scripts/script2799.cs2)  
 [**2800**](scripts/script2800.cs2)  
@@ -2872,5 +2872,5 @@
 [**2870**](scripts/[clientscript,objbox_reset].cs2) `[clientscript,objbox_reset]`  
 [**2871**](scripts/script2871.cs2)  
 [**2872**](scripts/script2872.cs2)  
-[**2873**](scripts/script2873.cs2)  
-[**2874**](scripts/script2874.cs2)  
+[**2873**](scripts/[clientscript,kdr_update].cs2) `[clientscript,kdr_update]`  
+[**2874**](scripts/[proc,kdr_update].cs2) `[proc,kdr_update]`  
