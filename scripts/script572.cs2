@@ -1,33 +1,32 @@
 // 572
 script572(enum $enum0)(int)
-if ($enum0 = 374) {
-	return(%varbit4270);
+switch_enum ($enum0) {
+	case 374 :
+		return(%varbit4270);
+	case 913 :
+		return(%varbit4271);
+	case 915 :
+		return(%varbit4272);
+	case 917 :
+		return(%varbit4273);
+	case 919 :
+		return(%varbit4274);
+	case 921 :
+		return(%varbit4275);
+	case 923 :
+		return(%varbit4276);
+	case 925 :
+		return(%varbit4277);
+	case 927 :
+		return(%varbit4278);
+	case 929 :
+		return(%varbit4283);
+	case 2336 :
+		return(%varbit8377);
+	case 2338 :
+		return(%varbit8378);
+	case 2340 :
+		return(%varbit8379);
+	case default :
+		return(0);
 }
-if ($enum0 = 913) {
-	return(%varbit4271);
-}
-if ($enum0 = 915) {
-	return(%varbit4272);
-}
-if ($enum0 = 917) {
-	return(%varbit4273);
-}
-if ($enum0 = 919) {
-	return(%varbit4274);
-}
-if ($enum0 = 921) {
-	return(%varbit4275);
-}
-if ($enum0 = 923) {
-	return(%varbit4276);
-}
-if ($enum0 = 925) {
-	return(%varbit4277);
-}
-if ($enum0 = 927) {
-	return(%varbit4278);
-}
-if ($enum0 = 929) {
-	return(%varbit4283);
-}
-return(0);

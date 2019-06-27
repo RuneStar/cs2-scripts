@@ -2,10 +2,10 @@
 [clientscript,clanwars_setup_corner_init](component $component0, component $component1)
 %varcint59 = ^min_32bit_int;
 cc_deleteall($component0);
-def_int $int2 = ~setup_continuous_border($component0, 0);
+def_int $int2 = ~thinbox($component0, 0);
 cc_create($component0, ^iftype_text, $int2);
-cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(calc(if_getwidth($component0) - 10), if_getheight($component0), ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);

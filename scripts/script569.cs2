@@ -12,7 +12,7 @@ cc_setsize($int4, 40, ^setsize_abs, ^setsize_abs);
 cc_setgraphic("tradebacking_dark");
 cc_settiling(true);
 cc_settrans(100);
-cc_create($component3, ^iftype_text, ~setup_continuous_border($component3, 1));
+cc_create($component3, ^iftype_text, ~thinbox($component3, 1));
 cc_setposition(0, 3, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize($int4, 34, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

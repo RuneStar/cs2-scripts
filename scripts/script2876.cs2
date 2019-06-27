@@ -1,0 +1,12 @@
+// 2876
+script2876(component $component0, component $component1, component $component2, component $component3, int $int4, int $int5, int $int6)
+def_int $int7 = if_getwidth($component0);
+def_int $int8 = if_getheight($component0);
+if (($int7 = $int5) & ($int8 = $int6)) {
+	return;
+}
+def_int $int9 = ~max(300, ~min($int4, calc($int8 - 10)));
+if_setsize(350, $int9, ^setsize_abs, ^setsize_abs, $component1);
+~scrollbar_vertical_rebuild($component3, $component2);
+~scrollbar_resize($component3, $component2, %varcint203);
+if_setontimer("script2875($component0, $component1, $component2, $component3, $int4, $int7, $int8)", $component0);

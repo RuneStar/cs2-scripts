@@ -494,6 +494,7 @@
 [**491**](scripts/[proc,bankside_switchview].cs2) `[proc,bankside_switchview]`  
 [**492**](scripts/[clientscript,bankside_lootingbag_draw].cs2) `[clientscript,bankside_lootingbag_draw]`  
 [**493**](scripts/[proc,bankside_lootingbag_draw].cs2) `[proc,bankside_lootingbag_draw]`  
+[**494**](scripts/script494.cs2)  
 [**495**](scripts/[clientscript,wilderness_lootingbag_setup].cs2) `[clientscript,wilderness_lootingbag_setup]`  
 [**496**](scripts/[clientscript,wilderness_lootingbag_draw].cs2) `[clientscript,wilderness_lootingbag_draw]`  
 [**497**](scripts/[proc,wilderness_lootingbag_draw].cs2) `[proc,wilderness_lootingbag_draw]`  
@@ -573,8 +574,6 @@
 [**571**](scripts/script571.cs2)  
 [**572**](scripts/script572.cs2)  
 [**573**](scripts/script573.cs2)  
-[**574**](scripts/script574.cs2)  
-[**575**](scripts/[proc,setup_continuous_border].cs2) `[proc,setup_continuous_border]`  
 [**576**](scripts/[clientscript,clanwars_setup_scrollbox_init].cs2) `[clientscript,clanwars_setup_scrollbox_init]`  
 [**577**](scripts/[proc,clanwars_setup_scrollbox_drawframe].cs2) `[proc,clanwars_setup_scrollbox_drawframe]`  
 [**578**](scripts/[clientscript,clanwars_setup_smallbox_init].cs2) `[clientscript,clanwars_setup_smallbox_init]`  
@@ -2874,3 +2873,10 @@
 [**2872**](scripts/script2872.cs2)  
 [**2873**](scripts/[clientscript,kdr_update].cs2) `[clientscript,kdr_update]`  
 [**2874**](scripts/[proc,kdr_update].cs2) `[proc,kdr_update]`  
+[**2875**](scripts/script2875.cs2)  
+[**2876**](scripts/script2876.cs2)  
+[**2877**](scripts/script2877.cs2)  
+[**2878**](scripts/script2878.cs2)  
+[**2879**](scripts/script2879.cs2)  
+[**2880**](scripts/script2880.cs2)  
+[**2881**](scripts/script2881.cs2)  
