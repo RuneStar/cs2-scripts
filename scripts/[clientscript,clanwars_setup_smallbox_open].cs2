@@ -1,11 +1,11 @@
 // 2877
-script2877(enum $enum0, component $component1, component $component2, int $int3, component $component4, component $component5, component $component6)
+[clientscript,clanwars_setup_smallbox_open](enum $enum0, component $component1, component $component2, int $int3, component $component4, component $component5, component $component6)
 sound_synth(2266, 1, 0);
 if_sethide(true, $component6);
 ~deltooltip_action($component6);
 ~xpdrops_setup_display_hoverdisable($component2);
 if_sethide(false, $component4);
-if_setonclick("script2878(1, -1, $enum0, $component2, $int3, $component4, $component6)", $component4);
+if_setonclick("clanwars_setup_smallbox_close(1, -1, $enum0, $component2, $int3, $component4, $component6)", $component4);
 def_int $int7 = if_getx($component2);
 def_int $int8 = if_gety($component2);
 def_component $component9 = if_getlayer($component2);
@@ -44,7 +44,7 @@ while ($int13 < $int10) {
 	cc_setop(1, "Select");
 	cc_setonmouserepeat("xpdrops_setup_display_dropdown_hover(true, event_com, event_comid, .cc_getid, 0xff891f)");
 	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comid, .cc_getid, 0xff891f)");
-	cc_setonop("script2878(event_opindex, $int13, $enum0, $component2, $int3, $component4, $component6)");
+	cc_setonop("clanwars_setup_smallbox_close(event_opindex, $int13, $enum0, $component2, $int3, $component4, $component6)");
 	cc_settext(enum(int, string, $enum0, $int13));
 	$int13, $int12 = calc($int13 + 1), calc($int12 + 1);
 }
