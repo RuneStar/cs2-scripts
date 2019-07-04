@@ -574,6 +574,7 @@
 [**571**](scripts/script571.cs2)  
 [**572**](scripts/script572.cs2)  
 [**573**](scripts/script573.cs2)  
+[**574**](scripts/[proc,gnomeball_score].cs2) `[proc,gnomeball_score]`  
 [**576**](scripts/[clientscript,clanwars_setup_scrollbox_init].cs2) `[clientscript,clanwars_setup_scrollbox_init]`  
 [**577**](scripts/[proc,clanwars_setup_scrollbox_drawframe].cs2) `[proc,clanwars_setup_scrollbox_drawframe]`  
 [**578**](scripts/[clientscript,clanwars_setup_smallbox_init].cs2) `[clientscript,clanwars_setup_smallbox_init]`  
