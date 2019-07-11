@@ -29,5 +29,9 @@ switch_component ($component1) {
 		if ((%varbit2010 = 0) | (%varbit5604 >= 5)) {
 			return(0);
 		}
+	case 218:77, 218:81, 218:79, 218:75 :
+		if (inv_total(inv, rune_pouch_23650) > 0) {
+			return(1);
+		}
 }
 return(~magic_spellbook_hasrunes($obj0));
