@@ -1,5 +1,11 @@
 // 2620
 [proc,magic_spellbook_hasrunes](obj $obj0)(int)
+switch_obj ($obj0) {
+	case ice_blitz_4645, blood_blitz_4644, blood_barrage_4650, ice_barrage_4651 :
+		if ((inv_total(inv, rune_pouch_23650) > 0) & (~script234 = 1)) {
+			return(1);
+		}
+}
 def_obj $obj1 = oc_param($obj0, magic_runetype_1);
 if (($obj1 ! null) & (~magic_runecount($obj1) < oc_param($obj0, magic_runecount_1))) {
 	return(0);
