@@ -1,0 +1,20 @@
+// 2885
+script2885(component $component0, component $component1, component $component2, component $component3, component $component4)
+def_string $string0 = nc_param(%var1683, 510);
+if (compare($string0, "") = 0) {
+	if_sethide(true, $component3);
+} else {
+	if_sethide(false, $component3);
+	if_settext($string0, $component4);
+}
+def_string $string1 = "<tostring(%varbit6099)> / <tostring(%varbit6100)>";
+if_settext($string1, $component0);
+def_int $int5 = if_getwidth($component1);
+$int5 = scale(%varbit6099, %varbit6100, $int5);
+if (($int5 = 0) & (%varbit6099 > 0)) {
+	$int5 = 1;
+}
+if (($int5 = if_getwidth($component1)) & (%varbit6099 < %varbit6100)) {
+	$int5 = calc($int5 - 1);
+}
+if_setsize($int5, if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);

@@ -1,0 +1,7 @@
+// 2908
+[clientscript,gauntlet_map_init](component $component0, int $int1)
+def_graphic $graphic2 = "close_buttons,5";
+def_graphic $graphic3 = "close_buttons,4";
+if_setonmouseover("graphic_swapper(event_com, $graphic2)", $component0);
+if_setonmouseleave("graphic_swapper(event_com, $graphic3)", $component0);
+~gauntlet_map_update;

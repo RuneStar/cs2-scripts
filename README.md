@@ -575,6 +575,7 @@
 [**572**](scripts/script572.cs2)  
 [**573**](scripts/script573.cs2)  
 [**574**](scripts/[proc,gnomeball_score].cs2) `[proc,gnomeball_score]`  
+[**575**](scripts/script575.cs2)  
 [**576**](scripts/[clientscript,clanwars_setup_scrollbox_init].cs2) `[clientscript,clanwars_setup_scrollbox_init]`  
 [**577**](scripts/[proc,clanwars_setup_scrollbox_drawframe].cs2) `[proc,clanwars_setup_scrollbox_drawframe]`  
 [**578**](scripts/[clientscript,clanwars_setup_smallbox_init].cs2) `[clientscript,clanwars_setup_smallbox_init]`  
@@ -2881,3 +2882,47 @@
 [**2879**](scripts/[clientscript,clanwars_setup_smallbox_updatetext].cs2) `[clientscript,clanwars_setup_smallbox_updatetext]`  
 [**2880**](scripts/[proc,clanwars_setup_smallbox_updatetext].cs2) `[proc,clanwars_setup_smallbox_updatetext]`  
 [**2881**](scripts/script2881.cs2)  
+[**2882**](scripts/script2882.cs2)  
+[**2883**](scripts/script2883.cs2)  
+[**2884**](scripts/script2884.cs2)  
+[**2885**](scripts/script2885.cs2)  
+[**2886**](scripts/script2886.cs2)  
+[**2887**](scripts/script2887.cs2)  
+[**2888**](scripts/script2888.cs2)  
+[**2889**](scripts/script2889.cs2)  
+[**2890**](scripts/script2890.cs2)  
+[**2891**](scripts/[proc,orbs_worldmap_graphics].cs2) `[proc,orbs_worldmap_graphics]`  
+[**2892**](scripts/script2892.cs2)  
+[**2893**](scripts/[clientscript,overlay_portal].cs2) `[clientscript,overlay_portal]`  
+[**2894**](scripts/[clientscript,overlay_portal_remove].cs2) `[clientscript,overlay_portal_remove]`  
+[**2895**](scripts/[clientscript,overlay_portal_adjust].cs2) `[clientscript,overlay_portal_adjust]`  
+[**2896**](scripts/script2896.cs2)  
+[**2897**](scripts/script2897.cs2)  
+[**2898**](scripts/script2898.cs2)  
+[**2899**](scripts/script2899.cs2)  
+[**2900**](scripts/script2900.cs2)  
+[**2901**](scripts/script2901.cs2)  
+[**2902**](scripts/script2902.cs2)  
+[**2903**](scripts/script2903.cs2)  
+[**2904**](scripts/[worldmapelementmouserepeat,630].cs2) `[worldmapelementmouserepeat,630]`  
+[**2905**](scripts/[worldmapelementmouserepeat,631].cs2) `[worldmapelementmouserepeat,631]`  
+[**2906**](scripts/[worldmapelementmouseleave,630].cs2) `[worldmapelementmouseleave,630]`  
+[**2907**](scripts/[worldmapelementmouseleave,631].cs2) `[worldmapelementmouseleave,631]`  
+[**2908**](scripts/[clientscript,gauntlet_map_init].cs2) `[clientscript,gauntlet_map_init]`  
+[**2909**](scripts/[proc,gauntlet_map_update].cs2) `[proc,gauntlet_map_update]`  
+[**2910**](scripts/[proc,gauntlet_map_start_update].cs2) `[proc,gauntlet_map_start_update]`  
+[**2911**](scripts/[proc,gauntlet_map_room_update].cs2) `[proc,gauntlet_map_room_update]`  
+[**2912**](scripts/[proc,gauntlet_map_player_update].cs2) `[proc,gauntlet_map_player_update]`  
+[**2913**](scripts/[clientscript,gauntlet_overlay_init].cs2) `[clientscript,gauntlet_overlay_init]`  
+[**2914**](scripts/[clientscript,gauntlet_timer_update].cs2) `[clientscript,gauntlet_timer_update]`  
+[**2915**](scripts/[clientscript,gauntlet_timer].cs2) `[clientscript,gauntlet_timer]`  
+[**2916**](scripts/[clientscript,gauntlet_timer_end].cs2) `[clientscript,gauntlet_timer_end]`  
+[**2917**](scripts/script2917.cs2)  
+[**2918**](scripts/script2918.cs2)  
+[**2919**](scripts/[proc,gauntlet_select_item].cs2) `[proc,gauntlet_select_item]`  
+[**2920**](scripts/script2920.cs2)  
+[**2921**](scripts/script2921.cs2)  
+[**2922**](scripts/script2922.cs2)  
+[**2923**](scripts/script2923.cs2)  
+[**2924**](scripts/script2924.cs2)  
+[**2925**](scripts/script2925.cs2)  

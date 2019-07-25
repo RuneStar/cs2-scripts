@@ -94,6 +94,9 @@ switch_int ($int0) {
 		if ($int1 = 3) {
 			return("Barbarian", 1);
 		}
+		if ($int1 = 4) {
+			return("Other", 1);
+		}
 		return("", -1);
 	case 9 :
 		if ($int1 = 0) {
@@ -149,6 +152,9 @@ switch_int ($int0) {
 			return("Weaponry", 1);
 		}
 		if ($int1 = 7) {
+			return("Crystal", 1);
+		}
+		if ($int1 = 8) {
 			return("Other", 1);
 		}
 		return("", -1);
@@ -215,6 +221,9 @@ switch_int ($int0) {
 			return("Lovakite", 1);
 		}
 		if ($int1 = 9) {
+			return("Crystal", 1);
+		}
+		if ($int1 = 10) {
 			return("Other", 1);
 		}
 		return("", -1);

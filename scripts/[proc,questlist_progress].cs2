@@ -625,19 +625,19 @@ switch_struct ($struct0) {
 			return(1);
 		}
 		return(0);
-	case mournings_ends_part_i_399 :
-		if (%var517 > 7) {
+	case mournings_end_part_i_399 :
+		if (%var517 > 8) {
 			return(2);
 		}
 		if (%var517 = 0) {
 			return(1);
 		}
 		return(0);
-	case mournings_ends_part_ii_400 :
+	case mournings_end_part_ii_400 :
 		if (%varbit1103 > 59) {
 			return(2);
 		}
-		if (%varbit1103 < 9) {
+		if (%varbit1103 = 0) {
 			return(1);
 		}
 		return(0);
@@ -733,7 +733,7 @@ switch_struct ($struct0) {
 		if (%var328 > 14) {
 			return(2);
 		}
-		if (%var328 = 0) {
+		if (%var328 <= 1) {
 			return(1);
 		}
 		return(0);
@@ -930,10 +930,10 @@ switch_struct ($struct0) {
 		}
 		return(0);
 	case underground_pass_442 :
-		if (%var161 = 10) {
+		if (%var161 >= 11) {
 			return(2);
 		}
-		if (testbit(%var162, 11) = ^false) {
+		if (%var161 = 0) {
 			return(1);
 		}
 		return(0);
@@ -1238,6 +1238,14 @@ switch_struct ($struct0) {
 			return(2);
 		}
 		if (%varbit8063 <= 0) {
+			return(1);
+		}
+		return(0);
+	case song_of_the_elves_603 :
+		if (%varbit9016 >= 200) {
+			return(2);
+		}
+		if (%varbit9016 <= 0) {
 			return(1);
 		}
 		return(0);

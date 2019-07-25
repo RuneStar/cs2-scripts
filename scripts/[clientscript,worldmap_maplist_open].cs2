@@ -5,7 +5,7 @@ sound_synth(2266, 1, 0);
 if_sethide(false, $component1);
 def_int $int4 = 0;
 def_maparea $maparea5 = null;
-while ($int4 <= 32) {
+while ($int4 <= 34) {
 	$maparea5 = enum(int, maparea, 1697, $int4);
 	if (((($maparea5 ! null) & (cc_find($component2, calc($int4 + 1)) = ^true)) & ($int3 ! -1)) & (~worldmap_findcoordinmap($maparea5, %varcint188) ! null)) {
 		if (.cc_find($component2, $int3) = ^true) {

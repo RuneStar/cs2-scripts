@@ -1,0 +1,42 @@
+// 2915
+[clientscript,gauntlet_timer](int $int0, int $int1)
+def_component $component2 = 637:4;
+$int0 = calc($int0 - clientclock);
+if ($int0 <= 0) {
+	if_setontimer(null, 637:3);
+	return;
+}
+def_int $int3 = calc($int0 / 50);
+def_int $int4 = calc($int3 / 60);
+def_int $int5 = calc($int3 % 60);
+def_string $string0 = "Time Left: <tostring($int4)>:<tostring($int5)>";
+if ($int5 < 10) {
+	$string0 = "Time Left: <tostring($int4)>:0<tostring($int5)>";
+}
+if_settext($string0, $component2);
+if ((calc(clientclock % 20) < 10) & ($int3 <= 10)) {
+	if_setcolour(0xfc0000, $component2);
+} else {
+	if_setcolour(0xfcfce7, $component2);
+}
+if (calc($int0 % 50) ! 0) {
+	return;
+}
+if ($int3 = 451) {
+	mes("<col=ef1020>Time remaining: 7:30");
+}
+if ($int3 = 301) {
+	mes("<col=ef1020>Time remaining: 5:00");
+}
+if ($int3 = 151) {
+	mes("<col=ef1020>Time remaining: 2:30");
+}
+if ($int3 = 61) {
+	mes("<col=ef1020>Time remaining: 1:00");
+}
+if ($int3 = 31) {
+	mes("<col=ef1020>Time remaining: 0:30");
+}
+if ($int3 = 11) {
+	mes("<col=ef1020>Time remaining: 0:10");
+}

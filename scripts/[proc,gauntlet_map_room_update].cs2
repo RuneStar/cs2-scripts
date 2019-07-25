@@ -1,0 +1,7 @@
+// 2911
+[proc,gauntlet_map_room_update](component $component0, int $int1)
+if ($int1 = 1) {
+	if_settrans(0, $component0);
+} else {
+	if_settrans(120, $component0);
+}

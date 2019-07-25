@@ -6,6 +6,7 @@ if ($enum3 = null) {
 }
 def_graphic $graphic4 = null;
 def_graphic $graphic5 = null;
+$graphic4, $graphic5 = ~orbs_worldmap_graphics;
 if ($enum3 = 1745) {
 	if (%varbit6254 = ^false) {
 		if_setposition(0, 17, ^setpos_abs_right, ^setpos_abs_bottom, $component0);
@@ -16,16 +17,12 @@ if ($enum3 = 1745) {
 	if_setgraphic(1697, $component1);
 	if_setsize(40, 40, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(32, 32, ^setsize_abs, ^setsize_abs, $component2);
-	$graphic4 = "worldmap_icon_large,0";
-	$graphic5 = "worldmap_icon_large,0";
 } else {
 	if_setposition(0, 20, ^setpos_abs_right, ^setpos_abs_bottom, $component0);
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component0);
 	if_setgraphic(1438, $component1);
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(22, 22, ^setsize_abs, ^setsize_abs, $component2);
-	$graphic4 = "worldmap_icon,0";
-	$graphic5 = "worldmap_icon,1";
 }
 if (if_hassub(enum(component, component, $enum3, 161:14)) = true) {
 	if_settrans(125, $component2);
@@ -33,9 +30,8 @@ if (if_hassub(enum(component, component, $enum3, 161:14)) = true) {
 	if_setonmouserepeat("settrans(event_com, 0)", $component2);
 	if_setonmouseleave("settrans(event_com, 125)", $component2);
 	if_clearops($component2);
-	if_setop(1, "Close", $component2);
-	if_setopbase("<col=ff9040>Floating panel</col>", $component2);
-	if_setonop("opsound(event_opindex, 2)", $component2);
+	if_setop(2, "Close <col=ff9040>Floating panel</col>", $component2);
+	if_setonop("opsound(event_opindex, -1)", $component2);
 } else {
 	if_settrans(0, $component2);
 	if_setgraphic($graphic4, $component2);
@@ -43,16 +39,17 @@ if (if_hassub(enum(component, component, $enum3, 161:14)) = true) {
 	if_setonmouseleave("graphic_swapper(event_com, $graphic4)", $component2);
 	if_clearops($component2);
 	if ($enum3 = 1745) {
-		if_setop(1, "Fullscreen", $component2);
+		~script2892($component2);
+		if_setop(2, "Open <col=ff9040>World Map</col>", $component2);
 		if (%varbit6254 = ^false) {
-			if_setop(3, "Minimise", $component2);
+			if_setop(4, "Minimise <col=ff9040>Minimap</col>", $component2);
 		} else {
-			if_setop(3, "Restore", $component2);
+			if_setop(4, "Restore <col=ff9040>Minimap</col>", $component2);
 		}
 	} else {
-		if_setop(1, "Floating", $component2);
-		if_setop(2, "Fullscreen", $component2);
+		~script2892($component2);
+		if_setop(2, "Floating <col=ff9040>World Map</col>", $component2);
+		if_setop(3, "Fullscreen <col=ff9040>World Map</col>", $component2);
 	}
-	if_setopbase("<col=ff9040>World Map</col>", $component2);
-	if_setonop("opsound(event_opindex, 6)", $component2);
+	if_setonop("opsound(event_opindex, -1)", $component2);
 }

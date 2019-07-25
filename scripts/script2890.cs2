@@ -1,0 +1,17 @@
+// 2890
+script2890(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, int $int7)
+if ($int7 <= 0) {
+	if_sethide(true, $component2);
+	if_sethide(true, $component6);
+}
+$int7 = ~min(255, calc($int7 + 3));
+if_settrans($int7, $component0);
+if_settrans($int7, $component1);
+if_settrans($int7, $component3);
+if_settrans($int7, $component4);
+if_settrans($int7, $component5);
+if ($int7 >= 255) {
+	if_setontimer(null, $component0);
+	return;
+}
+if_setontimer("script2889($component0, $component1, $component2, $component3, $component4, $component5, $component6, $int7)", $component0);

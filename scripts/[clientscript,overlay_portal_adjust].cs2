@@ -1,0 +1,27 @@
+// 2895
+[clientscript,overlay_portal_adjust](int $int0, boolean $boolean1, component $component2)
+def_int $int3 = calc(clientclock - $int0);
+def_int $int4 = 0;
+if ($int3 >= 20) {
+	if ($boolean1 = false) {
+		cc_deleteall($component2);
+	} else if (cc_find($component2, 1) = ^true) {
+		cc_settrans(0);
+	}
+	if_setontimer(null, $component2);
+	return;
+}
+if (cc_find($component2, 0) = ^true) {
+	if ($boolean1 = true) {
+		cc_setmodelangle(0, 130, 0, 0, 0, ~max(1, scale(6464, 10000, cc_getmodelzoom)));
+	} else {
+		cc_setmodelangle(0, 130, 0, 0, 0, ~max(1, scale(10000, 6464, ~max(cc_getmodelzoom, 2))));
+	}
+}
+if (cc_find($component2, 1) = ^true) {
+	if ($boolean1 = true) {
+		cc_settrans(calc(cc_gettrans - 12));
+	} else {
+		cc_settrans(calc(cc_gettrans + 12));
+	}
+}

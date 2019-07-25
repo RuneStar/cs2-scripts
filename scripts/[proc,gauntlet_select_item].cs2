@@ -1,0 +1,10 @@
+// 2919
+[proc,gauntlet_select_item](obj $obj0, int $int1)(obj)
+if ($int1 = 0) {
+	return($obj0);
+}
+def_obj $obj2 = enum(namedobj, namedobj, 2391, $obj0);
+if ($obj2 ! null) {
+	return($obj2);
+}
+return($obj0);

@@ -1,0 +1,20 @@
+// 2891
+[proc,orbs_worldmap_graphics]()(graphic, graphic)
+def_graphic $graphic0 = null;
+def_graphic $graphic1 = null;
+if (~toplevel_getcomponents = 1745) {
+	if (%varbit9178 = 1) {
+		$graphic0 = "worldmap_icon_large,2";
+		$graphic1 = "worldmap_icon_large,2";
+	} else {
+		$graphic0 = "worldmap_icon_large,0";
+		$graphic1 = "worldmap_icon_large,0";
+	}
+} else if (%varbit9178 = 1) {
+	$graphic0 = "worldmap_icon,2";
+	$graphic1 = "worldmap_icon,3";
+} else {
+	$graphic0 = "worldmap_icon,0";
+	$graphic1 = "worldmap_icon,1";
+}
+return($graphic0, $graphic1);

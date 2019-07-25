@@ -47,7 +47,7 @@ switch_int ($int0) {
 				case 20 :
 					return(65, sarachnis_cudgel_23528, "Members: Sarachnis Cudgel");
 				case 21 :
-					return(70, new_crystal_halberd_full_13091, "Members: Crystal weaponry<br> (with 50 Agility)");
+					return(70, crystal_halberd_23987, "Members: Crystal weaponry<br> (with 50 Agility)");
 				case 22 :
 					return(70, saradomin_sword_11838, "Members: Saradomin sword");
 				case 23 :
@@ -91,6 +91,8 @@ switch_int ($int0) {
 				case 42 :
 					return(75, dinhs_bulwark_21015, "Members: Dinh's bulwark<br> (with 75 Defence)");
 				case 43 :
+					return(75, blade_of_saeldor_23995, "Members: Blade of Saeldor");
+				case 44 :
 					return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Defence)");
 				case default :
 					return(-1, null, "");
@@ -321,24 +323,27 @@ switch_int ($int0) {
 				return(70, boots_of_brimstone_22951, "Members: Boots of brimstone (with 70 Ranged and Magic)");
 			}
 			if ($int2 = 29) {
-				return(75, justiciar_faceguard_22326, "Members: Justiciar armour");
+				return(70, crystal_helm_23971, "Members: Crystal armour (with 50 Agility after Song of the Elves)");
 			}
 			if ($int2 = 30) {
-				return(75, serpentine_helm_12931, "Members: Serpentine helm");
+				return(75, justiciar_faceguard_22326, "Members: Justiciar armour");
 			}
 			if ($int2 = 31) {
-				return(75, guardian_boots_21733, "Members: Guardian boots");
+				return(75, serpentine_helm_12931, "Members: Serpentine helm");
 			}
 			if ($int2 = 32) {
-				return(75, primordial_boots_13239, "Members: Primordial boots<br> (with 75 Strength)");
+				return(75, guardian_boots_21733, "Members: Guardian boots");
 			}
 			if ($int2 = 33) {
-				return(75, eternal_boots_13235, "Members: Eternal boots<br> (with 75 Magic)");
+				return(75, primordial_boots_13239, "Members: Primordial boots<br> (with 75 Strength)");
 			}
 			if ($int2 = 34) {
-				return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Ranged)");
+				return(75, eternal_boots_13235, "Members: Eternal boots<br> (with 75 Magic)");
 			}
 			if ($int2 = 35) {
+				return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Ranged)");
+			}
+			if ($int2 = 36) {
 				return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Attack)");
 			}
 			return(-1, null, "");
@@ -408,7 +413,7 @@ switch_int ($int0) {
 				return(60, odium_ward_11926, "Members: Odium & Malediction wards");
 			}
 			if ($int2 = 9) {
-				return(70, new_crystal_shield_4224, "Members: Elf crystal (with 50 Agility)");
+				return(70, crystal_shield_23991, "Members: Elf crystal (with 50 Agility)");
 			}
 			if ($int2 = 10) {
 				return(70, blessed_spirit_shield_12831, "Members: Blessed spirit shield<br>(with 60 Prayer)");
@@ -473,7 +478,7 @@ switch_int ($int0) {
 				return(65, 3rd_age_bow_12424, "Members: 3rd age bow<br> Ammo: Arrows up to dragon");
 			}
 			if ($int2 = 11) {
-				return(70, new_crystal_bow_4212, "Members: Crystal bows (with 50 Agility)<br> Ammo: None");
+				return(70, crystal_bow_23983, "Members: Crystal bows (with 50 Agility)<br> Ammo: None");
 			}
 			if ($int2 = 12) {
 				return(75, twisted_bow_20997, "Members: Twisted bow<br> Ammo: Arrows up to dragon");
@@ -970,10 +975,10 @@ switch_int ($int0) {
 				return(1, agility_arena_ticket_2996, "Low-level Agility Arena obstacles");
 			}
 			if ($int2 = 3) {
-				return(10, mark_of_grace_11849, "Draynor Village rooftop course");
+				return(10, mark_of_grace_11849, "Draynor Village Rooftop Course");
 			}
 			if ($int2 = 4) {
-				return(20, mark_of_grace_11849, "Al Kharid rooftop course");
+				return(20, mark_of_grace_11849, "Al Kharid Rooftop Course");
 			}
 			if ($int2 = 5) {
 				return(20, agility_arena_ticket_2996, "Medium-level Agility Arena obstacles");
@@ -985,7 +990,7 @@ switch_int ($int0) {
 				return(30, pyramid_top_6970, "Agility Pyramid");
 			}
 			if ($int2 = 8) {
-				return(30, mark_of_grace_11849, "Varrock rooftop course");
+				return(30, mark_of_grace_11849, "Varrock Rooftop Course");
 			}
 			if ($int2 = 9) {
 				return(30, clockwork_suit_10595, "Penguin Agility Course");
@@ -994,7 +999,7 @@ switch_int ($int0) {
 				return(35, steel_battleaxe_1365, "Barbarian Outpost Agility Course");
 			}
 			if ($int2 = 11) {
-				return(40, mark_of_grace_11849, "Canifis rooftop course");
+				return(40, mark_of_grace_11849, "Canifis Rooftop Course");
 			}
 			if ($int2 = 12) {
 				return(40, agility_arena_ticket_2996, "High-level Agility Arena obstacles");
@@ -1003,31 +1008,31 @@ switch_int ($int0) {
 				return(48, ninja_monkey_greegree_4024, "Ape Atoll Agility Course");
 			}
 			if ($int2 = 14) {
-				return(50, elf_crystal_4211, "Use crystal equipment");
+				return(50, mark_of_grace_11849, "Falador Rooftop Course");
 			}
 			if ($int2 = 15) {
-				return(50, mark_of_grace_11849, "Falador rooftop course");
-			}
-			if ($int2 = 16) {
 				return(52, skull_964, "Wilderness Course");
 			}
-			if ($int2 = 17) {
+			if ($int2 = 16) {
 				return(60, stick_4179, "Werewolf Agility Course");
 			}
-			if ($int2 = 18) {
-				return(60, mark_of_grace_11849, "Seers' Village rooftop course");
+			if ($int2 = 17) {
+				return(60, mark_of_grace_11849, "Seers' Village Rooftop Course");
 			}
-			if ($int2 = 19) {
+			if ($int2 = 18) {
 				return(70, bullseye_lantern_4550, "Caves south of Dorgesh-Kaan");
 			}
+			if ($int2 = 19) {
+				return(70, mark_of_grace_11849, "Pollnivneach Rooftop Course");
+			}
 			if ($int2 = 20) {
-				return(70, mark_of_grace_11849, "Pollnivneach rooftop course");
+				return(75, crystal_shard_23962, "Prifddinas Agility Course");
 			}
 			if ($int2 = 21) {
-				return(80, mark_of_grace_11849, "Rellekka rooftop course");
+				return(80, mark_of_grace_11849, "Rellekka Rooftop Course");
 			}
 			if ($int2 = 22) {
-				return(90, mark_of_grace_11849, "Ardougne rooftop course");
+				return(90, mark_of_grace_11849, "Ardougne Rooftop Course");
 			}
 			return(-1, null, "");
 		}
@@ -1218,24 +1223,28 @@ switch_int ($int0) {
 				case 73 :
 					return(77, agility_jump_6514, "Shilo Village river crossing");
 				case 74 :
-					return(79, agility_climb_6517, "Kharazi Jungle vine climb<br> (with Legends' Guild access)");
+					return(78, agility_contortion_6516, "Iorwerth Dungeon northern shortcut");
 				case 75 :
-					return(80, agility_jump_6514, "Taverley Dungeon spiked blades jump");
+					return(79, agility_climb_6517, "Kharazi Jungle vine climb<br> (with Legends' Guild access)");
 				case 76 :
-					return(81, agility_jump_6514, "Slayer Dungeon spiked blades jump");
+					return(80, agility_jump_6514, "Taverley Dungeon spiked blades jump");
 				case 77 :
-					return(82, agility_jump_6514, "Lava Maze northern jump");
+					return(81, agility_jump_6514, "Fremennik Slayer Dungeon spiked blades jump");
 				case 78 :
-					return(83, agility_jump_6514, "Brimhaven Dungeon eastern stepping stones");
+					return(82, agility_jump_6514, "Lava Maze northern jump");
 				case 79 :
-					return(85, agility_climb_6517, "Elven overpass advanced cliffside scramble");
+					return(83, agility_jump_6514, "Brimhaven Dungeon eastern stepping stones");
 				case 80 :
-					return(86, agility_contortion_6516, "Kalphite Lair shortcut");
+					return(84, agility_contortion_6516, "Iorwerth Dungeon southern shortcut");
 				case 81 :
-					return(87, agility_climb_6517, "Brimhaven Dungeon vine to baby green dragons");
+					return(85, agility_climb_6517, "Elven overpass advanced cliffside scramble");
 				case 82 :
-					return(88, agility_contortion_6516, "Karuulm Dungeon pipe");
+					return(86, agility_contortion_6516, "Kalphite Lair shortcut");
 				case 83 :
+					return(87, agility_climb_6517, "Brimhaven Dungeon vine to baby green dragons");
+				case 84 :
+					return(88, agility_contortion_6516, "Karuulm Dungeon pipe");
+				case 85 :
 					return(89, agility_jump_6514, "Revenant cave jump (hard)");
 				case default :
 					return(-1, null, "");
@@ -1253,6 +1262,12 @@ switch_int ($int0) {
 			}
 			if ($int2 = 3) {
 				return(45, leaping_sturgeon_11332, "Leaping sturgeon<br> (with 45 Strength & 70 Fishing)");
+			}
+			return(-1, null, "");
+		}
+		if ($int1 = 4) {
+			if ($int2 = 0) {
+				return(50, crystal_halberd_23987, "Members: Crystal weaponry<br> (with 70 Attack)");
 			}
 			return(-1, null, "");
 		}
@@ -1322,36 +1337,48 @@ switch_int ($int0) {
 					case 29 :
 						return(69, dragon_scale_dust_241, "Anti-firebreath potion<br>Lantadyme & ground blue dragon scale");
 					case 30 :
-						return(72, wine_of_zamorak_245, "Ranging potion<br>Dwarf weed & wine of Zamorak");
+						return(70, crystal_dust_23964, "Divine super attack potion<br>Crystal dust & super attack potion");
 					case 31 :
-						return(73, cactus_spine_6016, "Weapon poison(+)<br>Coconut milk, cactus spine & red spiders' eggs");
+						return(70, crystal_dust_23964, "Divine super strength potion<br>Crystal dust & super strength potion");
 					case 32 :
-						return(76, potato_cactus_3138, "Magic potion<br>Lantadyme & potato cactus");
+						return(70, crystal_dust_23964, "Divine super defence potion<br>Crystal dust & super defence potion");
 					case 33 :
-						return(77, amylase_crystal_5_3961, "Stamina potion<br>Amylase & super energy potion");
+						return(72, wine_of_zamorak_245, "Ranging potion<br>Dwarf weed & wine of Zamorak");
 					case 34 :
-						return(78, jangerberries_247, "Zamorak brew<br>Torstol & jangerberries");
+						return(73, cactus_spine_6016, "Weapon poison(+)<br>Coconut milk, cactus spine & red spiders' eggs");
 					case 35 :
-						return(79, magic_roots_6051, "Antidote++<br>Coconut milk, irit leaf & magic tree roots");
+						return(74, crystal_dust_23964, "Divine ranging potion<br>Crystal dust & ranging potion");
 					case 36 :
-						return(80, wine_of_zamorak_245, "Bastion potion<br>Cadantine & Wine of Zamorak mixed in a Vial of blood");
+						return(76, potato_cactus_3138, "Magic potion<br>Lantadyme & potato cactus");
 					case 37 :
-						return(80, potato_cactus_3138, "Battlemage potion<br>Cadantine & Potato Cactus mixed in a Vial of blood");
+						return(77, amylase_crystal_5_3961, "Stamina potion<br>Amylase & super energy potion");
 					case 38 :
-						return(81, crushed_nest_6693, "Saradomin brew<br>Toadflax & crushed birdnest");
+						return(78, jangerberries_247, "Zamorak brew<br>Torstol & jangerberries");
 					case 39 :
-						return(82, poison_ivy_berries_6018, "Weapon poison(++)<br>Coconut milk, nightshade & poison ivy berries");
+						return(78, crystal_dust_23964, "Divine magic potion<br>Crystal dust & magic potion");
 					case 40 :
-						return(84, lava_scale_shard_5_3256, "Extended antifire potion<br>Antifire potion & lava scale shards");
+						return(79, magic_roots_6051, "Antidote++<br>Coconut milk, irit leaf & magic tree roots");
 					case 41 :
-						return(87, zulrahs_scales_4_3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
+						return(80, wine_of_zamorak_245, "Bastion potion<br>Cadantine & Wine of Zamorak mixed in a Vial of blood");
 					case 42 :
-						return(90, torstol_269, "Super combat potion<br>Super attack potion, Super defence potion, Super strength potion & Torstol");
+						return(80, potato_cactus_3138, "Battlemage potion<br>Cadantine & Potato Cactus mixed in a Vial of blood");
 					case 43 :
-						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & Crushed superior dragon bones<br>(after Dragon Slayer II)");
+						return(81, crushed_nest_6693, "Saradomin brew<br>Toadflax & crushed birdnest");
 					case 44 :
-						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
+						return(82, poison_ivy_berries_6018, "Weapon poison(++)<br>Coconut milk, nightshade & poison ivy berries");
 					case 45 :
+						return(84, lava_scale_shard_5_3256, "Extended antifire potion<br>Antifire potion & lava scale shards");
+					case 46 :
+						return(87, zulrahs_scales_4_3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
+					case 47 :
+						return(90, torstol_269, "Super combat potion<br>Super attack potion, Super defence potion, Super strength potion & Torstol");
+					case 48 :
+						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & Crushed superior dragon bones<br>(after Dragon Slayer II)");
+					case 49 :
+						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
+					case 50 :
+						return(97, crystal_dust_23964, "Divine super combat potion<br>Crystal dust & super combat potion");
+					case 51 :
 						return(98, lava_scale_shard_5_3256, "Extended super antifires<br>Super antifire potion & lava scale shards<br>(after Dragon Slayer II)");
 					case default :
 						return(-1, null, "");
@@ -1712,7 +1739,7 @@ switch_int ($int0) {
 				return(64, xerician_fabric_13383, "Lizardman Temple beneath Molch");
 			}
 			if ($int2 = 7) {
-				return(72, raw_shark_383, "King Lathas' castle in Ardougne");
+				return(72, raw_shark_383, "Ardougne Castle");
 			}
 			if ($int2 = 8) {
 				return(78, uncut_sapphire_1623, "Dorgesh-Kaan (rich chests)");
@@ -2208,6 +2235,42 @@ switch_int ($int0) {
 			return(-1, null, "");
 		}
 		if ($int1 = 7) {
+			if ($int2 = 0) {
+				return(70, crystal_helm_23971, "Crystal helm<br>(with 70 Smithing)");
+			}
+			if ($int2 = 1) {
+				return(72, crystal_legs_23979, "Crystal legs<br>(with 72 Smithing)");
+			}
+			if ($int2 = 2) {
+				return(74, crystal_body_23975, "Crystal body<br>(with 74 Smithing)");
+			}
+			if ($int2 = 3) {
+				return(76, crystal_pickaxe_23680, "Crystal pickaxe<br>(with 76 Smithing)");
+			}
+			if ($int2 = 4) {
+				return(76, crystal_axe_23673, "Crystal axe<br>(with 76 Smithing)");
+			}
+			if ($int2 = 5) {
+				return(76, crystal_harpoon_23762, "Crystal harpoon<br>(with 76 Smithing)");
+			}
+			if ($int2 = 6) {
+				return(78, crystal_bow_23983, "Crystal bow<br>(with 78 Smithing)");
+			}
+			if ($int2 = 7) {
+				return(78, crystal_halberd_23987, "Crystal halberd<br>(with 78 Smithing)");
+			}
+			if ($int2 = 8) {
+				return(78, crystal_shield_23991, "Crystal shield<br>(with 78 Smithing)");
+			}
+			if ($int2 = 9) {
+				return(80, enhanced_crystal_key_23951, "Enhanced crystal key<br>(with 80 Smithing)");
+			}
+			if ($int2 = 10) {
+				return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Smithing)");
+			}
+			return(-1, null, "");
+		}
+		if ($int1 = 8) {
 			switch_int ($int2) {
 				case 0 :
 					return(5, bird_house_21512, "Craft a birdhouse trap from normal logs.");
@@ -2618,24 +2681,27 @@ switch_int ($int0) {
 				return(70, adamantite_ore_449, "Adamantite ore");
 			}
 			if ($int2 = 23) {
-				return(72, pay_dirt_12011, "Members: Motherlode mine (upper level)");
+				return(70, soft_clay_1761, "Members: Soft clay");
 			}
 			if ($int2 = 24) {
-				return(72, te_salt_22593, "Members: Te Salt");
+				return(72, pay_dirt_12011, "Members: Motherlode mine (upper level)");
 			}
 			if ($int2 = 25) {
-				return(72, efh_salt_22595, "Members: Efh Salt");
+				return(72, te_salt_22593, "Members: Te Salt");
 			}
 			if ($int2 = 26) {
-				return(72, urt_salt_22597, "Members: Urt Salt");
+				return(72, efh_salt_22595, "Members: Efh Salt");
 			}
 			if ($int2 = 27) {
-				return(72, basalt_22603, "Members: Basalt");
+				return(72, urt_salt_22597, "Members: Urt Salt");
 			}
 			if ($int2 = 28) {
-				return(85, runite_ore_451, "Runite ore");
+				return(72, basalt_22603, "Members: Basalt");
 			}
 			if ($int2 = 29) {
+				return(85, runite_ore_451, "Runite ore");
+			}
+			if ($int2 = 30) {
 				return(92, amethyst_21347, "Members: Amethyst");
 			}
 			return(-1, null, "");
@@ -2682,6 +2748,12 @@ switch_int ($int0) {
 			}
 			if ($int2 = 13) {
 				return(70, expert_mining_gloves_21392, "Members: Expert mining gloves");
+			}
+			if ($int2 = 14) {
+				return(71, crystal_pickaxe_23680, "Members: Crystal pickaxe<br>(after Song of the Elves)");
+			}
+			if ($int2 = 13) {
+				return(71, crystal_pickaxe_23680, "Members: Crystal pickaxe<br>(after Song of the Elves)");
 			}
 			return(-1, null, "");
 		}
@@ -3337,6 +3409,42 @@ switch_int ($int0) {
 		}
 		if ($int1 = 9) {
 			if ($int2 = 0) {
+				return(70, crystal_helm_23971, "Crystal helm<br>(with 70 Crafting)");
+			}
+			if ($int2 = 1) {
+				return(72, crystal_legs_23979, "Crystal legs<br>(with 72 Crafting)");
+			}
+			if ($int2 = 2) {
+				return(74, crystal_body_23975, "Crystal body<br>(with 74 Crafting)");
+			}
+			if ($int2 = 3) {
+				return(76, crystal_pickaxe_23680, "Crystal pickaxe<br>(with 76 Crafting)");
+			}
+			if ($int2 = 4) {
+				return(76, crystal_axe_23673, "Crystal axe<br>(with 76 Crafting)");
+			}
+			if ($int2 = 5) {
+				return(76, crystal_harpoon_23762, "Crystal harpoon<br>(with 76 Crafting)");
+			}
+			if ($int2 = 6) {
+				return(78, crystal_bow_23983, "Crystal bow<br>(with 78 Crafting)");
+			}
+			if ($int2 = 7) {
+				return(78, crystal_halberd_23987, "Crystal halberd<br>(with 78 Crafting)");
+			}
+			if ($int2 = 8) {
+				return(78, crystal_shield_23991, "Crystal shield<br>(with 78 Crafting)");
+			}
+			if ($int2 = 9) {
+				return(80, enhanced_crystal_key_23951, "Enhanced crystal key<br>(with 80 Crafting)");
+			}
+			if ($int2 = 10) {
+				return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Smithing)");
+			}
+			return(-1, null, "");
+		}
+		if ($int1 = 10) {
+			if ($int2 = 0) {
 				return(60, dragon_sq_shield_1187, "Dragon square shield");
 			}
 			if ($int2 = 1) {
@@ -3507,6 +3615,9 @@ switch_int ($int0) {
 				return(61, dragon_harpoon_21028, "Dragon harpoon");
 			}
 			if ($int2 = 2) {
+				return(71, crystal_harpoon_23762, "Crystal harpoon<br>(after Song of the Elves)");
+			}
+			if ($int2 = 3) {
 				return(75, infernal_harpoon_21031, "Infernal harpoon<br>(with 85 Cooking)");
 			}
 			return(-1, null, "");
@@ -4412,6 +4523,9 @@ switch_int ($int0) {
 			if ($int2 = 10) {
 				return(61, infernal_axe_13241, "Members: Infernal axe<br>(with 85 Firemaking)");
 			}
+			if ($int2 = 11) {
+				return(71, crystal_axe_23673, "Members: Crystal axe<br>(after Song of the Elves)");
+			}
 			return(-1, null, "");
 		}
 		if ($int1 = 2) {
@@ -5037,6 +5151,9 @@ switch_int ($int0) {
 			}
 			if ($int2 = 9) {
 				return(72, calquat_fruit_5980, "Calquat trees<br>Payment: Poison ivy berries x8");
+			}
+			if ($int2 = 10) {
+				return(74, crystal_shard_23962, "Crystal trees");
 			}
 			if ($int2 = 10) {
 				return(-1, 7620, "Anima plants have effects on all other farming patches");

@@ -1,0 +1,24 @@
+// 2925
+script2925(component $component0, string $string0, string $string1, obj $obj1)
+cc_create($component0, ^iftype_graphic, 0);
+cc_setobject($obj1, -1);
+cc_setoutline(1);
+cc_setgraphicshadow(0x604e32);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(1, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_create($component0, ^iftype_text, 1);
+cc_setsize(292, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(43, 1, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_setcolour(0xf5e9d5);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settext($string0);
+cc_create($component0, ^iftype_text, 2);
+cc_setsize(292, 22, ^setsize_abs, ^setsize_abs);
+cc_setposition(43, 1, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_setcolour(0xf5e9d5);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settext($string1);

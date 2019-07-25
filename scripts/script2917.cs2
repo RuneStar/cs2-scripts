@@ -1,0 +1,35 @@
+// 2917
+script2917(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23)
+def_int $int24 = if_getheight($component2);
+if_setscrollsize(0, $int24, $component1);
+~scrollbar_vertical($component3, $component1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+if_setscrollpos(0, 0, $component1);
+if_settext("Crystal Singing Recipes", $component0);
+~script2918($component4, "Crystal Vial", "<tostring(10)> <~script2920> Shards", ~gauntlet_select_item(vial_23879, %varbit9292));
+def_string $string0 = "Teleport Crystal";
+if (%varbit9292 = 1) {
+	$string0 = "Corrupted Teleport Crystal";
+}
+~script2918($component5, $string0, "<tostring(40)> <~script2920> Shards", ~gauntlet_select_item(teleport_crystal_23904, %varbit9292));
+~script2918($component6, "Basic <~script2920> Halberd", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(crystal_halberd_basic_23895, %varbit9292));
+~script2918($component7, "Basic <~script2920> Bow", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(crystal_bow_basic_23901, %varbit9292));
+~script2918($component8, "Basic <~script2920> Staff", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(crystal_staff_basic_23898, %varbit9292));
+~script2918($component9, "Basic <~script2920> Helm", "<tostring(40)> <~script2920> Shards, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(crystal_helm_basic_23886, %varbit9292));
+~script2918($component10, "Basic <~script2920> Body", "<tostring(40)> <~script2920> Shards, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(crystal_body_basic_23889, %varbit9292));
+~script2918($component11, "Basic <~script2920> Legs", "<tostring(40)> <~script2920> Shards, <tostring(1)> <~script2920> Ore, <tostring(1)> Phren Bark & <tostring(1)> Linum Tirinum", ~gauntlet_select_item(crystal_legs_basic_23892, %varbit9292));
+~script2918($component12, "Attuned <~script2920> Halberd", "<tostring(60)> <~script2920> Shards & 1 Basic <~script2920> Halberd", ~gauntlet_select_item(crystal_halberd_attuned_23896, %varbit9292));
+~script2918($component13, "Attuned <~script2920> Bow", "<tostring(60)> <~script2920> Shards & 1 Basic <~script2920> Bow", ~gauntlet_select_item(crystal_bow_attuned_23902, %varbit9292));
+~script2918($component14, "Attuned <~script2920> Staff", "<tostring(60)> <~script2920> Shards & 1 Basic <~script2920> Staff", ~gauntlet_select_item(crystal_staff_attuned_23899, %varbit9292));
+~script2918($component15, "Attuned <~script2920> Helm", "<tostring(60)> <~script2920> Shards, 1 Basic <~script2920> Helm, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(crystal_helm_attuned_23887, %varbit9292));
+~script2918($component16, "Attuned <~script2920> Body", "<tostring(60)> <~script2920> Shards, 1 Basic <~script2920> Body, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(crystal_body_attuned_23890, %varbit9292));
+~script2918($component17, "Attuned <~script2920> Legs", "<tostring(60)> <~script2920> Shards, 1 Basic <~script2920> Legs, <tostring(2)> <~script2920> Ore, <tostring(2)> Phren Bark & <tostring(2)> Linum Tirinum", ~gauntlet_select_item(crystal_legs_attuned_23893, %varbit9292));
+~script2918($component18, "Perfected <~script2920> Halberd", "1 Attuned <~script2920> Halberd & 1 <~script2920> Spike", ~gauntlet_select_item(crystal_halberd_perfected_23897, %varbit9292));
+def_string $string1 = "Crystalline";
+if (%varbit9292 = 1) {
+	$string1 = "Corrupted";
+}
+~script2918($component19, "Perfected <~script2920> Bow", "1 Attuned <~script2920> Bow & 1 <$string1> Bowstring", ~gauntlet_select_item(crystal_bow_perfected_23903, %varbit9292));
+~script2918($component20, "Perfected <~script2920> Staff", "1 Attuned <~script2920> Staff & 1 <~script2920> Orb", ~gauntlet_select_item(crystal_staff_perfected_23900, %varbit9292));
+~script2918($component21, "Perfected <~script2920> Helm", "<tostring(80)> <~script2920> Shards, 1 Attuned <~script2920> Helm, <tostring(3)> <~script2920> Ore, <tostring(3)> Phren Bark & <tostring(3)> Linum Tirinum", ~gauntlet_select_item(crystal_helm_perfected_23888, %varbit9292));
+~script2918($component22, "Perfected <~script2920> Body", "<tostring(80)> <~script2920> Shards, 1 Attuned <~script2920> Body, <tostring(3)> <~script2920> Ore, <tostring(3)> Phren Bark & <tostring(3)> Linum Tirinum", ~gauntlet_select_item(crystal_body_perfected_23891, %varbit9292));
+~script2918($component23, "Perfected <~script2920> Legs", "<tostring(80)> <~script2920> Shards, 1 Attuned <~script2920> Legs, <tostring(3)> <~script2920> Ore, <tostring(3)> Phren Bark & <tostring(3)> Linum Tirinum", ~gauntlet_select_item(crystal_legs_perfected_23894, %varbit9292));
