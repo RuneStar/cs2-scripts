@@ -1,0 +1,50 @@
+// 2844
+[proc,adventurepath_item_entry](int $int0, component $component1, int $int2, obj $obj3, int $int4, string $string0, int $int5)(int, int)
+if ($obj3 = null) {
+	return($int2, $int5);
+}
+cc_create($component1, ^iftype_rectangle, $int2);
+cc_setsize(if_getwidth($component1), 50, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+if ($int5 = 1) {
+	cc_settrans(215);
+} else {
+	cc_settrans(235);
+}
+cc_setcolour(^black);
+$int2 = calc($int2 + 1);
+$int2 = ~script2991($component1, $int2, calc(36 * 2), 50, 0, $int0);
+cc_create($component1, ^iftype_graphic, $int2);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(36 / 2), calc(($int0 + (32 / 2)) - (32 / 4)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setoutline(1);
+cc_setobject(oc_uncert($obj3), $int4);
+$int2 = calc($int2 + 1);
+def_string $string1 = "";
+switch_obj ($obj3) {
+	case combat_path_voucher_24131 :
+		cc_setop(1, "Show voucher items");
+		$string1 = "Combat path voucher";
+		cc_setonop("adventurepath_voucher_init(0, $string1)");
+		$string0 = append($string0, " <~text_device("Click", "Tap")> the voucher icon to see the rewards.");
+	case default :
+		cc_setop(1, "Check reward");
+		cc_setonop("adventurepath_voucher_item_op($obj3, $int4)");
+}
+if (~on_mobile = false) {
+	cc_setonmouserepeat("cc_settrans(event_com, cc_getid, 150, null)");
+	cc_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)");
+}
+def_int $int6 = calc((if_getwidth($component1) - (36 * 2)) - 10);
+$int2 = ~script2991($component1, $int2, calc($int6 + 10), 50, calc(36 * 2), $int0);
+cc_create($component1, ^iftype_text, $int2);
+cc_setsize($int6, 50, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc((36 * 2) + 5), $int0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($string0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int2 = calc($int2 + 1);
+return($int2, calc(1 - $int5));

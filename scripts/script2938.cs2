@@ -1,0 +1,6 @@
+// 2938
+script2938(component $component0, obj $obj1, int $int2, obj $obj3, string $string0, obj $obj4, obj $obj5)
+if_sethide(false, $component0);
+~script2940($component0, $obj1, $int2, $obj3, $string0, $obj4, $obj5);
+if_setoninvtransmit("script2939($component0, $obj1, $int2, $obj3, $string0, $obj4, $obj5){inv}", $component0);
+if_setonstattransmit("script2939($component0, $obj1, $int2, $obj3, $string0, $obj4, $obj5){crafting}", $component0);

@@ -1,0 +1,42 @@
+// 2990
+script2990(component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)(int)
+def_int $int8 = 0;
+def_int $int9 = calc(($int2 - 9) + $int4);
+def_int $int10 = calc(($int3 - 9) + $int5);
+def_int $int11 = calc($int2 - 18);
+def_int $int12 = calc($int3 - 18);
+def_int $int13 = 5;
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setsize(calc($int2 - 4), $int3, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(2 + $int4), $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0xf50000);
+cc_setfill(true);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_rectangle, $int1);
+def_int $int14 = 0;
+if ($int6 <= $int7) {
+	$int14 = calc($int2 - 4);
+} else {
+	$int14 = scale($int7, $int6, calc($int2 - 4));
+}
+cc_setsize($int14, $int3, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(2 + $int4), $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0x06eb01);
+cc_setfill(true);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, calc($int1 + 0), "v2_stone_button,0", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 1), "v2_stone_button,1", $int9, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 2), "v2_stone_button,2", $int4, $int10, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 3), "v2_stone_button,3", $int9, $int10, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 4), "v2_stone_button,4", $int4, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $int12, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 5), "v2_stone_button,5", calc($int4 + 9), $int5, ^setpos_abs_left, ^setpos_abs_top, $int11, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 6), "v2_stone_button,6", $int9, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $int12, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 7), "v2_stone_button,7", calc($int4 + 9), $int10, ^setpos_abs_left, ^setpos_abs_top, $int11, 9, ^setsize_abs, ^setsize_abs);
+cc_create($component0, ^iftype_text, calc($int1 + 8));
+cc_setsize($int2, calc($int3 - 3), ^setsize_abs, ^setsize_abs);
+cc_setposition($int4, calc($int5 + 3), ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("<tostring($int7)>/<tostring($int6)>");
+cc_setcolour(^black);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+return(calc($int1 + 9));

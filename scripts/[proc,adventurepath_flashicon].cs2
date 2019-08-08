@@ -1,0 +1,7 @@
+// 2958
+[proc,adventurepath_flashicon](component $component0)
+if (calc(clientclock % 20) < 10) {
+	if_sethide(false, $component0);
+} else {
+	if_sethide(true, $component0);
+}

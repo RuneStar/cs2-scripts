@@ -1,171 +1,26 @@
 // 1596
-[clientscript,silver_crafting_init](component $component0, component $component1, component $component2, component $component3, component $component4)
-cc_deleteall($component0);
-cc_deleteall($component1);
-cc_deleteall($component2);
-if_setoninvtransmit("silver_crafting_init($component0, $component1, $component2, $component3, $component4){inv}", $component1);
-def_int $int5 = 36;
-def_int $int6 = 32;
-def_int $int7 = 60;
-def_int $int8 = 0;
-def_obj $obj9 = null;
-while ($int8 < 4) {
-	$obj9 = enum(int, obj, 1521, $int8);
-	cc_create($component0, ^iftype_graphic, $int8);
-	cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
-	cc_setposition(10, calc(20 + ($int8 * 60)), ^setpos_abs_left, ^setpos_abs_top);
-	cc_setobject_nonum(enum(int, obj, 1521, $int8), 0);
-	if (inv_total(inv, $obj9) = 0) {
-		cc_sethide(false);
-	} else {
-		cc_sethide(true);
-	}
-	$int8 = calc($int8 + 1);
-}
-$int8 = 0;
-while ($int8 < 4) {
-	$obj9 = enum(int, obj, 1521, $int8);
-	cc_create($component0, ^iftype_text, calc($int8 + 4));
-	cc_setsize(210, 20, ^setsize_abs, ^setsize_abs);
-	cc_setposition($int7, calc(15 + ($int8 * 60)), ^setpos_abs_left, ^setpos_abs_top);
-	cc_settext(enum(int, string, 1522, $int8));
-	cc_settextfont(b12_full);
-	cc_setcolour(0xff981f);
-	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-	$int8 = calc($int8 + 1);
-}
-$int8 = 0;
-while ($int8 < 4) {
-	$obj9 = enum(int, obj, 1521, $int8);
-	cc_create($component0, ^iftype_text, calc($int8 + 8));
-	cc_setsize(210, 20, ^setsize_abs, ^setsize_abs);
-	cc_setposition($int7, calc(35 + ($int8 * 60)), ^setpos_abs_left, ^setpos_abs_top);
-	cc_settext(enum(int, string, 1523, $int8));
-	cc_settextfont(p12_full);
-	cc_setcolour(0xff981f);
-	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-	if (inv_total(inv, $obj9) = 0) {
-		cc_sethide(false);
-	} else {
-		cc_sethide(true);
-	}
-	$int8 = calc($int8 + 1);
-}
-$obj9 = null;
-$int8 = 0;
-def_obj $obj10 = enum(int, obj, 1515, $int8);
-def_int $int11 = 30;
-def_obj $obj12 = null;
-def_string $string0 = "";
-def_int $int13 = -1;
-while ($obj10 ! null) {
-	cc_create($component1, ^iftype_graphic, $int8);
-	cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int7 + (($int8 % 3) * 70)), $int11, ^setpos_abs_left, ^setpos_abs_top);
-	$obj12 = enum(obj, obj, 1519, $obj10);
-	$int13 = enum(obj, int, 1520, $obj10);
-	if (($obj12 ! null) & ((inv_total(inv, $obj12) = 0) | (inv_total(inv, silver_bar_2355) = 0))) {
-		if (stat(crafting) >= $int13) {
-			$string0 = "<oc_name($obj10)><br><col=008000>Requires <tostring($int13)> Crafting<br><col=800000>Requires <oc_name($obj12)>";
-		} else {
-			$string0 = "<oc_name($obj10)><br><col=800000>Requires <tostring($int13)> Crafting<br><col=800000>Requires <oc_name($obj12)>";
-		}
-		cc_setobject_nonum(enum(obj, obj, 1518, $obj10), 0);
-		cc_clearops;
-	} else {
-		if (stat(crafting) >= $int13) {
-			$string0 = "<oc_name($obj10)><br><col=008000>Requires <tostring($int13)> Crafting";
-		} else {
-			$string0 = "<oc_name($obj10)><br><col=800000>Requires <tostring($int13)> Crafting";
-		}
-		cc_setobject_nonum($obj10, 0);
-		cc_setop(1, "Craft 1");
-		cc_setop(2, "Craft 5");
-		cc_setop(3, "Craft 10");
-		cc_setop(4, "Craft X");
-		cc_setop(5, "Craft All");
-		cc_setopbase(oc_name($obj10));
-	}
-	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component4, $string0, 25, 512)");
-	cc_setonmouseleave("deltooltip($component4)");
-	$obj9 = enum(obj, obj, 1517, $obj10);
-	if (($obj9 ! null) & (inv_total(inv, $obj9) = 0)) {
-		cc_sethide(true);
-	} else {
-		cc_sethide(false);
-	}
-	$int8 = calc($int8 + 1);
-	$obj10 = enum(int, obj, 1515, $int8);
-	if (calc($int8 % 3) = 0) {
-		$int11 = calc($int11 + 60);
-	}
-}
-$int8 = 0;
-$obj10 = enum(int, obj, 1516, $int8);
-if ($obj10 = null) {
-	return;
-}
-$obj9 = enum(obj, obj, 1517, $obj10);
-$int11 = 8;
-$int7 = 25;
-while ($obj10 ! null) {
-	cc_create($component3, ^iftype_text, $int8);
-	cc_setsize(80, 30, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int7 + (($int8 % 2) * 85)), $int11, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settext(enum(obj, string, 1682, $obj10));
-	cc_settextfont(p12_full);
-	cc_setcolour(0xff981f);
-	cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
-	$int8 = calc($int8 + 1);
-	$obj10 = enum(int, obj, 1516, $int8);
-	$obj9 = enum(obj, obj, 1517, $obj10);
-	if (calc($int8 % 2) = 0) {
-		$int11 = calc($int11 + 60);
-	}
-}
-$obj9 = null;
-$int8 = 0;
-$obj10 = enum(int, obj, 1516, $int8);
-if ($obj10 = null) {
-	return;
-}
-$obj9 = enum(obj, obj, 1517, $obj10);
-$int11 = 35;
-$int7 = 45;
-while ($obj10 ! null) {
-	cc_create($component2, ^iftype_graphic, $int8);
-	cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int7 + (($int8 % 2) * 90)), $int11, ^setpos_abs_left, ^setpos_abs_top);
-	$obj9 = enum(obj, obj, 1517, $obj10);
-	$int13 = enum(obj, int, 1520, $obj10);
-	if (($obj9 ! null) & (inv_total(inv, $obj9) = 0)) {
-		if (stat(crafting) >= $int13) {
-			$string0 = "<oc_name($obj10)><br><col=008000>Requires <tostring($int13)> Crafting<br><col=800000>Requires mould";
-		} else {
-			$string0 = "<oc_name($obj10)><br><col=800000>Requires <tostring($int13)> Crafting<br><col=800000>Requires mould";
-		}
-		cc_setobject_nonum($obj9, 0);
-		cc_clearops;
-	} else {
-		if (stat(crafting) >= $int13) {
-			$string0 = "<oc_name($obj10)><br><col=008000>Requires <tostring($int13)> Crafting";
-		} else {
-			$string0 = "<oc_name($obj10)><br><col=800000>Requires <tostring($int13)> Crafting";
-		}
-		cc_setobject_nonum($obj10, 0);
-		cc_setop(1, "Craft 1");
-		cc_setop(2, "Craft 5");
-		cc_setop(3, "Craft 10");
-		cc_setop(4, "Craft X");
-		cc_setop(5, "Craft All");
-		cc_setopbase(oc_name($obj10));
-	}
-	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component4, $string0, 25, 512)");
-	cc_setonmouseleave("deltooltip($component4)");
-	$int8 = calc($int8 + 1);
-	$obj10 = enum(int, obj, 1516, $int8);
-	$obj9 = enum(obj, obj, 1517, $obj10);
-	if (calc($int8 % 2) = 0) {
-		$int11 = calc($int11 + 60);
-	}
-}
+[clientscript,silver_crafting_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24)
+~script2935($component1, ring_mould_1592, "Rings", "You need a ring mould.");
+~script2938($component2, opal_ring_21081, 1, ring_mould_1592, "Opal ring", opal_1609, dummy_perfect_ring_1647);
+~script2938($component3, jade_ring_21084, 13, ring_mould_1592, "Jade ring", jade_1611, dummy_perfect_ring_1647);
+~script2938($component4, topaz_ring_21087, 16, ring_mould_1592, "Topaz ring", red_topaz_1613, dummy_perfect_ring_1647);
+~script2935($component5, necklace_mould_1597, "Necklaces", "You need a necklace mould.");
+~script2938($component6, opal_necklace_21090, 16, necklace_mould_1597, "Opal necklace", opal_1609, dummy_perfect_necklace_1666);
+~script2938($component7, jade_necklace_21093, 25, necklace_mould_1597, "Jade necklace", jade_1611, dummy_perfect_necklace_1666);
+~script2938($component8, topaz_necklace_21096, 32, necklace_mould_1597, "Topaz necklace", red_topaz_1613, dummy_perfect_necklace_1666);
+~script2935($component9, amulet_mould_1595, "Amulets", "You need an amulet mould.");
+~script2938($component10, opal_amulet_u_21099, 27, amulet_mould_1595, "Opal amulet", opal_1609, dummy_gold_amulet_u_1685);
+~script2938($component11, jade_amulet_u_21102, 34, amulet_mould_1595, "Jade amulet", jade_1611, dummy_gold_amulet_u_1685);
+~script2938($component12, topaz_amulet_u_21105, 45, amulet_mould_1595, "Topaz amulet", red_topaz_1613, dummy_gold_amulet_u_1685);
+~script2935($component13, bracelet_mould_11065, "Bracelets", "You need a bracelet mould.");
+~script2938($component14, opal_bracelet_21117, 22, bracelet_mould_11065, "Opal bracelet", opal_1609, dummy_gold_bracelet_11067);
+~script2938($component15, jade_bracelet_21120, 29, bracelet_mould_11065, "Jade bracelet", jade_1611, dummy_gold_bracelet_11067);
+~script2938($component16, topaz_bracelet_21123, 38, bracelet_mould_11065, "Topaz bracelet", red_topaz_1613, dummy_gold_bracelet_11067);
+~script2941($component17, unstrung_symbol_1714, 16, holy_mould_1599, "Holy symbol");
+~script2941($component18, unstrung_emblem_1720, 17, unholy_mould_1594, "Unholy symbol");
+~script2941($component19, silver_sickle_2961, 18, sickle_mould_2976, "Silver sickle");
+~script2941($component20, conductor_4201, 20, conductor_mould_4200, "Lightning rod");
+~script2941($component21, silver_bolts_unf_9382, 22, bolt_mould_9434, "Silver crossbow bolts");
+~script2941($component22, tiara_5525, 23, tiara_mould_5523, "Tiara");
+~script2941($component23, silvthrill_rod_7637, 25, rod_clay_mould_7649, "Silvthrill rod");
+~script2941($component24, demonic_sigil_6748, 30, demonic_sigil_mould_6747, "Demonic sigil");

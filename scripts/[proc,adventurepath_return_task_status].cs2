@@ -1,0 +1,6 @@
+// 2959
+[proc,adventurepath_return_task_status](int $int0)(int)
+if ($int0 < 32) {
+	return(testbit(%var2364, $int0));
+}
+return(^false);

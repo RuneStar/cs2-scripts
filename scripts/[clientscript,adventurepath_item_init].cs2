@@ -1,0 +1,79 @@
+// 2843
+[clientscript,adventurepath_item_init](struct $struct0)
+if ($struct0 = null) {
+	if_close;
+	return;
+}
+def_component $component1 = 643:4;
+def_component $component2 = 643:3;
+def_component $component3 = 643:0;
+if_setsize(500, 334, ^setsize_abs, ^setsize_abs, $component3);
+if_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_top, $component3);
+cc_deleteall($component1);
+cc_deleteall($component2);
+cc_deleteall($component3);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_enum $enum7 = struct_param($struct0, 820);
+def_enum $enum8 = struct_param($struct0, 821);
+def_enum $enum9 = struct_param($struct0, 833);
+def_enum $enum10 = null;
+def_enum $enum11 = null;
+def_obj $obj12 = null;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+$int5 = ~script2974($component2, $int5, calc(36 * 2), 40, 0, 0, "<lt><lt>   Back", 0xff981f, 0xff981f, 0, 0);
+cc_setop(1, "Back");
+while ($int13 < 4) {
+	$enum10 = enum(int, enum, $enum7, $int13);
+	$enum11 = enum(int, enum, $enum8, $int13);
+	if (($enum10 ! null) & ($enum11 ! null)) {
+		cc_create($component2, ^iftype_text, $int5);
+		cc_setsize(calc(16 + if_getwidth($component2)), 40, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top);
+		if ($int13 = 0) {
+			cc_settext("<u=ff981f>Free to play</u>");
+		} else if ($int13 = 1) {
+			cc_settext("<u=ff981f>Members</u>");
+		} else if ($int13 = 2) {
+			cc_settext("<u=ff981f>Free to play reclaimable</u>");
+		} else {
+			cc_settext("<u=ff981f>Members reclaimable</u>");
+		}
+		cc_settextfont(b12_full);
+		cc_settextshadow(true);
+		cc_setcolour(0xff981f);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		$int5 = calc($int5 + 1);
+		$int4 = calc($int4 + 40);
+		$int15 = enum_getoutputcount($enum10);
+		while ($int14 < $int15) {
+			$obj12 = enum(int, namedobj, $enum10, $int14);
+			$int5, $int6 = ~adventurepath_item_entry($int4, $component2, $int5, $obj12, enum(namedobj, int, $enum11, $obj12), enum(namedobj, string, $enum9, $obj12), $int6);
+			$int4 = calc($int4 + 50);
+			$int14 = calc($int14 + 1);
+		}
+	}
+	$int13 = calc($int13 + 1);
+	$enum10 = null;
+	$enum11 = null;
+	$obj12 = null;
+	$int14 = 0;
+	$int15 = 0;
+}
+def_int $int16 = 0;
+def_int $int17 = if_getheight($component3);
+def_int $int18 = calc($int17 - if_getheight($component2));
+if ($int4 > $int17) {
+	if_setscrollsize(0, $int4, $component2);
+	~scrollbar_vertical($component1, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if_sethide(false, $component1);
+} else {
+	$int16 = calc($int17 - $int4);
+	if_setsize(if_getwidth($component3), calc($int18 + $int4), ^setsize_abs, ^setsize_abs, $component3);
+	if_setposition(if_getx($component3), calc($int16 / 2), ^setpos_abs_left, ^setpos_abs_top, $component3);
+	if_sethide(true, $component1);
+}
+~stoneborder(643:1, "<struct_param($struct0, 828)> completion rewards", 0);

@@ -1,0 +1,13 @@
+// 3010
+[proc,adventurepath_back_button_text](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6)(int)
+cc_create($component0, ^iftype_text, $int1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settext("<lt><lt>   Back");
+cc_setop(1, "Back");
+cc_setonop("adventurepath_back_to_paths($component2, $component3, $component4, $component5, $component6)");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+return(calc($int1 + 1));

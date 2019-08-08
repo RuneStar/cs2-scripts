@@ -1,0 +1,34 @@
+// 2945
+[proc,adventurepath_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26)
+def_struct $struct27 = null;
+def_int $int28 = 0;
+def_int $int29 = if_getwidth($component2);
+def_int $int30 = 286;
+def_int $int31 = calc(($int29 / 2) - (5 * 2));
+def_int $int32 = 0;
+def_int $int33 = 0;
+def_int $int34 = 0;
+while ($int34 < enum_getoutputcount(2618)) {
+	$struct27 = enum(int, struct, 2618, $int34);
+	if ($struct27 = null) {
+		if_close;
+		mes("Adventure Paths are not avaliable at this current time.");
+	}
+	$int28 = ~adventurepath_draw_path($component0, $component2, $int28, $struct27, $int29, $int30, $int31, $int32, $int33, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $int34, $component18, $component17, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26);
+	$int32 = calc($int32 + 1);
+	if ($int32 >= 2) {
+		$int32 = 0;
+		$int33 = calc($int33 + 1);
+	}
+	$int34 = calc($int34 + 1);
+}
+if ($int32 = 0) {
+	$int33 = calc($int33 - 1);
+}
+$int30 = calc(($int30 / 2) * ($int33 + 1));
+if ($int30 > if_getheight($component2)) {
+	if_setscrollsize(0, $int30, $component2);
+}
+~scrollbar_vertical($component1, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setonvartransmit("adventurepath_set_info_transmit($component7, $component8, $component9, $component10, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $component18, $component17, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26){var2358, var2357}", $component16);
+if_setonvartransmit("adventurepath_task_init_transmit($component0, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component18, $component17, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26){var2358, var2357}", $component15);

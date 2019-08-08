@@ -1,0 +1,77 @@
+// 2841
+[proc,adventurepath_voucher_entry](int $int0, component $component1, int $int2, int $int3, enum $enum4, enum $enum5, string $string0, npc $npc6, int $int7, int $int8)(int, int)
+cc_create($component1, ^iftype_rectangle, $int3);
+cc_setsize(if_getwidth($component1), 88, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+if ($int7 = 1) {
+	cc_settrans(215);
+} else {
+	cc_settrans(235);
+}
+cc_setcolour(^black);
+$int3 = calc($int3 + 1);
+$int3 = ~script2991($component1, $int3, 64, 88, 0, $int0);
+if ($npc6 ! null) {
+	cc_create($component1, ^iftype_model, $int3);
+	cc_setnpchead($npc6);
+	cc_setsize(64, 64, ^setsize_abs, ^setsize_abs);
+	cc_setmodelangle(0, 0, 27, 2047, 0, 1300);
+	cc_setposition(0, ~script2845($npc6, $int0), ^setpos_abs_left, ^setpos_abs_top);
+	$int3 = calc($int3 + 1);
+}
+def_int $int9 = enum_getoutputcount($enum4);
+$int9 = ~min(4, $int9);
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_obj $obj13 = null;
+def_int $int14 = 0;
+def_int $int15 = enum_getoutputcount($enum4);
+while ($int10 < $int9) {
+	$obj13 = enum(int, obj, $enum4, $int10);
+	$int14 = enum(obj, int, $enum5, $obj13);
+	if ($obj13 ! null) {
+		$int3 = ~script2991($component1, $int3, calc((36 * 2) + 16), 88, 64, $int0);
+		cc_create($component1, ^iftype_graphic, $int3);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		if ($int15 = 1) {
+			cc_setposition(calc(72 + (36 / 2)), calc(($int0 + (32 / 2)) + 14), ^setpos_abs_left, ^setpos_abs_top);
+		} else if ($int15 = 2) {
+			cc_setposition(calc(72 + (36 * $int11)), calc(($int0 + (32 / 2)) + 14), ^setpos_abs_left, ^setpos_abs_top);
+		} else {
+			cc_setposition(calc(72 + (36 * $int11)), calc(($int0 + (32 * $int12)) + 14), ^setpos_abs_left, ^setpos_abs_top);
+		}
+		cc_setoutline(1);
+		cc_setobject(oc_uncert($obj13), $int14);
+		$int3 = calc($int3 + 1);
+		$int11 = calc($int11 + 1);
+		cc_setop(1, "Check reward");
+		cc_setonop("adventurepath_voucher_item_op($obj13, $int14)");
+		if (~on_mobile = false) {
+			cc_setonmouserepeat("cc_settrans(event_com, cc_getid, 150, null)");
+			cc_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)");
+		}
+		if ($int11 > 1) {
+			$int11 = 0;
+			$int12 = calc($int12 + 1);
+		}
+	}
+	$int10 = calc($int10 + 1);
+}
+def_int $int16 = calc(80 + (36 * 2));
+$int3 = ~script2991($component1, $int3, calc($int2 - 16), 88, $int16, $int0);
+cc_create($component1, ^iftype_text, $int3);
+cc_setsize(calc($int2 - 36), 88, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int16 + 10), $int0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($string0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if (($int8 ! -1) & (~adventurepath_return_voucher($int8) = ^false)) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(0x0dc10d);
+}
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int3 = calc($int3 + 1);
+return($int3, calc(1 - $int7));

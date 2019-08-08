@@ -2840,14 +2840,14 @@
 [**2837**](scripts/script2837.cs2)  
 [**2838**](scripts/script2838.cs2)  
 [**2839**](scripts/script2839.cs2)  
-[**2840**](scripts/script2840.cs2)  
-[**2841**](scripts/script2841.cs2)  
-[**2842**](scripts/script2842.cs2)  
-[**2843**](scripts/script2843.cs2)  
-[**2844**](scripts/script2844.cs2)  
+[**2840**](scripts/[clientscript,adventurepath_voucher_init].cs2) `[clientscript,adventurepath_voucher_init]`  
+[**2841**](scripts/[proc,adventurepath_voucher_entry].cs2) `[proc,adventurepath_voucher_entry]`  
+[**2842**](scripts/[clientscript,adventurepath_voucher_item_op].cs2) `[clientscript,adventurepath_voucher_item_op]`  
+[**2843**](scripts/[clientscript,adventurepath_item_init].cs2) `[clientscript,adventurepath_item_init]`  
+[**2844**](scripts/[proc,adventurepath_item_entry].cs2) `[proc,adventurepath_item_entry]`  
 [**2845**](scripts/script2845.cs2)  
-[**2846**](scripts/script2846.cs2)  
-[**2847**](scripts/script2847.cs2)  
+[**2846**](scripts/[clientscript,adventurepath_init].cs2) `[clientscript,adventurepath_init]`  
+[**2847**](scripts/[proc,adventurepath_change_page].cs2) `[proc,adventurepath_change_page]`  
 [**2848**](scripts/[clientscript,cocktail_init_if].cs2) `[clientscript,cocktail_init_if]`  
 [**2849**](scripts/script2849.cs2)  
 [**2850**](scripts/script2850.cs2)  
@@ -2926,3 +2926,119 @@
 [**2923**](scripts/script2923.cs2)  
 [**2924**](scripts/script2924.cs2)  
 [**2925**](scripts/script2925.cs2)  
+[**2926**](scripts/script2926.cs2)  
+[**2927**](scripts/script2927.cs2)  
+[**2928**](scripts/script2928.cs2)  
+[**2929**](scripts/script2929.cs2)  
+[**2930**](scripts/script2930.cs2)  
+[**2931**](scripts/script2931.cs2)  
+[**2932**](scripts/script2932.cs2)  
+[**2933**](scripts/script2933.cs2)  
+[**2934**](scripts/script2934.cs2)  
+[**2935**](scripts/script2935.cs2)  
+[**2936**](scripts/script2936.cs2)  
+[**2937**](scripts/script2937.cs2)  
+[**2938**](scripts/script2938.cs2)  
+[**2939**](scripts/script2939.cs2)  
+[**2940**](scripts/script2940.cs2)  
+[**2941**](scripts/script2941.cs2)  
+[**2942**](scripts/script2942.cs2)  
+[**2943**](scripts/script2943.cs2)  
+[**2944**](scripts/script2944.cs2)  
+[**2945**](scripts/[proc,adventurepath_init].cs2) `[proc,adventurepath_init]`  
+[**2946**](scripts/[proc,adventurepath_draw_path].cs2) `[proc,adventurepath_draw_path]`  
+[**2947**](scripts/script2947.cs2)  
+[**2948**](scripts/[clientscript,adventurepath_task_init_transmit].cs2) `[clientscript,adventurepath_task_init_transmit]`  
+[**2949**](scripts/[clientscript,adventurepath_task_init].cs2) `[clientscript,adventurepath_task_init]`  
+[**2950**](scripts/[proc,adventurepath_task_init_op].cs2) `[proc,adventurepath_task_init_op]`  
+[**2951**](scripts/[proc,adventurepath_task_init].cs2) `[proc,adventurepath_task_init]`  
+[**2952**](scripts/[clientscript,adventurepath_mouseover_path_reward].cs2) `[clientscript,adventurepath_mouseover_path_reward]`  
+[**2953**](scripts/[clientscript,adventurepath_mouseleave_path_reward].cs2) `[clientscript,adventurepath_mouseleave_path_reward]`  
+[**2954**](scripts/[clientscript,adventurepath_set_info_transmit].cs2) `[clientscript,adventurepath_set_info_transmit]`  
+[**2955**](scripts/[clientscript,adventurepath_set_info].cs2) `[clientscript,adventurepath_set_info]`  
+[**2956**](scripts/script2956.cs2)  
+[**2957**](scripts/script2957.cs2)  
+[**2958**](scripts/[proc,adventurepath_flashicon].cs2) `[proc,adventurepath_flashicon]`  
+[**2959**](scripts/[proc,adventurepath_return_task_status].cs2) `[proc,adventurepath_return_task_status]`  
+[**2960**](scripts/script2960.cs2)  
+[**2961**](scripts/script2961.cs2)  
+[**2962**](scripts/script2962.cs2)  
+[**2963**](scripts/[proc,adventurepath_return_path_status].cs2) `[proc,adventurepath_return_path_status]`  
+[**2964**](scripts/script2964.cs2)  
+[**2965**](scripts/script2965.cs2)  
+[**2966**](scripts/[proc,adventurepath_return_voucher].cs2) `[proc,adventurepath_return_voucher]`  
+[**2967**](scripts/[proc,adventurepath_return_path_length].cs2) `[proc,adventurepath_return_path_length]`  
+[**2968**](scripts/script2968.cs2)  
+[**2969**](scripts/[proc,adventurepath_return_task_focus].cs2) `[proc,adventurepath_return_task_focus]`  
+[**2970**](scripts/[proc,adventurepath_set_task_focus].cs2) `[proc,adventurepath_set_task_focus]`  
+[**2971**](scripts/script2971.cs2)  
+[**2972**](scripts/script2972.cs2)  
+[**2973**](scripts/script2973.cs2)  
+[**2974**](scripts/script2974.cs2)  
+[**2975**](scripts/script2975.cs2)  
+[**2976**](scripts/script2976.cs2)  
+[**2977**](scripts/script2977.cs2)  
+[**2978**](scripts/script2978.cs2)  
+[**2979**](scripts/script2979.cs2)  
+[**2980**](scripts/script2980.cs2)  
+[**2981**](scripts/script2981.cs2)  
+[**2982**](scripts/script2982.cs2)  
+[**2983**](scripts/script2983.cs2)  
+[**2984**](scripts/script2984.cs2)  
+[**2985**](scripts/script2985.cs2)  
+[**2986**](scripts/script2986.cs2)  
+[**2987**](scripts/script2987.cs2)  
+[**2988**](scripts/script2988.cs2)  
+[**2989**](scripts/script2989.cs2)  
+[**2990**](scripts/script2990.cs2)  
+[**2991**](scripts/script2991.cs2)  
+[**2992**](scripts/script2992.cs2)  
+[**2993**](scripts/[proc,adventurepath_hint_list].cs2) `[proc,adventurepath_hint_list]`  
+[**2994**](scripts/script2994.cs2)  
+[**2995**](scripts/script2995.cs2)  
+[**2996**](scripts/script2996.cs2)  
+[**2997**](scripts/[proc,adventurepath_set_info].cs2) `[proc,adventurepath_set_info]`  
+[**2998**](scripts/script2998.cs2)  
+[**2999**](scripts/script2999.cs2)  
+[**3000**](scripts/script3000.cs2)  
+[**3001**](scripts/script3001.cs2)  
+[**3002**](scripts/[proc,adventurepath_task_focus].cs2) `[proc,adventurepath_task_focus]`  
+[**3003**](scripts/[clientscript,adventurepath_open_url].cs2) `[clientscript,adventurepath_open_url]`  
+[**3004**](scripts/script3004.cs2)  
+[**3005**](scripts/script3005.cs2)  
+[**3006**](scripts/script3006.cs2)  
+[**3007**](scripts/[proc,adventurepath_button_text].cs2) `[proc,adventurepath_button_text]`  
+[**3008**](scripts/[clientscript,adventurepath_back_mouseover].cs2) `[clientscript,adventurepath_back_mouseover]`  
+[**3009**](scripts/[clientscript,adventurepath_back_mouseleave].cs2) `[clientscript,adventurepath_back_mouseleave]`  
+[**3010**](scripts/[proc,adventurepath_back_button_text].cs2) `[proc,adventurepath_back_button_text]`  
+[**3011**](scripts/[clientscript,adventurepath_back_to_paths].cs2) `[clientscript,adventurepath_back_to_paths]`  
+[**3012**](scripts/[clientscript,adventurepath_show_more_info].cs2) `[clientscript,adventurepath_show_more_info]`  
+[**3013**](scripts/script3013.cs2)  
+[**3014**](scripts/script3014.cs2)  
+[**3015**](scripts/script3015.cs2)  
+[**3016**](scripts/script3016.cs2)  
+[**3017**](scripts/script3017.cs2)  
+[**3018**](scripts/[clientscript,adventurepath_side_init].cs2) `[clientscript,adventurepath_side_init]`  
+[**3019**](scripts/[clientscript,adventurepath_side_info_transmit].cs2) `[clientscript,adventurepath_side_info_transmit]`  
+[**3020**](scripts/script3020.cs2)  
+[**3021**](scripts/[clientscript,adventurepath_side_layer].cs2) `[clientscript,adventurepath_side_layer]`  
+[**3022**](scripts/[proc,adventurepath_side_info].cs2) `[proc,adventurepath_side_info]`  
+[**3023**](scripts/[proc,adventurepath_side_settings].cs2) `[proc,adventurepath_side_settings]`  
+[**3024**](scripts/script3024.cs2)  
+[**3025**](scripts/script3025.cs2)  
+[**3026**](scripts/script3026.cs2)  
+[**3027**](scripts/script3027.cs2)  
+[**3028**](scripts/script3028.cs2)  
+[**3029**](scripts/script3029.cs2)  
+[**3030**](scripts/script3030.cs2)  
+[**3031**](scripts/script3031.cs2)  
+[**3032**](scripts/script3032.cs2)  
+[**3033**](scripts/script3033.cs2)  
+[**3034**](scripts/script3034.cs2)  
+[**3035**](scripts/[proc,adventurepath_side_create_toggle].cs2) `[proc,adventurepath_side_create_toggle]`  
+[**3036**](scripts/script3036.cs2)  
+[**3037**](scripts/script3037.cs2)  
+[**3038**](scripts/script3038.cs2)  
+[**3039**](scripts/script3039.cs2)  
+[**3040**](scripts/script3040.cs2)  
+[**3041**](scripts/script3041.cs2)  

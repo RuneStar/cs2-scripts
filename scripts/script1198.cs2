@@ -122,7 +122,7 @@ def_obj $obj30 = enum(int, namedobj, 1261, $int29);
 while ($obj30 ! null) {
 	cc_create($component3, ^iftype_graphic, $int29);
 	.cc_create($component4, ^iftype_text, $int29);
-	if (($obj30 ! bologas_blessing_20747) | (%varbit5370 >= 2)) {
+	if ($obj30 ! bologas_blessing_20747) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
@@ -143,6 +143,44 @@ while ($obj30 ! null) {
 		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 		$int23 = enum(obj, int, 1262, $obj30);
 		.cc_settext(tostring($int23));
+		if (%varbit4893 < $int23) {
+			.cc_setcolour(^red);
+		} else {
+			.cc_setcolour(^white);
+		}
+		if (calc($int28 % 3) = 0) {
+			cc_setposition($int26, $int27, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(0, calc($int27 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		} else if (calc($int28 % 3) = 1) {
+			cc_setposition(0, $int27, ^setpos_abs_centre, ^setpos_abs_top);
+			.cc_setposition(0, calc($int27 + 32), ^setpos_abs_centre, ^setpos_abs_top);
+		} else {
+			cc_setposition($int26, $int27, ^setpos_abs_right, ^setpos_abs_top);
+			.cc_setposition(0, calc($int27 + 32), ^setpos_abs_right, ^setpos_abs_top);
+			$int27 = calc($int27 + $int25);
+		}
+		$int28 = calc($int28 + 1);
+	} else if (%varbit5370 >= 2) {
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		cc_setobject(oc_uncert($obj30), 10);
+		cc_setopbase("<col=ff9040><oc_name($obj30)> (sets of <tostring(10)>)</col>");
+		cc_setop(1, "Value");
+		cc_setop(2, "Buy-1");
+		cc_setop(3, "Buy-5");
+		cc_setop(4, "Buy-10");
+		cc_setop(5, "Buy-50");
+		cc_setop(6, "Buy-X");
+		cc_setop(10, "Examine");
+		cc_setonop("script487(event_com, event_comid, 120, 0)");
+		.cc_setsize($int24, 18, ^setsize_abs, ^setsize_abs);
+		.cc_setcolour(^white);
+		.cc_settextfont(p11_full);
+		.cc_settextshadow(true);
+		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+		$int23 = enum(obj, int, 1262, $obj30);
+		.cc_settext("<tostring($int23)> for <tostring(10)>");
 		if (%varbit4893 < $int23) {
 			.cc_setcolour(^red);
 		} else {

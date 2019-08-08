@@ -1,0 +1,8 @@
+// 3013
+script3013(component $component0, component $component1, component $component2, component $component3, component $component4)
+~v2_stone_button_out_filled($component1);
+if_setonmouseleave("script3015($component1)", $component1);
+if_setonmouserepeat("script3014($component1)", $component1);
+if_setonop("script3017($component0, $component2, $component3, $component4, $component1)", $component1);
+if_setop(1, "Back", $component1);
+~script3016($component1, 9);

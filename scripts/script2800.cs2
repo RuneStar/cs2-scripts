@@ -1,9 +1,12 @@
 // 2800
-script2800(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
+script2800(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19)
 ~script2802($component1, $component2, $component3, $component0);
 ~script2802($component5, $component6, $component7, $component4);
 ~script2802($component9, $component10, $component11, $component8);
 ~script2802($component13, $component14, $component15, $component12);
+if (%varbit9340 ! 0) {
+	~script2802($component17, $component18, $component19, $component16);
+}
 switch_int (%varbit8168) {
 	case 0 :
 		~script2801($component1, $component2, $component3, $component0);
@@ -13,4 +16,6 @@ switch_int (%varbit8168) {
 		~script2801($component9, $component10, $component11, $component8);
 	case 3 :
 		~script2801($component13, $component14, $component15, $component12);
+	case 4 :
+		~script2801($component17, $component18, $component19, $component16);
 }

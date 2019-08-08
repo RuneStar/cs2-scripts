@@ -1,0 +1,113 @@
+// 3022
+[proc,adventurepath_side_info](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+cc_deleteall($component2);
+cc_deleteall($component1);
+cc_deleteall($component6);
+cc_deleteall($component3);
+cc_deleteall($component0);
+def_int $int7 = 0;
+def_enum $enum8 = enum(int, enum, 2620, %varbit9324);
+def_struct $struct9 = enum(int, struct, 2619, %varbit9324);
+def_int $int10 = 0;
+def_int $int11 = enum_getoutputcount($enum8);
+def_struct $struct12 = null;
+def_int $int13 = ~adventurepath_return_task_focus(%varbit9324);
+while ($int10 < $int11) {
+	$struct12 = enum(int, struct, $enum8, $int10);
+	if (($struct12 ! null) & (struct_param($struct12, 806) = $int13)) {
+		$int10 = $int11;
+	} else {
+		$struct12 = null;
+	}
+	$int10 = calc($int10 + 1);
+}
+cc_create($component2, ^iftype_graphic, $int7);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
+cc_setgraphic(struct_param($struct9, 831));
+$int7 = 0;
+cc_create($component1, ^iftype_text, $int7);
+cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if ($struct12 ! null) {
+	cc_settext("<struct_param($struct12, 810)> <img=15>");
+} else {
+	cc_settext("<~text_device("Click", "Tap")> here to open Adventure Paths.<img=15>");
+}
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 17);
+cc_setop(1, "Show<col=ff9040> Task information");
+if (~on_mobile = false) {
+	cc_setonmouserepeat("cc_colour_swapper($component1, cc_getid, 0xbebebe)");
+	cc_setonmouseleave("cc_colour_swapper($component1, cc_getid, 0xff981f)");
+}
+$int7 = 0;
+cc_create($component6, ^iftype_text, $int7);
+cc_setsize(10, 9, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settext("Recommended next task");
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 17);
+$int7 = 0;
+cc_create($component3, ^iftype_text, $int7);
+cc_setsize(6, 6, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if ($struct12 ! null) {
+	cc_settext("<struct_param($struct12, 812)> <img=15>");
+} else {
+	cc_settext("Set a Path and Task in focus to see the task show up here. <~text_device("Click", "Tap")> the eye icon to set a task in focus. <img=15>");
+}
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_left, ^settextalign_top, 15);
+cc_setop(1, "Show<col=ff9040> Task information");
+if (~on_mobile = false) {
+	cc_setonmouserepeat("cc_colour_swapper($component3, cc_getid, 0xbebebe)");
+	cc_setonmouseleave("cc_colour_swapper($component3, cc_getid, 0xff981f)");
+}
+$int7 = 0;
+$int10 = 0;
+def_int $int14 = ~script2972(%varbit9324);
+def_struct $struct15 = null;
+cc_create($component0, ^iftype_text, $int7);
+cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 17);
+if (($int14 ! -1) & ($int14 ! 0)) {
+	$struct15 = enum(int, struct, $enum8, $int14);
+	while ($int10 < $int11) {
+		$struct15 = enum(int, struct, $enum8, $int10);
+		if (($struct15 ! null) & (struct_param($struct15, 806) = $int14)) {
+			$int10 = $int11;
+		}
+		$int10 = calc($int10 + 1);
+	}
+	if (($struct15 ! null) & ($struct12 ! null)) {
+		cc_settext("<struct_param($struct15, 810)> <img=15>");
+		cc_setop(1, "Show<col=ff9040> Task information");
+		if (~on_mobile = false) {
+			cc_setonmouserepeat("cc_colour_swapper($component0, cc_getid, 0xbebebe)");
+			cc_setonmouseleave("cc_colour_swapper($component0, cc_getid, 0xff981f)");
+		}
+	} else {
+		cc_settext("None");
+	}
+} else {
+	cc_settext("None");
+}
+$int7 = 0;
+def_int $int16 = ~adventurepath_return_path_length(%varbit9324);
+def_int $int17 = ~script2968(%varbit9324);
+if (struct_param($struct12, 826) = 0) {
+	$int16 = struct_param($struct12, 816);
+	$int17 = ~min($int16, stat_base(struct_param($struct12, 815)));
+}
+$int7 = ~script2990($component4, $int7, if_getwidth($component4), if_getheight($component4), 0, 0, $int16, $int17);

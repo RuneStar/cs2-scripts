@@ -1,0 +1,66 @@
+// 3025
+script3025(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $int6)
+cc_deleteall($component5);
+cc_deleteall($component2);
+cc_deleteall($component3);
+def_int $int7 = 0;
+$int7 = ~v2_stone_button_filled($component5);
+cc_create($component5, ^iftype_text, $int7);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settext("<lt><lt>   Back");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 17);
+if_setonmouserepeat("script3038($component5, 0, ^white)", $component5);
+if_setonmouseleave("script3036($component5, 0, 0xff981f)", $component5);
+cc_setop(1, "Back");
+cc_setonop("script3039($component0, $component1)");
+$int7 = 0;
+cc_create($component2, ^iftype_text, $int7);
+cc_setsize(4, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settext("Settings");
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 17);
+def_int $int8 = if_getwidth($component3);
+def_int $int9 = 0;
+def_int $int10 = if_getheight($component3);
+def_int $int11 = 0;
+$int7 = 0;
+$int7, $int9 = ~adventurepath_side_create_toggle($int7, $int9, $component3, $int8, 40, 0, calc((15 * $int9) + ($int9 * 34)), "Task complete message", %varbit9329, 0);
+cc_setonvartransmit("script3026($component3, calc($int7 - 2)){var2370}");
+cc_setonop("script3027($component3, calc($int7 - 2))");
+$int7, $int9 = ~adventurepath_side_create_toggle($int7, $int9, $component3, $int8, 40, 0, calc((15 * $int9) + ($int9 * 34)), "Path complete message", %varbit9330, 0);
+cc_setonvartransmit("script3028($component3, calc($int7 - 2)){var2370}");
+cc_setonop("script3029($component3, calc($int7 - 2))");
+$int7, $int9 = ~adventurepath_side_create_toggle($int7, $int9, $component3, $int8, 40, 0, calc((15 * $int9) + ($int9 * 34)), "Task focus message", %varbit9331, 0);
+cc_setonvartransmit("script3030($component3, calc($int7 - 2)){var2370}");
+cc_setonop("script3031($component3, calc($int7 - 2))");
+$int7, $int9 = ~adventurepath_side_create_toggle($int7, $int9, $component3, $int8, 40, 0, calc((15 * $int9) + ($int9 * 34)), "Path focus message", %varbit9332, 0);
+cc_setonvartransmit("script3032($component3, calc($int7 - 2)){var2370}");
+cc_setonop("script3033($component3, calc($int7 - 2))");
+$int7 = 0;
+def_int $int12 = 4;
+if ($int6 = 1) {
+	$int11 = calc(((15 * ($int9 - 1)) + ($int9 * 34)) + 5);
+	if ($int11 > $int10) {
+		if_setscrollsize(0, $int11, $component3);
+		if_sethide(false, $component4);
+	} else {
+		if_setscrollsize(0, 0, $component3);
+		if_sethide(true, $component4);
+	}
+	if ($int12 > 4) {
+		if_setsize(30, 14, ^setsize_minus, ^setsize_minus, $component3);
+		if_setsize(16, 14, ^setsize_abs, ^setsize_minus, $component4);
+		~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+		if_setscrollpos(0, 0, $component3);
+	} else {
+		if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $component4);
+		if_setsize(15, 14, ^setsize_minus, ^setsize_minus, $component3);
+	}
+}

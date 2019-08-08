@@ -48,16 +48,8 @@ cc_setoutline(1);
 def_int $int6 = enum(obj, int, 844, $obj1);
 cc_setobject($obj1, $int6);
 if ($int6 > 1) {
-	if_setop(1, "Smith 1 set", $component0);
-	if_setop(2, "Smith 5 sets", $component0);
-	if_setop(3, "Smith 10 sets", $component0);
-	if_setop(4, "Smith X sets", $component0);
-	if_setop(5, "Smith All sets", $component0);
+	if_setop(1, "Smith set", $component0);
 } else {
-	if_setop(1, "Smith 1", $component0);
-	if_setop(2, "Smith 5", $component0);
-	if_setop(3, "Smith 10", $component0);
-	if_setop(4, "Smith X", $component0);
-	if_setop(5, "Smith All", $component0);
+	if_setop(1, "Smith", $component0);
 }
 if_setopbase("<col=ff9040><oc_name($obj1)></col>", $component0);

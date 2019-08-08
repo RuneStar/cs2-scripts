@@ -1,0 +1,15 @@
+// 2847
+[proc,adventurepath_change_page](component $component0, component $component1, component $component2, component $component3, int $int4)
+if_sethide(true, $component0);
+if_sethide(true, $component2);
+if_sethide(true, $component1);
+if_sethide(true, $component3);
+switch_int ($int4) {
+	case 1 :
+		if_sethide(false, $component1);
+	case 2 :
+		if_sethide(false, $component3);
+	case default :
+		if_sethide(false, $component0);
+		if_sethide(false, $component2);
+}

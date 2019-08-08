@@ -1,0 +1,8 @@
+// 2941
+script2941(component $component0, obj $obj1, int $int2, obj $obj3, string $string0)
+if_sethide(false, $component0);
+if_setop(1, "Craft", $component0);
+if_setopbase("<col=ff9040><$string0></col>", $component0);
+~script2943($component0, $obj1, $int2, $obj3, $string0);
+if_setoninvtransmit("script2942($component0, $obj1, $int2, $obj3, $string0){inv}", $component0);
+if_setonstattransmit("script2942($component0, $obj1, $int2, $obj3, $string0){crafting}", $component0);

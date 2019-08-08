@@ -1,0 +1,33 @@
+// 2989
+script2989(component $component0, int $int1, graphic $graphic2)(int)
+if (cc_find($component0, calc($int1 + 0)) = ^true) {
+	cc_setgraphic("tradebacking_dark");
+}
+if (cc_find($component0, calc($int1 + 1)) = ^true) {
+	cc_setgraphic("v2_stone_button_in,0");
+}
+if (cc_find($component0, calc($int1 + 2)) = ^true) {
+	cc_setgraphic("v2_stone_button_in,1");
+}
+if (cc_find($component0, calc($int1 + 3)) = ^true) {
+	cc_setgraphic("v2_stone_button_in,2");
+}
+if (cc_find($component0, calc($int1 + 4)) = ^true) {
+	cc_setgraphic("v2_stone_button_in,3");
+}
+if (cc_find($component0, calc($int1 + 5)) = ^true) {
+	cc_setgraphic("v2_stone_button_in,4");
+}
+if (cc_find($component0, calc($int1 + 6)) = ^true) {
+	cc_setgraphic("v2_stone_button_in,5");
+}
+if (cc_find($component0, calc($int1 + 7)) = ^true) {
+	cc_setgraphic("v2_stone_button_in,6");
+}
+if (cc_find($component0, calc($int1 + 8)) = ^true) {
+	cc_setgraphic("v2_stone_button_in,7");
+}
+if (cc_find($component0, calc($int1 + 9)) = ^true) {
+	cc_setgraphic($graphic2);
+}
+return(0);

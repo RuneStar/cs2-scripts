@@ -1,4 +1,8 @@
 // 2845
-script2845(component $component0, string $string0, int $int1)
-cc_deleteall($component0);
-~script2846($component0, $string0, 0, 0, $int1);
+script2845(npc $npc0, int $int1)(int)
+switch_npc ($npc0) {
+	case apothecary_5036 :
+		return(calc($int1 + 24));
+	case default :
+		return(calc($int1 + 14));
+}

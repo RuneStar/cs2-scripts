@@ -1,0 +1,20 @@
+// 3018
+[clientscript,adventurepath_side_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13)
+cc_deleteall($component2);
+cc_deleteall($component3);
+cc_deleteall($component4);
+cc_deleteall($component5);
+cc_deleteall($component6);
+cc_deleteall($component7);
+if (%varbit9327 = 1) {
+	if_sethide(true, $component0);
+	if_sethide(false, $component8);
+} else {
+	if_sethide(false, $component0);
+	if_sethide(true, $component8);
+}
+~adventurepath_side_info($component2, $component4, $component5, $component6, $component7, $component12, $component13);
+if_setonvartransmit("adventurepath_side_info_transmit($component2, $component4, $component5, $component6, $component7, $component12, $component13){var2359, var2358}", $component1);
+if_setonvartransmit("adventurepath_side_layer($component0, $component8){var2370}", $component0);
+~adventurepath_side_settings($component3, $component0, $component8);
+~script3025($component0, $component8, $component9, $component10, $component11, $component12, 1);

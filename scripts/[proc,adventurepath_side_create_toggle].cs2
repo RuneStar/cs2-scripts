@@ -1,0 +1,66 @@
+// 3035
+[proc,adventurepath_side_create_toggle](int $int0, int $int1, component $component2, int $int3, int $int4, int $int5, int $int6, string $string0, int $int7, int $int8)(int, int)
+def_int $int9 = $int0;
+def_int $int10 = 4;
+if ($int10 < 5) {
+	$int3 = calc($int3 + 16);
+}
+def_int $int11 = calc(($int3 - 9) + $int5);
+def_int $int12 = calc(($int4 - 9) + $int6);
+def_int $int13 = calc($int3 - 18);
+def_int $int14 = calc($int4 - 18);
+~create_graphic($component2, $int0, "tradebacking", $int5, $int6, ^setpos_abs_left, ^setpos_abs_top, $int3, $int4, ^setsize_abs, ^setsize_abs);
+~create_graphic($component2, calc($int0 + 1), "v2_stone_button,0", $int5, $int6, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component2, calc($int0 + 2), "v2_stone_button,1", $int11, $int6, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component2, calc($int0 + 3), "v2_stone_button,2", $int5, $int12, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component2, calc($int0 + 4), "v2_stone_button,3", $int11, $int12, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component2, calc($int0 + 5), "v2_stone_button,4", $int5, calc(9 + $int6), ^setpos_abs_left, ^setpos_abs_top, 9, $int14, ^setsize_abs, ^setsize_abs);
+~create_graphic($component2, calc($int0 + 6), "v2_stone_button,5", calc($int5 + 9), $int6, ^setpos_abs_left, ^setpos_abs_top, $int13, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component2, calc($int0 + 7), "v2_stone_button,6", $int11, calc(9 + $int6), ^setpos_abs_left, ^setpos_abs_top, 9, $int14, ^setsize_abs, ^setsize_abs);
+~create_graphic($component2, calc($int0 + 8), "v2_stone_button,7", calc($int5 + 9), $int12, ^setpos_abs_left, ^setpos_abs_top, $int13, 9, ^setsize_abs, ^setsize_abs);
+cc_create($component2, ^iftype_text, calc($int0 + 9));
+if ($int10 > 4) {
+	cc_setsize(calc($int3 - 46), $int4, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_setsize(calc($int3 - 39), $int4, ^setsize_abs, ^setsize_abs);
+}
+cc_setposition(calc(3 + $int5), $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($string0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+$int0 = calc($int0 + 10);
+cc_create($component2, ^iftype_graphic, $int0);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+if ($int10 > 4) {
+	cc_setposition(calc($int3 - 46), calc($int6 + (($int4 / 2) - 8)), ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc($int3 - 29), calc($int6 + (($int4 / 2) - 8)), ^setpos_abs_left, ^setpos_abs_top);
+}
+if ($int7 = 1) {
+	cc_setgraphic("options_radio_buttons,1");
+} else {
+	cc_setgraphic("options_radio_buttons,2");
+}
+if ($int8 = 1) {
+	cc_sethide(true);
+} else {
+	cc_sethide(false);
+}
+cc_create($component2, ^iftype_rectangle, calc($int0 + 1));
+if ($int10 > 4) {
+	cc_setsize(calc($int3 + 17), $int4, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_setsize($int3, $int4, ^setsize_abs, ^setsize_abs);
+}
+cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_settrans(255);
+cc_setop(1, "Toggle setting");
+if (~on_mobile = false) {
+	cc_setonmouseover("script2977($component2, calc($int0 - 10), 0xff981f)");
+} else {
+	cc_setonmouseover("script2977($component2, calc($int0 - 10), ^white)");
+}
+cc_setonmouseleave("script2975($component2, calc($int0 - 10), 0xff981f)");
+return(calc($int0 + 2), calc($int1 + 1));
