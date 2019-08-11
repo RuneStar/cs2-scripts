@@ -1,0 +1,5 @@
+// 2898
+[clientscript,mirror_interface_button_reset](component $component0, string $string0, int $int1, string $string1)
+if (clientclock >= $int1) {
+	~mirror_interface_button_draw($component0, $string1, false);
+}

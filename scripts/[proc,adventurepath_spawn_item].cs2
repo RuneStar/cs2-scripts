@@ -1,0 +1,32 @@
+// 3005
+[proc,adventurepath_spawn_item](component $component0, int $int1, obj $obj2, int $int3, int $int4, int $int5, int $int6, int $int7, boolean $boolean8, int $bit9)(int, int, int)
+if ($obj2 = null) {
+	return($int1, $int4, $int5);
+}
+cc_create($component0, ^iftype_graphic, $int1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+if ($boolean8 = false) {
+	cc_setposition(calc((($int6 / 6) * $int4) + 5), calc(((32 * $int5) + $int7) + (10 * (1 + $int5))), ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(calc((($int6 / 6) * ($int4 + 3)) + 5), calc(((32 * $int5) + $int7) + (10 * (1 + $int5))), ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setobject(oc_uncert($obj2), $int3);
+cc_setoutline(1);
+cc_setonop("adventurepath_say_item($obj2, $int3, $boolean8)");
+if ($bit9 = ^false) {
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("cc_settrans($component0, cc_getid, 80, null)");
+		cc_setonmouseleave("cc_settrans($component0, cc_getid, 0, null)");
+	} else {
+		cc_settrans(0);
+	}
+} else {
+	cc_settrans(150);
+}
+cc_setop(1, "Check reward");
+$int4 = calc($int4 + 1);
+if ($int4 = 3) {
+	$int4 = 0;
+	$int5 = calc($int5 + 1);
+}
+return(calc($int1 + 1), $int4, $int5);

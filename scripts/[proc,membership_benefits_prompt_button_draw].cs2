@@ -1,0 +1,18 @@
+// 2571
+[proc,membership_benefits_prompt_button_draw](component $component0, string $string0, boolean $boolean1)
+cc_deleteall($component0);
+def_int $int2 = 0;
+def_int $int3 = 0;
+if ($boolean1 = true) {
+	$int2 = ~script2044($component0, $int2);
+} else {
+	$int2 = ~script2045($component0, $int2);
+}
+cc_create($component0, ^iftype_text, $int2);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0x403020);
+cc_settextfont(p11_full);
+cc_settextshadow(false);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);

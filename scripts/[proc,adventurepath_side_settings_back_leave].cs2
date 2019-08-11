@@ -1,0 +1,32 @@
+// 3037
+[proc,adventurepath_side_settings_back_leave](component $component0, int $int1, int $colour2)
+if (cc_find($component0, calc($int1 + 0)) = ^true) {
+	cc_setgraphic("tradebacking");
+}
+if (cc_find($component0, calc($int1 + 1)) = ^true) {
+	cc_setgraphic("v2_stone_button,0");
+}
+if (cc_find($component0, calc($int1 + 2)) = ^true) {
+	cc_setgraphic("v2_stone_button,1");
+}
+if (cc_find($component0, calc($int1 + 3)) = ^true) {
+	cc_setgraphic("v2_stone_button,2");
+}
+if (cc_find($component0, calc($int1 + 4)) = ^true) {
+	cc_setgraphic("v2_stone_button,3");
+}
+if (cc_find($component0, calc($int1 + 5)) = ^true) {
+	cc_setgraphic("v2_stone_button,4");
+}
+if (cc_find($component0, calc($int1 + 6)) = ^true) {
+	cc_setgraphic("v2_stone_button,5");
+}
+if (cc_find($component0, calc($int1 + 7)) = ^true) {
+	cc_setgraphic("v2_stone_button,6");
+}
+if (cc_find($component0, calc($int1 + 8)) = ^true) {
+	cc_setgraphic("v2_stone_button,7");
+}
+if ((~on_mobile = false) & (cc_find($component0, calc($int1 + 9)) = ^true)) {
+	cc_setcolour($colour2);
+}

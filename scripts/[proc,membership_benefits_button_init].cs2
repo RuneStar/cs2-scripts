@@ -1,0 +1,6 @@
+// 2560
+[proc,membership_benefits_button_init](component $component0, string $string0)
+~membership_benefits_button_draw($component0, $string0, false);
+if_setop(1, $string0, $component0);
+if_setonmouserepeat("membership_benefits_button_draw(event_com, $string0, true)", $component0);
+if_setonmouseleave("membership_benefits_button_draw(event_com, $string0, false)", $component0);

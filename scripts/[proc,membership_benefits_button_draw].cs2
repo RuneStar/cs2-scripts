@@ -1,0 +1,17 @@
+// 2562
+[proc,membership_benefits_button_draw](component $component0, string $string0, boolean $boolean1)
+cc_deleteall($component0);
+def_int $int2 = 0;
+if ($boolean1 = true) {
+	$int2 = ~v2_stone_button_in_filled($component0);
+} else {
+	$int2 = ~v2_stone_button_out_filled($component0);
+}
+cc_create($component0, ^iftype_text, $int2);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);

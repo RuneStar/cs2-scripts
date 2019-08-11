@@ -39,7 +39,7 @@ if (if_hassub(enum(component, component, $enum3, 161:14)) = true) {
 	if_setonmouseleave("graphic_swapper(event_com, $graphic4)", $component2);
 	if_clearops($component2);
 	if ($enum3 = 1745) {
-		~script2892($component2);
+		~orbs_worldmap_op1($component2);
 		if_setop(2, "Open <col=ff9040>World Map</col>", $component2);
 		if (%varbit6254 = ^false) {
 			if_setop(4, "Minimise <col=ff9040>Minimap</col>", $component2);
@@ -47,7 +47,7 @@ if (if_hassub(enum(component, component, $enum3, 161:14)) = true) {
 			if_setop(4, "Restore <col=ff9040>Minimap</col>", $component2);
 		}
 	} else {
-		~script2892($component2);
+		~orbs_worldmap_op1($component2);
 		if_setop(2, "Floating <col=ff9040>World Map</col>", $component2);
 		if_setop(3, "Fullscreen <col=ff9040>World Map</col>", $component2);
 	}

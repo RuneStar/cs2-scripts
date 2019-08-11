@@ -1,0 +1,8 @@
+// 2678
+[clientscript,telenexus_scry_click](component $component0, component $component1, int $int2)
+if ($int2 = 2) {
+	%varbit6671 = 0;
+} else if ($int2 = 3) {
+	%varbit6671 = 1;
+}
+~telenexus_options($component0, $component1);

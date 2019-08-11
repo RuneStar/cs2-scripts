@@ -14,7 +14,7 @@ if ($int5 = 1) {
 }
 cc_setcolour(^black);
 $int2 = calc($int2 + 1);
-$int2 = ~script2991($component1, $int2, calc(36 * 2), 50, 0, $int0);
+$int2 = ~stoneborder_free($component1, $int2, calc(36 * 2), 50, 0, $int0);
 cc_create($component1, ^iftype_graphic, $int2);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(36 / 2), calc(($int0 + (32 / 2)) - (32 / 4)), ^setpos_abs_left, ^setpos_abs_top);
@@ -37,7 +37,7 @@ if (~on_mobile = false) {
 	cc_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)");
 }
 def_int $int6 = calc((if_getwidth($component1) - (36 * 2)) - 10);
-$int2 = ~script2991($component1, $int2, calc($int6 + 10), 50, calc(36 * 2), $int0);
+$int2 = ~stoneborder_free($component1, $int2, calc($int6 + 10), 50, calc(36 * 2), $int0);
 cc_create($component1, ^iftype_text, $int2);
 cc_setsize($int6, 50, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc((36 * 2) + 5), $int0, ^setpos_abs_left, ^setpos_abs_top);

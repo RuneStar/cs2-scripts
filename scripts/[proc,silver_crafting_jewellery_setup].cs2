@@ -1,0 +1,6 @@
+// 2938
+[proc,silver_crafting_jewellery_setup](component $component0, obj $obj1, int $int2, obj $obj3, string $string0, obj $obj4, obj $obj5)
+if_sethide(false, $component0);
+~silver_crafting_jewellery_draw($component0, $obj1, $int2, $obj3, $string0, $obj4, $obj5);
+if_setoninvtransmit("silver_crafting_jewellery_draw($component0, $obj1, $int2, $obj3, $string0, $obj4, $obj5){inv}", $component0);
+if_setonstattransmit("silver_crafting_jewellery_draw($component0, $obj1, $int2, $obj3, $string0, $obj4, $obj5){crafting}", $component0);

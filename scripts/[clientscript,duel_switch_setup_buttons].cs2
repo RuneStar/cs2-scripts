@@ -6,8 +6,8 @@ if (testbit(%var286, 3) = ^false) {
 	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component8, $string0, 50, 250)", $component3);
 	if_setonmouseover(null, $component2);
 	if_setonmouseover(null, $component3);
-	if_setonop("script2483", $component2);
-	if_setonop("script2483", $component3);
+	if_setonop("duel_invalid_option", $component2);
+	if_setonop("duel_invalid_option", $component3);
 } else {
 	$string0 = "Opponent's backpack inventory";
 	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component8, $string0, 50, 250)", $component2);

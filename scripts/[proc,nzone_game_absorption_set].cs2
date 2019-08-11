@@ -1,0 +1,59 @@
+// 262
+[proc,nzone_game_absorption_set](component $component0, int $int1)
+if_setonvartransmit("nzone_game_absorption_transmit(event_com, $int1){var1067}", $component0);
+if ($int1 <= 0) {
+	if (cc_find($component0, 0) = ^true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 1) = ^true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 2) = ^true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 3) = ^true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 4) = ^true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 5) = ^true) {
+		cc_sethide(true);
+	}
+	return;
+}
+if (cc_find($component0, 0) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find($component0, 1) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find($component0, 2) = ^true) {
+	cc_sethide(false);
+}
+if (cc_find($component0, 4) = ^true) {
+	cc_sethide(false);
+}
+def_int $int2 = calc(50 * 3);
+def_int $int3 = 0;
+if ((cc_find($component0, 3) = ^true) & (.cc_find($component0, 5) = ^true)) {
+	cc_sethide(false);
+	.cc_sethide(false);
+	if ($int1 < interpolate(0, 40, 0, 100, 50)) {
+		cc_setobject(absorption_1_11737, 1);
+	} else if ($int1 < interpolate(0, 75, 0, 100, 50)) {
+		cc_setobject(absorption_2_11736, 1);
+	} else if ($int1 < interpolate(0, 95, 0, 100, 50)) {
+		cc_setobject(absorption_3_11735, 1);
+	} else {
+		cc_setobject(absorption_4_11734, 1);
+	}
+	if ($int1 < $int2) {
+		$int3 = $int1;
+	} else {
+		$int3 = $int2;
+	}
+	$int3 = interpolate(0, $int3, 0, $int2, 255);
+	.cc_setcolour(~rgb_to_hex(255, $int3, $int3));
+	.cc_settext(~tostring_spacer($int1, ","));
+}

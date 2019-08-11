@@ -1,0 +1,64 @@
+// 2940
+[proc,silver_crafting_jewellery_draw](component $component0, obj $obj1, int $int2, obj $obj3, string $string0, obj $obj4, obj $obj5)
+cc_deleteall($component0);
+if (inv_total(inv, $obj3) <= 0) {
+	if_clearops($component0);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+	return;
+}
+def_int $int6 = 0;
+if_setop(1, "Craft", $component0);
+if_setopbase("<col=ff9040><$string0></col>", $component0);
+cc_create($component0, ^iftype_graphic, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setoutline(1);
+cc_setgraphicshadow(0x333333);
+def_int $int7 = 0;
+if (((inv_total(inv, $obj4) > 0) & (stat(crafting) >= $int2)) & ((map_members = ^true) | (oc_members($obj1) = ^false))) {
+	cc_setobject_nonum($obj1, 1);
+	cc_settrans(0);
+	$int7 = 1;
+} else {
+	cc_setobject_nonum($obj5, 1);
+	cc_settrans(150);
+}
+cc_create($component0, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+.cc_create($component0, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize(0, 22, ^setsize_minus, ^setsize_abs);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+def_int $int8 = if_getwidth($component0);
+if ((parawidth($string0, $int8, p12_full) <= $int8) & (paraheight($string0, $int8, p12_full) <= 1)) {
+	cc_settextfont(p12_full);
+} else {
+	cc_settextfont(p11_full);
+}
+.cc_settextfont(p11_full);
+cc_settextshadow(true);
+.cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+cc_settext($string0);
+if ($int7 = 1) {
+	.cc_settext("");
+	cc_setcolour(0xff981f);
+	.cc_setcolour(0xff981f);
+	if_setonmouserepeat("silver_crafting_mouseeffect(^white, event_com, cc_getid, .cc_getid)", $component0);
+	if_setonmouseleave("silver_crafting_mouseeffect(0xff981f, event_com, cc_getid, .cc_getid)", $component0);
+} else {
+	if ((map_members = ^false) & (oc_members($obj1) = ^true)) {
+		.cc_settext("");
+	} else {
+		.cc_settext("Level <tostring($int2)>");
+	}
+	cc_setcolour(^red);
+	.cc_setcolour(0x7f7f7f);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+}

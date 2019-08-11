@@ -1,0 +1,11 @@
+// 2897
+[clientscript,mirror_interface_keypress](int $key0, char $char1, component $component2, string $string0, string $string1, component $component3)
+if (($char1 = null) | (~keypress_permit(635, -1) = 0)) {
+	return;
+}
+if ((string_indexof_char($string0, $char1) ! -1) | ((($key0 = ^key_return) | ($key0 = ^key_space)) & ($component2 = $component3))) {
+	~mirror_interface_button_draw($component2, $string1, true);
+	if_setonkey(null, $component2);
+	if_setontimer("mirror_interface_button_reset($component2, $string0, calc(clientclock + 40), $string1)", $component2);
+	if_resume_pausebutton($component2);
+}

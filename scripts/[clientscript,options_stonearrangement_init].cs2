@@ -1,0 +1,9 @@
+// 848
+[clientscript,options_stonearrangement_init](component $component0, component $component1, component $component2)
+if_setonmouseleave("deltooltip($component2)", $component0);
+if_setop(1, "Side-stones arrangement", $component0);
+if_setop(1, "Hotkeys Behaviour", $component1);
+~options_gfx_togglebox($component1, "Side-panels...", "Can be closed by the hotkeys.", "In resizable mode, if the stone buttons are arranged along the bottom of the screen, should it be possible to shut a side-panel by pressing its hotkey?", $component2);
+~options_stonearrangement($component0, $component1, $component2);
+if_setonvartransmit("options_stonearrangement_resynch($component0, $component1, $component2){var1055}", $component0);
+if_setonop("options_stonearrangement_op(event_opindex, false, $component0, $component1, $component2)", $component0);

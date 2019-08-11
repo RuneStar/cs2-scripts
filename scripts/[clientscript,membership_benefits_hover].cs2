@@ -1,0 +1,16 @@
+// 2558
+[clientscript,membership_benefits_hover](int $int0, int $int1, boolean $boolean2)
+cc_deleteall(275:10);
+if ($boolean2 = true) {
+	cc_create(275:10, ^iftype_rectangle, 0);
+	cc_setsize(0, 33, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(true);
+	cc_setcolour(^white);
+	cc_settrans(220);
+	if (cc_find(275:13, $int0) = ^true) {
+		cc_setgraphic("open_buttons,1");
+	}
+} else if (cc_find(275:13, $int0) = ^true) {
+	cc_setgraphic("open_buttons,0");
+}

@@ -1,0 +1,19 @@
+// 2896
+[clientscript,mirror_interface_init](component $component0, component $component1, component $component2, component $component3, string $string0, string $string1)
+~mirror_interface_button_draw($component0, $string0, false);
+~mirror_interface_button_draw($component1, $string1, false);
+if (~on_mobile = true) {
+	return;
+}
+if_setonkey("mirror_interface_keypress(event_keypressed, event_keytyped, $component0, "1", $string0, $component0)", $component0);
+if_setontimer(null, $component0);
+if_setonkey("mirror_interface_keypress(event_keypressed, event_keytyped, $component1, "2", $string1, $component0)", $component1);
+if_setontimer(null, $component1);
+if_setonmouserepeat("mirror_interface_button_draw($component0, $string0, true)", $component0);
+if_setonmouseleave("mirror_interface_button_draw($component0, $string0, false)", $component0);
+if_setonmouserepeat("mirror_interface_button_draw($component1, $string1, true)", $component1);
+if_setonmouseleave("mirror_interface_button_draw($component1, $string1, false)", $component1);
+def_graphic $graphic4 = "close_buttons,6";
+def_graphic $graphic5 = "close_buttons,7";
+if_setonmouserepeat("graphic_swapper($component3, $graphic5)", $component2);
+if_setonmouseleave("graphic_swapper($component3, $graphic4)", $component2);

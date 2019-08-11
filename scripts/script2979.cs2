@@ -46,10 +46,10 @@ if ($int8 ! 0) {
 }
 if ($int9 = 0) {
 	if (~on_mobile = true) {
-		cc_setonmouseover("script2982($component0, $int1, $colour6)");
+		cc_setonmouseover("v2_stone_button_in_filled_free_icon($component0, $int1, $colour6)");
 	} else {
-		cc_setonmouseover("script2982($component0, $int1, $colour7)");
+		cc_setonmouseover("v2_stone_button_in_filled_free_icon($component0, $int1, $colour7)");
 	}
-	cc_setonmouseleave("script2980($component0, $int1, $colour6)");
+	cc_setonmouseleave("v2_stone_button_filled_free_icon($component0, $int1, $colour6)");
 }
 return(calc($int1 + 12));

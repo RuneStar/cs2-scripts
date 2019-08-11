@@ -35,7 +35,7 @@ cc_setcolour(0xff981f);
 cc_setsize(10, 18, ^setsize_minus, ^setsize_abs);
 cc_setposition(15, 5, ^setpos_abs_left, ^setpos_abs_top);
 cc_setop(1, "Select");
-cc_setonop("script2678($component0, $component1, 2)");
+cc_setonop("telenexus_scry_click($component0, $component1, 2)");
 if (%varbit6671 = 0) {
 	cc_setonmouseover("telenexus_options_mouseover(event_com, 0, 2, $graphic5)");
 	cc_setonmouseleave("telenexus_options_mouseleave(event_com, 0, 2, $graphic4)");
@@ -52,7 +52,7 @@ cc_setcolour(0xff981f);
 cc_setsize(10, 18, ^setsize_minus, ^setsize_abs);
 cc_setposition(15, 5, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_setop(1, "Select");
-cc_setonop("script2678($component0, $component1, 3)");
+cc_setonop("telenexus_scry_click($component0, $component1, 3)");
 if (%varbit6671 = 1) {
 	cc_setonmouseover("telenexus_options_mouseover(event_com, 1, 3, $graphic5)");
 	cc_setonmouseleave("telenexus_options_mouseleave(event_com, 1, 3, $graphic4)");

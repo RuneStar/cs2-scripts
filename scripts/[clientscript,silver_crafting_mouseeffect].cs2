@@ -1,0 +1,6 @@
+// 2934
+[clientscript,silver_crafting_mouseeffect](int $colour0, component $component1, int $int2, int $int3)
+if ((cc_find($component1, $int2) = ^true) & (.cc_find($component1, $int3) = ^true)) {
+	cc_setcolour($colour0);
+	.cc_setcolour($colour0);
+}

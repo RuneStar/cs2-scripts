@@ -1,0 +1,42 @@
+// 851
+[proc,options_stonearrangement](component $component0, component $component1, component $component2)
+def_string $string0 = "Resizable mode stone buttons:<br>'Old School Box'";
+if (%varbit4607 = 0) {
+	if_setgraphic("options_boxes,0", $component0);
+	if (cc_find($component1, 0) = ^true) {
+		cc_setcolour(0x8f8f8f);
+	}
+	if (cc_find($component1, 1) = ^true) {
+		cc_setcolour(0x8f8f8f);
+	}
+	if (cc_find($component1, 2) = ^true) {
+		cc_setgraphic("options_radio_buttons,0");
+	}
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setonop(null, $component1);
+} else {
+	if_setgraphic("options_boxes,1", $component0);
+	if (cc_find($component1, 0) = ^true) {
+		cc_setcolour(0xff981f);
+	}
+	if (cc_find($component1, 1) = ^true) {
+		cc_setcolour(0xff981f);
+	}
+	if (%varbit4611 = 1) {
+		$string0 = "Resizable mode stone buttons:<br>'Bottom Line'<br>The hotkeys will not close the side-panels.";
+		if (cc_find($component1, 2) = ^true) {
+			cc_setgraphic("options_radio_buttons,1");
+		}
+	} else {
+		$string0 = "Resizable mode stone buttons:<br>'Bottom Line'<br>The hotkeys can close the side-panels.";
+		if (cc_find($component1, 2) = ^true) {
+			cc_setgraphic("options_radio_buttons,2");
+		}
+	}
+	if_setonmouserepeat("options_gfx_mouseeffect(true, event_com)", $component1);
+	if_setonmouseleave("options_gfx_mouseeffect(false, event_com)", $component1);
+	if_setonop("options_stonearrangement_op(event_opindex, true, $component0, $component1, $component2)", $component1);
+}
+if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component2, $string0, 25, 512)", $component0);
+%varcint2 = 0;

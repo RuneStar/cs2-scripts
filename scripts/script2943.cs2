@@ -41,8 +41,8 @@ if ((($int5 = 1) & (stat(crafting) >= $int2)) & ((map_members = ^true) | (oc_mem
 	.cc_settext("");
 	cc_setcolour(0xff981f);
 	.cc_setcolour(0xff981f);
-	if_setonmouserepeat("script2934(^white, event_com, cc_getid, .cc_getid)", $component0);
-	if_setonmouseleave("script2934(0xff981f, event_com, cc_getid, .cc_getid)", $component0);
+	if_setonmouserepeat("silver_crafting_mouseeffect(^white, event_com, cc_getid, .cc_getid)", $component0);
+	if_setonmouseleave("silver_crafting_mouseeffect(0xff981f, event_com, cc_getid, .cc_getid)", $component0);
 } else {
 	if ((map_members = ^false) & (oc_members($obj1) = ^true)) {
 		.cc_settext("");

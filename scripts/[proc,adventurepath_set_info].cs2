@@ -70,11 +70,11 @@ if ($enum32 ! null) {
 			if ($int30 = 0) {
 				$int23, $int37 = ~script3004($component4, 0, "Free:", $int23, $int37, 0, 0, 1);
 				$boolean40 = false;
-				$bit41 = ~script2960($int0);
+				$bit41 = ~adventurepath_return_reward_f2p($int0);
 			} else if ($int30 = 1) {
 				$int23, $int37 = ~script3004($component4, 0, "Members:", $int23, calc(16 - $int37), 0, 1, 0);
 				$boolean40 = true;
-				$bit41 = ~script2961($int0);
+				$bit41 = ~adventurepath_return_reward_p2p($int0);
 			} else if ($int30 = 2) {
 				$int23, $int37 = ~script3004($component4, 0, "Free:", $int23, $int37, $int28, 0, 1);
 				$boolean40 = false;
@@ -90,9 +90,9 @@ if ($enum32 ! null) {
 				$obj36 = enum(int, namedobj, $enum34, $int31);
 				if ($obj36 ! null) {
 					if ($boolean40 = true) {
-						$int23, $int24, $int28 = ~script3005($component4, $int23, $obj36, enum(namedobj, int, $enum35, $obj36), $int24, $int28, $int29, calc(16 - $int37), $boolean40, $bit41);
+						$int23, $int24, $int28 = ~adventurepath_spawn_item($component4, $int23, $obj36, enum(namedobj, int, $enum35, $obj36), $int24, $int28, $int29, calc(16 - $int37), $boolean40, $bit41);
 					} else {
-						$int23, $int24, $int28 = ~script3005($component4, $int23, $obj36, enum(namedobj, int, $enum35, $obj36), $int24, $int28, $int29, $int37, $boolean40, $bit41);
+						$int23, $int24, $int28 = ~adventurepath_spawn_item($component4, $int23, $obj36, enum(namedobj, int, $enum35, $obj36), $int24, $int28, $int29, $int37, $boolean40, $bit41);
 					}
 				}
 				$int31 = calc($int31 + 1);
@@ -184,8 +184,8 @@ if (~script2973($int0, $int46) ! $int0) {
 	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
-	if_setonmouserepeat("script2992", $component22);
-	if_setonmouseleave("script2992", $component22);
+	if_setonmouserepeat("adventurepath_do_nothing", $component22);
+	if_setonmouseleave("adventurepath_do_nothing", $component22);
 } else if ($int47 = $int0) {
 	$int23 = ~v2_stone_button_filled($component22);
 	cc_create($component22, ^iftype_graphic, $int23);
@@ -207,8 +207,8 @@ if (~script2973($int0, $int46) ! $int0) {
 	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
-	if_setonmouserepeat("script2992", $component22);
-	if_setonmouseleave("script2992", $component22);
+	if_setonmouserepeat("adventurepath_do_nothing", $component22);
+	if_setonmouseleave("adventurepath_do_nothing", $component22);
 } else {
 	$int23 = ~v2_stone_button_filled($component22);
 	cc_create($component22, ^iftype_graphic, $int23);

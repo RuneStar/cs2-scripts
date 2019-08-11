@@ -1,0 +1,15 @@
+// 2991
+[proc,stoneborder_free](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5)(int)
+def_int $int6 = calc($int2 - 64);
+def_int $int7 = calc($int3 - 64);
+def_int $int8 = calc(($int4 + $int2) - 32);
+def_int $int9 = calc(($int5 + $int3) - 32);
+~create_graphic($component0, $int1, "v2_borders_slim,4", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 1), "v2_borders_slim,5", $int8, $int5, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 2), "v2_borders_slim,6", $int4, $int9, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 3), "v2_borders_slim,7", $int8, $int9, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 4), "v2_borders_slim,0", calc($int4 + 32), calc($int5 - 13), ^setpos_abs_left, ^setpos_abs_top, $int6, 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 5), "v2_borders_slim,2", calc($int4 + 32), calc(($int5 + $int3) - 20), ^setpos_abs_left, ^setpos_abs_top, $int6, 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 6), "v2_borders_slim,1", calc($int4 - 13), calc($int5 + 32), ^setpos_abs_left, ^setpos_abs_top, 32, $int7, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 7), "v2_borders_slim,3", calc($int8 + 12), calc($int5 + 32), ^setpos_abs_left, ^setpos_abs_top, 32, $int7, ^setsize_abs, ^setsize_abs);
+return(calc($int1 + 8));

@@ -8,8 +8,8 @@ if (~inzone(0_56_50_56_2, 1_57_50_36_36, coord) = 1) {
 		if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $component2);
 		if (%varbit6440 = 2) {
 			if_settext("Step inside now!", $component3);
-			~script2303($component3);
-			if_setontimer("script2302($component3)", $component3);
+			~tob_hud_nameflasher($component3);
+			if_setontimer("tob_hud_nameflasher($component3)", $component3);
 		} else if (%varbit6440 = 0) {
 			if_settext("No party", $component3);
 			if_setcolour(0xff981f, $component3);

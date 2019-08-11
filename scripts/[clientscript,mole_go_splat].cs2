@@ -15,4 +15,4 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setmodel(12027);
 cc_setmodelanim(3320);
 ~mole_splat_zoom($component2);
-cc_setontimer("script897(event_com, event_comid, calc(clientclock + $int0))");
+cc_setontimer("mole_go_splat_off(event_com, event_comid, calc(clientclock + $int0))");
