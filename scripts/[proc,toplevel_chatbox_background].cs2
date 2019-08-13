@@ -56,7 +56,7 @@ if (%varbit2570 = 1) {
 	if_setnoclickthrough(true, 162:38);
 } else {
 	if_setnoclickthrough(false, 162:38);
-	_2006(true, 162:38);
+	if_setnoscrollthrough(true, 162:38);
 }
 def_int $int4 = 0;
 if ($int1 = 0) {
