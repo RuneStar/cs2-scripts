@@ -1,0 +1,13 @@
+// 3050
+script3050(component $component0)
+def_int $int1 = ~min(255, ~max(0, %varbit3377));
+if ($int1 < calc(255 / 4)) {
+	cc_setcolour(0xee1111);
+} else if ($int1 < calc(255 / 2)) {
+	cc_setcolour(0xeeee11);
+} else {
+	cc_setcolour(0x11ee11);
+}
+def_int $int2 = scale($int1, 255, if_getwidth($component0));
+cc_setsize($int2, 0, ^setsize_abs, ^setsize_minus);
+.cc_setsize($int2, 0, ^setsize_minus, ^setsize_minus);

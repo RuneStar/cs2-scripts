@@ -1,5 +1,19 @@
 // 403
-[clientscript,poh_tablets_init](component $component0, model $model1, model $model2, int $int3, int $int4, string $string0)
-if_setopbase("<col=ff9040><$string0>", $component0);
-if_setonvartransmit("poh_tablets_update($component0, $model1, $model2, $int3, $int4){var261, var262}", $component0);
-~poh_tablets_update($component0, $model1, $model2, $int3, $int4);
+[clientscript,poh_tablets_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
+cc_deleteall($component0);
+~thinbox($component0, 0);
+~script3042($component1, "Varrock Teleport", 0, 0, 15202, 15203);
+~script3042($component2, "Lumbridge Teleport", 1, 0, 15196, 15197);
+~script3042($component3, "Falador Teleport", 1, 0, 15187, 15193);
+~script3042($component4, "Camelot Teleport", 2, 0, 15183, 15184);
+~script3042($component5, "Ardougne Teleport", 2, 0, 15177, 15178);
+~script3042($component6, "Watchtower Teleport", 3, 0, 15204, 15205);
+~script3042($component7, "House Teleport", 3, 0, 15200, 15201);
+~script3042($component8, "Enchant Sapphire", 0, 0, 8258, 15192);
+~script3042($component9, "Enchant Emerald", 0, 1, 8258, 15189);
+~script3042($component10, "Enchant Ruby", 0, 2, 8258, 15191);
+~script3042($component11, "Enchant Diamond", 0, 2, 8258, 15186);
+~script3042($component12, "Enchant Dragonstone", 0, 3, 8258, 15188);
+~script3042($component13, "Enchant Onyx", 0, 3, 8258, 15190);
+~script3042($component14, "Bones to Bananas", 0, 1, 15179, 15180);
+~script3042($component15, "Bones to Peaches", 0, 3, 15181, 15182);

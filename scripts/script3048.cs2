@@ -1,0 +1,14 @@
+// 3048
+script3048(component $component0)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_rectangle, 0);
+.cc_create($component0, ^iftype_rectangle, 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_settrans(128);
+.cc_settrans(128);
+cc_setfill(true);
+.cc_setfill(true);
+.cc_setcolour(^black);
+~script3050($component0);
+if_setonvartransmit("script3049(event_com, cc_getid, .cc_getid){var391}", $component0);

@@ -1,0 +1,60 @@
+// 3042
+script3042(component $component0, string $string0, int $int1, int $int2, model $model3, model $model4)
+cc_deleteall($component0);
+def_int $int5 = 0;
+if (~on_mobile = true) {
+	cc_create($component0, ^iftype_rectangle, $int5);
+	$int5 = calc($int5 + 1);
+	.cc_create($component0, ^iftype_rectangle, $int5);
+	$int5 = calc($int5 + 1);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	.cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+	cc_setcolour(^white);
+	.cc_setcolour(^white);
+	cc_setfill(true);
+	.cc_setfill(true);
+	cc_settrans(250);
+	.cc_settrans(250);
+	cc_sethide(true);
+	.cc_sethide(true);
+	if_setonmouserepeat("script3044(event_com, cc_getid, .cc_getid, false)", $component0);
+	if_setonmouseleave("script3044(event_com, cc_getid, .cc_getid, true)", $component0);
+} else {
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+}
+cc_create($component0, ^iftype_model, $int5);
+def_int $int6 = $int5;
+$int5 = calc($int5 + 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+def_int $int7 = -1;
+if (~on_mobile = true) {
+	cc_setmodelangle(0, 7, 512, 0, 0, 305);
+	.cc_create($component0, ^iftype_text, $int5);
+	$int7 = $int5;
+	$int5 = calc($int5 + 1);
+	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+	.cc_setsize(0, 22, ^setsize_minus, ^setsize_abs);
+	.cc_settextfont(p11_full);
+	.cc_settextshadow(true);
+	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	.cc_settext($string0);
+	if ((%var261 >= $int1) & (%var262 >= $int2)) {
+		.cc_setcolour(0xff981f);
+	} else {
+		.cc_setcolour(0x9f9f9f);
+	}
+} else {
+	cc_setmodelangle(0, 0, 512, 0, 0, 200);
+}
+if ((%var261 >= $int1) & (%var262 >= $int2)) {
+	cc_setmodel($model4);
+} else {
+	cc_setmodel($model3);
+}
+if_setopbase("<col=ff9040><$string0></col>", $component0);
+if_setop(1, "Create", $component0);
+if_setonvartransmit("script3043(event_com, $int6, $int7, $int1, $int2, $model3, $model4){var261, var262}", $component0);

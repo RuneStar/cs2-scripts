@@ -1,0 +1,22 @@
+// 3053
+script3053(component $component0, component $component1, component $component2)
+if (%varbit9344 = 1) {
+	if_settext("Net: <col=ff0000>Ripped!</col>", $component0);
+} else {
+	if_settext("Net: <col=00ff00>OK</col>", $component0);
+}
+def_string $string0 = ",";
+if (%varbit9346 <= 0) {
+	if_settext("Catch: Nothing", $component1);
+} else if (%varbit9346 < 4000) {
+	if_settext("Catch: <~tostring_spacer(%varbit9346, $string0)> fish", $component1);
+} else {
+	if_settext("Catch: Lots!", $component1);
+}
+if (%varbit9345 <= 0) {
+	if_settext("Time left: Under 1 min", $component2);
+} else if (%varbit9345 = 1) {
+	if_settext("Time left: 1 min", $component2);
+} else {
+	if_settext("Time left: <tostring(%varbit9345)> mins", $component2);
+}

@@ -494,112 +494,82 @@ switch_int ($int0) {
 		}
 		return(-1, null, "");
 	case 4 :
-		if ($int1 = 0) {
-			return(2, brown_rug_8316, "Brown rug");
+		switch_int ($int1) {
+			case 0 :
+				return(2, brown_rug_8316, "Brown rug");
+			case 1 :
+				return(2, torn_curtains_8322, "Torn curtains");
+			case 2 :
+				return(13, rug_8317, "Rug");
+			case 3 :
+				return(18, curtains_8323, "Curtains");
+			case 4 :
+				return(25, oak_clock_8052, "Oak clock");
+			case 5 :
+				return(40, oak_lectern_8334, "Oak lectern");
+			case 6 :
+				return(40, opulent_curtains_8324, "Opulent curtains");
+			case 7 :
+				return(41, globe_8341, "Globe");
+			case 8 :
+				return(43, alchemical_chart_8354, "Alchemical chart");
+			case 9 :
+				return(44, wooden_telescope_8348, "Wooden telescope");
+			case 10 :
+				return(47, eagle_lectern_8335, "Oak eagle lectern");
+			case 11 :
+				return(47, demon_lectern_8336, "Oak demon lectern");
+			case 12 :
+				return(50, ornamental_globe_8342, "Ornamental globe");
+			case 13 :
+				return(55, teak_clock_8053, "Teak clock");
+			case 14 :
+				return(57, teak_eagle_lectern_8337, "Teak eagle lectern");
+			case 15 :
+				return(57, teak_demon_lectern_8338, "Teak demon lectern");
+			case 16 :
+				return(59, lunar_globe_8343, "Lunar globe");
+			case 17 :
+				return(63, astronomical_chart_8355, "Astronomical chart");
+			case 18 :
+				return(64, teak_telescope_8349, "Teak telescope");
+			case 19 :
+				return(65, opulent_rug_8318, "Opulent rug");
+			case 20 :
+				return(67, mahogany_eagle_8339, "Mahogany eagle lectern");
+			case 21 :
+				return(67, mahogany_demon_8340, "Mahogany demon lectern");
+			case 22 :
+				return(68, celestial_globe_8344, "Celestial globe");
+			case 23 :
+				return(72, candles_8128, "Dungeon candles");
+			case 24 :
+				return(72, decorative_blood_8125, "Decorative dungeon bloodstain");
+			case 25 :
+				return(77, armillary_sphere_8345, "Armillary sphere");
+			case 26 :
+				return(77, marble_lectern_24132, "Marble lectern");
+			case 27 :
+				return(83, infernal_chart_8356, "Infernal chart");
+			case 28 :
+				return(83, decorative_pipe_8126, "Decorative dungeon pipe");
+			case 29 :
+				return(84, torches_8129, "Dungeon torches");
+			case 30 :
+				return(84, mahogany_telescope_8350, "Mahogany 'scope");
+			case 31 :
+				return(85, gilded_clock_8054, "Gilded mahogany clock");
+			case 32 :
+				return(86, small_orrery_8346, "Small orrery");
+			case 33 :
+				return(94, hanging_skeleton_8127, "Hanging dungeon skeleton");
+			case 34 :
+				return(94, skull_torches_8130, "Dungeon skull torches");
+			case 35 :
+				return(95, large_orrery_8347, "Large orrery");
+			case default :
+				return(-1, null, "");
 		}
-		if ($int1 = 1) {
-			return(2, torn_curtains_8322, "Torn curtains");
-		}
-		if ($int1 = 2) {
-			return(13, rug_8317, "Rug");
-		}
-		if ($int1 = 3) {
-			return(18, curtains_8323, "Curtains");
-		}
-		if ($int1 = 4) {
-			return(25, oak_clock_8052, "Oak clock");
-		}
-		if ($int1 = 5) {
-			return(40, oak_lectern_8334, "Oak lectern");
-		}
-		if ($int1 = 6) {
-			return(40, opulent_curtains_8324, "Opulent curtains");
-		}
-		if ($int1 = 7) {
-			return(41, globe_8341, "Globe");
-		}
-		if ($int1 = 8) {
-			return(43, alchemical_chart_8354, "Alchemical chart");
-		}
-		if ($int1 = 9) {
-			return(44, wooden_telescope_8348, "Wooden telescope");
-		}
-		if ($int1 = 10) {
-			return(47, eagle_lectern_8335, "Oak eagle lectern");
-		}
-		if ($int1 = 11) {
-			return(47, demon_lectern_8336, "Oak demon lectern");
-		}
-		if ($int1 = 12) {
-			return(50, ornamental_globe_8342, "Ornamental globe");
-		}
-		if ($int1 = 13) {
-			return(55, teak_clock_8053, "Teak clock");
-		}
-		if ($int1 = 14) {
-			return(57, teak_eagle_lectern_8337, "Teak eagle lectern");
-		}
-		if ($int1 = 15) {
-			return(57, teak_demon_lectern_8338, "Teak demon lectern");
-		}
-		if ($int1 = 16) {
-			return(59, lunar_globe_8343, "Lunar globe");
-		}
-		if ($int1 = 17) {
-			return(63, astronomical_chart_8355, "Astronomical chart");
-		}
-		if ($int1 = 18) {
-			return(64, teak_telescope_8349, "Teak telescope");
-		}
-		if ($int1 = 19) {
-			return(65, opulent_rug_8318, "Opulent rug");
-		}
-		if ($int1 = 20) {
-			return(67, mahogany_eagle_8339, "Mahogany eagle lectern");
-		}
-		if ($int1 = 21) {
-			return(67, mahogany_demon_8340, "Mahogany demon lectern");
-		}
-		if ($int1 = 22) {
-			return(68, celestial_globe_8344, "Celestial globe");
-		}
-		if ($int1 = 23) {
-			return(72, candles_8128, "Dungeon candles");
-		}
-		if ($int1 = 24) {
-			return(72, decorative_blood_8125, "Decorative dungeon bloodstain");
-		}
-		if ($int1 = 25) {
-			return(77, armillary_sphere_8345, "Armillary sphere");
-		}
-		if ($int1 = 26) {
-			return(83, infernal_chart_8356, "Infernal chart");
-		}
-		if ($int1 = 27) {
-			return(83, decorative_pipe_8126, "Decorative dungeon pipe");
-		}
-		if ($int1 = 28) {
-			return(84, torches_8129, "Dungeon torches");
-		}
-		if ($int1 = 29) {
-			return(84, mahogany_telescope_8350, "Mahogany 'scope");
-		}
-		if ($int1 = 30) {
-			return(85, gilded_clock_8054, "Gilded mahogany clock");
-		}
-		if ($int1 = 31) {
-			return(86, small_orrery_8346, "Small orrery");
-		}
-		if ($int1 = 32) {
-			return(94, hanging_skeleton_8127, "Hanging dungeon skeleton");
-		}
-		if ($int1 = 33) {
-			return(94, skull_torches_8130, "Dungeon skull torches");
-		}
-		if ($int1 = 34) {
-			return(95, large_orrery_8347, "Large orrery");
-		}
-		return(-1, null, "");
 	case 5 :
 		switch_int ($int1) {
 			case 0 :

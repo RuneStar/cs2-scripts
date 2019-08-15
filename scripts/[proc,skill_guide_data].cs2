@@ -2611,151 +2611,120 @@ switch_int ($int0) {
 		return(-1, null, "");
 	case 13 :
 		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(1, rune_essence_1436, "Rune essence<br>(after Rune Mysteries quest)");
+			switch_int ($int2) {
+				case 0 :
+					return(1, rune_essence_1436, "Rune essence<br>(after Rune Mysteries quest)");
+				case 1 :
+					return(1, clay_434, "Clay");
+				case 2 :
+					return(1, copper_ore_436, "Copper ore");
+				case 3 :
+					return(1, tin_ore_438, "Tin ore");
+				case 4 :
+					return(10, blurite_ore_668, "Blurite ore");
+				case 5 :
+					return(10, limestone_3211, "Members: Limestone");
+				case 6 :
+					return(15, iron_ore_440, "Iron ore");
+				case 7 :
+					return(20, silver_ore_442, "Silver ore");
+				case 8 :
+					return(22, volcanic_ash_21622, "Members: Volcanic ash");
+				case 9 :
+					return(30, coal_453, "Coal");
+				case 10 :
+					return(30, pure_essence_7936, "Members: Pure essence<br>(after Rune Mysteries quest)");
+				case 11 :
+					return(30, pay_dirt_12011, "Members: Motherlode mine (lower level)");
+				case 12 :
+					return(35, sandstone_10kg_6977, "Members: Sandstone");
+				case 13 :
+					return(38, dense_essence_block_13445, "Members: Dense essence<br>(with 38 Crafting)");
+				case 14 :
+					return(40, gold_ore_444, "Gold");
+				case 15 :
+					return(40, uncut_red_topaz_1629, "Members: Gem rocks");
+				case 16 :
+					return(42, volcanic_sulphur_13571, "Members: Volcanic sulphur");
+				case 17 :
+					return(43, dynamite_13573, "Members: Lovakengj Blast Mine");
+				case 18 :
+					return(45, granite_5kg_6983, "Members: Granite");
+				case 19 :
+					return(50, iron_ore_fragment_21532, "Members: Volcanic Mine (with 150 Kudos)");
+				case 20 :
+					return(55, mithril_ore_447, "Mithril ore");
+				case 21 :
+					return(65, lovakite_ore_13356, "Members: Lovakite ore");
+				case 22 :
+					return(70, adamantite_ore_449, "Adamantite ore");
+				case 23 :
+					return(70, soft_clay_1761, "Members: Soft clay");
+				case 24 :
+					return(72, pay_dirt_12011, "Members: Motherlode mine (upper level)");
+				case 25 :
+					return(72, te_salt_22593, "Members: Te Salt");
+				case 26 :
+					return(72, efh_salt_22595, "Members: Efh Salt");
+				case 27 :
+					return(72, urt_salt_22597, "Members: Urt Salt");
+				case 28 :
+					return(72, basalt_22603, "Members: Basalt");
+				case 29 :
+					return(85, runite_ore_451, "Runite ore");
+				case 30 :
+					return(92, amethyst_21347, "Members: Amethyst");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, clay_434, "Clay");
-			}
-			if ($int2 = 2) {
-				return(1, copper_ore_436, "Copper ore");
-			}
-			if ($int2 = 3) {
-				return(1, tin_ore_438, "Tin ore");
-			}
-			if ($int2 = 4) {
-				return(10, blurite_ore_668, "Blurite ore");
-			}
-			if ($int2 = 5) {
-				return(10, limestone_3211, "Members: Limestone");
-			}
-			if ($int2 = 6) {
-				return(15, iron_ore_440, "Iron ore");
-			}
-			if ($int2 = 7) {
-				return(20, silver_ore_442, "Silver ore");
-			}
-			if ($int2 = 8) {
-				return(22, volcanic_ash_21622, "Members: Volcanic ash");
-			}
-			if ($int2 = 9) {
-				return(30, coal_453, "Coal");
-			}
-			if ($int2 = 10) {
-				return(30, pure_essence_7936, "Members: Pure essence<br>(after Rune Mysteries quest)");
-			}
-			if ($int2 = 11) {
-				return(30, pay_dirt_12011, "Members: Motherlode mine (lower level)");
-			}
-			if ($int2 = 12) {
-				return(35, sandstone_10kg_6977, "Members: Sandstone");
-			}
-			if ($int2 = 13) {
-				return(38, dense_essence_block_13445, "Members: Dense essence<br>(with 38 Crafting)");
-			}
-			if ($int2 = 14) {
-				return(40, gold_ore_444, "Gold");
-			}
-			if ($int2 = 15) {
-				return(40, uncut_red_topaz_1629, "Members: Gem rocks");
-			}
-			if ($int2 = 16) {
-				return(42, volcanic_sulphur_13571, "Members: Volcanic sulphur");
-			}
-			if ($int2 = 17) {
-				return(43, dynamite_13573, "Members: Lovakengj Blast Mine");
-			}
-			if ($int2 = 18) {
-				return(45, granite_5kg_6983, "Members: Granite");
-			}
-			if ($int2 = 19) {
-				return(50, iron_ore_fragment_21532, "Members: Volcanic Mine (with 150 Kudos)");
-			}
-			if ($int2 = 20) {
-				return(55, mithril_ore_447, "Mithril ore");
-			}
-			if ($int2 = 21) {
-				return(65, lovakite_ore_13356, "Members: Lovakite ore");
-			}
-			if ($int2 = 22) {
-				return(70, adamantite_ore_449, "Adamantite ore");
-			}
-			if ($int2 = 23) {
-				return(70, soft_clay_1761, "Members: Soft clay");
-			}
-			if ($int2 = 24) {
-				return(72, pay_dirt_12011, "Members: Motherlode mine (upper level)");
-			}
-			if ($int2 = 25) {
-				return(72, te_salt_22593, "Members: Te Salt");
-			}
-			if ($int2 = 26) {
-				return(72, efh_salt_22595, "Members: Efh Salt");
-			}
-			if ($int2 = 27) {
-				return(72, urt_salt_22597, "Members: Urt Salt");
-			}
-			if ($int2 = 28) {
-				return(72, basalt_22603, "Members: Basalt");
-			}
-			if ($int2 = 29) {
-				return(85, runite_ore_451, "Runite ore");
-			}
-			if ($int2 = 30) {
-				return(92, amethyst_21347, "Members: Amethyst");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(1, bronze_pickaxe_1265, "Bronze pickaxe");
+			switch_int ($int2) {
+				case 0 :
+					return(1, bronze_pickaxe_1265, "Bronze pickaxe");
+				case 1 :
+					return(1, iron_pickaxe_1267, "Iron pickaxe");
+				case 2 :
+					return(6, steel_pickaxe_1269, "Steel pickaxe");
+				case 3 :
+					return(11, black_pickaxe_12297, "Black pickaxe");
+				case 4 :
+					return(20, mining_gloves_21343, "Members: Mining gloves");
+				case 5 :
+					return(21, mithril_pickaxe_1273, "Mithril pickaxe");
+				case 6 :
+					return(31, adamant_pickaxe_1271, "Adamant pickaxe");
+				case 7 :
+					return(41, rune_pickaxe_1275, "Rune pickaxe");
+				case 8 :
+					return(41, gilded_pickaxe_23276, "Gilded pickaxe");
+				case 9 :
+					return(55, superior_mining_gloves_21345, "Members: Superior mining gloves");
+				case 10 :
+					return(61, dragon_pickaxe_11920, "Members: Dragon pickaxe");
+				case 11 :
+					return(61, 3rd_age_pickaxe_20014, "Members: 3rd age pickaxe");
+				case 12 :
+					return(61, infernal_pickaxe_13243, "Members: Infernal pickaxe<br>(with 85 Smithing)");
+				case 13 :
+					return(70, expert_mining_gloves_21392, "Members: Expert mining gloves");
+				case 14 :
+					return(71, crystal_pickaxe_23680, "Members: Crystal pickaxe<br>(after Song of the Elves)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, iron_pickaxe_1267, "Iron pickaxe");
+		}
+		if ($int1 = 2) {
+			switch_int ($int2) {
+				case 0 :
+					return(30, pay_dirt_12011, "Members: Motherlode Mine");
+				case 1 :
+					return(60, mithril_ore_447, "Mining Guild");
+				case 2 :
+					return(72, pay_dirt_12011, "Members: Motherlode Mine upper area");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 2) {
-				return(6, steel_pickaxe_1269, "Steel pickaxe");
-			}
-			if ($int2 = 3) {
-				return(11, black_pickaxe_12297, "Black pickaxe");
-			}
-			if ($int2 = 4) {
-				return(20, mining_gloves_21343, "Members: Mining gloves");
-			}
-			if ($int2 = 5) {
-				return(21, mithril_pickaxe_1273, "Mithril pickaxe");
-			}
-			if ($int2 = 6) {
-				return(31, adamant_pickaxe_1271, "Adamant pickaxe");
-			}
-			if ($int2 = 7) {
-				return(41, rune_pickaxe_1275, "Rune pickaxe");
-			}
-			if ($int2 = 8) {
-				return(41, gilded_pickaxe_23276, "Gilded pickaxe");
-			}
-			if ($int2 = 9) {
-				return(55, superior_mining_gloves_21345, "Members: Superior mining gloves");
-			}
-			if ($int2 = 10) {
-				return(61, dragon_pickaxe_11920, "Members: Dragon pickaxe");
-			}
-			if ($int2 = 11) {
-				return(61, 3rd_age_pickaxe_20014, "Members: 3rd age pickaxe");
-			}
-			if ($int2 = 12) {
-				return(61, infernal_pickaxe_13243, "Members: Infernal pickaxe<br>(with 85 Smithing)");
-			}
-			if ($int2 = 13) {
-				return(70, expert_mining_gloves_21392, "Members: Expert mining gloves");
-			}
-			if ($int2 = 14) {
-				return(71, crystal_pickaxe_23680, "Members: Crystal pickaxe<br>(after Song of the Elves)");
-			}
-			if ($int2 = 13) {
-				return(71, crystal_pickaxe_23680, "Members: Crystal pickaxe<br>(after Song of the Elves)");
-			}
-			return(-1, null, "");
 		}
 		return(-1, null, "");
 	case 14 :

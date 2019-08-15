@@ -2,13 +2,17 @@
 [proc,adventurepath_task_focus](component $component0, int $int1, int $int2, int $int3, int $int4)
 if (~script2973($int2, $int4) ! $int2) {
 	if (cc_find($component0, calc($int3 + 9)) = ^true) {
+		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		cc_setgraphic("clickcross,5");
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	}
 	if_setonmouserepeat("adventurepath_do_nothing", $component0);
 	if_setonmouseleave("adventurepath_do_nothing", $component0);
 } else if ($int1 = $int2) {
 	if (cc_find($component0, calc($int3 + 9)) = ^true) {
+		cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 		cc_setgraphic(2223);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	if_setonmouserepeat("script2998($component0, $int1, $int2, $int4)", $component0);
 	if_setonmouseleave("script2999($component0, $int1, $int2, $int4)", $component0);
@@ -22,7 +26,9 @@ if (~script2973($int2, $int4) ! $int2) {
 	if_setonmouseleave("adventurepath_do_nothing", $component0);
 } else {
 	if (cc_find($component0, calc($int3 + 9)) = ^true) {
+		cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 		cc_setgraphic(2224);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	if_setonmouserepeat("script2998($component0, $int1, $int2, $int4)", $component0);
 	if_setonmouseleave("script2999($component0, $int1, $int2, $int4)", $component0);

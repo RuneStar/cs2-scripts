@@ -475,8 +475,6 @@
 [**472**](scripts/[clientscript,quickprayer_close].cs2) `[clientscript,quickprayer_close]`  
 [**473**](scripts/[clientscript,quickprayer_close_timeout].cs2) `[clientscript,quickprayer_close_timeout]`  
 [**474**](scripts/script474.cs2)  
-[**475**](scripts/[clientscript,poh_tablets_update].cs2) `[clientscript,poh_tablets_update]`  
-[**476**](scripts/[proc,poh_tablets_update].cs2) `[proc,poh_tablets_update]`  
 [**477**](scripts/[clientscript,ntk_textbox].cs2) `[clientscript,ntk_textbox]`  
 [**478**](scripts/[clientscript,tournament_sidepanel_setactive].cs2) `[clientscript,tournament_sidepanel_setactive]`  
 [**479**](scripts/[clientscript,ntk_timer_resynch].cs2) `[clientscript,ntk_timer_resynch]`  
@@ -877,7 +875,6 @@
 [**874**](scripts/[clientscript,wom_telescope_borders].cs2) `[clientscript,wom_telescope_borders]`  
 [**875**](scripts/[proc,wom_telescope_borders].cs2) `[proc,wom_telescope_borders]`  
 [**876**](scripts/[clientscript,cc_outline_on].cs2) `[clientscript,cc_outline_on]`  
-[**877**](scripts/[clientscript,trawler_water].cs2) `[clientscript,trawler_water]`  
 [**878**](scripts/[clientscript,boardgames_rank_draughts].cs2) `[clientscript,boardgames_rank_draughts]`  
 [**879**](scripts/[clientscript,boardgames_rank_runelink].cs2) `[clientscript,boardgames_rank_runelink]`  
 [**880**](scripts/[clientscript,boardgames_rank_runeversi].cs2) `[clientscript,boardgames_rank_runeversi]`  
@@ -1292,11 +1289,6 @@
 [**1289**](scripts/[clientscript,glidermap_fly].cs2) `[clientscript,glidermap_fly]`  
 [**1290**](scripts/[proc,glidermap_fly].cs2) `[proc,glidermap_fly]`  
 [**1291**](scripts/script1291.cs2)  
-[**1292**](scripts/[clientscript,teletab_init].cs2) `[clientscript,teletab_init]`  
-[**1293**](scripts/[proc,teletab_req_met].cs2) `[proc,teletab_req_met]`  
-[**1294**](scripts/[clientscript,teletab_runecost].cs2) `[clientscript,teletab_runecost]`  
-[**1295**](scripts/[clientscript,teletab_blank_runecost].cs2) `[clientscript,teletab_blank_runecost]`  
-[**1296**](scripts/script1296.cs2)  
 [**1297**](scripts/[clientscript,slayer_rewards_unlock_draw].cs2) `[clientscript,slayer_rewards_unlock_draw]`  
 [**1298**](scripts/[proc,slayer_rewards_unlock_desc].cs2) `[proc,slayer_rewards_unlock_desc]`  
 [**1299**](scripts/script1299.cs2)  
@@ -1363,7 +1355,6 @@
 [**1360**](scripts/[proc,quicksort_intenum].cs2) `[proc,quicksort_intenum]`  
 [**1361**](scripts/[proc,welcome_screen_lastlogin].cs2) `[proc,welcome_screen_lastlogin]`  
 [**1362**](scripts/[clientscript,welcome_screen_messages].cs2) `[clientscript,welcome_screen_messages]`  
-[**1363**](scripts/[clientscript,trawler_activity].cs2) `[clientscript,trawler_activity]`  
 [**1364**](scripts/[clientscript,barbassault_reward_shop_init].cs2) `[clientscript,barbassault_reward_shop_init]`  
 [**1365**](scripts/script1365.cs2)  
 [**1366**](scripts/script1366.cs2)  
@@ -3042,3 +3033,28 @@
 [**3039**](scripts/[clientscript,adventurepath_side_settings_back_op].cs2) `[clientscript,adventurepath_side_settings_back_op]`  
 [**3040**](scripts/script3040.cs2)  
 [**3041**](scripts/script3041.cs2)  
+[**3042**](scripts/script3042.cs2)  
+[**3043**](scripts/script3043.cs2)  
+[**3044**](scripts/script3044.cs2)  
+[**3045**](scripts/script3045.cs2)  
+[**3046**](scripts/script3046.cs2)  
+[**3047**](scripts/script3047.cs2)  
+[**3048**](scripts/script3048.cs2)  
+[**3049**](scripts/script3049.cs2)  
+[**3050**](scripts/script3050.cs2)  
+[**3051**](scripts/script3051.cs2)  
+[**3052**](scripts/script3052.cs2)  
+[**3053**](scripts/script3053.cs2)  
+[**3054**](scripts/script3054.cs2)  
+[**3055**](scripts/script3055.cs2)  
+[**3056**](scripts/script3056.cs2)  
+[**3057**](scripts/script3057.cs2)  
+[**3058**](scripts/script3058.cs2)  
+[**3059**](scripts/script3059.cs2)  
+[**3060**](scripts/script3060.cs2)  
+[**3061**](scripts/script3061.cs2)  
+[**3062**](scripts/script3062.cs2)  
+[**3063**](scripts/script3063.cs2)  
+[**3064**](scripts/script3064.cs2)  
+[**3065**](scripts/script3065.cs2)  
+[**3066**](scripts/script3066.cs2)  

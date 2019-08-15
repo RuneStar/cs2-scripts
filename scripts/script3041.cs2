@@ -11,7 +11,9 @@ if (%varbit9340 = 1) {
 } else {
 	if_clearops($component6);
 	if_sethide(true, $component6);
-	%varbit8168 = 0;
+	if (%varbit8168 = 4) {
+		%varbit8168 = 0;
+	}
 	~script2800($component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26);
 	$int28 = calc(16384 / 4);
 }
