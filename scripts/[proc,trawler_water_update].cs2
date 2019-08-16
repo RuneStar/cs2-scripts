@@ -1,5 +1,5 @@
 // 3047
-script3047(component $component0)
+[proc,trawler_water_update](component $component0)
 def_int $int1 = scale(~min(95, ~max(0, %varbit9343)), 95, if_getwidth($component0));
 cc_setsize($int1, 0, ^setsize_abs, ^setsize_minus);
 .cc_setsize($int1, 0, ^setsize_minus, ^setsize_minus);

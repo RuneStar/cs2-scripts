@@ -1,5 +1,5 @@
 // 3050
-script3050(component $component0)
+[proc,trawler_activity_update](component $component0)
 def_int $int1 = ~min(255, ~max(0, %varbit3377));
 if ($int1 < calc(255 / 4)) {
 	cc_setcolour(0xee1111);

@@ -1,0 +1,10 @@
+// 3066
+[clientscript,arceuus_teletab_confirm_reset](int $int0, component $component1, string $string0)
+if (clientclock < $int0) {
+	return;
+}
+~arceuus_teletab_confirm_draw(false, $string0, $component1);
+if_setonmouserepeat("arceuus_teletab_confirm_draw(true, $string0, $component1)", $component1);
+if_setonmouseleave("arceuus_teletab_confirm_draw(false, $string0, $component1)", $component1);
+if_setonop("arceuus_teletab_confirm_op(event_opindex, event_com, $string0)", $component1);
+if_setontimer(null, $component1);

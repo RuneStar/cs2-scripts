@@ -1,5 +1,5 @@
 // 3048
-script3048(component $component0)
+[clientscript,trawler_activity_init](component $component0)
 cc_deleteall($component0);
 cc_create($component0, ^iftype_rectangle, 0);
 .cc_create($component0, ^iftype_rectangle, 1);
@@ -10,5 +10,5 @@ cc_settrans(128);
 cc_setfill(true);
 .cc_setfill(true);
 .cc_setcolour(^black);
-~script3050($component0);
-if_setonvartransmit("script3049(event_com, cc_getid, .cc_getid){var391}", $component0);
+~trawler_activity_update($component0);
+if_setonvartransmit("trawler_activity_update(event_com, cc_getid, .cc_getid){var391}", $component0);

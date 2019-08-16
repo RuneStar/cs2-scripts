@@ -1,5 +1,5 @@
 // 3045
-script3045(component $component0)
+[clientscript,trawler_water_init](component $component0)
 cc_deleteall($component0);
 cc_create($component0, ^iftype_rectangle, 0);
 .cc_create($component0, ^iftype_rectangle, 1);
@@ -11,5 +11,5 @@ cc_setfill(true);
 .cc_setfill(true);
 cc_setcolour(0x7f7fff);
 .cc_setcolour(^black);
-~script3047($component0);
-if_setonvartransmit("script3046(event_com, cc_getid, .cc_getid){var391}", $component0);
+~trawler_water_update($component0);
+if_setonvartransmit("trawler_water_update(event_com, cc_getid, .cc_getid){var391}", $component0);
