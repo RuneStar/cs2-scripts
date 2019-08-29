@@ -1,0 +1,12 @@
+// 3082
+script3082(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+~script3084($component1);
+if_setonvartransmit("script3083($component1){var261, var262}", $component1);
+def_int $int6 = ~script3087(-1, $component0, $component2, $component4, $component5);
+if_setscrollpos(0, 0, $component2);
+if ($int6 >= if_getheight($component2)) {
+	if_setscrollsize(0, $int6, $component2);
+} else {
+	if_setscrollsize(0, 0, $component2);
+}
+~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

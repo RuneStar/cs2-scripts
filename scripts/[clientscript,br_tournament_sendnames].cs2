@@ -34,11 +34,11 @@ while ($int2 < 11) {
 		$int3 = calc($int3 + 1);
 		.cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
 		.cc_setposition(0, calc($int2 * 15), ^setpos_abs_centre, ^setpos_abs_top);
-		.cc_setcolour(^white);
+		.cc_setcolour(0xff981f);
 		.cc_settextfont(p11_full);
 		.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		.cc_settextshadow(true);
-		.cc_settext("<$string1> <$string2>");
+		.cc_settext("<col=ffb83f><$string1></col> <$string2>");
 	}
 	$int2 = calc($int2 + 1);
 }

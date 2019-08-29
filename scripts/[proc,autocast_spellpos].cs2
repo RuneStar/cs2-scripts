@@ -135,7 +135,7 @@ switch_int ($int1) {
 			case 47 :
 				return(-60, 64);
 		}
-	case 11791 :
+	case 11791, 22296, 24144 :
 		switch_int ($int0) {
 			case 1 :
 				return(-60, -66);
@@ -182,56 +182,17 @@ switch_int ($int1) {
 			case 18 :
 				return(-20, 64);
 			case 20 :
-				return(20, 64);
-		}
-	case 22296 :
-		switch_int ($int0) {
-			case 1 :
-				return(-60, -66);
-			case 2 :
-				return(-20, -66);
-			case 3 :
-				return(20, -66);
-			case 4 :
-				return(60, -66);
-			case 5 :
-				return(-60, -40);
-			case 6 :
-				return(-20, -40);
-			case 7 :
-				return(20, -40);
-			case 8 :
-				return(60, -40);
-			case 9 :
-				return(-60, -14);
-			case 10 :
-				return(-20, -14);
-			case 11 :
-				return(20, -14);
-			case 12 :
-				return(60, -14);
-			case 13 :
-				return(-60, 13);
-			case 14 :
-				return(-20, 13);
-			case 15 :
-				return(20, 13);
-			case 16 :
-				return(60, 13);
-			case 48 :
-				return(-60, 39);
-			case 49 :
-				return(-20, 39);
-			case 50 :
-				return(20, 39);
-			case 51 :
-				return(60, 39);
-			case 17 :
-				return(-60, 64);
-			case 18 :
-				return(-20, 64);
+				if ($int1 = 11791) {
+					return(20, 64);
+				}
 			case 52 :
-				return(20, 64);
+				if ($int1 = 22296) {
+					return(20, 64);
+				}
+			case 19 :
+				if ($int1 = 24144) {
+					return(20, 64);
+				}
 		}
 	case 4675 :
 		switch_int ($int0) {

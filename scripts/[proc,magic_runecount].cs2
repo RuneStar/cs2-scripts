@@ -144,10 +144,12 @@ switch_obj ($obj0) {
 			}
 		}
 	case 8843 :
-		if (($obj4 = guthix_staff_2416) | ($obj4 = void_knight_mace_8841)) {
-			return(1);
+		switch_obj ($obj4) {
+			case guthix_staff_2416, void_knight_mace_8841, void_knight_mace_l_24181, staff_of_balance_24144 :
+				return(1);
+			case default :
+				return(0);
 		}
-		return(0);
 	case zamorak_staff_2417 :
 		switch_obj ($obj4) {
 			case zamorak_staff_2417, staff_of_the_dead_11791, toxic_staff_uncharged_12902, toxic_staff_of_the_dead_12904 :
@@ -157,7 +159,7 @@ switch_obj ($obj0) {
 		}
 	case slayers_staff_4170 :
 		switch_obj ($obj4) {
-			case slayers_staff_4170, slayers_staff_e_21255, staff_of_the_dead_11791, toxic_staff_uncharged_12902, toxic_staff_of_the_dead_12904, staff_of_light_22296 :
+			case slayers_staff_4170, slayers_staff_e_21255, staff_of_the_dead_11791, toxic_staff_uncharged_12902, toxic_staff_of_the_dead_12904, staff_of_light_22296, staff_of_balance_24144 :
 				return(1);
 			case default :
 				return(0);

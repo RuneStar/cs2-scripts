@@ -1,0 +1,50 @@
+// 3068
+[clientscript,br_loadout_insert](component $component0, int $int1, component $component2, int $int3, int $int4, component $component5, int $int6, int $int7, component $component8, component $component9, component $component10)
+if (cc_find($component0, $int1) = ^true) {
+	cc_setontimer(null);
+}
+if (cc_find($component5, $int6) = ^true) {
+	cc_sethide(true);
+}
+if (cc_find($component5, $int7) = ^true) {
+	cc_sethide(true);
+}
+def_obj $obj11 = enum(int, namedobj, 2630, $int4);
+if ($obj11 = null) {
+	return;
+}
+def_int $int12 = 0;
+def_int $int13 = -1;
+if ($component2 = $component8) {
+	if (($int3 >= 0) & ($int3 < inv_size(inv))) {
+		$int13 = $int3;
+	}
+	$int12 = 1;
+}
+def_int $int14 = inv_size(worn);
+if ($int13 = -1) {
+	while ($int14 > 0) {
+		$int14 = calc($int14 - 1);
+		if (($int13 = -1) & (enum(int, component, 2632, $int14) = $component2)) {
+			$int13, $int12 = $int14, 0;
+		}
+	}
+}
+if ($int13 = -1) {
+	return;
+}
+if ($int12 = 0) {
+	if (oc_param($obj11, 850) ! $int13) {
+		return;
+	}
+} else if (enum(int, namedobj, 2630, ~br_loadout_get_inv($int13)) ! null) {
+	~br_loadout_additem($int4, $obj11, $int13, $component5, $component8, $component9, $component10);
+	return;
+}
+sound_synth(2266, 1, 0);
+if ($int12 = 1) {
+	~br_loadout_set_inv($int13, $int4);
+} else {
+	~br_loadout_set_worn($int13, $int4);
+}
+~br_loadout_drawloadout($component5, $component8, $component9, $component10);

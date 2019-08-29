@@ -1,5 +1,5 @@
-// 1417
-[clientscript,br_tournament_refresh_op](int $int0, component $component1)
+// 3081
+script3081(int $int0, component $component1, string $string0)
 if ($int0 ! 1) {
 	return;
 }
@@ -13,9 +13,9 @@ cc_setcolour(0x8f8f8f);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext("Refresh");
+cc_settext($string0);
 if_setonmouseover(null, $component1);
 if_setonmouseleave(null, $component1);
-if_setop(1, "", $component1);
+if_clearops($component1);
 if_setonop(null, $component1);
-if_setontimer("br_tournament_refresh_reset(calc(clientclock + 10), event_com)", $component1);
+if_setontimer("script3079(calc(clientclock + 10), event_com, $string0)", $component1);

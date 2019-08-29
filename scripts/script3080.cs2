@@ -1,5 +1,5 @@
-// 1416
-[proc,br_tournament_refresh_reset](component $component0)
+// 3080
+script3080(component $component0, string $string0)
 cc_deleteall($component0);
 def_int $int1 = ~options_button_off($component0, 0);
 cc_create($component0, ^iftype_text, $int1);
@@ -9,9 +9,9 @@ cc_setcolour(0xff981f);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext("Refresh");
+cc_settext($string0);
 if_setonmouseover("cc_colour_swapper(event_com, $int1, ^white)", $component0);
 if_setonmouseleave("cc_colour_swapper(event_com, $int1, 0xff981f)", $component0);
-if_setop(1, "Refresh", $component0);
-if_setonop("br_tournament_refresh_op(event_opindex, event_com)", $component0);
+if_setop(1, $string0, $component0);
+if_setonop("script3081(event_opindex, event_com, $string0)", $component0);
 if_setontimer(null, $component0);

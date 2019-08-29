@@ -38,11 +38,7 @@ switch_int ($key0) {
 			~deadman_chest_tele;
 		}
 	case ^key_f12 :
-		if (~deadman_world = 1) {
-			~deadman_toplevel_close;
-		} else {
-			docheat("~1v1arena_restore");
-		}
+		docheat("~dmm_disablespectator_request");
 	case ^key_page_up :
 		~script2222;
 	case ^key_page_down :

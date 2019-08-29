@@ -62,7 +62,6 @@
 [**59**](scripts/[proc,chatbox_multi_addoption].cs2) `[proc,chatbox_multi_addoption]`  
 [**60**](scripts/[clientscript,dream_bank_init].cs2) `[clientscript,dream_bank_init]`  
 [**61**](scripts/[clientscript,dream_chest_init].cs2) `[clientscript,dream_chest_init]`  
-[**62**](scripts/[clientscript,br_shrine_init].cs2) `[clientscript,br_shrine_init]`  
 [**63**](scripts/[clientscript,scrollbar_vertical_graphics].cs2) `[clientscript,scrollbar_vertical_graphics]`  
 [**64**](scripts/script64.cs2)  
 [**65**](scripts/[clientscript,set_spinner].cs2) `[clientscript,set_spinner]`  
@@ -475,6 +474,8 @@
 [**472**](scripts/[clientscript,quickprayer_close].cs2) `[clientscript,quickprayer_close]`  
 [**473**](scripts/[clientscript,quickprayer_close_timeout].cs2) `[clientscript,quickprayer_close_timeout]`  
 [**474**](scripts/script474.cs2)  
+[**475**](scripts/script475.cs2)  
+[**476**](scripts/script476.cs2)  
 [**477**](scripts/[clientscript,ntk_textbox].cs2) `[clientscript,ntk_textbox]`  
 [**478**](scripts/[clientscript,tournament_sidepanel_setactive].cs2) `[clientscript,tournament_sidepanel_setactive]`  
 [**479**](scripts/[clientscript,ntk_timer_resynch].cs2) `[clientscript,ntk_timer_resynch]`  
@@ -875,6 +876,7 @@
 [**874**](scripts/[clientscript,wom_telescope_borders].cs2) `[clientscript,wom_telescope_borders]`  
 [**875**](scripts/[proc,wom_telescope_borders].cs2) `[proc,wom_telescope_borders]`  
 [**876**](scripts/[clientscript,cc_outline_on].cs2) `[clientscript,cc_outline_on]`  
+[**877**](scripts/script877.cs2)  
 [**878**](scripts/[clientscript,boardgames_rank_draughts].cs2) `[clientscript,boardgames_rank_draughts]`  
 [**879**](scripts/[clientscript,boardgames_rank_runelink].cs2) `[clientscript,boardgames_rank_runelink]`  
 [**880**](scripts/[clientscript,boardgames_rank_runeversi].cs2) `[clientscript,boardgames_rank_runeversi]`  
@@ -1289,6 +1291,11 @@
 [**1289**](scripts/[clientscript,glidermap_fly].cs2) `[clientscript,glidermap_fly]`  
 [**1290**](scripts/[proc,glidermap_fly].cs2) `[proc,glidermap_fly]`  
 [**1291**](scripts/script1291.cs2)  
+[**1292**](scripts/[clientscript,br_loadout_init].cs2) `[clientscript,br_loadout_init]`  
+[**1293**](scripts/[clientscript,br_loadout_menuop].cs2) `[clientscript,br_loadout_menuop]`  
+[**1294**](scripts/[clientscript,br_loadout_menureset].cs2) `[clientscript,br_loadout_menureset]`  
+[**1295**](scripts/script1295.cs2)  
+[**1296**](scripts/script1296.cs2)  
 [**1297**](scripts/[clientscript,slayer_rewards_unlock_draw].cs2) `[clientscript,slayer_rewards_unlock_draw]`  
 [**1298**](scripts/[proc,slayer_rewards_unlock_desc].cs2) `[proc,slayer_rewards_unlock_desc]`  
 [**1299**](scripts/script1299.cs2)  
@@ -1355,6 +1362,7 @@
 [**1360**](scripts/[proc,quicksort_intenum].cs2) `[proc,quicksort_intenum]`  
 [**1361**](scripts/[proc,welcome_screen_lastlogin].cs2) `[proc,welcome_screen_lastlogin]`  
 [**1362**](scripts/[clientscript,welcome_screen_messages].cs2) `[clientscript,welcome_screen_messages]`  
+[**1363**](scripts/script1363.cs2)  
 [**1364**](scripts/[clientscript,barbassault_reward_shop_init].cs2) `[clientscript,barbassault_reward_shop_init]`  
 [**1365**](scripts/script1365.cs2)  
 [**1366**](scripts/script1366.cs2)  
@@ -1405,10 +1413,6 @@
 [**1411**](scripts/[clientscript,questdisplay].cs2) `[clientscript,questdisplay]`  
 [**1412**](scripts/[proc,questdisplay_setup].cs2) `[proc,questdisplay_setup]`  
 [**1413**](scripts/script1413.cs2)  
-[**1414**](scripts/[clientscript,br_tournament_refresh_init].cs2) `[clientscript,br_tournament_refresh_init]`  
-[**1415**](scripts/[clientscript,br_tournament_refresh_reset].cs2) `[clientscript,br_tournament_refresh_reset]`  
-[**1416**](scripts/[proc,br_tournament_refresh_reset].cs2) `[proc,br_tournament_refresh_reset]`  
-[**1417**](scripts/[clientscript,br_tournament_refresh_op].cs2) `[clientscript,br_tournament_refresh_op]`  
 [**1418**](scripts/[clientscript,br_tournament_sendnames].cs2) `[clientscript,br_tournament_sendnames]`  
 [**1419**](scripts/[clientscript,br_tournament_op].cs2) `[clientscript,br_tournament_op]`  
 [**1420**](scripts/[clientscript,br_tournament_submit].cs2) `[clientscript,br_tournament_submit]`  
@@ -2185,7 +2189,6 @@
 [**2191**](scripts/script2191.cs2)  
 [**2192**](scripts/script2192.cs2)  
 [**2193**](scripts/[proc,deadman_arenas_tele].cs2) `[proc,deadman_arenas_tele]`  
-[**2194**](scripts/[proc,deadman_toplevel_close].cs2) `[proc,deadman_toplevel_close]`  
 [**2195**](scripts/[proc,scale_colour].cs2) `[proc,scale_colour]`  
 [**2196**](scripts/script2196.cs2)  
 [**2197**](scripts/[proc,setup_diary_entry].cs2) `[proc,setup_diary_entry]`  
@@ -3058,3 +3061,27 @@
 [**3064**](scripts/[proc,arceuus_teletab_confirm_draw].cs2) `[proc,arceuus_teletab_confirm_draw]`  
 [**3065**](scripts/[clientscript,arceuus_teletab_confirm_op].cs2) `[clientscript,arceuus_teletab_confirm_op]`  
 [**3066**](scripts/[clientscript,arceuus_teletab_confirm_reset].cs2) `[clientscript,arceuus_teletab_confirm_reset]`  
+[**3067**](scripts/[proc,br_loadout_drawloadout].cs2) `[proc,br_loadout_drawloadout]`  
+[**3068**](scripts/[clientscript,br_loadout_insert].cs2) `[clientscript,br_loadout_insert]`  
+[**3069**](scripts/script3069.cs2)  
+[**3070**](scripts/[proc,br_loadout_additem].cs2) `[proc,br_loadout_additem]`  
+[**3071**](scripts/[clientscript,br_loadout_hidewarning].cs2) `[clientscript,br_loadout_hidewarning]`  
+[**3072**](scripts/script3072.cs2)  
+[**3073**](scripts/[proc,br_loadout_sort].cs2) `[proc,br_loadout_sort]`  
+[**3074**](scripts/[proc,br_loadout_get_inv].cs2) `[proc,br_loadout_get_inv]`  
+[**3075**](scripts/[proc,br_loadout_get_worn].cs2) `[proc,br_loadout_get_worn]`  
+[**3076**](scripts/[proc,br_loadout_set_inv].cs2) `[proc,br_loadout_set_inv]`  
+[**3077**](scripts/[proc,br_loadout_set_worn].cs2) `[proc,br_loadout_set_worn]`  
+[**3078**](scripts/script3078.cs2)  
+[**3079**](scripts/script3079.cs2)  
+[**3080**](scripts/script3080.cs2)  
+[**3081**](scripts/script3081.cs2)  
+[**3082**](scripts/script3082.cs2)  
+[**3083**](scripts/script3083.cs2)  
+[**3084**](scripts/script3084.cs2)  
+[**3085**](scripts/script3085.cs2)  
+[**3086**](scripts/script3086.cs2)  
+[**3087**](scripts/script3087.cs2)  
+[**3088**](scripts/script3088.cs2)  
+[**3089**](scripts/script3089.cs2)  
+[**3090**](scripts/script3090.cs2)  

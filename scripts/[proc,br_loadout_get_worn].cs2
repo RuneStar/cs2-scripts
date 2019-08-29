@@ -1,0 +1,28 @@
+// 3075
+[proc,br_loadout_get_worn](int $int0)(int)
+switch_int ($int0) {
+	case 0 :
+		return(%varbit9436);
+	case 1 :
+		return(%varbit9437);
+	case 2 :
+		return(%varbit9438);
+	case 3 :
+		return(%varbit9439);
+	case 4 :
+		return(%varbit9403);
+	case 5 :
+		return(%varbit9404);
+	case 7 :
+		return(%varbit9405);
+	case 9 :
+		return(%varbit9373);
+	case 10 :
+		return(%varbit9440);
+	case 12 :
+		return(%varbit9441);
+	case 13 :
+		return(%varbit9406);
+	case default :
+		return(0);
+}

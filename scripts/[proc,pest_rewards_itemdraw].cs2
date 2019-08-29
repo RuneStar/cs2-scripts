@@ -3,7 +3,7 @@
 cc_create($component6, ^iftype_graphic, $int9);
 $int9 = calc($int9 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int2 + ((40 - 36) / 2)), $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setobject_nonum($obj0, 1);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);

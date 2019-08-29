@@ -1,0 +1,7 @@
+// 3071
+[clientscript,br_loadout_hidewarning](component $component0, int $int1, int $int2)
+%varcint110 = calc(clientclock + 2);
+if (.cc_find($component0, calc($int1 + $int2)) = ^true) {
+	.cc_setmodel(16238);
+	.cc_setontimer("script3072(calc(clientclock + 2), event_com, event_comid)");
+}

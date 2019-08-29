@@ -1,0 +1,145 @@
+// 3067
+[proc,br_loadout_drawloadout](component $component0, component $component1, component $component2, component $component3)
+def_int $array0(calc(enum_getoutputcount(2630) + 1));
+def_component $component4 = null;
+def_int $int5 = 0;
+def_obj $obj6 = null;
+def_int $int7 = 0;
+def_int $int8 = inv_size(worn);
+while ($int7 < $int8) {
+	$component4 = enum(int, component, 2632, $int7);
+	if ($component4 ! null) {
+		cc_deleteall($component4);
+		cc_create($component4, ^iftype_graphic, 0);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+		cc_setgraphic("miscgraphics,0");
+		cc_create($component4, ^iftype_graphic, 1);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		$int5 = ~br_loadout_get_worn($int7);
+		$obj6 = enum(int, namedobj, 2630, $int5);
+		if ($obj6 ! null) {
+			cc_settrans(0);
+			cc_setgraphicshadow(0x333333);
+			cc_setoutline(1);
+			if (oc_stackable($obj6) = true) {
+				cc_setobject($obj6, 5000);
+			} else {
+				cc_setobject($obj6, 1);
+			}
+			$array0($int5) = ~min(calc($array0($int5) + 1), enum(obj, int, 2631, $obj6));
+			cc_setopbase("<col=ff9040><oc_name($obj6)></col>");
+			cc_setop(1, "Discard");
+			cc_setop(10, "Examine");
+			cc_setonop("script487(event_com, cc_getid, 100, 0)");
+			cc_setdraggable($component0, -1);
+			cc_setondragcomplete("script3069(event_com, event_comid, event_dragtarget, event_dragtargetid, $int5, $component0, $component1, $component2, $component3)");
+			cc_setondrag("br_loadout_hidewarning(event_com, event_comid, 1)");
+			cc_setdragdeadzone(5);
+			cc_setdragdeadtime(5);
+		} else {
+			cc_settrans(255);
+			cc_clearops;
+			cc_create($component4, ^iftype_graphic, 2);
+			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+			cc_setgraphic(enum(int, graphic, 904, $int7));
+		}
+	}
+	$int7 = calc($int7 + 1);
+}
+cc_deleteall($component1);
+def_int $int9 = calc((((if_getwidth($component1) - 6) - (4 * 36)) / 3) + 36);
+def_int $int10 = calc((((if_getheight($component1) - 6) - (7 * 32)) / 6) + 32);
+$int7 = 0;
+def_int $int11 = inv_size(inv);
+while ($int7 < $int11) {
+	$int5 = ~br_loadout_get_inv($int7);
+	$obj6 = enum(int, namedobj, 2630, $int5);
+	cc_create($component1, ^iftype_graphic, $int7);
+	cc_setposition(calc(4 + ($int9 * ($int7 % 4))), calc(3 + ($int10 * ($int7 / 4))), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	if ($obj6 ! null) {
+		cc_settrans(0);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		if (oc_stackable($obj6) = true) {
+			cc_setobject($obj6, 5000);
+		} else {
+			cc_setobject($obj6, 1);
+		}
+		$array0($int5) = ~min(calc($array0($int5) + 1), enum(obj, int, 2631, $obj6));
+		cc_setopbase("<col=ff9040><oc_name($obj6)></col>");
+		cc_setop(1, "Discard");
+		cc_setop(10, "Examine");
+		cc_setonop("script487(event_com, cc_getid, 100, 0)");
+		cc_setdraggable($component0, -1);
+		cc_setondragcomplete("script3069(event_com, event_comid, event_dragtarget, event_dragtargetid, $int5, $component0, $component1, $component2, $component3)");
+		cc_setondrag("br_loadout_hidewarning(event_com, event_comid, $int11)");
+		cc_setdragdeadzone(5);
+		cc_setdragdeadtime(5);
+	} else {
+		cc_settrans(255);
+		cc_clearops;
+	}
+	$int7 = calc($int7 + 1);
+}
+def_int $int12 = $int7;
+def_int $int13 = 0;
+$int7 = $int8;
+while ($int7 > 0) {
+	$int7 = calc($int7 - 1);
+	$component4 = enum(int, component, 2632, $int7);
+	if ($component4 ! null) {
+		$int5 = ~br_loadout_get_worn($int7);
+		$obj6 = enum(int, namedobj, 2630, $int5);
+		if ($obj6 ! null) {
+			if ($array0($int5) > 0) {
+				$array0($int5) = calc($array0($int5) - 1);
+			} else {
+				cc_create($component4, ^iftype_model, 2);
+				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+				cc_setposition(1, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+				cc_setmodel(bank_filler_7669);
+				cc_setmodelangle(0, 0, 512, 512, 0, 1800);
+				$int13 = 1;
+			}
+		}
+	}
+}
+$int7 = 0;
+while ($int7 < $int11) {
+	cc_create($component1, ^iftype_model, $int12);
+	$int12 = calc($int12 + 1);
+	$int5 = ~br_loadout_get_inv($int7);
+	$obj6 = enum(int, namedobj, 2630, $int5);
+	if ($obj6 ! null) {
+		if ($array0($int5) > 0) {
+			$array0($int5) = calc($array0($int5) - 1);
+			cc_sethide(true);
+		} else {
+			cc_sethide(false);
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setposition(calc(4 + ($int9 * ($int7 % 4))), calc(3 + ($int10 * ($int7 / 4))), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setmodel(bank_filler_7669);
+			cc_setmodelangle(0, 0, 512, 512, 0, 1800);
+			$int13 = 1;
+		}
+	} else {
+		cc_sethide(true);
+	}
+	$int7 = calc($int7 + 1);
+}
+$int12 = ~thinbox($component1, $int12);
+if ($int13 = 1) {
+	if_settextfont(p11_full, $component3);
+	~tob_hud_nameflasher($component3);
+	if_setontimer("tob_hud_nameflasher($component3)", $component3);
+	if_settext("Your loadout contains too many of the <img=11> items - please discard some.", $component3);
+} else {
+	if_settextfont(p12_full, $component3);
+	if_setcolour(0xff981f, $component3);
+	if_setontimer(null, $component3);
+	if_settext("You will receive these items when a game begins.", $component3);
+}

@@ -1,0 +1,148 @@
+// 1292
+[clientscript,br_loadout_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+cc_deleteall($component5);
+def_int $int7 = 0;
+cc_create($component5, ^iftype_graphic, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,0");
+cc_create($component5, ^iftype_graphic, $int7);
+$int7 = calc($int7 + 1);
+cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("bankbuttons,6");
+cc_create($component5, ^iftype_text, $int7);
+cc_setcolour(0xff981f);
+if_setonmouserepeat("cc_colour_swapper(event_com, $int7, ^white)", $component5);
+if_setonmouseleave("cc_colour_swapper(event_com, $int7, 0xff981f)", $component5);
+$int7 = calc($int7 + 1);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize(38, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Drag items here to discard them.");
+def_int $int8 = enum_getoutputcount(2630);
+def_int $array0($int8);
+def_int $int9 = 0;
+cc_deleteall($component3);
+$int7 = 0;
+while ($int7 < $int8) {
+	if (enum(int, namedobj, 2630, $int7) ! null) {
+		$array0($int9) = $int7;
+		$int9 = calc($int9 + 1);
+	}
+	cc_create($component3, ^iftype_graphic, $int7);
+	cc_sethide(true);
+	$int7 = calc($int7 + 1);
+}
+def_int $int10 = $int9;
+if ($int10 > 1) {
+	~br_loadout_sort(0, 0, calc($int10 - 1));
+}
+cc_deleteall($component1);
+cc_create($component1, ^iftype_graphic, 0);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setoutline(1);
+cc_setgraphicshadow(0x333333);
+cc_sethide(true);
+cc_settrans(125);
+def_int $int11 = cc_getid;
+cc_create($component1, ^iftype_text, 1);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_sethide(true);
+def_int $int12 = cc_getid;
+def_int $int13 = 0;
+def_int $int14 = calc((36 - 32) / 2);
+def_obj $obj15 = null;
+def_int $int16 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+def_int $int17 = 0;
+$int9 = 0;
+while ($int9 < $int10) {
+	if (cc_find($component3, $array0($int9)) = ^true) {
+		cc_sethide(false);
+		cc_settiling(true);
+		cc_setgraphic("tradebacking_light");
+		cc_settrans(255);
+		cc_setsize(0, 36, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $int13, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setop(1, "Add");
+		cc_setop(10, "Examine");
+		cc_setdraggable($component1, -1);
+		cc_setdragdeadzone(5);
+		cc_setdragdeadtime(5);
+		$obj15 = enum(int, namedobj, 2630, $array0($int9));
+		$string1 = oc_name($obj15);
+		cc_setopbase("<col=ff9040><$string1></col>");
+		.cc_create($component3, ^iftype_rectangle, $int7);
+		$int7 = calc($int7 + 1);
+		.cc_setsize(0, 36, ^setsize_minus, ^setsize_abs);
+		.cc_setposition(0, $int13, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setfill(true);
+		cc_setonmouserepeat("script1015(event_com, .cc_getid, ^white, 225)");
+		if (calc($int9 % 2) = 0) {
+			.cc_setcolour(^white);
+			.cc_settrans(255);
+			cc_setonmouseleave("script1015(event_com, .cc_getid, ^white, 255)");
+			cc_setonop("br_loadout_menuop(event_opindex, event_com, event_comid, .cc_getid, ^white, 225, ^white, 255, $component1, $component2, $component5, $component6)");
+		} else {
+			.cc_setcolour(^black);
+			.cc_settrans(225);
+			cc_setonmouseleave("script1015(event_com, .cc_getid, ^black, 225)");
+			cc_setonop("br_loadout_menuop(event_opindex, event_com, event_comid, .cc_getid, ^white, 225, ^black, 225, $component1, $component2, $component5, $component6)");
+		}
+		.cc_create($component3, ^iftype_graphic, $int7);
+		$int7 = calc($int7 + 1);
+		.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(3, calc($int13 + $int14), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setoutline(1);
+		.cc_setgraphicshadow(0x333333);
+		if (oc_stackable($obj15) = true) {
+			.cc_setobject($obj15, 5000);
+		} else {
+			.cc_setobject_nonum($obj15, 1);
+		}
+		.cc_create($component3, ^iftype_text, $int7);
+		$int7 = calc($int7 + 1);
+		.cc_setsize(calc(8 + 36), 36, ^setsize_minus, ^setsize_abs);
+		.cc_setposition(3, $int13, ^setpos_abs_right, ^setpos_abs_top);
+		.cc_setcolour(0xff981f);
+		.cc_settextfont(p12_full);
+		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		.cc_settextshadow(true);
+		$int17, $int16 = string_length($string1), 0;
+		if ($int17 <= 0) {
+			$string1, $int17 = "-", 1;
+		}
+		if (($int17 > 0) & (parawidth($string1, 512, p12_full) > .cc_getwidth)) {
+			while (($int17 > 1) & ($int16 = 0)) {
+				$int17 = calc($int17 - 1);
+				$string0 = append(substring($string1, 0, $int17), "...");
+				if (parawidth($string0, 512, p12_full) <= .cc_getwidth) {
+					$string1, $int16 = $string0, 1;
+				}
+			}
+		}
+		.cc_settext($string1);
+		cc_setondrag("script1295(event_com, event_comid, $obj15, $string1, $component1, $int11, $int12, $int14, event_mousex, event_mousey)");
+		cc_setondragcomplete("br_loadout_insert(event_com, event_comid, event_dragtarget, event_dragtargetid, $array0($int9), $component1, $int11, $int12, $component2, $component5, $component6)");
+		$int13 = calc($int13 + 36);
+	}
+	$int9 = calc($int9 + 1);
+}
+if ($int13 > if_getheight($component3)) {
+	if_setscrollsize(0, $int13, $component3);
+} else {
+	if_setscrollsize(0, 0, $component3);
+}
+if_setscrollpos(0, 0, $component3);
+~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~br_loadout_drawloadout($component1, $component2, $component5, $component6);
+if_setonvartransmit("script1363($component0, $component1, $component2, $component5, $component6){var2382, var2383, var2384, var2385, var2386, var2387, var2388, var2389, var1373, var1573, var1704, var1666, var309}", $component0);
+if_setontimer(null, $component0);

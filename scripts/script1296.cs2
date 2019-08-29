@@ -1,0 +1,14 @@
+// 1296
+script1296(int $int0, component $component1, int $int2, component $component3, int $int4, int $int5)
+if (clientclock < $int0) {
+	return;
+}
+if (cc_find($component1, $int2) = ^true) {
+	cc_setontimer(null);
+}
+if (cc_find($component3, $int4) = ^true) {
+	cc_sethide(true);
+}
+if (cc_find($component3, $int5) = ^true) {
+	cc_sethide(true);
+}

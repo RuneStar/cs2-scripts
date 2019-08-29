@@ -1,0 +1,8 @@
+// 3084
+script3084(component $component0)
+def_string $string0 = ",";
+if (%var262 < 1023) {
+	if_settext("Points: <col=ffffff><~tostring_spacer(%var261, $string0)></col><br>Wins: <col=ffffff><~tostring_spacer(%var262, $string0)></col>", $component0);
+} else {
+	if_settext("Points: <col=ffffff><~tostring_spacer(%var261, $string0)></col><br>Wins: <col=ffffff>Lots!</col>", $component0);
+}
