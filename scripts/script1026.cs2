@@ -66,7 +66,7 @@ if (%varbit4704 = 1) {
 	if ($stat23 ! null) {
 		if_settext(~xpdrops_tostring(%var261, 1), $component14);
 	} else {
-		if_settext(~script1029(%var261), $component14);
+		if_settext(~xpdrops_tostring_thousands(%var261), $component14);
 	}
 	if_settext("", $component15);
 	if_settext("", $component16);
@@ -109,8 +109,8 @@ if (%varbit4704 = 1) {
 		if_settext(~xpdrops_tostring(%var261, 1), $component15);
 		if_settext(~xpdrops_tostring(%var262, 1), $component16);
 	} else {
-		if_settext(~script1029(%var261), $component15);
-		if_settext(~script1029(%var262), $component16);
+		if_settext(~xpdrops_tostring_thousands(%var261), $component15);
+		if_settext(~xpdrops_tostring_thousands(%var262), $component16);
 	}
 	if_setcolour(0x808080, $component17);
 	if_setcolour(0xff981f, $component18);

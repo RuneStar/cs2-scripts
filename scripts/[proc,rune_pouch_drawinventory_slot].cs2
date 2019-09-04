@@ -12,7 +12,7 @@ if ($obj0 ! null) {
 		cc_setop(3, "Store-All");
 		cc_setop(4, "Store-X");
 		cc_setop(10, "Examine");
-		cc_setonop("script487(event_com, event_comid, 100, 0)");
+		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
 		cc_setondragcomplete("rune_pouch_inventoryreorder(event_com, event_dragtarget, event_comid, event_dragtargetid, 255, 0)");
 	} else {
 		cc_settrans(150);
@@ -20,7 +20,7 @@ if ($obj0 ! null) {
 		cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
 		cc_setop(1, "Store");
 		cc_setop(10, "Examine");
-		cc_setonop("script487(event_com, event_comid, 175, 150)");
+		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 175, 150)");
 		cc_setondragcomplete("rune_pouch_inventoryreorder(event_com, event_dragtarget, event_comid, event_dragtargetid, 255, 150)");
 	}
 } else {

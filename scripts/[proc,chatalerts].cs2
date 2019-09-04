@@ -21,7 +21,7 @@ while ($int0 ! -1) {
 	if ($int4 <= $int1) {
 		return;
 	}
-	if ((~filtertest($chattype3, $string0, $string2, $int4, $int2, removetags(chat_playername), $int5) = 1) & (~script210($chattype3, $string0, $int5) = 0)) {
+	if ((~filtertest($chattype3, $string0, $string2, $int4, $int2, removetags(chat_playername), $int5) = 1) & (~trade_partner_check($chattype3, $string0, $int5) = 0)) {
 		switch_int ($chattype3) {
 			case ^chattype_modchat, ^chattype_publicchat :
 				~chat_alert_enable(2);

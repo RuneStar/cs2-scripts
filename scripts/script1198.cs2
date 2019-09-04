@@ -135,7 +135,7 @@ while ($obj30 ! null) {
 		cc_setop(5, "Buy-50");
 		cc_setop(6, "Buy-X");
 		cc_setop(10, "Examine");
-		cc_setonop("script487(event_com, event_comid, 120, 0)");
+		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 120, 0)");
 		.cc_setsize($int24, 18, ^setsize_abs, ^setsize_abs);
 		.cc_setcolour(^white);
 		.cc_settextfont(p11_full);
@@ -173,7 +173,7 @@ while ($obj30 ! null) {
 		cc_setop(5, "Buy-50");
 		cc_setop(6, "Buy-X");
 		cc_setop(10, "Examine");
-		cc_setonop("script487(event_com, event_comid, 120, 0)");
+		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 120, 0)");
 		.cc_setsize($int24, 18, ^setsize_abs, ^setsize_abs);
 		.cc_setcolour(^white);
 		.cc_settextfont(p11_full);

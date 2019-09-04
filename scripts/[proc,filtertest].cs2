@@ -61,7 +61,7 @@ switch_int ($chattype0) {
 		if ($int3 = 2) {
 			return(0);
 		}
-		if (((%var287 = 1) & ($int2 = 0)) & (~script210($chattype0, $string0, $int3) = 0)) {
+		if (((%var287 = 1) & ($int2 = 0)) & (~trade_partner_check($chattype0, $string0, $int3) = 0)) {
 			return(0);
 		}
 		if (chat_getfilter_private = 0) {
@@ -89,7 +89,7 @@ switch_int ($chattype0) {
 		if ((($chattype0 = ^chattype_loginlogoutnotification) & (%varbit1627 = 0)) & (calc(clientclock - $int1) >= 500)) {
 			return(0);
 		}
-		if (((%var287 = 1) & ($int2 = 0)) & (~script210($chattype0, $string0, $int3) = 0)) {
+		if (((%var287 = 1) & ($int2 = 0)) & (~trade_partner_check($chattype0, $string0, $int3) = 0)) {
 			return(0);
 		}
 		if (chat_getfilter_private ! 2) {

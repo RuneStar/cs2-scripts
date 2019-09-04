@@ -39,7 +39,7 @@ while ($int4 > 0) {
 			cc_setobject($obj7, inv_getnum(inv, $int4));
 			if ($int3 = 1) {
 				cc_setop(1, "Offer");
-				cc_setonop("script487(event_com, event_comid, 100, 0)");
+				cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
 			} else {
 				cc_setonop(null);
 			}

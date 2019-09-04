@@ -1,6 +1,0 @@
-// 487
-script487(component $component0, int $int1, int $int2, int $int3)
-if (cc_find($component0, $int1) = ^true) {
-	cc_settrans($int2);
-	cc_setontimer("script488(event_com, event_comid, $int3, calc(clientclock + 10))");
-}

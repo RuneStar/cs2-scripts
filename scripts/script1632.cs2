@@ -10,7 +10,7 @@ if (($char0 ! null) & ((string_indexof_char($string0, $char0) ! -1) | (string_in
 	if_setonkey("script1632(event_keytyped, $int1, event_com, $string0, $string1, calc(clientclock + 20))", $component2);
 	if (cc_find($component2, 4) = ^true) {
 		cc_settrans(120);
-		cc_setontimer("script488(event_com, event_comid, 0, calc(clientclock + 10))");
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, 0, calc(clientclock + 10))");
 	}
 	sound_synth(2266, 1, 0);
 	if (cc_find(458:2, $int1) = ^true) {

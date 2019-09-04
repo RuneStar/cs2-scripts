@@ -1,0 +1,5 @@
+// 1378
+[clientscript,poh_viewer_room_indicator](component $component0, int $int1, int $int2)
+if (cc_find($component0, $int1) = ^true) {
+	~poh_viewer_room_indicator($int2);
+}

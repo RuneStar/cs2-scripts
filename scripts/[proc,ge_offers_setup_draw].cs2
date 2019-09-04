@@ -70,7 +70,7 @@ if (%var1151 ! null) {
 		if (cc_find($component0, $int11) = ^true) {
 			cc_settext("<col=ff0000>Too much money!</col>");
 		}
-		~script780($component0, $int14, $component13);
+		~ge_offers_setup_draw_disableconfirm($component0, $int14, $component13);
 	} else {
 		$int15 = calc(%varbit4396 * %varbit4398);
 		if (cc_find($component0, $int11) = ^true) {
@@ -89,7 +89,7 @@ if (%var1151 ! null) {
 				cc_settext("<col=ffffff>Confirm</col>");
 			}
 		} else {
-			~script780($component0, $int14, $component13);
+			~ge_offers_setup_draw_disableconfirm($component0, $int14, $component13);
 		}
 	}
 } else {
@@ -108,5 +108,5 @@ if (%var1151 ! null) {
 	if (cc_find($component0, $int11) = ^true) {
 		cc_settext("");
 	}
-	~script780($component0, $int14, $component13);
+	~ge_offers_setup_draw_disableconfirm($component0, $int14, $component13);
 }

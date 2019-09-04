@@ -61,4 +61,4 @@ if ((map_members = ^true) | (oc_members($obj2) = ^false)) {
 	if_setonvartransmit(null, $component0);
 }
 if_setop(10, "Examine", $component0);
-if_setonop("script487($component0, cc_getid, 100, 0)", $component0);
+if_setonop("cc_settrans_temporarily($component0, cc_getid, 100, 0)", $component0);

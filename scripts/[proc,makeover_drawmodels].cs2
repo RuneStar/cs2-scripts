@@ -92,7 +92,7 @@ while ($int20 < $int10) {
 		cc_setposition(calc($int21 + $int15), $int17, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	cc_setgraphic("overlay_multiway");
-	~script501($int20, $int8);
-	cc_setonvartransmit("script500(event_com, event_comid, $int20, $int8){var261, var262}");
+	~makeover_indicator($int20, $int8);
+	cc_setonvartransmit("makeover_indicator(event_com, event_comid, $int20, $int8){var261, var262}");
 	$int20 = calc($int20 + 1);
 }

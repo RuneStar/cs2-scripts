@@ -54,7 +54,7 @@ while ($int5 < $int1) {
 				cc_setonmouseleave(null);
 			} else {
 				cc_settrans(0);
-				cc_setonop("script487(event_com, event_comid, 150, 0)");
+				cc_setonop("cc_settrans_temporarily(event_com, event_comid, 150, 0)");
 				if ($array0($int5) <= -1) {
 					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 81:7, $string0, 25, 512)");
 					cc_setonmouseleave("deltooltip(81:7)");

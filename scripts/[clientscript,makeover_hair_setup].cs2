@@ -39,7 +39,7 @@ while ($int3 < 25) {
 		cc_setposition(calc((($int3 - 13) * 25) + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	cc_setgraphic("overlay_multiway");
-	~script501($int3, 3);
-	cc_setonvartransmit("script500(event_com, event_comid, $int3, 3){var263}");
+	~makeover_indicator($int3, 3);
+	cc_setonvartransmit("makeover_indicator(event_com, event_comid, $int3, 3){var263}");
 	$int3 = calc($int3 + 1);
 }

@@ -18,7 +18,7 @@ if (string_length($string1) > 0) {
 	cc_setfill(true);
 	cc_setcolour(^white);
 	cc_settrans(255);
-	if_setondragcomplete("script487(event_com, cc_getid, 200, 255)", $component8);
+	if_setondragcomplete("cc_settrans_temporarily(event_com, cc_getid, 200, 255)", $component8);
 	cc_create($component8, ^iftype_text, $int9);
 	$int9 = calc($int9 + 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

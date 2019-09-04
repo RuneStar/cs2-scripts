@@ -21,7 +21,7 @@ while ($int5 < $int4) {
 		cc_setop(5, "Buy 50");
 	}
 	cc_setop(10, "Examine");
-	cc_setonop("script487(event_com, event_comid, 125, 0)");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 125, 0)");
 	$int5 = calc($int5 + 1);
 }
 ~scrollbar_vertical(300:17, 300:16, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

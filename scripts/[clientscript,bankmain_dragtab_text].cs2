@@ -10,5 +10,5 @@ if (((($int5 = 0) | ($int6 = 0)) | (testbit($int4, $int5) = ^false)) | (testbit(
 }
 if (cc_find($component0, $int1) = ^true) {
 	cc_setcolour(0x3f3f3f);
-	cc_setontimer("script221(event_com, event_comid, 0xe4d8a2, calc(clientclock + 10))");
+	cc_setontimer("cc_colour_temporarily_end(event_com, event_comid, 0xe4d8a2, calc(clientclock + 10))");
 }

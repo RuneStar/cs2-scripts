@@ -7,7 +7,7 @@ if (($int2 < 0) | ($int2 >= $int6)) {
 if ($component1 ! $component0) {
 	if (cc_find($component0, $int2) = ^true) {
 		cc_settrans($int4);
-		cc_setontimer("script488(event_com, event_comid, $int5, calc(clientclock + 30))");
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, $int5, calc(clientclock + 30))");
 	}
 	return;
 }

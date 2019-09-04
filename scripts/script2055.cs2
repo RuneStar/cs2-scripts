@@ -23,7 +23,7 @@ if ($boolean2 = true) {
 			$int3 = ~script2056(0, 1, 270:7, $int0, $int1, $int3);
 		}
 	} else {
-		~script2047(270:7);
+		~skillmulti_wipebutton(270:7);
 	}
 	if ($int1 > 5) {
 		if (%varcint200 = 5) {
@@ -32,7 +32,7 @@ if ($boolean2 = true) {
 			$int3 = ~script2056(0, 5, 270:8, $int0, $int1, $int3);
 		}
 	} else {
-		~script2047(270:8);
+		~skillmulti_wipebutton(270:8);
 	}
 	if ($int1 > 10) {
 		if (%varcint200 = 10) {
@@ -41,12 +41,12 @@ if ($boolean2 = true) {
 			$int3 = ~script2056(0, 10, 270:9, $int0, $int1, $int3);
 		}
 	} else {
-		~script2047(270:9);
+		~skillmulti_wipebutton(270:9);
 	}
 	if ((((%varcint201 = 1) | (%varcint201 = 5)) | (%varcint201 = 10)) | (%varcint201 = $int1)) {
-		~script2047(270:10);
+		~skillmulti_wipebutton(270:10);
 	} else if ((%varcint201 < 1) | (%varcint201 > $int1)) {
-		~script2047(270:10);
+		~skillmulti_wipebutton(270:10);
 	} else if (%varcint200 = %varcint201) {
 		$int3 = ~script2056(1, %varcint201, 270:10, $int0, $int1, $int3);
 	} else {
@@ -62,7 +62,7 @@ if ($boolean2 = true) {
 		if_setonop("script2060(event_opindex, $int0, $int1)", 270:11);
 		if_setontimer(null, 270:11);
 	} else {
-		~script2047(270:11);
+		~skillmulti_wipebutton(270:11);
 	}
 	if (%varcint200 >= $int1) {
 		$int3 = ~script2056(1, $int1, 270:12, $int0, $int1, $int3);
@@ -82,7 +82,7 @@ if ($boolean2 = true) {
 			$int3 = ~script2056(0, 5, 270:8, $int0, $int1, $int3);
 		}
 	} else {
-		~script2047(270:8);
+		~skillmulti_wipebutton(270:8);
 	}
 	if ($int1 >= 10) {
 		if (%varcint200 = 10) {
@@ -91,11 +91,11 @@ if ($boolean2 = true) {
 			$int3 = ~script2056(0, 10, 270:9, $int0, $int1, $int3);
 		}
 	} else {
-		~script2047(270:9);
+		~skillmulti_wipebutton(270:9);
 	}
-	~script2047(270:10);
-	~script2047(270:11);
-	~script2047(270:12);
+	~skillmulti_wipebutton(270:10);
+	~skillmulti_wipebutton(270:11);
+	~skillmulti_wipebutton(270:12);
 }
 if ($int3 > 0) {
 	$int3 = calc($int3 - 5);

@@ -26,7 +26,7 @@ while ($int3 < $int4) {
 			cc_setobject($obj2, inv_getnum(207, $int3));
 			if_setopbase("<col=ff9040><oc_name($obj2)></col>", $component1);
 			if_setop(10, "Examine", $component1);
-			if_setonop("script487(event_com, cc_getid, 100, 0)", $component1);
+			if_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)", $component1);
 		} else {
 			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

@@ -1,0 +1,6 @@
+// 48
+[clientscript,cc_colour_temporarily](component $component0, int $int1, int $colour2, int $colour3)
+if (cc_find($component0, $int1) = ^true) {
+	cc_setcolour($colour2);
+	cc_setontimer("cc_colour_temporarily_end(event_com, event_comid, $colour3, calc(clientclock + 10))");
+}

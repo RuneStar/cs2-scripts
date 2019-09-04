@@ -11,7 +11,7 @@ if ($int10 > 1) {
 		$int12, $int13 = ~skillmain_button_create(0, 1, $component4, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
 	}
 } else {
-	~script2933($component4);
+	~skillmain_button_wipe($component4);
 }
 if ($int10 > 5) {
 	if ($int11 = 5) {
@@ -20,7 +20,7 @@ if ($int10 > 5) {
 		$int12, $int13 = ~skillmain_button_create(0, 5, $component5, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
 	}
 } else {
-	~script2933($component5);
+	~skillmain_button_wipe($component5);
 }
 if ($int10 > 10) {
 	if ($int11 = 10) {
@@ -29,7 +29,7 @@ if ($int10 > 10) {
 		$int12, $int13 = ~skillmain_button_create(0, 10, $component6, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
 	}
 } else {
-	~script2933($component6);
+	~skillmain_button_wipe($component6);
 }
 if ($int10 > 2) {
 	if ($int11 = 0) {
@@ -38,7 +38,7 @@ if ($int10 > 2) {
 		$int12, $int13 = ~skillmain_button_create(0, 0, $component7, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
 	}
 } else {
-	~script2933($component7);
+	~skillmain_button_wipe($component7);
 }
 if ($int11 >= $int10) {
 	$int12, $int13 = ~skillmain_button_create(1, 28, $component8, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
@@ -48,7 +48,7 @@ if ($int11 >= $int10) {
 if ((((($int11 ! 1) & ($int11 ! 5)) & ($int11 ! 10)) & ($int11 ! 0)) & ($int11 < $int10)) {
 	$int12, $int13 = ~skillmain_button_create(1, $int11, $component9, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
 } else {
-	~script2933($component9);
+	~skillmain_button_wipe($component9);
 }
 if ($int1 > 0) {
 	$int12 = calc($int12 - ($int1 - if_getwidth($component8)));

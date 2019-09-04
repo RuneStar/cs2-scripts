@@ -1,6 +1,0 @@
-// 48
-script48(component $component0, int $int1, int $colour2, int $colour3)
-if (cc_find($component0, $int1) = ^true) {
-	cc_setcolour($colour2);
-	cc_setontimer("script221(event_com, event_comid, $colour3, calc(clientclock + 10))");
-}
