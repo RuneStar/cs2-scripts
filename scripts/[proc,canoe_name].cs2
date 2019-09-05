@@ -1,0 +1,11 @@
+// 3096
+[proc,canoe_name](string $string0, component $component0, string $string1)
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0x999999);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settext($string0);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setop(1, "Make<col=ff9040> <$string1>");

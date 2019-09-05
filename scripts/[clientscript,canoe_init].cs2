@@ -1,0 +1,23 @@
+// 3093
+[clientscript,canoe_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
+cc_deleteall($component1);
+cc_deleteall($component2);
+def_int $int11 = 0;
+cc_create($component2, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^white);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_settext("WHAT SORT OF CANOE WOULD YOU LIKE TO MAKE ?");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component1, ^iftype_graphic, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("close_buttons,4");
+if_setonmouserepeat("script3097($component1, true, 0)", $component1);
+if_setonmouseleave("script3097($component1, false, 0)", $component1);
+if_setop(1, "Close", $component1);
+if_setonop("canoe_close", $component1);
+~canoe_setup($component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10);
+if_setonstattransmit("canoe_remake($component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10){woodcutting}", $component0);

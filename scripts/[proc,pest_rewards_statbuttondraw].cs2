@@ -6,18 +6,9 @@ cc_setsize($int3, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
 cc_settextfont(p11_full);
-cc_settextshadow(false);
+cc_settextshadow(true);
 cc_settext(~pest_rewards_costpts($int11));
 cc_setop(1, "<enum(stat, string, 680, $stat0)> XP: <~pest_rewards_costpoints($int11)>");
-if ($int10 = $int4) {
-	cc_setcolour(^white);
-	cc_setonmouserepeat(null);
-	cc_setonmouseleave(null);
-} else {
-	cc_setcolour(0xa07030);
-	cc_setonmouserepeat("cc_colour_swapper(event_com, event_comid, 0xc09050)");
-	cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xa07030)");
-}
 def_string $string0 = "";
 if (stat_base($stat0) < 25) {
 	$string0 = "The Void Knights will not offer training in skills for which you have a level under <tostring(25)>.";
@@ -27,5 +18,18 @@ if (stat_base($stat0) < 25) {
 	cc_setonop("pest_rewards_refuse($string0, $component5, $component6, $component7, $component8)");
 } else {
 	cc_setonop("pest_rewards_select($int4, $component5, $component6, $component7, $component8)");
+}
+if ($int10 = $int4) {
+	cc_setcolour(^white);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+} else if (string_length($string0) > 0) {
+	cc_setcolour(0x9f9f9f);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+} else {
+	cc_setcolour(0xff981f);
+	cc_setonmouserepeat("cc_colour_swapper(event_com, event_comid, 0xffb83f)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xff981f)");
 }
 return(calc($int9 + 1), calc($int2 + $int3));

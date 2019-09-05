@@ -1,0 +1,14 @@
+// 3103
+[proc,canoe_get_state](int $int0)(int)
+switch_int ($int0) {
+	case 3 :
+		return(%varbit1841);
+	case 2 :
+		return(%varbit1840);
+	case 4 :
+		return(%varbit1842);
+	case 1 :
+		return(%varbit1839);
+	case default :
+		return(0);
+}

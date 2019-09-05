@@ -1,5 +1,13 @@
 // 2779
 [proc,pest_rewards_itemdraw](obj $obj0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, int $int9, int $int10)(int)
+.cc_create($component6, ^iftype_rectangle, $int9);
+$int9 = calc($int9 + 1);
+.cc_setsize($int3, 32, ^setsize_abs, ^setsize_abs);
+.cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(^black);
+.cc_setfill(true);
+.cc_settrans(255);
+.cc_setop(1, enum(int, string, 2285, $int4));
 cc_create($component6, ^iftype_graphic, $int9);
 $int9 = calc($int9 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -11,38 +19,34 @@ def_int $int11 = calc($int3 - 40);
 $int2 = calc($int2 + 40);
 cc_create($component6, ^iftype_text, $int9);
 $int9 = calc($int9 + 1);
-.cc_create($component6, ^iftype_text, $int9);
-$int9 = calc($int9 + 1);
 cc_setsize($int11, 32, ^setsize_abs, ^setsize_abs);
-.cc_setsize($int11, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
-.cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-.cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
 cc_settextfont(p12_full);
-.cc_settextfont(p11_full);
 cc_settextshadow(true);
-.cc_settextshadow(false);
-def_int $int12 = enum(int, int, 2286, $int4);
-.cc_settext(~pest_rewards_costpts($int12));
-.cc_setop(1, enum(int, string, 2285, $int4));
+def_int $colour12 = 0xff981f;
+def_int $colour13 = 0xffb83f;
+def_int $int14 = enum(int, int, 2286, $int4);
 def_string $string0 = "";
-def_stat $stat13 = enum(int, stat, 2288, $int4);
+def_stat $stat15 = enum(int, stat, 2288, $int4);
 if ((enum(int, boolean, 2287, $int4) = true) & (((((((stat_base(hitpoints) < 42) | (stat_base(attack) < 42)) | (stat_base(defence) < 42)) | (stat_base(strength) < 42)) | (stat_base(ranged) < 42)) | (stat_base(magic) < 42)) | (stat_base(prayer) < 22))) {
 	cc_setcolour(^red);
 	cc_settext(enum(int, string, 2285, $int4));
 	$string0 = "You need level 42 in Attack, Strength, Defence, Ranged, Magic and Hitpoints, and level 22 Prayer, to purchase that item.";
 	.cc_setonop("pest_rewards_refuse($string0, $component5, $component6, $component7, $component8)");
-} else if (($stat13 ! null) & (stat($stat13) < 25)) {
+	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
+} else if (($stat15 ! null) & (stat($stat15) < 25)) {
 	cc_setcolour(^red);
 	cc_settext("<enum(int, string, 2285, $int4)> - requires level <tostring(25)>");
-	$string0 = "You need level <tostring(25)> <enum(stat, string, 680, $stat13)> to purchase that item.";
+	$string0 = "You need level <tostring(25)> <enum(stat, string, 680, $stat15)> to purchase that item.";
 	.cc_setonop("pest_rewards_refuse($string0, $component5, $component6, $component7, $component8)");
-} else if (%var261 < $int12) {
+	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
+} else if (%var261 < $int14) {
 	cc_setcolour(^red);
-	cc_settext("<enum(int, string, 2285, $int4)> - <~pest_rewards_costpoints($int12)>");
-	$string0 = "You need <~pest_rewards_costpoints($int12)> to claim that reward.";
+	cc_settext("<enum(int, string, 2285, $int4)> - <~pest_rewards_costpoints($int14)>");
+	$string0 = "You need <~pest_rewards_costpoints($int14)> to claim that reward.";
 	.cc_setonop("pest_rewards_refuse($string0, $component5, $component6, $component7, $component8)");
+	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
 } else {
 	if ($int10 = $int4) {
 		cc_setcolour(^white);
@@ -52,13 +56,21 @@ if ((enum(int, boolean, 2287, $int4) = true) & (((((((stat_base(hitpoints) < 42)
 	cc_settext(enum(int, string, 2285, $int4));
 	.cc_setonop("pest_rewards_select($int4, $component5, $component6, $component7, $component8)");
 }
+cc_create($component6, ^iftype_text, $int9);
+$int9 = calc($int9 + 1);
+cc_setsize($int11, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settext(~pest_rewards_costpts($int14));
 if ($int10 = $int4) {
-	.cc_setcolour(^white);
+	cc_setcolour(^white);
 	.cc_setonmouserepeat(null);
 	.cc_setonmouseleave(null);
 } else {
-	.cc_setcolour(0xa07030);
-	.cc_setonmouserepeat("cc_colour_swapper(event_com, event_comid, 0xc09050)");
-	.cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xa07030)");
+	cc_setcolour($colour12);
+	.cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour13)");
+	.cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, $colour12)");
 }
 return($int9);

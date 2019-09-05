@@ -62,6 +62,7 @@
 [**59**](scripts/[proc,chatbox_multi_addoption].cs2) `[proc,chatbox_multi_addoption]`  
 [**60**](scripts/[clientscript,dream_bank_init].cs2) `[clientscript,dream_bank_init]`  
 [**61**](scripts/[clientscript,dream_chest_init].cs2) `[clientscript,dream_chest_init]`  
+[**62**](scripts/script62.cs2)  
 [**63**](scripts/[clientscript,scrollbar_vertical_graphics].cs2) `[clientscript,scrollbar_vertical_graphics]`  
 [**64**](scripts/script64.cs2)  
 [**65**](scripts/[clientscript,set_spinner].cs2) `[clientscript,set_spinner]`  
@@ -1413,6 +1414,10 @@
 [**1411**](scripts/[clientscript,questdisplay].cs2) `[clientscript,questdisplay]`  
 [**1412**](scripts/[proc,questdisplay_setup].cs2) `[proc,questdisplay_setup]`  
 [**1413**](scripts/script1413.cs2)  
+[**1414**](scripts/script1414.cs2)  
+[**1415**](scripts/script1415.cs2)  
+[**1416**](scripts/script1416.cs2)  
+[**1417**](scripts/script1417.cs2)  
 [**1418**](scripts/[clientscript,br_tournament_sendnames].cs2) `[clientscript,br_tournament_sendnames]`  
 [**1419**](scripts/[clientscript,br_tournament_op].cs2) `[clientscript,br_tournament_op]`  
 [**1420**](scripts/[clientscript,br_tournament_submit].cs2) `[clientscript,br_tournament_submit]`  
@@ -2189,6 +2194,7 @@
 [**2191**](scripts/script2191.cs2)  
 [**2192**](scripts/script2192.cs2)  
 [**2193**](scripts/[proc,deadman_arenas_tele].cs2) `[proc,deadman_arenas_tele]`  
+[**2194**](scripts/script2194.cs2)  
 [**2195**](scripts/[proc,scale_colour].cs2) `[proc,scale_colour]`  
 [**2196**](scripts/script2196.cs2)  
 [**2197**](scripts/[proc,setup_diary_entry].cs2) `[proc,setup_diary_entry]`  
@@ -3085,3 +3091,21 @@
 [**3088**](scripts/script3088.cs2)  
 [**3089**](scripts/script3089.cs2)  
 [**3090**](scripts/script3090.cs2)  
+[**3091**](scripts/script3091.cs2)  
+[**3092**](scripts/script3092.cs2)  
+[**3093**](scripts/[clientscript,canoe_init].cs2) `[clientscript,canoe_init]`  
+[**3094**](scripts/[clientscript,canoe_remake].cs2) `[clientscript,canoe_remake]`  
+[**3095**](scripts/[proc,canoe_setup].cs2) `[proc,canoe_setup]`  
+[**3096**](scripts/[proc,canoe_name].cs2) `[proc,canoe_name]`  
+[**3097**](scripts/script3097.cs2)  
+[**3098**](scripts/[clientscript,canoe_close].cs2) `[clientscript,canoe_close]`  
+[**3099**](scripts/[clientscript,canoe_map_init].cs2) `[clientscript,canoe_map_init]`  
+[**3100**](scripts/[proc,canoe_location_setup].cs2) `[proc,canoe_location_setup]`  
+[**3101**](scripts/[clientscript,canoe_location_hover].cs2) `[clientscript,canoe_location_hover]`  
+[**3102**](scripts/script3102.cs2)  
+[**3103**](scripts/[proc,canoe_get_state].cs2) `[proc,canoe_get_state]`  
+[**3104**](scripts/[proc,canoe_return_locations].cs2) `[proc,canoe_return_locations]`  
+[**3105**](scripts/script3105.cs2)  
+[**3106**](scripts/script3106.cs2)  
+[**3107**](scripts/script3107.cs2)  
+[**3108**](scripts/script3108.cs2)  
