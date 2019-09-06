@@ -53,7 +53,7 @@ while ($int15 <= enum_getoutputcount(1375)) {
 		.cc_create($component4, ^iftype_graphic, $int20);
 		.cc_setsize(7, 11, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(0, calc(($int17 + 2) + ($int16 / 2)), ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setgraphic(2148);
+		.cc_setgraphic("drag_handle");
 		.cc_create($component3, ^iftype_rectangle, $int20);
 		.cc_setsize(0, calc(18 + $int16), ^setsize_minus, ^setsize_abs);
 		.cc_setposition(0, $int17, ^setpos_abs_left, ^setpos_abs_top);

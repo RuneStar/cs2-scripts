@@ -51,7 +51,7 @@ while ($int8 <= $int16) {
 		if (cc_gethide = false) {
 			.cc_setsize(7, 11, ^setsize_abs, ^setsize_abs);
 			.cc_setposition(0, calc(($int10 + 3) + ($int9 / 2)), ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setgraphic(2148);
+			.cc_setgraphic("drag_handle");
 		} else {
 			.cc_sethide(true);
 		}
