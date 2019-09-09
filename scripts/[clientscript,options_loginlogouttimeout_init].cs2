@@ -1,0 +1,6 @@
+// 1
+[clientscript,options_loginlogouttimeout_init](component $component0, component $component1)
+if_setonmouseleave("deltooltip($component1)", $component0);
+~options_loginlogouttimeout($component0, $component1);
+if_setonvartransmit("options_loginlogouttimeout_resynch($component0, $component1){var1055}", $component0);
+if_setonop("options_loginlogouttimeout_op(event_opindex, $component0, $component1)", $component0);

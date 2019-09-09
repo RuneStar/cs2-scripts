@@ -1,0 +1,47 @@
+// 330
+[clientscript,thormac_setup](component $component0, obj $obj1)
+if_setopbase("<col=ff9040><oc_name($obj1)>", $component0);
+def_int $int2 = if_getwidth($component0);
+def_int $int3 = calc(if_getheight($component0) - 30);
+cc_deleteall($component0);
+def_int $int4 = 0;
+cc_create($component0, ^iftype_model, $int4);
+$int4 = calc($int4 + 1);
+cc_setsize($int3, $int3, ^setsize_abs, ^setsize_abs);
+if ($obj1 = steam_battlestaff_11787) {
+	cc_setposition(15, 0, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_create($component0, ^iftype_model, $int4);
+	$int4 = calc($int4 + 1);
+	.cc_setsize($int3, $int3, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(calc($int2 - ($int3 + 15)), 0, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setobject(steam_battlestaff_12795, 1);
+} else if ($obj1 = lava_battlestaff_3053) {
+	cc_setposition(15, 0, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_create($component0, ^iftype_model, $int4);
+	$int4 = calc($int4 + 1);
+	.cc_setsize($int3, $int3, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(calc($int2 - ($int3 + 15)), 0, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setobject(lava_battlestaff_21198, 1);
+} else {
+	cc_setposition(calc(($int2 - $int3) / 2), 0, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_setobject($obj1, 1);
+cc_create($component0, ^iftype_graphic, $int4);
+$int4 = calc($int4 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("tradebacking");
+cc_settiling(true);
+cc_settrans(255);
+if_setonmouseover("cc_settrans(event_com, cc_getid, 190, null)", $component0);
+if_setonmouseleave("cc_settrans(event_com, cc_getid, 255, null)", $component0);
+cc_create($component0, ^iftype_text, $int4);
+$int4 = calc($int4 + 1);
+cc_setsize($int2, 30, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext(oc_name($obj1));
+~thormac_highlight($component0, $obj1);
+if_setoninvtransmit("thormac_highlight(event_com, cc_getid, $obj1){inv}", $component0);

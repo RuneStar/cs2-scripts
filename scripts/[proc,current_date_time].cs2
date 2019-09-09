@@ -1,0 +1,16 @@
+// 2196
+[proc,current_date_time](int $int0, int $int1)(string)
+def_string $string0 = fromdate($int0);
+def_int $int2 = calc($int1 % 1440);
+def_int $int3 = calc($int2 / 60);
+def_int $int4 = calc($int2 % 60);
+def_string $string1 = "";
+if ($int4 = 0) {
+	$string1 = "00";
+} else if ($int4 < 10) {
+	$string1 = "0<tostring($int4)>";
+} else {
+	$string1 = tostring($int4);
+}
+$string0 = append($string0, " - <tostring($int3)>:<$string1>");
+return($string0);

@@ -1,0 +1,7 @@
+// 941
+[clientscript,peng_observer_borders](component $component0, int $int1, int $int2, component $component3)
+def_int $int4 = if_getwidth($component0);
+def_int $int5 = if_getheight($component0);
+if (($int1 ! $int4) | ($int2 ! $int5)) {
+	~peng_observer_borders($component0, $int4, $int5, $component3);
+}

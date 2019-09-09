@@ -1,0 +1,42 @@
+// 942
+[proc,peng_observer_borders](component $component0, int $int1, int $int2, component $component3)
+def_int $int4 = $int2;
+if ($int4 < 334) {
+	$int4 = 334;
+} else if ($int4 > 1000) {
+	$int4 = 1000;
+}
+def_int $int5 = invpow(calc($int4 - 334), 2);
+def_int $int6 = invpow(calc(1000 - 334), 2);
+if_setmodelangle(0, 0, 0, 0, 0, calc(245 - interpolate(0, $int5, 0, $int6, 180)), $component3);
+def_int $int7 = 0;
+def_int $int8 = 334;
+if ($int4 > $int8) {
+	$int8 = $int4;
+}
+if ((cc_find($component0, 0) = ^true) & (.cc_find($component0, 1) = ^true)) {
+	if ($int2 < $int8) {
+		cc_sethide(true);
+		.cc_sethide(true);
+	} else {
+		cc_sethide(false);
+		.cc_sethide(false);
+		$int7 = calc(($int2 - $int8) / 2);
+		cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);
+		.cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);
+	}
+}
+if ((cc_find($component0, 2) = ^true) & (.cc_find($component0, 3) = ^true)) {
+	$int8 = interpolate(0, 512, 0, 334, $int8);
+	if ($int1 < $int8) {
+		cc_sethide(true);
+		.cc_sethide(true);
+	} else {
+		cc_sethide(false);
+		.cc_sethide(false);
+		$int7 = calc(($int1 - $int8) / 2);
+		cc_setsize($int7, 0, ^setsize_abs, ^setsize_minus);
+		.cc_setsize($int7, 0, ^setsize_abs, ^setsize_minus);
+	}
+}
+if_setontimer("peng_observer_borders($component0, $int1, $int2, $component3)", $component0);

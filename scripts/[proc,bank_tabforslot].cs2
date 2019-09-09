@@ -1,0 +1,39 @@
+// 516
+[proc,bank_tabforslot](int $int0)(int)
+def_int $int1 = %varbit4171;
+if ($int0 < $int1) {
+	return(1);
+}
+$int1 = calc($int1 + %varbit4172);
+if ($int0 < $int1) {
+	return(2);
+}
+$int1 = calc($int1 + %varbit4173);
+if ($int0 < $int1) {
+	return(3);
+}
+$int1 = calc($int1 + %varbit4174);
+if ($int0 < $int1) {
+	return(4);
+}
+$int1 = calc($int1 + %varbit4175);
+if ($int0 < $int1) {
+	return(5);
+}
+$int1 = calc($int1 + %varbit4176);
+if ($int0 < $int1) {
+	return(6);
+}
+$int1 = calc($int1 + %varbit4177);
+if ($int0 < $int1) {
+	return(7);
+}
+$int1 = calc($int1 + %varbit4178);
+if ($int0 < $int1) {
+	return(8);
+}
+$int1 = calc($int1 + %varbit4179);
+if ($int0 < $int1) {
+	return(9);
+}
+return(0);

@@ -1,0 +1,13 @@
+// 332
+[proc,thormac_highlight](component $component0, obj $obj1)
+def_int $int2 = inv_total(inv, $obj1);
+if ($obj1 = steam_battlestaff_11787) {
+	$int2 = calc($int2 + inv_total(inv, steam_battlestaff_12795));
+}
+if ($int2 > 0) {
+	cc_setcolour(^white);
+	if_setonop("opsound(event_opindex, 2)", $component0);
+} else {
+	cc_setcolour(0xaaaaaa);
+	if_setonop(null, $component0);
+}

@@ -1,0 +1,8 @@
+// 645
+[proc,poh_menagerie_setroaming](component $component0)
+if (%varbit2013 = 1) {
+	cc_setgraphic("options_radio_buttons,1");
+} else {
+	cc_setgraphic("options_radio_buttons,2");
+}
+if_setontimer(null, $component0);

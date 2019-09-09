@@ -1,0 +1,9 @@
+// 122
+[clientscript,component_pulse_timer](component $component0)
+def_int $int1 = 0;
+$int1 = calc(clientclock % 100);
+if ($int1 > 50) {
+	$int1 = calc(100 - $int1);
+}
+$int1 = calc(255 - $int1);
+if_settrans($int1, $component0);

@@ -7,8 +7,8 @@ if ($component2 = $component6) {
 	~script1317($int1, $component0, $component6, $component7, $component8);
 	return;
 }
-def_int $int9 = ~script516($int3);
-if (((($component2 ! $component0) | ($int3 < 0)) | ($int3 >= 816)) | (~script516($int1) ! $int9)) {
+def_int $int9 = ~bank_tabforslot($int3);
+if (((($component2 ! $component0) | ($int3 < 0)) | ($int3 >= 816)) | (~bank_tabforslot($int1) ! $int9)) {
 	if (cc_find($component0, $int1) = ^true) {
 		cc_settrans(200);
 		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, $int4, calc(clientclock + 10))");

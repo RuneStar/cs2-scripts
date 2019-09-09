@@ -20,8 +20,8 @@ cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("close_buttons,4");
 if (~on_mobile = false) {
-	if_setonmouserepeat("script3097($component1, true, 0)", $component1);
-	if_setonmouseleave("script3097($component1, false, 0)", $component1);
+	if_setonmouserepeat("close_mouse_interact($component1, true, 0)", $component1);
+	if_setonmouseleave("close_mouse_interact($component1, false, 0)", $component1);
 }
 if_setop(1, "Close", $component1);
 if_setonop("canoe_close", $component1);

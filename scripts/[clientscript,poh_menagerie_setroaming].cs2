@@ -1,0 +1,8 @@
+// 644
+[clientscript,poh_menagerie_setroaming](component $component0, int $int1, int $int2)
+if (clientclock < $int2) {
+	return;
+}
+if (cc_find($component0, $int1) = ^true) {
+	~poh_menagerie_setroaming($component0);
+}

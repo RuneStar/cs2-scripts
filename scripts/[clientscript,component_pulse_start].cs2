@@ -1,0 +1,4 @@
+// 119
+[clientscript,component_pulse_start](component $component0)
+if_sethide(false, $component0);
+if_setontimer("component_pulse_timer($component0)", $component0);

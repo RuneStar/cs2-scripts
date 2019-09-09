@@ -1,0 +1,9 @@
+// 3097
+[clientscript,close_mouse_interact](component $component0, boolean $boolean1, int $int2)
+if (cc_find($component0, $int2) = ^true) {
+	if ($boolean1 = true) {
+		cc_setgraphic("close_buttons,5");
+	} else {
+		cc_setgraphic("close_buttons,4");
+	}
+}

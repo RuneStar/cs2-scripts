@@ -1,0 +1,8 @@
+// 697
+[clientscript,makeovermage_colour_op](int $int0, int $int1, component $component2)
+if ($int0 ! 1) {
+	return;
+}
+sound_synth(2266, 1, 0);
+%var262 = $int1;
+~makeovermage_colour_update($component2);

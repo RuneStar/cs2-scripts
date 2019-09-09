@@ -1,0 +1,23 @@
+// 569
+[clientscript,clanwars_ffa_init](component $component0, component $component1, component $component2, component $component3)
+~script2249($component1, setbit(0, 3));
+~script1486($component2, ^setpos_abs_centre, 1, 0);
+cc_deleteall($component3);
+def_string $string0 = "Step over the line to fight!";
+def_int $int4 = calc(parawidth($string0, 512, quill_oblique_large) + 15);
+if_setsize($int4, 40, ^setsize_abs, ^setsize_abs, $component3);
+cc_create($component3, ^iftype_graphic, 0);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int4, 40, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("tradebacking_dark");
+cc_settiling(true);
+cc_settrans(100);
+cc_create($component3, ^iftype_text, ~thinbox($component3, 1));
+cc_setposition(0, 3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int4, 34, ^setsize_abs, ^setsize_abs);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(quill_oblique_large);
+cc_settextshadow(true);
+cc_setcolour(0xffffa0);
+cc_settext($string0);
+if_setontimer("clanwars_ffa_hint($component3)", $component0);
