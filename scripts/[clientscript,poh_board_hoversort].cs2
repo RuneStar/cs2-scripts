@@ -1,0 +1,9 @@
+// 3116
+[clientscript,poh_board_hoversort](component $component0, int $int1, int $int2, component $component3, string $string0)
+if (cc_find($component0, $int1) = ^true) {
+	cc_settrans($int2);
+}
+if (.cc_find($component0, calc($int1 + 1)) = ^true) {
+	.cc_settrans($int2);
+}
+~tooltip_mouserepeat($component0, $int1, $component3, $string0, 25, 250);

@@ -1,0 +1,8 @@
+// 3120
+[clientscript,poh_board_location_filter_clicked](component $component0, component $component1, component $component2)
+if (%varbit9448 = 1) {
+	%varbit9448 = 0;
+} else {
+	%varbit9448 = 1;
+}
+~poh_board_location_filter_activate($component0, $component1, $component2);

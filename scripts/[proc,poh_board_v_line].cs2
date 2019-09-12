@@ -1,0 +1,13 @@
+// 3114
+[proc,poh_board_v_line](component $component0, int $int1, int $int2)(int)
+cc_create($component0, ^iftype_line, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition(calc($int2 + 10), 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_abs, ^setsize_minus);
+cc_setcolour(0x5a5245);
+cc_create($component0, ^iftype_line, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition(calc($int2 + 11), 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(0, 0, ^setsize_abs, ^setsize_minus);
+cc_setcolour(0x383023);
+return($int1);

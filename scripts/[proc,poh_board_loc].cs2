@@ -1,0 +1,27 @@
+// 3123
+[proc,poh_board_loc](string $string0)(string)
+if (compare($string0, "1") = 0) {
+	return("RIM");
+}
+if (compare($string0, "2") = 0) {
+	return("TAV");
+}
+if (compare($string0, "3") = 0) {
+	return("POL");
+}
+if (compare($string0, "4") = 0) {
+	return("REL");
+}
+if (compare($string0, "5") = 0) {
+	return("BRI");
+}
+if (compare($string0, "6") = 0) {
+	return("YAN");
+}
+if (compare($string0, "8") = 0) {
+	return("HOS");
+}
+if (compare($string0, "9") = 0) {
+	return("PRI");
+}
+return("Nowhere");

@@ -1,0 +1,48 @@
+// 3112
+[proc,poh_board_setsort](component $component0, component $component1, component $component2)
+cc_deleteall($component0);
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 40;
+def_int $int6 = 100;
+$int3 = ~poh_board_sortbutton_draw($int3, $int6, $component0, 0, 1, $component1, "Sort by name", null);
+$int4 = ~poh_board_v_line($component2, $int4, $int6);
+cc_create($component0, ^iftype_text, $int3);
+cc_setposition(10, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(100, 0, ^setsize_abs, ^setsize_minus);
+cc_settext("Player Name");
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+def_string $string0 = "Sort by name";
+cc_setonmouserepeat("poh_board_hoversort(event_com, event_comid, 120, $component1, $string0)");
+cc_setonmouseleave("cc_settrans(event_com, event_comid, 0, $component1)");
+if (%varcint379 = 0) {
+	cc_setonclick("poh_board_clicksort(1)");
+} else {
+	cc_setonclick("poh_board_clicksort(0)");
+}
+$int3 = calc($int3 + 1);
+$int6 = calc($int6 + $int5);
+$int3 = ~poh_board_sortbutton_draw($int3, $int6, $component0, 2, 3, $component1, "Sort by Construction level", 2257);
+$int4 = ~poh_board_v_line($component2, $int4, $int6);
+$int6 = calc($int6 + $int5);
+$int3 = ~poh_board_sortbutton_draw($int3, $int6, $component0, 4, 5, $component1, "Sort by Gilded altar", 2251);
+$int4 = ~poh_board_v_line($component2, $int4, $int6);
+$int6 = calc($int6 + $int5);
+$int3 = ~poh_board_sortbutton_draw($int3, $int6, $component0, 6, 7, $component1, "Sort by nexus tier", 2252);
+$int4 = ~poh_board_v_line($component2, $int4, $int6);
+$int6 = calc($int6 + $int5);
+$int3 = ~poh_board_sortbutton_draw($int3, $int6, $component0, 8, 9, $component1, "Sort by jewellery box", 2253);
+$int4 = ~poh_board_v_line($component2, $int4, $int6);
+$int6 = calc($int6 + $int5);
+$int3 = ~poh_board_sortbutton_draw($int3, $int6, $component0, 10, 11, $component1, "Sort by tier of pool", 2254);
+$int4 = ~poh_board_v_line($component2, $int4, $int6);
+$int6 = calc($int6 + $int5);
+$int3 = ~poh_board_sortbutton_draw($int3, $int6, $component0, 12, 13, $component1, "Sort by occult altar", 2255);
+$int4 = ~poh_board_v_line($component2, $int4, $int6);
+$int6 = calc($int6 + $int5);
+$int3 = ~poh_board_sortbutton_draw($int3, $int6, $component0, 14, 15, $component1, "Sort by armour stand", 2256);
+$int4 = ~poh_board_v_line($component2, $int4, $int6);
+~poh_board_redraw;

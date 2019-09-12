@@ -1,0 +1,17 @@
+// 3121
+[proc,poh_board_location_filter_activate](component $component0, component $component1, component $component2)
+def_int $int3 = 25;
+if (~on_mobile = true) {
+	$int3 = 35;
+}
+~poh_board_location_filter_build($component0, $component1);
+~poh_board_redraw;
+def_int $int4 = calc(%varcint377 * $int3);
+if ($int4 > if_getheight(52:7)) {
+	if_setscrollsize(0, $int4, 52:7);
+	~scrollbar_resize(52:20, 52:7, %varcint378);
+} else {
+	if_setscrollsize(0, 0, 52:7);
+	~scrollbar_resize(52:20, 52:7, 0);
+	%varcint378 = 0;
+}

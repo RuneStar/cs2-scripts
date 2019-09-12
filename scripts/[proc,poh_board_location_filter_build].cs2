@@ -1,0 +1,15 @@
+// 3122
+[proc,poh_board_location_filter_build](component $component0, component $component1)
+def_graphic $graphic2 = "checkbox,2";
+def_graphic $graphic3 = "checkbox,5";
+def_graphic $graphic4 = "checkbox,0";
+def_graphic $graphic5 = "checkbox,3";
+if (%varbit9448 = 1) {
+	if_setgraphic($graphic2, $component1);
+	if_setonmouserepeat("graphic_swapper($component1, $graphic3)", $component0);
+	if_setonmouseleave("graphic_swapper($component1, $graphic2)", $component0);
+} else {
+	if_setgraphic($graphic4, $component1);
+	if_setonmouserepeat("graphic_swapper($component1, $graphic5)", $component0);
+	if_setonmouseleave("graphic_swapper($component1, $graphic4)", $component0);
+}
