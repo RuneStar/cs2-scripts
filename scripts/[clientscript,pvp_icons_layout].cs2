@@ -1,5 +1,5 @@
 // 385
 [clientscript,pvp_icons_layout](boolean $boolean0)
-if ((($boolean0 = true) | (~script568(coord) = 1)) | (calc(clientclock % 100) = 0)) {
+if ((($boolean0 = true) | (~clanwars_ffa_arena(coord) = 1)) | (calc(clientclock % 100) = 0)) {
 	~pvp_icons_layout;
 }

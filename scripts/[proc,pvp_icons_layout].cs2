@@ -134,7 +134,7 @@ if (~pvpw_check = 1) {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, 90:66);
 	if_setcolour(^yellow, 90:66);
 	if_sethide(true, 90:65);
-	if (~script568(coord) = 1) {
+	if (~clanwars_ffa_arena(coord) = 1) {
 		if (~inzone(0_51_74_0_0, 3_52_74_63_23, coord) = 1) {
 			if_settrans(0, 90:63);
 		} else {

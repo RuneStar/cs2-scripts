@@ -513,7 +513,7 @@
 [**510**](scripts/script510.cs2)  
 [**511**](scripts/[clientscript,bankmain_dragtab_text].cs2) `[clientscript,bankmain_dragtab_text]`  
 [**512**](scripts/[clientscript,bankmain_dragtab_graphic].cs2) `[clientscript,bankmain_dragtab_graphic]`  
-[**513**](scripts/script513.cs2)  
+[**513**](scripts/[proc,bank_gettabrange].cs2) `[proc,bank_gettabrange]`  
 [**514**](scripts/[proc,bankmain_searching].cs2) `[proc,bankmain_searching]`  
 [**515**](scripts/script515.cs2)  
 [**516**](scripts/[proc,bank_tabforslot].cs2) `[proc,bank_tabforslot]`  
@@ -568,7 +568,7 @@
 [**565**](scripts/[proc,clanwars_view_setbutton].cs2) `[proc,clanwars_view_setbutton]`  
 [**566**](scripts/[proc,clanwars_view_updatebutton].cs2) `[proc,clanwars_view_updatebutton]`  
 [**567**](scripts/[clientscript,clanwars_view_spin].cs2) `[clientscript,clanwars_view_spin]`  
-[**568**](scripts/script568.cs2)  
+[**568**](scripts/[proc,clanwars_ffa_arena].cs2) `[proc,clanwars_ffa_arena]`  
 [**569**](scripts/[clientscript,clanwars_ffa_init].cs2) `[clientscript,clanwars_ffa_init]`  
 [**570**](scripts/[clientscript,clanwars_ffa_hint].cs2) `[clientscript,clanwars_ffa_hint]`  
 [**571**](scripts/[proc,clanwars_ffa_hint].cs2) `[proc,clanwars_ffa_hint]`  
@@ -694,7 +694,7 @@
 [**691**](scripts/[clientscript,trail_slidepuzzle_op].cs2) `[clientscript,trail_slidepuzzle_op]`  
 [**692**](scripts/[proc,trail_slidepuzzle_position].cs2) `[proc,trail_slidepuzzle_position]`  
 [**693**](scripts/[clientscript,corp_beast_damage].cs2) `[clientscript,corp_beast_damage]`  
-[**694**](scripts/script694.cs2)  
+[**694**](scripts/[clientscript,makeovermage_gender].cs2) `[clientscript,makeovermage_gender]`  
 [**695**](scripts/[clientscript,makeovermage_colour_init].cs2) `[clientscript,makeovermage_colour_init]`  
 [**696**](scripts/[clientscript,makeovermage_colour_update].cs2) `[clientscript,makeovermage_colour_update]`  
 [**697**](scripts/[clientscript,makeovermage_colour_op].cs2) `[clientscript,makeovermage_colour_op]`  
