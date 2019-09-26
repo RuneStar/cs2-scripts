@@ -1,4 +1,7 @@
 // 3111
-[clientscript,poh_board_set_last_name](string $string0)
+[clientscript,poh_board_set_last_name](string $string0, component $component0, int $int1)
 %varcstring361 = $string0;
 %varcint56 = 1;
+if (cc_find($component0, $int1) = ^true) {
+	cc_setontimer("script3125(event_com, event_comid, $string0, calc(clientclock + 30))");
+}

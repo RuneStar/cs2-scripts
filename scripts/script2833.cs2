@@ -19,14 +19,14 @@ while ($int3 < $int4) {
 		if (calc($int3 + 1) = $int4) {
 			if_setposition(0, calc($int1 + (($int3 / 2) * 36)), ^setpos_abs_centre, ^setpos_abs_top, $component6);
 		} else {
-			if_setposition(0, calc($int1 + (($int3 / 2) * 36)), ^setpos_abs_left, ^setpos_abs_top, $component6);
+			if_setposition(2, calc($int1 + (($int3 / 2) * 36)), ^setpos_abs_left, ^setpos_abs_top, $component6);
 		}
 	} else {
-		if_setposition(0, calc($int1 + (($int3 / 2) * 36)), ^setpos_abs_right, ^setpos_abs_top, $component6);
+		if_setposition(2, calc($int1 + (($int3 / 2) * 36)), ^setpos_abs_right, ^setpos_abs_top, $component6);
 	}
 	if_setop(1, "Open", $component6);
 	if_setopbase("<col=ff9040><$string0></col>", $component6);
-	if_setonop("script2834", $component6);
+	if_setonop("opsound(event_opindex, 2)", $component6);
 	cc_create($component6, ^iftype_text, $int2);
 	cc_settext($string0);
 	cc_setcolour(0xf7f0df);

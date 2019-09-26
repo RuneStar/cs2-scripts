@@ -328,24 +328,27 @@ switch_int ($int0) {
 				return(70, crystal_helm_23971, "Members: Crystal armour (with 50 Agility after Song of the Elves)");
 			}
 			if ($int2 = 30) {
-				return(75, justiciar_faceguard_22326, "Members: Justiciar armour");
+				return(70, neitiznot_faceguard_24271, "Members: Neitiznot faceguard<br> (after The Fremennik Exiles)");
 			}
 			if ($int2 = 31) {
-				return(75, serpentine_helm_12931, "Members: Serpentine helm");
+				return(75, justiciar_faceguard_22326, "Members: Justiciar armour");
 			}
 			if ($int2 = 32) {
-				return(75, guardian_boots_21733, "Members: Guardian boots");
+				return(75, serpentine_helm_12931, "Members: Serpentine helm");
 			}
 			if ($int2 = 33) {
-				return(75, primordial_boots_13239, "Members: Primordial boots<br> (with 75 Strength)");
+				return(75, guardian_boots_21733, "Members: Guardian boots");
 			}
 			if ($int2 = 34) {
-				return(75, eternal_boots_13235, "Members: Eternal boots<br> (with 75 Magic)");
+				return(75, primordial_boots_13239, "Members: Primordial boots<br> (with 75 Strength)");
 			}
 			if ($int2 = 35) {
-				return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Ranged)");
+				return(75, eternal_boots_13235, "Members: Eternal boots<br> (with 75 Magic)");
 			}
 			if ($int2 = 36) {
+				return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Ranged)");
+			}
+			if ($int2 = 37) {
 				return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Attack)");
 			}
 			return(-1, null, "");
@@ -4407,118 +4410,92 @@ switch_int ($int0) {
 		return(-1, null, "");
 	case 18 :
 		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(1, logs_1511, "Normal trees");
+			switch_int ($int2) {
+				case 0 :
+					return(1, logs_1511, "Normal trees");
+				case 1 :
+					return(1, achey_tree_logs_2862, "Members: Achey trees");
+				case 2 :
+					return(10, thatch_spar_light_6281, "Members: Light jungle");
+				case 3 :
+					return(15, oak_logs_1521, "Oak trees");
+				case 4 :
+					return(20, thatch_spar_med_6283, "Members: Medium jungle");
+				case 5 :
+					return(30, willow_logs_1519, "Willow trees");
+				case 6 :
+					return(35, thatch_spar_dense_6285, "Members: Dense jungle");
+				case 7 :
+					return(35, teak_logs_6333, "Members: Teak trees");
+				case 8 :
+					return(42, juniper_logs_13355, "Members: Juniper trees");
+				case 9 :
+					return(45, maple_logs_1517, "Maple trees");
+				case 10 :
+					return(45, bark_3239, "Members: Hollow trees");
+				case 11 :
+					return(50, mahogany_logs_6332, "Members: Mahogany trees");
+				case 12 :
+					return(54, arctic_pine_logs_10810, "Members: Arctic pine trees");
+				case 13 :
+					return(60, yew_logs_1515, "Yew trees");
+				case 14 :
+					return(65, sulliuscep_cap_21626, "Members: Sulliuscep mushroom trees");
+				case 15 :
+					return(75, magic_logs_1513, "Members: Magic trees");
+				case 16 :
+					return(90, redwood_logs_19669, "Members: Redwood trees");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, achey_tree_logs_2862, "Members: Achey trees");
-			}
-			if ($int2 = 2) {
-				return(10, thatch_spar_light_6281, "Members: Light jungle");
-			}
-			if ($int2 = 3) {
-				return(15, oak_logs_1521, "Oak trees");
-			}
-			if ($int2 = 4) {
-				return(20, thatch_spar_med_6283, "Members: Medium jungle");
-			}
-			if ($int2 = 5) {
-				return(30, willow_logs_1519, "Willow trees");
-			}
-			if ($int2 = 6) {
-				return(35, thatch_spar_dense_6285, "Members: Dense jungle");
-			}
-			if ($int2 = 7) {
-				return(35, teak_logs_6333, "Members: Teak trees");
-			}
-			if ($int2 = 8) {
-				return(42, juniper_logs_13355, "Members: Juniper trees");
-			}
-			if ($int2 = 9) {
-				return(45, maple_logs_1517, "Maple trees");
-			}
-			if ($int2 = 10) {
-				return(45, bark_3239, "Members: Hollow trees");
-			}
-			if ($int2 = 11) {
-				return(50, mahogany_logs_6332, "Members: Mahogany trees");
-			}
-			if ($int2 = 12) {
-				return(54, arctic_pine_logs_10810, "Members: Arctic pine trees");
-			}
-			if ($int2 = 13) {
-				return(60, yew_logs_1515, "Yew trees");
-			}
-			if ($int2 = 14) {
-				return(65, sulliuscep_cap_21626, "Members: Sulliuscep mushroom trees");
-			}
-			if ($int2 = 15) {
-				return(75, magic_logs_1513, "Members: Magic trees");
-			}
-			if ($int2 = 16) {
-				return(90, redwood_logs_19669, "Members: Redwood trees");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(1, bronze_axe_1351, "Bronze axe");
+			switch_int ($int2) {
+				case 0 :
+					return(1, bronze_axe_1351, "Bronze axe");
+				case 1 :
+					return(1, iron_axe_1349, "Iron axe");
+				case 2 :
+					return(6, steel_axe_1353, "Steel axe");
+				case 3 :
+					return(11, black_axe_1361, "Black axe");
+				case 4 :
+					return(21, mithril_axe_1355, "Mithril axe");
+				case 5 :
+					return(31, adamant_axe_1357, "Adamant axe");
+				case 6 :
+					return(41, rune_axe_1359, "Rune axe");
+				case 7 :
+					return(41, gilded_axe_23279, "Gilded axe");
+				case 8 :
+					return(61, dragon_axe_6739, "Members: Dragon axe");
+				case 9 :
+					return(61, 3rd_age_axe_20011, "Members: 3rd age axe");
+				case 10 :
+					return(61, infernal_axe_13241, "Members: Infernal axe<br>(with 85 Firemaking)");
+				case 11 :
+					return(70, crystal_axe_23673, "Members: Crystal axe<br>(after Song of the Elves)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, iron_axe_1349, "Iron axe");
-			}
-			if ($int2 = 2) {
-				return(6, steel_axe_1353, "Steel axe");
-			}
-			if ($int2 = 3) {
-				return(11, black_axe_1361, "Black axe");
-			}
-			if ($int2 = 4) {
-				return(21, mithril_axe_1355, "Mithril axe");
-			}
-			if ($int2 = 5) {
-				return(31, adamant_axe_1357, "Adamant axe");
-			}
-			if ($int2 = 6) {
-				return(41, rune_axe_1359, "Rune axe");
-			}
-			if ($int2 = 7) {
-				return(41, gilded_axe_23279, "Gilded axe");
-			}
-			if ($int2 = 8) {
-				return(61, dragon_axe_6739, "Members: Dragon axe");
-			}
-			if ($int2 = 9) {
-				return(61, 3rd_age_axe_20011, "Members: 3rd age axe");
-			}
-			if ($int2 = 10) {
-				return(61, infernal_axe_13241, "Members: Infernal axe<br>(with 85 Firemaking)");
-			}
-			if ($int2 = 11) {
-				return(71, crystal_axe_23673, "Members: Crystal axe<br>(after Song of the Elves)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 2) {
-			if ($int2 = 0) {
-				return(12, paddle_7414, "Log canoe");
+			switch_int ($int2) {
+				case 0 :
+					return(12, paddle_7414, "Log canoe");
+				case 1 :
+					return(27, paddle_7414, "Dugout canoe");
+				case 2 :
+					return(42, paddle_7414, "Stable dugout canoe");
+				case 3 :
+					return(56, fremennik_shield_10826, "Members: Fremennik round shield");
+				case 4 :
+					return(56, split_log_10812, "Members: Split arctic pine logs");
+				case 5 :
+					return(57, paddle_7414, "Waka canoe");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(27, paddle_7414, "Dugout canoe");
-			}
-			if ($int2 = 2) {
-				return(42, paddle_7414, "Stable dugout canoe");
-			}
-			if ($int2 = 3) {
-				return(56, fremennik_shield_10826, "Members: Fremennik round shield");
-			}
-			if ($int2 = 4) {
-				return(56, split_log_10812, "Members: Split arctic pine logs");
-			}
-			if ($int2 = 5) {
-				return(57, paddle_7414, "Waka canoe");
-			}
-			return(-1, null, "");
 		}
 		return(-1, null, "");
 	case 12 :
@@ -4869,6 +4846,8 @@ switch_int ($int0) {
 				case 19 :
 					return(60, nose_peg_4168, "Nose peg");
 				case 20 :
+					return(60, vs_shield_24266, "V's shield<br> (with 40 Defence)");
+				case 21 :
 					return(65, amethyst_broad_bolts_5_3902, "Amethyst broad bolts<br> (with 61 Ranged)");
 				case default :
 					return(-1, null, "");

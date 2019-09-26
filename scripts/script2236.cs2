@@ -2,15 +2,57 @@
 script2236(component $component0, component $component1, int $int2, int $int3)
 def_int $int4 = if_getwidth($component1);
 def_int $int5 = if_getheight($component1);
-def_int $int6 = 16064;
-def_int $int7 = 16258;
-if (($int4 ! $int2) | ($int5 ! $int3)) {
-	$int6, $int7 = ~script2682($int4, $int5);
-	if_setsize($int6, $int7, ^setsize_2, ^setsize_2, $component0);
-	if ($component0 = 601:12) {
-		~script2232(601:2, $component0);
-	}
-	if_setonresize("script2235($component0, $component1, $int4, $int5)", $component0);
-	if_setonsubchange("script2235($component0, $component1, $int4, $int5)", $component0);
-	if_setontimer("script2235($component0, $component1, $int4, $int5)", $component0);
+if ((($int4 = $int2) & ($int5 = $int3)) & (calc(clientclock % 75) ! 0)) {
+	return;
 }
+def_int $int6 = _6220;
+def_int $int7 = _6221;
+def_int $int8 = _6222;
+def_int $int9 = _6223;
+if_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top, $component0);
+if_setsize(calc($int4 - ($int8 - $int6)), calc($int5 - ($int9 - $int7)), ^setsize_minus, ^setsize_minus, $component0);
+if ($component0 = 601:12) {
+	if (.cc_find(601:2, 0) = ^true) {
+		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);
+	} else {
+		.cc_create(601:2, ^iftype_text, 0);
+		.cc_setnoclickthrough(true);
+		.cc_setonclick("opsound(0, 0)");
+		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);
+	}
+	if (.cc_find(601:2, 1) = ^true) {
+		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+		.cc_setsize(0, $int9, ^setsize_minus, ^setsize_minus);
+	} else {
+		.cc_create(601:2, ^iftype_text, 1);
+		.cc_setnoclickthrough(true);
+		.cc_setonclick("opsound(0, 0)");
+		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+		.cc_setsize(0, $int9, ^setsize_minus, ^setsize_minus);
+	}
+	if (.cc_find(601:2, 2) = ^true) {
+		.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+		.cc_setsize($int6, 0, ^setsize_abs, ^setsize_minus);
+	} else {
+		.cc_create(601:2, ^iftype_text, 2);
+		.cc_setnoclickthrough(true);
+		.cc_setonclick("opsound(0, 0)");
+		.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+		.cc_setsize($int6, 0, ^setsize_abs, ^setsize_minus);
+	}
+	if (.cc_find(601:2, 3) = ^true) {
+		.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+		.cc_setsize($int8, 0, ^setsize_minus, ^setsize_minus);
+	} else {
+		.cc_create(601:2, ^iftype_text, 3);
+		.cc_setnoclickthrough(true);
+		.cc_setonclick("opsound(0, 0)");
+		.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+		.cc_setsize($int8, 0, ^setsize_minus, ^setsize_minus);
+	}
+}
+if_setonresize("script2235($component0, $component1, $int4, $int5)", $component0);
+if_setonsubchange("script2235($component0, $component1, $int4, $int5)", $component0);
+if_setontimer("script2235($component0, $component1, $int4, $int5)", $component0);

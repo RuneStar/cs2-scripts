@@ -1,13 +1,18 @@
 // 2101
-[proc,hp_hud_pos](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
-def_int $int8 = if_getwidth($component1);
-def_int $int9 = scale(1, 4, $int8);
-$int9 = ~max($int9, 150);
-$int9 = ~min($int9, 500);
-if ($int0 = $int9) {
+[proc,hp_hud_pos](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+def_int $int9 = if_getwidth($component1);
+def_int $int10 = scale(1, 4, $int9);
+$int10 = ~max($int10, 200);
+$int10 = ~min($int10, 600);
+if ($int0 = $int10) {
 	return;
 }
-if_setsize($int9, 38, ^setsize_abs, ^setsize_abs, $component2);
-if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component3);
-if_setontimer("hp_hud_pos($int9, $component1, $component2, $component3, $component4, $component5, $component6, $component7)", $component1);
-~hp_hud_update($component6, $component7, $component3, $component5);
+if_setsize($int10, 42, ^setsize_abs, ^setsize_abs, $component2);
+if (~on_mobile = false) {
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component2);
+} else {
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component2);
+}
+if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component3);
+if_setontimer("hp_hud_pos($int10, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8)", $component1);
+~hp_hud_update($component6, $component7, $component8, $component3, $component5);

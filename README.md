@@ -575,7 +575,6 @@
 [**572**](scripts/script572.cs2)  
 [**573**](scripts/script573.cs2)  
 [**574**](scripts/[proc,gnomeball_score].cs2) `[proc,gnomeball_score]`  
-[**575**](scripts/[clientscript,hp_hud_centre_init].cs2) `[clientscript,hp_hud_centre_init]`  
 [**576**](scripts/[clientscript,clanwars_setup_scrollbox_init].cs2) `[clientscript,clanwars_setup_scrollbox_init]`  
 [**577**](scripts/[proc,clanwars_setup_scrollbox_drawframe].cs2) `[proc,clanwars_setup_scrollbox_drawframe]`  
 [**578**](scripts/[clientscript,clanwars_setup_smallbox_init].cs2) `[clientscript,clanwars_setup_smallbox_init]`  
@@ -1281,10 +1280,6 @@
 [**1278**](scripts/[proc,deadmanprotect_stats_refresh].cs2) `[proc,deadmanprotect_stats_refresh]`  
 [**1279**](scripts/script1279.cs2)  
 [**1280**](scripts/script1280.cs2)  
-[**1281**](scripts/script1281.cs2)  
-[**1282**](scripts/script1282.cs2)  
-[**1283**](scripts/script1283.cs2)  
-[**1284**](scripts/script1284.cs2)  
 [**1285**](scripts/[proc,colour_interpolate].cs2) `[proc,colour_interpolate]`  
 [**1286**](scripts/[clientscript,glidermap_init].cs2) `[clientscript,glidermap_init]`  
 [**1287**](scripts/[clientscript,glidermap_hideshow].cs2) `[clientscript,glidermap_hideshow]`  
@@ -1970,7 +1965,6 @@
 [**1967**](scripts/[clientscript,vm_info_init].cs2) `[clientscript,vm_info_init]`  
 [**1968**](scripts/[proc,vm_kudos_get_status].cs2) `[proc,vm_kudos_get_status]`  
 [**1969**](scripts/[proc,vm_kudos_get_quest_status].cs2) `[proc,vm_kudos_get_quest_status]`  
-[**1970**](scripts/script1970.cs2)  
 [**1971**](scripts/[proc,text_device].cs2) `[proc,text_device]`  
 [**1972**](scripts/[proc,on_mobile].cs2) `[proc,on_mobile]`  
 [**1973**](scripts/script1973.cs2)  
@@ -2080,8 +2074,6 @@
 [**2077**](scripts/[clientscript,vm_kudos_init].cs2) `[clientscript,vm_kudos_init]`  
 [**2078**](scripts/[clientscript,vm_kudos_update].cs2) `[clientscript,vm_kudos_update]`  
 [**2079**](scripts/[proc,vm_kudos_update].cs2) `[proc,vm_kudos_update]`  
-[**2080**](scripts/script2080.cs2)  
-[**2081**](scripts/script2081.cs2)  
 [**2082**](scripts/[proc,kots_world].cs2) `[proc,kots_world]`  
 [**2083**](scripts/[proc,kots_remaining_time].cs2) `[proc,kots_remaining_time]`  
 [**2084**](scripts/[proc,deadman_finallocation].cs2) `[proc,deadman_finallocation]`  
@@ -2232,7 +2224,6 @@
 [**2229**](scripts/[clientscript,shop_quantity].cs2) `[clientscript,shop_quantity]`  
 [**2230**](scripts/[proc,shop_quantity].cs2) `[proc,shop_quantity]`  
 [**2231**](scripts/[clientscript,shop_quantity_op].cs2) `[clientscript,shop_quantity_op]`  
-[**2232**](scripts/script2232.cs2)  
 [**2233**](scripts/[proc,welcome_screen_continue_text].cs2) `[proc,welcome_screen_continue_text]`  
 [**2234**](scripts/[clientscript,camera_do_zoom].cs2) `[clientscript,camera_do_zoom]`  
 [**2235**](scripts/script2235.cs2)  
@@ -2682,7 +2673,6 @@
 [**2679**](scripts/[clientscript,telenexus_scry_vartrans].cs2) `[clientscript,telenexus_scry_vartrans]`  
 [**2680**](scripts/[proc,telenexus_options].cs2) `[proc,telenexus_options]`  
 [**2681**](scripts/[proc,telenexus_get_slot].cs2) `[proc,telenexus_get_slot]`  
-[**2682**](scripts/script2682.cs2)  
 [**2683**](scripts/[clientscript,options_bottom_appearance].cs2) `[clientscript,options_bottom_appearance]`  
 [**2684**](scripts/[clientscript,bond_prompt_init].cs2) `[clientscript,bond_prompt_init]`  
 [**2685**](scripts/script2685.cs2)  
@@ -2809,6 +2799,8 @@
 [**2806**](scripts/script2806.cs2)  
 [**2807**](scripts/[proc,deadman_broadcast_message_sizing].cs2) `[proc,deadman_broadcast_message_sizing]`  
 [**2808**](scripts/[clientscript,deadman_broadcast_message_timer].cs2) `[clientscript,deadman_broadcast_message_timer]`  
+[**2809**](scripts/script2809.cs2)  
+[**2810**](scripts/script2810.cs2)  
 [**2811**](scripts/[clientscript,seed_vault_side_init].cs2) `[clientscript,seed_vault_side_init]`  
 [**2812**](scripts/[clientscript,seed_vault_side_draw].cs2) `[clientscript,seed_vault_side_draw]`  
 [**2813**](scripts/[proc,seed_vault_side_draw].cs2) `[proc,seed_vault_side_draw]`  
@@ -2832,7 +2824,6 @@
 [**2831**](scripts/script2831.cs2)  
 [**2832**](scripts/script2832.cs2)  
 [**2833**](scripts/script2833.cs2)  
-[**2834**](scripts/script2834.cs2)  
 [**2835**](scripts/[worldmapelementmouserepeat,619].cs2) `[worldmapelementmouserepeat,619]`  
 [**2836**](scripts/[worldmapelementmouseleave,619].cs2) `[worldmapelementmouseleave,619]`  
 [**2837**](scripts/script2837.cs2)  
@@ -2880,10 +2871,6 @@
 [**2879**](scripts/[clientscript,clanwars_setup_smallbox_updatetext].cs2) `[clientscript,clanwars_setup_smallbox_updatetext]`  
 [**2880**](scripts/[proc,clanwars_setup_smallbox_updatetext].cs2) `[proc,clanwars_setup_smallbox_updatetext]`  
 [**2881**](scripts/script2881.cs2)  
-[**2882**](scripts/[clientscript,hp_hud_centre_pos].cs2) `[clientscript,hp_hud_centre_pos]`  
-[**2883**](scripts/[proc,hp_hud_centre_pos].cs2) `[proc,hp_hud_centre_pos]`  
-[**2884**](scripts/[clientscript,hp_hud_centre_update].cs2) `[clientscript,hp_hud_centre_update]`  
-[**2885**](scripts/[proc,hp_hud_centre_update].cs2) `[proc,hp_hud_centre_update]`  
 [**2886**](scripts/[clientscript,hp_hud_fade_in_check].cs2) `[clientscript,hp_hud_fade_in_check]`  
 [**2887**](scripts/[clientscript,hp_hud_fade_in].cs2) `[clientscript,hp_hud_fade_in]`  
 [**2888**](scripts/[proc,hp_hud_fade_in].cs2) `[proc,hp_hud_fade_in]`  
@@ -3123,3 +3110,18 @@
 [**3122**](scripts/[proc,poh_board_location_filter_build].cs2) `[proc,poh_board_location_filter_build]`  
 [**3123**](scripts/[proc,poh_board_loc].cs2) `[proc,poh_board_loc]`  
 [**3124**](scripts/[clientscript,poh_board_explain_location].cs2) `[clientscript,poh_board_explain_location]`  
+[**3125**](scripts/script3125.cs2)  
+[**3126**](scripts/script3126.cs2)  
+[**3127**](scripts/script3127.cs2)  
+[**3128**](scripts/script3128.cs2)  
+[**3129**](scripts/script3129.cs2)  
+[**3130**](scripts/script3130.cs2)  
+[**3131**](scripts/script3131.cs2)  
+[**3132**](scripts/script3132.cs2)  
+[**3133**](scripts/script3133.cs2)  
+[**3134**](scripts/script3134.cs2)  
+[**3135**](scripts/script3135.cs2)  
+[**3136**](scripts/script3136.cs2)  
+[**3137**](scripts/script3137.cs2)  
+[**3138**](scripts/script3138.cs2)  
+[**3139**](scripts/script3139.cs2)  
