@@ -1,16 +1,16 @@
 // 1526
-[proc,raids_partydetails_sort](intarray $array0, int $int1, int $int2, int $int3)
+[proc,raids_partydetails_sort](intarray $intarray0, int $int1, int $int2, int $int3)
 def_int $int4 = calc(($int1 + $int2) / 2);
-def_int $int5 = $array0($int4);
-$array0($int4) = $array0($int2);
-$array0($int2) = $int5;
+def_int $int5 = $intarray0($int4);
+$intarray0($int4) = $intarray0($int2);
+$intarray0($int2) = $int5;
 def_int $int6 = $int1;
 def_int $int7 = $int1;
 def_int $int8 = -1;
 def_string $string0 = "";
 def_string $string1 = "";
 while ($int7 < $int2) {
-	if (cc_find(507:11, calc(($array0($int7) * 8) + $int3)) = ^true) {
+	if (cc_find(507:11, calc(($intarray0($int7) * 8) + $int3)) = ^true) {
 		$string0 = removetags(cc_gettext);
 	} else {
 		$string0 = "";
@@ -21,18 +21,18 @@ while ($int7 < $int2) {
 		$string1 = "";
 	}
 	if (compare($string0, $string1) <= 0) {
-		$int8 = $array0($int7);
-		$array0($int7) = $array0($int6);
-		$array0($int6) = $int8;
+		$int8 = $intarray0($int7);
+		$intarray0($int7) = $intarray0($int6);
+		$intarray0($int6) = $int8;
 		$int6 = calc($int6 + 1);
 	}
 	$int7 = calc($int7 + 1);
 }
-$array0($int2) = $array0($int6);
-$array0($int6) = $int5;
+$intarray0($int2) = $intarray0($int6);
+$intarray0($int6) = $int5;
 if ($int1 < calc($int6 - 1)) {
-	~raids_partydetails_sort(array0, $int1, calc($int6 - 1), $int3);
+	~raids_partydetails_sort(intarray0, $int1, calc($int6 - 1), $int3);
 }
 if (calc($int6 + 1) < $int2) {
-	~raids_partydetails_sort(array0, calc($int6 + 1), $int2, $int3);
+	~raids_partydetails_sort(intarray0, calc($int6 + 1), $int2, $int3);
 }

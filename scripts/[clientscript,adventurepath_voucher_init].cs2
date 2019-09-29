@@ -24,7 +24,7 @@ if ($int9 = 0) {
 	return;
 }
 def_int $int10 = 0;
-def_struct $array0($int9);
+def_struct $structarray0($int9);
 def_enum $enum11 = null;
 def_enum $enum12 = null;
 def_int $int13 = 0;
@@ -33,10 +33,10 @@ def_int $int15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
 while ($int13 < $int9) {
-	$array0($int13) = enum(int, struct, $enum1, $int13);
-	if ($array0($int13) ! null) {
-		$enum11 = struct_param($array0($int13), 838);
-		$enum12 = struct_param($array0($int13), 840);
+	$structarray0($int13) = enum(int, struct, $enum1, $int13);
+	if ($structarray0($int13) ! null) {
+		$enum11 = struct_param($structarray0($int13), 838);
+		$enum12 = struct_param($structarray0($int13), 840);
 		if (($enum11 ! null) & ($enum12 ! null)) {
 			if ($int14 = 0) {
 				cc_create($component3, ^iftype_text, $int10);
@@ -51,7 +51,7 @@ while ($int13 < $int9) {
 				$int10 = calc($int10 + 1);
 				$int17 = calc($int17 + 40);
 			}
-			$int10, $int16 = ~adventurepath_voucher_entry($int17, $component3, $int7, $int10, $enum11, $enum12, struct_param($array0($int13), 842), struct_param($array0($int13), 837), $int16, struct_param($array0($int13), 844));
+			$int10, $int16 = ~adventurepath_voucher_entry($int17, $component3, $int7, $int10, $enum11, $enum12, struct_param($structarray0($int13), 842), struct_param($structarray0($int13), 837), $int16, struct_param($structarray0($int13), 844));
 			$int17 = calc($int17 + 88);
 		}
 	}
@@ -59,9 +59,9 @@ while ($int13 < $int9) {
 }
 $int13 = 0;
 while ($int13 < $int9) {
-	if ($array0($int13) ! null) {
-		$enum11 = struct_param($array0($int13), 839);
-		$enum12 = struct_param($array0($int13), 841);
+	if ($structarray0($int13) ! null) {
+		$enum11 = struct_param($structarray0($int13), 839);
+		$enum12 = struct_param($structarray0($int13), 841);
 		if (($enum11 ! null) & ($enum12 ! null)) {
 			if ($int15 = 0) {
 				cc_create($component3, ^iftype_text, $int10);
@@ -76,7 +76,7 @@ while ($int13 < $int9) {
 				$int10 = calc($int10 + 1);
 				$int17 = calc($int17 + 40);
 			}
-			$int10, $int16 = ~adventurepath_voucher_entry($int17, $component3, $int7, $int10, $enum11, $enum12, struct_param($array0($int13), 843), struct_param($array0($int13), 837), $int16, struct_param($array0($int13), 845));
+			$int10, $int16 = ~adventurepath_voucher_entry($int17, $component3, $int7, $int10, $enum11, $enum12, struct_param($structarray0($int13), 843), struct_param($structarray0($int13), 837), $int16, struct_param($structarray0($int13), 845));
 			$int17 = calc($int17 + 88);
 		}
 	}

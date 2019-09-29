@@ -4,15 +4,15 @@ if (($boolean0 = true) & (%varcint207 = null)) {
 	return;
 }
 def_int $int34 = calc(23 + 1);
-def_stat $array0($int34);
-def_int $array1($int34);
+def_stat $statarray0($int34);
+def_int $intarray1($int34);
 def_int $int35 = 0;
 def_int $int36 = 0;
 if ($boolean0 = true) {
 	while (%varcint207 ! null) {
-		$array0($int35) = enum(int, stat, 681, coordx(%varcint207));
-		$array1($int35) = coordz(%varcint207);
-		if (($array0($int35) ! null) & ($array1($int35) > 0)) {
+		$statarray0($int35) = enum(int, stat, 681, coordx(%varcint207));
+		$intarray1($int35) = coordz(%varcint207);
+		if (($statarray0($int35) ! null) & ($intarray1($int35) > 0)) {
 			$int35 = calc($int35 + 1);
 		}
 		%varcint207, %varcint208, %varcint209, %varcint210, %varcint211, %varcint212, %varcint213 = %varcint208, %varcint209, %varcint210, %varcint211, %varcint212, %varcint213, null;
@@ -20,140 +20,140 @@ if ($boolean0 = true) {
 } else {
 	$int36 = calc(stat_xp(fishing) - $int25);
 	if ($int36 > 0) {
-		$array0($int35) = fishing;
-		$array1($int35) = $int36;
+		$statarray0($int35) = fishing;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(attack) - $int11);
 	if ($int36 > 0) {
-		$array0($int35) = attack;
-		$array1($int35) = $int36;
+		$statarray0($int35) = attack;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(strength) - $int12);
 	if ($int36 > 0) {
-		$array0($int35) = strength;
-		$array1($int35) = $int36;
+		$statarray0($int35) = strength;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(ranged) - $int13);
 	if ($int36 > 0) {
-		$array0($int35) = ranged;
-		$array1($int35) = $int36;
+		$statarray0($int35) = ranged;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(magic) - $int14);
 	if ($int36 > 0) {
-		$array0($int35) = magic;
-		$array1($int35) = $int36;
+		$statarray0($int35) = magic;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(defence) - $int15);
 	if ($int36 > 0) {
-		$array0($int35) = defence;
-		$array1($int35) = $int36;
+		$statarray0($int35) = defence;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(hitpoints) - $int16);
 	if ($int36 > 0) {
-		$array0($int35) = hitpoints;
-		$array1($int35) = $int36;
+		$statarray0($int35) = hitpoints;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(prayer) - $int17);
 	if ($int36 > 0) {
-		$array0($int35) = prayer;
-		$array1($int35) = $int36;
+		$statarray0($int35) = prayer;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(agility) - $int18);
 	if ($int36 > 0) {
-		$array0($int35) = agility;
-		$array1($int35) = $int36;
+		$statarray0($int35) = agility;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(herblore) - $int19);
 	if ($int36 > 0) {
-		$array0($int35) = herblore;
-		$array1($int35) = $int36;
+		$statarray0($int35) = herblore;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(thieving) - $int20);
 	if ($int36 > 0) {
-		$array0($int35) = thieving;
-		$array1($int35) = $int36;
+		$statarray0($int35) = thieving;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(crafting) - $int21);
 	if ($int36 > 0) {
-		$array0($int35) = crafting;
-		$array1($int35) = $int36;
+		$statarray0($int35) = crafting;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(runecraft) - $int22);
 	if ($int36 > 0) {
-		$array0($int35) = runecraft;
-		$array1($int35) = $int36;
+		$statarray0($int35) = runecraft;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(mining) - $int23);
 	if ($int36 > 0) {
-		$array0($int35) = mining;
-		$array1($int35) = $int36;
+		$statarray0($int35) = mining;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(smithing) - $int24);
 	if ($int36 > 0) {
-		$array0($int35) = smithing;
-		$array1($int35) = $int36;
+		$statarray0($int35) = smithing;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(cooking) - $int26);
 	if ($int36 > 0) {
-		$array0($int35) = cooking;
-		$array1($int35) = $int36;
+		$statarray0($int35) = cooking;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(firemaking) - $int27);
 	if ($int36 > 0) {
-		$array0($int35) = firemaking;
-		$array1($int35) = $int36;
+		$statarray0($int35) = firemaking;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(woodcutting) - $int28);
 	if ($int36 > 0) {
-		$array0($int35) = woodcutting;
-		$array1($int35) = $int36;
+		$statarray0($int35) = woodcutting;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(fletching) - $int29);
 	if ($int36 > 0) {
-		$array0($int35) = fletching;
-		$array1($int35) = $int36;
+		$statarray0($int35) = fletching;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(slayer) - $int30);
 	if ($int36 > 0) {
-		$array0($int35) = slayer;
-		$array1($int35) = $int36;
+		$statarray0($int35) = slayer;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(farming) - $int31);
 	if ($int36 > 0) {
-		$array0($int35) = farming;
-		$array1($int35) = $int36;
+		$statarray0($int35) = farming;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(construction) - $int32);
 	if ($int36 > 0) {
-		$array0($int35) = construction;
-		$array1($int35) = $int36;
+		$statarray0($int35) = construction;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 	$int36 = calc(stat_xp(hunter) - $int33);
 	if ($int36 > 0) {
-		$array0($int35) = hunter;
-		$array1($int35) = $int36;
+		$statarray0($int35) = hunter;
+		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
 }
@@ -182,7 +182,7 @@ if ((($int35 > 0) & ($int16 > 0)) & (calc(clientclock - %varcint76) > 10)) {
 	$int43 = calc((($int41 * enum(int, int, 1171, %varbit4722)) / $int42) + 1);
 	while ($int37 < $int35) {
 		if (($int38 = 0) & ($boolean0 = false)) {
-			%varcint72 = $array0($int37);
+			%varcint72 = $statarray0($int37);
 			$int38 = 1;
 		}
 		if ((%varcint71 > 0) & (%varcint71 > calc(clientclock - $int43))) {
@@ -193,18 +193,18 @@ if ((($int35 > 0) & ($int16 > 0)) & (calc(clientclock - %varcint76) > 10)) {
 		if ($int44 < calc(clientclock + ($int43 * $int10))) {
 			$component47 = enum(int, component, 1163, %varcint70);
 			if_sethide(false, $component47);
-			$int46 = $array1($int37);
+			$int46 = $intarray1($int37);
 			cc_create($component47, ^iftype_graphic, 1);
-			cc_setgraphic(enum(stat, graphic, 255, $array0($int37)));
+			cc_setgraphic(enum(stat, graphic, 255, $statarray0($int37)));
 			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_5);
 			cc_sethide(true);
 			$int45 = 1;
 			$int37 = calc($int37 + 1);
 			while ((((%varbit4696 = 1) & ($int37 < $int35)) & ($int45 < 5)) & ($int46 < 1000000)) {
-				$int46 = calc($int46 + $array1($int37));
+				$int46 = calc($int46 + $intarray1($int37));
 				$int45 = calc($int45 + 1);
 				cc_create($component47, ^iftype_graphic, $int45);
-				cc_setgraphic(enum(stat, graphic, 255, $array0($int37)));
+				cc_setgraphic(enum(stat, graphic, 255, $statarray0($int37)));
 				cc_setposition(0, 0, ^setpos_abs_left, ^setpos_5);
 				cc_sethide(true);
 				$int37 = calc($int37 + 1);

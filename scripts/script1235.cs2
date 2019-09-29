@@ -29,44 +29,44 @@ script1235(inv $inv0, int $int1, int $int2, int $int3, int $int4, int $int5, int
 %varcint108 = $int27;
 %varcint109 = $int28;
 def_int $int29 = inv_size($inv0);
-def_int $array0($int29);
-$array0(0) = $int1;
-$array0(1) = $int2;
-$array0(2) = $int3;
-$array0(3) = $int4;
-$array0(4) = $int5;
-$array0(5) = $int6;
-$array0(6) = $int7;
-$array0(7) = $int8;
-$array0(8) = $int9;
-$array0(9) = $int10;
-$array0(10) = $int11;
-$array0(11) = $int12;
-$array0(12) = $int13;
-$array0(13) = $int14;
-$array0(14) = $int15;
-$array0(15) = $int16;
-$array0(16) = $int17;
-$array0(17) = $int18;
-$array0(18) = $int19;
-$array0(19) = $int20;
-$array0(20) = $int21;
-$array0(21) = $int22;
-$array0(22) = $int23;
-$array0(23) = $int24;
-$array0(24) = $int25;
-$array0(25) = $int26;
-$array0(26) = $int27;
-$array0(27) = $int28;
+def_int $intarray0($int29);
+$intarray0(0) = $int1;
+$intarray0(1) = $int2;
+$intarray0(2) = $int3;
+$intarray0(3) = $int4;
+$intarray0(4) = $int5;
+$intarray0(5) = $int6;
+$intarray0(6) = $int7;
+$intarray0(7) = $int8;
+$intarray0(8) = $int9;
+$intarray0(9) = $int10;
+$intarray0(10) = $int11;
+$intarray0(11) = $int12;
+$intarray0(12) = $int13;
+$intarray0(13) = $int14;
+$intarray0(14) = $int15;
+$intarray0(15) = $int16;
+$intarray0(16) = $int17;
+$intarray0(17) = $int18;
+$intarray0(18) = $int19;
+$intarray0(19) = $int20;
+$intarray0(20) = $int21;
+$intarray0(21) = $int22;
+$intarray0(22) = $int23;
+$intarray0(23) = $int24;
+$intarray0(24) = $int25;
+$intarray0(25) = $int26;
+$intarray0(26) = $int27;
+$intarray0(27) = $int28;
 def_string $string0 = "Invalid item.";
 while ($int29 > 0) {
 	$int29 = calc($int29 - 1);
 	if (cc_find(81:5, $int29) = ^true) {
-		if ((($inv0 = inv) & ($array0($int29) <= -1)) & (inv_getobj(inv, $int29) ! null)) {
+		if ((($inv0 = inv) & ($intarray0($int29) <= -1)) & (inv_getobj(inv, $int29) ! null)) {
 			cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 81:7, $string0, 25, 512)");
 			cc_setonmouseleave("deltooltip(81:7)");
 		} else {
-			~trade_tooltip(inv_getnum($inv0, $int29), $array0($int29), 81:7);
+			~trade_tooltip(inv_getnum($inv0, $int29), $intarray0($int29), 81:7);
 		}
 	}
 }

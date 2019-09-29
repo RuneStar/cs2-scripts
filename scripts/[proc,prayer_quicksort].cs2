@@ -1,26 +1,26 @@
 // 465
-[proc,prayer_quicksort](intarray $array0, int $int1, int $int2)
+[proc,prayer_quicksort](intarray $intarray0, int $int1, int $int2)
 def_int $int3 = calc(($int1 + $int2) / 2);
-def_int $int4 = $array0($int3);
-$array0($int3) = $array0($int2);
-$array0($int2) = $int4;
+def_int $int4 = $intarray0($int3);
+$intarray0($int3) = $intarray0($int2);
+$intarray0($int2) = $int4;
 def_int $int5 = $int1;
 def_int $int6 = $int1;
 def_int $int7 = -1;
 while ($int6 < $int2) {
-	if (enum(int, int, 861, $array0($int6)) <= enum(int, int, 861, $int4)) {
-		$int7 = $array0($int6);
-		$array0($int6) = $array0($int5);
-		$array0($int5) = $int7;
+	if (enum(int, int, 861, $intarray0($int6)) <= enum(int, int, 861, $int4)) {
+		$int7 = $intarray0($int6);
+		$intarray0($int6) = $intarray0($int5);
+		$intarray0($int5) = $int7;
 		$int5 = calc($int5 + 1);
 	}
 	$int6 = calc($int6 + 1);
 }
-$array0($int2) = $array0($int5);
-$array0($int5) = $int4;
+$intarray0($int2) = $intarray0($int5);
+$intarray0($int5) = $int4;
 if ($int1 < calc($int5 - 1)) {
-	~prayer_quicksort(array0, $int1, calc($int5 - 1));
+	~prayer_quicksort(intarray0, $int1, calc($int5 - 1));
 }
 if (calc($int5 + 1) < $int2) {
-	~prayer_quicksort(array0, calc($int5 + 1), $int2);
+	~prayer_quicksort(intarray0, calc($int5 + 1), $int2);
 }

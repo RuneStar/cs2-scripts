@@ -34,7 +34,7 @@ if (~toplevel_getcomponents ! 1132) {
 def_int $int26 = calc((4 + 1) * 21);
 if_setsize(0, $int26, ^setsize_minus, ^setsize_minus, $component20);
 if_setsize(6, $int26, ^setsize_minus, ^setsize_abs, $component10);
-def_int $array0(calc(~max(104, 36) + 1));
+def_int $intarray0(calc(~max(104, 36) + 1));
 cc_deleteall($component21);
 $int25 = 0;
 def_int $int27 = 16;
@@ -46,7 +46,7 @@ def_string $string0 = "";
 def_int $int29 = 0;
 def_category $category30 = enum(int, category, 1705, $int28);
 while ($category30 ! null) {
-	$array0($int28) = $int28;
+	$intarray0($int28) = $int28;
 	$int28 = calc($int28 + 1);
 	$string0 = enum(category, string, 1713, $category30);
 	cc_create($component21, ^iftype_rectangle, $int25);
@@ -82,7 +82,7 @@ while ($category30 ! null) {
 	$category30 = enum(int, category, 1705, $int28);
 }
 if ($int28 >= 2) {
-	~worldmap_keysort(array0, $component21, 0, 104);
+	~worldmap_keysort(intarray0, $component21, 0, 104);
 }
 $int29 = calc($int29 + 18);
 def_int $int31 = -1;
@@ -95,7 +95,7 @@ def_int $int36 = 0;
 def_int $int37 = 0;
 $int26 = 0;
 while ($int36 < $int28) {
-	if (cc_find($component21, calc(($array0($int36) * 4) + 3)) = ^true) {
+	if (cc_find($component21, calc(($intarray0($int36) * 4) + 3)) = ^true) {
 		$string1, $string0 = ~script632(cc_gettext);
 		$int32 = string_length($string1);
 		if (($int32 > 0) & (compare($string1, tostring($int31)) ! 0)) {
@@ -129,7 +129,7 @@ while ($int36 < $int28) {
 			$int31, $int26 = $int35, calc($int26 + 20);
 		}
 	}
-	if (cc_find($component21, calc($array0($int36) * 4)) = ^true) {
+	if (cc_find($component21, calc($intarray0($int36) * 4)) = ^true) {
 		cc_setposition(0, $int26, ^setpos_abs_centre, ^setpos_abs_top);
 	}
 	if (~on_mobile = true) {
@@ -137,10 +137,10 @@ while ($int36 < $int28) {
 	} else {
 		$int37 = $int26;
 	}
-	if (cc_find($component21, calc(($array0($int36) * 4) + 1)) = ^true) {
+	if (cc_find($component21, calc(($intarray0($int36) * 4) + 1)) = ^true) {
 		cc_setposition(1, $int37, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find($component21, calc(($array0($int36) * 4) + 2)) = ^true) {
+	if (cc_find($component21, calc(($intarray0($int36) * 4) + 2)) = ^true) {
 		cc_setposition(0, $int26, ^setpos_abs_right, ^setpos_abs_top);
 	}
 	$int26, $int36 = calc($int26 + $int27), calc($int36 + 1);
@@ -280,7 +280,7 @@ def_fontmetrics $fontmetrics44 = null;
 $string0, $int29, $int28 = "", 0, 0;
 def_maparea $maparea45 = enum(int, maparea, 1697, $int28);
 while ($maparea45 ! null) {
-	$array0($int28) = $int25;
+	$intarray0($int28) = $int25;
 	$int28 = calc($int28 + 1);
 	cc_create($component16, ^iftype_text, $int25);
 	$int25 = calc($int25 + 1);
@@ -315,7 +315,7 @@ cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
 cc_setgraphic(struct_param(1, 459));
 if ($int28 >= 3) {
-	~quicksort_cctext(array0, $component16, 1, 36);
+	~quicksort_cctext(intarray0, $component16, 1, 36);
 }
 $int29 = calc((((((3 + $int29) + 2) + 26) + 2) + 16) + 3);
 if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $component12);
@@ -350,7 +350,7 @@ if (~on_mobile = false) {
 }
 while ($int28 > 0) {
 	$int28 = calc($int28 - 1);
-	if (cc_find($component16, $array0($int28)) = ^true) {
+	if (cc_find($component16, $intarray0($int28)) = ^true) {
 		cc_setposition(0, calc($int28 * $int27), ^setpos_abs_centre, ^setpos_abs_top);
 	}
 }

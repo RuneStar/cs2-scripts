@@ -2,7 +2,7 @@
 [clientscript,build_achievement_list](component $component0, component $component1, int $int2)
 cc_deleteall($component0);
 cc_deleteall($component1);
-def_int $array0(12);
+def_int $intarray0(12);
 def_int $int3 = 0;
 def_int $int4 = 0;
 while ($int3 < 12) {
@@ -13,17 +13,17 @@ while ($int3 < 12) {
 	cc_setcolour(0xff9933);
 	cc_settrans(150);
 	cc_setsize(16, 27, ^setsize_minus, ^setsize_abs);
-	$array0($int3) = $int3;
+	$intarray0($int3) = $int3;
 	$int3 = calc($int3 + 1);
 }
-~quicksort_intenum(array0, 0, calc(12 - 1), 595);
+~quicksort_intenum(intarray0, 0, calc(12 - 1), 595);
 def_int $int5 = 8;
 $int3 = 0;
 while ($int3 < 12) {
-	if (cc_find($component0, $array0($int3)) = ^true) {
+	if (cc_find($component0, $intarray0($int3)) = ^true) {
 		cc_setposition(0, $int5, ^setpos_abs_centre, ^setpos_abs_top);
 	}
-	$int4 = ~setup_diary_entry($component0, $array0($int3), $int4, $int5);
+	$int4 = ~setup_diary_entry($component0, $intarray0($int3), $int4, $int5);
 	$int3, $int5 = calc($int3 + 1), calc($int5 + 28);
 }
 $int5 = calc($int5 + 8);

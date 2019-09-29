@@ -1,16 +1,16 @@
 // 1731
-[proc,worldmap_keysort](intarray $array0, component $component1, int $int2, int $int3)
+[proc,worldmap_keysort](intarray $intarray0, component $component1, int $int2, int $int3)
 def_int $int4 = calc(($int2 + $int3) / 2);
-def_int $int5 = $array0($int4);
-$array0($int4) = $array0($int3);
-$array0($int3) = $int5;
+def_int $int5 = $intarray0($int4);
+$intarray0($int4) = $intarray0($int3);
+$intarray0($int3) = $int5;
 def_int $int6 = $int2;
 def_int $int7 = $int2;
 def_int $int8 = -1;
 def_string $string0 = "";
 def_string $string1 = "";
 while ($int7 < $int3) {
-	if (cc_find($component1, calc(($array0($int7) * 4) + 3)) = ^true) {
+	if (cc_find($component1, calc(($intarray0($int7) * 4) + 3)) = ^true) {
 		$string0 = cc_gettext;
 	} else {
 		$string0 = "";
@@ -21,18 +21,18 @@ while ($int7 < $int3) {
 		$string1 = "";
 	}
 	if (compare($string0, $string1) <= 0) {
-		$int8 = $array0($int7);
-		$array0($int7) = $array0($int6);
-		$array0($int6) = $int8;
+		$int8 = $intarray0($int7);
+		$intarray0($int7) = $intarray0($int6);
+		$intarray0($int6) = $int8;
 		$int6 = calc($int6 + 1);
 	}
 	$int7 = calc($int7 + 1);
 }
-$array0($int3) = $array0($int6);
-$array0($int6) = $int5;
+$intarray0($int3) = $intarray0($int6);
+$intarray0($int6) = $int5;
 if ($int2 < calc($int6 - 1)) {
-	~worldmap_keysort(array0, $component1, $int2, calc($int6 - 1));
+	~worldmap_keysort(intarray0, $component1, $int2, calc($int6 - 1));
 }
 if (calc($int6 + 1) < $int3) {
-	~worldmap_keysort(array0, $component1, calc($int6 + 1), $int3);
+	~worldmap_keysort(intarray0, $component1, calc($int6 + 1), $int3);
 }

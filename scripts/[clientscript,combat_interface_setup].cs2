@@ -1,7 +1,7 @@
 // 420
 [clientscript,combat_interface_setup]
-def_int $array0(4);
-def_int $array1(4);
+def_int $intarray0(4);
+def_int $intarray1(4);
 def_int $int0 = 45;
 def_int $int1 = 68;
 def_int $int2 = 47;
@@ -37,14 +37,14 @@ if (~on_mobile = true) {
 }
 if ((%varbit357 = 18) | (%varbit357 = 21)) {
 	if_sethide(false, 593:20);
-	$array0(0) = $int9;
-	$array0(1) = $int9;
-	$array0(2) = $int9;
-	$array0(3) = $int9;
-	$array1(0) = $int0;
-	$array1(1) = calc(($int0 + $int3) + $int7);
-	$array1(2) = calc($int0 + (2 * ($int3 + $int7)));
-	$array1(3) = calc($int0 + (3 * ($int3 + $int7)));
+	$intarray0(0) = $int9;
+	$intarray0(1) = $int9;
+	$intarray0(2) = $int9;
+	$intarray0(3) = $int9;
+	$intarray1(0) = $int0;
+	$intarray1(1) = calc(($int0 + $int3) + $int7);
+	$intarray1(2) = calc($int0 + (2 * ($int3 + $int7)));
+	$intarray1(3) = calc($int0 + (3 * ($int3 + $int7)));
 	$int10 = calc($int0 + (3 * ($int3 + $int7)));
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:4);
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:8);
@@ -65,14 +65,14 @@ if ((%varbit357 = 18) | (%varbit357 = 21)) {
 	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:19);
 } else {
 	if_sethide(true, 593:20);
-	$array0(0) = $int9;
-	$array0(1) = calc(($int9 + $int1) + $int6);
-	$array0(2) = $int9;
-	$array0(3) = calc(($int9 + $int1) + $int6);
-	$array1(0) = $int0;
-	$array1(1) = $int0;
-	$array1(2) = calc(($int0 + $int2) + $int8);
-	$array1(3) = calc(($int0 + $int2) + $int8);
+	$intarray0(0) = $int9;
+	$intarray0(1) = calc(($int9 + $int1) + $int6);
+	$intarray0(2) = $int9;
+	$intarray0(3) = calc(($int9 + $int1) + $int6);
+	$intarray1(0) = $int0;
+	$intarray1(1) = $int0;
+	$intarray1(2) = calc(($int0 + $int2) + $int8);
+	$intarray1(3) = calc(($int0 + $int2) + $int8);
 	$int10 = calc($int0 + (2 * ($int2 + $int8)));
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:4);
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 593:8);
@@ -248,7 +248,7 @@ if (%varbit357 = 1) {
 def_int $int18 = 0;
 if ($graphic14 ! null) {
 	if_sethide(false, 593:4);
-	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:4);
+	if_setposition($intarray0($int18), $intarray1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:4);
 	$int18 = calc($int18 + 1);
 	if_setgraphic($graphic14, 593:6);
 	if_settext($string0, 593:7);
@@ -263,7 +263,7 @@ if ($graphic14 ! null) {
 }
 if ($graphic15 ! null) {
 	if_sethide(false, 593:8);
-	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:8);
+	if_setposition($intarray0($int18), $intarray1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:8);
 	$int18 = calc($int18 + 1);
 	if_setgraphic($graphic15, 593:10);
 	if_settext($string1, 593:11);
@@ -278,7 +278,7 @@ if ($graphic15 ! null) {
 }
 if ($graphic16 ! null) {
 	if_sethide(false, 593:12);
-	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:12);
+	if_setposition($intarray0($int18), $intarray1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:12);
 	$int18 = calc($int18 + 1);
 	if_setgraphic($graphic16, 593:14);
 	if_settext($string2, 593:15);
@@ -293,7 +293,7 @@ if ($graphic16 ! null) {
 }
 if ($graphic17 ! null) {
 	if_sethide(false, 593:16);
-	if_setposition($array0($int18), $array1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:16);
+	if_setposition($intarray0($int18), $intarray1($int18), ^setpos_abs_left, ^setpos_abs_top, 593:16);
 	$int18 = calc($int18 + 1);
 	if_setgraphic($graphic17, 593:18);
 	if_settext($string3, 593:19);

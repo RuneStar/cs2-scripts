@@ -1,29 +1,29 @@
 // 2255
-[proc,music_sort](intarray $array0, int $int1, int $int2)
+[proc,music_sort](intarray $intarray0, int $int1, int $int2)
 def_int $int3 = calc(($int1 + $int2) / 2);
-def_int $int4 = $array0($int3);
-$array0($int3) = $array0($int2);
-$array0($int2) = $int4;
+def_int $int4 = $intarray0($int3);
+$intarray0($int3) = $intarray0($int2);
+$intarray0($int2) = $int4;
 def_int $int5 = $int1;
 def_int $int6 = $int1;
 def_int $int7 = 0;
 def_int $int8 = enum(int, int, 818, $int4);
 def_string $string0 = enum(int, string, 817, $int8);
 while ($int6 < $int2) {
-	$int7 = enum(int, int, 818, $array0($int6));
+	$int7 = enum(int, int, 818, $intarray0($int6));
 	if (compare(enum(int, string, 817, $int7), $string0) <= 0) {
-		$int8 = $array0($int6);
-		$array0($int6) = $array0($int5);
-		$array0($int5) = $int8;
+		$int8 = $intarray0($int6);
+		$intarray0($int6) = $intarray0($int5);
+		$intarray0($int5) = $int8;
 		$int5 = calc($int5 + 1);
 	}
 	$int6 = calc($int6 + 1);
 }
-$array0($int2) = $array0($int5);
-$array0($int5) = $int4;
+$intarray0($int2) = $intarray0($int5);
+$intarray0($int5) = $int4;
 if ($int1 < calc($int5 - 1)) {
-	~music_sort(array0, $int1, calc($int5 - 1));
+	~music_sort(intarray0, $int1, calc($int5 - 1));
 }
 if (calc($int5 + 1) < $int2) {
-	~music_sort(array0, calc($int5 + 1), $int2);
+	~music_sort(intarray0, calc($int5 + 1), $int2);
 }

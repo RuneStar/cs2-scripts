@@ -2,35 +2,35 @@
 [proc,wilderness_lootingbag_draw](inv $inv0)
 cc_deleteall(81:5);
 def_int $int1 = inv_size($inv0);
-def_int $array0($int1);
-$array0(0) = %varcint81;
-$array0(1) = %varcint82;
-$array0(2) = %varcint83;
-$array0(3) = %varcint84;
-$array0(4) = %varcint85;
-$array0(5) = %varcint86;
-$array0(6) = %varcint87;
-$array0(7) = %varcint88;
-$array0(8) = %varcint89;
-$array0(9) = %varcint90;
-$array0(10) = %varcint91;
-$array0(11) = %varcint92;
-$array0(12) = %varcint93;
-$array0(13) = %varcint94;
-$array0(14) = %varcint95;
-$array0(15) = %varcint96;
-$array0(16) = %varcint97;
-$array0(17) = %varcint98;
-$array0(18) = %varcint99;
-$array0(19) = %varcint100;
-$array0(20) = %varcint101;
-$array0(21) = %varcint102;
-$array0(22) = %varcint104;
-$array0(23) = %varcint105;
-$array0(24) = %varcint106;
-$array0(25) = %varcint107;
-$array0(26) = %varcint108;
-$array0(27) = %varcint109;
+def_int $intarray0($int1);
+$intarray0(0) = %varcint81;
+$intarray0(1) = %varcint82;
+$intarray0(2) = %varcint83;
+$intarray0(3) = %varcint84;
+$intarray0(4) = %varcint85;
+$intarray0(5) = %varcint86;
+$intarray0(6) = %varcint87;
+$intarray0(7) = %varcint88;
+$intarray0(8) = %varcint89;
+$intarray0(9) = %varcint90;
+$intarray0(10) = %varcint91;
+$intarray0(11) = %varcint92;
+$intarray0(12) = %varcint93;
+$intarray0(13) = %varcint94;
+$intarray0(14) = %varcint95;
+$intarray0(15) = %varcint96;
+$intarray0(16) = %varcint97;
+$intarray0(17) = %varcint98;
+$intarray0(18) = %varcint99;
+$intarray0(19) = %varcint100;
+$intarray0(20) = %varcint101;
+$intarray0(21) = %varcint102;
+$intarray0(22) = %varcint104;
+$intarray0(23) = %varcint105;
+$intarray0(24) = %varcint106;
+$intarray0(25) = %varcint107;
+$intarray0(26) = %varcint108;
+$intarray0(27) = %varcint109;
 def_obj $obj2 = null;
 def_int $int3 = 0;
 def_int $int4 = 0;
@@ -55,11 +55,11 @@ while ($int5 < $int1) {
 			} else {
 				cc_settrans(0);
 				cc_setonop("cc_settrans_temporarily(event_com, event_comid, 150, 0)");
-				if ($array0($int5) <= -1) {
+				if ($intarray0($int5) <= -1) {
 					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 81:7, $string0, 25, 512)");
 					cc_setonmouseleave("deltooltip(81:7)");
 				} else {
-					~trade_tooltip($int3, $array0($int5), 81:7);
+					~trade_tooltip($int3, $intarray0($int5), 81:7);
 				}
 			}
 			cc_setop(1, "Store-1");
@@ -70,7 +70,7 @@ while ($int5 < $int1) {
 		} else {
 			cc_settrans(0);
 			cc_setop(10, "Examine");
-			~trade_tooltip($int3, $array0($int5), 81:7);
+			~trade_tooltip($int3, $intarray0($int5), 81:7);
 		}
 		cc_setopbase("<col=ff9040><oc_name($obj2)>");
 	} else {

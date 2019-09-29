@@ -1,27 +1,27 @@
 // 2621
-[proc,magic_spellbook_sort](intarray $array0, int $int1, int $int2, enum $enum3)
+[proc,magic_spellbook_sort](intarray $intarray0, int $int1, int $int2, enum $enum3)
 def_int $int4 = calc(($int1 + $int2) / 2);
-def_int $int5 = $array0($int4);
-$array0($int4) = $array0($int2);
-$array0($int2) = $int5;
+def_int $int5 = $intarray0($int4);
+$intarray0($int4) = $intarray0($int2);
+$intarray0($int2) = $int5;
 def_int $int6 = $int1;
 def_int $int7 = $int1;
 def_int $int8 = -1;
 def_int $int9 = calc((1000 * oc_param(enum(int, obj, $enum3, $int5), spell_levelreq)) + $int5);
 while ($int7 < $int2) {
-	if (calc((1000 * oc_param(enum(int, obj, $enum3, $array0($int7)), spell_levelreq)) + $array0($int7)) <= $int9) {
-		$int8 = $array0($int7);
-		$array0($int7) = $array0($int6);
-		$array0($int6) = $int8;
+	if (calc((1000 * oc_param(enum(int, obj, $enum3, $intarray0($int7)), spell_levelreq)) + $intarray0($int7)) <= $int9) {
+		$int8 = $intarray0($int7);
+		$intarray0($int7) = $intarray0($int6);
+		$intarray0($int6) = $int8;
 		$int6 = calc($int6 + 1);
 	}
 	$int7 = calc($int7 + 1);
 }
-$array0($int2) = $array0($int6);
-$array0($int6) = $int5;
+$intarray0($int2) = $intarray0($int6);
+$intarray0($int6) = $int5;
 if ($int1 < calc($int6 - 1)) {
-	~magic_spellbook_sort(array0, $int1, calc($int6 - 1), $enum3);
+	~magic_spellbook_sort(intarray0, $int1, calc($int6 - 1), $enum3);
 }
 if (calc($int6 + 1) < $int2) {
-	~magic_spellbook_sort(array0, calc($int6 + 1), $int2, $enum3);
+	~magic_spellbook_sort(intarray0, calc($int6 + 1), $int2, $enum3);
 }

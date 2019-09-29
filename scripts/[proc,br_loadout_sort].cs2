@@ -1,9 +1,9 @@
 // 3073
-[proc,br_loadout_sort](intarray $array0, int $int1, int $int2)
+[proc,br_loadout_sort](intarray $intarray0, int $int1, int $int2)
 def_int $int3 = calc(($int1 + $int2) / 2);
-def_int $int4 = $array0($int3);
-$array0($int3) = $array0($int2);
-$array0($int2) = $int4;
+def_int $int4 = $intarray0($int3);
+$intarray0($int3) = $intarray0($int2);
+$intarray0($int2) = $int4;
 def_int $int5 = $int1;
 def_int $int6 = $int1;
 def_int $int7 = 0;
@@ -14,21 +14,21 @@ def_int $int11 = oc_param($obj10, 850);
 def_string $string0 = oc_name($obj10);
 def_int $int12 = 0;
 while ($int6 < $int2) {
-	$obj8 = enum(int, namedobj, 2630, $array0($int6));
+	$obj8 = enum(int, namedobj, 2630, $intarray0($int6));
 	$int9 = oc_param($obj8, 850);
 	if (($int9 < $int11) | (($int9 = $int11) & (compare(oc_name($obj8), $string0) <= 0))) {
-		$int12 = $array0($int6);
-		$array0($int6) = $array0($int5);
-		$array0($int5) = $int12;
+		$int12 = $intarray0($int6);
+		$intarray0($int6) = $intarray0($int5);
+		$intarray0($int5) = $int12;
 		$int5 = calc($int5 + 1);
 	}
 	$int6 = calc($int6 + 1);
 }
-$array0($int2) = $array0($int5);
-$array0($int5) = $int4;
+$intarray0($int2) = $intarray0($int5);
+$intarray0($int5) = $int4;
 if ($int1 < calc($int5 - 1)) {
-	~br_loadout_sort(array0, $int1, calc($int5 - 1));
+	~br_loadout_sort(intarray0, $int1, calc($int5 - 1));
 }
 if (calc($int5 + 1) < $int2) {
-	~br_loadout_sort(array0, calc($int5 + 1), $int2);
+	~br_loadout_sort(intarray0, calc($int5 + 1), $int2);
 }

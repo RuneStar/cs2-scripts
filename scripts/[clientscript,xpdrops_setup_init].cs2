@@ -16,7 +16,7 @@ if_setonclick("xpdrops_setup_display_dropdown_close($component4, $component47, $
 ~xpdrops_setup_display_update($component8, $component10, $component12, $component14, $component16, $component18, $component20, $component22, $component24);
 if_setonvartransmit("xpdrops_setup_display_update($component8, $component10, $component12, $component14, $component16, $component18, $component20, $component22, $component24){var1227, var1141}", $component0);
 cc_deleteall($component27);
-def_stat $array0(23);
+def_stat $statarray0(23);
 def_int $int48 = 0;
 while ($int48 <= 23) {
 	cc_create($component27, ^iftype_rectangle, $int48);
@@ -35,9 +35,9 @@ while ($int48 <= 23) {
 	}
 	cc_setop(1, "Configure");
 	if ($int48 < 23) {
-		$array0($int48) = enum(int, stat, 681, calc($int48 + 1));
-		cc_setopbase("<col=ff9040><enum(stat, string, 680, $array0($int48))></col>");
-		cc_setonop("script1023(event_opindex, event_comid, $array0($int48), $component3, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36, $component37, $component38, $component39, $component40, $component41, $component42, $component43, $component44, $component45, $component46)");
+		$statarray0($int48) = enum(int, stat, 681, calc($int48 + 1));
+		cc_setopbase("<col=ff9040><enum(stat, string, 680, $statarray0($int48))></col>");
+		cc_setonop("script1023(event_opindex, event_comid, $statarray0($int48), $component3, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36, $component37, $component38, $component39, $component40, $component41, $component42, $component43, $component44, $component45, $component46)");
 	} else {
 		cc_setopbase("<col=ff9040>Total XP</col>");
 		cc_setonop("script1023(event_opindex, event_comid, null, $component3, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34, $component35, $component36, $component37, $component38, $component39, $component40, $component41, $component42, $component43, $component44, $component45, $component46)");
@@ -53,7 +53,7 @@ while ($int49 <= 23) {
 	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 	if ($int49 < 23) {
-		cc_setgraphic(enum(stat, graphic, 255, $array0($int49)));
+		cc_setgraphic(enum(stat, graphic, 255, $statarray0($int49)));
 	} else {
 		cc_setgraphic("staticons2,7");
 	}
@@ -66,7 +66,7 @@ while ($int49 <= 23) {
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	if ($int49 < 23) {
-		cc_settext(enum(stat, string, 680, $array0($int49)));
+		cc_settext(enum(stat, string, 680, $statarray0($int49)));
 	} else {
 		cc_settext("Total XP");
 	}

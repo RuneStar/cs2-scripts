@@ -7,7 +7,7 @@ cc_deleteall($component2);
 cc_deleteall($component3);
 cc_deleteall($component6);
 def_int $int7 = enum_getoutputcount(2304);
-def_int $array0(calc($int7 + 1));
+def_int $intarray0(calc($int7 + 1));
 def_int $int8 = 0;
 def_obj $obj9 = null;
 def_int $int10 = 50;
@@ -71,11 +71,11 @@ while ($int8 < 90) {
 		}
 		if (~seed_vault_searching = 0) {
 			if (~script2828($int8) ! -1) {
-				$array0(0) = calc($array0(0) + 1);
+				$intarray0(0) = calc($intarray0(0) + 1);
 				cc_setop(7, "Remove-Favourite");
 				.cc_setop(7, "Remove-Favourite");
 			} else {
-				$array0(oc_param(oc_unplaceholder($obj9), 709)) = calc($array0(oc_param(oc_unplaceholder($obj9), 709)) + 1);
+				$intarray0(oc_param(oc_unplaceholder($obj9), 709)) = calc($intarray0(oc_param(oc_unplaceholder($obj9), 709)) + 1);
 				if (~script2831 > 0) {
 					cc_setop(7, "Favourite");
 					.cc_setop(7, "Favourite");
@@ -94,7 +94,7 @@ while ($int8 < 90) {
 	$int8 = calc($int8 + 1);
 }
 if (~seed_vault_searching = 0) {
-	$array0(0) = calc($array0(0) + 1);
+	$intarray0(0) = calc($intarray0(0) + 1);
 }
 def_int $int12 = 0;
 def_int $int13 = 0;
@@ -106,7 +106,7 @@ if (~on_mobile = true) {
 	$int16 = 25;
 }
 def_int $int17 = calc(if_getwidth($component4) / ($int10 + $int15));
-def_int $array1(calc($int7 + 1));
+def_int $intarray1(calc($int7 + 1));
 if (~seed_vault_searching = 1) {
 	cc_create($component2, ^iftype_text, 0);
 	cc_setsize(5, 20, ^setsize_minus, ^setsize_abs);
@@ -122,7 +122,7 @@ if (~seed_vault_searching = 1) {
 	.cc_settiling(true);
 	.cc_setsize(4, 2, ^setsize_minus, ^setsize_abs);
 	.cc_setposition(2, $int14, ^setpos_abs_left, ^setpos_abs_top);
-	$array1(0) = calc($int14 + 15);
+	$intarray1(0) = calc($int14 + 15);
 } else {
 	while ($int12 <= $int7) {
 		$int13 = enum(int, int, 2304, $int12);
@@ -140,13 +140,13 @@ if (~seed_vault_searching = 1) {
 		.cc_settiling(true);
 		.cc_setsize(4, 2, ^setsize_minus, ^setsize_abs);
 		.cc_setposition(2, $int14, ^setpos_abs_left, ^setpos_abs_top);
-		$array1($int12) = calc($int14 + 15);
-		$int14 = calc($int14 + ((1 + (($array0($int12) - 1) / $int17)) * (($int16 + 32) + $int11)));
+		$intarray1($int12) = calc($int14 + 15);
+		$int14 = calc($int14 + ((1 + (($intarray0($int12) - 1) / $int17)) * (($int16 + 32) + $int11)));
 		$int12 = calc($int12 + 1);
 	}
 }
 $int8 = 0;
-def_int $array2(calc($int7 + 1));
+def_int $intarray2(calc($int7 + 1));
 def_int $int18 = 0;
 $int14 = 0;
 def_int $int19 = -1;
@@ -159,8 +159,8 @@ while ($int8 < 90) {
 		} else if (~script2828($int8) ! -1) {
 			$int19 = 0;
 		}
-		$int18 = $array2($int19);
-		$int14 = $array1($int19);
+		$int18 = $intarray2($int19);
+		$int14 = $intarray1($int19);
 		if ((cc_find($component0, $int8) = ^true) & (.cc_find($component1, $int8) = ^true)) {
 			cc_setposition(calc(($int18 + ($int15 / 2)) + (($int10 - 36) / 2)), $int14, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setposition(calc($int18 + ($int15 / 2)), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
@@ -187,9 +187,9 @@ while ($int8 < 90) {
 		}
 		if (calc(($int18 + $int15) + $int10) > if_getwidth($component0)) {
 			$int18 = 0;
-			$array1($int19) = calc((($int14 + $int16) + 32) + $int11);
+			$intarray1($int19) = calc((($int14 + $int16) + 32) + $int11);
 		}
-		$array2($int19) = $int18;
+		$intarray2($int19) = $int18;
 	}
 	$int8 = calc($int8 + 1);
 }
@@ -211,8 +211,8 @@ if (~seed_vault_searching = 0) {
 	.cc_settextshadow(true);
 	.cc_setcolour(0xff981f);
 	.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-	$int18 = $array2(0);
-	$int14 = $array1(0);
+	$int18 = $intarray2(0);
+	$int14 = $intarray1(0);
 	cc_setposition(calc(($int18 + ($int15 / 2)) + (($int10 - 36) / 2)), $int14, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setposition(calc($int18 + ($int15 / 2)), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
 } else {
@@ -220,7 +220,7 @@ if (~seed_vault_searching = 0) {
 }
 ~scrollbar_vertical_rebuild($component5, $component4);
 def_int $int20 = 0;
-def_int $int21 = calc((($array1($int7) + $int16) + 32) + $int11);
+def_int $int21 = calc((($intarray1($int7) + $int16) + 32) + $int11);
 if ($int21 > if_getheight($component4)) {
 	if (%varcint376 > 0) {
 		$int20 = %varcint376;

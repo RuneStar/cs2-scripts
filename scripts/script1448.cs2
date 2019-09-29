@@ -4,21 +4,21 @@ cc_deleteall(481:34);
 def_int $int14 = 0;
 def_component $component15 = null;
 def_int $int16 = -1;
-def_obj $array0(14);
-$array0(0) = $obj0;
-$array0(1) = $obj1;
-$array0(2) = $obj2;
-$array0(3) = $obj3;
-$array0(4) = $obj4;
-$array0(5) = $obj5;
-$array0(6) = $obj6;
-$array0(7) = $obj7;
-$array0(8) = $obj8;
-$array0(9) = $obj9;
-$array0(10) = $obj10;
-$array0(11) = $obj11;
-$array0(12) = $obj12;
-$array0(13) = $obj13;
+def_obj $objarray0(14);
+$objarray0(0) = $obj0;
+$objarray0(1) = $obj1;
+$objarray0(2) = $obj2;
+$objarray0(3) = $obj3;
+$objarray0(4) = $obj4;
+$objarray0(5) = $obj5;
+$objarray0(6) = $obj6;
+$objarray0(7) = $obj7;
+$objarray0(8) = $obj8;
+$objarray0(9) = $obj9;
+$objarray0(10) = $obj10;
+$objarray0(11) = $obj11;
+$objarray0(12) = $obj12;
+$objarray0(13) = $obj13;
 while ($int14 < 14) {
 	$component15 = enum(int, component, 1505, $int14);
 	cc_create(481:34, ^iftype_graphic, $int14);
@@ -29,9 +29,9 @@ while ($int14 < 14) {
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 	}
-	if ($array0($int14) ! null) {
-		cc_setobject_nonum($array0($int14), 0);
-		cc_setopbase("<col=ff981f><oc_name($array0($int14))>");
+	if ($objarray0($int14) ! null) {
+		cc_setobject_nonum($objarray0($int14), 0);
+		cc_setopbase("<col=ff981f><oc_name($objarray0($int14))>");
 		cc_setop(10, "Examine<col=ff9040>");
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);

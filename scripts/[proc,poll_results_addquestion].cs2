@@ -54,58 +54,58 @@ $string1, $string0 = ~script632($string0);
 $string2, $string0 = ~script632($string0);
 ~poll_addlink($string1, $string2, 345:11, $int36, 3, p11_full, p11_full, 10, 2);
 def_string $string3 = $string0;
-def_int $array0(calc(41 + 1));
+def_int $intarray0(calc(41 + 1));
 if ($int3 = -1) {
-	$array0(41) = 1;
+	$intarray0(41) = 1;
 }
-$array0(0) = ~max(0, $int3);
-$array0(1) = ~max(0, $int4);
-$array0(2) = ~max(0, $int5);
-$array0(3) = ~max(0, $int6);
-$array0(4) = ~max(0, $int7);
-$array0(5) = ~max(0, $int8);
-$array0(6) = ~max(0, $int9);
-$array0(7) = ~max(0, $int10);
-$array0(8) = ~max(0, $int11);
-$array0(9) = ~max(0, $int12);
-$array0(10) = ~max(0, $int13);
-$array0(11) = ~max(0, $int14);
-$array0(12) = ~max(0, $int15);
-$array0(13) = ~max(0, $int16);
-$array0(14) = ~max(0, $int17);
-$array0(15) = ~max(0, $int18);
-$array0(16) = ~max(0, $int19);
-$array0(17) = ~max(0, $int20);
-$array0(18) = ~max(0, $int21);
-$array0(19) = ~max(0, $int22);
-$array0(20) = ~max(0, $int23);
-$array0(21) = ~max(0, $int24);
-$array0(22) = ~max(0, $int25);
-$array0(23) = ~max(0, $int26);
-$array0(24) = ~max(0, $int27);
-$array0(25) = ~max(0, $int28);
-$array0(26) = ~max(0, $int29);
-$array0(27) = ~max(0, $int30);
-$array0(28) = ~max(0, $int31);
-$array0(29) = ~max(0, $int32);
-$array0(30) = ~max(0, $int33);
-$array0(31) = ~max(0, $int34);
-$array0(38) = 0;
-$array0(39) = 100;
-$array0(40) = -1;
+$intarray0(0) = ~max(0, $int3);
+$intarray0(1) = ~max(0, $int4);
+$intarray0(2) = ~max(0, $int5);
+$intarray0(3) = ~max(0, $int6);
+$intarray0(4) = ~max(0, $int7);
+$intarray0(5) = ~max(0, $int8);
+$intarray0(6) = ~max(0, $int9);
+$intarray0(7) = ~max(0, $int10);
+$intarray0(8) = ~max(0, $int11);
+$intarray0(9) = ~max(0, $int12);
+$intarray0(10) = ~max(0, $int13);
+$intarray0(11) = ~max(0, $int14);
+$intarray0(12) = ~max(0, $int15);
+$intarray0(13) = ~max(0, $int16);
+$intarray0(14) = ~max(0, $int17);
+$intarray0(15) = ~max(0, $int18);
+$intarray0(16) = ~max(0, $int19);
+$intarray0(17) = ~max(0, $int20);
+$intarray0(18) = ~max(0, $int21);
+$intarray0(19) = ~max(0, $int22);
+$intarray0(20) = ~max(0, $int23);
+$intarray0(21) = ~max(0, $int24);
+$intarray0(22) = ~max(0, $int25);
+$intarray0(23) = ~max(0, $int26);
+$intarray0(24) = ~max(0, $int27);
+$intarray0(25) = ~max(0, $int28);
+$intarray0(26) = ~max(0, $int29);
+$intarray0(27) = ~max(0, $int30);
+$intarray0(28) = ~max(0, $int31);
+$intarray0(29) = ~max(0, $int32);
+$intarray0(30) = ~max(0, $int33);
+$intarray0(31) = ~max(0, $int34);
+$intarray0(38) = 0;
+$intarray0(39) = 100;
+$intarray0(40) = -1;
 def_int $int40 = 0;
 def_int $int41 = 0;
 while ($int41 < $int1) {
 	$string1, $string0 = ~script632($string0);
-	$array0(38) = parawidth($string1, $int36, p11_full);
-	if ($array0(38) > $array0(39)) {
-		$array0(39) = $array0(38);
+	$intarray0(38) = parawidth($string1, $int36, p11_full);
+	if ($intarray0(38) > $intarray0(39)) {
+		$intarray0(39) = $intarray0(38);
 	}
 	if ($int0 = -1) {
 		if (compare(lowercase($string1), "skip question") = 0) {
-			$array0(40) = $int41;
+			$intarray0(40) = $int41;
 		} else {
-			$int40 = calc($int40 + $array0($int41));
+			$int40 = calc($int40 + $intarray0($int41));
 		}
 	}
 	$int41 = calc($int41 + 1);
@@ -116,55 +116,55 @@ if ($int0 ! -1) {
 if ($int40 <= 0) {
 	$int40 = 1;
 }
-def_int $array1($int1);
+def_int $intarray1($int1);
 def_int $int42 = 1000;
-$array0(32) = ^max_32bit_int;
-$array0(33) = -1;
-$array0(34) = -1;
-$array0(35) = ^min_32bit_int;
-$array0(36) = -1;
-$array0(37) = -1;
+$intarray0(32) = ^max_32bit_int;
+$intarray0(33) = -1;
+$intarray0(34) = -1;
+$intarray0(35) = ^min_32bit_int;
+$intarray0(36) = -1;
+$intarray0(37) = -1;
 $int41 = 0;
 while ($int41 < $int1) {
-	if ($int41 ! $array0(40)) {
-		$array1($int41) = interpolate(0, $array0($int41), 0, $int40, 2000);
-		if ((calc($array1($int41) % 2) = 1) & (((($int0 ! -1) | ($int1 ! 3)) | ($int41 ! 0)) | ($array1($int41) ! calc((75 * 20) - 1)))) {
-			$array1($int41) = calc($array1($int41) + 1);
+	if ($int41 ! $intarray0(40)) {
+		$intarray1($int41) = interpolate(0, $intarray0($int41), 0, $int40, 2000);
+		if ((calc($intarray1($int41) % 2) = 1) & (((($int0 ! -1) | ($int1 ! 3)) | ($int41 ! 0)) | ($intarray1($int41) ! calc((75 * 20) - 1)))) {
+			$intarray1($int41) = calc($intarray1($int41) + 1);
 		}
-		$array1($int41) = calc($array1($int41) / 2);
-		if ($array0($int41) > 0) {
+		$intarray1($int41) = calc($intarray1($int41) / 2);
+		if ($intarray0($int41) > 0) {
 			if ($int0 = -1) {
-				$int42 = calc($int42 - $array1($int41));
-				if ($array0($int41) < $array0(32)) {
-					$array0(32) = $array0($int41);
-					$array0(33) = $int41;
-					$array0(34) = -1;
-				} else if ($array0($int41) = $array0(32)) {
-					$array0(34) = $int41;
+				$int42 = calc($int42 - $intarray1($int41));
+				if ($intarray0($int41) < $intarray0(32)) {
+					$intarray0(32) = $intarray0($int41);
+					$intarray0(33) = $int41;
+					$intarray0(34) = -1;
+				} else if ($intarray0($int41) = $intarray0(32)) {
+					$intarray0(34) = $int41;
 				}
 			}
-			if ($array0($int41) > $array0(35)) {
-				$array0(35) = $array0($int41);
-				$array0(36) = $int41;
-				$array0(37) = -1;
-			} else if ($array0($int41) = $array0(35)) {
-				$array0(37) = $int41;
+			if ($intarray0($int41) > $intarray0(35)) {
+				$intarray0(35) = $intarray0($int41);
+				$intarray0(36) = $int41;
+				$intarray0(37) = -1;
+			} else if ($intarray0($int41) = $intarray0(35)) {
+				$intarray0(37) = $int41;
 			}
 		}
 	}
 	$int41 = calc($int41 + 1);
 }
-if (((($int0 = -1) & ($int42 > 0)) & ($array0(33) ! -1)) & ($array0(34) = -1)) {
-	$array1($array0(33)) = calc($array1($array0(33)) + $int42);
+if (((($int0 = -1) & ($int42 > 0)) & ($intarray0(33) ! -1)) & ($intarray0(34) = -1)) {
+	$intarray1($intarray0(33)) = calc($intarray1($intarray0(33)) + $int42);
 }
-if ($array0(37) ! -1) {
-	$array0(36) = -1;
+if ($intarray0(37) ! -1) {
+	$intarray0(36) = -1;
 }
-if ($array0(39) > 230) {
-	$array0(39) = 230;
+if ($intarray0(39) > 230) {
+	$intarray0(39) = 230;
 }
 def_int $int43 = calc($int35 - (3 + 95));
-def_int $int44 = calc((3 + $array0(39)) + 5);
+def_int $int44 = calc((3 + $intarray0(39)) + 5);
 def_int $int45 = calc(($int43 - $int44) - 5);
 $string0 = $string3;
 $int41 = 0;
@@ -172,10 +172,10 @@ while ($int41 < $int1) {
 	$string1, $string0 = ~script632($string0);
 	if ($int41 = 0) {
 		$string2 = $string1;
-	} else if ((((((($int41 = 1) & (($int1 = 2) | (($int1 = 3) & ($array0(40) = 2)))) & ($int0 = -1)) & (compare(lowercase($string2), "yes") = 0)) & (compare(lowercase($string1), "no") = 0)) & ($array1(0) >= calc(75 * 10))) & (cc_find(345:11, $int37) = ^true)) {
+	} else if ((((((($int41 = 1) & (($int1 = 2) | (($int1 = 3) & ($intarray0(40) = 2)))) & ($int0 = -1)) & (compare(lowercase($string2), "yes") = 0)) & (compare(lowercase($string1), "no") = 0)) & ($intarray1(0) >= calc(75 * 10))) & (cc_find(345:11, $int37) = ^true)) {
 		cc_setcolour(^green);
 	}
-	$int39 = calc((paraheight($string1, $array0(39), p11_full) * 10) + 2);
+	$int39 = calc((paraheight($string1, $intarray0(39), p11_full) * 10) + 2);
 	if ($int39 < 15) {
 		$int39 = 15;
 	}
@@ -185,12 +185,12 @@ while ($int41 < $int1) {
 	%varcint43 = calc(%varcint43 + 1);
 	cc_setposition(3, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setposition($int43, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize($array0(39), $int39, ^setsize_abs, ^setsize_abs);
+	cc_setsize($intarray0(39), $int39, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(95, $int39, ^setsize_abs, ^setsize_abs);
 	if (testbit($int2, $int41) = ^true) {
 		cc_setcolour(0xffff7f);
 		.cc_setcolour(0xffff7f);
-	} else if ($int41 = $array0(40)) {
+	} else if ($int41 = $intarray0(40)) {
 		cc_setcolour(0xafafaf);
 		.cc_setcolour(0xafafaf);
 	} else if (calc($int41 % 2) = 0) {
@@ -208,22 +208,22 @@ while ($int41 < $int1) {
 	.cc_settextshadow(true);
 	cc_settext($string1);
 	$string1 = ",";
-	if ($array0(41) = 1) {
+	if ($intarray0(41) = 1) {
 		.cc_settext("-");
-	} else if ($int41 ! $array0(40)) {
-		.cc_settext("<tostring(calc($array1($int41) / 10))>.<tostring(calc($array1($int41) % 10))>% (<~tostring_spacer($array0($int41), $string1)>)");
+	} else if ($int41 ! $intarray0(40)) {
+		.cc_settext("<tostring(calc($intarray1($int41) / 10))>.<tostring(calc($intarray1($int41) % 10))>% (<~tostring_spacer($intarray0($int41), $string1)>)");
 		cc_create(345:11, ^iftype_graphic, %varcint43);
 		%varcint43 = calc(%varcint43 + 1);
 		cc_setposition($int44, calc(%varcint49 + (($int39 - 11) / 2)), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setsize(interpolate(0, $array0($int41), 0, $int40, $int45), 11, ^setsize_abs, ^setsize_abs);
-		if ($int41 = $array0(36)) {
+		cc_setsize(interpolate(0, $intarray0($int41), 0, $int40, $int45), 11, ^setsize_abs, ^setsize_abs);
+		if ($int41 = $intarray0(36)) {
 			cc_setgraphic("tradebacking_dark");
 		} else {
 			cc_setgraphic("tradebacking");
 		}
 		cc_settiling(true);
 	} else {
-		.cc_settext("(<~tostring_spacer($array0($int41), $string1)>)");
+		.cc_settext("(<~tostring_spacer($intarray0($int41), $string1)>)");
 	}
 	$int41, %varcint49 = calc($int41 + 1), calc(%varcint49 + $int39);
 }

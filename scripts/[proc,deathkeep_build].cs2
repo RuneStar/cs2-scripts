@@ -10,7 +10,7 @@ def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;
-def_obj $array0($int1);
+def_obj $objarray0($int1);
 def_int $int12 = 0;
 def_int $int13 = 0;
 if ($int0 = 0) {
@@ -22,7 +22,7 @@ if ($int0 = 0) {
 		if ($obj6 ! null) {
 			$int7 = inv_getnum(584, $int11);
 			while (($int10 < $int1) & ($int7 > 0)) {
-				$array0($int10) = $obj6;
+				$objarray0($int10) = $obj6;
 				$int7 = calc($int7 - 1);
 				$int10 = calc($int10 + 1);
 			}
@@ -35,7 +35,7 @@ if ($int0 = 0) {
 		cc_create(4:18, ^iftype_graphic, $int4);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc(5 + ($int4 * 40)), 25, ^setpos_abs_left, ^setpos_abs_top);
-		$obj6 = $array0($int4);
+		$obj6 = $objarray0($int4);
 		if ($obj6 ! null) {
 			cc_setobject($obj6, 1);
 			cc_setopbase("<col=ff981f><oc_name($obj6)>");
@@ -71,7 +71,7 @@ if ($int0 = 0) {
 				$int10 = 0;
 				$int13 = 0;
 				while ($int10 < $int1) {
-					if ($array0($int10) = $obj6) {
+					if ($objarray0($int10) = $obj6) {
 						$int13 = calc($int13 + 1);
 					}
 					$int10 = calc($int10 + 1);

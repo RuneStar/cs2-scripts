@@ -1,26 +1,26 @@
 // 1360
-[proc,quicksort_intenum](intarray $array0, int $int1, int $int2, enum $enum3)
+[proc,quicksort_intenum](intarray $intarray0, int $int1, int $int2, enum $enum3)
 def_int $int4 = calc(($int1 + $int2) / 2);
-def_int $int5 = $array0($int4);
-$array0($int4) = $array0($int2);
-$array0($int2) = $int5;
+def_int $int5 = $intarray0($int4);
+$intarray0($int4) = $intarray0($int2);
+$intarray0($int2) = $int5;
 def_int $int6 = $int1;
 def_int $int7 = $int1;
 def_int $int8 = -1;
 while ($int7 < $int2) {
-	if (compare(enum(int, string, $enum3, $array0($int7)), enum(int, string, $enum3, $int5)) <= 0) {
-		$int8 = $array0($int7);
-		$array0($int7) = $array0($int6);
-		$array0($int6) = $int8;
+	if (compare(enum(int, string, $enum3, $intarray0($int7)), enum(int, string, $enum3, $int5)) <= 0) {
+		$int8 = $intarray0($int7);
+		$intarray0($int7) = $intarray0($int6);
+		$intarray0($int6) = $int8;
 		$int6 = calc($int6 + 1);
 	}
 	$int7 = calc($int7 + 1);
 }
-$array0($int2) = $array0($int6);
-$array0($int6) = $int5;
+$intarray0($int2) = $intarray0($int6);
+$intarray0($int6) = $int5;
 if ($int1 < calc($int6 - 1)) {
-	~quicksort_intenum(array0, $int1, calc($int6 - 1), $enum3);
+	~quicksort_intenum(intarray0, $int1, calc($int6 - 1), $enum3);
 }
 if (calc($int6 + 1) < $int2) {
-	~quicksort_intenum(array0, calc($int6 + 1), $int2, $enum3);
+	~quicksort_intenum(intarray0, calc($int6 + 1), $int2, $enum3);
 }

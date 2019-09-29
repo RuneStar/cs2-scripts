@@ -1,6 +1,6 @@
 // 3067
 [proc,br_loadout_drawloadout](component $component0, component $component1, component $component2, component $component3)
-def_int $array0(calc(enum_getoutputcount(2630) + 1));
+def_int $intarray0(calc(enum_getoutputcount(2630) + 1));
 def_component $component4 = null;
 def_int $int5 = 0;
 def_obj $obj6 = null;
@@ -28,7 +28,7 @@ while ($int7 < $int8) {
 			} else {
 				cc_setobject($obj6, 1);
 			}
-			$array0($int5) = ~min(calc($array0($int5) + 1), enum(obj, int, 2631, $obj6));
+			$intarray0($int5) = ~min(calc($intarray0($int5) + 1), enum(obj, int, 2631, $obj6));
 			cc_setopbase("<col=ff9040><oc_name($obj6)></col>");
 			cc_setop(1, "Discard");
 			cc_setop(10, "Examine");
@@ -69,7 +69,7 @@ while ($int7 < $int11) {
 		} else {
 			cc_setobject($obj6, 1);
 		}
-		$array0($int5) = ~min(calc($array0($int5) + 1), enum(obj, int, 2631, $obj6));
+		$intarray0($int5) = ~min(calc($intarray0($int5) + 1), enum(obj, int, 2631, $obj6));
 		cc_setopbase("<col=ff9040><oc_name($obj6)></col>");
 		cc_setop(1, "Discard");
 		cc_setop(10, "Examine");
@@ -95,8 +95,8 @@ while ($int7 > 0) {
 		$int5 = ~br_loadout_get_worn($int7);
 		$obj6 = enum(int, namedobj, 2630, $int5);
 		if ($obj6 ! null) {
-			if ($array0($int5) > 0) {
-				$array0($int5) = calc($array0($int5) - 1);
+			if ($intarray0($int5) > 0) {
+				$intarray0($int5) = calc($intarray0($int5) - 1);
 			} else {
 				cc_create($component4, ^iftype_model, 2);
 				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -115,8 +115,8 @@ while ($int7 < $int11) {
 	$int5 = ~br_loadout_get_inv($int7);
 	$obj6 = enum(int, namedobj, 2630, $int5);
 	if ($obj6 ! null) {
-		if ($array0($int5) > 0) {
-			$array0($int5) = calc($array0($int5) - 1);
+		if ($intarray0($int5) > 0) {
+			$intarray0($int5) = calc($intarray0($int5) - 1);
 			cc_sethide(true);
 		} else {
 			cc_sethide(false);
