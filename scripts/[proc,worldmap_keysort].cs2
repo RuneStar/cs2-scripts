@@ -1,5 +1,5 @@
 // 1731
-[proc,worldmap_keysort](int $int0, component $component1, int $int2, int $int3)
+[proc,worldmap_keysort](intarray $array0, component $component1, int $int2, int $int3)
 def_int $int4 = calc(($int2 + $int3) / 2);
 def_int $int5 = $array0($int4);
 $array0($int4) = $array0($int3);
@@ -31,8 +31,8 @@ while ($int7 < $int3) {
 $array0($int3) = $array0($int6);
 $array0($int6) = $int5;
 if ($int2 < calc($int6 - 1)) {
-	~worldmap_keysort(0, $component1, $int2, calc($int6 - 1));
+	~worldmap_keysort(array0, $component1, $int2, calc($int6 - 1));
 }
 if (calc($int6 + 1) < $int3) {
-	~worldmap_keysort(0, $component1, calc($int6 + 1), $int3);
+	~worldmap_keysort(array0, $component1, calc($int6 + 1), $int3);
 }

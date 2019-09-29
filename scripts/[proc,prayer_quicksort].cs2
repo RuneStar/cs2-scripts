@@ -1,5 +1,5 @@
 // 465
-[proc,prayer_quicksort](int $int0, int $int1, int $int2)
+[proc,prayer_quicksort](intarray $array0, int $int1, int $int2)
 def_int $int3 = calc(($int1 + $int2) / 2);
 def_int $int4 = $array0($int3);
 $array0($int3) = $array0($int2);
@@ -19,8 +19,8 @@ while ($int6 < $int2) {
 $array0($int2) = $array0($int5);
 $array0($int5) = $int4;
 if ($int1 < calc($int5 - 1)) {
-	~prayer_quicksort(0, $int1, calc($int5 - 1));
+	~prayer_quicksort(array0, $int1, calc($int5 - 1));
 }
 if (calc($int5 + 1) < $int2) {
-	~prayer_quicksort(0, calc($int5 + 1), $int2);
+	~prayer_quicksort(array0, calc($int5 + 1), $int2);
 }

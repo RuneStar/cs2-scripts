@@ -18,13 +18,13 @@ while (($int2 = 0) & ($int1 < 100)) {
 def_string $string0 = "";
 if ($int1 >= 2) {
 	if ((%varcint181 = 2) | (%varcint181 = 3)) {
-		~raids_partydetails_sort(0, 0, calc($int1 - 1), 5);
+		~raids_partydetails_sort(array0, 0, calc($int1 - 1), 5);
 	} else if ((%varcint181 = 4) | (%varcint181 = 5)) {
-		~raids_partydetails_sort(0, 0, calc($int1 - 1), 6);
+		~raids_partydetails_sort(array0, 0, calc($int1 - 1), 6);
 	} else if ((%varcint181 = 6) | (%varcint181 = 7)) {
-		~raids_partydetails_sort(0, 0, calc($int1 - 1), 7);
+		~raids_partydetails_sort(array0, 0, calc($int1 - 1), 7);
 	} else {
-		~raids_partydetails_sort(0, 0, calc($int1 - 1), 1);
+		~raids_partydetails_sort(array0, 0, calc($int1 - 1), 1);
 	}
 }
 def_int $int3 = 0;

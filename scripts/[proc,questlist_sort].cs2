@@ -1,5 +1,5 @@
 // 1352
-[proc,questlist_sort](int $int0, int $int1, int $int2, enum $enum3, int $int4)
+[proc,questlist_sort](intarray $array0, int $int1, int $int2, enum $enum3, int $int4)
 def_int $int5 = calc(($int1 + $int2) / 2);
 def_int $int6 = $array0($int5);
 $array0($int5) = $array0($int2);
@@ -20,8 +20,8 @@ while ($int8 < $int2) {
 $array0($int2) = $array0($int7);
 $array0($int7) = $int6;
 if ($int1 < calc($int7 - 1)) {
-	~questlist_sort(0, $int1, calc($int7 - 1), $enum3, $int4);
+	~questlist_sort(array0, $int1, calc($int7 - 1), $enum3, $int4);
 }
 if (calc($int7 + 1) < $int2) {
-	~questlist_sort(0, calc($int7 + 1), $int2, $enum3, $int4);
+	~questlist_sort(array0, calc($int7 + 1), $int2, $enum3, $int4);
 }

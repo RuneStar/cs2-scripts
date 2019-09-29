@@ -82,7 +82,7 @@ while ($category30 ! null) {
 	$category30 = enum(int, category, 1705, $int28);
 }
 if ($int28 >= 2) {
-	~worldmap_keysort(0, $component21, 0, 104);
+	~worldmap_keysort(array0, $component21, 0, 104);
 }
 $int29 = calc($int29 + 18);
 def_int $int31 = -1;
@@ -315,7 +315,7 @@ cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
 cc_setgraphic(struct_param(1, 459));
 if ($int28 >= 3) {
-	~quicksort_cctext(0, $component16, 1, 36);
+	~quicksort_cctext(array0, $component16, 1, 36);
 }
 $int29 = calc((((((3 + $int29) + 2) + 26) + 2) + 16) + 3);
 if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $component12);

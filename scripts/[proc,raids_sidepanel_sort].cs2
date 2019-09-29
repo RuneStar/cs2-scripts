@@ -1,5 +1,5 @@
 // 1555
-[proc,raids_sidepanel_sort](int $int0, int $int1, int $int2, int $int3)
+[proc,raids_sidepanel_sort](intarray $array0, int $int1, int $int2, int $int3)
 def_int $int4 = calc(($int1 + $int2) / 2);
 def_int $int5 = $array0($int4);
 $array0($int4) = $array0($int2);
@@ -31,8 +31,8 @@ while ($int7 < $int2) {
 $array0($int2) = $array0($int6);
 $array0($int6) = $int5;
 if ($int1 < calc($int6 - 1)) {
-	~raids_sidepanel_sort(0, $int1, calc($int6 - 1), $int3);
+	~raids_sidepanel_sort(array0, $int1, calc($int6 - 1), $int3);
 }
 if (calc($int6 + 1) < $int2) {
-	~raids_sidepanel_sort(0, calc($int6 + 1), $int2, $int3);
+	~raids_sidepanel_sort(array0, calc($int6 + 1), $int2, $int3);
 }

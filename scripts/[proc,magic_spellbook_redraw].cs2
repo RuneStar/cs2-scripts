@@ -73,7 +73,7 @@ if (($boolean10 = false) & (%varbit6718 = 1)) {
 	}
 }
 if ($int16 >= 2) {
-	~magic_spellbook_sort(0, 0, calc($int16 - 1), $enum14);
+	~magic_spellbook_sort(array0, 0, calc($int16 - 1), $enum14);
 } else if ($int16 <= 0) {
 	cc_create($component0, ^iftype_text, 0);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

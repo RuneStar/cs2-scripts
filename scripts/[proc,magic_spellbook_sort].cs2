@@ -1,5 +1,5 @@
 // 2621
-[proc,magic_spellbook_sort](int $int0, int $int1, int $int2, enum $enum3)
+[proc,magic_spellbook_sort](intarray $array0, int $int1, int $int2, enum $enum3)
 def_int $int4 = calc(($int1 + $int2) / 2);
 def_int $int5 = $array0($int4);
 $array0($int4) = $array0($int2);
@@ -20,8 +20,8 @@ while ($int7 < $int2) {
 $array0($int2) = $array0($int6);
 $array0($int6) = $int5;
 if ($int1 < calc($int6 - 1)) {
-	~magic_spellbook_sort(0, $int1, calc($int6 - 1), $enum3);
+	~magic_spellbook_sort(array0, $int1, calc($int6 - 1), $enum3);
 }
 if (calc($int6 + 1) < $int2) {
-	~magic_spellbook_sort(0, calc($int6 + 1), $int2, $enum3);
+	~magic_spellbook_sort(array0, calc($int6 + 1), $int2, $enum3);
 }
