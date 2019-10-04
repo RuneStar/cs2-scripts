@@ -1,0 +1,11 @@
+// 575
+script575(int $int0, component $component1, component $component2)
+~script1282;
+def_int $int3 = calc(if_getwidth($component1) - if_getwidth($component2));
+if_setposition(scale(%varcint381, 600, $int3), 0, ^setpos_abs_left, ^setpos_abs_centre, $component2);
+if_setdraggable($component1, -1, $component2);
+if_setondrag("script1281(event_mousex, $int3, $component1, $component2)", $component2);
+if_setondragcomplete("script1281(event_mousex, $int3, $component1, $component2)", $component2);
+if_setonclick("script1281(event_mousex, $int3, $component1, $component2)", $component1);
+if_setnoclickthrough(true, $component2);
+if_setonclick("opsound(0, 0)", $component2);

@@ -575,6 +575,7 @@
 [**572**](scripts/script572.cs2)  
 [**573**](scripts/script573.cs2)  
 [**574**](scripts/[proc,gnomeball_score].cs2) `[proc,gnomeball_score]`  
+[**575**](scripts/script575.cs2)  
 [**576**](scripts/[clientscript,clanwars_setup_scrollbox_init].cs2) `[clientscript,clanwars_setup_scrollbox_init]`  
 [**577**](scripts/[proc,clanwars_setup_scrollbox_drawframe].cs2) `[proc,clanwars_setup_scrollbox_drawframe]`  
 [**578**](scripts/[clientscript,clanwars_setup_smallbox_init].cs2) `[clientscript,clanwars_setup_smallbox_init]`  
@@ -1280,6 +1281,8 @@
 [**1278**](scripts/[proc,deadmanprotect_stats_refresh].cs2) `[proc,deadmanprotect_stats_refresh]`  
 [**1279**](scripts/script1279.cs2)  
 [**1280**](scripts/script1280.cs2)  
+[**1281**](scripts/script1281.cs2)  
+[**1282**](scripts/script1282.cs2)  
 [**1285**](scripts/[proc,colour_interpolate].cs2) `[proc,colour_interpolate]`  
 [**1286**](scripts/[clientscript,glidermap_init].cs2) `[clientscript,glidermap_init]`  
 [**1287**](scripts/[clientscript,glidermap_hideshow].cs2) `[clientscript,glidermap_hideshow]`  
