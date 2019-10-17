@@ -1,20 +1,20 @@
 // 23
-[clientscript,pvp_store_init](component $component0, component $component1, enum $enum2)
+[clientscript,pvp_store_init](component $component0, component $component1, component $component2, enum $enum3, int $int4)
 cc_deleteall($component0);
 cc_deleteall($component1);
-def_int $int3 = 0;
-def_int $int4 = 0;
-def_obj $obj5 = enum(int, namedobj, $enum2, $int4);
-while ($obj5 ! null) {
-	cc_create($component0, ^iftype_graphic, $int4);
+def_int $int5 = -1;
+def_int $int6 = 0;
+def_obj $obj7 = enum(int, namedobj, $enum3, $int6);
+while ($obj7 ! null) {
+	cc_create($component0, ^iftype_graphic, $int6);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	$int3 = calc(($int4 / 8) * 50);
-	cc_setposition(calc(($int4 % 8) * 46), $int3, ^setpos_abs_left, ^setpos_abs_top);
-	if ((%var1137 > %var1138) & ($obj5 = hunters_honour_12855)) {
-		$obj5 = rogues_revenge_12856;
+	$int5 = calc(($int6 / 9) * 43);
+	cc_setposition(calc(($int6 % 9) * 50), $int5, ^setpos_abs_left, ^setpos_abs_top);
+	if (($obj7 = hunters_honour_12855) & ($int4 = 1)) {
+		$obj7 = rogues_revenge_12856;
 	}
-	cc_setobject($obj5, 1);
-	cc_setopbase("<col=ff9040><oc_name($obj5)>");
+	cc_setobject($obj7, 1);
+	cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
 	cc_setop(1, "Value");
 	cc_setop(2, "Buy-1");
 	cc_setop(3, "Buy-5");
@@ -23,16 +23,27 @@ while ($obj5 ! null) {
 	cc_setop(10, "Examine");
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	$int4 = calc($int4 + 1);
-	$obj5 = enum(int, namedobj, $enum2, $int4);
+	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+	$int6 = calc($int6 + 1);
+	$obj7 = enum(int, namedobj, $enum3, $int6);
 }
-if ($int3 > 0) {
-	$int3 = calc($int3 + 32);
+if ($int5 ! -1) {
+	$int5 = calc($int5 + 32);
 }
 if_setscrollpos(0, 0, $component0);
-if ($int3 > if_getheight($component0)) {
-	if_setscrollsize(0, $int3, $component0);
-	~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if ($int5 > if_getheight($component0)) {
+	if_setscrollsize(0, $int5, $component0);
 } else {
 	if_setscrollsize(0, 0, $component0);
+}
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $int8 = ~steelborder($component2, "Bounty Hunter Store", 0);
+if (cc_find($component2, $int8) = ^true) {
+	if ($enum3 = 2642) {
+		~script2884(%var262);
+		cc_setonvartransmit("script2883(event_com, event_comid){var262}");
+	} else {
+		~script3140(%var1132);
+		cc_setonvartransmit("script2885(event_com, event_comid){var1132}");
+	}
 }

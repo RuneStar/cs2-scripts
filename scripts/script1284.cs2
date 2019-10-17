@@ -1,0 +1,9 @@
+// 1284
+script1284(int $int0, component $component1)
+~script2232(false, $int0, $component1);
+if_setop(1, "Buy", $component1);
+if_setopbase("<col=ff9040>Tier <tostring($int0)></col>", $component1);
+if_setonmouserepeat("script2081(true, $int0, $component1)", $component1);
+if_setonmouseleave("script2081(false, $int0, $component1)", $component1);
+if_setonop("script1970(event_opindex, $int0, $component1)", $component1);
+if_setontimer(null, $component1);

@@ -1,0 +1,67 @@
+// 3141
+script3141(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
+cc_deleteall($component2);
+~thinstonebox($component2, 0);
+def_graphic $graphic15 = "zeah_book,0";
+def_graphic $graphic16 = "zeah_book,1";
+cc_deleteall($component1);
+def_int $int17 = 0;
+if (~on_mobile = true) {
+	if_setsize(25, 25, ^setsize_abs, ^setsize_abs, $component1);
+	$int17 = ~v2_stone_button_filled($component1);
+} else {
+	if_setsize(11, 11, ^setsize_abs, ^setsize_abs, $component1);
+	if_setonmouseover("cc_graphic_swapper(event_com, $int17, $graphic16, null)", $component1);
+	if_setonmouseleave("cc_graphic_swapper(event_com, $int17, $graphic15, null)", $component1);
+}
+cc_create($component1, ^iftype_graphic, $int17);
+cc_setgraphic($graphic15);
+cc_setsize(11, 11, ^setsize_abs, ^setsize_abs);
+cc_setvflip(false);
+cc_sethflip(true);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if_setop(1, "Expand", $component1);
+if_setonop("script3142(event_opindex, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component11, $component12, $component13, $component14)", $component1);
+cc_deleteall($component14);
+$int17 = 0;
+if_setonmouseover("cc_graphic_swapper(event_com, $int17, $graphic16, null)", $component14);
+if_setonmouseleave("cc_graphic_swapper(event_com, $int17, $graphic15, null)", $component14);
+cc_create($component14, ^iftype_graphic, $int17);
+cc_setgraphic($graphic15);
+cc_setsize(11, 11, ^setsize_abs, ^setsize_abs);
+cc_setvflip(false);
+cc_sethflip(false);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+if_setop(1, "Minimise", $component14);
+if_setonop("script3142(event_opindex, 1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component11, $component12, $component13, $component14)", $component14);
+if (~on_mobile = true) {
+	if_setop(2, "", $component14);
+	if_setop(3, "", $component14);
+	if_setop(4, "", $component14);
+} else {
+	if_setop(2, "Dock Left", $component14);
+	if_setop(3, "Dock Middle", $component14);
+	if_setop(4, "Dock Right", $component14);
+}
+~script3146(false, $component13);
+if_setonmouseover("script3145(true, $component13)", $component13);
+if_setonmouseleave("script3145(false, $component13)", $component13);
+if_setop(1, "Bounty Tasks", $component13);
+if_setonop("opsound(event_opindex, 2)", $component13);
+if_setop(1, "Skip target", $component8);
+def_graphic $graphic18 = "fast_forward,1";
+if_setonmouseover("graphic_swapper(event_com, $graphic18)", $component8);
+$graphic18 = "fast_forward,0";
+if_setonmouseleave("graphic_swapper(event_com, $graphic18)", $component8);
+if_setop(1, "Info", $component11);
+if_setonmouseover("settrans(event_com, 125)", $component11);
+if_setonmouseleave("settrans(event_com, 0)", $component11);
+if_setonop("opsound(event_opindex, 2)", $component11);
+if_setop(1, "Configure", $component12);
+if_setonmouseover("settrans(event_com, 125)", $component12);
+if_setonmouseleave("settrans(event_com, 0)", $component12);
+if_setonop("opsound(event_opindex, 2)", $component12);
+~script3144($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component11, $component12, $component13, $component14);
+if_setonvartransmit("script3143($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component11, $component12, $component13, $component14){var1130, var1795}", $component0);
+~script3148($component10);
+if_setonvartransmit("script3147($component10){var1327}", $component10);

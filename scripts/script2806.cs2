@@ -2,14 +2,14 @@
 script2806
 def_int $int0 = scale(40, 100, if_getwidth(90:0));
 def_int $int1 = 60;
-if_setsize($int0, $int1, ^setsize_abs, ^setsize_abs, 90:7);
+if_setsize($int0, $int1, ^setsize_abs, ^setsize_abs, 90:25);
 if (if_gettop = 80) {
-	if_setposition(0, 154, ^setpos_abs_centre, ^setpos_abs_top, 90:7);
+	if_setposition(0, 154, ^setpos_abs_centre, ^setpos_abs_top, 90:25);
 } else {
-	if_setposition(-35, 32, ^setpos_abs_centre, ^setpos_abs_top, 90:7);
+	if_setposition(-35, 32, ^setpos_abs_centre, ^setpos_abs_top, 90:25);
 }
-if_setsize(calc($int0 - 20), calc($int1 - 10), ^setsize_abs, ^setsize_abs, 90:12);
-def_string $string0 = if_gettext(90:12);
+if_setsize(calc($int0 - 20), calc($int1 - 10), ^setsize_abs, ^setsize_abs, 90:30);
+def_string $string0 = if_gettext(90:30);
 if (compare($string0, "") ! 0) {
 	~deadman_broadcast_message_sizing($string0);
 }

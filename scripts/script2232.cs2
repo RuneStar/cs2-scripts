@@ -1,0 +1,33 @@
+// 2232
+script2232(boolean $boolean0, int $int1, component $component2)
+cc_deleteall($component2);
+def_int $int3 = 0;
+if ($boolean0 = true) {
+	$int3 = ~v2_stone_button_in_filled($component2);
+} else {
+	$int3 = ~v2_stone_button_out_filled($component2);
+}
+cc_create($component2, ^iftype_model, $int3);
+$int3 = calc($int3 + 1);
+.cc_create($component2, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(calc(if_getwidth($component2) - 35), calc(if_getheight($component2) - 35), ^setsize_abs, ^setsize_abs);
+.cc_setsize(0, 25, ^setsize_minus, ^setsize_minus);
+def_obj $obj4 = enum(int, namedobj, 2640, $int1);
+cc_setobject_nonum($obj4, 1);
+.cc_setcolour(^white);
+.cc_settextfont(quill_oblique_large);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextshadow(true);
+.cc_settext(tostring($int1));
+cc_create($component2, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
+cc_setcolour(0xff981f);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("<~tostring_spacer(calc(oc_cost($obj4) * 10), ",")> coins");

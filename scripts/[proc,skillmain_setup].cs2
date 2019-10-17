@@ -1,6 +1,9 @@
 // 2928
 [proc,skillmain_setup](component $component0, int $int1, int $int2, obj $obj3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
-def_int $int10 = ~min(28, inv_total(inv, $obj3));
+def_int $int10 = 28;
+if ($obj3 ! null) {
+	$int10 = ~min(28, inv_total(inv, $obj3));
+}
 def_int $int11 = ~min($int10, %var2224);
 def_int $int12 = 0;
 def_int $int13 = 0;
@@ -13,23 +16,27 @@ if ($int10 > 1) {
 } else {
 	~skillmain_button_wipe($component4);
 }
-if ($int10 > 5) {
-	if ($int11 = 5) {
-		$int12, $int13 = ~skillmain_button_create(1, 5, $component5, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
+if ($component5 ! null) {
+	if ($int10 > 5) {
+		if ($int11 = 5) {
+			$int12, $int13 = ~skillmain_button_create(1, 5, $component5, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
+		} else {
+			$int12, $int13 = ~skillmain_button_create(0, 5, $component5, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
+		}
 	} else {
-		$int12, $int13 = ~skillmain_button_create(0, 5, $component5, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
+		~skillmain_button_wipe($component5);
 	}
-} else {
-	~skillmain_button_wipe($component5);
 }
-if ($int10 > 10) {
-	if ($int11 = 10) {
-		$int12, $int13 = ~skillmain_button_create(1, 10, $component6, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
+if ($component6 ! null) {
+	if ($int10 > 10) {
+		if ($int11 = 10) {
+			$int12, $int13 = ~skillmain_button_create(1, 10, $component6, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
+		} else {
+			$int12, $int13 = ~skillmain_button_create(0, 10, $component6, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
+		}
 	} else {
-		$int12, $int13 = ~skillmain_button_create(0, 10, $component6, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
+		~skillmain_button_wipe($component6);
 	}
-} else {
-	~skillmain_button_wipe($component6);
 }
 if ($int10 > 2) {
 	if ($int11 = 0) {
@@ -45,7 +52,15 @@ if ($int11 >= $int10) {
 } else {
 	$int12, $int13 = ~skillmain_button_create(0, 28, $component8, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
 }
-if ((((($int11 ! 1) & ($int11 ! 5)) & ($int11 ! 10)) & ($int11 ! 0)) & ($int11 < $int10)) {
+def_int $int14 = 1;
+if ($component5 ! null) {
+	$int14 = 5;
+}
+def_int $int15 = 1;
+if ($component6 ! null) {
+	$int15 = 10;
+}
+if ((((($int11 ! 1) & ($int11 ! $int14)) & ($int11 ! $int15)) & ($int11 ! 0)) & ($int11 < $int10)) {
 	$int12, $int13 = ~skillmain_button_create(1, $int11, $component9, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
 } else {
 	~skillmain_button_wipe($component9);

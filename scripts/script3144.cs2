@@ -1,0 +1,67 @@
+// 3144
+script3144(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13)
+if (%varbit6704 = 1) {
+	if_sethide(true, $component2);
+	if_sethide(false, $component1);
+} else {
+	if_sethide(false, $component2);
+	if_sethide(true, $component1);
+}
+if (%varbit9489 = 1) {
+	if_sethide(false, $component9);
+	if_sethide(true, $component12);
+} else {
+	if_sethide(true, $component9);
+	if_sethide(false, $component12);
+}
+if (~on_mobile = true) {
+	~script1486(90:5, ^setpos_abs_right, 1, 0);
+} else if (%varbit6715 = 2) {
+	if (%varbit4143 = 1) {
+		if_setposition(106, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	} else {
+		if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	}
+	~script1486(90:5, ^setpos_abs_left, 1, 0);
+} else if (%varbit6715 = 3) {
+	if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+	~script1486(90:5, ^setpos_abs_centre, 1, 0);
+} else {
+	if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, $component0);
+	~script1486(90:5, ^setpos_abs_right, 1, 0);
+}
+if (%varbit9495 = 0) {
+	if_setobject_nonum(6512, 1, $component3);
+	if_settext("", $component4);
+	if_settext("---", $component6);
+	if_sethide(true, $component5);
+	if_sethide(true, $component8);
+	return;
+}
+if_setobject_nonum(enum(int, namedobj, 2640, %varbit9491), 1, $component3);
+if (%varbit9491 > 0) {
+	if (%varbit9492 = 1) {
+		if_settext("<col=ffffff><tostring(%varbit9491)></col>", $component4);
+	} else {
+		if_settext(tostring(%varbit9491), $component4);
+	}
+} else {
+	if_settext("", $component4);
+}
+def_int $int14 = 0;
+if (%varbit9493 > 0) {
+	$int14 = calc((%varbit9493 - 1) * 5);
+	if ($int14 > 0) {
+		if_settext("<tostring($int14)>-<tostring(calc($int14 + 4))>", $component6);
+	} else {
+		if_settext("1-<tostring(calc($int14 + 4))>", $component6);
+	}
+} else {
+	if_settext("Safe", $component6);
+}
+if (%varbit9494 = 1) {
+	if_sethide(false, $component5);
+} else {
+	if_sethide(true, $component5);
+}
+if_sethide(false, $component8);

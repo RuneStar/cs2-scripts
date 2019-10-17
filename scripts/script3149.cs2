@@ -1,0 +1,11 @@
+// 3149
+script3149(int $int0, int $int1, component $component2)
+if (clientclock < $int0) {
+	return;
+}
+~script3150($int1, $component2);
+if ($int1 > 0) {
+	if_setontimer("script3149(calc($int0 + 50), calc($int1 - 1), $component2)", $component2);
+} else {
+	if_setontimer(null, $component2);
+}

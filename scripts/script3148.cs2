@@ -1,0 +1,9 @@
+// 3148
+script3148(component $component0)
+def_int $int1 = scale(60, 100, calc(%varbit9500 * 8));
+~script3150($int1, $component0);
+if ($int1 > 0) {
+	if_setontimer("script3149(calc(clientclock + 50), calc($int1 - 1), $component0)", $component0);
+} else {
+	if_setontimer(null, $component0);
+}
