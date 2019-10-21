@@ -1,6 +1,6 @@
 // 3070
-[proc,br_loadout_additem](int $int0, obj $obj1, int $int2, component $component3, component $component4, component $component5, component $component6)
-if ($obj1 = null) {
+[proc,br_loadout_additem](int $int0, namedobj $namedobj1, int $int2, component $component3, component $component4, component $component5, component $component6)
+if ($namedobj1 = null) {
 	return;
 }
 def_int $int7 = 0;

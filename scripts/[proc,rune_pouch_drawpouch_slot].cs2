@@ -1,11 +1,11 @@
 // 667
-[proc,rune_pouch_drawpouch_slot](obj $obj0, int $int1)
+[proc,rune_pouch_drawpouch_slot](namedobj $namedobj0, int $int1)
 cc_clearops;
 cc_setontimer(null);
-if (($obj0 ! null) & ($int1 > 0)) {
+if (($namedobj0 ! null) & ($int1 > 0)) {
 	cc_settrans(0);
-	cc_setobject($obj0, $int1);
-	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+	cc_setobject($namedobj0, $int1);
+	cc_setopbase("<col=ff9040><oc_name($namedobj0)></col>");
 	cc_setop(1, "Withdraw-1");
 	cc_setop(2, "Withdraw-5");
 	cc_setop(3, "Withdraw-All");

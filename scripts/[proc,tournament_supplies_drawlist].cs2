@@ -12,10 +12,10 @@ if (~wildwars_world = 1) {
 	$enum8 = 1735;
 }
 def_int $int9 = ~tournament_beta_world;
-def_obj $obj10 = enum(int, namedobj, $enum8, $int7);
-while ($obj10 ! null) {
+def_namedobj $namedobj10 = enum(int, namedobj, $enum8, $int7);
+while ($namedobj10 ! null) {
 	if (cc_find($component0, $int7) = ^true) {
-		if (($int4 = 1) | (string_indexof_string(lowercase(oc_name($obj10)), $string0, 0) ! -1)) {
+		if (($int4 = 1) | (string_indexof_string(lowercase(oc_name($namedobj10)), $string0, 0) ! -1)) {
 			cc_sethide(false);
 			$int6 = calc(($int5 / 10) * $int3);
 			cc_setposition(calc(($int5 % 10) * (36 + $int2)), $int6, ^setpos_abs_left, ^setpos_abs_top);
@@ -25,14 +25,14 @@ while ($obj10 ! null) {
 		}
 	}
 	$int7 = calc($int7 + 1);
-	$obj10 = enum(int, namedobj, $enum8, $int7);
+	$namedobj10 = enum(int, namedobj, $enum8, $int7);
 }
 def_int $int11 = 0;
 if ($int9 = 1) {
-	$obj10 = enum(int, namedobj, 1906, $int11);
-	while ($obj10 ! null) {
+	$namedobj10 = enum(int, namedobj, 1906, $int11);
+	while ($namedobj10 ! null) {
 		if (cc_find($component0, $int7) = ^true) {
-			if (($int4 = 1) | (string_indexof_string(lowercase(oc_name($obj10)), $string0, 0) ! -1)) {
+			if (($int4 = 1) | (string_indexof_string(lowercase(oc_name($namedobj10)), $string0, 0) ! -1)) {
 				cc_sethide(false);
 				$int6 = calc(($int5 / 10) * $int3);
 				cc_setposition(calc(($int5 % 10) * (36 + $int2)), $int6, ^setpos_abs_left, ^setpos_abs_top);
@@ -43,7 +43,7 @@ if ($int9 = 1) {
 		}
 		$int7 = calc($int7 + 1);
 		$int11 = calc($int11 + 1);
-		$obj10 = enum(int, namedobj, 1906, $int11);
+		$namedobj10 = enum(int, namedobj, 1906, $int11);
 	}
 }
 if (cc_find($component0, $int7) = ^true) {

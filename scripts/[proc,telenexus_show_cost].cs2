@@ -2,13 +2,13 @@
 [proc,telenexus_show_cost](component $component0, struct $struct1, int $int2, component $component3, int $int4)
 cc_deleteall($component0);
 if_sethide(false, $component0);
-def_obj $obj5 = struct_param($struct1, 664);
+def_namedobj $namedobj5 = struct_param($struct1, 664);
 def_int $int6 = struct_param($struct1, 668);
-def_obj $obj7 = struct_param($struct1, 665);
+def_namedobj $namedobj7 = struct_param($struct1, 665);
 def_int $int8 = struct_param($struct1, 669);
-def_obj $obj9 = struct_param($struct1, 666);
+def_namedobj $namedobj9 = struct_param($struct1, 666);
 def_int $int10 = struct_param($struct1, 670);
-def_obj $obj11 = struct_param($struct1, 667);
+def_namedobj $namedobj11 = struct_param($struct1, 667);
 def_int $int12 = struct_param($struct1, 671);
 def_stat $stat13 = struct_param($struct1, 672);
 def_int $int14 = struct_param($struct1, 673);
@@ -30,19 +30,19 @@ cc_setfill(false);
 cc_setcolour(0xff981f);
 cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
 cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
-if ($obj5 ! null) {
+if ($namedobj5 ! null) {
 	cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(10, 30, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setobject(oc_uncert($obj5), $int6);
+	cc_setobject(oc_uncert($namedobj5), $int6);
 	cc_setop(1, "Examine");
-	cc_setonop("telenexus_examine_cost($obj5)");
+	cc_setonop("telenexus_examine_cost($namedobj5)");
 	.cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(inv, $obj5) - inv_total(619, $obj5)) >= $int6) {
+	if (calc(inv_total(inv, $namedobj5) - inv_total(619, $namedobj5)) >= $int6) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {
@@ -50,19 +50,19 @@ if ($obj5 ! null) {
 		.cc_setgraphic("clickcross,4");
 	}
 }
-if ($obj7 ! null) {
+if ($namedobj7 ! null) {
 	cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(50, 30, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setobject(oc_uncert($obj7), $int8);
+	cc_setobject(oc_uncert($namedobj7), $int8);
 	cc_setop(1, "Examine");
-	cc_setonop("telenexus_examine_cost($obj7)");
+	cc_setonop("telenexus_examine_cost($namedobj7)");
 	.cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(inv, $obj7) - inv_total(619, $obj7)) >= $int8) {
+	if (calc(inv_total(inv, $namedobj7) - inv_total(619, $namedobj7)) >= $int8) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {
@@ -70,19 +70,19 @@ if ($obj7 ! null) {
 		.cc_setgraphic("clickcross,4");
 	}
 }
-if ($obj9 ! null) {
+if ($namedobj9 ! null) {
 	cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(90, 30, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setobject(oc_uncert($obj9), $int10);
+	cc_setobject(oc_uncert($namedobj9), $int10);
 	cc_setop(1, "Examine");
-	cc_setonop("telenexus_examine_cost($obj9)");
+	cc_setonop("telenexus_examine_cost($namedobj9)");
 	.cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(inv, $obj9) - inv_total(619, $obj9)) >= $int10) {
+	if (calc(inv_total(inv, $namedobj9) - inv_total(619, $namedobj9)) >= $int10) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {
@@ -90,19 +90,19 @@ if ($obj9 ! null) {
 		.cc_setgraphic("clickcross,4");
 	}
 }
-if ($obj11 ! null) {
+if ($namedobj11 ! null) {
 	cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(130, 30, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setobject(oc_uncert($obj11), $int12);
+	cc_setobject(oc_uncert($namedobj11), $int12);
 	cc_setop(1, "Examine");
-	cc_setonop("telenexus_examine_cost($obj11)");
+	cc_setonop("telenexus_examine_cost($namedobj11)");
 	.cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(inv, $obj11) - inv_total(619, $obj11)) >= $int12) {
+	if (calc(inv_total(inv, $namedobj11) - inv_total(619, $namedobj11)) >= $int12) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {

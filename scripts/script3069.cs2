@@ -1,7 +1,7 @@
 // 3069
 script3069(component $component0, int $int1, component $component2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8)
-def_obj $obj9 = enum(int, namedobj, 2630, $int4);
-if ($obj9 = null) {
+def_namedobj $namedobj9 = enum(int, namedobj, 2630, $int4);
+if ($namedobj9 = null) {
 	return;
 }
 def_int $int10 = inv_size(inv);
@@ -52,15 +52,15 @@ if ($int15 = -1) {
 }
 def_int $int17 = 0;
 if ($int13 = 0) {
-	if (oc_param($obj9, 850) ! $int15) {
+	if (oc_param($namedobj9, 850) ! $int15) {
 		return;
 	}
 	$int17 = ~br_loadout_get_worn($int15);
 } else {
 	$int17 = ~br_loadout_get_inv($int15);
 }
-def_obj $obj18 = enum(int, namedobj, 2630, $int17);
-if ((($obj18 ! null) & ($int12 = 0)) & (oc_param($obj18, 850) ! $int14)) {
+def_namedobj $namedobj18 = enum(int, namedobj, 2630, $int17);
+if ((($namedobj18 ! null) & ($int12 = 0)) & (oc_param($namedobj18, 850) ! $int14)) {
 	return;
 }
 sound_synth(2266, 1, 0);

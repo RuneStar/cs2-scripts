@@ -1,6 +1,6 @@
 // 3005
-[proc,adventurepath_spawn_item](component $component0, int $int1, obj $obj2, int $int3, int $int4, int $int5, int $int6, int $int7, boolean $boolean8, int $bit9)(int, int, int)
-if ($obj2 = null) {
+[proc,adventurepath_spawn_item](component $component0, int $int1, namedobj $namedobj2, int $int3, int $int4, int $int5, int $int6, int $int7, boolean $boolean8, int $bit9)(int, int, int)
+if ($namedobj2 = null) {
 	return($int1, $int4, $int5);
 }
 cc_create($component0, ^iftype_graphic, $int1);
@@ -10,9 +10,9 @@ if ($boolean8 = false) {
 } else {
 	cc_setposition(calc((($int6 / 6) * ($int4 + 3)) + 5), calc(((32 * $int5) + $int7) + (10 * (1 + $int5))), ^setpos_abs_left, ^setpos_abs_top);
 }
-cc_setobject(oc_uncert($obj2), $int3);
+cc_setobject(oc_uncert($namedobj2), $int3);
 cc_setoutline(1);
-cc_setonop("adventurepath_say_item($obj2, $int3, $boolean8)");
+cc_setonop("adventurepath_say_item($namedobj2, $int3, $boolean8)");
 if ($bit9 = ^false) {
 	if (~on_mobile = false) {
 		cc_setonmouserepeat("cc_settrans($component0, cc_getid, 80, null)");

@@ -11,8 +11,8 @@ def_int $int8 = enum_getoutputcount($enum6);
 def_int $int9 = 0;
 def_int $int10 = 0;
 def_string $string0 = "";
-def_obj $obj11 = null;
-def_obj $obj12 = null;
+def_namedobj $namedobj11 = null;
+def_namedobj $namedobj12 = null;
 cc_deleteall($component1);
 cc_create($component1, ^iftype_text, 0);
 $string0 = struct_param($struct0, 689);
@@ -29,23 +29,23 @@ while ($int7 < $int8) {
 		$int4 = 0;
 		$int5 = calc($int5 + 36);
 	}
-	$obj11 = enum(int, namedobj, $enum6, $int7);
-	$int9 = inv_total(620, $obj11);
-	$obj12 = enum(namedobj, namedobj, 2108, $obj11);
-	if ((%varbit6907 = 1) & ($obj12 ! null)) {
-		$obj11 = $obj12;
+	$namedobj11 = enum(int, namedobj, $enum6, $int7);
+	$int9 = inv_total(620, $namedobj11);
+	$namedobj12 = enum(namedobj, namedobj, 2108, $namedobj11);
+	if ((%varbit6907 = 1) & ($namedobj12 ! null)) {
+		$namedobj11 = $namedobj12;
 	}
 	cc_create($component2, ^iftype_graphic, $int7);
 	cc_setoutline(1);
 	cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setop(1, "Check");
-	cc_setopbase("<col=ff9040><oc_name($obj11)></col>");
-	cc_setonop("collection_item_click($obj11, $int9)");
+	cc_setopbase("<col=ff9040><oc_name($namedobj11)></col>");
+	cc_setonop("collection_item_click($namedobj11, $int9)");
 	if ($int9 > 1) {
-		cc_setobject($obj11, $int9);
+		cc_setobject($namedobj11, $int9);
 	} else {
-		cc_setobject_nonum($obj11, 1);
+		cc_setobject_nonum($namedobj11, 1);
 	}
 	if ($int9 = 0) {
 		cc_settrans(175);

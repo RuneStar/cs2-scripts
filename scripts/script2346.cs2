@@ -9,18 +9,18 @@ def_int $int3 = 14;
 def_int $int4 = 43;
 def_int $int5 = 0;
 def_int $int6 = enum_getoutputcount(1952);
-def_obj $obj7 = null;
+def_namedobj $namedobj7 = null;
 def_int $int8 = 0;
 def_string $string0 = "";
 while ($int5 < $int6) {
-	$obj7 = enum(int, namedobj, 1952, $int5);
-	if ($obj7 ! null) {
+	$namedobj7 = enum(int, namedobj, 1952, $int5);
+	if ($namedobj7 ! null) {
 		cc_create($component1, ^iftype_graphic, $int8);
 		$int8 = calc($int8 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc((36 + $int3) * ($int5 % 4)), calc(($int5 / 4) * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
-		$string0 = "<col=ff981f><oc_name($obj7)>";
-		cc_setobject($obj7, -1);
+		$string0 = "<col=ff981f><oc_name($namedobj7)>";
+		cc_setobject($namedobj7, -1);
 		cc_setopbase($string0);
 		cc_setop(1, "Value");
 		cc_setop(2, "Buy-1");
@@ -35,13 +35,13 @@ while ($int5 < $int6) {
 $int5 = 0;
 def_int $int9 = 0;
 while ($int5 < $int6) {
-	$obj7 = enum(int, namedobj, 1952, $int5);
-	if ($obj7 ! null) {
+	$namedobj7 = enum(int, namedobj, 1952, $int5);
+	if ($namedobj7 ! null) {
 		cc_create($component1, ^iftype_text, $int8);
 		$int8 = calc($int8 + 1);
 		cc_setsize(36, 20, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc((36 + $int3) * ($int5 % 4)), calc(38 + (($int5 / 4) * (36 + $int4))), ^setpos_abs_left, ^setpos_abs_top);
-		$int9 = enum(obj, int, 1953, $obj7);
+		$int9 = enum(obj, int, 1953, $namedobj7);
 		cc_settext(tostring($int9));
 		cc_settextfont(p11_full);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

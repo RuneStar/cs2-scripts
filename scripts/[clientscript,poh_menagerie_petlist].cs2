@@ -5,7 +5,7 @@ cc_deleteall(210:4);
 def_int $int0 = 0;
 def_int $int1 = calc((40 - 32) / 2);
 def_int $int2 = 0;
-def_obj $obj3 = null;
+def_namedobj $namedobj3 = null;
 while ($int2 <= 44) {
 	cc_create(210:3, ^iftype_graphic, $int0);
 	$int0 = calc($int0 + 1);
@@ -13,11 +13,11 @@ while ($int2 <= 44) {
 	cc_setposition(5, calc(($int2 * 40) + $int1), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	$obj3 = enum(int, namedobj, 985, $int2);
-	if ($obj3 ! null) {
-		cc_setobject($obj3, 1);
+	$namedobj3 = enum(int, namedobj, 985, $int2);
+	if ($namedobj3 ! null) {
+		cc_setobject($namedobj3, 1);
 		cc_setop(10, "Examine");
-		cc_setopbase("<col=ff9040><oc_name($obj3)></col>");
+		cc_setopbase("<col=ff9040><oc_name($namedobj3)></col>");
 	}
 	$int2 = calc($int2 + 1);
 }

@@ -10,49 +10,49 @@ if (~wildwars_world = 1) {
 	$enum11 = 1735;
 }
 def_int $int12 = ~tournament_beta_world;
-def_obj $obj13 = enum(int, namedobj, $enum11, $int10);
-while ($obj13 ! null) {
+def_namedobj $namedobj13 = enum(int, namedobj, $enum11, $int10);
+while ($namedobj13 ! null) {
 	cc_create($component3, ^iftype_graphic, $int10);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setobject_nonum($obj13, 10000);
+	cc_setobject_nonum($namedobj13, 10000);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	cc_setop(1, "Take");
-	if (oc_stackable($obj13) = false) {
+	if (oc_stackable($namedobj13) = false) {
 		cc_setop(2, "Take-5");
 		cc_setop(3, "Take-10");
 	}
 	cc_setop(4, "Take-X");
 	cc_setop(10, "Examine");
-	cc_setopbase("<col=ff9040><oc_name($obj13)></col>");
+	cc_setopbase("<col=ff9040><oc_name($namedobj13)></col>");
 	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
 	cc_sethide(true);
 	$int10 = calc($int10 + 1);
-	$obj13 = enum(int, namedobj, $enum11, $int10);
+	$namedobj13 = enum(int, namedobj, $enum11, $int10);
 }
 def_int $int14 = 0;
 if ($int12 = 1) {
 	$int14 = 0;
-	$obj13 = enum(int, namedobj, 1906, $int14);
-	while ($obj13 ! null) {
+	$namedobj13 = enum(int, namedobj, 1906, $int14);
+	while ($namedobj13 ! null) {
 		cc_create($component3, ^iftype_graphic, $int10);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setobject_nonum($obj13, 10000);
+		cc_setobject_nonum($namedobj13, 10000);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
 		cc_setop(1, "Take");
-		if (oc_stackable($obj13) = false) {
+		if (oc_stackable($namedobj13) = false) {
 			cc_setop(2, "Take-5");
 			cc_setop(3, "Take-10");
 		}
 		cc_setop(4, "Take-X");
 		cc_setop(10, "Examine");
-		cc_setopbase("<col=ff9040><oc_name($obj13)></col>");
+		cc_setopbase("<col=ff9040><oc_name($namedobj13)></col>");
 		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
 		cc_sethide(true);
 		$int14 = calc($int14 + 1);
 		$int10 = calc($int10 + 1);
-		$obj13 = enum(int, namedobj, 1906, $int14);
+		$namedobj13 = enum(int, namedobj, 1906, $int14);
 	}
 }
 cc_create($component3, ^iftype_text, $int10);

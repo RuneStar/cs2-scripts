@@ -18,10 +18,10 @@ def_int $int16 = 0;
 def_int $int17 = 0;
 def_string $string0 = "Create";
 def_int $int18 = 0;
-def_obj $obj19 = enum(int, namedobj, 2628, %varbit9363);
+def_namedobj $namedobj19 = enum(int, namedobj, 2628, %varbit9363);
 def_obj $obj20 = null;
-if ($obj19 ! null) {
-	$obj20 = oc_param($obj19, 608);
+if ($namedobj19 ! null) {
+	$obj20 = oc_param($namedobj19, 608);
 }
 if ($obj20 = null) {
 	~arceuus_teletab_confirm_draw(true, "<col=9f9f9f>---</col>", $component13);

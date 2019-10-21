@@ -118,16 +118,16 @@ cc_deleteall($component3);
 cc_deleteall($component4);
 def_int $int28 = 0;
 def_int $int29 = 0;
-def_obj $obj30 = enum(int, namedobj, 1261, $int29);
-while ($obj30 ! null) {
+def_namedobj $namedobj30 = enum(int, namedobj, 1261, $int29);
+while ($namedobj30 ! null) {
 	cc_create($component3, ^iftype_graphic, $int29);
 	.cc_create($component4, ^iftype_text, $int29);
-	if ($obj30 ! bologas_blessing_20747) {
+	if ($namedobj30 ! bologas_blessing_20747) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		cc_setobject_nonum(oc_uncert($obj30), 1);
-		cc_setopbase("<col=ff9040><oc_name($obj30)></col>");
+		cc_setobject_nonum(oc_uncert($namedobj30), 1);
+		cc_setopbase("<col=ff9040><oc_name($namedobj30)></col>");
 		cc_setop(1, "Value");
 		cc_setop(2, "Buy-1");
 		cc_setop(3, "Buy-5");
@@ -141,7 +141,7 @@ while ($obj30 ! null) {
 		.cc_settextfont(p11_full);
 		.cc_settextshadow(true);
 		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-		$int23 = enum(obj, int, 1262, $obj30);
+		$int23 = enum(obj, int, 1262, $namedobj30);
 		.cc_settext(tostring($int23));
 		if (%varbit4893 < $int23) {
 			.cc_setcolour(^red);
@@ -164,8 +164,8 @@ while ($obj30 ! null) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		cc_setobject(oc_uncert($obj30), 10);
-		cc_setopbase("<col=ff9040><oc_name($obj30)> (sets of <tostring(10)>)</col>");
+		cc_setobject(oc_uncert($namedobj30), 10);
+		cc_setopbase("<col=ff9040><oc_name($namedobj30)> (sets of <tostring(10)>)</col>");
 		cc_setop(1, "Value");
 		cc_setop(2, "Buy-1");
 		cc_setop(3, "Buy-5");
@@ -179,7 +179,7 @@ while ($obj30 ! null) {
 		.cc_settextfont(p11_full);
 		.cc_settextshadow(true);
 		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-		$int23 = enum(obj, int, 1262, $obj30);
+		$int23 = enum(obj, int, 1262, $namedobj30);
 		.cc_settext("<tostring($int23)> for <tostring(10)>");
 		if (%varbit4893 < $int23) {
 			.cc_setcolour(^red);
@@ -203,5 +203,5 @@ while ($obj30 ! null) {
 		.cc_sethide(true);
 	}
 	$int29 = calc($int29 + 1);
-	$obj30 = enum(int, namedobj, 1261, $int29);
+	$namedobj30 = enum(int, namedobj, 1261, $int29);
 }

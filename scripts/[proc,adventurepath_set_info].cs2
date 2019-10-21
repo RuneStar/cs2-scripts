@@ -54,7 +54,7 @@ def_enum $enum32 = null;
 def_enum $enum33 = null;
 def_enum $enum34 = null;
 def_enum $enum35 = null;
-def_obj $obj36 = null;
+def_namedobj $namedobj36 = null;
 def_int $int37 = 0;
 def_int $int38 = 0;
 def_int $int39 = 0;
@@ -87,12 +87,12 @@ if ($enum32 ! null) {
 		}
 		if (($enum34 ! null) & ($enum35 ! null)) {
 			while ($int31 < enum_getoutputcount($enum34)) {
-				$obj36 = enum(int, namedobj, $enum34, $int31);
-				if ($obj36 ! null) {
+				$namedobj36 = enum(int, namedobj, $enum34, $int31);
+				if ($namedobj36 ! null) {
 					if ($boolean40 = true) {
-						$int23, $int24, $int28 = ~adventurepath_spawn_item($component4, $int23, $obj36, enum(namedobj, int, $enum35, $obj36), $int24, $int28, $int29, calc(16 - $int37), $boolean40, $bit41);
+						$int23, $int24, $int28 = ~adventurepath_spawn_item($component4, $int23, $namedobj36, enum(namedobj, int, $enum35, $namedobj36), $int24, $int28, $int29, calc(16 - $int37), $boolean40, $bit41);
 					} else {
-						$int23, $int24, $int28 = ~adventurepath_spawn_item($component4, $int23, $obj36, enum(namedobj, int, $enum35, $obj36), $int24, $int28, $int29, $int37, $boolean40, $bit41);
+						$int23, $int24, $int28 = ~adventurepath_spawn_item($component4, $int23, $namedobj36, enum(namedobj, int, $enum35, $namedobj36), $int24, $int28, $int29, $int37, $boolean40, $bit41);
 					}
 				}
 				$int31 = calc($int31 + 1);

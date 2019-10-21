@@ -4,17 +4,17 @@ cc_deleteall($component0);
 cc_deleteall($component1);
 def_int $int5 = -1;
 def_int $int6 = 0;
-def_obj $obj7 = enum(int, namedobj, $enum3, $int6);
-while ($obj7 ! null) {
+def_namedobj $namedobj7 = enum(int, namedobj, $enum3, $int6);
+while ($namedobj7 ! null) {
 	cc_create($component0, ^iftype_graphic, $int6);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	$int5 = calc(($int6 / 9) * 43);
 	cc_setposition(calc(($int6 % 9) * 50), $int5, ^setpos_abs_left, ^setpos_abs_top);
-	if (($obj7 = hunters_honour_12855) & ($int4 = 1)) {
-		$obj7 = rogues_revenge_12856;
+	if (($namedobj7 = hunters_honour_12855) & ($int4 = 1)) {
+		$namedobj7 = rogues_revenge_12856;
 	}
-	cc_setobject($obj7, 1);
-	cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
+	cc_setobject($namedobj7, 1);
+	cc_setopbase("<col=ff9040><oc_name($namedobj7)></col>");
 	cc_setop(1, "Value");
 	cc_setop(2, "Buy-1");
 	cc_setop(3, "Buy-5");
@@ -25,7 +25,7 @@ while ($obj7 ! null) {
 	cc_setoutline(1);
 	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
 	$int6 = calc($int6 + 1);
-	$obj7 = enum(int, namedobj, $enum3, $int6);
+	$namedobj7 = enum(int, namedobj, $enum3, $int6);
 }
 if ($int5 ! -1) {
 	$int5 = calc($int5 + 32);

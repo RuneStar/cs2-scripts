@@ -1,7 +1,7 @@
 // 474
 script474(int $int0, int $int1, int $int2, int $int3)
 def_int $int4 = 0;
-def_obj $obj5 = null;
+def_namedobj $namedobj5 = null;
 def_int $int6 = 0;
 while ($int6 <= 110) {
 	if (cc_find(78:3, $int6) = ^true) {
@@ -33,9 +33,9 @@ while ($int6 <= 110) {
 			$int4 = 0;
 		}
 		if ($int4 = 1) {
-			$obj5 = enum(int, namedobj, 708, $int6);
-			if ($obj5 ! null) {
-				if (inv_total(inv, $obj5) = 0) {
+			$namedobj5 = enum(int, namedobj, 708, $int6);
+			if ($namedobj5 ! null) {
+				if (inv_total(inv, $namedobj5) = 0) {
 					cc_sethide(false);
 				} else {
 					cc_sethide(true);

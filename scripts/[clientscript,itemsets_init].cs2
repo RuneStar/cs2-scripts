@@ -4,19 +4,19 @@ cc_deleteall($component0);
 cc_deleteall($component1);
 def_int $int2 = calc(((if_getwidth($component0) - (36 * 8)) / 7) + 36);
 def_int $int3 = 0;
-def_obj $obj4 = null;
+def_namedobj $namedobj4 = null;
 def_int $int5 = 0;
 def_enum $enum6 = enum(int, enum, 1033, $int5);
 while ($enum6 ! null) {
-	$obj4 = enum(int, namedobj, $enum6, -1);
+	$namedobj4 = enum(int, namedobj, $enum6, -1);
 	cc_create($component0, ^iftype_graphic, $int5);
-	if ($obj4 ! null) {
+	if ($namedobj4 ! null) {
 		cc_sethide(false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		$int3 = calc(($int5 / 8) * 48);
 		cc_setposition(calc(($int5 % 8) * $int2), $int3, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setobject_nonum($obj4, 1);
-		cc_setopbase("<col=ff9040><oc_name($obj4)></col>");
+		cc_setobject_nonum($namedobj4, 1);
+		cc_setopbase("<col=ff9040><oc_name($namedobj4)></col>");
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
 		~itemsets_redraw($enum6);

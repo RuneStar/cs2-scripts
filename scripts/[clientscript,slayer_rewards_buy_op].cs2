@@ -1,6 +1,6 @@
 // 322
 [clientscript,slayer_rewards_buy_op](int $int0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7)
-def_obj $obj8 = null;
+def_namedobj $namedobj8 = null;
 def_string $string0 = "Choose an item from the shop.";
 def_int $int9 = 0;
 def_int $int10 = 0;
@@ -11,11 +11,11 @@ if ($int0 <= 1) {
 	cc_deleteall($component6);
 	if_setposition(92, 165, ^setpos_abs_left, ^setpos_abs_top, $component7);
 	if_sethide(true, $component6);
-	$obj8 = enum(int, namedobj, 840, $int2);
-	if ($obj8 ! null) {
-		$string0 = "<u=ff981f><oc_name($obj8)></u><br><br><enum(obj, string, 843, $obj8)><br><br>";
-		$int9 = enum(obj, int, 842, $obj8);
-		$int10 = enum(obj, int, 841, $obj8);
+	$namedobj8 = enum(int, namedobj, 840, $int2);
+	if ($namedobj8 ! null) {
+		$string0 = "<u=ff981f><oc_name($namedobj8)></u><br><br><enum(obj, string, 843, $namedobj8)><br><br>";
+		$int9 = enum(obj, int, 842, $namedobj8);
+		$int10 = enum(obj, int, 841, $namedobj8);
 		if ($int9 ! 1) {
 			if ($int10 > 1) {
 				$string0 = append($string0, "Cost: <tostring($int9)> points for <tostring($int10)>");

@@ -2,9 +2,9 @@
 script1064(obj $obj0)(int, obj)
 def_int $int1 = 0;
 def_int $int2 = 0;
-def_obj $obj3 = null;
+def_namedobj $namedobj3 = null;
 def_int $int4 = 0;
-def_obj $obj5 = null;
+def_namedobj $namedobj5 = null;
 def_obj $obj6 = null;
 switch_obj ($obj0) {
 	case rake_5341 :
@@ -26,23 +26,23 @@ switch_obj ($obj0) {
 	case watering_can_6797 :
 		$int2 = enum_getoutputcount(136);
 		while ($int2 >= 0) {
-			$obj3 = enum(int, namedobj, 136, $int2);
-			if ($obj3 ! null) {
-				$int1 = ~script716($obj3);
+			$namedobj3 = enum(int, namedobj, 136, $int2);
+			if ($namedobj3 ! null) {
+				$int1 = ~script716($namedobj3);
 				if ($int1 > 0) {
 					if (calc(^max_32bit_int - $int4) < $int1) {
 						$int4 = ^max_32bit_int;
 					} else {
 						$int4 = calc($int4 + $int1);
 					}
-					if ($obj5 = null) {
-						$obj5 = $obj3;
+					if ($namedobj5 = null) {
+						$namedobj5 = $namedobj3;
 					}
 				}
 			}
 			$int2 = calc($int2 - 1);
 		}
-		return($int4, $obj5);
+		return($int4, $namedobj5);
 	case gardening_trowel_5325 :
 		return(~script716(gardening_trowel_5325), gardening_trowel_5325);
 	case plant_cure_6036 :
