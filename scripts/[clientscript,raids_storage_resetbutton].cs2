@@ -1,6 +1,6 @@
 // 1613
-[clientscript,raids_storage_resetbutton](component $component0, string $string0, fontmetrics $fontmetrics1, int $int2)
+[clientscript,raids_storage_resetbutton](component $component0, string $string0, graphic $graphic1, int $int2)
 if (clientclock < $int2) {
 	return;
 }
-~raids_storage_drawbutton($string0, $component0, $fontmetrics1);
+~raids_storage_drawbutton($string0, $component0, $graphic1);
