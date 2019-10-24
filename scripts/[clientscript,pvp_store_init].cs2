@@ -13,7 +13,11 @@ while ($namedobj7 ! null) {
 	if (($namedobj7 = hunters_honour_12855) & ($int4 = 1)) {
 		$namedobj7 = rogues_revenge_12856;
 	}
-	cc_setobject($namedobj7, 1);
+	if ($enum3 = 2642) {
+		cc_setobject($namedobj7, oc_param($namedobj7, 852));
+	} else {
+		cc_setobject($namedobj7, 1);
+	}
 	cc_setopbase("<col=ff9040><oc_name($namedobj7)></col>");
 	cc_setop(1, "Value");
 	cc_setop(2, "Buy-1");

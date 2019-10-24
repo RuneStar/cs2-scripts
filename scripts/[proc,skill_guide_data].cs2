@@ -237,121 +237,88 @@ switch_int ($int0) {
 		return(-1, null, "");
 	case 5 :
 		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(1, bronze_med_helm_1139, "Bronze");
+			switch_int ($int2) {
+				case 0 :
+					return(1, bronze_med_helm_1139, "Bronze");
+				case 1 :
+					return(1, iron_med_helm_1137, "Iron");
+				case 2 :
+					return(5, steel_med_helm_1141, "Steel");
+				case 3 :
+					return(10, black_med_helm_1151, "Black");
+				case 4 :
+					return(10, white_med_helm_6621, "Members: White");
+				case 5 :
+					return(10, slayer_helmet_11864, "Members: Slayer helm");
+				case 6 :
+					return(10, xerician_hat_13385, "Members: Xerician armour<br> (with 20 Magic)");
+				case 7 :
+					return(20, mithril_med_helm_1143, "Mithril");
+				case 8 :
+					return(20, yak_hide_armour_10822, "Members: Yak-hide");
+				case 9 :
+					return(20, initiate_sallet_5574, "Members: Initiate armour<br> (after Recruitment Drive, with 10 Prayer)");
+				case 10 :
+					return(20, shayzien_helm_5_13379, "Members: Shayzien armour");
+				case 11 :
+					return(30, adamant_med_helm_1145, "Adamantite");
+				case 12 :
+					return(30, proselyte_sallet_9672, "Members: Proselyte armour<br> (after Slug Menace, with 20 Prayer)");
+				case 13 :
+					return(35, samurai_kasa_20035, "Members: Samurai armour");
+				case 14 :
+					return(40, rune_med_helm_1147, "Rune");
+				case 15 :
+					return(40, rock_shell_helm_6128, "Members: Rock-shell armour<br> (after Fremennik Trials)");
+				case 16 :
+					return(40, dagonhai_robe_top_24291, "Dagon'hai robes<br> (with 70 Magic)");
+				case 17 :
+					return(42, void_knight_top_8839, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				case 18 :
+					return(45, berserker_helm_3751, "Members: Fremennik helmets<br> (after Fremennik Trials)");
+				case 19 :
+					return(50, granite_shield_3122, "Members: Granite<br> (with 50 Strength)");
+				case 20 :
+					return(55, helm_of_neitiznot_10828, "Members: Helm of neitiznot<br> (after Fremennik Isles)");
+				case 21 :
+					return(60, dragon_med_helm_1149, "Members: Dragon");
+				case 22 :
+					return(60, obsidian_platebody_21301, "Members: Obsidian armour");
+				case 23 :
+					return(65, bandos_chestplate_11832, "Members: Bandos armour");
+				case 24 :
+					return(65, 3rd_age_full_helmet_10350, "Members: 3rd age fighter armour");
+				case 25 :
+					return(65, ancestral_robe_top_21021, "Members: Ancestral robes<br> (with 75 Magic)");
+				case 26 :
+					return(70, avernic_defender_22322, "Members: Avernic defender<br> (with 70 Attack)");
+				case 27 :
+					return(70, torags_helm_4745, "Members: Barrows armour");
+				case 28 :
+					return(70, armadyl_helmet_11826, "Members: Armadyl armour (with 70 Ranged)");
+				case 29 :
+					return(70, boots_of_brimstone_22951, "Members: Boots of brimstone (with 70 Ranged and Magic)");
+				case 30 :
+					return(70, crystal_helm_23971, "Members: Crystal armour (with 50 Agility after Song of the Elves)");
+				case 31 :
+					return(70, neitiznot_faceguard_24271, "Members: Neitiznot faceguard<br> (after The Fremennik Exiles)");
+				case 32 :
+					return(75, justiciar_faceguard_22326, "Members: Justiciar armour");
+				case 33 :
+					return(75, serpentine_helm_12931, "Members: Serpentine helm");
+				case 34 :
+					return(75, guardian_boots_21733, "Members: Guardian boots");
+				case 35 :
+					return(75, primordial_boots_13239, "Members: Primordial boots<br> (with 75 Strength)");
+				case 36 :
+					return(75, eternal_boots_13235, "Members: Eternal boots<br> (with 75 Magic)");
+				case 37 :
+					return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Ranged)");
+				case 38 :
+					return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Attack)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(1, iron_med_helm_1137, "Iron");
-			}
-			if ($int2 = 2) {
-				return(5, steel_med_helm_1141, "Steel");
-			}
-			if ($int2 = 3) {
-				return(10, black_med_helm_1151, "Black");
-			}
-			if ($int2 = 4) {
-				return(10, white_med_helm_6621, "Members: White");
-			}
-			if ($int2 = 5) {
-				return(10, slayer_helmet_11864, "Members: Slayer helm");
-			}
-			if ($int2 = 6) {
-				return(10, xerician_hat_13385, "Members: Xerician armour<br> (with 20 Magic)");
-			}
-			if ($int2 = 7) {
-				return(20, mithril_med_helm_1143, "Mithril");
-			}
-			if ($int2 = 8) {
-				return(20, yak_hide_armour_10822, "Members: Yak-hide");
-			}
-			if ($int2 = 9) {
-				return(20, initiate_sallet_5574, "Members: Initiate armour<br> (after Recruitment Drive, with 10 Prayer)");
-			}
-			if ($int2 = 10) {
-				return(20, shayzien_helm_5_13379, "Members: Shayzien armour");
-			}
-			if ($int2 = 11) {
-				return(30, adamant_med_helm_1145, "Adamantite");
-			}
-			if ($int2 = 12) {
-				return(30, proselyte_sallet_9672, "Members: Proselyte armour<br> (after Slug Menace, with 20 Prayer)");
-			}
-			if ($int2 = 13) {
-				return(35, samurai_kasa_20035, "Members: Samurai armour");
-			}
-			if ($int2 = 14) {
-				return(40, rune_med_helm_1147, "Rune");
-			}
-			if ($int2 = 15) {
-				return(40, rock_shell_helm_6128, "Members: Rock-shell armour<br> (after Fremennik Trials)");
-			}
-			if ($int2 = 16) {
-				return(42, void_knight_top_8839, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
-			}
-			if ($int2 = 17) {
-				return(45, berserker_helm_3751, "Members: Fremennik helmets<br> (after Fremennik Trials)");
-			}
-			if ($int2 = 18) {
-				return(50, granite_shield_3122, "Members: Granite<br> (with 50 Strength)");
-			}
-			if ($int2 = 19) {
-				return(55, helm_of_neitiznot_10828, "Members: Helm of neitiznot<br> (after Fremennik Isles)");
-			}
-			if ($int2 = 20) {
-				return(60, dragon_med_helm_1149, "Members: Dragon");
-			}
-			if ($int2 = 21) {
-				return(60, obsidian_platebody_21301, "Members: Obsidian armour");
-			}
-			if ($int2 = 22) {
-				return(65, bandos_chestplate_11832, "Members: Bandos armour");
-			}
-			if ($int2 = 23) {
-				return(65, 3rd_age_full_helmet_10350, "Members: 3rd age fighter armour");
-			}
-			if ($int2 = 24) {
-				return(65, ancestral_robe_top_21021, "Members: Ancestral robes<br> (with 75 Magic)");
-			}
-			if ($int2 = 25) {
-				return(70, avernic_defender_22322, "Members: Avernic defender<br> (with 70 Attack)");
-			}
-			if ($int2 = 26) {
-				return(70, torags_helm_4745, "Members: Barrows armour");
-			}
-			if ($int2 = 27) {
-				return(70, armadyl_helmet_11826, "Members: Armadyl armour (with 70 Ranged)");
-			}
-			if ($int2 = 28) {
-				return(70, boots_of_brimstone_22951, "Members: Boots of brimstone (with 70 Ranged and Magic)");
-			}
-			if ($int2 = 29) {
-				return(70, crystal_helm_23971, "Members: Crystal armour (with 50 Agility after Song of the Elves)");
-			}
-			if ($int2 = 30) {
-				return(70, neitiznot_faceguard_24271, "Members: Neitiznot faceguard<br> (after The Fremennik Exiles)");
-			}
-			if ($int2 = 31) {
-				return(75, justiciar_faceguard_22326, "Members: Justiciar armour");
-			}
-			if ($int2 = 32) {
-				return(75, serpentine_helm_12931, "Members: Serpentine helm");
-			}
-			if ($int2 = 33) {
-				return(75, guardian_boots_21733, "Members: Guardian boots");
-			}
-			if ($int2 = 34) {
-				return(75, primordial_boots_13239, "Members: Primordial boots<br> (with 75 Strength)");
-			}
-			if ($int2 = 35) {
-				return(75, eternal_boots_13235, "Members: Eternal boots<br> (with 75 Magic)");
-			}
-			if ($int2 = 36) {
-				return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Ranged)");
-			}
-			if ($int2 = 37) {
-				return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Attack)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 1) {
 			if ($int2 = 0) {
