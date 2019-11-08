@@ -1,0 +1,16 @@
+// 2725
+script2725(struct $struct0, int $int1)
+def_int $int2 = ~script3151($struct0);
+if ($int2 >= 2) {
+	.cc_setgraphic("options_radio_buttons,2");
+	cc_setop(1, "Deactivate");
+	cc_setonop("script2726(event_opindex, 1, event_com, event_comid, .cc_getid, $struct0, $int1)");
+} else if ($int2 = 1) {
+	.cc_setgraphic("options_radio_buttons,0");
+	cc_setop(1, "Activate");
+	cc_setonop("script2726(event_opindex, 2, event_com, event_comid, .cc_getid, $struct0, $int1)");
+} else {
+	.cc_setgraphic("options_radio_buttons,1");
+	cc_setop(1, "Unlock");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 0, $int1)");
+}

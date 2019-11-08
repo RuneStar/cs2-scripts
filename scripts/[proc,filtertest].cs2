@@ -10,14 +10,12 @@ if ((enum(int, boolean, 892, $chattype0) = true) & ($chattype0 ! ^chattype_playe
 	return(1);
 }
 def_int $int4 = -1;
-def_string $string3 = "";
 switch_int ($chattype0) {
 	case ^chattype_publicchat, ^chattype_modchat :
 		if ($int1 < %varcint199) {
 			return(0);
 		}
-		$string3 = removetags($string0);
-		if (compare($string2, $string3) = 0) {
+		if (compare($string2, removetags($string0)) = 0) {
 			return(1);
 		}
 		if ($int3 = 2) {
@@ -97,6 +95,9 @@ switch_int ($chattype0) {
 		}
 		return(0);
 	case ^chattype_friendschat, ^chattype_chalreq_friendschat :
+		if (compare($string2, removetags($string0)) = 0) {
+			return(1);
+		}
 		if ($int3 = 2) {
 			return(0);
 		}

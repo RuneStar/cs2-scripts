@@ -12,6 +12,7 @@
 [**9**](scripts/[clientscript,tt_reward_highlight].cs2) `[clientscript,tt_reward_highlight]`  
 [**10**](scripts/[clientscript,wom_item_move].cs2) `[clientscript,wom_item_move]`  
 [**11**](scripts/[clientscript,wom_tab_highlight].cs2) `[clientscript,wom_tab_highlight]`  
+[**12**](scripts/script12.cs2)  
 [**13**](scripts/script13.cs2)  
 [**14**](scripts/script14.cs2)  
 [**15**](scripts/script15.cs2)  
@@ -23,6 +24,7 @@
 [**21**](scripts/script21.cs2)  
 [**22**](scripts/[clientscript,tt_reward_highlight_off].cs2) `[clientscript,tt_reward_highlight_off]`  
 [**23**](scripts/[clientscript,pvp_store_init].cs2) `[clientscript,pvp_store_init]`  
+[**24**](scripts/script24.cs2)  
 [**25**](scripts/[clientscript,closebutton].cs2) `[clientscript,closebutton]`  
 [**26**](scripts/[proc,closebutton_action].cs2) `[proc,closebutton_action]`  
 [**27**](scripts/[clientscript,closebutton_over].cs2) `[clientscript,closebutton_over]`  
@@ -79,6 +81,7 @@
 [**78**](scripts/[proc,chatout_set].cs2) `[proc,chatout_set]`  
 [**79**](scripts/[proc,chatout_get].cs2) `[proc,chatout_get]`  
 [**80**](scripts/[clientscript,chat_onsubchange].cs2) `[clientscript,chat_onsubchange]`  
+[**81**](scripts/script81.cs2)  
 [**82**](scripts/[clientscript,orbs_update_prayer].cs2) `[clientscript,orbs_update_prayer]`  
 [**83**](scripts/[clientscript,splitpm_changed].cs2) `[clientscript,splitpm_changed]`  
 [**84**](scripts/[proc,rebuildchatbox].cs2) `[proc,rebuildchatbox]`  
@@ -2721,6 +2724,9 @@
 [**2721**](scripts/[proc,1v1arena_hud_buildarena].cs2) `[proc,1v1arena_hud_buildarena]`  
 [**2722**](scripts/[clientscript,1v1arena_spectator_init].cs2) `[clientscript,1v1arena_spectator_init]`  
 [**2723**](scripts/[clientscript,1v1arena_spectator_endhint].cs2) `[clientscript,1v1arena_spectator_endhint]`  
+[**2724**](scripts/script2724.cs2)  
+[**2725**](scripts/script2725.cs2)  
+[**2726**](scripts/script2726.cs2)  
 [**2727**](scripts/[clientscript,meslayer_keyboard_show].cs2) `[clientscript,meslayer_keyboard_show]`  
 [**2728**](scripts/[proc,collection_draw_tab].cs2) `[proc,collection_draw_tab]`  
 [**2729**](scripts/[clientscript,collection_hover_tab].cs2) `[clientscript,collection_hover_tab]`  
@@ -3145,3 +3151,11 @@
 [**3148**](scripts/script3148.cs2)  
 [**3149**](scripts/script3149.cs2)  
 [**3150**](scripts/script3150.cs2)  
+[**3151**](scripts/script3151.cs2)  
+[**3152**](scripts/script3152.cs2)  
+[**3153**](scripts/script3153.cs2)  
+[**3154**](scripts/script3154.cs2)  
+[**3155**](scripts/script3155.cs2)  
+[**3156**](scripts/script3156.cs2)  
+[**3157**](scripts/script3157.cs2)  
+[**3158**](scripts/script3158.cs2)  

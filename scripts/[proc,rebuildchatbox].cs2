@@ -104,12 +104,24 @@ while (($int9 ! -1) & ($component8 ! null)) {
 				if_setonmouserepeat(null, $component8);
 				if_setonmouseleave(null, $component8);
 				if_setop(1, "Accept trade", $component8);
+				if ($int12 = 1) {
+					if_setop(6, "Message", $component8);
+				} else {
+					if_setop(6, "Add friend", $component8);
+					if_setop(7, "Add ignore", $component8);
+				}
 			case ^chattype_chalreq_trade, ^chattype_chalreq_friendschat :
 				if_setopbase("<col=ffffff><$string9></col>", $component8);
 				if_setonop("chat_op(event_opindex, event_opbase)", $component8);
 				if_setonmouserepeat(null, $component8);
 				if_setonmouseleave(null, $component8);
 				if_setop(2, "Accept challenge", $component8);
+				if ($int12 = 1) {
+					if_setop(6, "Message", $component8);
+				} else {
+					if_setop(6, "Add friend", $component8);
+					if_setop(7, "Add ignore", $component8);
+				}
 			case ^chattype_broadcast :
 				if (string_length($string12) > 0) {
 					if_setop(6, "Open", $component8);

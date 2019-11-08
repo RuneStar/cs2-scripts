@@ -1,0 +1,48 @@
+// 81
+script81(int $int0, component $component1, int $int2)(int)
+def_int $int3 = 0;
+def_int $int4 = 255;
+def_struct $struct5 = enum(int, struct, 2649, $int0);
+if (($struct5 ! null) & (cc_find($component1, $int0) = ^true)) {
+	$int3 = calc(($int0 * 32) + 30);
+	.cc_create($component1, ^iftype_graphic, $int2);
+	$int2 = calc($int2 + 1);
+	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(6, $int3, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setobject_nonum(struct_param($struct5, 855), 1);
+	.cc_setgraphicshadow(0x333333);
+	.cc_setoutline(1);
+	.cc_create($component1, ^iftype_text, $int2);
+	$int2 = calc($int2 + 1);
+	.cc_setsize(calc((6 + 36) + 30), 16, ^setsize_minus, ^setsize_abs);
+	.cc_setposition(30, $int3, ^setpos_abs_right, ^setpos_abs_top);
+	.cc_setcolour(0xff981f);
+	.cc_settextfont(p12_full);
+	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	.cc_settextshadow(true);
+	.cc_settext("<col=ffb83f><struct_param($struct5, 853)></col> - <tostring(struct_param($struct5, 856))> points");
+	cc_setopbase("<col=ff9040><struct_param($struct5, 853)></col>");
+	.cc_create($component1, ^iftype_text, $int2);
+	$int2 = calc($int2 + 1);
+	.cc_setsize(calc((6 + 36) + 30), calc(32 - 16), ^setsize_minus, ^setsize_abs);
+	.cc_setposition(30, calc($int3 + 16), ^setpos_abs_right, ^setpos_abs_top);
+	.cc_setcolour(0xff981f);
+	.cc_settextfont(p11_full);
+	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	.cc_settextshadow(true);
+	.cc_settext(struct_param($struct5, 854));
+	.cc_create($component1, ^iftype_graphic, $int2);
+	$int2 = calc($int2 + 1);
+	.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(10, calc($int3 + ((32 - 17) / 2)), ^setpos_abs_right, ^setpos_abs_top);
+	if (calc($int0 % 2) = 1) {
+		$int4 = 100;
+	}
+	cc_settrans($int4);
+	cc_setonmouseover("cc_settrans(event_com, event_comid, 50, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comid, $int4, null)");
+	cc_setontimer(null);
+	~script2725($struct5, $int4);
+	cc_setonvartransmit("script2724(event_com, event_comid, .cc_getid, $struct5, $int4){var1141}");
+}
+return($int2);

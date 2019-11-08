@@ -3,9 +3,10 @@ script3041(component $component0, component $component1, component $component2, 
 def_int $int28 = 0;
 if (%varbit9340 = 1) {
 	if_setop(1, "Adventure Paths", $component6);
+	if_setop(2, "Disable Adventure Paths", $component6);
 	if_setonmouseover("script2803($component23)", $component6);
 	if_setonmouseleave("script2804($component23, 4)", $component6);
-	if_setonop("script2798(4, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26)", $component6);
+	if_setonop("script2798(event_opindex, 4, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26)", $component6);
 	if_sethide(false, $component6);
 	$int28 = calc(16384 / 5);
 } else {
