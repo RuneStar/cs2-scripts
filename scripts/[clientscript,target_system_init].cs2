@@ -1,5 +1,5 @@
 // 3141
-script3141(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
+[clientscript,target_system_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
 cc_deleteall($component2);
 ~thinstonebox($component2, 0);
 def_graphic $graphic16 = "zeah_book,0";
@@ -21,7 +21,7 @@ cc_setvflip(false);
 cc_sethflip(true);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if_setop(1, "Expand", $component1);
-if_setonop("script3142(event_opindex, 0, $component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15)", $component1);
+if_setonop("target_system_hideop(event_opindex, 0, $component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15)", $component1);
 cc_deleteall($component15);
 $int18 = 0;
 if_setonmouseover("cc_graphic_swapper(event_com, $int18, $graphic17, null)", $component15);
@@ -33,7 +33,7 @@ cc_setvflip(false);
 cc_sethflip(false);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 if_setop(1, "Minimise", $component15);
-if_setonop("script3142(event_opindex, 1, $component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15)", $component15);
+if_setonop("target_system_hideop(event_opindex, 1, $component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15)", $component15);
 if (~on_mobile = true) {
 	if_setop(2, "", $component15);
 	if_setop(3, "", $component15);
@@ -65,7 +65,7 @@ if_setop(1, "Configure", $component13);
 if_setonmouseover("settrans(event_com, 125)", $component13);
 if_setonmouseleave("settrans(event_com, 0)", $component13);
 if_setonop("opsound(event_opindex, 2)", $component13);
-~script3144($component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15);
-if_setonvartransmit("script3143($component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15){var1130, var1795}", $component0);
+~target_system_redraw($component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15);
+if_setonvartransmit("target_system_redraw($component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15){var1130, var1795}", $component0);
 ~script3148($component11);
 if_setonvartransmit("script3147($component11){var1327}", $component11);

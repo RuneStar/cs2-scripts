@@ -3141,10 +3141,10 @@
 [**3138**](scripts/script3138.cs2)  
 [**3139**](scripts/script3139.cs2)  
 [**3140**](scripts/script3140.cs2)  
-[**3141**](scripts/script3141.cs2)  
-[**3142**](scripts/script3142.cs2)  
-[**3143**](scripts/script3143.cs2)  
-[**3144**](scripts/script3144.cs2)  
+[**3141**](scripts/[clientscript,target_system_init].cs2) `[clientscript,target_system_init]`  
+[**3142**](scripts/[clientscript,target_system_hideop].cs2) `[clientscript,target_system_hideop]`  
+[**3143**](scripts/[clientscript,target_system_redraw].cs2) `[clientscript,target_system_redraw]`  
+[**3144**](scripts/[proc,target_system_redraw].cs2) `[proc,target_system_redraw]`  
 [**3145**](scripts/script3145.cs2)  
 [**3146**](scripts/script3146.cs2)  
 [**3147**](scripts/script3147.cs2)  
@@ -3153,9 +3153,9 @@
 [**3150**](scripts/script3150.cs2)  
 [**3151**](scripts/script3151.cs2)  
 [**3152**](scripts/script3152.cs2)  
-[**3153**](scripts/script3153.cs2)  
-[**3154**](scripts/script3154.cs2)  
-[**3155**](scripts/script3155.cs2)  
-[**3156**](scripts/script3156.cs2)  
-[**3157**](scripts/script3157.cs2)  
-[**3158**](scripts/script3158.cs2)  
+[**3153**](scripts/[clientscript,offer_banner_init].cs2) `[clientscript,offer_banner_init]`  
+[**3154**](scripts/[proc,offer_banner_close].cs2) `[proc,offer_banner_close]`  
+[**3155**](scripts/[clientscript,offer_banner].cs2) `[clientscript,offer_banner]`  
+[**3156**](scripts/[proc,offer_banner].cs2) `[proc,offer_banner]`  
+[**3157**](scripts/[clientscript,offer_button].cs2) `[clientscript,offer_button]`  
+[**3158**](scripts/[proc,offer_button].cs2) `[proc,offer_button]`  
