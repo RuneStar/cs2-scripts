@@ -1,0 +1,23 @@
+// 3205
+script3205(component $component0, boolean $boolean1)
+if ($boolean1 = true) {
+	~v2_stone_button_in_filled($component0);
+	cc_create($component0, ^iftype_text, 9);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settext("Claim Points");
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xaaaaaa);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+} else {
+	~v2_stone_button_filled($component0);
+	cc_create($component0, ^iftype_text, 9);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settext("Claim Points");
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(^white);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+}

@@ -1,0 +1,21 @@
+// 3201
+script3201(component $component0)
+def_int $int1 = 1;
+def_int $int2 = 23;
+def_int $int3 = 1;
+def_stat $stat4 = attack;
+def_obj $obj5 = attack_cape_9747;
+def_int $int6 = 5;
+def_int $int7 = 5;
+while ($int1 < $int2) {
+	cc_create($component0, ^iftype_graphic, $int3);
+	cc_setsize(5, 5, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
+	$stat4 = enum(int, stat, 681, $int1);
+	$obj5 = enum(stat, namedobj, 2651, $stat4);
+	cc_setobject($obj5, -1);
+	$int1 = calc($int1 + 1);
+	$int6 = calc($int6 + 5);
+	$int3 = $int1;
+	mes("Loading: <oc_name($obj5)>");
+}

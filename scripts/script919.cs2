@@ -6,13 +6,13 @@ if (($enum0 = 1131) | ($enum0 = 1745)) {
 	if (%varcint171 ! -1) {
 		$component1 = enum(int, component, 1137, %varcint171);
 	}
-	$component2 = enum(component, component, $enum0, 164:64);
-	if ((if_hassub(enum(component, component, $enum0, 161:66)) = true) | (($component1 ! null) & (if_hassub(enum(component, component, $enum0, $component1)) = true))) {
+	$component2 = enum(component, component, $enum0, 164:65);
+	if ((if_hassub(enum(component, component, $enum0, 161:67)) = true) | (($component1 ! null) & (if_hassub(enum(component, component, $enum0, $component1)) = true))) {
 		if_sethide(false, $component2);
 		if ($enum0 = 1745) {
 			switch_component ($component1) {
-				case 161:68, 161:73, 161:74, 161:80, 161:76, 161:77, 161:75 :
-					if ((if_hassub(enum(component, component, $enum0, 161:66)) = true) & (if_hassub(enum(component, component, $enum0, 161:13)) = true)) {
+				case 161:69, 161:74, 161:75, 161:81, 161:77, 161:78, 161:76 :
+					if ((if_hassub(enum(component, component, $enum0, 161:67)) = true) & (if_hassub(enum(component, component, $enum0, 161:14)) = true)) {
 						if_setposition(37, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
 					} else {
 						if_setposition(37, 87, ^setpos_abs_left, ^setpos_abs_centre, $component2);
@@ -25,12 +25,13 @@ if (($enum0 = 1131) | ($enum0 = 1745)) {
 		if_sethide(true, $component2);
 	}
 	~script2526;
+	%varcint384 = clientclock;
 	~script2386;
-	if (if_gethide(enum(component, component, $enum0, 161:50)) = true) {
-		if_sethide(true, enum(component, component, $enum0, 161:38));
-		if_sethide(true, enum(component, component, $enum0, 161:45));
+	if (if_gethide(enum(component, component, $enum0, 161:51)) = true) {
+		if_sethide(true, enum(component, component, $enum0, 161:39));
+		if_sethide(true, enum(component, component, $enum0, 161:46));
 	} else {
-		if_sethide(false, enum(component, component, $enum0, 161:38));
-		if_sethide(false, enum(component, component, $enum0, 161:45));
+		if_sethide(false, enum(component, component, $enum0, 161:39));
+		if_sethide(false, enum(component, component, $enum0, 161:46));
 	}
 }

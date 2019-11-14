@@ -54,6 +54,9 @@ def_int $int18 = 0;
 if (($boolean10 = false) & (%varbit6718 = 1)) {
 	while ($int18 < $int15) {
 		$obj17 = enum(int, obj, $enum14, $int18);
+		if (~script3160 = 1) {
+			$obj17 = ~script3159($obj17);
+		}
 		if_sethide(false, oc_param($obj17, spell_button));
 		$intarray0($int16) = $int18;
 		$int16 = calc($int16 + 1);
@@ -62,6 +65,9 @@ if (($boolean10 = false) & (%varbit6718 = 1)) {
 } else {
 	while ($int18 < $int15) {
 		$obj17 = enum(int, obj, $enum14, $int18);
+		if (~script3160 = 1) {
+			$obj17 = ~script3159($obj17);
+		}
 		if (~script2619($obj17) = 1) {
 			if_sethide(false, oc_param($obj17, spell_button));
 			$intarray0($int16) = $int18;
@@ -145,6 +151,9 @@ def_int $int29 = 0;
 $int18 = 0;
 while ($int18 < $int16) {
 	$obj17 = enum(int, obj, $enum14, $intarray0($int18));
+	if (~script3160 = 1) {
+		$obj17 = ~script3159($obj17);
+	}
 	$component25 = oc_param($obj17, spell_button);
 	if_setsize($int19, $int19, ^setsize_abs, ^setsize_abs, $component25);
 	$int28, $int29 = calc(($int18 % $int20) * $int26), calc(($int18 / $int20) * $int27);

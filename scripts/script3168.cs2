@@ -1,0 +1,52 @@
+// 3168
+script3168(component $component0, int $int1, int $colour2, graphic $graphic3, component $component4, string $string0)
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = enum(int, int, 2653, $colour2);
+$int5, $int6 = ~script3172($component0, $int1);
+$int1 = calc($int1 * 7);
+if (($int5 < 0) | ($int6 < 0)) {
+	return;
+}
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setposition(calc($int5 + 1), calc($int6 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(26, 26, ^setsize_abs, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour($colour2);
+cc_settrans($int7);
+$int1 = calc($int1 + 1);
+$int7 = enum(int, int, 2654, $colour2);
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setsize(1, 28, ^setsize_abs, ^setsize_abs);
+cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setfill(true);
+cc_setcolour($colour2);
+cc_settrans($int7);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setsize(1, 28, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int5 + 27), $int6, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setfill(true);
+cc_setcolour($colour2);
+cc_settrans($int7);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setsize(26, 1, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int5 + 1), $int6, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setfill(true);
+cc_setcolour($colour2);
+cc_settrans($int7);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setsize(26, 1, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int5 + 1), calc($int6 + 27), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setfill(true);
+cc_setcolour($colour2);
+cc_settrans($int7);
+$int1 = calc($int1 + 1);
+cc_create($component0, ^iftype_graphic, $int1);
+cc_setposition(calc($int5 + 2), calc($int6 + 2), ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setsize(24, 24, ^setsize_abs, ^setsize_abs);
+cc_setgraphic($graphic3);
+$int1 = calc($int1 + 1);
+~script3169($component0, $int1, $component4, $string0, $int5, $int6);

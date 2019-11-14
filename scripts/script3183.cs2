@@ -1,0 +1,9 @@
+// 3183
+script3183(component $component0, int $int1, component $component2, string $string0, int $int3)
+if (%varcint385 = $int1) {
+	~deltooltip_action($component2);
+	%varcint385 = -1;
+} else {
+	~tooltip_build($component0, $int1, $component2, $string0, $int3);
+	%varcint385 = $int1;
+}

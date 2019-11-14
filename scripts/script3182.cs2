@@ -1,0 +1,165 @@
+// 3182
+script3182(component $component0, component $component1, int $int2, int $int3)
+if_setop(1, "", $component0);
+if_setopbase("", $component0);
+if ($int3 = 1) {
+	$int2 = 0;
+}
+def_struct $struct4 = enum(int, struct, 2670, %varbit10032);
+def_enum $enum5 = null;
+def_struct $struct6 = null;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = -1;
+def_struct $struct11 = ~script3180($int3);
+def_int $int12 = -1;
+def_int $int13 = if_getwidth($component0);
+def_string $string0 = "";
+def_int $int14 = -1;
+if ($struct11 ! null) {
+	$int12 = struct_param($struct11, 877);
+}
+if (($int12 ! -1) & ($int3 = 0)) {
+	$int13 = calc($int13 - 15);
+}
+if (cc_find($component0, 0) = ^false) {
+	cc_create($component0, ^iftype_rectangle, $int9);
+	cc_setsize(calc($int13 - 2), 29, ^setsize_abs, ^setsize_abs);
+	cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(false);
+	cc_setcolour(0x474745);
+	$int9 = calc($int9 + 1);
+	cc_create($component0, ^iftype_graphic, $int9);
+	cc_setsize(calc($int13 - 4), 27, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic(2387);
+	cc_settiling(true);
+	$int9 = calc($int9 + 1);
+	cc_create($component0, ^iftype_graphic, $int9);
+	cc_setsize(0, 27, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic(2386);
+	cc_settiling(true);
+	$int9 = calc($int9 + 1);
+	if ($int3 = 0) {
+		cc_create($component0, ^iftype_text, $int9);
+		cc_setsize($int13, 0, ^setsize_abs, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_setcolour(^white);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settext("");
+		$int9 = calc($int9 + 1);
+		cc_create($component0, ^iftype_rectangle, $int9);
+		cc_setsize($int13, 31, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setfill(false);
+		cc_setcolour(0x0e0e0c);
+		$int9 = calc($int9 + 1);
+		if ($int12 ! -1) {
+			cc_create($component0, ^iftype_graphic, $int9);
+			cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
+			cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
+			cc_setgraphic(2354);
+			$int9 = calc($int9 + 1);
+		}
+	} else {
+		if ($struct4 ! null) {
+			$enum5 = struct_param($struct4, 870);
+			if ($enum5 ! null) {
+				$int7 = enum_getoutputcount($enum5);
+				while ($int8 < $int7) {
+					$struct6 = enum(int, struct, $enum5, $int8);
+					cc_create($component0, ^iftype_graphic, $int9);
+					cc_setsize(10, 31, ^setsize_abs, ^setsize_abs);
+					$int14 = scale(struct_param($struct6, 877), $int12, calc($int13 - 4));
+					if ($int14 <= 2) {
+						$int14 = 0;
+					} else if ($int14 >= calc($int13 - 4)) {
+						$int14 = $int13;
+					} else {
+						$int14 = calc($int14 + 2);
+					}
+					cc_setposition(calc($int14 - 5), 0, ^setpos_abs_left, ^setpos_abs_top);
+					cc_setgraphic(2388);
+					$string0 = "Relic unlocked at <tostring(struct_param($struct6, 877))> points.";
+					if (~on_mobile = true) {
+						cc_setop(1, "Show Threshold");
+						cc_setonop("script3183(event_com, event_comid, $component1, $string0, 512)");
+					} else {
+						cc_setop(1, "");
+						cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component1, $string0, 25, 512)");
+						cc_setonmouseleave("deltooltip($component1)");
+					}
+					$int8 = calc($int8 + 1);
+					$int9 = calc($int9 + 1);
+				}
+			}
+		}
+		cc_create($component0, ^iftype_text, $int9);
+		cc_setsize($int13, 0, ^setsize_abs, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_setcolour(^white);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settext("");
+		$int10 = $int9;
+		$int9 = calc($int9 + 1);
+		cc_create($component0, ^iftype_rectangle, $int9);
+		cc_setsize($int13, 31, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setfill(false);
+		cc_setcolour(0x0e0e0c);
+		$int9 = calc($int9 + 1);
+	}
+}
+if ($int3 = 0) {
+	$int10 = 3;
+}
+def_int $int15 = calc($int13 - 4);
+def_int $int16 = $int15;
+if (($int12 ! -1) & ($int12 > 0)) {
+	$int16 = scale(%var2615, $int12, $int15);
+}
+if ($int16 > $int15) {
+	$int16 = $int15;
+}
+if (cc_find($component0, 2) = ^true) {
+	if ($int2 = 1) {
+		if (cc_getwidth > $int16) {
+			cc_setsize(0, cc_getheight, ^setsize_abs, ^setsize_abs);
+		}
+		if_setontimer("script3184($component0, $int16)", $component0);
+	} else {
+		cc_setsize($int16, cc_getheight, ^setsize_abs, ^setsize_abs);
+	}
+}
+def_int $int17 = -1;
+if (($int10 ! -1) & (cc_find($component0, $int10) = ^true)) {
+	if (($int3 = 0) & ($int12 ! -1)) {
+		if (%var2615 >= $int12) {
+			cc_settext("<~text_device("Click", "Tap")> here to select your next relic");
+			if_setop(1, "View", $component0);
+			if_setopbase("<col=ff981f>Relics</col>", $component0);
+		} else {
+			$int17 = calc($int12 - %var2615);
+			if ($int17 > 1) {
+				cc_settext("<tostring($int17)> points until your next relic");
+			} else {
+				cc_settext("<tostring($int17)> point until your next relic");
+			}
+		}
+	} else {
+		cc_settext("<tostring(%var2615)> points");
+	}
+}
+if (($int3 = 0) & (cc_find($component0, 5) = ^true)) {
+	if (%var2615 >= $int12) {
+		cc_setgraphic(2353);
+	} else {
+		cc_setgraphic(2354);
+	}
+}

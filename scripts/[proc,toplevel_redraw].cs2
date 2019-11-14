@@ -6,11 +6,11 @@ if (%varbit4611 = 1) {
 	if_setonkey("toplevel_keypress(event_keypressed, $enum1, true)", $component0);
 }
 ~toplevel_resize($component0, $enum1);
-def_component $component2 = enum(component, component, $enum1, 161:17);
+def_component $component2 = enum(component, component, $enum1, 161:18);
 if ($component2 ! null) {
 	if_sethide(~int_to_bool(%varbit542), $component2);
 }
-$component2 = enum(component, component, $enum1, 161:26);
+$component2 = enum(component, component, $enum1, 161:27);
 if ($component2 ! null) {
 	if ((%varbit542 = ^true) | (%varbit4606 ! 0)) {
 		if_sethide(true, $component2);
@@ -63,6 +63,9 @@ if (($component9 ! null) & ($component7 ! null)) {
 		case 4 :
 			if_setop(1, "Adventure Paths", $component9);
 			if_setgraphic("sideicons_interface,23", $component7);
+		case 5 :
+			if_setop(1, "Leagues", $component9);
+			if_setgraphic("sideicons_interface,24", $component7);
 		case default :
 			if_setop(1, "Quest List", $component9);
 			if_setgraphic("sideicons_interface,2", $component7);
@@ -105,7 +108,7 @@ if (($component9 ! null) & ($component7 ! null)) {
 		if_setgraphic("sideicons_interface,9", $component7);
 	}
 }
-$component7 = enum(component, component, $enum1, 161:30);
+$component7 = enum(component, component, $enum1, 161:31);
 if ($component7 ! null) {
 	if (%varbit4609 = 1) {
 		if_setgraphic("tradebacking_dark", $component7);
@@ -115,7 +118,7 @@ if ($component7 ! null) {
 		if_settrans(150, $component7);
 	}
 }
-$component7 = enum(component, component, $enum1, 161:16);
+$component7 = enum(component, component, $enum1, 161:17);
 if ((~on_mobile = true) & ($component7 ! null)) {
 	if (%varbit6254 = ^false) {
 		if_setposition(36, 163, ^setpos_abs_right, ^setpos_abs_top, $component7);
@@ -130,6 +133,13 @@ if ($component7 ! null) {
 		if_sethide(true, $component7);
 	}
 }
+$component2 = enum(component, component, $enum1, 161:5);
+if ((%varbit9528 = 0) & (%varbit542 = ^false)) {
+	if_sethide(false, $component2);
+} else {
+	if_sethide(true, $component2);
+}
+~script3175($component2, ^min_32bit_int);
 if (%varbit4134 = 1) {
 	mousecam(false);
 } else {

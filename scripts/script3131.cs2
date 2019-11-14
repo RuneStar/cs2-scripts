@@ -1,18 +1,18 @@
 // 3131
-script3131(int $int0, int $int1, int $colour2, component $component3, boolean $boolean4)
-if (cc_find($component3, 0) = ^true) {
+script3131(int $int0, int $int1, int $int2, int $int3, int $colour4, component $component5, boolean $boolean6)
+if (cc_find($component5, 0) = ^true) {
 	if (clientclock < $int0) {
 		return;
 	}
 	if (clientclock >= $int1) {
 		cc_setontimer(null);
-		if ($boolean4 = true) {
+		if ($boolean6 = true) {
 			cc_delete;
 		}
 		return;
 	}
-	cc_setcolour($colour2);
-	cc_setfillcolour($colour2);
-	cc_settrans(interpolate(0, 255, $int0, $int1, clientclock));
+	cc_setcolour($colour4);
+	cc_setfillcolour($colour4);
+	cc_settrans(interpolate($int3, $int2, $int0, $int1, clientclock));
 	_1124(255);
 }

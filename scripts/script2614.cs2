@@ -5,27 +5,27 @@ if (stat(magic) < oc_param($obj0, spell_levelreq)) {
 	return(0);
 }
 switch_component ($component1) {
-	case 218:137, 218:136 :
+	case 218:138, 218:137 :
 		if (%varbit2451 = 1) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case 218:123 :
+	case 218:124 :
 		if (%varbit5438 > 0) {
 			if_settrans(150, $component1);
 		} else {
 			if_settrans(0, $component1);
 		}
-	case 218:17 :
+	case 218:18 :
 		if ((((((((((inv_total(inv, explorers_ring_1_13125) > 0) | (inv_total(inv, explorers_ring_2_13126) > 0)) | (inv_total(inv, explorers_ring_3_13127) > 0)) | (inv_total(worn, explorers_ring_1_13125) > 0)) | (inv_total(worn, explorers_ring_2_13126) > 0)) | (inv_total(worn, explorers_ring_3_13127) > 0)) | (inv_total(inv, explorers_ring_4_13128) > 0)) | (inv_total(worn, explorers_ring_4_13128) > 0)) & (map_members = ^true)) & (%varbit4554 < 30)) {
 			return(1);
 		}
-	case 218:38 :
+	case 218:39 :
 		if ((((inv_total(inv, explorers_ring_4_13128) > 0) | (inv_total(worn, explorers_ring_4_13128) > 0)) & (map_members = ^true)) & (%varbit4554 < 30)) {
 			return(1);
 		}
-	case 218:68 :
+	case 218:69 :
 		if ((%varbit2010 = 0) | (%varbit5604 >= 5)) {
 			return(0);
 		}

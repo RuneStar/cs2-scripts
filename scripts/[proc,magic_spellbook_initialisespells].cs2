@@ -4,6 +4,9 @@ def_component $component3 = null;
 def_int $int4 = 0;
 def_obj $obj5 = enum(int, obj, $enum0, $int4);
 while ($obj5 ! null) {
+	if (~script3160 = 1) {
+		$obj5 = ~script3159($obj5);
+	}
 	$component3 = oc_param($obj5, spell_button);
 	if_setopbase("<col=00ff00><oc_param($obj5, spell_name)></col>", $component3);
 	if (if_gettargetmask($component3) ! 0) {

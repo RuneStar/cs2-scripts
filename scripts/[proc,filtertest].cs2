@@ -3,6 +3,9 @@
 if ($chattype0 = null) {
 	return(0);
 }
+if ($int1 < %varcint383) {
+	return(0);
+}
 if ((enum(int, boolean, 892, $chattype0) = true) & ($chattype0 ! ^chattype_playerrelated)) {
 	if (($chattype0 = ^chattype_spam) & (%varbit26 = 1)) {
 		return(0);

@@ -3,7 +3,9 @@
 def_int $int3 = -1;
 def_int $colour4 = ^red;
 $int3 = ~area_task_complete($int2);
-if ($int3 = 2) {
+if (~script3235($int2) = 1) {
+	$colour4 = 0x9f9f9f;
+} else if ($int3 = 2) {
 	$colour4 = 0x0dc10d;
 } else if ($int3 = 1) {
 	$colour4 = ^yellow;

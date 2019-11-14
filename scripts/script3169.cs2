@@ -1,0 +1,35 @@
+// 3169
+script3169(component $component0, int $int1, component $component2, string $string0, int $int3, int $int4)
+cc_create($component0, ^iftype_rectangle, $int1);
+if (~on_mobile = true) {
+	cc_setposition(calc($int3 - 1), calc($int4 - 1), ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
+} else {
+	cc_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setsize(28, 28, ^setsize_abs, ^setsize_abs);
+}
+cc_setcolour(^black);
+cc_settrans(255);
+if (((string_length($string0) <= 0) | (%varbit9529 = 1)) | (%varbit9528 = 1)) {
+	cc_setonclick(null);
+	cc_setnoclickthrough(false);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	if_setontimer(null, $component0);
+	~deltooltip_action($component2);
+	%varcint382 = -1;
+	return;
+}
+if (~on_mobile = true) {
+	cc_setonclick("script3170($component0, $int1, $component2, $string0, 512)");
+	cc_setnoclickthrough(true);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+} else {
+	cc_setonclick(null);
+	cc_setnoclickthrough(false);
+	cc_setonmouserepeat("tooltip_mouserepeat($component0, $int1, $component2, $string0, 35, 512)");
+	cc_setonmouseleave("deltooltip($component2)");
+	if_setontimer(null, $component0);
+	%varcint2 = 0;
+}
