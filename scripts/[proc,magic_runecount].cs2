@@ -5,7 +5,7 @@ def_int $int2 = 0;
 def_int $int3 = 0;
 def_obj $obj4 = inv_getobj(worn, 3);
 if (map_members = ^true) {
-	if (inv_total(inv, rune_pouch_12791) > 0) {
+	if ((inv_total(inv, rune_pouch_12791) > 0) | (inv_total(inv, rune_pouch_l_24416) > 0)) {
 		$int1, $int2, $int3 = %varbit29, %varbit1622, %varbit1623;
 	}
 } else if (($obj4 ! null) & (oc_members($obj4) = ^true)) {
