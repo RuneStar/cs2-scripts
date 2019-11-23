@@ -7,7 +7,7 @@ def_int $int6 = ~quest_f2p_count;
 while ($int5 < $int6) {
 	if (cc_find($component0, $int5) = ^true) {
 		$int3 = ~questlist_f2p_progress($int5);
-		if (~script3236($int5) = 1) {
+		if (~questlist_f2p_progress_grey($int5) = 1) {
 			$colour4 = 0x9f9f9f;
 		} else if ($int3 = 2) {
 			$colour4 = 0x0dc10d;
@@ -26,7 +26,7 @@ $int5, $int6 = 0, ~quest_members_count;
 while ($int5 < $int6) {
 	if (cc_find($component1, $int5) = ^true) {
 		$int3 = ~questlist_members_progress($int5);
-		if (~script3237($int5) = 1) {
+		if (~questlist_members_progress_grey($int5) = 1) {
 			$colour4 = 0x9f9f9f;
 		} else if ($int3 = 2) {
 			$colour4 = 0x0dc10d;

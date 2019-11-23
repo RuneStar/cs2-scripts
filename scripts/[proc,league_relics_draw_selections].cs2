@@ -1,0 +1,287 @@
+// 3189
+[proc,league_relics_draw_selections](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
+cc_deleteall($component1);
+cc_deleteall($component2);
+cc_deleteall($component3);
+cc_deleteall($component4);
+cc_deleteall($component5);
+cc_deleteall($component0);
+cc_deleteall($component10);
+cc_deleteall($component11);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("tradebacking_light");
+if_sethide(false, $component6);
+if_sethide(true, $component7);
+if_sethide(true, $component9);
+if_sethide(true, $component8);
+def_struct $struct13 = enum(int, struct, 2670, %varbit10032);
+def_enum $enum14 = null;
+def_int $int15 = 0;
+def_struct $struct16 = null;
+def_int $int17 = 0;
+def_enum $enum18 = null;
+if ($struct13 ! null) {
+	$enum14 = struct_param($struct13, 870);
+}
+if ($enum14 ! null) {
+	$int15 = enum_getoutputcount($enum14);
+}
+def_int $int19 = 0;
+cc_create($component10, ^iftype_graphic, $int19);
+cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(2289);
+def_graphic $graphic20 = 2290;
+def_graphic $graphic21 = 2289;
+if (~on_mobile = false) {
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic20, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic21, null)");
+}
+if_setonop("league_menu_click(event_opindex, $component10, $component11, $int19, $component12)", $component10);
+if_setop(1, "Show Menu", $component10);
+$int19 = 0;
+cc_create($component11, ^iftype_graphic, $int19);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("tradebacking_light");
+$int19 = calc($int19 + 1);
+$int19 = ~steelbox($component11, $int19);
+if_sethide(true, $component11);
+cc_create($component11, ^iftype_rectangle, $int19);
+cc_setsize(calc(if_getwidth($component11) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(255);
+$int19 = calc($int19 + 1);
+cc_create($component11, ^iftype_text, $int19);
+cc_setsize(calc(if_getwidth($component11) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Info");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_setonmouseover("league_info_mouseover($component11, $int19)");
+cc_setonmouseleave("league_info_mouseleave($component11, $int19)");
+cc_setop(1, "View Information");
+cc_setonop("script3224($component10, $component11, $component12)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int19 = calc($int19 + 1);
+cc_create($component11, ^iftype_rectangle, $int19);
+cc_setsize(calc(if_getwidth($component11) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 25, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(235);
+$int19 = calc($int19 + 1);
+cc_create($component11, ^iftype_text, $int19);
+cc_setsize(calc(if_getwidth($component11) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 25, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Tasks");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_setonmouseover("league_info_mouseover($component11, $int19)");
+cc_setonmouseleave("league_info_mouseleave($component11, $int19)");
+cc_setop(1, "View Tasks");
+cc_setonop("script3224($component10, $component11, $component12)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int19 = calc($int19 + 1);
+cc_create($component11, ^iftype_rectangle, $int19);
+cc_setsize(calc(if_getwidth($component11) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 45, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(255);
+$int19 = calc($int19 + 1);
+cc_create($component11, ^iftype_text, $int19);
+cc_setsize(calc(if_getwidth($component11) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 45, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Relics");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xc8c8c8);
+cc_settrans(200);
+cc_setop(1, "View Relics");
+cc_setonop("script3224($component10, $component11, $component12)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+def_int $int22 = if_getwidth($component6);
+def_int $int23 = calc(if_getheight($component6) - 5);
+def_int $int24 = 0;
+def_int $int25 = 0;
+def_int $int26 = 0;
+def_int $int27 = 0;
+def_int $int28 = 0;
+if ($int15 > 0) {
+	$int24 = calc($int22 / $int15);
+	$int27 = calc(($int22 - ($int24 * $int15)) / 2);
+}
+def_graphic $graphic29 = null;
+def_int $int30 = -1;
+def_string $string0 = "";
+def_int $int31 = 0;
+def_int $int32 = 0;
+def_int $colour33 = null;
+def_int $colour34 = null;
+def_int $colour35 = null;
+def_int $colour36 = null;
+def_int $int37 = 0;
+def_int $int38 = 0;
+def_struct $struct39 = null;
+def_graphic $graphic40 = null;
+def_string $string1 = "";
+def_int $int41 = -1;
+def_struct $struct42 = null;
+def_int $int43 = 0;
+def_int $int44 = 0;
+def_int $int45 = 0;
+while ($int43 < $int15) {
+	$struct16 = enum(int, struct, $enum14, $int43);
+	$enum18 = struct_param($struct16, 878);
+	switch_int ($int43) {
+		case 0 :
+			$int41 = %varbit10049;
+		case 1 :
+			$int41 = %varbit10050;
+		case 2 :
+			$int41 = %varbit10051;
+		case 3 :
+			$int41 = %varbit10052;
+		case 4 :
+			$int41 = %varbit10053;
+		case default :
+			$int41 = 0;
+	}
+	$struct42 = enum(int, struct, $enum18, $int41);
+	if (($enum18 ! null) & ($struct42 ! null)) {
+		cc_create($component1, ^iftype_graphic, $int43);
+		cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
+		cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("tradebacking_dark");
+		cc_settiling(true);
+		$graphic29, $int30, $string0, $int31, $int32, $int38, $colour34, $colour36 = null, 255, "", 1, 0, 1, 0xaaaaaa, 0xdddddd;
+	} else if ((($int28 = 0) & ($enum18 ! null)) & (%var2615 >= struct_param($struct16, 877))) {
+		cc_create($component1, ^iftype_graphic, $int43);
+		cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
+		cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("tradebacking_light");
+		cc_settiling(true);
+		$graphic29, $int30, $string0, $int31, $int32, $int38, $colour34, $colour36 = null, 127, "", 1, 1, 1, null, null;
+		$int28 = 1;
+	} else {
+		cc_create($component1, ^iftype_graphic, $int43);
+		cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
+		cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic("tradebacking_dark");
+		cc_settiling(true);
+		$graphic29, $int30, $string0, $int31, $int32, $int38, $colour34, $colour36 = 2353, 255, "Locked", 0, 0, 0, null, null;
+	}
+	cc_create($component0, ^iftype_text, calc($int43 + 1));
+	cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
+	cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settext("Selection <tostring(calc($int43 + 1))>");
+	if ($enum18 ! null) {
+		$int17 = enum_getoutputcount($enum18);
+	} else {
+		$int17 = 0;
+	}
+	if ($int17 > 0) {
+		$int25 = calc($int23 / $int17);
+		$int26 = calc(($int23 - ($int25 * $int17)) / 2);
+	}
+	$int44 = 0;
+	while ($int44 < $int17) {
+		$struct39 = enum(int, struct, $enum18, calc($int44 + 1));
+		cc_create($component4, ^iftype_text, $int45);
+		if (string_length($string0) > 0) {
+			$string1 = $string0;
+		} else {
+			$string1 = struct_param($struct39, 879);
+		}
+		cc_setsize(calc($int24 - 10), 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int27 + 5), calc(($int26 + ($int25 / 2)) + 1), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settext($string1);
+		cc_settextfont(p11_full);
+		if ($struct39 ! $struct42) {
+			if ($colour34 ! null) {
+				$colour33 = $colour34;
+			} else {
+				$colour33 = 0xff981f;
+			}
+			if ($colour36 ! null) {
+				$colour35 = $colour36;
+			} else {
+				$colour35 = ^white;
+			}
+		} else {
+			$colour33, $colour35 = 0xff981f, ^white;
+		}
+		cc_setcolour($colour33);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_create($component2, ^iftype_graphic, $int45);
+		cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(($int27 + ($int24 / 2)) - 15), calc(($int26 + ($int25 / 2)) - 31), ^setpos_abs_left, ^setpos_abs_top);
+		if ($graphic29 ! null) {
+			$graphic40, $int37 = $graphic29, calc($int30 - 128);
+		} else if ($struct39 = $struct42) {
+			$graphic40, $int37 = struct_param($struct39, 881), 0;
+		} else {
+			$graphic40, $int37 = struct_param($struct39, 883), calc($int30 - 128);
+		}
+		cc_setgraphic($graphic40);
+		cc_create($component3, ^iftype_graphic, $int45);
+		cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(($int27 + ($int24 / 2)) - 17), calc(($int26 + ($int25 / 2)) - 33), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphic(2385);
+		if ($int30 ! -1) {
+			cc_settrans($int30);
+		} else {
+			cc_settrans(255);
+		}
+		cc_create($component5, ^iftype_rectangle, $int45);
+		cc_setsize($int24, $int25, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int27, $int26, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setfill(true);
+		cc_settrans(255);
+		if ($int38 = 1) {
+			cc_setop(1, "View");
+			cc_setopbase("<col=ff981f><$string1></col>");
+			cc_setonop("league_relics_loading($component9, $int45)");
+		}
+		if (($int31 = 1) & (~on_mobile = false)) {
+			if ($int32 = 1) {
+				cc_setonmouseover("league_relic_hover($component3, $int37, $component2, struct_param($struct39, 881), $component4, $colour35, $int45)");
+			} else {
+				cc_setonmouseover("league_relic_hover($component3, $int37, $component2, $graphic40, $component4, $colour35, $int45)");
+			}
+			cc_setonmouseleave("league_relic_hover($component3, $int30, $component2, $graphic40, $component4, $colour33, $int45)");
+		}
+		$int45 = calc($int45 + 1);
+		$int26 = calc($int26 + $int25);
+		$int44 = calc($int44 + 1);
+	}
+	$int27 = calc($int27 + $int24);
+	$int43 = calc($int43 + 1);
+}
+if ($int28 = 1) {
+	cc_deleteall($component0);
+	cc_create($component0, ^iftype_graphic, 0);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("tradebacking_light");
+	cc_create($component0, ^iftype_text, 1);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settext("You have a new relic available for selection!");
+}

@@ -1,0 +1,10 @@
+// 3239
+[proc,questlist_showprogress_grey](struct $struct0)(int)
+def_enum $enum1 = null;
+if (~league_world = 1) {
+	$enum1 = struct_param(enum(int, struct, 2670, %varbit10032), 890);
+	if (($enum1 ! null) & (enum(struct, boolean, $enum1, $struct0) = false)) {
+		return(1);
+	}
+}
+return(0);

@@ -1,0 +1,8 @@
+// 1363
+[clientscript,br_loadout_drawloadout_request](component $component0, component $component1, component $component2, component $component3, component $component4)
+if (clientclock > %varcint110) {
+	~br_loadout_drawloadout($component1, $component2, $component3, $component4);
+	if_setontimer(null, $component0);
+} else {
+	if_setontimer("br_loadout_drawloadout_request($component0, $component1, $component2, $component3, $component4)", $component0);
+}

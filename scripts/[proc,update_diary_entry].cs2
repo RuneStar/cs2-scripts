@@ -3,7 +3,7 @@
 def_int $int3 = -1;
 def_int $colour4 = ^red;
 $int3 = ~area_task_complete($int2);
-if (~script3235($int2) = 1) {
+if (~update_diary_entry_grey($int2) = 1) {
 	$colour4 = 0x9f9f9f;
 } else if ($int3 = 2) {
 	$colour4 = 0x0dc10d;

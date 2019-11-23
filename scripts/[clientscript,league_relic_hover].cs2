@@ -1,0 +1,17 @@
+// 3190
+[clientscript,league_relic_hover](component $component0, int $int1, component $component2, graphic $graphic3, component $component4, int $colour5, int $int6)
+if ($int1 > 255) {
+	$int1 = 255;
+}
+if ($int1 < 0) {
+	$int1 = 0;
+}
+if (cc_find($component0, $int6) = ^true) {
+	cc_settrans($int1);
+}
+if (cc_find($component2, $int6) = ^true) {
+	cc_setgraphic($graphic3);
+}
+if (cc_find($component4, $int6) = ^true) {
+	cc_setcolour($colour5);
+}

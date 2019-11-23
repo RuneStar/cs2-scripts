@@ -34,7 +34,7 @@ while ($int7 < $int8) {
 			cc_setop(10, "Examine");
 			cc_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)");
 			cc_setdraggable($component0, -1);
-			cc_setondragcomplete("script3069(event_com, event_comid, event_dragtarget, event_dragtargetid, $int5, $component0, $component1, $component2, $component3)");
+			cc_setondragcomplete("br_loadout_rearrange(event_com, event_comid, event_dragtarget, event_dragtargetid, $int5, $component0, $component1, $component2, $component3)");
 			cc_setondrag("br_loadout_hidewarning(event_com, event_comid, 1)");
 			cc_setdragdeadzone(5);
 			cc_setdragdeadtime(5);
@@ -75,7 +75,7 @@ while ($int7 < $int11) {
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)");
 		cc_setdraggable($component0, -1);
-		cc_setondragcomplete("script3069(event_com, event_comid, event_dragtarget, event_dragtargetid, $int5, $component0, $component1, $component2, $component3)");
+		cc_setondragcomplete("br_loadout_rearrange(event_com, event_comid, event_dragtarget, event_dragtargetid, $int5, $component0, $component1, $component2, $component3)");
 		cc_setondrag("br_loadout_hidewarning(event_com, event_comid, $int11)");
 		cc_setdragdeadzone(5);
 		cc_setdragdeadtime(5);

@@ -1,0 +1,12 @@
+// 1445
+[clientscript,duel_options_exclamations](component $component0)
+def_int $int1 = 0;
+cc_deleteall($component0);
+while ($int1 < 13) {
+	cc_create($component0, ^iftype_graphic, $int1);
+	cc_setsize(5, 16, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, calc($int1 * 20), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("exclamation_mark");
+	cc_sethide(true);
+	$int1 = calc($int1 + 1);
+}

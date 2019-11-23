@@ -1,0 +1,4 @@
+// 3185
+[clientscript,league_border_pulse_start](component $component0)
+if_settrans(255, $component0);
+if_setontimer("league_border_pulse($component0, true, 0)", $component0);

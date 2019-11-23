@@ -1,0 +1,282 @@
+// 3218
+[proc,league_info_draw_interface](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, int $int11, int $int12)
+~steelborder($component2, "General League Information", 1);
+~steelborder($component4, "<~league_get_league_name> Information", 1);
+cc_deleteall($component3);
+cc_deleteall($component5);
+cc_deleteall($component8);
+cc_deleteall($component9);
+def_struct $struct13 = enum(int, struct, 2670, %varbit10032);
+def_struct $struct14 = 1239;
+if ($struct13 = null) {
+	return;
+}
+def_enum $enum15 = struct_param($struct14, 886);
+def_enum $enum16 = struct_param($struct14, 887);
+def_enum $enum17 = struct_param($struct13, 888);
+def_enum $enum18 = struct_param($struct13, 889);
+def_int $int19 = struct_param($struct13, 872);
+def_int $int20 = calc(1 + ($int19 - %varbit9535));
+if ($int20 < 1) {
+	$int20 = 1;
+}
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_int $int25 = 0;
+def_int $int26 = 0;
+def_string $string0 = "";
+def_int $int27 = if_getwidth($component3);
+def_int $int28 = if_getwidth($component5);
+def_string $string1 = "<img=13> <~text_device("Click", "Tap")> to open the Leagues blog!<br>";
+def_int $int29 = calc((12 * paraheight($string1, ($int27 - 10), p12_full)) + 10);
+def_string $string2 = "<img=13> <~text_device("Click", "Tap")> to open the <~league_get_league_name> blog!<br>";
+def_string $string3 = "https://osrs.game/Leagues";
+def_string $string4 = "https://osrs.game/Twisted-League";
+def_int $int30 = calc((12 * paraheight($string2, ($int28 - 10), p12_full)) + 10);
+def_int $int31 = $int30;
+if ($int29 > $int30) {
+	$int31 = $int29;
+}
+$int31 = calc($int31 + 10);
+cc_create($component8, ^iftype_graphic, $int22);
+cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(2289);
+def_graphic $graphic32 = 2290;
+def_graphic $graphic33 = 2289;
+if (~on_mobile = false) {
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic32, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic33, null)");
+}
+if_setonop("league_menu_click(event_opindex, $component8, $component9, $int22, $component10)", $component8);
+if_setop(1, "Show Menu", $component8);
+$int22 = 0;
+cc_create($component9, ^iftype_graphic, $int22);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("tradebacking_light");
+$int22 = calc($int22 + 1);
+$int22 = ~steelbox($component9, $int22);
+if_sethide(true, $component9);
+cc_create($component9, ^iftype_rectangle, $int22);
+cc_setsize(calc(if_getwidth($component9) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(255);
+$int22 = calc($int22 + 1);
+cc_create($component9, ^iftype_text, $int22);
+cc_setsize(calc(if_getwidth($component9) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Info");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xc8c8c8);
+cc_settrans(200);
+cc_setop(1, "View Info");
+cc_setonop("script3224($component8, $component9, $component10)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int22 = calc($int22 + 1);
+cc_create($component9, ^iftype_rectangle, $int22);
+cc_setsize(calc(if_getwidth($component9) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 25, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(235);
+$int22 = calc($int22 + 1);
+cc_create($component9, ^iftype_text, $int22);
+cc_setsize(calc(if_getwidth($component9) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 25, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Tasks");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+if (~on_mobile = false) {
+	cc_setonmouseover("league_info_mouseover($component9, $int22)");
+	cc_setonmouseleave("league_info_mouseleave($component9, $int22)");
+}
+cc_setop(1, "View Tasks");
+cc_setonop("script3224($component8, $component9, $component10)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int22 = calc($int22 + 1);
+cc_create($component9, ^iftype_rectangle, $int22);
+cc_setsize(calc(if_getwidth($component9) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 45, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(255);
+$int22 = calc($int22 + 1);
+cc_create($component9, ^iftype_text, $int22);
+cc_setsize(calc(if_getwidth($component9) - 10), 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 45, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Relics");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+if (~on_mobile = false) {
+	cc_setonmouseover("league_info_mouseover($component9, $int22)");
+	cc_setonmouseleave("league_info_mouseleave($component9, $int22)");
+}
+cc_setop(1, "View Relics");
+cc_setonop("script3224($component8, $component9, $component10)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int22 = 0;
+while ($int21 < enum_getoutputcount($enum15)) {
+	if ($int21 = 0) {
+		cc_create($component3, ^iftype_rectangle, $int22);
+		cc_setsize($int27, $int31, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour(^white);
+		cc_setfill(true);
+		cc_settrans(235);
+		$int22 = calc($int22 + 1);
+		cc_create($component3, ^iftype_text, $int22);
+		cc_setposition(5, $int24, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settext($string1);
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_setcolour(0xff981f);
+		cc_setsize(calc($int27 - 10), $int31, ^setsize_abs, ^setsize_abs);
+		if (~on_mobile = false) {
+			cc_setonmouseover("league_info_mouseover($component3, $int22)");
+			cc_setonmouseleave("league_info_mouseleave($component3, $int22)");
+		}
+		cc_setop(1, "Open Link");
+		cc_setonop("league_blog_click($string3)");
+		$int24 = calc($int24 + $int31);
+		$int22 = calc($int22 + 1);
+	}
+	cc_create($component3, ^iftype_rectangle, $int22);
+	cc_setsize($int27, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int24, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	cc_settrans(255);
+	$int22 = calc($int22 + 1);
+	cc_create($component3, ^iftype_text, $int22);
+	cc_settext(enum(int, string, $enum15, $int21));
+	cc_setposition(0, $int24, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(b12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(true);
+	cc_setsize($int27, 20, ^setsize_abs, ^setsize_abs);
+	$int22 = calc($int22 + 1);
+	$int24 = calc($int24 + 20);
+	$string0 = enum(int, string, $enum16, $int21);
+	$string0 = ~script1299($string0, "|", "<br><br>");
+	$int26 = paraheight($string0, calc($int27 - 10), p11_full);
+	cc_create($component3, ^iftype_rectangle, $int22);
+	cc_setsize($int27, calc((12 * $int26) + 15), ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int24, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	cc_settrans(235);
+	$int22 = calc($int22 + 1);
+	cc_create($component3, ^iftype_text, $int22);
+	cc_setposition(5, $int24, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext($string0);
+	cc_settextfont(p11_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 12);
+	cc_setsize(calc($int27 - 10), calc((12 * $int26) + 15), ^setsize_abs, ^setsize_abs);
+	$int22 = calc($int22 + 1);
+	$int24 = calc($int24 + ((12 * $int26) + 15));
+	$int21 = calc($int21 + 1);
+}
+$int21 = 0;
+$int22 = 0;
+$int23 = 5;
+while ($int21 < enum_getoutputcount($enum17)) {
+	if ($int21 = 0) {
+		cc_create($component5, ^iftype_rectangle, $int22);
+		cc_setsize($int28, $int31, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour(^white);
+		cc_setfill(true);
+		cc_settrans(235);
+		$int22 = calc($int22 + 1);
+		cc_create($component5, ^iftype_text, $int22);
+		cc_setposition(5, $int25, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settext($string2);
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_setcolour(0xff981f);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_setsize(calc($int28 - 10), $int31, ^setsize_abs, ^setsize_abs);
+		if (~on_mobile = false) {
+			cc_setonmouseover("league_info_mouseover($component5, $int22)");
+			cc_setonmouseleave("league_info_mouseleave($component5, $int22)");
+		}
+		cc_setop(1, "Open Link");
+		cc_setonop("league_blog_click($string4)");
+		$int25 = calc($int25 + $int31);
+		$int22 = calc($int22 + 1);
+	}
+	cc_create($component5, ^iftype_rectangle, $int22);
+	cc_setsize($int28, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int25, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	cc_settrans(255);
+	$int22 = calc($int22 + 1);
+	cc_create($component5, ^iftype_text, $int22);
+	cc_settext(enum(int, string, $enum17, $int21));
+	cc_setposition(0, $int25, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(b12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(true);
+	cc_setsize($int28, 20, ^setsize_abs, ^setsize_abs);
+	$int22 = calc($int22 + 1);
+	$int25 = calc($int25 + 20);
+	$string0 = enum(int, string, $enum18, $int21);
+	if ($int21 = 0) {
+		if ($int20 = 1) {
+			$string0 = append($string0, "|There is <tostring($int20)> day left in the <~league_get_league_name>!");
+		} else {
+			$string0 = append($string0, "|There are <tostring($int20)> days left in the <~league_get_league_name>!");
+		}
+	}
+	$string0 = ~script1299($string0, "|", "<br><br>");
+	$int26 = paraheight($string0, calc($int28 - 10), p11_full);
+	cc_create($component5, ^iftype_rectangle, $int22);
+	cc_setsize($int28, calc((12 * $int26) + 15), ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int25, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	cc_settrans(235);
+	$int22 = calc($int22 + 1);
+	cc_create($component5, ^iftype_text, $int22);
+	cc_setposition($int23, $int25, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext($string0);
+	cc_settextfont(p11_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 12);
+	cc_setsize(calc($int28 - 10), calc((12 * $int26) + 15), ^setsize_abs, ^setsize_abs);
+	$int22 = calc($int22 + 1);
+	$int25 = calc($int25 + ((12 * $int26) + 15));
+	$int21 = calc($int21 + 1);
+}
+cc_deleteall($component6);
+cc_deleteall($component7);
+def_int $int34 = if_getheight($component3);
+if ($int24 > $int34) {
+	if_setscrollsize(0, $int24, $component3);
+} else {
+	if_setscrollsize(0, 0, $component3);
+}
+~scrollbar_vertical($component6, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $int35 = if_getheight($component5);
+if ($int25 > $int35) {
+	if_setscrollsize(0, $int25, $component5);
+} else {
+	if_setscrollsize(0, 0, $component5);
+}
+~scrollbar_vertical($component7, $component5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

@@ -1,0 +1,52 @@
+// 3216
+[proc,league_task_is_completed](struct $struct0)(int)
+def_struct $struct1 = enum(int, struct, 2670, %varbit10032);
+if ($struct1 = null) {
+	return(^false);
+}
+def_enum $enum2 = struct_param($struct1, 869);
+if (($enum2 = null) | (enum(struct, boolean, $enum2, $struct0) = false)) {
+	return(^false);
+}
+def_int $int3 = struct_param($struct0, 873);
+if (($int3 = -1) | ($int3 < 0)) {
+	return(^false);
+}
+def_int $int4 = calc($int3 % 32);
+def_int $int5 = calc($int3 / 32);
+switch_int ($int5) {
+	case 0 :
+		return(testbit(%var2616, $int4));
+	case 1 :
+		return(testbit(%var2617, $int4));
+	case 2 :
+		return(testbit(%var2618, $int4));
+	case 3 :
+		return(testbit(%var2619, $int4));
+	case 4 :
+		return(testbit(%var2620, $int4));
+	case 5 :
+		return(testbit(%var2621, $int4));
+	case 6 :
+		return(testbit(%var2622, $int4));
+	case 7 :
+		return(testbit(%var2623, $int4));
+	case 8 :
+		return(testbit(%var2624, $int4));
+	case 9 :
+		return(testbit(%var2625, $int4));
+	case 10 :
+		return(testbit(%var2626, $int4));
+	case 11 :
+		return(testbit(%var2627, $int4));
+	case 12 :
+		return(testbit(%var2628, $int4));
+	case 13 :
+		return(testbit(%var2629, $int4));
+	case 14 :
+		return(testbit(%var2630, $int4));
+	case 15 :
+		return(testbit(%var2631, $int4));
+	case default :
+		return(^false);
+}

@@ -1,0 +1,15 @@
+// 3232
+[proc,league_side_panel_hudtoggle](component $component0, component $component1)
+def_string $string0 = "Enable the overlay that shows your active Relics.";
+if (%varbit9528 = 1) {
+	cc_setgraphic("options_radio_buttons,1");
+	if_setop(1, "Disable", $component0);
+	$string0 = "Disable the overlay that shows your active Relics.";
+} else {
+	cc_setgraphic("options_radio_buttons,2");
+	if_setop(1, "Enable", $component0);
+}
+if (~on_mobile = false) {
+	.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component1, $string0, 25, 190)");
+}
+%varcint2 = 0;

@@ -1,0 +1,34 @@
+// 838
+[proc,scrollbar_vertical_repaint](component $component0, graphic $graphic1, graphic $graphic2, graphic $graphic3, graphic $graphic4, graphic $graphic5, graphic $graphic6, int $int7)
+def_int $int8 = 0;
+def_int $int9 = 0;
+if ($int7 = 1) {
+	$int8, $int9 = 235, 180;
+}
+if (~on_mobile = true) {
+	$int8, $int9 = 200, 130;
+}
+if (cc_find($component0, 0) = ^true) {
+	cc_setgraphic($graphic1);
+	cc_settrans($int8);
+}
+if (cc_find($component0, 1) = ^true) {
+	cc_setgraphic($graphic3);
+	cc_settrans($int8);
+}
+if (cc_find($component0, 2) = ^true) {
+	cc_setgraphic($graphic2);
+	cc_settrans($int8);
+}
+if (cc_find($component0, 3) = ^true) {
+	cc_setgraphic($graphic4);
+	cc_settrans($int8);
+}
+if (cc_find($component0, 4) = ^true) {
+	cc_setgraphic($graphic5);
+	cc_settrans($int9);
+}
+if (cc_find($component0, 5) = ^true) {
+	cc_setgraphic($graphic6);
+	cc_settrans($int9);
+}

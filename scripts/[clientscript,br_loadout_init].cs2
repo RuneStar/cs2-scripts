@@ -144,5 +144,5 @@ if ($int13 > if_getheight($component3)) {
 if_setscrollpos(0, 0, $component3);
 ~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~br_loadout_drawloadout($component1, $component2, $component5, $component6);
-if_setonvartransmit("script1363($component0, $component1, $component2, $component5, $component6){var2382, var2383, var2384, var2385, var2386, var2387, var2388, var2389, var1373, var1573, var1704, var1666, var309}", $component0);
+if_setonvartransmit("br_loadout_drawloadout_request($component0, $component1, $component2, $component5, $component6){var2382, var2383, var2384, var2385, var2386, var2387, var2388, var2389, var1373, var1573, var1704, var1666, var309}", $component0);
 if_setontimer(null, $component0);

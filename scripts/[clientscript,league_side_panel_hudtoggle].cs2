@@ -1,0 +1,5 @@
+// 3230
+[clientscript,league_side_panel_hudtoggle](component $component0, int $int1, int $int2, component $component3)
+if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
+	~league_side_panel_hudtoggle($component0, $component3);
+}

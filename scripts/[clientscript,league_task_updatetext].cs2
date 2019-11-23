@@ -1,0 +1,5 @@
+// 3208
+[clientscript,league_task_updatetext](component $component0, int $int1, enum $enum2)
+if (cc_find($component0, $int1) = ^true) {
+	~league_task_filter_updatetext($enum2);
+}

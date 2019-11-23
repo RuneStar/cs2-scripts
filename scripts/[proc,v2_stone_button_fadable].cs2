@@ -1,0 +1,27 @@
+// 2274
+[proc,v2_stone_button_fadable](component $component0, int $int1)(int, int)
+if ($int1 <= 0) {
+	cc_deleteall($component0);
+	$int1 = 0;
+}
+~create_graphic($component0, $int1, "tradebacking", 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 2, 2, ^setsize_minus, ^setsize_minus);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "tradebacking", 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 2, 2, ^setsize_minus, ^setsize_minus);
+def_int $int2 = $int1;
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,0", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,1", 0, 0, ^setpos_abs_right, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,2", 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 9, 9, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,3", 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 9, 9, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,4", 0, 0, ^setpos_abs_left, ^setpos_abs_centre, 9, 18, ^setsize_abs, ^setsize_minus);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,5", 0, 0, ^setpos_abs_centre, ^setpos_abs_top, 18, 9, ^setsize_minus, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,6", 0, 0, ^setpos_abs_right, ^setpos_abs_centre, 9, 18, ^setsize_abs, ^setsize_minus);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,7", 0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, 18, 9, ^setsize_minus, ^setsize_abs);
+return($int2, calc($int1 + 1));

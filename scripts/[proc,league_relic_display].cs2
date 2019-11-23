@@ -1,0 +1,9 @@
+// 3199
+[proc,league_relic_display](component $component0, component $component1)
+if (~league_world = 0) {
+	return;
+}
+switch_int (%varbit10032) {
+	case 1 :
+		~league_relic_display_twisted($component0, $component1);
+}

@@ -1,0 +1,22 @@
+// 3227
+[proc,league_side_panel_update_bar](component $component0, int $int1)
+if ($int1 = -1) {
+	$int1 = %var2615;
+}
+def_struct $struct2 = ~script3180(0);
+def_int $int3 = -1;
+if ($struct2 ! null) {
+	$int3 = struct_param($struct2, 877);
+} else {
+	$int3 = 400;
+}
+def_int $int4 = -1;
+if (($int3 ! -1) & ($int3 > 0)) {
+	$int4 = scale($int1, $int3, 130);
+} else {
+	$int4 = 130;
+}
+if (if_find($component0) = true) {
+	cc_setsize($int4, 0, ^setsize_abs, ^setsize_minus);
+}
+~league_side_panel_update_text(656:14, 656:11, 656:13, $int1, $int3);

@@ -1,0 +1,8 @@
+// 3229
+[clientscript,league_side_panel_button_hover](component $component0, int $int1)
+cc_deleteall($component0);
+if ($int1 = 1) {
+	~v2_stone_button_in_filled($component0);
+} else {
+	~v2_stone_button_filled($component0);
+}

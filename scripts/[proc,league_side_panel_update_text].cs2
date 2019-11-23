@@ -1,0 +1,18 @@
+// 3228
+[proc,league_side_panel_update_text](component $component0, component $component1, component $component2, int $int3, int $int4)
+def_int $int5 = calc($int4 - $int3);
+if (($int5 <= 0) & (if_find($component0) = true)) {
+	if (%varbit10053 = 0) {
+		cc_settext("<col=ffffff>You can unlock a new relic!</col>");
+	} else {
+		cc_settext("<col=ffffff>You have unlocked all relics!</col>");
+	}
+} else if (if_find($component0) = true) {
+	cc_settext("<col=ffffff><tostring($int5)></col> points until next relic.");
+}
+if (if_find($component1) = true) {
+	cc_settext(tostring($int3));
+}
+if (if_find($component2) = true) {
+	cc_settext(tostring(%varbit10046));
+}
