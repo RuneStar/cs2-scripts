@@ -16,8 +16,8 @@ def_string $string10 = "-";
 def_int $int3 = 25;
 def_int $int4 = 40;
 def_int $int5 = 10;
-def_graphic $graphic6 = 2249;
-def_graphic $graphic7 = 2250;
+def_graphic $graphic6 = "rightarrow_small_stone,0";
+def_graphic $graphic7 = "rightarrow_small_stone,1";
 if (~on_mobile = true) {
 	$int3 = 35;
 }
@@ -181,7 +181,7 @@ if (string_length($string0) > 0) {
 	if ((cc_find(52:19, $int0) = ^true) & (.cc_find(52:10, $int0) = ^true)) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize(32, 21, ^setsize_abs, ^setsize_abs);
-		cc_setgraphic(2249);
+		cc_setgraphic("rightarrow_small_stone,0");
 		cc_settrans(0);
 		.cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		.cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);

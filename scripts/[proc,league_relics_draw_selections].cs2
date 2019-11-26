@@ -32,9 +32,9 @@ def_int $int19 = 0;
 cc_create($component10, ^iftype_graphic, $int19);
 cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic(2289);
-def_graphic $graphic20 = 2290;
-def_graphic $graphic21 = 2289;
+cc_setgraphic("menu_buttons,0");
+def_graphic $graphic20 = "menu_buttons,1";
+def_graphic $graphic21 = "menu_buttons,0";
 if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic20, null)");
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic21, null)");
@@ -176,7 +176,7 @@ while ($int43 < $int15) {
 		cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("tradebacking_dark");
 		cc_settiling(true);
-		$graphic29, $int30, $string0, $int31, $int32, $int38, $colour34, $colour36 = 2353, 255, "Locked", 0, 0, 0, null, null;
+		$graphic29, $int30, $string0, $int31, $int32, $int38, $colour34, $colour36 = "league_relics,0", 255, "Locked", 0, 0, 0, null, null;
 	}
 	cc_create($component0, ^iftype_text, calc($int43 + 1));
 	cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
@@ -239,7 +239,7 @@ while ($int43 < $int15) {
 		cc_create($component3, ^iftype_graphic, $int45);
 		cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc(($int27 + ($int24 / 2)) - 17), calc(($int26 + ($int25 / 2)) - 33), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic(2385);
+		cc_setgraphic("league_relics_outline");
 		if ($int30 ! -1) {
 			cc_settrans($int30);
 		} else {

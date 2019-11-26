@@ -33,13 +33,13 @@ if (cc_find($component0, 0) = ^false) {
 	cc_create($component0, ^iftype_graphic, $int9);
 	cc_setsize(calc($int13 - 4), 27, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic(2387);
+	cc_setgraphic("league_progress_bar,1");
 	cc_settiling(true);
 	$int9 = calc($int9 + 1);
 	cc_create($component0, ^iftype_graphic, $int9);
 	cc_setsize(0, 27, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic(2386);
+	cc_setgraphic("league_progress_bar,0");
 	cc_settiling(true);
 	$int9 = calc($int9 + 1);
 	if ($int3 = 0) {
@@ -62,7 +62,7 @@ if (cc_find($component0, 0) = ^false) {
 			cc_create($component0, ^iftype_graphic, $int9);
 			cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
-			cc_setgraphic(2354);
+			cc_setgraphic("league_relics,1");
 			$int9 = calc($int9 + 1);
 		}
 	} else {
@@ -158,8 +158,8 @@ if (($int10 ! -1) & (cc_find($component0, $int10) = ^true)) {
 }
 if (($int3 = 0) & (cc_find($component0, 5) = ^true)) {
 	if (%var2615 >= $int12) {
-		cc_setgraphic(2353);
+		cc_setgraphic("league_relics,0");
 	} else {
-		cc_setgraphic(2354);
+		cc_setgraphic("league_relics,1");
 	}
 }

@@ -43,9 +43,9 @@ $int31 = calc($int31 + 10);
 cc_create($component8, ^iftype_graphic, $int22);
 cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic(2289);
-def_graphic $graphic32 = 2290;
-def_graphic $graphic33 = 2289;
+cc_setgraphic("menu_buttons,0");
+def_graphic $graphic32 = "menu_buttons,1";
+def_graphic $graphic33 = "menu_buttons,0";
 if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic32, null)");
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic33, null)");

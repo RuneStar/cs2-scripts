@@ -15,9 +15,9 @@ def_int $int16 = 0;
 cc_create($component12, ^iftype_graphic, $int16);
 cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic(2289);
-def_graphic $graphic17 = 2290;
-def_graphic $graphic18 = 2289;
+cc_setgraphic("menu_buttons,0");
+def_graphic $graphic17 = "menu_buttons,1";
+def_graphic $graphic18 = "menu_buttons,0";
 if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic17, null)");
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic18, null)");
@@ -102,8 +102,8 @@ def_int $int26 = 255;
 if (~on_mobile = true) {
 	$int25 = scale(8, 5, $int25);
 }
-def_graphic $graphic27 = 2313;
-def_graphic $graphic28 = 2312;
+def_graphic $graphic27 = "open_buttons_small,1";
+def_graphic $graphic28 = "open_buttons_small,0";
 def_int $bit29 = null;
 def_int $int30 = -1;
 def_string $string0 = "null";
@@ -126,12 +126,12 @@ while ($int21 < $int20) {
 		if ($int21 = $int0) {
 			$int32 = paraheight($string1, calc(if_getwidth($component4) - 10), p11_full);
 			cc_setsize(0, calc($int25 + ((10 * $int32) + 10)), ^setsize_minus, ^setsize_abs);
-			$graphic27 = 2315;
-			$graphic28 = 2314;
+			$graphic27 = "open_buttons_small,3";
+			$graphic28 = "open_buttons_small,2";
 		} else {
 			cc_setsize(0, $int25, ^setsize_minus, ^setsize_abs);
-			$graphic27 = 2313;
-			$graphic28 = 2312;
+			$graphic27 = "open_buttons_small,1";
+			$graphic28 = "open_buttons_small,0";
 		}
 		cc_setposition(0, $int24, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_setcolour(^white);
