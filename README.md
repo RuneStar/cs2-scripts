@@ -3041,6 +3041,7 @@
 [**3038**](scripts/[clientscript,adventurepath_side_settings_back_over].cs2) `[clientscript,adventurepath_side_settings_back_over]`  
 [**3039**](scripts/[clientscript,adventurepath_side_settings_back_op].cs2) `[clientscript,adventurepath_side_settings_back_op]`  
 [**3040**](scripts/script3040.cs2)  
+[**3041**](scripts/script3041.cs2)  
 [**3042**](scripts/[proc,poh_tablets_buildbutton].cs2) `[proc,poh_tablets_buildbutton]`  
 [**3043**](scripts/[clientscript,poh_tablets_updatebutton].cs2) `[clientscript,poh_tablets_updatebutton]`  
 [**3044**](scripts/[clientscript,poh_tablets_hidehighlight].cs2) `[clientscript,poh_tablets_hidehighlight]`  
