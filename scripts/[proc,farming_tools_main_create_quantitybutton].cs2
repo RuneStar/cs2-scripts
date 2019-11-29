@@ -1,8 +1,8 @@
 // 2747
-script2747(component $component0, string $string0, boolean $boolean1, int $int2)
+[proc,farming_tools_main_create_quantitybutton](component $component0, string $string0, boolean $boolean1, int $int2)
 cc_deleteall($component0);
 def_int $int3 = 0;
-if_setonvartransmit("script2745($component0, $string0, false, $int2){var675}", $component0);
+if_setonvartransmit("farming_tools_main_create_quantitybutton($component0, $string0, false, $int2){var675}", $component0);
 if (%varbit7792 = $int2) {
 	$int3 = ~options_button_on($component0, $int3);
 	if_setonmouserepeat(null, $component0);
@@ -11,8 +11,8 @@ if (%varbit7792 = $int2) {
 	if_setonop(null, $component0);
 } else {
 	$int3 = ~options_button_off($component0, $int3);
-	if_setonmouserepeat("script2745($component0, $string0, true, $int2)", $component0);
-	if_setonmouseleave("script2745($component0, $string0, false, $int2)", $component0);
+	if_setonmouserepeat("farming_tools_main_create_quantitybutton($component0, $string0, true, $int2)", $component0);
+	if_setonmouseleave("farming_tools_main_create_quantitybutton($component0, $string0, false, $int2)", $component0);
 	if_setopbase("<col=ff9040><$string0></col>", $component0);
 	if_setop(1, "Default Quantity:", $component0);
 	if_setonop("script2746(event_opindex, $int2)", $component0);

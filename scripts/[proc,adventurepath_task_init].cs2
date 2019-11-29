@@ -78,7 +78,7 @@ if_setonmouseleave("adventurepath_mouseleave_path_reward($int1, $component13, $s
 cc_setop(1, "Show <col=ff9040>path reward");
 $int31 = 0;
 def_int $int37 = ~adventurepath_return_path_length(%var2357);
-def_int $int38 = ~script2968(%var2357);
+def_int $int38 = ~adventurepath_return_path_tasks_done(%var2357);
 if ($int37 <= 0) {
 	return;
 }

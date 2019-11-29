@@ -1,5 +1,5 @@
 // 1617
-script1617(component $component0)
+[proc,raids_storage_side_dismiss_enable](component $component0)
 def_int $int1 = ~options_button_off($component0, 0);
 cc_create($component0, ^iftype_text, $int1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

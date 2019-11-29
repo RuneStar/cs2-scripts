@@ -476,7 +476,7 @@
 [**473**](scripts/[clientscript,quickprayer_close_timeout].cs2) `[clientscript,quickprayer_close_timeout]`  
 [**474**](scripts/script474.cs2)  
 [**475**](scripts/[proc,pest_rewards_divider].cs2) `[proc,pest_rewards_divider]`  
-[**476**](scripts/script476.cs2)  
+[**476**](scripts/[clientscript,br_hud_writetimer].cs2) `[clientscript,br_hud_writetimer]`  
 [**477**](scripts/[clientscript,ntk_textbox].cs2) `[clientscript,ntk_textbox]`  
 [**478**](scripts/[clientscript,tournament_sidepanel_setactive].cs2) `[clientscript,tournament_sidepanel_setactive]`  
 [**479**](scripts/[clientscript,ntk_timer_resynch].cs2) `[clientscript,ntk_timer_resynch]`  
@@ -877,7 +877,7 @@
 [**874**](scripts/[clientscript,wom_telescope_borders].cs2) `[clientscript,wom_telescope_borders]`  
 [**875**](scripts/[proc,wom_telescope_borders].cs2) `[proc,wom_telescope_borders]`  
 [**876**](scripts/[clientscript,cc_outline_on].cs2) `[clientscript,cc_outline_on]`  
-[**877**](scripts/script877.cs2)  
+[**877**](scripts/[proc,br_hud_writetimer].cs2) `[proc,br_hud_writetimer]`  
 [**878**](scripts/[clientscript,boardgames_rank_draughts].cs2) `[clientscript,boardgames_rank_draughts]`  
 [**879**](scripts/[clientscript,boardgames_rank_runelink].cs2) `[clientscript,boardgames_rank_runelink]`  
 [**880**](scripts/[clientscript,boardgames_rank_runeversi].cs2) `[clientscript,boardgames_rank_runeversi]`  
@@ -1479,7 +1479,7 @@
 [**1476**](scripts/[clientscript,hidey_buildlists].cs2) `[clientscript,hidey_buildlists]`  
 [**1477**](scripts/[proc,hidey_buildlists].cs2) `[proc,hidey_buildlists]`  
 [**1478**](scripts/[proc,hidey_build_tab].cs2) `[proc,hidey_build_tab]`  
-[**1479**](scripts/script1479.cs2)  
+[**1479**](scripts/[proc,hh_get_status].cs2) `[proc,hh_get_status]`  
 [**1480**](scripts/[clientscript,hidey_tabbuttons].cs2) `[clientscript,hidey_tabbuttons]`  
 [**1481**](scripts/[proc,hidey_tabbuttons].cs2) `[proc,hidey_tabbuttons]`  
 [**1482**](scripts/[proc,hidey_tabbuttons_draw].cs2) `[proc,hidey_tabbuttons_draw]`  
@@ -1527,7 +1527,7 @@
 [**1524**](scripts/script1524.cs2)  
 [**1525**](scripts/[proc,raids_partydetails_setsort].cs2) `[proc,raids_partydetails_setsort]`  
 [**1526**](scripts/[proc,raids_partydetails_sort].cs2) `[proc,raids_partydetails_sort]`  
-[**1527**](scripts/script1527.cs2)  
+[**1527**](scripts/[proc,raids_partydetails_sortbutton_draw].cs2) `[proc,raids_partydetails_sortbutton_draw]`  
 [**1528**](scripts/script1528.cs2)  
 [**1529**](scripts/[clientscript,raids_partydetails_clicksort].cs2) `[clientscript,raids_partydetails_clicksort]`  
 [**1530**](scripts/script1530.cs2)  
@@ -1556,7 +1556,7 @@
 [**1553**](scripts/script1553.cs2)  
 [**1554**](scripts/[proc,raids_sidepanel_setsort].cs2) `[proc,raids_sidepanel_setsort]`  
 [**1555**](scripts/[proc,raids_sidepanel_sort].cs2) `[proc,raids_sidepanel_sort]`  
-[**1556**](scripts/script1556.cs2)  
+[**1556**](scripts/[proc,raids_sidepanel_sortbutton_draw].cs2) `[proc,raids_sidepanel_sortbutton_draw]`  
 [**1557**](scripts/[clientscript,raids_sidepanel_clicksort].cs2) `[clientscript,raids_sidepanel_clicksort]`  
 [**1558**](scripts/script1558.cs2)  
 [**1559**](scripts/script1559.cs2)  
@@ -1572,7 +1572,7 @@
 [**1569**](scripts/[clientscript,raids_partylist_reset].cs2) `[clientscript,raids_partylist_reset]`  
 [**1570**](scripts/[proc,raids_partylist_setsort].cs2) `[proc,raids_partylist_setsort]`  
 [**1571**](scripts/[proc,raids_partylist_sort].cs2) `[proc,raids_partylist_sort]`  
-[**1572**](scripts/script1572.cs2)  
+[**1572**](scripts/[proc,raids_partylist_sortbutton_draw].cs2) `[proc,raids_partylist_sortbutton_draw]`  
 [**1573**](scripts/[clientscript,raids_partylist_clicksort].cs2) `[clientscript,raids_partylist_clicksort]`  
 [**1574**](scripts/script1574.cs2)  
 [**1575**](scripts/script1575.cs2)  
@@ -1617,9 +1617,9 @@
 [**1614**](scripts/[clientscript,raids_storage_side_init].cs2) `[clientscript,raids_storage_side_init]`  
 [**1615**](scripts/[clientscript,raids_storage_side_setup].cs2) `[clientscript,raids_storage_side_setup]`  
 [**1616**](scripts/[proc,raids_storage_side_setup].cs2) `[proc,raids_storage_side_setup]`  
-[**1617**](scripts/script1617.cs2)  
+[**1617**](scripts/[proc,raids_storage_side_dismiss_enable].cs2) `[proc,raids_storage_side_dismiss_enable]`  
 [**1618**](scripts/[clientscript,raids_storage_side_dismiss].cs2) `[clientscript,raids_storage_side_dismiss]`  
-[**1619**](scripts/script1619.cs2)  
+[**1619**](scripts/[clientscript,raids_storage_side_dismiss_reset].cs2) `[clientscript,raids_storage_side_dismiss_reset]`  
 [**1620**](scripts/[clientscript,raids_storage_side_items].cs2) `[clientscript,raids_storage_side_items]`  
 [**1621**](scripts/[proc,raids_storage_side_items].cs2) `[proc,raids_storage_side_items]`  
 [**1622**](scripts/[proc,raids_storage_side_private_drawitem].cs2) `[proc,raids_storage_side_private_drawitem]`  
@@ -1722,9 +1722,9 @@
 [**1719**](scripts/[clientscript,worldmap_toggles_vartransmit].cs2) `[clientscript,worldmap_toggles_vartransmit]`  
 [**1720**](scripts/[proc,worldmap_toggles_set].cs2) `[proc,worldmap_toggles_set]`  
 [**1721**](scripts/[proc,worldmap_applyzoom].cs2) `[proc,worldmap_applyzoom]`  
-[**1722**](scripts/script1722.cs2)  
-[**1723**](scripts/script1723.cs2)  
-[**1724**](scripts/script1724.cs2)  
+[**1722**](scripts/[proc,worldmap_zoombutton_build].cs2) `[proc,worldmap_zoombutton_build]`  
+[**1723**](scripts/[clientscript,worldmap_zoombutton_draw].cs2) `[clientscript,worldmap_zoombutton_draw]`  
+[**1724**](scripts/[proc,worldmap_zoombutton_draw].cs2) `[proc,worldmap_zoombutton_draw]`  
 [**1725**](scripts/[clientscript,worldmap_zoom_scroll].cs2) `[clientscript,worldmap_zoom_scroll]`  
 [**1726**](scripts/[clientscript,worldmap_zoom_adjust].cs2) `[clientscript,worldmap_zoom_adjust]`  
 [**1727**](scripts/[proc,worldmap_zoom_adjust].cs2) `[proc,worldmap_zoom_adjust]`  
@@ -2335,7 +2335,7 @@
 [**2332**](scripts/[clientscript,tob_partydetails_autorefresh].cs2) `[clientscript,tob_partydetails_autorefresh]`  
 [**2333**](scripts/[proc,tob_partydetails_setsort].cs2) `[proc,tob_partydetails_setsort]`  
 [**2334**](scripts/[proc,tob_partydetails_sort].cs2) `[proc,tob_partydetails_sort]`  
-[**2335**](scripts/script2335.cs2)  
+[**2335**](scripts/[proc,tob_partydetails_sortbutton_draw].cs2) `[proc,tob_partydetails_sortbutton_draw]`  
 [**2336**](scripts/[clientscript,tob_partydetails_clicksort].cs2) `[clientscript,tob_partydetails_clicksort]`  
 [**2337**](scripts/[clientscript,tob_partylist_init].cs2) `[clientscript,tob_partylist_init]`  
 [**2338**](scripts/[clientscript,tob_partylist_setpartybutton].cs2) `[clientscript,tob_partylist_setpartybutton]`  
@@ -2398,7 +2398,7 @@
 [**2395**](scripts/script2395.cs2)  
 [**2396**](scripts/[clientscript,orbs_update_store].cs2) `[clientscript,orbs_update_store]`  
 [**2397**](scripts/[clientscript,recurring_membership].cs2) `[clientscript,recurring_membership]`  
-[**2398**](scripts/script2398.cs2)  
+[**2398**](scripts/[proc,recurring_membership].cs2) `[proc,recurring_membership]`  
 [**2399**](scripts/[proc,openurl_raw].cs2) `[proc,openurl_raw]`  
 [**2400**](scripts/[clientscript,options_fps_init].cs2) `[clientscript,options_fps_init]`  
 [**2401**](scripts/[clientscript,options_fps_op].cs2) `[clientscript,options_fps_op]`  
@@ -2745,9 +2745,9 @@
 [**2742**](scripts/script2742.cs2)  
 [**2743**](scripts/[clientscript,longscroll_init].cs2) `[clientscript,longscroll_init]`  
 [**2744**](scripts/script2744.cs2)  
-[**2745**](scripts/script2745.cs2)  
+[**2745**](scripts/[clientscript,farming_tools_main_create_quantitybutton].cs2) `[clientscript,farming_tools_main_create_quantitybutton]`  
 [**2746**](scripts/script2746.cs2)  
-[**2747**](scripts/script2747.cs2)  
+[**2747**](scripts/[proc,farming_tools_main_create_quantitybutton].cs2) `[proc,farming_tools_main_create_quantitybutton]`  
 [**2748**](scripts/[clientscript,farming_tools_main_recreate].cs2) `[clientscript,farming_tools_main_recreate]`  
 [**2749**](scripts/[proc,farming_tools_main_recreate].cs2) `[proc,farming_tools_main_recreate]`  
 [**2750**](scripts/[clientscript,farming_tools_side_recreate].cs2) `[clientscript,farming_tools_side_recreate]`  
@@ -2936,8 +2936,8 @@
 [**2933**](scripts/[proc,skillmain_button_wipe].cs2) `[proc,skillmain_button_wipe]`  
 [**2934**](scripts/[clientscript,silver_crafting_mouseeffect].cs2) `[clientscript,silver_crafting_mouseeffect]`  
 [**2935**](scripts/script2935.cs2)  
-[**2936**](scripts/script2936.cs2)  
-[**2937**](scripts/script2937.cs2)  
+[**2936**](scripts/[clientscript,silver_crafting_jewellerytitle_draw].cs2) `[clientscript,silver_crafting_jewellerytitle_draw]`  
+[**2937**](scripts/[proc,silver_crafting_jewellerytitle_draw].cs2) `[proc,silver_crafting_jewellerytitle_draw]`  
 [**2938**](scripts/[proc,silver_crafting_jewellery_setup].cs2) `[proc,silver_crafting_jewellery_setup]`  
 [**2939**](scripts/[clientscript,silver_crafting_jewellery_draw].cs2) `[clientscript,silver_crafting_jewellery_draw]`  
 [**2940**](scripts/[proc,silver_crafting_jewellery_draw].cs2) `[proc,silver_crafting_jewellery_draw]`  
@@ -2964,11 +2964,11 @@
 [**2961**](scripts/[proc,adventurepath_return_reward_p2p].cs2) `[proc,adventurepath_return_reward_p2p]`  
 [**2962**](scripts/[proc,adventurepath_return_kit].cs2) `[proc,adventurepath_return_kit]`  
 [**2963**](scripts/[proc,adventurepath_return_path_status].cs2) `[proc,adventurepath_return_path_status]`  
-[**2964**](scripts/script2964.cs2)  
-[**2965**](scripts/script2965.cs2)  
+[**2964**](scripts/[proc,adventurepath_return_path_reward_f2p].cs2) `[proc,adventurepath_return_path_reward_f2p]`  
+[**2965**](scripts/[proc,adventurepath_return_path_reward_p2p].cs2) `[proc,adventurepath_return_path_reward_p2p]`  
 [**2966**](scripts/[proc,adventurepath_return_voucher].cs2) `[proc,adventurepath_return_voucher]`  
 [**2967**](scripts/[proc,adventurepath_return_path_length].cs2) `[proc,adventurepath_return_path_length]`  
-[**2968**](scripts/script2968.cs2)  
+[**2968**](scripts/[proc,adventurepath_return_path_tasks_done].cs2) `[proc,adventurepath_return_path_tasks_done]`  
 [**2969**](scripts/[proc,adventurepath_return_task_focus].cs2) `[proc,adventurepath_return_task_focus]`  
 [**2970**](scripts/[proc,adventurepath_set_task_focus].cs2) `[proc,adventurepath_set_task_focus]`  
 [**2971**](scripts/[proc,adventurepath_return_task_recommended].cs2) `[proc,adventurepath_return_task_recommended]`  
@@ -3078,10 +3078,10 @@
 [**3075**](scripts/[proc,br_loadout_get_worn].cs2) `[proc,br_loadout_get_worn]`  
 [**3076**](scripts/[proc,br_loadout_set_inv].cs2) `[proc,br_loadout_set_inv]`  
 [**3077**](scripts/[proc,br_loadout_set_worn].cs2) `[proc,br_loadout_set_worn]`  
-[**3078**](scripts/script3078.cs2)  
-[**3079**](scripts/script3079.cs2)  
-[**3080**](scripts/script3080.cs2)  
-[**3081**](scripts/script3081.cs2)  
+[**3078**](scripts/[clientscript,br_tournament_button_init].cs2) `[clientscript,br_tournament_button_init]`  
+[**3079**](scripts/[clientscript,br_tournament_button_reset].cs2) `[clientscript,br_tournament_button_reset]`  
+[**3080**](scripts/[proc,br_tournament_button_reset].cs2) `[proc,br_tournament_button_reset]`  
+[**3081**](scripts/[clientscript,br_tournament_button_op].cs2) `[clientscript,br_tournament_button_op]`  
 [**3082**](scripts/script3082.cs2)  
 [**3083**](scripts/script3083.cs2)  
 [**3084**](scripts/script3084.cs2)  
@@ -3224,7 +3224,7 @@
 [**3221**](scripts/[clientscript,league_info_mouseleave].cs2) `[clientscript,league_info_mouseleave]`  
 [**3222**](scripts/[clientscript,league_blog_click].cs2) `[clientscript,league_blog_click]`  
 [**3223**](scripts/[clientscript,league_menu_click].cs2) `[clientscript,league_menu_click]`  
-[**3224**](scripts/script3224.cs2)  
+[**3224**](scripts/[clientscript,league_menu_frame_click].cs2) `[clientscript,league_menu_frame_click]`  
 [**3225**](scripts/[clientscript,league_side_panel_init].cs2) `[clientscript,league_side_panel_init]`  
 [**3226**](scripts/[clientscript,league_side_panel_update_bar].cs2) `[clientscript,league_side_panel_update_bar]`  
 [**3227**](scripts/[proc,league_side_panel_update_bar].cs2) `[proc,league_side_panel_update_bar]`  

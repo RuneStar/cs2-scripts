@@ -12,7 +12,7 @@ if (if_gethide($component2) = false) {
 } else {
 	if_sethide(false, $component2);
 	if_sethide(false, $component4);
-	if_setonclick("script3224($component1, $component2, $component4)", $component4);
+	if_setonclick("league_menu_frame_click($component1, $component2, $component4)", $component4);
 	if_setnoclickthrough(true, $component2);
 	$int5 = 1;
 }

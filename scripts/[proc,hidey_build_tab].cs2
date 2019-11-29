@@ -33,13 +33,13 @@ while ($loc18 ! null) {
 	if ($int8 < 20) {
 		$int8 = 20;
 	}
-	$int11, $int13 = ~script1479($loc18, $int3, $int4, $int5);
+	$int11, $int13 = ~hh_get_status($loc18, $int3, $int4, $int5);
 	$int17 = calc($int16 + 1);
 	$loc18 = enum(int, loc, $enum2, $int17);
 	if ($loc18 ! null) {
 		$string1 = enum(loc, string, 1531, $loc18);
 		$int9 = calc((paraheight($string1, 143, p12_full) * 12) + 9);
-		$int12, $int14 = ~script1479($loc18, $int3, $int4, $int5);
+		$int12, $int14 = ~hh_get_status($loc18, $int3, $int4, $int5);
 		if ($int8 < $int9) {
 			$int8 = $int9;
 		}

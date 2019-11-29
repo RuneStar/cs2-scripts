@@ -1,5 +1,5 @@
 // 2937
-script2937(component $component0, obj $obj1, string $string0, string $string1)
+[proc,silver_crafting_jewellerytitle_draw](component $component0, obj $obj1, string $string0, string $string1)
 cc_deleteall($component0);
 if (inv_total(inv, $obj1) > 0) {
 	return;

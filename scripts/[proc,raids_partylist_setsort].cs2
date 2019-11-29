@@ -1,12 +1,12 @@
 // 1570
 [proc,raids_partylist_setsort]
-~script1572(499:7, 0, 1, "Sort by members");
-~script1572(499:8, 2, 3, "Sort by target size");
-~script1572(499:9, 4, 5, "Sort by leader name");
-~script1572(499:10, 6, 7, "Sort by preferred combat level");
-~script1572(499:11, 8, 9, "Sort by preferred skill total");
-~script1572(499:12, 10, 11, "Sort by challenge mode");
-~script1572(499:13, 12, 13, "Sort by age");
+~raids_partylist_sortbutton_draw(499:7, 0, 1, "Sort by members");
+~raids_partylist_sortbutton_draw(499:8, 2, 3, "Sort by target size");
+~raids_partylist_sortbutton_draw(499:9, 4, 5, "Sort by leader name");
+~raids_partylist_sortbutton_draw(499:10, 6, 7, "Sort by preferred combat level");
+~raids_partylist_sortbutton_draw(499:11, 8, 9, "Sort by preferred skill total");
+~raids_partylist_sortbutton_draw(499:12, 10, 11, "Sort by challenge mode");
+~raids_partylist_sortbutton_draw(499:13, 12, 13, "Sort by age");
 def_int $intarray0(40);
 def_int $int0 = 0;
 def_int $int1 = 0;

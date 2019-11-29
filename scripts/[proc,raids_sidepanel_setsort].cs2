@@ -1,8 +1,8 @@
 // 1554
 [proc,raids_sidepanel_setsort](int $int0)
-~script1556(500:7, 0, 1, "Sort by name", $int0);
-~script1556(500:8, 2, 3, "Sort by combat level", $int0);
-~script1556(500:9, 4, 5, "Sort by skill total", $int0);
+~raids_sidepanel_sortbutton_draw(500:7, 0, 1, "Sort by name", $int0);
+~raids_sidepanel_sortbutton_draw(500:8, 2, 3, "Sort by combat level", $int0);
+~raids_sidepanel_sortbutton_draw(500:9, 4, 5, "Sort by skill total", $int0);
 def_int $intarray0($int0);
 def_int $int1 = 0;
 def_int $int2 = 0;

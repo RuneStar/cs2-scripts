@@ -1,5 +1,5 @@
 // 3081
-script3081(int $int0, component $component1, string $string0)
+[clientscript,br_tournament_button_op](int $int0, component $component1, string $string0)
 if ($int0 ! 1) {
 	return;
 }
@@ -18,4 +18,4 @@ if_setonmouseover(null, $component1);
 if_setonmouseleave(null, $component1);
 if_clearops($component1);
 if_setonop(null, $component1);
-if_setontimer("script3079(calc(clientclock + 10), event_com, $string0)", $component1);
+if_setontimer("br_tournament_button_reset(calc(clientclock + 10), event_com, $string0)", $component1);

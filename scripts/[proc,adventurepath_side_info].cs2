@@ -105,7 +105,7 @@ if (($int14 ! -1) & ($int14 ! 0)) {
 }
 $int7 = 0;
 def_int $int16 = ~adventurepath_return_path_length(%varbit9324);
-def_int $int17 = ~script2968(%varbit9324);
+def_int $int17 = ~adventurepath_return_path_tasks_done(%varbit9324);
 if (struct_param($struct12, 826) = 0) {
 	$int16 = struct_param($struct12, 816);
 	$int17 = ~min($int16, stat_base(struct_param($struct12, 815)));

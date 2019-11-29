@@ -1,0 +1,5 @@
+// 3079
+[clientscript,br_tournament_button_reset](int $int0, component $component1, string $string0)
+if (clientclock >= $int0) {
+	~br_tournament_button_reset($component1, $string0);
+}

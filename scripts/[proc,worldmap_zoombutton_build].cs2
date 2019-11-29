@@ -1,0 +1,19 @@
+// 1722
+[proc,worldmap_zoombutton_build](component $component0, string $string0, boolean $boolean1, component $component2, component $component3)
+def_string $string1 = "-";
+if ($boolean1 = true) {
+	$string1 = "+";
+}
+if (string_length($string0) > 0) {
+	~worldmap_zoombutton_draw($component0, false, ^black, $string1);
+	if_setonmouserepeat("worldmap_zoombutton_draw($component0, true, ^black, $string1)", $component0);
+	if_setonmouseleave("worldmap_zoombutton_draw($component0, false, ^black, $string1)", $component0);
+	if_setop(1, $string0, $component0);
+	if_setonop("worldmap_zoom_adjust($boolean1, $component2, $component3)", $component0);
+} else {
+	~worldmap_zoombutton_draw($component0, true, ^red, $string1);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_clearops($component0);
+	if_setonop(null, $component0);
+}

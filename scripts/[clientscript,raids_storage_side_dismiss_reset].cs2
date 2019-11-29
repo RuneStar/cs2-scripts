@@ -1,0 +1,6 @@
+// 1619
+[clientscript,raids_storage_side_dismiss_reset](component $component0, int $int1)
+if (clientclock < $int1) {
+	return;
+}
+~raids_storage_side_dismiss_enable($component0);

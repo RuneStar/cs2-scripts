@@ -1,9 +1,9 @@
 // 1525
 [proc,raids_partydetails_setsort](int $int0)
-~script1527(507:7, 0, 1, "Sort by name", $int0);
-~script1527(507:8, 2, 3, "Sort by combat level", $int0);
-~script1527(507:9, 4, 5, "Sort by skill total", $int0);
-~script1527(507:10, 6, 7, "Sort by kill count", $int0);
+~raids_partydetails_sortbutton_draw(507:7, 0, 1, "Sort by name", $int0);
+~raids_partydetails_sortbutton_draw(507:8, 2, 3, "Sort by combat level", $int0);
+~raids_partydetails_sortbutton_draw(507:9, 4, 5, "Sort by skill total", $int0);
+~raids_partydetails_sortbutton_draw(507:10, 6, 7, "Sort by kill count", $int0);
 def_int $intarray0(100);
 def_int $int1 = 0;
 def_int $int2 = 0;
