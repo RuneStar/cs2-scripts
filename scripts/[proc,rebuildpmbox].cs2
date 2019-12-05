@@ -44,48 +44,59 @@ def_string $string1 = "";
 def_int $int14 = 0;
 def_string $string2 = "";
 def_string $string3 = "";
+def_int $int15 = -1;
+def_boolean $boolean16 = false;
 if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (chat_gethistorylength(^chattype_broadcast) > 0)) {
 	$int12, $int13, $string1, $string2, $string0, $int14 = chat_gethistory_bytypeandline(^chattype_broadcast, 0);
 	if ($int12 ! -1) {
-		$string0, $string3 = ~chat_broadcast_parseurl($string0);
+		$string0, $string3, $int15 = ~chat_broadcast_parseurl($string0);
 		$int7 = calc($int7 + ~script199($string0, $int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^yellow, true));
 		if_clearops($component10);
-		if (string_length($string3) > 0) {
-			if_setop(6, "Open", $component10);
-			if_setop(7, "Check", $component10);
-			if_setonmouserepeat("chat_recol(if_getlayer($component10), $int9, ^white)", $component10);
-			if_setonmouseleave("chat_recol(if_getlayer($component10), $int9, ^yellow)", $component10);
+		if ((string_length($string3) > 0) & ($int15 ! -1)) {
+			$boolean16 = enum(int, boolean, 2761, $int15);
+			if (clienttype ! 3) {
+				$boolean16 = false;
+			}
+			if ($boolean16 = false) {
+				if_setop(6, "Open", $component10);
+				if_setop(7, "Check", $component10);
+				if_setonmouserepeat("chat_recol(if_getlayer($component10), $int9, ^white)", $component10);
+				if_setonmouseleave("chat_recol(if_getlayer($component10), $int9, ^yellow)", $component10);
+			} else {
+				if_setonmouserepeat(null, $component10);
+				if_setonmouseleave(null, $component10);
+			}
 		} else {
 			if_setonmouserepeat(null, $component10);
 			if_setonmouseleave(null, $component10);
 		}
 		if_setop(9, "Clear history", $component10);
 		if_setopbase("<col=ff9040>Notification</col>", $component10);
-		if_setonop("chat_broadcast_op(event_opindex, $string3)", $component10);
+		if_setonop("chat_broadcast_op(event_opindex, $string3, $int15)", $component10);
 		$int9 = calc($int9 + 1);
 		$component10 = enum(int, component, 580, $int9);
 	}
 }
 $int12 = $int0;
-def_int $chattype15 = ^chattype_gamemessage;
+def_int $chattype17 = ^chattype_gamemessage;
 if ((%var287 = 1) & ((%varcint41 ! 1337) | (%varbit4089 = 0))) {
 	while ((($int12 ! -1) & ($component10 ! null)) & (calc($int7 - $int4) < 57)) {
-		$chattype15, $int13, $string1, $string2, $string0, $int14 = chat_gethistory_byuid($int12);
-		if (~pm_filtertest($chattype15, $string1, $int13, $int14) = 1) {
-			switch_int ($chattype15) {
+		$chattype17, $int13, $string1, $string2, $string0, $int14 = chat_gethistory_byuid($int12);
+		if (~pm_filtertest($chattype17, $string1, $int13, $int14) = 1) {
+			switch_int ($chattype17) {
 				case ^chattype_privatechat, ^chattype_modprivatechat :
 					$int7 = calc($int7 + ~script203("From <$string1>:", $string0, $int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 				case ^chattype_privatechatout :
 					$int7 = calc($int7 + ~script203("To <$string1>:", $string0, $int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 				case default :
 					$int7 = calc($int7 + ~script199($string0, $int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
-					if (($chattype15 = ^chattype_loginlogoutnotification) & (%varbit1627 = 0)) {
+					if (($chattype17 = ^chattype_loginlogoutnotification) & (%varbit1627 = 0)) {
 						%varcint65 = calc(($int13 + 500) + 1);
 						if_setontimer("script664(false)", 162:0);
 					}
 			}
 			if_clearops($component10);
-			if ((($chattype15 = ^chattype_privatechat) | ($chattype15 = ^chattype_privatechatout)) | ($chattype15 = ^chattype_modprivatechat)) {
+			if ((($chattype17 = ^chattype_privatechat) | ($chattype17 = ^chattype_privatechatout)) | ($chattype17 = ^chattype_modprivatechat)) {
 				if ($int14 = 1) {
 					if_setop(8, "Message", $component10);
 				} else {

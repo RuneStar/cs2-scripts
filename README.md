@@ -3205,7 +3205,7 @@
 [**3202**](scripts/[clientscript,league_tasks_init].cs2) `[clientscript,league_tasks_init]`  
 [**3203**](scripts/[clientscript,league_tasks_draw_list].cs2) `[clientscript,league_tasks_draw_list]`  
 [**3204**](scripts/[proc,league_tasks_draw_list].cs2) `[proc,league_tasks_draw_list]`  
-[**3205**](scripts/script3205.cs2)  
+[**3205**](scripts/[proc,account_setup_tabs].cs2) `[proc,account_setup_tabs]`  
 [**3206**](scripts/[clientscript,league_task_hover].cs2) `[clientscript,league_task_hover]`  
 [**3207**](scripts/[clientscript,league_task_filter_init].cs2) `[clientscript,league_task_filter_init]`  
 [**3208**](scripts/[clientscript,league_task_updatetext].cs2) `[clientscript,league_task_updatetext]`  
@@ -3240,3 +3240,34 @@
 [**3237**](scripts/[proc,questlist_members_progress_grey].cs2) `[proc,questlist_members_progress_grey]`  
 [**3238**](scripts/script3238.cs2)  
 [**3239**](scripts/[proc,questlist_showprogress_grey].cs2) `[proc,questlist_showprogress_grey]`  
+[**3240**](scripts/script3240.cs2)  
+[**3241**](scripts/script3241.cs2)  
+[**3242**](scripts/script3242.cs2)  
+[**3243**](scripts/script3243.cs2)  
+[**3244**](scripts/script3244.cs2)  
+[**3245**](scripts/script3245.cs2)  
+[**3246**](scripts/script3246.cs2)  
+[**3247**](scripts/script3247.cs2)  
+[**3248**](scripts/script3248.cs2)  
+[**3249**](scripts/script3249.cs2)  
+[**3250**](scripts/script3250.cs2)  
+[**3251**](scripts/script3251.cs2)  
+[**3252**](scripts/script3252.cs2)  
+[**3253**](scripts/[clientscript,magic_training_init].cs2) `[clientscript,magic_training_init]`  
+[**3254**](scripts/[clientscript,magic_training_rewards].cs2) `[clientscript,magic_training_rewards]`  
+[**3255**](scripts/[proc,magic_training_rewards].cs2) `[proc,magic_training_rewards]`  
+[**3256**](scripts/[clientscript,magic_training_rewards_op].cs2) `[clientscript,magic_training_rewards_op]`  
+[**3257**](scripts/[proc,magic_training_highlight_selected].cs2) `[proc,magic_training_highlight_selected]`  
+[**3258**](scripts/[proc,magic_training_costs_background].cs2) `[proc,magic_training_costs_background]`  
+[**3259**](scripts/[clientscript,magic_training_costs_transmit].cs2) `[clientscript,magic_training_costs_transmit]`  
+[**3260**](scripts/[proc,magic_training_costs].cs2) `[proc,magic_training_costs]`  
+[**3261**](scripts/[clientscript,magic_training_confirm_transmit].cs2) `[clientscript,magic_training_confirm_transmit]`  
+[**3262**](scripts/[proc,magic_training_confirm].cs2) `[proc,magic_training_confirm]`  
+[**3263**](scripts/[clientscript,account_tab_highlight].cs2) `[clientscript,account_tab_highlight]`  
+[**3264**](scripts/[clientscript,account_tab_highlight_reset].cs2) `[clientscript,account_tab_highlight_reset]`  
+[**3265**](scripts/[proc,account_tab_highlight].cs2) `[proc,account_tab_highlight]`  
+[**3266**](scripts/[proc,account_tab_highlight_reset].cs2) `[proc,account_tab_highlight_reset]`  
+[**3267**](scripts/[clientscript,account_switch_tab].cs2) `[clientscript,account_switch_tab]`  
+[**3268**](scripts/[clientscript,account_update_tabs].cs2) `[clientscript,account_update_tabs]`  
+[**3269**](scripts/[proc,account_update_tabs].cs2) `[proc,account_update_tabs]`  
+[**3270**](scripts/[proc,account_polls_update].cs2) `[proc,account_polls_update]`  

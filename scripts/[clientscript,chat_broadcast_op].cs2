@@ -1,15 +1,22 @@
 // 2064
-[clientscript,chat_broadcast_op](int $int0, string $string0)
-def_int $int1 = -1;
+[clientscript,chat_broadcast_op](int $int0, string $string0, int $int1)
+def_int $int2 = -1;
+def_boolean $boolean3 = false;
 if ($int0 = 9) {
 	%varcint202 = clientclock;
-	$int1 = ~script553;
-	~rebuildchatbox($int1);
-	~rebuildpmbox($int1);
+	$int2 = ~script553;
+	~rebuildchatbox($int2);
+	~rebuildpmbox($int2);
 } else if (string_length($string0) > 0) {
-	if ($int0 = 6) {
-		~openurl_raw($string0, true, true);
-	} else {
-		mes("Link destination: <col=ef1020><$string0></col>");
+	$boolean3 = enum(int, boolean, 2761, $int1);
+	if (clienttype ! 3) {
+		$boolean3 = false;
+	}
+	if ($boolean3 = false) {
+		if ($int0 = 6) {
+			~openurl_raw($string0, true, true);
+		} else {
+			mes("Link destination: <col=ef1020><$string0></col>");
+		}
 	}
 }

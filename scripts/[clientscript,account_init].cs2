@@ -1,5 +1,8 @@
 // 2497
-[clientscript,account_init](component $component0)
-if_setonvartransmit("account_update_display{var1780, var1781, var1795, var1737}", $component0);
+[clientscript,account_init](component $component0, component $component1)
+if_setonvartransmit("account_update_display{var1780, var1781, var1795, var1737, var375}", $component0);
+~account_setup_tabs;
+if_setonvartransmit("account_update_tabs{var1666}", $component1);
+~account_update_tabs(%varbit10060);
 ~account_update_display;
 ~script2833;

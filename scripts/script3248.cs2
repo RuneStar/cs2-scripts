@@ -1,0 +1,38 @@
+// 3248
+script3248(component $component0)
+cc_deleteall($component0);
+def_struct $struct1 = null;
+def_int $int2 = 0;
+def_int $int3 = calc(if_getwidth($component0) / 3);
+def_int $int4 = calc(if_getheight($component0) / 4);
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = enum_getoutputcount(2752);
+while ($int7 < $int8) {
+	$struct1 = enum(int, struct, 2752, calc($int7 + 1));
+	if ($struct1 ! null) {
+		$int6 = calc($int4 * $int7);
+		$int5 = calc(1 - $int5);
+		if (struct_param($struct1, 913) = true) {
+			cc_create($component0, ^iftype_graphic, $int2);
+			cc_setgraphic(struct_param($struct1, 910));
+			cc_setsize(50, 50, ^setsize_abs, ^setsize_abs);
+			cc_setposition(5, calc($int6 + 5), ^setpos_abs_left, ^setpos_abs_top);
+			$int2 = calc($int2 + 1);
+			cc_create($component0, ^iftype_text, $int2);
+			cc_setsize(calc(if_getwidth($component0) - 107), $int4, ^setsize_abs, ^setsize_abs);
+			cc_setposition(57, $int6, ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+			cc_settextfont(p11_full);
+			cc_setcolour(0xff981f);
+			cc_settextshadow(true);
+			cc_settext("x<tostring(struct_param($struct1, 907))> of any un-noted impling type");
+		} else {
+			$int2 = ~script3249($int2, $component0, $int6, calc($int3 * 0), $int3, $int4, struct_param($struct1, 901), struct_param($struct1, 907), struct_param($struct1, 910), struct_param($struct1, 904), 1);
+			$int2 = ~script3249($int2, $component0, $int6, calc($int3 * 1), $int3, $int4, struct_param($struct1, 902), struct_param($struct1, 908), struct_param($struct1, 911), struct_param($struct1, 905), 1);
+			$int2 = ~script3249($int2, $component0, $int6, calc($int3 * 2), $int3, $int4, struct_param($struct1, 903), struct_param($struct1, 909), struct_param($struct1, 912), struct_param($struct1, 906), 0);
+		}
+	}
+	$int7 = calc($int7 + 1);
+}

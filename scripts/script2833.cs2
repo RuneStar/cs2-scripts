@@ -1,41 +1,64 @@
 // 2833
 script2833
-def_int $int0 = 7143426;
-def_int $int1 = 4;
+def_int $int0 = 7143503;
+def_int $int1 = 5;
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = enum_getoutputcount(2320);
 def_struct $struct5 = null;
 def_component $component6 = null;
 def_string $string0 = "";
+def_int $int7 = 0;
+def_boolean $boolean8 = null;
 while ($int3 < $int4) {
 	$struct5 = enum(int, struct, 2320, $int3);
 	$component6 = enum(int, component, 2321, $int3);
-	if_sethide(false, $component6);
-	$string0 = struct_param($struct5, 729);
-	$int2 = ~options_button_off($component6, 0);
-	if_setsize(84, 30, ^setsize_abs, ^setsize_abs, $component6);
-	if (calc($int3 % 2) = 0) {
-		if (calc($int3 + 1) = $int4) {
-			if_setposition(0, calc($int1 + (($int3 / 2) * 36)), ^setpos_abs_centre, ^setpos_abs_top, $component6);
-		} else {
-			if_setposition(2, calc($int1 + (($int3 / 2) * 36)), ^setpos_abs_left, ^setpos_abs_top, $component6);
-		}
-	} else {
-		if_setposition(2, calc($int1 + (($int3 / 2) * 36)), ^setpos_abs_right, ^setpos_abs_top, $component6);
+	$boolean8 = enum(struct, boolean, 2760, $struct5);
+	if (clienttype ! 3) {
+		$boolean8 = false;
 	}
-	if_setop(1, "Open", $component6);
-	if_setopbase("<col=ff9040><$string0></col>", $component6);
-	if_setonop("opsound(event_opindex, 2)", $component6);
-	cc_create($component6, ^iftype_text, $int2);
-	cc_settext($string0);
+	if ($boolean8 = false) {
+		if_sethide(false, $component6);
+		$string0 = struct_param($struct5, 729);
+		$int2 = ~options_button_off($component6, 0);
+		if_setsize(84, 30, ^setsize_abs, ^setsize_abs, $component6);
+		if (calc($int7 % 2) = 0) {
+			if (calc($int7 + 1) = $int4) {
+				if_setposition(0, calc(($int1 + (($int7 / 2) * 36)) + (($int7 / 2) * 2)), ^setpos_abs_centre, ^setpos_abs_top, $component6);
+			} else {
+				if_setposition(3, calc(($int1 + (($int7 / 2) * 36)) + (($int7 / 2) * 2)), ^setpos_abs_left, ^setpos_abs_top, $component6);
+			}
+		} else {
+			if_setposition(3, calc(($int1 + (($int7 / 2) * 36)) + (($int7 / 2) * 2)), ^setpos_abs_right, ^setpos_abs_top, $component6);
+		}
+		if_setop(1, "Open", $component6);
+		if_setopbase("<col=ff9040><$string0></col>", $component6);
+		if_setonop("opsound(event_opindex, 2)", $component6);
+		cc_create($component6, ^iftype_text, $int2);
+		cc_settext($string0);
+		cc_setcolour(0xf7f0df);
+		cc_settextshadow(true);
+		cc_settextfont(p11_full);
+		cc_setsize(8, 0, ^setsize_minus, ^setsize_minus);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setonmouseover("cc_colour_swapper(event_com, event_comid, 0xc0c0c0)");
+		cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xf7f0df)");
+		$int7 = calc($int7 + 1);
+	}
+	$int3 = calc($int3 + 1);
+}
+if ($int7 <= 0) {
+	$component6 = enum(int, component, 2321, 0);
+	if_sethide(false, $component6);
+	if_setsize(0, 40, ^setsize_minus, ^setsize_abs, $component6);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component6);
+	cc_create($component6, ^iftype_text, 0);
+	cc_settext("There are currently no useful links available.");
 	cc_setcolour(0xf7f0df);
 	cc_settextshadow(true);
 	cc_settextfont(p11_full);
-	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_setsize(8, 0, ^setsize_minus, ^setsize_minus);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 18);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setonmouseover("cc_colour_swapper(event_com, event_comid, 0xc0c0c0)");
-	cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xf7f0df)");
-	$int3 = calc($int3 + 1);
 }

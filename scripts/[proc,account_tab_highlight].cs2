@@ -1,0 +1,8 @@
+// 3265
+[proc,account_tab_highlight](component $component0, component $component1, component $component2, int $int3)
+if (%varbit10060 = $int3) {
+	return;
+}
+if_setgraphic("tabs_tall,4", $component0);
+if_setgraphic("tabs_tall,5", $component1);
+if_setgraphic("tabs_tall,4", $component2);

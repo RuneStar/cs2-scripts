@@ -1,0 +1,7 @@
+// 3263
+[clientscript,account_tab_highlight](component $component0, component $component1, component $component2, int $int3)
+if (%varbit10060 = $int3) {
+	~account_tab_highlight_reset($component0, $component1, $component2, $int3);
+} else {
+	~account_tab_highlight($component0, $component1, $component2, $int3);
+}

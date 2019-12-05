@@ -1,0 +1,14 @@
+// 3253
+[clientscript,magic_training_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+cc_deleteall($component1);
+cc_deleteall($component2);
+cc_deleteall($component3);
+cc_deleteall($component4);
+def_int $int6 = ~magic_training_rewards($component1, $component3, $component2);
+if_setscrollsize(0, $int6, $component1);
+~scrollbar_vertical($component4, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~magic_training_costs_background($component3);
+~magic_training_confirm($component2, %varbit10059);
+if_setonvartransmit("magic_training_costs_transmit($component3, $component1){var2224, var210, var261, var262, var263, var264}", $component0);
+if_setoninvtransmit("magic_training_costs_transmit($component3, $component1){inv}", $component5);
+if_setonvartransmit("magic_training_confirm_transmit($component2){var2224, var210}", $component5);

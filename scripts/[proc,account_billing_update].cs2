@@ -1,13 +1,13 @@
 // 2503
 [proc,account_billing_update]
-def_component $component0 = 109:15;
-def_component $component1 = 109:16;
-def_component $component2 = 109:23;
-def_component $component3 = 109:22;
-def_component $component4 = 109:34;
+def_component $component0 = 109:25;
+def_component $component1 = 109:26;
+def_component $component2 = 109:30;
+def_component $component3 = 109:28;
+def_component $component4 = 109:29;
 def_component $component5 = 109:35;
 def_component $component6 = 109:33;
-def_component $component7 = 109:32;
+def_component $component7 = 109:34;
 def_string $string0 = "Membership: <col=ff0000>None</col>";
 def_string $string1 = "Upgrade Now";
 def_graphic $graphic8 = 2151;
@@ -33,11 +33,11 @@ if ((%varcint103 = 1) & (%var1780 > 0)) {
 	$string2 = "View Benefits";
 	$graphic9 = 2150;
 }
-if_settext($string2, $component6);
+if_settext($string2, $component5);
+if_setgraphic($graphic9, $component6);
 if_setgraphic($graphic9, $component7);
 if_settext($string0, $component0);
 if_setop(1, $string1, $component1);
 if_settext($string1, $component2);
 if_setgraphic($graphic8, $component3);
 if_setgraphic($graphic8, $component4);
-if_setgraphic($graphic8, $component5);

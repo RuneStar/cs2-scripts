@@ -1,0 +1,11 @@
+// 3244
+script3244(component $component0, component $component1, component $component2, component $component3, component $component4)
+cc_deleteall($component1);
+cc_deleteall($component2);
+cc_deleteall($component3);
+cc_deleteall($component4);
+~script3245($component2, $component3, $component4);
+~script3248($component1);
+~script3252($component3);
+if_setonvartransmit("script3251($component3){var1018}", $component0);
+if_setoninvtransmit("script3247($component1){inv}", $component0);

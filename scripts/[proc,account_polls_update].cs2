@@ -1,0 +1,25 @@
+// 3270
+[proc,account_polls_update]
+def_component $component0 = 109:53;
+def_component $component1 = 109:54;
+def_component $component2 = 109:58;
+def_component $component3 = 109:59;
+def_string $string0 = "Current Poll: <col=ff0000>Inactive</col>";
+def_string $string1 = "View Poll";
+if (%varbit10065 = 1) {
+	$string0 = "Current Poll: <col=00ff00>Active</col>";
+	if (%varbit4337 = 1) {
+		$string1 = "Vote Now";
+	}
+	if_setop(1, $string1, $component1);
+	if_sethide(true, $component3);
+	if_setonmouseover("text_colour_swapper($component2, 0xc0c0c0)", $component2);
+	if_setonmouseleave("text_colour_swapper($component2, 0xf7f0df)", $component2);
+} else {
+	if_setop(1, "", $component1);
+	if_sethide(false, $component3);
+	if_setonmouseover("text_colour_swapper($component2, 0xf7f0df)", $component2);
+	if_setonmouseleave("text_colour_swapper($component2, 0xf7f0df)", $component2);
+}
+if_settext($string0, $component0);
+if_settext($string1, $component2);

@@ -2,7 +2,7 @@
 [clientscript,bugreport_submit]
 if (string_length(%varcstring372) > 0) {
 	sound_synth(2266, 1, 0);
-	if (%varbit4931 < 10) {
+	if ((%varbit4931 < 10) & (string_length(%varcstring372) >= 15)) {
 		bug_report(0, ~bugreport_parse(%varcstring372, 0), ~bugreport_parse(%varcstring373, 0));
 	}
 	if (~on_mobile = true) {

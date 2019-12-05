@@ -1,0 +1,12 @@
+// 3258
+[proc,magic_training_costs_background](component $component0)(int)
+cc_deleteall($component0);
+def_int $int1 = 0;
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+$int1 = calc($int1 + 1);
+$int1 = ~thinbox($component0, $int1);
+return($int1);

@@ -1,0 +1,15 @@
+// 3250
+script3250(component $component0, int $int1, int $int2)(int)
+cc_create($component0, ^iftype_rectangle, $int2);
+$int2 = calc($int2 + 1);
+cc_setposition(0, $int1, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(10, 1, ^setsize_minus, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(0x0e0e0c);
+cc_create($component0, ^iftype_rectangle, $int2);
+$int2 = calc($int2 + 1);
+cc_setposition(0, calc($int1 + 1), ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(10, 1, ^setsize_minus, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(0x474745);
+return($int2);
