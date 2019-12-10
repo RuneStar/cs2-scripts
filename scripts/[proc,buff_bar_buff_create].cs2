@@ -1,9 +1,9 @@
 // 3168
-script3168(component $component0, int $int1, int $colour2, graphic $graphic3, component $component4, string $string0)
+[proc,buff_bar_buff_create](component $component0, int $int1, int $colour2, graphic $graphic3, component $component4, string $string0)
 def_int $int5 = 0;
 def_int $int6 = 0;
 def_int $int7 = enum(int, int, 2653, $colour2);
-$int5, $int6 = ~script3172($component0, $int1);
+$int5, $int6 = ~buff_bar_buff_position($component0, $int1);
 $int1 = calc($int1 * 7);
 if (($int5 < 0) | ($int6 < 0)) {
 	return;
@@ -49,4 +49,4 @@ cc_setposition(calc($int5 + 2), calc($int6 + 2), ^setpos_abs_left, ^setpos_abs_b
 cc_setsize(24, 24, ^setsize_abs, ^setsize_abs);
 cc_setgraphic($graphic3);
 $int1 = calc($int1 + 1);
-~script3169($component0, $int1, $component4, $string0, $int5, $int6);
+~buff_bar_buff_create_tooltip($component0, $int1, $component4, $string0, $int5, $int6);

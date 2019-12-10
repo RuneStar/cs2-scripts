@@ -1,0 +1,11 @@
+// 3170
+[clientscript,buff_bar_mobile_tooltip](component $component0, int $int1, component $component2, string $string0, int $int3)
+if (%varcint382 = $int1) {
+	~deltooltip_action($component2);
+	%varcint382 = -1;
+	if_setontimer(null, $component0);
+} else {
+	~tooltip_build($component0, $int1, $component2, $string0, $int3);
+	%varcint382 = $int1;
+	if_setontimer("buff_bar_mobile_tooltip_remove($component2, calc(clientclock + 240), $component0)", $component0);
+}

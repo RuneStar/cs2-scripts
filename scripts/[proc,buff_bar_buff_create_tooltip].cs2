@@ -1,5 +1,5 @@
 // 3169
-script3169(component $component0, int $int1, component $component2, string $string0, int $int3, int $int4)
+[proc,buff_bar_buff_create_tooltip](component $component0, int $int1, component $component2, string $string0, int $int3, int $int4)
 cc_create($component0, ^iftype_rectangle, $int1);
 if (~on_mobile = true) {
 	cc_setposition(calc($int3 - 1), calc($int4 - 1), ^setpos_abs_left, ^setpos_abs_bottom);
@@ -21,7 +21,7 @@ if (((string_length($string0) <= 0) | (%varbit9529 = 1)) | (%varbit9528 = 1)) {
 	return;
 }
 if (~on_mobile = true) {
-	cc_setonclick("script3170($component0, $int1, $component2, $string0, 512)");
+	cc_setonclick("buff_bar_mobile_tooltip($component0, $int1, $component2, $string0, 512)");
 	cc_setnoclickthrough(true);
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);

@@ -3165,14 +3165,14 @@
 [**3162**](scripts/[clientscript,league_icon_flash].cs2) `[clientscript,league_icon_flash]`  
 [**3163**](scripts/[clientscript,league_flash_timer].cs2) `[clientscript,league_flash_timer]`  
 [**3164**](scripts/[proc,league_flashicon].cs2) `[proc,league_flashicon]`  
-[**3165**](scripts/script3165.cs2)  
-[**3166**](scripts/script3166.cs2)  
-[**3167**](scripts/script3167.cs2)  
-[**3168**](scripts/script3168.cs2)  
-[**3169**](scripts/script3169.cs2)  
-[**3170**](scripts/script3170.cs2)  
-[**3171**](scripts/script3171.cs2)  
-[**3172**](scripts/script3172.cs2)  
+[**3165**](scripts/[clientscript,buff_bar_init].cs2) `[clientscript,buff_bar_init]`  
+[**3166**](scripts/[clientscript,buff_bar_setup].cs2) `[clientscript,buff_bar_setup]`  
+[**3167**](scripts/[proc,buff_bar_setup].cs2) `[proc,buff_bar_setup]`  
+[**3168**](scripts/[proc,buff_bar_buff_create].cs2) `[proc,buff_bar_buff_create]`  
+[**3169**](scripts/[proc,buff_bar_buff_create_tooltip].cs2) `[proc,buff_bar_buff_create_tooltip]`  
+[**3170**](scripts/[clientscript,buff_bar_mobile_tooltip].cs2) `[clientscript,buff_bar_mobile_tooltip]`  
+[**3171**](scripts/[clientscript,buff_bar_mobile_tooltip_remove].cs2) `[clientscript,buff_bar_mobile_tooltip_remove]`  
+[**3172**](scripts/[proc,buff_bar_buff_position].cs2) `[proc,buff_bar_buff_position]`  
 [**3173**](scripts/script3173.cs2)  
 [**3174**](scripts/script3174.cs2)  
 [**3175**](scripts/script3175.cs2)  
