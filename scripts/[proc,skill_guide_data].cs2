@@ -1777,502 +1777,491 @@ switch_int ($int0) {
 		}
 		return(-1, null, "");
 	case 11 :
-		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(21, empty_sack_5418, "Vegetable sack");
-			}
-			if ($int2 = 1) {
-				return(26, drift_net_21652, "Drift net");
-			}
-			if ($int2 = 2) {
-				return(36, basket_5376, "Fruit basket");
-			}
-			return(-1, null, "");
+		switch_int ($int1) {
+			case 0 :
+				if ($int2 = 0) {
+					return(21, empty_sack_5418, "Vegetable sack");
+				}
+				if ($int2 = 1) {
+					return(26, drift_net_21652, "Drift net");
+				}
+				if ($int2 = 2) {
+					return(36, basket_5376, "Fruit basket");
+				}
+				return(-1, null, "");
+			case 1 :
+				if ($int2 = 0) {
+					return(1, leather_gloves_1059, "Leather gloves");
+				}
+				if ($int2 = 1) {
+					return(7, leather_boots_1061, "Leather boots");
+				}
+				if ($int2 = 2) {
+					return(9, leather_cowl_1167, "Leather cowl");
+				}
+				if ($int2 = 3) {
+					return(11, leather_vambraces_1063, "Leather vambraces");
+				}
+				if ($int2 = 4) {
+					return(14, leather_body_1129, "Leather body");
+				}
+				if ($int2 = 5) {
+					return(14, xerician_hat_13385, "Members: Xerician hat");
+				}
+				if ($int2 = 6) {
+					return(15, myre_snelm_3327, "Members: Snail helmet");
+				}
+				if ($int2 = 7) {
+					return(15, crab_helmet_7539, "Members: Crab shell armour");
+				}
+				if ($int2 = 8) {
+					return(17, xerician_robe_13389, "Members: Xerician robe");
+				}
+				if ($int2 = 9) {
+					return(18, leather_chaps_1095, "Leather chaps");
+				}
+				if ($int2 = 10) {
+					return(22, xerician_top_13387, "Members: Xerician top");
+				}
+				if ($int2 = 11) {
+					return(28, hardleather_body_1131, "Hard leather body");
+				}
+				if ($int2 = 12) {
+					return(32, spiky_vambraces_10077, "Members: Spiked vambraces");
+				}
+				if ($int2 = 13) {
+					return(35, broodoo_shield_10_6259, "Members: Broodoo shield");
+				}
+				if ($int2 = 14) {
+					return(38, coif_1169, "Members: Coif");
+				}
+				if ($int2 = 15) {
+					return(41, studded_body_1133, "Members: Studded body");
+				}
+				if ($int2 = 16) {
+					return(41, hard_leather_shield_22269, "Members: Leather shield");
+				}
+				if ($int2 = 17) {
+					return(43, yak_hide_armour_10824, "Members: Yak-hide leg armour");
+				}
+				if ($int2 = 18) {
+					return(44, studded_chaps_1097, "Members: Studded chaps");
+				}
+				if ($int2 = 19) {
+					return(45, snakeskin_boots_6328, "Members: Snakeskin boots");
+				}
+				if ($int2 = 20) {
+					return(46, yak_hide_armour_10822, "Members: Yak-hide body armour");
+				}
+				if ($int2 = 21) {
+					return(47, snakeskin_vambraces_6330, "Members: Snakeskin vambraces");
+				}
+				if ($int2 = 22) {
+					return(48, snakeskin_bandana_6326, "Members: Snakeskin bandana");
+				}
+				if ($int2 = 23) {
+					return(51, snakeskin_chaps_6324, "Members: Snakeskin chaps");
+				}
+				if ($int2 = 24) {
+					return(52, serpentine_helm_12931, "Members: Serpentine helm");
+				}
+				if ($int2 = 25) {
+					return(53, snakeskin_body_6322, "Members: Snakeskin body");
+				}
+				if ($int2 = 26) {
+					return(55, slayer_helmet_11864, "Members: Slayer helm");
+				}
+				if ($int2 = 27) {
+					return(56, snakeskin_shield_22272, "Members: Snakeskin shield");
+				}
+				if ($int2 = 28) {
+					return(57, green_dhide_vamb_1065, "Members: Green dragonhide vambraces");
+				}
+				if ($int2 = 29) {
+					return(60, green_dhide_chaps_1099, "Members: Green dragonhide chaps");
+				}
+				if ($int2 = 30) {
+					return(62, green_dhide_shield_22275, "Members: Green dragonhide shield");
+				}
+				if ($int2 = 31) {
+					return(63, green_dhide_body_1135, "Members: Green dragonhide body");
+				}
+				if ($int2 = 32) {
+					return(66, blue_dhide_vamb_2487, "Members: Blue dragonhide vambraces");
+				}
+				if ($int2 = 33) {
+					return(68, blue_dhide_chaps_2493, "Members: Blue dragonhide chaps");
+				}
+				if ($int2 = 34) {
+					return(69, blue_dhide_shield_22278, "Members: Blue dragonhide shield");
+				}
+				if ($int2 = 35) {
+					return(71, blue_dhide_body_2499, "Members: Blue dragonhide body");
+				}
+				if ($int2 = 36) {
+					return(73, red_dhide_vamb_2489, "Members: Red dragonhide vambraces");
+				}
+				if ($int2 = 37) {
+					return(75, red_dhide_chaps_2495, "Members: Red dragonhide chaps");
+				}
+				if ($int2 = 38) {
+					return(76, red_dhide_shield_22281, "Members: Red dragonhide shield");
+				}
+				if ($int2 = 39) {
+					return(77, red_dhide_body_2501, "Members: Red dragonhide body");
+				}
+				if ($int2 = 40) {
+					return(79, black_dhide_vamb_2491, "Members: Black dragonhide vambraces");
+				}
+				if ($int2 = 41) {
+					return(82, black_dhide_chaps_2497, "Members: Black dragonhide chaps");
+				}
+				if ($int2 = 42) {
+					return(83, black_dhide_shield_22284, "Members: Black dragonhide shield");
+				}
+				if ($int2 = 43) {
+					return(84, black_dhide_body_2503, "Members: Black dragonhide body");
+				}
+				return(-1, null, "");
+			case 2 :
+				if ($int2 = 0) {
+					return(1, ball_of_wool_1759, "Wool");
+				}
+				if ($int2 = 1) {
+					return(10, bow_string_1777, "Members: Flax into bow strings");
+				}
+				if ($int2 = 2) {
+					return(10, crossbow_string_9438, "Members: Sinew into crossbow strings");
+				}
+				if ($int2 = 3) {
+					return(19, magic_string_6038, "Members: Magic tree roots into magic strings");
+				}
+				if ($int2 = 4) {
+					return(30, rope_954, "Members: Yak hair into rope");
+				}
+				return(-1, null, "");
+			case 3 :
+				if ($int2 = 0) {
+					return(1, pot_1931, "Pot");
+				}
+				if ($int2 = 1) {
+					return(7, pie_dish_2313, "Pie dish");
+				}
+				if ($int2 = 2) {
+					return(8, bowl_1923, "Bowl");
+				}
+				if ($int2 = 3) {
+					return(19, empty_plant_pot_5350, "Members: Plant pot");
+				}
+				if ($int2 = 4) {
+					return(25, pot_lid_4440, "Members: Pot lid");
+				}
+				return(-1, null, "");
+			case 4 :
+				if ($int2 = 0) {
+					return(1, beer_glass_1919, "Beer glass");
+				}
+				if ($int2 = 1) {
+					return(4, empty_candle_lantern_4527, "Candle lantern");
+				}
+				if ($int2 = 2) {
+					return(12, empty_oil_lamp_4525, "Oil lamp");
+				}
+				if ($int2 = 3) {
+					return(26, empty_oil_lantern_4535, "Oil lantern");
+				}
+				if ($int2 = 4) {
+					return(33, vial_229, "Vial");
+				}
+				if ($int2 = 5) {
+					return(42, empty_fishbowl_6667, "Fishbowl");
+				}
+				if ($int2 = 6) {
+					return(46, unpowered_orb_567, "Glass orb");
+				}
+				if ($int2 = 7) {
+					return(49, lantern_lens_4542, "Bullseye lantern lens");
+				}
+				if ($int2 = 8) {
+					return(87, light_orb_10973, "Dorgeshuun light orb");
+				}
+				return(-1, null, "");
+			case 5 :
+				if ($int2 = 0) {
+					return(1, opal_1609, "Members: Cut opal");
+				}
+				if ($int2 = 1) {
+					return(1, opal_ring_21081, "Members: Opal ring");
+				}
+				if ($int2 = 2) {
+					return(3, polished_buttons_10496, "Polished buttons");
+				}
+				if ($int2 = 3) {
+					return(5, gold_ring_1635, "Gold ring");
+				}
+				if ($int2 = 4) {
+					return(6, gold_necklace_1654, "Gold necklace");
+				}
+				if ($int2 = 5) {
+					return(7, gold_bracelet_11069, "Members: Gold bracelet");
+				}
+				if ($int2 = 6) {
+					return(8, gold_amulet_1692, "Gold amulet");
+				}
+				if ($int2 = 7) {
+					return(13, jade_1611, "Members: Cut jade");
+				}
+				if ($int2 = 8) {
+					return(13, jade_ring_21084, "Members: Jade ring");
+				}
+				if ($int2 = 9) {
+					return(16, unblessed_symbol_1716, "Holy symbol");
+				}
+				if ($int2 = 10) {
+					return(16, red_topaz_1613, "Members: Cut red topaz");
+				}
+				if ($int2 = 11) {
+					return(16, topaz_ring_21087, "Members: Red topaz ring");
+				}
+				if ($int2 = 12) {
+					return(16, opal_necklace_21090, "Members: Opal necklace");
+				}
+				if ($int2 = 13) {
+					return(17, unpowered_symbol_1722, "Members: Unholy symbol");
+				}
+				if ($int2 = 14) {
+					return(20, sapphire_1607, "Cut sapphire");
+				}
+				if ($int2 = 15) {
+					return(20, sapphire_ring_1637, "Sapphire ring");
+				}
+				if ($int2 = 16) {
+					return(22, sapphire_necklace_1656, "Sapphire necklace");
+				}
+				if ($int2 = 17) {
+					return(22, opal_bracelet_21117, "Members: Opal bracelet");
+				}
+				if ($int2 = 18) {
+					return(23, tiara_5525, "Tiara");
+				}
+				if ($int2 = 19) {
+					return(23, sapphire_bracelet_11072, "Members: Sapphire bracelet");
+				}
+				if ($int2 = 20) {
+					return(24, sapphire_amulet_1694, "Sapphire amulet");
+				}
+				if ($int2 = 21) {
+					return(25, jade_necklace_21093, "Members: Jade necklace");
+				}
+				if ($int2 = 22) {
+					return(27, emerald_1605, "Cut emerald");
+				}
+				if ($int2 = 23) {
+					return(27, emerald_ring_1639, "Emerald ring");
+				}
+				if ($int2 = 24) {
+					return(27, opal_amulet_21108, "Members: Opal amulet");
+				}
+				if ($int2 = 25) {
+					return(29, emerald_necklace_1658, "Emerald necklace");
+				}
+				if ($int2 = 26) {
+					return(29, jade_bracelet_21120, "Members: Jade bracelet");
+				}
+				if ($int2 = 27) {
+					return(30, emerald_bracelet_11076, "Members: Emerald bracelet");
+				}
+				if ($int2 = 28) {
+					return(31, emerald_amulet_1696, "Emerald amulet");
+				}
+				if ($int2 = 29) {
+					return(32, topaz_necklace_21096, "Members: Red topaz necklace");
+				}
+				if ($int2 = 30) {
+					return(34, ruby_1603, "Cut ruby");
+				}
+				if ($int2 = 31) {
+					return(34, ruby_ring_1641, "Ruby ring");
+				}
+				if ($int2 = 32) {
+					return(34, jade_amulet_21111, "Members: Jade amulet");
+				}
+				if ($int2 = 33) {
+					return(37, strung_rabbit_foot_10132, "Members: Rabbit-foot necklaces");
+				}
+				if ($int2 = 34) {
+					return(38, topaz_bracelet_21123, "Members: Red topaz bracelet");
+				}
+				if ($int2 = 35) {
+					return(40, ruby_necklace_1660, "Ruby necklace");
+				}
+				if ($int2 = 36) {
+					return(42, ruby_bracelet_11085, "Members: Ruby bracelet");
+				}
+				if ($int2 = 37) {
+					return(43, diamond_1601, "Cut diamond");
+				}
+				if ($int2 = 38) {
+					return(43, diamond_ring_1643, "Diamond ring");
+				}
+				if ($int2 = 39) {
+					return(45, topaz_amulet_21114, "Members: Red topaz amulet");
+				}
+				if ($int2 = 40) {
+					return(50, ruby_amulet_1698, "Ruby amulet");
+				}
+				if ($int2 = 41) {
+					return(55, dragonstone_1615, "Members: Cut dragonstone");
+				}
+				if ($int2 = 42) {
+					return(55, dragonstone_ring_1645, "Members: Dragonstone ring");
+				}
+				if ($int2 = 43) {
+					return(56, diamond_necklace_1662, "Diamond necklace");
+				}
+				if ($int2 = 44) {
+					return(58, diamond_bracelet_11092, "Members: Diamond bracelet");
+				}
+				if ($int2 = 45) {
+					return(67, onyx_6573, "Members: Cut onyx");
+				}
+				if ($int2 = 46) {
+					return(67, onyx_ring_6575, "Members: Onyx ring");
+				}
+				if ($int2 = 47) {
+					return(70, diamond_amulet_1700, "Diamond amulet");
+				}
+				if ($int2 = 48) {
+					return(72, dragon_necklace_1664, "Members: Dragonstone necklace");
+				}
+				if ($int2 = 49) {
+					return(74, dragonstone_bracelet_11115, "Members: Dragonstone bracelet");
+				}
+				if ($int2 = 50) {
+					return(75, slayer_ring_8_11866, "Members: Slayer ring");
+				}
+				if ($int2 = 51) {
+					return(80, dragonstone_amulet_1702, "Members: Dragonstone amulet");
+				}
+				if ($int2 = 52) {
+					return(82, onyx_necklace_6577, "Members: Onyx necklace");
+				}
+				if ($int2 = 53) {
+					return(84, onyx_bracelet_11130, "Members: Onyx bracelet");
+				}
+				if ($int2 = 54) {
+					return(89, zenyte_19493, "Members: Cut zenyte");
+				}
+				if ($int2 = 55) {
+					return(89, zenyte_ring_19538, "Members: Zenyte ring");
+				}
+				if ($int2 = 56) {
+					return(90, onyx_amulet_6581, "Members: Onyx amulet");
+				}
+				if ($int2 = 57) {
+					return(92, zenyte_necklace_19535, "Members: Zenyte necklace");
+				}
+				if ($int2 = 58) {
+					return(95, zenyte_bracelet_19532, "Members: Zenyte bracelet");
+				}
+				if ($int2 = 59) {
+					return(98, zenyte_amulet_19541, "Members: Zenyte amulet");
+				}
+				return(-1, null, "");
+			case 6 :
+				switch_int ($int2) {
+					case 0 :
+						return(18, silver_sickle_2961, "Silver sickle");
+					case 1 :
+						return(21, silver_bolts_unf_5_9414, "Silver crossbow bolts");
+					case 2 :
+						return(54, water_battlestaff_1395, "Water battlestaff");
+					case 3 :
+						return(58, earth_battlestaff_1399, "Earth battlestaff");
+					case 4 :
+						return(59, toxic_staff_of_the_dead_12904, "Toxic Staff of the Dead");
+					case 5 :
+						return(59, trident_of_the_swamp_12899, "Trident of the Swamp");
+					case 6 :
+						return(62, fire_battlestaff_1393, "Fire battlestaff");
+					case 7 :
+						return(66, air_battlestaff_1397, "Air battlestaff");
+					case 8 :
+						return(83, amethyst_bolt_tips_5_4768, "Amethyst bolt tips");
+					case 9 :
+						return(85, amethyst_arrowtips_21350, "Amethyst arrowtips");
+					case 10 :
+						return(87, amethyst_javelin_heads_5_13220, "Amethyst javelin heads");
+					case default :
+						return(-1, null, "");
+				}
+			case 7 :
+				if ($int2 = 0) {
+					return(70, crystal_helm_23971, "Crystal helm<br>(with 70 Smithing)");
+				}
+				if ($int2 = 1) {
+					return(72, crystal_legs_23979, "Crystal legs<br>(with 72 Smithing)");
+				}
+				if ($int2 = 2) {
+					return(74, crystal_body_23975, "Crystal body<br>(with 74 Smithing)");
+				}
+				if ($int2 = 3) {
+					return(76, crystal_pickaxe_23680, "Crystal pickaxe<br>(with 76 Smithing)");
+				}
+				if ($int2 = 4) {
+					return(76, crystal_axe_23673, "Crystal axe<br>(with 76 Smithing)");
+				}
+				if ($int2 = 5) {
+					return(76, crystal_harpoon_23762, "Crystal harpoon<br>(with 76 Smithing)");
+				}
+				if ($int2 = 6) {
+					return(78, crystal_bow_23983, "Crystal bow<br>(with 78 Smithing)");
+				}
+				if ($int2 = 7) {
+					return(78, crystal_halberd_23987, "Crystal halberd<br>(with 78 Smithing)");
+				}
+				if ($int2 = 8) {
+					return(78, crystal_shield_23991, "Crystal shield<br>(with 78 Smithing)");
+				}
+				if ($int2 = 9) {
+					return(80, enhanced_crystal_key_23951, "Enhanced crystal key<br>(with 80 Smithing)");
+				}
+				if ($int2 = 10) {
+					return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Smithing)");
+				}
+				return(-1, null, "");
+			case 8 :
+				switch_int ($int2) {
+					case 0 :
+						return(5, bird_house_21512, "Craft a birdhouse trap from normal logs");
+					case 1 :
+						return(10, damaged_monkey_tail_19665, "Extract sinew from monkey tails");
+					case 2 :
+						return(15, oak_bird_house_21515, "Craft a birdhouse trap from oak logs");
+					case 3 :
+						return(25, willow_bird_house_21518, "Craft a birdhouse trap from willow logs");
+					case 4 :
+						return(30, hammer_2347, "Repair Piscarilius fishing cranes");
+					case 5 :
+						return(35, teak_bird_house_21521, "Craft a birdhouse trap from teak logs");
+					case 6 :
+						return(38, dense_essence_block_13445, "Dense essence<br>(with 38 Mining)");
+					case 7 :
+						return(45, maple_bird_house_22192, "Craft a birdhouse trap from maple logs");
+					case 8 :
+						return(50, mahogany_bird_house_22195, "Craft a birdhouse trap from mahogany logs");
+					case 9 :
+						return(60, yew_bird_house_22198, "Craft a birdhouse trap from yew logs");
+					case 10 :
+						return(75, magic_bird_house_22201, "Craft a birdhouse trap from magic logs");
+					case 11 :
+						return(90, redwood_bird_house_22204, "Craft a birdhouse trap from redwood logs");
+					case default :
+						return(-1, null, "");
+				}
+			case default :
+				return(-1, null, "");
 		}
-		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(1, leather_gloves_1059, "Leather gloves");
-			}
-			if ($int2 = 1) {
-				return(7, leather_boots_1061, "Leather boots");
-			}
-			if ($int2 = 2) {
-				return(9, leather_cowl_1167, "Leather cowl");
-			}
-			if ($int2 = 3) {
-				return(11, leather_vambraces_1063, "Leather vambraces");
-			}
-			if ($int2 = 4) {
-				return(14, leather_body_1129, "Leather body");
-			}
-			if ($int2 = 5) {
-				return(14, xerician_hat_13385, "Members: Xerician hat");
-			}
-			if ($int2 = 6) {
-				return(15, myre_snelm_3327, "Members: Snail helmet");
-			}
-			if ($int2 = 7) {
-				return(15, crab_helmet_7539, "Members: Crab shell armour");
-			}
-			if ($int2 = 8) {
-				return(17, xerician_robe_13389, "Members: Xerician robe");
-			}
-			if ($int2 = 9) {
-				return(18, leather_chaps_1095, "Leather chaps");
-			}
-			if ($int2 = 10) {
-				return(22, xerician_top_13387, "Members: Xerician top");
-			}
-			if ($int2 = 11) {
-				return(28, hardleather_body_1131, "Hard leather body");
-			}
-			if ($int2 = 12) {
-				return(32, spiky_vambraces_10077, "Members: Spiked vambraces");
-			}
-			if ($int2 = 13) {
-				return(35, broodoo_shield_10_6259, "Members: Broodoo shield");
-			}
-			if ($int2 = 14) {
-				return(38, coif_1169, "Members: Coif");
-			}
-			if ($int2 = 15) {
-				return(41, studded_body_1133, "Members: Studded body");
-			}
-			if ($int2 = 16) {
-				return(41, hard_leather_shield_22269, "Members: Leather shield");
-			}
-			if ($int2 = 17) {
-				return(43, yak_hide_armour_10824, "Members: Yak-hide leg armour");
-			}
-			if ($int2 = 18) {
-				return(44, studded_chaps_1097, "Members: Studded chaps");
-			}
-			if ($int2 = 19) {
-				return(45, snakeskin_boots_6328, "Members: Snakeskin boots");
-			}
-			if ($int2 = 20) {
-				return(46, yak_hide_armour_10822, "Members: Yak-hide body armour");
-			}
-			if ($int2 = 21) {
-				return(47, snakeskin_vambraces_6330, "Members: Snakeskin vambraces");
-			}
-			if ($int2 = 22) {
-				return(48, snakeskin_bandana_6326, "Members: Snakeskin bandana");
-			}
-			if ($int2 = 23) {
-				return(51, snakeskin_chaps_6324, "Members: Snakeskin chaps");
-			}
-			if ($int2 = 24) {
-				return(52, serpentine_helm_12931, "Members: Serpentine helm");
-			}
-			if ($int2 = 25) {
-				return(53, snakeskin_body_6322, "Members: Snakeskin body");
-			}
-			if ($int2 = 26) {
-				return(55, slayer_helmet_11864, "Members: Slayer helm");
-			}
-			if ($int2 = 27) {
-				return(56, snakeskin_shield_22272, "Members: Snakeskin shield");
-			}
-			if ($int2 = 28) {
-				return(57, green_dhide_vamb_1065, "Members: Green dragonhide vambraces");
-			}
-			if ($int2 = 29) {
-				return(60, green_dhide_chaps_1099, "Members: Green dragonhide chaps");
-			}
-			if ($int2 = 30) {
-				return(62, green_dhide_shield_22275, "Members: Green dragonhide shield");
-			}
-			if ($int2 = 31) {
-				return(63, green_dhide_body_1135, "Members: Green dragonhide body");
-			}
-			if ($int2 = 32) {
-				return(66, blue_dhide_vamb_2487, "Members: Blue dragonhide vambraces");
-			}
-			if ($int2 = 33) {
-				return(68, blue_dhide_chaps_2493, "Members: Blue dragonhide chaps");
-			}
-			if ($int2 = 34) {
-				return(69, blue_dhide_shield_22278, "Members: Blue dragonhide shield");
-			}
-			if ($int2 = 35) {
-				return(71, blue_dhide_body_2499, "Members: Blue dragonhide body");
-			}
-			if ($int2 = 36) {
-				return(73, red_dhide_vamb_2489, "Members: Red dragonhide vambraces");
-			}
-			if ($int2 = 37) {
-				return(75, red_dhide_chaps_2495, "Members: Red dragonhide chaps");
-			}
-			if ($int2 = 38) {
-				return(76, red_dhide_shield_22281, "Members: Red dragonhide shield");
-			}
-			if ($int2 = 39) {
-				return(77, red_dhide_body_2501, "Members: Red dragonhide body");
-			}
-			if ($int2 = 40) {
-				return(79, black_dhide_vamb_2491, "Members: Black dragonhide vambraces");
-			}
-			if ($int2 = 41) {
-				return(82, black_dhide_chaps_2497, "Members: Black dragonhide chaps");
-			}
-			if ($int2 = 42) {
-				return(83, black_dhide_shield_22284, "Members: Black dragonhide shield");
-			}
-			if ($int2 = 43) {
-				return(84, black_dhide_body_2503, "Members: Black dragonhide body");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 2) {
-			if ($int2 = 0) {
-				return(1, ball_of_wool_1759, "Wool");
-			}
-			if ($int2 = 1) {
-				return(10, bow_string_1777, "Members: Flax into bow strings");
-			}
-			if ($int2 = 2) {
-				return(10, crossbow_string_9438, "Members: Sinew into crossbow strings");
-			}
-			if ($int2 = 3) {
-				return(19, magic_string_6038, "Members: Magic tree roots into magic strings");
-			}
-			if ($int2 = 4) {
-				return(30, rope_954, "Members: Yak hair into rope");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 3) {
-			if ($int2 = 0) {
-				return(1, pot_1931, "Pot");
-			}
-			if ($int2 = 1) {
-				return(7, pie_dish_2313, "Pie dish");
-			}
-			if ($int2 = 2) {
-				return(8, bowl_1923, "Bowl");
-			}
-			if ($int2 = 3) {
-				return(19, empty_plant_pot_5350, "Members: Plant pot");
-			}
-			if ($int2 = 4) {
-				return(25, pot_lid_4440, "Members: Pot lid");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 4) {
-			if ($int2 = 0) {
-				return(1, beer_glass_1919, "Beer glass");
-			}
-			if ($int2 = 1) {
-				return(4, empty_candle_lantern_4527, "Candle lantern");
-			}
-			if ($int2 = 2) {
-				return(12, empty_oil_lamp_4525, "Oil lamp");
-			}
-			if ($int2 = 3) {
-				return(26, empty_oil_lantern_4535, "Oil lantern");
-			}
-			if ($int2 = 4) {
-				return(33, vial_229, "Vial");
-			}
-			if ($int2 = 5) {
-				return(42, empty_fishbowl_6667, "Fishbowl");
-			}
-			if ($int2 = 6) {
-				return(46, unpowered_orb_567, "Glass orb");
-			}
-			if ($int2 = 7) {
-				return(49, lantern_lens_4542, "Bullseye lantern lens");
-			}
-			if ($int2 = 8) {
-				return(87, light_orb_10973, "Dorgeshuun light orb");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 5) {
-			if ($int2 = 0) {
-				return(1, opal_1609, "Members: Cut opal");
-			}
-			if ($int2 = 1) {
-				return(1, opal_ring_21081, "Members: Opal ring");
-			}
-			if ($int2 = 2) {
-				return(3, polished_buttons_10496, "Polished buttons");
-			}
-			if ($int2 = 3) {
-				return(5, gold_ring_1635, "Gold ring");
-			}
-			if ($int2 = 4) {
-				return(6, gold_necklace_1654, "Gold necklace");
-			}
-			if ($int2 = 5) {
-				return(7, gold_bracelet_11069, "Members: Gold bracelet");
-			}
-			if ($int2 = 6) {
-				return(8, gold_amulet_1692, "Gold amulet");
-			}
-			if ($int2 = 7) {
-				return(13, jade_1611, "Members: Cut jade");
-			}
-			if ($int2 = 8) {
-				return(13, jade_ring_21084, "Members: Jade ring");
-			}
-			if ($int2 = 9) {
-				return(16, unblessed_symbol_1716, "Holy symbol");
-			}
-			if ($int2 = 10) {
-				return(16, red_topaz_1613, "Members: Cut red topaz");
-			}
-			if ($int2 = 11) {
-				return(16, topaz_ring_21087, "Members: Red topaz ring");
-			}
-			if ($int2 = 12) {
-				return(16, opal_necklace_21090, "Members: Opal necklace");
-			}
-			if ($int2 = 13) {
-				return(17, unpowered_symbol_1722, "Members: Unholy symbol");
-			}
-			if ($int2 = 14) {
-				return(20, sapphire_1607, "Cut sapphire");
-			}
-			if ($int2 = 15) {
-				return(20, sapphire_ring_1637, "Sapphire ring");
-			}
-			if ($int2 = 16) {
-				return(22, sapphire_necklace_1656, "Sapphire necklace");
-			}
-			if ($int2 = 17) {
-				return(22, opal_bracelet_21117, "Members: Opal bracelet");
-			}
-			if ($int2 = 18) {
-				return(23, tiara_5525, "Tiara");
-			}
-			if ($int2 = 19) {
-				return(23, sapphire_bracelet_11072, "Members: Sapphire bracelet");
-			}
-			if ($int2 = 20) {
-				return(24, sapphire_amulet_1694, "Sapphire amulet");
-			}
-			if ($int2 = 21) {
-				return(25, jade_necklace_21093, "Members: Jade necklace");
-			}
-			if ($int2 = 22) {
-				return(27, emerald_1605, "Cut emerald");
-			}
-			if ($int2 = 23) {
-				return(27, emerald_ring_1639, "Emerald ring");
-			}
-			if ($int2 = 24) {
-				return(27, opal_amulet_21108, "Members: Opal amulet");
-			}
-			if ($int2 = 25) {
-				return(29, emerald_necklace_1658, "Emerald necklace");
-			}
-			if ($int2 = 26) {
-				return(29, jade_bracelet_21120, "Members: Jade bracelet");
-			}
-			if ($int2 = 27) {
-				return(30, emerald_bracelet_11076, "Members: Emerald bracelet");
-			}
-			if ($int2 = 28) {
-				return(31, emerald_amulet_1696, "Emerald amulet");
-			}
-			if ($int2 = 29) {
-				return(32, topaz_necklace_21096, "Members: Red topaz necklace");
-			}
-			if ($int2 = 30) {
-				return(34, ruby_1603, "Cut ruby");
-			}
-			if ($int2 = 31) {
-				return(34, ruby_ring_1641, "Ruby ring");
-			}
-			if ($int2 = 32) {
-				return(34, jade_amulet_21111, "Members: Jade amulet");
-			}
-			if ($int2 = 33) {
-				return(37, strung_rabbit_foot_10132, "Members: Rabbit-foot necklaces");
-			}
-			if ($int2 = 34) {
-				return(38, topaz_bracelet_21123, "Members: Red topaz bracelet");
-			}
-			if ($int2 = 35) {
-				return(40, ruby_necklace_1660, "Ruby necklace");
-			}
-			if ($int2 = 36) {
-				return(42, ruby_bracelet_11085, "Members: Ruby bracelet");
-			}
-			if ($int2 = 37) {
-				return(43, diamond_1601, "Cut diamond");
-			}
-			if ($int2 = 38) {
-				return(43, diamond_ring_1643, "Diamond ring");
-			}
-			if ($int2 = 39) {
-				return(45, topaz_amulet_21114, "Members: Red topaz amulet");
-			}
-			if ($int2 = 40) {
-				return(50, ruby_amulet_1698, "Ruby amulet");
-			}
-			if ($int2 = 41) {
-				return(55, dragonstone_1615, "Members: Cut dragonstone");
-			}
-			if ($int2 = 42) {
-				return(55, dragonstone_ring_1645, "Members: Dragonstone ring");
-			}
-			if ($int2 = 43) {
-				return(56, diamond_necklace_1662, "Diamond necklace");
-			}
-			if ($int2 = 44) {
-				return(58, diamond_bracelet_11092, "Members: Diamond bracelet");
-			}
-			if ($int2 = 45) {
-				return(67, onyx_6573, "Members: Cut onyx");
-			}
-			if ($int2 = 46) {
-				return(67, onyx_ring_6575, "Members: Onyx ring");
-			}
-			if ($int2 = 47) {
-				return(70, diamond_amulet_1700, "Diamond amulet");
-			}
-			if ($int2 = 48) {
-				return(72, dragon_necklace_1664, "Members: Dragonstone necklace");
-			}
-			if ($int2 = 49) {
-				return(74, dragonstone_bracelet_11115, "Members: Dragonstone bracelet");
-			}
-			if ($int2 = 50) {
-				return(75, slayer_ring_8_11866, "Members: Slayer ring");
-			}
-			if ($int2 = 51) {
-				return(80, dragonstone_amulet_1702, "Members: Dragonstone amulet");
-			}
-			if ($int2 = 52) {
-				return(82, onyx_necklace_6577, "Members: Onyx necklace");
-			}
-			if ($int2 = 53) {
-				return(84, onyx_bracelet_11130, "Members: Onyx bracelet");
-			}
-			if ($int2 = 54) {
-				return(89, zenyte_19493, "Members: Cut zenyte");
-			}
-			if ($int2 = 55) {
-				return(89, zenyte_ring_19538, "Members: Zenyte ring");
-			}
-			if ($int2 = 56) {
-				return(90, onyx_amulet_6581, "Members: Onyx amulet");
-			}
-			if ($int2 = 57) {
-				return(92, zenyte_necklace_19535, "Members: Zenyte necklace");
-			}
-			if ($int2 = 58) {
-				return(95, zenyte_bracelet_19532, "Members: Zenyte bracelet");
-			}
-			if ($int2 = 59) {
-				return(98, zenyte_amulet_19541, "Members: Zenyte amulet");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 6) {
-			if ($int2 = 0) {
-				return(21, silver_bolts_unf_5_9414, "Silver crossbow bolts");
-			}
-			if ($int2 = 1) {
-				return(54, water_battlestaff_1395, "Water battlestaff");
-			}
-			if ($int2 = 2) {
-				return(58, earth_battlestaff_1399, "Earth battlestaff");
-			}
-			if ($int2 = 3) {
-				return(59, toxic_staff_of_the_dead_12904, "Toxic Staff of the Dead");
-			}
-			if ($int2 = 4) {
-				return(59, trident_of_the_swamp_12899, "Trident of the Swamp");
-			}
-			if ($int2 = 5) {
-				return(62, fire_battlestaff_1393, "Fire battlestaff");
-			}
-			if ($int2 = 6) {
-				return(66, air_battlestaff_1397, "Air battlestaff");
-			}
-			if ($int2 = 7) {
-				return(83, amethyst_bolt_tips_5_4768, "Amethyst bolt tips");
-			}
-			if ($int2 = 8) {
-				return(85, amethyst_arrowtips_21350, "Amethyst arrowtips");
-			}
-			if ($int2 = 9) {
-				return(87, amethyst_javelin_heads_5_13220, "Amethyst javelin heads");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 7) {
-			if ($int2 = 0) {
-				return(70, crystal_helm_23971, "Crystal helm<br>(with 70 Smithing)");
-			}
-			if ($int2 = 1) {
-				return(72, crystal_legs_23979, "Crystal legs<br>(with 72 Smithing)");
-			}
-			if ($int2 = 2) {
-				return(74, crystal_body_23975, "Crystal body<br>(with 74 Smithing)");
-			}
-			if ($int2 = 3) {
-				return(76, crystal_pickaxe_23680, "Crystal pickaxe<br>(with 76 Smithing)");
-			}
-			if ($int2 = 4) {
-				return(76, crystal_axe_23673, "Crystal axe<br>(with 76 Smithing)");
-			}
-			if ($int2 = 5) {
-				return(76, crystal_harpoon_23762, "Crystal harpoon<br>(with 76 Smithing)");
-			}
-			if ($int2 = 6) {
-				return(78, crystal_bow_23983, "Crystal bow<br>(with 78 Smithing)");
-			}
-			if ($int2 = 7) {
-				return(78, crystal_halberd_23987, "Crystal halberd<br>(with 78 Smithing)");
-			}
-			if ($int2 = 8) {
-				return(78, crystal_shield_23991, "Crystal shield<br>(with 78 Smithing)");
-			}
-			if ($int2 = 9) {
-				return(80, enhanced_crystal_key_23951, "Enhanced crystal key<br>(with 80 Smithing)");
-			}
-			if ($int2 = 10) {
-				return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Smithing)");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 8) {
-			switch_int ($int2) {
-				case 0 :
-					return(5, bird_house_21512, "Craft a birdhouse trap from normal logs");
-				case 1 :
-					return(10, damaged_monkey_tail_19665, "Extract sinew from monkey tails");
-				case 2 :
-					return(15, oak_bird_house_21515, "Craft a birdhouse trap from oak logs");
-				case 3 :
-					return(25, willow_bird_house_21518, "Craft a birdhouse trap from willow logs");
-				case 4 :
-					return(30, hammer_2347, "Repair Piscarilius fishing cranes");
-				case 5 :
-					return(35, teak_bird_house_21521, "Craft a birdhouse trap from teak logs");
-				case 6 :
-					return(38, dense_essence_block_13445, "Dense essence<br>(with 38 Mining)");
-				case 7 :
-					return(45, maple_bird_house_22192, "Craft a birdhouse trap from maple logs");
-				case 8 :
-					return(50, mahogany_bird_house_22195, "Craft a birdhouse trap from mahogany logs");
-				case 9 :
-					return(60, yew_bird_house_22198, "Craft a birdhouse trap from yew logs");
-				case 10 :
-					return(75, magic_bird_house_22201, "Craft a birdhouse trap from magic logs");
-				case 11 :
-					return(90, redwood_bird_house_22204, "Craft a birdhouse trap from redwood logs");
-				case default :
-					return(-1, null, "");
-			}
-		}
-		return(-1, null, "");
 	case 19 :
 		if ($int1 = 0) {
 			if ($int2 = 0) {

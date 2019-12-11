@@ -39,7 +39,7 @@ while ($int3 < $int4) {
 		cc_setcolour(0xf7f0df);
 		cc_settextshadow(true);
 		cc_settextfont(p11_full);
-		cc_setsize(8, 0, ^setsize_minus, ^setsize_minus);
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setonmouseover("cc_colour_swapper(event_com, event_comid, 0xc0c0c0)");
