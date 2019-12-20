@@ -54,7 +54,7 @@ if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (c
 		if_clearops($component10);
 		if ((string_length($string3) > 0) & ($int15 ! -1)) {
 			$boolean16 = enum(int, boolean, 2761, $int15);
-			if (clienttype ! 3) {
+			if (clienttype ! ^clienttype_ios) {
 				$boolean16 = false;
 			}
 			if ($boolean16 = false) {

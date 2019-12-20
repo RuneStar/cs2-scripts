@@ -10,7 +10,7 @@ $string1 = enum(int, string, 63, $int0);
 if (string_length($string1) <= 0) {
 	return($string0, "", -1);
 }
-if (clienttype ! 3) {
+if (clienttype ! ^clienttype_ios) {
 	return("<img=12> <$string0>", $string1, $int0);
 }
 return($string0, $string1, $int0);

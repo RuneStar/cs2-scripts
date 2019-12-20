@@ -9,7 +9,7 @@ if ($int0 = 9) {
 	~rebuildpmbox($int2);
 } else if (string_length($string0) > 0) {
 	$boolean3 = enum(int, boolean, 2761, $int1);
-	if (clienttype ! 3) {
+	if (clienttype ! ^clienttype_ios) {
 		$boolean3 = false;
 	}
 	if ($boolean3 = false) {

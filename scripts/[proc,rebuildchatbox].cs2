@@ -127,7 +127,7 @@ while (($int9 ! -1) & ($component8 ! null)) {
 			case ^chattype_broadcast :
 				if ((string_length($string12) > 0) & ($int12 ! -1)) {
 					$boolean13 = enum(int, boolean, 2761, $int12);
-					if (clienttype ! 3) {
+					if (clienttype ! ^clienttype_ios) {
 						$boolean13 = false;
 					}
 					if ($boolean13 = false) {

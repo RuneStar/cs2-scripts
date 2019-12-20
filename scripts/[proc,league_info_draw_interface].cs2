@@ -56,7 +56,7 @@ $int22 = 0;
 ~script3041($component8, $component9, $component10, $int22, 0);
 $int22 = 0;
 while ($int21 < enum_getoutputcount($enum15)) {
-	if (($int21 = 0) & (clienttype ! 3)) {
+	if (($int21 = 0) & (clienttype ! ^clienttype_ios)) {
 		cc_create($component3, ^iftype_rectangle, $int22);
 		cc_setsize($int27, $int31, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -124,7 +124,7 @@ $int21 = 0;
 $int22 = 0;
 $int23 = 5;
 while ($int21 < enum_getoutputcount($enum17)) {
-	if (($int21 = 0) & (clienttype ! 3)) {
+	if (($int21 = 0) & (clienttype ! ^clienttype_ios)) {
 		cc_create($component5, ^iftype_rectangle, $int22);
 		cc_setsize($int28, $int31, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);

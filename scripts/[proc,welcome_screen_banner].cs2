@@ -1,6 +1,6 @@
 // 3091
 [proc,welcome_screen_banner]
-if (clienttype ! 3) {
+if (clienttype ! ^clienttype_ios) {
 	if_setonmouserepeat("comp_sethide(false, 413:81)", 413:78);
 	if_setonmouseleave("comp_sethide(true, 413:81)", 413:78);
 	if_setop(1, "View news", 413:78);

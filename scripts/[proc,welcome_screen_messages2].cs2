@@ -7,7 +7,7 @@ if (%var1781 = 1) {
 } else {
 	if_settext("You have<br>0 unread<br>messages in<br>your inbox.", $component1);
 }
-if (clienttype ! 3) {
+if (clienttype ! ^clienttype_ios) {
 	if_setonmouserepeat("comp_sethide(false, $component2)", $component0);
 	if_setonmouseleave("comp_sethide(true, $component2)", $component0);
 	if_setop(1, "View Inbox", $component0);

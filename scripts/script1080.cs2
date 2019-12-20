@@ -1,6 +1,6 @@
 // 1080
 script1080(string $string0)
-if ((string_length($string0) > 0) & (clienttype ! 3)) {
+if ((string_length($string0) > 0) & (clienttype ! ^clienttype_ios)) {
 	if_sethide(false, 378:8);
 	if_settrans(255, 378:8);
 	if_setonmouserepeat("settrans(event_com, 220)", 378:8);

@@ -1,6 +1,6 @@
 // 2357
 [proc,options_bottom_appearance]
-if ((clienttype = 3) & (%varbit6713 = 0)) {
+if ((clienttype = ^clienttype_ios) & (%varbit6713 = 0)) {
 	if_sethide(true, 261:108);
 	if_sethide(true, 261:109);
 	if_setposition(-56, 0, ^setpos_abs_centre, ^setpos_abs_top, 261:100);
