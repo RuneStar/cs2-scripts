@@ -4,21 +4,21 @@
 if ($int1 = 1) {
 	%varcstring370 = $string0;
 }
-if_setonkey("snapshot_onkey(event_keypressed, event_keytyped)", 553:5);
-if_settext("<escape(%varcstring370)><col=ffff00>|", 553:5);
+if_setonkey("snapshot_onkey(event_keypressed, event_keytyped)", snapshot_main:5);
+if_settext("<escape(%varcstring370)><col=ffff00>|", snapshot_main:5);
 %varcint6, %varcint140, %varcint224 = 0, 1, $int0;
 if ((playermod = true) | (staffmodlevel > 0)) {
 	%varcint140 = 0;
-	if_setcolour(^white, 553:14);
-	~snapshot_toggle(553:15, %varcint6);
+	if_setcolour(^white, snapshot_main:14);
+	~snapshot_toggle(snapshot_main:15, %varcint6);
 } else {
-	if_setgraphic("checkbox,0", 553:15);
-	if_setcolour(0xbbbbbb, 553:14);
-	if_clearops(553:15);
-	if_clearops(553:14);
+	if_setgraphic("checkbox,0", snapshot_main:15);
+	if_setcolour(0xbbbbbb, snapshot_main:14);
+	if_clearops(snapshot_main:15);
+	if_clearops(snapshot_main:14);
 }
-~snapshot_toggle(553:12, %varcint140);
+~snapshot_toggle(snapshot_main:12, %varcint140);
 if (~on_mobile = true) {
 	~keyboard_show(0, 12);
-	if_setonclick("snapshot_openkeyboard(0, 12)", 553:5);
+	if_setonclick("snapshot_openkeyboard(0, 12)", snapshot_main:5);
 }

@@ -3,9 +3,9 @@
 def_int $int2 = -1;
 if ($int0 = 1) {
 	~script147($int1);
-	if (cc_find(335:28, calc(inv_size(90) + $int1)) = ^true) {
+	if (cc_find(trademain:28, calc(inv_size(90) + $int1)) = ^true) {
 		cc_setontimer("trade_slot_flasher(event_com, event_comid, clientclock)");
 	}
-} else if (cc_find(335:25, calc(inv_size(90) + $int1)) = ^true) {
+} else if (cc_find(trademain:25, calc(inv_size(90) + $int1)) = ^true) {
 	cc_setontimer("trade_slot_flasher(event_com, event_comid, clientclock)");
 }

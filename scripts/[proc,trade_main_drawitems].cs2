@@ -71,7 +71,7 @@ while ($int15 < $int0) {
 			cc_setop(5, "Remove-X");
 			cc_setop(10, "Examine");
 			cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
-			~trade_tooltip($int10, $intarray1($int15), 335:32);
+			~trade_tooltip($int10, $intarray1($int15), trademain:32);
 		} else {
 			cc_sethide(true);
 			cc_clearops;
@@ -129,7 +129,7 @@ while ($int15 < $int0) {
 			cc_setobject($obj9, $int10);
 			cc_setop(10, "Examine");
 			cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
-			~trade_tooltip($int10, $intarray1($int15), 335:32);
+			~trade_tooltip($int10, $intarray1($int15), trademain:32);
 		} else {
 			cc_sethide(true);
 			cc_clearops;

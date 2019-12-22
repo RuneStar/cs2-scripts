@@ -5,7 +5,7 @@ cc_create($component0, ^iftype_rectangle, 0);
 cc_setsize(0, interpolate(0, 5, 0, 20, 16384), ^setsize_minus, ^setsize_2);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_setfill(true);
-if_setmodeltransparent(true, 313:1);
+if_setmodeltransparent(true, smokeoverlay:1);
 cc_setcolour(^black);
 cc_setfillcolour(0x808080);
 cc_settrans(255);

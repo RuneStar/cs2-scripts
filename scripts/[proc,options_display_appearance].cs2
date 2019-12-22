@@ -1,13 +1,13 @@
 // 2352
 [proc,options_display_appearance]
 if (~on_mobile = true) {
-	if_sethide(true, 261:32);
-	if_sethide(true, 261:35);
-	if_sethide(false, 261:22);
-	if_sethide(false, 261:36);
+	if_sethide(true, options:32);
+	if_sethide(true, options:35);
+	if_sethide(false, options:22);
+	if_sethide(false, options:36);
 	return;
 }
-if_sethide(false, 261:32);
-if_sethide(false, 261:35);
-if_sethide(true, 261:22);
-if_sethide(true, 261:36);
+if_sethide(false, options:32);
+if_sethide(false, options:35);
+if_sethide(true, options:22);
+if_sethide(true, options:36);

@@ -1,31 +1,31 @@
 // 2355
 [proc,options_controls_appearance]
 if (~on_mobile = true) {
-	if_sethide(true, 261:79);
-	if_sethide(true, 261:80);
-	if_sethide(true, 261:83);
-	if_sethide(true, 261:84);
-	if_sethide(false, 261:87);
-	if_sethide(false, 261:88);
-	if_sethide(false, 261:89);
-	if_setposition(-66, 6, ^setpos_abs_centre, ^setpos_abs_top, 261:77);
-	if_setposition(-66, 10, ^setpos_abs_centre, ^setpos_abs_top, 261:78);
-	if_setposition(-22, 6, ^setpos_abs_centre, ^setpos_abs_top, 261:85);
-	if_setposition(-22, 10, ^setpos_abs_centre, ^setpos_abs_top, 261:86);
-	if_setposition(22, 6, ^setpos_abs_centre, ^setpos_abs_top, 261:81);
-	if_setposition(22, 10, ^setpos_abs_centre, ^setpos_abs_top, 261:82);
+	if_sethide(true, options:79);
+	if_sethide(true, options:80);
+	if_sethide(true, options:83);
+	if_sethide(true, options:84);
+	if_sethide(false, options:87);
+	if_sethide(false, options:88);
+	if_sethide(false, options:89);
+	if_setposition(-66, 6, ^setpos_abs_centre, ^setpos_abs_top, options:77);
+	if_setposition(-66, 10, ^setpos_abs_centre, ^setpos_abs_top, options:78);
+	if_setposition(-22, 6, ^setpos_abs_centre, ^setpos_abs_top, options:85);
+	if_setposition(-22, 10, ^setpos_abs_centre, ^setpos_abs_top, options:86);
+	if_setposition(22, 6, ^setpos_abs_centre, ^setpos_abs_top, options:81);
+	if_setposition(22, 10, ^setpos_abs_centre, ^setpos_abs_top, options:82);
 	return;
 }
-if_sethide(false, 261:79);
-if_sethide(false, 261:80);
-if_sethide(false, 261:83);
-if_sethide(false, 261:84);
-if_sethide(true, 261:87);
-if_sethide(true, 261:88);
-if_sethide(true, 261:89);
-if_setposition(20, 6, ^setpos_abs_left, ^setpos_abs_top, 261:77);
-if_setposition(24, 10, ^setpos_abs_left, ^setpos_abs_top, 261:78);
-if_setposition(-35, 48, ^setpos_abs_centre, ^setpos_abs_top, 261:85);
-if_setposition(-35, 52, ^setpos_abs_centre, ^setpos_abs_top, 261:86);
-if_setposition(20, 6, ^setpos_abs_right, ^setpos_abs_top, 261:81);
-if_setposition(24, 10, ^setpos_abs_right, ^setpos_abs_top, 261:82);
+if_sethide(false, options:79);
+if_sethide(false, options:80);
+if_sethide(false, options:83);
+if_sethide(false, options:84);
+if_sethide(true, options:87);
+if_sethide(true, options:88);
+if_sethide(true, options:89);
+if_setposition(20, 6, ^setpos_abs_left, ^setpos_abs_top, options:77);
+if_setposition(24, 10, ^setpos_abs_left, ^setpos_abs_top, options:78);
+if_setposition(-35, 48, ^setpos_abs_centre, ^setpos_abs_top, options:85);
+if_setposition(-35, 52, ^setpos_abs_centre, ^setpos_abs_top, options:86);
+if_setposition(20, 6, ^setpos_abs_right, ^setpos_abs_top, options:81);
+if_setposition(24, 10, ^setpos_abs_right, ^setpos_abs_top, options:82);

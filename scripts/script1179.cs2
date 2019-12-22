@@ -8,25 +8,25 @@ $string1, $string0 = ~script632($string0);
 $string2, $string0 = ~script632($string0);
 $string3, $string0 = ~script632($string0);
 $string4, $string0 = ~script632($string0);
-if_settext(removetags($string0), 522:3);
-if_settext($string1, 522:20);
-if_settext($string2, 522:22);
-if_settext($string3, 522:24);
-if_settext($string4, 522:26);
-def_int $int0 = calc(paraheight($string1, if_getwidth(522:20), p12_full) * 12);
-if ($int0 > if_getheight(522:18)) {
-	if_setscrollsize(0, $int0, 522:19);
+if_settext(removetags($string0), dream_monster_stat:3);
+if_settext($string1, dream_monster_stat:20);
+if_settext($string2, dream_monster_stat:22);
+if_settext($string3, dream_monster_stat:24);
+if_settext($string4, dream_monster_stat:26);
+def_int $int0 = calc(paraheight($string1, if_getwidth(dream_monster_stat:20), p12_full) * 12);
+if ($int0 > if_getheight(dream_monster_stat:18)) {
+	if_setscrollsize(0, $int0, dream_monster_stat:19);
 }
-$int0 = calc(paraheight($string2, if_getwidth(522:22), p12_full) * 12);
-if ($int0 > if_getheight(522:18)) {
-	if_setscrollsize(0, $int0, 522:21);
+$int0 = calc(paraheight($string2, if_getwidth(dream_monster_stat:22), p12_full) * 12);
+if ($int0 > if_getheight(dream_monster_stat:18)) {
+	if_setscrollsize(0, $int0, dream_monster_stat:21);
 }
-$int0 = calc(paraheight($string3, if_getwidth(522:24), p12_full) * 12);
-if ($int0 > if_getheight(522:18)) {
-	if_setscrollsize(0, $int0, 522:23);
+$int0 = calc(paraheight($string3, if_getwidth(dream_monster_stat:24), p12_full) * 12);
+if ($int0 > if_getheight(dream_monster_stat:18)) {
+	if_setscrollsize(0, $int0, dream_monster_stat:23);
 }
-$int0 = calc(paraheight($string4, if_getwidth(522:26), p12_full) * 12);
-if ($int0 > if_getheight(522:18)) {
-	if_setscrollsize(0, $int0, 522:25);
+$int0 = calc(paraheight($string4, if_getwidth(dream_monster_stat:26), p12_full) * 12);
+if ($int0 > if_getheight(dream_monster_stat:18)) {
+	if_setscrollsize(0, $int0, dream_monster_stat:25);
 }
-~script1181(522:5);
+~script1181(dream_monster_stat:5);

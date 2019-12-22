@@ -1,15 +1,15 @@
 // 814
 [clientscript,confirmdestroy_init](obj $obj0, int $int1, string $string0, string $string1)
-cc_deleteall(584:0);
-cc_create(584:0, ^iftype_rectangle, 0);
-.cc_create(584:0, ^iftype_rectangle, 1);
+cc_deleteall(confirm_destroy:0);
+cc_create(confirm_destroy:0, ^iftype_rectangle, 0);
+.cc_create(confirm_destroy:0, ^iftype_rectangle, 1);
 cc_sethide(true);
 .cc_sethide(true);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 .cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
-cc_create(584:0, ^iftype_text, 2);
+cc_create(confirm_destroy:0, ^iftype_text, 2);
 cc_setsize(0, 30, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setcolour(0x800000);
@@ -19,8 +19,8 @@ cc_settext($string0);
 def_int $int2 = parawidth($string0, 479, q8_full);
 $int2 = ~max($int2, 330);
 $int2 = calc((($int2 + 57) / 2) + 5);
-cc_create(584:0, ^iftype_graphic, 3);
-.cc_create(584:0, ^iftype_graphic, 4);
+cc_create(confirm_destroy:0, ^iftype_graphic, 3);
+.cc_create(confirm_destroy:0, ^iftype_graphic, 4);
 cc_setsize(57, 13, ^setsize_abs, ^setsize_abs);
 .cc_setsize(57, 13, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(0 - $int2), 9, ^setpos_abs_centre, ^setpos_abs_top);
@@ -28,11 +28,11 @@ cc_setposition(calc(0 - $int2), 9, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setgraphic("sworddecor,1");
 .cc_setgraphic("sworddecor,0");
 if (~inzone(0_30_77_0_0, 3_30_77_63_63, coord) = 1) {
-	~confirmdestroy_setupbutton(584:1, "Yes", 1, "Yy");
+	~confirmdestroy_setupbutton(confirm_destroy:1, "Yes", 1, "Yy");
 } else {
-	~confirmdestroy_setupbutton(584:1, "Yes", 1, "1Yy");
+	~confirmdestroy_setupbutton(confirm_destroy:1, "Yes", 1, "1Yy");
 }
-~confirmdestroy_setupbutton(584:3, "No", 0, "2Nn");
-if_setobject($obj0, $int1, 584:5);
-if_settext(oc_name($obj0), 584:6);
-if_settext($string1, 584:7);
+~confirmdestroy_setupbutton(confirm_destroy:3, "No", 0, "2Nn");
+if_setobject($obj0, $int1, confirm_destroy:5);
+if_settext(oc_name($obj0), confirm_destroy:6);
+if_settext($string1, confirm_destroy:7);
