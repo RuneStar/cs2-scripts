@@ -5,7 +5,7 @@ if ($obj5 = null) {
 	return;
 }
 if (oc_unplaceholder($obj5) ! $obj5) {
-	sound_synth(2277, 1, 0);
+	sound_synth(pillory_wrong, 1, 0);
 	mes("You can release placeholders by clicking on them.");
 	return;
 }
