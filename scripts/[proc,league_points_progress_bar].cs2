@@ -83,7 +83,7 @@ if (cc_find($component0, 0) = ^false) {
 						$int14 = calc($int14 + 2);
 					}
 					cc_setposition(calc($int14 - 5), 0, ^setpos_abs_left, ^setpos_abs_top);
-					cc_setgraphic(2388);
+					cc_setgraphic("league_progress_bar_indicator");
 					$string0 = "Relic unlocked at <tostring(struct_param($struct6, 877))> points.";
 					if (~on_mobile = true) {
 						cc_setop(1, "Show Threshold");
