@@ -232,7 +232,6 @@
 [**229**](scripts/[clientscript,cc_graphic_swapper].cs2) `[clientscript,cc_graphic_swapper]`  
 [**230**](scripts/[clientscript,makeover_clothes_setup].cs2) `[clientscript,makeover_clothes_setup]`  
 [**231**](scripts/[proc,scrollbar_vertical_rebuild].cs2) `[proc,scrollbar_vertical_rebuild]`  
-[**232**](scripts/[clientscript,bankmain_menubutton].cs2) `[clientscript,bankmain_menubutton]`  
 [**233**](scripts/script233.cs2)  
 [**234**](scripts/script234.cs2)  
 [**235**](scripts/[clientscript,autocast_init].cs2) `[clientscript,autocast_init]`  
@@ -503,7 +502,6 @@
 [**500**](scripts/[clientscript,makeover_indicator].cs2) `[clientscript,makeover_indicator]`  
 [**501**](scripts/[proc,makeover_indicator].cs2) `[proc,makeover_indicator]`  
 [**502**](scripts/[clientscript,makeover_hair_setup].cs2) `[clientscript,makeover_hair_setup]`  
-[**503**](scripts/[proc,bankmain_menubutton].cs2) `[proc,bankmain_menubutton]`  
 [**504**](scripts/[clientscript,bankmain_switchtab].cs2) `[clientscript,bankmain_switchtab]`  
 [**505**](scripts/[proc,bankmain_finishbuilding].cs2) `[proc,bankmain_finishbuilding]`  
 [**506**](scripts/[proc,bankmain_tabicon].cs2) `[proc,bankmain_tabicon]`  
@@ -544,7 +542,6 @@
 [**541**](scripts/[proc,ge_offers_bigbutton].cs2) `[proc,ge_offers_bigbutton]`  
 [**542**](scripts/[clientscript,ge_offers_bigbutton_op].cs2) `[clientscript,ge_offers_bigbutton_op]`  
 [**543**](scripts/[clientscript,ge_offers_bigbutton_reset].cs2) `[clientscript,ge_offers_bigbutton_reset]`  
-[**544**](scripts/[clientscript,wear_initslot].cs2) `[clientscript,wear_initslot]`  
 [**545**](scripts/[clientscript,wear_updateslot].cs2) `[clientscript,wear_updateslot]`  
 [**546**](scripts/[proc,wear_updateslot].cs2) `[proc,wear_updateslot]`  
 [**547**](scripts/[clientscript,runweight_visible].cs2) `[clientscript,runweight_visible]`  
@@ -3271,3 +3268,15 @@
 [**3268**](scripts/[clientscript,account_update_tabs].cs2) `[clientscript,account_update_tabs]`  
 [**3269**](scripts/[proc,account_update_tabs].cs2) `[proc,account_update_tabs]`  
 [**3270**](scripts/[proc,account_polls_update].cs2) `[proc,account_polls_update]`  
+[**3271**](scripts/script3271.cs2)  
+[**3272**](scripts/script3272.cs2)  
+[**3273**](scripts/script3273.cs2)  
+[**3274**](scripts/script3274.cs2)  
+[**3275**](scripts/script3275.cs2)  
+[**3276**](scripts/script3276.cs2)  
+[**3277**](scripts/script3277.cs2)  
+[**3278**](scripts/script3278.cs2)  
+[**3279**](scripts/script3279.cs2)  
+[**3280**](scripts/script3280.cs2)  
+[**3281**](scripts/script3281.cs2)  
+[**3282**](scripts/script3282.cs2)  

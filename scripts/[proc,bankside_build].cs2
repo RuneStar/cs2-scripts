@@ -1,28 +1,77 @@
 // 296
-[proc,bankside_build](component $component0, component $component1, component $component2, component $component3)
-def_int $int4 = 0;
-def_int $int5 = inv_size(516);
-while (($int5 > 0) & ($int4 = 0)) {
-	$int5 = calc($int5 - 1);
-	if (inv_getobj(516, $int5) ! null) {
-		$int4 = 1;
+[proc,bankside_build](component $component0, component $component1, component $component2, component $component3, component $component4)
+if_setontimer("script3277(%varcint386, $component0, $component1, $component2, $component3, $component4)", $component0);
+cc_deleteall($component2);
+def_int $int5 = calc(((42 - 36) * 3) - 2);
+def_int $int6 = calc((36 - 32) * 2);
+def_obj $obj7 = null;
+def_int $int8 = 0;
+def_string $string0 = "";
+if (%varcint386 = true) {
+	if_sethide(true, $component1);
+	if_sethide(true, $component2);
+	if_sethide(false, $component3);
+	$int8 = inv_size(inv);
+	while ($int8 > 0) {
+		$int8 = calc($int8 - 1);
+		if (cc_find($component3, $int8) = ^true) {
+			$obj7 = inv_getobj(inv, $int8);
+			if ($obj7 ! null) {
+				cc_setobject($obj7, inv_getnum(inv, $int8));
+				cc_setposition(calc($int5 + (($int8 % 4) * 42)), calc($int6 + (($int8 / 4) * 36)), ^setpos_abs_left, ^setpos_abs_top);
+				cc_clearops;
+				if (testbit(%var262, $int8) = ^true) {
+					$string0 = oc_param($obj7, 595);
+					if ((string_length($string0) <= 0) & ((map_members = ^true) | (oc_members($obj7) = ^false))) {
+						$string0 = oc_iop($obj7, oc_param($obj7, 148));
+					}
+					if (string_length($string0) > 0) {
+						cc_setop(1, $string0);
+						cc_settrans(0);
+						cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+					} else {
+						cc_settrans(120);
+						cc_setonop(null);
+					}
+				} else {
+					cc_settrans(120);
+					cc_setonop(null);
+				}
+				cc_setop(10, "Examine");
+				cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
+			} else {
+				cc_settrans(255);
+				cc_setobject(6512, 1);
+				cc_clearops;
+				cc_setonop(null);
+			}
+			cc_setontimer(null);
+		}
+	}
+	return;
+}
+if_sethide(false, $component1);
+if_sethide(false, $component2);
+if_sethide(true, $component3);
+def_int $int9 = 0;
+$int8 = inv_size(516);
+while (($int8 > 0) & ($int9 = 0)) {
+	$int8 = calc($int8 - 1);
+	if (inv_getobj(516, $int8) ! null) {
+		$int9 = 1;
 	}
 }
-cc_deleteall($component2);
-def_int $int6 = 0;
-def_int $int7 = calc(((42 - 36) * 3) - 2);
-def_int $int8 = calc((36 - 32) * 2);
-def_obj $obj9 = null;
-$int5 = inv_size(inv);
-while ($int5 > 0) {
-	$int5 = calc($int5 - 1);
-	if (cc_find($component1, $int5) = ^true) {
-		$obj9 = inv_getobj(inv, $int5);
-		~bankside_drawitem($obj9, inv_getnum(inv, $int5), $component1, $component2, $int4, $component0, $component3);
-		cc_setposition(calc($int7 + (($int5 % 4) * 42)), calc($int8 + (($int5 / 4) * 36)), ^setpos_abs_left, ^setpos_abs_top);
-		if ((($obj9 = looting_bag_11941) | ($obj9 = looting_bag_22586)) & ($int4 = 1)) {
-			.cc_create($component2, ^iftype_graphic, $int6);
-			$int6 = calc($int6 + 1);
+def_int $int10 = 0;
+$int8 = inv_size(inv);
+while ($int8 > 0) {
+	$int8 = calc($int8 - 1);
+	if (cc_find($component1, $int8) = ^true) {
+		$obj7 = inv_getobj(inv, $int8);
+		~bankside_drawitem($obj7, inv_getnum(inv, $int8), $int8, $component1, $component2, $int9, $component0, $component4);
+		cc_setposition(calc($int5 + (($int8 % 4) * 42)), calc($int6 + (($int8 / 4) * 36)), ^setpos_abs_left, ^setpos_abs_top);
+		if ((($obj7 = looting_bag_11941) | ($obj7 = looting_bag_22586)) & ($int9 = 1)) {
+			.cc_create($component2, ^iftype_graphic, $int10);
+			$int10 = calc($int10 + 1);
 			.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 			.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setgraphic("prayerglow");

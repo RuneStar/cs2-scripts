@@ -1,23 +1,29 @@
 // 294
-[clientscript,bankside_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+[clientscript,bankside_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 cc_deleteall($component3);
-def_int $int7 = 0;
-def_int $int8 = inv_size(inv);
-while ($int7 < $int8) {
-	cc_create($component3, ^iftype_graphic, $int7);
+cc_deleteall($component4);
+def_int $int8 = 0;
+def_int $int9 = inv_size(inv);
+while ($int8 < $int9) {
+	cc_create($component3, ^iftype_graphic, $int8);
+	.cc_create($component4, ^iftype_graphic, $int8);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
+	.cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
+	.cc_setoutline(1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
 	cc_sethide(false);
-	$int7 = calc($int7 + 1);
+	.cc_sethide(false);
+	$int8 = calc($int8 + 1);
 }
-~bankside_build($component1, $component3, $component2, $component4);
-if_setoninvtransmit("bankside_build($component1, $component3, $component2, $component4){inv, 516}", $component1);
-if_setonvartransmit("bankside_build($component1, $component3, $component2, $component4){var304, var1666, var261}", $component1);
-~bankside_lootingbag_draw($component5);
-if_setoninvtransmit("bankside_lootingbag_draw($component5){516}", $component4);
-~bankside_switchview($component1, $component4);
-if_setonvartransmit("bankside_switchview(-1, $component1, $component4, -1){var115}", $component0);
-if_setonop("bankside_switchview(event_opindex, $component1, $component4, 0)", $component6);
+~bankside_build($component1, $component3, $component2, $component4, $component5);
+if_setoninvtransmit("bankside_build($component1, $component3, $component2, $component4, $component5){inv, 516}", $component1);
+if_setonvartransmit("bankside_build($component1, $component3, $component2, $component4, $component5){var304, var1666, var1141, var261, var262, var263}", $component1);
+~bankside_lootingbag_draw($component6);
+if_setoninvtransmit("bankside_lootingbag_draw($component6){516}", $component5);
+~bankside_switchview($component1, $component5);
+if_setonvartransmit("bankside_switchview(-1, $component1, $component5, -1){var115}", $component0);
+if_setonop("bankside_switchview(event_opindex, $component1, $component5, 0)", $component7);

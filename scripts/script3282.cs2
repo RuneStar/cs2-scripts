@@ -1,8 +1,8 @@
-// 544
-[clientscript,wear_initslot](component $component0, int $int1)
+// 3282
+script3282(component $component0, int $int1, boolean $boolean2)
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0);
-cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 cc_setgraphic("miscgraphics,0");
 cc_create($component0, ^iftype_graphic, 1);
@@ -12,7 +12,7 @@ cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 .cc_create($component0, ^iftype_graphic, 2);
 .cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
-.cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setgraphic(enum(int, graphic, 904, $int1));
-~wear_updateslot($component0, $int1);
-if_setoninvtransmit("wear_updateslot($component0, $int1, cc_getid, .cc_getid){worn}", $component0);
+~wear_updateslot($component0, $int1, $boolean2);
+if_setoninvtransmit("wear_updateslot($component0, $int1, $boolean2, cc_getid, .cc_getid){worn}", $component0);

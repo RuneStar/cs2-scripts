@@ -1,5 +1,8 @@
 // 2576
-[proc,bankside_extraop](obj $obj0)(string)
+[proc,bankside_extraop](obj $obj0, int $int1)(string)
+if (%varbit10079 = 1) {
+	return("");
+}
 def_string $string0 = oc_param($obj0, 595);
 switch_obj ($obj0) {
 	case small_pouch_5509 :
@@ -17,6 +20,14 @@ switch_obj ($obj0) {
 	case giant_pouch_5514, giant_pouch_5515 :
 		if (testbit(%var261, 3) = ^true) {
 			$string0 = "Empty";
+		}
+	case default :
+		if ((string_length($string0) <= 0) & ((map_members = ^true) | (oc_members($obj0) = ^false))) {
+			if (testbit(%var262, $int1) = ^true) {
+				$string0 = oc_iop($obj0, oc_param($obj0, 148));
+			} else if (testbit(%var263, $int1) = ^true) {
+				$string0 = oc_iop($obj0, 1);
+			}
 		}
 }
 return($string0);

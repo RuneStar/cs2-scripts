@@ -1,0 +1,26 @@
+// 3271
+script3271(component $component0)
+cc_deleteall($component0);
+def_int $int1 = 17;
+def_int $int2 = 17;
+def_int $int3 = calc(if_getwidth($component0) - $int1);
+cc_create($component0, ^iftype_text, 0);
+cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
+cc_settext("Music unlock message");
+cc_create($component0, ^iftype_graphic, 1);
+cc_setsize($int1, $int2, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, calc(((if_getheight($component0) / 2) - ($int2 / 2)) - 1), ^setpos_abs_left, ^setpos_abs_top);
+if (%varbit10078 = 0) {
+	cc_setgraphic("options_radio_buttons,6");
+} else {
+	cc_setgraphic("options_radio_buttons,5");
+}
+if_setonop("script3272($component0, %varbit10078)", $component0);
+if_setonvartransmit("script3273($component0){var19}", $component0);
+if_setonmouseleave("cc_colour_swapper($component0, 0, 0xff981f)", $component0);
+if_setonmouserepeat("cc_colour_swapper($component0, 0, ^white)", $component0);

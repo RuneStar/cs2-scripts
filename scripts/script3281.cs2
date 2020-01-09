@@ -1,0 +1,11 @@
+// 3281
+script3281(enum $enum0, boolean $boolean1)
+def_component $component2 = null;
+def_int $int3 = inv_size(worn);
+while ($int3 > 0) {
+	$int3 = calc($int3 - 1);
+	$component2 = enum(int, component, $enum0, $int3);
+	if ($component2 ! null) {
+		~script3282($component2, $int3, $boolean1);
+	}
+}
