@@ -34,7 +34,6 @@ cc_settext("Teleport Mode");
 cc_setcolour(0xff981f);
 cc_setsize(10, 18, ^setsize_minus, ^setsize_abs);
 cc_setposition(15, 5, ^setpos_abs_left, ^setpos_abs_top);
-cc_setop(1, "Select");
 cc_setonop("telenexus_scry_click($component0, $component1, 2)");
 if (%varbit6671 = 0) {
 	cc_setonmouseover("telenexus_options_mouseover(event_com, 0, 2, $graphic5)");
@@ -51,7 +50,6 @@ cc_settext("Scry Mode");
 cc_setcolour(0xff981f);
 cc_setsize(10, 18, ^setsize_minus, ^setsize_abs);
 cc_setposition(15, 5, ^setpos_abs_left, ^setpos_abs_bottom);
-cc_setop(1, "Select");
 cc_setonop("telenexus_scry_click($component0, $component1, 3)");
 if (%varbit6671 = 1) {
 	cc_setonmouseover("telenexus_options_mouseover(event_com, 1, 3, $graphic5)");

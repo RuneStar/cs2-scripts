@@ -4,7 +4,7 @@ def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = enum(int, int, 273, $int8);
-while (($int9 ! -1) & ($int9 <= 47)) {
+while (($int9 ! -1) & ($int9 <= 48)) {
 	if ((($int9 < 32) & (testbit(%var1076, $int9) = ^false)) | (($int9 >= 32) & (testbit(%var1344, calc($int9 % 32)) = ^false))) {
 		$int6, $int7 = calc($int6 + 1), calc($int7 + enum(int, int, 836, $int9));
 	}
@@ -37,7 +37,7 @@ if (($int6 > 0) & ($int7 > 0)) {
 	if_setonmouserepeat("options_button_on(event_com, 0)", $component0);
 	if_setonmouseleave("options_button_off(event_com, 0)", $component0);
 	if_setop(1, "Extend", $component0);
-	if_setonop("slayer_rewards_unlock_confirm(null, calc(47 + 9), $string1, $component1, $component2, $component3, $component4, $component5, $int7)", $component0);
+	if_setonop("slayer_rewards_unlock_confirm(null, calc(48 + 9), $string1, $component1, $component2, $component3, $component4, $component5, $int7)", $component0);
 } else {
 	cc_setcolour(0x7f4c0f);
 	cc_settext($string0);

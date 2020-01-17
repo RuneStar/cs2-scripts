@@ -13,6 +13,10 @@ def_int $int10 = struct_param($struct0, 673);
 def_int $int11 = struct_param($struct0, 674);
 def_string $string0 = "";
 def_int $int12 = 1;
+def_int $int13 = 1;
+if (%varbit4896 < 600) {
+	$int13 = 0;
+}
 if ($stat9 ! null) {
 	if (stat_base($stat9) >= $int10) {
 		$string0 = "<$string0><col=0dc10d>";
@@ -75,7 +79,7 @@ if ($int11 = 1) {
 				$int12 = 0;
 			}
 			$string0 = "<$string0>Recited the incantation.</col>";
-		case troll_stronghold_467 :
+		case troll_stronghold_467, weiss_592 :
 			if (%varbit6528 >= 200) {
 				$string0 = "<$string0><col=0dc10d>";
 			} else {
@@ -107,6 +111,89 @@ if ($int11 = 1) {
 				$int12 = 0;
 			}
 			$string0 = "<$string0>Complete the hard or elite tier of the Ardougne achievement diary.</col>";
+		case battlefront_1247 :
+			if (%varbit4897 = 1) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0>Visited Kourend.</col>";
+			if ($int13 = 1) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0> 60% Arceuus favour.</col>";
+		case salve_graveyard_1249, fenken_castle_1250, barrows_1254 :
+			if (%var302 >= 61) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0>Complete Priest in Peril.</col>";
+			if ($int13 = 1) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0> 60% Arceuus favour.</col>";
+		case west_ardougne_1251 :
+			if (%var68 >= 16) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0>Completed Biohazard.</col>";
+			if ($int13 = 1) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0> 60% Arceuus favour.</col>";
+		case harmony_island_1252 :
+			if (%var980 >= 130) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0>Completed The Great Brain Robbery.</col>";
+			if ($int13 = 1) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0> 60% Arceuus favour.</col>";
+		case ape_atoll_dungeon_1255 :
+			if (%var365 >= 10) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0>Completed Monkey Madness.</col>";
+			if ($int13 = 1) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0> 60% Arceuus favour.</col>";
+		case lumbridge_grave_1245, draynor_manor_1246, mind_altar_1248, cemetery_1253 :
+			if ($int13 = 1) {
+				$string0 = "<$string0><col=0dc10d>";
+			} else {
+				$string0 = "<$string0><col=ff0000>";
+				$int12 = 0;
+			}
+			$string0 = "<$string0>60% Arceuus favour.</col>";
 	}
 }
 def_string $string1 = "";

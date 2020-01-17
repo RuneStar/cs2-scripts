@@ -11,7 +11,7 @@ def_int $int12 = 4;
 if (%varbit6670 = 2) {
 	$int12 = 8;
 } else if (%varbit6670 = 3) {
-	$int12 = 18;
+	$int12 = 30;
 }
 def_int $int13 = 0;
 def_int $int14 = 0;
@@ -64,6 +64,6 @@ if ($int20 > if_getheight($component0)) {
 } else {
 	if_setscrollsize(0, 0, $component3);
 	if_setscrollpos(0, 0, $component3);
-	if_setscrollsize(0, 0, $component3);
 }
 ~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_resize($component4, $component3, if_getscrolly($component3));

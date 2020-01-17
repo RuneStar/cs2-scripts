@@ -1,12 +1,12 @@
 // 2269
 [clientscript,telenexus_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, int $int23, int $int24, component $component25, component $component26, component $component27)
 ~telenexus_left_click($component0, $component1, $component2, $component26, $component27);
-if_setonvartransmit("telenexus_left_click($component0, $component1, $component2, $component26, $component27){var1806, var1803, var1804, var1805, var1810}", $component0);
-if_setonvartransmit("telenexus_done_text($component5){var1806, var1803, var1804, var1805, var1810, var1799, var1800, var1801, var1802, var1809}", $component5);
+if_setonvartransmit("telenexus_left_click($component0, $component1, $component2, $component26, $component27){var1806, var1803, var1804, var1805, var1810, var2637, var2638}", $component0);
+if_setonvartransmit("telenexus_done_text($component5){var1806, var1803, var1804, var1805, var1810, var2637, var2638, var1799, var1800, var1801, var1802, var1809, var2635, var2636}", $component5);
 ~script2271($component7, $component8, $component12, $component9, $component10, $component11, $component6, $component21, $component15, $component19, $component16, $component17, $component18, $component13, true);
-if_setonvartransmit("script2270($component7, $component8, $component12, $component9, $component10, $component11, $component6, $component21, $component15, $component19, $component16, $component17, $component18, $component13, false){var1806, var1803, var1804, var1805, var1810}", $component7);
+if_setonvartransmit("script2270($component7, $component8, $component12, $component9, $component10, $component11, $component6, $component21, $component15, $component19, $component16, $component17, $component18, $component13, false){var1806, var1803, var1804, var1805, var1810, var2637, var2638}", $component7);
 ~script2273($component14, $component15, $component19, $component16, $component17, $component18, $component13, true);
-if_setonvartransmit("script2272($component14, $component15, $component19, $component16, $component17, $component18, $component13, false){var1806, var1803, var1804, var1805, var1810}", $component14);
+if_setonvartransmit("script2272($component14, $component15, $component19, $component16, $component17, $component18, $component13, false){var1806, var1803, var1804, var1805, var1810, var2637, var2638}", $component14);
 if_setonop("telenexus_okbutton_click", $component4);
 if_setonop("telenexus_cancel($component22)", $component25);
 ~poh_nexus_model($component3);
