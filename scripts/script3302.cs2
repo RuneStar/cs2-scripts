@@ -1,0 +1,13 @@
+// 3302
+script3302(string $string0, string $string1, string $string2)(string)
+def_string $string3 = "";
+def_int $int0 = 0;
+def_int $int1 = string_length($string0);
+def_int $int2 = string_indexof_string($string0, $string1, $int0);
+while ($int2 ! -1) {
+	$string3 = "<$string3><substring($string0, $int0, $int2)><$string2>";
+	$int0 = calc($int2 + string_length($string1));
+	$int2 = string_indexof_string($string0, $string1, $int0);
+}
+$string3 = "<$string3><substring($string0, $int0, $int1)>";
+return($string3);

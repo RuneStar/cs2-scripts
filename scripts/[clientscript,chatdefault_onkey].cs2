@@ -47,6 +47,8 @@ if ($key0 = ^key_return) {
 						setremoveroofs(true);
 						mes("Roofs are now all hidden.");
 					}
+				} else if (string_indexof_string(%varcstring335, "::wiki", 0) = 0) {
+					~script3299(%varcstring335);
 				} else if (string_indexof_string(%varcstring335, "::bank", 0) = 0) {
 					~chat_sendpublic("Hey, everyone, I just tried to do something very silly!", 0);
 				} else {

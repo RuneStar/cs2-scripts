@@ -27,7 +27,11 @@ switch_enum ($enum1) {
 		}
 		%varcint384 = clientclock;
 	case 1129 :
-		_2122(1200, enum(component, component, $enum1, 161:26));
+		if (~script3297 = 1) {
+			_2122(2422, enum(component, component, $enum1, 161:26));
+		} else {
+			_2122(1200, enum(component, component, $enum1, 161:26));
+		}
 	case 1745 :
 		if (%varbit6257 = 1) {
 			if_sethide(true, 601:31);

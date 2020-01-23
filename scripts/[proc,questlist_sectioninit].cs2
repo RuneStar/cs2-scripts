@@ -24,6 +24,8 @@ while ($int9 < $int2) {
 	cc_setopbase("<col=ff9040><$string1></col>");
 	$intarray0($int9) = calc(($int6 * $int7) + $int9);
 	cc_setop(1, "Read Journal:");
+	cc_setop(2, "Guide:");
+	cc_setop(3, "Quick-guide:");
 	$int9 = calc($int9 + 1);
 }
 if ($int2 > 1) {

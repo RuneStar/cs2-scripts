@@ -1,0 +1,13 @@
+// 3299
+script3299(string $string0)
+def_string $string1 = "";
+if (string_length($string0) >= 7) {
+	$string1 = substring($string0, 7, string_length($string0));
+}
+if (string_length($string1) <= 0) {
+	mes("The Old School RuneScape Wiki has been opened.");
+	~script3301("", "", "", "", "");
+	return;
+}
+mes("Your search has been opened in the Old School RuneScape Wiki.");
+~script3301("Search", "", "", "", $string1);

@@ -1,0 +1,17 @@
+// 3295
+script3295(int $int0, component $component1, component $component2)
+if ($int0 ! 1) {
+	return;
+}
+if ((~on_mobile = false) & (%varbit4084 = 1)) {
+	mes("The wiki lookup also requires data orbs to be turned on.");
+	sound_synth(pillory_wrong, 1, 0);
+	return;
+}
+sound_synth(2266, 1, 0);
+if (%varbit10113 = 0) {
+	%varbit10113 = 1;
+} else {
+	%varbit10113 = 0;
+}
+~script3296($component1, $component2);

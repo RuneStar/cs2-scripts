@@ -1,0 +1,21 @@
+// 3303
+script3303(string $string0)(string)
+$string0 = ~script3302($string0, "%", "%25");
+$string0 = ~script1299($string0, " ", "%20");
+$string0 = ~script1299($string0, "&", "%26");
+$string0 = ~script1299($string0, "+", "%2B");
+$string0 = ~script1299($string0, "|", "%7C");
+$string0 = ~script1299($string0, "`", "%60");
+$string0 = ~script1299($string0, """, "%22");
+$string0 = ~script1299($string0, substring("<br>", 0, 1), "%3C");
+$string0 = ~script1299($string0, ">", "%3E");
+$string0 = ~script1299($string0, "{", "%7B");
+$string0 = ~script1299($string0, "}", "%7D");
+$string0 = ~script1299($string0, "^", "%5E");
+$string0 = ~script1299($string0, "\", "%5C");
+$string0 = ~script1299($string0, "!", "%21");
+$string0 = ~script1299($string0, "$", "%24");
+$string0 = ~script1299($string0, "#", "%23");
+$string0 = ~script1299($string0, "(", "%28");
+$string0 = ~script1299($string0, ")", "%29");
+return($string0);
