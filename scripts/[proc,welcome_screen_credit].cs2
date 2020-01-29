@@ -1,42 +1,39 @@
 // 2216
-[proc,welcome_screen_credit](component $component0, component $component1, component $component2)
+[proc,welcome_screen_credit](component $component0, int $int1)
 def_string $string0 = "";
-def_int $int3 = 0;
+def_int $int2 = 0;
 if (%var1780 > 1) {
-	if (%varbit6623 = 2) {
+	if ($int1 = 0) {
 		$string0 = "You have <col=00ff00><~tostring_spacer(%var1780, ",")></col> days of membership left.";
 	} else {
 		$string0 = "You have <col=00ff00><~tostring_spacer(%var1780, ",")></col> days of Old School RuneScape membership remaining.";
 	}
 } else if (%var1780 = 1) {
-	if (%varbit6623 = 2) {
+	if ($int1 = 0) {
 		$string0 = "You have <col=00ff00><~tostring_spacer(%var1780, ",")></col> day of membership left.";
 	} else {
 		$string0 = "You have <col=00ff00><~tostring_spacer(%var1780, ",")></col> day of Old School RuneScape membership remaining.";
 	}
 } else if (%varcint103 = 1) {
-	if (%varbit6623 = 2) {
-		$string0 = "You have no membership credit remaining.<br><br><col=ff9040>Subscribe to retain your membership status!</col>";
+	if ($int1 = 0) {
+		$string0 = "You have no membership credit left.<br><br><col=ff9040>Subscribe to retain your membership status!</col>";
 	} else {
 		$string0 = "You have no Old School RuneScape membership credit remaining.<br><br><col=ff9040>Subscribe to retain your membership status!</col>";
 	}
 } else if (%varcint103 = 0) {
 	$string0 = "You are not a member.<br>Subscribe to access extra skills, areas,<br>quests, and more.";
 } else {
-	$int3 = 1;
+	$int2 = 1;
 }
 if (((%varcint226 = 0) & (%var1780 <= 3)) & (%varcint103 = 1)) {
-	if (%varbit6623 = 2) {
+	if ($int1 = 0) {
 		$string0 = "<$string0><br><col=ff9040>Renew now to avoid losing your</col><br><col=ff9040>membership status!</col>";
 	} else {
 		$string0 = "<$string0><br><br><col=ff9040>Credit low! Renew now to avoid losing your</col><br><col=ff9040>membership status!</col>";
 	}
 }
-if_setonmouserepeat("comp_sethide(false, $component2)", $component1);
-if_setonmouseleave("comp_sethide(true, $component2)", $component1);
-if_setop(1, "Open Store", $component1);
-if ($int3 = 1) {
-	if_setontimer("welcome_screen_credit($component0, $component1, $component2)", $component0);
+if ($int2 = 1) {
+	if_setontimer("welcome_screen_credit($component0)", $component0);
 	if_settext("", $component0);
 } else {
 	if_settext($string0, $component0);

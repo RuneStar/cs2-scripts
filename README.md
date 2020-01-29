@@ -62,7 +62,6 @@
 [**59**](scripts/[proc,chatbox_multi_addoption].cs2) `[proc,chatbox_multi_addoption]`  
 [**60**](scripts/[clientscript,dream_bank_init].cs2) `[clientscript,dream_bank_init]`  
 [**61**](scripts/[clientscript,dream_chest_init].cs2) `[clientscript,dream_chest_init]`  
-[**62**](scripts/[clientscript,welcome_screen2_init].cs2) `[clientscript,welcome_screen2_init]`  
 [**63**](scripts/[clientscript,scrollbar_vertical_graphics].cs2) `[clientscript,scrollbar_vertical_graphics]`  
 [**64**](scripts/script64.cs2)  
 [**65**](scripts/[clientscript,set_spinner].cs2) `[clientscript,set_spinner]`  
@@ -1414,10 +1413,6 @@
 [**1411**](scripts/[clientscript,questdisplay].cs2) `[clientscript,questdisplay]`  
 [**1412**](scripts/[proc,questdisplay_setup].cs2) `[proc,questdisplay_setup]`  
 [**1413**](scripts/script1413.cs2)  
-[**1414**](scripts/[clientscript,welcome_screen_messages2].cs2) `[clientscript,welcome_screen_messages2]`  
-[**1415**](scripts/[proc,welcome_screen_messages2].cs2) `[proc,welcome_screen_messages2]`  
-[**1416**](scripts/[clientscript,welcome_screen_credit2].cs2) `[clientscript,welcome_screen_credit2]`  
-[**1417**](scripts/[proc,welcome_screen_credit2].cs2) `[proc,welcome_screen_credit2]`  
 [**1418**](scripts/[clientscript,br_tournament_sendnames].cs2) `[clientscript,br_tournament_sendnames]`  
 [**1419**](scripts/[clientscript,br_tournament_op].cs2) `[clientscript,br_tournament_op]`  
 [**1420**](scripts/[clientscript,br_tournament_submit].cs2) `[clientscript,br_tournament_submit]`  
@@ -2194,7 +2189,6 @@
 [**2191**](scripts/script2191.cs2)  
 [**2192**](scripts/script2192.cs2)  
 [**2193**](scripts/[proc,deadman_arenas_tele].cs2) `[proc,deadman_arenas_tele]`  
-[**2194**](scripts/script2194.cs2)  
 [**2195**](scripts/[proc,scale_colour].cs2) `[proc,scale_colour]`  
 [**2196**](scripts/[proc,current_date_time].cs2) `[proc,current_date_time]`  
 [**2197**](scripts/[proc,setup_diary_entry].cs2) `[proc,setup_diary_entry]`  
@@ -3307,3 +3301,7 @@
 [**3304**](scripts/script3304.cs2)  
 [**3305**](scripts/script3305.cs2)  
 [**3306**](scripts/script3306.cs2)  
+[**3307**](scripts/script3307.cs2)  
+[**3308**](scripts/script3308.cs2)  
+[**3309**](scripts/script3309.cs2)  
+[**3310**](scripts/script3310.cs2)  

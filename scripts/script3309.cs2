@@ -1,0 +1,23 @@
+// 3309
+script3309(int $int0, component $component1, component $component2, component $component3, component $component4, component $component5)
+if ($int0 = 0) {
+	if_sethide(false, $component5);
+	if_sethide(true, $component1);
+	if_sethide(true, $component2);
+	if_setsize(220, 90, ^setsize_abs, ^setsize_abs, $component4);
+	if_setposition(29, 282, ^setpos_abs_left, ^setpos_abs_top, $component4);
+	if_setsize(220, 90, ^setsize_abs, ^setsize_abs, $component3);
+	if_setposition(29, 282, ^setpos_abs_right, ^setpos_abs_top, $component3);
+	if_setgraphic("button_brown_small", welcome_screen:74);
+	if_setgraphic("button_brown_small", welcome_screen:67);
+} else {
+	if_sethide(true, $component5);
+	if_sethide(false, $component1);
+	if_sethide(false, $component2);
+	if_setsize(343, 90, ^setsize_abs, ^setsize_abs, $component4);
+	if_setposition(29, 64, ^setpos_abs_right, ^setpos_abs_top, $component4);
+	if_setsize(343, 90, ^setsize_abs, ^setsize_abs, $component3);
+	if_setposition(29, 173, ^setpos_abs_right, ^setpos_abs_top, $component3);
+	if_setgraphic("button_brown_big", welcome_screen:74);
+	if_setgraphic("button_brown_big", welcome_screen:67);
+}

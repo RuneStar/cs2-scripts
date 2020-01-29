@@ -26,6 +26,7 @@ if (((%varcint73 > 0) & (%varcint74 > 0)) & (($int5 ! %varcint73) | ($int4 ! %va
 	~camera_do_zoom(%varcint73, %varcint74);
 }
 if_setonscrollwheel("camera_zoom(event_mousey)", $component3);
+_2309(1, $component3);
 def_int $int6 = calc(%varbit3756 - 1);
 def_component $component7 = enum(int, component, 1139, $int6);
 def_component $component8 = enum(int, component, 1138, $int6);

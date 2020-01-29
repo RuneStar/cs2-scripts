@@ -6,7 +6,7 @@ def_string $string0 = "";
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_int $int6 = 0;
-while ($int6 <= 47) {
+while ($int6 <= 48) {
 	cc_create($component1, ^iftype_graphic, $int6);
 	if (enum(int, graphic, 1001, $int6) ! null) {
 		cc_sethide(false);

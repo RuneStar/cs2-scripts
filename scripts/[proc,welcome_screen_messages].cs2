@@ -1,11 +1,17 @@
 // 2214
-[proc,welcome_screen_messages](component $component0, component $component1, component $component2)
-if (%var1781 > 0) {
+[proc,welcome_screen_messages](component $component0, component $component1, component $component2, int $int3)
+if ($int3 = 0) {
 	if (%var1781 = 1) {
-		if_settext("You have <col=00ff00>1 unread message</col><br>in your message centre.", $component1);
+		if_settext("You have<br><col=00ff00>1</col> unread<br>message in<br>your inbox.", $component1);
+	} else if (%var1781 > 0) {
+		if_settext("You have<br><col=00ff00><~tostring_spacer(%var1781, ",")></col> unread<br>messages in<br>your inbox.", $component1);
 	} else {
-		if_settext("You have <col=00ff00><~tostring_spacer(%var1781, ",")> unread messages</col><br>in your message centre.", $component1);
+		if_settext("You have<br>0 unread<br>messages in<br>your inbox.", $component1);
 	}
+} else if (%var1781 = 1) {
+	if_settext("You have <col=00ff00>1 unread message</col><br>in your message centre.", $component1);
+} else if (%var1781 > 0) {
+	if_settext("You have <col=00ff00><~tostring_spacer(%var1781, ",")> unread messages</col><br>in your message centre.", $component1);
 } else {
 	if_settext("You have no unread messages<br>in your message centre.", $component1);
 }

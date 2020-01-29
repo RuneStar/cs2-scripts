@@ -1,0 +1,13 @@
+// 3310
+script3310(component $component0)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_text, 0);
+cc_setcolour(0x909090);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("<u=909090>Switch style</u>");
+cc_setonmouserepeat("cc_colour_swapper($component0, 0, 0xb4b4b4)");
+cc_setonmouseleave("cc_colour_swapper($component0, 0, 0x909090)");
