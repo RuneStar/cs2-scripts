@@ -3275,8 +3275,8 @@
 [**3278**](scripts/script3278.cs2)  
 [**3279**](scripts/script3279.cs2)  
 [**3280**](scripts/script3280.cs2)  
-[**3281**](scripts/script3281.cs2)  
-[**3282**](scripts/script3282.cs2)  
+[**3281**](scripts/[clientscript,wear_initslots].cs2) `[clientscript,wear_initslots]`  
+[**3282**](scripts/[proc,wear_initslot].cs2) `[proc,wear_initslot]`  
 [**3283**](scripts/script3283.cs2)  
 [**3284**](scripts/script3284.cs2)  
 [**3285**](scripts/script3285.cs2)  
