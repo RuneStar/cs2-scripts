@@ -53,8 +53,8 @@ if (~instance_check(coord) = 1) {
 				$int24 = scale(%varbit6448, ~max(%varbit6449, 1), 1000);
 				if_settext("<tostring(calc($int24 / 10))>.<tostring(calc($int24 % 10))>%", $component6);
 			} else if (%varbit6447 = 3) {
-				cc_setcolour(0x0a0573);
-				.cc_setcolour(0x46eae4);
+				cc_setcolour(0x002620);
+				.cc_setcolour(0x00d2ac);
 				$int24 = scale(%varbit6448, ~max(%varbit6449, 1), 1000);
 				if_settext("<col=ff0000><tostring(calc($int24 / 10))>.<tostring(calc($int24 % 10))>%</col>", $component6);
 			} else {

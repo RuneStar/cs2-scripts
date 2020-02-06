@@ -8,7 +8,7 @@ def_int $int6 = 0;
 def_int $int7 = 0;
 def_enum $enum8 = null;
 def_int $int9 = 0;
-while ($int9 <= 44) {
+while ($int9 <= 45) {
 	cc_create($component0, ^iftype_graphic, $int9);
 	if ((($int9 < 32) & (testbit(%var864, $int9) = ^true)) | (($int9 >= 32) & (testbit(%var1416, calc($int9 - 32)) = ^true))) {
 		if ($int9 = 11) {

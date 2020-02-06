@@ -1,0 +1,35 @@
+// 3324
+script3324(int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19)
+if ($int0 <= 0) {
+	if_sethide(true, $component4);
+	if_sethide(true, $component8);
+	if_sethide(true, $component12);
+	if_sethide(true, $component16);
+}
+$int0 = ~min(255, calc($int0 + 3));
+if_settrans($int0, $component2);
+if_settrans($int0, $component3);
+if_settrans($int0, $component5);
+if_settrans($int0, $component6);
+if_settrans($int0, $component9);
+if_settrans($int0, $component10);
+if_settrans($int0, $component13);
+if_settrans($int0, $component14);
+if_settrans($int0, $component17);
+if_settrans($int0, $component18);
+if_setontimer(null, $component6);
+if_setontimer(null, $component10);
+if_setontimer(null, $component14);
+if_setontimer(null, $component18);
+if ($int1 = -1) {
+	$int1 = if_gettrans($component7);
+}
+$int1 = ~min(255, calc($int1 + 3));
+if ($int0 >= 255) {
+	$int1 = 255;
+}
+if_settrans($int1, $component7);
+if_settrans($int1, $component11);
+if_settrans($int1, $component15);
+if_settrans($int1, $component19);
+if_setontimer("script3323($int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19)", $component2);

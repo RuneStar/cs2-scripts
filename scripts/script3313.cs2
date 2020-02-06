@@ -1,0 +1,26 @@
+// 3313
+script3313(int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18)
+$int0 = ~max(0, calc($int0 - 3));
+if_settrans($int0, $component1);
+if_settrans($int0, $component2);
+if_settrans($int0, $component4);
+if_settrans($int0, $component5);
+if_settrans($int0, $component6);
+if_settrans($int0, $component8);
+if_settrans($int0, $component9);
+if_settrans($int0, $component10);
+if_settrans($int0, $component12);
+if_settrans($int0, $component13);
+if_settrans($int0, $component14);
+if_settrans($int0, $component16);
+if_settrans($int0, $component17);
+if_settrans($int0, $component18);
+if ($int0 <= 0) {
+	if_sethide(false, $component3);
+	if_sethide(false, $component7);
+	if_sethide(false, $component11);
+	if_sethide(false, $component15);
+	if_setontimer(null, $component1);
+	return;
+}
+if_setontimer("script3312($int0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18)", $component1);

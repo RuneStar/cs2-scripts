@@ -3,20 +3,21 @@
 def_int $intarray0(4);
 def_int $intarray1(4);
 def_int $int0 = 45;
-def_int $int1 = 68;
+def_int $int1 = 71;
 def_int $int2 = 47;
 def_int $int3 = 32;
 def_int $int4 = 26;
 def_int $int5 = 12;
-def_int $int6 = 14;
+def_int $int6 = 8;
 def_int $int7 = 4;
 def_int $int8 = 7;
 def_int $int9 = 20;
 def_int $int10 = 0;
-def_int $int11 = 97;
-def_int $int12 = 44;
+def_int $int11 = calc((3 * $int3) + (2 * $int7));
+def_int $int12 = 50;
 def_int $int13 = 44;
 if (~on_mobile = true) {
+	$int0 = 43;
 	$int6 = 4;
 	$int1 = 88;
 	$int2 = 47;
@@ -24,16 +25,14 @@ if (~on_mobile = true) {
 	$int9 = 5;
 	$int13 = $int2;
 	if ((%varbit357 = 18) | (%varbit357 = 21)) {
-		$int4 = calc($int2 - 4);
+		$int4 = calc($int2 - 6);
 	} else {
-		$int4 = $int2;
+		$int4 = calc($int2 - 2);
 	}
 	$int5 = 20;
-	$int12 = 50;
-	$int11 = calc((3 * $int3) + (2 * $int7));
-	if_settextalign(^settextalign_centre, ^settextalign_bottom, 0, 593:2);
+	if_setsize(190, 16, ^setsize_abs, ^setsize_abs, 593:2);
 } else {
-	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, 593:2);
+	if_setsize(190, 28, ^setsize_abs, ^setsize_abs, 593:2);
 }
 if ((%varbit357 = 18) | (%varbit357 = 21)) {
 	if_sethide(false, 593:20);
@@ -54,15 +53,15 @@ if ((%varbit357 = 18) | (%varbit357 = 21)) {
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:9);
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:13);
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, 593:17);
-	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:6);
-	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:10);
-	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:14);
-	if_setposition(-1, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:18);
+	if_setposition(0, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:6);
+	if_setposition(0, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:10);
+	if_setposition(0, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:14);
+	if_setposition(0, -1, ^setpos_abs_centre, ^setpos_abs_centre, 593:18);
 	if_setsize(33, 23, ^setsize_abs, ^setsize_abs, 593:6);
-	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:7);
-	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:11);
-	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:15);
-	if_setposition(-1, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:19);
+	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:7);
+	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:11);
+	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:15);
+	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_centre, 593:19);
 } else {
 	if_sethide(true, 593:20);
 	$intarray0(0) = $int9;

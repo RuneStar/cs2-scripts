@@ -1,0 +1,30 @@
+// 3322
+script3322(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+def_int $int9 = 0;
+if (if_gettrans($component0) ! 0) {
+	$int9 = if_gettrans($component0);
+} else if (if_gettrans($component1) ! 0) {
+	$int9 = if_gettrans($component1);
+} else if (if_gettrans($component2) ! 0) {
+	$int9 = if_gettrans($component2);
+} else if (if_gettrans($component3) ! 0) {
+	$int9 = if_gettrans($component3);
+}
+if ($int9 = 0) {
+	if_setontimer(null, $component8);
+	if_setontimer("script3319($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8)", $component8);
+	return;
+}
+$int9 = ~max(0, calc($int9 - 3));
+if (if_getwidth($component0) = if_getwidth($component4)) {
+	if_settrans($int9, $component0);
+}
+if (if_getwidth($component1) = if_getwidth($component5)) {
+	if_settrans($int9, $component1);
+}
+if (if_getwidth($component2) = if_getwidth($component6)) {
+	if_settrans($int9, $component2);
+}
+if (if_getwidth($component3) = if_getwidth($component7)) {
+	if_settrans($int9, $component3);
+}

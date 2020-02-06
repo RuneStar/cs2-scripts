@@ -1,9 +1,7 @@
 // 3091
 [proc,welcome_screen_banner]
-if (clienttype ! ^clienttype_ios) {
+if (~on_mobile = false) {
 	if_setonmouserepeat("comp_sethide(false, welcome_screen:90)", welcome_screen:86);
 	if_setonmouseleave("comp_sethide(true, welcome_screen:90)", welcome_screen:86);
-} else {
-	if_setop(1, "", welcome_screen:86);
 }
 if_sethide(true, welcome_screen:90);

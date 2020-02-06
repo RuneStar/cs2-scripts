@@ -6,7 +6,11 @@ if ((map_members = ^true) | (%varbit5314 = 1)) {
 }
 if ($int1 <= 0) {
 	if_sethide(true, 593:35);
+	if_setsize(190, 28, ^setsize_abs, ^setsize_abs, 593:2);
 	return;
+}
+if (~on_mobile = true) {
+	if_setsize(190, 16, ^setsize_abs, ^setsize_abs, 593:2);
 }
 def_int $int2 = 0;
 if (if_gethide(593:35) = true) {

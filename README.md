@@ -62,6 +62,7 @@
 [**59**](scripts/[proc,chatbox_multi_addoption].cs2) `[proc,chatbox_multi_addoption]`  
 [**60**](scripts/[clientscript,dream_bank_init].cs2) `[clientscript,dream_bank_init]`  
 [**61**](scripts/[clientscript,dream_chest_init].cs2) `[clientscript,dream_chest_init]`  
+[**62**](scripts/script62.cs2)  
 [**63**](scripts/[clientscript,scrollbar_vertical_graphics].cs2) `[clientscript,scrollbar_vertical_graphics]`  
 [**64**](scripts/script64.cs2)  
 [**65**](scripts/[clientscript,set_spinner].cs2) `[clientscript,set_spinner]`  
@@ -1413,6 +1414,10 @@
 [**1411**](scripts/[clientscript,questdisplay].cs2) `[clientscript,questdisplay]`  
 [**1412**](scripts/[proc,questdisplay_setup].cs2) `[proc,questdisplay_setup]`  
 [**1413**](scripts/script1413.cs2)  
+[**1414**](scripts/script1414.cs2)  
+[**1415**](scripts/script1415.cs2)  
+[**1416**](scripts/script1416.cs2)  
+[**1417**](scripts/script1417.cs2)  
 [**1418**](scripts/[clientscript,br_tournament_sendnames].cs2) `[clientscript,br_tournament_sendnames]`  
 [**1419**](scripts/[clientscript,br_tournament_op].cs2) `[clientscript,br_tournament_op]`  
 [**1420**](scripts/[clientscript,br_tournament_submit].cs2) `[clientscript,br_tournament_submit]`  
@@ -2189,6 +2194,7 @@
 [**2191**](scripts/script2191.cs2)  
 [**2192**](scripts/script2192.cs2)  
 [**2193**](scripts/[proc,deadman_arenas_tele].cs2) `[proc,deadman_arenas_tele]`  
+[**2194**](scripts/script2194.cs2)  
 [**2195**](scripts/[proc,scale_colour].cs2) `[proc,scale_colour]`  
 [**2196**](scripts/[proc,current_date_time].cs2) `[proc,current_date_time]`  
 [**2197**](scripts/[proc,setup_diary_entry].cs2) `[proc,setup_diary_entry]`  
@@ -3305,3 +3311,18 @@
 [**3308**](scripts/script3308.cs2)  
 [**3309**](scripts/script3309.cs2)  
 [**3310**](scripts/script3310.cs2)  
+[**3311**](scripts/script3311.cs2)  
+[**3312**](scripts/script3312.cs2)  
+[**3313**](scripts/script3313.cs2)  
+[**3314**](scripts/script3314.cs2)  
+[**3315**](scripts/script3315.cs2)  
+[**3316**](scripts/script3316.cs2)  
+[**3317**](scripts/script3317.cs2)  
+[**3318**](scripts/script3318.cs2)  
+[**3319**](scripts/script3319.cs2)  
+[**3320**](scripts/script3320.cs2)  
+[**3321**](scripts/script3321.cs2)  
+[**3322**](scripts/script3322.cs2)  
+[**3323**](scripts/script3323.cs2)  
+[**3324**](scripts/script3324.cs2)  
+[**3325**](scripts/script3325.cs2)  

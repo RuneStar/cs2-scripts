@@ -85,16 +85,18 @@ switch_int ($int0) {
 				case 39 :
 					return(75, ghrazi_rapier_22324, "Members: Ghrazi rapier");
 				case 40 :
-					return(75, saras_blessed_sword_full_12808, "Members: Blessed Saradomin sword");
+					return(75, inquisitors_mace_24417, "Members: Inquisitor's mace");
 				case 41 :
-					return(75, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 75 Strength)");
+					return(75, saras_blessed_sword_full_12808, "Members: Blessed Saradomin sword");
 				case 42 :
-					return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Strength)");
+					return(75, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 75 Strength)");
 				case 43 :
-					return(75, dinhs_bulwark_21015, "Members: Dinh's bulwark<br> (with 75 Defence)");
+					return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Strength)");
 				case 44 :
-					return(75, blade_of_saeldor_23995, "Members: Blade of Saeldor");
+					return(75, dinhs_bulwark_21015, "Members: Dinh's bulwark<br> (with 75 Defence)");
 				case 45 :
+					return(75, blade_of_saeldor_23995, "Members: Blade of Saeldor");
+				case 46 :
 					return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Defence)");
 				case default :
 					return(-1, null, "");
@@ -170,6 +172,9 @@ switch_int ($int0) {
 				return(50, granite_helm_10589, "Granite armour<br> (with 50 Defence)");
 			}
 			if ($int2 = 2) {
+				return(70, inquisitors_great_helm_24419, "Members: Inquisitor's armour<br> (with 30 Defence)");
+			}
+			if ($int2 = 3) {
 				return(75, primordial_boots_13239, "Primordial boots<br> (with 75 Defence)");
 			}
 			return(-1, null, "");
@@ -263,58 +268,60 @@ switch_int ($int0) {
 				case 11 :
 					return(30, adamant_med_helm_1145, "Adamantite");
 				case 12 :
-					return(30, proselyte_sallet_9672, "Members: Proselyte armour<br> (after Slug Menace, with 20 Prayer)");
+					return(30, inquisitors_great_helm_24419, "Members: Inquisitor's armour<br> (with 70 Strength)");
 				case 13 :
-					return(35, samurai_kasa_20035, "Members: Samurai armour");
+					return(30, proselyte_sallet_9672, "Members: Proselyte armour<br> (after Slug Menace, with 20 Prayer)");
 				case 14 :
-					return(40, rune_med_helm_1147, "Rune");
+					return(35, samurai_kasa_20035, "Members: Samurai armour");
 				case 15 :
-					return(40, rock_shell_helm_6128, "Members: Rock-shell armour<br> (after Fremennik Trials)");
+					return(40, rune_med_helm_1147, "Rune");
 				case 16 :
-					return(40, dagonhai_robe_top_24291, "Dagon'hai robes<br> (with 70 Magic)");
+					return(40, rock_shell_helm_6128, "Members: Rock-shell armour<br> (after Fremennik Trials)");
 				case 17 :
-					return(42, void_knight_top_8839, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+					return(40, dagonhai_robe_top_24291, "Dagon'hai robes<br> (with 70 Magic)");
 				case 18 :
-					return(45, berserker_helm_3751, "Members: Fremennik helmets<br> (after Fremennik Trials)");
+					return(42, void_knight_top_8839, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 				case 19 :
-					return(50, granite_shield_3122, "Members: Granite<br> (with 50 Strength)");
+					return(45, berserker_helm_3751, "Members: Fremennik helmets<br> (after Fremennik Trials)");
 				case 20 :
-					return(55, helm_of_neitiznot_10828, "Members: Helm of neitiznot<br> (after Fremennik Isles)");
+					return(50, granite_shield_3122, "Members: Granite<br> (with 50 Strength)");
 				case 21 :
-					return(60, dragon_med_helm_1149, "Members: Dragon");
+					return(55, helm_of_neitiznot_10828, "Members: Helm of neitiznot<br> (after Fremennik Isles)");
 				case 22 :
-					return(60, obsidian_platebody_21301, "Members: Obsidian armour");
+					return(60, dragon_med_helm_1149, "Members: Dragon");
 				case 23 :
-					return(65, bandos_chestplate_11832, "Members: Bandos armour");
+					return(60, obsidian_platebody_21301, "Members: Obsidian armour");
 				case 24 :
-					return(65, 3rd_age_full_helmet_10350, "Members: 3rd age fighter armour");
+					return(65, bandos_chestplate_11832, "Members: Bandos armour");
 				case 25 :
-					return(65, ancestral_robe_top_21021, "Members: Ancestral robes<br> (with 75 Magic)");
+					return(65, 3rd_age_full_helmet_10350, "Members: 3rd age fighter armour");
 				case 26 :
-					return(70, avernic_defender_22322, "Members: Avernic defender<br> (with 70 Attack)");
+					return(65, ancestral_robe_top_21021, "Members: Ancestral robes<br> (with 75 Magic)");
 				case 27 :
-					return(70, torags_helm_4745, "Members: Barrows armour");
+					return(70, avernic_defender_22322, "Members: Avernic defender<br> (with 70 Attack)");
 				case 28 :
-					return(70, armadyl_helmet_11826, "Members: Armadyl armour (with 70 Ranged)");
+					return(70, torags_helm_4745, "Members: Barrows armour");
 				case 29 :
-					return(70, boots_of_brimstone_22951, "Members: Boots of brimstone (with 70 Ranged and Magic)");
+					return(70, armadyl_helmet_11826, "Members: Armadyl armour (with 70 Ranged)");
 				case 30 :
-					return(70, crystal_helm_23971, "Members: Crystal armour (with 50 Agility after Song of the Elves)");
+					return(70, boots_of_brimstone_22951, "Members: Boots of brimstone (with 70 Ranged and Magic)");
 				case 31 :
-					return(70, neitiznot_faceguard_24271, "Members: Neitiznot faceguard<br> (after The Fremennik Exiles)");
+					return(70, crystal_helm_23971, "Members: Crystal armour (with 50 Agility after Song of the Elves)");
 				case 32 :
-					return(75, justiciar_faceguard_22326, "Members: Justiciar armour");
+					return(70, neitiznot_faceguard_24271, "Members: Neitiznot faceguard<br> (after The Fremennik Exiles)");
 				case 33 :
-					return(75, serpentine_helm_12931, "Members: Serpentine helm");
+					return(75, justiciar_faceguard_22326, "Members: Justiciar armour");
 				case 34 :
-					return(75, guardian_boots_21733, "Members: Guardian boots");
+					return(75, serpentine_helm_12931, "Members: Serpentine helm");
 				case 35 :
-					return(75, primordial_boots_13239, "Members: Primordial boots<br> (with 75 Strength)");
+					return(75, guardian_boots_21733, "Members: Guardian boots");
 				case 36 :
-					return(75, eternal_boots_13235, "Members: Eternal boots<br> (with 75 Magic)");
+					return(75, primordial_boots_13239, "Members: Primordial boots<br> (with 75 Strength)");
 				case 37 :
-					return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Ranged)");
+					return(75, eternal_boots_13235, "Members: Eternal boots<br> (with 75 Magic)");
 				case 38 :
+					return(75, pegasian_boots_13237, "Members: Pegasian boots<br> (with 75 Ranged)");
+				case 39 :
 					return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Attack)");
 				case default :
 					return(-1, null, "");
@@ -930,6 +937,12 @@ switch_int ($int0) {
 				return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 			}
 			if ($int2 = 1) {
+				return(50, nightmare_staff_24422, "Nightmare Staff (without orb)<br> (with 65 Magic)");
+			}
+			if ($int2 = 2) {
+				return(50, harmonised_nightmare_staff_24423, "Nightmare Staff (with orb)<br> (with 75 Magic)");
+			}
+			if ($int2 = 3) {
 				return(75, ring_of_suffering_19550, "Enchanted zenyte jewellery");
 			}
 			return(-1, null, "");

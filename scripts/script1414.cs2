@@ -1,0 +1,13 @@
+// 1414
+script1414(component $component0, int $int1)
+def_int $int2 = if_getwidth($component0);
+if ($int2 = $int1) {
+	if_setsize($int1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+	if_setontimer(null, $component0);
+	return;
+}
+if ($int2 < $int1) {
+	if_setsize(calc($int2 + 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+} else if ($int2 > $int1) {
+	if_setsize(calc($int2 - 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+}

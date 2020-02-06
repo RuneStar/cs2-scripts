@@ -1,0 +1,78 @@
+// 3316
+script3316(component $component0, component $component1, int $int2, int $int3, component $component4, component $component5, int $int6, int $int7, component $component8, component $component9, int $int10, int $int11, component $component12, component $component13, int $int14, int $int15, int $int16)
+def_int $int17 = if_getwidth($component1);
+def_int $int18 = if_getwidth($component0);
+if (($int2 ! -1) & ($int3 ! -1)) {
+	$int18 = scale($int3, $int2, $int18);
+	if (($int18 = 0) & ($int3 > 0)) {
+		$int18 = 1;
+	}
+	if (($int18 = if_getwidth($component0)) & ($int3 < $int2)) {
+		$int18 = calc($int18 - 1);
+	}
+	if ($int16 = 1) {
+		if_setsize($int18, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
+		if (if_getwidth($component0) = if_getwidth($component1)) {
+			if_setcolour(^white, $component1);
+		}
+	} else {
+		if_setontimer("script3317($component1, $int18, $component0)", $component0);
+	}
+}
+def_int $int19 = if_getwidth($component5);
+def_int $int20 = if_getwidth($component4);
+if (($int6 ! -1) & ($int7 ! -1)) {
+	$int20 = scale($int7, $int6, $int20);
+	if (($int20 = 0) & ($int7 > 0)) {
+		$int20 = 1;
+	}
+	if (($int20 = if_getwidth($component4)) & ($int7 < $int6)) {
+		$int20 = calc($int20 - 1);
+	}
+	if ($int16 = 1) {
+		if_setsize($int20, if_getheight($component5), ^setsize_abs, ^setsize_abs, $component5);
+		if (if_getwidth($component4) = if_getwidth($component5)) {
+			if_setcolour(^white, $component5);
+		}
+	} else {
+		if_setontimer("script3317($component5, $int20, $component4)", $component4);
+	}
+}
+def_int $int21 = if_getwidth($component9);
+def_int $int22 = if_getwidth($component8);
+if (($int10 ! -1) & ($int11 ! -1)) {
+	$int22 = scale($int11, $int10, $int22);
+	if (($int22 = 0) & ($int11 > 0)) {
+		$int22 = 1;
+	}
+	if (($int22 = if_getwidth($component8)) & ($int11 < $int10)) {
+		$int22 = calc($int22 - 1);
+	}
+	if ($int16 = 1) {
+		if_setsize($int22, if_getheight($component9), ^setsize_abs, ^setsize_abs, $component9);
+		if (if_getwidth($component8) = if_getwidth($component9)) {
+			if_setcolour(^white, $component9);
+		}
+	} else {
+		if_setontimer("script3317($component9, $int22, $component8)", $component8);
+	}
+}
+def_int $int23 = if_getwidth($component13);
+def_int $int24 = if_getwidth($component12);
+if (($int14 ! -1) & ($int15 ! -1)) {
+	$int24 = scale($int15, $int14, $int24);
+	if (($int24 = 0) & ($int15 > 0)) {
+		$int24 = 1;
+	}
+	if (($int24 = if_getwidth($component12)) & ($int15 < $int14)) {
+		$int24 = calc($int24 - 1);
+	}
+	if ($int16 = 1) {
+		if_setsize($int24, if_getheight($component13), ^setsize_abs, ^setsize_abs, $component13);
+		if (if_getwidth($component12) = if_getwidth($component13)) {
+			if_setcolour(^white, $component13);
+		}
+	} else {
+		if_setontimer("script3317($component13, $int24, $component12)", $component12);
+	}
+}

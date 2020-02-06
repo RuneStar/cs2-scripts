@@ -1,0 +1,16 @@
+// 3318
+script3318(component $component0, int $int1, component $component2)
+def_int $int3 = if_getwidth($component0);
+if ($int3 = $int1) {
+	if_setsize($int1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+	if_setontimer(null, $component2);
+	if (if_getwidth($component2) = $int3) {
+		if_setcolour(^white, $component0);
+	}
+	return;
+}
+if ($int3 < $int1) {
+	if_setsize(calc($int3 + 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+} else if ($int3 > $int1) {
+	if_setsize(calc($int3 - 1), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+}

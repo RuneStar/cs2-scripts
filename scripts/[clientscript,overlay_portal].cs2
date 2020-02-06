@@ -1,17 +1,26 @@
 // 2893
-[clientscript,overlay_portal](component $component0, model $model1, int $colour2)
+[clientscript,overlay_portal](component $component0, component $component1, model $model2, int $colour3, int $colour4, int $int5)
 cc_deleteall($component0);
-cc_create($component0, ^iftype_model, 0);
+cc_deleteall($component1);
+if (($colour4 ! null) & ($int5 ! -1)) {
+	cc_create($component0, ^iftype_rectangle, 0);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setfill(true);
+	cc_setcolour($colour4);
+	cc_settrans($int5);
+}
+cc_create($component1, ^iftype_model, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_sethide(false);
-cc_setmodel($model1);
+cc_setmodel($model2);
 cc_setmodelangle(0, 130, 0, 0, 0, 4000);
 cc_setmodelanim(7301);
-cc_create($component0, ^iftype_rectangle, 1);
+cc_create($component1, ^iftype_rectangle, 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(true);
-cc_setcolour($colour2);
+cc_setcolour($colour3);
 cc_settrans(255);
-if_setontimer("overlay_portal_adjust(clientclock, true, $component0)", $component0);
+if_setontimer("overlay_portal_adjust(clientclock, true, $component1)", $component1);

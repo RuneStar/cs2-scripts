@@ -1,0 +1,7 @@
+// 3314
+script3314(int $int0, int $int1, component $component2, component $component3, component $component4, int $int5, component $component6, int $int7, component $component8, component $component9, component $component10, int $int11, component $component12, int $int13, component $component14, component $component15, component $component16, int $int17, component $component18, int $int19, component $component20, component $component21, component $component22, int $int23, component $component24, int $int25, component $component26, component $component27, component $component28)
+def_int $int29 = 0;
+if (~on_mobile = true) {
+	$int29 = calc($int29 + 45);
+}
+if_setposition(if_getx($component2), $int29, ^setpos_abs_left, ^setpos_abs_top, $component2);

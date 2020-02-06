@@ -1,6 +1,6 @@
 // 1678
 script1678(component $component0, component $component1)
-if ((clienttype = ^clienttype_ios) & (%varbit6713 = 0)) {
+if ((~script3325 = 1) & (%varbit6713 = 0)) {
 	if_sethide(true, $component0);
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component1);
 	return;
