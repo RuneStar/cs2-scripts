@@ -1,0 +1,23 @@
+// 3328
+script3328(component $component0, component $component1, int $int2, int $int3)
+def_int $int4 = inv_size(inv);
+if (($int2 < 0) | ($int2 >= $int4)) {
+	return;
+}
+if (($int3 < 0) | ($int3 >= $int4)) {
+	return;
+}
+if ($component0 ! $component1) {
+	return;
+}
+def_obj $obj5 = inv_getobj(inv, $int2);
+if ($obj5 = null) {
+	return;
+}
+def_obj $obj6 = inv_getobj(inv, $int3);
+if (cc_find($component0, $int3) = ^true) {
+	~script3327($obj5, inv_getnum(inv, $int2), $int2);
+}
+if (cc_find($component0, $int2) = ^true) {
+	~script3327($obj6, inv_getnum(inv, $int3), $int3);
+}

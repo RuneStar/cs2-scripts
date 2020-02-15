@@ -6,7 +6,6 @@ def_int $int5 = calc(((42 - 36) * 3) - 2);
 def_int $int6 = calc((36 - 32) * 2);
 def_obj $obj7 = null;
 def_int $int8 = 0;
-def_string $string0 = "";
 if (%varcint386 = true) {
 	if_sethide(true, $component1);
 	if_sethide(true, $component2);
@@ -15,36 +14,9 @@ if (%varcint386 = true) {
 	while ($int8 > 0) {
 		$int8 = calc($int8 - 1);
 		if (cc_find($component3, $int8) = ^true) {
-			$obj7 = inv_getobj(inv, $int8);
-			if ($obj7 ! null) {
-				cc_setobject($obj7, inv_getnum(inv, $int8));
-				cc_setposition(calc($int5 + (($int8 % 4) * 42)), calc($int6 + (($int8 / 4) * 36)), ^setpos_abs_left, ^setpos_abs_top);
-				cc_clearops;
-				if (testbit(%var262, $int8) = ^true) {
-					$string0 = oc_param($obj7, 595);
-					if ((string_length($string0) <= 0) & ((map_members = ^true) | (oc_members($obj7) = ^false))) {
-						$string0 = oc_iop($obj7, oc_param($obj7, 148));
-					}
-					if (string_length($string0) > 0) {
-						cc_setop(1, $string0);
-						cc_settrans(0);
-						cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
-					} else {
-						cc_settrans(120);
-						cc_setonop(null);
-					}
-				} else {
-					cc_settrans(120);
-					cc_setonop(null);
-				}
-				cc_setop(10, "Examine");
-				cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
-			} else {
-				cc_settrans(255);
-				cc_setobject(6512, 1);
-				cc_clearops;
-				cc_setonop(null);
-			}
+			cc_clearops;
+			cc_setposition(calc($int5 + (($int8 % 4) * 42)), calc($int6 + (($int8 / 4) * 36)), ^setpos_abs_left, ^setpos_abs_top);
+			~script3327(inv_getobj(inv, $int8), inv_getnum(inv, $int8), $int8);
 			cc_setontimer(null);
 		}
 	}

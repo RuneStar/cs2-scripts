@@ -1,10 +1,10 @@
 // 297
 [proc,bankside_drawitem](obj $obj0, int $int1, int $int2, component $component3, component $component4, int $int5, component $component6, component $component7)
+cc_clearops;
 def_string $string0 = "";
 if ($obj0 ! null) {
 	cc_settrans(0);
 	cc_setobject($obj0, $int1);
-	cc_clearops;
 	if ((($obj0 = looting_bag_11941) | ($obj0 = looting_bag_22586)) & ($int5 = 1)) {
 		cc_setop(1, "View");
 		cc_setonop("bankside_switchview(event_opindex, $component6, $component7, 1)");
@@ -29,7 +29,6 @@ if ($obj0 ! null) {
 } else {
 	cc_settrans(255);
 	cc_setobject(6512, 1);
-	cc_clearops;
 	cc_setonop(null);
 	cc_setondragcomplete(null);
 }

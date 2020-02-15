@@ -13,7 +13,7 @@ def_boolean $boolean8 = null;
 while ($int3 < $int4) {
 	$struct5 = enum(int, struct, 2320, $int3);
 	$component6 = enum(int, component, 2321, $int3);
-	$boolean8 = enum(struct, boolean, 2760, $struct5);
+	$boolean8 = struct_param($struct5, 925);
 	if (clienttype ! ^clienttype_ios) {
 		$boolean8 = false;
 	}

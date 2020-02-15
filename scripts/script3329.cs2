@@ -1,0 +1,21 @@
+// 3329
+script3329(component $component0, component $component1)
+cc_deleteall(659:3);
+cc_deleteall(659:5);
+cc_deleteall($component0);
+cc_deleteall($component1);
+cc_create($component0, ^iftype_model, 0);
+cc_setmodel(25725);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setmodelangle(0, 0, 512, 0, 0, 450);
+cc_create($component1, ^iftype_graphic, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("close_buttons,6");
+def_graphic $graphic2 = "close_buttons,7";
+def_graphic $graphic3 = "close_buttons,6";
+cc_setop(1, "Close");
+cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic2, null)");
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic3, null)");
+cc_setonop("closebutton_click");
