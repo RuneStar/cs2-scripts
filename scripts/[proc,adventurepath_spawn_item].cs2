@@ -1,14 +1,19 @@
 // 3005
-[proc,adventurepath_spawn_item](component $component0, int $int1, namedobj $namedobj2, int $int3, int $int4, int $int5, int $int6, int $int7, boolean $boolean8, int $bit9)(int, int, int)
+[proc,adventurepath_spawn_item](component $component0, int $int1, namedobj $namedobj2, int $int3, int $int4, int $int5, int $int6, int $int7, boolean $boolean8, int $bit9)(int, int, int, int)
 if ($namedobj2 = null) {
-	return($int1, $int4, $int5);
+	return($int1, $int4, $int5, $int7);
+}
+if ($int4 >= 3) {
+	$int4 = 0;
+	$int5 = calc($int5 + 1);
+	$int7 = calc($int7 + 5);
 }
 cc_create($component0, ^iftype_graphic, $int1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 if ($boolean8 = false) {
-	cc_setposition(calc((($int6 / 6) * $int4) + 5), calc(((32 * $int5) + $int7) + (10 * (1 + $int5))), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc((($int6 / 6) * $int4) + 5), calc(((32 * $int5) + $int7) + 10), ^setpos_abs_left, ^setpos_abs_top);
 } else {
-	cc_setposition(calc((($int6 / 6) * ($int4 + 3)) + 5), calc(((32 * $int5) + $int7) + (10 * (1 + $int5))), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc((($int6 / 6) * ($int4 + 3)) + 5), calc(((32 * $int5) + $int7) + 10), ^setpos_abs_left, ^setpos_abs_top);
 }
 cc_setobject(oc_uncert($namedobj2), $int3);
 cc_setoutline(1);
@@ -24,9 +29,4 @@ if ($bit9 = ^false) {
 	cc_settrans(150);
 }
 cc_setop(1, "Check reward");
-$int4 = calc($int4 + 1);
-if ($int4 = 3) {
-	$int4 = 0;
-	$int5 = calc($int5 + 1);
-}
-return(calc($int1 + 1), $int4, $int5);
+return(calc($int1 + 1), calc(1 + $int4), $int5, $int7);

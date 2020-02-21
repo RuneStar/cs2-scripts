@@ -1,0 +1,23 @@
+// 3348
+script3348(int $int0, int $int1, int $int2)
+if ($int0 = 4) {
+	$int2 = calc($int2 - 4);
+	if_setposition(0, calc((100 - $int2) / 2), ^setpos_abs_centre, ^setpos_abs_top, 660:1);
+	if ($int2 <= 2) {
+		$int0 = 5;
+		%varcint391 = 5;
+		$int2 = 2;
+	}
+} else if ($int0 = 5) {
+	$int1 = calc($int1 - 4);
+	if ($int2 <= 0) {
+		$int0 = 6;
+		%varcint391 = 6;
+	}
+}
+if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 660:1);
+if ($int0 < 6) {
+	if_setontimer("script3348($int0, $int1, $int2)", 660:2);
+} else {
+	if_setontimer(null, 660:2);
+}

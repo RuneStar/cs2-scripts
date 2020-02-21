@@ -1,0 +1,14 @@
+// 3347
+script3347(int $int0)
+if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, 660:1);
+if_setsize(178, 100, ^setsize_abs, ^setsize_abs, 660:1);
+$int0 = calc($int0 + 1);
+if (calc($int0 % 30) = 0) {
+	%varcint392 = calc($int0 / 30);
+}
+if ($int0 < 210) {
+	if_setontimer("script3347($int0)", 660:2);
+} else {
+	%varcint391 = 4;
+	if_setontimer("script3348(4, 178, 100)", 660:2);
+}

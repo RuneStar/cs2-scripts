@@ -2971,7 +2971,6 @@
 [**2968**](scripts/[proc,adventurepath_return_path_tasks_done].cs2) `[proc,adventurepath_return_path_tasks_done]`  
 [**2969**](scripts/[proc,adventurepath_return_task_focus].cs2) `[proc,adventurepath_return_task_focus]`  
 [**2970**](scripts/[proc,adventurepath_set_task_focus].cs2) `[proc,adventurepath_set_task_focus]`  
-[**2971**](scripts/[proc,adventurepath_return_task_recommended].cs2) `[proc,adventurepath_return_task_recommended]`  
 [**2972**](scripts/script2972.cs2)  
 [**2973**](scripts/script2973.cs2)  
 [**2974**](scripts/[proc,create_v2_stone_button_filled_free].cs2) `[proc,create_v2_stone_button_filled_free]`  
@@ -3331,3 +3330,24 @@
 [**3328**](scripts/script3328.cs2)  
 [**3329**](scripts/script3329.cs2)  
 [**3330**](scripts/script3330.cs2)  
+[**3331**](scripts/script3331.cs2)  
+[**3332**](scripts/script3332.cs2)  
+[**3333**](scripts/script3333.cs2)  
+[**3334**](scripts/script3334.cs2)  
+[**3335**](scripts/script3335.cs2)  
+[**3336**](scripts/script3336.cs2)  
+[**3337**](scripts/script3337.cs2)  
+[**3338**](scripts/script3338.cs2)  
+[**3339**](scripts/script3339.cs2)  
+[**3340**](scripts/script3340.cs2)  
+[**3341**](scripts/script3341.cs2)  
+[**3342**](scripts/script3342.cs2)  
+[**3343**](scripts/script3343.cs2)  
+[**3344**](scripts/script3344.cs2)  
+[**3345**](scripts/script3345.cs2)  
+[**3346**](scripts/script3346.cs2)  
+[**3347**](scripts/script3347.cs2)  
+[**3348**](scripts/script3348.cs2)  
+[**3349**](scripts/script3349.cs2)  
+[**3350**](scripts/script3350.cs2)  
+[**3351**](scripts/script3351.cs2)  

@@ -5,14 +5,14 @@ if ($enum0 ! 1745) {
 	return(0);
 }
 def_component $component1 = enum(int, component, 1137, %varcint171);
-def_component $component2 = enum(component, component, $enum0, 164:65);
-if ((if_hassub(enum(component, component, $enum0, 161:67)) = true) & (if_hassub(enum(component, component, $enum0, 161:14)) = true)) {
+def_component $component2 = enum(component, component, $enum0, 164:66);
+if ((if_hassub(enum(component, component, $enum0, 161:68)) = true) & (if_hassub(enum(component, component, $enum0, 161:15)) = true)) {
 	return(1);
 }
-if ((((((($component1 = 161:70) | ($component1 = 161:71)) | ($component1 = 161:72)) | ($component1 = 161:73)) | ($component1 = 161:79)) | ($component1 = 161:80)) | ($component1 = 161:82)) {
+if ((((((($component1 = 161:71) | ($component1 = 161:72)) | ($component1 = 161:73)) | ($component1 = 161:74)) | ($component1 = 161:80)) | ($component1 = 161:81)) | ($component1 = 161:83)) {
 	return(1);
 }
-if ((if_getx($component2) ! 37) & (if_hassub(enum(component, component, $enum0, 161:67)) = true)) {
+if ((if_getx($component2) ! 37) & (if_hassub(enum(component, component, $enum0, 161:68)) = true)) {
 	return(1);
 }
 return(0);

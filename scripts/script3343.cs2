@@ -1,0 +1,13 @@
+// 3343
+script3343(string $string0, string $string1)
+if_settext("<u=ff981f><$string0>", 660:4);
+if_settext($string1, 660:8);
+if_settrans(255, 660:4);
+if_settrans(255, 660:8);
+if_setposition(0, calc((100 - 2) / 2), ^setpos_abs_centre, ^setpos_abs_top, 660:1);
+if_setsize(1, 2, ^setsize_abs, ^setsize_abs, 660:1);
+%varcstring387 = $string0;
+%varcstring388 = $string1;
+%varcint391 = 1;
+%varcint392 = 0;
+if_setontimer("script3346(1, 0, 2)", 660:2);

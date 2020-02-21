@@ -6,13 +6,13 @@ if (($enum0 = 1131) | ($enum0 = 1745)) {
 	if (%varcint171 ! -1) {
 		$component1 = enum(int, component, 1137, %varcint171);
 	}
-	$component2 = enum(component, component, $enum0, 164:65);
-	if ((if_hassub(enum(component, component, $enum0, 161:67)) = true) | (($component1 ! null) & (if_hassub(enum(component, component, $enum0, $component1)) = true))) {
+	$component2 = enum(component, component, $enum0, 164:66);
+	if ((if_hassub(enum(component, component, $enum0, 161:68)) = true) | (($component1 ! null) & (if_hassub(enum(component, component, $enum0, $component1)) = true))) {
 		if_sethide(false, $component2);
 		if ($enum0 = 1745) {
 			switch_component ($component1) {
-				case 161:69, 161:74, 161:75, 161:81, 161:77, 161:78, 161:76 :
-					if ((if_hassub(enum(component, component, $enum0, 161:67)) = true) & (if_hassub(enum(component, component, $enum0, 161:14)) = true)) {
+				case 161:70, 161:75, 161:76, 161:82, 161:78, 161:79, 161:77 :
+					if ((if_hassub(enum(component, component, $enum0, 161:68)) = true) & (if_hassub(enum(component, component, $enum0, 161:15)) = true)) {
 						if_setposition(37, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
 					} else {
 						if_setposition(37, 87, ^setpos_abs_left, ^setpos_abs_centre, $component2);
@@ -27,11 +27,11 @@ if (($enum0 = 1131) | ($enum0 = 1745)) {
 	~script2526;
 	%varcint384 = clientclock;
 	~script2386;
-	if (if_gethide(enum(component, component, $enum0, 161:51)) = true) {
-		if_sethide(true, enum(component, component, $enum0, 161:39));
-		if_sethide(true, enum(component, component, $enum0, 161:46));
+	if (if_gethide(enum(component, component, $enum0, 161:52)) = true) {
+		if_sethide(true, enum(component, component, $enum0, 161:40));
+		if_sethide(true, enum(component, component, $enum0, 161:47));
 	} else {
-		if_sethide(false, enum(component, component, $enum0, 161:39));
-		if_sethide(false, enum(component, component, $enum0, 161:46));
+		if_sethide(false, enum(component, component, $enum0, 161:40));
+		if_sethide(false, enum(component, component, $enum0, 161:47));
 	}
 }

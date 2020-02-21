@@ -42,7 +42,7 @@ cc_create($component0, ^iftype_graphic, calc($int1 + 11));
 cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
 cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
 if ($int8 ! 0) {
-	cc_setop(1, "Show task <col=ff9040>'<$string0>'");
+	cc_setop(1, "Show task: <col=ff9040><$string0>");
 }
 if ($int9 = 0) {
 	if (~on_mobile = true) {

@@ -6,11 +6,11 @@ if (%varbit4611 = 1) {
 	if_setonkey("toplevel_keypress(event_keypressed, $enum1, true)", $component0);
 }
 ~toplevel_resize($component0, $enum1);
-def_component $component2 = enum(component, component, $enum1, 161:18);
+def_component $component2 = enum(component, component, $enum1, 161:19);
 if ($component2 ! null) {
 	if_sethide(~int_to_bool(%varbit542), $component2);
 }
-$component2 = enum(component, component, $enum1, 161:27);
+$component2 = enum(component, component, $enum1, 161:28);
 if ($component2 ! null) {
 	if ((%varbit542 = ^true) | (%varbit4606 ! 0)) {
 		if_sethide(true, $component2);
@@ -109,7 +109,7 @@ if (($component9 ! null) & ($component7 ! null)) {
 		if_setgraphic("sideicons_interface,9", $component7);
 	}
 }
-$component7 = enum(component, component, $enum1, 161:31);
+$component7 = enum(component, component, $enum1, 161:32);
 if ($component7 ! null) {
 	if (%varbit4609 = 1) {
 		if_setgraphic("tradebacking_dark", $component7);
@@ -119,10 +119,14 @@ if ($component7 ! null) {
 		if_settrans(150, $component7);
 	}
 }
-$component7 = enum(component, component, $enum1, 161:17);
+$component7 = enum(component, component, $enum1, 161:18);
 if ((~on_mobile = true) & ($component7 ! null)) {
 	if (%varbit6254 = ^false) {
-		if_setposition(36, 163, ^setpos_abs_right, ^setpos_abs_top, $component7);
+		if (%varbit10113 = 0) {
+			if_setposition(40, 163, ^setpos_abs_right, ^setpos_abs_top, $component7);
+		} else {
+			if_setposition(36, 163, ^setpos_abs_right, ^setpos_abs_top, $component7);
+		}
 	} else {
 		if_setposition(4, 115, ^setpos_abs_right, ^setpos_abs_top, $component7);
 	}

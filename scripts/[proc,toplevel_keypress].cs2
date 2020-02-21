@@ -3,9 +3,9 @@
 if (~keypress_permit(-1, -1) = 0) {
 	return;
 }
-def_component $component3 = enum(component, component, $enum1, 161:14);
+def_component $component3 = enum(component, component, $enum1, 161:15);
 def_component $component4 = enum(int, component, 1137, 3);
-def_component $component5 = enum(component, component, $enum1, 161:15);
+def_component $component5 = enum(component, component, $enum1, 161:16);
 $component4 = enum(component, component, $enum1, $component4);
 if (($key0 = ^key_escape) & (%varbit4681 = 1)) {
 	if (($component5 ! null) & (if_hassub($component5) = true)) {
@@ -15,7 +15,7 @@ if (($key0 = ^key_escape) & (%varbit4681 = 1)) {
 		if_close;
 		return;
 	}
-	$component3 = enum(component, component, $enum1, 161:67);
+	$component3 = enum(component, component, $enum1, 161:68);
 	if ((($component3 ! null) & (if_hassub($component4) = true)) & (if_hassub($component3) = true)) {
 		if_close;
 		return;

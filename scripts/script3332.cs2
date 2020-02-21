@@ -1,0 +1,26 @@
+// 3332
+script3332(component $component0, coord $coord1, mapelement $mapelement2, int $int3)
+def_int $int4 = -1;
+def_int $int5 = -1;
+switch_int ($int3) {
+	case 60 :
+		worldmap_jumptosourcecoord($coord1);
+	case 61 :
+		$int4, $int5 = worldmap_getdisplayposition;
+		if (($int4 ! coordx($coord1)) | ($int5 ! coordz($coord1))) {
+			return;
+		}
+	case 62 :
+		worldmap_setzoom(200);
+	case 63 :
+		if (worldmap_getzoom ! 200) {
+			return;
+		}
+		if ($mapelement2 ! null) {
+			worldmap_flashelement($mapelement2);
+		}
+		if_setontimer(null, $component0);
+		if_sethide(true, $component0);
+		return;
+}
+if_setontimer("script3332($component0, $coord1, $mapelement2, calc($int3 + 1))", $component0);

@@ -18,7 +18,7 @@ if ((%varcint171 <= 0) & (enum(enum, boolean, 1134, $enum1) = false)) {
 	%varcint171 = 3;
 }
 %varcint172, %varcint173 = null, -1;
-$component3 = enum(component, component, $enum1, 161:27);
+$component3 = enum(component, component, $enum1, 161:28);
 if ($component3 ! null) {
 	cc_deleteall($component3);
 	cc_create($component3, ^iftype_text, 0);
@@ -46,10 +46,10 @@ if ($enum1 = 139) {
 	_3130(1625, 1);
 	_3131(1);
 	~script1490(601:6);
-	~script1490(601:13);
+	~script1490(601:14);
 	~script2249(601:11, setbit(0, 3));
-	~script868(601:29);
-	~script957(601:30);
+	~script868(601:30);
+	~script957(601:31);
 } else {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
@@ -60,6 +60,7 @@ if ($enum1 = 139) {
 ~options_appearance;
 ~account_update_display;
 ~script3173(enum(component, component, $enum1, 161:5));
+~script3349(enum(component, component, $enum1, 161:7));
 ~toplevel_redraw($component0, $enum1);
 ~toplevel_subchange($component0, $enum1);
 ~toplevel_sidebutton_switch(%varcint171, $enum1);

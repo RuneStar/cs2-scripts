@@ -12,7 +12,7 @@ def_int $int10 = ~min(_6222, calc($int5 - $int7));
 def_int $int11 = _6223;
 if_setposition($int8, $int9, ^setpos_abs_left, ^setpos_abs_top, $component0);
 if_setsize(calc($int5 - ($int10 - $int8)), calc($int6 - ($int11 - $int9)), ^setsize_minus, ^setsize_minus, $component0);
-if ($component0 = 601:13) {
+if ($component0 = 601:14) {
 	if (.cc_find(601:2, 0) = ^true) {
 		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 		.cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);

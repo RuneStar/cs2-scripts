@@ -1,0 +1,9 @@
+// 3337
+script3337(component $component0, int $int1)
+if (cc_find($component0, $int1) = ^true) {
+	cc_setcolour(0xbebebe);
+}
+if (cc_find($component0, calc($int1 - 1)) = ^true) {
+	cc_settrans(80);
+}
+~script3243($component0, 0);

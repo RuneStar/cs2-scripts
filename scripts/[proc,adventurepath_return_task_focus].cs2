@@ -1,8 +1,16 @@
 // 2969
 [proc,adventurepath_return_task_focus](int $int0)(int)
+def_int $int1 = enum(int, int, 2837, $int0);
+def_int $int2 = -1;
 switch_int ($int0) {
 	case 0 :
-		return(%varbit9325);
+		$int2 = %varbit9325;
+	case 1 :
+		$int2 = %varbit10158;
 	case default :
 		return(0);
 }
+if ($int2 ! 0) {
+	$int2 = calc($int2 + $int1);
+}
+return($int2);

@@ -10,7 +10,8 @@ def_int $int5 = 0;
 def_string $string5 = "";
 def_string $string6 = "";
 def_string $string7 = "";
-def_string $string8 = "<br>    ";
+def_string $string8 = "<br>    ";
+def_string $string9 = " ";
 def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
@@ -33,7 +34,7 @@ while ($int3 ! -1) {
 			$string5 = append($string5, " ");
 			$string5 = append($string5, $string4);
 		}
-		if (calc(parawidth($string7, $int0, $fontmetrics2) + parawidth($string4, $int0, $fontmetrics2)) >= calc($int0 - $int5)) {
+		if (calc((parawidth($string7, $int0, $fontmetrics2) + parawidth($string4, $int0, $fontmetrics2)) + parawidth($string9, $int0, $fontmetrics2)) >= calc($int0 - $int5)) {
 			$string5 = append($string7, $string8);
 			$string5 = append($string5, $string4);
 			$string6 = append($string6, $string5);

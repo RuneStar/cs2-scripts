@@ -1,0 +1,11 @@
+// 3331
+script3331(component $component0, coord $coord1, mapelement $mapelement2)
+if (($coord1 = null) | (worldmap_isloaded = false)) {
+	return;
+}
+def_maparea $maparea3 = _6623($coord1);
+if ($maparea3 ! worldmap_getcurrentmap) {
+	worldmap_setmap($maparea3);
+}
+if_sethide(false, $component0);
+if_setontimer("script3332($component0, $coord1, $mapelement2, 0)", $component0);

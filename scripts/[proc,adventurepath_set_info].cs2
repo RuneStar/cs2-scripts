@@ -3,6 +3,9 @@
 cc_deleteall($component3);
 cc_deleteall($component21);
 cc_deleteall($component22);
+cc_deleteall($component4);
+cc_deleteall($component22);
+cc_deleteall(642:22);
 def_string $string0 = struct_param($struct5, 810);
 if_settext($string0, $component1);
 if_setcolour(0xff981f, $component1);
@@ -22,7 +25,7 @@ if (~on_mobile = false) {
 	$int23 = calc(1 + $int23);
 }
 cc_create($component3, ^iftype_text, $int23);
-cc_settextalign(^settextalign_left, ^settextalign_top, 15);
+cc_settextalign(^settextalign_left, ^settextalign_top, 17);
 cc_setcolour(0xff981f);
 cc_settext(struct_param($struct5, 813));
 cc_settextshadow(true);
@@ -44,96 +47,127 @@ def_int $int24 = 0;
 def_int $int25 = 0;
 def_int $int26 = 0;
 def_int $int27 = 0;
-def_int $int28 = 0;
 $int23 = 0;
-def_int $int29 = if_getwidth($component4);
-cc_deleteall($component4);
+def_int $int28 = if_getwidth($component4);
+if ((~adventurepath_return_task_status($int0) = ^false) & (struct_param($struct5, 927) ! null)) {
+	if_setop(1, "Show<col=ff9040> Hint", 642:22);
+	if_setop(2, "Remove<col=ff9040> Hint arrow", 642:22);
+	$int23 = ~v2_stone_button_filled(642:22);
+	if_setonmouserepeat("script3242(642:22, 0)", 642:22);
+	if_setonmouseleave("script3240(642:22, 0)", 642:22);
+} else {
+	if_setop(1, "", 642:22);
+	if_setop(2, "", 642:22);
+	$int23 = ~v2_stone_button_in_filled(642:22);
+	if_setonmouserepeat(null, 642:22);
+	if_setonmouseleave(null, 642:22);
+}
+cc_create(642:22, ^iftype_graphic, $int23);
+cc_setsize(22, 22, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("worldmap_icon,0");
+$int23 = 0;
+def_int $int29 = 0;
 def_int $int30 = 0;
-def_int $int31 = 0;
+def_enum $enum31 = null;
 def_enum $enum32 = null;
-def_enum $enum33 = null;
-def_enum $enum34 = null;
-def_enum $enum35 = null;
-def_namedobj $namedobj36 = null;
-def_int $int37 = 0;
-def_int $int38 = 0;
-def_int $int39 = 0;
-def_boolean $boolean40 = false;
-def_int $bit41 = ^false;
-$enum32 = struct_param($struct5, 820);
-$enum33 = struct_param($struct5, 821);
-if ($enum32 ! null) {
-	while ($int30 < 4) {
-		$enum34 = enum(int, enum, $enum32, $int30);
-		$enum35 = enum(int, enum, $enum33, $int30);
-		if ($enum34 ! null) {
-			if ($int30 = 0) {
-				$int23, $int37 = ~script3004($component4, 0, "Free:", $int23, $int37, 0, 0, 1);
-				$boolean40 = false;
-				$bit41 = ~adventurepath_return_reward_f2p($int0);
-			} else if ($int30 = 1) {
-				$int23, $int37 = ~script3004($component4, 0, "Members:", $int23, calc(16 - $int37), 0, 1, 0);
-				$boolean40 = true;
-				$bit41 = ~adventurepath_return_reward_p2p($int0);
-			} else if ($int30 = 2) {
-				$int23, $int37 = ~script3004($component4, 0, "Free:", $int23, $int37, $int28, 0, 1);
-				$boolean40 = false;
-				$bit41 = ^false;
-			} else if ($int30 = 3) {
-				$int23, $int37 = ~script3004($component4, 0, "Members:", $int23, calc(16 - $int37), $int28, 1, 0);
-				$boolean40 = true;
-				$bit41 = ^false;
+def_enum $enumarray0(4);
+def_enum $enumarray1(4);
+def_int $int33 = 0;
+def_namedobj $namedobj34 = null;
+def_int $int35 = 0;
+def_int $bit36 = ^false;
+$enum31 = struct_param($struct5, 820);
+$enum32 = struct_param($struct5, 821);
+if (($enum31 ! null) & ($enum32 ! null)) {
+	while ($int29 < 4) {
+		$enumarray0($int29) = enum(int, enum, $enum31, $int29);
+		$enumarray1($int29) = enum(int, enum, $enum32, $int29);
+		$int29 = calc($int29 + 1);
+	}
+	if (($enumarray0(0) ! null) | ($enumarray0(1) ! null)) {
+		$int23, $int35 = ~script3004($component4, 0, "Free:", $int23, $int35, 0, 0, 0);
+		$int23, $int35 = ~script3004($component4, 0, "Members:", $int23, $int35, 0, 1, 1);
+		if ($enumarray0(0) ! null) {
+			$bit36 = ~adventurepath_return_reward_f2p($int0);
+			$int30 = enum_getoutputcount($enumarray0(0));
+			$int29 = 0;
+			while ($int29 < $int30) {
+				$namedobj34 = enum(int, namedobj, $enumarray0(0), $int29);
+				if ($namedobj34 ! null) {
+					$int23, $int24, $int27, $int35 = ~adventurepath_spawn_item($component4, $int23, $namedobj34, enum(namedobj, int, $enumarray1(0), $namedobj34), $int24, $int27, $int28, $int35, false, $bit36);
+				}
+				$int29 = calc($int29 + 1);
 			}
+			$int25 = $int27;
+			$int24, $int27 = 0, 0;
 		}
-		if (($enum34 ! null) & ($enum35 ! null)) {
-			while ($int31 < enum_getoutputcount($enum34)) {
-				$namedobj36 = enum(int, namedobj, $enum34, $int31);
-				if ($namedobj36 ! null) {
-					if ($boolean40 = true) {
-						$int23, $int24, $int28 = ~adventurepath_spawn_item($component4, $int23, $namedobj36, enum(namedobj, int, $enum35, $namedobj36), $int24, $int28, $int29, calc(16 - $int37), $boolean40, $bit41);
-					} else {
-						$int23, $int24, $int28 = ~adventurepath_spawn_item($component4, $int23, $namedobj36, enum(namedobj, int, $enum35, $namedobj36), $int24, $int28, $int29, $int37, $boolean40, $bit41);
-					}
+		if ($enumarray0(1) ! null) {
+			$bit36 = ~adventurepath_return_reward_p2p($int0);
+			$int30 = enum_getoutputcount($enumarray0(1));
+			$int29 = 0;
+			while ($int29 < $int30) {
+				$namedobj34 = enum(int, namedobj, $enumarray0(1), $int29);
+				if ($namedobj34 ! null) {
+					$int23, $int24, $int27, $int35 = ~adventurepath_spawn_item($component4, $int23, $namedobj34, enum(namedobj, int, $enumarray1(1), $namedobj34), $int24, $int27, $int28, $int35, true, $bit36);
 				}
-				$int31 = calc($int31 + 1);
+				$int29 = calc($int29 + 1);
 			}
-			$int24 = 0;
-			if (($int30 = 0) | ($int30 = 1)) {
-				if ($int28 > $int25) {
-					$int25 = $int28;
-				}
-				$int28 = 0;
-			} else {
-				if ($int28 > $int26) {
-					$int26 = $int28;
-				}
-				$int28 = $int25;
+			if ($int27 > $int25) {
+				$int25 = $int27;
 			}
+			$int24, $int27 = 0, calc($int25 + 1);
 		}
-		$int31 = 0;
-		$int30 = calc($int30 + 1);
-		$bit41 = ^false;
+		$int35 = calc($int35 + 16);
+	}
+	if (($enumarray0(2) ! null) | ($enumarray0(3) ! null)) {
+		$int23, $int35 = ~script3004($component4, 0, "Reclaimable Free:", $int23, $int35, $int27, 0, 0);
+		$int23, $int35 = ~script3004($component4, 0, "Reclaimable Members:", $int23, $int35, $int27, 1, 1);
+		$bit36 = ^false;
+		if ($enumarray0(2) ! null) {
+			$int30 = enum_getoutputcount($enumarray0(2));
+			$int29 = 0;
+			while ($int29 < $int30) {
+				$namedobj34 = enum(int, namedobj, $enumarray0(2), $int29);
+				if ($namedobj34 ! null) {
+					$int23, $int24, $int27, $int35 = ~adventurepath_spawn_item($component4, $int23, $namedobj34, enum(namedobj, int, $enumarray1(2), $namedobj34), $int24, $int27, $int28, $int35, false, $bit36);
+				}
+				$int29 = calc($int29 + 1);
+			}
+			$int26 = $int27;
+			$int24, $int27 = 0, calc($int25 + 1);
+		}
+		if ($enumarray0(3) ! null) {
+			$int30 = enum_getoutputcount($enumarray0(3));
+			$int29 = 0;
+			while ($int29 < $int30) {
+				$namedobj34 = enum(int, namedobj, $enumarray0(3), $int29);
+				if ($namedobj34 ! null) {
+					$int23, $int24, $int27, $int35 = ~adventurepath_spawn_item($component4, $int23, $namedobj34, enum(namedobj, int, $enumarray1(3), $namedobj34), $int24, $int27, $int28, $int35, true, $bit36);
+				}
+				$int29 = calc($int29 + 1);
+			}
+			if ($int27 > $int26) {
+				$int26 = $int27;
+			}
+			$int26 = calc($int26 + 1);
+		}
 	}
 }
-def_int $int42 = 0;
-def_int $int43 = if_getheight($component4);
+def_int $int37 = 0;
+def_int $int38 = if_getheight($component4);
 cc_create($component4, ^iftype_graphic, $int23);
 cc_setgraphic("v2_borders_slim,1");
 $int23 = calc($int23 + 1);
-$int27 = calc((1 + $int25) + $int26);
-$int37 = calc(16 + $int37);
-if ($int24 = 0) {
-	$int42 = calc(((32 * $int27) + $int37) + (10 * $int27));
-} else {
-	$int42 = calc(((32 * $int27) + $int37) + (10 * $int27));
-}
-if ($int42 > $int43) {
-	cc_setsize(32, calc($int42 - 20), ^setsize_abs, ^setsize_abs);
+$int35 = calc(16 + $int35);
+$int37 = calc((32 * $int26) + $int35);
+if ($int37 > $int38) {
+	cc_setsize(32, calc($int37 - 15), ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc((if_getwidth($component4) / 2) - 18), 10, ^setpos_abs_left, ^setpos_abs_top);
-	if_setscrollsize(0, $int42, $component4);
+	if_setscrollsize(0, $int37, $component4);
 	if_sethide(false, $component13);
 } else {
-	cc_setsize(32, calc($int43 - 20), ^setsize_abs, ^setsize_abs);
+	cc_setsize(32, calc($int38 - 20), ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc((if_getwidth($component4) / 2) - 18), 10, ^setpos_abs_left, ^setpos_abs_top);
 	if_setscrollsize(0, 0, $component4);
 	if_sethide(true, $component13);
@@ -144,18 +178,18 @@ if_settext($string0, $component20);
 if_setcolour(0xff981f, $component20);
 if_settext(~adventurepath_hint_list(struct_param($struct5, 814), if_getwidth($component17), 0, "", p12_full), $component17);
 if_setcolour(0xff981f, $component17);
-def_graphic $graphic44 = struct_param($struct5, 822);
-if ($graphic44 ! null) {
-	if_setgraphic($graphic44, $component19);
+def_graphic $graphic39 = struct_param($struct5, 822);
+if ($graphic39 ! null) {
+	if_setgraphic($graphic39, $component19);
 	if_settext(struct_param($struct5, 823), $component18);
 	if_setcolour(0xff981f, $component18);
 }
 if_settext($string1, $component16);
 if_setcolour(0xff981f, $component16);
-def_boolean $boolean45 = struct_param($struct5, 825);
+def_boolean $boolean40 = struct_param($struct5, 825);
 def_string $string2 = struct_param($struct5, 824);
 $int23 = 0;
-if ($boolean45 = true) {
+if ($boolean40 = true) {
 	cc_create($component21, ^iftype_text, $int23);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 13);
 	cc_setcolour(0xf4f4f4);
@@ -172,9 +206,9 @@ if ($boolean45 = true) {
 		cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xf4f4f4)");
 	}
 }
-def_int $int46 = struct_param($struct5, 807);
-def_int $int47 = ~adventurepath_return_task_focus($int46);
-if (~script2973($int0, $int46) ! $int0) {
+def_int $int41 = struct_param($struct5, 807);
+def_int $int42 = ~adventurepath_return_task_focus($int41);
+if (~script2973($int0, $int41) ! $int0) {
 	$int23 = ~v2_stone_button_in_filled($component22);
 	cc_create($component22, ^iftype_graphic, $int23);
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
@@ -186,7 +220,7 @@ if (~script2973($int0, $int46) ! $int0) {
 	cc_settrans(255);
 	if_setonmouserepeat("adventurepath_do_nothing", $component22);
 	if_setonmouseleave("adventurepath_do_nothing", $component22);
-} else if ($int47 = $int0) {
+} else if ($int42 = $int0) {
 	$int23 = ~v2_stone_button_filled($component22);
 	cc_create($component22, ^iftype_graphic, $int23);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
@@ -195,9 +229,9 @@ if (~script2973($int0, $int46) ! $int0) {
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
 	cc_setop(1, "Remove<col=ff9040> Focus");
-	cc_setonop("script3001($component22, $int0, $int46)");
-	if_setonmouserepeat("script2998($component22, $int47, $int0, $int46)", $component22);
-	if_setonmouseleave("script2999($component22, $int47, $int0, $int46)", $component22);
+	cc_setonop("script3001($component22, $int0, $int41)");
+	if_setonmouserepeat("script2998($component22, $int42, $int0, $int41)", $component22);
+	if_setonmouseleave("script2999($component22, $int42, $int0, $int41)", $component22);
 } else if (~adventurepath_return_task_status($int0) = ^true) {
 	$int23 = ~v2_stone_button_in_filled($component22);
 	cc_create($component22, ^iftype_graphic, $int23);
@@ -218,8 +252,8 @@ if (~script2973($int0, $int46) ! $int0) {
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
 	cc_setop(1, "Set<col=ff9040> Focus");
-	cc_setonop("script3001($component22, $int0, $int46)");
-	if_setonmouserepeat("script2998($component22, $int47, $int0, $int46)", $component22);
-	if_setonmouseleave("script2999($component22, $int47, $int0, $int46)", $component22);
+	cc_setonop("script3001($component22, $int0, $int41)");
+	if_setonmouserepeat("script2998($component22, $int42, $int0, $int41)", $component22);
+	if_setonmouseleave("script2999($component22, $int42, $int0, $int41)", $component22);
 }
 if_setonvartransmit("script3000($component22){var2360, var2358}", $component22);

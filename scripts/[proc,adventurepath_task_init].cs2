@@ -64,6 +64,8 @@ while ($int29 < enum_getoutputcount($enum27)) {
 def_int $int36 = calc(((50 + 5) * $int30) - 5);
 if ($int36 > if_getheight($component4)) {
 	if_setscrollsize(0, $int36, $component4);
+} else {
+	if_setscrollsize(0, 0, $component4);
 }
 $int31 = ~v2_stone_button_out_filled($component12);
 $int31 = ~adventurepath_back_button_text($component12, $int31, $component3, $component0, $component4, $component16, $component17);
