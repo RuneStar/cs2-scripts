@@ -7,9 +7,9 @@ def_int $int0 = %varcint391;
 def_int $int1 = calc(%varcint392 * 30);
 switch_int ($int0) {
 	case 1, 2 :
-		if_setontimer("script3346($int0, %varcint390, %varcint389)", 660:2);
+		if_setontimer("notification_start($int0, %varcint390, %varcint389)", 660:2);
 	case 3 :
-		if_setontimer("script3347($int1)", 660:2);
+		if_setontimer("notification_delay($int1)", 660:2);
 	case 4, 5 :
-		if_setontimer("script3348($int0, %varcint390, %varcint389)", 660:2);
+		if_setontimer("notification_end($int0, %varcint390, %varcint389)", 660:2);
 }

@@ -1,7 +1,7 @@
 // 3306
-script3306(component $component0, component $component1, component $component2, boolean $boolean3)
-def_graphic $graphic4 = 2420;
-def_graphic $graphic5 = 2421;
+[proc,wiki_icon_update](component $component0, component $component1, component $component2, boolean $boolean3)
+def_graphic $graphic4 = "wiki_icon,0";
+def_graphic $graphic5 = "wiki_icon,1";
 if (%varbit10113 = 0) {
 	if_sethide(false, $component1);
 	if (~on_mobile = false) {

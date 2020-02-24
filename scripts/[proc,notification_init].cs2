@@ -1,0 +1,5 @@
+// 3349
+[proc,notification_init](component $component0)
+if (if_getlayer($component0) ! null) {
+	~notification_positioning($component0, ^min_32bit_int);
+}

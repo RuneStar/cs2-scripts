@@ -1,5 +1,5 @@
 // 3343
-script3343(string $string0, string $string1)
+[clientscript,notification_display_init](string $string0, string $string1)
 if_settext("<u=ff981f><$string0>", 660:4);
 if_settext($string1, 660:8);
 if_settrans(255, 660:4);
@@ -10,4 +10,4 @@ if_setsize(1, 2, ^setsize_abs, ^setsize_abs, 660:1);
 %varcstring388 = $string1;
 %varcint391 = 1;
 %varcint392 = 0;
-if_setontimer("script3346(1, 0, 2)", 660:2);
+if_setontimer("notification_start(1, 0, 2)", 660:2);

@@ -1,7 +1,7 @@
 // 3298
 script3298(component $component0, component $component1, boolean $boolean2)
-def_graphic $graphic3 = 2421;
-def_graphic $graphic4 = 2420;
+def_graphic $graphic3 = "wiki_icon,1";
+def_graphic $graphic4 = "wiki_icon,0";
 if ($boolean2 = true) {
 	if_setonmouserepeat(null, $component0);
 	if_setonmouseleave(null, $component0);
@@ -9,5 +9,5 @@ if ($boolean2 = true) {
 } else {
 	if_setonmouserepeat("graphic_swapper($component1, $graphic3)", $component0);
 	if_setonmouseleave("graphic_swapper($component1, $graphic4)", $component0);
-	if_setgraphic(2420, $component1);
+	if_setgraphic("wiki_icon,0", $component1);
 }
