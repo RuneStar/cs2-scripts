@@ -1,0 +1,15 @@
+// 3356
+script3356(component $component0, int $int1, int $int2, boolean $boolean3)
+if (calc(clientclock % 10) ! 0) {
+	return;
+}
+if (getremoveroofs = true) {
+	if ($boolean3 = true) {
+		return;
+	}
+} else if ($boolean3 = false) {
+	return;
+}
+if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
+	~script3358(remove_roof_1269);
+}

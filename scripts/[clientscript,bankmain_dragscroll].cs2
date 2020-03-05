@@ -1,6 +1,6 @@
 // 284
 [clientscript,bankmain_dragscroll](component $component0, int $int1, int $int2, int $int3, component $component4, int $int5)
-if (calc($int2 - if_getx($component0)) < -5) {
+if (calc($int2 - if_getx($component0)) < calc(51 - 10)) {
 	return;
 }
 $int3 = calc($int3 - if_gety($component0));

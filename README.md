@@ -2971,6 +2971,7 @@
 [**2968**](scripts/[proc,adventurepath_return_path_tasks_done].cs2) `[proc,adventurepath_return_path_tasks_done]`  
 [**2969**](scripts/[proc,adventurepath_return_task_focus].cs2) `[proc,adventurepath_return_task_focus]`  
 [**2970**](scripts/[proc,adventurepath_set_task_focus].cs2) `[proc,adventurepath_set_task_focus]`  
+[**2971**](scripts/script2971.cs2)  
 [**2972**](scripts/script2972.cs2)  
 [**2973**](scripts/script2973.cs2)  
 [**2974**](scripts/[proc,create_v2_stone_button_filled_free].cs2) `[proc,create_v2_stone_button_filled_free]`  
@@ -3351,3 +3352,11 @@
 [**3349**](scripts/[proc,notification_init].cs2) `[proc,notification_init]`  
 [**3350**](scripts/[clientscript,notification_positioning].cs2) `[clientscript,notification_positioning]`  
 [**3351**](scripts/[proc,notification_positioning].cs2) `[proc,notification_positioning]`  
+[**3352**](scripts/script3352.cs2)  
+[**3353**](scripts/script3353.cs2)  
+[**3354**](scripts/script3354.cs2)  
+[**3355**](scripts/script3355.cs2)  
+[**3356**](scripts/script3356.cs2)  
+[**3357**](scripts/script3357.cs2)  
+[**3358**](scripts/script3358.cs2)  
+[**3359**](scripts/script3359.cs2)  

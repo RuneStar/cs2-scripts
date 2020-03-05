@@ -14,12 +14,24 @@ def_int $int2 = string_length(%varcstring335);
 def_string $string1 = escape(%varcstring335);
 def_string $string2 = "";
 def_int $int3 = 0;
+def_boolean $boolean4 = ~on_mobile;
 if (%varbit8119 = 1) {
-	$string2 = "<enum(int, string, 1894, %varbit1777)><chat_playername>: <$string0><$string1></col>";
+	$string2 = "<enum(int, string, 1894, %varbit1777)><chat_playername>";
+	if ($boolean4 = true) {
+		$string2 = append($string2, "<img=19>");
+	}
+	$string2 = append($string2, ": <$string0><$string1></col>");
 	if ($int2 < 80) {
 		$string2 = append($string2, "<$string0>*</col>");
 	}
 	$int3 = parawidth($string2, ^max_32bit_int, p12_full);
+	if ($boolean4 = true) {
+		if_setsize(~max(60, calc(5 + $int3)), 30, ^setsize_abs, ^setsize_abs, 162:39);
+		if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 162:39);
+	} else {
+		if_setsize(0, 30, ^setsize_abs, ^setsize_minus, 162:39);
+		if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 162:39);
+	}
 	if ($int3 > if_getwidth(162:57)) {
 		if_settextalign(^settextalign_right, ^settextalign_bottom, 0, 162:57);
 	} else {

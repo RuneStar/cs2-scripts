@@ -1,28 +1,27 @@
 // 2502
 [proc,account_update_layout]
+def_int $int0 = 0;
 if (~bonds_hide = 1) {
 	if ((%varbit6713 = 0) & (%varcint103 = 1)) {
-		if_sethide(false, 109:26);
 		if_sethide(true, 109:31);
 		if_setsize(190, 56, ^setsize_abs, ^setsize_abs, 109:24);
-		if_sethide(true, 109:38);
-		if_setsize(190, 28, ^setsize_abs, ^setsize_abs, 109:36);
-		if_setposition(0, 31, ^setpos_abs_left, ^setpos_abs_top, 109:24);
-		if_setposition(0, 92, ^setpos_abs_left, ^setpos_abs_top, 109:36);
-		if_setposition(0, 124, ^setpos_abs_left, ^setpos_abs_top, 109:43);
+		$int0 = calc($int0 + 32);
 	} else {
-		if_sethide(false, 109:26);
 		if_sethide(false, 109:31);
 		if_setsize(190, 88, ^setsize_abs, ^setsize_abs, 109:24);
-		if_sethide(true, 109:38);
-		if_setsize(190, 28, ^setsize_abs, ^setsize_abs, 109:36);
-		if_setposition(0, 31, ^setpos_abs_left, ^setpos_abs_top, 109:24);
-		if_setposition(0, 123, ^setpos_abs_left, ^setpos_abs_top, 109:36);
-		if_setposition(0, 155, ^setpos_abs_left, ^setpos_abs_top, 109:43);
 	}
+	if_setposition(0, calc(109 - $int0), ^setpos_abs_left, ^setpos_abs_top, 109:36);
+	if (%varcint228 = 0) {
+		if_sethide(true, 109:38);
+		if_setsize(190, 24, ^setsize_abs, ^setsize_abs, 109:36);
+		$int0 = calc($int0 + 32);
+	} else {
+		if_sethide(false, 109:38);
+		if_setsize(190, 56, ^setsize_abs, ^setsize_abs, 109:36);
+	}
+	if_setposition(0, calc(165 - $int0), ^setpos_abs_left, ^setpos_abs_top, 109:43);
 	if_sethide(true, 109:65);
 } else {
-	if_sethide(false, 109:26);
 	if_sethide(false, 109:31);
 	if_setsize(190, 88, ^setsize_abs, ^setsize_abs, 109:24);
 	if_sethide(false, 109:38);
