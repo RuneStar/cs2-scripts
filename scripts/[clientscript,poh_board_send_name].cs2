@@ -1,0 +1,9 @@
+// 3125
+[clientscript,poh_board_send_name](component $component0, int $int1, string $string0, int $int2)
+if (clientclock < $int2) {
+	return;
+}
+resume_namedialog($string0);
+if (cc_find($component0, $int1) = ^true) {
+	cc_setontimer(null);
+}

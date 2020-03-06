@@ -1,0 +1,20 @@
+// 2056
+[proc,skillmulti_quantitybutton_setup](int $int0, int $int1, component $component2, int $int3, int $int4, int $int5)(int)
+if_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_centre, $component2);
+def_string $string0 = "All";
+if ($component2 ! 270:12) {
+	$string0 = tostring($int1);
+}
+if ($int0 = 1) {
+	~skillmulti_wipebutton($component2);
+	$string0 = "<col=ffffff><$string0></col>";
+	~skillmulti_quantitybutton_draw(true, $string0, $component2);
+} else {
+	~skillmulti_quantitybutton_draw(false, $string0, $component2);
+	if_setonmouseover("skillmulti_quantitybutton_draw(true, $string0, $component2)", $component2);
+	if_setonmouseleave("skillmulti_quantitybutton_draw(false, $string0, $component2)", $component2);
+	if_setop(1, $string0, $component2);
+	if_setonop("skillmulti_quantitybutton_op(event_opindex, $int1, $int3, $int4)", $component2);
+	if_setontimer(null, $component2);
+}
+return(calc(($int5 + if_getwidth($component2)) + 5));

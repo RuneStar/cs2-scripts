@@ -1,9 +1,0 @@
-// 3072
-script3072(int $int0, component $component1, int $int2)
-if (clientclock < $int0) {
-	return;
-}
-if (cc_find($component1, $int2) = ^true) {
-	cc_setmodel(bank_filler_7669);
-	cc_setontimer(null);
-}

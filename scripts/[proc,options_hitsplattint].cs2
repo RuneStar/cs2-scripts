@@ -1,0 +1,13 @@
+// 3354
+[proc,options_hitsplattint](component $component0, component $component1)
+def_string $string0 = "Hitsplat tinting (currently on)";
+if (%varbit10236 = 1) {
+	$string0 = "Hitsplat tinting (currently off)";
+	if_setgraphic("options_boxes,0", $component0);
+	if_setop(1, "Enable", $component0);
+} else {
+	if_setgraphic("options_boxes,1", $component0);
+	if_setop(1, "Disable", $component0);
+}
+if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component1, $string0, 25, 512)", $component0);
+%varcint2 = 0;

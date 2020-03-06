@@ -1,0 +1,106 @@
+// 3041
+[proc,league_create_dropdown](component $component0, component $component1, component $component2, int $int3, int $int4)
+def_int $int5 = calc(if_getheight($component1) - 10);
+def_int $int6 = if_getwidth($component1);
+if (~on_mobile = true) {
+	$int5 = 86;
+	$int6 = 115;
+}
+def_int $int7 = calc($int5 / 3);
+def_int $int8 = 5;
+if_setsize($int6, calc($int5 + 10), ^setsize_abs, ^setsize_abs, $component1);
+cc_create($component1, ^iftype_graphic, $int3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("tradebacking_light");
+$int3 = calc($int3 + 1);
+$int3 = ~steelbox($component1, $int3);
+if_sethide(true, $component1);
+cc_create($component1, ^iftype_rectangle, $int3);
+cc_setsize(calc($int6 - 10), $int7, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, $int8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+if ($int4 = 0) {
+	cc_settrans(235);
+} else {
+	cc_settrans(255);
+}
+$int3 = calc($int3 + 1);
+cc_create($component1, ^iftype_text, $int3);
+cc_setsize(calc($int6 - 10), $int7, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, $int8, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Info");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int4 = 0) {
+	cc_setcolour(0xc8c8c8);
+	cc_settrans(200);
+} else {
+	cc_setcolour(0xff981f);
+	cc_setonmouseover("league_info_mouseover($component1, $int3)");
+	cc_setonmouseleave("league_info_mouseleave($component1, $int3)");
+}
+cc_setop(1, "View Information");
+cc_setonop("league_menu_frame_click($component0, $component1, $component2)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int3 = calc($int3 + 1);
+$int8 = calc($int8 + $int7);
+cc_create($component1, ^iftype_rectangle, $int3);
+cc_setsize(calc($int6 - 10), $int7, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, $int8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+if ($int4 = 1) {
+	cc_settrans(235);
+} else {
+	cc_settrans(255);
+}
+$int3 = calc($int3 + 1);
+cc_create($component1, ^iftype_text, $int3);
+cc_setsize(calc($int6 - 10), $int7, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, $int8, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Tasks");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int4 = 1) {
+	cc_setcolour(0xc8c8c8);
+	cc_settrans(200);
+} else {
+	cc_setcolour(0xff981f);
+	cc_setonmouseover("league_info_mouseover($component1, $int3)");
+	cc_setonmouseleave("league_info_mouseleave($component1, $int3)");
+}
+cc_setop(1, "View Tasks");
+cc_setonop("league_menu_frame_click($component0, $component1, $component2)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int3 = calc($int3 + 1);
+$int8 = calc($int8 + $int7);
+cc_create($component1, ^iftype_rectangle, $int3);
+cc_setsize(calc($int6 - 10), $int7, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, $int8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+if ($int4 = 2) {
+	cc_settrans(235);
+} else {
+	cc_settrans(255);
+}
+$int3 = calc($int3 + 1);
+cc_create($component1, ^iftype_text, $int3);
+cc_setsize(calc($int6 - 10), $int7, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, $int8, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Relics");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int4 = 2) {
+	cc_setcolour(0xc8c8c8);
+	cc_settrans(200);
+} else {
+	cc_setcolour(0xff981f);
+	cc_setonmouseover("league_info_mouseover($component1, $int3)");
+	cc_setonmouseleave("league_info_mouseleave($component1, $int3)");
+}
+cc_setop(1, "View Relics");
+cc_setonop("league_menu_frame_click($component0, $component1, $component2)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

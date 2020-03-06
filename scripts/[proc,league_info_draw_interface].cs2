@@ -53,7 +53,7 @@ if (~on_mobile = false) {
 if_setonop("league_menu_click(event_opindex, $component8, $component9, $int22, $component10)", $component8);
 if_setop(1, "Show Menu", $component8);
 $int22 = 0;
-~script3041($component8, $component9, $component10, $int22, 0);
+~league_create_dropdown($component8, $component9, $component10, $int22, 0);
 $int22 = 0;
 while ($int21 < enum_getoutputcount($enum15)) {
 	if (($int21 = 0) & (clienttype ! ^clienttype_ios)) {

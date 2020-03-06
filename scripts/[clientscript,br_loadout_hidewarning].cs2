@@ -3,5 +3,5 @@
 %varcint110 = calc(clientclock + 2);
 if (.cc_find($component0, calc($int1 + $int2)) = ^true) {
 	.cc_setmodel(16238);
-	.cc_setontimer("script3072(calc(clientclock + 2), event_com, event_comid)");
+	.cc_setontimer("br_loadout_restorewarning(calc(clientclock + 2), event_com, event_comid)");
 }

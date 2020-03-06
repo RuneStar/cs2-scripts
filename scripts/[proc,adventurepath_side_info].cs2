@@ -114,8 +114,8 @@ if ((($struct13 ! null) & (~adventurepath_return_task_status($int14) = ^false)) 
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 17);
 	if_setop(1, "Show<col=ff9040> Hint", $component6);
 	if_setop(2, "Remove<col=ff9040> Hint arrow", $component6);
-	if_setonmouseover("script3337($component6, $int8)", $component6);
-	if_setonmouseleave("script3338($component6, $int8)", $component6);
+	if_setonmouseover("adventurepath_side_hint_mouseover($component6, $int8)", $component6);
+	if_setonmouseleave("adventurepath_side_hint_mouseleave($component6, $int8)", $component6);
 } else {
 	$int8 = ~v2_stone_button_in_filled($component6);
 	cc_create($component6, ^iftype_graphic, $int8);

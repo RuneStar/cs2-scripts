@@ -1,5 +1,5 @@
 // 2051
 [clientscript,skillmulti_itembutton_key](char $char0, int $key1, obj $obj2, component $component3, string $string0, int $key4, int $int5, int $int6)
 if ((~keypress_permit(270, -1) = 1) & ((($key4 ! null) & ($key1 = $key4)) | ((($char0 ! null) & (string_length($string0) > 0)) & (string_indexof_char($string0, $char0) ! -1)))) {
-	~script2052($obj2, $component3, $string0, $key4, $int5, $int6);
+	~skillmulti_itembutton_triggered($obj2, $component3, $string0, $key4, $int5, $int6);
 }

@@ -130,7 +130,7 @@ while ($int9 < $int10) {
 			}
 		}
 		.cc_settext($string1);
-		cc_setondrag("script1295(event_com, event_comid, $obj15, $string1, $component1, $int11, $int12, $int14, event_mousex, event_mousey)");
+		cc_setondrag("br_loadout_menudragging(event_com, event_comid, $obj15, $string1, $component1, $int11, $int12, $int14, event_mousex, event_mousey)");
 		cc_setondragcomplete("br_loadout_insert(event_com, event_comid, event_dragtarget, event_dragtargetid, $intarray0($int9), $component1, $int11, $int12, $component2, $component5, $component6)");
 		$int13 = calc($int13 + 36);
 	}

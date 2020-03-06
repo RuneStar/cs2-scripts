@@ -42,7 +42,7 @@ if (~on_mobile = false) {
 if_setonop("league_menu_click(event_opindex, $component10, $component11, $int19, $component12)", $component10);
 if_setop(1, "Show Menu", $component10);
 $int19 = 0;
-~script3041($component10, $component11, $component12, $int19, 2);
+~league_create_dropdown($component10, $component11, $component12, $int19, 2);
 def_int $int22 = if_getwidth($component6);
 def_int $int23 = calc(if_getheight($component6) - 5);
 def_int $int24 = 0;

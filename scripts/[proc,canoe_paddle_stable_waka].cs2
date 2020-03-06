@@ -1,0 +1,14 @@
+// 3108
+[proc,canoe_paddle_stable_waka](int $int0)(int, int, int, int, int)
+switch_int ($int0) {
+	case 1 :
+		return(1, 0, 0, 0, 0);
+	case 2 :
+		return(0, 1, 0, 0, 0);
+	case 3 :
+		return(0, 0, 1, 0, 0);
+	case 4 :
+		return(0, 0, 0, 1, 0);
+	case default :
+		return(0, 0, 0, 0, 0);
+}

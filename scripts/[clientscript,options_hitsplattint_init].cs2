@@ -1,0 +1,7 @@
+// 2971
+[clientscript,options_hitsplattint_init](component $component0, component $component1)
+if_setopbase("<col=ff9040>Hitsplat tinting</col>", $component0);
+if_setonmouseleave("deltooltip($component1)", $component0);
+~options_hitsplattint($component0, $component1);
+if_setonvartransmit("options_hitsplattint_resynch($component0, $component1){var1425}", $component0);
+if_setonop("options_hitsplattint_op(event_opindex, $component0, $component1)", $component0);

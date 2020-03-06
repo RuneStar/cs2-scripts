@@ -2,13 +2,13 @@
 [proc,canoe_return_locations]()(int, int, int, int, int)
 switch_int (~canoe_get_state(%varbit1846)) {
 	case 11 :
-		return(~script3105(%varbit1846));
+		return(~canoe_paddle_log(%varbit1846));
 	case 12 :
-		return(~script3106(%varbit1846));
+		return(~canoe_paddle_dugout(%varbit1846));
 	case 13 :
-		return(~script3107(%varbit1846));
+		return(~canoe_paddle_stable_dugout(%varbit1846));
 	case 14 :
-		return(~script3108(%varbit1846));
+		return(~canoe_paddle_stable_waka(%varbit1846));
 	case default :
 		return(0, 0, 0, 0, 0);
 }

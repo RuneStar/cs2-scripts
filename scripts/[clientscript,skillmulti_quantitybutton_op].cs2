@@ -1,0 +1,8 @@
+// 2059
+[clientscript,skillmulti_quantitybutton_op](int $int0, int $int1, int $int2, int $int3)
+if ($int0 ! 1) {
+	return;
+}
+sound_synth(2266, 1, 0);
+%varcint200 = $int1;
+~script2055($int2, $int3);

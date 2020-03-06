@@ -4,7 +4,7 @@ def_int $int1 = 0;
 def_int $int2 = calc(7 + 1);
 def_int $int3 = enum(int, int, 998, $int2);
 while ($int3 ! -1) {
-	if (~script2163($int2) = 1) {
+	if (~makeover_unlockedcolour($int2) = 1) {
 		$int1 = calc($int1 + 1);
 	}
 	$int2 = calc($int2 + 1);
@@ -18,7 +18,7 @@ def_int $int7 = 0;
 $int2 = enum(int, int, 999, $int7);
 while ($int2 ! -1) {
 	cc_create($component0, ^iftype_rectangle, $int7);
-	if (~script2163($int2) = 1) {
+	if (~makeover_unlockedcolour($int2) = 1) {
 		if ($int2 = %var262) {
 			$int6 = $int5;
 		}

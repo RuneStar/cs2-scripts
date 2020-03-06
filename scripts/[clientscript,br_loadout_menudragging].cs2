@@ -1,0 +1,20 @@
+// 1295
+[clientscript,br_loadout_menudragging](component $component0, int $int1, obj $obj2, string $string0, component $component3, int $int4, int $int5, int $int6, int $int7, int $int8)
+if (cc_find($component0, $int1) = ^true) {
+	cc_setontimer("script1296(calc(clientclock + 1), $component0, $int1, $component3, $int4, $int5)");
+	if (.cc_find($component3, $int4) = ^true) {
+		if (oc_stackable($obj2) = true) {
+			.cc_setobject($obj2, 5000);
+		} else {
+			.cc_setobject_nonum($obj2, 1);
+		}
+		.cc_setposition(calc($int7 + 3), calc($int8 + $int6), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_sethide(false);
+	}
+	if (.cc_find($component3, $int5) = ^true) {
+		.cc_setsize(calc(cc_getwidth - (8 + 36)), cc_getheight, ^setsize_abs, ^setsize_abs);
+		.cc_settext($string0);
+		.cc_setposition(calc((($int7 + 3) + 36) + 2), $int8, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_sethide(false);
+	}
+}
