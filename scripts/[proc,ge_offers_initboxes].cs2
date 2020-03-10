@@ -25,7 +25,7 @@ def_int $int9 = $int0;
 $int0 = calc($int0 + 1);
 cc_setsize(40, 36, ^setsize_abs, ^setsize_abs);
 cc_setposition(70, 31, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic(1120);
+cc_setgraphic("graphic_1120");
 cc_create($component1, ^iftype_graphic, $int0);
 def_int $int10 = $int0;
 $int0 = calc($int0 + 1);

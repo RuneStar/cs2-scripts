@@ -1,7 +1,7 @@
 // 1440
 [clientscript,cws_response_toggle](component $component0, int $int1, int $int2, int $int3, int $int4)
 if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int3) = ^true)) {
-	sound_synth(2266, 1, 0);
+	sound_synth(synth_2266, 1, 0);
 	~cws_set_toggle($component0, $int2, $int3, $int4);
 	.cc_resume_pausebutton;
 }

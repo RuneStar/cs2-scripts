@@ -9,30 +9,30 @@ if ($int3 <= 0) {
 }
 def_int $int6 = 0;
 def_int $int7 = calc($int0 * 38);
-cc_create(383:3, ^iftype_graphic, $int5);
+cc_create(interface_383:3, ^iftype_graphic, $int5);
 cc_setposition(0, $int7, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 38, ^setsize_minus, ^setsize_abs);
 cc_setgraphic("tradebacking_light");
 cc_settiling(true);
 if (calc($int0 % 2) = 0) {
 	cc_settrans(0);
-	cc_setonmouseover("ge_history_mouseeffect(383:3, $int5, 75, calc($int5 + 3), true, $obj1, $int3)");
-	cc_setonmouseleave("ge_history_mouseeffect(383:3, $int5, 0, calc($int5 + 3), false, $obj1, $int3)");
+	cc_setonmouseover("ge_history_mouseeffect(interface_383:3, $int5, 75, calc($int5 + 3), true, $obj1, $int3)");
+	cc_setonmouseleave("ge_history_mouseeffect(interface_383:3, $int5, 0, calc($int5 + 3), false, $obj1, $int3)");
 } else {
 	cc_settrans(125);
-	cc_setonmouseover("ge_history_mouseeffect(383:3, $int5, 200, calc($int5 + 3), true, $obj1, $int3)");
-	cc_setonmouseleave("ge_history_mouseeffect(383:3, $int5, 125, calc($int5 + 3), false, $obj1, $int3)");
+	cc_setonmouseover("ge_history_mouseeffect(interface_383:3, $int5, 200, calc($int5 + 3), true, $obj1, $int3)");
+	cc_setonmouseleave("ge_history_mouseeffect(interface_383:3, $int5, 125, calc($int5 + 3), false, $obj1, $int3)");
 }
 cc_setop(1, "Buy-offer");
 cc_setop(10, "Examine");
 cc_setopbase("<col=ff9040><oc_name($obj1)></col>");
 $int5 = calc($int5 + 1);
-cc_create(383:3, ^iftype_graphic, $int5);
+cc_create(interface_383:3, ^iftype_graphic, $int5);
 $int5 = calc($int5 + 1);
 cc_setposition($int6, calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
 $int6 = calc($int6 + 35);
-.cc_create(383:3, ^iftype_text, $int5);
+.cc_create(interface_383:3, ^iftype_text, $int5);
 $int5 = calc($int5 + 1);
 .cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setsize(45, 38, ^setsize_abs, ^setsize_abs);
@@ -48,7 +48,7 @@ if ($int2 = 1) {
 	cc_setgraphic("ge_icons,2");
 	.cc_settext("Bought:");
 }
-cc_create(383:3, ^iftype_text, $int5);
+cc_create(interface_383:3, ^iftype_text, $int5);
 $int5 = calc($int5 + 1);
 cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(170, 38, ^setsize_abs, ^setsize_abs);
@@ -62,7 +62,7 @@ if ($int3 >= 2) {
 } else {
 	cc_settext("<col=ffb83f><oc_name($obj1)></col>");
 }
-cc_create(383:3, ^iftype_graphic, $int5);
+cc_create(interface_383:3, ^iftype_graphic, $int5);
 $int5 = calc($int5 + 1);
 cc_setposition($int6, calc($int7 + 3), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -70,7 +70,7 @@ $int6 = calc($int6 + 36);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 cc_setobject($obj1, $int3);
-cc_create(383:3, ^iftype_text, $int5);
+cc_create(interface_383:3, ^iftype_text, $int5);
 $int5 = calc($int5 + 1);
 cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize($int6, 38, ^setsize_minus, ^setsize_abs);

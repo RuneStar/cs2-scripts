@@ -4,39 +4,39 @@ def_int $int4 = ~max(calc(if_getscrollheight($component1) - if_getheight($compon
 $int2 = ~max(~min($int2, $int4), 0);
 if_setscrollpos(0, $int2, $component1);
 switch_component ($component1) {
-	case 162:58 :
+	case interface_162:58 :
 		%varcint7 = if_getscrolly($component1);
-	case 399:5 :
+	case interface_399:5 :
 		%varcint10 = if_getscrolly($component1);
-	case 239:3 :
+	case interface_239:3 :
 		%varcint75 = if_getscrolly($component1);
-	case 429:11 :
+	case interface_429:11 :
 		%varcint9 = if_getscrolly($component1);
-	case 12:11 :
+	case interface_12:11 :
 		%varcint51 = if_getscrolly($component1);
-	case 381:7 :
+	case interface_381:7 :
 		%varcint0 = if_getscrolly($component1);
-	case 69:15 :
+	case interface_69:15 :
 		%varcint69 = if_getscrolly($component1);
-	case 592:2, 458:3 :
+	case interface_592:2, interface_458:3 :
 		%varcint58 = if_getscrolly($component1);
-	case poll_results:11, 400:10 :
+	case poll_results:11, interface_400:10 :
 		%varcint63 = if_getscrolly($component1);
-	case 92:4 :
+	case interface_92:4 :
 		%varcint203 = if_getscrolly($component1);
-	case 179:5 :
+	case interface_179:5 :
 		%varcint77 = if_getscrolly($component1);
-	case 75:2 :
+	case interface_75:2 :
 		%varcint80 = if_getscrolly($component1);
-	case 129:13 :
+	case interface_129:13 :
 		%varcint138 = if_getscrolly($component1);
-	case 499:14, 507:11, 500:10 :
+	case interface_499:14, interface_507:11, interface_500:10 :
 		%varcint179 = if_getscrolly($component1);
-	case 595:19 :
+	case interface_595:19 :
 		%varcint182 = if_getscrolly($component1);
-	case 631:11 :
+	case interface_631:11 :
 		%varcint376 = if_getscrolly($component1);
-	case 52:20 :
+	case interface_52:20 :
 		%varcint378 = if_getscrolly($component1);
 }
 if ($boolean3 = true) {

@@ -19,13 +19,13 @@ while ($int6 < $int1) {
 			cc_setobject($obj5, inv_getnum(inv, $int6));
 			cc_setopbase("<col=ff9040><oc_name($obj5)></col>");
 			$int2, $int3 = 0, 0;
-			$obj4 = enum(int, obj, 1666, $int3);
+			$obj4 = enum(int, obj, enum_1666, $int3);
 			while (($int2 = 0) & ($obj4 ! null)) {
 				if ($obj4 = $obj5) {
 					$int2 = 1;
 				}
 				$int3 = calc($int3 + 1);
-				$obj4 = enum(int, obj, 1666, $int3);
+				$obj4 = enum(int, obj, enum_1666, $int3);
 			}
 			if ($int2 = 1) {
 				cc_setop(1, "Donate");

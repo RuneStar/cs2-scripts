@@ -7,9 +7,9 @@ if (string_length($string0) > 0) {
 def_int $int5 = 0;
 def_int $int6 = 0;
 def_int $int7 = 0;
-def_enum $enum8 = 1124;
+def_enum $enum8 = enum_1124;
 if (~wildwars_world = 1) {
-	$enum8 = 1735;
+	$enum8 = enum_1735;
 }
 def_int $int9 = ~tournament_beta_world;
 def_namedobj $namedobj10 = enum(int, namedobj, $enum8, $int7);
@@ -29,7 +29,7 @@ while ($namedobj10 ! null) {
 }
 def_int $int11 = 0;
 if ($int9 = 1) {
-	$namedobj10 = enum(int, namedobj, 1906, $int11);
+	$namedobj10 = enum(int, namedobj, enum_1906, $int11);
 	while ($namedobj10 ! null) {
 		if (cc_find($component0, $int7) = ^true) {
 			if (($int4 = 1) | (string_indexof_string(lowercase(oc_name($namedobj10)), $string0, 0) ! -1)) {
@@ -43,7 +43,7 @@ if ($int9 = 1) {
 		}
 		$int7 = calc($int7 + 1);
 		$int11 = calc($int11 + 1);
-		$namedobj10 = enum(int, namedobj, 1906, $int11);
+		$namedobj10 = enum(int, namedobj, enum_1906, $int11);
 	}
 }
 if (cc_find($component0, $int7) = ^true) {

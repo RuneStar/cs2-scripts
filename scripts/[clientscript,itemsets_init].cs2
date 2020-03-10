@@ -6,7 +6,7 @@ def_int $int2 = calc(((if_getwidth($component0) - (36 * 8)) / 7) + 36);
 def_int $int3 = 0;
 def_namedobj $namedobj4 = null;
 def_int $int5 = 0;
-def_enum $enum6 = enum(int, enum, 1033, $int5);
+def_enum $enum6 = enum(int, enum, enum_1033, $int5);
 while ($enum6 ! null) {
 	$namedobj4 = enum(int, namedobj, $enum6, -1);
 	cc_create($component0, ^iftype_graphic, $int5);
@@ -25,7 +25,7 @@ while ($enum6 ! null) {
 		cc_sethide(true);
 	}
 	$int5 = calc($int5 + 1);
-	$enum6 = enum(int, enum, 1033, $int5);
+	$enum6 = enum(int, enum, enum_1033, $int5);
 }
 if ($int3 > 0) {
 	$int3 = calc($int3 + 32);

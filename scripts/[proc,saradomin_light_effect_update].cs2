@@ -9,7 +9,7 @@ if ($int1 <= 50) {
 if ($int1 <= 70) {
 	$int1 = calc($int1 - 50);
 	.cc_settrans(calc(55 + ($int1 * 10)));
-	cc_setmodel(16238);
+	cc_setmodel(model_16238);
 	return;
 }
 cc_deleteall($component0);

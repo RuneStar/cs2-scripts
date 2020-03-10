@@ -1,6 +1,6 @@
 // 1125
 script1125(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 if_sethide(true, $component11);
 ~deltooltip_action($component11);
 ~xpdrops_setup_display_hoverdisable($component0);
@@ -17,7 +17,7 @@ if (~on_mobile = true) {
 .cc_settrans(200);
 .cc_sethide(true);
 def_int $int13 = 0;
-def_string $string0 = enum(int, string, 1246, $int13);
+def_string $string0 = enum(int, string, enum_1246, $int13);
 while (string_length($string0) > 0) {
 	cc_create($component1, ^iftype_text, calc($int13 + 1));
 	cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
@@ -33,9 +33,9 @@ while (string_length($string0) > 0) {
 	cc_setonop("script1127(event_opindex, event_com, event_comid, $component6, $component11, $component4, $component8, $component5, $component9)");
 	$int13 = calc($int13 + 1);
 	if (~on_mobile = true) {
-		$string0 = enum(int, string, 1879, $int13);
+		$string0 = enum(int, string, enum_1879, $int13);
 	} else {
-		$string0 = enum(int, string, 1246, $int13);
+		$string0 = enum(int, string, enum_1246, $int13);
 	}
 }
 if_sethide(false, $component1);

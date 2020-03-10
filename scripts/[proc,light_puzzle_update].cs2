@@ -11,9 +11,9 @@ def_int $int8 = calc(((if_getheight($component0) - (32 * $int6)) - $int5) / ($in
 cc_deleteall($component0);
 while ($int1 < 25) {
 	if (testbit(%var1356, $int1) = ^true) {
-		$obj4 = 20356;
+		$obj4 = obj_20356;
 	} else {
-		$obj4 = 20357;
+		$obj4 = obj_20357;
 	}
 	cc_create($component0, ^iftype_graphic, $int1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);

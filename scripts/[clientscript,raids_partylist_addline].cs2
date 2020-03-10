@@ -1,9 +1,9 @@
 // 1566
 [clientscript,raids_partylist_addline](int $int0, string $string0)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:15)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
-def_component $component1 = enum(int, component, 1537, $int0);
+def_component $component1 = enum(int, component, enum_1537, $int0);
 if ($component1 = null) {
 	return;
 }
@@ -25,13 +25,13 @@ if (string_length($string0) > 0) {
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setfill(true);
-	~raids_partylist_entry_init(%varcint178, $component1, $int0, $string1, 499:14);
+	~raids_partylist_entry_init(%varcint178, $component1, $int0, $string1, interface_499:14);
 	if_setop(1, "View party:", $component1);
 	if_setopbase("<col=ff9040><removetags($string1)></col>", $component1);
 	$string2, $string0 = ~script632($string0);
 	$string3, $string0 = ~script632($string0);
 	$string4, $string5 = ~string_prependzero($string2, 3), ~string_prependzero($string3, 3);
-	$int3 = if_getwidth(499:7);
+	$int3 = if_getwidth(interface_499:7);
 	cc_create($component1, ^iftype_text, 1);
 	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 	cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
@@ -40,7 +40,7 @@ if (string_length($string0) > 0) {
 	cc_settextshadow(true);
 	cc_settext($string2);
 	$int2 = calc($int2 + $int3);
-	$int3 = if_getwidth(499:8);
+	$int3 = if_getwidth(interface_499:8);
 	.cc_create($component1, ^iftype_text, 2);
 	.cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 	.cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
@@ -62,7 +62,7 @@ if (string_length($string0) > 0) {
 		.cc_settext("<col=9f9f9f>-</col>");
 	}
 	$int2 = calc($int2 + $int3);
-	$int3 = if_getwidth(499:9);
+	$int3 = if_getwidth(interface_499:9);
 	cc_create($component1, ^iftype_text, 3);
 	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 	cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
@@ -73,7 +73,7 @@ if (string_length($string0) > 0) {
 	cc_settext($string1);
 	$int2 = calc($int2 + $int3);
 	$string6, $string0 = ~script632($string0);
-	$int3 = if_getwidth(499:10);
+	$int3 = if_getwidth(interface_499:10);
 	cc_create($component1, ^iftype_text, 4);
 	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 	cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
@@ -88,7 +88,7 @@ if (string_length($string0) > 0) {
 	}
 	$int2 = calc($int2 + $int3);
 	$string7, $string0 = ~script632($string0);
-	$int3 = if_getwidth(499:11);
+	$int3 = if_getwidth(interface_499:11);
 	cc_create($component1, ^iftype_text, 5);
 	cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 	cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
@@ -103,7 +103,7 @@ if (string_length($string0) > 0) {
 	}
 	$int2 = calc($int2 + $int3);
 	$string8, $string0 = ~script632($string0);
-	$int3 = if_getwidth(499:12);
+	$int3 = if_getwidth(interface_499:12);
 	cc_create($component1, ^iftype_graphic, 6);
 	cc_setposition(calc($int2 + 2), 2, ^setpos_abs_left, ^setpos_abs_centre);
 	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
@@ -185,16 +185,16 @@ if ($int0 >= calc(40 - 1)) {
 	$int5 = calc(%varcint178 * 18);
 	if ($int5 > if_getheight($component4)) {
 		if_setscrollsize(0, $int5, $component4);
-		~scrollbar_resize(499:55, $component4, %varcint179);
+		~scrollbar_resize(interface_499:55, $component4, %varcint179);
 	} else {
 		if_setscrollsize(0, 0, $component4);
-		~scrollbar_resize(499:55, $component4, 0);
+		~scrollbar_resize(interface_499:55, $component4, 0);
 		%varcint179 = 0;
 	}
 	cc_deleteall($component4);
 	$int0 = 0;
 	while ($int0 < 40) {
-		if_sethide(false, enum(int, component, 1537, $int0));
+		if_sethide(false, enum(int, component, enum_1537, $int0));
 		cc_create($component4, ^iftype_text, $int0);
 		cc_sethide(true);
 		$int0 = calc($int0 + 1);
@@ -209,6 +209,6 @@ if ($int0 >= calc(40 - 1)) {
 		cc_settextshadow(true);
 		cc_settext("No parties are currently listed.");
 	}
-	if_sethide(false, 499:56);
-	if_sethide(false, 499:58);
+	if_sethide(false, interface_499:56);
+	if_sethide(false, interface_499:58);
 }

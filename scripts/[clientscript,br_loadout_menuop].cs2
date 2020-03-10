@@ -1,7 +1,7 @@
 // 1293
 [clientscript,br_loadout_menuop](int $int0, component $component1, int $int2, int $int3, int $colour4, int $int5, int $colour6, int $int7, component $component8, component $component9, component $component10, component $component11)
 if ((cc_find($component1, $int2) = ^true) & (.cc_find($component1, $int3) = ^true)) {
-	sound_synth(2266, 1, 0);
+	sound_synth(synth_2266, 1, 0);
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);
 	.cc_setcolour($colour4);
@@ -9,5 +9,5 @@ if ((cc_find($component1, $int2) = ^true) & (.cc_find($component1, $int3) = ^tru
 	.cc_setontimer("br_loadout_menureset(calc(clientclock + 20), $component1, $int2, $int3, $colour4, $int5, $colour6, $int7)");
 }
 if ($int0 = 1) {
-	~br_loadout_additem($int2, enum(int, namedobj, 2630, $int2), 0, $component8, $component9, $component10, $component11);
+	~br_loadout_additem($int2, enum(int, namedobj, enum_2630, $int2), 0, $component8, $component9, $component10, $component11);
 }

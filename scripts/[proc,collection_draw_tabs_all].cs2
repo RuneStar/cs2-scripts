@@ -1,34 +1,34 @@
 // 2389
 [proc,collection_draw_tabs_all](int $int0)
-~collection_draw_tab(621:4, bosses_471, $int0);
-~collection_draw_tab(621:5, raids_472, $int0);
-~collection_draw_tab(621:6, clues_473, $int0);
-~collection_draw_tab(621:7, minigames_474, $int0);
-~collection_draw_tab(621:8, other_475, $int0);
-if_sethide(true, 621:10);
-if_sethide(true, 621:13);
-if_sethide(true, 621:14);
-if_sethide(true, 621:21);
-if_sethide(true, 621:22);
-if_sethide(true, 621:23);
-if_sethide(true, 621:24);
-if_sethide(true, 621:26);
-if_sethide(true, 621:27);
-if_sethide(true, 621:28);
+~collection_draw_tab(interface_621:4, bosses_471, $int0);
+~collection_draw_tab(interface_621:5, raids_472, $int0);
+~collection_draw_tab(interface_621:6, clues_473, $int0);
+~collection_draw_tab(interface_621:7, minigames_474, $int0);
+~collection_draw_tab(interface_621:8, other_475, $int0);
+if_sethide(true, interface_621:10);
+if_sethide(true, interface_621:13);
+if_sethide(true, interface_621:14);
+if_sethide(true, interface_621:21);
+if_sethide(true, interface_621:22);
+if_sethide(true, interface_621:23);
+if_sethide(true, interface_621:24);
+if_sethide(true, interface_621:26);
+if_sethide(true, interface_621:27);
+if_sethide(true, interface_621:28);
 switch_int ($int0) {
 	case 0 :
-		if_sethide(false, 621:10);
-		if_sethide(false, 621:13);
+		if_sethide(false, interface_621:10);
+		if_sethide(false, interface_621:13);
 	case 1 :
-		if_sethide(false, 621:14);
-		if_sethide(false, 621:21);
+		if_sethide(false, interface_621:14);
+		if_sethide(false, interface_621:21);
 	case 2 :
-		if_sethide(false, 621:22);
-		if_sethide(false, 621:23);
+		if_sethide(false, interface_621:22);
+		if_sethide(false, interface_621:23);
 	case 3 :
-		if_sethide(false, 621:24);
-		if_sethide(false, 621:26);
+		if_sethide(false, interface_621:24);
+		if_sethide(false, interface_621:26);
 	case 4 :
-		if_sethide(false, 621:27);
-		if_sethide(false, 621:28);
+		if_sethide(false, interface_621:27);
+		if_sethide(false, interface_621:28);
 }

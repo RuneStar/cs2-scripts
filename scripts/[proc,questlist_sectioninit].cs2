@@ -19,7 +19,7 @@ while ($int9 < $int2) {
 	cc_settextfont(p11_full);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	$string1 = struct_param(enum(int, struct, $enum1, $int9), 610);
+	$string1 = struct_param(enum(int, struct, $enum1, $int9), param_610);
 	cc_settext($string1);
 	cc_setopbase("<col=ff9040><$string1></col>");
 	$intarray0($int9) = calc(($int6 * $int7) + $int9);

@@ -12,35 +12,35 @@ while ($int9 <= 45) {
 	cc_create($component0, ^iftype_graphic, $int9);
 	if ((($int9 < 32) & (testbit(%var864, $int9) = ^true)) | (($int9 >= 32) & (testbit(%var1416, calc($int9 - 32)) = ^true))) {
 		if ($int9 = 11) {
-			$enum8 = 1686;
+			$enum8 = enum_1686;
 		} else if ($int9 = 15) {
-			$enum8 = 1687;
+			$enum8 = enum_1687;
 		} else if ($int9 = 19) {
-			$enum8 = 1688;
+			$enum8 = enum_1688;
 		} else if ($int9 = 25) {
-			$enum8 = 1691;
+			$enum8 = enum_1691;
 		} else if ($int9 = 27) {
-			$enum8 = 1689;
+			$enum8 = enum_1689;
 		} else if ($int9 = 31) {
-			$enum8 = 1690;
+			$enum8 = enum_1690;
 		} else if ($int9 = 14) {
-			$enum8 = 285;
+			$enum8 = enum_285;
 		} else if ($int9 = 36) {
-			$enum8 = 1893;
+			$enum8 = enum_1893;
 		} else if ($int9 = 34) {
-			$enum8 = 1711;
+			$enum8 = enum_1711;
 		} else if ($int9 = 12) {
-			$enum8 = 995;
+			$enum8 = enum_995;
 		} else if ($int9 = 41) {
-			$enum8 = 2176;
+			$enum8 = enum_2176;
 		} else if ($int9 = 43) {
-			$enum8 = 2364;
+			$enum8 = enum_2364;
 		} else if ($int9 = 33) {
-			$enum8 = 2788;
+			$enum8 = enum_2788;
 		} else {
 			$enum8 = null;
 		}
-		$int7 = ~poh_menagerie_drawpet(enum(int, namedobj, 985, $int9), $enum8, $int5, $int6);
+		$int7 = ~poh_menagerie_drawpet(enum(int, namedobj, enum_985, $int9), $enum8, $int5, $int6);
 		$int6 = calc($int6 + 1);
 	} else {
 		cc_sethide(true);
@@ -49,10 +49,10 @@ while ($int9 <= 45) {
 }
 def_obj $obj10 = null;
 def_int $int11 = 0;
-def_int $int12 = inv_size(517);
+def_int $int12 = inv_size(inv_517);
 while ($int11 < $int12) {
 	cc_create($component0, ^iftype_graphic, $int9);
-	$obj10 = inv_getobj(517, $int11);
+	$obj10 = inv_getobj(inv_517, $int11);
 	if ($obj10 ! null) {
 		$int7 = ~poh_menagerie_drawpet($obj10, null, $int5, $int6);
 		$int6 = calc($int6 + 1);

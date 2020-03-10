@@ -15,7 +15,7 @@ if ($int8 > 0) {
 	$int10 = calc(($int8 - 1) + ($int9 * 5));
 	$int11 = ~trail_slidepuzzle_getint($int10);
 	if ($int11 = -1) {
-		sound_synth(1859, 1, 0);
+		sound_synth(synth_1859, 1, 0);
 		~trail_slidepuzzle_setint($int10, $int7);
 		~trail_slidepuzzle_setint($int2, -1);
 		~trail_slidepuzzle_position($component1, $int3, $int4, $int5, $int6);
@@ -27,7 +27,7 @@ if ($int8 < calc(5 - 1)) {
 	$int10 = calc(($int8 + 1) + ($int9 * 5));
 	$int11 = ~trail_slidepuzzle_getint($int10);
 	if ($int11 = -1) {
-		sound_synth(1859, 1, 0);
+		sound_synth(synth_1859, 1, 0);
 		~trail_slidepuzzle_setint($int10, $int7);
 		~trail_slidepuzzle_setint($int2, -1);
 		~trail_slidepuzzle_position($component1, $int3, $int4, $int5, $int6);
@@ -39,7 +39,7 @@ if ($int9 > 0) {
 	$int10 = calc($int8 + (($int9 - 1) * 5));
 	$int11 = ~trail_slidepuzzle_getint($int10);
 	if ($int11 = -1) {
-		sound_synth(1859, 1, 0);
+		sound_synth(synth_1859, 1, 0);
 		~trail_slidepuzzle_setint($int10, $int7);
 		~trail_slidepuzzle_setint($int2, -1);
 		~trail_slidepuzzle_position($component1, $int3, $int4, $int5, $int6);
@@ -51,7 +51,7 @@ if ($int9 < calc(5 - 1)) {
 	$int10 = calc($int8 + (($int9 + 1) * 5));
 	$int11 = ~trail_slidepuzzle_getint($int10);
 	if ($int11 = -1) {
-		sound_synth(1859, 1, 0);
+		sound_synth(synth_1859, 1, 0);
 		~trail_slidepuzzle_setint($int10, $int7);
 		~trail_slidepuzzle_setint($int2, -1);
 		~trail_slidepuzzle_position($component1, $int3, $int4, $int5, $int6);
@@ -59,4 +59,4 @@ if ($int9 < calc(5 - 1)) {
 		return;
 	}
 }
-sound_synth(2304, 1, 0);
+sound_synth(synth_2304, 1, 0);

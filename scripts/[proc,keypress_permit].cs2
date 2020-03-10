@@ -4,10 +4,10 @@ if (%varcint187 > clientclock) {
 	return(0);
 }
 def_enum $enum2 = ~toplevel_getcomponents;
-if (((%varcint190 = 1) & (if_hassub(enum(component, component, $enum2, 161:16)) = true)) & ($int1 ! 595)) {
+if (((%varcint190 = 1) & (if_hassub(enum(component, component, $enum2, interface_161:16)) = true)) & ($int1 ! 595)) {
 	return(0);
 }
-if (($enum2 = 1132) & (if_hassub(165:29) = true)) {
+if (($enum2 = enum_1132) & (if_hassub(interface_165:29) = true)) {
 	if ($int0 = 16) {
 		$enum2 = $enum2;
 	} else if (($int1 = 595) & (%varcint190 = 1)) {

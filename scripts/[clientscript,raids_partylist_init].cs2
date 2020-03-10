@@ -2,7 +2,7 @@
 [clientscript,raids_partylist_init](component $component0, component $component1)
 def_int $int2 = 0;
 while ($int2 < 40) {
-	if_sethide(true, enum(int, component, 1537, $int2));
+	if_sethide(true, enum(int, component, enum_1537, $int2));
 	$int2 = calc($int2 + 1);
 }
 if_setscrollsize(0, 0, $component0);
@@ -18,13 +18,13 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settext("Loading...");
-cc_deleteall(499:3);
-if_sethide(true, 499:56);
-cc_create(499:3, ^iftype_rectangle, enum(component, int, 1538, 499:56));
+cc_deleteall(interface_499:3);
+if_sethide(true, interface_499:56);
+cc_create(interface_499:3, ^iftype_rectangle, enum(component, int, enum_1538, interface_499:56));
 cc_sethide(true);
-if_sethide(true, 499:58);
-cc_create(499:3, ^iftype_rectangle, enum(component, int, 1538, 499:58));
+if_sethide(true, interface_499:58);
+cc_create(interface_499:3, ^iftype_rectangle, enum(component, int, enum_1538, interface_499:58));
 cc_sethide(true);
-~script1558(499:56, "Refresh", 499:3, 1538, -1);
+~script1558(interface_499:56, "Refresh", interface_499:3, enum_1538, -1);
 ~raids_partylist_setpartybutton;
-if_setonvartransmit("raids_partylist_setpartybutton{var1427}", 499:58);
+if_setonvartransmit("raids_partylist_setpartybutton{var1427}", interface_499:58);

@@ -1,15 +1,15 @@
 // 1523
 [proc,raids_partydetails_closestats]
-if_sethide(true, 507:28);
-cc_deleteall(507:28);
-if_setonclick(null, 507:28);
-~deltooltip_action(507:35);
-if_sethide(false, 507:27);
-cc_deleteall(507:27);
-cc_create(507:27, ^iftype_model, 0);
+if_sethide(true, interface_507:28);
+cc_deleteall(interface_507:28);
+if_setonclick(null, interface_507:28);
+~deltooltip_action(interface_507:35);
+if_sethide(false, interface_507:27);
+cc_deleteall(interface_507:27);
+cc_create(interface_507:27, ^iftype_model, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setmodel(4612);
+cc_setmodel(model_4612);
 cc_setmodelangle(0, 190, 0, 0, 0, 2500);
-cc_setmodelanim(7385);
+cc_setmodelanim(seq_7385);
 cc_setontimer("raids_partydetails_autorefresh(event_com, event_comid, calc(clientclock + 520))");

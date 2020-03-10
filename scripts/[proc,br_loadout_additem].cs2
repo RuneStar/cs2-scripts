@@ -8,8 +8,8 @@ def_int $int8 = 0;
 def_int $int9 = inv_size(inv);
 while ($int8 < $int9) {
 	$int7 = calc(($int2 + $int8) % $int9);
-	if (enum(int, namedobj, 2630, ~br_loadout_get_inv($int7)) = null) {
-		sound_synth(2266, 1, 0);
+	if (enum(int, namedobj, enum_2630, ~br_loadout_get_inv($int7)) = null) {
+		sound_synth(synth_2266, 1, 0);
 		~br_loadout_set_inv($int7, $int0);
 		~br_loadout_drawloadout($component3, $component4, $component5, $component6);
 		return;

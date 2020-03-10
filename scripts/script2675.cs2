@@ -20,9 +20,9 @@ cc_create($component2, ^iftype_graphic, $int4);
 cc_setsize($int3, $int3, ^setsize_abs, ^setsize_abs);
 cc_setposition(5, $int6, ^setpos_abs_left, ^setpos_abs_top);
 if ($int3 = 40) {
-	cc_setgraphic(struct_param($struct7, 676));
+	cc_setgraphic(struct_param($struct7, param_676));
 } else {
-	cc_setgraphic(struct_param($struct7, 675));
+	cc_setgraphic(struct_param($struct7, param_675));
 }
 def_string $string0 = "None set";
 cc_create($component1, ^iftype_text, $int4);
@@ -32,7 +32,7 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
-$string0 = struct_param($struct7, 660);
+$string0 = struct_param($struct7, param_660);
 $int6 = calc(cc_getheight + cc_gety);
 def_string $string1 = "";
 def_string $string2 = "";
@@ -40,8 +40,8 @@ if (($int9 = 1) & ($int8 < 36)) {
 	if ($int8 < 10) {
 		$string1 = tostring($int8);
 	} else {
-		$string1 = enum(int, string, 1401, calc($int8 - 9));
-		$string2 = enum(int, string, 1402, calc($int8 - 9));
+		$string1 = enum(int, string, enum_1401, calc($int8 - 9));
+		$string2 = enum(int, string, enum_1402, calc($int8 - 9));
 	}
 	$string0 = append("<col=ffffff><$string1></col> :  ", $string0);
 	if ($struct7 ! null) {

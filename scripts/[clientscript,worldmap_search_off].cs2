@@ -1,6 +1,6 @@
 // 1734
 [clientscript,worldmap_search_off](component $component0, int $int1, int $int2)
 if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
-	sound_synth(2266, 1, 0);
+	sound_synth(synth_2266, 1, 0);
 	~worldmap_search_off($component0);
 }

@@ -1,4 +1,4 @@
 // 1211
 [proc,zeah_favour_settitle](int $int0, int $int1)
 def_int $int2 = interpolate(0, $int1, 0, 1000, 1000);
-cc_settext("<enum(int, string, 1264, $int0)>: <col=ffffff><tostring(calc($int2 / 10))>.<tostring(calc($int2 % 10))>%</col>");
+cc_settext("<enum(int, string, enum_1264, $int0)>: <col=ffffff><tostring(calc($int2 / 10))>.<tostring(calc($int2 % 10))>%</col>");

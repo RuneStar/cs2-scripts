@@ -2,16 +2,16 @@
 [proc,telenexus_show_cost](component $component0, struct $struct1, int $int2, component $component3, int $int4)
 cc_deleteall($component0);
 if_sethide(false, $component0);
-def_namedobj $namedobj5 = struct_param($struct1, 664);
-def_int $int6 = struct_param($struct1, 668);
-def_namedobj $namedobj7 = struct_param($struct1, 665);
-def_int $int8 = struct_param($struct1, 669);
-def_namedobj $namedobj9 = struct_param($struct1, 666);
-def_int $int10 = struct_param($struct1, 670);
-def_namedobj $namedobj11 = struct_param($struct1, 667);
-def_int $int12 = struct_param($struct1, 671);
-def_stat $stat13 = struct_param($struct1, 672);
-def_int $int14 = struct_param($struct1, 673);
+def_namedobj $namedobj5 = struct_param($struct1, param_664);
+def_int $int6 = struct_param($struct1, param_668);
+def_namedobj $namedobj7 = struct_param($struct1, param_665);
+def_int $int8 = struct_param($struct1, param_669);
+def_namedobj $namedobj9 = struct_param($struct1, param_666);
+def_int $int10 = struct_param($struct1, param_670);
+def_namedobj $namedobj11 = struct_param($struct1, param_667);
+def_int $int12 = struct_param($struct1, param_671);
+def_stat $stat13 = struct_param($struct1, param_672);
+def_int $int14 = struct_param($struct1, param_673);
 def_int $int15 = 0;
 def_int $int16 = 0;
 if (cc_find($component3, 0) = ^true) {
@@ -42,7 +42,7 @@ if ($namedobj5 ! null) {
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(inv, $namedobj5) - inv_total(619, $namedobj5)) >= $int6) {
+	if (calc(inv_total(inv, $namedobj5) - inv_total(inv_619, $namedobj5)) >= $int6) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {
@@ -62,7 +62,7 @@ if ($namedobj7 ! null) {
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(inv, $namedobj7) - inv_total(619, $namedobj7)) >= $int8) {
+	if (calc(inv_total(inv, $namedobj7) - inv_total(inv_619, $namedobj7)) >= $int8) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {
@@ -82,7 +82,7 @@ if ($namedobj9 ! null) {
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(inv, $namedobj9) - inv_total(619, $namedobj9)) >= $int10) {
+	if (calc(inv_total(inv, $namedobj9) - inv_total(inv_619, $namedobj9)) >= $int10) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {
@@ -102,7 +102,7 @@ if ($namedobj11 ! null) {
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
 	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
-	if (calc(inv_total(inv, $namedobj11) - inv_total(619, $namedobj11)) >= $int12) {
+	if (calc(inv_total(inv, $namedobj11) - inv_total(inv_619, $namedobj11)) >= $int12) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
 	} else {
@@ -115,7 +115,7 @@ $int15 = calc($int15 + 1);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 cc_settextshadow(true);
-cc_settext(struct_param($struct1, 660));
+cc_settext(struct_param($struct1, param_660));
 cc_setcolour(0xff981f);
 cc_setsize(10, 10, ^setsize_minus, ^setsize_minus);
 cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_top);

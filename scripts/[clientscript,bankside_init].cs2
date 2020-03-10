@@ -22,10 +22,10 @@ while ($int8 < $int9) {
 	$int8 = calc($int8 + 1);
 }
 ~bankside_build($component1, $component3, $component2, $component4, $component5);
-if_setoninvtransmit("bankside_build($component1, $component3, $component2, $component4, $component5){inv, 516}", $component1);
+if_setoninvtransmit("bankside_build($component1, $component3, $component2, $component4, $component5){inv, inv_516}", $component1);
 if_setonvartransmit("bankside_build($component1, $component3, $component2, $component4, $component5){var304, var1666, var1141, var261, var262, var263}", $component1);
 ~bankside_lootingbag_draw($component6);
-if_setoninvtransmit("bankside_lootingbag_draw($component6){516}", $component5);
+if_setoninvtransmit("bankside_lootingbag_draw($component6){inv_516}", $component5);
 ~bankside_switchview($component1, $component5);
 if_setonvartransmit("bankside_switchview(-1, $component1, $component5, -1){var115}", $component0);
 if_setonop("bankside_switchview(event_opindex, $component1, $component5, 0)", $component7);

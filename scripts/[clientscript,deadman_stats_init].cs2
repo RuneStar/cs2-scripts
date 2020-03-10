@@ -1,7 +1,7 @@
 // 1140
 [clientscript,deadman_stats_init](component $component0, int $int1, int $int2)
-def_string $string0 = enum(int, string, 108, $int1);
-def_stat $stat3 = enum(int, stat, 681, $int1);
+def_string $string0 = enum(int, string, enum_108, $int1);
+def_stat $stat3 = enum(int, stat, enum_681, $int1);
 if_setop(1, "Protect", $component0);
 if_setopbase($string0, $component0);
 if_setonop("deadman_stats_click(event_opindex, $component0, $int1)", $component0);
@@ -18,7 +18,7 @@ cc_setgraphic("miscgraphics,6");
 cc_create($component0, ^iftype_graphic, 2);
 cc_setposition(calc(3 + $int2), 4, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-cc_setgraphic(enum(stat, graphic, 255, $stat3));
+cc_setgraphic(enum(stat, graphic, enum_255, $stat3));
 cc_create($component0, ^iftype_text, 3);
 cc_setposition(30, 3, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(32, 12, ^setsize_abs, ^setsize_abs);

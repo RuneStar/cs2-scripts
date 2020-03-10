@@ -1,6 +1,6 @@
 // 2882
 script2882(component $component0)
-def_int $int1 = enum_getoutputcount(2640);
+def_int $int1 = enum_getoutputcount(enum_2640);
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_obj $obj4 = null;
@@ -18,7 +18,7 @@ while ($int6 > 0) {
 			cc_setop(1, "Sell");
 			$int3, $int2 = 0, 1;
 			while ($int2 <= $int1) {
-				if ($obj4 = enum(int, namedobj, 2640, $int2)) {
+				if ($obj4 = enum(int, namedobj, enum_2640, $int2)) {
 					$int3, $int2 = 1, $int1;
 				}
 				$int2 = calc($int2 + 1);
@@ -34,7 +34,7 @@ while ($int6 > 0) {
 			cc_setopbase("<col=ff9040><oc_name($obj4)></col>");
 		} else {
 			cc_sethide(true);
-			cc_setobject(6512, 1);
+			cc_setobject(obj_6512, 1);
 		}
 	}
 }

@@ -3,7 +3,7 @@
 cc_clearops;
 cc_setontimer(null);
 if ($obj0 ! null) {
-	if (enum(obj, int, 55, $obj0) ! 0) {
+	if (enum(obj, int, enum_55, $obj0) ! 0) {
 		cc_settrans(0);
 		cc_setobject($obj0, $int1);
 		cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
@@ -25,7 +25,7 @@ if ($obj0 ! null) {
 	}
 } else {
 	cc_settrans(0);
-	cc_setobject(6512, 1);
+	cc_setobject(obj_6512, 1);
 	cc_setonop(null);
 	cc_setondragcomplete(null);
 }

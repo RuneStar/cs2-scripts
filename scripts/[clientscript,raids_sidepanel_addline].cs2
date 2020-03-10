@@ -1,6 +1,6 @@
 // 1548
 [clientscript,raids_sidepanel_addline](int $int0, string $string0)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:72)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:72)) = false) {
 	return;
 }
 if (string_length($string0) <= 0) {
@@ -11,7 +11,7 @@ $string1, $string0 = ~script632($string0);
 def_string $string2 = removetags($string1);
 def_string $string3 = "";
 $string3, $string0 = ~script632($string0);
-if (cc_find(500:10, calc($int0 * 7)) = ^true) {
+if (cc_find(interface_500:10, calc($int0 * 7)) = ^true) {
 	cc_setopbase("<col=ff9040><$string2></col>");
 	~raids_sidepanel_entry_init($int0, false);
 	cc_setonop("raids_sidepanel_entry_op($string2)");
@@ -20,11 +20,11 @@ def_int $int1 = 0;
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_string $string4 = "";
-if (cc_find(500:10, calc(($int0 * 7) + 1)) = ^true) {
+if (cc_find(interface_500:10, calc(($int0 * 7) + 1)) = ^true) {
 	$int1, $int2 = string_length($string1), cc_getwidth;
 	if (($int1 > 0) & (parawidth($string1, 512, p11_full) > $int2)) {
-		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 500:15, $string2, 25, 190)");
-		cc_setonmouseleave("deltooltip(500:15)");
+		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, interface_500:15, $string2, 25, 190)");
+		cc_setonmouseleave("deltooltip(interface_500:15)");
 		while (($int1 > 1) & ($int3 = 0)) {
 			$int1 = calc($int1 - 1);
 			$string4 = append(substring($string1, 0, $int1), "...");
@@ -38,18 +38,18 @@ if (cc_find(500:10, calc(($int0 * 7) + 1)) = ^true) {
 	}
 	cc_settext($string1);
 }
-if (cc_find(500:10, calc(($int0 * 7) + 2)) = ^true) {
+if (cc_find(interface_500:10, calc(($int0 * 7) + 2)) = ^true) {
 	cc_settext($string3);
 }
-if (cc_find(500:10, calc(($int0 * 7) + 3)) = ^true) {
+if (cc_find(interface_500:10, calc(($int0 * 7) + 3)) = ^true) {
 	cc_settext($string0);
 }
-if (cc_find(500:10, calc(($int0 * 7) + 4)) = ^true) {
+if (cc_find(interface_500:10, calc(($int0 * 7) + 4)) = ^true) {
 	cc_settext($string2);
 }
-if (cc_find(500:10, calc(($int0 * 7) + 5)) = ^true) {
+if (cc_find(interface_500:10, calc(($int0 * 7) + 5)) = ^true) {
 	cc_settext(append_num(~string_prependzero($string3, 3), $int0));
 }
-if (cc_find(500:10, calc(($int0 * 7) + 6)) = ^true) {
+if (cc_find(interface_500:10, calc(($int0 * 7) + 6)) = ^true) {
 	cc_settext(append_num(~string_prependzero($string0, 4), $int0));
 }

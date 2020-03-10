@@ -11,8 +11,8 @@ while ($int1 < $int2) {
 	cc_create($component0, ^iftype_graphic, $int3);
 	cc_setsize(5, 5, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
-	$stat4 = enum(int, stat, 681, $int1);
-	$obj5 = enum(stat, namedobj, 2651, $stat4);
+	$stat4 = enum(int, stat, enum_681, $int1);
+	$obj5 = enum(stat, namedobj, enum_2651, $stat4);
 	cc_setobject($obj5, -1);
 	$int1 = calc($int1 + 1);
 	$int6 = calc($int6 + 5);

@@ -8,7 +8,7 @@ def_int $int5 = $int1;
 def_int $int6 = $int1;
 def_int $int7 = -1;
 while ($int6 < $int2) {
-	if (enum(int, int, 861, $intarray0($int6)) <= enum(int, int, 861, $int4)) {
+	if (enum(int, int, enum_861, $intarray0($int6)) <= enum(int, int, enum_861, $int4)) {
 		$int7 = $intarray0($int6);
 		$intarray0($int6) = $intarray0($int5);
 		$intarray0($int5) = $int7;

@@ -6,14 +6,14 @@ cc_deleteall($component1);
 cc_deleteall($component2);
 cc_deleteall($component3);
 cc_deleteall($component6);
-def_int $int7 = enum_getoutputcount(2304);
+def_int $int7 = enum_getoutputcount(enum_2304);
 def_int $intarray0(calc($int7 + 1));
 def_int $int8 = 0;
 def_obj $obj9 = null;
 def_int $int10 = 50;
 def_int $int11 = 40;
 while ($int8 < 90) {
-	$obj9 = inv_getobj(626, $int8);
+	$obj9 = inv_getobj(inv_626, $int8);
 	cc_create($component0, ^iftype_graphic, $int8);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	.cc_create($component1, ^iftype_text, $int8);
@@ -29,7 +29,7 @@ while ($int8 < 90) {
 			cc_setop(8, "Remove-Placeholder");
 			cc_setop(9, "Remove-All-Placeholders");
 		} else {
-			cc_setobject($obj9, inv_total(626, $obj9));
+			cc_setobject($obj9, inv_total(inv_626, $obj9));
 			if (%var2195 = ^max_32bit_int) {
 				cc_setop(1, "Withdraw-All");
 			} else if (%var2195 > 1) {
@@ -75,7 +75,7 @@ while ($int8 < 90) {
 				cc_setop(7, "Remove-Favourite");
 				.cc_setop(7, "Remove-Favourite");
 			} else {
-				$intarray0(oc_param(oc_unplaceholder($obj9), 709)) = calc($intarray0(oc_param(oc_unplaceholder($obj9), 709)) + 1);
+				$intarray0(oc_param(oc_unplaceholder($obj9), param_709)) = calc($intarray0(oc_param(oc_unplaceholder($obj9), param_709)) + 1);
 				if (~script2831 > 0) {
 					cc_setop(7, "Favourite");
 					.cc_setop(7, "Favourite");
@@ -125,14 +125,14 @@ if (~seed_vault_searching = 1) {
 	$intarray1(0) = calc($int14 + 15);
 } else {
 	while ($int12 <= $int7) {
-		$int13 = enum(int, int, 2304, $int12);
+		$int13 = enum(int, int, enum_2304, $int12);
 		cc_create($component2, ^iftype_text, $int12);
 		cc_setsize(5, 20, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, $int14, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(0xff981f);
 		cc_settextfont(b12_full);
 		cc_settextshadow(true);
-		cc_settext(enum(int, string, 2305, $int13));
+		cc_settext(enum(int, string, enum_2305, $int13));
 		cc_setposition(5, $int14, ^setpos_abs_left, ^setpos_abs_top);
 		$int14 = calc((cc_gety + cc_getheight) + 2);
 		.cc_create($component3, ^iftype_graphic, $int12);
@@ -151,9 +151,9 @@ def_int $int18 = 0;
 $int14 = 0;
 def_int $int19 = -1;
 while ($int8 < 90) {
-	$obj9 = inv_getobj(626, $int8);
+	$obj9 = inv_getobj(inv_626, $int8);
 	if (($obj9 ! null) & (~seed_vault_filteritem($obj9) = 1)) {
-		$int19 = oc_param(oc_unplaceholder($obj9), 709);
+		$int19 = oc_param(oc_unplaceholder($obj9), param_709);
 		if ((~seed_vault_searching = 1) & (~seed_vault_filteritem($obj9) = 1)) {
 			$int19 = 0;
 		} else if (~script2828($int8) ! -1) {

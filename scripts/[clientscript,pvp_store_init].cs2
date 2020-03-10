@@ -16,8 +16,8 @@ while ($namedobj11 ! null) {
 	if (($namedobj11 = hunters_honour_12855) & ($int6 = 1)) {
 		$namedobj11 = rogues_revenge_12856;
 	}
-	if ($enum5 = 2642) {
-		cc_setobject($namedobj11, oc_param($namedobj11, 852));
+	if ($enum5 = enum_2642) {
+		cc_setobject($namedobj11, oc_param($namedobj11, param_852));
 	} else {
 		cc_setobject($namedobj11, 1);
 	}
@@ -41,14 +41,14 @@ if ($int9 ! -1) {
 }
 if_sethide(false, $component1);
 if_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top, $component1);
-def_int $int12 = enum_getoutputcount(2648);
+def_int $int12 = enum_getoutputcount(enum_2648);
 def_int $intarray0($int12);
 def_int $int13 = 20;
 def_int $int14 = 0;
 $int10 = 0;
 while ($int10 < $int12) {
-	$namedobj11 = enum(int, namedobj, 2648, $int10);
-	$intarray0($int10) = oc_param($namedobj11, 152);
+	$namedobj11 = enum(int, namedobj, enum_2648, $int10);
+	$intarray0($int10) = oc_param($namedobj11, param_152);
 	cc_create($component1, ^iftype_graphic, $int10);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	$int14 = calc($int13 + (($int10 / 9) * $int8));
@@ -90,11 +90,11 @@ $int14 = calc($int14 + $int8);
 if_setsize(0, $int14, ^setsize_minus, ^setsize_abs, $component1);
 $int9 = calc($int9 + $int14);
 def_int $int16 = 0;
-if ($enum5 = 2642) {
+if ($enum5 = enum_2642) {
 	if_sethide(false, $component2);
 	$int9 = calc($int9 + 10);
 	if_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top, $component2);
-	$int12 = enum_getoutputcount(2649);
+	$int12 = enum_getoutputcount(enum_2649);
 	$int16 = calc(($int12 * 32) + 33);
 	if_setsize(if_getwidth($component2), $int16, ^setsize_abs, ^setsize_abs, $component2);
 	$int9 = calc($int9 + $int16);
@@ -144,7 +144,7 @@ if ($int7 = 1) {
 }
 $int15 = ~steelborder($component4, "Bounty Hunter Store", 0);
 if (cc_find($component4, $int15) = ^true) {
-	if ($enum5 = 2642) {
+	if ($enum5 = enum_2642) {
 		~script2884(%var262);
 		cc_setonvartransmit("script2883(event_com, event_comid){var262}");
 	} else {

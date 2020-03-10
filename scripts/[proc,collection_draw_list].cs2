@@ -1,6 +1,6 @@
 // 2731
 [proc,collection_draw_list](component $component0, component $component1, component $component2, component $component3, struct $struct4, int $int5, int $int6)
-def_enum $enum7 = struct_param($struct4, 683);
+def_enum $enum7 = struct_param($struct4, param_683);
 def_int $int8 = 0;
 def_int $int9 = enum_getoutputcount($enum7);
 def_int $int10 = 15;
@@ -13,7 +13,7 @@ if (~on_mobile = true) {
 }
 while ($int8 < $int9) {
 	$struct13 = enum(int, struct, $enum7, $int8);
-	$string0 = struct_param($struct13, 689);
+	$string0 = struct_param($struct13, param_689);
 	cc_create($component2, ^iftype_text, $int8);
 	cc_settext($string0);
 	cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);

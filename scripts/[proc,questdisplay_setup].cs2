@@ -19,7 +19,7 @@ while ($int6 < $int2) {
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settext(struct_param(enum(int, struct, $enum3, $int6), 610));
+	cc_settext(struct_param(enum(int, struct, $enum3, $int6), param_610));
 	$int5 = string_indexof_string("<tostring(1)><tostring(0)><tostring(2)>", substring($string1, $int6, calc($int6 + 1)), 0);
 	if ($int5 = 0) {
 		cc_setcolour(^red);
@@ -45,7 +45,7 @@ while ($int6 < $int2) {
 cc_create($component1, ^iftype_text, $int6);
 cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setcolour(if_getcolour(473:8));
+cc_setcolour(if_getcolour(interface_473:8));
 cc_settextfont(b12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

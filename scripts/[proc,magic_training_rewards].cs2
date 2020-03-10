@@ -2,7 +2,7 @@
 [proc,magic_training_rewards](component $component0, component $component1, component $component2)(int)
 cc_deleteall($component0);
 def_int $int3 = 0;
-def_int $int4 = enum_getoutputcount(2753);
+def_int $int4 = enum_getoutputcount(enum_2753);
 def_int $int5 = 0;
 def_namedobj $namedobj6 = null;
 def_string $string0 = "";
@@ -11,7 +11,7 @@ def_int $int8 = calc(if_getheight($component0) / 4);
 def_int $int9 = 0;
 def_int $int10 = 0;
 while ($int3 < $int4) {
-	$namedobj6 = enum(int, namedobj, 2753, $int3);
+	$namedobj6 = enum(int, namedobj, enum_2753, $int3);
 	if ($namedobj6 ! null) {
 		$string0 = oc_name($namedobj6);
 		cc_create($component0, ^iftype_graphic, $int5);

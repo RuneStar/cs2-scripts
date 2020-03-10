@@ -4,7 +4,7 @@ def_int $int1 = calc(%var261 - 1);
 def_int $int2 = 0;
 def_int $int3 = 0;
 while ($int3 < $int0) {
-	if ((cc_find(100:31, $int3) = ^true) & (.cc_find(100:31, calc($int0 + $int3)) = ^true)) {
+	if ((cc_find(interface_100:31, $int3) = ^true) & (.cc_find(interface_100:31, calc($int0 + $int3)) = ^true)) {
 		if ($int3 = $int1) {
 			cc_settrans(200);
 			.cc_setcolour(0xffb83f);
@@ -31,13 +31,13 @@ while ($int3 < $int0) {
 def_int $int4 = 0;
 if ($int2 = 1) {
 	~script2692(false, false);
-	if_setonmouserepeat("script2691(true, false)", 100:33);
-	if_setonmouseleave("script2691(false, false)", 100:33);
-	if_setonop("script2693(event_opindex)", 100:33);
+	if_setonmouserepeat("script2691(true, false)", interface_100:33);
+	if_setonmouseleave("script2691(false, false)", interface_100:33);
+	if_setonop("script2693(event_opindex)", interface_100:33);
 } else {
-	cc_deleteall(100:33);
-	$int4 = ~v2_stone_button_in_filled(100:33);
-	cc_create(100:33, ^iftype_text, $int4);
+	cc_deleteall(interface_100:33);
+	$int4 = ~v2_stone_button_in_filled(interface_100:33);
+	cc_create(interface_100:33, ^iftype_text, $int4);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setcolour(0x9f9f9f);
@@ -45,9 +45,9 @@ if ($int2 = 1) {
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext("---");
-	if_setonmouserepeat(null, 100:33);
-	if_setonmouseleave(null, 100:33);
-	if_setonop(null, 100:33);
-	if_clearops(100:33);
+	if_setonmouserepeat(null, interface_100:33);
+	if_setonmouseleave(null, interface_100:33);
+	if_setonop(null, interface_100:33);
+	if_clearops(interface_100:33);
 }
-if_setontimer(null, 100:33);
+if_setontimer(null, interface_100:33);

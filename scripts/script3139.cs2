@@ -11,7 +11,7 @@ if ($int1 > 5) {
 }
 cc_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
-def_graphic $graphic5 = enum(int, graphic, 2637, $int2);
+def_graphic $graphic5 = enum(int, graphic, enum_2637, $int2);
 if ($graphic5 = null) {
 	cc_sethide(true);
 } else {

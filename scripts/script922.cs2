@@ -3,10 +3,10 @@ script922()(int)
 if (getwindowmode = ^windowmode_fixed) {
 	return(0);
 }
-if ((if_hassub(162:561) = true) | (if_hassub(162:560) = true)) {
+if ((if_hassub(interface_162:561) = true) | (if_hassub(interface_162:560) = true)) {
 	return(0);
 }
-if (if_gethide(162:40) = false) {
+if (if_gethide(interface_162:40) = false) {
 	return(0);
 }
 return(1);

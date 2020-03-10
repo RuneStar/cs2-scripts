@@ -28,9 +28,9 @@ if ($boolean0 = true) {
 	cc_sethide(true);
 }
 if (~prayer_isavailable($int1) = 1) {
-	.cc_setgraphic(enum(int, graphic, 865, $int1));
+	.cc_setgraphic(enum(int, graphic, enum_865, $int1));
 } else {
-	.cc_setgraphic(enum(int, graphic, 864, $int1));
+	.cc_setgraphic(enum(int, graphic, enum_864, $int1));
 }
 if (($boolean0 = false) & (%varbit5711 = 0)) {
 	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component4, ~prayer_gettooltiptext($int1), 25, if_getwidth($component3))", $component2);

@@ -1,12 +1,12 @@
 // 802
 [proc,ge_pricelist_draw](inv $inv0, int $int1, int $int2)
-cc_deleteall(237:2);
+cc_deleteall(interface_237:2);
 def_int $int3 = 0;
 while ($int3 < $int1) {
-	cc_create(237:2, ^iftype_graphic, $int3);
+	cc_create(interface_237:2, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);
 }
-def_int $int4 = if_getwidth(237:2);
+def_int $int4 = if_getwidth(interface_237:2);
 def_int $int5 = 0;
 def_int $int6 = $int1;
 def_obj $obj7 = null;
@@ -21,7 +21,7 @@ def_int $int15 = -1;
 def_int $int16 = -1;
 $int3 = 0;
 if (%varbit4440 = 1) {
-	if (cc_find(237:4, $int2) = ^true) {
+	if (cc_find(interface_237:4, $int2) = ^true) {
 		cc_setgraphic("options_radio_buttons,0");
 	}
 	$int9, $int10 = calc(36 + 10), calc(32 + 10);
@@ -31,7 +31,7 @@ if (%varbit4440 = 1) {
 		$obj7 = inv_getobj($inv0, $int3);
 		if ($obj7 ! null) {
 			$int14, $int15 = calc($int11 + (($int3 % 5) * $int13)), calc((($int3 / 5) * $int12) + 20);
-			if (cc_find(237:2, $int3) = ^true) {
+			if (cc_find(interface_237:2, $int3) = ^true) {
 				cc_sethide(false);
 				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 				cc_setposition(calc($int14 + 5), calc($int15 + 5), ^setpos_abs_left, ^setpos_abs_top);
@@ -39,8 +39,8 @@ if (%varbit4440 = 1) {
 				cc_setop(10, "Examine");
 				cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
 			}
-			$int6 = ~script771(237:2, $int6, $int14, $int15, $int9, $int10);
-			cc_create(237:2, ^iftype_graphic, $int6);
+			$int6 = ~script771(interface_237:2, $int6, $int14, $int15, $int9, $int10);
+			cc_create(interface_237:2, ^iftype_graphic, $int6);
 			$int6 = calc($int6 + 1);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc($int14 + 5), calc($int15 + 5), ^setpos_abs_left, ^setpos_abs_top);
@@ -48,7 +48,7 @@ if (%varbit4440 = 1) {
 			cc_setoutline(1);
 			cc_setobject_nonum($obj7, 1);
 			$int8 = inv_getnum($inv0, $int3);
-			cc_create(237:2, ^iftype_text, $int6);
+			cc_create(interface_237:2, ^iftype_text, $int6);
 			$int6 = calc($int6 + 1);
 			cc_setsize($int13, 22, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc($int14 - ($int11 / 2)), calc(($int15 + $int10) + 2), ^setpos_abs_left, ^setpos_abs_top);
@@ -61,13 +61,13 @@ if (%varbit4440 = 1) {
 			} else {
 				cc_settext("<~tostring_spacer($int8, ",")> coins");
 			}
-		} else if (cc_find(237:2, $int3) = ^true) {
+		} else if (cc_find(interface_237:2, $int3) = ^true) {
 			cc_sethide(true);
 		}
 		$int3 = calc($int3 + 1);
 	}
 } else {
-	if (cc_find(237:4, $int2) = ^true) {
+	if (cc_find(interface_237:4, $int2) = ^true) {
 		cc_setgraphic("options_radio_buttons,2");
 	}
 	$int5 = calc($int4 / 2);
@@ -79,7 +79,7 @@ if (%varbit4440 = 1) {
 			$int15 = calc(($int3 / 2) * $int12);
 			if (calc($int3 % 2) = 0) {
 				$int14 = 0;
-				cc_create(237:2, ^iftype_graphic, $int6);
+				cc_create(interface_237:2, ^iftype_graphic, $int6);
 				$int6 = calc($int6 + 1);
 				cc_setsize($int4, $int12, ^setsize_abs, ^setsize_abs);
 				cc_setgraphic("tradebacking_light");
@@ -94,7 +94,7 @@ if (%varbit4440 = 1) {
 				$int14 = $int5;
 			}
 			$int16 = calc($int15 + 2);
-			if (cc_find(237:2, $int3) = ^true) {
+			if (cc_find(interface_237:2, $int3) = ^true) {
 				cc_sethide(false);
 				cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 				cc_setposition($int14, $int16, ^setpos_abs_left, ^setpos_abs_top);
@@ -102,14 +102,14 @@ if (%varbit4440 = 1) {
 				cc_setop(10, "Examine");
 				cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
 			}
-			cc_create(237:2, ^iftype_graphic, $int6);
+			cc_create(interface_237:2, ^iftype_graphic, $int6);
 			$int6 = calc($int6 + 1);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition($int14, $int16, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setgraphicshadow(0x333333);
 			cc_setoutline(1);
 			cc_setobject_nonum($obj7, 1);
-			cc_create(237:2, ^iftype_text, $int6);
+			cc_create(interface_237:2, ^iftype_text, $int6);
 			$int6 = calc($int6 + 1);
 			cc_setsize($int13, calc(32 - 2), ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc($int14 + 36), calc($int16 + 1), ^setpos_abs_left, ^setpos_abs_top);
@@ -119,7 +119,7 @@ if (%varbit4440 = 1) {
 			cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 			cc_settext(oc_name($obj7));
 			$int8 = inv_getnum($inv0, $int3);
-			cc_create(237:2, ^iftype_text, $int6);
+			cc_create(interface_237:2, ^iftype_text, $int6);
 			$int6 = calc($int6 + 1);
 			cc_setsize($int13, calc(32 - 2), ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc($int14 + 36), calc($int16 + 1), ^setpos_abs_left, ^setpos_abs_top);
@@ -132,7 +132,7 @@ if (%varbit4440 = 1) {
 			} else {
 				cc_settext("<col=ffffff><~tostring_spacer($int8, ",")> coins</col>");
 			}
-		} else if (cc_find(237:2, $int3) = ^true) {
+		} else if (cc_find(interface_237:2, $int3) = ^true) {
 			cc_sethide(true);
 		}
 		$int3 = calc($int3 + 1);
@@ -141,9 +141,9 @@ if (%varbit4440 = 1) {
 if ($int15 >= 0) {
 	$int15 = calc($int15 + $int12);
 }
-if ($int15 > if_getheight(237:2)) {
-	if_setscrollsize(0, $int15, 237:2);
+if ($int15 > if_getheight(interface_237:2)) {
+	if_setscrollsize(0, $int15, interface_237:2);
 } else {
-	if_setscrollsize(0, 0, 237:2);
+	if_setscrollsize(0, 0, interface_237:2);
 }
-~scrollbar_resize(237:3, 237:2, if_getscrolly(237:2));
+~scrollbar_resize(interface_237:3, interface_237:2, if_getscrolly(interface_237:2));

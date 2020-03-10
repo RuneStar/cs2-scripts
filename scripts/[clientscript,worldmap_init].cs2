@@ -6,7 +6,7 @@ _2309(1, $component4);
 ~worldmap_overview_toggle(false, $component6, $component8);
 cc_deleteall($component0);
 def_int $int25 = 0;
-if (~toplevel_getcomponents ! 1132) {
+if (~toplevel_getcomponents ! enum_1132) {
 	while ($int25 < 8) {
 		cc_create($component0, ^iftype_graphic, $int25);
 		cc_sethide(false);
@@ -45,11 +45,11 @@ if (~on_mobile = true) {
 def_int $int28 = 0;
 def_string $string0 = "";
 def_int $int29 = 0;
-def_category $category30 = enum(int, category, 1705, $int28);
+def_category $category30 = enum(int, category, enum_1705, $int28);
 while ($category30 ! null) {
 	$intarray0($int28) = $int28;
 	$int28 = calc($int28 + 1);
-	$string0 = enum(category, string, 1713, $category30);
+	$string0 = enum(category, string, enum_1713, $category30);
 	cc_create($component21, ^iftype_rectangle, $int25);
 	$int25 = calc($int25 + 1);
 	cc_setsize(0, $int27, ^setsize_minus, ^setsize_abs);
@@ -61,7 +61,7 @@ while ($category30 ! null) {
 	cc_create($component21, ^iftype_graphic, $int25);
 	$int25 = calc($int25 + 1);
 	cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
-	cc_setgraphic(enum(category, graphic, 1712, $category30));
+	cc_setgraphic(enum(category, graphic, enum_1712, $category30));
 	cc_create($component21, ^iftype_text, $int25);
 	$int25 = calc($int25 + 1);
 	cc_setsize(18, $int27, ^setsize_minus, ^setsize_abs);
@@ -78,9 +78,9 @@ while ($category30 ! null) {
 	cc_settextfont(p11_full);
 	cc_settextshadow(false);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-	cc_settext("<tostring(enum(category, int, 1714, $category30))>|<$string0>");
+	cc_settext("<tostring(enum(category, int, enum_1714, $category30))>|<$string0>");
 	cc_sethide(true);
-	$category30 = enum(int, category, 1705, $int28);
+	$category30 = enum(int, category, enum_1705, $int28);
 }
 if ($int28 >= 2) {
 	~worldmap_keysort(intarray0, $component21, 0, 105);
@@ -124,7 +124,7 @@ while ($int36 < $int28) {
 			cc_settextfont(p12_full);
 			cc_settextshadow(true);
 			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-			$string0 = enum(int, string, 1715, $int35);
+			$string0 = enum(int, string, enum_1715, $int35);
 			cc_settext($string0);
 			$int29 = ~max($int29, parawidth($string0, 512, p12_full));
 			$int31, $int26 = $int35, calc($int26 + 20);
@@ -172,7 +172,7 @@ cc_create($component10, ^iftype_graphic, $int25);
 $int25 = calc($int25 + 1);
 cc_setsize(23, 23, ^setsize_abs, ^setsize_abs);
 cc_setposition(-2, calc($int26 - 2), ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic(struct_param(1, 459));
+cc_setgraphic(struct_param(struct_1, param_459));
 $int26 = calc(21 * 1);
 cc_create($component10, ^iftype_rectangle, $int25);
 $int25 = calc($int25 + 1);
@@ -273,13 +273,13 @@ $int25 = calc($int25 + 1);
 .cc_setcolour(^white);
 .cc_settrans(200);
 .cc_sethide(true);
-def_maparea $maparea40 = enum(int, maparea, 1697, 0);
+def_maparea $maparea40 = enum(int, maparea, enum_1697, 0);
 def_coord $coord41 = null;
 def_coord $coord42 = null;
 def_fontmetrics $fontmetrics43 = null;
 def_fontmetrics $fontmetrics44 = null;
 $string0, $int29, $int28 = "", 0, 0;
-def_maparea $maparea45 = enum(int, maparea, 1697, $int28);
+def_maparea $maparea45 = enum(int, maparea, enum_1697, $int28);
 while ($maparea45 ! null) {
 	$intarray0($int28) = $int25;
 	$int28 = calc($int28 + 1);
@@ -307,14 +307,14 @@ while ($maparea45 ! null) {
 	if ($coord41 ! null) {
 		$maparea40, $coord42 = $maparea45, $coord41;
 	}
-	$maparea45 = enum(int, maparea, 1697, $int28);
+	$maparea45 = enum(int, maparea, enum_1697, $int28);
 }
 def_int $int46 = $int25;
 cc_create($component16, ^iftype_graphic, $int25);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
-cc_setgraphic(struct_param(1, 459));
+cc_setgraphic(struct_param(struct_1, param_459));
 if ($int28 >= 3) {
 	~quicksort_cctext(intarray0, $component16, 1, 36);
 }
@@ -391,4 +391,4 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 ~xpdrops_setup_display_hoveroff($component12);
 ~worldmap_loadmap($maparea40, $coord42, $component12, $component13, $component4, $component6, $component7, $component18, $component19);
 ~worldmap_mobile_layout;
-if_setopkey(1, 13, 0, 595:4);
+if_setopkey(1, 13, 0, interface_595:4);

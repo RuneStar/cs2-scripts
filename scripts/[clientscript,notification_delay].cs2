@@ -1,14 +1,14 @@
 // 3347
 [clientscript,notification_delay](int $int0)
-if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, 660:1);
-if_setsize(178, 100, ^setsize_abs, ^setsize_abs, 660:1);
+if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, interface_660:1);
+if_setsize(178, 100, ^setsize_abs, ^setsize_abs, interface_660:1);
 $int0 = calc($int0 + 1);
 if (calc($int0 % 30) = 0) {
 	%varcint392 = calc($int0 / 30);
 }
 if ($int0 < 210) {
-	if_setontimer("notification_delay($int0)", 660:2);
+	if_setontimer("notification_delay($int0)", interface_660:2);
 } else {
 	%varcint391 = 4;
-	if_setontimer("notification_end(4, 178, 100)", 660:2);
+	if_setontimer("notification_end(4, 178, 100)", interface_660:2);
 }

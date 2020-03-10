@@ -1,7 +1,7 @@
 // 2916
 [clientscript,gauntlet_timer_end]
-def_component $component0 = 637:4;
-if_setontimer(null, 637:3);
+def_component $component0 = interface_637:4;
+if_setontimer(null, interface_637:3);
 if_setsize(0, if_getheight($component0), ^setsize_minus, ^setsize_abs, $component0);
 if_setposition(0, if_gety($component0), ^setpos_abs_centre, ^setpos_abs_top, $component0);
 if_settextalign(^settextalign_centre, ^settextalign_centre, 0, $component0);

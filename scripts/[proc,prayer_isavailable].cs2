@@ -1,6 +1,6 @@
 // 464
 [proc,prayer_isavailable](int $int0)(int)
-if ((stat_base(prayer) < enum(int, int, 861, $int0)) & (%varbit5314 = 0)) {
+if ((stat_base(prayer) < enum(int, int, enum_861, $int0)) & (%varbit5314 = 0)) {
 	return(0);
 }
 switch_int ($int0) {

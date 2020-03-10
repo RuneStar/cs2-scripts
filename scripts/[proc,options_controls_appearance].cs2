@@ -1,6 +1,6 @@
 // 2355
 [proc,options_controls_appearance]
-def_int $int0 = scale(600, 16384, if_getwidth(if_getlayer(601:14)));
+def_int $int0 = scale(600, 16384, if_getwidth(if_getlayer(interface_601:14)));
 if (~on_mobile = true) {
 	if_sethide(true, options:73);
 	if_sethide(true, options:74);

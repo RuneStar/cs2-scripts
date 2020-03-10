@@ -7,9 +7,9 @@ if ($int4 <= 0) {
 	if ($int3 ! -1) {
 		logout;
 	}
-	if_resume_pausebutton(228:4);
+	if_resume_pausebutton(interface_228:4);
 } else if ($int5 = 1) {
-	if_settext("There is 1 second remaining <$string0>", 228:2);
+	if_settext("There is 1 second remaining <$string0>", interface_228:2);
 } else {
-	if_settext("There are <tostring($int5)> seconds remaining <$string0>", 228:2);
+	if_settext("There are <tostring($int5)> seconds remaining <$string0>", interface_228:2);
 }

@@ -1,15 +1,15 @@
 // 2868
 [clientscript,objbox_setbuttons](string $string0)
-cc_deleteall(193:0);
-if_setonclick(null, 193:0);
+cc_deleteall(interface_193:0);
+if_setonclick(null, interface_193:0);
 if (string_length($string0) <= 0) {
 	return;
 }
-cc_create(193:0, ^iftype_rectangle, 0);
+cc_create(interface_193:0, ^iftype_rectangle, 0);
 cc_sethide(true);
-cc_create(193:0, ^iftype_rectangle, 1);
+cc_create(interface_193:0, ^iftype_rectangle, 1);
 cc_sethide(true);
-cc_create(193:0, ^iftype_text, 2);
+cc_create(interface_193:0, ^iftype_text, 2);
 cc_sethide(false);
 cc_setposition(96, 0, ^setpos_abs_left, ^setpos_abs_bottom);
 cc_settextshadow(false);
@@ -26,7 +26,7 @@ if (string_length($string0) <= 0) {
 	cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, ^blue)");
 	cc_settext($string2);
 	if (~on_mobile = true) {
-		$component0 = 193:0;
+		$component0 = interface_193:0;
 	}
 	cc_setop(1, "Continue");
 	cc_setonop("objbox_listener(true, null, null, ^key_space, $string1, event_com, event_comid, 0, $string2, $component0, 0)");
@@ -35,7 +35,7 @@ if (string_length($string0) <= 0) {
 		if_setonclick("objbox_listener(true, null, null, ^key_space, $string1, event_com, cc_getid, 0, $string2, $component0, 0)", $component0);
 	}
 } else {
-	.cc_create(193:0, ^iftype_text, 3);
+	.cc_create(interface_193:0, ^iftype_text, 3);
 	.cc_sethide(false);
 	.cc_setposition(286, 0, ^setpos_abs_left, ^setpos_abs_bottom);
 	.cc_settextshadow(false);

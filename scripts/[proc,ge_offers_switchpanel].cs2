@@ -2,7 +2,7 @@
 [proc,ge_offers_switchpanel](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6)
 ~deltooltip_action($component6);
 def_int $int7 = calc(%varbit4439 - 1);
-def_inv $inv8 = enum(int, inv, 150, $int7);
+def_inv $inv8 = enum(int, inv, enum_150, $int7);
 if ($inv8 = null) {
 	if_sethide(true, $component2);
 	if_sethide(false, $component3);

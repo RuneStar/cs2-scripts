@@ -24,7 +24,7 @@ if ((($int0 < 32) & (testbit(%var1076, $int0) = ^true)) | (($int0 >= 32) & (test
 		return;
 	}
 	cc_setgraphic("options_radio_buttons,6");
-	if (enum(int, boolean, 854, $int0) = true) {
+	if (enum(int, boolean, enum_854, $int0) = true) {
 		.cc_setop(1, "Disable");
 		.cc_setonop("slayer_rewards_unlock_confirm(false, $int0, $string0, $component1, $component2, $component3, $component4, $component5, -1)");
 	} else {

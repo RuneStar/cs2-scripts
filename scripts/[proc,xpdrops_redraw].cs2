@@ -12,13 +12,13 @@ def_int $int9 = calc((28 + parawidth("+8,888,888,888", 512, $fontmetrics6)) + 2)
 if_setsize($int9, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
 if_settextfont($fontmetrics7, $component2);
 def_int $int10 = 0;
-def_component $component11 = enum(int, component, 1163, $int10);
+def_component $component11 = enum(int, component, enum_1163, $int10);
 while ($component11 ! null) {
 	if (cc_find($component11, 0) = ^true) {
-		cc_setcolour(enum(int, int, 1169, %varbit4695));
+		cc_setcolour(enum(int, int, enum_1169, %varbit4695));
 		~xpdrops_setdropsize($component11, $int8, $fontmetrics6, $fontmetrics7, cc_gettext);
 	}
 	$int10 = calc($int10 + 1);
-	$component11 = enum(int, component, 1163, $int10);
+	$component11 = enum(int, component, enum_1163, $int10);
 }
 ~xpdrops_setposition($component1);

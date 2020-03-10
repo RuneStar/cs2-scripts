@@ -11,15 +11,15 @@ def_int $int13 = 0;
 if (~on_mobile = true) {
 	$int12 = 20;
 }
-while ($int11 <= enum_getoutputcount(2304)) {
-	$int10 = enum(int, int, 2304, $int11);
+while ($int11 <= enum_getoutputcount(enum_2304)) {
+	$int10 = enum(int, int, enum_2304, $int11);
 	cc_create($component0, ^iftype_text, $int11);
 	cc_setsize(5, calc(20 + $int12), ^setsize_minus, ^setsize_abs);
 	cc_setposition(5, $int13, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
-	cc_settext(enum(int, string, 2305, $int10));
+	cc_settext(enum(int, string, enum_2305, $int10));
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_setonmouseover("cc_colour_swapper($component0, $int11, ^white)");
 	cc_setonmouseleave("cc_colour_swapper($component0, $int11, 0xff981f)");

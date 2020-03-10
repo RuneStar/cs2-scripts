@@ -1,14 +1,14 @@
 // 3216
 [proc,league_task_is_completed](struct $struct0)(int)
-def_struct $struct1 = enum(int, struct, 2670, %varbit10032);
+def_struct $struct1 = enum(int, struct, enum_2670, %varbit10032);
 if ($struct1 = null) {
 	return(^false);
 }
-def_enum $enum2 = struct_param($struct1, 869);
+def_enum $enum2 = struct_param($struct1, param_869);
 if (($enum2 = null) | (enum(struct, boolean, $enum2, $struct0) = false)) {
 	return(^false);
 }
-def_int $int3 = struct_param($struct0, 873);
+def_int $int3 = struct_param($struct0, param_873);
 if (($int3 = -1) | ($int3 < 0)) {
 	return(^false);
 }

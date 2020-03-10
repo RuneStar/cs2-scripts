@@ -11,7 +11,7 @@ if (~script2973($int2, $int4) ! $int2) {
 } else if ($int1 = $int2) {
 	if (cc_find($component0, calc($int3 + 9)) = ^true) {
 		cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
-		cc_setgraphic(2223);
+		cc_setgraphic("graphic_2223");
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	if_setonmouserepeat("script2998($component0, $int1, $int2, $int4)", $component0);
@@ -27,7 +27,7 @@ if (~script2973($int2, $int4) ! $int2) {
 } else {
 	if (cc_find($component0, calc($int3 + 9)) = ^true) {
 		cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
-		cc_setgraphic(2224);
+		cc_setgraphic("graphic_2224");
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	if_setonmouserepeat("script2998($component0, $int1, $int2, $int4)", $component0);

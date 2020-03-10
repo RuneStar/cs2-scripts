@@ -14,7 +14,7 @@ while ($int5 < 9) {
 	cc_create($component1, ^iftype_graphic, $int5);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int7 + ((($int7 * 2) + 36) * ($int5 % 3))), $int8, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setobject_nonum(enum(int, obj, 1382, $int5), 0);
+	cc_setobject_nonum(enum(int, obj, enum_1382, $int5), 0);
 	cc_setop(1, "Details");
 	cc_setonop("tt_reward_selected_onclick(event_comid, $component1, $component0, $component3, $component2, $component4)");
 	cc_setonmouseover("tt_reward_highlight(event_comid, $component1, $component0)");
@@ -22,7 +22,7 @@ while ($int5 < 9) {
 	cc_create($component0, ^iftype_text, $int5);
 	cc_setsize(56, 62, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(($int7 - 10) + (((($int7 - 10) * 2) + 56) * ($int5 % 3))), $int8, ^setpos_abs_left, ^setpos_abs_top);
-	cc_settext(enum(int, string, 1383, $int5));
+	cc_settext(enum(int, string, enum_1383, $int5));
 	cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);

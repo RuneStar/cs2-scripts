@@ -24,9 +24,9 @@ switch_obj ($obj0) {
 		}
 		return(~script716(secateurs_5329), secateurs_5329);
 	case watering_can_6797 :
-		$int2 = enum_getoutputcount(136);
+		$int2 = enum_getoutputcount(enum_136);
 		while ($int2 >= 0) {
-			$namedobj3 = enum(int, namedobj, 136, $int2);
+			$namedobj3 = enum(int, namedobj, enum_136, $int2);
 			if ($namedobj3 ! null) {
 				$int1 = ~script716($namedobj3);
 				if ($int1 > 0) {

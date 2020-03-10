@@ -1,6 +1,6 @@
 // 1376
 [clientscript,poh_viewer_setroom](int $int0, enum $enum1, int $int2, int $int3, int $int4)
-def_component $component5 = enum(int, component, 1424, $int0);
+def_component $component5 = enum(int, component, enum_1424, $int0);
 if ($component5 = null) {
 	return;
 }
@@ -186,14 +186,14 @@ if (testbit($int4, 21) = ^true) {
 if (testbit($int4, 22) = ^true) {
 	$int18 = setbit($int18, 4);
 }
-def_obj $obj19 = enum(int, obj, 250, $int10);
+def_obj $obj19 = enum(int, obj, enum_250, $int10);
 if_setopbase("<col=ff9040><oc_name($obj19)></col>", $component5);
 ~script1385($int0, $int6, $int8, $int7);
 cc_deleteall($component5);
 cc_create($component5, ^iftype_graphic, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setgraphic(enum(int, graphic, 1423, $int10));
+cc_setgraphic(enum(int, graphic, enum_1423, $int10));
 cc_set2dangle(calc((16384 * (4 - $int9)) % 65536));
 cc_create($component5, ^iftype_graphic, 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -204,14 +204,14 @@ cc_settrans(75);
 cc_sethide(true);
 def_string $string0 = "<oc_name($obj19)>:";
 def_int $int20 = 0;
-$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int11, 1425, $enum1, $int20);
-$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int12, 1426, $enum1, $int20);
-$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int13, 1427, $enum1, $int20);
-$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int14, 1428, $enum1, $int20);
-$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int15, 1429, $enum1, $int20);
-$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int16, 1430, $enum1, $int20);
-$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int17, 1431, $enum1, $int20);
-$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int18, 1432, $enum1, $int20);
+$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int11, enum_1425, $enum1, $int20);
+$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int12, enum_1426, $enum1, $int20);
+$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int13, enum_1427, $enum1, $int20);
+$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int14, enum_1428, $enum1, $int20);
+$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int15, enum_1429, $enum1, $int20);
+$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int16, enum_1430, $enum1, $int20);
+$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int17, enum_1431, $enum1, $int20);
+$string0, $int20 = ~poh_viewer_roomtooltip($string0, $int18, enum_1432, $enum1, $int20);
 if ($int20 > 0) {
 	$string0 = append($string0, "</col>");
 } else {

@@ -1,31 +1,31 @@
 // 3269
 [proc,account_update_tabs](int $int0)
-if_sethide(true, 109:22);
-if_sethide(true, 109:50);
-if_sethide(true, 109:77);
-if_setgraphic("tabs_tall,2", 109:7);
-if_setgraphic("tabs_tall,3", 109:8);
-if_setgraphic("tabs_tall,2", 109:9);
-if_setgraphic("tabs_tall,2", 109:12);
-if_setgraphic("tabs_tall,3", 109:13);
-if_setgraphic("tabs_tall,2", 109:14);
-if_setgraphic("tabs_tall,2", 109:17);
-if_setgraphic("tabs_tall,3", 109:18);
-if_setgraphic("tabs_tall,2", 109:19);
+if_sethide(true, interface_109:22);
+if_sethide(true, interface_109:50);
+if_sethide(true, interface_109:77);
+if_setgraphic("tabs_tall,2", interface_109:7);
+if_setgraphic("tabs_tall,3", interface_109:8);
+if_setgraphic("tabs_tall,2", interface_109:9);
+if_setgraphic("tabs_tall,2", interface_109:12);
+if_setgraphic("tabs_tall,3", interface_109:13);
+if_setgraphic("tabs_tall,2", interface_109:14);
+if_setgraphic("tabs_tall,2", interface_109:17);
+if_setgraphic("tabs_tall,3", interface_109:18);
+if_setgraphic("tabs_tall,2", interface_109:19);
 switch_int ($int0) {
 	case 1 :
-		if_sethide(false, 109:50);
-		if_setgraphic("tabs_tall,0", 109:12);
-		if_setgraphic("tabs_tall,1", 109:13);
-		if_setgraphic("tabs_tall,0", 109:14);
+		if_sethide(false, interface_109:50);
+		if_setgraphic("tabs_tall,0", interface_109:12);
+		if_setgraphic("tabs_tall,1", interface_109:13);
+		if_setgraphic("tabs_tall,0", interface_109:14);
 	case 2 :
-		if_sethide(false, 109:77);
-		if_setgraphic("tabs_tall,0", 109:17);
-		if_setgraphic("tabs_tall,1", 109:18);
-		if_setgraphic("tabs_tall,0", 109:19);
+		if_sethide(false, interface_109:77);
+		if_setgraphic("tabs_tall,0", interface_109:17);
+		if_setgraphic("tabs_tall,1", interface_109:18);
+		if_setgraphic("tabs_tall,0", interface_109:19);
 	case default :
-		if_sethide(false, 109:22);
-		if_setgraphic("tabs_tall,0", 109:7);
-		if_setgraphic("tabs_tall,1", 109:8);
-		if_setgraphic("tabs_tall,0", 109:9);
+		if_sethide(false, interface_109:22);
+		if_setgraphic("tabs_tall,0", interface_109:7);
+		if_setgraphic("tabs_tall,1", interface_109:8);
+		if_setgraphic("tabs_tall,0", interface_109:9);
 }

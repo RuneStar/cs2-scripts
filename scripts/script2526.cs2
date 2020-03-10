@@ -1,11 +1,11 @@
 // 2526
 script2526()(int)
 def_enum $enum0 = ~toplevel_getcomponents;
-if ($enum0 ! 1745) {
+if ($enum0 ! enum_1745) {
 	return(0);
 }
 %varcint222 = clientclock;
-def_component $component1 = enum(component, component, $enum0, 161:15);
+def_component $component1 = enum(component, component, $enum0, interface_161:15);
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
@@ -28,7 +28,7 @@ if (~script2519 = 1) {
 	$int3 = 1;
 }
 def_int $int14 = calc(($int7 - $int5) / 2);
-if (((%varcint41 = 1337) & (if_hassub(162:560) = false)) & (%varbit6538 = 1)) {
+if (((%varcint41 = 1337) & (if_hassub(interface_162:560) = false)) & (%varbit6538 = 1)) {
 	$int13 = calc((($int12 - 18) / 2) - ($int6 / 2));
 	if_setposition(~max(0, $int13), 0, ^setpos_abs_left, ^setpos_abs_top, $component1);
 	return(3);

@@ -1,12 +1,12 @@
 // 1584
 [clientscript,killcounts](int $int0, string $string0, string $string1, string $string2, string $string3)
-def_component $component1 = 549:12;
-def_component $component2 = 549:13;
-def_component $component3 = 549:14;
-def_component $component4 = 549:15;
-def_component $component5 = 549:16;
-def_component $component6 = 549:5;
-def_component $component7 = 549:4;
+def_component $component1 = interface_549:12;
+def_component $component2 = interface_549:13;
+def_component $component3 = interface_549:14;
+def_component $component4 = interface_549:15;
+def_component $component5 = interface_549:16;
+def_component $component6 = interface_549:5;
+def_component $component7 = interface_549:4;
 def_int $int8 = 0;
 def_int $int9 = string_indexof_string($string0, "|", 0);
 def_int $int10 = string_indexof_string($string1, "|", 0);
@@ -78,4 +78,4 @@ while (((($int8 <= $int0) & ($int9 ! -1)) & ($int10 ! -1)) & ($int11 ! -1)) {
 if_setscrollsize(0, calc(($int8 * $int14) + $int14), $component6);
 if_setscrollpos(0, 0, $component6);
 ~scrollbar_vertical($component7, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if_settext($string3, 549:3);
+if_settext($string3, interface_549:3);

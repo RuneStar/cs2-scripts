@@ -42,16 +42,16 @@ if (($int8 >= 7) & ($int9 >= 7)) {
 		}
 	}
 }
-if_setsize($int14, $int14, ^setsize_abs, ^setsize_abs, 422:5);
+if_setsize($int14, $int14, ^setsize_abs, ^setsize_abs, interface_422:5);
 def_int $int17 = calc(7 + 2);
 def_int $int18 = pow($int17, 2);
 def_int $int19 = 0;
 def_int $int20 = 0;
-cc_deleteall(422:5);
+cc_deleteall(interface_422:5);
 def_int $int21 = 0;
 def_int $int22 = 0;
 while ($int22 < $int18) {
-	cc_create(422:5, ^iftype_rectangle, $int21);
+	cc_create(interface_422:5, ^iftype_rectangle, $int21);
 	$int21 = calc($int21 + 1);
 	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
 	$int19, $int20 = calc($int22 % $int17), calc($int22 / $int17);
@@ -62,7 +62,7 @@ while ($int22 < $int18) {
 }
 $int22 = 0;
 while ($int22 < $int18) {
-	cc_create(422:5, ^iftype_rectangle, $int21);
+	cc_create(interface_422:5, ^iftype_rectangle, $int21);
 	$int21 = calc($int21 + 1);
 	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
 	$int19, $int20 = calc($int22 % $int17), calc($int22 / $int17);
@@ -73,7 +73,7 @@ while ($int22 < $int18) {
 }
 $int22 = 0;
 while ($int22 < $int18) {
-	cc_create(422:5, ^iftype_rectangle, $int21);
+	cc_create(interface_422:5, ^iftype_rectangle, $int21);
 	$int21 = calc($int21 + 1);
 	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
 	$int19, $int20 = calc($int22 % $int17), calc($int22 / $int17);
@@ -115,9 +115,9 @@ while ($int22 < $int18) {
 ~script1383(31, %varcint174, $int0, $int11, $int12, $int13);
 ~script1383(32, %varcint176, $int0, $int11, $int12, $int13);
 ~script1383(33, %varcint177, $int0, $int11, $int12, $int13);
-def_component $component23 = enum(int, component, 1424, -1);
+def_component $component23 = enum(int, component, enum_1424, -1);
 if_setsize($int11, $int11, ^setsize_abs, ^setsize_abs, $component23);
-if_setonvartransmit("poh_viewer_preview_position($component23, $int17, $int18, $int11, $int12, $int13){var780}", 422:40);
+if_setonvartransmit("poh_viewer_preview_position($component23, $int17, $int18, $int11, $int12, $int13){var780}", interface_422:40);
 cc_deleteall($component23);
 cc_create($component23, ^iftype_graphic, 0);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

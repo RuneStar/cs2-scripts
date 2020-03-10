@@ -9,16 +9,16 @@ if ($int0 = 1) {
 	}
 } else if ($int0 = 2) {
 	$int2 = calc($int2 + 4);
-	if_setposition(0, calc((100 - $int2) / 2), ^setpos_abs_centre, ^setpos_abs_top, 660:1);
+	if_setposition(0, calc((100 - $int2) / 2), ^setpos_abs_centre, ^setpos_abs_top, interface_660:1);
 	if ($int2 >= 100) {
 		$int0 = 3;
 		%varcint391 = 3;
 		$int2 = 100;
 	}
 }
-if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, 660:1);
+if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, interface_660:1);
 if ($int0 < 3) {
-	if_setontimer("notification_start($int0, $int1, $int2)", 660:2);
+	if_setontimer("notification_start($int0, $int1, $int2)", interface_660:2);
 } else {
-	if_setontimer("notification_delay(0)", 660:2);
+	if_setontimer("notification_delay(0)", interface_660:2);
 }

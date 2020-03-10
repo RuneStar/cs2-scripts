@@ -1,7 +1,7 @@
 // 1408
 [clientscript,champions_log](int $int0)
-cc_deleteall(468:2);
-cc_deleteall(468:3);
+cc_deleteall(interface_468:2);
+cc_deleteall(interface_468:3);
 def_int $int1 = 0;
 def_int $int2 = 15;
 $int1, $int2 = ~champions_log_build(0, $int0, $int1, $int2);
@@ -15,6 +15,6 @@ $int1, $int2 = ~champions_log_build(7, $int0, $int1, $int2);
 $int1, $int2 = ~champions_log_build(8, $int0, $int1, $int2);
 $int1, $int2 = ~champions_log_build(9, $int0, $int1, $int2);
 $int1, $int2 = ~champions_log_build(10, $int0, $int1, $int2);
-if_setscrollpos(0, 0, 468:2);
-if_setscrollsize(0, calc($int2 + 15), 468:2);
-~scrollbar_vertical(468:3, 468:2, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+if_setscrollpos(0, 0, interface_468:2);
+if_setscrollsize(0, calc($int2 + 15), interface_468:2);
+~scrollbar_vertical(interface_468:3, interface_468:2, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");

@@ -8,7 +8,7 @@ def_int $int3 = 0;
 def_int $int4 = 0;
 def_component $component5 = null;
 while ($int4 <= 28) {
-	$component5 = enum(int, component, 859, $int4);
+	$component5 = enum(int, component, enum_859, $int4);
 	if ($component5 ! null) {
 		cc_create($component1, ^iftype_graphic, $int4);
 		cc_sethide(false);
@@ -35,7 +35,7 @@ while ($int9 < $int3) {
 	if (cc_find($component1, $intarray0($int9)) = ^true) {
 		cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setop(1, "Toggle");
-		cc_setopbase("<col=ff9040><enum(int, string, 860, $intarray0($int9))>");
+		cc_setopbase("<col=ff9040><enum(int, string, enum_860, $intarray0($int9))>");
 		.cc_create($component1, ^iftype_graphic, $int6);
 		$int6 = calc($int6 + 1);
 		.cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);

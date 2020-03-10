@@ -2,7 +2,7 @@
 [proc,worldmap_window_set](component $component0, component $component1, component $component2, component $component3, int $int4)
 if_sethide(true, $component2);
 if_sethide(false, $component3);
-if (~toplevel_getcomponents = 1132) {
+if (~toplevel_getcomponents = enum_1132) {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component1);
 	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component1);
 	return;

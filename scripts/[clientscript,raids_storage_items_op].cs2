@@ -3,7 +3,7 @@
 if ($int0 = 10) {
 	return;
 }
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 if (cc_find($component1, $int2) = ^true) {
 	cc_settrans(125);
 	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, 0, calc(clientclock + 10))");

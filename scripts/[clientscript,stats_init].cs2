@@ -1,8 +1,8 @@
 // 393
 [clientscript,stats_init](component $component0, component $component1, int $int2, int $int3)
-def_string $string0 = enum(int, string, 108, $int2);
-def_stat $stat4 = enum(int, stat, 681, $int2);
-def_boolean $boolean5 = enum(stat, boolean, 1497, $stat4);
+def_string $string0 = enum(int, string, enum_108, $int2);
+def_stat $stat4 = enum(int, stat, enum_681, $int2);
+def_boolean $boolean5 = enum(stat, boolean, enum_1497, $stat4);
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0);
 cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);
@@ -15,7 +15,7 @@ cc_setgraphic("miscgraphics,5");
 cc_create($component0, ^iftype_graphic, 2);
 cc_setposition(calc(3 + $int3), 4, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-cc_setgraphic(enum(stat, graphic, 255, $stat4));
+cc_setgraphic(enum(stat, graphic, enum_255, $stat4));
 cc_create($component0, ^iftype_text, 3);
 .cc_create($component0, ^iftype_text, 4);
 cc_setposition(32, 4, ^setpos_abs_left, ^setpos_abs_top);

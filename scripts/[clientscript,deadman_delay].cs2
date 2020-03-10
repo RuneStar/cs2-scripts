@@ -3,15 +3,15 @@
 def_int $int2 = calc($int0 * 30);
 def_int $int3 = calc((49 + $int2) / 50);
 if ($int3 = 1) {
-	if_settext("There is 1 second remaining <$string0>", 228:2);
+	if_settext("There is 1 second remaining <$string0>", interface_228:2);
 } else {
-	if_settext("There are <tostring($int3)> seconds remaining <$string0>", 228:2);
+	if_settext("There are <tostring($int3)> seconds remaining <$string0>", interface_228:2);
 }
-if_settext($string1, 228:0);
-if_sethide(false, 228:1);
-def_component $component4 = enum(component, component, ~toplevel_getcomponents, 161:31);
+if_settext($string1, interface_228:0);
+if_sethide(false, interface_228:1);
+def_component $component4 = enum(component, component, ~toplevel_getcomponents, interface_161:31);
 if ($component4 = null) {
-	$component4 = 228:0;
+	$component4 = interface_228:0;
 }
 if_setontimer("deadman_delay_timer($component4, $string0, clientclock, $int2, $int1)", $component4);
 if_setondialogabort("deadman_delay_abortion($component4)", $component4);

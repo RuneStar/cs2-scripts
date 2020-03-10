@@ -12,7 +12,7 @@ def_int $int5 = 0;
 def_int $int6 = 0;
 $int0 = 0;
 while (($int6 = 0) & ($int0 <= 200)) {
-	if (cc_find(52:9, $int0) = ^true) {
+	if (cc_find(interface_52:9, $int0) = ^true) {
 		if (string_length(cc_gettext) > 0) {
 			$intarray0($int5) = $int0;
 			$int5 = calc($int5 + 1);
@@ -25,24 +25,24 @@ while (($int6 = 0) & ($int0 <= 200)) {
 if ($int5 >= 2) {
 	switch_int (%varcint379) {
 		case 0, 1 :
-			~quicksort_cctext(intarray0, 52:9, 0, calc($int5 - 1));
+			~quicksort_cctext(intarray0, interface_52:9, 0, calc($int5 - 1));
 		case 4, 5 :
-			~quicksort_cctext(intarray0, 52:35, 0, calc($int5 - 1));
+			~quicksort_cctext(intarray0, interface_52:35, 0, calc($int5 - 1));
 		case 6, 7 :
-			~quicksort_cctext(intarray0, 52:36, 0, calc($int5 - 1));
+			~quicksort_cctext(intarray0, interface_52:36, 0, calc($int5 - 1));
 		case 8, 9 :
-			~quicksort_cctext(intarray0, 52:37, 0, calc($int5 - 1));
+			~quicksort_cctext(intarray0, interface_52:37, 0, calc($int5 - 1));
 		case 10, 11 :
-			~quicksort_cctext(intarray0, 52:38, 0, calc($int5 - 1));
+			~quicksort_cctext(intarray0, interface_52:38, 0, calc($int5 - 1));
 		case 12, 13 :
-			~quicksort_cctext(intarray0, 52:39, 0, calc($int5 - 1));
+			~quicksort_cctext(intarray0, interface_52:39, 0, calc($int5 - 1));
 		case 14, 15 :
-			~quicksort_cctext(intarray0, 52:40, 0, calc($int5 - 1));
+			~quicksort_cctext(intarray0, interface_52:40, 0, calc($int5 - 1));
 		case default :
 			if (%varcint379 ! 2) {
 				%varcint379 = 3;
 			}
-			~quicksort_cctext(intarray0, 52:12, 0, calc($int5 - 1));
+			~quicksort_cctext(intarray0, interface_52:12, 0, calc($int5 - 1));
 	}
 }
 if (~on_mobile = true) {
@@ -54,7 +54,7 @@ switch_int (%varcint379) {
 		$int1 = $int5;
 		while ($int1 > 0) {
 			$int1 = calc($int1 - 1);
-			if ((cc_find(52:9, $intarray0($int1)) = ^true) & (.cc_find(52:10, $intarray0($int1)) = ^true)) {
+			if ((cc_find(interface_52:9, $intarray0($int1)) = ^true) & (.cc_find(interface_52:10, $intarray0($int1)) = ^true)) {
 				if ((string_length(cc_gettext) = 0) | ((%varbit9448 = 1) & (compare(~poh_board_loc(tostring(%varbit9449)), .cc_gettext) ! 0))) {
 					$boolean7 = true;
 				} else {
@@ -62,63 +62,63 @@ switch_int (%varcint379) {
 					%varcint377 = calc(%varcint377 + 1);
 				}
 			}
-			if (cc_find(52:9, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:9, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:12, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:12, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:13, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:13, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:14, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:14, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:15, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:15, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:16, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:16, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:17, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:17, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:18, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:18, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:35, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:35, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if (cc_find(52:36, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:36, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if (cc_find(52:37, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:37, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if (cc_find(52:38, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:38, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if (cc_find(52:39, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:39, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if (cc_find(52:40, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:40, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if ((cc_find(52:19, $intarray0($int1)) = ^true) & (.cc_find(52:10, $intarray0($int1)) = ^true)) {
+			if ((cc_find(interface_52:19, $intarray0($int1)) = ^true) & (.cc_find(interface_52:10, $intarray0($int1)) = ^true)) {
 				cc_setposition(cc_getx, calc($int2 + 2), ^setpos_abs_left, ^setpos_abs_top);
 				.cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				if ($boolean7 = true) {
@@ -138,7 +138,7 @@ switch_int (%varcint379) {
 		}
 	case default :
 		while ($int1 < $int5) {
-			if ((cc_find(52:9, $intarray0($int1)) = ^true) & (.cc_find(52:10, $intarray0($int1)) = ^true)) {
+			if ((cc_find(interface_52:9, $intarray0($int1)) = ^true) & (.cc_find(interface_52:10, $intarray0($int1)) = ^true)) {
 				if ((string_length(cc_gettext) = 0) | ((%varbit9448 = 1) & (compare(~poh_board_loc(tostring(%varbit9449)), .cc_gettext) ! 0))) {
 					$boolean7 = true;
 				} else {
@@ -146,63 +146,63 @@ switch_int (%varcint379) {
 					%varcint377 = calc(%varcint377 + 1);
 				}
 			}
-			if (cc_find(52:9, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:9, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:12, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:12, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:13, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:13, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:14, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:14, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:15, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:15, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:16, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:16, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:17, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:17, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:18, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:18, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide($boolean7);
 			}
-			if (cc_find(52:35, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:35, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if (cc_find(52:36, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:36, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if (cc_find(52:37, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:37, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if (cc_find(52:38, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:38, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if (cc_find(52:39, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:39, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if (cc_find(52:40, $intarray0($int1)) = ^true) {
+			if (cc_find(interface_52:40, $intarray0($int1)) = ^true) {
 				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				cc_sethide(true);
 			}
-			if ((cc_find(52:19, $intarray0($int1)) = ^true) & (.cc_find(52:10, $intarray0($int1)) = ^true)) {
+			if ((cc_find(interface_52:19, $intarray0($int1)) = ^true) & (.cc_find(interface_52:10, $intarray0($int1)) = ^true)) {
 				cc_setposition(cc_getx, calc($int2 + 2), ^setpos_abs_left, ^setpos_abs_top);
 				.cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_abs_top);
 				if ($boolean7 = true) {

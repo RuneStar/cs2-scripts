@@ -5,9 +5,9 @@ if_sethide(false, $component2);
 if_sethide(false, $component3);
 def_int $int4 = 0;
 def_int $int5 = 0;
-def_int $int6 = enum(int, int, 1167, %varbit4694);
+def_int $int6 = enum(int, int, enum_1167, %varbit4694);
 if ($int6 > 0) {
-	$int4 = calc(%varcint71 + enum(int, int, 1171, %varbit4722));
+	$int4 = calc(%varcint71 + enum(int, int, enum_1171, %varbit4722));
 	if ($int4 > clientclock) {
 		$int5 = calc($int4 - clientclock);
 	}

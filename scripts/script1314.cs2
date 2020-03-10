@@ -4,7 +4,7 @@ def_enum $enum0 = ~toplevel_getcomponents;
 if ($enum0 = null) {
 	return;
 }
-def_component $component1 = enum(component, component, $enum0, 161:3);
+def_component $component1 = enum(component, component, $enum0, interface_161:3);
 if ($component1 = null) {
 	return;
 }
@@ -16,4 +16,4 @@ cc_setcolour(^black);
 cc_setfill(true);
 cc_setontimer("script1315(event_com, event_comid, clientclock)");
 ~script1316($component1, 0);
-sound_synth(2982, 1, 10);
+sound_synth(synth_2982, 1, 10);

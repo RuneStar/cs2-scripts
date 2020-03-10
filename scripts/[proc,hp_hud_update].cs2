@@ -1,6 +1,6 @@
 // 2103
 [proc,hp_hud_update](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5)
-def_string $string0 = nc_param(%var1683, 510);
+def_string $string0 = nc_param(%var1683, param_510);
 if (compare($string0, "") = 0) {
 	if_sethide(true, $component3);
 } else {

@@ -49,10 +49,10 @@ if (string_length($string2) > 0) {
 $string2 = append($string2, $string4);
 def_string $string5 = "";
 def_int $int6 = 0;
-def_int $int7 = enum(int, int, 376, %varbit4270);
-def_int $int8 = enum(int, int, 377, %varbit4270);
-def_int $int9 = enum(int, int, 1120, %varbit4270);
-def_int $int10 = enum(int, int, 1119, %varbit4270);
+def_int $int7 = enum(int, int, enum_376, %varbit4270);
+def_int $int8 = enum(int, int, enum_377, %varbit4270);
+def_int $int9 = enum(int, int, enum_1120, %varbit4270);
+def_int $int10 = enum(int, int, enum_1119, %varbit4270);
 if (((($int7 > 0) | ($int8 > 0)) | ($int9 > 0)) | ($int10 > 0)) {
 	$int3 = calc($int3 + 1);
 	$string4 = "Kills:";

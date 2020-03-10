@@ -1,7 +1,7 @@
 // 2315
 [clientscript,tob_hud_cleartext](int $int0, int $int1)
 def_int $int2 = 0;
-if (cc_find(28:1, $int0) = ^true) {
+if (cc_find(interface_28:1, $int0) = ^true) {
 	$int2 = calc(clientclock - $int1);
 	if ($int2 <= 0) {
 		cc_setposition(0, scale(18, 50, 16384), ^setpos_abs_centre, ^setpos_3);

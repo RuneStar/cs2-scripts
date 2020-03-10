@@ -1,15 +1,15 @@
 // 1346
 [proc,br_fogcolour]
-def_int $colour0 = if_getcolour(90:1);
-def_int $int1 = if_gettrans(90:1);
+def_int $colour0 = if_getcolour(interface_90:1);
+def_int $int1 = if_gettrans(interface_90:1);
 if ((%varbit5320 <= 0) & (%varbit5316 <= 0)) {
 	if ($colour0 ! 0x882000) {
-		if_setcolour(0x882000, 90:1);
+		if_setcolour(0x882000, interface_90:1);
 	}
 	if ($int1 ! 255) {
-		if_settrans(255, 90:1);
+		if_settrans(255, interface_90:1);
 	}
-	_2124(255, 90:1);
+	_2124(255, interface_90:1);
 	return;
 }
 def_int $int2 = 0;
@@ -62,11 +62,11 @@ if ($int18 < $int9) {
 } else if ($int18 > $int9) {
 	$int18 = calc($int18 - 1);
 }
-if_setcolour(~rgb_to_hex($int16, $int17, $int18), 90:1);
+if_setcolour(~rgb_to_hex($int16, $int17, $int18), interface_90:1);
 if ($int1 < $int15) {
 	$int1 = calc($int1 + 1);
 } else if ($int1 > $int15) {
 	$int1 = calc($int1 - 1);
 }
-if_settrans($int1, 90:1);
-_2124(255, 90:1);
+if_settrans($int1, interface_90:1);
+_2124(255, interface_90:1);

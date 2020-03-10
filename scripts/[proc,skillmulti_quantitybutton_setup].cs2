@@ -2,7 +2,7 @@
 [proc,skillmulti_quantitybutton_setup](int $int0, int $int1, component $component2, int $int3, int $int4, int $int5)(int)
 if_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_centre, $component2);
 def_string $string0 = "All";
-if ($component2 ! 270:12) {
+if ($component2 ! interface_270:12) {
 	$string0 = tostring($int1);
 }
 if ($int0 = 1) {

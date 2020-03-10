@@ -1,5 +1,5 @@
 // 1065
 [clientscript,barrows_reward_init](component $component0)
-def_int $int1 = inv_size(141);
+def_int $int1 = inv_size(inv_141);
 ~barrows_reward_draw($component0, $int1);
-if_setoninvtransmit("barrows_reward_draw($component0, $int1){141}", $component0);
+if_setoninvtransmit("barrows_reward_draw($component0, $int1){inv_141}", $component0);

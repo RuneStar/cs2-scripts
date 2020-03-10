@@ -28,7 +28,7 @@ script1217(int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int
 %varcint135 = $int25;
 %varcint136 = $int26;
 %varcint137 = $int27;
-def_int $int28 = inv_size(90);
+def_int $int28 = inv_size(inv_90);
 def_int $intarray0($int28);
 $intarray0(0) = $int0;
 $intarray0(1) = $int1;
@@ -61,7 +61,7 @@ $intarray0(27) = $int27;
 while ($int28 > 0) {
 	$int28 = calc($int28 - 1);
 	if (cc_find(trademain:28, $int28) = ^true) {
-		~trade_tooltip(invother_getnum(90, $int28), $intarray0($int28), trademain:32);
+		~trade_tooltip(invother_getnum(inv_90, $int28), $intarray0($int28), trademain:32);
 	}
 }
 ~deltooltip_action(trademain:32);

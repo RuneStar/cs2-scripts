@@ -1,8 +1,8 @@
 // 905
 [clientscript,toplevel_keypress](int $key0, enum $enum1, boolean $boolean2)
-if ((if_gettop = 80) & (%varbit1463 = 1)) {
+if ((if_gettop = interface_80) & (%varbit1463 = 1)) {
 	~spectator_keypress($key0);
-} else if ((if_gettop = 165) & (%varbit6331 = 1)) {
+} else if ((if_gettop = interface_165) & (%varbit6331 = 1)) {
 	~deadman_map_keypress($key0);
 } else {
 	~toplevel_keypress($key0, $enum1, $boolean2);

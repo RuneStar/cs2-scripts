@@ -23,13 +23,13 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext("Drag items here to discard them.");
-def_int $int8 = enum_getoutputcount(2630);
+def_int $int8 = enum_getoutputcount(enum_2630);
 def_int $intarray0($int8);
 def_int $int9 = 0;
 cc_deleteall($component3);
 $int7 = 0;
 while ($int7 < $int8) {
-	if (enum(int, namedobj, 2630, $int7) ! null) {
+	if (enum(int, namedobj, enum_2630, $int7) ! null) {
 		$intarray0($int9) = $int7;
 		$int9 = calc($int9 + 1);
 	}
@@ -77,7 +77,7 @@ while ($int9 < $int10) {
 		cc_setdraggable($component1, -1);
 		cc_setdragdeadzone(5);
 		cc_setdragdeadtime(5);
-		$obj15 = enum(int, namedobj, 2630, $intarray0($int9));
+		$obj15 = enum(int, namedobj, enum_2630, $intarray0($int9));
 		$string1 = oc_name($obj15);
 		cc_setopbase("<col=ff9040><$string1></col>");
 		.cc_create($component3, ^iftype_rectangle, $int7);

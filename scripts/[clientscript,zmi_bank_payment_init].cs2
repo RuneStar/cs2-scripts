@@ -1,8 +1,8 @@
 // 1454
 [clientscript,zmi_bank_payment_init](boolean $boolean0, string $string0, string $string1)
-def_component $component1 = 106:1;
-def_component $component2 = 106:2;
-def_component $component3 = 106:17;
+def_component $component1 = interface_106:1;
+def_component $component2 = interface_106:2;
+def_component $component3 = interface_106:17;
 ~steelborder($component1, $string0, 0);
 if_setonvartransmit("bank_payment_draw($component2, -1, $boolean0){var1139, var1140}", $component2);
 if_setoninvtransmit("bank_payment_draw($component2, -1, $boolean0){inv}", $component2);

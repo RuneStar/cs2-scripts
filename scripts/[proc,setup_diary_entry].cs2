@@ -13,7 +13,7 @@ cc_setonmouseleave("diary_mouseover(event_com, event_comid, $int1, false)");
 cc_setonvartransmit("update_diary_entry(event_com, event_comid, $int1){var1719, var1720, var1721, var1722, var1723, var1724, var1188, var1189, var1000, var1001, var1002, var1200, var1190, var1191}");
 cc_create($component0, ^iftype_text, $int2);
 $int2 = calc($int2 + 1);
-cc_settext(enum(int, string, 595, $int1));
+cc_settext(enum(int, string, enum_595, $int1));
 cc_setsize(70, 15, ^setsize_abs, ^setsize_abs);
 cc_settextshadow(true);
 cc_settextfont(p11_full);

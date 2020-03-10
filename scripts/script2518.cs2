@@ -1,18 +1,18 @@
 // 2518
 script2518()(int)
 def_enum $enum0 = ~toplevel_getcomponents;
-if ($enum0 ! 1745) {
+if ($enum0 ! enum_1745) {
 	return(0);
 }
-def_component $component1 = enum(int, component, 1137, %varcint171);
-def_component $component2 = enum(component, component, $enum0, 164:66);
-if ((((((($component1 = 161:70) | ($component1 = 161:75)) | ($component1 = 161:76)) | ($component1 = 161:82)) | ($component1 = 161:78)) | ($component1 = 161:79)) | ($component1 = 161:77)) {
-	if ((if_hassub(enum(component, component, $enum0, 161:68)) = true) & (if_hassub(enum(component, component, $enum0, 161:15)) = true)) {
+def_component $component1 = enum(int, component, enum_1137, %varcint171);
+def_component $component2 = enum(component, component, $enum0, interface_164:66);
+if ((((((($component1 = interface_161:70) | ($component1 = interface_161:75)) | ($component1 = interface_161:76)) | ($component1 = interface_161:82)) | ($component1 = interface_161:78)) | ($component1 = interface_161:79)) | ($component1 = interface_161:77)) {
+	if ((if_hassub(enum(component, component, $enum0, interface_161:68)) = true) & (if_hassub(enum(component, component, $enum0, interface_161:15)) = true)) {
 		return(0);
 	}
 	return(1);
 }
-if ((if_getx($component2) = 37) & (if_hassub(enum(component, component, $enum0, 161:68)) = true)) {
+if ((if_getx($component2) = 37) & (if_hassub(enum(component, component, $enum0, interface_161:68)) = true)) {
 	return(1);
 }
 return(0);

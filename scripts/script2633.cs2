@@ -1,67 +1,67 @@
 // 2633
 script2633(int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8)
 if ($int1 > 0) {
-	if_sethide(false, 616:13);
-	if_settext(tostring($int1), 616:13);
+	if_sethide(false, interface_616:13);
+	if_settext(tostring($int1), interface_616:13);
 } else {
-	if_sethide(true, 616:13);
+	if_sethide(true, interface_616:13);
 }
-if_settext(tostring($int2), 616:17);
-if_settext(tostring($int3), 616:23);
+if_settext(tostring($int2), interface_616:17);
+if_settext(tostring($int3), interface_616:23);
 if ($int5 > 0) {
-	if_sethide(false, 616:37);
-	if_settext(tostring($int5), 616:37);
+	if_sethide(false, interface_616:37);
+	if_settext(tostring($int5), interface_616:37);
 } else {
-	if_sethide(true, 616:37);
+	if_sethide(true, interface_616:37);
 }
-if_settext(tostring($int6), 616:41);
-if_settext(tostring($int7), 616:47);
+if_settext(tostring($int6), interface_616:41);
+if_settext(tostring($int7), interface_616:47);
 def_int $int9 = calc(($int1 + $int2) + $int3);
 def_int $int10 = calc(($int5 + $int6) + $int7);
-if_settext(tostring($int9), 616:10);
-if_settext(tostring($int10), 616:34);
+if_settext(tostring($int9), interface_616:10);
+if_settext(tostring($int10), interface_616:34);
 if ($int1 > 0) {
-	if_sethide(false, 616:11);
+	if_sethide(false, interface_616:11);
 } else {
-	if_sethide(true, 616:11);
+	if_sethide(true, interface_616:11);
 }
 if ($int5 > 0) {
-	if_sethide(false, 616:35);
+	if_sethide(false, interface_616:35);
 } else {
-	if_sethide(true, 616:35);
+	if_sethide(true, interface_616:35);
 }
 if ($int10 > 0) {
-	if_sethide(false, 616:50);
-	if_setposition(94, 30, ^setpos_abs_left, ^setpos_abs_top, 616:30);
+	if_sethide(false, interface_616:50);
+	if_setposition(94, 30, ^setpos_abs_left, ^setpos_abs_top, interface_616:30);
 } else {
-	if_sethide(true, 616:50);
-	if_setposition(94, 45, ^setpos_abs_left, ^setpos_abs_top, 616:30);
+	if_sethide(true, interface_616:50);
+	if_setposition(94, 45, ^setpos_abs_left, ^setpos_abs_top, interface_616:30);
 }
 if (($int4 > 0) | ($int8 > 0)) {
-	if_sethide(true, 616:57);
-	if_sethide(false, 616:58);
-	if_settext("Redemption in progress", 616:59);
-	if_setcolour(0xff981f, 616:59);
-	if_sethide(true, 616:65);
-	if_sethide(false, 616:66);
-	if_settext("Redemption in progress", 616:67);
-	if_setcolour(0xff981f, 616:67);
+	if_sethide(true, interface_616:57);
+	if_sethide(false, interface_616:58);
+	if_settext("Redemption in progress", interface_616:59);
+	if_setcolour(0xff981f, interface_616:59);
+	if_sethide(true, interface_616:65);
+	if_sethide(false, interface_616:66);
+	if_settext("Redemption in progress", interface_616:67);
+	if_setcolour(0xff981f, interface_616:67);
 } else if (calc($int9 + $int10) > 0) {
-	if_sethide(false, 616:57);
-	if_sethide(true, 616:58);
-	if_settext("Redeem with bonds", 616:59);
-	if_setcolour(^white, 616:59);
-	if_sethide(false, 616:65);
-	if_sethide(true, 616:66);
-	if_settext("Redeem name change", 616:67);
-	if_setcolour(^white, 616:67);
+	if_sethide(false, interface_616:57);
+	if_sethide(true, interface_616:58);
+	if_settext("Redeem with bonds", interface_616:59);
+	if_setcolour(^white, interface_616:59);
+	if_sethide(false, interface_616:65);
+	if_sethide(true, interface_616:66);
+	if_settext("Redeem name change", interface_616:67);
+	if_setcolour(^white, interface_616:67);
 } else {
-	if_sethide(true, 616:57);
-	if_sethide(false, 616:58);
-	if_settext("Nothing to redeem", 616:59);
-	if_setcolour(0xff981f, 616:59);
-	if_sethide(true, 616:65);
-	if_sethide(false, 616:66);
-	if_settext("Nothing to redeem", 616:67);
-	if_setcolour(0xff981f, 616:67);
+	if_sethide(true, interface_616:57);
+	if_sethide(false, interface_616:58);
+	if_settext("Nothing to redeem", interface_616:59);
+	if_setcolour(0xff981f, interface_616:59);
+	if_sethide(true, interface_616:65);
+	if_sethide(false, interface_616:66);
+	if_settext("Nothing to redeem", interface_616:67);
+	if_setcolour(0xff981f, interface_616:67);
 }

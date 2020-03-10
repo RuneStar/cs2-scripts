@@ -1,6 +1,6 @@
 // 1479
 [proc,hh_get_status](loc $loc0, int $int1, int $int2, int $int3)(int, int)
-def_coord $coord4 = enum(loc, coord, 1368, $loc0);
+def_coord $coord4 = enum(loc, coord, enum_1368, $loc0);
 if ($coord4 = null) {
 	return(0, 0);
 }
@@ -25,9 +25,9 @@ if ($int5 = 1) {
 if (testbit($int7, $int6) = ^false) {
 	return(0, 0);
 }
-def_coord $coord8 = enum(loc, coord, 1525, $loc0);
+def_coord $coord8 = enum(loc, coord, enum_1525, $loc0);
 if ($coord8 ! null) {
-	if (inv_getobj(576, coordx($coord8)) ! null) {
+	if (inv_getobj(inv_576, coordx($coord8)) ! null) {
 		return(1, 1);
 	}
 	if (($loc0 = inconspicuous_rocks_elite_multi_29032) & (testbit($int2, 31) = ^true)) {
@@ -35,7 +35,7 @@ if ($coord8 ! null) {
 	}
 	return(1, 0);
 }
-$coord8 = enum(loc, coord, 1440, $loc0);
+$coord8 = enum(loc, coord, enum_1440, $loc0);
 if ($coord8 ! null) {
 	$int5, $int6 = coordx($coord8), coordz($coord8);
 	if ($int5 = 1) {

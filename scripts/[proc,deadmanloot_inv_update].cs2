@@ -8,9 +8,9 @@ def_int $int4 = 0;
 def_boolean $boolean5 = false;
 def_int $int6 = 0;
 while ($int1 < 5) {
-	$inv0 = enum(int, inv, 1243, $int1);
+	$inv0 = enum(int, inv, enum_1243, $int1);
 	while ($int2 < 28) {
-		if (cc_find(234:15, calc(($int1 * 28) + $int2)) = ^true) {
+		if (cc_find(interface_234:15, calc(($int1 * 28) + $int2)) = ^true) {
 			$obj3 = inv_getobj($inv0, $int2);
 			if (($obj3 ! null) & ($int1 = %varbit4842)) {
 				cc_setobject($obj3, inv_getnum($inv0, $int2));
@@ -20,21 +20,21 @@ while ($int1 < 5) {
 				}
 				$boolean5 = true;
 			} else {
-				cc_setobject_nonum(6512, 1);
+				cc_setobject_nonum(obj_6512, 1);
 				cc_setopbase("");
 				cc_sethide(true);
 			}
 		}
 		$int2 = calc($int2 + 1);
 	}
-	if (((($boolean5 = true) & (cc_find(234:14, $int1) = ^true)) & (string_length(cc_getop(1)) = 0)) & (inv_total(inv, enum(int, namedobj, 1244, $int1)) > 0)) {
+	if (((($boolean5 = true) & (cc_find(interface_234:14, $int1) = ^true)) & (string_length(cc_getop(1)) = 0)) & (inv_total(inv, enum(int, namedobj, enum_1244, $int1)) > 0)) {
 		$int6 = 1;
 	}
 	if ($int1 = %varbit4842) {
-		if_sethide($boolean5, 234:16);
-		if_sethide($boolean5, 234:46);
-		if (cc_find(234:14, calc(5 + $int1)) = ^true) {
-			if (inv_total(inv, enum(int, namedobj, 1244, $int1)) <= 0) {
+		if_sethide($boolean5, interface_234:16);
+		if_sethide($boolean5, interface_234:46);
+		if (cc_find(interface_234:14, calc(5 + $int1)) = ^true) {
+			if (inv_total(inv, enum(int, namedobj, enum_1244, $int1)) <= 0) {
 				cc_sethide(true);
 			} else {
 				cc_sethide(false);

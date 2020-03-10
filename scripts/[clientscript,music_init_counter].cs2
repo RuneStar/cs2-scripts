@@ -27,8 +27,8 @@ def_coord $coord3 = null;
 def_int $int4 = 0;
 def_int $int5 = 0;
 while ($int5 < $int1) {
-	$int2 = enum(int, int, 818, $int5);
-	$coord3 = enum(int, coord, 819, $int2);
+	$int2 = enum(int, int, enum_818, $int5);
+	$coord3 = enum(int, coord, enum_819, $int2);
 	if ($coord3 ! null) {
 		if (testbit($intarray0(coordx($coord3)), coordz($coord3)) = ^true) {
 			$int4 = calc($int4 + 1);

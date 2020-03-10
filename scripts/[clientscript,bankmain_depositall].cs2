@@ -4,5 +4,5 @@ if ($int3 ! 1) {
 	return;
 }
 if_setgraphic($graphic1, $component0);
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 if_setontimer("bankmain_depositall_end(event_com, $graphic2, calc(clientclock + 20))", $component0);

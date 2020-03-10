@@ -10,9 +10,9 @@ cc_setfill(true);
 cc_settrans(210);
 def_int $int5 = 1;
 def_int $int6 = -1;
-if_settext("World <tostring(map_world)>", 21:18);
-while ($int5 <= enum_getoutputcount(1915)) {
-	$int6 = enum(int, int, 1915, $int5);
+if_settext("World <tostring(map_world)>", interface_21:18);
+while ($int5 <= enum_getoutputcount(enum_1915)) {
+	$int6 = enum(int, int, enum_1915, $int5);
 	cc_create($component1, ^iftype_rectangle, calc($int5 - 1));
 	if (calc($int5 % 2) = 1) {
 		cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
@@ -27,7 +27,7 @@ while ($int5 <= enum_getoutputcount(1915)) {
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_settext(enum(int, string, 1914, $int6));
+	cc_settext(enum(int, string, enum_1914, $int6));
 	cc_setop(1, "Select");
 	cc_setonop("raids_challenge_move_highlight($component0, 0, cc_gety)");
 	$int5 = calc($int5 + 1);

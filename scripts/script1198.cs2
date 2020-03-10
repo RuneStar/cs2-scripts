@@ -118,7 +118,7 @@ cc_deleteall($component3);
 cc_deleteall($component4);
 def_int $int28 = 0;
 def_int $int29 = 0;
-def_namedobj $namedobj30 = enum(int, namedobj, 1261, $int29);
+def_namedobj $namedobj30 = enum(int, namedobj, enum_1261, $int29);
 while ($namedobj30 ! null) {
 	cc_create($component3, ^iftype_graphic, $int29);
 	.cc_create($component4, ^iftype_text, $int29);
@@ -141,7 +141,7 @@ while ($namedobj30 ! null) {
 		.cc_settextfont(p11_full);
 		.cc_settextshadow(true);
 		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-		$int23 = enum(obj, int, 1262, $namedobj30);
+		$int23 = enum(obj, int, enum_1262, $namedobj30);
 		.cc_settext(tostring($int23));
 		if (%varbit4893 < $int23) {
 			.cc_setcolour(^red);
@@ -179,7 +179,7 @@ while ($namedobj30 ! null) {
 		.cc_settextfont(p11_full);
 		.cc_settextshadow(true);
 		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-		$int23 = enum(obj, int, 1262, $namedobj30);
+		$int23 = enum(obj, int, enum_1262, $namedobj30);
 		.cc_settext("<tostring($int23)> for <tostring(10)>");
 		if (%varbit4893 < $int23) {
 			.cc_setcolour(^red);
@@ -203,5 +203,5 @@ while ($namedobj30 ! null) {
 		.cc_sethide(true);
 	}
 	$int29 = calc($int29 + 1);
-	$namedobj30 = enum(int, namedobj, 1261, $int29);
+	$namedobj30 = enum(int, namedobj, enum_1261, $int29);
 }

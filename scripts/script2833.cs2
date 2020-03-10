@@ -4,22 +4,22 @@ def_int $int0 = 7143503;
 def_int $int1 = 5;
 def_int $int2 = 0;
 def_int $int3 = 0;
-def_int $int4 = enum_getoutputcount(2320);
+def_int $int4 = enum_getoutputcount(enum_2320);
 def_struct $struct5 = null;
 def_component $component6 = null;
 def_string $string0 = "";
 def_int $int7 = 0;
 def_boolean $boolean8 = null;
 while ($int3 < $int4) {
-	$struct5 = enum(int, struct, 2320, $int3);
-	$component6 = enum(int, component, 2321, $int3);
-	$boolean8 = struct_param($struct5, 925);
+	$struct5 = enum(int, struct, enum_2320, $int3);
+	$component6 = enum(int, component, enum_2321, $int3);
+	$boolean8 = struct_param($struct5, param_925);
 	if (clienttype ! ^clienttype_ios) {
 		$boolean8 = false;
 	}
 	if ($boolean8 = false) {
 		if_sethide(false, $component6);
-		$string0 = struct_param($struct5, 729);
+		$string0 = struct_param($struct5, param_729);
 		$int2 = ~options_button_off($component6, 0);
 		if_setsize(84, 30, ^setsize_abs, ^setsize_abs, $component6);
 		if (calc($int7 % 2) = 0) {
@@ -50,7 +50,7 @@ while ($int3 < $int4) {
 	$int3 = calc($int3 + 1);
 }
 if ($int7 <= 0) {
-	$component6 = enum(int, component, 2321, 0);
+	$component6 = enum(int, component, enum_2321, 0);
 	if_sethide(false, $component6);
 	if_setsize(0, 40, ^setsize_minus, ^setsize_abs, $component6);
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component6);

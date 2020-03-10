@@ -11,7 +11,7 @@ if ($int2 = 1) {
 	}
 	~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 } else {
-	sound_synth(2266, 1, 0);
+	sound_synth(synth_2266, 1, 0);
 	if (%varcint54 = 1) {
 		%varcint54 = 0;
 	} else {
@@ -32,9 +32,9 @@ def_int $int10 = 0;
 def_int $int11 = 0;
 def_boolean $boolean12 = true;
 while ($int11 < 4) {
-	$component5 = enum(int, component, 1297, $int11);
-	$component7 = enum(int, component, 1298, $int11);
-	$component6 = enum(int, component, 1299, $int11);
+	$component5 = enum(int, component, enum_1297, $int11);
+	$component7 = enum(int, component, enum_1298, $int11);
+	$component6 = enum(int, component, enum_1299, $int11);
 	if ((($component5 ! null) & ($component6 ! null)) & ($component7 ! null)) {
 		if (string_length(if_gettext($component5)) > 0) {
 			$int9 = calc((paraheight(if_gettext($component5), $int8, p12_full) * 12) + 5);
@@ -70,9 +70,9 @@ def_component $componentarray0(64);
 def_int $int15 = 0;
 def_string $string0 = "";
 while ($int13 < 64) {
-	$component14 = enum(int, component, 824, $int13);
+	$component14 = enum(int, component, enum_824, $int13);
 	if ($component14 ! null) {
-		$component6 = enum(component, component, 1296, $component14);
+		$component6 = enum(component, component, enum_1296, $component14);
 		if (string_length(if_gettext($component14)) > 0) {
 			if_sethide(false, $component14);
 			if ($component6 ! null) {
@@ -93,14 +93,14 @@ if ($int15 > 0) {
 	if (%varcint54 = 1) {
 		~quicksort_componenttext(componentarray0, 0, calc($int15 - 1));
 	} else {
-		~quicksort_componentenum(componentarray0, 0, calc($int15 - 1), 823);
+		~quicksort_componentenum(componentarray0, 0, calc($int15 - 1), enum_823);
 	}
 }
 $int13 = 0;
 cc_deleteall($component0);
 while ($int13 < $int15) {
-	$component6 = enum(component, component, 1296, $componentarray0($int13));
-	$string0 = enum(component, string, 823, $componentarray0($int13));
+	$component6 = enum(component, component, enum_1296, $componentarray0($int13));
+	$string0 = enum(component, string, enum_823, $componentarray0($int13));
 	$int9 = calc((paraheight(if_gettext($componentarray0($int13)), $int8, p12_full) * 12) + 5);
 	if ($component6 ! null) {
 		if_setposition(2, $int10, ^setpos_abs_left, ^setpos_abs_top, $component6);
@@ -121,18 +121,18 @@ while ($int13 < $int15) {
 	$int10 = calc(($int10 + $int9) + 3);
 	$int13 = calc($int13 + 1);
 }
-$string0 = if_gettext(381:139);
+$string0 = if_gettext(interface_381:139);
 if (string_length($string0) > 0) {
-	if_sethide(false, 381:139);
+	if_sethide(false, interface_381:139);
 	$int9 = calc((paraheight($string0, $int8, p12_full) * 12) + 5);
-	if_setsize($int8, $int9, ^setsize_abs, ^setsize_abs, 381:139);
-	if_setposition(20, $int10, ^setpos_abs_left, ^setpos_abs_top, 381:139);
-	if_setcolour(0xff3f3f, 381:139);
-	if_setonmouseover("text_colour_swapper(event_com, 0xff7f7f)", 381:139);
-	if_setonmouseleave("text_colour_swapper(event_com, 0xff3f3f)", 381:139);
+	if_setsize($int8, $int9, ^setsize_abs, ^setsize_abs, interface_381:139);
+	if_setposition(20, $int10, ^setpos_abs_left, ^setpos_abs_top, interface_381:139);
+	if_setcolour(0xff3f3f, interface_381:139);
+	if_setonmouseover("text_colour_swapper(event_com, 0xff7f7f)", interface_381:139);
+	if_setonmouseleave("text_colour_swapper(event_com, 0xff3f3f)", interface_381:139);
 	$int10 = calc(($int10 + $int9) + 3);
 } else {
-	if_sethide(true, 381:139);
+	if_sethide(true, interface_381:139);
 }
 if ($int10 > 0) {
 	$int10 = calc($int10 - 3);

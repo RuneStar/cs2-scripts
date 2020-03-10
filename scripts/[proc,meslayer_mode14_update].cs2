@@ -1,9 +1,9 @@
 // 752
 [proc,meslayer_mode14_update](boolean $boolean0, enum $enum1)
 %varcint66 = 0;
-cc_deleteall(162:53);
-def_int $int2 = if_getwidth(162:53);
-def_int $int3 = if_getheight(162:53);
+cc_deleteall(interface_162:53);
+def_int $int2 = if_getwidth(interface_162:53);
+def_int $int3 = if_getheight(interface_162:53);
 if (string_length(%varcstring359) <= 0) {
 	~script753($int2, $int3, "Start typing the name of an item to search for it.");
 	return;
@@ -42,7 +42,7 @@ while ($obj19 ! null) {
 		} else {
 			$int15, $int16 = $int7, $int11;
 		}
-		cc_create(162:53, ^iftype_rectangle, $int6);
+		cc_create(interface_162:53, ^iftype_rectangle, $int6);
 		if ($int6 = 0) {
 			cc_setonkey("meslayer_mode14_select($obj19, event_keypressed)");
 		}
@@ -57,7 +57,7 @@ while ($obj19 ! null) {
 		cc_setopbase("<col=ff9040><oc_name($obj19)></col>");
 		cc_setop(1, "Select");
 		cc_setonop("meslayer_mode14_select($obj19, ^key_return)");
-		cc_create(162:53, ^iftype_text, $int6);
+		cc_create(interface_162:53, ^iftype_text, $int6);
 		$int6 = calc($int6 + 1);
 		cc_setsize($int10, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int16, $int17, ^setpos_abs_left, ^setpos_abs_top);
@@ -66,7 +66,7 @@ while ($obj19 ! null) {
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		cc_setcolour(^black);
 		cc_settext(oc_name($obj19));
-		cc_create(162:53, ^iftype_graphic, $int6);
+		cc_create(interface_162:53, ^iftype_graphic, $int6);
 		$int6 = calc($int6 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int15, $int17, ^setpos_abs_left, ^setpos_abs_top);
@@ -92,9 +92,9 @@ if ($int14 < 2) {
 	$int17 = calc($int17 + 32);
 }
 if ($int17 > $int3) {
-	if_setscrollsize(0, $int17, 162:53);
+	if_setscrollsize(0, $int17, interface_162:53);
 } else {
-	if_setscrollpos(0, 0, 162:53);
-	if_setscrollsize(0, 0, 162:53);
+	if_setscrollpos(0, 0, interface_162:53);
+	if_setscrollsize(0, 0, interface_162:53);
 }
-~scrollbar_resize(162:54, 162:53, if_getscrolly(162:53));
+~scrollbar_resize(interface_162:54, interface_162:53, if_getscrolly(interface_162:53));

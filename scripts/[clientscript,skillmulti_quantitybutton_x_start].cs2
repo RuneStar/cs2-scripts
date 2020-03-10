@@ -3,6 +3,6 @@
 if ($int0 ! 1) {
 	return;
 }
-sound_synth(2266, 1, 0);
-if_setontimer("skillmulti_quantitybutton_x_end($int1, $int2)", 270:11);
+sound_synth(synth_2266, 1, 0);
+if_setontimer("skillmulti_quantitybutton_x_end($int1, $int2)", interface_270:11);
 ~meslayer_skillmulti("Enter amount (1 - <tostring($int2)>):");

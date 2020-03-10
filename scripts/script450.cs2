@@ -1,9 +1,9 @@
 // 450
 script450(int $int0, int $int1, int $int2, int $int3, string $string0)
-if_settext($string0, 78:1);
-cc_deleteall(78:3);
-cc_deleteall(78:4);
-def_int $int4 = calc(((if_getwidth(78:3) - (10 * 36)) / 9) + 36);
+if_settext($string0, interface_78:1);
+cc_deleteall(interface_78:3);
+cc_deleteall(interface_78:4);
+def_int $int4 = calc(((if_getwidth(interface_78:3) - (10 * 36)) / 9) + 36);
 def_int $int5 = 0;
 def_int $int6 = 0;
 def_int $int7 = 0;
@@ -37,9 +37,9 @@ while ($int9 <= 124) {
 	} else {
 		$int7 = 0;
 	}
-	cc_create(78:3, ^iftype_graphic, $int9);
+	cc_create(interface_78:3, ^iftype_graphic, $int9);
 	if ($int7 = 1) {
-		$namedobj8 = enum(int, namedobj, 708, $int9);
+		$namedobj8 = enum(int, namedobj, enum_708, $int9);
 		if ($namedobj8 ! null) {
 			if (inv_total(inv, $namedobj8) = 0) {
 				cc_sethide(false);
@@ -72,11 +72,11 @@ if ($int6 > 0) {
 } else if ($int5 > 0) {
 	$int5 = calc($int5 - 15);
 }
-if ($int5 <= if_getheight(78:3)) {
-	if_setscrollsize(0, 0, 78:3);
+if ($int5 <= if_getheight(interface_78:3)) {
+	if_setscrollsize(0, 0, interface_78:3);
 } else {
-	if_setscrollsize(0, $int5, 78:3);
+	if_setscrollsize(0, $int5, interface_78:3);
 }
-if_setscrollpos(0, 0, 78:3);
-~scrollbar_vertical(78:4, 78:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-if_setoninvtransmit("script474($int0, $int1, $int2, $int3){inv}", 78:3);
+if_setscrollpos(0, 0, interface_78:3);
+~scrollbar_vertical(interface_78:4, interface_78:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+if_setoninvtransmit("script474($int0, $int1, $int2, $int3){inv}", interface_78:3);

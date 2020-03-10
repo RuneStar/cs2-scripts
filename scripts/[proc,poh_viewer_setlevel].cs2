@@ -1,6 +1,6 @@
 // 1389
 [proc,poh_viewer_setlevel](int $int0, int $int1, int $int2)
-if_setonvartransmit("poh_viewer_setlevel(false, $int0, $int1, $int2){var780}", 422:43);
+if_setonvartransmit("poh_viewer_setlevel(false, $int0, $int1, $int2){var780}", interface_422:43);
 if ($int0 < $int1) {
 	$int0 = $int1;
 } else if ($int0 > $int2) {
@@ -15,7 +15,7 @@ if ($int0 = 0) {
 }
 def_int $int7 = 0;
 while ($int7 < $int4) {
-	if (cc_find(422:5, $int5) = ^true) {
+	if (cc_find(interface_422:5, $int5) = ^true) {
 		cc_sethide($boolean6);
 	}
 	$int7, $int5 = calc($int7 + 1), calc($int5 + 1);
@@ -27,14 +27,14 @@ if ($int0 = 1) {
 }
 $int7 = 0;
 while ($int7 < $int4) {
-	if (cc_find(422:5, $int5) = ^true) {
+	if (cc_find(interface_422:5, $int5) = ^true) {
 		cc_sethide($boolean6);
 	}
 	$int7, $int5 = calc($int7 + 1), calc($int5 + 1);
 }
 $int7 = 0;
 while ($int7 < $int4) {
-	if (cc_find(422:5, $int5) = ^true) {
+	if (cc_find(interface_422:5, $int5) = ^true) {
 		cc_sethide(true);
 	}
 	$int7, $int5 = calc($int7 + 1), calc($int5 + 1);
@@ -48,7 +48,7 @@ if (($int9 >= 0) & ($int9 < $int4)) {
 } else if (($int9 >= calc($int4 * 2)) & ($int9 < calc($int4 * 3))) {
 	$int8 = 2;
 }
-def_component $component10 = enum(int, component, 1424, -1);
+def_component $component10 = enum(int, component, enum_1424, -1);
 if ($int0 = $int8) {
 	if_sethide(false, $component10);
 	if ((((cc_find($component10, 1) = ^true) | (cc_find($component10, 2) = ^true)) | (cc_find($component10, 3) = ^true)) & (cc_gettrans >= 255)) {
@@ -69,18 +69,18 @@ if ($int0 = $int8) {
 }
 def_int $int11 = 0;
 if ($int1 <= 0) {
-	$int11 = ~script1391(422:44, 0, "Dungeon", $int0, $int1, $int2, $int8);
+	$int11 = ~script1391(interface_422:44, 0, "Dungeon", $int0, $int1, $int2, $int8);
 } else {
-	$int11 = ~script1392(422:44, "Dungeon");
+	$int11 = ~script1392(interface_422:44, "Dungeon");
 }
 def_int $int12 = 0;
 if ($int2 >= 2) {
-	$int12 = ~script1391(422:46, 2, "Upstairs", $int0, $int1, $int2, $int8);
+	$int12 = ~script1391(interface_422:46, 2, "Upstairs", $int0, $int1, $int2, $int8);
 } else {
-	$int12 = ~script1392(422:46, "Upstairs");
+	$int12 = ~script1392(interface_422:46, "Upstairs");
 }
-def_int $int13 = calc(if_getwidth(if_getlayer(422:45)) - (($int11 + ~script1391(422:45, 1, "Ground", $int0, $int1, $int2, $int8)) + $int12));
-if_setposition(calc($int11 + ($int13 / 2)), 0, ^setpos_abs_left, ^setpos_abs_centre, 422:45);
+def_int $int13 = calc(if_getwidth(if_getlayer(interface_422:45)) - (($int11 + ~script1391(interface_422:45, 1, "Ground", $int0, $int1, $int2, $int8)) + $int12));
+if_setposition(calc($int11 + ($int13 / 2)), 0, ^setpos_abs_left, ^setpos_abs_centre, interface_422:45);
 ~script1390(1, %varcint141, $int0, $int3, $int4);
 ~script1390(2, %varcint142, $int0, $int3, $int4);
 ~script1390(3, %varcint143, $int0, $int3, $int4);
@@ -114,6 +114,6 @@ if_setposition(calc($int11 + ($int13 / 2)), 0, ^setpos_abs_left, ^setpos_abs_cen
 ~script1390(31, %varcint174, $int0, $int3, $int4);
 ~script1390(32, %varcint176, $int0, $int3, $int4);
 ~script1390(33, %varcint177, $int0, $int3, $int4);
-if (($int9 ! -1) & (cc_find(422:5, $int9) = ^true)) {
+if (($int9 ! -1) & (cc_find(interface_422:5, $int9) = ^true)) {
 	cc_sethide(true);
 }

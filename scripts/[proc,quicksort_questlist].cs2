@@ -8,7 +8,7 @@ def_int $int6 = $int1;
 def_int $int7 = $int1;
 def_int $int8 = -1;
 while ($int7 < $int2) {
-	if (compare(struct_param(enum(int, struct, $enum3, $intarray0($int7)), 579), struct_param(enum(int, struct, $enum3, $int5), 579)) <= 0) {
+	if (compare(struct_param(enum(int, struct, $enum3, $intarray0($int7)), param_579), struct_param(enum(int, struct, $enum3, $int5), param_579)) <= 0) {
 		$int8 = $intarray0($int7);
 		$intarray0($int7) = $intarray0($int6);
 		$intarray0($int6) = $int8;

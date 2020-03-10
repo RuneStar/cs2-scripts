@@ -4,13 +4,13 @@ cc_deleteall($component0);
 cc_deleteall($component2);
 if (%varbit4146 = 1) {
 	if_settext("Select hairstyle", $component1);
-	~makeover_drawmodels($component0, 881, 882, null, null, 1200, 0, 180, 1, 1);
+	~makeover_drawmodels($component0, enum_881, enum_882, null, null, 1200, 0, 180, 1, 1);
 } else if (%varbit4146 = 2) {
 	if_settext("Select facial hair", $component1);
-	~makeover_drawmodels($component0, 884, 885, 886, null, 1200, 0, 180, 1, 1);
+	~makeover_drawmodels($component0, enum_884, enum_885, enum_886, null, 1200, 0, 180, 1, 1);
 } else if (%varbit4146 = 3) {
 	if_settext("Select hairstyle", $component1);
-	~makeover_drawmodels($component0, 888, 889, null, null, 1350, 0, 150, 1, 1);
+	~makeover_drawmodels($component0, enum_888, enum_889, null, null, 1350, 0, 150, 1, 1);
 } else {
 	if_settext("Please try again later.", $component1);
 	return;
@@ -25,8 +25,8 @@ while ($int3 < 25) {
 		cc_setposition(calc((($int3 - 13) * 25) + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	cc_setfill(true);
-	cc_setcolour(enum(int, int, 890, $int3));
-	cc_setop(1, enum(int, string, 891, $int3));
+	cc_setcolour(enum(int, int, enum_890, $int3));
+	cc_setop(1, enum(int, string, enum_891, $int3));
 	$int3 = calc($int3 + 1);
 }
 $int3 = 0;

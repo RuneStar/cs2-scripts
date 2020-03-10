@@ -4,7 +4,7 @@ cc_create($component8, ^iftype_graphic, $int11);
 $int11 = calc($int11 + 1);
 cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int2 + ((36 - 25) / 2)), $int1, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic(enum(stat, graphic, 255, $stat0));
+cc_setgraphic(enum(stat, graphic, enum_255, $stat0));
 def_int $int13 = calc($int3 - 40);
 $int2 = calc($int2 + 40);
 cc_create($component8, ^iftype_text, $int11);
@@ -14,20 +14,20 @@ cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
-def_int $int14 = enum(int, int, 2286, $int4);
+def_int $int14 = enum(int, int, enum_2286, $int4);
 if (stat_base($stat0) < 25) {
 	cc_setcolour(^red);
-	cc_settext("<enum(stat, string, 680, $stat0)> - requires level <tostring(25)>");
+	cc_settext("<enum(stat, string, enum_680, $stat0)> - requires level <tostring(25)>");
 } else if (%var261 < $int14) {
 	cc_setcolour(^red);
-	cc_settext("<enum(stat, string, 680, $stat0)> - <tostring($int14)>+ points");
+	cc_settext("<enum(stat, string, enum_680, $stat0)> - <tostring($int14)>+ points");
 } else {
 	if ((($int12 = $int4) | ($int12 = $int5)) | ($int12 = $int6)) {
 		cc_setcolour(^white);
 	} else {
 		cc_setcolour(0x00df00);
 	}
-	cc_settext("<enum(stat, string, 680, $stat0)> - <tostring(~script2786($stat0))> XP");
+	cc_settext("<enum(stat, string, enum_680, $stat0)> - <tostring(~script2786($stat0))> XP");
 }
 $int13 = calc($int13 / 3);
 $int11, $int2 = ~pest_rewards_statbuttondraw($stat0, $int1, $int2, $int13, $int4, $component7, $component8, $component9, $component10, $int11, $int12);

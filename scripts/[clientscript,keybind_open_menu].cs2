@@ -10,7 +10,7 @@ if (calc(if_gety($component1) + if_getheight($component1)) > if_getheight($compo
 if (~on_mobile = true) {
 	if_setgraphic("mobile_stones,1", $component6);
 } else {
-	if_setgraphic(1181, $component6);
+	if_setgraphic("graphic_1181", $component6);
 }
 if_sethide(false, $component2);
 if_setonclick("keybind_close_dropdown($component2, $component6)", $component2);

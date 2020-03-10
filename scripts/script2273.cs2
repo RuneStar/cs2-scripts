@@ -31,7 +31,7 @@ cc_sethide(true);
 while ($int8 <= $int16) {
 	cc_create($component5, ^iftype_text, $int8);
 	$int15 = ~telenexus_get_slot_value($int8);
-	$struct11 = enum(int, struct, 1377, $int15);
+	$struct11 = enum(int, struct, enum_1377, $int15);
 	if ($struct11 = null) {
 		cc_sethide(true);
 	} else {
@@ -40,7 +40,7 @@ while ($int8 <= $int16) {
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		cc_settext("    <struct_param($struct11, 660)>");
+		cc_settext("    <struct_param($struct11, param_660)>");
 		cc_setcolour(0xff981f);
 		cc_setdragdeadtime(4);
 		cc_setdragdeadzone(5);

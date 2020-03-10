@@ -1,12 +1,12 @@
 // 1269
 [clientscript,bankmain_toggleplaceholders_op](int $int0, component $component1, int $int2)
 if ($int0 = 10) {
-	sound_synth(2266, 1, 0);
+	sound_synth(synth_2266, 1, 0);
 	return;
 }
 if ($int0 ! 1) {
 	return;
 }
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 %varbit3755 = $int2;
 ~bankmain_toggleplaceholders($component1);

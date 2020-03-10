@@ -4,27 +4,27 @@ cc_deleteall($component1);
 cc_deleteall($component2);
 cc_deleteall($component3);
 cc_deleteall($component4);
-def_enum $enum5 = 789;
-def_enum $enum6 = 790;
+def_enum $enum5 = enum_789;
+def_enum $enum6 = enum_790;
 if (%varbit3945 = 1) {
 	if_sethide(true, $component0);
 	if_sethide(false, $component3);
-	$enum5 = 791;
-	$enum6 = 792;
+	$enum5 = enum_791;
+	$enum6 = enum_792;
 	if (%varbit3944 = 1) {
-		~makeover_drawmodels($component3, 787, 788, null, null, 800, 60, 0, 1, 1);
+		~makeover_drawmodels($component3, enum_787, enum_788, null, null, 800, 60, 0, 1, 1);
 	} else {
-		~makeover_drawmodels($component3, 778, 779, null, null, 720, 60, 0, 1, 1);
+		~makeover_drawmodels($component3, enum_778, enum_779, null, null, 720, 60, 0, 1, 1);
 	}
 } else {
 	if_sethide(false, $component0);
 	if_sethide(true, $component3);
 	if (%varbit3944 = 1) {
-		~makeover_drawmodels($component1, 781, 782, null, female_arms_332, 600, 135, 0, 1, 0);
-		~makeover_drawmodels($component2, 784, 785, null, female_torso_456, 650, 135, 0, 2, 0);
+		~makeover_drawmodels($component1, enum_781, enum_782, null, female_arms_332, 600, 135, 0, 1, 0);
+		~makeover_drawmodels($component2, enum_784, enum_785, null, female_torso_456, 650, 135, 0, 2, 0);
 	} else {
-		~makeover_drawmodels($component1, 771, 772, 773, male_arms_151, 780, 135, 0, 1, 1);
-		~makeover_drawmodels($component2, 775, 776, null, male_torso_292, 780, 135, 0, 2, 1);
+		~makeover_drawmodels($component1, enum_771, enum_772, enum_773, male_arms_151, 780, 135, 0, 1, 1);
+		~makeover_drawmodels($component2, enum_775, enum_776, null, male_torso_292, 780, 135, 0, 2, 1);
 	}
 }
 def_int $int7 = 0;

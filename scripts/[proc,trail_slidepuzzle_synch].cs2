@@ -1,14 +1,14 @@
 // 690
 [proc,trail_slidepuzzle_synch](component $component0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6)
-def_inv $inv7 = 140;
+def_inv $inv7 = inv_140;
 if (%var261 = 8) {
-	$inv7 = 222;
+	$inv7 = inv_222;
 } else if (%var261 = 7) {
-	$inv7 = 221;
+	$inv7 = inv_221;
 }
 def_enum $enum8 = null;
 def_enum $enum9 = null;
-$enum8, $enum9 = enum(int, enum, 1864, %var261), enum(int, enum, 1865, %var261);
+$enum8, $enum9 = enum(int, enum, enum_1864, %var261), enum(int, enum, enum_1865, %var261);
 if ((%var261 = 7) | (%var261 = 8)) {
 	if_sethide(true, $component5);
 	if_sethide(false, $component6);
@@ -34,7 +34,7 @@ while ($int11 < $int1) {
 		if (($int11 < $int2) & (cc_find($component0, calc($int1 + $int11)) = ^true)) {
 			$obj10 = enum(int, namedobj, $enum8, $int11);
 			if ($obj10 ! null) {
-				cc_setmodel(oc_param($obj10, 186));
+				cc_setmodel(oc_param($obj10, param_186));
 			} else {
 				cc_setmodel(null);
 			}

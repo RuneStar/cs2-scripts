@@ -1,13 +1,13 @@
 // 3067
 [proc,br_loadout_drawloadout](component $component0, component $component1, component $component2, component $component3)
-def_int $intarray0(calc(enum_getoutputcount(2630) + 1));
+def_int $intarray0(calc(enum_getoutputcount(enum_2630) + 1));
 def_component $component4 = null;
 def_int $int5 = 0;
 def_namedobj $namedobj6 = null;
 def_int $int7 = 0;
 def_int $int8 = inv_size(worn);
 while ($int7 < $int8) {
-	$component4 = enum(int, component, 2632, $int7);
+	$component4 = enum(int, component, enum_2632, $int7);
 	if ($component4 ! null) {
 		cc_deleteall($component4);
 		cc_create($component4, ^iftype_graphic, 0);
@@ -18,7 +18,7 @@ while ($int7 < $int8) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		$int5 = ~br_loadout_get_worn($int7);
-		$namedobj6 = enum(int, namedobj, 2630, $int5);
+		$namedobj6 = enum(int, namedobj, enum_2630, $int5);
 		if ($namedobj6 ! null) {
 			cc_settrans(0);
 			cc_setgraphicshadow(0x333333);
@@ -28,7 +28,7 @@ while ($int7 < $int8) {
 			} else {
 				cc_setobject($namedobj6, 1);
 			}
-			$intarray0($int5) = ~min(calc($intarray0($int5) + 1), enum(obj, int, 2631, $namedobj6));
+			$intarray0($int5) = ~min(calc($intarray0($int5) + 1), enum(obj, int, enum_2631, $namedobj6));
 			cc_setopbase("<col=ff9040><oc_name($namedobj6)></col>");
 			cc_setop(1, "Discard");
 			cc_setop(10, "Examine");
@@ -44,7 +44,7 @@ while ($int7 < $int8) {
 			cc_create($component4, ^iftype_graphic, 2);
 			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-			cc_setgraphic(enum(int, graphic, 904, $int7));
+			cc_setgraphic(enum(int, graphic, enum_904, $int7));
 		}
 	}
 	$int7 = calc($int7 + 1);
@@ -56,7 +56,7 @@ $int7 = 0;
 def_int $int11 = inv_size(inv);
 while ($int7 < $int11) {
 	$int5 = ~br_loadout_get_inv($int7);
-	$namedobj6 = enum(int, namedobj, 2630, $int5);
+	$namedobj6 = enum(int, namedobj, enum_2630, $int5);
 	cc_create($component1, ^iftype_graphic, $int7);
 	cc_setposition(calc(4 + ($int9 * ($int7 % 4))), calc(3 + ($int10 * ($int7 / 4))), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -69,7 +69,7 @@ while ($int7 < $int11) {
 		} else {
 			cc_setobject($namedobj6, 1);
 		}
-		$intarray0($int5) = ~min(calc($intarray0($int5) + 1), enum(obj, int, 2631, $namedobj6));
+		$intarray0($int5) = ~min(calc($intarray0($int5) + 1), enum(obj, int, enum_2631, $namedobj6));
 		cc_setopbase("<col=ff9040><oc_name($namedobj6)></col>");
 		cc_setop(1, "Discard");
 		cc_setop(10, "Examine");
@@ -90,10 +90,10 @@ def_int $int13 = 0;
 $int7 = $int8;
 while ($int7 > 0) {
 	$int7 = calc($int7 - 1);
-	$component4 = enum(int, component, 2632, $int7);
+	$component4 = enum(int, component, enum_2632, $int7);
 	if ($component4 ! null) {
 		$int5 = ~br_loadout_get_worn($int7);
-		$namedobj6 = enum(int, namedobj, 2630, $int5);
+		$namedobj6 = enum(int, namedobj, enum_2630, $int5);
 		if ($namedobj6 ! null) {
 			if ($intarray0($int5) > 0) {
 				$intarray0($int5) = calc($intarray0($int5) - 1);
@@ -113,7 +113,7 @@ while ($int7 < $int11) {
 	cc_create($component1, ^iftype_model, $int12);
 	$int12 = calc($int12 + 1);
 	$int5 = ~br_loadout_get_inv($int7);
-	$namedobj6 = enum(int, namedobj, 2630, $int5);
+	$namedobj6 = enum(int, namedobj, enum_2630, $int5);
 	if ($namedobj6 ! null) {
 		if ($intarray0($int5) > 0) {
 			$intarray0($int5) = calc($intarray0($int5) - 1);

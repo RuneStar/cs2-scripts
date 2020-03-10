@@ -1,7 +1,7 @@
 // 2140
 [clientscript,fossil_driftnet_store_init](component $component0, component $component1, component $component2)
 if_setnpchead(annette_7510, $component1);
-if_setmodelanim(579, $component1);
+if_setmodelanim(seq_579, $component1);
 cc_deleteall($component2);
 cc_create($component2, ^iftype_graphic, 0);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

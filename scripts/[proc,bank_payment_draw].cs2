@@ -24,11 +24,11 @@ cc_deleteall($component0);
 def_int $int18 = 0;
 while ($int8 <= 14) {
 	$int16 = 0;
-	$component9 = enum(int, component, 1511, $int8);
+	$component9 = enum(int, component, enum_1511, $int8);
 	if ($component9 = null) {
 		return;
 	}
-	$coord10 = enum(int, coord, 1512, $int8);
+	$coord10 = enum(int, coord, enum_1512, $int8);
 	if ($coord10 = null) {
 		return;
 	}
@@ -38,7 +38,7 @@ while ($int8 <= 14) {
 	$int14 = calc($int6 + (($int11 - 1) * $int5));
 	if_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top, $component9);
 	if_setsize($int5, $int5, ^setsize_abs, ^setsize_abs, $component9);
-	$obj17 = enum(int, namedobj, 982, $int8);
+	$obj17 = enum(int, namedobj, enum_982, $int8);
 	$int18 = inv_total(inv, $obj17);
 	if ((inv_total(inv, rune_pouch_12791) > 0) | (inv_total(inv, rune_pouch_l_24416) > 0)) {
 		if (%varbit29 = $int8) {

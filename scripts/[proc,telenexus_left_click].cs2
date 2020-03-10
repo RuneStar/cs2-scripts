@@ -10,9 +10,9 @@ def_graphic $graphic11 = "checkbox,2";
 def_graphic $graphic12 = "checkbox,5";
 def_string $string0 = "";
 def_int $int13 = 0;
-def_struct $struct14 = enum(int, struct, 1377, %varbit6669);
-if (struct_param($struct14, 680) ! null) {
-	$struct14 = struct_param($struct14, 680);
+def_struct $struct14 = enum(int, struct, enum_1377, %varbit6669);
+if (struct_param($struct14, param_680) ! null) {
+	$struct14 = struct_param($struct14, param_680);
 }
 if_setonop("telenexus_tick_op($component0, $component1, $component2, $component3, $component4)", $component4);
 if ((%varbit6669 = 0) | ($struct14 = null)) {
@@ -25,7 +25,7 @@ if ((%varbit6669 = 0) | ($struct14 = null)) {
 } else if ((((%varbit6669 < 150) & (%varbit6669 ! 1)) & (%varbit6669 ! 4)) & (%varbit6669 ! 6)) {
 	if_sethide(true, $component2);
 	if_sethide(false, $component1);
-	if_settext(struct_param($struct14, 660), $component1);
+	if_settext(struct_param($struct14, param_660), $component1);
 	if_setgraphic($graphic11, $component3);
 	if_setonmouseover("telenexus_tick_mouseover($component3, $component4, $graphic12)", $component4);
 	if_setonmouseleave("telenexus_tick_mouseleave($component3, $component4, $graphic11)", $component4);
@@ -56,10 +56,10 @@ if ((%varbit6669 = 0) | ($struct14 = null)) {
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	cc_settextshadow(true);
-	cc_settext(struct_param($struct14, 660));
+	cc_settext(struct_param($struct14, param_660));
 	cc_setsize(10, 20, ^setsize_minus, ^setsize_abs);
 	cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setopbase("<col=ff9040><struct_param($struct14, 660)>");
+	cc_setopbase("<col=ff9040><struct_param($struct14, param_660)>");
 	cc_setop(1, "Select");
 	if ($int13 = 1) {
 		cc_setcolour(0xff981f);
@@ -77,15 +77,15 @@ if ((%varbit6669 = 0) | ($struct14 = null)) {
 		cc_setonmouseover(null);
 		cc_setonmouseleave(null);
 	}
-	$int13, $string0 = ~script2664(struct_param($struct14, 679));
+	$int13, $string0 = ~script2664(struct_param($struct14, param_679));
 	cc_create($component2, ^iftype_text, 3);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	cc_settextshadow(true);
-	cc_settext(struct_param(struct_param($struct14, 679), 660));
+	cc_settext(struct_param(struct_param($struct14, param_679), param_660));
 	cc_setsize(10, 20, ^setsize_minus, ^setsize_abs);
 	cc_setposition(5, 35, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setopbase("<col=ff9040><struct_param(struct_param($struct14, 679), 660)>");
+	cc_setopbase("<col=ff9040><struct_param(struct_param($struct14, param_679), param_660)>");
 	cc_setop(1, "Select");
 	if ($int13 = 1) {
 		cc_setcolour(0xff981f);

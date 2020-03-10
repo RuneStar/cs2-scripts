@@ -3,13 +3,13 @@ script1092(component $component0, component $component1, component $component2, 
 def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
-def_int $int9 = enum(int, int, 273, $int8);
+def_int $int9 = enum(int, int, enum_273, $int8);
 while (($int9 ! -1) & ($int9 <= 48)) {
 	if ((($int9 < 32) & (testbit(%var1076, $int9) = ^false)) | (($int9 >= 32) & (testbit(%var1344, calc($int9 % 32)) = ^false))) {
-		$int6, $int7 = calc($int6 + 1), calc($int7 + enum(int, int, 836, $int9));
+		$int6, $int7 = calc($int6 + 1), calc($int7 + enum(int, int, enum_836, $int9));
 	}
 	$int8 = calc($int8 + 1);
-	$int9 = enum(int, int, 273, $int8);
+	$int9 = enum(int, int, enum_273, $int8);
 }
 cc_deleteall($component0);
 def_int $int10 = ~options_button_off($component0, 0);

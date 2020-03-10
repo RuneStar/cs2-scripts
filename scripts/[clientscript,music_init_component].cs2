@@ -8,19 +8,19 @@ def_int $int8 = 0;
 def_string $string0 = "";
 if (cc_find($component0, $int1) = ^true) {
 	cc_setontimer(null);
-	$int4 = enum(int, int, 818, $int1);
+	$int4 = enum(int, int, enum_818, $int1);
 	if ($int4 ! 0) {
 		cc_setsize(0, $int3, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, calc(3 + ($int2 * $int3)), ^setpos_abs_centre, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-		$string0 = enum(int, string, 812, $int4);
+		$string0 = enum(int, string, enum_812, $int4);
 		cc_settext($string0);
 		cc_setop(1, "Play");
 		cc_setop(2, "Unlock hint");
 		cc_setopbase("<col=ff9040><$string0></col>");
-		$coord5 = enum(int, coord, 819, $int4);
+		$coord5 = enum(int, coord, enum_819, $int4);
 		if ($coord5 ! null) {
 			$int6, $int7 = coordx($coord5), coordz($coord5);
 			switch_int ($int6) {

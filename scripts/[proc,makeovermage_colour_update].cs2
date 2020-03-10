@@ -2,20 +2,20 @@
 [proc,makeovermage_colour_update](component $component0)
 def_int $int1 = 0;
 def_int $int2 = calc(7 + 1);
-def_int $int3 = enum(int, int, 998, $int2);
+def_int $int3 = enum(int, int, enum_998, $int2);
 while ($int3 ! -1) {
 	if (~makeover_unlockedcolour($int2) = 1) {
 		$int1 = calc($int1 + 1);
 	}
 	$int2 = calc($int2 + 1);
-	$int3 = enum(int, int, 998, $int2);
+	$int3 = enum(int, int, enum_998, $int2);
 }
 def_int $int4 = ~min(27, calc((if_getheight($component0) - 2) / ((7 + 1) + $int1)));
 def_int $int5 = 1;
 def_int $int6 = -1;
 cc_deleteall($component0);
 def_int $int7 = 0;
-$int2 = enum(int, int, 999, $int7);
+$int2 = enum(int, int, enum_999, $int7);
 while ($int2 ! -1) {
 	cc_create($component0, ^iftype_rectangle, $int7);
 	if (~makeover_unlockedcolour($int2) = 1) {
@@ -26,7 +26,7 @@ while ($int2 ! -1) {
 		cc_setsize(2, $int4, ^setsize_minus, ^setsize_abs);
 		cc_setposition(1, $int5, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setfill(true);
-		cc_setcolour(enum(int, int, 998, $int2));
+		cc_setcolour(enum(int, int, enum_998, $int2));
 		cc_setop(1, "Select colour");
 		cc_setonop("makeovermage_colour_op(event_opindex, $int2, $component0)");
 		$int5 = calc($int5 + $int4);
@@ -34,7 +34,7 @@ while ($int2 ! -1) {
 		cc_sethide(true);
 	}
 	$int7 = calc($int7 + 1);
-	$int2 = enum(int, int, 999, $int7);
+	$int2 = enum(int, int, enum_999, $int7);
 }
 cc_create($component0, ^iftype_rectangle, $int7);
 $int7 = calc($int7 + 1);

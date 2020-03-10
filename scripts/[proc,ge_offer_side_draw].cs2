@@ -2,7 +2,7 @@
 [proc,ge_offer_side_draw](component $component0, component $component1)
 def_int $int2 = calc(%varbit4439 - 1);
 def_int $int3 = 0;
-if (enum(int, inv, 150, $int2) = null) {
+if (enum(int, inv, enum_150, $int2) = null) {
 	$int3 = 1;
 } else if (stockmarket_isofferempty($int2) = true) {
 	if (%varbit4397 = 1) {
@@ -47,7 +47,7 @@ while ($int4 > 0) {
 			cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
 		} else {
 			cc_sethide(true);
-			cc_setobject(6512, 1);
+			cc_setobject(obj_6512, 1);
 		}
 	}
 }

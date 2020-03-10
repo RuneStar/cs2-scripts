@@ -1,6 +1,6 @@
 // 2017
 [clientscript,mesoverlay_checkheight](string $string0, int $int0)
-def_int $int1 = if_getheight(263:1);
+def_int $int1 = if_getheight(interface_263:1);
 if ($int1 ! $int0) {
 	~mesoverlay_draw($string0, $int1);
 }

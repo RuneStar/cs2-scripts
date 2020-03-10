@@ -1,7 +1,7 @@
 // 3214
 [clientscript,league_task_filter_close](int $int0, int $int1, enum $enum2, component $component3, int $int4, component $component5)
 if ((($int0 = 1) & ($enum2 ! null)) & (($int1 = -1) | (($int1 >= 0) & ($int1 < enum_getoutputcount($enum2))))) {
-	sound_synth(2266, 1, 0);
+	sound_synth(synth_2266, 1, 0);
 	if ($int1 ! -1) {
 		~script3211($enum2, $int1);
 	}

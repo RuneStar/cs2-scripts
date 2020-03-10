@@ -20,9 +20,9 @@ def_int $int11 = 0;
 def_int $int12 = 1;
 def_int $colour13 = 0x604e32;
 def_graphic $graphic14 = null;
-def_int $int15 = enum(obj, int, 496, $obj1);
+def_int $int15 = enum(obj, int, enum_496, $obj1);
 if ($int15 ! -1) {
-	$graphic14, $int8, $int9, $int10, $int11, $int12, $colour13 = enum(int, graphic, 865, $int15), 30, 30, 3, 0, 0, ^black;
+	$graphic14, $int8, $int9, $int10, $int11, $int12, $colour13 = enum(int, graphic, enum_865, $int15), 30, 30, 3, 0, 0, ^black;
 } else if (%varbit4371 = 4) {
 	$graphic14 = oc_param($obj1, spell_graphic1_on);
 	if ($graphic14 ! null) {

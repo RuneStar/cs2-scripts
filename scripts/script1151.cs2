@@ -1,7 +1,7 @@
 // 1151
 script1151(component $component0)
 cc_deleteall($component0);
-def_int $int1 = inv_size(563);
+def_int $int1 = inv_size(inv_563);
 def_int $int2 = 0;
 while ($int2 < $int1) {
 	cc_create($component0, ^iftype_graphic, $int2);
@@ -13,5 +13,5 @@ while ($int2 < $int1) {
 	cc_setdragdeadtime(5);
 	$int2 = calc($int2 + 1);
 }
-if_setoninvtransmit("script1154($component0){563}", $component0);
+if_setoninvtransmit("script1154($component0){inv_563}", $component0);
 ~script1155($component0);

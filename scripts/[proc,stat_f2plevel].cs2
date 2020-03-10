@@ -2,12 +2,12 @@
 [proc,stat_f2plevel]()(int)
 def_int $int0 = 0;
 def_int $int1 = 1;
-def_stat $stat2 = enum(int, stat, 681, $int1);
+def_stat $stat2 = enum(int, stat, enum_681, $int1);
 while ($stat2 ! null) {
-	if (enum(stat, boolean, 1497, $stat2) = false) {
+	if (enum(stat, boolean, enum_1497, $stat2) = false) {
 		$int0 = calc($int0 + stat_base($stat2));
 	}
 	$int1 = calc($int1 + 1);
-	$stat2 = enum(int, stat, 681, $int1);
+	$stat2 = enum(int, stat, enum_681, $int1);
 }
 return($int0);

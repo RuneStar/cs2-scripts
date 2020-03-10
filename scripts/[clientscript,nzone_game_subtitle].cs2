@@ -7,7 +7,7 @@ if ($int6 < 50) {
 	if ($int6 < 0) {
 		$int6 = 0;
 	} else if ($int6 = 1) {
-		sound_synth(2201, 1, 0);
+		sound_synth(synth_2201, 1, 0);
 	}
 	$int6 = calc(50 - $int6);
 	if (cc_find($component0, $int1) = ^true) {
@@ -23,7 +23,7 @@ if ($int6 < $int5) {
 }
 if ($int6 < calc(50 * 3)) {
 	if ($int6 = $int5) {
-		sound_synth(2201, 1, 0);
+		sound_synth(synth_2201, 1, 0);
 	}
 	$int6 = calc($int6 - $int5);
 	if (cc_find($component0, $int1) = ^true) {

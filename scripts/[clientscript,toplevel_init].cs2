@@ -4,21 +4,21 @@ if_setonsubchange("toplevel_subchange(event_com, $enum1)", $component0);
 if_setonresize("toplevel_resize(event_com, $enum1)", $component0);
 if_setonvartransmit("toplevel_vartransmit(event_com, $enum1){var1021, var1055, var1734, var1431, var1227, var439, var1141, var1795}", $component0);
 def_int $int2 = 0;
-def_component $component3 = enum(int, component, 1138, $int2);
+def_component $component3 = enum(int, component, enum_1138, $int2);
 while ($component3 ! null) {
 	$component3 = enum(component, component, $enum1, $component3);
 	if ($component3 ! null) {
-		if_setop(1, enum(int, string, 1141, $int2), $component3);
+		if_setop(1, enum(int, string, enum_1141, $int2), $component3);
 		if_setonop("toplevel_sidebutton_op(event_opindex, $enum1, $int2)", $component3);
 	}
 	$int2 = calc($int2 + 1);
-	$component3 = enum(int, component, 1138, $int2);
+	$component3 = enum(int, component, enum_1138, $int2);
 }
-if ((%varcint171 <= 0) & (enum(enum, boolean, 1134, $enum1) = false)) {
+if ((%varcint171 <= 0) & (enum(enum, boolean, enum_1134, $enum1) = false)) {
 	%varcint171 = 3;
 }
 %varcint172, %varcint173 = null, -1;
-$component3 = enum(component, component, $enum1, 161:28);
+$component3 = enum(component, component, $enum1, interface_161:28);
 if ($component3 ! null) {
 	cc_deleteall($component3);
 	cc_create($component3, ^iftype_text, 0);
@@ -33,23 +33,23 @@ if ($component3 ! null) {
 	.cc_setonop("toplevel_compass_op(event_opindex)");
 }
 ~script1044;
-if ($enum1 = 139) {
+if ($enum1 = enum_139) {
 	setshowmouseovertext(false);
 	setshowmousecross(false);
 	setshowloadingmessages(false);
 	_3130(299, -1);
 	_3131(0);
-} else if ($enum1 = 1745) {
+} else if ($enum1 = enum_1745) {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
 	setshowloadingmessages(true);
 	_3130(1625, 1);
 	_3131(1);
-	~script1490(601:6);
-	~script1490(601:14);
-	~script2249(601:11, setbit(0, 3));
-	~script868(601:30);
-	~script957(601:31);
+	~script1490(interface_601:6);
+	~script1490(interface_601:14);
+	~script2249(interface_601:11, setbit(0, 3));
+	~script868(interface_601:30);
+	~script957(interface_601:31);
 } else {
 	setshowmouseovertext(true);
 	setshowmousecross(true);
@@ -59,8 +59,8 @@ if ($enum1 = 139) {
 }
 ~options_appearance;
 ~account_update_display;
-~script3173(enum(component, component, $enum1, 161:5));
-~notification_init(enum(component, component, $enum1, 161:7));
+~script3173(enum(component, component, $enum1, interface_161:5));
+~notification_init(enum(component, component, $enum1, interface_161:7));
 ~toplevel_redraw($component0, $enum1);
 ~toplevel_subchange($component0, $enum1);
 ~toplevel_sidebutton_switch(%varcint171, $enum1);

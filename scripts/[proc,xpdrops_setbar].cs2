@@ -7,7 +7,7 @@ if (%varbit4697 = 31) {
 } else if (%varbit4697 = 30) {
 	$stat7 = null;
 } else {
-	$stat7 = enum(int, stat, 681, %varbit4697);
+	$stat7 = enum(int, stat, enum_681, %varbit4697);
 }
 def_stat $stat8 = null;
 if (%varbit4698 = 31) {
@@ -15,7 +15,7 @@ if (%varbit4698 = 31) {
 } else if (%varbit4698 = 30) {
 	$stat8 = null;
 } else {
-	$stat8 = enum(int, stat, 681, %varbit4698);
+	$stat8 = enum(int, stat, enum_681, %varbit4698);
 }
 def_boolean $boolean9 = false;
 def_string $string0 = ",";
@@ -33,7 +33,7 @@ def_int $int17 = 0;
 def_int $int18 = 0;
 if ($stat7 ! null) {
 	$boolean9 = true;
-	if_setgraphic(enum(stat, graphic, 255, $stat7), $component1);
+	if_setgraphic(enum(stat, graphic, enum_255, $stat7), $component1);
 	$int10, $int11 = ~xpdrops_data_get($stat7);
 	$int12 = stat_xp($stat7);
 	if ($int11 = -1) {
@@ -41,22 +41,22 @@ if ($stat7 ! null) {
 		if ($int15 >= 0) {
 			$string3 = ~tostring_spacer($int15, $string0);
 			if_settext("+<$string3>", $component2);
-			$string1 = "<enum(stat, string, 680, $stat7)> tracker:|Tracking from:|Total XP:";
+			$string1 = "<enum(stat, string, enum_680, $stat7)> tracker:|Tracking from:|Total XP:";
 			$string2 = "<$string3>|<~tostring_spacer($int10, $string0)>|<~tostring_spacer($int12, $string0)>";
 		} else {
 			if_settext("N/A", $component2);
-			$string1 = "Your <enum(stat, string, 680, $stat7)> tracker is invalid.<br>Set a lower starting point.";
+			$string1 = "Your <enum(stat, string, enum_680, $stat7)> tracker is invalid.<br>Set a lower starting point.";
 		}
 	} else {
 		$string3 = ~tostring_spacer($int12, $string0);
 		if_settext($string3, $component2);
 		$int13 = stat_base($stat7);
 		if ($int13 < 99) {
-			$int14 = enum(int, int, 256, calc($int13 + 1));
-			$string1 = "<enum(stat, string, 680, $stat7)> XP:|<col=7f7f7f>Next level:</col>|Remaining:";
+			$int14 = enum(int, int, enum_256, calc($int13 + 1));
+			$string1 = "<enum(stat, string, enum_680, $stat7)> XP:|<col=7f7f7f>Next level:</col>|Remaining:";
 			$string2 = "<$string3>|<col=7f7f7f><~tostring_spacer($int14, $string0)></col>|<~tostring_spacer(calc($int14 - $int12), $string0)>";
 		} else {
-			$string1 = "<enum(stat, string, 680, $stat7)> XP:";
+			$string1 = "<enum(stat, string, enum_680, $stat7)> XP:";
 			$string2 = $string3;
 		}
 	}
@@ -121,7 +121,7 @@ if ($stat8 ! null) {
 	$int10, $int11 = ~xpdrops_data_get($stat8);
 	if (($int11 ! -1) & ($int11 > $int10)) {
 		$int21 = ~xpdrops_setbar_progress($component4, $int10, $int12, $int11, 1);
-		$string1 = "<enum(stat, string, 680, $stat8)> goal|<col=7f7f7f>Start:</col>|Current:|<col=7f7f7f>End:</col>";
+		$string1 = "<enum(stat, string, enum_680, $stat8)> goal|<col=7f7f7f>Start:</col>|Current:|<col=7f7f7f>End:</col>";
 		$string2 = "<~xpdrops_percentage_tostring($int21)>|<col=7f7f7f><~tostring_spacer($int10, $string0)></col>|<~tostring_spacer($int12, $string0)>|<col=7f7f7f><~tostring_spacer($int11, $string0)></col>";
 		if ($int12 < $int11) {
 			$string1 = append($string1, "|Remaining:");
@@ -133,13 +133,13 @@ if ($stat8 ! null) {
 		if ($int22 > 99) {
 			$int22 = 99;
 		}
-		$int14 = enum(int, int, 256, $int22);
-		$int21 = ~xpdrops_setbar_progress($component4, enum(int, int, 256, $int13), $int12, $int14, 0);
+		$int14 = enum(int, int, enum_256, $int22);
+		$int21 = ~xpdrops_setbar_progress($component4, enum(int, int, enum_256, $int13), $int12, $int14, 0);
 		if ($int13 < 99) {
-			$string1 = "<enum(stat, string, 680, $stat8)>|Current XP:|<col=7f7f7f>Next level:</col>|Remaining:";
+			$string1 = "<enum(stat, string, enum_680, $stat8)>|Current XP:|<col=7f7f7f>Next level:</col>|Remaining:";
 			$string2 = "<~xpdrops_percentage_tostring($int21)>|<~tostring_spacer($int12, $string0)>|<col=7f7f7f><~tostring_spacer($int14, $string0)></col>|<~tostring_spacer(calc($int14 - $int12), $string0)>";
 		} else {
-			$string1 = "<enum(stat, string, 680, $stat8)> XP:";
+			$string1 = "<enum(stat, string, enum_680, $stat8)> XP:";
 			$string2 = ~tostring_spacer($int12, $string0);
 		}
 	}

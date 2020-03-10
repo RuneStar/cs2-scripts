@@ -103,7 +103,7 @@ $int5 = calc($int5 + 1);
 cc_setsize(20, 18, ^setsize_abs, ^setsize_abs);
 cc_setposition($int6, 8, ^setpos_abs_left, ^setpos_abs_top);
 cc_settiling(false);
-def_inv $inv15 = enum(int, inv, 150, $int1);
+def_inv $inv15 = enum(int, inv, enum_150, $int1);
 ~ge_collect_drawslot($component0, $int1, $component2, $int11, $inv15, $int7, $int8, $int9, $int10, $int12, $int13, $int14);
 if_setonstocktransmit("ge_collect_drawslot($component0, $int1, $component2, $int11, $inv15, $int7, $int8, $int9, $int10, $int12, $int13, $int14)", $component0);
 if_setoninvtransmit("ge_collect_drawslot($component0, $int1, $component2, $int11, $inv15, $int7, $int8, $int9, $int10, $int12, $int13, $int14){$inv15}", $component0);

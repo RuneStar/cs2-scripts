@@ -5,9 +5,9 @@ cc_deleteall($component4);
 def_int $int8 = calc((if_getwidth($component3) - (10 * 36)) / (10 - 1));
 def_int $int9 = calc(32 + 10);
 def_int $int10 = 0;
-def_enum $enum11 = 1124;
+def_enum $enum11 = enum_1124;
 if (~wildwars_world = 1) {
-	$enum11 = 1735;
+	$enum11 = enum_1735;
 }
 def_int $int12 = ~tournament_beta_world;
 def_namedobj $namedobj13 = enum(int, namedobj, $enum11, $int10);
@@ -33,7 +33,7 @@ while ($namedobj13 ! null) {
 def_int $int14 = 0;
 if ($int12 = 1) {
 	$int14 = 0;
-	$namedobj13 = enum(int, namedobj, 1906, $int14);
+	$namedobj13 = enum(int, namedobj, enum_1906, $int14);
 	while ($namedobj13 ! null) {
 		cc_create($component3, ^iftype_graphic, $int10);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -52,7 +52,7 @@ if ($int12 = 1) {
 		cc_sethide(true);
 		$int14 = calc($int14 + 1);
 		$int10 = calc($int10 + 1);
-		$namedobj13 = enum(int, namedobj, 1906, $int14);
+		$namedobj13 = enum(int, namedobj, enum_1906, $int14);
 	}
 }
 cc_create($component3, ^iftype_text, $int10);
@@ -71,4 +71,4 @@ if (~bankmain_searching = 1) {
 ~tournament_supplies_search_off($component3, $component4, $component5, $int8, $int9);
 ~tournament_supplies_switchlayer($component2, $component1, $component2, "Items", $component6, "Load-outs", $component3, $component4, $component5, $int8, $int9);
 ~tournament_supplies_previewarea($component7);
-if_setoninvtransmit("tournament_supplies_previewarea($component7){207}", $component7);
+if_setoninvtransmit("tournament_supplies_previewarea($component7){inv_207}", $component7);

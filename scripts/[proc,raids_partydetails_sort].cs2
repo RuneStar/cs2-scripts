@@ -10,12 +10,12 @@ def_int $int8 = -1;
 def_string $string0 = "";
 def_string $string1 = "";
 while ($int7 < $int2) {
-	if (cc_find(507:11, calc(($intarray0($int7) * 8) + $int3)) = ^true) {
+	if (cc_find(interface_507:11, calc(($intarray0($int7) * 8) + $int3)) = ^true) {
 		$string0 = removetags(cc_gettext);
 	} else {
 		$string0 = "";
 	}
-	if (cc_find(507:11, calc(($int5 * 8) + $int3)) = ^true) {
+	if (cc_find(interface_507:11, calc(($int5 * 8) + $int3)) = ^true) {
 		$string1 = removetags(cc_gettext);
 	} else {
 		$string1 = "";

@@ -1,7 +1,7 @@
 // 3087
 script3087(int $int0, component $component1, component $component2, component $component3, component $component4)(int)
 if_setonvartransmit("script3086($int0, $component1, $component2, $component3, $component4){var261, var262}", $component1);
-if_setoninvtransmit("script3086($int0, $component1, $component2, $component3, $component4){422}", $component1);
+if_setoninvtransmit("script3086($int0, $component1, $component2, $component3, $component4){inv_422}", $component1);
 cc_deleteall($component2);
 def_int $int5 = 0;
 def_int $int6 = 3;
@@ -45,7 +45,7 @@ def_string $string0 = "";
 cc_deleteall($component3);
 $int5 = 0;
 if ($int0 ! -1) {
-	$string0 = enum(int, string, 2634, $int0);
+	$string0 = enum(int, string, enum_2634, $int0);
 	~pest_rewards_confirmdraw(false, $string0, $component4);
 	while ($int5 < $int0) {
 		cc_create($component3, ^iftype_rectangle, $int5);

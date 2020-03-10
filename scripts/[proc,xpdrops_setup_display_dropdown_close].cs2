@@ -1,7 +1,7 @@
 // 1038
 [proc,xpdrops_setup_display_dropdown_close](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
 if (if_gethide($component0) = false) {
-	sound_synth(2266, 1, 0);
+	sound_synth(synth_2266, 1, 0);
 }
 if_sethide(true, $component0);
 if_sethide(false, $component1);

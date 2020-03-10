@@ -8,9 +8,9 @@ while ($int0 < 255) {
 		cc_create(dream_armour:42, ^iftype_graphic, $int2);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition($int1, $int0, ^setpos_abs_left, ^setpos_abs_top);
-		if (inv_getobj(514, $int2) ! null) {
-			cc_setobject(inv_getobj(514, $int2), inv_getnum(514, $int2));
-			cc_setopbase(oc_name(inv_getobj(514, $int2)));
+		if (inv_getobj(inv_514, $int2) ! null) {
+			cc_setobject(inv_getobj(inv_514, $int2), inv_getnum(inv_514, $int2));
+			cc_setopbase(oc_name(inv_getobj(inv_514, $int2)));
 			cc_setop(1, "Withdraw");
 			cc_setgraphicshadow(0x111111);
 			cc_setoutline(1);

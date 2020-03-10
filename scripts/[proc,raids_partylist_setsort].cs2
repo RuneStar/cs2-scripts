@@ -1,17 +1,17 @@
 // 1570
 [proc,raids_partylist_setsort]
-~raids_partylist_sortbutton_draw(499:7, 0, 1, "Sort by members");
-~raids_partylist_sortbutton_draw(499:8, 2, 3, "Sort by target size");
-~raids_partylist_sortbutton_draw(499:9, 4, 5, "Sort by leader name");
-~raids_partylist_sortbutton_draw(499:10, 6, 7, "Sort by preferred combat level");
-~raids_partylist_sortbutton_draw(499:11, 8, 9, "Sort by preferred skill total");
-~raids_partylist_sortbutton_draw(499:12, 10, 11, "Sort by challenge mode");
-~raids_partylist_sortbutton_draw(499:13, 12, 13, "Sort by age");
+~raids_partylist_sortbutton_draw(interface_499:7, 0, 1, "Sort by members");
+~raids_partylist_sortbutton_draw(interface_499:8, 2, 3, "Sort by target size");
+~raids_partylist_sortbutton_draw(interface_499:9, 4, 5, "Sort by leader name");
+~raids_partylist_sortbutton_draw(interface_499:10, 6, 7, "Sort by preferred combat level");
+~raids_partylist_sortbutton_draw(interface_499:11, 8, 9, "Sort by preferred skill total");
+~raids_partylist_sortbutton_draw(interface_499:12, 10, 11, "Sort by challenge mode");
+~raids_partylist_sortbutton_draw(interface_499:13, 12, 13, "Sort by age");
 def_int $intarray0(40);
 def_int $int0 = 0;
 def_int $int1 = 0;
 while ($int1 < 40) {
-	if (cc_find(enum(int, component, 1537, $int0), 0) = ^true) {
+	if (cc_find(enum(int, component, enum_1537, $int0), 0) = ^true) {
 		$intarray0($int0) = $int0;
 		$int0 = calc($int0 + 1);
 	}
@@ -20,19 +20,19 @@ while ($int1 < 40) {
 def_string $string0 = "";
 if ($int0 >= 2) {
 	if ((%varcint180 = 2) | (%varcint180 = 3)) {
-		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 9, 1537);
+		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 9, enum_1537);
 	} else if ((%varcint180 = 4) | (%varcint180 = 5)) {
-		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 3, 1537);
+		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 3, enum_1537);
 	} else if ((%varcint180 = 6) | (%varcint180 = 7)) {
-		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 10, 1537);
+		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 10, enum_1537);
 	} else if ((%varcint180 = 8) | (%varcint180 = 9)) {
-		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 11, 1537);
+		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 11, enum_1537);
 	} else if ((%varcint180 = 10) | (%varcint180 = 11)) {
-		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 12, 1537);
+		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 12, enum_1537);
 	} else if ((%varcint180 = 12) | (%varcint180 = 13)) {
-		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 13, 1537);
+		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 13, enum_1537);
 	} else {
-		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 8, 1537);
+		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 8, enum_1537);
 	}
 }
 def_int $int2 = 0;
@@ -43,22 +43,22 @@ if (((((((%varcint180 = 1) | (%varcint180 = 3)) | (%varcint180 = 5)) | (%varcint
 	$int2 = $int0;
 	while ($int2 > 0) {
 		$int2 = calc($int2 - 1);
-		$component4 = enum(int, component, 1537, $intarray0($int2));
+		$component4 = enum(int, component, enum_1537, $intarray0($int2));
 		if ($component4 ! null) {
 			if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
 			if ((cc_find($component4, 0) = ^true) & (.cc_find($component4, 3) = ^true)) {
-				~raids_partylist_entry_init($int2, $component4, $intarray0($int2), .cc_gettext, 499:14);
+				~raids_partylist_entry_init($int2, $component4, $intarray0($int2), .cc_gettext, interface_499:14);
 			}
 		}
 		$int3 = calc($int3 + 18);
 	}
 } else {
 	while ($int2 < $int0) {
-		$component4 = enum(int, component, 1537, $intarray0($int2));
+		$component4 = enum(int, component, enum_1537, $intarray0($int2));
 		if ($component4 ! null) {
 			if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
 			if ((cc_find($component4, 0) = ^true) & (.cc_find($component4, 3) = ^true)) {
-				~raids_partylist_entry_init($int2, $component4, $intarray0($int2), .cc_gettext, 499:14);
+				~raids_partylist_entry_init($int2, $component4, $intarray0($int2), .cc_gettext, interface_499:14);
 			}
 		}
 		$int3, $int2 = calc($int3 + 18), calc($int2 + 1);

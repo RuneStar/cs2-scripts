@@ -1,9 +1,9 @@
 // 433
 [clientscript,grouping_dropdown](boolean $boolean0)
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 if ($boolean0 = true) {
-	if_sethide(false, 76:14);
+	if_sethide(false, interface_76:14);
 } else {
-	if_sethide(true, 76:14);
+	if_sethide(true, interface_76:14);
 }
 ~grouping_rebuild;

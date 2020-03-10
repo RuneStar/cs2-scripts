@@ -1,7 +1,7 @@
 // 1436
 [proc,cws_init_button](component $component0, string $string0)
-def_graphic $graphic1 = 833;
-def_graphic $graphic2 = 834;
+def_graphic $graphic1 = "graphic_833";
+def_graphic $graphic2 = "graphic_834";
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0);
 .cc_create($component0, ^iftype_text, 1);

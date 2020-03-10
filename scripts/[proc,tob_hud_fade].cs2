@@ -1,16 +1,16 @@
 // 2309
 [proc,tob_hud_fade](int $colour0, int $int1, int $int2, string $string0, int $int3)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:3)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:3)) = false) {
 	return;
 }
-if (cc_find(28:1, 0) = ^true) {
+if (cc_find(interface_28:1, 0) = ^true) {
 	if ($int3 = 1) {
 		~tob_hud_setportal;
 	} else {
 		cc_sethide(true);
 	}
 } else {
-	cc_create(28:1, ^iftype_model, 0);
+	cc_create(interface_28:1, ^iftype_model, 0);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	if ($int3 = 1) {
@@ -19,16 +19,16 @@ if (cc_find(28:1, 0) = ^true) {
 		cc_sethide(true);
 	}
 }
-if ((cc_find(28:1, 1) = ^true) & (.cc_find(28:1, 2) = ^true)) {
+if ((cc_find(interface_28:1, 1) = ^true) & (.cc_find(interface_28:1, 2) = ^true)) {
 	~script2310(cc_getcolour, $colour0, cc_gettrans, $int1, $int2, $string0);
 } else {
-	cc_create(28:1, ^iftype_rectangle, 1);
+	cc_create(interface_28:1, ^iftype_rectangle, 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setfill(true);
 	cc_setcolour(^black);
 	cc_settrans(255);
-	.cc_create(28:1, ^iftype_text, 2);
+	.cc_create(interface_28:1, ^iftype_text, 2);
 	.cc_setsize(0, 50, ^setsize_minus, ^setsize_abs);
 	.cc_setcolour(0xc80032);
 	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

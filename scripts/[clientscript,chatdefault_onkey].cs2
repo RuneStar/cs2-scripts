@@ -1,6 +1,6 @@
 // 73
 [clientscript,chatdefault_onkey](int $key0, char $char1)
-if ((if_gethide(162:55) = true) | (if_gethide(162:56) = true)) {
+if ((if_gethide(interface_162:55) = true) | (if_gethide(interface_162:56) = true)) {
 	return;
 }
 if ((%varbit8119 = 0) | (~keypress_permit(-1, 162) = 0)) {

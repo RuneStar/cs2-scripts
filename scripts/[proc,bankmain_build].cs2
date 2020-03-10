@@ -152,12 +152,12 @@ if ((%varbit4150 <= 0) | (%varbit4150 > 9)) {
 		if (string_length($string0) > 0) {
 			if_settext("Showing items: <col=ff0000><$string0></col>", $component5);
 			if (%varcint5 = 11) {
-				if_settext("Show items whose names contain the following text: (<tostring($int26)> found)", 162:44);
+				if_settext("Show items whose names contain the following text: (<tostring($int26)> found)", interface_162:44);
 			}
 		} else {
 			if_settext("Showing items: <col=ff0000>*</col>", $component5);
 			if (%varcint5 = 11) {
-				if_settext("Show items whose names contain the following text:", 162:44);
+				if_settext("Show items whose names contain the following text:", interface_162:44);
 			}
 		}
 	} else {
@@ -198,7 +198,7 @@ while ($int19 < 816) {
 	$int19 = calc($int19 + 1);
 }
 if (%varbit4170 = 2) {
-	if_settext("Tab <enum(int, string, 207, %varbit4150)>", $component5);
+	if_settext("Tab <enum(int, string, enum_207, %varbit4150)>", $component5);
 } else {
 	if_settext("Tab <tostring(%varbit4150)>", $component5);
 }

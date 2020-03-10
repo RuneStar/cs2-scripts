@@ -13,7 +13,7 @@ if ($boolean0 = true) {
 		if (%varcint207 = 1_1_1_1_1) {
 			~xpdrops_showpanel($component1, $component3, $component8, $component9);
 		} else {
-			$statarray0($int35) = enum(int, stat, 681, coordx(%varcint207));
+			$statarray0($int35) = enum(int, stat, enum_681, coordx(%varcint207));
 			$intarray1($int35) = coordz(%varcint207);
 			if (($statarray0($int35) ! null) & ($intarray1($int35) > 0)) {
 				$int35 = calc($int35 + 1);
@@ -183,7 +183,7 @@ if ((($int35 > 0) & ($int16 > 0)) & (calc(clientclock - %varcint76) > 10)) {
 	if ($int42 < 100) {
 		$int42 = 100;
 	}
-	$int43 = calc((($int41 * enum(int, int, 1171, %varbit4722)) / $int42) + 1);
+	$int43 = calc((($int41 * enum(int, int, enum_1171, %varbit4722)) / $int42) + 1);
 	while ($int37 < $int35) {
 		if (($int38 = 0) & ($boolean0 = false)) {
 			%varcint72 = $statarray0($int37);
@@ -195,11 +195,11 @@ if ((($int35 > 0) & ($int16 > 0)) & (calc(clientclock - %varcint76) > 10)) {
 			$int44 = clientclock;
 		}
 		if ($int44 < calc(clientclock + ($int43 * $int10))) {
-			$component47 = enum(int, component, 1163, %varcint70);
+			$component47 = enum(int, component, enum_1163, %varcint70);
 			if_sethide(false, $component47);
 			$int46 = $intarray1($int37);
 			cc_create($component47, ^iftype_graphic, 1);
-			cc_setgraphic(enum(stat, graphic, 255, $statarray0($int37)));
+			cc_setgraphic(enum(stat, graphic, enum_255, $statarray0($int37)));
 			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_5);
 			cc_sethide(true);
 			$int45 = 1;
@@ -208,7 +208,7 @@ if ((($int35 > 0) & ($int16 > 0)) & (calc(clientclock - %varcint76) > 10)) {
 				$int46 = calc($int46 + $intarray1($int37));
 				$int45 = calc($int45 + 1);
 				cc_create($component47, ^iftype_graphic, $int45);
-				cc_setgraphic(enum(stat, graphic, 255, $statarray0($int37)));
+				cc_setgraphic(enum(stat, graphic, enum_255, $statarray0($int37)));
 				cc_setposition(0, 0, ^setpos_abs_left, ^setpos_5);
 				cc_sethide(true);
 				$int37 = calc($int37 + 1);

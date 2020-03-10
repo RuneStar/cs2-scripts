@@ -2,7 +2,7 @@
 script2093(component $component0, int $int1)
 def_model $model2 = doll_34414;
 if (calc($int1 % 50) < 25) {
-	$model2 = 34415;
+	$model2 = model_34415;
 }
 def_int $int3 = calc(($int1 * 34) % 2048);
 if ($int1 <= 30) {
@@ -51,13 +51,13 @@ if ($int1 <= 180) {
 	return;
 }
 if ($int1 <= 210) {
-	.cc_setmodel(16238);
+	.cc_setmodel(model_16238);
 	$int1 = calc($int1 - 180);
 	cc_setcolour(~rgb_to_hex(calc(96 - scale($int1, 30, 96)), 0, 0));
 	return;
 }
 if ($int1 <= 270) {
-	.cc_setmodel(16238);
+	.cc_setmodel(model_16238);
 	$int1 = calc($int1 - 210);
 	cc_settrans(scale($int1, 60, 255));
 	return;

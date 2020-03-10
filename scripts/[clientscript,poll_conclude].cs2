@@ -1,11 +1,11 @@
 // 618
 [clientscript,poll_conclude](component $component0, component $component1, component $component2, int $int3)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:15)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
-if ($component0 = 400:10) {
-	if_setposition(calc((if_getwidth(400:10) - if_getwidth(400:11)) / 2), %varcint49, ^setpos_abs_left, ^setpos_abs_top, 400:11);
-	%varcint49 = calc(%varcint49 + if_getheight(400:11));
+if ($component0 = interface_400:10) {
+	if_setposition(calc((if_getwidth(interface_400:10) - if_getwidth(interface_400:11)) / 2), %varcint49, ^setpos_abs_left, ^setpos_abs_top, interface_400:11);
+	%varcint49 = calc(%varcint49 + if_getheight(interface_400:11));
 }
 if (%varcint49 > if_getheight($component0)) {
 	if_setscrollsize(0, %varcint49, $component0);

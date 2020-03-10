@@ -1,22 +1,22 @@
 // 908
 [proc,toplevel_subchange](component $component0, enum $enum1)
-if (if_hassub(162:561) = true) {
-	if_sethide(false, 162:561);
-	if_sethide(true, 162:560);
-	if_sethide(true, 162:56);
-} else if (if_hassub(162:560) = true) {
-	if_sethide(true, 162:561);
-	if_sethide(false, 162:560);
-	if_sethide(true, 162:56);
+if (if_hassub(interface_162:561) = true) {
+	if_sethide(false, interface_162:561);
+	if_sethide(true, interface_162:560);
+	if_sethide(true, interface_162:56);
+} else if (if_hassub(interface_162:560) = true) {
+	if_sethide(true, interface_162:561);
+	if_sethide(false, interface_162:560);
+	if_sethide(true, interface_162:56);
 } else {
-	if_sethide(true, 162:561);
-	if_sethide(true, 162:560);
-	if_sethide(false, 162:56);
+	if_sethide(true, interface_162:561);
+	if_sethide(true, interface_162:560);
+	if_sethide(false, interface_162:56);
 }
 ~toplevel_sidebuttons_enable($enum1);
 def_component $component2 = null;
 if (%varcint171 ! -1) {
-	$component2 = enum(int, component, 1137, %varcint171);
+	$component2 = enum(int, component, enum_1137, %varcint171);
 	$component2 = enum(component, component, $enum1, $component2);
 	if ($component2 ! null) {
 		if (if_hassub($component2) = true) {
@@ -28,29 +28,29 @@ if (%varcint171 ! -1) {
 		}
 	}
 }
-if (if_hassub(enum(component, component, $enum1, 161:68)) = true) {
-	$component2 = enum(component, component, $enum1, 161:69);
+if (if_hassub(enum(component, component, $enum1, interface_161:68)) = true) {
+	$component2 = enum(component, component, $enum1, interface_161:69);
 	if ($component2 ! null) {
 		if_sethide(true, $component2);
 	}
-	$component2 = enum(component, component, $enum1, 161:52);
+	$component2 = enum(component, component, $enum1, interface_161:52);
 	if ($component2 ! null) {
 		if_sethide(true, $component2);
 	}
-	$component2 = enum(component, component, $enum1, 161:36);
+	$component2 = enum(component, component, $enum1, interface_161:36);
 	if ($component2 ! null) {
 		if_sethide(true, $component2);
 	}
 } else {
-	$component2 = enum(component, component, $enum1, 161:69);
+	$component2 = enum(component, component, $enum1, interface_161:69);
 	if ($component2 ! null) {
 		if_sethide(false, $component2);
 	}
-	$component2 = enum(component, component, $enum1, 161:52);
+	$component2 = enum(component, component, $enum1, interface_161:52);
 	if ($component2 ! null) {
 		if_sethide(false, $component2);
 	}
-	$component2 = enum(component, component, $enum1, 161:36);
+	$component2 = enum(component, component, $enum1, interface_161:36);
 	if ($component2 ! null) {
 		if_sethide(false, $component2);
 	}

@@ -1,6 +1,6 @@
 // 3180
 script3180(int $int0)(struct)
-def_struct $struct1 = enum(int, struct, 2670, %varbit10032);
+def_struct $struct1 = enum(int, struct, enum_2670, %varbit10032);
 def_enum $enum2 = null;
 def_struct $struct3 = null;
 def_int $int4 = 0;
@@ -8,7 +8,7 @@ def_int $int5 = -1;
 def_int $int6 = 0;
 def_int $int7 = 0;
 if ($struct1 ! null) {
-	$enum2 = struct_param($struct1, 870);
+	$enum2 = struct_param($struct1, param_870);
 	if ($enum2 ! null) {
 		$int4 = enum_getoutputcount($enum2);
 		if ($int0 = 1) {
@@ -16,7 +16,7 @@ if ($struct1 ! null) {
 		}
 		while ($int6 < $int4) {
 			$struct3 = enum(int, struct, $enum2, $int6);
-			$int5 = struct_param($struct3, 877);
+			$int5 = struct_param($struct3, param_877);
 			if (%var2615 < $int5) {
 				return($struct3);
 			}

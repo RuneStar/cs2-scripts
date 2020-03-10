@@ -9,7 +9,7 @@ def_int $int8 = $int1;
 def_int $int9 = -1;
 def_string $string0 = "";
 while ($int8 < $int2) {
-	if (compare("<tostring(calc($intarray0($int8) / $int4))><struct_param(enum(int, struct, $enum3, calc($intarray0($int8) % $int4)), 579)>", "<tostring(calc($int6 / $int4))><struct_param(enum(int, struct, $enum3, calc($int6 % $int4)), 579)>") <= 0) {
+	if (compare("<tostring(calc($intarray0($int8) / $int4))><struct_param(enum(int, struct, $enum3, calc($intarray0($int8) % $int4)), param_579)>", "<tostring(calc($int6 / $int4))><struct_param(enum(int, struct, $enum3, calc($int6 % $int4)), param_579)>") <= 0) {
 		$int9 = $intarray0($int8);
 		$intarray0($int8) = $intarray0($int7);
 		$intarray0($int7) = $int9;

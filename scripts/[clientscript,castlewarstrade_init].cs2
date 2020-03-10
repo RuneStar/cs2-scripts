@@ -2,7 +2,7 @@
 [clientscript,castlewarstrade_init](component $component0)
 def_int $int1 = 0;
 def_int $int2 = 0;
-def_namedobj $namedobj3 = enum(int, namedobj, 852, $int2);
+def_namedobj $namedobj3 = enum(int, namedobj, enum_852, $int2);
 while ($namedobj3 ! null) {
 	cc_create($component0, ^iftype_graphic, $int2);
 	if ((map_members = ^false) & (oc_members($namedobj3) = ^true)) {
@@ -20,5 +20,5 @@ while ($namedobj3 ! null) {
 		cc_setoutline(1);
 	}
 	$int2 = calc($int2 + 1);
-	$namedobj3 = enum(int, namedobj, 852, $int2);
+	$namedobj3 = enum(int, namedobj, enum_852, $int2);
 }

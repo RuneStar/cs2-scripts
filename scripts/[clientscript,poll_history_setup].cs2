@@ -1,28 +1,28 @@
 // 627
 [clientscript,poll_history_setup](int $int0, string $string0, string $string1)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:15)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
-cc_deleteall(310:4);
+cc_deleteall(interface_310:4);
 def_int $int1 = 0;
 while ($int1 < $int0) {
-	cc_create(310:4, ^iftype_rectangle, $int1);
+	cc_create(interface_310:4, ^iftype_rectangle, $int1);
 	cc_sethide(true);
 	$int1 = calc($int1 + 1);
 }
 def_int $int2 = 10;
 def_string $string2 = "";
 def_int $int3 = 0;
-def_int $int4 = if_getwidth(310:4);
+def_int $int4 = if_getwidth(interface_310:4);
 def_int $int5 = 0;
 while ($int5 < $int0) {
-	cc_create(310:4, ^iftype_rectangle, $int1);
+	cc_create(interface_310:4, ^iftype_rectangle, $int1);
 	$int1 = calc($int1 + 1);
 	cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(255);
-	.cc_create(310:4, ^iftype_text, $int1);
+	.cc_create(interface_310:4, ^iftype_text, $int1);
 	$int1 = calc($int1 + 1);
 	.cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setcolour(0xff981f);
@@ -40,7 +40,7 @@ while ($int5 < $int0) {
 	$int3 = calc(($int3 + (paraheight($string2, $int4, p11_full) * 10)) + 2);
 	cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 	.cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
-	.cc_create(310:4, ^iftype_text, $int1);
+	.cc_create(interface_310:4, ^iftype_text, $int1);
 	$int1 = calc($int1 + 1);
 	.cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
@@ -54,12 +54,12 @@ while ($int5 < $int0) {
 		$int2 = calc($int2 + 10);
 	}
 }
-if ($int2 > if_getheight(310:4)) {
-	if_setscrollsize(0, $int2, 310:4);
+if ($int2 > if_getheight(interface_310:4)) {
+	if_setscrollsize(0, $int2, interface_310:4);
 } else {
-	if_setscrollsize(0, 0, 310:4);
+	if_setscrollsize(0, 0, interface_310:4);
 }
 %varcint49 = $int2;
-cc_deleteall(310:5);
-if_setscrollpos(0, 0, 310:4);
-~scrollbar_vertical(310:5, 310:4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_deleteall(interface_310:5);
+if_setscrollpos(0, 0, interface_310:4);
+~scrollbar_vertical(interface_310:5, interface_310:4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

@@ -2,14 +2,14 @@
 script2330(int $int0, int $int1, component $component2, int $int3, string $string0, int $int4)
 def_int $int5 = -1;
 if ($int0 = 1) {
-	$int5 = calc((enum_getoutputcount(1939) + 5) + $int1);
+	$int5 = calc((enum_getoutputcount(enum_1939) + 5) + $int1);
 } else if ($int0 = 10) {
-	$int5 = calc(((enum_getoutputcount(1939) + 5) + 10) + $int1);
+	$int5 = calc(((enum_getoutputcount(enum_1939) + 5) + 10) + $int1);
 } else {
 	return;
 }
-if ((cc_find($component2, $int3) = ^true) & (.cc_find(50:0, $int5) = ^true)) {
-	sound_synth(2266, 1, 0);
+if ((cc_find($component2, $int3) = ^true) & (.cc_find(interface_50:0, $int5) = ^true)) {
+	sound_synth(synth_2266, 1, 0);
 	cc_settrans(200);
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);

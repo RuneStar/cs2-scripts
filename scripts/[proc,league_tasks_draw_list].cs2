@@ -27,7 +27,7 @@ if_setop(1, "Show Menu", $component10);
 $int14 = 0;
 ~league_create_dropdown($component10, $component11, $component12, $int14, 1);
 $int14 = 0;
-def_enum $enum17 = struct_param(enum(int, struct, 2670, %varbit10032), 868);
+def_enum $enum17 = struct_param(enum(int, struct, enum_2670, %varbit10032), param_868);
 def_int $int18 = enum_getoutputcount($enum17);
 def_int $int19 = 0;
 def_int $int20 = 0;
@@ -50,10 +50,10 @@ if (%var2615 < %var2614) {
 while ($int19 < $int18) {
 	$struct21 = enum(int, struct, $enum17, $int19);
 	$bit27 = ~league_task_is_completed($struct21);
-	$int28 = struct_param($struct21, 876);
-	$string0 = struct_param($struct21, 874);
-	$string1 = struct_param($struct21, 875);
-	$int29 = enum(int, int, 2671, $int28);
+	$int28 = struct_param($struct21, param_876);
+	$string0 = struct_param($struct21, param_874);
+	$string1 = struct_param($struct21, param_875);
+	$int29 = enum(int, int, enum_2671, $int28);
 	if (((%varbit10033 = 0) | (%varbit10033 = $int28)) & ((%varbit10034 = 0) | (calc(%varbit10034 - 1) = $bit27))) {
 		cc_create($component2, ^iftype_rectangle, $int14);
 		if ($int19 = $int0) {
@@ -97,7 +97,7 @@ while ($int19 < $int18) {
 		cc_create($component7, ^iftype_graphic, $int14);
 		cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
 		cc_setposition(28, calc($int22 + (($int23 - 18) / 2)), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic(enum(int, graphic, 2674, $int28));
+		cc_setgraphic(enum(int, graphic, enum_2674, $int28));
 		cc_create($component3, ^iftype_text, $int14);
 		cc_settext($string0);
 		cc_setsize(51, 16, ^setsize_minus, ^setsize_abs);
@@ -112,9 +112,9 @@ while ($int19 < $int18) {
 		}
 		cc_create($component4, ^iftype_text, $int14);
 		if ($int29 = 1) {
-			cc_settext("Reward: <col=ffffff><tostring(enum(int, int, 2671, $int28))> point</col>");
+			cc_settext("Reward: <col=ffffff><tostring(enum(int, int, enum_2671, $int28))> point</col>");
 		} else {
-			cc_settext("Reward: <col=ffffff><tostring(enum(int, int, 2671, $int28))> points</col>");
+			cc_settext("Reward: <col=ffffff><tostring(enum(int, int, enum_2671, $int28))> points</col>");
 		}
 		cc_setsize(51, 11, ^setsize_minus, ^setsize_abs);
 		cc_setposition(51, calc(($int22 + ($int23 / 2)) + 2), ^setpos_abs_left, ^setpos_abs_top);

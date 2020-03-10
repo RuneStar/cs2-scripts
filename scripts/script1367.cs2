@@ -19,69 +19,69 @@ if ($int5 > 0) {
 }
 def_int $int8 = ~script1369;
 def_int $int9 = 0;
-def_model $model10 = enum(int, model, 1403, $int4);
+def_model $model10 = enum(int, model, enum_1403, $int4);
 def_int $int11 = 6;
 while ($model10 ! null) {
 	if ($int4 = 1) {
 		if (%varbit3251 < 5) {
-			$int9 = enum(int, int, 1408, %varbit3251);
+			$int9 = enum(int, int, enum_1408, %varbit3251);
 			$string2 = "<tostring($int9)> Attacker points";
 		} else {
 			$string2 = " - Mastered - ";
 		}
-		$string1 = enum(int, string, 1413, %varbit3251);
+		$string1 = enum(int, string, enum_1413, %varbit3251);
 		if (%varbit3251 < 5) {
 			$string0 = "Attacker level up to <tostring(calc(%varbit3251 + 1))>";
 		} else {
 			$string0 = "Attacker level up complete";
 		}
-		$model10 = enum(int, model, 1409, %varbit3251);
+		$model10 = enum(int, model, enum_1409, %varbit3251);
 	} else if ($int4 = 2) {
 		if (%varbit3254 < 5) {
-			$int9 = enum(int, int, 1408, %varbit3254);
+			$int9 = enum(int, int, enum_1408, %varbit3254);
 			$string2 = "<tostring($int9)> Collector points";
 		} else {
 			$string2 = " - Mastered - ";
 		}
-		$string1 = enum(int, string, 1414, %varbit3254);
+		$string1 = enum(int, string, enum_1414, %varbit3254);
 		if (%varbit3254 < 5) {
 			$string0 = "Collector level up to <tostring(calc(%varbit3254 + 1))>";
 		} else {
 			$string0 = "Collector level up complete";
 		}
-		$model10 = enum(int, model, 1410, %varbit3254);
+		$model10 = enum(int, model, enum_1410, %varbit3254);
 	} else if ($int4 = 3) {
 		if (%varbit3253 < 5) {
-			$int9 = enum(int, int, 1408, %varbit3253);
+			$int9 = enum(int, int, enum_1408, %varbit3253);
 			$string2 = "<tostring($int9)> Defender points";
 		} else {
 			$string2 = " - Mastered - ";
 		}
-		$string1 = enum(int, string, 1415, %varbit3253);
+		$string1 = enum(int, string, enum_1415, %varbit3253);
 		if (%varbit3253 < 5) {
 			$string0 = "Defender level up to <tostring(calc(%varbit3253 + 1))>";
 		} else {
 			$string0 = "Defender level up complete";
 		}
-		$model10 = enum(int, model, 1411, %varbit3253);
+		$model10 = enum(int, model, enum_1411, %varbit3253);
 	} else if ($int4 = 4) {
 		if (%varbit3255 < 5) {
-			$int9 = enum(int, int, 1408, %varbit3255);
+			$int9 = enum(int, int, enum_1408, %varbit3255);
 			$string2 = "<tostring($int9)> Healer points";
 		} else {
 			$string2 = " - Mastered - ";
 		}
-		$string1 = enum(int, string, 1416, %varbit3255);
+		$string1 = enum(int, string, enum_1416, %varbit3255);
 		if (%varbit3255 < 5) {
 			$string0 = "Healer level up to <tostring(calc(%varbit3255 + 1))>";
 		} else {
 			$string0 = "Healer level up complete";
 		}
-		$model10 = enum(int, model, 1412, %varbit3255);
+		$model10 = enum(int, model, enum_1412, %varbit3255);
 	} else {
-		$string0 = ~script1299(enum(int, string, 1405, $int4), "XXXX", ~text_device("Gamble points", "Lucky Dip"));
-		$string1 = enum(int, string, 1406, $int4);
-		$string2 = enum(int, string, 1407, $int4);
+		$string0 = ~script1299(enum(int, string, enum_1405, $int4), "XXXX", ~text_device("Gamble points", "Lucky Dip"));
+		$string1 = enum(int, string, enum_1406, $int4);
+		$string2 = enum(int, string, enum_1407, $int4);
 	}
 	cc_create($component0, ^iftype_text, $int2);
 	cc_setcolour(0xccccff);
@@ -97,7 +97,7 @@ while ($model10 ! null) {
 	cc_setsize(90, 46, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(0x333300);
 	$int2 = calc($int2 + 1);
-	$boolean7 = enum(int, boolean, 1404, $int4);
+	$boolean7 = enum(int, boolean, enum_1404, $int4);
 	if ($boolean7 = true) {
 		$int6 = calc((6 + (50 * ($int4 - 2))) + 49);
 	} else {
@@ -169,7 +169,7 @@ while ($model10 ! null) {
 	.cc_setonop("script1368(event_com, event_comid, $int4, testbit($int8, calc($int4 - 1)), $boolean7, $int5)");
 	$int3 = calc($int3 + 1);
 	$int4 = calc($int4 + 1);
-	$model10 = enum(int, model, 1403, $int4);
+	$model10 = enum(int, model, enum_1403, $int4);
 	$int11 = calc($int11 + 50);
 }
 if_setscrollsize(0, $int11, $component0);

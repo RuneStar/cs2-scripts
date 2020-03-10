@@ -15,7 +15,7 @@ cc_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(calc(if_getwidth($component2) - 35), calc(if_getheight($component2) - 35), ^setsize_abs, ^setsize_abs);
 .cc_setsize(0, 25, ^setsize_minus, ^setsize_minus);
-def_obj $obj4 = enum(int, namedobj, 2640, $int1);
+def_obj $obj4 = enum(int, namedobj, enum_2640, $int1);
 cc_setobject_nonum($obj4, 1);
 .cc_setcolour(^white);
 .cc_settextfont(quill_oblique_large);

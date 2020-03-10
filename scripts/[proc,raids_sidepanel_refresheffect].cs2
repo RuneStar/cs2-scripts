@@ -1,7 +1,7 @@
 // 1546
 [proc,raids_sidepanel_refresheffect](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 if ($int0 = 1) {
-	sound_synth(2266, 1, 0);
+	sound_synth(synth_2266, 1, 0);
 }
 if_sethide(true, $component2);
 if_sethide(true, $component3);

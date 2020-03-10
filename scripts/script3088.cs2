@@ -7,10 +7,10 @@ $int8 = calc($int8 + 1);
 .cc_setcolour(^black);
 .cc_setfill(true);
 .cc_settrans(255);
-.cc_setop(1, enum(int, string, 2634, $int0));
-def_namedobj $namedobj10 = enum(int, namedobj, 2633, $int0);
+.cc_setop(1, enum(int, string, enum_2634, $int0));
+def_namedobj $namedobj10 = enum(int, namedobj, enum_2633, $int0);
 if ($namedobj10 = null) {
-	$namedobj10 = 6512;
+	$namedobj10 = obj_6512;
 }
 cc_create($component5, ^iftype_graphic, $int8);
 $int8 = calc($int8 + 1);
@@ -30,18 +30,18 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 def_int $colour12 = 0xff981f;
 def_int $colour13 = 0xffb83f;
-def_int $int14 = inv_getnum(422, $int0);
-def_int $int15 = enum(int, int, 2636, $int0);
+def_int $int14 = inv_getnum(inv_422, $int0);
+def_int $int15 = enum(int, int, enum_2636, $int0);
 def_string $string0 = "";
 if ((oc_members($namedobj10) = ^true) & (map_members = ^false)) {
 	cc_setcolour(0x9f9f9f);
-	cc_settext(enum(int, string, 2634, $int0));
+	cc_settext(enum(int, string, enum_2634, $int0));
 	$string0 = "You must be on a members' world to purchase that item.";
 	.cc_setonop("script3090($string0, $component4, $component5, $component6, $component7)");
 	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
 } else if (%var262 < $int15) {
 	cc_setcolour(^red);
-	cc_settext(enum(int, string, 2634, $int0));
+	cc_settext(enum(int, string, enum_2634, $int0));
 	if ($int15 > 1) {
 		$string0 = "You must achieve <tostring($int15)> wins before you can have that item.";
 	} else {
@@ -51,7 +51,7 @@ if ((oc_members($namedobj10) = ^true) & (map_members = ^false)) {
 	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
 } else if (%var261 < $int14) {
 	cc_setcolour(^red);
-	cc_settext("<enum(int, string, 2634, $int0)> - <~pest_rewards_costpoints($int14)>");
+	cc_settext("<enum(int, string, enum_2634, $int0)> - <~pest_rewards_costpoints($int14)>");
 	$string0 = "You need <~pest_rewards_costpoints($int14)> to claim that reward.";
 	.cc_setonop("script3090($string0, $component4, $component5, $component6, $component7)");
 	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
@@ -61,7 +61,7 @@ if ((oc_members($namedobj10) = ^true) & (map_members = ^false)) {
 	} else {
 		cc_setcolour(0x00df00);
 	}
-	cc_settext(enum(int, string, 2634, $int0));
+	cc_settext(enum(int, string, enum_2634, $int0));
 	.cc_setonop("script3089($int0, $component4, $component5, $component6, $component7)");
 }
 cc_create($component5, ^iftype_text, $int8);

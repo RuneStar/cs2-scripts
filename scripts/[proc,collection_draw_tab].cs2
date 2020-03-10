@@ -1,7 +1,7 @@
 // 2728
 [proc,collection_draw_tab](component $component0, struct $struct1, int $int2)
 cc_deleteall($component0);
-def_int $int3 = struct_param($struct1, 684);
+def_int $int3 = struct_param($struct1, param_684);
 cc_create($component0, ^iftype_graphic, 0);
 cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
@@ -18,7 +18,7 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settextshadow(true);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-cc_settext(struct_param($struct1, 682));
+cc_settext(struct_param($struct1, param_682));
 if ($int3 = $int2) {
 	if (cc_find($component0, 0) = ^true) {
 		cc_setgraphic("tabs_split,0");

@@ -23,8 +23,8 @@ if (($int5 = 1) & ($int3 < 36)) {
 	if ($int3 < 10) {
 		$string1 = tostring($int3);
 	} else {
-		$string1 = enum(int, string, 1401, calc($int3 - 9));
-		$string2 = enum(int, string, 1402, calc($int3 - 9));
+		$string1 = enum(int, string, enum_1401, calc($int3 - 9));
+		$string2 = enum(int, string, enum_1402, calc($int3 - 9));
 	}
 	$string0 = append("<col=735a28><$string1></col>: ", $string0);
 	.cc_setonkey("chatbox_keyinput_listener(event_keypressed, event_keytyped, $component0, cc_getid, null, null, $string1, $string2, 0x46320a, 0)");

@@ -2,8 +2,8 @@
 [clientscript,chat_onsubchange](component $component0, int $windowmode1, boolean $boolean2, boolean $boolean3, enum $enum4)
 def_int $int5 = 0;
 def_int $windowmode6 = getwindowmode;
-def_boolean $boolean7 = if_hassub(162:561);
-def_boolean $boolean8 = if_hassub(162:560);
+def_boolean $boolean7 = if_hassub(interface_162:561);
+def_boolean $boolean8 = if_hassub(interface_162:560);
 def_enum $enum9 = ~toplevel_getcomponents;
 if ($windowmode6 ! $windowmode1) {
 	$int5 = 1;
@@ -27,5 +27,5 @@ if ($windowmode6 ! $windowmode1) {
 }
 if ($int5 = 1) {
 	~script113;
-	if_setonsubchange("chat_onsubchange(event_com, $windowmode6, $boolean7, $boolean8, $enum9)", 162:0);
+	if_setonsubchange("chat_onsubchange(event_com, $windowmode6, $boolean7, $boolean8, $enum9)", interface_162:0);
 }

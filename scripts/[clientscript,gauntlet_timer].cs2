@@ -1,9 +1,9 @@
 // 2915
 [clientscript,gauntlet_timer](int $int0, int $int1)
-def_component $component2 = 637:4;
+def_component $component2 = interface_637:4;
 $int0 = calc($int0 - clientclock);
 if ($int0 <= 0) {
-	if_setontimer(null, 637:3);
+	if_setontimer(null, interface_637:3);
 	return;
 }
 def_int $int3 = calc($int0 / 50);

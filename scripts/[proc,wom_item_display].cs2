@@ -1,6 +1,6 @@
 // 704
 [proc,wom_item_display](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6)(int, int, int)
-def_enum $enum7 = enum(int, enum, 2070, $int2);
+def_enum $enum7 = enum(int, enum, enum_2070, $int2);
 def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 0;
@@ -20,10 +20,10 @@ while ($enum14 ! null) {
 	$int10 = enum_getoutputcount($enum14);
 	$int16 = 0;
 	if ($int2 = 1) {
-		if (~questlist_progress(enum(enum, struct, 2074, $enum14)) = 2) {
+		if (~questlist_progress(enum(enum, struct, enum_2074, $enum14)) = 2) {
 			$int16 = 1;
 		}
-	} else if (($int2 = 2) & (~questlist_progress(enum(enum, struct, 2075, $enum14)) = 2)) {
+	} else if (($int2 = 2) & (~questlist_progress(enum(enum, struct, enum_2075, $enum14)) = 2)) {
 		$int16 = 1;
 	}
 	while ($int8 < $int10) {

@@ -1,7 +1,7 @@
 // 792
 [proc,ge_collect_drawitem](int $int0, inv $inv1, component $component2, int $int3)
-def_graphic $graphic4 = 1120;
-def_graphic $graphic5 = 1121;
+def_graphic $graphic4 = "graphic_1120";
+def_graphic $graphic5 = "graphic_1121";
 if (.cc_find($component2, $int3) = ^true) {
 	.cc_setgraphic($graphic4);
 }

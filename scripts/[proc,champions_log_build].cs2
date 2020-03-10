@@ -1,30 +1,30 @@
 // 1409
 [proc,champions_log_build](int $int0, int $int1, int $int2, int $int3)(int, int)
-cc_create(468:2, ^iftype_model, $int2);
+cc_create(interface_468:2, ^iftype_model, $int2);
 $int2 = calc($int2 + 1);
-.cc_create(468:2, ^iftype_text, $int2);
+.cc_create(interface_468:2, ^iftype_text, $int2);
 $int2 = calc($int2 + 1);
 cc_setposition(0, $int3, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_top);
 cc_setsize(80, 80, ^setsize_abs, ^setsize_abs);
 .cc_setsize(80, 80, ^setsize_minus, ^setsize_abs);
 $int3 = calc($int3 + 80);
-def_model $model4 = enum(int, model, 1469, $int0);
+def_model $model4 = enum(int, model, enum_1469, $int0);
 if ($model4 ! null) {
 	cc_setmodel($model4);
 	cc_setmodelangle(0, 165, 0, 0, 0, 400);
 } else {
 	cc_setnpchead(leon_dcour_3360);
 	cc_setmodelangle(10, 30, 92, 1955, 0, 1100);
-	cc_setmodelanim(579);
+	cc_setmodelanim(seq_579);
 }
 .cc_setcolour(0xffe6a0);
 .cc_settextfont(q8_full);
 .cc_settextshadow(true);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 if (testbit($int1, $int0) = ^true) {
-	.cc_settext("<str><enum(int, string, 1470, $int0)></str>");
+	.cc_settext("<str><enum(int, string, enum_1470, $int0)></str>");
 } else {
-	.cc_settext(enum(int, string, 1470, $int0));
+	.cc_settext(enum(int, string, enum_1470, $int0));
 }
 return($int2, $int3);

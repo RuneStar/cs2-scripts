@@ -36,10 +36,10 @@ def_int $int24 = 0;
 def_string $string0 = "";
 while ($int21 <= $int12) {
 	$int16 = ~telenexus_get_slot($int21);
-	$struct15 = enum(int, struct, 1377, $int16);
+	$struct15 = enum(int, struct, enum_1377, $int16);
 	if ($struct15 ! null) {
 		$int13, $int23, $int20, $int22 = ~script2675($component9, $component1, $component2, $int19, $int13, $int18, $int20, $struct15, $int23, $int17, $int22, $component5);
-		$struct15 = struct_param($struct15, 679);
+		$struct15 = struct_param($struct15, param_679);
 		if ($struct15 ! null) {
 			$int24, $string0 = ~script2664($struct15);
 			if ($int24 = 1) {

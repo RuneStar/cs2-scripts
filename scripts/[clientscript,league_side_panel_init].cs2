@@ -19,8 +19,8 @@ if (~on_mobile = false) {
 	if_setonmouseover("league_side_panel_button_hover($component2, 1)", $component2);
 }
 def_string $string0 = "Relics Overlay";
-def_component $component3 = 656:25;
-def_component $component4 = 656:24;
+def_component $component3 = interface_656:25;
+def_component $component4 = interface_656:24;
 if_setopbase("<col=ff9040><$string0></col>", $component4);
 if_setsize(calc(parawidth($string0, 190, p11_full) + 20), if_getheight($component4), ^setsize_abs, ^setsize_abs, $component4);
 cc_create($component4, ^iftype_graphic, 0);
@@ -42,4 +42,4 @@ if (~on_mobile = false) {
 ~league_side_panel_hudtoggle($component4, $component3);
 if_setonvartransmit("league_side_panel_hudtoggle($component4, cc_getid, .cc_getid, $component3){var1734}", $component4);
 if_setonop("league_side_panel_hudop(event_opindex, $component4, cc_getid, .cc_getid, $component3)", $component4);
-~league_side_panel_update_bar(656:8, %var2615);
+~league_side_panel_update_bar(interface_656:8, %var2615);

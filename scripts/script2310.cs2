@@ -14,7 +14,7 @@ if ($int4 = 1) {
 		.cc_settext($string0);
 		.cc_setontimer("tob_hud_cleartext(event_comid, calc(clientclock + 150))");
 	}
-	if_setontimer(null, 28:1);
+	if_setontimer(null, interface_28:1);
 	return;
 }
 def_int $int5 = -1;
@@ -65,4 +65,4 @@ if (string_length($string0) > 0) {
 }
 def_int $int15 = calc(clientclock + 19);
 ~script2312($int15, $int5, $int6, $int7, $int2, $int11, $int12, $int13, $int14, $int8, $int9, $int10, $int3);
-if_setontimer("script2311(cc_getid, .cc_getid, $int15, $int5, $int6, $int7, $int2, $int11, $int12, $int13, $int14, $int8, $int9, $int10, $int3)", 28:1);
+if_setontimer("script2311(cc_getid, .cc_getid, $int15, $int5, $int6, $int7, $int2, $int11, $int12, $int13, $int14, $int8, $int9, $int10, $int3)", interface_28:1);

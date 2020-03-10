@@ -2,9 +2,9 @@
 [proc,meslayer_mode1](string $string0)
 if ((%varcint5 <= 0) | (%varcint5 = 1)) {
 	~meslayer_open(1);
-	if_settext($string0, 162:44);
-	if_settext("<~text_device("Click", "Tap")> to continue", 162:45);
-	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, 162:45);
-	if_setonclick("meslayer_close(1)", 162:40);
-	if_setonkey(null, 162:45);
+	if_settext($string0, interface_162:44);
+	if_settext("<~text_device("Click", "Tap")> to continue", interface_162:45);
+	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, interface_162:45);
+	if_setonclick("meslayer_close(1)", interface_162:40);
+	if_setonkey(null, interface_162:45);
 }

@@ -1,11 +1,11 @@
 // 2732
 [proc,collection_draw_log](struct $struct0)
-def_component $component1 = 621:19;
-def_component $component2 = 621:35;
-def_component $component3 = 621:36;
+def_component $component1 = interface_621:19;
+def_component $component2 = interface_621:35;
+def_component $component3 = interface_621:36;
 def_int $int4 = 0;
 def_int $int5 = 0;
-def_enum $enum6 = struct_param($struct0, 690);
+def_enum $enum6 = struct_param($struct0, param_690);
 def_int $int7 = 0;
 def_int $int8 = enum_getoutputcount($enum6);
 def_int $int9 = 0;
@@ -15,7 +15,7 @@ def_namedobj $namedobj11 = null;
 def_namedobj $namedobj12 = null;
 cc_deleteall($component1);
 cc_create($component1, ^iftype_text, 0);
-$string0 = struct_param($struct0, 689);
+$string0 = struct_param($struct0, param_689);
 cc_settext($string0);
 cc_settextfont(b12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -30,8 +30,8 @@ while ($int7 < $int8) {
 		$int5 = calc($int5 + 36);
 	}
 	$namedobj11 = enum(int, namedobj, $enum6, $int7);
-	$int9 = inv_total(620, $namedobj11);
-	$namedobj12 = enum(namedobj, namedobj, 2108, $namedobj11);
+	$int9 = inv_total(inv_620, $namedobj11);
+	$namedobj12 = enum(namedobj, namedobj, enum_2108, $namedobj11);
 	if ((%varbit6907 = 1) & ($namedobj12 ! null)) {
 		$namedobj11 = $namedobj12;
 	}

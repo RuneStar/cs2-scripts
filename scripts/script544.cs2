@@ -7,10 +7,10 @@ script544(component $component0, int $int1, int $int2, int $int3, struct $struct
 .cc_setfill(true);
 .cc_settrans(255);
 if (~script3292 = 1) {
-	.cc_setop(1, "Select <col=ff891f><struct_param($struct4, 363)>");
+	.cc_setop(1, "Select <col=ff891f><struct_param($struct4, param_363)>");
 }
 $int7 = calc($int7 + 1);
-def_namedobj $namedobj19 = struct_param($struct4, 150);
+def_namedobj $namedobj19 = struct_param($struct4, param_150);
 if ($namedobj19 = null) {
 	return($int7);
 }
@@ -31,12 +31,12 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 def_int $int21 = 16750623;
 def_int $int22 = 16758847;
-def_int $int23 = struct_param($struct4, 151);
+def_int $int23 = struct_param($struct4, param_151);
 def_string $string0 = "";
 def_string $string1 = ",";
 if ((oc_members($namedobj19) = ^true) & (map_members = ^false)) {
 	cc_setcolour(0x9f9f9f);
-	cc_settext(struct_param($struct4, 363));
+	cc_settext(struct_param($struct4, param_363));
 	$string0 = "You must be on a members' world to purchase that item.";
 	.cc_setonop("script3285($string0, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18)");
 	$int21, $int22 = 10461087, 10461087;
@@ -45,10 +45,10 @@ if ((oc_members($namedobj19) = ^true) & (map_members = ^false)) {
 	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
 	if ($int23 = 1) {
 		$string0 = "You need <~tostring_spacer($int23, $string1)> point to claim that reward.";
-		cc_settext("<struct_param($struct4, 363)><br>  <col=9f9f7b><~tostring_spacer($int23, $string1)> points</col>");
+		cc_settext("<struct_param($struct4, param_363)><br>  <col=9f9f7b><~tostring_spacer($int23, $string1)> points</col>");
 	} else {
 		$string0 = "You need <~tostring_spacer($int23, $string1)> points to claim that reward.";
-		cc_settext("<struct_param($struct4, 363)><br>  <col=9f9f7b><~tostring_spacer($int23, $string1)> points</col>");
+		cc_settext("<struct_param($struct4, param_363)><br>  <col=9f9f7b><~tostring_spacer($int23, $string1)> points</col>");
 	}
 	.cc_setonop("script3285($string0, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18)");
 	$int21, $int22 = 10461087, 10461087;
@@ -56,18 +56,18 @@ if ((oc_members($namedobj19) = ^true) & (map_members = ^false)) {
 	if (($int6 = $int5) & (~script3292 = 1)) {
 		cc_setcolour(^white);
 		if ($int23 = 1) {
-			cc_settext("<struct_param($struct4, 363)><br>  <~tostring_spacer($int23, $string1)> point</col>");
+			cc_settext("<struct_param($struct4, param_363)><br>  <~tostring_spacer($int23, $string1)> point</col>");
 		} else {
-			cc_settext("<struct_param($struct4, 363)><br>  <~tostring_spacer($int23, $string1)> points</col>");
+			cc_settext("<struct_param($struct4, param_363)><br>  <~tostring_spacer($int23, $string1)> points</col>");
 		}
 		.cc_setonmouserepeat(null);
 		.cc_setonmouseleave(null);
 	} else {
 		cc_setcolour(0x00df00);
 		if ($int23 = 1) {
-			cc_settext("<struct_param($struct4, 363)><br>  <col=ff891f><~tostring_spacer($int23, $string1)> point</col>");
+			cc_settext("<struct_param($struct4, param_363)><br>  <col=ff891f><~tostring_spacer($int23, $string1)> point</col>");
 		} else {
-			cc_settext("<struct_param($struct4, 363)><br>  <col=ff891f><~tostring_spacer($int23, $string1)> points</col>");
+			cc_settext("<struct_param($struct4, param_363)><br>  <col=ff891f><~tostring_spacer($int23, $string1)> points</col>");
 		}
 	}
 	cc_settextalign(^settextalign_left, ^settextalign_top, 15);

@@ -169,7 +169,7 @@ while ($int24 < $int15) {
 	$int21 = calc($int21 + 1);
 	.cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
 	.cc_setposition(1, calc($int22 + (($int23 - 9) / 2)), ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setgraphic(enum(int, graphic, 706, $int17));
+	.cc_setgraphic(enum(int, graphic, enum_706, $int17));
 	if (clan_isself($int24) = false) {
 		if (clan_isfriend($int24) = true) {
 			cc_setop(9, "Remove friend");

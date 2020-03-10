@@ -3,9 +3,9 @@
 cc_deleteall($component2);
 def_int $int4 = 0;
 def_int $int5 = 5;
-while (($int4 = 0) | (enum(int, int, 1160, $int4) ! 0)) {
+while (($int4 = 0) | (enum(int, int, enum_1160, $int4) ! 0)) {
 	cc_create($component2, ^iftype_text, $int4);
-	cc_settext(enum(int, string, 1159, $int4));
+	cc_settext(enum(int, string, enum_1159, $int4));
 	cc_setsize(40, 15, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(5 + (($int4 % 2) * 40)), $int5, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p12_full);

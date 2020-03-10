@@ -1,6 +1,6 @@
 // 395
 [proc,stats_setlevels](stat $stat0, component $component1, string $string0, component $component2)
-def_boolean $boolean3 = enum(stat, boolean, 1497, $stat0);
+def_boolean $boolean3 = enum(stat, boolean, enum_1497, $stat0);
 cc_settext(tostring(stat($stat0)));
 def_int $int4 = stat_base($stat0);
 .cc_settext(tostring($int4));
@@ -11,13 +11,13 @@ def_string $string3 = ~tostring_spacer($int5, $string1);
 def_int $int6 = 0;
 if (%varbit4181 = 0) {
 	if ($int4 < 99) {
-		$int6 = enum(int, int, 256, calc($int4 + 1));
+		$int6 = enum(int, int, enum_256, calc($int4 + 1));
 		$string2 = append($string2, "|Next level at:|Remaining XP:");
 		$string3 = append($string3, "|<~tostring_spacer($int6, $string1)>|<~tostring_spacer(calc($int6 - $int5), $string1)>");
 	}
 } else {
 	$string2 = append($string2, "|Next level at:");
-	$string3 = append($string3, "|<~tostring_spacer(enum(int, int, 256, calc($int4 + 1)), $string1)>");
+	$string3 = append($string3, "|<~tostring_spacer(enum(int, int, enum_256, calc($int4 + 1)), $string1)>");
 }
 def_int $int7 = 0;
 def_int $int8 = 0;

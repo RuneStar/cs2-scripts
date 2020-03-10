@@ -3,37 +3,37 @@
 def_int $int0 = 0;
 while ($int0 <= 5) {
 	if ((%varcint42 = $int0) & (%varcint41 = $int0)) {
-		if_setgraphic(~graphic_device("small_button_pressed_highlight", "med_buttons,3"), enum(int, component, 683, $int0));
+		if_setgraphic(~graphic_device("small_button_pressed_highlight", "med_buttons,3"), enum(int, component, enum_683, $int0));
 	} else if (%varcint42 = $int0) {
-		if_setgraphic(~graphic_device("small_button_highlight", "med_buttons,0"), enum(int, component, 683, $int0));
+		if_setgraphic(~graphic_device("small_button_highlight", "med_buttons,0"), enum(int, component, enum_683, $int0));
 	} else if (%varcint41 = $int0) {
-		if_setgraphic(~graphic_device("small_button_pressed", "med_buttons,3"), enum(int, component, 683, $int0));
+		if_setgraphic(~graphic_device("small_button_pressed", "med_buttons,3"), enum(int, component, enum_683, $int0));
 	} else if (calc((~chat_alert_get($int0) / 25) % 2) = 1) {
-		if_setgraphic(~graphic_device("small_button_blue", "med_buttons,1"), enum(int, component, 683, $int0));
+		if_setgraphic(~graphic_device("small_button_blue", "med_buttons,1"), enum(int, component, enum_683, $int0));
 	} else {
-		if_setgraphic(~graphic_device("small_button", "med_buttons,0"), enum(int, component, 683, $int0));
+		if_setgraphic(~graphic_device("small_button", "med_buttons,0"), enum(int, component, enum_683, $int0));
 	}
 	$int0 = calc($int0 + 1);
 }
 $int0 = 2;
 if (%varbit26 = 1) {
-	if_settext("<col=ffff00>Filtered", 162:12);
+	if_settext("<col=ffff00>Filtered", interface_162:12);
 } else {
-	if_settext("On", 162:12);
+	if_settext("On", interface_162:12);
 }
 def_int $int1 = 0;
 while ($int0 <= 5) {
 	switch_int (~chat_get_filter($int0)) {
 		case 1 :
-			if_settext("<col=ffff00>Friends", enum(int, component, 684, $int0));
+			if_settext("<col=ffff00>Friends", enum(int, component, enum_684, $int0));
 		case 2 :
-			if_settext("<col=ff0000>Off", enum(int, component, 684, $int0));
+			if_settext("<col=ff0000>Off", enum(int, component, enum_684, $int0));
 		case 3 :
-			if_settext("<col=00ffff>Hide", enum(int, component, 684, $int0));
+			if_settext("<col=00ffff>Hide", enum(int, component, enum_684, $int0));
 		case 4 :
-			if_settext("<col=00afff>Autochat", enum(int, component, 684, $int0));
+			if_settext("<col=00afff>Autochat", enum(int, component, enum_684, $int0));
 		case default :
-			if_settext("On", enum(int, component, 684, $int0));
+			if_settext("On", enum(int, component, enum_684, $int0));
 	}
 	$int0 = calc($int0 + 1);
 }

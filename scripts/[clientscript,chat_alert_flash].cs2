@@ -6,7 +6,7 @@ if (calc($int1 % 25) = 0) {
 	~redraw_chat_buttons;
 	$int2 = calc($int1 / 25);
 	if ($int2 <= 1) {
-		if_setontimer(null, enum(int, component, 683, $int0));
+		if_setontimer(null, enum(int, component, enum_683, $int0));
 	} else {
 		~chat_alert_set($int0, calc($int1 - 1));
 	}

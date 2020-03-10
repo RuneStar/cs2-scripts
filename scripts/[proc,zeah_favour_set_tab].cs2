@@ -55,7 +55,7 @@ if_sethide(false, $component15);
 if (cc_find($component14, 0) = ^true) {
 	cc_setgraphic("banktabs,2");
 }
-if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component2, enum(int, string, 1264, %varcint79), 25, 512)", $component14);
+if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, $component2, enum(int, string, enum_1264, %varcint79), 25, 512)", $component14);
 if_setonmouseleave("deltooltip($component2)", $component14);
 if_setonop("opsound(0, 0)", $component14);
 def_int $int16 = if_getheight($component15);

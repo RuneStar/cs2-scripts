@@ -5,7 +5,7 @@ def_int $int3 = calc(if_getheight($component0) / 4);
 def_int $int4 = if_getwidth($component0);
 def_int $int5 = 0;
 def_int $int6 = 1;
-def_int $int7 = enum_getoutputcount(2750);
+def_int $int7 = enum_getoutputcount(enum_2750);
 def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 0;
@@ -13,7 +13,7 @@ def_int $int11 = if_getwidth($component2);
 def_int $int12 = calc(if_getheight($component2) / 4);
 def_namedobj $namedobj13 = null;
 while ($int5 < $int7) {
-	$namedobj13 = enum(int, namedobj, 2750, calc($int5 + 1));
+	$namedobj13 = enum(int, namedobj, enum_2750, calc($int5 + 1));
 	if ($namedobj13 ! null) {
 		cc_create($component0, ^iftype_graphic, $int8);
 		cc_setoutline(1);
@@ -28,7 +28,7 @@ while ($int5 < $int7) {
 		cc_settextfont(p11_full);
 		cc_setcolour(0xff981f);
 		cc_settextshadow(true);
-		cc_settext("<oc_name($namedobj13)> x<tostring(enum(namedobj, int, 2751, $namedobj13))>");
+		cc_settext("<oc_name($namedobj13)> x<tostring(enum(namedobj, int, enum_2751, $namedobj13))>");
 		$int8 = calc($int8 + 1);
 	}
 	cc_create($component0, ^iftype_text, $int8);

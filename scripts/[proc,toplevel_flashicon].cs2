@@ -2,7 +2,7 @@
 [proc,toplevel_flashicon](component $component0, component $component1)
 def_enum $enum2 = ~toplevel_getcomponents;
 def_int $int3 = calc(%varbit3756 - 1);
-def_component $component4 = enum(int, component, 1139, $int3);
+def_component $component4 = enum(int, component, enum_1139, $int3);
 $component4 = enum(component, component, $enum2, $component4);
 if ($component4 ! $component0) {
 	return;

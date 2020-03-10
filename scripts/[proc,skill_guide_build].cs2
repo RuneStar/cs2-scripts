@@ -1,11 +1,11 @@
 // 656
 [proc,skill_guide_build](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
-if_settext(enum(int, string, 108, %varbit4371), $component0);
+if_settext(enum(int, string, enum_108, %varbit4371), $component0);
 def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 0;
 def_string $string0 = "";
-def_component $component11 = enum(int, component, 990, $int9);
+def_component $component11 = enum(int, component, enum_990, $int9);
 $string0, $int10 = ~skill_guide_subsection(%varbit4371, $int9);
 while (($component11 ! null) & (string_length($string0) > 0)) {
 	if_settext($string0, $component11);
@@ -18,7 +18,7 @@ while (($component11 ! null) & (string_length($string0) > 0)) {
 		$int8 = $int9;
 	}
 	$int9 = calc($int9 + 1);
-	$component11 = enum(int, component, 990, $int9);
+	$component11 = enum(int, component, enum_990, $int9);
 	$string0, $int10 = ~skill_guide_subsection(%varbit4371, $int9);
 }
 def_int $int12 = $int9;
@@ -27,9 +27,9 @@ if ($int12 >= 2) {
 	if_sethide(false, $component5);
 	if_sethide(false, $component6);
 	if_sethide(false, $component7);
-	if_setmodel(enum(int, model, 991, $int12), $component6);
-	if_setposition(if_getx($component7), enum(int, int, 992, $int12), ^setpos_abs_left, ^setpos_abs_top, $component7);
-	$component11 = enum(int, component, 990, $int9);
+	if_setmodel(enum(int, model, enum_991, $int12), $component6);
+	if_setposition(if_getx($component7), enum(int, int, enum_992, $int12), ^setpos_abs_left, ^setpos_abs_top, $component7);
+	$component11 = enum(int, component, enum_990, $int9);
 	while ($component11 ! null) {
 		if ($int9 < $int12) {
 			if_sethide(false, $component11);
@@ -39,17 +39,17 @@ if ($int12 >= 2) {
 			if_setonop(null, $component11);
 		}
 		$int9 = calc($int9 + 1);
-		$component11 = enum(int, component, 990, $int9);
+		$component11 = enum(int, component, enum_990, $int9);
 	}
 } else {
 	if_sethide(true, $component5);
 	if_sethide(true, $component6);
 	if_sethide(true, $component7);
-	$component11 = enum(int, component, 990, $int9);
+	$component11 = enum(int, component, enum_990, $int9);
 	while ($component11 ! null) {
 		if_sethide(true, $component11);
 		$int9 = calc($int9 + 1);
-		$component11 = enum(int, component, 990, $int9);
+		$component11 = enum(int, component, enum_990, $int9);
 	}
 }
 cc_deleteall($component2);

@@ -5,10 +5,10 @@ def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
 while ($int4 < 31) {
-	$int3 = enum(int, int, 1829, $int4);
+	$int3 = enum(int, int, enum_1829, $int4);
 	if (cc_find($component0, $int3) = ^true) {
 		$int1, $int2 = ~ds2_fossil_map_getslot($int3);
-		cc_setmodel(enum(int, model, 1828, $int1));
+		cc_setmodel(enum(int, model, enum_1828, $int1));
 		cc_setmodelangle(0, 0, 512, calc(512 * $int2), 0, 625);
 	}
 	$int4 = calc($int4 + 1);

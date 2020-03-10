@@ -3,7 +3,7 @@ script1534(int $int0, component $component1, int $int2, string $string0)
 if ($int0 ! 1) {
 	return;
 }
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 if (cc_find($component1, $int2) = ^true) {
 	cc_setcolour(0x7f7f7f);
 	cc_settext("...");
@@ -13,6 +13,6 @@ if_setonmouseleave(null, $component1);
 if_setonop(null, $component1);
 if_clearops($component1);
 if_setontimer("script1535($component1, $int2, $string0, calc(clientclock + 80))", $component1);
-if (cc_find(507:3, enum(component, int, 1539, $component1)) = ^true) {
+if (cc_find(interface_507:3, enum(component, int, enum_1539, $component1)) = ^true) {
 	cc_resume_pausebutton;
 }

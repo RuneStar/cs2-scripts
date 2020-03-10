@@ -1,16 +1,16 @@
 // 2664
 script2664(struct $struct0)(int, string)
-def_namedobj $namedobj1 = struct_param($struct0, 664);
-def_int $int2 = struct_param($struct0, 668);
-def_namedobj $namedobj3 = struct_param($struct0, 665);
-def_int $int4 = struct_param($struct0, 669);
-def_namedobj $namedobj5 = struct_param($struct0, 666);
-def_int $int6 = struct_param($struct0, 670);
-def_namedobj $namedobj7 = struct_param($struct0, 667);
-def_int $int8 = struct_param($struct0, 671);
-def_stat $stat9 = struct_param($struct0, 672);
-def_int $int10 = struct_param($struct0, 673);
-def_int $int11 = struct_param($struct0, 674);
+def_namedobj $namedobj1 = struct_param($struct0, param_664);
+def_int $int2 = struct_param($struct0, param_668);
+def_namedobj $namedobj3 = struct_param($struct0, param_665);
+def_int $int4 = struct_param($struct0, param_669);
+def_namedobj $namedobj5 = struct_param($struct0, param_666);
+def_int $int6 = struct_param($struct0, param_670);
+def_namedobj $namedobj7 = struct_param($struct0, param_667);
+def_int $int8 = struct_param($struct0, param_671);
+def_stat $stat9 = struct_param($struct0, param_672);
+def_int $int10 = struct_param($struct0, param_673);
+def_int $int11 = struct_param($struct0, param_674);
 def_string $string0 = "";
 def_int $int12 = 1;
 def_int $int13 = 1;
@@ -24,7 +24,7 @@ if ($stat9 ! null) {
 		$string0 = "<$string0><col=ff0000>";
 		$int12 = 0;
 	}
-	$string0 = "<$string0>Level <tostring($int10)> <enum(stat, string, 680, $stat9)>.</col>";
+	$string0 = "<$string0>Level <tostring($int10)> <enum(stat, string, enum_680, $stat9)>.</col>";
 }
 if ($int11 = 1) {
 	if ($stat9 ! null) {
@@ -197,19 +197,19 @@ if ($int11 = 1) {
 	}
 }
 def_string $string1 = "";
-if (($namedobj1 ! null) & (calc(inv_total(inv, $namedobj1) - inv_total(619, $namedobj1)) < $int2)) {
+if (($namedobj1 ! null) & (calc(inv_total(inv, $namedobj1) - inv_total(inv_619, $namedobj1)) < $int2)) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }
-if (($namedobj3 ! null) & (calc(inv_total(inv, $namedobj3) - inv_total(619, $namedobj3)) < $int4)) {
+if (($namedobj3 ! null) & (calc(inv_total(inv, $namedobj3) - inv_total(inv_619, $namedobj3)) < $int4)) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }
-if (($namedobj5 ! null) & (calc(inv_total(inv, $namedobj5) - inv_total(619, $namedobj5)) < $int6)) {
+if (($namedobj5 ! null) & (calc(inv_total(inv, $namedobj5) - inv_total(inv_619, $namedobj5)) < $int6)) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }
-if (($namedobj7 ! null) & (calc(inv_total(inv, $namedobj7) - inv_total(619, $namedobj7)) < $int8)) {
+if (($namedobj7 ! null) & (calc(inv_total(inv, $namedobj7) - inv_total(inv_619, $namedobj7)) < $int8)) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }

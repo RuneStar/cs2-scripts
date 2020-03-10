@@ -1,7 +1,7 @@
 // 549
 script549
 if (string_length(%varcstring359) > 0) {
-	if_settext("Filter public chat: <col=0000ff><escape(lowercase(%varcstring359))></col>", 162:44);
+	if_settext("Filter public chat: <col=0000ff><escape(lowercase(%varcstring359))></col>", interface_162:44);
 } else {
-	if_settext("Filter public chat: <col=7f0000>[no filter]</col>", 162:44);
+	if_settext("Filter public chat: <col=7f0000>[no filter]</col>", interface_162:44);
 }

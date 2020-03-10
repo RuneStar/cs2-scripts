@@ -1,6 +1,6 @@
 // 497
 [proc,wilderness_lootingbag_draw](inv $inv0)
-cc_deleteall(81:5);
+cc_deleteall(interface_81:5);
 def_int $int1 = inv_size($inv0);
 def_int $intarray0($int1);
 $intarray0(0) = %varcint81;
@@ -37,7 +37,7 @@ def_int $int4 = 0;
 def_string $string0 = "Invalid item.";
 def_int $int5 = 0;
 while ($int5 < $int1) {
-	cc_create(81:5, ^iftype_graphic, $int5);
+	cc_create(interface_81:5, ^iftype_graphic, $int5);
 	$obj2 = inv_getobj($inv0, $int5);
 	if ($obj2 ! null) {
 		$int3, $int4 = inv_getnum($inv0, $int5), calc($int4 + 1);
@@ -56,10 +56,10 @@ while ($int5 < $int1) {
 				cc_settrans(0);
 				cc_setonop("cc_settrans_temporarily(event_com, event_comid, 150, 0)");
 				if ($intarray0($int5) <= -1) {
-					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, 81:7, $string0, 25, 512)");
-					cc_setonmouseleave("deltooltip(81:7)");
+					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, interface_81:7, $string0, 25, 512)");
+					cc_setonmouseleave("deltooltip(interface_81:7)");
 				} else {
-					~trade_tooltip($int3, $intarray0($int5), 81:7);
+					~trade_tooltip($int3, $intarray0($int5), interface_81:7);
 				}
 			}
 			cc_setop(1, "Store-1");
@@ -70,7 +70,7 @@ while ($int5 < $int1) {
 		} else {
 			cc_settrans(0);
 			cc_setop(10, "Examine");
-			~trade_tooltip($int3, $intarray0($int5), 81:7);
+			~trade_tooltip($int3, $intarray0($int5), interface_81:7);
 		}
 		cc_setopbase("<col=ff9040><oc_name($obj2)>");
 	} else {
@@ -78,10 +78,10 @@ while ($int5 < $int1) {
 	}
 	$int5 = calc($int5 + 1);
 }
-if (($inv0 = 516) & ($int4 <= 0)) {
-	cc_create(81:5, ^iftype_text, $int5);
+if (($inv0 = inv_516) & ($int4 <= 0)) {
+	cc_create(interface_81:5, ^iftype_text, $int5);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(if_getwidth(81:5), if_getheight(81:5), ^setsize_abs, ^setsize_abs);
+	cc_setsize(if_getwidth(interface_81:5), if_getheight(interface_81:5), ^setsize_abs, ^setsize_abs);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);

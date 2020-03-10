@@ -1,6 +1,6 @@
 // 2719
 [proc,1v1arena_hud_buildplayer](int $int0, int $int1, string $string0, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)(string, int, int, int, int, int, int)
-def_component $component8 = enum(int, component, 1378, $int0);
+def_component $component8 = enum(int, component, enum_1378, $int0);
 if ($component8 = null) {
 	return($string0, $int2, $int3, $int4, $int5, $int6, $int7);
 }
@@ -38,19 +38,19 @@ if (string_length($string1) > 0) {
 	cc_settext($string1);
 	switch_int ($int1) {
 		case 1 :
-			~script2720(618:8, $int3, $component8);
+			~script2720(interface_618:8, $int3, $component8);
 			$int3 = calc($int3 + 1);
 		case 2 :
-			~script2720(618:9, $int4, $component8);
+			~script2720(interface_618:9, $int4, $component8);
 			$int4 = calc($int4 + 1);
 		case 3 :
-			~script2720(618:10, $int5, $component8);
+			~script2720(interface_618:10, $int5, $component8);
 			$int5 = calc($int5 + 1);
 		case 4 :
-			~script2720(618:11, $int6, $component8);
+			~script2720(interface_618:11, $int6, $component8);
 			$int6 = calc($int6 + 1);
 		case 5 :
-			~script2720(618:12, $int7, $component8);
+			~script2720(interface_618:12, $int7, $component8);
 			$int7 = calc($int7 + 1);
 		case default :
 			if_setposition(calc(if_getwidth($component8) * ($int2 % 4)), calc(if_getheight($component8) * (4 - ($int2 / 4))), ^setpos_abs_left, ^setpos_abs_bottom, $component8);

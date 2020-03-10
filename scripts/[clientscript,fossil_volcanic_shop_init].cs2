@@ -7,7 +7,7 @@ def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = 0;
-def_namedobj $namedobj10 = enum(int, namedobj, 1779, $int9);
+def_namedobj $namedobj10 = enum(int, namedobj, enum_1779, $int9);
 while ($namedobj10 ! null) {
 	cc_create($component1, ^iftype_rectangle, $int5);
 	$int5 = calc($int5 + 1);
@@ -57,7 +57,7 @@ while ($namedobj10 ! null) {
 	cc_setopbase("<col=ff9040><oc_name($namedobj10)></col>");
 	cc_setonop("opsound(event_opindex, 1086)");
 	$int9 = calc($int9 + 1);
-	$namedobj10 = enum(int, namedobj, 1779, $int9);
+	$namedobj10 = enum(int, namedobj, enum_1779, $int9);
 }
 if ($int9 > 0) {
 	if (calc($int9 % 2) = 1) {
@@ -96,7 +96,7 @@ def_int $int14 = 0;
 while ($int9 > 0) {
 	$int9 = calc($int9 - 1);
 	if (cc_find($component1, $int9) = ^true) {
-		$namedobj10 = enum(int, namedobj, 1779, $int9);
+		$namedobj10 = enum(int, namedobj, enum_1779, $int9);
 		.cc_create($component1, ^iftype_graphic, $int5);
 		$int5 = calc($int5 + 1);
 		.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -127,7 +127,7 @@ while ($int9 > 0) {
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_settextshadow(true);
 		.cc_settextfont(p11_full);
-		$int14 = enum(obj, int, 1780, $namedobj10);
+		$int14 = enum(obj, int, enum_1780, $namedobj10);
 		if (($namedobj10 = heat_proof_vessel_21539) & (%varbit5959 = 1)) {
 			.cc_settext("<col=ff0000>Already unlocked</col>");
 			.cc_settextshadow(false);

@@ -4,6 +4,6 @@ if (~keypress_permit(12, -1) = 0) {
 	return;
 }
 if (($key0 ! ^key_escape) & (~keybind_get_slot($key0) = 4)) {
-	sound_synth(2266, 1, 0);
+	sound_synth(synth_2266, 1, 0);
 	~bankmain_viewbuttons($component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22);
 }

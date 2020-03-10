@@ -1,8 +1,8 @@
 // 1119
 [clientscript,farming_view_setpanel](int $int0, obj $obj1, coord $coord2, int $int3)
-def_component $component4 = enum(int, component, 1235, $int0);
-def_component $component5 = enum(int, component, 1236, $int0);
-def_component $component6 = enum(int, component, 1237, $int0);
+def_component $component4 = enum(int, component, enum_1235, $int0);
+def_component $component5 = enum(int, component, enum_1236, $int0);
+def_component $component6 = enum(int, component, enum_1237, $int0);
 if ((($component4 = null) | ($component5 = null)) | ($component6 = null)) {
 	return;
 }
@@ -49,7 +49,7 @@ cc_settextfont(b12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
-cc_settext(enum(int, string, 1233, $int0));
+cc_settext(enum(int, string, enum_1233, $int0));
 cc_create($component6, ^iftype_text, $int10);
 $int10 = calc($int10 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
@@ -60,9 +60,9 @@ cc_setcolour(0xff981f);
 cc_settextshadow(true);
 def_string $string0 = "";
 if (($obj1 = bucket_1925) | ($obj1 = weeds_6055)) {
-	$string0 = enum(int, string, 1234, $int0);
+	$string0 = enum(int, string, enum_1234, $int0);
 } else {
-	$string0 = enum(obj, string, 1238, $obj1);
+	$string0 = enum(obj, string, enum_1238, $obj1);
 }
 cc_settext($string0);
 def_int $int11 = if_getheight($component6);
@@ -173,5 +173,5 @@ if ($int9 > 0) {
 	cc_settext(tostring($int9));
 	$string0 = append($string0, "<br>Minimum yield: <tostring($int9)>");
 }
-if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, 179:280, $string0, 25, 512)", $component6);
-if_setonmouseleave("deltooltip(179:280)", $component6);
+if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_179:280, $string0, 25, 512)", $component6);
+if_setonmouseleave("deltooltip(interface_179:280)", $component6);

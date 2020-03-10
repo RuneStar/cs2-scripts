@@ -1,6 +1,6 @@
 // 649
 [proc,poh_add_room_initbutton](int $int0, int $int1, string $string0, int $int2)(int)
-def_component $component3 = enum(int, component, 984, $int1);
+def_component $component3 = enum(int, component, enum_984, $int1);
 if ($component3 = null) {
 	return($int0);
 }
@@ -38,7 +38,7 @@ cc_setposition(238, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-def_obj $obj8 = enum(int, obj, 250, $int1);
+def_obj $obj8 = enum(int, obj, enum_250, $int1);
 if ($obj8 ! null) {
 	$int7 = oc_cost($obj8);
 } else {

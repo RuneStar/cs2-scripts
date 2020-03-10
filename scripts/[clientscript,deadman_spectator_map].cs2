@@ -1,10 +1,10 @@
 // 2185
 [clientscript,deadman_spectator_map](int $int0)
-if_sethide(true, 595:22);
-if_sethide(true, 595:30);
-if_setsize(12, 12, ^setsize_minus, ^setsize_minus, 595:7);
+if_sethide(true, interface_595:22);
+if_sethide(true, interface_595:30);
+if_setsize(12, 12, ^setsize_minus, ^setsize_minus, interface_595:7);
 if ($int0 = 1) {
-	if_sethide(true, 595:38);
+	if_sethide(true, interface_595:38);
 }
 setshowloadingmessages(false);
 worldmap_disableelements(false);

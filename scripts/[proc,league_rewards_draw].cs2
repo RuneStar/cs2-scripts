@@ -4,7 +4,7 @@ cc_deleteall($component4);
 def_int $int12 = 0;
 def_int $int13 = 5;
 def_int $int14 = calc(if_getwidth($component4) / 2);
-def_enum $enum15 = 2670;
+def_enum $enum15 = enum_2670;
 def_int $int16 = 0;
 def_int $int17 = 1;
 def_int $int18 = 0;
@@ -14,10 +14,10 @@ def_int $int21 = 0;
 %varbit10110 = -1;
 while ($int17 <= enum_getoutputcount($enum15)) {
 	$struct19 = enum(int, struct, $enum15, $int17);
-	$enum20 = struct_param($struct19, 87);
+	$enum20 = struct_param($struct19, param_87);
 	if ($enum20 ! null) {
 		cc_create($component4, ^iftype_text, $int21);
-		cc_settext("<struct_param($struct19, 858)> Rewards");
+		cc_settext("<struct_param($struct19, param_858)> Rewards");
 		cc_settextfont(b12_full);
 		cc_settextshadow(true);
 		cc_setcolour(0xff891f);

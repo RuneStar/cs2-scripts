@@ -6,6 +6,6 @@ if ($int0 ! 1) {
 if (~mobile_setting_check = 0) {
 	return;
 }
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 %varbit6374 = calc(1 - %varbit6374);
 ~options_chatscrollside($component1, $component2);

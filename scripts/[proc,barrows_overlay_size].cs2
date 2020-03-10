@@ -21,13 +21,13 @@ if (~inzone(0_55_151_0_0, 3_55_151_63_63, coord) = 1) {
 	if_sethide(true, $component9);
 }
 ~hud_clamp($component1);
-def_int $int15 = enum(enum, int, 1135, $enum11);
+def_int $int15 = enum(enum, int, enum_1135, $enum11);
 def_int $int16 = 5;
 def_int $int17 = 200;
 def_int $int18 = 20;
 def_int $setposh19 = ^setpos_abs_left;
 if ($int15 > 0) {
-	if ($enum11 = 1745) {
+	if ($enum11 = enum_1745) {
 		$int15, $int16 = 45, 220;
 		$int17, $int18 = 180, 60;
 		$setposh19 = ^setpos_abs_right;

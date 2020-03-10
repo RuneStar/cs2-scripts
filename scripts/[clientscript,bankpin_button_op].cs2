@@ -3,7 +3,7 @@
 if (($int0 < 0) | ($int0 >= 10)) {
 	return;
 }
-sound_synth(1041, 1, 0);
+sound_synth(synth_1041, 1, 0);
 if ($int1 = 3) {
 	$int2 = calc($int2 + $int0);
 	resume_countdialog(tostring($int2));

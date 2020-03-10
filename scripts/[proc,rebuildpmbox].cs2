@@ -6,20 +6,20 @@ def_int $int3 = 103;
 def_int $int4 = 4;
 def_int $int5 = 23;
 def_enum $enum6 = ~toplevel_getcomponents;
-if (enum(enum, int, 1136, $enum6) > 0) {
-	if ($enum6 = 1745) {
-		$setposv2, $int3, $int1, $int5 = ^setpos_abs_top, 102, enum(enum, int, 1960, $enum6), 30;
+if (enum(enum, int, enum_1136, $enum6) > 0) {
+	if ($enum6 = enum_1745) {
+		$setposv2, $int3, $int1, $int5 = ^setpos_abs_top, 102, enum(enum, int, enum_1960, $enum6), 30;
 	}
 	if ((%varcint41 = 1337) & (~script922 = 1)) {
 		$int4 = calc($int4 + $int5);
 	} else {
-		$int4 = calc($int4 + if_getheight(enum(component, component, $enum6, 161:31)));
+		$int4 = calc($int4 + if_getheight(enum(component, component, $enum6, interface_161:31)));
 	}
 }
 def_int $int7 = $int4;
-def_int $int8 = if_getwidth(163:0);
+def_int $int8 = if_getwidth(interface_163:0);
 def_int $int9 = 0;
-def_component $component10 = enum(int, component, 580, $int9);
+def_component $component10 = enum(int, component, enum_580, $int9);
 def_int $int11 = 0;
 def_string $string0 = "";
 if (reboottimer > 0) {
@@ -29,14 +29,14 @@ if (reboottimer > 0) {
 	} else {
 		$string0 = "System update in: <tostring(calc(reboottimer / 3000))>:<tostring($int11)>";
 	}
-	$int7 = calc($int7 + ~script199($string0, $int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^yellow, true));
+	$int7 = calc($int7 + ~script199($string0, $int9, $component10, interface_163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^yellow, true));
 	if_clearops($component10);
 	if_setonop(null, $component10);
 	if_setonmouserepeat(null, $component10);
 	if_setonmouseleave(null, $component10);
 	if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $component10);
 	$int9 = calc($int9 + 1);
-	$component10 = enum(int, component, 580, $int9);
+	$component10 = enum(int, component, enum_580, $int9);
 }
 def_int $int12 = -1;
 def_int $int13 = -1;
@@ -50,10 +50,10 @@ if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (c
 	$int12, $int13, $string1, $string2, $string0, $int14 = chat_gethistory_bytypeandline(^chattype_broadcast, 0);
 	if ($int12 ! -1) {
 		$string0, $string3, $int15 = ~chat_broadcast_parseurl($string0);
-		$int7 = calc($int7 + ~script199($string0, $int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^yellow, true));
+		$int7 = calc($int7 + ~script199($string0, $int9, $component10, interface_163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^yellow, true));
 		if_clearops($component10);
 		if ((string_length($string3) > 0) & ($int15 ! -1)) {
-			$boolean16 = enum(int, boolean, 2761, $int15);
+			$boolean16 = enum(int, boolean, enum_2761, $int15);
 			if (clienttype ! ^clienttype_ios) {
 				$boolean16 = false;
 			}
@@ -74,7 +74,7 @@ if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (c
 		if_setopbase("<col=ff9040>Notification</col>", $component10);
 		if_setonop("chat_broadcast_op(event_opindex, $string3, $int15)", $component10);
 		$int9 = calc($int9 + 1);
-		$component10 = enum(int, component, 580, $int9);
+		$component10 = enum(int, component, enum_580, $int9);
 	}
 }
 $int12 = $int0;
@@ -85,14 +85,14 @@ if ((%var287 = 1) & ((%varcint41 ! 1337) | (%varbit4089 = 0))) {
 		if (~pm_filtertest($chattype17, $string1, $int13, $int14) = 1) {
 			switch_int ($chattype17) {
 				case ^chattype_privatechat, ^chattype_modprivatechat :
-					$int7 = calc($int7 + ~script203("From <$string1>:", $string0, $int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
+					$int7 = calc($int7 + ~script203("From <$string1>:", $string0, $int9, $component10, interface_163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 				case ^chattype_privatechatout :
-					$int7 = calc($int7 + ~script203("To <$string1>:", $string0, $int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
+					$int7 = calc($int7 + ~script203("To <$string1>:", $string0, $int9, $component10, interface_163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 				case default :
-					$int7 = calc($int7 + ~script199($string0, $int9, $component10, 163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
+					$int7 = calc($int7 + ~script199($string0, $int9, $component10, interface_163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 					if (($chattype17 = ^chattype_loginlogoutnotification) & (%varbit1627 = 0)) {
 						%varcint65 = calc(($int13 + 500) + 1);
-						if_setontimer("script664(false)", 162:0);
+						if_setontimer("script664(false)", interface_162:0);
 					}
 			}
 			if_clearops($component10);
@@ -112,7 +112,7 @@ if ((%var287 = 1) & ((%varcint41 ! 1337) | (%varbit4089 = 0))) {
 			if_setonmouserepeat(null, $component10);
 			if_setonmouseleave(null, $component10);
 			$int9 = calc($int9 + 1);
-			$component10 = enum(int, component, 580, $int9);
+			$component10 = enum(int, component, enum_580, $int9);
 		}
 		$int12 = chat_getprevuid($int12);
 	}
@@ -123,14 +123,14 @@ while ($component10 ! null) {
 	if_setonmouserepeat(null, $component10);
 	if_setonmouseleave(null, $component10);
 	if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $component10);
-	if (cc_find(163:0, calc($int9 * 2)) = ^true) {
+	if (cc_find(interface_163:0, calc($int9 * 2)) = ^true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(163:0, calc(($int9 * 2) + 1)) = ^true) {
+	if (cc_find(interface_163:0, calc(($int9 * 2) + 1)) = ^true) {
 		cc_settext("");
 		cc_sethide(true);
 	}
 	$int9 = calc($int9 + 1);
-	$component10 = enum(int, component, 580, $int9);
+	$component10 = enum(int, component, enum_580, $int9);
 }

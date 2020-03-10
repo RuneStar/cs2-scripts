@@ -2,37 +2,37 @@
 [proc,grouping_rebuild]
 def_string $string0 = "";
 if ((%varcint64 > 0) & (%varcint64 <= 20)) {
-	$string0 = enum(int, string, 848, %varcint64);
-	if_settext($string0, 76:8);
+	$string0 = enum(int, string, enum_848, %varcint64);
+	if_settext($string0, interface_76:8);
 } else {
 	%varcint64 = 0;
-	if_settext("Select a minigame...", 76:8);
+	if_settext("Select a minigame...", interface_76:8);
 }
-def_int $int0 = enum(int, int, 850, %varcint64);
+def_int $int0 = enum(int, int, enum_850, %varcint64);
 if ($int0 = -1) {
-	if_settext("---", 76:22);
-	if_setcolour(0xff981f, 76:22);
+	if_settext("---", interface_76:22);
+	if_setcolour(0xff981f, interface_76:22);
 } else {
 	if ((%varcint64 = 4) & (%varcint103 = 0)) {
 		$int0 = 383;
 	}
-	if_settext(tostring($int0), 76:22);
+	if_settext(tostring($int0), interface_76:22);
 	if (map_world = $int0) {
-		if_setcolour(0x0dc10d, 76:22);
+		if_setcolour(0x0dc10d, interface_76:22);
 	} else {
-		if_setcolour(^yellow, 76:22);
+		if_setcolour(^yellow, interface_76:22);
 	}
 }
-cc_deleteall(76:26);
+cc_deleteall(interface_76:26);
 def_int $int1 = 0;
 while ($int1 < %varcint64) {
-	cc_create(76:26, ^iftype_rectangle, $int1);
+	cc_create(interface_76:26, ^iftype_rectangle, $int1);
 	cc_sethide(true);
 	$int1 = calc($int1 + 1);
 }
-cc_create(76:26, ^iftype_rectangle, %varcint64);
+cc_create(interface_76:26, ^iftype_rectangle, %varcint64);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(if_getwidth(76:26), if_getheight(76:26), ^setsize_abs, ^setsize_abs);
+cc_setsize(if_getwidth(interface_76:26), if_getheight(interface_76:26), ^setsize_abs, ^setsize_abs);
 cc_setfill(true);
 cc_settrans(255);
 if (%varcint64 = 0) {
@@ -43,31 +43,31 @@ if (%varcint64 = 0) {
 def_int $int2 = 0;
 def_string $string1 = lowercase(clan_getchatownername);
 def_int $int3 = 1;
-def_string $string2 = enum(int, string, 849, $int3);
+def_string $string2 = enum(int, string, enum_849, $int3);
 while (string_length($string2) > 0) {
 	if (compare($string1, $string2) = 0) {
 		$int2 = $int3;
 	}
 	$int3 = calc($int3 + 1);
-	$string2 = enum(int, string, 849, $int3);
+	$string2 = enum(int, string, enum_849, $int3);
 }
 if (%varcint64 = 0) {
-	if_settext("---", 76:25);
-	if_clearops(76:23);
-	if_setonop(null, 76:23);
+	if_settext("---", interface_76:25);
+	if_clearops(interface_76:23);
+	if_setonop(null, interface_76:23);
 } else if ($int2 ! %varcint64) {
-	if_settext("Join", 76:25);
-	if_setop(1, "Join <col=ff8040><$string0></col> channel", 76:23);
-	if_setonop("grouping_joinchannel(%varcint64)", 76:23);
+	if_settext("Join", interface_76:25);
+	if_setop(1, "Join <col=ff8040><$string0></col> channel", interface_76:23);
+	if_setonop("grouping_joinchannel(%varcint64)", interface_76:23);
 } else {
-	if_settext("Leave", 76:25);
-	if_setop(1, "Leave <col=ff8040><$string0></col> channel", 76:23);
-	if_setonop("grouping_joinchannel(0)", 76:23);
+	if_settext("Leave", interface_76:25);
+	if_setop(1, "Leave <col=ff8040><$string0></col> channel", interface_76:23);
+	if_setonop("grouping_joinchannel(0)", interface_76:23);
 }
 def_int $int4 = 0;
 def_int $int5 = 0;
-cc_deleteall(76:18);
-cc_deleteall(76:12);
+cc_deleteall(interface_76:18);
+cc_deleteall(interface_76:12);
 $int1 = 0;
 def_string $string3 = "";
 def_int $int6 = -1;
@@ -79,17 +79,17 @@ def_int $int11 = 13;
 if (~on_mobile = true) {
 	$int11 = scale(8, 5, $int11);
 }
-if (if_gethide(76:14) = true) {
-	if_setgraphic("scrollbar_v2,1", 76:20);
-	if_sethide(false, 76:5);
-	if_setonclick("grouping_dropdown(true)", 76:5);
-	if_setonclick(null, 76:2);
-	$int5 = if_getwidth(76:12);
-	if_sethide(false, 76:9);
+if (if_gethide(interface_76:14) = true) {
+	if_setgraphic("scrollbar_v2,1", interface_76:20);
+	if_sethide(false, interface_76:5);
+	if_setonclick("grouping_dropdown(true)", interface_76:5);
+	if_setonclick(null, interface_76:2);
+	$int5 = if_getwidth(interface_76:12);
+	if_sethide(false, interface_76:9);
 	if (($int2 = 0) | (%varcint64 ! $int2)) {
-		if_setscrollsize(0, 0, 76:12);
-		~scrollbar_resize(76:13, 76:12, 0);
-		cc_create(76:12, ^iftype_text, $int1);
+		if_setscrollsize(0, 0, interface_76:12);
+		~scrollbar_resize(interface_76:13, interface_76:12, 0);
+		cc_create(interface_76:12, ^iftype_text, $int1);
 		$int1 = calc($int1 + 1);
 		cc_settextfont(p12_full);
 		cc_setcolour(0xff981f);
@@ -97,14 +97,14 @@ if (if_gethide(76:14) = true) {
 		cc_settextshadow(true);
 		if ($int2 = 0) {
 			cc_settext("You are not currently in a minigame chat-channel.");
-			cc_setsize($int5, if_getheight(76:12), ^setsize_abs, ^setsize_abs);
+			cc_setsize($int5, if_getheight(interface_76:12), ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 			return;
 		}
-		$string1 = "You are currently talking in the <col=ffffff><enum(int, string, 848, $int2)></col> channel.";
+		$string1 = "You are currently talking in the <col=ffffff><enum(int, string, enum_848, $int2)></col> channel.";
 		$int10 = calc((paraheight($string1, $int5, p12_full) * 12) + 5);
 		cc_setsize($int5, $int10, ^setsize_abs, ^setsize_abs);
-		cc_setposition(0, calc((if_getheight(76:12) - $int10) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(0, calc((if_getheight(interface_76:12) - $int10) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settext($string1);
 		cc_setonmouserepeat("cc_colour_swapper(event_com, event_comid, 0xffb82f)");
 		cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xff981f)");
@@ -117,9 +117,9 @@ if (if_gethide(76:14) = true) {
 	while ($int9 > 0) {
 		$int9 = calc($int9 - 1);
 		$string3, $int0, $int6 = clan_getchatusername($int9), clan_getchatuserworld($int9), clan_getchatuserrank($int9);
-		cc_create(76:12, ^iftype_text, $int1);
+		cc_create(interface_76:12, ^iftype_text, $int1);
 		$int1 = calc($int1 + 1);
-		.cc_create(76:12, ^iftype_text, $int1);
+		.cc_create(interface_76:12, ^iftype_text, $int1);
 		$int1 = calc($int1 + 1);
 		cc_setsize(calc($int5 - 10), $int11, ^setsize_abs, ^setsize_abs);
 		.cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
@@ -139,12 +139,12 @@ if (if_gethide(76:14) = true) {
 		.cc_settextshadow(true);
 		cc_settext($string3);
 		.cc_settext("World <tostring($int0)>");
-		cc_create(76:12, ^iftype_graphic, $int1);
+		cc_create(interface_76:12, ^iftype_graphic, $int1);
 		$int1 = calc($int1 + 1);
 		cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, calc($int10 + 1), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic(enum(int, graphic, 706, $int6));
-		cc_create(76:12, ^iftype_rectangle, $int1);
+		cc_setgraphic(enum(int, graphic, enum_706, $int6));
+		cc_create(interface_76:12, ^iftype_rectangle, $int1);
 		$int1 = calc($int1 + 1);
 		cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
@@ -167,15 +167,15 @@ if (if_gethide(76:14) = true) {
 		$int10 = calc($int10 + $int11);
 	}
 	if ($int10 > 0) {
-		$int4 = if_getscrolly(76:12);
-		if_setscrollsize(0, $int10, 76:12);
-		~scrollbar_resize(76:13, 76:12, $int4);
+		$int4 = if_getscrolly(interface_76:12);
+		if_setscrollsize(0, $int10, interface_76:12);
+		~scrollbar_resize(interface_76:13, interface_76:12, $int4);
 	} else {
-		if_setscrollsize(0, 0, 76:12);
-		~scrollbar_resize(76:13, 76:12, 0);
-		cc_create(76:12, ^iftype_text, $int1);
+		if_setscrollsize(0, 0, interface_76:12);
+		~scrollbar_resize(interface_76:13, interface_76:12, 0);
+		cc_create(interface_76:12, ^iftype_text, $int1);
 		$int1 = calc($int1 + 1);
-		cc_setsize($int5, if_getheight(76:12), ^setsize_abs, ^setsize_abs);
+		cc_setsize($int5, if_getheight(interface_76:12), ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_setcolour(0xff981f);
@@ -185,18 +185,18 @@ if (if_gethide(76:14) = true) {
 	}
 	return;
 }
-if_setgraphic("scrollbar_v2,0", 76:20);
-if_sethide(true, 76:5);
-if_setonclick(null, 76:5);
-if_setonclick("grouping_dropdown(false)", 76:2);
-if_sethide(true, 76:9);
-$int5 = calc(if_getwidth(76:18) - 12);
+if_setgraphic("scrollbar_v2,0", interface_76:20);
+if_sethide(true, interface_76:5);
+if_setonclick(null, interface_76:5);
+if_setonclick("grouping_dropdown(false)", interface_76:2);
+if_sethide(true, interface_76:9);
+$int5 = calc(if_getwidth(interface_76:18) - 12);
 $int10 = 3;
 $int11 = 12;
 if (~on_mobile = true) {
 	$int11 = scale(8, 5, $int11);
 }
-cc_create(76:18, ^iftype_rectangle, $int1);
+cc_create(interface_76:18, ^iftype_rectangle, $int1);
 $int1 = calc($int1 + 1);
 cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -205,10 +205,10 @@ cc_setfill(true);
 cc_settrans(230);
 cc_sethide(true);
 $int3 = 1;
-$string2 = enum(int, string, 849, $int3);
+$string2 = enum(int, string, enum_849, $int3);
 while (string_length($string2) > 0) {
 	if (%varcint64 ! $int3) {
-		.cc_create(76:18, ^iftype_text, $int1);
+		.cc_create(interface_76:18, ^iftype_text, $int1);
 		$int1 = calc($int1 + 1);
 		.cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(6, $int10, ^setpos_abs_left, ^setpos_abs_top);
@@ -216,7 +216,7 @@ while (string_length($string2) > 0) {
 		.cc_settextfont(p11_full);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_settextshadow(true);
-		.cc_settext(enum(int, string, 848, $int3));
+		.cc_settext(enum(int, string, enum_848, $int3));
 		.cc_setonmouseover("grouping_mouseover(event_com, event_comid, cc_getid, true)");
 		.cc_setonmouseleave("grouping_mouseover(event_com, event_comid, cc_getid, false)");
 		.cc_setop(1, "Select");
@@ -224,10 +224,10 @@ while (string_length($string2) > 0) {
 		$int10 = calc($int10 + $int11);
 	}
 	$int3 = calc($int3 + 1);
-	$string2 = enum(int, string, 849, $int3);
+	$string2 = enum(int, string, enum_849, $int3);
 }
 if (%varcint64 ! 0) {
-	.cc_create(76:18, ^iftype_text, $int1);
+	.cc_create(interface_76:18, ^iftype_text, $int1);
 	$int1 = calc($int1 + 1);
 	.cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
 	.cc_setposition(6, $int10, ^setpos_abs_left, ^setpos_abs_top);
@@ -242,5 +242,5 @@ if (%varcint64 ! 0) {
 	.cc_setonop("grouping_viewchannel(0)");
 	$int10 = calc($int10 + $int11);
 }
-if_setscrollsize(0, $int10, 76:18);
-~scrollbar_resize(76:19, 76:18, if_getscrolly(76:18));
+if_setscrollsize(0, $int10, interface_76:18);
+~scrollbar_resize(interface_76:19, interface_76:18, if_getscrolly(interface_76:18));

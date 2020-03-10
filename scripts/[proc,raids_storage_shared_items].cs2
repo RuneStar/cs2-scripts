@@ -5,10 +5,10 @@ def_int $int4 = 0;
 def_int $int5 = 0;
 cc_deleteall($component0);
 def_int $int6 = 0;
-def_obj $obj7 = enum(int, obj, 1666, $int6);
+def_obj $obj7 = enum(int, obj, enum_1666, $int6);
 while ($obj7 ! null) {
 	cc_create($component0, ^iftype_graphic, $int6);
-	$int4 = invother_total(582, $obj7);
+	$int4 = invother_total(inv_582, $obj7);
 	if ($int4 > 0) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		$int5 = calc(($int3 / 10) * (32 + 8));
@@ -30,7 +30,7 @@ while ($obj7 ! null) {
 		cc_sethide(true);
 	}
 	$int6 = calc($int6 + 1);
-	$obj7 = enum(int, obj, 1666, $int6);
+	$obj7 = enum(int, obj, enum_1666, $int6);
 }
 def_int $int8 = 0;
 $int5 = calc($int5 + 32);
@@ -42,10 +42,10 @@ if ($int5 > if_getheight($component0)) {
 }
 ~scrollbar_resize($component1, $component0, $int8);
 $int3 = 0;
-$int6 = inv_size(582);
+$int6 = inv_size(inv_582);
 while ($int6 > 0) {
 	$int6 = calc($int6 - 1);
-	if (invother_getnum(582, $int6) > 0) {
+	if (invother_getnum(inv_582, $int6) > 0) {
 		$int3 = calc($int3 + 1);
 	}
 }

@@ -1,6 +1,6 @@
 // 2055
 script2055(int $int0, int $int1)
-def_boolean $boolean2 = enum(int, boolean, 1810, $int0);
+def_boolean $boolean2 = enum(int, boolean, enum_1810, $int0);
 if ($boolean2 = true) {
 	%varcint200 = ~max(1, ~min($int1, %varcint200));
 } else {
@@ -18,87 +18,87 @@ def_string $string0 = "X";
 if ($boolean2 = true) {
 	if ($int1 > 1) {
 		if (%varcint200 = 1) {
-			$int3 = ~skillmulti_quantitybutton_setup(1, 1, 270:7, $int0, $int1, $int3);
+			$int3 = ~skillmulti_quantitybutton_setup(1, 1, interface_270:7, $int0, $int1, $int3);
 		} else {
-			$int3 = ~skillmulti_quantitybutton_setup(0, 1, 270:7, $int0, $int1, $int3);
+			$int3 = ~skillmulti_quantitybutton_setup(0, 1, interface_270:7, $int0, $int1, $int3);
 		}
 	} else {
-		~skillmulti_wipebutton(270:7);
+		~skillmulti_wipebutton(interface_270:7);
 	}
 	if ($int1 > 5) {
 		if (%varcint200 = 5) {
-			$int3 = ~skillmulti_quantitybutton_setup(1, 5, 270:8, $int0, $int1, $int3);
+			$int3 = ~skillmulti_quantitybutton_setup(1, 5, interface_270:8, $int0, $int1, $int3);
 		} else {
-			$int3 = ~skillmulti_quantitybutton_setup(0, 5, 270:8, $int0, $int1, $int3);
+			$int3 = ~skillmulti_quantitybutton_setup(0, 5, interface_270:8, $int0, $int1, $int3);
 		}
 	} else {
-		~skillmulti_wipebutton(270:8);
+		~skillmulti_wipebutton(interface_270:8);
 	}
 	if ($int1 > 10) {
 		if (%varcint200 = 10) {
-			$int3 = ~skillmulti_quantitybutton_setup(1, 10, 270:9, $int0, $int1, $int3);
+			$int3 = ~skillmulti_quantitybutton_setup(1, 10, interface_270:9, $int0, $int1, $int3);
 		} else {
-			$int3 = ~skillmulti_quantitybutton_setup(0, 10, 270:9, $int0, $int1, $int3);
+			$int3 = ~skillmulti_quantitybutton_setup(0, 10, interface_270:9, $int0, $int1, $int3);
 		}
 	} else {
-		~skillmulti_wipebutton(270:9);
+		~skillmulti_wipebutton(interface_270:9);
 	}
 	if ((((%varcint201 = 1) | (%varcint201 = 5)) | (%varcint201 = 10)) | (%varcint201 = $int1)) {
-		~skillmulti_wipebutton(270:10);
+		~skillmulti_wipebutton(interface_270:10);
 	} else if ((%varcint201 < 1) | (%varcint201 > $int1)) {
-		~skillmulti_wipebutton(270:10);
+		~skillmulti_wipebutton(interface_270:10);
 	} else if (%varcint200 = %varcint201) {
-		$int3 = ~skillmulti_quantitybutton_setup(1, %varcint201, 270:10, $int0, $int1, $int3);
+		$int3 = ~skillmulti_quantitybutton_setup(1, %varcint201, interface_270:10, $int0, $int1, $int3);
 	} else {
-		$int3 = ~skillmulti_quantitybutton_setup(0, %varcint201, 270:10, $int0, $int1, $int3);
+		$int3 = ~skillmulti_quantitybutton_setup(0, %varcint201, interface_270:10, $int0, $int1, $int3);
 	}
 	if ($int1 > 2) {
-		if_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_centre, 270:11);
-		$int3 = calc(($int3 + if_getwidth(270:11)) + 5);
-		~skillmulti_quantitybutton_draw(false, $string0, 270:11);
-		if_setonmouseover("skillmulti_quantitybutton_draw(true, $string0, event_com)", 270:11);
-		if_setonmouseleave("skillmulti_quantitybutton_draw(false, $string0, event_com)", 270:11);
-		if_setop(1, "Other quantity", 270:11);
-		if_setonop("skillmulti_quantitybutton_x_start(event_opindex, $int0, $int1)", 270:11);
-		if_setontimer(null, 270:11);
+		if_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_centre, interface_270:11);
+		$int3 = calc(($int3 + if_getwidth(interface_270:11)) + 5);
+		~skillmulti_quantitybutton_draw(false, $string0, interface_270:11);
+		if_setonmouseover("skillmulti_quantitybutton_draw(true, $string0, event_com)", interface_270:11);
+		if_setonmouseleave("skillmulti_quantitybutton_draw(false, $string0, event_com)", interface_270:11);
+		if_setop(1, "Other quantity", interface_270:11);
+		if_setonop("skillmulti_quantitybutton_x_start(event_opindex, $int0, $int1)", interface_270:11);
+		if_setontimer(null, interface_270:11);
 	} else {
-		~skillmulti_wipebutton(270:11);
+		~skillmulti_wipebutton(interface_270:11);
 	}
 	if (%varcint200 >= $int1) {
-		$int3 = ~skillmulti_quantitybutton_setup(1, $int1, 270:12, $int0, $int1, $int3);
+		$int3 = ~skillmulti_quantitybutton_setup(1, $int1, interface_270:12, $int0, $int1, $int3);
 	} else {
-		$int3 = ~skillmulti_quantitybutton_setup(0, $int1, 270:12, $int0, $int1, $int3);
+		$int3 = ~skillmulti_quantitybutton_setup(0, $int1, interface_270:12, $int0, $int1, $int3);
 	}
 } else {
 	if (%varcint200 = 1) {
-		$int3 = ~skillmulti_quantitybutton_setup(1, 1, 270:7, $int0, $int1, $int3);
+		$int3 = ~skillmulti_quantitybutton_setup(1, 1, interface_270:7, $int0, $int1, $int3);
 	} else {
-		$int3 = ~skillmulti_quantitybutton_setup(0, 1, 270:7, $int0, $int1, $int3);
+		$int3 = ~skillmulti_quantitybutton_setup(0, 1, interface_270:7, $int0, $int1, $int3);
 	}
 	if ($int1 >= 5) {
 		if (%varcint200 = 5) {
-			$int3 = ~skillmulti_quantitybutton_setup(1, 5, 270:8, $int0, $int1, $int3);
+			$int3 = ~skillmulti_quantitybutton_setup(1, 5, interface_270:8, $int0, $int1, $int3);
 		} else {
-			$int3 = ~skillmulti_quantitybutton_setup(0, 5, 270:8, $int0, $int1, $int3);
+			$int3 = ~skillmulti_quantitybutton_setup(0, 5, interface_270:8, $int0, $int1, $int3);
 		}
 	} else {
-		~skillmulti_wipebutton(270:8);
+		~skillmulti_wipebutton(interface_270:8);
 	}
 	if ($int1 >= 10) {
 		if (%varcint200 = 10) {
-			$int3 = ~skillmulti_quantitybutton_setup(1, 10, 270:9, $int0, $int1, $int3);
+			$int3 = ~skillmulti_quantitybutton_setup(1, 10, interface_270:9, $int0, $int1, $int3);
 		} else {
-			$int3 = ~skillmulti_quantitybutton_setup(0, 10, 270:9, $int0, $int1, $int3);
+			$int3 = ~skillmulti_quantitybutton_setup(0, 10, interface_270:9, $int0, $int1, $int3);
 		}
 	} else {
-		~skillmulti_wipebutton(270:9);
+		~skillmulti_wipebutton(interface_270:9);
 	}
-	~skillmulti_wipebutton(270:10);
-	~skillmulti_wipebutton(270:11);
-	~skillmulti_wipebutton(270:12);
+	~skillmulti_wipebutton(interface_270:10);
+	~skillmulti_wipebutton(interface_270:11);
+	~skillmulti_wipebutton(interface_270:12);
 }
 if ($int3 > 0) {
 	$int3 = calc($int3 - 5);
 }
-if_setsize($int3, 0, ^setsize_abs, ^setsize_minus, 270:6);
-if_setsize($int3, 0, ^setsize_minus, ^setsize_minus, 270:3);
+if_setsize($int3, 0, ^setsize_abs, ^setsize_minus, interface_270:6);
+if_setsize($int3, 0, ^setsize_minus, ^setsize_minus, interface_270:3);

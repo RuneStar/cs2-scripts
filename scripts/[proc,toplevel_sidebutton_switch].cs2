@@ -4,12 +4,12 @@ def_component $component2 = null;
 def_component $component3 = null;
 def_component $component4 = null;
 def_int $int5 = 0;
-def_component $component6 = enum(int, component, 1138, $int5);
+def_component $component6 = enum(int, component, enum_1138, $int5);
 while ($component6 ! null) {
 	$component6 = enum(component, component, $enum1, $component6);
 	if ($component6 ! null) {
 		if_setgraphic(null, $component6);
-		$component2 = enum(int, component, 1137, $int5);
+		$component2 = enum(int, component, enum_1137, $int5);
 		$component2 = enum(component, component, $enum1, $component2);
 		if_sethide(true, $component2);
 		if ($int5 = $int0) {
@@ -17,7 +17,7 @@ while ($component6 ! null) {
 		}
 	}
 	$int5 = calc($int5 + 1);
-	$component6 = enum(int, component, 1138, $int5);
+	$component6 = enum(int, component, enum_1138, $int5);
 }
 if (($component3 ! null) & ($component4 ! null)) {
 	%varcint171 = $int0;

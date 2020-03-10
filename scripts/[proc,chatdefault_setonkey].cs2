@@ -1,7 +1,7 @@
 // 927
 [proc,chatdefault_setonkey](int $int0)
 if ($int0 = 1) {
-	if_setonkey("chatdefault_onkey(event_keypressed, event_keytyped)", 162:0);
+	if_setonkey("chatdefault_onkey(event_keypressed, event_keytyped)", interface_162:0);
 } else {
-	if_setonkey(null, 162:0);
+	if_setonkey(null, interface_162:0);
 }

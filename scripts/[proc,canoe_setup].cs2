@@ -11,20 +11,20 @@ cc_deleteall($component4);
 cc_deleteall($component6);
 ~canoe_name("A Log.", $component0, "Log canoe");
 if (stat(woodcutting) < 27) {
-	if_setmodel(12104, $component3);
+	if_setmodel(model_12104, $component3);
 } else {
-	if_setmodel(12103, $component3);
+	if_setmodel(model_12103, $component3);
 	~canoe_name("A Dugout.", $component2, "Dugout canoe");
 }
 if (stat(woodcutting) < 42) {
-	if_setmodel(12102, $component5);
+	if_setmodel(model_12102, $component5);
 } else {
-	if_setmodel(12101, $component5);
+	if_setmodel(model_12101, $component5);
 	~canoe_name("A Stable Dugout", $component4, "Stable dugout canoe");
 }
 if (stat(woodcutting) < 57) {
-	if_setmodel(12113, $component7);
+	if_setmodel(model_12113, $component7);
 } else {
-	if_setmodel(12112, $component7);
+	if_setmodel(model_12112, $component7);
 	~canoe_name("A Waka.", $component6, "Waka canoe");
 }

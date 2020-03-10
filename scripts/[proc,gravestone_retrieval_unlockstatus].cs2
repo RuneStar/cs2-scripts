@@ -1,14 +1,14 @@
 // 1987
 [proc,gravestone_retrieval_unlockstatus](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5)
 if (cc_find($component0, $int1) = ^true) {
-	cc_settext(enum(int, string, 1753, %var261));
+	cc_settext(enum(int, string, enum_1753, %var261));
 }
 if_sethide(false, $component4);
 if_sethide(true, $component5);
 if_setgraphic("miscgraphics,0", $component2);
 if_setontimer(null, $component2);
-def_namedobj $namedobj6 = enum(int, namedobj, 1756, %var261);
-def_int $int7 = enum(int, int, 1757, %var261);
+def_namedobj $namedobj6 = enum(int, namedobj, enum_1756, %var261);
+def_int $int7 = enum(int, int, enum_1757, %var261);
 if (($namedobj6 ! null) & ($int7 > 0)) {
 	if_setgraphic("bankbuttons,7", $component3);
 	if_setop(1, "Unlock", $component2);

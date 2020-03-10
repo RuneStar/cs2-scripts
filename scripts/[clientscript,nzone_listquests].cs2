@@ -1,20 +1,20 @@
 // 254
 [clientscript,nzone_listquests](int $int0, int $int1, int $int2, int $int3)
-if_setsize(300, if_getheight(129:1), ^setsize_abs, ^setsize_abs, 129:1);
-if_sethide(true, 129:6);
-if_sethide(true, 129:7);
-if_sethide(true, 129:8);
-if_sethide(true, 129:9);
-cc_deleteall(129:13);
+if_setsize(300, if_getheight(interface_129:1), ^setsize_abs, ^setsize_abs, interface_129:1);
+if_sethide(true, interface_129:6);
+if_sethide(true, interface_129:7);
+if_sethide(true, interface_129:8);
+if_sethide(true, interface_129:9);
+cc_deleteall(interface_129:13);
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_int $int6 = 0;
 def_int $int7 = 0;
 while ($int7 <= 36) {
 	if (~script1260($int0, $int1, $int7) = 1) {
-		cc_create(129:13, ^iftype_graphic, $int4);
+		cc_create(interface_129:13, ^iftype_graphic, $int4);
 		$int4 = calc($int4 + 1);
-		.cc_create(129:13, ^iftype_text, $int4);
+		.cc_create(interface_129:13, ^iftype_text, $int4);
 		$int4 = calc($int4 + 1);
 		cc_setsize(0, 17, ^setsize_minus, ^setsize_abs);
 		.cc_setsize(0, 17, ^setsize_minus, ^setsize_abs);
@@ -31,30 +31,30 @@ while ($int7 <= 36) {
 		.cc_settextshadow(true);
 		.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		if (~script1260($int2, $int3, $int7) = 1) {
-			.cc_settext(enum(int, string, 804, $int7));
+			.cc_settext(enum(int, string, enum_804, $int7));
 		} else {
-			.cc_settext("<str><col=8f8f8f><enum(int, string, 804, $int7)></col></str>");
+			.cc_settext("<str><col=8f8f8f><enum(int, string, enum_804, $int7)></col></str>");
 		}
 		$int5, $int6 = calc($int5 + 17), calc($int6 + 17);
 	}
 	$int7 = calc($int7 + 1);
 }
-if ($int6 > if_getheight(129:13)) {
-	if_setscrollpos(0, 0, 129:13);
-	if_setscrollsize(0, $int6, 129:13);
+if ($int6 > if_getheight(interface_129:13)) {
+	if_setscrollpos(0, 0, interface_129:13);
+	if_setscrollsize(0, $int6, interface_129:13);
 } else {
-	if_setscrollpos(0, 0, 129:13);
-	if_setscrollsize(0, 0, 129:13);
-	cc_create(129:13, ^iftype_graphic, $int4);
+	if_setscrollpos(0, 0, interface_129:13);
+	if_setscrollsize(0, 0, interface_129:13);
+	cc_create(interface_129:13, ^iftype_graphic, $int4);
 	$int4 = calc($int4 + 1);
 	cc_setsize(0, $int6, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_setgraphic("tradebacking_dark");
 	cc_settiling(true);
 }
-~scrollbar_vertical(129:14, 129:13, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical(interface_129:14, interface_129:13, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if ($int5 <= 0) {
-	cc_create(129:13, ^iftype_text, $int4);
+	cc_create(interface_129:13, ^iftype_text, $int4);
 	$int4 = calc($int4 + 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

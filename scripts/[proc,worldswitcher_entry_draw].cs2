@@ -18,7 +18,7 @@ def_int $int19 = 0;
 if (map_world = $int5) {
 	$int18 = 1;
 } else if (testbit($int6, 7) = ^true) {
-	$int19 = enum(int, int, 1496, $int5);
+	$int19 = enum(int, int, enum_1496, $int5);
 	if (testbit($int6, 0) = ^true) {
 		if ($int15 < $int19) {
 			$int18 = 1;
@@ -104,7 +104,7 @@ cc_create($component0, ^iftype_graphic, $int1);
 $int1 = calc($int1 + 1);
 cc_setsize($int12, 15, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int10 + $int11), calc($int2 + (($int9 - cc_getheight) / 2)), ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic(enum(int, graphic, 1125, $int7));
+cc_setgraphic(enum(int, graphic, enum_1125, $int7));
 cc_create($component0, ^iftype_text, $int1);
 $int1 = calc($int1 + 1);
 cc_setsize($int13, $int9, ^setsize_abs, ^setsize_abs);

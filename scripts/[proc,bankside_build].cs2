@@ -26,10 +26,10 @@ if_sethide(false, $component1);
 if_sethide(false, $component2);
 if_sethide(true, $component3);
 def_int $int9 = 0;
-$int8 = inv_size(516);
+$int8 = inv_size(inv_516);
 while (($int8 > 0) & ($int9 = 0)) {
 	$int8 = calc($int8 - 1);
-	if (inv_getobj(516, $int8) ! null) {
+	if (inv_getobj(inv_516, $int8) ! null) {
 		$int9 = 1;
 	}
 }

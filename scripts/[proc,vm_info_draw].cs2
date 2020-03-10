@@ -3,21 +3,21 @@
 def_int $int5 = 0;
 cc_deleteall($component1);
 cc_deleteall($component3);
-def_string $string0 = "<tostring(enum(int, int, 1740, $int5))> - <enum(int, string, 1741, $int5)>";
-def_string $string1 = enum(int, string, 1742, $int5);
+def_string $string0 = "<tostring(enum(int, int, enum_1740, $int5))> - <enum(int, string, enum_1741, $int5)>";
+def_string $string1 = enum(int, string, enum_1742, $int5);
 def_int $int6 = 0;
 def_int $int7 = 20;
 def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 1;
-while (enum(int, int, 1740, $int5) > 0) {
+while (enum(int, int, enum_1740, $int5) > 0) {
 	if (((($int5 = 0) | ($int5 = 5)) | ($int5 = 19)) | ($int5 = 33)) {
 		if ($int5 > 0) {
 			$int7 = calc($int7 + 15);
 		}
 		$int10 = 1;
 		cc_create($component3, ^iftype_text, $int6);
-		cc_settext(enum(int, string, 1743, $int5));
+		cc_settext(enum(int, string, enum_1743, $int5));
 		cc_setsize(40, 20, ^setsize_minus, ^setsize_abs);
 		cc_setposition(15, $int7, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(b12_full);
@@ -27,7 +27,7 @@ while (enum(int, int, 1740, $int5) > 0) {
 		$int7 = calc($int7 + 20);
 		$int6 = calc($int6 + 1);
 		cc_create($component3, ^iftype_text, $int6);
-		cc_settext(enum(int, string, 1744, $int5));
+		cc_settext(enum(int, string, enum_1744, $int5));
 		cc_setsize(40, calc(15 * paraheight(cc_gettext, cc_getwidth, p12_full)), ^setsize_minus, ^setsize_abs);
 		cc_setposition(15, $int7, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
@@ -78,8 +78,8 @@ while (enum(int, int, 1740, $int5) > 0) {
 	}
 	$int7 = calc(($int7 + (15 * $int8)) + 5);
 	$int5 = calc($int5 + 1);
-	$string0 = "<tostring(enum(int, int, 1740, $int5))> - <enum(int, string, 1741, $int5)>";
-	$string1 = enum(int, string, 1742, $int5);
+	$string0 = "<tostring(enum(int, int, enum_1740, $int5))> - <enum(int, string, enum_1741, $int5)>";
+	$string1 = enum(int, string, enum_1742, $int5);
 }
 if_setscrollsize(0, $int7, $component1);
 ~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

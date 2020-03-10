@@ -6,12 +6,12 @@ if (clientclock < $int4) {
 def_int $int5 = 0;
 def_component $component6 = null;
 def_int $int7 = 1;
-if (enum(int, int, 1167, %varbit4694) > 0) {
+if (enum(int, int, enum_1167, %varbit4694) > 0) {
 	if_sethide(true, $component1);
 	if_sethide(true, $component2);
 	~deltooltip_action($component3);
 	if_sethide(true, $component3);
-	$component6 = enum(int, component, 1163, $int5);
+	$component6 = enum(int, component, enum_1163, $int5);
 	while ($component6 ! null) {
 		if_sethide(true, $component6);
 		if (cc_find($component6, 0) = ^true) {
@@ -25,7 +25,7 @@ if (enum(int, int, 1167, %varbit4694) > 0) {
 			$int7 = calc($int7 + 1);
 		}
 		$int5 = calc($int5 + 1);
-		$component6 = enum(int, component, 1163, $int5);
+		$component6 = enum(int, component, enum_1163, $int5);
 	}
 }
 if_setontimer(null, $component0);

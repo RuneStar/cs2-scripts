@@ -1,10 +1,10 @@
 // 3153
 [clientscript,offer_banner_init](component $component0)
-def_component $component1 = 650:5;
-def_component $component2 = 650:3;
+def_component $component1 = interface_650:5;
+def_component $component2 = interface_650:3;
 cc_deleteall($component1);
 cc_deleteall($component0);
 cc_deleteall($component2);
 ~offer_banner_close($component0);
-~offer_banner($component1, 1103);
-~offer_button($component2, 1104);
+~offer_banner($component1, "graphic_1103");
+~offer_button($component2, "graphic_1104");

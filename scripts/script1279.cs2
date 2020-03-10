@@ -1,6 +1,6 @@
 // 1279
 script1279(int $int0)(int, int, int)
-def_stat $stat1 = enum(int, stat, 681, $int0);
+def_stat $stat1 = enum(int, stat, enum_681, $int0);
 def_int $int2 = stat_base($stat1);
 def_int $bit3 = testbit(%var1295, calc($int0 - 1));
 def_int $int4 = 50;
@@ -23,17 +23,17 @@ if ($bit3 = ^true) {
 def_int $int5 = stat_xp($stat1);
 def_int $int6 = scale($int4, 100, $int5);
 def_int $int7 = $int2;
-while (enum(int, int, 256, $int7) > $int6) {
+while (enum(int, int, enum_256, $int7) > $int6) {
 	$int7 = calc($int7 - 1);
 }
-def_int $int8 = enum(int, int, 1240, $int0);
+def_int $int8 = enum(int, int, enum_1240, $int0);
 if ($int2 < $int8) {
 	$int8 = $int2;
 }
 if ($int8 > $int7) {
 	$int7 = $int8;
 }
-def_int $int9 = enum(int, int, 256, $int8);
+def_int $int9 = enum(int, int, enum_256, $int8);
 if ($int5 < $int9) {
 	$int9 = $int5;
 }

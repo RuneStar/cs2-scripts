@@ -3,11 +3,11 @@
 if ($int0 ! 1) {
 	return;
 }
-sound_synth(2266, 1, 0);
-if_sethide(true, 398:19);
-if_sethide(true, 398:20);
-if_sethide(true, 398:21);
-if_sethide(true, 398:22);
-if_sethide(true, 398:23);
-if_sethide(true, 398:24);
+sound_synth(synth_2266, 1, 0);
+if_sethide(true, interface_398:19);
+if_sethide(true, interface_398:20);
+if_sethide(true, interface_398:21);
+if_sethide(true, interface_398:22);
+if_sethide(true, interface_398:23);
+if_sethide(true, interface_398:24);
 if_setontimer("fairyrings_confirm_expire(event_com, calc(clientclock + 45))", $component1);

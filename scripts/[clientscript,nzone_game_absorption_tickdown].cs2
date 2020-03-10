@@ -18,8 +18,8 @@ if_setontimer("nzone_game_absorption_tickdown($component0, $int1, $int2, $int3)"
 ~nzone_game_absorption_set($component0, $int1);
 if ($int4 < 0) {
 	if (calc(clientclock % 2) = 0) {
-		sound_synth(2157, 1, 0);
+		sound_synth(synth_2157, 1, 0);
 	} else {
-		sound_synth(2156, 1, 0);
+		sound_synth(synth_2156, 1, 0);
 	}
 }

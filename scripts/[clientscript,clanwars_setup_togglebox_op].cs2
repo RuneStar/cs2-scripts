@@ -3,7 +3,7 @@
 if ((($int0 ! 1) | ($int3 < 0)) | ($int3 >= 32)) {
 	return;
 }
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 if (testbit(%var92, $int3) = ^true) {
 	%var92 = clearbit(%var92, $int3);
 } else {

@@ -5,7 +5,7 @@ if_setopbase("", $component0);
 if ($int3 = 1) {
 	$int2 = 0;
 }
-def_struct $struct4 = enum(int, struct, 2670, %varbit10032);
+def_struct $struct4 = enum(int, struct, enum_2670, %varbit10032);
 def_enum $enum5 = null;
 def_struct $struct6 = null;
 def_int $int7 = 0;
@@ -18,7 +18,7 @@ def_int $int13 = if_getwidth($component0);
 def_string $string0 = "";
 def_int $int14 = -1;
 if ($struct11 ! null) {
-	$int12 = struct_param($struct11, 877);
+	$int12 = struct_param($struct11, param_877);
 }
 if (($int12 ! -1) & ($int3 = 0)) {
 	$int13 = calc($int13 - 15);
@@ -67,14 +67,14 @@ if (cc_find($component0, 0) = ^false) {
 		}
 	} else {
 		if ($struct4 ! null) {
-			$enum5 = struct_param($struct4, 870);
+			$enum5 = struct_param($struct4, param_870);
 			if ($enum5 ! null) {
 				$int7 = enum_getoutputcount($enum5);
 				while ($int8 < $int7) {
 					$struct6 = enum(int, struct, $enum5, $int8);
 					cc_create($component0, ^iftype_graphic, $int9);
 					cc_setsize(10, 31, ^setsize_abs, ^setsize_abs);
-					$int14 = scale(struct_param($struct6, 877), $int12, calc($int13 - 4));
+					$int14 = scale(struct_param($struct6, param_877), $int12, calc($int13 - 4));
 					if ($int14 <= 2) {
 						$int14 = 0;
 					} else if ($int14 >= calc($int13 - 4)) {
@@ -84,7 +84,7 @@ if (cc_find($component0, 0) = ^false) {
 					}
 					cc_setposition(calc($int14 - 5), 0, ^setpos_abs_left, ^setpos_abs_top);
 					cc_setgraphic("league_progress_bar_indicator");
-					$string0 = "Relic unlocked at <tostring(struct_param($struct6, 877))> points.";
+					$string0 = "Relic unlocked at <tostring(struct_param($struct6, param_877))> points.";
 					if (~on_mobile = true) {
 						cc_setop(1, "Show Threshold");
 						cc_setonop("script3183(event_com, event_comid, $component1, $string0, 512)");

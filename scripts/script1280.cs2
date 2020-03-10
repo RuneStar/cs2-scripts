@@ -1,19 +1,19 @@
 // 1280
 script1280
-cc_deleteall(226:16);
+cc_deleteall(interface_226:16);
 def_int $int0 = 0;
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_obj $obj3 = null;
 if (%varcint139 ! 0) {
-	$int0 = inv_size(554);
+	$int0 = inv_size(inv_554);
 	while ($int1 < $int0) {
-		cc_create(226:16, ^iftype_graphic, $int1);
-		$obj3 = inv_getobj(554, $int1);
+		cc_create(interface_226:16, ^iftype_graphic, $int1);
+		$obj3 = inv_getobj(inv_554, $int1);
 		if ($obj3 ! null) {
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc(($int2 % 7) * 39), calc(($int2 / 7) * 38), ^setpos_abs_left, ^setpos_abs_top);
-			cc_setobject($obj3, inv_getnum(554, $int1));
+			cc_setobject($obj3, inv_getnum(inv_554, $int1));
 			cc_setopbase("<col=ff9040><oc_name($obj3)>");
 			cc_setop(1, "Examine");
 			cc_setgraphicshadow(0x333333);
@@ -26,7 +26,7 @@ if (%varcint139 ! 0) {
 	}
 }
 if ($int2 = 0) {
-	cc_create(226:16, ^iftype_text, $int2);
+	cc_create(interface_226:16, ^iftype_text, $int2);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(0xff981f);
@@ -35,4 +35,4 @@ if ($int2 = 0) {
 	cc_settextshadow(true);
 	cc_settext("None.");
 }
-if_setsize(0, calc(((($int2 - 1) / 7) + 1) * 38), ^setsize_minus, ^setsize_abs, 226:16);
+if_setsize(0, calc(((($int2 - 1) / 7) + 1) * 38), ^setsize_minus, ^setsize_abs, interface_226:16);

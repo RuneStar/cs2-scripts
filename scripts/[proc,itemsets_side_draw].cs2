@@ -12,7 +12,7 @@ while ($int3 > 0) {
 		if ($obj1 ! null) {
 			cc_sethide(false);
 			cc_setobject($obj1, inv_getnum(inv, $int3));
-			if ((enum(obj, enum, 1034, $obj1) ! null) | (enum(obj, enum, 1034, oc_uncert($obj1)) ! null)) {
+			if ((enum(obj, enum, enum_1034, $obj1) ! null) | (enum(obj, enum, enum_1034, oc_uncert($obj1)) ! null)) {
 				if ((map_members = ^false) & (oc_members($obj1) = ^true)) {
 					cc_settrans(130);
 					cc_setonop(null);
@@ -29,7 +29,7 @@ while ($int3 > 0) {
 			cc_setopbase("<col=ff9040><oc_name($obj1)></col>");
 		} else {
 			cc_sethide(true);
-			cc_setobject(6512, 1);
+			cc_setobject(obj_6512, 1);
 		}
 	}
 }

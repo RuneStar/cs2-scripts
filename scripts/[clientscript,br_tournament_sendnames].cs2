@@ -1,11 +1,11 @@
 // 1418
 [clientscript,br_tournament_sendnames](string $string0)
-cc_deleteall(394:3);
+cc_deleteall(interface_394:3);
 def_graphic $graphic0 = null;
 def_graphic $graphic1 = "tradebacking_light";
 def_int $int2 = 0;
 while ($int2 < 11) {
-	cc_create(394:3, ^iftype_graphic, $int2);
+	cc_create(interface_394:3, ^iftype_graphic, $int2);
 	cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
 	cc_setposition(0, calc($int2 * 15), ^setpos_abs_centre, ^setpos_abs_top);
 	if (calc($int2 % 2) = 0) {
@@ -25,11 +25,11 @@ def_int $int3 = $int2;
 $int2 = 0;
 while ($int2 < 11) {
 	$string1, $string0 = ~script632($string0);
-	if ((string_length($string1) > 0) & (cc_find(394:3, $int2) = ^true)) {
+	if ((string_length($string1) > 0) & (cc_find(interface_394:3, $int2) = ^true)) {
 		cc_setop(1, "Find");
 		cc_setopbase("<col=ff9040><$string1></col>");
 		$string2, $string0 = ~script632($string0);
-		.cc_create(394:3, ^iftype_text, $int3);
+		.cc_create(interface_394:3, ^iftype_text, $int3);
 		cc_setonop("br_tournament_op(event_opindex, $string1, event_com, $int3)");
 		$int3 = calc($int3 + 1);
 		.cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);

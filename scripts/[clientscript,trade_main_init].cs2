@@ -28,7 +28,7 @@
 %varcint37 = 0;
 %varcint38 = 0;
 %varcint39 = 0;
-def_int $int5 = inv_size(90);
+def_int $int5 = inv_size(inv_90);
 cc_deleteall($component1);
 cc_deleteall($component3);
 def_int $int6 = 0;
@@ -63,5 +63,5 @@ while ($int6 < $int5) {
 }
 def_int $int8 = calc((36 - 10) / 2);
 ~trade_main_drawitems($int5, $int8, $component1, $component2, $component3, $component4);
-if_setoninvtransmit("trade_main_drawitems($int5, $int8, $component1, $component2, $component3, $component4){90}", $component0);
+if_setoninvtransmit("trade_main_drawitems($int5, $int8, $component1, $component2, $component3, $component4){inv_90}", $component0);
 if_setonvartransmit("trade_main_drawitems($int5, $int8, $component1, $component2, $component3, $component4){var1042}", $component0);

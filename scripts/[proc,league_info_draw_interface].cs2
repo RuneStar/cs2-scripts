@@ -6,16 +6,16 @@ cc_deleteall($component3);
 cc_deleteall($component5);
 cc_deleteall($component8);
 cc_deleteall($component9);
-def_struct $struct13 = enum(int, struct, 2670, %varbit10032);
-def_struct $struct14 = 1239;
+def_struct $struct13 = enum(int, struct, enum_2670, %varbit10032);
+def_struct $struct14 = struct_1239;
 if ($struct13 = null) {
 	return;
 }
-def_enum $enum15 = struct_param($struct14, 886);
-def_enum $enum16 = struct_param($struct14, 887);
-def_enum $enum17 = struct_param($struct13, 888);
-def_enum $enum18 = struct_param($struct13, 889);
-def_int $int19 = struct_param($struct13, 872);
+def_enum $enum15 = struct_param($struct14, param_886);
+def_enum $enum16 = struct_param($struct14, param_887);
+def_enum $enum17 = struct_param($struct13, param_888);
+def_enum $enum18 = struct_param($struct13, param_889);
+def_int $int19 = struct_param($struct13, param_872);
 def_int $int20 = calc(1 + ($int19 - %varbit9535));
 if ($int20 < 1) {
 	$int20 = 1;

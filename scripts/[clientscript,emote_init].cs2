@@ -8,12 +8,12 @@ def_int $int5 = 0;
 def_int $int6 = 0;
 while ($int6 <= 48) {
 	cc_create($component1, ^iftype_graphic, $int6);
-	if (enum(int, graphic, 1001, $int6) ! null) {
+	if (enum(int, graphic, enum_1001, $int6) ! null) {
 		cc_sethide(false);
 		cc_setsize(42, 48, ^setsize_abs, ^setsize_abs);
 		$int5 = calc((($int4 / 4) * 49) + 6);
 		cc_setposition(calc(($int4 % 4) * 43), $int5, ^setpos_abs_left, ^setpos_abs_top);
-		$string0 = enum(int, string, 1000, $int6);
+		$string0 = enum(int, string, enum_1000, $int6);
 		cc_setop(1, $string0);
 		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component3, $string0, 25, 120)");
 		cc_setonmouseleave("deltooltip($component3)");

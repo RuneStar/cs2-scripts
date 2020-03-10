@@ -10,27 +10,27 @@ if (((($int0 <= 0) & ($int1 <= 0)) & ($int2 <= 0)) & ($int3 <= 0)) {
 }
 if_sethide(true, barbassault_turret:1);
 if_sethide(false, barbassault_turret:2);
-def_model $model5 = 20542;
+def_model $model5 = model_20542;
 if ($int0 > 0) {
-	$model5 = 20544;
+	$model5 = model_20544;
 }
 if_setmodel($model5, barbassault_turret:4);
 if_setmodel($model5, barbassault_turret:11);
 if_setmodel($model5, barbassault_turret:18);
 if_setmodel($model5, barbassault_turret:25);
 if ($int1 > 0) {
-	$model5 = 20545;
+	$model5 = model_20545;
 } else {
-	$model5 = 20542;
+	$model5 = model_20542;
 }
 if_setmodel($model5, barbassault_turret:6);
 if_setmodel($model5, barbassault_turret:13);
 if_setmodel($model5, barbassault_turret:20);
 if_setmodel($model5, barbassault_turret:27);
 if ($int2 > 0) {
-	$model5 = 20543;
+	$model5 = model_20543;
 } else {
-	$model5 = 20542;
+	$model5 = model_20542;
 }
 if_setmodel($model5, barbassault_turret:8);
 if_setmodel($model5, barbassault_turret:15);
@@ -39,7 +39,7 @@ if_setmodel($model5, barbassault_turret:29);
 if ($int3 > 0) {
 	$model5 = omega_egg_20572;
 } else {
-	$model5 = 20542;
+	$model5 = model_20542;
 }
 if_setmodel($model5, barbassault_turret:32);
 def_string $string0 = tostring($int0);

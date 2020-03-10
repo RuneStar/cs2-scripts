@@ -9,7 +9,7 @@ def_int $setposh7 = ^setpos_abs_left;
 def_int $setposv8 = ^setpos_abs_bottom;
 if ($int1 ! %varcint384) {
 	$enum2 = ~toplevel_getcomponents;
-	if ($enum2 = 1745) {
+	if ($enum2 = enum_1745) {
 		if (~script2519 = 1) {
 			$int3 = calc(204 - 1);
 		} else {
@@ -20,7 +20,7 @@ if ($int1 ! %varcint384) {
 		$int6 = 249;
 		$setposh7 = ^setpos_abs_right;
 		$setposv8 = ^setpos_abs_centre;
-	} else if (($enum2 = 1130) | ($enum2 = 1131)) {
+	} else if (($enum2 = enum_1130) | ($enum2 = enum_1131)) {
 		if (%varbit9530 = 0) {
 			$int3 = 1;
 			$int4 = -66;
@@ -40,7 +40,7 @@ if ($int1 ! %varcint384) {
 			$setposh7 = ^setpos_abs_left;
 			$setposv8 = ^setpos_abs_bottom;
 		}
-	} else if ($enum2 = 1129) {
+	} else if ($enum2 = enum_1129) {
 		if (%varbit9530 = 0) {
 			$int3 = 1;
 			$int4 = 76;

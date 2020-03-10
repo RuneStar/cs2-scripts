@@ -6,7 +6,7 @@ def_obj $obj3 = null;
 def_int $int4 = 0;
 def_int $int5 = inv_size(worn);
 while ($int4 < $int5) {
-	$component2 = enum(int, component, 678, $int4);
+	$component2 = enum(int, component, enum_678, $int4);
 	if ($component2 ! null) {
 		cc_deleteall($component2);
 		cc_create($component2, ^iftype_graphic, 0);
@@ -14,13 +14,13 @@ while ($int4 < $int5) {
 		cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 		cc_setgraphic("miscgraphics,0");
 		cc_create($component2, ^iftype_graphic, 1);
-		$obj3 = inv_getobj(207, $int4);
+		$obj3 = inv_getobj(inv_207, $int4);
 		if ($obj3 ! null) {
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 			cc_setgraphicshadow(0x333333);
 			cc_setoutline(1);
-			cc_setobject($obj3, inv_getnum(207, $int4));
+			cc_setobject($obj3, inv_getnum(inv_207, $int4));
 			if_setopbase("<col=ff9040><oc_name($obj3)></col>", $component2);
 			if_setop(10, "Examine", $component2);
 			if_setonop("cc_settrans_temporarily(event_com, cc_getid, 100, 0)", $component2);
@@ -28,7 +28,7 @@ while ($int4 < $int5) {
 		} else {
 			cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-			cc_setgraphic(enum(int, graphic, 904, $int4));
+			cc_setgraphic(enum(int, graphic, enum_904, $int4));
 			if_clearops($component2);
 			if_setonop(null, $component2);
 		}
@@ -41,7 +41,7 @@ def_int $int7 = calc((((if_getheight($component0) - 4) - (7 * 32)) / 6) + 32);
 def_int $int8 = 0;
 def_int $int9 = inv_size(inv);
 while ($int8 < $int9) {
-	$obj3 = inv_getobj(207, $int4);
+	$obj3 = inv_getobj(inv_207, $int4);
 	cc_create($component0, ^iftype_graphic, $int8);
 	if ($obj3 ! null) {
 		cc_sethide(false);
@@ -49,7 +49,7 @@ while ($int8 < $int9) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		cc_setobject($obj3, inv_getnum(207, $int4));
+		cc_setobject($obj3, inv_getnum(inv_207, $int4));
 		cc_setopbase("<col=ff9040><oc_name($obj3)></col>");
 		cc_setop(10, "Examine");
 		$int1 = 1;

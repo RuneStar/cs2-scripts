@@ -7,11 +7,11 @@ def_string $string0 = "";
 def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
-def_int $int9 = enum_getoutputcount(2070);
+def_int $int9 = enum_getoutputcount(enum_2070);
 while ($int3 <= $int9) {
 	$component4 = ~wom_get_tab($int3);
 	$component5 = ~wom_get_text($int3);
-	$string0 = enum(int, string, 2071, $int3);
+	$string0 = enum(int, string, enum_2071, $int3);
 	if ((map_members = ^false) & (compare($string0, "Free") ! 0)) {
 		$string0 = "";
 	}

@@ -1,8 +1,8 @@
 // 2018
 [proc,mesoverlay_draw](string $string0, int $int0)
-if_setscrollpos(0, 0, 263:1);
-cc_deleteall(263:1);
-def_int $int1 = if_getwidth(263:1);
+if_setscrollpos(0, 0, interface_263:1);
+cc_deleteall(interface_263:1);
+def_int $int1 = if_getwidth(interface_263:1);
 def_int $int2 = paraheight($string0, $int1, q8_full);
 def_int $int3 = 16;
 if ($int2 = 2) {
@@ -11,7 +11,7 @@ if ($int2 = 2) {
 	$int3 = 24;
 }
 def_int $int4 = calc(($int2 * $int3) + 4);
-cc_create(263:1, ^iftype_text, 0);
+cc_create(interface_263:1, ^iftype_text, 0);
 cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
 cc_setcolour(^black);
 cc_settextshadow(false);
@@ -20,14 +20,14 @@ cc_settextfont(q8_full);
 cc_settext($string0);
 if ($int4 <= $int0) {
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	if_setscrollsize(0, 0, 263:1);
-	cc_deleteall(263:2);
-	if_sethide(true, 263:2);
+	if_setscrollsize(0, 0, interface_263:1);
+	cc_deleteall(interface_263:2);
+	if_sethide(true, interface_263:2);
 } else {
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-	if_setscrollsize(0, $int4, 263:1);
-	cc_deleteall(263:2);
-	if_sethide(false, 263:2);
-	~scrollbar_vertical(263:2, 263:1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+	if_setscrollsize(0, $int4, interface_263:1);
+	cc_deleteall(interface_263:2);
+	if_sethide(false, interface_263:2);
+	~scrollbar_vertical(interface_263:2, interface_263:1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 }
-if_setontimer("mesoverlay_checkheight($string0, $int0)", 263:1);
+if_setontimer("mesoverlay_checkheight($string0, $int0)", interface_263:1);

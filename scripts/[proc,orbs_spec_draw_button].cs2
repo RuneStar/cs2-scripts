@@ -3,7 +3,7 @@
 def_graphic $graphic6 = "orb_frame,1";
 def_graphic $graphic7 = "orb_frame,0";
 if_clearops($component5);
-if (((map_members = ^false) & (%varbit5314 = 0)) | (enum(obj, int, 906, inv_getobj(worn, 3)) <= 0)) {
+if (((map_members = ^false) & (%varbit5314 = 0)) | (enum(obj, int, enum_906, inv_getobj(worn, 3)) <= 0)) {
 	if_sethide(true, $component5);
 	if_setonmouserepeat(null, $component5);
 	if_setonmouseleave(null, $component5);

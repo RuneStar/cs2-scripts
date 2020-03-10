@@ -3,11 +3,11 @@
 def_int $int14 = ~steelborder($component1, "", 0);
 ~ge_offers_index_inittop($component5);
 def_int $int15 = 0;
-def_component $component16 = enum(int, component, 245, $int15);
+def_component $component16 = enum(int, component, enum_245, $int15);
 while ($component16 ! null) {
 	~ge_offers_index_initslot($component1, $int14, $component3, $component4, $component6, $component10, $component16, $int15, $component13);
 	$int15 = calc($int15 + 1);
-	$component16 = enum(int, component, 245, $int15);
+	$component16 = enum(int, component, enum_245, $int15);
 }
 ~script819($component6, $component7, $component8);
 ~script816($component9);

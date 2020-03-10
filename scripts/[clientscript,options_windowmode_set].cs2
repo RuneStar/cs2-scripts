@@ -6,7 +6,7 @@ if (getwindowmode = $windowmode0) {
 if (($windowmode0 ! ^windowmode_resizable) & (~mobile_setting_check = 0)) {
 	return;
 }
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 setwindowmode($windowmode0);
 if (getdefaultwindowmode ! $windowmode0) {
 	setdefaultwindowmode($windowmode0);

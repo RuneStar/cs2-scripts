@@ -11,12 +11,12 @@ if (%varbit9328 = 1) {
 	~adventurepath_task_init_op($component0, %var2357, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component18, $component17, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26);
 	~adventurepath_change_page($component0, $component3, $component17, $component19, 1);
 } else if (%varbit9328 = 2) {
-	$enum28 = enum(int, enum, 2620, %var2357);
+	$enum28 = enum(int, enum, enum_2620, %var2357);
 	if ($enum28 ! null) {
 		$int30 = enum_getoutputcount($enum28);
 		while ($int29 < $int30) {
 			$struct27 = enum(int, struct, $enum28, $int29);
-			if (($struct27 ! null) & (struct_param($struct27, 806) = %var2358)) {
+			if (($struct27 ! null) & (struct_param($struct27, param_806) = %var2358)) {
 				$int29 = $int30;
 			}
 			$int29 = calc($int29 + 1);

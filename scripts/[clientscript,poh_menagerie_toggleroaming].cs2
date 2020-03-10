@@ -3,7 +3,7 @@
 if ($int0 ! 1) {
 	return;
 }
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 if (cc_find($component1, $int2) = ^true) {
 	cc_setgraphic("options_radio_buttons,0");
 }

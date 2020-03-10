@@ -1,14 +1,14 @@
 // 275
 [proc,nzone_rewards_price](obj $obj0)(string)
 def_obj $obj1 = oc_uncert($obj0);
-def_int $int2 = inv_total(464, $obj1);
+def_int $int2 = inv_total(inv_464, $obj1);
 if ($int2 <= 0) {
 	if ($obj1 = ring_of_suffering_r_20655) {
 		$int2 = 725;
-	} else if (oc_param($obj1, 385) = 1) {
-		$int2 = inv_total(108, slayer_helmet_11864);
+	} else if (oc_param($obj1, param_385) = 1) {
+		$int2 = inv_total(inv_108, slayer_helmet_11864);
 	} else {
-		$int2 = inv_total(108, $obj1);
+		$int2 = inv_total(inv_108, $obj1);
 	}
 	$int2 = calc($int2 * 1000);
 }

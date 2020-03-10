@@ -1,6 +1,6 @@
 // 3110
 [clientscript,poh_board_addline](int $int0, int $int1, int $int2, string $string0)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:15)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
 def_string $string1 = "";
@@ -31,7 +31,7 @@ if (string_length($string0) > 0) {
 	$string8, $string0 = ~script632($string0);
 	$string9, $string0 = ~script632($string0);
 	$string10, $string0 = ~script632($string0);
-	if (cc_find(52:9, $int0) = ^true) {
+	if (cc_find(interface_52:9, $int0) = ^true) {
 		cc_setposition(10, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize(100, $int3, ^setsize_abs, ^setsize_abs);
 		cc_settextfont(p12_full);
@@ -42,7 +42,7 @@ if (string_length($string0) > 0) {
 		cc_sethide(false);
 	}
 	$int5 = 120;
-	if (cc_find(52:12, $int0) = ^true) {
+	if (cc_find(interface_52:12, $int0) = ^true) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 		cc_settextfont(p12_full);
@@ -53,12 +53,12 @@ if (string_length($string0) > 0) {
 		cc_sethide(false);
 	}
 	$int5 = calc($int5 + $int4);
-	if (cc_find(52:35, $int0) = ^true) {
+	if (cc_find(interface_52:35, $int0) = ^true) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 		cc_settext("<$string5><$string1>");
 	}
-	if (cc_find(52:13, $int0) = ^true) {
+	if (cc_find(interface_52:13, $int0) = ^true) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 		cc_settextfont(p12_full);
@@ -71,14 +71,14 @@ if (string_length($string0) > 0) {
 		}
 		cc_settext($string5);
 		cc_sethide(false);
-		if (cc_find(52:35, $int0) = ^true) {
+		if (cc_find(interface_52:35, $int0) = ^true) {
 			cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 			cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 			cc_settext("<$string5><$string1>");
 		}
 	}
 	$int5 = calc($int5 + $int4);
-	if (cc_find(52:14, $int0) = ^true) {
+	if (cc_find(interface_52:14, $int0) = ^true) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 		cc_settextfont(p12_full);
@@ -91,14 +91,14 @@ if (string_length($string0) > 0) {
 		}
 		cc_settext($string6);
 		cc_sethide(false);
-		if (cc_find(52:36, $int0) = ^true) {
+		if (cc_find(interface_52:36, $int0) = ^true) {
 			cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 			cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 			cc_settext("<$string6><$string1>");
 		}
 	}
 	$int5 = calc($int5 + $int4);
-	if (cc_find(52:15, $int0) = ^true) {
+	if (cc_find(interface_52:15, $int0) = ^true) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 		cc_settextfont(p12_full);
@@ -111,14 +111,14 @@ if (string_length($string0) > 0) {
 		}
 		cc_settext($string7);
 		cc_sethide(false);
-		if (cc_find(52:37, $int0) = ^true) {
+		if (cc_find(interface_52:37, $int0) = ^true) {
 			cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 			cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 			cc_settext("<$string7><$string1>");
 		}
 	}
 	$int5 = calc($int5 + $int4);
-	if (cc_find(52:16, $int0) = ^true) {
+	if (cc_find(interface_52:16, $int0) = ^true) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 		cc_settextfont(p12_full);
@@ -131,14 +131,14 @@ if (string_length($string0) > 0) {
 		}
 		cc_settext($string8);
 		cc_sethide(false);
-		if (cc_find(52:38, $int0) = ^true) {
+		if (cc_find(interface_52:38, $int0) = ^true) {
 			cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 			cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 			cc_settext("<$string8><$string1>");
 		}
 	}
 	$int5 = calc($int5 + $int4);
-	if (cc_find(52:17, $int0) = ^true) {
+	if (cc_find(interface_52:17, $int0) = ^true) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 		cc_settextfont(p12_full);
@@ -151,14 +151,14 @@ if (string_length($string0) > 0) {
 		}
 		cc_settext($string9);
 		cc_sethide(false);
-		if (cc_find(52:39, $int0) = ^true) {
+		if (cc_find(interface_52:39, $int0) = ^true) {
 			cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 			cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 			cc_settext("<$string9><$string1>");
 		}
 	}
 	$int5 = calc($int5 + $int4);
-	if (cc_find(52:18, $int0) = ^true) {
+	if (cc_find(interface_52:18, $int0) = ^true) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 		cc_settextfont(p12_full);
@@ -171,14 +171,14 @@ if (string_length($string0) > 0) {
 		}
 		cc_settext($string10);
 		cc_sethide(false);
-		if (cc_find(52:40, $int0) = ^true) {
+		if (cc_find(interface_52:40, $int0) = ^true) {
 			cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 			cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 			cc_settext("<$string10><$string1>");
 		}
 	}
 	$int5 = calc($int5 + $int4);
-	if ((cc_find(52:19, $int0) = ^true) & (.cc_find(52:10, $int0) = ^true)) {
+	if ((cc_find(interface_52:19, $int0) = ^true) & (.cc_find(interface_52:10, $int0) = ^true)) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize(32, 21, ^setsize_abs, ^setsize_abs);
 		cc_setgraphic("rightarrow_small_stone,0");
@@ -194,7 +194,7 @@ if (string_length($string0) > 0) {
 			if (($int2 > 0) | (compare(chat_playername, $string1) = 0)) {
 				cc_sethide(false);
 				.cc_sethide(true);
-				cc_setonop("poh_board_set_last_name($string1, 52:19, $int0)");
+				cc_setonop("poh_board_set_last_name($string1, interface_52:19, $int0)");
 				cc_setop(1, "Enter House");
 				cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic7, null)");
 				cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic6, null)");
@@ -223,82 +223,82 @@ if (string_length($string0) > 0) {
 	}
 	%varcint377 = calc(%varcint377 + 1);
 } else {
-	if (cc_find(52:9, $int0) = ^true) {
+	if (cc_find(interface_52:9, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:12, $int0) = ^true) {
+	if (cc_find(interface_52:12, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:13, $int0) = ^true) {
+	if (cc_find(interface_52:13, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:14, $int0) = ^true) {
+	if (cc_find(interface_52:14, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:15, $int0) = ^true) {
+	if (cc_find(interface_52:15, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:16, $int0) = ^true) {
+	if (cc_find(interface_52:16, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:17, $int0) = ^true) {
+	if (cc_find(interface_52:17, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:18, $int0) = ^true) {
+	if (cc_find(interface_52:18, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:35, $int0) = ^true) {
+	if (cc_find(interface_52:35, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:36, $int0) = ^true) {
+	if (cc_find(interface_52:36, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:37, $int0) = ^true) {
+	if (cc_find(interface_52:37, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:38, $int0) = ^true) {
+	if (cc_find(interface_52:38, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:39, $int0) = ^true) {
+	if (cc_find(interface_52:39, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:40, $int0) = ^true) {
+	if (cc_find(interface_52:40, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:10, $int0) = ^true) {
+	if (cc_find(interface_52:10, $int0) = ^true) {
 		cc_settext("");
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find(52:19, $int0) = ^true) {
+	if (cc_find(interface_52:19, $int0) = ^true) {
 		cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setonop(null);
@@ -308,17 +308,17 @@ if (string_length($string0) > 0) {
 def_int $int8 = 0;
 if ($int0 >= 200) {
 	$int8 = calc(%varcint377 * $int3);
-	if ($int8 > if_getheight(52:7)) {
-		if_setscrollsize(0, $int8, 52:7);
-		~scrollbar_resize(52:20, 52:7, %varcint378);
+	if ($int8 > if_getheight(interface_52:7)) {
+		if_setscrollsize(0, $int8, interface_52:7);
+		~scrollbar_resize(interface_52:20, interface_52:7, %varcint378);
 	} else {
-		if_setscrollsize(0, 0, 52:7);
-		~scrollbar_resize(52:20, 52:7, 0);
+		if_setscrollsize(0, 0, interface_52:7);
+		~scrollbar_resize(interface_52:20, interface_52:7, 0);
 		%varcint378 = 0;
 	}
-	cc_deleteall(52:4);
+	cc_deleteall(interface_52:4);
 	if (%varcint377 <= 0) {
-		cc_create(52:4, ^iftype_text, 0);
+		cc_create(interface_52:4, ^iftype_text, 0);
 		cc_setposition(0, calc($int3 * 3), ^setpos_abs_centre, ^setpos_abs_top);
 		cc_setsize(0, $int3, ^setsize_minus, ^setsize_abs);
 		cc_setcolour(0xff981f);
@@ -331,14 +331,14 @@ if ($int0 >= 200) {
 	if ((((((((((((((((%varcint379 ! 0) & (%varcint379 ! 1)) & (%varcint379 ! 2)) & (%varcint379 ! 3)) & (%varcint379 ! 4)) & (%varcint379 ! 5)) & (%varcint379 ! 6)) & (%varcint379 ! 7)) & (%varcint379 ! 8)) & (%varcint379 ! 9)) & (%varcint379 ! 10)) & (%varcint379 ! 11)) & (%varcint379 ! 12)) & (%varcint379 ! 13)) & (%varcint379 ! 14)) & (%varcint379 ! 15)) {
 		%varcint379 = 5;
 	}
-	~poh_board_setsort(52:5, 52:2, 52:21);
+	~poh_board_setsort(interface_52:5, interface_52:2, interface_52:21);
 	$int8 = calc(%varcint377 * $int3);
-	if ($int8 > if_getheight(52:7)) {
-		if_setscrollsize(0, $int8, 52:7);
-		~scrollbar_resize(52:20, 52:7, %varcint378);
+	if ($int8 > if_getheight(interface_52:7)) {
+		if_setscrollsize(0, $int8, interface_52:7);
+		~scrollbar_resize(interface_52:20, interface_52:7, %varcint378);
 	} else {
-		if_setscrollsize(0, 0, 52:7);
-		~scrollbar_resize(52:20, 52:7, 0);
+		if_setscrollsize(0, 0, interface_52:7);
+		~scrollbar_resize(interface_52:20, interface_52:7, 0);
 		%varcint378 = 0;
 	}
 	%varcint377 = 0;

@@ -21,7 +21,7 @@ if (worldmap_isloaded = false) {
 }
 def_coord $coord10 = null;
 def_int $int11 = 0;
-def_maparea $maparea12 = enum(int, maparea, 1697, $int11);
+def_maparea $maparea12 = enum(int, maparea, enum_1697, $int11);
 while ($maparea12 ! null) {
 	$coord10 = ~worldmap_findcoordinmap($maparea12, $coord9);
 	if ($coord10 ! null) {
@@ -35,5 +35,5 @@ while ($maparea12 ! null) {
 		return;
 	}
 	$int11 = calc($int11 + 1);
-	$maparea12 = enum(int, maparea, 1697, $int11);
+	$maparea12 = enum(int, maparea, enum_1697, $int11);
 }

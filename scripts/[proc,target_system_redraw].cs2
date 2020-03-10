@@ -15,23 +15,23 @@ if (%varbit9489 = 1) {
 	if_sethide(false, $component12);
 }
 if (~on_mobile = true) {
-	~script1486(90:5, ^setpos_abs_right, 1, 0);
+	~script1486(interface_90:5, ^setpos_abs_right, 1, 0);
 } else if (%varbit6715 = 2) {
 	if (%varbit4143 = 1) {
 		if_setposition(106, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
 	} else {
 		if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
 	}
-	~script1486(90:5, ^setpos_abs_left, 1, 0);
+	~script1486(interface_90:5, ^setpos_abs_left, 1, 0);
 } else if (%varbit6715 = 3) {
 	if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-	~script1486(90:5, ^setpos_abs_centre, 1, 0);
+	~script1486(interface_90:5, ^setpos_abs_centre, 1, 0);
 } else {
 	if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, $component0);
-	~script1486(90:5, ^setpos_abs_right, 1, 0);
+	~script1486(interface_90:5, ^setpos_abs_right, 1, 0);
 }
 if (%varbit9495 = 0) {
-	if_setobject_nonum(6512, 1, $component3);
+	if_setobject_nonum(obj_6512, 1, $component3);
 	if_settext("", $component4);
 	if_settext("---", $component6);
 	if_setcolour(^white, $component6);
@@ -39,7 +39,7 @@ if (%varbit9495 = 0) {
 	if_sethide(true, $component8);
 	return;
 }
-if_setobject_nonum(enum(int, namedobj, 2640, %varbit9491), 1, $component3);
+if_setobject_nonum(enum(int, namedobj, enum_2640, %varbit9491), 1, $component3);
 if (%varbit9491 > 0) {
 	if (%varbit9492 = 1) {
 		if_settext("<col=ffffff><tostring(%varbit9491)></col>", $component4);

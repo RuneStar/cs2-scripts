@@ -1,7 +1,7 @@
 // 821
 script821(component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, component $component8, int $int9, int $int10, int $int11, int $int12)
 def_int $int13 = calc(%varbit4439 - 1);
-def_inv $inv14 = enum(int, inv, 150, $int13);
+def_inv $inv14 = enum(int, inv, enum_150, $int13);
 if (($inv14 = null) | (stockmarket_isofferempty($int13) = true)) {
 	if (cc_find($component0, $int1) = ^true) {
 		cc_settext("No offer");
@@ -10,7 +10,7 @@ if (($inv14 = null) | (stockmarket_isofferempty($int13) = true)) {
 		cc_sethide(true);
 	}
 	if (cc_find($component0, $int3) = ^true) {
-		cc_setobject_nonum(6512, 1);
+		cc_setobject_nonum(obj_6512, 1);
 	}
 	if (cc_find($component0, $int4) = ^true) {
 		cc_settext("No offer");
@@ -38,7 +38,7 @@ if (($inv14 = null) | (stockmarket_isofferempty($int13) = true)) {
 def_int $int15 = stockmarket_getoffertype($int13);
 def_obj $obj16 = stockmarket_getofferitem($int13);
 if ($obj16 = null) {
-	$obj16 = 6512;
+	$obj16 = obj_6512;
 }
 def_int $int17 = stockmarket_getoffercount($int13);
 if ($int17 <= 0) {

@@ -1,6 +1,6 @@
 // 604
 [clientscript,poll_setbutton](component $component0, component $component1, string $string0)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, 161:15)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
 ~poll_setbutton($component0, $component1, $string0);

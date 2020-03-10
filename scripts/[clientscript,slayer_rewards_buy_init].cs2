@@ -11,7 +11,7 @@ def_int $int14 = 0;
 def_int $int15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
-def_namedobj $namedobj18 = enum(int, namedobj, 840, $int17);
+def_namedobj $namedobj18 = enum(int, namedobj, enum_840, $int17);
 while ($namedobj18 ! null) {
 	$int13, $int14 = calc(($int17 % 5) * $int10), calc(($int17 / 5) * $int11);
 	cc_create($component1, ^iftype_graphic, $int17);
@@ -23,14 +23,14 @@ while ($namedobj18 ! null) {
 	$int15 = calc(($int14 + 32) + 15);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	$int16 = enum(obj, int, 841, $namedobj18);
+	$int16 = enum(obj, int, enum_841, $namedobj18);
 	cc_setobject($namedobj18, $int16);
 	cc_settrans(0);
 	.cc_setcolour(0xff981f);
 	.cc_settextfont(p12_full);
 	.cc_settextshadow(true);
 	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	.cc_settext(~tostring_spacer(enum(obj, int, 842, $namedobj18), ","));
+	.cc_settext(~tostring_spacer(enum(obj, int, enum_842, $namedobj18), ","));
 	if (($namedobj18 = herb_sack_13226) | ($namedobj18 = rune_pouch_12791)) {
 		cc_setop(2, "Buy 1");
 	} else if ($int16 = 1) {
@@ -53,7 +53,7 @@ while ($namedobj18 ! null) {
 	cc_setopbase("<col=ff9040><oc_name($namedobj18)></col>");
 	cc_setonop("slayer_rewards_buy_op(event_opindex, event_com, event_comid, $component4, $component5, $component6, $component7, $component8)");
 	$int17 = calc($int17 + 1);
-	$namedobj18 = enum(int, namedobj, 840, $int17);
+	$namedobj18 = enum(int, namedobj, enum_840, $int17);
 }
 if_setscrollpos(0, 0, $component0);
 if_setsize($int9, $int15, ^setsize_abs, ^setsize_abs, $component1);

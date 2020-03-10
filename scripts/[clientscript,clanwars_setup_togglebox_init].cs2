@@ -1,6 +1,6 @@
 // 582
 [clientscript,clanwars_setup_togglebox_init](enum $enum0, component $component1, component $component2, component $component3, component $component4, string $string0)
-def_enum $enum5 = enum(enum, enum, 373, $enum0);
+def_enum $enum5 = enum(enum, enum, enum_373, $enum0);
 cc_deleteall($component1);
 cc_deleteall($component3);
 ~clanwars_setup_scrollbox_drawframe($component2, $component3, $string0);
@@ -10,7 +10,7 @@ def_string $string1 = "";
 def_int $int8 = 0;
 def_int $int9 = enum(int, int, $enum0, $int8);
 while ($int9 ! -1) {
-	$string1 = enum(int, string, 934, $int9);
+	$string1 = enum(int, string, enum_934, $int9);
 	cc_create($component3, ^iftype_rectangle, calc($int8 * 3));
 	cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int6, 17, ^setsize_abs, ^setsize_abs);

@@ -25,7 +25,7 @@ if (cc_find($component0, calc($int2 + 2)) = ^true) {
 if_setopbase("<col=ff9040><oc_name($obj4)></col>", $component0);
 if_clearops($component0);
 if_setop(10, "Examine", $component0);
-def_int $int6 = enum(obj, int, 2193, $obj1);
+def_int $int6 = enum(obj, int, enum_2193, $obj1);
 if ($int6 <= 1) {
 	if_setop(1, "Store", $component0);
 } else {

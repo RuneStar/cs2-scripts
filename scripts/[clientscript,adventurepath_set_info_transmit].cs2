@@ -3,13 +3,13 @@
 if (%var2358 = 0) {
 	return;
 }
-def_enum $enum21 = enum(int, enum, 2620, %var2357);
+def_enum $enum21 = enum(int, enum, enum_2620, %var2357);
 if ($enum21 = null) {
 	return;
 }
 def_int $int22 = 0;
 def_struct $struct23 = null;
-def_int $int24 = struct_param($struct23, 806);
+def_int $int24 = struct_param($struct23, param_806);
 while ($int22 < enum_getoutputcount($enum21)) {
 	$struct23 = enum(int, struct, $enum21, $int22);
 	if (($struct23 ! null) & ($int24 = %var2358)) {

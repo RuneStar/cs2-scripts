@@ -1,21 +1,21 @@
 // 108
 [clientscript,meslayer_mode7](string $string0)
 ~meslayer_open(7);
-if_settext($string0, 162:44);
+if_settext($string0, interface_162:44);
 ~script222("");
 def_string $string1 = "";
-if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string1)", 162:45);
-if_setondialogabort("meslayer_ondialogabort", 162:45);
+if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string1)", interface_162:45);
+if_setondialogabort("meslayer_ondialogabort", interface_162:45);
 if (~on_mobile = true) {
 	~keyboard_show(1, 10);
-	if_setposition(0, -18, ^setpos_abs_centre, ^setpos_abs_centre, 162:44);
-	if_setsize(0, 36, ^setsize_minus, ^setsize_abs, 162:44);
-	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_centre, 162:45);
-	if_setsize(0, 20, ^setsize_minus, ^setsize_abs, 162:45);
-	~meslayer_button_draw(162:46, "B", 0);
-	if_setonclick("meslayer_mode7_button(event_com, "B", $string0)", 162:46);
-	~meslayer_button_draw(162:47, "M", 0);
-	if_setonclick("meslayer_mode7_button(event_com, "M", $string0)", 162:47);
-	~meslayer_button_draw(162:48, "K", 0);
-	if_setonclick("meslayer_mode7_button(event_com, "K", $string0)", 162:48);
+	if_setposition(0, -18, ^setpos_abs_centre, ^setpos_abs_centre, interface_162:44);
+	if_setsize(0, 36, ^setsize_minus, ^setsize_abs, interface_162:44);
+	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_centre, interface_162:45);
+	if_setsize(0, 20, ^setsize_minus, ^setsize_abs, interface_162:45);
+	~meslayer_button_draw(interface_162:46, "B", 0);
+	if_setonclick("meslayer_mode7_button(event_com, "B", $string0)", interface_162:46);
+	~meslayer_button_draw(interface_162:47, "M", 0);
+	if_setonclick("meslayer_mode7_button(event_com, "M", $string0)", interface_162:47);
+	~meslayer_button_draw(interface_162:48, "K", 0);
+	if_setonclick("meslayer_mode7_button(event_com, "K", $string0)", interface_162:48);
 }

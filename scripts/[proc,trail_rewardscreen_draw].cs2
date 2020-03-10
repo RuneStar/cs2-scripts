@@ -7,7 +7,7 @@ def_obj $obj4 = null;
 def_int $int5 = 0;
 while ($int5 < $int1) {
 	cc_create($component0, ^iftype_graphic, $int5);
-	$obj4 = inv_getobj(141, $int5);
+	$obj4 = inv_getobj(inv_141, $int5);
 	if ($obj4 ! null) {
 		cc_sethide(false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -21,7 +21,7 @@ while ($int5 < $int1) {
 		}
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		cc_setobject($obj4, inv_getnum(141, $int5));
+		cc_setobject($obj4, inv_getnum(inv_141, $int5));
 		cc_setop(10, "Examine");
 		cc_setopbase("<col=ff9040><oc_name($obj4)></col>");
 	} else {

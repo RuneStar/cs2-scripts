@@ -1,6 +1,6 @@
 // 576
 [clientscript,clanwars_setup_scrollbox_init](enum $enum0, component $component1, component $component2, component $component3, component $component4, component $component5)
-def_enum $enum6 = enum(enum, enum, 373, $enum0);
+def_enum $enum6 = enum(enum, enum, enum_373, $enum0);
 cc_deleteall($component1);
 cc_deleteall($component3);
 if ($component4 ! null) {
@@ -31,8 +31,8 @@ while (string_length($string0) > 0) {
 	cc_settextshadow(true);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	if (($enum0 = 929) & (map_members = ^false)) {
-		if (enum(int, boolean, 935, $int9) = true) {
+	if (($enum0 = enum_929) & (map_members = ^false)) {
+		if (enum(int, boolean, enum_935, $int9) = true) {
 			cc_settext("<str><$string0></str>");
 		} else {
 			cc_settext($string0);
@@ -42,7 +42,7 @@ while (string_length($string0) > 0) {
 	}
 	$int9, $int8 = calc($int9 + 1), calc($int8 + 17);
 	$string0 = enum(int, string, $enum0, $int9);
-	if ((($int7 = 0) & ($enum0 = 929)) & ($int8 >= calc(12 * 17))) {
+	if ((($int7 = 0) & ($enum0 = enum_929)) & ($int8 >= calc(12 * 17))) {
 		$string0 = "";
 	}
 }

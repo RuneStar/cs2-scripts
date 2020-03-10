@@ -8,11 +8,11 @@ if ($int0 = 1) {
 			return;
 		}
 		if (~prayer_isavailable($int2) = 0) {
-			sound_synth(2673, 1, 0);
+			sound_synth(synth_2673, 1, 0);
 			return;
 		}
 		if (stat(prayer) <= 0) {
-			sound_synth(2673, 1, 0);
+			sound_synth(synth_2673, 1, 0);
 			mes("You need to recharge your Prayer at an altar.");
 			return;
 		}
@@ -22,7 +22,7 @@ if ($int0 = 1) {
 } else if ($int0 = 2) {
 	~deltooltip_action($component7);
 	if (($boolean1 = true) & (%varcint218 ! $component3)) {
-		sound_synth(2266, 1, 0);
+		sound_synth(synth_2266, 1, 0);
 		~tooltip_build($component3, -1, $component7, ~prayer_gettooltiptext($int2), if_getwidth($component6));
 		%varcint218 = $component3;
 	} else {

@@ -13,7 +13,7 @@ cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
-cc_setobject_nonum(enum(int, namedobj, 2628, $int1), 1);
+cc_setobject_nonum(enum(int, namedobj, enum_2628, $int1), 1);
 cc_create($component2, ^iftype_text, $int4);
 $int4 = calc($int4 + 1);
 cc_setsize(calc(36 + 10), 0, ^setsize_minus, ^setsize_minus);
@@ -26,4 +26,4 @@ if ($boolean3 = true) {
 }
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext(enum(int, string, 2629, $int1));
+cc_settext(enum(int, string, enum_2629, $int1));

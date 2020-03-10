@@ -7,9 +7,9 @@ def_string $string0 = "";
 def_string $string1 = "";
 def_string $string2 = "";
 def_int $int3 = 0;
-if (if_hassub(162:560) = true) {
+if (if_hassub(interface_162:560) = true) {
 	$chattype1, $int2, $string0, $string1, $string2, $int3 = chat_gethistory_byuid($int0);
-	if ((enum(int, boolean, 892, $chattype1) = true) & ($chattype1 ! ^chattype_108)) {
+	if ((enum(int, boolean, enum_892, $chattype1) = true) & ($chattype1 ! ^chattype_108)) {
 		~meslayer_mode1($string2);
 	}
 }

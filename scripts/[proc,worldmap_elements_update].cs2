@@ -175,16 +175,16 @@ switch_maparea (worldmap_getcurrentmap) {
 		$int5 = ~script1753(0_20_159_49_30, 1_20_159_53_30, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_20_159_34_12, 2_20_159_38_12, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 	case fossil_underground :
-		$int5 = ~script1753(1_58_160_4_3, enum(coord, coord, 1771, 1_58_160_4_3), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-		$int5 = ~script1753(1_58_160_42_1, enum(coord, coord, 1771, 1_58_160_42_1), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-		$int5 = ~script1753(1_58_160_60_27, enum(coord, coord, 1771, 1_58_160_60_27), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-		$int5 = ~script1753(1_58_160_60_40, enum(coord, coord, 1771, 1_58_160_60_40), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-		$int5 = ~script1753(1_59_160_13_58, enum(coord, coord, 1771, 1_59_160_13_58), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-		$int5 = ~script1753(1_59_160_3_37, enum(coord, coord, 1771, 1_59_160_3_37), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-		$int5 = ~script1753(1_59_160_3_1, enum(coord, coord, 1771, 1_59_160_3_1), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-		$int5 = ~script1753(1_59_160_47_7, enum(coord, coord, 1771, 1_59_160_47_7), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-		$int5 = ~script1753(1_59_160_40_31, enum(coord, coord, 1771, 1_59_160_40_31), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
-		$int5 = ~script1753(1_59_160_57_49, enum(coord, coord, 1771, 1_59_160_57_49), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script1753(1_58_160_4_3, enum(coord, coord, enum_1771, 1_58_160_4_3), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script1753(1_58_160_42_1, enum(coord, coord, enum_1771, 1_58_160_42_1), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script1753(1_58_160_60_27, enum(coord, coord, enum_1771, 1_58_160_60_27), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script1753(1_58_160_60_40, enum(coord, coord, enum_1771, 1_58_160_60_40), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script1753(1_59_160_13_58, enum(coord, coord, enum_1771, 1_59_160_13_58), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script1753(1_59_160_3_37, enum(coord, coord, enum_1771, 1_59_160_3_37), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script1753(1_59_160_3_1, enum(coord, coord, enum_1771, 1_59_160_3_1), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script1753(1_59_160_47_7, enum(coord, coord, enum_1771, 1_59_160_47_7), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script1753(1_59_160_40_31, enum(coord, coord, enum_1771, 1_59_160_40_31), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
+		$int5 = ~script1753(1_59_160_57_49, enum(coord, coord, enum_1771, 1_59_160_57_49), false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(3_59_158_26_47, 1_59_158_27_46, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(1_59_158_27_46, 3_59_158_26_47, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(3_59_158_37_47, 1_59_158_37_46, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
@@ -209,5 +209,5 @@ switch_maparea (worldmap_getcurrentmap) {
 		$int5 = ~script1753(2_41_96_44_22, 1_41_96_44_22, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 }
 if (testbit(%varbit5640, 0) = ^false) {
-	$int5 = ~worldmap_elements_marker(%varcint188, 1, $component0, $int1, $int2, $int3, $int4, $int5);
+	$int5 = ~worldmap_elements_marker(%varcint188, struct_1, $component0, $int1, $int2, $int3, $int4, $int5);
 }

@@ -5,7 +5,7 @@ def_namedobj $namedobj2 = null;
 if (%varbit3729 = 0) {
 	$int1 = ~v2_stone_button_in_filled($component0);
 } else {
-	$namedobj2 = enum(int, namedobj, 2750, %varbit3729);
+	$namedobj2 = enum(int, namedobj, enum_2750, %varbit3729);
 	$int1 = ~v2_stone_button_filled($component0);
 }
 cc_create($component0, ^iftype_text, $int1);
@@ -19,7 +19,7 @@ if (%varbit3729 = 0) {
 	cc_settext("Select an item");
 } else {
 	if ($namedobj2 ! null) {
-		cc_settext("Confirm: <col=ffffff><oc_name($namedobj2)> x<tostring(enum(namedobj, int, 2751, $namedobj2))>");
+		cc_settext("Confirm: <col=ffffff><oc_name($namedobj2)> x<tostring(enum(namedobj, int, enum_2751, $namedobj2))>");
 	} else {
 		cc_settext("Confirm");
 	}

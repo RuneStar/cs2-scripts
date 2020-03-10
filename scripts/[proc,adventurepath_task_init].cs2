@@ -15,7 +15,7 @@ def_int $int28 = -1;
 def_int $int29 = 0;
 def_int $int30 = 0;
 def_int $int31 = 0;
-$enum27 = enum(int, enum, 2620, $int1);
+$enum27 = enum(int, enum, enum_2620, $int1);
 def_int $int32 = 0;
 def_int $int33 = 0;
 def_graphic $graphic34 = null;
@@ -27,9 +27,9 @@ while ($int29 < enum_getoutputcount($enum27)) {
 		if_close;
 		return;
 	}
-	if (struct_param($struct25, 807) = $int1) {
-		$graphic34 = struct_param($struct25, 811);
-		$int32 = struct_param($struct25, 806);
+	if (struct_param($struct25, param_807) = $int1) {
+		$graphic34 = struct_param($struct25, param_811);
+		$int32 = struct_param($struct25, param_806);
 		if (%var2358 = 0) {
 			%var2358 = $int32;
 		}
@@ -40,18 +40,18 @@ while ($int29 < enum_getoutputcount($enum27)) {
 		}
 		$int35 = ~script2973($int32, $int1);
 		if ($int35 ! $int32) {
-			$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, 810), ^red, ^white, $int32, $int33, $graphic34);
+			$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), ^red, ^white, $int32, $int33, $graphic34);
 			cc_setonop("adventurepath_set_info($int32, $component7, $component8, $component9, $component10, $struct25, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $int1, $component2, $component5, $component6, $int32, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24)");
 		} else if (~adventurepath_return_task_status($int32) = ^true) {
 			if ((~adventurepath_return_reward_f2p($int32) = ^false) | (~adventurepath_return_reward_p2p($int32) = ^false)) {
-				$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, 810), 0x32dbe9, ^white, $int32, $int33, $graphic34);
+				$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), 0x32dbe9, ^white, $int32, $int33, $graphic34);
 				cc_setonop("adventurepath_set_info($int32, $component7, $component8, $component9, $component10, $struct25, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $int1, $component2, $component5, $component6, $int32, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24)");
 			} else {
-				$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, 810), 0x0dc10d, ^white, $int32, $int33, $graphic34);
+				$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), 0x0dc10d, ^white, $int32, $int33, $graphic34);
 				cc_setonop("adventurepath_set_info($int32, $component7, $component8, $component9, $component10, $struct25, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $int1, $component2, $component5, $component6, $int32, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24)");
 			}
 		} else {
-			$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, 810), ^yellow, ^white, $int32, $int33, $graphic34);
+			$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), ^yellow, ^white, $int32, $int33, $graphic34);
 			cc_setonop("adventurepath_set_info($int32, $component7, $component8, $component9, $component10, $struct25, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $int1, $component2, $component5, $component6, $int32, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24)");
 		}
 		if (%var2358 = $int32) {

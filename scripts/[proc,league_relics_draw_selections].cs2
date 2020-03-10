@@ -16,14 +16,14 @@ if_sethide(false, $component6);
 if_sethide(true, $component7);
 if_sethide(true, $component9);
 if_sethide(true, $component8);
-def_struct $struct13 = enum(int, struct, 2670, %varbit10032);
+def_struct $struct13 = enum(int, struct, enum_2670, %varbit10032);
 def_enum $enum14 = null;
 def_int $int15 = 0;
 def_struct $struct16 = null;
 def_int $int17 = 0;
 def_enum $enum18 = null;
 if ($struct13 ! null) {
-	$enum14 = struct_param($struct13, 870);
+	$enum14 = struct_param($struct13, param_870);
 }
 if ($enum14 ! null) {
 	$int15 = enum_getoutputcount($enum14);
@@ -75,7 +75,7 @@ def_int $int44 = 0;
 def_int $int45 = 0;
 while ($int43 < $int15) {
 	$struct16 = enum(int, struct, $enum14, $int43);
-	$enum18 = struct_param($struct16, 878);
+	$enum18 = struct_param($struct16, param_878);
 	switch_int ($int43) {
 		case 0 :
 			$int41 = %varbit10049;
@@ -98,7 +98,7 @@ while ($int43 < $int15) {
 		cc_setgraphic("tradebacking_dark");
 		cc_settiling(true);
 		$graphic29, $int30, $string0, $int31, $int32, $int38, $colour34, $colour36 = null, 255, "", 1, 0, 1, 0xaaaaaa, 0xdddddd;
-	} else if ((($int28 = 0) & ($enum18 ! null)) & (%var2615 >= struct_param($struct16, 877))) {
+	} else if ((($int28 = 0) & ($enum18 ! null)) & (%var2615 >= struct_param($struct16, param_877))) {
 		cc_create($component1, ^iftype_graphic, $int43);
 		cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
 		cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -138,7 +138,7 @@ while ($int43 < $int15) {
 		if (string_length($string0) > 0) {
 			$string1 = $string0;
 		} else {
-			$string1 = struct_param($struct39, 879);
+			$string1 = struct_param($struct39, param_879);
 		}
 		cc_setsize(calc($int24 - 10), 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int27 + 5), calc(($int26 + ($int25 / 2)) + 1), ^setpos_abs_left, ^setpos_abs_top);
@@ -167,9 +167,9 @@ while ($int43 < $int15) {
 		if ($graphic29 ! null) {
 			$graphic40, $int37 = $graphic29, calc($int30 - 128);
 		} else if ($struct39 = $struct42) {
-			$graphic40, $int37 = struct_param($struct39, 881), 0;
+			$graphic40, $int37 = struct_param($struct39, param_881), 0;
 		} else {
-			$graphic40, $int37 = struct_param($struct39, 883), calc($int30 - 128);
+			$graphic40, $int37 = struct_param($struct39, param_883), calc($int30 - 128);
 		}
 		cc_setgraphic($graphic40);
 		cc_create($component3, ^iftype_graphic, $int45);
@@ -193,7 +193,7 @@ while ($int43 < $int15) {
 		}
 		if (($int31 = 1) & (~on_mobile = false)) {
 			if ($int32 = 1) {
-				cc_setonmouseover("league_relic_hover($component3, $int37, $component2, struct_param($struct39, 881), $component4, $colour35, $int45)");
+				cc_setonmouseover("league_relic_hover($component3, $int37, $component2, struct_param($struct39, param_881), $component4, $colour35, $int45)");
 			} else {
 				cc_setonmouseover("league_relic_hover($component3, $int37, $component2, $graphic40, $component4, $colour35, $int45)");
 			}

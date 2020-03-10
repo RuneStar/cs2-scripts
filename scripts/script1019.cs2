@@ -3,7 +3,7 @@ script1019(int $int0, component $component1, int $int2, int $colour3)
 if ($int0 ! 1) {
 	return;
 }
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 if (cc_find($component1, $int2) = ^true) {
 	cc_setcolour(^white);
 	cc_setontimer("script1020(event_com, event_comid, $colour3, calc(clientclock + 30))");

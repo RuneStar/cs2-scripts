@@ -1,6 +1,6 @@
 // 628
 [clientscript,poll_historyop](component $component0, int $int1, int $int2, string $string0)
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 if (cc_find($component0, $int2) = ^true) {
 	cc_settext("<col=ffffff>Loading...</col>");
 	cc_setontimer("poll_historyreset(event_com, event_comid, $string0, calc(clientclock + 30))");

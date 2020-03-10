@@ -14,9 +14,9 @@ cc_deleteall($component0);
 if (map_members = ^false) {
 	$int2, $int6, $int7 = ~wom_item_display($component0, $component1, 1, 0, 0, 0, 0);
 } else if (%varbit6610 = 0) {
-	$int10 = enum_getoutputcount(2070);
+	$int10 = enum_getoutputcount(enum_2070);
 	while ($int5 <= $int10) {
-		$enum8 = enum(int, enum, 2070, $int5);
+		$enum8 = enum(int, enum, enum_2070, $int5);
 		$int2, $int6, $int7 = ~wom_item_display($component0, $component1, $int5, $int3, $int2, $int6, $int7);
 		$int11 = enum_getoutputcount($enum8);
 		while ($int4 < $int11) {

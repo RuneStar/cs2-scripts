@@ -217,7 +217,7 @@ switch_int ($int0) {
 		}
 		if ($int1 = 4) {
 			if ($int2 = 0) {
-				return(-1, 7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing and level 15 Agility.");
+				return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing and level 15 Agility.");
 			}
 			if ($int2 = 1) {
 				return(15, leaping_trout_11328, "Leaping trout<br> (with 15 Agility & 48 Fishing)");
@@ -749,17 +749,17 @@ switch_int ($int0) {
 		if ($int1 = 0) {
 			switch_int ($int2) {
 				case 0 :
-					return(-1, 7620, "Hitpoints are used to tell you how healthy your character is. A character who reaches 0 Hitpoints has died, but will reappear in their chosen respawn location (normally Lumbridge).");
+					return(-1, obj_7620, "Hitpoints are used to tell you how healthy your character is. A character who reaches 0 Hitpoints has died, but will reappear in their chosen respawn location (normally Lumbridge).");
 				case 1 :
-					return(-1, 7620, "If you see any red 'hit splats' during combat, the number shown corresponds to the number of Hitpoints lost as a result of that strike.");
+					return(-1, obj_7620, "If you see any red 'hit splats' during combat, the number shown corresponds to the number of Hitpoints lost as a result of that strike.");
 				case 2 :
-					return(-1, 7620, "Blue hit splats mean no damage has been dealt.");
+					return(-1, obj_7620, "Blue hit splats mean no damage has been dealt.");
 				case 3 :
-					return(-1, 7620, "Green hit splats are poison damage.");
+					return(-1, obj_7620, "Green hit splats are poison damage.");
 				case 4 :
-					return(-1, 7620, "Teal hit splats are venom damage. (Members)");
+					return(-1, obj_7620, "Teal hit splats are venom damage. (Members)");
 				case 5 :
-					return(-1, 7620, "Orange hit splats are disease damage. (Members)");
+					return(-1, obj_7620, "Orange hit splats are disease damage. (Members)");
 				case default :
 					return(-1, null, "");
 			}
@@ -1237,7 +1237,7 @@ switch_int ($int0) {
 		}
 		if ($int1 = 3) {
 			if ($int2 = 0) {
-				return(-1, 7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing and level 15 Agility.");
+				return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing and level 15 Agility.");
 			}
 			if ($int2 = 1) {
 				return(15, leaping_trout_11328, "Leaping trout<br> (with 15 Strength & 48 Fishing)");
@@ -1262,7 +1262,7 @@ switch_int ($int0) {
 			case 0 :
 				switch_int ($int2) {
 					case 0 :
-						return(-1, 7620, "You must complete the Druidic Ritual quest before you can use Herblore.");
+						return(-1, obj_7620, "You must complete the Druidic Ritual quest before you can use Herblore.");
 					case 1 :
 						return(3, eye_of_newt_221, "Attack potion<br>Guam leaf & eye of newt");
 					case 2 :
@@ -1370,7 +1370,7 @@ switch_int ($int0) {
 				}
 			case 1 :
 				if ($int2 = 0) {
-					return(-1, 7620, "You must complete the Druidic Ritual quest before you can use Herblore");
+					return(-1, obj_7620, "You must complete the Druidic Ritual quest before you can use Herblore");
 				}
 				if ($int2 = 1) {
 					return(3, guam_leaf_249, "Guam leaf");
@@ -1423,7 +1423,7 @@ switch_int ($int0) {
 				return(-1, null, "");
 			case 2 :
 				if ($int2 = 0) {
-					return(-1, 7620, "You must complete barbarian herblore training before you can make these potions.");
+					return(-1, obj_7620, "You must complete barbarian herblore training before you can make these potions.");
 				}
 				if ($int2 = 1) {
 					return(4, attack_mix_2_11429, "Attack mix");
@@ -1512,7 +1512,7 @@ switch_int ($int0) {
 				return(-1, null, "");
 			case 3 :
 				if ($int2 = 0) {
-					return(-1, 7620, "Potions may be <col=6f0000>strong</col>, <col=6f0000>standard</col> or <col=6f0000>weak</col>, depending on your Herblore level.");
+					return(-1, obj_7620, "Potions may be <col=6f0000>strong</col>, <col=6f0000>standard</col> or <col=6f0000>weak</col>, depending on your Herblore level.");
 				}
 				if ($int2 = 1) {
 					return(47, golpar_20905, "Weak Golpar potions:");
@@ -2824,7 +2824,7 @@ switch_int ($int0) {
 		}
 		if ($int1 = 2) {
 			if ($int2 = 0) {
-				return(-1, 7620, "After completing Knight's Sword, able to make:");
+				return(-1, obj_7620, "After completing Knight's Sword, able to make:");
 			}
 			if ($int2 = 1) {
 				return(8, blurite_bolts_unf_9376, "Blurite crossbow bolts<br>1 bar makes 10");
@@ -3528,7 +3528,7 @@ switch_int ($int0) {
 		}
 		if ($int1 = 1) {
 			if ($int2 = 0) {
-				return(-1, 7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing and level 15 Agility.");
+				return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing and level 15 Agility.");
 			}
 			if ($int2 = 1) {
 				return(48, leaping_trout_11328, "Leaping trout<br> (with 15 Agility & 15 Strength)");
@@ -3734,19 +3734,19 @@ switch_int ($int0) {
 				return(58, pitta_bread_1865, "Members: Pitta bread");
 			}
 			if ($int2 = 2) {
-				return(-1, 7620, "1. Pick some grain and take it to a windmill to make flour.");
+				return(-1, obj_7620, "1. Pick some grain and take it to a windmill to make flour.");
 			}
 			if ($int2 = 3) {
-				return(-1, 7620, "2. Use a pot to collect the flour you have made.");
+				return(-1, obj_7620, "2. Use a pot to collect the flour you have made.");
 			}
 			if ($int2 = 4) {
-				return(-1, 7620, "3. Fill a bucket or jug with water from a sink or fountain.");
+				return(-1, obj_7620, "3. Fill a bucket or jug with water from a sink or fountain.");
 			}
 			if ($int2 = 5) {
-				return(-1, 7620, "4. Mix the flour and water to make some bread dough.");
+				return(-1, obj_7620, "4. Mix the flour and water to make some bread dough.");
 			}
 			if ($int2 = 6) {
-				return(-1, 7620, "5. Cook the dough by using it with a stove.");
+				return(-1, obj_7620, "5. Cook the dough by using it with a stove.");
 			}
 			return(-1, null, "");
 		}
@@ -3788,19 +3788,19 @@ switch_int ($int0) {
 				return(95, summer_pie_7218, "Members: Summer pie");
 			}
 			if ($int2 = 12) {
-				return(-1, 7620, "To make a pie:");
+				return(-1, obj_7620, "To make a pie:");
 			}
 			if ($int2 = 13) {
-				return(-1, 7620, "1. Mix flour and water to make pastry dough.");
+				return(-1, obj_7620, "1. Mix flour and water to make pastry dough.");
 			}
 			if ($int2 = 14) {
-				return(-1, 7620, "2. Place the dough in an empty pie dish.");
+				return(-1, obj_7620, "2. Place the dough in an empty pie dish.");
 			}
 			if ($int2 = 15) {
-				return(-1, 7620, "3. Use your choice of filling with the empty pie (refer to pie recipe book).");
+				return(-1, obj_7620, "3. Use your choice of filling with the empty pie (refer to pie recipe book).");
 			}
 			if ($int2 = 16) {
-				return(-1, 7620, "4. Cook the pie by using it with a stove.");
+				return(-1, obj_7620, "4. Cook the pie by using it with a stove.");
 			}
 			return(-1, null, "");
 		}
@@ -3812,25 +3812,25 @@ switch_int ($int0) {
 				return(60, curry_2011, "Members: Curry");
 			}
 			if ($int2 = 2) {
-				return(-1, 7620, "To make stew:");
+				return(-1, obj_7620, "To make stew:");
 			}
 			if ($int2 = 3) {
-				return(-1, 7620, "1. Obtain a bowl and fill it with water from a sink or fountain.");
+				return(-1, obj_7620, "1. Obtain a bowl and fill it with water from a sink or fountain.");
 			}
 			if ($int2 = 4) {
-				return(-1, 7620, "2. Pick a potato and place it in the bowl.");
+				return(-1, obj_7620, "2. Pick a potato and place it in the bowl.");
 			}
 			if ($int2 = 5) {
-				return(-1, 7620, "3. Cook some meat and place it in the bowl.");
+				return(-1, obj_7620, "3. Cook some meat and place it in the bowl.");
 			}
 			if ($int2 = 6) {
-				return(-1, 7620, "4. Cook the stew by using it with a stove or fire.");
+				return(-1, obj_7620, "4. Cook the stew by using it with a stove or fire.");
 			}
 			if ($int2 = 7) {
-				return(-1, 7620, "After completing Evil Dave's miniquest<br>from Recipe for Disaster, I can add<br>spices to cooked stew.");
+				return(-1, obj_7620, "After completing Evil Dave's miniquest<br>from Recipe for Disaster, I can add<br>spices to cooked stew.");
 			}
 			if ($int2 = 8) {
-				return(-1, 7620, "To make curry: make uncooked stew as above. Before cooking, add some spices or 3 curry leaves.");
+				return(-1, obj_7620, "To make curry: make uncooked stew as above. Before cooking, add some spices or 3 curry leaves.");
 			}
 			return(-1, null, "");
 		}
@@ -3848,22 +3848,22 @@ switch_int ($int0) {
 				return(65, pineapple_pizza_2301, "Members: Pineapple pizza");
 			}
 			if ($int2 = 4) {
-				return(-1, 7620, "To make a pizza:");
+				return(-1, obj_7620, "To make a pizza:");
 			}
 			if ($int2 = 5) {
-				return(-1, 7620, "1. Mix flour and water to make a pizza base.");
+				return(-1, obj_7620, "1. Mix flour and water to make a pizza base.");
 			}
 			if ($int2 = 6) {
-				return(-1, 7620, "2. Add a tomato to the pizza.");
+				return(-1, obj_7620, "2. Add a tomato to the pizza.");
 			}
 			if ($int2 = 7) {
-				return(-1, 7620, "3. Add some cheese to the pizza.");
+				return(-1, obj_7620, "3. Add some cheese to the pizza.");
 			}
 			if ($int2 = 8) {
-				return(-1, 7620, "4. Cook the pizza by using it with a stove.");
+				return(-1, obj_7620, "4. Cook the pizza by using it with a stove.");
 			}
 			if ($int2 = 9) {
-				return(-1, 7620, "5. Add your choice of topping to the pizza.");
+				return(-1, obj_7620, "5. Add your choice of topping to the pizza.");
 			}
 			return(-1, null, "");
 		}
@@ -3875,16 +3875,16 @@ switch_int ($int0) {
 				return(50, chocolate_cake_1897, "Chocolate cake");
 			}
 			if ($int2 = 2) {
-				return(-1, 7620, "To make a cake:");
+				return(-1, obj_7620, "To make a cake:");
 			}
 			if ($int2 = 3) {
-				return(-1, 7620, "1. Mix flour, eggs and milk together in a cake tin.");
+				return(-1, obj_7620, "1. Mix flour, eggs and milk together in a cake tin.");
 			}
 			if ($int2 = 4) {
-				return(-1, 7620, "2. Cook the cake by using it with a stove.");
+				return(-1, obj_7620, "2. Cook the cake by using it with a stove.");
 			}
 			if ($int2 = 5) {
-				return(-1, 7620, "3. Optional: Buy some chocolate and add it to the cake to make a chocolate cake.");
+				return(-1, obj_7620, "3. Optional: Buy some chocolate and add it to the cake to make a chocolate cake.");
 			}
 			return(-1, null, "");
 		}
@@ -3896,19 +3896,19 @@ switch_int ($int0) {
 				return(65, wine_of_zamorak_245, "Members: Wine of Zamorak");
 			}
 			if ($int2 = 2) {
-				return(-1, 7620, "To make wine:");
+				return(-1, obj_7620, "To make wine:");
 			}
 			if ($int2 = 3) {
-				return(-1, 7620, "1. Fill a jug with water.");
+				return(-1, obj_7620, "1. Fill a jug with water.");
 			}
 			if ($int2 = 4) {
-				return(-1, 7620, "2. Use grapes with the jug of water.");
+				return(-1, obj_7620, "2. Use grapes with the jug of water.");
 			}
 			if ($int2 = 5) {
-				return(-1, 7620, "3. Wait until the wine ferments.");
+				return(-1, obj_7620, "3. Wait until the wine ferments.");
 			}
 			if ($int2 = 6) {
-				return(-1, 7620, "Wine will ferment when left in<br>your inventory or the bank.");
+				return(-1, obj_7620, "Wine will ferment when left in<br>your inventory or the bank.");
 			}
 			return(-1, null, "");
 		}
@@ -3917,22 +3917,22 @@ switch_int ($int0) {
 				return(20, cup_of_tea_4242, "Nettle tea");
 			}
 			if ($int2 = 1) {
-				return(-1, 7620, "To make nettle tea:");
+				return(-1, obj_7620, "To make nettle tea:");
 			}
 			if ($int2 = 2) {
-				return(-1, 7620, "1. Fill a bowl with water.");
+				return(-1, obj_7620, "1. Fill a bowl with water.");
 			}
 			if ($int2 = 3) {
-				return(-1, 7620, "2. Put some picked nettles into the bowl of water.");
+				return(-1, obj_7620, "2. Put some picked nettles into the bowl of water.");
 			}
 			if ($int2 = 4) {
-				return(-1, 7620, "3. Boil the nettle-water by using it with a range or a fire.");
+				return(-1, obj_7620, "3. Boil the nettle-water by using it with a range or a fire.");
 			}
 			if ($int2 = 5) {
-				return(-1, 7620, "4. Use the bowl of nettle tea with a cup.");
+				return(-1, obj_7620, "4. Use the bowl of nettle tea with a cup.");
 			}
 			if ($int2 = 6) {
-				return(-1, 7620, "5. If you take milk, use a bucket of milk on the nettle tea.");
+				return(-1, obj_7620, "5. If you take milk, use a bucket of milk on the nettle tea.");
 			}
 			return(-1, null, "");
 		}
@@ -4019,31 +4019,31 @@ switch_int ($int0) {
 				return(68, tuna_potato_7060, "Baked potato with tuna and sweetcorn");
 			}
 			if ($int2 = 16) {
-				return(-1, 7620, "To make baked potatoes with toppings:");
+				return(-1, obj_7620, "To make baked potatoes with toppings:");
 			}
 			if ($int2 = 17) {
-				return(-1, 7620, "1. Bake the potato on a range.");
+				return(-1, obj_7620, "1. Bake the potato on a range.");
 			}
 			if ($int2 = 18) {
-				return(-1, 7620, "2. Add some butter.");
+				return(-1, obj_7620, "2. Add some butter.");
 			}
 			if ($int2 = 19) {
-				return(-1, 7620, "3. If needed, combine topping ingredients by chopping them into a bowl.");
+				return(-1, obj_7620, "3. If needed, combine topping ingredients by chopping them into a bowl.");
 			}
 			if ($int2 = 20) {
-				return(-1, 7620, "Ingredients for toppings:");
+				return(-1, obj_7620, "Ingredients for toppings:");
 			}
 			if ($int2 = 21) {
-				return(-1, 7620, "1. Chilli con carne: meat & spicy sauce (made from garlic and gnome spice)");
+				return(-1, obj_7620, "1. Chilli con carne: meat & spicy sauce (made from garlic and gnome spice)");
 			}
 			if ($int2 = 22) {
-				return(-1, 7620, "2. Egg and tomato: scrambled egg & tomato");
+				return(-1, obj_7620, "2. Egg and tomato: scrambled egg & tomato");
 			}
 			if ($int2 = 23) {
-				return(-1, 7620, "3. Mushroom and onion: fried bittercap mushroom & fried onion");
+				return(-1, obj_7620, "3. Mushroom and onion: fried bittercap mushroom & fried onion");
 			}
 			if ($int2 = 24) {
-				return(-1, 7620, "4. Tuna and sweetcorn: tuna & cooked sweetcorn");
+				return(-1, obj_7620, "4. Tuna and sweetcorn: tuna & cooked sweetcorn");
 			}
 			return(-1, null, "");
 		}
@@ -4058,16 +4058,16 @@ switch_int ($int0) {
 				return(48, cheese_1985, "Cheese");
 			}
 			if ($int2 = 3) {
-				return(-1, 7620, "To make dairy products:");
+				return(-1, obj_7620, "To make dairy products:");
 			}
 			if ($int2 = 4) {
-				return(-1, 7620, "1. Get a bucket of milk, a pot of cream or a pot of butter.");
+				return(-1, obj_7620, "1. Get a bucket of milk, a pot of cream or a pot of butter.");
 			}
 			if ($int2 = 5) {
-				return(-1, 7620, "2. Use the milk, cream or butter in a churn.");
+				return(-1, obj_7620, "2. Use the milk, cream or butter in a churn.");
 			}
 			if ($int2 = 6) {
-				return(-1, 7620, "3. Milk can be churned into cream, then into butter, then into cheese.");
+				return(-1, obj_7620, "3. Milk can be churned into cream, then into butter, then into cheese.");
 			}
 			return(-1, null, "");
 		}
@@ -4536,7 +4536,7 @@ switch_int ($int0) {
 		}
 		if ($int1 = 1) {
 			if ($int2 = 0) {
-				return(-1, 7620, "As your Runecrafting skill develops, you will be able to craft multiple runes from one piece of essence. You only receive experience for each piece of essence crafted, not each rune crafted.");
+				return(-1, obj_7620, "As your Runecrafting skill develops, you will be able to craft multiple runes from one piece of essence. You only receive experience for each piece of essence crafted, not each rune crafted.");
 			}
 			if ($int2 = 1) {
 				return(11, air_rune_556, "2 Air runes per essence");
@@ -4644,7 +4644,7 @@ switch_int ($int0) {
 		}
 		if ($int1 = 2) {
 			if ($int2 = 0) {
-				return(-1, 7620, "Pouches come in various sizes which allow you to carry extra essence in them. As you use the pouches they degrade and store less essence, just speak to the Dark Mage at the centre of the Abyss to restore them.");
+				return(-1, obj_7620, "Pouches come in various sizes which allow you to carry extra essence in them. As you use the pouches they degrade and store less essence, just speak to the Dark Mage at the centre of the Abyss to restore them.");
 			}
 			if ($int2 = 1) {
 				return(1, small_pouch_5509, "Small pouch: Holds 3 extra essence");
@@ -4735,13 +4735,13 @@ switch_int ($int0) {
 				case 28 :
 					return(62, wyrm_23040, "Wyrms");
 				case 29 :
-					return(63, 11845, "Spiritual rangers");
+					return(63, obj_11845, "Spiritual rangers");
 				case 30 :
 					return(65, dust_devil_4145, "Dust devils");
 				case 31 :
 					return(66, fossil_island_wyvern_21507, "Fossil Island wyverns");
 				case 32 :
-					return(68, 11846, "Spiritual warriors");
+					return(68, obj_11846, "Spiritual warriors");
 				case 33 :
 					return(70, kurask_4146, "Kurask");
 				case 34 :
@@ -4755,7 +4755,7 @@ switch_int ($int0) {
 				case 38 :
 					return(82, fossil_island_wyvern_21508, "Ancient wyverns");
 				case 39 :
-					return(83, 11844, "Spiritual mages");
+					return(83, obj_11844, "Spiritual mages");
 				case 40 :
 					return(84, drake_23041, "Drakes");
 				case 41 :
@@ -5068,7 +5068,7 @@ switch_int ($int0) {
 				return(64, potato_cactus_3138, "Potato Cacti<br>Payment: Snape grass x8");
 			}
 			if ($int2 = 8) {
-				return(65, 23044, "Hespori");
+				return(65, obj_23044, "Hespori");
 			}
 			if ($int2 = 9) {
 				return(72, calquat_fruit_5980, "Calquat trees<br>Payment: Poison ivy berries x8");
@@ -5077,7 +5077,7 @@ switch_int ($int0) {
 				return(74, crystal_shard_23962, "Crystal trees");
 			}
 			if ($int2 = 10) {
-				return(-1, 7620, "Anima plants have effects on all other farming patches");
+				return(-1, obj_7620, "Anima plants have effects on all other farming patches");
 			}
 			if ($int2 = 11) {
 				return(76, dummy_kronos_plant_22938, "Anima: Kronos<br>Increases speed of growth");
@@ -5104,7 +5104,7 @@ switch_int ($int0) {
 				return(99, spirit_tree_6063, "Spirit trees<br>(unlimited)");
 			}
 			if ($int2 = 19) {
-				return(-1, 7620, "Payment: Monkey bar, ground suqah tooth & 5 monkey nuts");
+				return(-1, obj_7620, "Payment: Monkey bar, ground suqah tooth & 5 monkey nuts");
 			}
 			return(-1, null, "");
 		}
@@ -5113,22 +5113,22 @@ switch_int ($int0) {
 				return(23, scarecrow_6059, "Able to make and place a scarecrow");
 			}
 			if ($int2 = 1) {
-				return(-1, 7620, "Scarecrows ward sweetcorn from being attacked by birds, which helps to prevent disease.");
+				return(-1, obj_7620, "Scarecrows ward sweetcorn from being attacked by birds, which helps to prevent disease.");
 			}
 			if ($int2 = 2) {
-				return(-1, 7620, "How to make a scarecrow:");
+				return(-1, obj_7620, "How to make a scarecrow:");
 			}
 			if ($int2 = 3) {
-				return(-1, 7620, "1. Fill an empty sack with straw from a bale.");
+				return(-1, obj_7620, "1. Fill an empty sack with straw from a bale.");
 			}
 			if ($int2 = 4) {
-				return(-1, 7620, "2. Drive the hay sack onto a bronze spear.");
+				return(-1, obj_7620, "2. Drive the hay sack onto a bronze spear.");
 			}
 			if ($int2 = 5) {
-				return(-1, 7620, "3. Place a watermelon on top as a head.");
+				return(-1, obj_7620, "3. Place a watermelon on top as a head.");
 			}
 			if ($int2 = 6) {
-				return(-1, 7620, "4. Stand the scarecrow in an empty flower patch.");
+				return(-1, obj_7620, "4. Stand the scarecrow in an empty flower patch.");
 			}
 			return(-1, null, "");
 		}
@@ -5206,13 +5206,13 @@ switch_int ($int0) {
 		}
 		if ($int1 = 12) {
 			if ($int2 = 0) {
-				return(45, 23006, "Farming Guild - Low tier<br>(with 60% Hosidius Favour)");
+				return(45, obj_23006, "Farming Guild - Low tier<br>(with 60% Hosidius Favour)");
 			}
 			if ($int2 = 1) {
-				return(65, 23005, "Farming Guild - Mid tier<br>(with 60% Hosidius Favour)");
+				return(65, obj_23005, "Farming Guild - Mid tier<br>(with 60% Hosidius Favour)");
 			}
 			if ($int2 = 2) {
-				return(85, 23005, "Farming Guild - High tier<br>(with 60% Hosidius Favour)");
+				return(85, obj_23005, "Farming Guild - High tier<br>(with 60% Hosidius Favour)");
 			}
 			return(-1, null, "");
 		}

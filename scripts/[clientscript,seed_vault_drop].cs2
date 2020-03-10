@@ -16,8 +16,8 @@ if (cc_find($component1, $int2) = ^true) {
 }
 def_int $int10 = 0;
 def_int $int11 = 0;
-def_obj $obj12 = inv_getobj(626, $int2);
-def_obj $obj13 = inv_getobj(626, $int3);
+def_obj $obj12 = inv_getobj(inv_626, $int2);
+def_obj $obj13 = inv_getobj(inv_626, $int3);
 if ((cc_find($component0, $int2) = ^true) & (.cc_find($component0, $int3) = ^true)) {
 	if ($int3 = 90) {
 		if (~script2828($int2) ! -1) {
@@ -28,7 +28,7 @@ if ((cc_find($component0, $int2) = ^true) & (.cc_find($component0, $int3) = ^tru
 			cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setposition(calc(($int10 + $int6) + $int8), $int11, ^setpos_abs_left, ^setpos_abs_top);
 		}
-	} else if ((($obj12 ! null) & ($obj13 ! null)) & ((oc_param(oc_unplaceholder($obj12), 709) = oc_param(oc_unplaceholder($obj13), 709)) | ((~script2828($int2) ! -1) & (~script2828($int3) ! -1)))) {
+	} else if ((($obj12 ! null) & ($obj13 ! null)) & ((oc_param(oc_unplaceholder($obj12), param_709) = oc_param(oc_unplaceholder($obj13), param_709)) | ((~script2828($int2) ! -1) & (~script2828($int3) ! -1)))) {
 		$int10 = cc_getx;
 		$int11 = cc_gety;
 		cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
@@ -45,7 +45,7 @@ if ((cc_find($component1, $int2) = ^true) & (.cc_find($component1, $int3) = ^tru
 			cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setposition(calc(($int10 + $int6) + $int8), $int11, ^setpos_abs_left, ^setpos_abs_top);
 		}
-	} else if ((($obj12 ! null) & ($obj13 ! null)) & ((oc_param(oc_unplaceholder($obj12), 709) = oc_param(oc_unplaceholder($obj13), 709)) | ((~script2828($int2) ! -1) & (~script2828($int3) ! -1)))) {
+	} else if ((($obj12 ! null) & ($obj13 ! null)) & ((oc_param(oc_unplaceholder($obj12), param_709) = oc_param(oc_unplaceholder($obj13), param_709)) | ((~script2828($int2) ! -1) & (~script2828($int3) ! -1)))) {
 		$int10 = cc_getx;
 		$int11 = cc_gety;
 		cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);

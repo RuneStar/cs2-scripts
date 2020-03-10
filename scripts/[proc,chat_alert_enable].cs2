@@ -10,4 +10,4 @@ if (~chat_alert_get($int0) > 24) {
 	return;
 }
 ~chat_alert_set($int0, 249);
-if_setontimer("chat_alert_flash($int0)", enum(int, component, 683, $int0));
+if_setontimer("chat_alert_flash($int0)", enum(int, component, enum_683, $int0));

@@ -1,21 +1,21 @@
 // 1022
 [proc,xpdrops_setup_display_update](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 if (cc_find($component0, 4) = ^true) {
-	cc_settext(enum(int, string, 1164, %varbit4692));
+	cc_settext(enum(int, string, enum_1164, %varbit4692));
 }
 if (cc_find($component1, 4) = ^true) {
-	cc_settext(enum(int, string, 1165, %varbit4693));
+	cc_settext(enum(int, string, enum_1165, %varbit4693));
 }
 if (cc_find($component2, 4) = ^true) {
-	cc_settext(enum(int, string, 1166, %varbit4694));
+	cc_settext(enum(int, string, enum_1166, %varbit4694));
 }
 if (cc_find($component3, 4) = ^true) {
 	if (%varbit4697 = 31) {
 		cc_settext("Most recent");
 	} else if (%varbit4697 = 30) {
 		cc_settext("Off");
-	} else if (enum(int, stat, 681, %varbit4697) ! null) {
-		cc_settext(enum(int, string, 108, %varbit4697));
+	} else if (enum(int, stat, enum_681, %varbit4697) ! null) {
+		cc_settext(enum(int, string, enum_108, %varbit4697));
 	} else {
 		cc_settext("Total XP");
 	}
@@ -25,21 +25,21 @@ if (cc_find($component4, 4) = ^true) {
 		cc_settext("Most recent");
 	} else if (%varbit4698 = 30) {
 		cc_settext("Total XP goal");
-	} else if (enum(int, stat, 681, %varbit4698) ! null) {
-		cc_settext(enum(int, string, 108, %varbit4698));
+	} else if (enum(int, stat, enum_681, %varbit4698) ! null) {
+		cc_settext(enum(int, string, enum_108, %varbit4698));
 	} else {
 		cc_settext("Off");
 	}
 }
 if (cc_find($component5, 4) = ^true) {
-	cc_settext(enum(int, string, 1168, %varbit4695));
+	cc_settext(enum(int, string, enum_1168, %varbit4695));
 }
 if (cc_find($component6, 4) = ^true) {
-	cc_settext(enum(int, string, 1170, %varbit4696));
+	cc_settext(enum(int, string, enum_1170, %varbit4696));
 }
 if (cc_find($component7, 4) = ^true) {
-	cc_settext(enum(int, string, 1140, %varbit4722));
+	cc_settext(enum(int, string, enum_1140, %varbit4722));
 }
 if (cc_find($component8, 4) = ^true) {
-	cc_settext(enum(int, string, 1625, %varbit8120));
+	cc_settext(enum(int, string, enum_1625, %varbit8120));
 }

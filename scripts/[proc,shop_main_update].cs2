@@ -22,7 +22,7 @@ while ($int7 < $int1) {
 				} else {
 					cc_setop(9, "");
 				}
-				if (.cc_find(300:16, 0) = ^true) {
+				if (.cc_find(interface_300:16, 0) = ^true) {
 					.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
 					.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 					.cc_setgraphic("prayerglow");
@@ -35,7 +35,7 @@ while ($int7 < $int1) {
 			$int6 = cc_gety;
 		} else {
 			cc_sethide(true);
-			cc_setobject_nonum(6512, 1);
+			cc_setobject_nonum(obj_6512, 1);
 			cc_setopbase("");
 			cc_settrans(0);
 			cc_setontimer(null);
@@ -50,11 +50,11 @@ if ($int6 ! -1) {
 }
 if ($int6 > if_getheight($component0)) {
 	if_setscrollsize(0, $int6, $component0);
-	~scrollbar_resize(300:17, $component0, if_getscrolly($component0));
-	if_sethide(false, 300:17);
+	~scrollbar_resize(interface_300:17, $component0, if_getscrolly($component0));
+	if_sethide(false, interface_300:17);
 } else {
-	if_setscrollpos(0, 0, 300:16);
-	if_setscrollsize(0, 0, 300:16);
-	~scrollbar_resize(300:17, $component0, 0);
-	if_sethide(true, 300:17);
+	if_setscrollpos(0, 0, interface_300:16);
+	if_setscrollsize(0, 0, interface_300:16);
+	~scrollbar_resize(interface_300:17, $component0, 0);
+	if_sethide(true, interface_300:17);
 }

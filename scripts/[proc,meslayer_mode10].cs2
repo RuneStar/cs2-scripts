@@ -8,10 +8,10 @@ if (%varbit8119 = 0) {
 	return;
 }
 ~meslayer_open(10);
-if_settext("Enter the player name whose channel you wish to join:", 162:44);
+if_settext("Enter the player name whose channel you wish to join:", interface_162:44);
 ~script222("");
 def_string $string0 = "";
-if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string0)", 162:45);
+if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string0)", interface_162:45);
 ~meslayer_initlastnames;
 if (string_length(%varcstring362) > 0) {
 	~meslayer_dynamicbutton;

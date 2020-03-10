@@ -1,6 +1,6 @@
 // 1453
 script1453(obj $obj0, obj $obj1, obj $obj2, obj $obj3, obj $obj4, obj $obj5, obj $obj6, obj $obj7, obj $obj8, obj $obj9, obj $obj10, obj $obj11, obj $obj12, obj $obj13, obj $obj14, obj $obj15, obj $obj16, obj $obj17, obj $obj18, obj $obj19, obj $obj20, obj $obj21, obj $obj22, obj $obj23, obj $obj24, obj $obj25, obj $obj26, obj $obj27)
-cc_deleteall(481:31);
+cc_deleteall(interface_481:31);
 def_int $int28 = 0;
 def_int $int29 = -1;
 def_int $int30 = -1;
@@ -33,14 +33,14 @@ $objarray0(24) = $obj24;
 $objarray0(25) = $obj25;
 $objarray0(26) = $obj26;
 $objarray0(27) = $obj27;
-def_int $int31 = calc(if_getwidth(481:31) - 10);
-def_int $int32 = calc(if_getheight(481:31) - 10);
+def_int $int31 = calc(if_getwidth(interface_481:31) - 10);
+def_int $int32 = calc(if_getheight(interface_481:31) - 10);
 def_int $int33 = calc($int31 / 4);
 def_int $int34 = calc($int32 / 7);
 def_int $int35 = 5;
 def_int $int36 = 5;
 while ($int28 < inv_size(inv)) {
-	cc_create(481:31, ^iftype_graphic, $int28);
+	cc_create(interface_481:31, ^iftype_graphic, $int28);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int35, $int36, ^setpos_abs_left, ^setpos_abs_top);
 	if ($objarray0($int28) ! null) {

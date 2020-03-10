@@ -27,8 +27,8 @@ def_int $int5 = 0;
 def_int $int6 = 0;
 while ($int6 < $int2) {
 	if (cc_find($component0, $int6) = ^true) {
-		$int3 = enum(int, int, 818, $int6);
-		$coord4 = enum(int, coord, 819, $int3);
+		$int3 = enum(int, int, enum_818, $int6);
+		$coord4 = enum(int, coord, enum_819, $int3);
 		if ($coord4 ! null) {
 			if (testbit($intarray0(coordx($coord4)), coordz($coord4)) = ^true) {
 				~music_setcolour(0x0dc10d);

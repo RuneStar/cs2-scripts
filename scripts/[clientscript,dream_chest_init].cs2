@@ -19,9 +19,9 @@ while ($int0 < 5) {
 	if ($int0 = 4) {
 		cc_setposition(50, 125, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (inv_getobj(515, $int0) ! null) {
-		cc_setobject(inv_getobj(515, $int0), inv_getnum(515, $int0));
-		cc_setopbase(oc_name(inv_getobj(515, $int0)));
+	if (inv_getobj(inv_515, $int0) ! null) {
+		cc_setobject(inv_getobj(inv_515, $int0), inv_getnum(inv_515, $int0));
+		cc_setopbase(oc_name(inv_getobj(inv_515, $int0)));
 		cc_setop(1, "Deposit");
 		cc_setgraphicshadow(0x111111);
 		cc_setoutline(1);

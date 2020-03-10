@@ -4,9 +4,9 @@ if ($struct0 = null) {
 	if_close;
 	return;
 }
-def_component $component1 = 643:4;
-def_component $component2 = 643:3;
-def_component $component3 = 643:0;
+def_component $component1 = interface_643:4;
+def_component $component2 = interface_643:3;
+def_component $component3 = interface_643:0;
 if_setsize(500, 334, ^setsize_abs, ^setsize_abs, $component3);
 if_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_top, $component3);
 cc_deleteall($component1);
@@ -15,9 +15,9 @@ cc_deleteall($component3);
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_int $int6 = 0;
-def_enum $enum7 = struct_param($struct0, 820);
-def_enum $enum8 = struct_param($struct0, 821);
-def_enum $enum9 = struct_param($struct0, 833);
+def_enum $enum7 = struct_param($struct0, param_820);
+def_enum $enum8 = struct_param($struct0, param_821);
+def_enum $enum9 = struct_param($struct0, param_833);
 def_enum $enum10 = null;
 def_enum $enum11 = null;
 def_namedobj $namedobj12 = null;
@@ -76,4 +76,4 @@ if ($int4 > $int17) {
 	if_setposition(if_getx($component3), calc($int16 / 2), ^setpos_abs_left, ^setpos_abs_top, $component3);
 	if_sethide(true, $component1);
 }
-~stoneborder(643:1, "<struct_param($struct0, 828)> completion rewards", 0);
+~stoneborder(interface_643:1, "<struct_param($struct0, param_828)> completion rewards", 0);

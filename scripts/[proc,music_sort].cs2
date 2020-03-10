@@ -7,11 +7,11 @@ $intarray0($int2) = $int4;
 def_int $int5 = $int1;
 def_int $int6 = $int1;
 def_int $int7 = 0;
-def_int $int8 = enum(int, int, 818, $int4);
-def_string $string0 = enum(int, string, 817, $int8);
+def_int $int8 = enum(int, int, enum_818, $int4);
+def_string $string0 = enum(int, string, enum_817, $int8);
 while ($int6 < $int2) {
-	$int7 = enum(int, int, 818, $intarray0($int6));
-	if (compare(enum(int, string, 817, $int7), $string0) <= 0) {
+	$int7 = enum(int, int, enum_818, $intarray0($int6));
+	if (compare(enum(int, string, enum_817, $int7), $string0) <= 0) {
 		$int8 = $intarray0($int6);
 		$intarray0($int6) = $intarray0($int5);
 		$intarray0($int5) = $int8;

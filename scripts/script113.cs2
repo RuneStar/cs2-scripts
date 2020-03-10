@@ -2,15 +2,15 @@
 script113
 ~toplevel_chatbox_background;
 if (~on_mobile = true) {
-	if_setop(1, "Report", 162:33);
+	if_setop(1, "Report", interface_162:33);
 } else {
-	if_setop(1, "", 162:33);
+	if_setop(1, "", interface_162:33);
 }
 ~chatbox_mobile_rearrange;
-if ((%varbit5983 = 1) & (if_hassub(162:561) = true)) {
-	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, 162:561);
+if ((%varbit5983 = 1) & (if_hassub(interface_162:561) = true)) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, interface_162:561);
 } else {
-	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, 162:561);
+	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, interface_162:561);
 }
 ~redraw_chat_buttons;
 def_int $int0 = ~script553;

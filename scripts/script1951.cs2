@@ -1,7 +1,7 @@
 // 1951
 script1951
-def_int $int0 = if_getwidth(599:43);
-def_int $int1 = if_getheight(599:43);
+def_int $int0 = if_getwidth(interface_599:43);
+def_int $int1 = if_getheight(interface_599:43);
 def_int $int2 = $int0;
 def_int $int3 = %var1603;
 def_string $string0 = "<tostring($int3)>/99";
@@ -15,5 +15,5 @@ if (($int2 = $int0) & ($int3 < 99)) {
 if ($int2 > $int0) {
 	$int2 = $int0;
 }
-if_settext($string0, 599:53);
-if_setsize($int2, $int1, ^setsize_abs, ^setsize_abs, 599:48);
+if_settext($string0, interface_599:53);
+if_setsize($int2, $int1, ^setsize_abs, ^setsize_abs, interface_599:48);

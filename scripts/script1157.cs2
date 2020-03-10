@@ -1,20 +1,20 @@
 // 1157
 script1157(component $component0, int $int1, int $int2)
-def_int $int3 = inv_size(563);
+def_int $int3 = inv_size(inv_563);
 if (($int1 < 0) | ($int1 >= $int3)) {
 	return;
 }
 if (($int2 < 0) | ($int2 >= $int3)) {
 	return;
 }
-def_obj $obj4 = inv_getobj(563, $int1);
+def_obj $obj4 = inv_getobj(inv_563, $int1);
 if ($obj4 = null) {
 	return;
 }
-def_obj $obj5 = inv_getobj(563, $int2);
+def_obj $obj5 = inv_getobj(inv_563, $int2);
 if (cc_find($component0, $int2) = ^true) {
-	~script1156($obj4, inv_getnum(563, $int1), $component0);
+	~script1156($obj4, inv_getnum(inv_563, $int1), $component0);
 }
 if (cc_find($component0, $int1) = ^true) {
-	~script1156($obj5, inv_getnum(563, $int2), $component0);
+	~script1156($obj5, inv_getnum(inv_563, $int2), $component0);
 }

@@ -12,8 +12,8 @@ if (($char0 ! null) & ((string_indexof_char($string0, $char0) ! -1) | (string_in
 		cc_settrans(120);
 		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, 0, calc(clientclock + 10))");
 	}
-	sound_synth(2266, 1, 0);
-	if (cc_find(458:2, $int1) = ^true) {
+	sound_synth(synth_2266, 1, 0);
+	if (cc_find(interface_458:2, $int1) = ^true) {
 		cc_resume_pausebutton;
 	}
 }

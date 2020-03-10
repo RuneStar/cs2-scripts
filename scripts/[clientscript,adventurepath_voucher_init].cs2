@@ -1,14 +1,14 @@
 // 2840
 [clientscript,adventurepath_voucher_init](int $int0, string $string0)
-def_enum $enum1 = enum(int, enum, 2621, $int0);
+def_enum $enum1 = enum(int, enum, enum_2621, $int0);
 if ($enum1 = null) {
 	if_close;
 	mes("The voucher has already been used.");
 	return;
 }
-def_component $component2 = 643:4;
-def_component $component3 = 643:3;
-def_component $component4 = 643:0;
+def_component $component2 = interface_643:4;
+def_component $component3 = interface_643:3;
+def_component $component4 = interface_643:0;
 if_setsize(500, 334, ^setsize_abs, ^setsize_abs, $component4);
 if_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_top, $component4);
 cc_deleteall($component2);
@@ -35,8 +35,8 @@ def_int $int17 = 0;
 while ($int13 < $int9) {
 	$structarray0($int13) = enum(int, struct, $enum1, $int13);
 	if ($structarray0($int13) ! null) {
-		$enum11 = struct_param($structarray0($int13), 838);
-		$enum12 = struct_param($structarray0($int13), 840);
+		$enum11 = struct_param($structarray0($int13), param_838);
+		$enum12 = struct_param($structarray0($int13), param_840);
 		if (($enum11 ! null) & ($enum12 ! null)) {
 			if ($int14 = 0) {
 				cc_create($component3, ^iftype_text, $int10);
@@ -51,7 +51,7 @@ while ($int13 < $int9) {
 				$int10 = calc($int10 + 1);
 				$int17 = calc($int17 + 40);
 			}
-			$int10, $int16 = ~adventurepath_voucher_entry($int17, $component3, $int7, $int10, $enum11, $enum12, struct_param($structarray0($int13), 842), struct_param($structarray0($int13), 837), $int16, struct_param($structarray0($int13), 844));
+			$int10, $int16 = ~adventurepath_voucher_entry($int17, $component3, $int7, $int10, $enum11, $enum12, struct_param($structarray0($int13), param_842), struct_param($structarray0($int13), param_837), $int16, struct_param($structarray0($int13), param_844));
 			$int17 = calc($int17 + 88);
 		}
 	}
@@ -60,8 +60,8 @@ while ($int13 < $int9) {
 $int13 = 0;
 while ($int13 < $int9) {
 	if ($structarray0($int13) ! null) {
-		$enum11 = struct_param($structarray0($int13), 839);
-		$enum12 = struct_param($structarray0($int13), 841);
+		$enum11 = struct_param($structarray0($int13), param_839);
+		$enum12 = struct_param($structarray0($int13), param_841);
 		if (($enum11 ! null) & ($enum12 ! null)) {
 			if ($int15 = 0) {
 				cc_create($component3, ^iftype_text, $int10);
@@ -76,7 +76,7 @@ while ($int13 < $int9) {
 				$int10 = calc($int10 + 1);
 				$int17 = calc($int17 + 40);
 			}
-			$int10, $int16 = ~adventurepath_voucher_entry($int17, $component3, $int7, $int10, $enum11, $enum12, struct_param($structarray0($int13), 843), struct_param($structarray0($int13), 837), $int16, struct_param($structarray0($int13), 845));
+			$int10, $int16 = ~adventurepath_voucher_entry($int17, $component3, $int7, $int10, $enum11, $enum12, struct_param($structarray0($int13), param_843), struct_param($structarray0($int13), param_837), $int16, struct_param($structarray0($int13), param_845));
 			$int17 = calc($int17 + 88);
 		}
 	}
@@ -93,4 +93,4 @@ if ($int17 > $int6) {
 	if_setposition(if_getx($component4), calc($int8 / 2), ^setpos_abs_left, ^setpos_abs_top, $component4);
 	if_sethide(true, $component2);
 }
-~stoneborder(643:1, $string0, 0);
+~stoneborder(interface_643:1, $string0, 0);

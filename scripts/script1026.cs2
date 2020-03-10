@@ -3,11 +3,11 @@ script1026(component $component0, component $component1, component $component2, 
 def_int $int22 = 0;
 while ($int22 <= 23) {
 	if (cc_find($component2, calc(((23 + 1) + ($int22 * 3)) + 2)) = ^true) {
-		~script1027(enum(int, stat, 681, calc($int22 + 1)));
+		~script1027(enum(int, stat, enum_681, calc($int22 + 1)));
 	}
 	$int22 = calc($int22 + 1);
 }
-def_stat $stat23 = enum(int, stat, 681, %varbit4703);
+def_stat $stat23 = enum(int, stat, enum_681, %varbit4703);
 if ($stat23 = null) {
 	if (%varbit4703 ! calc(23 + 1)) {
 		if_sethide(false, $component0);
@@ -36,7 +36,7 @@ if_sethide(false, $component4);
 if_setnoclickthrough(true, $component4);
 if (cc_find($component4, 0) = ^true) {
 	if ($stat23 ! null) {
-		cc_settext(enum(stat, string, 680, $stat23));
+		cc_settext(enum(stat, string, enum_680, $stat23));
 	} else {
 		cc_settext("Total XP");
 	}

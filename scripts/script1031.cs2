@@ -9,8 +9,8 @@ if (~on_mobile = true) {
 }
 while ($int24 < $int22) {
 	cc_create($component0, ^iftype_text, calc($int24 + 1));
-	if ($enum1 = 1168) {
-		$colour23 = enum(int, int, 1169, $int24);
+	if ($enum1 = enum_1168) {
+		$colour23 = enum(int, int, enum_1169, $int24);
 	}
 	~script1033($component0, $int22, $colour23, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21);
 	cc_setposition(0, calc($int24 * $int25), ^setpos_abs_centre, ^setpos_abs_top);

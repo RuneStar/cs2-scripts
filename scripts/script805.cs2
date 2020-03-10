@@ -3,11 +3,11 @@ script805(int $int0, int $int1, int $int2, component $component3, int $int4, com
 if (($int0 ! 1) & ($int0 ! 2)) {
 	return;
 }
-sound_synth(2266, 1, 0);
+sound_synth(synth_2266, 1, 0);
 if ($int0 ! 1) {
 	return;
 }
-def_inv $inv10 = enum(int, inv, 150, $int1);
+def_inv $inv10 = enum(int, inv, enum_150, $int1);
 if ($inv10 = null) {
 	%varbit4439 = 0;
 } else {

@@ -5,11 +5,11 @@ cc_deleteall($component21);
 cc_deleteall($component22);
 cc_deleteall($component4);
 cc_deleteall($component22);
-cc_deleteall(642:22);
-def_string $string0 = struct_param($struct5, 810);
+cc_deleteall(interface_642:22);
+def_string $string0 = struct_param($struct5, param_810);
 if_settext($string0, $component1);
 if_setcolour(0xff981f, $component1);
-def_string $string1 = struct_param($struct5, 812);
+def_string $string1 = struct_param($struct5, param_812);
 if_settext($string1, $component2);
 if_setcolour(0xff981f, $component2);
 def_int $int23 = 0;
@@ -27,7 +27,7 @@ if (~on_mobile = false) {
 cc_create($component3, ^iftype_text, $int23);
 cc_settextalign(^settextalign_left, ^settextalign_top, 17);
 cc_setcolour(0xff981f);
-cc_settext(struct_param($struct5, 813));
+cc_settext(struct_param($struct5, param_813));
 cc_settextshadow(true);
 cc_settextfont(p12_full);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -49,20 +49,20 @@ def_int $int26 = 0;
 def_int $int27 = 0;
 $int23 = 0;
 def_int $int28 = if_getwidth($component4);
-if ((~adventurepath_return_task_status($int0) = ^false) & (struct_param($struct5, 927) ! null)) {
-	if_setop(1, "Show<col=ff9040> Hint", 642:22);
-	if_setop(2, "Remove<col=ff9040> Hint arrow", 642:22);
-	$int23 = ~v2_stone_button_filled(642:22);
-	if_setonmouserepeat("script3242(642:22, 0)", 642:22);
-	if_setonmouseleave("script3240(642:22, 0)", 642:22);
+if ((~adventurepath_return_task_status($int0) = ^false) & (struct_param($struct5, param_927) ! null)) {
+	if_setop(1, "Show<col=ff9040> Hint", interface_642:22);
+	if_setop(2, "Remove<col=ff9040> Hint arrow", interface_642:22);
+	$int23 = ~v2_stone_button_filled(interface_642:22);
+	if_setonmouserepeat("script3242(interface_642:22, 0)", interface_642:22);
+	if_setonmouseleave("script3240(interface_642:22, 0)", interface_642:22);
 } else {
-	if_setop(1, "", 642:22);
-	if_setop(2, "", 642:22);
-	$int23 = ~v2_stone_button_in_filled(642:22);
-	if_setonmouserepeat(null, 642:22);
-	if_setonmouseleave(null, 642:22);
+	if_setop(1, "", interface_642:22);
+	if_setop(2, "", interface_642:22);
+	$int23 = ~v2_stone_button_in_filled(interface_642:22);
+	if_setonmouserepeat(null, interface_642:22);
+	if_setonmouseleave(null, interface_642:22);
 }
-cc_create(642:22, ^iftype_graphic, $int23);
+cc_create(interface_642:22, ^iftype_graphic, $int23);
 cc_setsize(22, 22, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("worldmap_icon,0");
@@ -77,8 +77,8 @@ def_int $int33 = 0;
 def_namedobj $namedobj34 = null;
 def_int $int35 = 0;
 def_int $bit36 = ^false;
-$enum31 = struct_param($struct5, 820);
-$enum32 = struct_param($struct5, 821);
+$enum31 = struct_param($struct5, param_820);
+$enum32 = struct_param($struct5, param_821);
 if (($enum31 ! null) & ($enum32 ! null)) {
 	while ($int29 < 4) {
 		$enumarray0($int29) = enum(int, enum, $enum31, $int29);
@@ -176,18 +176,18 @@ if_setscrollpos(0, 0, $component4);
 ~scrollbar_vertical($component13, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if_settext($string0, $component20);
 if_setcolour(0xff981f, $component20);
-if_settext(~adventurepath_hint_list(struct_param($struct5, 814), if_getwidth($component17), 0, "", p12_full), $component17);
+if_settext(~adventurepath_hint_list(struct_param($struct5, param_814), if_getwidth($component17), 0, "", p12_full), $component17);
 if_setcolour(0xff981f, $component17);
-def_graphic $graphic39 = struct_param($struct5, 822);
+def_graphic $graphic39 = struct_param($struct5, param_822);
 if ($graphic39 ! null) {
 	if_setgraphic($graphic39, $component19);
-	if_settext(struct_param($struct5, 823), $component18);
+	if_settext(struct_param($struct5, param_823), $component18);
 	if_setcolour(0xff981f, $component18);
 }
 if_settext($string1, $component16);
 if_setcolour(0xff981f, $component16);
-def_boolean $boolean40 = struct_param($struct5, 825);
-def_string $string2 = struct_param($struct5, 824);
+def_boolean $boolean40 = struct_param($struct5, param_825);
+def_string $string2 = struct_param($struct5, param_824);
 $int23 = 0;
 if ($boolean40 = true) {
 	cc_create($component21, ^iftype_text, $int23);
@@ -206,7 +206,7 @@ if ($boolean40 = true) {
 		cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xf4f4f4)");
 	}
 }
-def_int $int41 = struct_param($struct5, 807);
+def_int $int41 = struct_param($struct5, param_807);
 def_int $int42 = ~adventurepath_return_task_focus($int41);
 if (~script2973($int0, $int41) ! $int0) {
 	$int23 = ~v2_stone_button_in_filled($component22);
@@ -224,7 +224,7 @@ if (~script2973($int0, $int41) ! $int0) {
 	$int23 = ~v2_stone_button_filled($component22);
 	cc_create($component22, ^iftype_graphic, $int23);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
-	cc_setgraphic(2223);
+	cc_setgraphic("graphic_2223");
 	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
@@ -247,7 +247,7 @@ if (~script2973($int0, $int41) ! $int0) {
 	$int23 = ~v2_stone_button_filled($component22);
 	cc_create($component22, ^iftype_graphic, $int23);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
-	cc_setgraphic(2224);
+	cc_setgraphic("graphic_2224");
 	cc_create($component22, ^iftype_rectangle, calc(1 + $int23));
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_settrans(255);
