@@ -1,31 +1,31 @@
 // 3330
 [clientscript,newspaper_content](string $string0, string $string1)
 def_int $int0 = 15;
-def_int $int1 = calc((paraheight($string0, if_getwidth(interface_659:3), q8_full) * $int0) + 10);
-def_int $int2 = calc((paraheight($string1, if_getwidth(interface_659:5), q8_full) * $int0) + 10);
-cc_create(interface_659:3, ^iftype_text, 0);
+def_int $int1 = calc((paraheight($string0, if_getwidth(interface_659:4), q8_full) * $int0) + 10);
+def_int $int2 = calc((paraheight($string1, if_getwidth(interface_659:6), q8_full) * $int0) + 10);
+cc_create(interface_659:4, ^iftype_text, 0);
 cc_setsize(0, $int1, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($string0);
 cc_settextfont(q8_full);
 cc_setcolour(0x1b1b1b);
 cc_settextalign(^settextalign_left, ^settextalign_top, $int0);
-cc_create(interface_659:5, ^iftype_text, 0);
+cc_create(interface_659:6, ^iftype_text, 0);
 cc_setsize(0, $int2, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($string1);
 cc_settextfont(q8_full);
 cc_setcolour(0x1b1b1b);
 cc_settextalign(^settextalign_left, ^settextalign_top, $int0);
-if ($int1 > if_getheight(interface_659:3)) {
-	if_setscrollsize(0, $int1, interface_659:3);
+if ($int1 > if_getheight(interface_659:4)) {
+	if_setscrollsize(0, $int1, interface_659:4);
 } else {
-	if_setscrollsize(0, 0, interface_659:3);
+	if_setscrollsize(0, 0, interface_659:4);
 }
-~scrollbar_vertical(interface_659:4, interface_659:3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if ($int2 > if_getheight(interface_659:5)) {
-	if_setscrollsize(0, $int2, interface_659:5);
+~scrollbar_vertical(interface_659:5, interface_659:4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if ($int2 > if_getheight(interface_659:6)) {
+	if_setscrollsize(0, $int2, interface_659:6);
 } else {
-	if_setscrollsize(0, 0, interface_659:5);
+	if_setscrollsize(0, 0, interface_659:6);
 }
-~scrollbar_vertical(interface_659:6, interface_659:5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical(interface_659:7, interface_659:6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
