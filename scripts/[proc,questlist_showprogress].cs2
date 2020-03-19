@@ -45,7 +45,7 @@ $int5, $int6 = 0, ~miniquest_count;
 while ($int5 < $int6) {
 	if (cc_find($component2, $int5) = ^true) {
 		$int3 = ~questlist_miniquests_progress($int5);
-		if (~script3238($int5) = 1) {
+		if (~questlist_miniquests_progress_grey($int5) = 1) {
 			$colour4 = 0x9f9f9f;
 		} else if ($int3 = 2) {
 			$colour4 = 0x0dc10d;

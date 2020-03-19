@@ -6,5 +6,5 @@ if (~keypress_permit(553, -1) = 0) {
 if (($key0 = ^key_return) & (~on_mobile = true)) {
 	~keyboard_hide;
 }
-%varcstring370 = ~script74(%varcstring370, 2, $key0, $char1);
+%varcstring370 = ~add_to_inputstring(%varcstring370, 2, $key0, $char1);
 if_settext("<escape(%varcstring370)><col=ffff00>|", snapshot_main:5);

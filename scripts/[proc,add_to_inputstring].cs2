@@ -1,5 +1,5 @@
 // 74
-script74(string $string0, int $int0, int $key1, char $char2)(string)
+[proc,add_to_inputstring](string $string0, int $int0, int $key1, char $char2)(string)
 def_int $int3 = string_length($string0);
 if ($key1 = ^key_backspace) {
 	if ($int3 > 0) {

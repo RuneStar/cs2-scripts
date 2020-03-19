@@ -1,5 +1,5 @@
 // 1414
-script1414(component $component0, int $int1)
+[proc,hp_hud_update_bar](component $component0, int $int1)
 def_int $int2 = if_getwidth($component0);
 if ($int2 = $int1) {
 	if_setsize($int1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
