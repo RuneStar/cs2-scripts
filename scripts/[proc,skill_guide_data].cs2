@@ -96,8 +96,6 @@ switch_int ($int0) {
 					return(75, dinhs_bulwark_21015, "Members: Dinh's bulwark<br> (with 75 Defence)");
 				case 45 :
 					return(75, blade_of_saeldor_23995, "Members: Blade of Saeldor");
-				case 46 :
-					return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Defence)");
 				case default :
 					return(-1, null, "");
 			}
@@ -105,6 +103,9 @@ switch_int ($int0) {
 		if ($int1 = 1) {
 			if ($int2 = 0) {
 				return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+			}
+			if ($int2 = 1) {
+				return(80, ferocious_gloves_22981, "Members: Ferocious Gloves<br> (with 80 Defence)");
 			}
 			return(-1, null, "");
 		}
