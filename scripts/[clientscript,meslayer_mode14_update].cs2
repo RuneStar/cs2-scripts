@@ -1,9 +1,9 @@
 // 751
-[clientscript,meslayer_mode14_update](boolean $boolean0, enum $enum1)
+[clientscript,meslayer_mode14_update](boolean $boolean0, enum $enum1, boolean $boolean2)
 if (%varcint66 <= 0) {
 	return;
 }
 %varcint66 = calc(%varcint66 - 1);
 if (%varcint66 <= 0) {
-	~meslayer_mode14_update($boolean0, $enum1);
+	~meslayer_mode14_update($boolean0, $enum1, $boolean2);
 }
