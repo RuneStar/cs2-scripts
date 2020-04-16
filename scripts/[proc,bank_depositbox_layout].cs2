@@ -1,13 +1,10 @@
 // 2595
-[proc,bank_depositbox_layout](component $component0, component $component1, component $component2)
+[proc,bank_depositbox_layout](component $component0, component $component1, int $int2)
 if (~on_mobile = true) {
 	if_setsize(418, 290, ^setsize_abs, ^setsize_abs, $component0);
 	if_setposition(29, 10, ^setpos_abs_right, ^setpos_abs_bottom, $component1);
 	if_setsize(140, 36, ^setsize_abs, ^setsize_abs, $component1);
-	if_sethide(false, $component2);
 } else {
 	if_setsize(352, 260, ^setsize_abs, ^setsize_abs, $component0);
-	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_bottom, $component1);
 	if_setsize(150, 36, ^setsize_abs, ^setsize_abs, $component1);
-	if_sethide(true, $component2);
 }

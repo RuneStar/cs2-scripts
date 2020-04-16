@@ -1,6 +1,6 @@
 // 144
-[clientscript,bank_depositbox_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
-~bank_depositbox_layout($component0, $component2, $component3);
+[clientscript,bank_depositbox_init](component $component0, component $component1, component $component2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+~bank_depositbox_layout($component0, $component2, $int3);
 cc_deleteall($component1);
 def_int $int10 = 0;
 def_int $int11 = inv_size(inv);

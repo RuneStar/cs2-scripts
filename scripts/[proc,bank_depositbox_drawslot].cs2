@@ -5,22 +5,22 @@ if ($obj1 ! null) {
 	cc_setobject($obj1, $int2);
 	cc_clearops;
 	cc_setop(1, ~script2599);
-	if ((~on_mobile = true) & (%varbit4430 = 0)) {
+	if (%varbit4430 = 0) {
 		cc_setop(2, "");
 	} else {
 		cc_setop(2, "Deposit-1");
 	}
-	if ((~on_mobile = true) & (%varbit4430 = 1)) {
+	if (%varbit4430 = 1) {
 		cc_setop(3, "");
 	} else {
 		cc_setop(3, "Deposit-5");
 	}
-	if ((~on_mobile = true) & (%varbit4430 = 2)) {
+	if (%varbit4430 = 2) {
 		cc_setop(4, "");
 	} else {
 		cc_setop(4, "Deposit-10");
 	}
-	if ((~on_mobile = true) & (%varbit4430 = 4)) {
+	if (%varbit4430 = 4) {
 		cc_setop(5, "");
 	} else {
 		cc_setop(5, "Deposit-All");

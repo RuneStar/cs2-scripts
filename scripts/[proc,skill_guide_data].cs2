@@ -2243,6 +2243,9 @@ switch_int ($int0) {
 				if ($int2 = 10) {
 					return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Smithing)");
 				}
+				if ($int2 = 11) {
+					return(82, blade_of_saeldor_c_24551, "Blade of Saeldor (c)<br>(with 82 Smithing)");
+				}
 				return(-1, null, "");
 			case 8 :
 				switch_int ($int2) {
@@ -3384,6 +3387,9 @@ switch_int ($int0) {
 			}
 			if ($int2 = 10) {
 				return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Crafting)");
+			}
+			if ($int2 = 11) {
+				return(82, blade_of_saeldor_c_24551, "Blade of Saeldor (c)<br>(with 82 Crafting)");
 			}
 			return(-1, null, "");
 		}

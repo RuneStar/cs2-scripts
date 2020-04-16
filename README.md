@@ -3333,8 +3333,6 @@
 [**3330**](scripts/[clientscript,newspaper_content].cs2) `[clientscript,newspaper_content]`  
 [**3331**](scripts/script3331.cs2)  
 [**3332**](scripts/script3332.cs2)  
-[**3333**](scripts/script3333.cs2)  
-[**3334**](scripts/script3334.cs2)  
 [**3335**](scripts/script3335.cs2)  
 [**3336**](scripts/script3336.cs2)  
 [**3337**](scripts/[clientscript,adventurepath_side_hint_mouseover].cs2) `[clientscript,adventurepath_side_hint_mouseover]`  

@@ -1,18 +1,18 @@
 // 1198
-script1198(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22)
+script1198(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24)
 if_settext("Points: <~tostring_spacer(%varbit4893, ",")>", $component0);
-def_int $int23 = 0;
+def_int $int25 = 0;
 if (%var262 > 0) {
-	$int23 = calc(20 - interpolate(0, %var261, 0, 1000, 20));
-	if_settext("Recharge can: <tostring($int23)>", $component2);
+	$int25 = calc(20 - interpolate(0, %var261, 0, 1000, 20));
+	if_settext("Recharge can: <tostring($int25)>", $component2);
 	if_setop(6, "Recharge", $component1);
 } else {
-	$int23 = 200;
-	if_settext("Buy can: <tostring($int23)>", $component2);
+	$int25 = 200;
+	if_settext("Buy can: <tostring($int25)>", $component2);
 	if_setop(6, "Buy", $component1);
 }
 if_setonop("opsound(event_opindex, 2)", $component1);
-if (%varbit4893 < $int23) {
+if (%varbit4893 < $int25) {
 	if_setcolour(^red, $component2);
 } else {
 	if_setcolour(^white, $component2);
@@ -21,113 +21,127 @@ if (%var263 > 0) {
 	if_setop(6, "Buy", $component5);
 	if_settext("Already owned", $component6);
 } else {
-	$int23 = 250;
+	$int25 = 250;
 	if_setop(6, "Buy", $component5);
-	if_settext("Buy seedbox: <tostring($int23)>", $component6);
+	if_settext("Buy seed box: <tostring($int25)>", $component6);
 }
 if_setonop("opsound(event_opindex, 2)", $component5);
-if ((%varbit4893 < $int23) | (%var263 > 0)) {
+if ((%varbit4893 < $int25) | (%var263 > 0)) {
 	if_setcolour(^red, $component6);
 } else {
 	if_setcolour(^white, $component6);
 }
-if (%varbit5557 = 0) {
-	if_sethide(true, $component22);
-	if_setop(6, "Buy", $component19);
-	if_settext("Buy Auto-weed: 50", $component20);
-	if (%varbit4893 < 50) {
-		if_setcolour(^red, $component20);
-	} else {
-		if_setcolour(^white, $component20);
-	}
-} else if (%varbit5557 = 1) {
-	if_sethide(false, $component22);
-	if_setgraphic("cross_interface,5", $component22);
-	if_setop(6, "Activate", $component19);
-	if_settext("Deactivated", $component20);
-	if_setcolour(^red, $component20);
+if (%var265 > 0) {
+	if_setop(6, "Buy", $component7);
+	if_settext("Already owned", $component8);
 } else {
-	if_sethide(false, $component22);
-	if_setgraphic("tick", $component22);
-	if_setop(6, "Deactivate", $component19);
-	if_settext("Activated", $component20);
-	if_setcolour(^white, $component20);
+	$int25 = 250;
+	if_setop(6, "Buy", $component7);
+	if_settext("Buy herb sack: <tostring($int25)>", $component8);
 }
-if_setonop("opsound(event_opindex, 2)", $component19);
-if_setobject_nonum(weeds_6055, 1, $component21);
-if (%var264 = 1) {
-	if_setobject(farmers_strawhat_13647, 1, $component9);
-	if_setopbase("<col=ff9040><oc_name(farmers_strawhat_13647)></col>", $component7);
-	if_setobject(farmers_shirt_13643, 1, $component12);
-	if_setopbase("<col=ff9040><oc_name(farmers_shirt_13643)></col>", $component10);
-	if_setobject(farmers_boro_trousers_13641, 1, $component15);
-	if_setopbase("<col=ff9040><oc_name(farmers_boro_trousers_13641)></col>", $component13);
-	if_setobject(farmers_boots_13645, 1, $component18);
-	if_setopbase("<col=ff9040><oc_name(farmers_boots_13645)></col>", $component16);
-} else {
-	if_setobject(farmers_strawhat_13646, 1, $component9);
-	if_setopbase("<col=ff9040><oc_name(farmers_strawhat_13646)></col>", $component7);
-	if_setobject(farmers_jacket_13642, 1, $component12);
-	if_setopbase("<col=ff9040><oc_name(farmers_jacket_13642)></col>", $component10);
-	if_setobject(farmers_boro_trousers_13640, 1, $component15);
-	if_setopbase("<col=ff9040><oc_name(farmers_boro_trousers_13640)></col>", $component13);
-	if_setobject(farmers_boots_13644, 1, $component18);
-	if_setopbase("<col=ff9040><oc_name(farmers_boots_13644)></col>", $component16);
-}
-$int23 = 75;
-if_settext("Buy hat: <tostring($int23)>", $component8);
-if_setop(6, "Buy", $component7);
 if_setonop("opsound(event_opindex, 2)", $component7);
-if (%varbit4893 < $int23) {
+if (((%varbit4893 < $int25) | (%var265 > 0)) | (stat_base(herblore) < 58)) {
 	if_setcolour(^red, $component8);
 } else {
 	if_setcolour(^white, $component8);
 }
-$int23 = 150;
-if_settext("Buy jacket: <tostring($int23)>", $component11);
-if_setop(6, "Buy", $component10);
-if_setonop("opsound(event_opindex, 2)", $component10);
-if (%varbit4893 < $int23) {
-	if_setcolour(^red, $component11);
+if (%varbit5557 = 0) {
+	if_sethide(true, $component24);
+	if_setop(6, "Buy", $component21);
+	if_settext("Buy Auto-weed: 50", $component22);
+	if (%varbit4893 < 50) {
+		if_setcolour(^red, $component22);
+	} else {
+		if_setcolour(^white, $component22);
+	}
+} else if (%varbit5557 = 1) {
+	if_sethide(false, $component24);
+	if_setgraphic("cross_interface,5", $component24);
+	if_setop(6, "Activate", $component21);
+	if_settext("Deactivated", $component22);
+	if_setcolour(^red, $component22);
 } else {
-	if_setcolour(^white, $component11);
+	if_sethide(false, $component24);
+	if_setgraphic("tick", $component24);
+	if_setop(6, "Deactivate", $component21);
+	if_settext("Activated", $component22);
+	if_setcolour(^white, $component22);
 }
-$int23 = 125;
-if_settext("Buy legs: <tostring($int23)>", $component14);
-if_setop(6, "Buy", $component13);
-if_setonop("opsound(event_opindex, 2)", $component13);
-if (%varbit4893 < $int23) {
-	if_setcolour(^red, $component14);
+if_setonop("opsound(event_opindex, 2)", $component21);
+if_setobject_nonum(weeds_6055, 1, $component23);
+if (%var264 = 1) {
+	if_setobject(farmers_strawhat_13647, 1, $component11);
+	if_setopbase("<col=ff9040><oc_name(farmers_strawhat_13647)></col>", $component9);
+	if_setobject(farmers_shirt_13643, 1, $component14);
+	if_setopbase("<col=ff9040><oc_name(farmers_shirt_13643)></col>", $component12);
+	if_setobject(farmers_boro_trousers_13641, 1, $component17);
+	if_setopbase("<col=ff9040><oc_name(farmers_boro_trousers_13641)></col>", $component15);
+	if_setobject(farmers_boots_13645, 1, $component20);
+	if_setopbase("<col=ff9040><oc_name(farmers_boots_13645)></col>", $component18);
 } else {
-	if_setcolour(^white, $component14);
+	if_setobject(farmers_strawhat_13646, 1, $component11);
+	if_setopbase("<col=ff9040><oc_name(farmers_strawhat_13646)></col>", $component9);
+	if_setobject(farmers_jacket_13642, 1, $component14);
+	if_setopbase("<col=ff9040><oc_name(farmers_jacket_13642)></col>", $component12);
+	if_setobject(farmers_boro_trousers_13640, 1, $component17);
+	if_setopbase("<col=ff9040><oc_name(farmers_boro_trousers_13640)></col>", $component15);
+	if_setobject(farmers_boots_13644, 1, $component20);
+	if_setopbase("<col=ff9040><oc_name(farmers_boots_13644)></col>", $component18);
 }
-$int23 = 50;
-if_settext("Buy boots: <tostring($int23)>", $component17);
-if_setop(6, "Buy", $component16);
-if_setonop("opsound(event_opindex, 2)", $component16);
-if (%varbit4893 < $int23) {
-	if_setcolour(^red, $component17);
+$int25 = 75;
+if_settext("Buy hat: <tostring($int25)>", $component10);
+if_setop(6, "Buy", $component9);
+if_setonop("opsound(event_opindex, 2)", $component9);
+if (%varbit4893 < $int25) {
+	if_setcolour(^red, $component10);
 } else {
-	if_setcolour(^white, $component17);
+	if_setcolour(^white, $component10);
 }
-def_int $int24 = calc(if_getwidth($component3) / 3);
-def_int $int25 = calc(32 + 18);
-def_int $int26 = calc(($int24 - 36) / 2);
-def_int $int27 = 0;
+$int25 = 150;
+if_settext("Buy jacket: <tostring($int25)>", $component13);
+if_setop(6, "Buy", $component12);
+if_setonop("opsound(event_opindex, 2)", $component12);
+if (%varbit4893 < $int25) {
+	if_setcolour(^red, $component13);
+} else {
+	if_setcolour(^white, $component13);
+}
+$int25 = 125;
+if_settext("Buy legs: <tostring($int25)>", $component16);
+if_setop(6, "Buy", $component15);
+if_setonop("opsound(event_opindex, 2)", $component15);
+if (%varbit4893 < $int25) {
+	if_setcolour(^red, $component16);
+} else {
+	if_setcolour(^white, $component16);
+}
+$int25 = 50;
+if_settext("Buy boots: <tostring($int25)>", $component19);
+if_setop(6, "Buy", $component18);
+if_setonop("opsound(event_opindex, 2)", $component18);
+if (%varbit4893 < $int25) {
+	if_setcolour(^red, $component19);
+} else {
+	if_setcolour(^white, $component19);
+}
+def_int $int26 = calc(if_getwidth($component3) / 3);
+def_int $int27 = calc(32 + 18);
+def_int $int28 = calc(($int26 - 36) / 2);
+def_int $int29 = 0;
 cc_deleteall($component3);
 cc_deleteall($component4);
-def_int $int28 = 0;
-def_int $int29 = 0;
-def_namedobj $namedobj30 = enum(int, namedobj, enum_1261, $int29);
-while ($namedobj30 ! null) {
-	cc_create($component3, ^iftype_graphic, $int29);
-	.cc_create($component4, ^iftype_text, $int29);
-	if ($namedobj30 ! bologas_blessing_20747) {
+def_int $int30 = 0;
+def_int $int31 = 0;
+def_namedobj $namedobj32 = enum(int, namedobj, enum_1261, $int31);
+while ($namedobj32 ! null) {
+	cc_create($component3, ^iftype_graphic, $int31);
+	.cc_create($component4, ^iftype_text, $int31);
+	if ($namedobj32 ! bologas_blessing_20747) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		cc_setobject_nonum(oc_uncert($namedobj30), 1);
-		cc_setopbase("<col=ff9040><oc_name($namedobj30)></col>");
+		cc_setobject_nonum(oc_uncert($namedobj32), 1);
+		cc_setopbase("<col=ff9040><oc_name($namedobj32)></col>");
 		cc_setop(1, "Value");
 		cc_setop(2, "Buy-1");
 		cc_setop(3, "Buy-5");
@@ -136,36 +150,36 @@ while ($namedobj30 ! null) {
 		cc_setop(6, "Buy-X");
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 120, 0)");
-		.cc_setsize($int24, 18, ^setsize_abs, ^setsize_abs);
+		.cc_setsize($int26, 18, ^setsize_abs, ^setsize_abs);
 		.cc_setcolour(^white);
 		.cc_settextfont(p11_full);
 		.cc_settextshadow(true);
 		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-		$int23 = enum(obj, int, enum_1262, $namedobj30);
-		.cc_settext(tostring($int23));
-		if (%varbit4893 < $int23) {
+		$int25 = enum(obj, int, enum_1262, $namedobj32);
+		.cc_settext(tostring($int25));
+		if (%varbit4893 < $int25) {
 			.cc_setcolour(^red);
 		} else {
 			.cc_setcolour(^white);
 		}
-		if (calc($int28 % 3) = 0) {
-			cc_setposition($int26, $int27, ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setposition(0, calc($int27 + 32), ^setpos_abs_left, ^setpos_abs_top);
-		} else if (calc($int28 % 3) = 1) {
-			cc_setposition(0, $int27, ^setpos_abs_centre, ^setpos_abs_top);
-			.cc_setposition(0, calc($int27 + 32), ^setpos_abs_centre, ^setpos_abs_top);
+		if (calc($int30 % 3) = 0) {
+			cc_setposition($int28, $int29, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		} else if (calc($int30 % 3) = 1) {
+			cc_setposition(0, $int29, ^setpos_abs_centre, ^setpos_abs_top);
+			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_centre, ^setpos_abs_top);
 		} else {
-			cc_setposition($int26, $int27, ^setpos_abs_right, ^setpos_abs_top);
-			.cc_setposition(0, calc($int27 + 32), ^setpos_abs_right, ^setpos_abs_top);
-			$int27 = calc($int27 + $int25);
+			cc_setposition($int28, $int29, ^setpos_abs_right, ^setpos_abs_top);
+			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_right, ^setpos_abs_top);
+			$int29 = calc($int29 + $int27);
 		}
-		$int28 = calc($int28 + 1);
+		$int30 = calc($int30 + 1);
 	} else if (%varbit5370 >= 2) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		cc_setobject(oc_uncert($namedobj30), 10);
-		cc_setopbase("<col=ff9040><oc_name($namedobj30)> (sets of <tostring(10)>)</col>");
+		cc_setobject(oc_uncert($namedobj32), 10);
+		cc_setopbase("<col=ff9040><oc_name($namedobj32)> (sets of <tostring(10)>)</col>");
 		cc_setop(1, "Value");
 		cc_setop(2, "Buy-1");
 		cc_setop(3, "Buy-5");
@@ -174,34 +188,34 @@ while ($namedobj30 ! null) {
 		cc_setop(6, "Buy-X");
 		cc_setop(10, "Examine");
 		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 120, 0)");
-		.cc_setsize($int24, 18, ^setsize_abs, ^setsize_abs);
+		.cc_setsize($int26, 18, ^setsize_abs, ^setsize_abs);
 		.cc_setcolour(^white);
 		.cc_settextfont(p11_full);
 		.cc_settextshadow(true);
 		.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
-		$int23 = enum(obj, int, enum_1262, $namedobj30);
-		.cc_settext("<tostring($int23)> for <tostring(10)>");
-		if (%varbit4893 < $int23) {
+		$int25 = enum(obj, int, enum_1262, $namedobj32);
+		.cc_settext("<tostring($int25)> for <tostring(10)>");
+		if (%varbit4893 < $int25) {
 			.cc_setcolour(^red);
 		} else {
 			.cc_setcolour(^white);
 		}
-		if (calc($int28 % 3) = 0) {
-			cc_setposition($int26, $int27, ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setposition(0, calc($int27 + 32), ^setpos_abs_left, ^setpos_abs_top);
-		} else if (calc($int28 % 3) = 1) {
-			cc_setposition(0, $int27, ^setpos_abs_centre, ^setpos_abs_top);
-			.cc_setposition(0, calc($int27 + 32), ^setpos_abs_centre, ^setpos_abs_top);
+		if (calc($int30 % 3) = 0) {
+			cc_setposition($int28, $int29, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		} else if (calc($int30 % 3) = 1) {
+			cc_setposition(0, $int29, ^setpos_abs_centre, ^setpos_abs_top);
+			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_centre, ^setpos_abs_top);
 		} else {
-			cc_setposition($int26, $int27, ^setpos_abs_right, ^setpos_abs_top);
-			.cc_setposition(0, calc($int27 + 32), ^setpos_abs_right, ^setpos_abs_top);
-			$int27 = calc($int27 + $int25);
+			cc_setposition($int28, $int29, ^setpos_abs_right, ^setpos_abs_top);
+			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_right, ^setpos_abs_top);
+			$int29 = calc($int29 + $int27);
 		}
-		$int28 = calc($int28 + 1);
+		$int30 = calc($int30 + 1);
 	} else {
 		cc_sethide(true);
 		.cc_sethide(true);
 	}
-	$int29 = calc($int29 + 1);
-	$namedobj30 = enum(int, namedobj, enum_1261, $int29);
+	$int31 = calc($int31 + 1);
+	$namedobj32 = enum(int, namedobj, enum_1261, $int31);
 }
