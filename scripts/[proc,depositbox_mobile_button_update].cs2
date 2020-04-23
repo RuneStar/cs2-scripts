@@ -1,19 +1,19 @@
 // 2601
 [proc,depositbox_mobile_button_update]
-if_setgraphic("miscgraphics,0", interface_192:11);
-if_setgraphic("miscgraphics,0", interface_192:13);
-if_setgraphic("miscgraphics,0", interface_192:15);
-if_setgraphic("miscgraphics,0", interface_192:17);
-if_setgraphic("miscgraphics,0", interface_192:19);
+~options_button_off(interface_192:11, 0);
+~options_button_off(interface_192:13, 0);
+~options_button_off(interface_192:15, 0);
+~options_button_off(interface_192:17, 0);
+~options_button_off(interface_192:19, 0);
 switch_int (%varbit4430) {
 	case 1 :
-		if_setgraphic("miscgraphics,9", interface_192:13);
+		~options_button_on(interface_192:13, 0);
 	case 2 :
-		if_setgraphic("miscgraphics,9", interface_192:15);
+		~options_button_on(interface_192:15, 0);
 	case 3 :
-		if_setgraphic("miscgraphics,9", interface_192:17);
+		~options_button_on(interface_192:17, 0);
 	case 4 :
-		if_setgraphic("miscgraphics,9", interface_192:19);
+		~options_button_on(interface_192:19, 0);
 	case default :
-		if_setgraphic("miscgraphics,9", interface_192:11);
+		~options_button_on(interface_192:11, 0);
 }

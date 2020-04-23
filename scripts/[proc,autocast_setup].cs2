@@ -25,7 +25,7 @@ while ($int2 <= 52) {
 		cc_setop(1, oc_param($obj5, spell_name));
 		cc_setoninvtransmit("autocast_spellhighlight(event_com, $int2, $obj5){inv, worn}");
 		cc_setonstattransmit("autocast_spellhighlight(event_com, $int2, $obj5){magic}");
-		cc_setonvartransmit("autocast_spellhighlight(event_com, $int2, $obj5){var638, var375, var1139, var1140, var1377}");
+		cc_setonvartransmit("autocast_spellhighlight(event_com, $int2, $obj5){var638, var375, var1139, var1140, var1377, var1105}");
 		~autocast_spellhighlight($obj5);
 		cc_setonmouseover("autocast_tooltip($component1, $obj5)");
 		cc_setonmouseleave("autocast_tooltip($component1, null)");

@@ -39,23 +39,20 @@ if (%varbit9495 = 0) {
 	if_sethide(true, $component8);
 	return;
 }
-if_setobject_nonum(enum(int, namedobj, enum_2640, %varbit9491), 1, $component3);
-if (%varbit9491 > 0) {
-	if (%varbit9492 = 1) {
-		if_settext("<col=ffffff><tostring(%varbit9491)></col>", $component4);
-	} else {
-		if_settext(tostring(%varbit9491), $component4);
-	}
+def_int $int14 = calc(%varbit10259 - 1);
+if_setobject_nonum(enum(int, namedobj, enum_2850, $int14), 1, $component3);
+if ($int14 ! -1) {
+	if_settext(tostring(%varbit10259), $component4);
 } else {
 	if_settext("", $component4);
 }
-def_int $int14 = 0;
+def_int $int15 = 0;
 if (%varbit9493 > 0) {
-	$int14 = calc((%varbit9493 - 1) * 5);
-	if ($int14 > 0) {
-		if_settext("<tostring($int14)>-<tostring(calc($int14 + 4))>", $component6);
+	$int15 = calc((%varbit9493 - 1) * 5);
+	if ($int15 > 0) {
+		if_settext("<tostring($int15)>-<tostring(calc($int15 + 4))>", $component6);
 	} else {
-		if_settext("1-<tostring(calc($int14 + 4))>", $component6);
+		if_settext("1-<tostring(calc($int15 + 4))>", $component6);
 	}
 } else {
 	if_settext("Safe", $component6);

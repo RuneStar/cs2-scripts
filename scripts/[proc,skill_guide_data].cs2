@@ -96,6 +96,8 @@ switch_int ($int0) {
 					return(75, dinhs_bulwark_21015, "Members: Dinh's bulwark<br> (with 75 Defence)");
 				case 45 :
 					return(75, blade_of_saeldor_23995, "Members: Blade of Saeldor");
+				case 46 :
+					return(75, vestas_blighted_longsword_24617, "Members: Vesta's blighted longsword");
 				case default :
 					return(-1, null, "");
 			}
@@ -115,70 +117,56 @@ switch_int ($int0) {
 		return(-1, null, "");
 	case 2 :
 		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(5, black_halberd_3196, "Black halberd<br> (with 10 Attack)");
+			switch_int ($int2) {
+				case 0 :
+					return(5, black_halberd_3196, "Black halberd<br> (with 10 Attack)");
+				case 1 :
+					return(5, white_halberd_6599, "White halberd<br> (with 10 Attack)");
+				case 2 :
+					return(10, mithril_halberd_3198, "Mithril halberd<br> (with 20 Attack)");
+				case 3 :
+					return(15, adamant_halberd_3200, "Adamant halberd<br> (with 30 Attack)");
+				case 4 :
+					return(20, rune_halberd_3202, "Rune halberd<br> (with 40 Attack)");
+				case 5 :
+					return(30, dragon_halberd_3204, "Dragon halberd<br> (with 60 Attack)");
+				case 6 :
+					return(40, barrelchest_anchor_10887, "Barrelchest Anchor<br> (with 60 Attack)");
+				case 7 :
+					return(42, void_knight_mace_8841, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				case 8 :
+					return(50, granite_maul_4153, "Granite maul<br> (with 50 Attack)");
+				case 9 :
+					return(50, granite_longsword_21646, "Granite longsword<br> (with 50 Attack)");
+				case 10 :
+					return(60, tzhaar_ket_om_6528, "TzHaar-Ket-Om");
+				case 11 :
+					return(70, dharoks_greataxe_4718, "Dharok's greataxe<br> (with 70 Attack)");
+				case 12 :
+					return(70, torags_hammers_4747, "Torag's hammers<br> (with 70 Attack)");
+				case 13 :
+					return(70, abyssal_bludgeon_13263, "Abyssal bludgeon<br> (with 70 Attack)");
+				case 14 :
+					return(75, elder_maul_21003, "Elder maul<br> (with 75 Attack)");
+				case 15 :
+					return(75, scythe_of_vitur_22325, "Scythe of Vitur<br> (with 75 Attack)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(5, white_halberd_6599, "White halberd<br> (with 10 Attack)");
-			}
-			if ($int2 = 2) {
-				return(10, mithril_halberd_3198, "Mithril halberd<br> (with 20 Attack)");
-			}
-			if ($int2 = 3) {
-				return(15, adamant_halberd_3200, "Adamant halberd<br> (with 30 Attack)");
-			}
-			if ($int2 = 4) {
-				return(20, rune_halberd_3202, "Rune halberd<br> (with 40 Attack)");
-			}
-			if ($int2 = 5) {
-				return(30, dragon_halberd_3204, "Dragon halberd<br> (with 60 Attack)");
-			}
-			if ($int2 = 6) {
-				return(40, barrelchest_anchor_10887, "Barrelchest Anchor<br> (with 60 Attack)");
-			}
-			if ($int2 = 7) {
-				return(42, void_knight_mace_8841, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
-			}
-			if ($int2 = 8) {
-				return(50, granite_maul_4153, "Granite maul<br> (with 50 Attack)");
-			}
-			if ($int2 = 9) {
-				return(50, granite_longsword_21646, "Granite longsword<br> (with 50 Attack)");
-			}
-			if ($int2 = 10) {
-				return(60, tzhaar_ket_om_6528, "TzHaar-Ket-Om");
-			}
-			if ($int2 = 11) {
-				return(70, dharoks_greataxe_4718, "Dharok's greataxe<br> (with 70 Attack)");
-			}
-			if ($int2 = 12) {
-				return(70, torags_hammers_4747, "Torag's hammers<br> (with 70 Attack)");
-			}
-			if ($int2 = 13) {
-				return(70, abyssal_bludgeon_13263, "Abyssal bludgeon<br> (with 70 Attack)");
-			}
-			if ($int2 = 14) {
-				return(75, elder_maul_21003, "Elder maul<br> (with 75 Attack)");
-			}
-			if ($int2 = 15) {
-				return(75, scythe_of_vitur_22325, "Scythe of Vitur<br> (with 75 Attack)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+			switch_int ($int2) {
+				case 0 :
+					return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				case 1 :
+					return(50, granite_helm_10589, "Granite armour<br> (with 50 Defence)");
+				case 2 :
+					return(70, inquisitors_great_helm_24419, "Members: Inquisitor's armour<br> (with 30 Defence)");
+				case 3 :
+					return(75, primordial_boots_13239, "Primordial boots<br> (with 75 Defence)");
+				case default :
+					return(-1, null, "");
 			}
-			if ($int2 = 1) {
-				return(50, granite_helm_10589, "Granite armour<br> (with 50 Defence)");
-			}
-			if ($int2 = 2) {
-				return(70, inquisitors_great_helm_24419, "Members: Inquisitor's armour<br> (with 30 Defence)");
-			}
-			if ($int2 = 3) {
-				return(75, primordial_boots_13239, "Primordial boots<br> (with 75 Defence)");
-			}
-			return(-1, null, "");
 		}
 		if ($int1 = 2) {
 			if ($int2 = 0) {
@@ -1273,306 +1261,253 @@ switch_int ($int0) {
 					case 4 :
 						return(12, limpwurt_root_225, "Strength potion<br>Tarromin & limpwurt root");
 					case 5 :
-						return(19, guam_tar_10142, "Guam tar<br>Guam leaf & swamp tar");
+						return(15, ashes_592, "Serum 207<br>Tarromin & ashes");
 					case 6 :
-						return(22, volcanic_ash_21622, "Compost potion<br>Harralander & volcanic ash");
+						return(19, guam_tar_10142, "Guam tar<br>Guam leaf & swamp tar");
 					case 7 :
-						return(22, red_spiders_eggs_223, "Stat restore potion<br>Harralander & red spiders' eggs");
+						return(22, volcanic_ash_21622, "Compost potion<br>Harralander & volcanic ash");
 					case 8 :
-						return(22, garlic_1550, "Guthix balance potion");
+						return(22, red_spiders_eggs_223, "Stat restore potion<br>Harralander & red spiders' eggs");
 					case 9 :
-						return(26, chocolate_dust_1975, "Energy potion<br>Harralander & chocolate dust");
+						return(22, garlic_1550, "Guthix balance potion");
 					case 10 :
-						return(30, white_berries_239, "Defence potion<br>Ranarr weed & white berries");
+						return(26, chocolate_dust_1975, "Energy potion<br>Harralander & chocolate dust");
 					case 11 :
-						return(31, marrentill_tar_10143, "Marrentill tar<br>Marrentill & swamp tar");
+						return(30, white_berries_239, "Defence potion<br>Ranarr weed & white berries");
 					case 12 :
-						return(34, toads_legs_2152, "Agility potion<br>Toadflax & toad legs");
+						return(31, marrentill_tar_10143, "Marrentill tar<br>Marrentill & swamp tar");
 					case 13 :
-						return(36, goat_horn_dust_9736, "Combat potion<br>Harralander & ground desert goat horn");
+						return(34, toads_legs_2152, "Agility potion<br>Toadflax & toad legs");
 					case 14 :
-						return(38, snape_grass_231, "Prayer restore potion<br>Ranarr weed & snape grass");
+						return(36, goat_horn_dust_9736, "Combat potion<br>Harralander & ground desert goat horn");
 					case 15 :
-						return(39, tarromin_tar_10144, "Tarromin tar<br>Tarromin & swamp tar");
+						return(38, snape_grass_231, "Prayer restore potion<br>Ranarr weed & snape grass");
 					case 16 :
-						return(44, harralander_tar_10145, "Harralander tar<br>Harralander & swamp tar");
+						return(39, tarromin_tar_10144, "Tarromin tar<br>Tarromin & swamp tar");
 					case 17 :
-						return(45, eye_of_newt_221, "Super Attack potion<br>Irit leaf & eye of newt");
+						return(44, harralander_tar_10145, "Harralander tar<br>Harralander & swamp tar");
 					case 18 :
-						return(48, unicorn_horn_dust_235, "Super anti-poison potion<br>Irit leaf & ground unicorn horn");
+						return(45, eye_of_newt_221, "Super Attack potion<br>Irit leaf & eye of newt");
 					case 19 :
-						return(50, snape_grass_231, "Fishing potion<br>Avantoe & snape grass");
+						return(48, unicorn_horn_dust_235, "Super anti-poison potion<br>Irit leaf & ground unicorn horn");
 					case 20 :
-						return(52, mort_myre_fungus_2970, "Super energy potion<br>Avantoe & Mort Myre fungi");
+						return(50, snape_grass_231, "Fishing potion<br>Avantoe & snape grass");
 					case 21 :
-						return(53, kebbit_teeth_10109, "Hunting potion - Avantoe & ground sabre-toothed kebbit teeth");
+						return(52, mort_myre_fungus_2970, "Super energy potion<br>Avantoe & Mort Myre fungi");
 					case 22 :
-						return(55, limpwurt_root_225, "Super Strength potion<br>Kwuarm & limpwurt root");
+						return(53, kebbit_teeth_10109, "Hunting potion - Avantoe & ground sabre-toothed kebbit teeth");
 					case 23 :
-						return(57, gorak_claws_9016, "Magic essence potion<br>Star flower & ground gorak's claw");
+						return(55, limpwurt_root_225, "Super Strength potion<br>Kwuarm & limpwurt root");
 					case 24 :
-						return(60, dragon_scale_dust_241, "Weapon poison<br>Kwuarm & ground blue dragon scale");
+						return(57, gorak_claws_9016, "Magic essence potion<br>Star flower & ground gorak's claw");
 					case 25 :
-						return(63, red_spiders_eggs_223, "Super restore potion<br>Snapdragon & red spiders' eggs");
+						return(60, dragon_scale_dust_241, "Weapon poison<br>Kwuarm & ground blue dragon scale");
 					case 26 :
-						return(65, nail_beast_nails_10937, "Sanfew serum cure all<br>Super restore potion, snake weed, ground unicorn horn and nail beast nails.");
+						return(63, red_spiders_eggs_223, "Super restore potion<br>Snapdragon & red spiders' eggs");
 					case 27 :
-						return(66, white_berries_239, "Super Defence potion<br>Cadantine & white berries");
+						return(65, nail_beast_nails_10937, "Sanfew serum cure all<br>Super restore potion, snake weed, ground unicorn horn and nail beast nails.");
 					case 28 :
-						return(68, yew_roots_6049, "Antidote+<br>Coconut milk, toadflax & yew roots");
+						return(66, white_berries_239, "Super Defence potion<br>Cadantine & white berries");
 					case 29 :
-						return(69, dragon_scale_dust_241, "Anti-firebreath potion<br>Lantadyme & ground blue dragon scale");
+						return(68, yew_roots_6049, "Antidote+<br>Coconut milk, toadflax & yew roots");
 					case 30 :
-						return(70, crystal_dust_23964, "Divine super attack potion<br>Crystal dust & super attack potion");
+						return(69, dragon_scale_dust_241, "Anti-firebreath potion<br>Lantadyme & ground blue dragon scale");
 					case 31 :
-						return(70, crystal_dust_23964, "Divine super strength potion<br>Crystal dust & super strength potion");
+						return(70, crystal_dust_23964, "Divine super attack potion<br>Crystal dust & super attack potion");
 					case 32 :
-						return(70, crystal_dust_23964, "Divine super defence potion<br>Crystal dust & super defence potion");
+						return(70, crystal_dust_23964, "Divine super strength potion<br>Crystal dust & super strength potion");
 					case 33 :
-						return(72, wine_of_zamorak_245, "Ranging potion<br>Dwarf weed & wine of Zamorak");
+						return(70, crystal_dust_23964, "Divine super defence potion<br>Crystal dust & super defence potion");
 					case 34 :
-						return(73, cactus_spine_6016, "Weapon poison(+)<br>Coconut milk, cactus spine & red spiders' eggs");
+						return(72, wine_of_zamorak_245, "Ranging potion<br>Dwarf weed & wine of Zamorak");
 					case 35 :
-						return(74, crystal_dust_23964, "Divine ranging potion<br>Crystal dust & ranging potion");
+						return(73, cactus_spine_6016, "Weapon poison(+)<br>Coconut milk, cactus spine & red spiders' eggs");
 					case 36 :
-						return(76, potato_cactus_3138, "Magic potion<br>Lantadyme & potato cactus");
+						return(74, crystal_dust_23964, "Divine ranging potion<br>Crystal dust & ranging potion");
 					case 37 :
-						return(77, amylase_crystal_5_3961, "Stamina potion<br>Amylase & super energy potion");
+						return(76, potato_cactus_3138, "Magic potion<br>Lantadyme & potato cactus");
 					case 38 :
-						return(78, jangerberries_247, "Zamorak brew<br>Torstol & jangerberries");
+						return(77, amylase_crystal_5_3961, "Stamina potion<br>Amylase & super energy potion");
 					case 39 :
-						return(78, crystal_dust_23964, "Divine magic potion<br>Crystal dust & magic potion");
+						return(78, jangerberries_247, "Zamorak brew<br>Torstol & jangerberries");
 					case 40 :
-						return(79, magic_roots_6051, "Antidote++<br>Coconut milk, irit leaf & magic tree roots");
+						return(78, crystal_dust_23964, "Divine magic potion<br>Crystal dust & magic potion");
 					case 41 :
-						return(80, wine_of_zamorak_245, "Bastion potion<br>Cadantine & Wine of Zamorak mixed in a Vial of blood");
+						return(79, magic_roots_6051, "Antidote++<br>Coconut milk, irit leaf & magic tree roots");
 					case 42 :
-						return(80, potato_cactus_3138, "Battlemage potion<br>Cadantine & Potato Cactus mixed in a Vial of blood");
+						return(80, wine_of_zamorak_245, "Bastion potion<br>Cadantine & Wine of Zamorak mixed in a Vial of blood");
 					case 43 :
-						return(81, crushed_nest_6693, "Saradomin brew<br>Toadflax & crushed birdnest");
+						return(80, potato_cactus_3138, "Battlemage potion<br>Cadantine & Potato Cactus mixed in a Vial of blood");
 					case 44 :
-						return(82, poison_ivy_berries_6018, "Weapon poison(++)<br>Coconut milk, nightshade & poison ivy berries");
+						return(81, crushed_nest_6693, "Saradomin brew<br>Toadflax & crushed birdnest");
 					case 45 :
-						return(84, lava_scale_shard_5_3256, "Extended antifire potion<br>Antifire potion & lava scale shards");
+						return(82, poison_ivy_berries_6018, "Weapon poison(++)<br>Coconut milk, nightshade & poison ivy berries");
 					case 46 :
-						return(87, zulrahs_scales_4_3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
+						return(84, lava_scale_shard_5_3256, "Extended antifire potion<br>Antifire potion & lava scale shards");
 					case 47 :
-						return(90, torstol_269, "Super combat potion<br>Super attack potion, Super defence potion, Super strength potion & Torstol");
+						return(87, zulrahs_scales_4_3997, "Anti-venom<br>Antidote++ & Zulrah's scales");
 					case 48 :
-						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & Crushed superior dragon bones<br>(after Dragon Slayer II)");
+						return(90, torstol_269, "Super combat potion<br>Super attack potion, Super defence potion, Super strength potion & Torstol");
 					case 49 :
-						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
+						return(92, crushed_superior_dragon_bones_21975, "Super antifire potion<br>Antifire potion & Crushed superior dragon bones<br>(after Dragon Slayer II)");
 					case 50 :
-						return(97, crystal_dust_23964, "Divine super combat potion<br>Crystal dust & super combat potion");
+						return(94, torstol_269, "Anti-venom+<br>Anti-venom & Torstol");
 					case 51 :
+						return(97, crystal_dust_23964, "Divine super combat potion<br>Crystal dust & super combat potion");
+					case 52 :
 						return(98, lava_scale_shard_5_3256, "Extended super antifires<br>Super antifire potion & lava scale shards<br>(after Dragon Slayer II)");
 					case default :
 						return(-1, null, "");
 				}
 			case 1 :
-				if ($int2 = 0) {
-					return(-1, obj_7620, "You must complete the Druidic Ritual quest before you can use Herblore");
+				switch_int ($int2) {
+					case 0 :
+						return(-1, obj_7620, "You must complete the Druidic Ritual quest before you can use Herblore");
+					case 1 :
+						return(3, guam_leaf_249, "Guam leaf");
+					case 2 :
+						return(3, rogues_purse_1534, "Rogue's purse");
+					case 3 :
+						return(3, snake_weed_1526, "Snake weed");
+					case 4 :
+						return(5, marrentill_251, "Marrentill");
+					case 5 :
+						return(11, tarromin_253, "Tarromin");
+					case 6 :
+						return(20, harralander_255, "Harralander");
+					case 7 :
+						return(25, ranarr_weed_257, "Ranarr weed");
+					case 8 :
+						return(30, toadflax_2998, "Toadflax");
+					case 9 :
+						return(40, irit_leaf_259, "Irit leaf");
+					case 10 :
+						return(48, avantoe_261, "Avantoe");
+					case 11 :
+						return(54, kwuarm_263, "Kwuarm");
+					case 12 :
+						return(59, snapdragon_3000, "Snapdragon");
+					case 13 :
+						return(65, cadantine_265, "Cadantine");
+					case 14 :
+						return(67, lantadyme_2481, "Lantadyme");
+					case 15 :
+						return(70, dwarf_weed_267, "Dwarf weed");
+					case 16 :
+						return(75, torstol_269, "Torstol");
+					case default :
+						return(-1, null, "");
 				}
-				if ($int2 = 1) {
-					return(3, guam_leaf_249, "Guam leaf");
-				}
-				if ($int2 = 2) {
-					return(3, rogues_purse_1534, "Rogue's purse");
-				}
-				if ($int2 = 3) {
-					return(3, snake_weed_1526, "Snake weed");
-				}
-				if ($int2 = 4) {
-					return(5, marrentill_251, "Marrentill");
-				}
-				if ($int2 = 5) {
-					return(11, tarromin_253, "Tarromin");
-				}
-				if ($int2 = 6) {
-					return(20, harralander_255, "Harralander");
-				}
-				if ($int2 = 7) {
-					return(25, ranarr_weed_257, "Ranarr weed");
-				}
-				if ($int2 = 8) {
-					return(30, toadflax_2998, "Toadflax");
-				}
-				if ($int2 = 9) {
-					return(40, irit_leaf_259, "Irit leaf");
-				}
-				if ($int2 = 10) {
-					return(48, avantoe_261, "Avantoe");
-				}
-				if ($int2 = 11) {
-					return(54, kwuarm_263, "Kwuarm");
-				}
-				if ($int2 = 12) {
-					return(59, snapdragon_3000, "Snapdragon");
-				}
-				if ($int2 = 13) {
-					return(65, cadantine_265, "Cadantine");
-				}
-				if ($int2 = 14) {
-					return(67, lantadyme_2481, "Lantadyme");
-				}
-				if ($int2 = 15) {
-					return(70, dwarf_weed_267, "Dwarf weed");
-				}
-				if ($int2 = 16) {
-					return(75, torstol_269, "Torstol");
-				}
-				return(-1, null, "");
 			case 2 :
-				if ($int2 = 0) {
-					return(-1, obj_7620, "You must complete barbarian herblore training before you can make these potions.");
+				switch_int ($int2) {
+					case 0 :
+						return(-1, obj_7620, "You must complete barbarian herblore training before you can make these potions.");
+					case 1 :
+						return(4, attack_mix_2_11429, "Attack mix");
+					case 2 :
+						return(6, antipoison_mix_2_11433, "Antipoison mix");
+					case 3 :
+						return(9, relicyms_mix_2_11437, "Relicym's mix");
+					case 4 :
+						return(14, strength_mix_2_11443, "Strength mix");
+					case 5 :
+						return(24, restore_mix_2_11449, "Restore mix");
+					case 6 :
+						return(29, energy_mix_2_11453, "Energy mix");
+					case 7 :
+						return(33, defence_mix_2_11457, "Defence mix");
+					case 8 :
+						return(37, agility_mix_2_11461, "Agility mix");
+					case 9 :
+						return(40, combat_mix_2_11445, "Combat mix");
+					case 10 :
+						return(42, prayer_mix_2_11465, "Prayer mix");
+					case 11 :
+						return(47, superattack_mix_2_11469, "Super Attack mix");
+					case 12 :
+						return(51, anti_poison_supermix_2_11473, "Anti-poison supermix");
+					case 13 :
+						return(53, fishing_mix_2_11477, "Fishing mix");
+					case 14 :
+						return(56, super_energy_mix_2_11481, "Super energy mix");
+					case 15 :
+						return(58, hunting_mix_2_11517, "Hunting mix");
+					case 16 :
+						return(59, super_str_mix_2_11485, "Super Strength mix");
+					case 17 :
+						return(61, magic_essence_mix_2_11489, "Magic essence mix");
+					case 18 :
+						return(67, super_restore_mix_2_11493, "Super restore mix");
+					case 19 :
+						return(71, super_def_mix_2_11497, "Super Defence mix");
+					case 20 :
+						return(74, antidote_mix_2_11501, "Antidote+ mix");
+					case 21 :
+						return(75, antifire_mix_2_11505, "Antifire mix");
+					case 22 :
+						return(80, ranging_mix_2_11509, "Ranging mix");
+					case 23 :
+						return(83, magic_mix_2_11513, "Magic mix");
+					case 24 :
+						return(85, zamorak_mix_2_11521, "Zamorak mix");
+					case 25 :
+						return(86, stamina_mix_2_12633, "Stamina mix");
+					case 26 :
+						return(91, extended_antifire_mix_2_11960, "Extended antifire mix");
+					case 27 :
+						return(98, super_antifire_mix_2_21994, "Super antifire mix");
+					case 28 :
+						return(99, extended_super_antifire_mix_2_22221, "Extended super antifire mix");
+					case default :
+						return(-1, null, "");
 				}
-				if ($int2 = 1) {
-					return(4, attack_mix_2_11429, "Attack mix");
-				}
-				if ($int2 = 2) {
-					return(6, antipoison_mix_2_11433, "Antipoison mix");
-				}
-				if ($int2 = 3) {
-					return(9, relicyms_mix_2_11437, "Relicym's mix");
-				}
-				if ($int2 = 4) {
-					return(14, strength_mix_2_11443, "Strength mix");
-				}
-				if ($int2 = 5) {
-					return(24, restore_mix_2_11449, "Restore mix");
-				}
-				if ($int2 = 6) {
-					return(29, energy_mix_2_11453, "Energy mix");
-				}
-				if ($int2 = 7) {
-					return(33, defence_mix_2_11457, "Defence mix");
-				}
-				if ($int2 = 8) {
-					return(37, agility_mix_2_11461, "Agility mix");
-				}
-				if ($int2 = 9) {
-					return(40, combat_mix_2_11445, "Combat mix");
-				}
-				if ($int2 = 10) {
-					return(42, prayer_mix_2_11465, "Prayer mix");
-				}
-				if ($int2 = 11) {
-					return(47, superattack_mix_2_11469, "Super Attack mix");
-				}
-				if ($int2 = 12) {
-					return(51, anti_poison_supermix_2_11473, "Anti-poison supermix");
-				}
-				if ($int2 = 13) {
-					return(53, fishing_mix_2_11477, "Fishing mix");
-				}
-				if ($int2 = 14) {
-					return(56, super_energy_mix_2_11481, "Super energy mix");
-				}
-				if ($int2 = 15) {
-					return(58, hunting_mix_2_11517, "Hunting mix");
-				}
-				if ($int2 = 16) {
-					return(59, super_str_mix_2_11485, "Super Strength mix");
-				}
-				if ($int2 = 17) {
-					return(61, magic_essence_mix_2_11489, "Magic essence mix");
-				}
-				if ($int2 = 18) {
-					return(67, super_restore_mix_2_11493, "Super restore mix");
-				}
-				if ($int2 = 19) {
-					return(71, super_def_mix_2_11497, "Super Defence mix");
-				}
-				if ($int2 = 20) {
-					return(74, antidote_mix_2_11501, "Antidote+ mix");
-				}
-				if ($int2 = 21) {
-					return(75, antifire_mix_2_11505, "Antifire mix");
-				}
-				if ($int2 = 22) {
-					return(80, ranging_mix_2_11509, "Ranging mix");
-				}
-				if ($int2 = 23) {
-					return(83, magic_mix_2_11513, "Magic mix");
-				}
-				if ($int2 = 24) {
-					return(85, zamorak_mix_2_11521, "Zamorak mix");
-				}
-				if ($int2 = 25) {
-					return(86, stamina_mix_2_12633, "Stamina mix");
-				}
-				if ($int2 = 26) {
-					return(91, extended_antifire_mix_2_11960, "Extended antifire mix");
-				}
-				if ($int2 = 27) {
-					return(98, super_antifire_mix_2_21994, "Super antifire mix");
-				}
-				if ($int2 = 28) {
-					return(99, extended_super_antifire_mix_2_22221, "Extended super antifire mix");
-				}
-				return(-1, null, "");
 			case 3 :
-				if ($int2 = 0) {
-					return(-1, obj_7620, "Potions may be <col=6f0000>strong</col>, <col=6f0000>standard</col> or <col=6f0000>weak</col>, depending on your Herblore level.");
+				switch_int ($int2) {
+					case 0 :
+						return(-1, obj_7620, "Potions may be <col=6f0000>strong</col>, <col=6f0000>standard</col> or <col=6f0000>weak</col>, depending on your Herblore level.");
+					case 1 :
+						return(47, golpar_20905, "Weak Golpar potions:");
+					case 2 :
+						return(scale(126, 100, 47), golpar_20905, "Standard Golpar potions");
+					case 3 :
+						return(scale(150, 100, 47), golpar_20905, "Strong Golpar potions");
+					case 4 :
+						return(-1, elder_potion_4_20920, "Elder potions<br> with Stinkhorn mushroom");
+					case 5 :
+						return(-1, kodai_potion_4_20944, "Kodai potions<br> with Endarkened juice");
+					case 6 :
+						return(-1, twisted_potion_4_20932, "Twisted potions<br> with Cicely");
+					case 7 :
+						return(52, buchu_leaf_20908, "Weak Buchu leaf potions:");
+					case 8 :
+						return(scale(126, 100, 52), buchu_leaf_20908, "Standard Buchu leaf potions");
+					case 9 :
+						return(scale(150, 100, 52), buchu_leaf_20908, "Strong Buchu leaf potions");
+					case 10 :
+						return(-1, revitalisation_potion_4_20956, "Revitalisation potions<br> with Stinkhorn mushroom");
+					case 11 :
+						return(-1, xerics_aid_4_20980, "Xeric's Aid potions<br> with Endarkened juice");
+					case 12 :
+						return(-1, prayer_enhance_4_20968, "Prayer enhance potions<br> with Cicely");
+					case 13 :
+						return(60, noxifer_20902, "Weak Noxifer potions:");
+					case 14 :
+						return(scale(126, 100, 60), noxifer_20902, "Standard Noxifer potions");
+					case 15 :
+						return(scale(150, 100, 60), noxifer_20902, "Strong Noxifer potions");
+					case 16 :
+						return(-1, overload_4_20992, "Overload<br> with Elder, Kodai & Twisted potions");
+					case 17 :
+						return(-1, overload_4_20996, "For overload potions, the tier is capped at the tier of the potions used to make it.");
+					case default :
+						return(-1, null, "");
 				}
-				if ($int2 = 1) {
-					return(47, golpar_20905, "Weak Golpar potions:");
-				}
-				if ($int2 = 2) {
-					return(scale(126, 100, 47), golpar_20905, "Standard Golpar potions");
-				}
-				if ($int2 = 3) {
-					return(scale(150, 100, 47), golpar_20905, "Strong Golpar potions");
-				}
-				if ($int2 = 4) {
-					return(-1, elder_potion_4_20920, "Elder potions<br> with Stinkhorn mushroom");
-				}
-				if ($int2 = 5) {
-					return(-1, kodai_potion_4_20944, "Kodai potions<br> with Endarkened juice");
-				}
-				if ($int2 = 6) {
-					return(-1, twisted_potion_4_20932, "Twisted potions<br> with Cicely");
-				}
-				if ($int2 = 7) {
-					return(52, buchu_leaf_20908, "Weak Buchu leaf potions:");
-				}
-				if ($int2 = 8) {
-					return(scale(126, 100, 52), buchu_leaf_20908, "Standard Buchu leaf potions");
-				}
-				if ($int2 = 9) {
-					return(scale(150, 100, 52), buchu_leaf_20908, "Strong Buchu leaf potions");
-				}
-				if ($int2 = 10) {
-					return(-1, revitalisation_potion_4_20956, "Revitalisation potions<br> with Stinkhorn mushroom");
-				}
-				if ($int2 = 11) {
-					return(-1, xerics_aid_4_20980, "Xeric's Aid potions<br> with Endarkened juice");
-				}
-				if ($int2 = 12) {
-					return(-1, prayer_enhance_4_20968, "Prayer enhance potions<br> with Cicely");
-				}
-				if ($int2 = 13) {
-					return(60, noxifer_20902, "Weak Noxifer potions:");
-				}
-				if ($int2 = 14) {
-					return(scale(126, 100, 60), noxifer_20902, "Standard Noxifer potions");
-				}
-				if ($int2 = 15) {
-					return(scale(150, 100, 60), noxifer_20902, "Strong Noxifer potions");
-				}
-				if ($int2 = 16) {
-					return(-1, overload_4_20992, "Overload<br> with Elder, Kodai & Twisted potions");
-				}
-				if ($int2 = 17) {
-					return(-1, overload_4_20996, "For overload potions, the tier is capped at the tier of the potions used to make it.");
-				}
-				return(-1, null, "");
 			case 4 :
 				if ($int2 = 0) {
 					return(31, herbiboar_21511, "Harvest herbs from the <col=6f0000>Herbiboar</col> on <col=6f0000>Fossil Island</col> (with 80 Hunter).");
 				}
 				if ($int2 = 1) {
-					return(58, herb_sack_13226, "Use the Herb Sack reward item, purchased from Slayer Masters.");
+					return(58, herb_sack_13226, "Use the Herb Sack reward item, purchased from the Tithe Farm or Slayer Masters.");
 				}
 				return(-1, null, "");
 			case default :
@@ -4188,202 +4123,7 @@ switch_int ($int0) {
 		}
 		return(-1, null, "");
 	case 17 :
-		if ($int1 = 0) {
-			if ($int2 = 0) {
-				return(1, logs_1511, "Normal logs");
-			}
-			if ($int2 = 1) {
-				return(1, achey_tree_logs_2862, "Members: Achey logs");
-			}
-			if ($int2 = 2) {
-				return(5, pyre_logs_3438, "Members: Pyre logs");
-			}
-			if ($int2 = 3) {
-				return(15, oak_logs_1521, "Oak logs");
-			}
-			if ($int2 = 4) {
-				return(20, oak_pyre_logs_3440, "Members: Oak pyre logs");
-			}
-			if ($int2 = 5) {
-				return(30, willow_logs_1519, "Willow logs");
-			}
-			if ($int2 = 6) {
-				return(35, teak_logs_6333, "Members: Teak logs");
-			}
-			if ($int2 = 7) {
-				return(35, willow_pyre_logs_3442, "Members: Willow pyre logs");
-			}
-			if ($int2 = 8) {
-				return(40, teak_pyre_logs_6211, "Members: Teak pyre logs");
-			}
-			if ($int2 = 9) {
-				return(42, arctic_pine_logs_10810, "Members: Arctic pine logs");
-			}
-			if ($int2 = 10) {
-				return(45, maple_logs_1517, "Maple logs");
-			}
-			if ($int2 = 11) {
-				return(47, arctic_pyre_logs_10808, "Members: Arctic pine pyre logs");
-			}
-			if ($int2 = 12) {
-				return(50, mahogany_logs_6332, "Members: Mahogany logs");
-			}
-			if ($int2 = 13) {
-				return(50, maple_pyre_logs_3444, "Members: Maple pyre logs");
-			}
-			if ($int2 = 14) {
-				return(55, mahogany_pyre_log_6213, "Members: Mahogany pyre logs");
-			}
-			if ($int2 = 15) {
-				return(60, yew_logs_1515, "Yew logs");
-			}
-			if ($int2 = 16) {
-				return(65, yew_pyre_logs_3446, "Members: Yew pyre logs");
-			}
-			if ($int2 = 17) {
-				return(75, magic_logs_1513, "Members: Magic logs");
-			}
-			if ($int2 = 18) {
-				return(80, magic_pyre_logs_3448, "Members: Magic pyre logs");
-			}
-			if ($int2 = 19) {
-				return(90, redwood_logs_19669, "Members: Redwood logs");
-			}
-			if ($int2 = 20) {
-				return(95, redwood_pyre_logs_19672, "Members: Redwood pyre logs");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 1) {
-			if ($int2 = 0) {
-				return(11, pyre_logs_3438, "Normal Pyre Ships<br>(with 11 Crafting)");
-			}
-			if ($int2 = 1) {
-				return(11, achey_tree_logs_2862, "Achey Pyre Ships<br>(with 11 Crafting)");
-			}
-			if ($int2 = 2) {
-				return(21, logs_1511, "Normal Logs");
-			}
-			if ($int2 = 3) {
-				return(21, achey_tree_logs_2862, "Achey Logs");
-			}
-			if ($int2 = 4) {
-				return(25, oak_pyre_logs_3440, "Oak Pyre Ships<br>(with 25 Crafting)");
-			}
-			if ($int2 = 5) {
-				return(35, oak_logs_1521, "Oak Logs");
-			}
-			if ($int2 = 6) {
-				return(40, willow_pyre_logs_3442, "Willow Pyre Ships<br>(with 40 Crafting)");
-			}
-			if ($int2 = 7) {
-				return(45, teak_pyre_logs_6211, "Teak Pyre Ships<br>(with 45 Crafting)");
-			}
-			if ($int2 = 8) {
-				return(50, willow_logs_1519, "Willow Logs");
-			}
-			if ($int2 = 9) {
-				return(52, arctic_pyre_logs_10808, "Arctic Pine Pyre Ships<br>(with 52 Crafting)");
-			}
-			if ($int2 = 10) {
-				return(55, teak_logs_6333, "Teak Logs");
-			}
-			if ($int2 = 11) {
-				return(55, maple_pyre_logs_3444, "Maple Pyre Ships<br>(with 55 Crafting)");
-			}
-			if ($int2 = 12) {
-				return(60, mahogany_pyre_log_6213, "Mahogany Pyre Ships<br>(with 60 Crafting)");
-			}
-			if ($int2 = 13) {
-				return(62, arctic_pine_logs_10810, "Arctic Pine Logs");
-			}
-			if ($int2 = 14) {
-				return(65, maple_logs_1517, "Maple Logs");
-			}
-			if ($int2 = 15) {
-				return(70, yew_pyre_logs_3446, "Yew Pyre Ships<br>(with 70 Crafting)");
-			}
-			if ($int2 = 16) {
-				return(70, mahogany_logs_6332, "Mahogany Logs");
-			}
-			if ($int2 = 17) {
-				return(80, yew_logs_1515, "Yew Logs");
-			}
-			if ($int2 = 18) {
-				return(85, magic_pyre_logs_3448, "Magic Pyre Ships<br>(with 85 Crafting)");
-			}
-			if ($int2 = 19) {
-				return(95, magic_logs_1513, "Magic Logs");
-			}
-			if ($int2 = 20) {
-				return(95, redwood_pyre_logs_19672, "Redwood Pyre ships<br>(with 95 Crafting)");
-			}
-			if ($int2 = 21) {
-				return(99, redwood_logs_19669, "Redwood logs");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 2) {
-			if ($int2 = 0) {
-				return(1, unlit_torch_596, "Torches");
-			}
-			if ($int2 = 1) {
-				return(1, candle_36, "Candles");
-			}
-			if ($int2 = 2) {
-				return(4, candle_lantern_4531, "Candle lanterns");
-			}
-			if ($int2 = 3) {
-				return(12, oil_lamp_4524, "Oil lamps");
-			}
-			if ($int2 = 4) {
-				return(20, iron_spit_7225, "Members: Iron spits");
-			}
-			if ($int2 = 5) {
-				return(26, oil_lantern_4539, "Oil lanterns");
-			}
-			if ($int2 = 6) {
-				return(33, lit_bug_lantern_7053, "Harpie bug lanterns (not a light source)");
-			}
-			if ($int2 = 7) {
-				return(49, bullseye_lantern_4550, "Bullseye lanterns");
-			}
-			if ($int2 = 8) {
-				return(49, sapphire_lantern_4702, "Sapphire lanterns");
-			}
-			if ($int2 = 9) {
-				return(49, emerald_lantern_9065, "Emerald lanterns");
-			}
-			if ($int2 = 10) {
-				return(50, bruma_torch_20720, "Bruma torches");
-			}
-			if ($int2 = 11) {
-				return(52, light_orb_10973, "Replace Dorgeshuun light orbs");
-			}
-			if ($int2 = 12) {
-				return(65, mining_helmet_5013, "Cave goblin mining helmets");
-			}
-			if ($int2 = 13) {
-				return(85, infernal_axe_13241, "Create infernal axe<br>(with 61 Woodcutting)");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 3) {
-			if ($int2 = 0) {
-				return(66, fire_of_eternal_light_22606, "Fire of Eternal Light<br>(with 35 Construction)");
-			}
-			if ($int2 = 1) {
-				return(66, fire_of_nourishment_22608, "Fire of Nourishment<br>(with 35 Construction)");
-			}
-			if ($int2 = 2) {
-				return(66, fire_of_dehumidification_22607, "Fire of Dehumidification<br>(with 50 Construction)");
-			}
-			if ($int2 = 3) {
-				return(66, fire_of_unseasonal_warmth_22609, "Fire of Unseasonal Warmth<br>(with 60 Construction)");
-			}
-			return(-1, null, "");
-		}
-		return(-1, null, "");
+		return(~skill_guide_data_firemaking($int1, $int2));
 	case 18 :
 		if ($int1 = 0) {
 			switch_int ($int2) {

@@ -7,6 +7,14 @@ if ($boolean0 = false) {
 def_int $int6 = oc_param($obj1, spell_levelreq);
 def_string $string0 = oc_param($obj1, spell_name);
 def_string $string1 = oc_param($obj1, spell_desc);
+def_obj $obj7 = oc_param($obj1, magic_runetype_1);
+def_int $int8 = oc_param($obj1, magic_runecount_1);
+def_obj $obj9 = oc_param($obj1, magic_runetype_2);
+def_int $int10 = oc_param($obj1, magic_runecount_2);
+def_obj $obj11 = oc_param($obj1, magic_runetype_3);
+def_int $int12 = oc_param($obj1, magic_runecount_3);
+def_obj $obj13 = oc_param($obj1, magic_runetype_4);
+def_int $int14 = oc_param($obj1, magic_runecount_4);
 switch_obj ($obj1) {
 	case vengeance_9136, vengeance_other_9135 :
 		if (%varbit2451 = 1) {
@@ -20,15 +28,27 @@ switch_obj ($obj1) {
 		if (%varbit5960 = 1) {
 			$string1 = "Fertilise a farming patch with super or ultra compost, consuming 2 volcanic ash to do so.";
 		}
+	case ice_barrage_4651 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_ice_barrage_sack_24607) > 0)) {
+			$obj13, $int14 = blighted_ice_barrage_sack_24607, 1;
+		}
+	case bind_3283 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_bind_sack_24609) > 0)) {
+			$obj13, $int14 = blighted_bind_sack_24609, 1;
+		}
+	case snare_3300 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_snare_sack_24611) > 0)) {
+			$obj13, $int14 = blighted_snare_sack_24611, 1;
+		}
+	case entangle_3322 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_entangle_sack_24613) > 0)) {
+			$obj13, $int14 = blighted_entangle_sack_24613, 1;
+		}
+	case tele_block_4555 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_teleblock_sack_24615) > 0)) {
+			$obj13, $int14 = blighted_teleblock_sack_24615, 1;
+		}
 }
-def_obj $obj7 = oc_param($obj1, magic_runetype_1);
-def_int $int8 = oc_param($obj1, magic_runecount_1);
-def_obj $obj9 = oc_param($obj1, magic_runetype_2);
-def_int $int10 = oc_param($obj1, magic_runecount_2);
-def_obj $obj11 = oc_param($obj1, magic_runetype_3);
-def_int $int12 = oc_param($obj1, magic_runecount_3);
-def_obj $obj13 = oc_param($obj1, magic_runetype_4);
-def_int $int14 = oc_param($obj1, magic_runecount_4);
 def_int $int15 = calc(2 + (13 * paraheight("Level <tostring($int6)>: <$string0>", 177, p12_full)));
 def_int $int16 = calc(2 + (13 * paraheight($string1, 177, p11_full)));
 def_int $int17 = calc(((((2 + $int15) + $int16) + 32) + 14) + 2);

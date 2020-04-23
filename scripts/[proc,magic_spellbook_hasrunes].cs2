@@ -1,8 +1,30 @@
 // 2620
 [proc,magic_spellbook_hasrunes](obj $obj0)(int)
 switch_obj ($obj0) {
-	case ice_blitz_4645, blood_blitz_4644, blood_barrage_4650, ice_barrage_4651 :
+	case ice_blitz_4645, blood_blitz_4644, blood_barrage_4650 :
 		if ((inv_total(inv, rune_pouch_23650) > 0) & (~script234 = 1)) {
+			return(1);
+		}
+	case ice_barrage_4651 :
+		if ((inv_total(inv, rune_pouch_23650) > 0) & (~script234 = 1)) {
+			return(1);
+		} else if ((%varbit5963 = 1) & (inv_total(inv, blighted_ice_barrage_sack_24607) > 0)) {
+			return(1);
+		}
+	case bind_3283 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_bind_sack_24609) > 0)) {
+			return(1);
+		}
+	case snare_3300 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_snare_sack_24611) > 0)) {
+			return(1);
+		}
+	case entangle_3322 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_entangle_sack_24613) > 0)) {
+			return(1);
+		}
+	case tele_block_4555 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_teleblock_sack_24615) > 0)) {
 			return(1);
 		}
 }

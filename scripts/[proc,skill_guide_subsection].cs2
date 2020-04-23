@@ -289,19 +289,7 @@ switch_int ($int0) {
 		}
 		return("", -1);
 	case 17 :
-		if ($int1 = 0) {
-			return("Burning", 0);
-		}
-		if ($int1 = 1) {
-			return("Barbarian", 1);
-		}
-		if ($int1 = 2) {
-			return("Equipment", 1);
-		}
-		if ($int1 = 3) {
-			return("Troll Fires", 1);
-		}
-		return("", -1);
+		return(~skill_guide_subsection_firemaking($int1));
 	case 18 :
 		if ($int1 = 0) {
 			return("Trees", 0);

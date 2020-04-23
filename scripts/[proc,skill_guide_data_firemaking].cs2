@@ -1,0 +1,141 @@
+// 3334
+[proc,skill_guide_data_firemaking](int $int0, int $int1)(int, obj, string)
+switch_int ($int0) {
+	case 0 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, logs_1511, "Normal logs");
+			case 1 :
+				return(1, achey_tree_logs_2862, "Members: Achey logs");
+			case 2 :
+				return(5, pyre_logs_3438, "Members: Pyre logs");
+			case 3 :
+				return(15, oak_logs_1521, "Oak logs");
+			case 4 :
+				return(20, oak_pyre_logs_3440, "Members: Oak pyre logs");
+			case 5 :
+				return(30, willow_logs_1519, "Willow logs");
+			case 6 :
+				return(35, teak_logs_6333, "Members: Teak logs");
+			case 7 :
+				return(35, willow_pyre_logs_3442, "Members: Willow pyre logs");
+			case 8 :
+				return(40, teak_pyre_logs_6211, "Members: Teak pyre logs");
+			case 9 :
+				return(42, arctic_pine_logs_10810, "Members: Arctic pine logs");
+			case 10 :
+				return(45, maple_logs_1517, "Maple logs");
+			case 11 :
+				return(47, arctic_pyre_logs_10808, "Members: Arctic pine pyre logs");
+			case 12 :
+				return(50, mahogany_logs_6332, "Members: Mahogany logs");
+			case 13 :
+				return(50, maple_pyre_logs_3444, "Members: Maple pyre logs");
+			case 14 :
+				return(55, mahogany_pyre_log_6213, "Members: Mahogany pyre logs");
+			case 15 :
+				return(60, yew_logs_1515, "Yew logs");
+			case 16 :
+				return(65, yew_pyre_logs_3446, "Members: Yew pyre logs");
+			case 17 :
+				return(75, magic_logs_1513, "Members: Magic logs");
+			case 18 :
+				return(80, magic_pyre_logs_3448, "Members: Magic pyre logs");
+			case 19 :
+				return(90, redwood_logs_19669, "Members: Redwood logs");
+			case 20 :
+				return(95, redwood_pyre_logs_19672, "Members: Redwood pyre logs");
+		}
+	case 1 :
+		switch_int ($int1) {
+			case 0 :
+				return(11, pyre_logs_3438, "Normal Pyre Ships<br>(with 11 Crafting)");
+			case 1 :
+				return(11, achey_tree_logs_2862, "Achey Pyre Ships<br>(with 11 Crafting)");
+			case 2 :
+				return(21, logs_1511, "Normal Logs");
+			case 3 :
+				return(21, achey_tree_logs_2862, "Achey Logs");
+			case 4 :
+				return(25, oak_pyre_logs_3440, "Oak Pyre Ships<br>(with 25 Crafting)");
+			case 5 :
+				return(35, oak_logs_1521, "Oak Logs");
+			case 6 :
+				return(40, willow_pyre_logs_3442, "Willow Pyre Ships<br>(with 40 Crafting)");
+			case 7 :
+				return(45, teak_pyre_logs_6211, "Teak Pyre Ships<br>(with 45 Crafting)");
+			case 8 :
+				return(50, willow_logs_1519, "Willow Logs");
+			case 9 :
+				return(52, arctic_pyre_logs_10808, "Arctic Pine Pyre Ships<br>(with 52 Crafting)");
+			case 10 :
+				return(55, teak_logs_6333, "Teak Logs");
+			case 11 :
+				return(55, maple_pyre_logs_3444, "Maple Pyre Ships<br>(with 55 Crafting)");
+			case 12 :
+				return(60, mahogany_pyre_log_6213, "Mahogany Pyre Ships<br>(with 60 Crafting)");
+			case 13 :
+				return(62, arctic_pine_logs_10810, "Arctic Pine Logs");
+			case 14 :
+				return(65, maple_logs_1517, "Maple Logs");
+			case 15 :
+				return(70, yew_pyre_logs_3446, "Yew Pyre Ships<br>(with 70 Crafting)");
+			case 16 :
+				return(70, mahogany_logs_6332, "Mahogany Logs");
+			case 17 :
+				return(80, yew_logs_1515, "Yew Logs");
+			case 18 :
+				return(85, magic_pyre_logs_3448, "Magic Pyre Ships<br>(with 85 Crafting)");
+			case 19 :
+				return(95, magic_logs_1513, "Magic Logs");
+			case 20 :
+				return(95, redwood_pyre_logs_19672, "Redwood Pyre ships<br>(with 95 Crafting)");
+			case 21 :
+				return(99, redwood_logs_19669, "Redwood logs");
+		}
+	case 2 :
+		switch_int ($int1) {
+			case 0 :
+				return(1, unlit_torch_596, "Torches");
+			case 1 :
+				return(1, candle_36, "Candles");
+			case 2 :
+				return(4, candle_lantern_4531, "Candle lanterns");
+			case 3 :
+				return(12, oil_lamp_4524, "Oil lamps");
+			case 4 :
+				return(20, iron_spit_7225, "Members: Iron spits");
+			case 5 :
+				return(26, oil_lantern_4539, "Oil lanterns");
+			case 6 :
+				return(33, lit_bug_lantern_7053, "Harpie bug lanterns (not a light source)");
+			case 7 :
+				return(49, bullseye_lantern_4550, "Bullseye lanterns");
+			case 8 :
+				return(49, sapphire_lantern_4702, "Sapphire lanterns");
+			case 9 :
+				return(49, emerald_lantern_9065, "Emerald lanterns");
+			case 10 :
+				return(50, bruma_torch_20720, "Bruma torches");
+			case 11 :
+				return(52, light_orb_10973, "Replace Dorgeshuun light orbs");
+			case 12 :
+				return(65, mining_helmet_5013, "Cave goblin mining helmets");
+			case 13 :
+				return(85, infernal_axe_13241, "Create infernal axe<br>(with 61 Woodcutting)");
+		}
+	case 3 :
+		switch_int ($int1) {
+			case 0 :
+				return(50, bruma_kindling_20696, "Wintertodt");
+			case 1 :
+				return(66, fire_of_eternal_light_22606, "Fire of Eternal Light<br>(with 35 Construction)");
+			case 2 :
+				return(66, fire_of_nourishment_22608, "Fire of Nourishment<br>(with 35 Construction)");
+			case 3 :
+				return(66, fire_of_dehumidification_22607, "Fire of Dehumidification<br>(with 50 Construction)");
+			case 4 :
+				return(66, fire_of_unseasonal_warmth_22609, "Fire of Unseasonal Warmth<br>(with 60 Construction)");
+		}
+}
+return(-1, null, "");

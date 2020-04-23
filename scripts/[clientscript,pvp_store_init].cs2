@@ -16,7 +16,7 @@ while ($namedobj11 ! null) {
 	if (($namedobj11 = hunters_honour_12855) & ($int6 = 1)) {
 		$namedobj11 = rogues_revenge_12856;
 	}
-	if ($enum5 = enum_2642) {
+	if ($enum5 = enum_2855) {
 		cc_setobject($namedobj11, oc_param($namedobj11, param_852));
 	} else {
 		cc_setobject($namedobj11, 1);
@@ -90,7 +90,7 @@ $int14 = calc($int14 + $int8);
 if_setsize(0, $int14, ^setsize_minus, ^setsize_abs, $component1);
 $int9 = calc($int9 + $int14);
 def_int $int16 = 0;
-if ($enum5 = enum_2642) {
+if ((($enum5 ! enum_2856) & ($enum5 ! enum_2857)) & ($enum5 ! enum_877)) {
 	if_sethide(false, $component2);
 	$int9 = calc($int9 + 10);
 	if_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top, $component2);
@@ -126,7 +126,7 @@ if ($enum5 = enum_2642) {
 	$int15 = ~stonepanel(30, $component2, $int15);
 	$int10 = 0;
 	while ($int10 < $int12) {
-		$int15 = ~script81($int10, $component2, $int15);
+		$int15 = ~script81($enum5, $int10, $component2, $int15);
 		$int10 = calc($int10 + 1);
 	}
 } else {
@@ -142,13 +142,8 @@ if ($int9 > if_getheight($component0)) {
 if ($int7 = 1) {
 	~scrollbar_resize($component3, $component0, calc($int9 - if_getheight($component0)));
 }
-$int15 = ~steelborder($component4, "Bounty Hunter Store", 0);
+$int15 = ~steelborder($component4, "Bounty Hunter Shop", 0);
 if (cc_find($component4, $int15) = ^true) {
-	if ($enum5 = enum_2642) {
-		~script2884(%var262);
-		cc_setonvartransmit("script2883(event_com, event_comid){var262}");
-	} else {
-		~script3140(%var1132);
-		cc_setonvartransmit("script2885(event_com, event_comid){var1132}");
-	}
+	~script3364($enum5);
+	cc_setonvartransmit("script3363($enum5, event_com, event_comid){var262}");
 }
