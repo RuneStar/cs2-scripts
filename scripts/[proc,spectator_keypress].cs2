@@ -37,6 +37,10 @@ switch_int ($key0) {
 		if (~deadman_world = 1) {
 			~deadman_chest_tele;
 		}
+	case ^key_f10 :
+		if (~deadman_world = 1) {
+			~deadman_lobby_tele;
+		}
 	case ^key_f12 :
 		docheat("~dmm_disablespectator_request");
 	case ^key_page_up :

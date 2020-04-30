@@ -56,9 +56,9 @@ def_int $int7 = oc_param($obj1, magic_runecount_3);
 def_obj $obj8 = oc_param($obj1, magic_runetype_4);
 def_int $int9 = oc_param($obj1, magic_runecount_4);
 switch_obj ($obj1) {
-	case ice_barrage_4651 :
-		if ((%varbit5963 = 1) & (inv_total(inv, blighted_ice_barrage_sack_24607) > 0)) {
-			$obj8, $int9 = blighted_ice_barrage_sack_24607, 1;
+	case ice_rush_4633, ice_burst_4639, ice_blitz_4645, ice_barrage_4651 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_ancient_ice_sack_24607) > 0)) {
+			$obj8, $int9 = blighted_ancient_ice_sack_24607, 1;
 		}
 	case bind_3283 :
 		if ((%varbit5963 = 1) & (inv_total(inv, blighted_bind_sack_24609) > 0)) {
@@ -75,6 +75,10 @@ switch_obj ($obj1) {
 	case tele_block_4555 :
 		if ((%varbit5963 = 1) & (inv_total(inv, blighted_teleblock_sack_24615) > 0)) {
 			$obj8, $int9 = blighted_teleblock_sack_24615, 1;
+		}
+	case vengeance_9136 :
+		if ((%varbit5963 = 1) & (inv_total(inv, blighted_vengeance_sack_24621) > 0)) {
+			$obj8, $int9 = blighted_vengeance_sack_24621, 1;
 		}
 }
 def_int $int10 = 4;

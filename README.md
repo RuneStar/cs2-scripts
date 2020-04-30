@@ -1283,6 +1283,8 @@
 [**1280**](scripts/script1280.cs2)  
 [**1281**](scripts/script1281.cs2)  
 [**1282**](scripts/script1282.cs2)  
+[**1283**](scripts/[worldmapelementmouserepeat,650].cs2) `[worldmapelementmouserepeat,650]`  
+[**1284**](scripts/[worldmapelementmouseleave,650].cs2) `[worldmapelementmouseleave,650]`  
 [**1285**](scripts/[proc,colour_interpolate].cs2) `[proc,colour_interpolate]`  
 [**1286**](scripts/[clientscript,glidermap_init].cs2) `[clientscript,glidermap_init]`  
 [**1287**](scripts/[clientscript,glidermap_hideshow].cs2) `[clientscript,glidermap_hideshow]`  
@@ -1968,6 +1970,7 @@
 [**1967**](scripts/[clientscript,vm_info_init].cs2) `[clientscript,vm_info_init]`  
 [**1968**](scripts/[proc,vm_kudos_get_status].cs2) `[proc,vm_kudos_get_status]`  
 [**1969**](scripts/[proc,vm_kudos_get_quest_status].cs2) `[proc,vm_kudos_get_quest_status]`  
+[**1970**](scripts/[proc,deadman_lobby_tele].cs2) `[proc,deadman_lobby_tele]`  
 [**1971**](scripts/[proc,text_device].cs2) `[proc,text_device]`  
 [**1972**](scripts/[proc,on_mobile].cs2) `[proc,on_mobile]`  
 [**1973**](scripts/script1973.cs2)  

@@ -35,7 +35,7 @@ if (~toplevel_getcomponents ! enum_1132) {
 def_int $int26 = calc((4 + 1) * 21);
 if_setsize(0, $int26, ^setsize_minus, ^setsize_minus, $component20);
 if_setsize(6, $int26, ^setsize_minus, ^setsize_abs, $component10);
-def_int $intarray0(calc(~max(105, 36) + 1));
+def_int $intarray0(calc(~max(106, 36) + 1));
 cc_deleteall($component21);
 $int25 = 0;
 def_int $int27 = 16;
@@ -83,7 +83,7 @@ while ($category30 ! null) {
 	$category30 = enum(int, category, enum_1705, $int28);
 }
 if ($int28 >= 2) {
-	~worldmap_keysort(intarray0, $component21, 0, 105);
+	~worldmap_keysort(intarray0, $component21, 0, 106);
 }
 $int29 = calc($int29 + 18);
 def_int $int31 = -1;
