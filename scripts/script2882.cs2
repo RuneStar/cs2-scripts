@@ -1,0 +1,12 @@
+// 2882
+script2882(component $component0, int $int1, int $int2)
+if ($int2 = 1) {
+	$int1 = calc($int1 + 1);
+} else {
+	$int1 = calc($int1 - 1);
+}
+if (($int1 = 25) | ($int1 = 0)) {
+	$int2 = calc(1 - $int2);
+}
+if_settrans(scale($int1, 25, 255), $component0);
+if_setontimer("script2882($component0, $int1, $int2)", $component0);

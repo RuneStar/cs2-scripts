@@ -26,34 +26,34 @@ $int8 = calc($int8 + 1);
 cc_setsize($int11, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-cc_settextfont(p12_full);
 cc_settextshadow(true);
+def_string $string0 = "";
 def_int $colour12 = 0xff981f;
 def_int $colour13 = 0xffb83f;
 def_int $int14 = inv_getnum(inv_422, $int0);
 def_int $int15 = enum(int, int, enum_2636, $int0);
-def_string $string0 = "";
+def_string $string1 = "";
 if ((oc_members($namedobj10) = ^true) & (map_members = ^false)) {
 	cc_setcolour(0x9f9f9f);
-	cc_settext(enum(int, string, enum_2634, $int0));
-	$string0 = "You must be on a members' world to purchase that item.";
-	.cc_setonop("script3090($string0, $component4, $component5, $component6, $component7)");
+	$string0 = enum(int, string, enum_2634, $int0);
+	$string1 = "You must be on a members' world to purchase that item.";
+	.cc_setonop("script3090($string1, $component4, $component5, $component6, $component7)");
 	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
 } else if (%var262 < $int15) {
 	cc_setcolour(^red);
-	cc_settext(enum(int, string, enum_2634, $int0));
+	$string0 = enum(int, string, enum_2634, $int0);
 	if ($int15 > 1) {
-		$string0 = "You must achieve <tostring($int15)> wins before you can have that item.";
+		$string1 = "You must achieve <tostring($int15)> wins before you can have that item.";
 	} else {
-		$string0 = "You must achieve one win before you can have that item.";
+		$string1 = "You must achieve one win before you can have that item.";
 	}
-	.cc_setonop("script3090($string0, $component4, $component5, $component6, $component7)");
+	.cc_setonop("script3090($string1, $component4, $component5, $component6, $component7)");
 	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
 } else if (%var261 < $int14) {
 	cc_setcolour(^red);
-	cc_settext("<enum(int, string, enum_2634, $int0)> - <~pest_rewards_costpoints($int14)>");
-	$string0 = "You need <~pest_rewards_costpoints($int14)> to claim that reward.";
-	.cc_setonop("script3090($string0, $component4, $component5, $component6, $component7)");
+	$string0 = "<enum(int, string, enum_2634, $int0)> - <~pest_rewards_costpoints($int14)>";
+	$string1 = "You need <~pest_rewards_costpoints($int14)> to claim that reward.";
+	.cc_setonop("script3090($string1, $component4, $component5, $component6, $component7)");
 	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
 } else {
 	if ($int9 = $int0) {
@@ -61,9 +61,15 @@ if ((oc_members($namedobj10) = ^true) & (map_members = ^false)) {
 	} else {
 		cc_setcolour(0x00df00);
 	}
-	cc_settext(enum(int, string, enum_2634, $int0));
+	$string0 = enum(int, string, enum_2634, $int0);
 	.cc_setonop("script3089($int0, $component4, $component5, $component6, $component7)");
 }
+if (parawidth($string0, 512, p12_full) > $int11) {
+	cc_settextfont(p11_full);
+} else {
+	cc_settextfont(p12_full);
+}
+cc_settext($string0);
 cc_create($component5, ^iftype_text, $int8);
 $int8 = calc($int8 + 1);
 cc_setsize($int11, 32, ^setsize_abs, ^setsize_abs);

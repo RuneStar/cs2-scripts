@@ -1,0 +1,27 @@
+// 3416
+script3416(string $string0, fontmetrics $fontmetrics0, int $int1)(int, int)
+def_int $int2 = 0;
+def_int $int3 = 500;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+while ($int2 < $int3) {
+	$int6 = calc($int6 + 10);
+	$int4 = paraheight($string0, $int6, $fontmetrics0);
+	$int5 = calc($int4 * $int1);
+	if ($int6 >= $int5) {
+		$int2 = $int3;
+		$int6 = scale(150, 100, calc($int6 + 22));
+		$int4 = paraheight($string0, calc($int6 - 22), $fontmetrics0);
+		$int5 = calc($int4 * $int1);
+		$int5 = ~max(calc($int5 + 75), 95);
+	}
+	$int2 = calc($int2 + 1);
+}
+if ($int6 < 185) {
+	$int6 = 185;
+	$int4 = paraheight($string0, calc($int6 - 22), $fontmetrics0);
+	$int5 = calc($int4 * $int1);
+	$int5 = ~max(calc($int5 + 75), 95);
+}
+return($int6, $int5);

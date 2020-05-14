@@ -2080,6 +2080,8 @@
 [**2077**](scripts/[clientscript,vm_kudos_init].cs2) `[clientscript,vm_kudos_init]`  
 [**2078**](scripts/[clientscript,vm_kudos_update].cs2) `[clientscript,vm_kudos_update]`  
 [**2079**](scripts/[proc,vm_kudos_update].cs2) `[proc,vm_kudos_update]`  
+[**2080**](scripts/script2080.cs2)  
+[**2081**](scripts/script2081.cs2)  
 [**2082**](scripts/[proc,kots_world].cs2) `[proc,kots_world]`  
 [**2083**](scripts/[proc,kots_remaining_time].cs2) `[proc,kots_remaining_time]`  
 [**2084**](scripts/[proc,deadman_finallocation].cs2) `[proc,deadman_finallocation]`  
@@ -2230,6 +2232,7 @@
 [**2229**](scripts/[clientscript,shop_quantity].cs2) `[clientscript,shop_quantity]`  
 [**2230**](scripts/[proc,shop_quantity].cs2) `[proc,shop_quantity]`  
 [**2231**](scripts/[clientscript,shop_quantity_op].cs2) `[clientscript,shop_quantity_op]`  
+[**2232**](scripts/script2232.cs2)  
 [**2233**](scripts/[proc,welcome_screen_continue_text].cs2) `[proc,welcome_screen_continue_text]`  
 [**2234**](scripts/[clientscript,camera_do_zoom].cs2) `[clientscript,camera_do_zoom]`  
 [**2235**](scripts/script2235.cs2)  
@@ -2679,6 +2682,7 @@
 [**2679**](scripts/[clientscript,telenexus_scry_vartrans].cs2) `[clientscript,telenexus_scry_vartrans]`  
 [**2680**](scripts/[proc,telenexus_options].cs2) `[proc,telenexus_options]`  
 [**2681**](scripts/[proc,telenexus_get_slot].cs2) `[proc,telenexus_get_slot]`  
+[**2682**](scripts/script2682.cs2)  
 [**2683**](scripts/[clientscript,options_bottom_appearance].cs2) `[clientscript,options_bottom_appearance]`  
 [**2684**](scripts/[clientscript,bond_prompt_init].cs2) `[clientscript,bond_prompt_init]`  
 [**2685**](scripts/script2685.cs2)  
@@ -2830,6 +2834,7 @@
 [**2831**](scripts/script2831.cs2)  
 [**2832**](scripts/script2832.cs2)  
 [**2833**](scripts/script2833.cs2)  
+[**2834**](scripts/script2834.cs2)  
 [**2835**](scripts/[worldmapelementmouserepeat,619].cs2) `[worldmapelementmouserepeat,619]`  
 [**2836**](scripts/[worldmapelementmouseleave,619].cs2) `[worldmapelementmouseleave,619]`  
 [**2837**](scripts/script2837.cs2)  
@@ -2877,6 +2882,10 @@
 [**2879**](scripts/[clientscript,clanwars_setup_smallbox_updatetext].cs2) `[clientscript,clanwars_setup_smallbox_updatetext]`  
 [**2880**](scripts/[proc,clanwars_setup_smallbox_updatetext].cs2) `[proc,clanwars_setup_smallbox_updatetext]`  
 [**2881**](scripts/script2881.cs2)  
+[**2882**](scripts/script2882.cs2)  
+[**2883**](scripts/script2883.cs2)  
+[**2884**](scripts/script2884.cs2)  
+[**2885**](scripts/script2885.cs2)  
 [**2886**](scripts/[clientscript,hp_hud_fade_in_check].cs2) `[clientscript,hp_hud_fade_in_check]`  
 [**2887**](scripts/[clientscript,hp_hud_fade_in].cs2) `[clientscript,hp_hud_fade_in]`  
 [**2888**](scripts/[proc,hp_hud_fade_in].cs2) `[proc,hp_hud_fade_in]`  
@@ -3131,6 +3140,7 @@
 [**3137**](scripts/script3137.cs2)  
 [**3138**](scripts/script3138.cs2)  
 [**3139**](scripts/script3139.cs2)  
+[**3140**](scripts/script3140.cs2)  
 [**3141**](scripts/[clientscript,target_system_init].cs2) `[clientscript,target_system_init]`  
 [**3142**](scripts/[clientscript,target_system_hideop].cs2) `[clientscript,target_system_hideop]`  
 [**3143**](scripts/[clientscript,target_system_redraw].cs2) `[clientscript,target_system_redraw]`  
@@ -3358,6 +3368,53 @@
 [**3365**](scripts/script3365.cs2)  
 [**3366**](scripts/script3366.cs2)  
 [**3367**](scripts/script3367.cs2)  
-[**3368**](scripts/[clientscript,levelup_charity_init].cs2) `[clientscript,levelup_charity_init]`  
-[**3369**](scripts/[clientscript,levelup_charity_update].cs2) `[clientscript,levelup_charity_update]`  
-[**3370**](scripts/[proc,levelup_charity_update].cs2) `[proc,levelup_charity_update]`  
+[**3371**](scripts/script3371.cs2)  
+[**3372**](scripts/script3372.cs2)  
+[**3373**](scripts/script3373.cs2)  
+[**3374**](scripts/script3374.cs2)  
+[**3375**](scripts/script3375.cs2)  
+[**3376**](scripts/script3376.cs2)  
+[**3377**](scripts/script3377.cs2)  
+[**3378**](scripts/script3378.cs2)  
+[**3379**](scripts/script3379.cs2)  
+[**3380**](scripts/script3380.cs2)  
+[**3381**](scripts/script3381.cs2)  
+[**3382**](scripts/script3382.cs2)  
+[**3383**](scripts/script3383.cs2)  
+[**3384**](scripts/script3384.cs2)  
+[**3385**](scripts/script3385.cs2)  
+[**3386**](scripts/script3386.cs2)  
+[**3387**](scripts/script3387.cs2)  
+[**3388**](scripts/script3388.cs2)  
+[**3389**](scripts/script3389.cs2)  
+[**3390**](scripts/script3390.cs2)  
+[**3391**](scripts/script3391.cs2)  
+[**3392**](scripts/script3392.cs2)  
+[**3393**](scripts/script3393.cs2)  
+[**3394**](scripts/script3394.cs2)  
+[**3395**](scripts/script3395.cs2)  
+[**3396**](scripts/script3396.cs2)  
+[**3397**](scripts/script3397.cs2)  
+[**3398**](scripts/script3398.cs2)  
+[**3399**](scripts/script3399.cs2)  
+[**3400**](scripts/script3400.cs2)  
+[**3401**](scripts/script3401.cs2)  
+[**3402**](scripts/script3402.cs2)  
+[**3403**](scripts/script3403.cs2)  
+[**3404**](scripts/script3404.cs2)  
+[**3405**](scripts/script3405.cs2)  
+[**3406**](scripts/script3406.cs2)  
+[**3407**](scripts/script3407.cs2)  
+[**3408**](scripts/[clientscript,highlight_start].cs2) `[clientscript,highlight_start]`  
+[**3409**](scripts/[clientscript,highlight_screen].cs2) `[clientscript,highlight_screen]`  
+[**3410**](scripts/[proc,highlight_screen].cs2) `[proc,highlight_screen]`  
+[**3411**](scripts/[clientscript,highlight_resize].cs2) `[clientscript,highlight_resize]`  
+[**3412**](scripts/script3412.cs2)  
+[**3413**](scripts/[clientscript,highlight_textbox].cs2) `[clientscript,highlight_textbox]`  
+[**3414**](scripts/[clientscript,highlight_textbox_resize].cs2) `[clientscript,highlight_textbox_resize]`  
+[**3415**](scripts/[proc,highlight_textbox].cs2) `[proc,highlight_textbox]`  
+[**3416**](scripts/script3416.cs2)  
+[**3417**](scripts/[clientscript,highlight_close_button].cs2) `[clientscript,highlight_close_button]`  
+[**3418**](scripts/[clientscript,highlight_close_op].cs2) `[clientscript,highlight_close_op]`  
+[**3419**](scripts/[proc,highlight_button].cs2) `[proc,highlight_button]`  
+[**3420**](scripts/[clientscript,highlight_next].cs2) `[clientscript,highlight_next]`  

@@ -1,0 +1,9 @@
+// 3413
+[clientscript,highlight_textbox](boolean $boolean0, component $component1, string $string0)
+~highlight_textbox($string0, $boolean0, $component1, 0);
+~highlight_button(interface_664:30, 0, "Continue", $boolean0);
+if (%varbit10308 > 0) {
+	~highlight_button(interface_664:31, 0, "Previous", false);
+} else {
+	~highlight_button(interface_664:31, 1, "Previous", false);
+}

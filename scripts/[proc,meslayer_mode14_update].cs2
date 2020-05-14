@@ -2,22 +2,23 @@
 [proc,meslayer_mode14_update](boolean $boolean0, enum $enum1, boolean $boolean2)
 %varcint66 = 0;
 cc_deleteall(interface_162:53);
+if_sethide(true, interface_162:55);
 def_int $int3 = if_getwidth(interface_162:53);
 def_int $int4 = if_getheight(interface_162:53);
 if (string_length(%varcstring359) <= 0) {
-	if ((($boolean2 = true) & (%var2674 ! null)) & (~script3362($boolean0, $enum1) = 1)) {
+	if ((((%varbit10295 = 0) & ($boolean2 = true)) & (%var2674 ! null)) & (~script3362($boolean0, $enum1) = 1)) {
 		return;
 	}
-	~script753($int3, $int4, "Start typing the name of an item to search for it.");
+	~script753($int3, $int4, "Start typing the name of an item to search for it.", $boolean2);
 	return;
 }
 def_int $int5 = oc_find(%varcstring359, $boolean0);
 if ($int5 < 0) {
-	~script753($int3, $int4, "Too many matches found. Please refine your search.");
+	~script753($int3, $int4, "Too many matches found. Please refine your search.", $boolean2);
 	return;
 }
 if ($int5 = 0) {
-	~script753($int3, $int4, "No matches found.");
+	~script753($int3, $int4, "No matches found.", $boolean2);
 	return;
 }
 def_int $int6 = calc($int3 / 3);
@@ -88,7 +89,7 @@ while ($obj20 ! null) {
 	$obj20 = oc_findnext;
 }
 if ($int19 <= 0) {
-	~script753($int3, $int4, "No matches found.");
+	~script753($int3, $int4, "No matches found.", $boolean2);
 	return;
 }
 if ($int15 < 2) {

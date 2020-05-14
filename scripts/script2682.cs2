@@ -1,0 +1,10 @@
+// 2682
+script2682(obj $obj0)
+if_setontimer(null, magic_spellbook:3);
+def_component $component1 = oc_param($obj0, spell_button);
+if ($component1 = null) {
+	return;
+}
+if_settrans(0, $component1);
+if_setonmouseover(null, $component1);
+%varcint393 = null;

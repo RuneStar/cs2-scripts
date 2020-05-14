@@ -1,0 +1,28 @@
+// 3419
+[proc,highlight_button](component $component0, int $int1, string $string0, boolean $boolean2)
+cc_deleteall($component0);
+def_int $int3 = 0;
+if ($int1 = 0) {
+	$int3 = ~v2_stone_button_filled($component0);
+} else {
+	$int3 = ~v2_stone_button_in_filled($component0);
+}
+cc_create($component0, ^iftype_text, $int3);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+if ($int1 = 0) {
+	cc_setop(1, $string0);
+	cc_setonop("highlight_next($boolean2, $component0, event_comid)");
+	if_setonmouserepeat("script3242(event_com, 0)", $component0);
+	if_setonmouseleave("script3240(event_com, 0)", $component0);
+} else {
+	cc_setop(1, "");
+	cc_setonop(null);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+}

@@ -1,0 +1,10 @@
+// 3377
+script3377
+def_string $string0 = "bottom";
+if (~on_mobile = true) {
+	$string0 = "top";
+}
+if_settext("Follow the instructions in the <col=ffffff>chatbox<col=ff981f>", interface_649:10);
+if_settext("to complete the tutorial.", interface_649:11);
+if_settext("The <col=ffffff>chatbox<col=ff981f> can be found at the", interface_649:12);
+if_settext("<col=ffffff><$string0><col=ff981f> of the screen.", interface_649:13);

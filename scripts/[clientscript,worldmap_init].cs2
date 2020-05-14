@@ -12,7 +12,7 @@ if (~toplevel_getcomponents ! enum_1132) {
 		cc_sethide(false);
 		cc_settiling(true);
 		cc_settrans(255);
-		cc_setonmouserepeat("cc_settrans(event_com, event_comid, 200, null)");
+		cc_setonmouserepeat("cc_settrans(event_com, event_comid, 75, null)");
 		cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
 		cc_setdraggable($component0, -1);
 		cc_setdragdeadzone(1);
@@ -35,7 +35,7 @@ if (~toplevel_getcomponents ! enum_1132) {
 def_int $int26 = calc((4 + 1) * 21);
 if_setsize(0, $int26, ^setsize_minus, ^setsize_minus, $component20);
 if_setsize(6, $int26, ^setsize_minus, ^setsize_abs, $component10);
-def_int $intarray0(calc(~max(106, 36) + 1));
+def_int $intarray0(calc(~max(106, 37) + 1));
 cc_deleteall($component21);
 $int25 = 0;
 def_int $int27 = 16;
@@ -241,7 +241,10 @@ $int25, $int38 = ~worldmap_toggles_enablebutton(3, $component10, $int25, $int38,
 $int25, $int38 = ~worldmap_toggles_enablebutton(4, $component10, $int25, $int38, $component4, $component7, $component23);
 $int29 = ~max($int29, calc($int38 + 6));
 if_setsize($int29, 50, ^setsize_abs, ^setsize_minus, $component5);
-~worldmap_key_toggle(false, $int29, $component3, $component5, $component9);
+~worldmap_key_toggle(0, $int29, $component3, $component5, $component9);
+if ((if_find(interface_595:39) = true) & (~on_mobile = true)) {
+	cc_sethide(true);
+}
 cc_deleteall($component11);
 $int25 = 0;
 cc_create($component11, ^iftype_graphic, $int25);
@@ -316,7 +319,7 @@ cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
 cc_setgraphic(struct_param(struct_1, param_459));
 if ($int28 >= 3) {
-	~quicksort_cctext(intarray0, $component16, 1, 36);
+	~quicksort_cctext(intarray0, $component16, 1, 37);
 }
 $int29 = calc((((((3 + $int29) + 2) + 26) + 2) + 16) + 3);
 if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $component12);

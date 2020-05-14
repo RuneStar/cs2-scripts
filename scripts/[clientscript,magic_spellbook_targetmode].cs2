@@ -1,5 +1,5 @@
 // 2617
-[clientscript,magic_spellbook_targetmode](boolean $boolean0, component $component1)
+[clientscript,magic_spellbook_targetmode](boolean $boolean0, component $component1, obj $obj2)
 if ($boolean0 = true) {
 	if_setoutline(2, $component1);
 	if (testbit(if_gettargetmask($component1), 4) = ^true) {
@@ -7,4 +7,7 @@ if ($boolean0 = true) {
 	}
 } else {
 	if_setoutline(0, $component1);
+}
+if ($obj2 = %varcint393) {
+	~script2682($obj2);
 }

@@ -63,8 +63,4 @@ if ($int6 <= 0) {
 	cc_setsize(8, 0, ^setsize_minus, ^setsize_minus);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 18);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	$int7 = 40;
-} else {
-	$int7 = calc($int7 + 30);
 }
-if_setsize(0, calc($int7 + $int0), ^setsize_minus, ^setsize_minus, interface_109:81);

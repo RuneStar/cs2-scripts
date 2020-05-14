@@ -1,0 +1,10 @@
+// 3390
+script3390
+setwindowmode(^windowmode_resizable);
+setdefaultwindowmode(^windowmode_resizable);
+setremoveroofs(true);
+if (~on_mobile = true) {
+	~camera_do_zoom(320, 320);
+} else {
+	~camera_do_zoom(400, 400);
+}

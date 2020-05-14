@@ -1,0 +1,10 @@
+// 3406
+script3406(component $component0)
+if_sethide(false, $component0);
+cc_deleteall($component0);
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setfill(true);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setnoclickthrough(true);
+cc_settrans(254);

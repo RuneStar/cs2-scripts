@@ -20,7 +20,7 @@ if (~bonds_hide = 1) {
 		if_setsize(190, 56, ^setsize_abs, ^setsize_abs, interface_109:36);
 	}
 	if_setposition(0, calc(165 - $int0), ^setpos_abs_left, ^setpos_abs_top, interface_109:43);
-	if_sethide(true, interface_109:81);
+	if_sethide(true, interface_109:65);
 } else {
 	if_sethide(false, interface_109:31);
 	if_setsize(190, 88, ^setsize_abs, ^setsize_abs, interface_109:24);
@@ -29,5 +29,5 @@ if (~bonds_hide = 1) {
 	if_setposition(0, 21, ^setpos_abs_left, ^setpos_abs_top, interface_109:24);
 	if_setposition(0, 109, ^setpos_abs_left, ^setpos_abs_top, interface_109:36);
 	if_setposition(0, 165, ^setpos_abs_left, ^setpos_abs_top, interface_109:43);
-	if_sethide(false, interface_109:81);
+	if_sethide(false, interface_109:65);
 }

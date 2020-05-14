@@ -1,10 +1,36 @@
 // 102
 [proc,meslayer_mode1](string $string0)
+def_int $int0 = 0;
 if ((%varcint5 <= 0) | (%varcint5 = 1)) {
 	~meslayer_open(1);
+	$int0 = paraheight($string0, 479, q8_full);
+	if ($int0 = 2) {
+		$int0 = 31;
+	} else if ($int0 = 3) {
+		$int0 = 24;
+	} else if ($int0 = 4) {
+		$int0 = 17;
+	} else {
+		$int0 = 0;
+	}
 	if_settext($string0, interface_162:44);
-	if_settext("<~text_device("Click", "Tap")> to continue", interface_162:45);
-	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, interface_162:45);
-	if_setonclick("meslayer_close(1)", interface_162:40);
-	if_setonkey(null, interface_162:45);
+	if_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_top, interface_162:44);
+	if_setsize(479, 72, ^setsize_abs, ^setsize_abs, interface_162:44);
+	if_settextalign(^settextalign_centre, ^settextalign_centre, $int0, interface_162:44);
+	if_settextfont(q8_full, interface_162:44);
+	if_settextfont(q8_full, interface_162:45);
+	if_setcolour(^blue, interface_162:45);
+	if_setonmouseover("text_colour_swapper(event_com, ^white)", interface_162:45);
+	if_setonmouseleave("text_colour_swapper(event_com, ^blue)", interface_162:45);
+	if_settext("<~text_device("Click", "Tap")> here to continue", interface_162:45);
+	if_setposition(0, 96, ^setpos_abs_centre, ^setpos_abs_top, interface_162:45);
+	if_setsize(479, 17, ^setsize_abs, ^setsize_abs, interface_162:45);
+	if_settextalign(^settextalign_centre, ^settextalign_top, 0, interface_162:45);
+	if (~on_mobile = true) {
+		if_setonclick("meslayer_close(1)", interface_162:40);
+	} else {
+		if_setonclick("meslayer_close(1)", interface_162:45);
+	}
+	if_setonkey("script3396(1, event_keypressed)", interface_162:45);
+	if_sethide(true, interface_162:42);
 }

@@ -1,0 +1,51 @@
+// 3410
+[proc,highlight_screen](component $component0, int $int1, int $int2, int $int3, int $int4, int $setposh5, int $setposv6, int $int7, int $int8, boolean $boolean9)
+def_int $int10 = if_getheight($component0);
+if ($int10 = $int8) {
+	return;
+}
+if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
+def_int $int11 = if_getwidth($component0);
+if_settrans($int7, interface_664:3);
+if_settrans($int7, interface_664:6);
+if_settrans($int7, interface_664:5);
+if_settrans($int7, interface_664:4);
+if ($setposv6 = ^setpos_abs_bottom) {
+	if_setsize(0, calc($int10 - ($int4 + $int2)), ^setsize_minus, ^setsize_abs, interface_664:3);
+} else {
+	if_setsize(0, $int4, ^setsize_minus, ^setsize_abs, interface_664:3);
+}
+if ($setposv6 = ^setpos_abs_bottom) {
+	if_setsize(0, $int4, ^setsize_minus, ^setsize_abs, interface_664:4);
+} else {
+	if_setsize(0, calc($int10 - ($int4 + $int2)), ^setsize_minus, ^setsize_abs, interface_664:4);
+}
+if ($setposh5 = ^setpos_abs_left) {
+	if_setsize($int3, calc($int10 - $int2), ^setsize_abs, ^setsize_minus, interface_664:6);
+} else {
+	if_setsize(calc($int11 - ($int3 + $int1)), calc($int10 - $int2), ^setsize_abs, ^setsize_minus, interface_664:6);
+}
+if ($setposv6 = ^setpos_abs_bottom) {
+	if_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_bottom, interface_664:6);
+} else {
+	if_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top, interface_664:6);
+}
+if ($setposh5 = ^setpos_abs_left) {
+	if_setsize(calc($int11 - ($int3 + $int1)), calc($int10 - $int2), ^setsize_abs, ^setsize_minus, interface_664:5);
+} else {
+	if_setsize($int3, calc($int10 - $int2), ^setsize_abs, ^setsize_minus, interface_664:5);
+}
+if ($setposv6 = ^setpos_abs_bottom) {
+	if_setposition(0, $int4, ^setpos_abs_right, ^setpos_abs_bottom, interface_664:5);
+} else {
+	if_setposition(0, $int4, ^setpos_abs_right, ^setpos_abs_top, interface_664:5);
+}
+if_setsize(calc(6 + $int1), calc(6 + $int2), ^setsize_abs, ^setsize_abs, interface_664:7);
+if_setposition(calc($int3 - 3), calc($int4 - 3), $setposh5, $setposv6, interface_664:7);
+if_sethide(false, interface_664:2);
+if ($boolean9 = true) {
+	if_sethide(true, interface_664:7);
+} else {
+	if_sethide(false, interface_664:7);
+}
+if_setontimer("highlight_resize($component0, $int1, $int2, $int3, $int4, $setposh5, $setposv6, $int7, $int10, $boolean9)", $component0);

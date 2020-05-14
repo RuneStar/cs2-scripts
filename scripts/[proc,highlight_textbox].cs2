@@ -1,0 +1,33 @@
+// 3415
+[proc,highlight_textbox](string $string0, boolean $boolean0, component $component1, int $int2)
+def_int $int3 = if_getheight($component1);
+if ($int3 = $int2) {
+	return;
+}
+def_int $int4 = if_getwidth($component1);
+if_settext("<tostring(calc(1 + %varbit10308))>/<tostring(%varbit10309)>", interface_664:27);
+def_int $int5 = 0;
+def_int $int6 = 0;
+$int5, $int6 = ~script3416($string0, p12_full, 16);
+if_setsize($int5, $int6, ^setsize_abs, ^setsize_abs, interface_664:8);
+if_settext($string0, interface_664:26);
+def_int $int7 = if_getx(interface_664:7);
+def_int $int8 = if_gety(interface_664:7);
+if (if_gethide(interface_664:7) = false) {
+	if (calc(($int8 + $int6) + 10) >= $int3) {
+		$int8 = calc(($int8 - 10) - $int6);
+	} else {
+		$int8 = calc(($int8 + 10) + if_getheight(interface_664:7));
+	}
+	$int7 = calc(($int7 + (if_getwidth(interface_664:7) / 2)) - ($int5 / 2));
+	if ($int7 <= 0) {
+		$int7 = 2;
+	} else if (calc($int7 + $int5) >= $int4) {
+		$int7 = calc(($int4 - 2) - $int5);
+	}
+	if_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top, interface_664:8);
+} else {
+	if_setposition(0, 50, ^setpos_abs_centre, ^setpos_abs_bottom, interface_664:8);
+}
+if_sethide(false, interface_664:8);
+if_setontimer("highlight_textbox_resize($string0, $boolean0, $component1, $int3)", interface_664:8);

@@ -1,0 +1,16 @@
+// 3401
+script3401(int $int0)
+if ($int0 = %varbit10295) {
+	return;
+}
+def_graphic $graphic1 = "checkbox,1";
+def_int $int2 = 10;
+if (%varbit10295 = 0) {
+	$graphic1 = "checkbox,2";
+}
+if (cc_find(interface_162:55, 1) = ^true) {
+	cc_setgraphic($graphic1);
+}
+if_setonmouserepeat("script3398", interface_162:55);
+if_setonmouseleave("script3399", interface_162:55);
+if_setonvartransmit("script3401(%varbit10295){var143}", interface_162:55);

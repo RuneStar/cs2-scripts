@@ -1,0 +1,30 @@
+// 3372
+script3372(boolean $boolean0, int $key1, char $char2, int $key3, string $string0, component $component4, int $int5, int $int6, string $string1, component $component7, int $int8)
+if (clientclock < $int8) {
+	return;
+}
+if ($boolean0 = false) {
+	if (~keypress_permit(-1, 162) = 0) {
+		return;
+	} else if (($key1 ! null) & ($key1 = $key3)) {
+		$boolean0 = true;
+	} else if (($char2 ! null) & (string_indexof_char($string0, $char2) ! -1)) {
+		$boolean0 = true;
+	}
+	return;
+}
+$int8 = calc(clientclock + 50);
+def_string $string2 = "<col=ffffff>Please wait...</col>";
+if ((cc_find($component4, $int5) = ^true) & (.cc_find($component4, $int6) = ^true)) {
+	if (parawidth($string2, 479, q8_full) > cc_getwidth) {
+		$string2 = "<col=ffffff>...</col>";
+	}
+	cc_settext($string2);
+	cc_setontimer("script3373($int8, $component4, $int5, $string1)");
+	cc_setonop("script3372(true, null, null, $key3, $string0, event_com, $int5, $int6, $string1, $component7, $int8)");
+	cc_setonkey("script3372(false, event_keypressed, event_keytyped, $key3, $string0, event_com, $int5, $int6, $string1, $component7, $int8)");
+	if ($component7 ! null) {
+		if_setonclick("script3372(true, null, null, $key3, $string0, event_com, $int5, $int6, $string1, $component7, $int8)", $component7);
+	}
+	.cc_resume_pausebutton;
+}

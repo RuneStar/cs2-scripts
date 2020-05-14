@@ -5,7 +5,7 @@ if (~on_mobile = false) {
 }
 def_int $int0 = if_getheight(interface_162:37);
 def_int $int1 = 0;
-if (((if_hassub(interface_162:561) = true) | (if_hassub(interface_162:560) = true)) | (if_gethide(interface_162:40) = false)) {
+if (((if_hassub(interface_162:562) = true) | (if_hassub(interface_162:561) = true)) | (if_gethide(interface_162:40) = false)) {
 	$int1 = 1;
 }
 def_int $int2 = calc(165 - 23);
@@ -14,6 +14,6 @@ if ($int1 = 0) {
 }
 if_setsize(519, $int2, ^setsize_abs, ^setsize_abs, interface_162:37);
 if ($int0 ! $int2) {
-	~scrollbar_resize(interface_162:559, interface_162:58, ~max(calc(if_getscrollheight(interface_162:58) - if_getheight(interface_162:58)), 0));
+	~scrollbar_resize(interface_162:560, interface_162:59, ~max(calc(if_getscrollheight(interface_162:59) - if_getheight(interface_162:59)), 0));
 }
 ~rebuildchatbox(~script553);

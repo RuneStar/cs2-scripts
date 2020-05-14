@@ -3,7 +3,7 @@
 if ($component0 ! null) {
 	if_setnoclickthrough(true, $component5);
 	if_setonmisctransmit("orbs_update_runenergy(null, $component1, $component2, $component3, $component4, $component5, $component6)", $component0);
-	if_setonvartransmit("orbs_update_runenergy(null, $component1, $component2, $component3, $component4, $component5, $component6){var173, var1575, var281}", $component0);
+	if_setonvartransmit("orbs_update_runenergy(null, $component1, $component2, $component3, $component4, $component5, $component6){var173, var1575, var281, var2686}", $component0);
 	if_setonsubchange("orbs_update_runenergy(null, $component1, $component2, $component3, $component4, $component5, $component6)", $component0);
 	if_setonop("orbs_toggle_runmode(event_opindex, $component3, $component4)", $component6);
 }
@@ -16,7 +16,7 @@ if (~toplevel_check_sidepanel(11) = false) {
 	if_sethide(true, $component6);
 } else {
 	if_sethide(false, $component6);
-	if (%var281 = 200) {
+	if ((%var281 = 200) | (%var2686 = 200)) {
 		if_setontimer("script2647($component5)", $component5);
 		if_setonmouserepeat(null, $component6);
 		if_setonmouseleave(null, $component6);

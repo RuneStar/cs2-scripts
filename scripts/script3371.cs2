@@ -1,0 +1,62 @@
+// 3371
+script3371(string $string0)
+cc_deleteall(interface_633:0);
+if_setonclick(null, interface_633:0);
+if (string_length($string0) <= 0) {
+	return;
+}
+cc_create(interface_633:0, ^iftype_rectangle, 0);
+cc_sethide(true);
+cc_create(interface_633:0, ^iftype_rectangle, 1);
+cc_sethide(true);
+cc_create(interface_633:0, ^iftype_text, 2);
+cc_sethide(false);
+cc_setposition(96, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_settextshadow(false);
+cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+cc_settextfont(q8_full);
+def_string $string1 = "";
+def_component $component0 = null;
+def_string $string2 = "";
+$string2, $string0 = ~script632($string0);
+if (string_length($string0) <= 0) {
+	cc_setsize(380, 78, ^setsize_abs, ^setsize_minus);
+	cc_setcolour(^blue);
+	cc_setonmouseover("cc_colour_swapper(event_com, event_comid, ^white)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, ^blue)");
+	cc_settext($string2);
+	if (~on_mobile = true) {
+		$component0 = interface_633:0;
+	}
+	cc_setop(1, "Continue");
+	cc_setonop("script3372(true, null, null, ^key_space, $string1, event_com, event_comid, 0, $string2, $component0, 0)");
+	cc_setonkey("script3372(false, event_keypressed, event_keytyped, ^key_space, $string1, event_com, event_comid, 0, $string2, $component0, 0)");
+	if ($component0 ! null) {
+		if_setonclick("script3372(true, null, null, ^key_space, $string1, event_com, cc_getid, 0, $string2, $component0, 0)", $component0);
+	}
+} else {
+	.cc_create(interface_633:0, ^iftype_text, 3);
+	.cc_sethide(false);
+	.cc_setposition(286, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+	.cc_settextshadow(false);
+	.cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+	cc_setcolour(0x7f0000);
+	.cc_setcolour(^blue);
+	cc_setonmouseover("cc_colour_swapper(event_com, event_comid, ^white)");
+	.cc_setonmouseover("cc_colour_swapper(event_com, event_comid, ^white)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0x7f0000)");
+	.cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, ^blue)");
+	.cc_settextfont(q8_full);
+	cc_setsize(190, 78, ^setsize_abs, ^setsize_minus);
+	.cc_setsize(190, 78, ^setsize_abs, ^setsize_minus);
+	cc_settext($string2);
+	.cc_settext($string0);
+	cc_setop(1, $string2);
+	.cc_setop(1, $string0);
+	$string1 = "1";
+	cc_setonop("script3372(true, null, null, ^key_escape, $string1, event_com, event_comid, 0, $string2, null, 0)");
+	cc_setonkey("script3372(false, event_keypressed, event_keytyped, ^key_escape, $string1, event_com, event_comid, 0, $string2, null, 0)");
+	$string1 = "2";
+	.cc_setonop("script3372(true, null, null, ^key_space, $string1, event_com, event_comid, 1, $string0, null, 0)");
+	.cc_setonkey("script3372(false, event_keypressed, event_keytyped, ^key_space, $string1, event_com, event_comid, 1, $string0, null, 0)");
+}

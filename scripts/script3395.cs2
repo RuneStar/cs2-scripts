@@ -1,0 +1,18 @@
+// 3395
+script3395(component $component0, component $component1)
+if (%varbit5605 = 1) {
+	~displayname_button_init($component0, "Look up name");
+	~displayname_disablebutton($component1, "Set name");
+} else if (%varbit5605 = 2) {
+	~displayname_disablebutton($component0, "Look up name");
+	~displayname_disablebutton($component1, "Set name");
+} else if (%varbit5605 = 4) {
+	~displayname_button_init($component0, "Look up name");
+	~displayname_button_init($component1, "Set name");
+} else if (%varbit5605 = 5) {
+	~displayname_disablebutton($component0, "Look up name");
+	~displayname_disablebutton($component1, "Set name");
+} else {
+	~displayname_disablebutton($component0, "Look up name");
+	~displayname_disablebutton($component1, "Set name");
+}

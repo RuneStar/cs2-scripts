@@ -1,0 +1,7 @@
+// 3375
+script3375(component $component0, int $int1)
+if (cc_find($component0, $int1) = ^true) {
+	sound_synth(synth_2266, 1, 0);
+	cc_setonop(null);
+	cc_setop(1, "");
+}

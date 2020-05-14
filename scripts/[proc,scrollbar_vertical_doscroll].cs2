@@ -4,7 +4,7 @@ def_int $int4 = ~max(calc(if_getscrollheight($component1) - if_getheight($compon
 $int2 = ~max(~min($int2, $int4), 0);
 if_setscrollpos(0, $int2, $component1);
 switch_component ($component1) {
-	case interface_162:58 :
+	case interface_162:59 :
 		%varcint7 = if_getscrolly($component1);
 	case interface_399:5 :
 		%varcint10 = if_getscrolly($component1);
@@ -12,7 +12,7 @@ switch_component ($component1) {
 		%varcint75 = if_getscrolly($component1);
 	case interface_429:11 :
 		%varcint9 = if_getscrolly($component1);
-	case interface_12:11 :
+	case interface_12:12 :
 		%varcint51 = if_getscrolly($component1);
 	case interface_381:7 :
 		%varcint0 = if_getscrolly($component1);

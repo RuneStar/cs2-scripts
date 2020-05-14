@@ -12,14 +12,14 @@ if (%varcint41 = 1337) {
 }
 if_sethide($boolean0, interface_162:37);
 if ((%varbit6374 = 1) & (getwindowmode ! ^windowmode_fixed)) {
-	if_setposition(1, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:58);
-	if_setposition(-1, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:559);
+	if_setposition(1, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:59);
+	if_setposition(-1, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:560);
 } else {
-	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:58);
-	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:559);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:59);
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:560);
 }
 cc_deleteall(interface_162:38);
-cc_deleteall(interface_162:56);
+cc_deleteall(interface_162:57);
 def_int $int1 = 0;
 if ((clientclock < %varcint223) & (~toplevel_getcomponents ! enum_1129)) {
 	$int1 = 1;
@@ -36,13 +36,13 @@ if (~toplevel_chatbox_maketransparent = 0) {
 		cc_setgraphic("chat_background");
 		cc_settiling(false);
 		cc_settrans(0);
-		cc_create(interface_162:56, ^iftype_rectangle, 0);
+		cc_create(interface_162:57, ^iftype_rectangle, 0);
 		cc_setsize(0, 1, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, 15, ^setpos_abs_centre, ^setpos_abs_bottom);
 		cc_setcolour(0x807660);
 		cc_setfill(true);
 	}
-	~scrollbar_vertical_repaint(interface_162:559, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1", 0);
+	~scrollbar_vertical_repaint(interface_162:560, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1", 0);
 	if (~toplevel_chatbox_controls_maketransparent = 1) {
 		if_settrans(255, interface_162:3);
 	} else {
@@ -68,8 +68,8 @@ if ($int1 = 0) {
 			cc_setcolour(^black);
 			cc_setfill(true);
 			cc_settrans(254);
-			cc_create(interface_162:56, ^iftype_rectangle, calc($int4 * 2));
-			.cc_create(interface_162:56, ^iftype_rectangle, calc(($int4 * 2) + 1));
+			cc_create(interface_162:57, ^iftype_rectangle, calc($int4 * 2));
+			.cc_create(interface_162:57, ^iftype_rectangle, calc(($int4 * 2) + 1));
 			cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
 			.cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -89,8 +89,8 @@ if ($int1 = 0) {
 		cc_setcolour(^black);
 		cc_setfill(true);
 		cc_settrans(225);
-		cc_create(interface_162:56, ^iftype_rectangle, calc($int4 * 2));
-		.cc_create(interface_162:56, ^iftype_rectangle, calc(($int4 * 2) + 1));
+		cc_create(interface_162:57, ^iftype_rectangle, calc($int4 * 2));
+		.cc_create(interface_162:57, ^iftype_rectangle, calc(($int4 * 2) + 1));
 		cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
 		.cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -103,7 +103,7 @@ if ($int1 = 0) {
 		.cc_settrans(130);
 	}
 }
-~scrollbar_vertical_repaint(interface_162:559, "scrollbar_trans_dragger,3", "scrollbar_trans_dragger,0", "scrollbar_trans_dragger,1", "scrollbar_trans_dragger,2", "scrollbar_trans_arrows,0", "scrollbar_trans_arrows,1", 1);
+~scrollbar_vertical_repaint(interface_162:560, "scrollbar_trans_dragger,3", "scrollbar_trans_dragger,0", "scrollbar_trans_dragger,1", "scrollbar_trans_dragger,2", "scrollbar_trans_arrows,0", "scrollbar_trans_arrows,1", 1);
 if ($boolean0 = true) {
 	if_settrans(255, interface_162:3);
 } else if (~on_mobile = false) {

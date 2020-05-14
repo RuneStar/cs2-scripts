@@ -1,19 +1,19 @@
 // 1733
-[proc,worldmap_key_toggle](boolean $boolean0, int $int1, component $component2, component $component3, component $component4)
+[proc,worldmap_key_toggle](int $int0, int $int1, component $component2, component $component3, component $component4)
 cc_deleteall($component4);
 def_int $int5 = 0;
-if ($boolean0 = true) {
+if ($int0 = 0) {
 	if_sethide(false, $component3);
 	if_setsize(calc($int1 + 12), 50, ^setsize_minus, ^setsize_minus, $component2);
 	$int5 = ~v2_stone_button_in_filled($component4);
 	if_setop(1, "Hide", $component4);
-	if_setonop("worldmap_key_toggle(false, $int1, $component2, $component3, $component4)", $component4);
+	if_setonop("worldmap_key_toggle(1, $int1, $component2, $component3, $component4)", $component4);
 } else {
 	if_sethide(true, $component3);
 	if_setsize(12, 50, ^setsize_minus, ^setsize_minus, $component2);
 	$int5 = ~v2_stone_button_out_filled($component4);
 	if_setop(1, "Show", $component4);
-	if_setonop("worldmap_key_toggle(true, $int1, $component2, $component3, $component4)", $component4);
+	if_setonop("worldmap_key_toggle(0, $int1, $component2, $component3, $component4)", $component4);
 }
 if_setopbase("<col=ff9040>Menu</col>", $component4);
 cc_create($component4, ^iftype_model, $int5);
@@ -38,3 +38,4 @@ cc_settrans(255);
 .cc_settrans(255);
 if_setonmouserepeat("worldmap_hovertoggle(event_com, cc_getid, .cc_getid, 240)", $component4);
 if_setonmouseleave("worldmap_hovertoggle(event_com, cc_getid, .cc_getid, 255)", $component4);
+if_setonvartransmit("script3402($int1, $component2, $component3, $component4){var1795}", $component4);

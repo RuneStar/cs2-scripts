@@ -1,8 +1,8 @@
 // 506
-[proc,bankmain_tabicon](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, component $component20, component $component21, component $component22, component $component23)(int, int)
-def_obj $obj24 = null;
+[proc,bankmain_tabicon](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, component $component20, component $component21, component $component22, component $component23, component $component24)(int, int)
+def_obj $obj25 = null;
 def_string $string0 = "";
-def_int $int25 = 0;
+def_int $int26 = 0;
 if (.cc_find($component8, $int12) = ^true) {
 	if ($int12 = 0) {
 		cc_create($component8, ^iftype_graphic, calc(($int12 + 9) + 1));
@@ -12,7 +12,7 @@ if (.cc_find($component8, $int12) = ^true) {
 		cc_settrans(20);
 		cc_setop(1, "View all items");
 		cc_setop(7, "Remove placeholders");
-		cc_setonop("bankmain_switchtab($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, event_opindex, $int12, $component20, $component21, $component22, $component23)");
+		cc_setonop("bankmain_switchtab($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, event_opindex, $int12, $component20, $component21, $component22, $component23, $component24)");
 		~bankmain_tabicon_highlight($int12);
 	} else if ($int13 > 0) {
 		if (%varbit4170 = 1) {
@@ -26,7 +26,7 @@ if (.cc_find($component8, $int12) = ^true) {
 			cc_setcolour(0xe4d8a2);
 			cc_settext($string0);
 			cc_setondragcomplete("bankmain_dragtab_text(event_com, event_comid, event_dragtarget, event_dragtargetid, $int19)");
-			~script507($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $int12, $component20, $component21, $component22, $component23);
+			~script507($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $int12, $component20, $component21, $component22, $component23, $component24);
 			~bankmain_tabicon_highlight($int12);
 		} else if (%varbit4170 = 2) {
 			$string0 = enum(int, string, enum_207, $int12);
@@ -39,18 +39,18 @@ if (.cc_find($component8, $int12) = ^true) {
 			cc_setcolour(0xe4d8a2);
 			cc_settext($string0);
 			cc_setondragcomplete("bankmain_dragtab_text(event_com, event_comid, event_dragtarget, event_dragtargetid, $int19)");
-			~script507($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $int12, $component20, $component21, $component22, $component23);
+			~script507($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $int12, $component20, $component21, $component22, $component23, $component24);
 			~bankmain_tabicon_highlight($int12);
 		} else {
-			$obj24 = inv_getobj(bank, $int14);
+			$obj25 = inv_getobj(bank, $int14);
 			cc_create($component8, ^iftype_graphic, calc(($int12 + 9) + 1));
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc(((($int12 * 40) + $int16) + $int17) + 1), $int18, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setgraphicshadow(0x333333);
 			cc_setoutline(1);
-			if ($obj24 ! null) {
-				cc_setobject_nonum($obj24, inv_getnum(bank, $int14));
-				if (oc_unplaceholder($obj24) ! $obj24) {
+			if ($obj25 ! null) {
+				cc_setobject_nonum($obj25, inv_getnum(bank, $int14));
+				if (oc_unplaceholder($obj25) ! $obj25) {
 					cc_settrans(120);
 					cc_setondragcomplete("bankmain_dragtab_graphic(event_com, event_comid, event_dragtarget, event_dragtargetid, $int19, 120)");
 				} else {
@@ -62,7 +62,7 @@ if (.cc_find($component8, $int12) = ^true) {
 				cc_settrans(0);
 				cc_setondragcomplete("bankmain_dragtab_graphic(event_com, event_comid, event_dragtarget, event_dragtargetid, $int19, 0)");
 			}
-			~script507($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $int12, $component20, $component21, $component22, $component23);
+			~script507($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $int12, $component20, $component21, $component22, $component23, $component24);
 			~bankmain_tabicon_highlight($int12);
 		}
 	} else if ($int15 = 0) {

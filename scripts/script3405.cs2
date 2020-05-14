@@ -1,0 +1,10 @@
+// 3405
+script3405(int $int0)
+def_component $component1 = enum(int, component, enum_859, $int0);
+if ($component1 = null) {
+	return;
+}
+if (cc_find($component1, 1) = ^true) {
+	if_setontimer(null, $component1);
+	cc_sethide(false);
+}

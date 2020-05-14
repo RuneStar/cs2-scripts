@@ -45,6 +45,9 @@ cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
+if (((~inzone(0_26_195_0_0, 0_26_195_63_63, coord) = 1) & ($obj1 = bronze_dagger_1205)) & (%var2686 < 350)) {
+	cc_setontimer("script2885(event_com, event_comid, 0, 1)");
+}
 def_int $int6 = enum(obj, int, enum_844, $obj1);
 cc_setobject($obj1, $int6);
 if ($int6 > 1) {

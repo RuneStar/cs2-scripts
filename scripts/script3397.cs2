@@ -1,0 +1,26 @@
+// 3397
+script3397(int $int0)
+cc_deleteall(interface_162:55);
+if_sethide(false, interface_162:55);
+if_setsize(130, 16, ^setsize_abs, ^setsize_abs, interface_162:55);
+if_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_162:55);
+def_graphic $graphic1 = "checkbox,1";
+def_int $int2 = 10;
+if (%varbit10295 = 0) {
+	$graphic1 = "checkbox,2";
+}
+cc_create(interface_162:55, ^iftype_text, 0);
+cc_setsize(112, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setcolour(^black);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Show last searched:");
+cc_create(interface_162:55, ^iftype_graphic, 1);
+cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setgraphic($graphic1);
+if_setonmouserepeat("script3398", interface_162:55);
+if_setonmouseleave("script3399", interface_162:55);
+if_setonop("script3400", interface_162:55);
+if_setonvartransmit("script3401(%varbit10295){var1795}", interface_162:55);
