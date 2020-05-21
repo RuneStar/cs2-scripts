@@ -15,16 +15,6 @@ if ($int12 > if_getheight($component2)) {
 	~scrollbar_resize($component3, $component2, 0);
 }
 if_settext(tostring($int13), $component6);
-if ((~inzone(0_48_48_39_43, 0_48_48_60_58, coord) = 0) & (~inzone(0_26_95_39_43, 0_26_95_60_58, coord) = 0)) {
-	cc_create($component18, ^iftype_graphic, 0);
-	cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("menu_buttons,2");
-	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, "menu_buttons,3", null)");
-	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, "menu_buttons,2", null)");
-	cc_setop(1, "Show tutorial");
-	cc_setonop("script3375(event_com, event_comid)");
-}
 cc_deleteall($component8);
 def_int $int20 = calc((if_getwidth($component8) - (40 * (9 + 1))) / 2);
 def_int $int21 = 0;

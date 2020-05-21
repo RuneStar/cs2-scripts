@@ -1,0 +1,16 @@
+// 3369
+script3369(component $component0)
+cc_deleteall($component0);
+if (((%varbit10336 = 0) & (~inzone(0_48_48_39_43, 0_48_48_60_58, coord) = 0)) & (~inzone(0_26_95_39_43, 0_26_95_60_58, coord) = 0)) {
+	cc_create($component0, ^iftype_graphic, 0);
+	cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("menu_buttons,2");
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, "menu_buttons,3", null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, "menu_buttons,2", null)");
+	if_setop(1, "Show tutorial", $component0);
+	if_setonop("script3375($component0)", $component0);
+} else {
+	if_setop(1, "", $component0);
+	if_setonop(null, $component0);
+}
