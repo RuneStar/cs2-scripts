@@ -1,5 +1,5 @@
 // 2081
-script2081(int $int0, obj $obj1)
+[clientscript,magic_flash_spell](int $int0, obj $obj1)
 if (%varbit4070 ! $int0) {
 	return;
 }
@@ -7,7 +7,7 @@ def_component $component2 = oc_param($obj1, spell_button);
 if ($component2 = null) {
 	return;
 }
-if_setontimer("script2232($component2, 1, 0)", magic_spellbook:3);
+if_setontimer("magic_flash($component2, 1, 0)", magic_spellbook:3);
 if (%varcint393 ! null) {
 	~script2682(%varcint393);
 }

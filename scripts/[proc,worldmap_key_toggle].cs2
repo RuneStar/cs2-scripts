@@ -38,4 +38,4 @@ cc_settrans(255);
 .cc_settrans(255);
 if_setonmouserepeat("worldmap_hovertoggle(event_com, cc_getid, .cc_getid, 240)", $component4);
 if_setonmouseleave("worldmap_hovertoggle(event_com, cc_getid, .cc_getid, 255)", $component4);
-if_setonvartransmit("script3402($int1, $component2, $component3, $component4){var1795}", $component4);
+if_setonvartransmit("worldmap_key_toggle_transmit($int1, $component2, $component3, $component4){var1795}", $component4);

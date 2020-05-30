@@ -1,5 +1,5 @@
 // 1179
-script1179(string $string0)
+[clientscript,dream_monster_populate](string $string0)
 def_string $string1 = "";
 def_string $string2 = "";
 def_string $string3 = "";
@@ -29,4 +29,4 @@ $int0 = calc(paraheight($string4, if_getwidth(dream_monster_stat:26), p12_full) 
 if ($int0 > if_getheight(dream_monster_stat:18)) {
 	if_setscrollsize(0, $int0, dream_monster_stat:25);
 }
-~script1181(dream_monster_stat:5);
+~dream_monster_switch_tab(dream_monster_stat:5);

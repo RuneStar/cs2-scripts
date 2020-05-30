@@ -1179,9 +1179,9 @@
 [**1176**](scripts/script1176.cs2)  
 [**1177**](scripts/script1177.cs2)  
 [**1178**](scripts/script1178.cs2)  
-[**1179**](scripts/script1179.cs2)  
-[**1180**](scripts/script1180.cs2)  
-[**1181**](scripts/script1181.cs2)  
+[**1179**](scripts/[clientscript,dream_monster_populate].cs2) `[clientscript,dream_monster_populate]`  
+[**1180**](scripts/[clientscript,dream_monster_switch_tab].cs2) `[clientscript,dream_monster_switch_tab]`  
+[**1181**](scripts/[proc,dream_monster_switch_tab].cs2) `[proc,dream_monster_switch_tab]`  
 [**1182**](scripts/[proc,deadman_skullduration].cs2) `[proc,deadman_skullduration]`  
 [**1183**](scripts/script1183.cs2)  
 [**1184**](scripts/script1184.cs2)  
@@ -2081,7 +2081,7 @@
 [**2078**](scripts/[clientscript,vm_kudos_update].cs2) `[clientscript,vm_kudos_update]`  
 [**2079**](scripts/[proc,vm_kudos_update].cs2) `[proc,vm_kudos_update]`  
 [**2080**](scripts/script2080.cs2)  
-[**2081**](scripts/script2081.cs2)  
+[**2081**](scripts/[clientscript,magic_flash_spell].cs2) `[clientscript,magic_flash_spell]`  
 [**2082**](scripts/[proc,kots_world].cs2) `[proc,kots_world]`  
 [**2083**](scripts/[proc,kots_remaining_time].cs2) `[proc,kots_remaining_time]`  
 [**2084**](scripts/[proc,deadman_finallocation].cs2) `[proc,deadman_finallocation]`  
@@ -2232,7 +2232,7 @@
 [**2229**](scripts/[clientscript,shop_quantity].cs2) `[clientscript,shop_quantity]`  
 [**2230**](scripts/[proc,shop_quantity].cs2) `[proc,shop_quantity]`  
 [**2231**](scripts/[clientscript,shop_quantity_op].cs2) `[clientscript,shop_quantity_op]`  
-[**2232**](scripts/script2232.cs2)  
+[**2232**](scripts/[clientscript,magic_flash].cs2) `[clientscript,magic_flash]`  
 [**2233**](scripts/[proc,welcome_screen_continue_text].cs2) `[proc,welcome_screen_continue_text]`  
 [**2234**](scripts/[clientscript,camera_do_zoom].cs2) `[clientscript,camera_do_zoom]`  
 [**2235**](scripts/script2235.cs2)  
@@ -2834,7 +2834,7 @@
 [**2831**](scripts/script2831.cs2)  
 [**2832**](scripts/script2832.cs2)  
 [**2833**](scripts/script2833.cs2)  
-[**2834**](scripts/script2834.cs2)  
+[**2834**](scripts/[clientscript,if_flash_component].cs2) `[clientscript,if_flash_component]`  
 [**2835**](scripts/[worldmapelementmouserepeat,619].cs2) `[worldmapelementmouserepeat,619]`  
 [**2836**](scripts/[worldmapelementmouseleave,619].cs2) `[worldmapelementmouseleave,619]`  
 [**2837**](scripts/script2837.cs2)  
@@ -2882,10 +2882,10 @@
 [**2879**](scripts/[clientscript,clanwars_setup_smallbox_updatetext].cs2) `[clientscript,clanwars_setup_smallbox_updatetext]`  
 [**2880**](scripts/[proc,clanwars_setup_smallbox_updatetext].cs2) `[proc,clanwars_setup_smallbox_updatetext]`  
 [**2881**](scripts/script2881.cs2)  
-[**2882**](scripts/script2882.cs2)  
+[**2882**](scripts/[clientscript,if_flash_component_timer].cs2) `[clientscript,if_flash_component_timer]`  
 [**2883**](scripts/script2883.cs2)  
-[**2884**](scripts/script2884.cs2)  
-[**2885**](scripts/script2885.cs2)  
+[**2884**](scripts/[clientscript,cc_flash_component].cs2) `[clientscript,cc_flash_component]`  
+[**2885**](scripts/[clientscript,cc_flash_component_timer].cs2) `[clientscript,cc_flash_component_timer]`  
 [**2886**](scripts/[clientscript,hp_hud_fade_in_check].cs2) `[clientscript,hp_hud_fade_in_check]`  
 [**2887**](scripts/[clientscript,hp_hud_fade_in].cs2) `[clientscript,hp_hud_fade_in]`  
 [**2888**](scripts/[proc,hp_hud_fade_in].cs2) `[proc,hp_hud_fade_in]`  
@@ -3396,15 +3396,15 @@
 [**3393**](scripts/script3393.cs2)  
 [**3394**](scripts/script3394.cs2)  
 [**3395**](scripts/script3395.cs2)  
-[**3396**](scripts/script3396.cs2)  
+[**3396**](scripts/[clientscript,meslayer_key_close].cs2) `[clientscript,meslayer_key_close]`  
 [**3397**](scripts/script3397.cs2)  
 [**3398**](scripts/script3398.cs2)  
 [**3399**](scripts/script3399.cs2)  
 [**3400**](scripts/script3400.cs2)  
 [**3401**](scripts/script3401.cs2)  
-[**3402**](scripts/script3402.cs2)  
-[**3403**](scripts/script3403.cs2)  
-[**3404**](scripts/script3404.cs2)  
+[**3402**](scripts/[clientscript,worldmap_key_toggle_transmit].cs2) `[clientscript,worldmap_key_toggle_transmit]`  
+[**3403**](scripts/[clientscript,prayer_flash_prayer].cs2) `[clientscript,prayer_flash_prayer]`  
+[**3404**](scripts/[clientscript,prayer_flash_timer].cs2) `[clientscript,prayer_flash_timer]`  
 [**3405**](scripts/script3405.cs2)  
 [**3406**](scripts/script3406.cs2)  
 [**3407**](scripts/script3407.cs2)  

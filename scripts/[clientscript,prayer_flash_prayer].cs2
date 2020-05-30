@@ -1,9 +1,9 @@
 // 3403
-script3403(int $int0)
+[clientscript,prayer_flash_prayer](int $int0)
 def_component $component1 = enum(int, component, enum_859, $int0);
 if ($component1 = null) {
 	return;
 }
 if (cc_find($component1, 1) = ^true) {
-	if_setontimer("script3404($component1, 0, 0)", $component1);
+	if_setontimer("prayer_flash_timer($component1, 0, 0)", $component1);
 }

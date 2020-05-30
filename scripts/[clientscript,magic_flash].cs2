@@ -1,5 +1,5 @@
 // 2232
-script2232(component $component0, int $int1, int $int2)
+[clientscript,magic_flash](component $component0, int $int1, int $int2)
 $int2 = calc($int2 - 1);
 if ($int2 <= 0) {
 	$int2 = 15;
@@ -10,4 +10,4 @@ if ($int2 <= 0) {
 	}
 	$int1 = calc(1 - $int1);
 }
-if_setontimer("script2232($component0, $int1, $int2)", magic_spellbook:3);
+if_setontimer("magic_flash($component0, $int1, $int2)", magic_spellbook:3);

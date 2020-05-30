@@ -1,0 +1,6 @@
+// 2884
+[clientscript,cc_flash_component](component $component0, int $int1)
+if (cc_find($component0, $int1) = ^true) {
+	cc_settrans(255);
+	cc_setontimer("cc_flash_component_timer($component0, $int1, 0, 1)");
+}

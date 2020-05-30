@@ -1,0 +1,4 @@
+// 2834
+[clientscript,if_flash_component](component $component0)
+if_settrans(255, $component0);
+if_setontimer("if_flash_component_timer($component0, 0, 1)", $component0);
