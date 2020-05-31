@@ -1,5 +1,5 @@
 // 2103
-[proc,hp_hud_update](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5)
+[proc,hp_hud_update](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, boolean $boolean9)
 def_string $string0 = nc_param(%var1683, param_510);
 if (compare($string0, "") = 0) {
 	if_sethide(true, $component3);
@@ -9,18 +9,43 @@ if (compare($string0, "") = 0) {
 }
 def_string $string1 = "<tostring(%varbit6099)> / <tostring(%varbit6100)>";
 if_settext($string1, $component0);
-def_int $int6 = if_getwidth($component1);
-def_int $int7 = $int6;
-$int7 = scale(%varbit6099, %varbit6100, $int7);
-if (($int7 = 0) & (%varbit6099 > 0)) {
-	$int7 = 1;
+def_int $int10 = if_getwidth($component1);
+def_int $int11 = $int10;
+def_int $int12 = calc(%varbit6100 + 1);
+$int11 = scale(%varbit6099, %varbit6100, $int11);
+if ((%varbit10338 > 0) & (%varbit10338 <= $int12)) {
+	if_sethide(false, $component5);
+	if_setposition(scale(calc(%varbit10338 - 1), %varbit6100, $int10), 0, ^setpos_abs_left, ^setpos_abs_centre, $component5);
+} else {
+	if_sethide(true, $component5);
 }
-if (($int7 = if_getwidth($component1)) & (%varbit6099 < %varbit6100)) {
-	$int7 = calc($int7 - 1);
+if ((%varbit10339 > 0) & (%varbit10339 <= $int12)) {
+	if_sethide(false, $component6);
+	if_setposition(calc($int10 - scale((%varbit10339 - 1), %varbit6100, $int10)), 0, ^setpos_abs_right, ^setpos_abs_centre, $component6);
+} else {
+	if_sethide(true, $component6);
 }
-if ($boolean5 = true) {
-	if_setsize($int7, if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
+if ((%varbit10340 > 0) & (%varbit10340 <= $int12)) {
+	if_sethide(false, $component7);
+	if_setposition(scale(calc(%varbit10340 - 1), %varbit6100, $int10), 0, ^setpos_abs_left, ^setpos_abs_centre, $component7);
+} else {
+	if_sethide(true, $component7);
+}
+if ((%varbit10341 > 0) & (%varbit10341 <= $int12)) {
+	if_sethide(false, $component8);
+	if_setposition(scale(calc(%varbit10341 - 1), %varbit6100, $int10), 0, ^setpos_abs_left, ^setpos_abs_centre, $component8);
+} else {
+	if_sethide(true, $component8);
+}
+if (($int11 = 0) & (%varbit6099 > 0)) {
+	$int11 = 1;
+}
+if (($int11 = if_getwidth($component1)) & (%varbit6099 < %varbit6100)) {
+	$int11 = calc($int11 - 1);
+}
+if ($boolean9 = true) {
+	if_setsize($int11, if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
 	if_setontimer(null, $component2);
 	return;
 }
-if_setontimer("hp_hud_update_bar($component2, $int7)", $component2);
+if_setontimer("hp_hud_update_bar($component2, $int11)", $component2);

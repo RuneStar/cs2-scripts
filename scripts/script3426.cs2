@@ -1,0 +1,13 @@
+// 3426
+script3426(component $component0, component $component1)
+def_string $string0 = "Health Overlay (currently on)";
+if (%varbit10345 = 1) {
+	$string0 = "Health Overlay (currently off)";
+	if_setgraphic("options_boxes,0", $component0);
+	if_setop(1, "Enable", $component0);
+} else {
+	if_setgraphic("options_boxes,1", $component0);
+	if_setop(1, "Disable", $component0);
+}
+if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component1, $string0, 25, 512)", $component0);
+%varcint2 = 0;

@@ -1,0 +1,12 @@
+// 3425
+script3425(int $int0, component $component1, component $component2)
+if ($int0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+if (%varbit10345 = 0) {
+	%varbit10345 = 1;
+} else {
+	%varbit10345 = 0;
+}
+~script3426($component1, $component2);
