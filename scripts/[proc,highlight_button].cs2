@@ -18,8 +18,8 @@ cc_settext($string0);
 if ($int1 = 0) {
 	cc_setop(1, $string0);
 	cc_setonop("highlight_next($boolean2, $component0, event_comid)");
-	if_setonmouserepeat("script3242(event_com, 0)", $component0);
-	if_setonmouseleave("script3240(event_com, 0)", $component0);
+	if_setonmouserepeat("v2_stone_button_change_in(event_com, 0)", $component0);
+	if_setonmouseleave("v2_stone_button_change_out(event_com, 0)", $component0);
 } else {
 	cc_setop(1, "");
 	cc_setonop(null);

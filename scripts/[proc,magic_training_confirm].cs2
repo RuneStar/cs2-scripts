@@ -15,5 +15,5 @@ if ($int1 = 63) {
 } else {
 	cc_settext("Confirm: <br><col=ffffff><oc_name(enum(int, namedobj, enum_2753, $int1))></col> <br>x<tostring(%var2224)>");
 }
-cc_setonmouseleave("script3240($component0, 0)");
-cc_setonmouserepeat("script3242($component0, 0)");
+cc_setonmouseleave("v2_stone_button_change_out($component0, 0)");
+cc_setonmouserepeat("v2_stone_button_change_in($component0, 0)");

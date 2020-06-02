@@ -53,8 +53,8 @@ if ((~adventurepath_return_task_status($int0) = ^false) & (struct_param($struct5
 	if_setop(1, "Show<col=ff9040> Hint", interface_642:22);
 	if_setop(2, "Remove<col=ff9040> Hint arrow", interface_642:22);
 	$int23 = ~v2_stone_button_filled(interface_642:22);
-	if_setonmouserepeat("script3242(interface_642:22, 0)", interface_642:22);
-	if_setonmouseleave("script3240(interface_642:22, 0)", interface_642:22);
+	if_setonmouserepeat("v2_stone_button_change_in(interface_642:22, 0)", interface_642:22);
+	if_setonmouseleave("v2_stone_button_change_out(interface_642:22, 0)", interface_642:22);
 } else {
 	if_setop(1, "", interface_642:22);
 	if_setop(2, "", interface_642:22);

@@ -7,10 +7,10 @@ if_setnoclickthrough(false, $component4);
 if (~on_mobile = true) {
 	if_setonmouseover(null, $component1);
 	if_setonmouseleave(null, $component1);
-	if_setonclick("script1222($component1, $component2, $component4, true)", $component2);
+	if_setonclick("zeah_overlay_grow($component1, $component2, $component4, true)", $component2);
 	if_setnoclickthrough(true, $component3);
 } else {
-	if_setonmouseover("script1222($component1, $component2, $component4, false)", $component1);
+	if_setonmouseover("zeah_overlay_grow($component1, $component2, $component4, false)", $component1);
 	if_setonmouseleave("script1224($component1, $component2, $component4, 0, false)", $component1);
 	if_setonclick(null, $component2);
 	if_setnoclickthrough(false, $component3);

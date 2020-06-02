@@ -1047,7 +1047,7 @@
 [**1044**](scripts/script1044.cs2)  
 [**1045**](scripts/[proc,max].cs2) `[proc,max]`  
 [**1046**](scripts/[proc,min].cs2) `[proc,min]`  
-[**1047**](scripts/script1047.cs2)  
+[**1047**](scripts/[clientscript,camera_zoom_slider_click].cs2) `[clientscript,camera_zoom_slider_click]`  
 [**1048**](scripts/script1048.cs2)  
 [**1049**](scripts/[proc,zoom_position_slider].cs2) `[proc,zoom_position_slider]`  
 [**1050**](scripts/[clientscript,toplevel_compass_op].cs2) `[clientscript,toplevel_compass_op]`  
@@ -1222,7 +1222,7 @@
 [**1219**](scripts/[proc,zeah_favour_overlay_hideshow].cs2) `[proc,zeah_favour_overlay_hideshow]`  
 [**1220**](scripts/[clientscript,zeah_border_flash].cs2) `[clientscript,zeah_border_flash]`  
 [**1221**](scripts/[clientscript,zeah_fade_border].cs2) `[clientscript,zeah_fade_border]`  
-[**1222**](scripts/script1222.cs2)  
+[**1222**](scripts/[clientscript,zeah_overlay_grow].cs2) `[clientscript,zeah_overlay_grow]`  
 [**1223**](scripts/script1223.cs2)  
 [**1224**](scripts/script1224.cs2)  
 [**1225**](scripts/script1225.cs2)  
@@ -1390,7 +1390,7 @@
 [**1387**](scripts/script1387.cs2)  
 [**1388**](scripts/[clientscript,poh_viewer_setlevel].cs2) `[clientscript,poh_viewer_setlevel]`  
 [**1389**](scripts/[proc,poh_viewer_setlevel].cs2) `[proc,poh_viewer_setlevel]`  
-[**1390**](scripts/script1390.cs2)  
+[**1390**](scripts/[proc,poh_viewer_handlelevel].cs2) `[proc,poh_viewer_handlelevel]`  
 [**1391**](scripts/script1391.cs2)  
 [**1392**](scripts/script1392.cs2)  
 [**1393**](scripts/[clientscript,poh_viewer_preview_pulse].cs2) `[clientscript,poh_viewer_preview_pulse]`  
@@ -2921,10 +2921,10 @@
 [**2918**](scripts/script2918.cs2)  
 [**2919**](scripts/[proc,gauntlet_select_item].cs2) `[proc,gauntlet_select_item]`  
 [**2920**](scripts/script2920.cs2)  
-[**2921**](scripts/script2921.cs2)  
-[**2922**](scripts/script2922.cs2)  
-[**2923**](scripts/script2923.cs2)  
-[**2924**](scripts/script2924.cs2)  
+[**2921**](scripts/[clientscript,prif_overlay_portal].cs2) `[clientscript,prif_overlay_portal]`  
+[**2922**](scripts/[clientscript,prif_remove_portal].cs2) `[clientscript,prif_remove_portal]`  
+[**2923**](scripts/[clientscript,prif_adjust_portal].cs2) `[clientscript,prif_adjust_portal]`  
+[**2924**](scripts/[clientscript,prif_recipes_init].cs2) `[clientscript,prif_recipes_init]`  
 [**2925**](scripts/script2925.cs2)  
 [**2926**](scripts/[clientscript,skillmain_init].cs2) `[clientscript,skillmain_init]`  
 [**2927**](scripts/[clientscript,skillmain_setup].cs2) `[clientscript,skillmain_setup]`  
@@ -3240,10 +3240,10 @@
 [**3237**](scripts/[proc,questlist_members_progress_grey].cs2) `[proc,questlist_members_progress_grey]`  
 [**3238**](scripts/[proc,questlist_miniquests_progress_grey].cs2) `[proc,questlist_miniquests_progress_grey]`  
 [**3239**](scripts/[proc,questlist_showprogress_grey].cs2) `[proc,questlist_showprogress_grey]`  
-[**3240**](scripts/script3240.cs2)  
-[**3241**](scripts/script3241.cs2)  
-[**3242**](scripts/script3242.cs2)  
-[**3243**](scripts/script3243.cs2)  
+[**3240**](scripts/[clientscript,v2_stone_button_change_out].cs2) `[clientscript,v2_stone_button_change_out]`  
+[**3241**](scripts/[proc,v2_stone_button_change_out].cs2) `[proc,v2_stone_button_change_out]`  
+[**3242**](scripts/[clientscript,v2_stone_button_change_in].cs2) `[clientscript,v2_stone_button_change_in]`  
+[**3243**](scripts/[proc,v2_stone_button_change_in].cs2) `[proc,v2_stone_button_change_in]`  
 [**3244**](scripts/script3244.cs2)  
 [**3245**](scripts/script3245.cs2)  
 [**3246**](scripts/script3246.cs2)  
@@ -3412,7 +3412,7 @@
 [**3409**](scripts/[clientscript,highlight_screen].cs2) `[clientscript,highlight_screen]`  
 [**3410**](scripts/[proc,highlight_screen].cs2) `[proc,highlight_screen]`  
 [**3411**](scripts/[clientscript,highlight_resize].cs2) `[clientscript,highlight_resize]`  
-[**3412**](scripts/script3412.cs2)  
+[**3412**](scripts/[clientscript,highlight_screen_hide_layer].cs2) `[clientscript,highlight_screen_hide_layer]`  
 [**3413**](scripts/[clientscript,highlight_textbox].cs2) `[clientscript,highlight_textbox]`  
 [**3414**](scripts/[clientscript,highlight_textbox_resize].cs2) `[clientscript,highlight_textbox_resize]`  
 [**3415**](scripts/[proc,highlight_textbox].cs2) `[proc,highlight_textbox]`  
@@ -3427,6 +3427,6 @@
 [**3424**](scripts/script3424.cs2)  
 [**3425**](scripts/script3425.cs2)  
 [**3426**](scripts/script3426.cs2)  
-[**3427**](scripts/script3427.cs2)  
+[**3427**](scripts/[proc,hp_hud_init].cs2) `[proc,hp_hud_init]`  
 [**3428**](scripts/script3428.cs2)  
 [**3429**](scripts/script3429.cs2)  

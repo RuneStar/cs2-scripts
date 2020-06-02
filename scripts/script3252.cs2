@@ -23,7 +23,7 @@ if (%varbit3729 = 0) {
 	} else {
 		cc_settext("Confirm");
 	}
-	cc_setonmouseleave("script3240($component0, 0)");
-	cc_setonmouserepeat("script3242($component0, 0)");
+	cc_setonmouseleave("v2_stone_button_change_out($component0, 0)");
+	cc_setonmouserepeat("v2_stone_button_change_in($component0, 0)");
 	cc_setop(1, "Confirm");
 }

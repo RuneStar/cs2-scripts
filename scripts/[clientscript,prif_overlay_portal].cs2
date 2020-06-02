@@ -1,5 +1,5 @@
 // 2921
-script2921
+[clientscript,prif_overlay_portal]
 cc_deleteall(interface_641:1);
 cc_create(interface_641:1, ^iftype_model, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -14,4 +14,4 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setfill(true);
 cc_setcolour(0x00a0c0);
 cc_settrans(255);
-if_setontimer("script2923(clientclock, true)", interface_641:1);
+if_setontimer("prif_adjust_portal(clientclock, true)", interface_641:1);
