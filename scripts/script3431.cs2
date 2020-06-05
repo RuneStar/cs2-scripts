@@ -1,0 +1,34 @@
+// 3431
+script3431(component $component0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_graphic $graphic5 = null;
+while ($int1 < 25) {
+	cc_create($component0, ^iftype_graphic, $int1);
+	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
+	$int2 = calc(35 * ($int1 % 5));
+	$int3 = calc(35 * ($int1 / 5));
+	cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_2540");
+	cc_settrans(0);
+	cc_setop(1, "Toggle");
+	cc_setonop("script3432($int1, event_com)");
+	cc_setonvartransmit("script3434($int1, event_com){var2715, var2716}");
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("script3433($int1, event_com, true)");
+		cc_setonmouseleave("script3433($int1, event_com, false)");
+	}
+	$int4 = ~script3439($int1);
+	if ($int4 = 0) {
+		$graphic5 = "graphic_2540";
+	} else if ($int4 = 1) {
+		$graphic5 = "graphic_2541";
+	} else if ($int4 = 2) {
+		$graphic5 = "graphic_2542";
+	}
+	cc_setgraphic($graphic5);
+	$int1 = calc($int1 + 1);
+}
+~script3435;

@@ -241,7 +241,7 @@ $int25, $int38 = ~worldmap_toggles_enablebutton(3, $component10, $int25, $int38,
 $int25, $int38 = ~worldmap_toggles_enablebutton(4, $component10, $int25, $int38, $component4, $component7, $component23);
 $int29 = ~max($int29, calc($int38 + 6));
 if_setsize($int29, 50, ^setsize_abs, ^setsize_minus, $component5);
-~worldmap_key_toggle(0, $int29, $component3, $component5, $component9);
+~worldmap_key_toggle(%varbit10294, $int29, $component3, $component5, $component9);
 if ((if_find(interface_595:39) = true) & (~on_mobile = true)) {
 	cc_sethide(true);
 }

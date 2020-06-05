@@ -17,7 +17,7 @@ def_string $string1 = "";
 def_string $string2 = "";
 def_int $int19 = 0;
 def_int $int20 = enum(int, int, $enum0, $int19);
-while (($int20 ! -1) & ($int20 <= 48)) {
+while (($int20 ! -1) & ($int20 <= 50)) {
 	$string1 = enum(int, string, enum_834, $int20);
 	$string2 = ~slayer_rewards_unlock_desc($int20);
 	$string0 = "<$string2> <col=ff0000>(<tostring(enum(int, int, enum_836, $int20))> points)</col>";

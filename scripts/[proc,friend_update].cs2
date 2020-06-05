@@ -28,6 +28,9 @@ if ($int15 <= -2) {
 		if_settext("You must set a name<br>before using this.", $component7);
 	}
 	if_sethide(true, $component0);
+} else if ($int15 = 0) {
+	if_settext("You may add friends by using the button below, or by <~text_device("right-clicking", "long pressing")> on a message from them and selecting to add them as a friend.", $component7);
+	if_sethide(true, $component0);
 } else {
 	$boolean14 = ~on_mobile;
 	if ($boolean14 = true) {

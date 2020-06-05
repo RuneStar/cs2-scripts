@@ -1,0 +1,51 @@
+// 3435
+script3435
+def_int $int0 = 1;
+def_int $int1 = -1;
+def_int $int2 = -1;
+def_int $intarray0(25);
+def_int $int3 = 0;
+def_int $int4 = 10;
+def_int $colour5 = null;
+while ($int3 < 25) {
+	$intarray0($int3) = ~script3439($int3);
+	if ($intarray0($int3) = 2) {
+		$intarray0($int3) = 1;
+	} else {
+		$intarray0($int3) = 0;
+	}
+	$int3 = calc($int3 + 1);
+}
+def_int $intarray1(10);
+$intarray1(0) = calc(((($intarray0(0) + ($intarray0(5) * 2)) + ($intarray0(10) * 3)) + ($intarray0(15) * 4)) + ($intarray0(20) * 5));
+$intarray1(1) = calc(((($intarray0(1) + ($intarray0(6) * 2)) + ($intarray0(11) * 3)) + ($intarray0(16) * 4)) + ($intarray0(21) * 5));
+$intarray1(2) = calc(((($intarray0(2) + ($intarray0(7) * 2)) + ($intarray0(12) * 3)) + ($intarray0(17) * 4)) + ($intarray0(22) * 5));
+$intarray1(3) = calc(((($intarray0(3) + ($intarray0(8) * 2)) + ($intarray0(13) * 3)) + ($intarray0(18) * 4)) + ($intarray0(23) * 5));
+$intarray1(4) = calc(((($intarray0(4) + ($intarray0(9) * 2)) + ($intarray0(14) * 3)) + ($intarray0(19) * 4)) + ($intarray0(24) * 5));
+$intarray1(5) = calc(((($intarray0(0) + ($intarray0(1) * 2)) + ($intarray0(2) * 3)) + ($intarray0(3) * 4)) + ($intarray0(4) * 5));
+$intarray1(6) = calc(((($intarray0(5) + ($intarray0(6) * 2)) + ($intarray0(7) * 3)) + ($intarray0(8) * 4)) + ($intarray0(9) * 5));
+$intarray1(7) = calc(((($intarray0(10) + ($intarray0(11) * 2)) + ($intarray0(12) * 3)) + ($intarray0(13) * 4)) + ($intarray0(14) * 5));
+$intarray1(8) = calc(((($intarray0(15) + ($intarray0(16) * 2)) + ($intarray0(17) * 3)) + ($intarray0(18) * 4)) + ($intarray0(19) * 5));
+$intarray1(9) = calc(((($intarray0(20) + ($intarray0(21) * 2)) + ($intarray0(22) * 3)) + ($intarray0(23) * 4)) + ($intarray0(24) * 5));
+$int3 = 0;
+while ($int3 < $int4) {
+	if_settext("(<tostring($intarray1($int3))>)", enum(int, component, enum_2860, $int3));
+	$int1 = ~script3436(if_gettext(enum(int, component, enum_2644, $int3)));
+	$int2 = $intarray1($int3);
+	if ($int2 = $int1) {
+		$colour5 = 0x07d907;
+	} else if ($int2 > $int1) {
+		$int0 = 0;
+		$colour5 = 0xf83333;
+	} else {
+		$int0 = 0;
+		$colour5 = 0xe0e0e0;
+	}
+	if_setcolour($colour5, enum(int, component, enum_2860, $int3));
+	$int3 = calc($int3 + 1);
+}
+if ($int0 = 1) {
+	%varbit10365 = 1;
+} else {
+	%varbit10365 = 0;
+}

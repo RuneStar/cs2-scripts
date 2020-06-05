@@ -1,0 +1,32 @@
+// 3433
+script3433(int $int0, component $component1, boolean $boolean2)
+if (~on_mobile = true) {
+	return;
+}
+def_int $int3 = 0;
+def_graphic $graphic4 = null;
+def_int $int5 = 0;
+if (cc_find($component1, $int0) = ^true) {
+	$int3 = ~script3439($int0);
+	if ($int3 = 0) {
+		if ($boolean2 = true) {
+			$graphic4, $int5 = "graphic_2543", 1;
+		} else {
+			$graphic4, $int5 = "graphic_2540", 0;
+		}
+	} else if ($int3 = 1) {
+		if ($boolean2 = true) {
+			$graphic4, $int5 = "graphic_2544", 1;
+		} else {
+			$graphic4, $int5 = "graphic_2541", 0;
+		}
+	} else if ($int3 = 2) {
+		if ($boolean2 = true) {
+			$graphic4, $int5 = "graphic_2545", 1;
+		} else {
+			$graphic4, $int5 = "graphic_2542", 0;
+		}
+	}
+	cc_setgraphic($graphic4);
+	cc_settrans($int5);
+}

@@ -9,10 +9,10 @@ if_sethide(false, $component4);
 def_string $string1 = "";
 def_int $int6 = 0;
 if ($boolean0 = true) {
-	$int6 = calc(48 + 2);
+	$int6 = calc(50 + 2);
 	$string1 = "<u=ff981f><$string0></u><br><br>Your current task will be cancelled, and the Slayer Masters will be blocked from assigning this category to you again.<br><br><col=ff0000>Cost: <tostring(100)> points</col><br><br>If you unblock this creature in future, you will not get your points back.";
 } else {
-	$int6 = calc(48 + 1);
+	$int6 = calc(50 + 1);
 	$string1 = "<u=ff981f><$string0></u><br><br>Your current task will be cancelled. The Slayer Masters may assign this category to you again in future.<br><br><col=ff0000>Cost: <tostring(30)> points</col>";
 }
 if_settext($string1, $component3);

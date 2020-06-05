@@ -1,0 +1,11 @@
+// 3440
+script3440(component $component0, int $int1, graphic $graphic2, component $component3)
+if (~on_mobile = true) {
+	return;
+}
+if (cc_find($component0, $int1) = ^true) {
+	cc_setgraphic($graphic2);
+}
+if ($component3 ! null) {
+	~deltooltip_action($component3);
+}

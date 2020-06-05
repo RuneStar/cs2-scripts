@@ -18,6 +18,9 @@ if ($int12 < 0) {
 		if_settext("You must set a name<br>before using this.", $component5);
 	}
 	if_sethide(true, $component0);
+} else if ($int12 = 0) {
+	if_settext("You may ignore users by using the button below, or by <~text_device("right-clicking", "long pressing")> on a message from them and selecting to add them to your ignore list.", $component5);
+	if_sethide(true, $component0);
 } else {
 	$boolean11 = ~on_mobile;
 	if ($boolean11 = true) {

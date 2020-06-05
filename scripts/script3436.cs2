@@ -1,0 +1,21 @@
+// 3436
+script3436(string $string0)(int)
+def_int $int0 = string_length($string0);
+def_string $string1 = "";
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+if ($int0 > 0) {
+	if ($int0 > 4) {
+		$int0 = 4;
+	}
+	while ($int2 < $int0) {
+		$string1 = substring($string0, $int2, calc($int2 + 1));
+		$int1 = string_indexof_string("0123456789", $string1, 0);
+		if ($int1 ! -1) {
+			$int3 = calc($int3 + ($int1 * pow(10, (($int0 - 1) - $int2))));
+		}
+		$int2 = calc($int2 + 1);
+	}
+}
+return($int3);

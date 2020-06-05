@@ -1,0 +1,31 @@
+// 3434
+script3434(int $int0, component $component1)
+def_int $int2 = 0;
+def_graphic $graphic3 = null;
+def_int $int4 = 0;
+if (cc_find($component1, $int0) = ^true) {
+	$int2 = ~script3439($int0);
+	$int4 = cc_gettrans;
+	if ($int2 = 0) {
+		if ($int4 = 1) {
+			$graphic3 = "graphic_2543";
+		} else {
+			$graphic3 = "graphic_2540";
+		}
+	} else if ($int2 = 1) {
+		if ($int4 = 1) {
+			$graphic3 = "graphic_2544";
+		} else {
+			$graphic3 = "graphic_2541";
+		}
+	} else if ($int2 = 2) {
+		if ($int4 = 1) {
+			$graphic3 = "graphic_2545";
+		} else {
+			$graphic3 = "graphic_2542";
+		}
+	}
+	cc_setgraphic($graphic3);
+	cc_settrans($int4);
+	~script3435;
+}

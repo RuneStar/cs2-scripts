@@ -216,8 +216,8 @@ if (%varbit6363 = 1) {
 		if_setonop("joinchat_onop(event_opindex, 1)", $component10);
 	}
 } else {
-	if_settext("Not in chat", $component0);
-	if_settext("None", $component1);
+	if_settext("<col=808080>Not in chat</col>", $component0);
+	if_settext("<col=808080>None</col>", $component1);
 	if_settext("Join Chat", $component10);
 	if_setop(1, "Join Chat", $component10);
 	if_setonop("joinchat_onop(event_opindex, 1)", $component10);

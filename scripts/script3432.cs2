@@ -1,0 +1,35 @@
+// 3432
+script3432(int $int0, component $component1)
+if (%varbit10365 = 1) {
+	return;
+}
+def_int $int2 = 0;
+def_graphic $graphic3 = null;
+def_int $int4 = 0;
+if (cc_find($component1, $int0) = ^true) {
+	sound_synth(synth_2266, 1, 0);
+	$int2 = ~script3437($int0);
+	$int4 = cc_gettrans;
+	if ($int2 = 0) {
+		if ($int4 = 1) {
+			$graphic3 = "graphic_2543";
+		} else {
+			$graphic3 = "graphic_2540";
+		}
+	} else if ($int2 = 1) {
+		if ($int4 = 1) {
+			$graphic3 = "graphic_2544";
+		} else {
+			$graphic3 = "graphic_2541";
+		}
+	} else if ($int2 = 2) {
+		if ($int4 = 1) {
+			$graphic3 = "graphic_2545";
+		} else {
+			$graphic3 = "graphic_2542";
+		}
+	}
+	cc_setgraphic($graphic3);
+	cc_settrans($int4);
+	~script3435;
+}
