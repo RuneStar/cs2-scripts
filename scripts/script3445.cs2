@@ -2,7 +2,7 @@
 script3445(int $int0)
 def_component $component1 = interface_668:4;
 $int0 = calc($int0 - clientclock);
-if ($int0 <= 0) {
+if (%varbit10413 = 1) {
 	if_setontimer(null, interface_668:3);
 	if (string_indexof_string(if_gettext($component1), "(Paused)", 0) = -1) {
 		if_settext(append(if_gettext($component1), " (Paused)"), $component1);

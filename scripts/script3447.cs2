@@ -1,0 +1,10 @@
+// 3447
+script3447(int $int0, component $component1, int $int2, int $int3)
+if (($int0 = 1) & (cc_find($component1, $int2) = ^true)) {
+	sound_synth(synth_2266, 1, 0);
+	cc_settrans(140);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	cc_setonmouseleave(null);
+	cc_setontimer("script3448(calc(clientclock + 20), $component1, $int2, $int3)");
+}

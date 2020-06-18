@@ -116,19 +116,7 @@ switch_int ($int0) {
 		}
 		return("", -1);
 	case 10 :
-		if ($int1 = 0) {
-			return("Pickpocket", 1);
-		}
-		if ($int1 = 1) {
-			return("Stalls", 1);
-		}
-		if ($int1 = 2) {
-			return("Chests", 1);
-		}
-		if ($int1 = 3) {
-			return("Other", 1);
-		}
-		return("", -1);
+		return(~script176($int1));
 	case 11 :
 		if ($int1 = 0) {
 			return("Weaving", 1);

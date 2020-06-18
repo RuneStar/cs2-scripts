@@ -1,0 +1,75 @@
+// 3446
+script3446(string $string0)
+~script3449(interface_120:7);
+cc_deleteall(interface_120:5);
+def_int $int0 = 0;
+while ($int0 < 50) {
+	cc_create(interface_120:5, ^iftype_rectangle, $int0);
+	cc_sethide(true);
+	$int0 = calc($int0 + 1);
+}
+def_int $intarray0(50);
+def_int $int1 = 0;
+def_string $string1 = "";
+$string1, $string0 = ~script632($string0);
+while (($int1 < 50) & (string_length($string1) > 0)) {
+	cc_create(interface_120:5, ^iftype_text, $int0);
+	$intarray0($int1) = $int0;
+	cc_setsize(0, 22, ^setsize_minus, ^setsize_abs);
+	cc_setcolour(0xff891f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext($string1);
+	if (.cc_find(interface_120:5, calc($int0 - 50)) = ^true) {
+		.cc_setopbase("<col=ff9040><$string1></col>");
+		.cc_setop(1, "Seek");
+		.cc_sethide(false);
+		.cc_setsize(0, 22, ^setsize_minus, ^setsize_abs);
+		.cc_setfill(true);
+		.cc_setcolour(^white);
+	}
+	$int0, $int1, $string1, $string0 = calc($int0 + 1), calc($int1 + 1), ~script632($string0);
+}
+if ($int1 <= 0) {
+	cc_create(interface_120:5, ^iftype_text, $int0);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(0xff891f);
+	cc_settextfont(b12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext("No eligible players were found.");
+} else if ($int1 >= 2) {
+	~quicksort_cctext(intarray0, interface_120:5, 0, calc($int1 - 1));
+}
+def_int $int2 = 0;
+$int0 = 0;
+while ($int0 < $int1) {
+	if ((cc_find(interface_120:5, $intarray0($int0)) = ^true) & (.cc_find(interface_120:5, calc($intarray0($int0) - 50)) = ^true)) {
+		cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setonmouserepeat("cc_settrans(event_com, event_comid, 200, null)");
+		if (calc($int0 % 2) = 0) {
+			.cc_settrans(230);
+			.cc_setonmouseleave("cc_settrans(event_com, event_comid, 230, null)");
+			.cc_setonop("script3447(event_opindex, event_com, event_comid, 230)");
+		} else {
+			.cc_settrans(245);
+			.cc_setonmouseleave("cc_settrans(event_com, event_comid, 245, null)");
+			.cc_setonop("script3447(event_opindex, event_com, event_comid, 245)");
+		}
+	}
+	$int0, $int2 = calc($int0 + 1), calc($int2 + 22);
+}
+cc_deleteall(interface_120:6);
+def_int $int3 = if_getheight(interface_120:5);
+if ($int2 > $int3) {
+	if_setscrollsize(0, $int2, interface_120:5);
+	~scrollbar_vertical(interface_120:6, interface_120:5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	~scrollbar_resize(interface_120:6, interface_120:5, ~max(0, ~min(calc($int2 - $int3), if_getscrolly(interface_120:5))));
+} else {
+	if_setscrollpos(0, 0, interface_120:5);
+	if_setscrollsize(0, 0, interface_120:5);
+	~scrollbar_vertical(interface_120:6, interface_120:5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+}

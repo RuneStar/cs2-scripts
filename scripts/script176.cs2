@@ -1,0 +1,14 @@
+// 176
+script176(int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Pickpocket", 1);
+	case 1 :
+		return("Stalls", 1);
+	case 2 :
+		return("Chests", 1);
+	case 3 :
+		return("Other", 1);
+	case default :
+		return("", -1);
+}

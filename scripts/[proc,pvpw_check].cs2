@@ -3,4 +3,7 @@
 if (testbit(worldflags, 2) = ^true) {
 	return(1);
 }
+if (~tournament_beta_world = 1) {
+	return(1);
+}
 return(0);

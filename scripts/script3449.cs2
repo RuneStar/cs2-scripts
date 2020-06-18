@@ -1,0 +1,16 @@
+// 3449
+script3449(component $component0)
+cc_deleteall($component0);
+def_int $int1 = ~options_button_off($component0, 0);
+cc_create($component0, ^iftype_text, $int1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff891f);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Refresh");
+if_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, ^white)", $component0);
+if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff891f)", $component0);
+if_setonop("script3450(event_opindex, event_com)", $component0);
+if_setontimer(null, $component0);

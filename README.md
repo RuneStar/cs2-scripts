@@ -176,7 +176,7 @@
 [**173**](scripts/[clientscript,chat_button_select].cs2) `[clientscript,chat_button_select]`  
 [**174**](scripts/[clientscript,chat_button_deselect].cs2) `[clientscript,chat_button_deselect]`  
 [**175**](scripts/[clientscript,chat_button_onop].cs2) `[clientscript,chat_button_onop]`  
-[**176**](scripts/[clientscript,tournament_sidepanel_init].cs2) `[clientscript,tournament_sidepanel_init]`  
+[**176**](scripts/script176.cs2)  
 [**177**](scripts/[clientscript,raids_storage_items_op].cs2) `[clientscript,raids_storage_items_op]`  
 [**178**](scripts/[proc,redraw_chat_buttons].cs2) `[proc,redraw_chat_buttons]`  
 [**179**](scripts/[proc,chat_alert_get].cs2) `[proc,chat_alert_get]`  
@@ -478,7 +478,7 @@
 [**475**](scripts/[proc,pest_rewards_divider].cs2) `[proc,pest_rewards_divider]`  
 [**476**](scripts/[clientscript,br_hud_writetimer].cs2) `[clientscript,br_hud_writetimer]`  
 [**477**](scripts/[clientscript,ntk_textbox].cs2) `[clientscript,ntk_textbox]`  
-[**478**](scripts/[clientscript,tournament_sidepanel_setactive].cs2) `[clientscript,tournament_sidepanel_setactive]`  
+[**478**](scripts/script478.cs2)  
 [**479**](scripts/[clientscript,ntk_timer_resynch].cs2) `[clientscript,ntk_timer_resynch]`  
 [**480**](scripts/[proc,ntk_timer_resynch].cs2) `[proc,ntk_timer_resynch]`  
 [**481**](scripts/[clientscript,ntk_timer_autonomous].cs2) `[clientscript,ntk_timer_autonomous]`  
@@ -972,15 +972,6 @@
 [**969**](scripts/[clientscript,stake_tooltip].cs2) `[clientscript,stake_tooltip]`  
 [**970**](scripts/[clientscript,logout_op].cs2) `[clientscript,logout_op]`  
 [**971**](scripts/[clientscript,ntk_init].cs2) `[clientscript,ntk_init]`  
-[**972**](scripts/[clientscript,tournament_sidepanel_changeactive].cs2) `[clientscript,tournament_sidepanel_changeactive]`  
-[**973**](scripts/[proc,tournament_sidepanel_setactive].cs2) `[proc,tournament_sidepanel_setactive]`  
-[**974**](scripts/[clientscript,tournament_sidepanel_setcolour].cs2) `[clientscript,tournament_sidepanel_setcolour]`  
-[**975**](scripts/[proc,tournament_sidepanel_setcolour].cs2) `[proc,tournament_sidepanel_setcolour]`  
-[**976**](scripts/[clientscript,tournament_data].cs2) `[clientscript,tournament_data]`  
-[**977**](scripts/[clientscript,tournament_sidepanel_stop_init].cs2) `[clientscript,tournament_sidepanel_stop_init]`  
-[**978**](scripts/[clientscript,tournament_sidepanel_stop_op].cs2) `[clientscript,tournament_sidepanel_stop_op]`  
-[**979**](scripts/[clientscript,tournament_sidepanel_stop_redraw].cs2) `[clientscript,tournament_sidepanel_stop_redraw]`  
-[**980**](scripts/[proc,tournament_sidepanel_stop_redraw].cs2) `[proc,tournament_sidepanel_stop_redraw]`  
 [**981**](scripts/[clientscript,keybind_build_dropdown].cs2) `[clientscript,keybind_build_dropdown]`  
 [**982**](scripts/[proc,keybind_build_dropdown].cs2) `[proc,keybind_build_dropdown]`  
 [**983**](scripts/[clientscript,keybind_dropdown_select].cs2) `[clientscript,keybind_dropdown_select]`  
@@ -1695,7 +1686,6 @@
 [**1692**](scripts/[clientscript,poh_jewellery_box_timeout].cs2) `[clientscript,poh_jewellery_box_timeout]`  
 [**1693**](scripts/script1693.cs2)  
 [**1694**](scripts/script1694.cs2)  
-[**1695**](scripts/[clientscript,oculus_close].cs2) `[clientscript,oculus_close]`  
 [**1696**](scripts/[proc,agilityarena_rewards_initbutton].cs2) `[proc,agilityarena_rewards_initbutton]`  
 [**1697**](scripts/[proc,magic_spacer_tostring].cs2) `[proc,magic_spacer_tostring]`  
 [**1698**](scripts/[clientscript,blast_mining_hud_init].cs2) `[clientscript,blast_mining_hud_init]`  
@@ -3446,3 +3436,9 @@
 [**3443**](scripts/script3443.cs2)  
 [**3444**](scripts/script3444.cs2)  
 [**3445**](scripts/script3445.cs2)  
+[**3446**](scripts/script3446.cs2)  
+[**3447**](scripts/script3447.cs2)  
+[**3448**](scripts/script3448.cs2)  
+[**3449**](scripts/script3449.cs2)  
+[**3450**](scripts/script3450.cs2)  
+[**3451**](scripts/script3451.cs2)  
