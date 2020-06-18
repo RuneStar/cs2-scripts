@@ -1,7 +1,7 @@
 // 3429
 script3429(int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20)
 def_int $int21 = 0;
-if (if_gettrans($component14) < 255) {
+if (((%varcint394 = 2) & (if_gettrans($component14) < 255)) & (if_gettrans($component14) > 0)) {
 	if_settrans($int21, $component14);
 	if_settrans($int21, $component15);
 	if_settrans($int21, $component16);

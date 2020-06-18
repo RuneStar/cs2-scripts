@@ -5,22 +5,18 @@ if (~keypress_permit(16, -1) = 0) {
 }
 switch_int ($key0) {
 	case ^key_escape :
-		sound_synth(synth_2266, 1, 0);
 		if_close;
 	case ^key_space :
 		if (cc_find($component1, $int2) = ^true) {
-			sound_synth(synth_2266, 1, 0);
 			cc_resume_pausebutton;
 		}
 	case ^key_page_up :
 		if (%varcint204 < 15) {
-			sound_synth(synth_2266, 1, 0);
 			%varcint204 = ~max(3, calc(%varcint204 + 1));
 			_3129(%varcint204, 2);
 		}
 	case ^key_page_down :
 		if (%varcint204 > 3) {
-			sound_synth(synth_2266, 1, 0);
 			%varcint204 = ~min(15, calc(%varcint204 - 1));
 			_3129(%varcint204, 2);
 		}
