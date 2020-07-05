@@ -1,0 +1,34 @@
+// 3453
+script3453(int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6)(int)
+def_boolean $boolean7 = false;
+switch_int ($int0) {
+	case 0 :
+		if ($int3 = 1) {
+			$boolean7 = true;
+		}
+	case 1 :
+		if ($int4 > 0) {
+			$boolean7 = true;
+		}
+	case 2 :
+		if ($int5 = 1) {
+			$boolean7 = true;
+		}
+	case 3 :
+		if ($int6 >= 21) {
+			$boolean7 = true;
+		}
+}
+def_component $component8 = enum(int, component, enum_2902, $int0);
+if_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top, $component8);
+def_string $string0 = enum(int, string, enum_2910, $int0);
+def_int $int9 = calc((5 + ~max(17, ((paraheight($string0, $int1, p11_full) * 12) + 2))) + 5);
+if_setsize(20, $int9, ^setsize_minus, ^setsize_abs, $component8);
+def_int $int10 = ~script3454($component8, $int0, $string0, $boolean7, 0);
+if_setonmouserepeat("cc_colour_swapper(event_com, $int10, ^white)", $component8);
+if_setonmouseleave("cc_colour_swapper(event_com, $int10, 0xff981f)", $component8);
+if_setop(1, "Toggle", $component8);
+.cc_create(interface_4:12, ^iftype_rectangle, $int0);
+.cc_sethide(true);
+if_setonop("script3455(event_com, $int0, $string0, $boolean7)", $component8);
+return(calc($int2 + $int9));

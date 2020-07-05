@@ -1,0 +1,8 @@
+// 3486
+script3486(int $int0, component $component1, string $string0, component $component2)
+if ($int0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+~script3485($component1, $string0, 1, $component2);
+if_setontimer("script3487(calc(clientclock + 40), $component1, $string0, $component2)", $component1);

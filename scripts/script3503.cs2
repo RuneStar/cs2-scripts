@@ -1,0 +1,17 @@
+// 3503
+script3503(component $component0, boolean $boolean1, boolean $boolean2)
+def_int $int3 = 0;
+if (($boolean1 = true) | ($boolean2 = true)) {
+	$int3 = ~v2_stone_button_in_filled($component0);
+} else {
+	$int3 = ~v2_stone_button_filled($component0);
+}
+cc_create($component0, ^iftype_graphic, $int3);
+cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("bankbuttons,4");
+if ($boolean2 = true) {
+	cc_settrans(0);
+} else {
+	cc_settrans(50);
+}

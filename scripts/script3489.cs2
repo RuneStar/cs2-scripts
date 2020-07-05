@@ -1,0 +1,48 @@
+// 3489
+script3489(boolean $boolean0, boolean $boolean1, component $component2, string $string0, component $component3)
+def_int $int4 = 0;
+if (($boolean0 = true) & ($boolean1 = false)) {
+	$int4 = ~v2_stone_button_out_filled($component2);
+} else {
+	$int4 = ~v2_stone_button_in_filled($component2);
+}
+if ($component2 = $component3) {
+	cc_create($component2, ^iftype_text, $int4);
+	.cc_create($component2, ^iftype_text, calc($int4 + 1));
+	cc_setsize(0, 10, ^setsize_minus, ^setsize_minus);
+	.cc_setsize(0, 10, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settextshadow(true);
+	.cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	.cc_settextfont(p11_full);
+	if ($boolean0 = true) {
+		cc_setcolour(^white);
+		.cc_setcolour(^white);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+		cc_settext("Confirm:");
+		.cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+		.cc_settext($string0);
+	} else {
+		cc_setcolour(0x9f9f9f);
+		.cc_setcolour(0x9f9f9f);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settext("---");
+		.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		.cc_settext("");
+	}
+} else {
+	cc_create($component2, ^iftype_text, $int4);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	if ($boolean0 = true) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour(0x9f9f9f);
+	}
+	cc_settextshadow(true);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext($string0);
+}

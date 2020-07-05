@@ -1,5 +1,5 @@
 // 1758
-script1758(component $component0, int $int1)
+script1758(component $component0, int $int1, struct $struct2)
 if (cc_find($component0, $int1) = ^true) {
-	cc_set2dangle(~script1759);
+	cc_set2dangle(~script1759($struct2));
 }

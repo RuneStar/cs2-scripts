@@ -12,6 +12,7 @@ def_int $int10 = ~min(_6222, calc($int5 - $int7));
 def_int $int11 = _6223;
 if_setposition($int8, $int9, ^setpos_abs_left, ^setpos_abs_top, $component0);
 if_setsize(calc($int5 - ($int10 - $int8)), calc($int6 - ($int11 - $int9)), ^setsize_minus, ^setsize_minus, $component0);
+def_component $component12 = null;
 if ($component0 = interface_601:14) {
 	if (.cc_find(interface_601:2, 0) = ^true) {
 		.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
@@ -52,6 +53,10 @@ if ($component0 = interface_601:14) {
 		.cc_setonclick("opsound(0, 0)");
 		.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 		.cc_setsize($int10, 0, ^setsize_minus, ^setsize_minus);
+	}
+	$component12 = enum(component, component, enum_1745, interface_161:18);
+	if ($component12 ! null) {
+		~script3506($component12);
 	}
 }
 if_setonresize("script2235($component0, $component1, $int5, $int6, %varcint381)", $component0);

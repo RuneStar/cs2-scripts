@@ -1,0 +1,8 @@
+// 3452
+script3452(component $component0, int $int1, string $string0)
+if (cc_find($component0, $int1) = ^true) {
+	sound_synth(synth_2266, 1, 0);
+	mes($string0);
+	cc_settrans(100);
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, 0, calc(clientclock + 10))");
+}

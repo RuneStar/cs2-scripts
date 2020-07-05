@@ -1,0 +1,15 @@
+// 3455
+script3455(component $component0, int $int1, string $string0, boolean $boolean2)
+sound_synth(synth_2266, 1, 0);
+if ($boolean2 = true) {
+	~script3454($component0, $int1, $string0, false, 1);
+} else {
+	~script3454($component0, $int1, $string0, true, 1);
+}
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+if_setonop(null, $component0);
+if_setontimer("script3456(calc(clientclock + 40), event_com, $int1, $string0, $boolean2)", $component0);
+if (cc_find(interface_4:12, $int1) = ^true) {
+	cc_resume_pausebutton;
+}

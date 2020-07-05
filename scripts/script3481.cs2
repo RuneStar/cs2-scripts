@@ -1,0 +1,9 @@
+// 3481
+script3481
+if (%var261 > 1) {
+	cc_settext("Coffer: <col=ffffff><~tostring_spacer(%var261, ",")></col> coins");
+} else if (%var261 = 1) {
+	cc_settext("Coffer: <col=ffffff>1</col> coin");
+} else {
+	cc_settext("Coffer: <col=ffffff>Empty</col>");
+}

@@ -6,5 +6,11 @@ if ($int0 ! 1) {
 sound_synth(synth_2266, 1, 0);
 ~worldmap_maplist_close($component2, $component3);
 if ((worldmap_getcurrentmap ! $maparea1) & (cc_find($component2, 4) = ^true)) {
-	~worldmap_loadmap($maparea1, %varcint188, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+	if (~worldmap_findcoordinmap($maparea1, %varcint188) ! null) {
+		~worldmap_loadmap($maparea1, %varcint188, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+	} else if (~worldmap_findcoordinmap($maparea1, %varcint401) ! null) {
+		~worldmap_loadmap($maparea1, %varcint401, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+	} else {
+		~worldmap_loadmap($maparea1, null, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+	}
 }

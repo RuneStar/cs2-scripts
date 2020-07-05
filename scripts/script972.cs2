@@ -1,0 +1,48 @@
+// 972
+script972(int $int0, int $int1, int $int2, int $int3, int $int4, obj $obj5, obj $obj6, obj $obj7, obj $obj8, string $string0)
+def_int $int9 = 0;
+def_int $int10 = 0;
+cc_deleteall(interface_4:3);
+def_int $int11 = 0;
+if (string_length($string0) > 0) {
+	$int9 = calc(((3 + (paraheight($string0, (if_getwidth(interface_4:2) - 6), p12_full) * 12)) + 4) + 3);
+	cc_create(interface_4:3, ^iftype_graphic, $int11);
+	$int11 = calc($int11 + 1);
+	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setgraphic("tradebacking_light");
+	cc_settiling(true);
+	$int11 = ~thinbox(interface_4:3, $int11);
+	cc_create(interface_4:3, ^iftype_text, $int11);
+	$int11 = calc($int11 + 1);
+	cc_setsize(6, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext($string0);
+	$int10 = calc($int9 + 3);
+}
+if_setsize(0, $int9, ^setsize_minus, ^setsize_abs, interface_4:3);
+if_setsize(149, $int10, ^setsize_minus, ^setsize_minus, interface_4:4);
+if_setsize(150, $int10, ^setsize_abs, ^setsize_minus, interface_4:12);
+def_int $int12 = if_getwidth(interface_4:5);
+def_int $int13 = ~max(1, calc($int12 / (36 + 5)));
+def_int $int14 = 0;
+if ($int13 > 1) {
+	$int14 = calc(($int12 - ($int13 * 36)) / ($int13 - 1));
+}
+def_int $int15 = calc(($int12 - (($int13 * 36) + (($int13 - 1) * $int14))) / 2);
+~script974($int3, $int13, $int14, $int15, $int4, $obj5, $obj6, $obj7, $obj8);
+if_setoninvtransmit("script973($int3, $int13, $int14, $int15, $int4, $obj5, $obj6, $obj7, $obj8){inv, inv_584, inv_468}", interface_4:0);
+if_setonvartransmit("script973($int3, $int13, $int14, $int15, $int4, $obj5, $obj6, $obj7, $obj8){var499}", interface_4:0);
+cc_deleteall(interface_4:12);
+$int12 = calc(if_getwidth(interface_4:12) - 50);
+$int13 = enum_getoutputcount(enum_2902);
+$int11, $int10 = 0, 30;
+while ($int11 < $int13) {
+	$int10 = ~script3453($int11, $int12, $int10, $int1, $int0, $int3, $int2);
+	$int11, $int10 = calc($int11 + 1), calc($int10 + 5);
+}
+~thinbox(interface_4:12, $int13);

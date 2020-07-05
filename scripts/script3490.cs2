@@ -1,0 +1,31 @@
+// 3490
+script3490(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+def_int $int10 = ~steelborder($component1, ~script3494, 0);
+if (cc_find($component1, $int10) = ^true) {
+	cc_setoninvtransmit("script3493(event_com, event_comid){inv_636}");
+}
+~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+$int10 = 0;
+while ($int10 < 120) {
+	cc_create($component2, ^iftype_graphic, $int10);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_sethide(true);
+	cc_setgraphicshadow(0x333333);
+	cc_setop(1, "Select");
+	cc_setop(10, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+	$int10 = calc($int10 + 1);
+}
+~script3492($component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9);
+if_setoninvtransmit("script3491($component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9){inv_636}", $component0);
+if_setonvartransmit("script3491($component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9){var261, var262, var263}", $component0);
+if_setop(1, "1", $component4);
+~script3496("1", $component4);
+if_setop(1, "5", $component5);
+~script3496("5", $component5);
+if_setop(1, "X", $component6);
+~script3496("X", $component6);
+if_setop(1, "All", $component7);
+~script3496("All", $component7);
+if_setop(1, "Take-All", $component8);
+~script3501($component8);

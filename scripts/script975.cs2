@@ -1,0 +1,22 @@
+// 975
+script975(string $string0, component $component0, int $int1, int $int2, int $int3, int $int4)(int, int)
+if ($int1 <= 0) {
+	if_sethide(true, $component0);
+	return($int3, $int4);
+}
+if_sethide(false, $component0);
+if ($int4 > 0) {
+	$int4, $int3 = ~pest_rewards_divider(0, interface_4:5, $int4, $int3);
+}
+if_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+$int2 = calc($int2 + 32);
+if_setsize(0, $int2, ^setsize_minus, ^setsize_abs, $component0);
+cc_create($component0, ^iftype_text, $int1);
+cc_setsize(2, 12, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+return($int3, calc($int4 + $int2));

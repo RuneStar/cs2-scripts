@@ -1,0 +1,23 @@
+// 3469
+script3469(component $component0, component $component1, component $component2, int $int3, int $int4, int $int5, component $component6, int $int7, component $component8, int $int9, component $component10, component $component11, component $component12, component $component13, int $int14, int $int15)
+def_int $int16 = if_getwidth($component0);
+def_int $int17 = calc(if_getheight($component0) - $int3);
+if (($int14 = $int16) & ($int15 = $int17)) {
+	return;
+}
+if (calc(if_getx($component1) + if_getwidth($component1)) >= calc($int14 - 10)) {
+	if (if_getx($component1) <= 10) {
+		%varcint395 = calc(%varcint395 + ($int16 - $int14));
+	} else {
+		%varcint397 = calc(%varcint397 + ($int16 - $int14));
+	}
+}
+if (calc(if_gety($component1) + if_getheight($component1)) >= calc($int15 - 10)) {
+	if (if_gety($component1) <= calc($int3 + 10)) {
+		%varcint396 = calc(%varcint396 + ($int17 - $int15));
+	} else {
+		%varcint398 = calc(%varcint398 + ($int17 - $int15));
+	}
+}
+~script3464($component0, $component1, $component2, $int3, $int4, $int5, $component6, $int7, $component8, $int9, $component10, $component11, $component12, $component13);
+if_setontimer("script3468($component0, $component1, $component2, $int3, $int4, $int5, $component6, $int7, $component8, $int9, $component10, $component11, $component12, $component13, $int16, $int17)", $component0);

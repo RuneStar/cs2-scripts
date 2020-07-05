@@ -1,0 +1,20 @@
+// 3498
+script3498(string $string0, component $component0, boolean $boolean1, boolean $boolean2)
+def_int $int3 = 0;
+if (($boolean1 = true) | ($boolean2 = true)) {
+	$int3 = ~v2_stone_button_in_filled($component0);
+} else {
+	$int3 = ~v2_stone_button_filled($component0);
+}
+cc_create($component0, ^iftype_text, $int3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextshadow(true);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+if ($boolean2 = true) {
+	cc_setcolour(^white);
+} else {
+	cc_setcolour(0xdfdfdf);
+}

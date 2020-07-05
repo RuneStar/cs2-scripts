@@ -1,0 +1,14 @@
+// 3477
+script3477(int $int0, component $component1, int $int2, component $component3, component $component4, component $component5)
+if ((%varcint400 ! $int2) | (%varcint399 ! $int0)) {
+	if_settext(~script3475(%varcint399), $component1);
+	if_settext(~script3476(%varcint400), $component3);
+	if (%varcint399 ! 0) {
+		if_setop(1, "Unlock", $component4);
+		if_setgraphic("bankbuttons,7", $component5);
+	} else {
+		if_setop(1, "Take-All", $component4);
+		if_setgraphic("bankbuttons,4", $component5);
+	}
+	if_setontimer("script3477(%varcint399, $component1, %varcint400, $component3, $component4, $component5)", $component3);
+}

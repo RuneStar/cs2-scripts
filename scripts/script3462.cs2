@@ -1,0 +1,116 @@
+// 3462
+script3462(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, int $int16, component $component17)
+def_int $int18 = ~steelborder($component1, ~script3474, 3);
+if (cc_find($component1, $int18) = ^true) {
+	cc_setoninvtransmit("script3473(event_com, event_comid){inv_525}");
+}
+def_int $int19 = 0;
+def_graphic $graphic20 = null;
+if (~on_mobile = true) {
+	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $component2);
+	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $component2);
+	$graphic20 = "steelborder_close_button,0";
+	if_setgraphic($graphic20, $component2);
+	if_setonmouseleave("graphic_swapper(event_com, $graphic20)", $component2);
+	$graphic20 = "steelborder_close_button,1";
+	if_setonmouseover("graphic_swapper(event_com, $graphic20)", $component2);
+	$int19 = calc(165 - (23 + 30));
+} else {
+	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $component2);
+	if_setposition(3, 6, ^setpos_abs_right, ^setpos_abs_top, $component2);
+	$graphic20 = "close_buttons,0";
+	if_setgraphic($graphic20, $component2);
+	if_setonmouseleave("graphic_swapper(event_com, $graphic20)", $component2);
+	$graphic20 = "close_buttons,1";
+	if_setonmouseover("graphic_swapper(event_com, $graphic20)", $component2);
+}
+if_setop(1, "Close", $component2);
+if_setonop("opsound(event_opindex, 2)", $component2);
+if_setopkey(1, 13, 0, $component2);
+if_setop(1, "Take-All", $component8);
+~script3470($component8, $component9);
+~script3470($component14, $component15);
+~scrollbar_vertical($component7, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($component13, $component12, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_deleteall($component6);
+cc_deleteall($component12);
+$int18 = 0;
+while ($int18 < 120) {
+	cc_create($component6, ^iftype_graphic, $int18);
+	.cc_create($component12, ^iftype_graphic, $int18);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_sethide(true);
+	.cc_sethide(true);
+	cc_setoutline(1);
+	.cc_setoutline(1);
+	cc_setgraphicshadow(0x333333);
+	.cc_setgraphicshadow(0x333333);
+	cc_setop(1, "Take");
+	.cc_setop(1, "Take");
+	cc_setop(10, "Examine");
+	.cc_setop(10, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+	.cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+	$int18 = calc($int18 + 1);
+}
+def_int $int21 = calc(120 * 2);
+while ($int18 < $int21) {
+	cc_create($component12, ^iftype_text, $int18);
+	cc_setsize(36, 12, ^setsize_abs, ^setsize_abs);
+	cc_sethide(true);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	$int18 = calc($int18 + 1);
+}
+if_settext(~script3475(-1), $component11);
+if_settext(~script3476(-1), $component17);
+if_setontimer("script3477(-1, $component11, -1, $component17, $component14, $component15)", $component17);
+cc_deleteall($component0);
+$int18 = 0;
+while ($int18 < 8) {
+	cc_create($component0, ^iftype_graphic, $int18);
+	cc_sethide(false);
+	cc_settiling(true);
+	cc_settrans(255);
+	cc_setonmouserepeat("cc_settrans(event_com, event_comid, 200, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+	cc_setdraggable($component0, -1);
+	cc_setdragdeadzone(1);
+	cc_setdragdeadtime(5);
+	$int18 = calc($int18 + 1);
+}
+cc_deleteall($component4);
+$int18 = 0;
+while ($int18 < 4) {
+	cc_create($component4, ^iftype_rectangle, $int18);
+	cc_sethide(false);
+	cc_setsize(calc($int18 * 2), calc($int18 * 2), ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0x9f9f9f);
+	cc_setfill(false);
+	cc_settrans(calc(100 + ($int18 * 10)));
+	$int18 = calc($int18 + 1);
+}
+def_int $int22 = calc(((12 + parawidth(~script3476(^max_32bit_int), 512, p11_full)) + 2) + 10);
+def_int $int23 = calc((14 + ~max((32 + 4), 42)) + 2);
+def_int $int24 = 109;
+def_int $int25 = calc(((40 + $int23) + $int24) + 10);
+if (%varcint395 < $int22) {
+	%varcint395 = scale(2, 3, 512);
+}
+if (%varcint396 < $int25) {
+	%varcint396 = scale(8, 9, 334);
+}
+if (%varcint397 < 0) {
+	%varcint397 = calc((if_getwidth($component0) - %varcint395) / 2);
+}
+if (%varcint398 < $int19) {
+	%varcint398 = ~max($int19, calc((if_getheight($component0) - %varcint396) / 2));
+}
+~script3464($component0, $component3, $component4, $int19, $int22, $int25, $component5, $int23, $component10, $int24, $component6, $component7, $component12, $component13);
+if_setoninvtransmit("script3463($component0, $component3, $component4, $int19, $int22, $int25, $component5, $int23, $component10, $int24, $component6, $component7, $component12, $component13){inv_525}", $component0);
+if_setonvartransmit("script3463($component0, $component3, $component4, $int19, $int22, $int25, $component5, $int23, $component10, $int24, $component6, $component7, $component12, $component13){var1574, var499}", $component0);
+~script3469($component0, $component3, $component4, $int19, $int22, $int25, $component5, $int23, $component10, $int24, $component6, $component7, $component12, $component13, ^min_32bit_int, ^min_32bit_int);

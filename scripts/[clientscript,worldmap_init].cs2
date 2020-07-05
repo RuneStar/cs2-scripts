@@ -35,7 +35,7 @@ if (~toplevel_getcomponents ! enum_1132) {
 def_int $int26 = calc((4 + 1) * 21);
 if_setsize(0, $int26, ^setsize_minus, ^setsize_minus, $component20);
 if_setsize(6, $int26, ^setsize_minus, ^setsize_abs, $component10);
-def_int $intarray0(calc(~max(106, 37) + 1));
+def_int $intarray0(~max(enum_getoutputcount(enum_1705), calc(37 + 1)));
 cc_deleteall($component21);
 $int25 = 0;
 def_int $int27 = 16;
@@ -83,7 +83,7 @@ while ($category30 ! null) {
 	$category30 = enum(int, category, enum_1705, $int28);
 }
 if ($int28 >= 2) {
-	~worldmap_keysort(intarray0, $component21, 0, 106);
+	~worldmap_keysort(intarray0, $component21, 0, calc(enum_getoutputcount(enum_1705) - 1));
 }
 $int29 = calc($int29 + 18);
 def_int $int31 = -1;
@@ -312,12 +312,18 @@ while ($maparea45 ! null) {
 	}
 	$maparea45 = enum(int, maparea, enum_1697, $int28);
 }
-def_int $int46 = $int25;
+def_coord $coord46 = movecoord(0_0_0_0_0, $int25, 0, 0);
 cc_create($component16, ^iftype_graphic, $int25);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
 cc_setgraphic(struct_param(struct_1, param_459));
+$coord46 = movecoord($coord46, 0, 0, $int25);
+cc_create($component16, ^iftype_graphic, $int25);
+$int25 = calc($int25 + 1);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_sethide(true);
+cc_setgraphic(struct_param(struct_317, param_459));
 if ($int28 >= 3) {
 	~quicksort_cctext(intarray0, $component16, 1, 37);
 }
@@ -366,7 +372,7 @@ cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic("tradebacking");
 cc_settiling(true);
-cc_setonclick("worldmap_maplist_open($component12, $component13, $component16, $int46)");
+cc_setonclick("worldmap_maplist_open($component12, $component13, $component16, coordx($coord46), coordz($coord46))");
 if_setonclick("worldmap_maplist_close($component12, $component13)", $component14);
 cc_create($component12, ^iftype_rectangle, $int25);
 $int25 = calc($int25 + 1);

@@ -1,0 +1,12 @@
+// 3471
+script3471(int $int0, component $component1, component $component2)
+if ($int0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+cc_deleteall($component1);
+~options_button_on($component1, 0);
+if_settrans(0, $component2);
+if_setonmouserepeat(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setontimer("script3472(calc(clientclock + 20), $component1, $component2)", $component1);

@@ -1,8 +1,8 @@
 // 2303
-[proc,tob_hud_nameflasher](component $component0)
-def_int $int1 = calc(clientclock % 90);
-if ($int1 > 45) {
-	$int1 = calc(90 - $int1);
+[proc,tob_hud_nameflasher]()(int)
+def_int $int0 = calc(clientclock % 90);
+if ($int0 > 45) {
+	$int0 = calc(90 - $int0);
 }
-def_int $int2 = scale(invpow(calc($int1 * 255), 2), invpow(11475, 2), 255);
-if_setcolour(~rgb_to_hex(255, $int2, $int2), $component0);
+def_int $int1 = scale(invpow(calc($int0 * 255), 2), invpow(11475, 2), 255);
+return(~rgb_to_hex(255, $int1, $int1));

@@ -1,0 +1,84 @@
+// 3483
+script3483(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+def_string $string0 = ",";
+def_obj $obj6 = null;
+def_int $int7 = 0;
+def_int $int8 = 0;
+if ((%var262 >= 0) & (%var262 < inv_size(inv))) {
+	$obj6 = inv_getobj(inv, %var262);
+}
+if ($obj6 ! null) {
+	cc_settext(oc_name($obj6));
+	if (%var263 > 0) {
+		$int7 = ~min(%var263, inv_total(inv, $obj6));
+		if (%var264 >= 10000) {
+			if ($int7 > 1) {
+				.cc_settext("<~tostring_spacer($int7, $string0)> x <~tostring_spacer(%var264, $string0)> coins");
+			} else {
+				.cc_settext("<~tostring_spacer(%var264, $string0)> coins");
+			}
+			if (calc(^max_32bit_int / %var264) < $int7) {
+				~script3484($component5, "Many coins", $component5);
+			} else {
+				~script3484($component5, "<~tostring_spacer(calc($int7 * %var264), $string0)> coins", $component5);
+			}
+		} else if (%var264 = 1) {
+			if ($int7 > 1) {
+				.cc_settext("<~tostring_spacer($int7, $string0)> x <col=ff0000>1 coin</col>");
+			} else {
+				.cc_settext("<col=ff0000>1 coin</col>");
+			}
+			~script3484($component5, "Unacceptable item", $component5);
+		} else {
+			if ($int7 > 1) {
+				.cc_settext("<~tostring_spacer($int7, $string0)> x <col=ff0000><~tostring_spacer(%var264, $string0)> coins</col>");
+			} else {
+				.cc_settext("<col=ff0000><~tostring_spacer(%var264, $string0)> coins</col>");
+			}
+			~script3484($component5, "Unacceptable item", $component5);
+		}
+	} else {
+		.cc_settext("Select a quantity...");
+		~script3485($component5, "", 0, $component5);
+		if_setontimer(null, $component5);
+	}
+	switch_int (%var263) {
+		case 1 :
+			~script3485($component1, "1", 1, $component5);
+			if_setontimer(null, $component1);
+			~script3484($component2, "5", $component5);
+			~script3484($component3, "X", $component5);
+			~script3484($component4, "All", $component5);
+		case 5 :
+			~script3484($component1, "1", $component5);
+			~script3485($component2, "5", 1, $component5);
+			if_setontimer(null, $component2);
+			~script3484($component3, "X", $component5);
+			~script3484($component4, "All", $component5);
+		case ^max_32bit_int :
+			~script3484($component1, "1", $component5);
+			~script3484($component2, "5", $component5);
+			~script3484($component3, "X", $component5);
+			~script3485($component4, "All", 1, $component5);
+			if_setontimer(null, $component4);
+		case default :
+			~script3484($component1, "1", $component5);
+			~script3484($component2, "5", $component5);
+			~script3485($component3, "X", 1, $component5);
+			if_setontimer(null, $component3);
+			~script3484($component4, "All", $component5);
+	}
+} else {
+	cc_settext("Select an item...");
+	.cc_settext("---");
+	~script3485($component1, "1", 0, $component5);
+	if_setontimer(null, $component1);
+	~script3485($component2, "5", 0, $component5);
+	if_setontimer(null, $component2);
+	~script3485($component3, "X", 0, $component5);
+	if_setontimer(null, $component3);
+	~script3485($component4, "All", 0, $component5);
+	if_setontimer(null, $component4);
+	~script3485($component5, "", 0, $component5);
+	if_setontimer(null, $component5);
+}

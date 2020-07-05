@@ -7,12 +7,26 @@ if_sethide(false, $component4);
 if_sethide(true, $component5);
 if_setgraphic("miscgraphics,0", $component2);
 if_setontimer(null, $component2);
+def_string $string0 = "";
 def_namedobj $namedobj6 = enum(int, namedobj, enum_1756, %var261);
 def_int $int7 = enum(int, int, enum_1757, %var261);
 if (($namedobj6 ! null) & ($int7 > 0)) {
 	if_setgraphic("bankbuttons,7", $component3);
 	if_setop(1, "Unlock", $component2);
-	if ($int7 > 1) {
+	if ($namedobj6 = coins_995) {
+		if (%var262 > 1) {
+			$string0 = "Death's Coffer: <col=ffffff><~tostring_spacer(%var262, ",")> x <oc_name($namedobj6)></col>";
+		} else if (%var262 = 1) {
+			$string0 = "Death's Coffer: <col=ffffff>One Coin</col>";
+		} else {
+			$string0 = "Death's Coffer: <col=ffffff>Empty</col>";
+		}
+		if ($int7 > 1) {
+			if_settext("Fee to unlock: <col=ffffff><~tostring_spacer($int7, ",")> x <oc_name($namedobj6)></col><br><$string0>", $component5);
+		} else {
+			if_settext("Fee to unlock: <col=ffffff><oc_name($namedobj6)></col><br><$string0>", $component5);
+		}
+	} else if ($int7 > 1) {
 		if_settext("Fee to unlock:<br><col=ffffff><~tostring_spacer($int7, ",")> x <oc_name($namedobj6)></col>", $component5);
 	} else {
 		if_settext("Fee to unlock:<br><col=ffffff><oc_name($namedobj6)></col>", $component5);
@@ -21,7 +35,7 @@ if (($namedobj6 ! null) & ($int7 > 0)) {
 	if_setonmouseleave("gravestone_retrieval_buttonhover(false, $component3, $component4, $component5)", $component2);
 	if_setonop("gravestone_retrieval_buttonop(event_opindex, $component2, $component3, $component4, $component5)", $component2);
 } else {
-	if_setgraphic("bankbuttons,0", $component3);
+	if_setgraphic("bankbuttons,4", $component3);
 	if_setop(1, "Take-All", $component2);
 	if_settext("", $component5);
 	if_setonmouserepeat("gravestone_retrieval_buttonhover(true, $component3, null, null)", $component2);

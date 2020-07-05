@@ -1,0 +1,9 @@
+// 3456
+script3456(int $int0, component $component1, int $int2, string $string0, boolean $boolean3)
+if (clientclock < $int0) {
+	return;
+}
+def_int $int4 = ~script3454($component1, $int2, $string0, $boolean3, 0);
+if_setonmouserepeat("cc_colour_swapper(event_com, $int4, ^white)", $component1);
+if_setonmouseleave("cc_colour_swapper(event_com, $int4, 0xff981f)", $component1);
+if_setonop("script3455(event_com, $int2, $string0, $boolean3)", $component1);

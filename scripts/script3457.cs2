@@ -1,0 +1,18 @@
+// 3457
+script3457(component $component0)
+if ($component0 = null) {
+	return;
+}
+cc_deleteall($component0);
+.cc_create($component0, ^iftype_graphic, 0);
+.cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setgraphic("mod_icons_interface,21");
+cc_create($component0, ^iftype_text, 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+cc_settextshadow(true);
+~script3459($component0);
+if_setonvartransmit("script3458(event_com, cc_getid, .cc_getid){var1697}", $component0);

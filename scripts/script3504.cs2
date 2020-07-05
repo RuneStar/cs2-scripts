@@ -1,0 +1,11 @@
+// 3504
+script3504(int $int0, component $component1)
+if ($int0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+~script3503($component1, false, true);
+if_setonmouserepeat(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setonop(null, $component1);
+if_setontimer("script3500(calc(clientclock + 20), $component1)", $component1);

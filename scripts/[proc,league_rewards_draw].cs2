@@ -26,7 +26,7 @@ while ($int17 <= enum_getoutputcount($enum15)) {
 		cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
 		$int13 = calc($int13 + 13);
 		$int21 = calc($int21 + 1);
-		$int13, $int21 = ~pest_rewards_divider($component4, $int13, $int21);
+		$int13, $int21 = ~pest_rewards_divider(5, $component4, $int13, $int21);
 		while ($int18 < enum_getoutputcount($enum20)) {
 			if (calc($int18 % 2) = 0) {
 				$int12 = 0;

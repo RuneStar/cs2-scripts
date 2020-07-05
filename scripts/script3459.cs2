@@ -1,0 +1,22 @@
+// 3459
+script3459(component $component0)
+if (%varbit10465 <= 0) {
+	cc_sethide(true);
+	.cc_sethide(true);
+	if_setontimer(null, $component0);
+	if_clearops($component0);
+	return;
+}
+cc_sethide(false);
+.cc_sethide(false);
+if (%varbit10465 > 1500) {
+	cc_setcolour(0x9f9f9f);
+	cc_settext("---");
+	if_setontimer(null, $component0);
+	if_clearops($component0);
+	return;
+}
+def_int $int1 = calc(%varbit10465 * 30);
+~script3461($int1);
+if_setontimer("script3460(event_com, cc_getid, $int1, clientclock)", $component0);
+if_setop(1, "Grave info", $component0);

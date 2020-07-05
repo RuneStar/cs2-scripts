@@ -1,13 +1,15 @@
 // 161
 script161(inv $inv0, int $int1, component $component2, int $int3, int $int4, component $component5, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8, boolean $boolean6)
+def_obj $obj7 = null;
 if (cc_find($component2, $int3) = ^true) {
-	if (invother_getobj($inv0, $int1) ! null) {
+	$obj7 = invother_getobj($inv0, $int1);
+	if ($obj7 ! null) {
 		if ($boolean6 = true) {
-			cc_setobject(invother_getobj($inv0, $int1), invother_getnum($inv0, $int1));
+			cc_setobject($obj7, invother_getnum($inv0, $int1));
 		} else {
-			cc_setobject_nonum(invother_getobj($inv0, $int1), 1);
+			cc_setobject_nonum($obj7, 1);
 		}
-		cc_setopbase(oc_name(invother_getobj($inv0, $int1)));
+		cc_setopbase(oc_name($obj7));
 		cc_setop(1, $string0);
 		cc_setop(2, $string1);
 		cc_setop(3, $string2);
@@ -29,23 +31,17 @@ if (cc_find($component2, $int3) = ^true) {
 		}
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
+		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
 	} else {
 		cc_setobject(null, 0);
 		cc_setopbase("");
-		cc_setop(1, "");
-		cc_setop(2, "");
-		cc_setop(3, "");
-		cc_setop(4, "");
-		cc_setop(5, "");
-		cc_setop(6, "");
-		cc_setop(7, "");
-		cc_setop(8, "");
-		cc_setop(9, "");
-		cc_setop(10, "");
+		cc_clearops;
 		if ($int4 > 0) {
 			cc_setdragdeadzone(0);
 			cc_setdragdeadtime(0);
 		}
 		cc_setondragcomplete(null);
+		cc_setonop(null);
 	}
+	cc_settrans(0);
 }

@@ -1,0 +1,51 @@
+// 979
+script979(obj $obj0, int $int1, obj $obj2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8)(int, int, int)
+cc_create(interface_4:7, ^iftype_graphic, $int8);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+def_int $int9 = calc(17 + (($int8 / $int5) * (32 + $int6)));
+cc_setposition(calc($int7 + (($int8 % $int5) * (36 + $int6))), $int9, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphicshadow(0x333333);
+cc_setobject($obj0, $int1);
+cc_setop(1, "Check");
+cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+def_string $string0 = "";
+def_string $string1 = "";
+if ($int3 > 1) {
+	$string1 = "<br>Expected fee: <col=ff0000><~tostring_spacer($int3, ",")> coins</col>";
+} else if ($int3 = 1) {
+	$string1 = "<br>Expected fee: <col=ff0000>1 coin</col>";
+} else {
+	$string1 = "<br>Expected fee: <col=ff0000>None</col>";
+}
+if ($obj2 = burnt_fish_369) {
+	if ($int1 > 1) {
+		if (%varbit1777 = 2) {
+			$string0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: A downgraded version of these items will drop on the ground.";
+		} else {
+			$string0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: A downgraded version of these items will be sent to your gravestone.<$string1>";
+		}
+	} else if (%varbit1777 = 2) {
+		$string0 = "<oc_name($obj0)>: A downgraded version of this item will drop on the ground.";
+	} else {
+		$string0 = "<oc_name($obj0)>: A downgraded version of this item will be sent to your gravestone.<$string1>";
+	}
+	cc_setoutline(2);
+} else {
+	if ($int1 > 1) {
+		if (%varbit1777 = 2) {
+			$string0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: These items will drop on the ground.";
+		} else {
+			$string0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: These items will be sent to your gravestone.<$string1>";
+		}
+	} else if (%varbit1777 = 2) {
+		$string0 = "<oc_name($obj0)>: This item will drop on the ground.";
+	} else {
+		$string0 = "<oc_name($obj0)>: This item will be sent to your gravestone.<$string1>";
+	}
+	cc_setoutline(1);
+}
+cc_setonop("script3452(event_com, event_comid, $string0)");
+if (calc(^max_32bit_int / $int1) < $int3) {
+	return(calc($int8 + 1), $int9, $int4);
+}
+return(calc($int8 + 1), $int9, calc($int1 * $int3));

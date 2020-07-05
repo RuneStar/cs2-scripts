@@ -1,0 +1,9 @@
+// 3470
+script3470(component $component0, component $component1)
+cc_deleteall($component0);
+~options_button_off($component0, 0);
+if_settrans(0, $component1);
+if_setonmouserepeat("settrans($component1, 100)", $component0);
+if_setonmouseleave("settrans($component1, 0)", $component0);
+if_setonop("script3471(event_opindex, $component0, $component1)", $component0);
+if_setontimer(null, $component0);

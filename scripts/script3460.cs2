@@ -1,0 +1,7 @@
+// 3460
+script3460(component $component0, int $int1, int $int2, int $int3)
+def_int $int4 = 0;
+if (cc_find($component0, $int1) = ^true) {
+	$int4 = ~min(calc(clientclock - $int3), calc(3 * 30));
+	~script3461(calc($int2 - $int4));
+}

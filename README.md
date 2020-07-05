@@ -118,7 +118,7 @@
 [**115**](scripts/[clientscript,options_gfx_windowmode_init].cs2) `[clientscript,options_gfx_windowmode_init]`  
 [**116**](scripts/[clientscript,options_gfx_windowmode_check].cs2) `[clientscript,options_gfx_windowmode_check]`  
 [**117**](scripts/[proc,options_gfx_windowmode].cs2) `[proc,options_gfx_windowmode]`  
-[**118**](scripts/[clientscript,death_deathkeepinit].cs2) `[clientscript,death_deathkeepinit]`  
+[**118**](scripts/script118.cs2)  
 [**119**](scripts/[clientscript,component_pulse_start].cs2) `[clientscript,component_pulse_start]`  
 [**120**](scripts/[proc,options_gfx_togglebox].cs2) `[proc,options_gfx_togglebox]`  
 [**121**](scripts/[clientscript,options_gfx_mouseeffect].cs2) `[clientscript,options_gfx_mouseeffect]`  
@@ -972,6 +972,15 @@
 [**969**](scripts/[clientscript,stake_tooltip].cs2) `[clientscript,stake_tooltip]`  
 [**970**](scripts/[clientscript,logout_op].cs2) `[clientscript,logout_op]`  
 [**971**](scripts/[clientscript,ntk_init].cs2) `[clientscript,ntk_init]`  
+[**972**](scripts/script972.cs2)  
+[**973**](scripts/script973.cs2)  
+[**974**](scripts/script974.cs2)  
+[**975**](scripts/script975.cs2)  
+[**976**](scripts/script976.cs2)  
+[**977**](scripts/script977.cs2)  
+[**978**](scripts/script978.cs2)  
+[**979**](scripts/script979.cs2)  
+[**980**](scripts/script980.cs2)  
 [**981**](scripts/[clientscript,keybind_build_dropdown].cs2) `[clientscript,keybind_build_dropdown]`  
 [**982**](scripts/[proc,keybind_build_dropdown].cs2) `[proc,keybind_build_dropdown]`  
 [**983**](scripts/[clientscript,keybind_dropdown_select].cs2) `[clientscript,keybind_dropdown_select]`  
@@ -1591,10 +1600,7 @@
 [**1597**](scripts/[clientscript,deadman_delay_abortion].cs2) `[clientscript,deadman_delay_abortion]`  
 [**1598**](scripts/[proc,skill_guide_subsection_hunter].cs2) `[proc,skill_guide_subsection_hunter]`  
 [**1599**](scripts/[proc,skill_guide_data_hunter].cs2) `[proc,skill_guide_data_hunter]`  
-[**1600**](scripts/[clientscript,deathkeep_invtransmit].cs2) `[clientscript,deathkeep_invtransmit]`  
-[**1601**](scripts/[proc,deathkeep_build].cs2) `[proc,deathkeep_build]`  
 [**1602**](scripts/[proc,raids_storage_shared_warning].cs2) `[proc,raids_storage_shared_warning]`  
-[**1603**](scripts/[clientscript,deathkeep_infomessage].cs2) `[clientscript,deathkeep_infomessage]`  
 [**1604**](scripts/[clientscript,raids_storage_private_prompt].cs2) `[clientscript,raids_storage_private_prompt]`  
 [**1605**](scripts/[proc,raids_storage_private_prompt].cs2) `[proc,raids_storage_private_prompt]`  
 [**1606**](scripts/[clientscript,raids_storage_private_items].cs2) `[clientscript,raids_storage_private_items]`  
@@ -1686,6 +1692,7 @@
 [**1692**](scripts/[clientscript,poh_jewellery_box_timeout].cs2) `[clientscript,poh_jewellery_box_timeout]`  
 [**1693**](scripts/script1693.cs2)  
 [**1694**](scripts/script1694.cs2)  
+[**1695**](scripts/script1695.cs2)  
 [**1696**](scripts/[proc,agilityarena_rewards_initbutton].cs2) `[proc,agilityarena_rewards_initbutton]`  
 [**1697**](scripts/[proc,magic_spacer_tostring].cs2) `[proc,magic_spacer_tostring]`  
 [**1698**](scripts/[clientscript,blast_mining_hud_init].cs2) `[clientscript,blast_mining_hud_init]`  
@@ -3442,3 +3449,60 @@
 [**3449**](scripts/script3449.cs2)  
 [**3450**](scripts/script3450.cs2)  
 [**3451**](scripts/script3451.cs2)  
+[**3452**](scripts/script3452.cs2)  
+[**3453**](scripts/script3453.cs2)  
+[**3454**](scripts/script3454.cs2)  
+[**3455**](scripts/script3455.cs2)  
+[**3456**](scripts/script3456.cs2)  
+[**3457**](scripts/script3457.cs2)  
+[**3458**](scripts/script3458.cs2)  
+[**3459**](scripts/script3459.cs2)  
+[**3460**](scripts/script3460.cs2)  
+[**3461**](scripts/script3461.cs2)  
+[**3462**](scripts/script3462.cs2)  
+[**3463**](scripts/script3463.cs2)  
+[**3464**](scripts/script3464.cs2)  
+[**3465**](scripts/script3465.cs2)  
+[**3466**](scripts/script3466.cs2)  
+[**3467**](scripts/script3467.cs2)  
+[**3468**](scripts/script3468.cs2)  
+[**3469**](scripts/script3469.cs2)  
+[**3470**](scripts/script3470.cs2)  
+[**3471**](scripts/script3471.cs2)  
+[**3472**](scripts/script3472.cs2)  
+[**3473**](scripts/script3473.cs2)  
+[**3474**](scripts/script3474.cs2)  
+[**3475**](scripts/script3475.cs2)  
+[**3476**](scripts/script3476.cs2)  
+[**3477**](scripts/script3477.cs2)  
+[**3478**](scripts/script3478.cs2)  
+[**3479**](scripts/script3479.cs2)  
+[**3480**](scripts/script3480.cs2)  
+[**3481**](scripts/script3481.cs2)  
+[**3482**](scripts/script3482.cs2)  
+[**3483**](scripts/script3483.cs2)  
+[**3484**](scripts/script3484.cs2)  
+[**3485**](scripts/script3485.cs2)  
+[**3486**](scripts/script3486.cs2)  
+[**3487**](scripts/script3487.cs2)  
+[**3488**](scripts/script3488.cs2)  
+[**3489**](scripts/script3489.cs2)  
+[**3490**](scripts/script3490.cs2)  
+[**3491**](scripts/script3491.cs2)  
+[**3492**](scripts/script3492.cs2)  
+[**3493**](scripts/script3493.cs2)  
+[**3494**](scripts/script3494.cs2)  
+[**3495**](scripts/script3495.cs2)  
+[**3496**](scripts/script3496.cs2)  
+[**3497**](scripts/script3497.cs2)  
+[**3498**](scripts/script3498.cs2)  
+[**3499**](scripts/script3499.cs2)  
+[**3500**](scripts/script3500.cs2)  
+[**3501**](scripts/script3501.cs2)  
+[**3502**](scripts/script3502.cs2)  
+[**3503**](scripts/script3503.cs2)  
+[**3504**](scripts/script3504.cs2)  
+[**3505**](scripts/script3505.cs2)  
+[**3506**](scripts/script3506.cs2)  
+[**3507**](scripts/script3507.cs2)  
+[**3508**](scripts/script3508.cs2)  

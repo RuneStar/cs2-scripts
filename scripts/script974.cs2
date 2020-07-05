@@ -1,0 +1,104 @@
+// 974
+script974(int $int0, int $int1, int $int2, int $int3, int $int4, obj $obj5, obj $obj6, obj $obj7, obj $obj8)
+cc_deleteall(interface_4:6);
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+cc_deleteall(interface_4:7);
+def_int $int12 = 0;
+def_int $int13 = 0;
+cc_deleteall(interface_4:8);
+def_int $int14 = 0;
+def_int $int15 = 0;
+cc_deleteall(interface_4:9);
+def_int $int16 = 0;
+def_int $int17 = 0;
+cc_deleteall(interface_4:10);
+def_int $int18 = 0;
+def_int $int19 = 0;
+if ($int4 > 0) {
+	if ($obj5 ! null) {
+		$int9, $int10, $int11 = ~script976($obj5, $int4, $int1, $int2, $int3, $int9, $int11);
+	}
+	if ($obj6 ! null) {
+		$int9, $int10, $int11 = ~script976($obj6, $int4, $int1, $int2, $int3, $int9, $int11);
+	}
+	if ($obj7 ! null) {
+		$int9, $int10, $int11 = ~script976($obj7, $int4, $int1, $int2, $int3, $int9, $int11);
+	}
+	if ($obj8 ! null) {
+		$int9, $int10, $int11 = ~script976($obj8, $int4, $int1, $int2, $int3, $int9, $int11);
+	}
+}
+def_int $int20 = 500000;
+if (%varbit1777 ! 0) {
+	$int20 = calc($int20 / 2);
+}
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_obj $obj23 = null;
+def_obj $obj24 = null;
+def_int $int25 = 0;
+while ($int25 < 50) {
+	$obj23 = inv_getobj(inv_584, $int25);
+	if ($obj23 ! null) {
+		$obj24 = inv_getobj(inv_468, $int25);
+		switch_obj ($obj24) {
+			case burnt_fish_323, burnt_fish_343 :
+				$int9, $int10, $int11 = ~script977($obj23, inv_getnum(inv_584, $int25), $obj24, $int1, $int2, $int3, $int9, $int11);
+			case burnt_fish_367, burnt_fish_369 :
+				$int12, $int13, $int21 = ~script979($obj23, inv_getnum(inv_584, $int25), $obj24, calc(inv_getnum(inv_468, $int25) - 1), $int20, $int1, $int2, $int3, $int12);
+				$int22 = ~min($int20, calc($int22 + ~min($int20, $int21)));
+			case burnt_fishcake_7531 :
+				$int16, $int17 = ~script980($obj23, inv_getnum(inv_584, $int25), calc(inv_getnum(inv_468, $int25) - 1), $int1, $int2, $int3, $int16);
+			case jug_of_bad_wine_1991 :
+				$int14, $int15 = ~script1695($obj23, inv_getnum(inv_584, $int25), $int1, $int2, $int3, $int14);
+			case default :
+				$int18, $int19 = ~script978($obj23, inv_getnum(inv_584, $int25), $int1, $int2, $int3, $int18);
+		}
+	}
+	$int25 = calc($int25 + 1);
+}
+$int25 = inv_total(inv, old_school_bond_13190);
+while ($int25 > 0) {
+	$int9, $int10, $int11 = ~script977(old_school_bond_13190, 1, burnt_fish_323, $int1, $int2, $int3, $int9, $int11);
+	$int25 = calc($int25 - 1);
+}
+$int25 = inv_total(inv, old_school_bond_untradeable_13192);
+while ($int25 > 0) {
+	$int9, $int10, $int11 = ~script977(old_school_bond_untradeable_13192, 1, burnt_fish_323, $int1, $int2, $int3, $int9, $int11);
+	$int25 = calc($int25 - 1);
+}
+cc_deleteall(interface_4:5);
+def_int $int26 = 0;
+def_int $int27 = 0;
+def_string $string0 = "";
+$int26, $int27 = ~script975("Items that are <col=ffffff>KEPT</col>:", interface_4:6, $int9, $int10, $int26, $int27);
+if (%varbit1777 = 2) {
+	$string0 = "Items <col=ff0000>DROPPED</col> near where you die:";
+} else if ($int22 > 1) {
+	$string0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: <~tostring_spacer($int22, ",")> coins)</col>";
+} else if ($int22 = 1) {
+	$string0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: 1 coin)</col>";
+} else {
+	$string0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: None)</col>";
+}
+$int26, $int27 = ~script975($string0, interface_4:7, $int12, $int13, $int26, $int27);
+$int26, $int27 = ~script975("Items <col=ff0000>LOST</col> to the player who kills you:", interface_4:8, $int14, $int15, $int26, $int27);
+if (%varbit1777 = 2) {
+	$string0 = "Items <col=ff0000>DROPPED</col> as coins:";
+} else {
+	$string0 = "Items that go to your <col=ffffff>GRAVESTONE</col> as coins:";
+}
+$int26, $int27 = ~script975($string0, interface_4:9, $int16, $int17, $int26, $int27);
+$int26, $int27 = ~script975("Items that are <col=ff0000>DELETED</col>:", interface_4:10, $int18, $int19, $int26, $int27);
+if ($int27 > 0) {
+	$int27 = calc($int27 + 3);
+}
+if_setscrollpos(0, 0, interface_4:5);
+if (if_getheight(interface_4:5) < $int27) {
+	if_setscrollsize(0, $int27, interface_4:5);
+} else {
+	if_setscrollsize(0, 0, interface_4:5);
+}
+~scrollbar_vertical(interface_4:11, interface_4:5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

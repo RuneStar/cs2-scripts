@@ -134,7 +134,7 @@ while ($int7 < $int11) {
 $int12 = ~thinbox($component1, $int12);
 if ($int13 = 1) {
 	if_settextfont(p11_full, $component3);
-	~tob_hud_nameflasher($component3);
+	if_setcolour(~tob_hud_nameflasher, $component3);
 	if_setontimer("tob_hud_nameflasher($component3)", $component3);
 	if_settext("Your loadout contains too many of the <img=11> items - please discard some.", $component3);
 } else {

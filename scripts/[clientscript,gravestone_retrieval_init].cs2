@@ -2,7 +2,7 @@
 [clientscript,gravestone_retrieval_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
 def_int $int10 = ~steelborder($component1, "", 0);
 ~gravestone_retrieval_unlockstatus($component1, $int10, $component4, $component5, $component8, $component9);
-if_setonvartransmit("gravestone_retrieval_unlockstatus($component1, $int10, $component4, $component5, $component8, $component9){var261}", $component0);
+if_setonvartransmit("gravestone_retrieval_unlockstatus($component1, $int10, $component4, $component5, $component8, $component9){var261, var262}", $component0);
 if_setgraphic("miscgraphics,0", $component6);
 if_setop(1, "Discard-All", $component6);
 if_setontimer(null, $component6);
@@ -13,7 +13,7 @@ def_int $int11 = calc(36 + 10);
 def_int $int12 = calc(32 + 8);
 cc_deleteall($component2);
 def_int $int13 = 0;
-while ($int13 < 90) {
+while ($int13 < 120) {
 	cc_create($component2, ^iftype_graphic, $int13);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(1 + (($int13 % 8) * $int11)), calc(3 + (($int13 / 8) * $int12)), ^setpos_abs_left, ^setpos_abs_top);

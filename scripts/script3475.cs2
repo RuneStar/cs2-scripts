@@ -1,0 +1,12 @@
+// 3475
+script3475(int $int0)(string)
+if ($int0 < 0) {
+	return("Loading...");
+}
+if ($int0 = 0) {
+	return("Fee: <col=ffffff>Paid</col>");
+}
+if ($int0 = 1) {
+	return("Fee: <col=ffffff>1 coin</col>");
+}
+return("Fee: <col=ffffff><~tostring_spacer($int0, ",")> coins</col>");

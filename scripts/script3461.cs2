@@ -1,0 +1,11 @@
+// 3461
+script3461(int $int0)
+cc_setcolour(~tob_hud_nameflasher);
+def_int $int1 = ~max(1, calc($int0 / 50));
+def_int $int2 = calc($int1 / 60);
+$int1 = calc($int1 % 60);
+if ($int1 >= 10) {
+	cc_settext("<tostring($int2)>:<tostring($int1)>");
+} else {
+	cc_settext("<tostring($int2)>:0<tostring($int1)>");
+}

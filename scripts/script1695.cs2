@@ -1,0 +1,19 @@
+// 1695
+script1695(obj $obj0, int $int1, int $int2, int $int3, int $int4, int $int5)(int, int)
+cc_create(interface_4:8, ^iftype_graphic, $int5);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+def_int $int6 = calc(17 + (($int5 / $int2) * (32 + $int3)));
+cc_setposition(calc($int4 + (($int5 % $int2) * (36 + $int3))), $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+cc_setobject($obj0, $int1);
+cc_setop(1, "Check");
+cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+def_string $string0 = "";
+if ($int1 > 1) {
+	$string0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: These items will be lost to the player who kills you.";
+} else {
+	$string0 = "<oc_name($obj0)>: This item will be lost to the player who kills you.";
+}
+cc_setonop("script3452(event_com, event_comid, $string0)");
+return(calc($int5 + 1), $int6);

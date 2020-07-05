@@ -1,4 +1,5 @@
 // 158
 [clientscript,interface_invother_init](component $component0, inv $inv1, int $int2, int $int3, int $int4, component $component5, boolean $boolean6, string $string0, string $string1, string $string2, string $string3, string $string4)
-~interface_invother_update_big($component0, $inv1, $int2, $int3, $int4, $component5, $string0, $string1, $string2, $string3, $string4, "null", "null", "null", "null", $boolean6);
-if_setoninvtransmit("interface_invother_update_big($component0, $inv1, $int2, $int3, $int4, $component5, $string0, $string1, $string2, $string3, $string4, "null", "null", "null", "null", $boolean6){$inv1}", $component0);
+def_string $string5 = "";
+~interface_invother_update_big($component0, $inv1, $int2, $int3, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string5, $string5, $string5, $boolean6);
+if_setoninvtransmit("interface_invother_update_big($component0, $inv1, $int2, $int3, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string5, $string5, $string5, $boolean6){$inv1}", $component0);

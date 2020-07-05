@@ -14,21 +14,14 @@ if (cc_find($component0, 0) = ^true) {
 }
 def_int $int2 = 0;
 def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
 if (cc_find($component0, 1) = ^true) {
-	cc_setposition(0, 16, ^setpos_abs_centre, ^setpos_abs_top);
-	$int2 = if_getscrollheight($component1);
-	if ($int2 <= 0) {
-		$int2 = if_getheight($component1);
-	}
-	if ($int2 > 0) {
-		$int3 = calc(((if_getheight($component0) - 32) * if_getheight($component1)) / $int2);
-	} else {
-		$int3 = calc(if_getheight($component0) - 32);
-	}
-	if ($int3 < 10) {
-		$int3 = 10;
-	}
-	cc_setsize(0, $int3, ^setsize_minus, ^setsize_abs);
+	$int3 = ~max(1, if_getheight($component1));
+	$int2 = ~max($int3, if_getscrollheight($component1));
+	$int4 = ~max(10, calc(if_getheight($component0) - 32));
+	$int5 = ~max(10, ~min($int4, scale($int3, $int2, $int4)));
+	cc_setsize(0, $int5, ^setsize_minus, ^setsize_abs);
 	if (.cc_find($component0, 2) = ^true) {
 		.cc_setsize(0, 5, ^setsize_minus, ^setsize_abs);
 	}

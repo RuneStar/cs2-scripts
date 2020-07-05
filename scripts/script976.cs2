@@ -1,0 +1,20 @@
+// 976
+script976(obj $obj0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6)(int, int, int)
+def_int $int7 = calc($int4 + (($int6 % $int2) * (36 + $int3)));
+def_int $int8 = calc(17 + (($int6 / $int2) * (32 + $int3)));
+cc_create(interface_4:6, ^iftype_graphic, $int5);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);
+cc_setoutline(1);
+cc_setgraphicshadow(0x333333);
+cc_setobject_nonum($obj0, 1);
+cc_setop(1, "Check");
+cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+def_string $string0 = "";
+if ($int1 > 1) {
+	$string0 = "<oc_name($obj0)>: You'll protect your <tostring($int1)> most valuable items.";
+} else {
+	$string0 = "<oc_name($obj0)>: You'll protect your most valuable item.";
+}
+cc_setonop("script3452(event_com, event_comid, $string0)");
+return(calc($int5 + 1), $int8, calc($int6 + 1));

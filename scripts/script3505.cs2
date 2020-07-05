@@ -1,0 +1,10 @@
+// 3505
+script3505(inv $inv0, int $int1)(int)
+def_int $int2 = 0;
+while ($int1 > 0) {
+	$int1 = calc($int1 - 1);
+	if (inv_getobj($inv0, $int1) = null) {
+		$int2 = calc($int2 + 1);
+	}
+}
+return($int2);

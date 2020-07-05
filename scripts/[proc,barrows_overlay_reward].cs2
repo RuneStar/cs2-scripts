@@ -1,5 +1,13 @@
 // 1578
 [proc,barrows_overlay_reward](component $component0)
-def_int $int1 = calc(((((%varbit457 + %varbit458) + %varbit459) + %varbit460) + %varbit461) + %varbit462);
-def_int $int2 = calc(%varbit463 + ($int1 * 2));
-if_settext("Rewards potential: <tostring(interpolate(0, 100, 0, 1012, $int2))>%", $component0);
+def_int $int1 = 0;
+if (%varbit10465 > 0) {
+	$int1 = enum(enum, int, enum_1135, ~toplevel_getcomponents);
+	if ($int1 <= 0) {
+		if_settext("", $component0);
+		return;
+	}
+}
+def_int $int2 = calc(((((%varbit457 + %varbit458) + %varbit459) + %varbit460) + %varbit461) + %varbit462);
+def_int $int3 = calc(%varbit463 + ($int2 * 2));
+if_settext("Rewards potential: <tostring(interpolate(0, 100, 0, 1012, $int3))>%", $component0);

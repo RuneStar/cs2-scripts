@@ -1,0 +1,31 @@
+// 3454
+script3454(component $component0, int $int1, string $string0, boolean $boolean2, int $int3)(int)
+if_setontimer(null, $component0);
+def_int $int4 = 0;
+if ($boolean2 = true) {
+	$int4 = ~v2_stone_button_in_filled($component0);
+} else {
+	$int4 = ~v2_stone_button_out_filled($component0);
+}
+cc_create($component0, ^iftype_graphic, $int4);
+$int4 = calc($int4 + 1);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_centre);
+if ($boolean2 = true) {
+	cc_setgraphic("options_radio_buttons,2");
+} else {
+	cc_setgraphic("options_radio_buttons,1");
+}
+cc_create($component0, ^iftype_text, $int4);
+cc_setsize(30, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(5, 0, ^setpos_abs_right, ^setpos_abs_centre);
+if ($int3 = 1) {
+	cc_setcolour(^white);
+} else {
+	cc_setcolour(0xff981f);
+}
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 12);
+cc_settextshadow(true);
+cc_settext($string0);
+return($int4);

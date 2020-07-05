@@ -34,12 +34,17 @@ if (~on_mobile = true) {
 	$int7 = 33;
 	$int8 = 33;
 }
+def_int $int9 = 11;
 if (testbit($int1, 0) = ^false) {
-	~create_graphic($component0, 11, $graphic3, $int5, $int6, ^setpos_abs_right, ^setpos_abs_top, $int7, $int8, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, $int9, $graphic3, $int5, $int6, ^setpos_abs_right, ^setpos_abs_top, $int7, $int8, ^setsize_abs, ^setsize_abs);
 	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic3, null)");
 	cc_setonmouseover("cc_graphic_swapper(event_com, event_comid, $graphic4, null)");
 	cc_setop(1, "Close");
 	cc_setonop("closebutton_click");
 	cc_setonkey("closebutton_key(event_keypressed)");
+	$int9 = 12;
+}
+if (testbit($int1, 1) = ^true) {
+	~create_graphic($component0, $int9, "map_resize", 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 8, 8, ^setsize_abs, ^setsize_abs);
 }
 return($int2);
