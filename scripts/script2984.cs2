@@ -34,6 +34,8 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 20);
 if ($int10 = 0) {
 	if ($int11 = 1) {
 		cc_setonop("script2985($component0, $int1, $graphic7)");
+	} else {
+		cc_setonop("script1601");
 	}
 	cc_setop(4, $string0);
 	if ((~on_mobile = true) & ($int12 = 0)) {

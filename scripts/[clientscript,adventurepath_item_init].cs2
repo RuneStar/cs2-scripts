@@ -26,6 +26,7 @@ def_int $int14 = 0;
 def_int $int15 = 0;
 $int5 = ~create_v2_stone_button_filled_free($component2, $int5, calc(36 * 2), 40, 0, 0, "<lt><lt>   Back", 0xff981f, 0xff981f, 0, 0);
 cc_setop(1, "Back");
+cc_setonop("script1601");
 while ($int13 < 4) {
 	$enum10 = enum(int, enum, $enum7, $int13);
 	$enum11 = enum(int, enum, $enum8, $int13);
@@ -51,8 +52,7 @@ while ($int13 < 4) {
 		$int15 = enum_getoutputcount($enum10);
 		while ($int14 < $int15) {
 			$namedobj12 = enum(int, namedobj, $enum10, $int14);
-			$int5, $int6 = ~adventurepath_item_entry($int4, $component2, $int5, $namedobj12, enum(namedobj, int, $enum11, $namedobj12), enum(namedobj, string, $enum9, $namedobj12), $int6);
-			$int4 = calc($int4 + 50);
+			$int5, $int6, $int4 = ~adventurepath_item_entry($int4, $component2, $int5, $namedobj12, enum(namedobj, int, $enum11, $namedobj12), enum(namedobj, string, $enum9, $namedobj12), $int6);
 			$int14 = calc($int14 + 1);
 		}
 	}

@@ -1,108 +1,46 @@
 // 2993
-[proc,adventurepath_hint_list](string $string0, int $int0, int $int1, string $string1, fontmetrics $fontmetrics2)(string)
-$string0 = ~script1299($string0, " ", " ");
-def_int $int3 = string_indexof_string($string0, "|", 0);
-def_int $int4 = 0;
-def_string $string2 = "";
-def_string $string3 = "";
-def_string $string4 = "";
+[proc,adventurepath_hint_list](string $string0, component $component0)
+cc_deleteall($component0);
+def_int $int1 = string_indexof_string($string0, "|", 0);
+def_string $string1 = "";
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = calc(if_getwidth($component0) - 15);
 def_int $int5 = 0;
-def_string $string5 = "";
-def_string $string6 = "";
-def_string $string7 = "";
-def_string $string8 = "<br>    ";
-def_string $string9 = " ";
-def_int $int6 = 0;
-def_int $int7 = 0;
-def_int $int8 = 0;
-def_int $int9 = 0;
-def_int $int10 = 0;
-def_int $int11 = 0;
-$int0 = calc($int0 - 17);
-while ($int3 ! -1) {
+while ($int1 ! -1) {
+	$string1 = substring($string0, 0, $int1);
+	$string0 = substring($string0, calc($int1 + 1), string_length($string0));
+	cc_create($component0, ^iftype_graphic, $int3);
 	$int3 = calc($int3 + 1);
-	$string3 = substring($string0, 0, $int3);
-	$int4 = string_indexof_string($string3, " ", 0);
-	while ($int4 ! -1) {
-		$string4 = substring($string3, 0, $int4);
-		if (($int7 = 0) & ($int9 = 0)) {
-			$string7 = $string5;
-			$string5 = append($string5, $string4);
-			$int7 = 1;
-		} else {
-			$string7 = $string5;
-			$string5 = append($string5, " ");
-			$string5 = append($string5, $string4);
-		}
-		if (calc((parawidth($string7, $int0, $fontmetrics2) + parawidth($string4, $int0, $fontmetrics2)) + parawidth($string9, $int0, $fontmetrics2)) >= calc($int0 - $int5)) {
-			$string5 = append($string7, $string8);
-			$string5 = append($string5, $string4);
-			$string6 = append($string6, $string5);
-			$string5 = "";
-			$int7 = 0;
-			$int9 = 1;
-			$int5 = parawidth(append($string8, $string4), $int0, $fontmetrics2);
-		}
-		$string3 = substring($string3, calc($int4 + 1), string_length($string3));
-		$int4 = string_indexof_string($string3, " ", 0);
-		if (($int4 = -1) & ($int8 = 0)) {
-			$int4 = string_indexof_string($string3, "|", 0);
-			$int8 = 1;
-		} else if ($int8 = 1) {
-			$int4 = -1;
-		}
-	}
-	$string6 = append($string6, $string5);
-	if (($int6 = 0) & ($int1 = 1)) {
-		$int6 = 1;
-		$string2 = append("<$string1>:<br><img=14>", $string6);
-	} else if (($int6 = 0) & ($int1 = 0)) {
-		$int6 = 1;
-		$string2 = append("<img=14>", $string6);
-	} else {
-		$string2 = append("<$string2><br><img=14>", $string6);
-	}
-	$string0 = substring($string0, $int3, string_length($string0));
-	$int3 = string_indexof_string($string0, "|", 0);
-	$int5 = 0;
-	$string6 = "";
-	$string5 = "";
-	$int7 = 0;
-	$int8 = 0;
-	$int9 = 0;
+	cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+	cc_setposition(1, calc(1 + $int2), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("mod_icons_interface,14");
+	cc_create($component0, ^iftype_text, $int3);
+	$int3 = calc($int3 + 1);
+	$string1 = ~script1600($string1);
+	cc_settext($string1);
+	cc_setposition(15, $int2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 15);
+	cc_settextfont(p12_full);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(true);
+	$int5 = calc(paraheight($string1, $int4, p12_full) * 15);
+	cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
+	$int2 = calc($int2 + $int5);
+	$int1 = string_indexof_string($string0, "|", 0);
 }
-$int4 = string_indexof_string($string0, " ", 0);
-while ($int4 ! -1) {
-	$string4 = substring($string0, 0, $int4);
-	if (($int7 = 0) & ($int9 = 0)) {
-		$string7 = $string5;
-		$string5 = append($string5, $string4);
-		$int7 = 1;
-	} else {
-		$string7 = $string5;
-		$string5 = append($string5, " ");
-		$string5 = append($string5, $string4);
-	}
-	if (calc(parawidth($string7, $int0, $fontmetrics2) + parawidth($string4, $int0, $fontmetrics2)) > calc($int0 - $int5)) {
-		$string5 = append($string7, $string8);
-		$string5 = append($string5, $string4);
-		$string6 = append($string6, $string5);
-		$string5 = "";
-		$int7 = 0;
-		$int9 = 1;
-		$int5 = parawidth(append($string8, $string4), $int0, $fontmetrics2);
-	}
-	if ($int8 = 0) {
-		$string0 = substring($string0, calc($int4 + 1), string_length($string0));
-		$int4 = string_indexof_string($string0, " ", 0);
-		if ($int4 = -1) {
-			$int4 = string_length($string0);
-			$int8 = 1;
-		}
-	} else if ($int8 = 1) {
-		$int4 = -1;
-	}
-}
-$string6 = append($string6, $string5);
-$string2 = append("<$string2><br><img=14>", $string6);
-return($string2);
+cc_create($component0, ^iftype_graphic, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+cc_setposition(1, calc(1 + $int2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("mod_icons_interface,14");
+cc_create($component0, ^iftype_text, $int3);
+$string0 = ~script1600($string0);
+cc_settext($string0);
+cc_setposition(15, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_top, 15);
+cc_settextfont(p12_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+$int5 = calc(paraheight($string0, $int4, p12_full) * 15);
+cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);

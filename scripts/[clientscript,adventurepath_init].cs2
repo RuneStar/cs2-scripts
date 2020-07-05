@@ -5,8 +5,14 @@ def_struct $struct27 = null;
 def_enum $enum28 = null;
 def_int $int29 = 0;
 def_int $int30 = 0;
-if_setonvartransmit("script2944($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26){var2360}", $component2);
-~adventurepath_init($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26);
+def_int $int31 = ~adventurepath_init($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26);
+if_setonvartransmit("script2944($int31, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26){var2360, var2357}", $component2);
+if ($int31 > if_getheight($component2)) {
+	if_setscrollsize(0, $int31, $component2);
+} else {
+	if_setscrollsize(0, 0, $component2);
+}
+~scrollbar_vertical($component1, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if (%varbit9328 = 1) {
 	~adventurepath_task_init_op($component0, %var2357, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component18, $component17, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26);
 	~adventurepath_change_page($component0, $component3, $component17, $component19, 1);

@@ -15,6 +15,9 @@ def_int $int28 = -1;
 def_int $int29 = 0;
 def_int $int30 = 0;
 def_int $int31 = 0;
+if (~script3512($int1) = 0) {
+	$int1 = 1;
+}
 $enum27 = enum(int, enum, enum_2620, $int1);
 def_int $int32 = 0;
 def_int $int33 = 0;
@@ -78,6 +81,7 @@ $int31 = ~adventurepath_button_text($component13, $int31, $string0);
 if_setonmouserepeat("adventurepath_mouseover_path_reward($int1, $component13, $string0)", $component13);
 if_setonmouseleave("adventurepath_mouseleave_path_reward($int1, $component13, $string0)", $component13);
 cc_setop(1, "Show <col=ff9040>path reward");
+cc_setonop("script1601");
 $int31 = 0;
 def_int $int37 = ~adventurepath_return_path_length(%var2357);
 def_int $int38 = ~adventurepath_return_path_tasks_done(%var2357);

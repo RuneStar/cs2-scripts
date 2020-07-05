@@ -1,5 +1,6 @@
 // 2985
 script2985(component $component0, int $int1, graphic $graphic2)
+sound_synth(synth_2266, 1, 0);
 if (cc_find($component0, calc($int1 + 0)) = ^true) {
 	cc_setgraphic("tradebacking");
 }

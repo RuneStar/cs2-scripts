@@ -1,5 +1,6 @@
 // 3006
 [clientscript,adventurepath_say_item](obj $obj0, int $int1, boolean $boolean2)
+sound_synth(synth_2266, 1, 0);
 if ($obj0 = bank_filler_20594) {
 	mes("There are no rewards of this type.");
 } else if ($boolean2 = true) {
