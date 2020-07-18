@@ -15,5 +15,5 @@ if ($int1 > 1) {
 } else {
 	$string0 = "<oc_name($obj0)>: This item will be lost to the player who kills you.";
 }
-cc_setonop("script3452(event_com, event_comid, $string0)");
+cc_setonop("deathkeep_opitem(event_com, event_comid, $string0)");
 return(calc($int5 + 1), $int6);

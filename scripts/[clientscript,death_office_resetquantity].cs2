@@ -1,0 +1,5 @@
+// 3495
+[clientscript,death_office_resetquantity](int $int0, string $string0, component $component1)
+if (clientclock >= $int0) {
+	~death_office_resetquantity($string0, $component1);
+}

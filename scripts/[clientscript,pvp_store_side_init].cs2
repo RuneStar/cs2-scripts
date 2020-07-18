@@ -1,0 +1,17 @@
+// 3365
+[clientscript,pvp_store_side_init](component $component0)
+cc_deleteall($component0);
+def_int $int1 = calc(((42 - 36) * 3) - 2);
+def_int $int2 = calc((36 - 32) * 2);
+def_int $int3 = 0;
+def_int $int4 = inv_size(inv);
+while ($int3 < $int4) {
+	cc_create($component0, ^iftype_graphic, $int3);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int1 + (($int3 % 4) * 42)), calc($int2 + (($int3 / 4) * 36)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	$int3 = calc($int3 + 1);
+}
+~pvp_store_side_draw($component0);
+if_setoninvtransmit("pvp_store_side_draw($component0){inv}", $component0);

@@ -27,7 +27,7 @@ if (~on_mobile = false) {
 cc_create($component3, ^iftype_text, $int23);
 cc_settextalign(^settextalign_left, ^settextalign_top, 17);
 cc_setcolour(0xff981f);
-cc_settext(~script1600(struct_param($struct5, param_813)));
+cc_settext(~adventurepath_replace(struct_param($struct5, param_813)));
 cc_settextshadow(true);
 cc_settextfont(p12_full);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -187,7 +187,7 @@ if_setcolour(0xff981f, $component20);
 def_graphic $graphic41 = struct_param($struct5, param_822);
 if ($graphic41 ! null) {
 	if_setgraphic($graphic41, $component19);
-	if_settext(~script1600(struct_param($struct5, param_823)), $component18);
+	if_settext(~adventurepath_replace(struct_param($struct5, param_823)), $component18);
 	if_setcolour(0xff981f, $component18);
 }
 if_settext($string1, $component16);

@@ -1,0 +1,4 @@
+// 3474
+[proc,gravestone_generic_title]()(string)
+def_int $int0 = inv_size(inv_525);
+return("Gravestone <col=ffb83f>(<tostring(calc($int0 - ~inv_freespace(inv_525, $int0)))>/<tostring($int0)>)</col>");

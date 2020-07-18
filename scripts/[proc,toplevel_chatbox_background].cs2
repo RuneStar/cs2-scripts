@@ -23,7 +23,7 @@ cc_deleteall(interface_162:57);
 def_int $int1 = 0;
 if ((clientclock < %varcint223) & (~toplevel_getcomponents ! enum_1129)) {
 	$int1 = 1;
-	if_setontimer("script2155(%varcint223)", interface_162:38);
+	if_setontimer("toplevel_chatbox_resetbackground_soon(%varcint223)", interface_162:38);
 } else {
 	if_setontimer(null, interface_162:38);
 }

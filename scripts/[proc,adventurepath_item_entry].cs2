@@ -29,7 +29,7 @@ switch_namedobj ($namedobj3) {
 	case combat_path_voucher_24131 :
 		cc_setop(1, "Show voucher items");
 		$string1 = "Combat path voucher";
-		cc_setonop("script1603(0, $string1)");
+		cc_setonop("adventurepath_voucher_op_init(0, $string1)");
 		$string0 = append($string0, " <~text_device("Click", "Tap")> the voucher icon to see the rewards.");
 	case default :
 		cc_setop(1, "Check reward");

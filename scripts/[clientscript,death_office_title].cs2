@@ -1,0 +1,5 @@
+// 3493
+[clientscript,death_office_title](component $component0, int $int1)
+if (cc_find($component0, $int1) = ^true) {
+	cc_settext(~death_office_title);
+}

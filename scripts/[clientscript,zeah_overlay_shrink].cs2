@@ -1,0 +1,11 @@
+// 1224
+[clientscript,zeah_overlay_shrink](component $component0, component $component1, component $component2, int $int3, boolean $boolean4)
+if (clientclock < $int3) {
+	return;
+}
+if_sethide(true, $component2);
+if_setnoclickthrough(false, $component2);
+if_setontimer("zeah_overlay_shrink_it($component0)", $component0);
+if ($boolean4 = true) {
+	if_setonclick("zeah_overlay_grow($component0, $component1, $component2, true)", $component1);
+}

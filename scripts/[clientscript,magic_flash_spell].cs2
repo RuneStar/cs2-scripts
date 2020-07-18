@@ -9,6 +9,6 @@ if ($component2 = null) {
 }
 if_setontimer("magic_flash($component2, 1, 0)", magic_spellbook:3);
 if (%varcint393 ! null) {
-	~script2682(%varcint393);
+	~magic_stop_flash(%varcint393);
 }
 %varcint393 = $obj1;
