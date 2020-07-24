@@ -1,5 +1,5 @@
 // 3099
-[clientscript,canoe_map_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+[clientscript,canoe_map_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 cc_deleteall($component0);
 cc_deleteall($component1);
 cc_deleteall($component2);
@@ -7,6 +7,7 @@ cc_deleteall($component3);
 cc_deleteall($component4);
 cc_deleteall($component5);
 cc_deleteall($component6);
+cc_deleteall($component7);
 cc_create($component0, ^iftype_text, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -25,26 +26,30 @@ if (~on_mobile = false) {
 }
 if_setop(1, "Close", $component1);
 if_setonop("canoe_close", $component1);
-def_int $int7 = 1;
 def_int $int8 = 1;
 def_int $int9 = 1;
 def_int $int10 = 1;
 def_int $int11 = 1;
-$int7, $int8, $int9, $int10, $int11 = ~canoe_return_locations;
-if ($int7 ! 1) {
+def_int $int12 = 1;
+def_int $int13 = 1;
+$int8, $int9, $int10, $int11, $int12, $int13 = ~canoe_return_locations;
+if ($int8 ! 1) {
 	~canoe_location_setup($component2, "Lumbridge", false, model_12103, model_12104, "Travel to<col=ff9040> Lumbridge", 0, 15);
 }
-if ($int8 ! 1) {
+if ($int9 ! 1) {
 	~canoe_location_setup($component3, "Champions <br>Guild", false, model_12103, model_12104, "Travel to<col=ff9040> Champions Guild", -20, 0);
 }
-if ($int9 ! 1) {
+if ($int10 ! 1) {
 	~canoe_location_setup($component4, "Barbarian <br> Village", false, model_12103, model_12104, "Travel to<col=ff9040> Barbarian Village", -10, 20);
 }
-if ($int10 ! 1) {
+if ($int11 ! 1) {
 	~canoe_location_setup($component5, "Edgeville", false, model_12103, model_12104, "Travel to<col=ff9040> Edgeville", -10, 25);
 }
-if ($int11 ! 1) {
+if ($int12 ! 1) {
 	~canoe_location_setup($component6, "Wilderness Pond - <br>No canoe trees here.", true, null, null, "Travel to<col=ff9040> Wilderness Pond", 0, 0);
+}
+if ($int13 ! 1) {
+	~canoe_location_setup($component7, "Ferox <br> Enclave", false, model_12103, model_12104, "Travel to<col=ff9040> Ferox Enclave", -15, 35);
 }
 switch_int (%varbit1846) {
 	case 3 :
@@ -55,4 +60,6 @@ switch_int (%varbit1846) {
 		~script3102($component5);
 	case 1 :
 		~script3102($component2);
+	case 5 :
+		~script3102($component7);
 }

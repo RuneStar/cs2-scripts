@@ -1,0 +1,41 @@
+// 3522
+script3522(component $component0, component $component1)
+def_string $string0 = enum(int, string, enum_3047, %varbit10535);
+if ((%varbit10542 > 0) & (%varbit10542 < 6)) {
+	$string0 = append($string0, "<br><br><col=ffffff>Graceful Run Restoration Bonus:</col><br><br>");
+	if (%varbit10536 = 1) {
+		$string0 = append($string0, "Graceful Hood:  +3%.<br>");
+	}
+	if (%varbit10537 = 1) {
+		$string0 = append($string0, "Graceful Torso:  +4%.<br>");
+	}
+	if (%varbit10538 = 1) {
+		$string0 = append($string0, "Graceful Legs:  +4%.<br>");
+	}
+	if (%varbit10540 = 1) {
+		$string0 = append($string0, "Graceful Gloves:  +3%.<br>");
+	}
+	if (%varbit10539 = 1) {
+		$string0 = append($string0, "Graceful Boots:  +3%.<br>");
+	}
+	if (%varbit10541 = 1) {
+		$string0 = append($string0, "Graceful Cape:  +3%.<br>");
+	}
+}
+def_int $int2 = calc((paraheight($string0, if_getwidth($component0), p12_full) * 12) + 5);
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_setcolour(0xff981f);
+cc_settext($string0);
+if_setscrollpos(0, 0, $component0);
+if_setscrollsize(0, $int2, $component0);
+if ($int2 > if_getheight($component0)) {
+	~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	if_sethide(false, $component1);
+} else {
+	if_sethide(true, $component1);
+}

@@ -1,5 +1,5 @@
 // 3104
-[proc,canoe_return_locations]()(int, int, int, int, int)
+[proc,canoe_return_locations]()(int, int, int, int, int, int)
 switch_int (~canoe_get_state(%varbit1846)) {
 	case 11 :
 		return(~canoe_paddle_log(%varbit1846));
@@ -10,5 +10,5 @@ switch_int (~canoe_get_state(%varbit1846)) {
 	case 14 :
 		return(~canoe_paddle_stable_waka(%varbit1846));
 	case default :
-		return(0, 0, 0, 0, 0);
+		return(0, 0, 0, 0, 0, 0);
 }
