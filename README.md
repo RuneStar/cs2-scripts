@@ -1063,7 +1063,7 @@
 [**1060**](scripts/[proc,farming_tools_main_update].cs2) `[proc,farming_tools_main_update]`  
 [**1061**](scripts/[clientscript,farming_tools_side_update].cs2) `[clientscript,farming_tools_side_update]`  
 [**1062**](scripts/[proc,farming_tools_side_update].cs2) `[proc,farming_tools_side_update]`  
-[**1063**](scripts/script1063.cs2)  
+[**1063**](scripts/[proc,farming_tools_getstored].cs2) `[proc,farming_tools_getstored]`  
 [**1064**](scripts/script1064.cs2)  
 [**1065**](scripts/[clientscript,barrows_reward_init].cs2) `[clientscript,barrows_reward_init]`  
 [**1066**](scripts/[clientscript,barrows_reward_draw].cs2) `[clientscript,barrows_reward_draw]`  
@@ -1091,8 +1091,8 @@
 [**1088**](scripts/[clientscript,stonebutton_url_clickrelease].cs2) `[clientscript,stonebutton_url_clickrelease]`  
 [**1089**](scripts/[clientscript,slayer_rewards_extend_init].cs2) `[clientscript,slayer_rewards_extend_init]`  
 [**1090**](scripts/[proc,slayer_rewards_unlock_draw].cs2) `[proc,slayer_rewards_unlock_draw]`  
-[**1091**](scripts/script1091.cs2)  
-[**1092**](scripts/script1092.cs2)  
+[**1091**](scripts/[clientscript,slayer_rewards_etcetera_draw].cs2) `[clientscript,slayer_rewards_etcetera_draw]`  
+[**1092**](scripts/[proc,slayer_rewards_etcetera_draw].cs2) `[proc,slayer_rewards_etcetera_draw]`  
 [**1093**](scripts/[clientscript,bugreport_init].cs2) `[clientscript,bugreport_init]`  
 [**1094**](scripts/[proc,bugreport_init_textinput].cs2) `[proc,bugreport_init_textinput]`  
 [**1095**](scripts/[clientscript,bugreport_info].cs2) `[clientscript,bugreport_info]`  
@@ -1432,8 +1432,8 @@
 [**1429**](scripts/script1429.cs2)  
 [**1430**](scripts/script1430.cs2)  
 [**1431**](scripts/script1431.cs2)  
-[**1432**](scripts/script1432.cs2)  
-[**1433**](scripts/script1433.cs2)  
+[**1432**](scripts/[clientscript,wint_outside_event].cs2) `[clientscript,wint_outside_event]`  
+[**1433**](scripts/[clientscript,wint_inside_event].cs2) `[clientscript,wint_inside_event]`  
 [**1434**](scripts/script1434.cs2)  
 [**1435**](scripts/[clientscript,cws_init].cs2) `[clientscript,cws_init]`  
 [**1436**](scripts/[proc,cws_init_button].cs2) `[proc,cws_init_button]`  
