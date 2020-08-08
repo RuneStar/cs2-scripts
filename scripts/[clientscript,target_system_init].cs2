@@ -1,71 +1,54 @@
 // 3141
-[clientscript,target_system_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
+[clientscript,target_system_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
 cc_deleteall($component2);
 ~thinstonebox($component2, 0);
-def_graphic $graphic16 = "zeah_book,0";
-def_graphic $graphic17 = "zeah_book,1";
+def_graphic $graphic11 = "zeah_book,0";
+def_graphic $graphic12 = "zeah_book,1";
 cc_deleteall($component1);
-def_int $int18 = 0;
+def_int $int13 = 0;
 if (~on_mobile = true) {
 	if_setsize(25, 25, ^setsize_abs, ^setsize_abs, $component1);
-	$int18 = ~v2_stone_button_filled($component1);
+	$int13 = ~v2_stone_button_filled($component1);
 } else {
 	if_setsize(11, 11, ^setsize_abs, ^setsize_abs, $component1);
-	if_setonmouseover("cc_graphic_swapper(event_com, $int18, $graphic17, null)", $component1);
-	if_setonmouseleave("cc_graphic_swapper(event_com, $int18, $graphic16, null)", $component1);
+	if_setonmouseover("cc_graphic_swapper(event_com, $int13, $graphic12, null)", $component1);
+	if_setonmouseleave("cc_graphic_swapper(event_com, $int13, $graphic11, null)", $component1);
 }
-cc_create($component1, ^iftype_graphic, $int18);
-cc_setgraphic($graphic16);
+cc_create($component1, ^iftype_graphic, $int13);
+cc_setgraphic($graphic11);
 cc_setsize(11, 11, ^setsize_abs, ^setsize_abs);
 cc_setvflip(false);
 cc_sethflip(true);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if_setop(1, "Expand", $component1);
-if_setonop("target_system_hideop(event_opindex, 0, $component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15)", $component1);
-cc_deleteall($component15);
-$int18 = 0;
-if_setonmouseover("cc_graphic_swapper(event_com, $int18, $graphic17, null)", $component15);
-if_setonmouseleave("cc_graphic_swapper(event_com, $int18, $graphic16, null)", $component15);
-cc_create($component15, ^iftype_graphic, $int18);
-cc_setgraphic($graphic16);
+if_setonop("target_system_hideop(event_opindex, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component10)", $component1);
+cc_deleteall($component10);
+$int13 = 0;
+if_setonmouseover("cc_graphic_swapper(event_com, $int13, $graphic12, null)", $component10);
+if_setonmouseleave("cc_graphic_swapper(event_com, $int13, $graphic11, null)", $component10);
+cc_create($component10, ^iftype_graphic, $int13);
+cc_setgraphic($graphic11);
 cc_setsize(11, 11, ^setsize_abs, ^setsize_abs);
 cc_setvflip(false);
 cc_sethflip(false);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-if_setop(1, "Minimise", $component15);
-if_setonop("target_system_hideop(event_opindex, 1, $component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15)", $component15);
+if_setop(1, "Minimise", $component10);
+if_setonop("target_system_hideop(event_opindex, 1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component10)", $component10);
 if (~on_mobile = true) {
-	if_setop(2, "", $component15);
-	if_setop(3, "", $component15);
-	if_setop(4, "", $component15);
+	if_setop(2, "", $component10);
+	if_setop(3, "", $component10);
+	if_setop(4, "", $component10);
 } else {
-	if_setop(2, "Dock Left", $component15);
-	if_setop(3, "Dock Middle", $component15);
-	if_setop(4, "Dock Right", $component15);
+	if_setop(2, "Dock Left", $component10);
+	if_setop(3, "Dock Middle", $component10);
+	if_setop(4, "Dock Right", $component10);
 }
-if_setop(1, "Hotspot Info", $component3);
-if_setonmouseover("settrans(event_com, 125)", $component3);
-if_setonmouseleave("settrans(event_com, 0)", $component3);
-if_setonop("opsound(event_opindex, 2)", $component3);
-~script3146(false, $component14);
-if_setonmouseover("script3145(true, $component14)", $component14);
-if_setonmouseleave("script3145(false, $component14)", $component14);
-if_setop(1, "Bounty Tasks", $component14);
-if_setonop("opsound(event_opindex, 2)", $component14);
-if_setop(1, "Skip target", $component9);
-def_graphic $graphic19 = "fast_forward,1";
-if_setonmouseover("graphic_swapper(event_com, $graphic19)", $component9);
-$graphic19 = "fast_forward,0";
-if_setonmouseleave("graphic_swapper(event_com, $graphic19)", $component9);
-if_setop(1, "Info", $component12);
-if_setonmouseover("settrans(event_com, 125)", $component12);
-if_setonmouseleave("settrans(event_com, 0)", $component12);
-if_setonop("opsound(event_opindex, 2)", $component12);
-if_setop(1, "Configure", $component13);
-if_setonmouseover("settrans(event_com, 125)", $component13);
-if_setonmouseleave("settrans(event_com, 0)", $component13);
-if_setonop("opsound(event_opindex, 2)", $component13);
-~target_system_redraw($component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15);
-if_setonvartransmit("target_system_redraw($component0, $component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component12, $component13, $component14, $component15){var1130, var1795}", $component0);
-~script3148($component11);
-if_setonvartransmit("script3147($component11){var1327}", $component11);
+if_setop(1, "Skip target", $component6);
+def_graphic $graphic14 = "fast_forward,1";
+if_setonmouseover("graphic_swapper(event_com, $graphic14)", $component6);
+$graphic14 = "fast_forward,0";
+if_setonmouseleave("graphic_swapper(event_com, $graphic14)", $component6);
+~target_system_redraw($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component10);
+if_setonvartransmit("target_system_redraw($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component10){var1130, var1795}", $component0);
+~script3148($component7, $component8, $component9);
+if_setonvartransmit("script3147($component7, $component8, $component9){var1542}", $component7);

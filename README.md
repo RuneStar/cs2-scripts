@@ -3145,8 +3145,6 @@
 [**3142**](scripts/[clientscript,target_system_hideop].cs2) `[clientscript,target_system_hideop]`  
 [**3143**](scripts/[clientscript,target_system_redraw].cs2) `[clientscript,target_system_redraw]`  
 [**3144**](scripts/[proc,target_system_redraw].cs2) `[proc,target_system_redraw]`  
-[**3145**](scripts/script3145.cs2)  
-[**3146**](scripts/script3146.cs2)  
 [**3147**](scripts/script3147.cs2)  
 [**3148**](scripts/script3148.cs2)  
 [**3149**](scripts/script3149.cs2)  

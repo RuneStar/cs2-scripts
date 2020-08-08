@@ -1,9 +1,13 @@
 // 3148
-script3148(component $component0)
-def_int $int1 = scale(60, 100, calc(%varbit9500 * 8));
-~script3150($int1, $component0);
-if ($int1 > 0) {
-	if_setontimer("script3149(calc(clientclock + 50), calc($int1 - 1), $component0)", $component0);
+script3148(component $component0, component $component1, component $component2)
+def_int $int3 = scale(60, 100, calc((%varbit10543 - 2) * 2));
+~script3150($int3, $component1);
+if ($int3 > -2) {
+	if_sethide(false, $component2);
+	if_sethide(false, $component1);
+	if_setontimer("script3149(calc(clientclock + 50), calc($int3 - 1), $component0, $component1, $component2)", $component0);
 } else {
+	if_sethide(true, $component2);
+	if_sethide(true, $component1);
 	if_setontimer(null, $component0);
 }

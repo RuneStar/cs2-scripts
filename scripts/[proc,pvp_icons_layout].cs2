@@ -14,17 +14,17 @@ if (($int7 = 0) & (if_gettop = interface_80)) {
 }
 if_sethide(false, interface_90:0);
 if (~pvpw_check = 1) {
-	if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:53);
+	if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:47);
 	if (%varcint53 = 1) {
 		$int5 = 0;
 	}
-	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:59);
-	if_setcolour(0xff981f, interface_90:59);
-	if_sethide(false, interface_90:58);
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:58);
+	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+	if_setcolour(0xff981f, interface_90:53);
+	if_sethide(false, interface_90:52);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:52);
 	~pvp_icons_comlevelrange(~wilderness_level);
 	~script866(true);
-	if_sethide(true, interface_90:60);
+	if_sethide(true, interface_90:54);
 	if_sethide(true, interface_90:1);
 } else if (%varbit5314 = 1) {
 	if ((%varbit5320 > 0) & (%varbit5316 > 0)) {
@@ -39,11 +39,11 @@ if (~pvpw_check = 1) {
 	~script866(true);
 } else if ($int7 = 1) {
 	$int5 = 0;
-	if_setcolour(0xff981f, interface_90:59);
+	if_setcolour(0xff981f, interface_90:53);
 	if (if_gettop = interface_80) {
-		if_sethide(true, interface_90:53);
+		if_sethide(true, interface_90:47);
 	} else {
-		if_sethide(false, interface_90:53);
+		if_sethide(false, interface_90:47);
 	}
 	if (%var1676 >= 4) {
 		$int6 = 12;
@@ -51,13 +51,13 @@ if (~pvpw_check = 1) {
 			$int6 = 13;
 		}
 		if (if_gettop = interface_80) {
-			if_sethide(true, interface_90:37);
+			if_sethide(true, interface_90:31);
 		} else if ((%var1676 > 5) | (%varbit4989 = $int6)) {
 			~script1434(false, $enum4, true);
-			if_sethide(true, interface_90:47);
+			if_sethide(true, interface_90:41);
 		} else if (%var1676 = 5) {
 			~script1434(false, $enum4, false);
-			if_sethide(false, interface_90:47);
+			if_sethide(false, interface_90:41);
 		}
 		if_sethide(false, interface_90:1);
 		_2125(2, interface_90:1);
@@ -68,58 +68,58 @@ if (~pvpw_check = 1) {
 		if_sethide(true, interface_90:1);
 	}
 	if (%varbit4965 > 0) {
-		if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:53);
-		if_sethide(true, interface_90:58);
-		if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:58);
-		if_sethide(false, interface_90:60);
+		if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:47);
+		if_sethide(true, interface_90:52);
+		if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:52);
+		if_sethide(false, interface_90:54);
 		if (%varbit4965 >= 60) {
-			if_settext("<tostring(calc(%varbit4965 / 60))>h <tostring(calc(%varbit4965 % 60))>m", interface_90:60);
+			if_settext("<tostring(calc(%varbit4965 / 60))>h <tostring(calc(%varbit4965 % 60))>m", interface_90:54);
 		} else {
-			if_settext("<tostring(calc(%varbit4965 % 60))>min", interface_90:60);
+			if_settext("<tostring(calc(%varbit4965 % 60))>min", interface_90:54);
 		}
 	} else if (%varcint78 ! 2) {
 		if (%varbit4854 > 0) {
-			if_setsize(57, 66, ^setsize_abs, ^setsize_abs, interface_90:53);
-			if_setposition(0, 25, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:59);
-			if_sethide(false, interface_90:58);
-			if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:58);
+			if_setsize(57, 66, ^setsize_abs, ^setsize_abs, interface_90:47);
+			if_setposition(0, 25, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+			if_sethide(false, interface_90:52);
+			if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:52);
 			~pvp_icons_comlevelrange(~wilderness_level);
-			if_sethide(false, interface_90:60);
-			if_settext(~deadman_skullduration, interface_90:60);
+			if_sethide(false, interface_90:54);
+			if_settext(~deadman_skullduration, interface_90:54);
 		} else {
-			if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:53);
-			if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:59);
-			if_sethide(false, interface_90:58);
-			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:58);
+			if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:47);
+			if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+			if_sethide(false, interface_90:52);
+			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:52);
 			~pvp_icons_comlevelrange(~wilderness_level);
-			if_sethide(true, interface_90:60);
+			if_sethide(true, interface_90:54);
 		}
 	} else if (%varbit4854 > 0) {
-		if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:53);
-		if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:59);
-		if_sethide(true, interface_90:58);
-		if_sethide(false, interface_90:60);
-		if_settext(~deadman_skullduration, interface_90:60);
+		if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:47);
+		if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+		if_sethide(true, interface_90:52);
+		if_sethide(false, interface_90:54);
+		if_settext(~deadman_skullduration, interface_90:54);
 	} else {
-		if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:53);
-		if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:59);
-		if_sethide(true, interface_90:58);
-		if_sethide(true, interface_90:60);
+		if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:47);
+		if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+		if_sethide(true, interface_90:52);
+		if_sethide(true, interface_90:54);
 	}
 	~script866(true);
 } else if (~wildwars_world = 1) {
-	if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:53);
+	if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:47);
 	$int5 = 13;
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:59);
-	if_setcolour(^yellow, interface_90:59);
-	if_sethide(true, interface_90:58);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+	if_setcolour(^yellow, interface_90:53);
+	if_sethide(true, interface_90:52);
 	if (%varbit5701 >= 1) {
 		if (%varbit5701 > 2) {
 			~script1434(false, $enum4, true);
-			if_sethide(true, interface_90:47);
+			if_sethide(true, interface_90:41);
 		} else if (%varbit5701 = 2) {
 			~script1434(false, $enum4, false);
-			if_sethide(false, interface_90:47);
+			if_sethide(false, interface_90:41);
 		}
 		if_sethide(false, interface_90:1);
 		_2125(2, interface_90:1);
@@ -131,29 +131,29 @@ if (~pvpw_check = 1) {
 	}
 	~script866(true);
 } else {
-	if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:53);
+	if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:47);
 	$int5 = 13;
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:59);
-	if_setcolour(^yellow, interface_90:59);
-	if_sethide(true, interface_90:58);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+	if_setcolour(^yellow, interface_90:53);
+	if_sethide(true, interface_90:52);
 	if (~clanwars_ffa_arena(coord) = 1) {
 		if (~inzone(0_51_74_0_0, 3_52_74_63_23, coord) = 1) {
-			if_settrans(0, interface_90:56);
+			if_settrans(0, interface_90:50);
 		} else {
-			if_settrans(255, interface_90:56);
+			if_settrans(255, interface_90:50);
 		}
 		~script866(true);
 	} else {
-		if_settrans(0, interface_90:56);
+		if_settrans(0, interface_90:50);
 		if (%varbit4163 > 100) {
-			if_setgraphic("pvpw_icons,3", interface_90:55);
-			if_setop(1, "Show time remaining", interface_90:55);
+			if_setgraphic("pvpw_icons,3", interface_90:49);
+			if_setop(1, "Show time remaining", interface_90:49);
 			if (%varbit10531 = 0) {
-				if_setonop("script3513(interface_90:55, interface_90:62, true)", interface_90:55);
+				if_setonop("script3513(interface_90:49, interface_90:56, true)", interface_90:49);
 			}
 		} else {
-			if_setgraphic("pvpw_icons,0", interface_90:55);
-			if_setonop(null, interface_90:55);
+			if_setgraphic("pvpw_icons,0", interface_90:49);
+			if_setonop(null, interface_90:49);
 			%varbit10531 = 0;
 		}
 		if (~target_world = 1) {
@@ -162,37 +162,37 @@ if (~pvpw_check = 1) {
 			~script866(true);
 		}
 	}
-	if_sethide(true, interface_90:60);
+	if_sethide(true, interface_90:54);
 	if_sethide(true, interface_90:1);
 	if (~kots_world = 1) {
 		$int3 = ~kots_remaining_time;
 		$int5 = 0;
 		if ($int3 > 0) {
-			if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:53);
-			if_sethide(true, interface_90:58);
-			if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:58);
-			if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:59);
-			if_sethide(false, interface_90:60);
-			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:60);
+			if_setsize(57, 55, ^setsize_abs, ^setsize_abs, interface_90:47);
+			if_sethide(true, interface_90:52);
+			if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:52);
+			if_setposition(0, 12, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+			if_sethide(false, interface_90:54);
+			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:54);
 			if ($int3 >= 6000) {
 				$int3 = calc(100 + ~kots_remaining_time);
-				if_settext("<tostring(calc($int3 / 6000))>h <tostring(calc(($int3 % 6000) / 100))>m", interface_90:60);
+				if_settext("<tostring(calc($int3 / 6000))>h <tostring(calc(($int3 % 6000) / 100))>m", interface_90:54);
 			} else if ($int3 > 100) {
 				$int3 = calc(100 + ~kots_remaining_time);
-				if_settext("<tostring(~max(1, calc(($int3 % 6000) / 100)))>min", interface_90:60);
+				if_settext("<tostring(~max(1, calc(($int3 % 6000) / 100)))>min", interface_90:54);
 			} else {
-				if_settext("1min", interface_90:60);
+				if_settext("1min", interface_90:54);
 			}
 		}
 	}
 }
-if_setposition(0, $int5, ^setpos_abs_centre, ^setpos_abs_top, interface_90:54);
+if_setposition(0, $int5, ^setpos_abs_centre, ^setpos_abs_top, interface_90:48);
 def_int $int8 = enum(enum, int, enum_1135, $enum4);
 if (~on_mobile = true) {
-	if_setposition(40, 10, ^setpos_abs_right, ^setpos_abs_bottom, interface_90:53);
+	if_setposition(40, 10, ^setpos_abs_right, ^setpos_abs_bottom, interface_90:47);
 } else if ($int8 > 0) {
-	if_setposition(29, calc(170 - $int5), ^setpos_abs_right, ^setpos_abs_top, interface_90:53);
+	if_setposition(29, calc(170 - $int5), ^setpos_abs_right, ^setpos_abs_top, interface_90:47);
 } else {
-	if_setposition(0, 40, ^setpos_abs_right, ^setpos_abs_bottom, interface_90:53);
+	if_setposition(0, 40, ^setpos_abs_right, ^setpos_abs_bottom, interface_90:47);
 }
 ~script2806;

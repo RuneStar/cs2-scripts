@@ -2,12 +2,12 @@
 [clientscript,deadman_broadcast_message_timer](int $int0)
 def_int $int1 = calc(clientclock - $int0);
 if ($int1 < 475) {
-	if_setsize(scale(~min($int1, 25), 25, 16384), 60, ^setsize_2, ^setsize_abs, interface_90:28);
+	if_setsize(scale(~min($int1, 25), 25, 16384), 60, ^setsize_2, ^setsize_abs, interface_90:22);
 } else if ($int1 < 500) {
-	if_setsize(scale(~max(calc(500 - $int1), 0), 25, 16384), 60, ^setsize_2, ^setsize_abs, interface_90:28);
+	if_setsize(scale(~max(calc(500 - $int1), 0), 25, 16384), 60, ^setsize_2, ^setsize_abs, interface_90:22);
 } else {
-	if_sethide(true, interface_90:28);
-	if_settext("", interface_90:31);
-	if_setontimer(null, interface_90:27);
+	if_sethide(true, interface_90:22);
+	if_settext("", interface_90:25);
+	if_setontimer(null, interface_90:21);
 	return;
 }

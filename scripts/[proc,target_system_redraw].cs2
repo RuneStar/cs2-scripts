@@ -1,18 +1,11 @@
 // 3144
-[proc,target_system_redraw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13)
+[proc,target_system_redraw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 if (%varbit6704 = 1) {
 	if_sethide(true, $component2);
 	if_sethide(false, $component1);
 } else {
 	if_sethide(false, $component2);
 	if_sethide(true, $component1);
-}
-if (%varbit9489 = 1) {
-	if_sethide(false, $component9);
-	if_sethide(true, $component12);
-} else {
-	if_sethide(true, $component9);
-	if_sethide(false, $component12);
 }
 if (~on_mobile = true) {
 	~script1486(interface_90:5, ^setpos_abs_right, 1, 0);
@@ -31,40 +24,26 @@ if (~on_mobile = true) {
 	~script1486(interface_90:5, ^setpos_abs_right, 1, 0);
 }
 if (%varbit9495 = 0) {
-	if_setobject_nonum(obj_6512, 1, $component3);
-	if_settext("", $component4);
-	if_settext("---", $component6);
-	if_setcolour(^white, $component6);
-	if_sethide(true, $component5);
-	if_sethide(true, $component8);
+	if_settext("---", $component4);
+	if_setcolour(^white, $component4);
+	if_sethide(true, $component3);
+	if_sethide(true, $component6);
 	return;
 }
-def_int $int14 = calc(%varbit10259 - 1);
-if_setobject_nonum(enum(int, namedobj, enum_2850, $int14), 1, $component3);
-if ($int14 ! -1) {
-	if_settext(tostring(%varbit10259), $component4);
-} else {
-	if_settext("", $component4);
-}
-def_int $int15 = 0;
+def_int $int8 = 0;
 if (%varbit9493 > 0) {
-	$int15 = calc((%varbit9493 - 1) * 5);
-	if ($int15 > 0) {
-		if_settext("<tostring($int15)>-<tostring(calc($int15 + 4))>", $component6);
+	$int8 = calc((%varbit9493 - 1) * 5);
+	if ($int8 > 0) {
+		if_settext("<tostring($int8)>-<tostring(calc($int8 + 4))>", $component4);
 	} else {
-		if_settext("1-<tostring(calc($int15 + 4))>", $component6);
+		if_settext("1-<tostring(calc($int8 + 4))>", $component4);
 	}
 } else {
-	if_settext("Safe", $component6);
-}
-if (%varbit9512 = 1) {
-	if_setcolour(0xff3030, $component6);
-} else {
-	if_setcolour(^white, $component6);
+	if_settext("Safe", $component4);
 }
 if (%varbit9494 = 1) {
-	if_sethide(false, $component5);
+	if_sethide(false, $component3);
 } else {
-	if_sethide(true, $component5);
+	if_sethide(true, $component3);
 }
-if_sethide(false, $component8);
+if_sethide(false, $component6);

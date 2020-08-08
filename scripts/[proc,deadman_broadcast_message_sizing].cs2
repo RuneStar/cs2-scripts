@@ -1,14 +1,14 @@
 // 2807
 [proc,deadman_broadcast_message_sizing](string $string0)
 def_int $int0 = 60;
-def_int $int1 = if_getwidth(interface_90:31);
-def_int $int2 = if_getwidth(interface_90:26);
+def_int $int1 = if_getwidth(interface_90:25);
+def_int $int2 = if_getwidth(interface_90:20);
 def_int $int3 = parawidth($string0, $int1, q8_full);
 def_int $int4 = paraheight($string0, $int1, q8_full);
 if (($int4 = 1) & ($int2 > calc($int3 + 20))) {
 	$int2 = calc($int3 + 20);
 }
-if_setsize($int2, $int0, ^setsize_abs, ^setsize_abs, interface_90:27);
-if_setsize($int2, $int0, ^setsize_abs, ^setsize_abs, interface_90:30);
-if_setsize(calc($int2 - 4), $int0, ^setsize_abs, ^setsize_abs, interface_90:29);
-if_setsize($int2, $int0, ^setsize_abs, ^setsize_abs, interface_90:28);
+if_setsize($int2, $int0, ^setsize_abs, ^setsize_abs, interface_90:21);
+if_setsize($int2, $int0, ^setsize_abs, ^setsize_abs, interface_90:24);
+if_setsize(calc($int2 - 4), $int0, ^setsize_abs, ^setsize_abs, interface_90:23);
+if_setsize($int2, $int0, ^setsize_abs, ^setsize_abs, interface_90:22);

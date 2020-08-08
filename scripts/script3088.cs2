@@ -9,6 +9,7 @@ $int8 = calc($int8 + 1);
 .cc_settrans(255);
 .cc_setop(1, enum(int, string, enum_2634, $int0));
 def_namedobj $namedobj10 = enum(int, namedobj, enum_2633, $int0);
+def_int $int11 = enum(int, int, enum_3048, $int0);
 if ($namedobj10 = null) {
 	$namedobj10 = obj_6512;
 }
@@ -16,45 +17,50 @@ cc_create($component5, ^iftype_graphic, $int8);
 $int8 = calc($int8 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int2 + ((40 - 36) / 2)), $int1, ^setpos_abs_left, ^setpos_abs_top);
-cc_setobject_nonum($namedobj10, 1);
+if ($int11 = 1) {
+	cc_setobject_nonum($namedobj10, 1);
+} else {
+	cc_setobject($namedobj10, $int11);
+}
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
-def_int $int11 = calc($int3 - 40);
+def_int $int12 = calc($int3 - 40);
 $int2 = calc($int2 + 40);
 cc_create($component5, ^iftype_text, $int8);
 $int8 = calc($int8 + 1);
-cc_setsize($int11, 32, ^setsize_abs, ^setsize_abs);
+cc_setsize($int12, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settextshadow(true);
 def_string $string0 = "";
-def_int $colour12 = 0xff981f;
-def_int $colour13 = 0xffb83f;
-def_int $int14 = inv_getnum(inv_422, $int0);
-def_int $int15 = enum(int, int, enum_2636, $int0);
+def_int $colour13 = 0xff981f;
+def_int $colour14 = 0xffb83f;
+def_int $int15 = inv_getnum(inv_422, $int0);
+def_int $int16 = enum(int, int, enum_2636, $int0);
 def_string $string1 = "";
+def_int $int17 = 0;
 if ((oc_members($namedobj10) = ^true) & (map_members = ^false)) {
 	cc_setcolour(0x9f9f9f);
 	$string0 = enum(int, string, enum_2634, $int0);
 	$string1 = "You must be on a members' world to purchase that item.";
 	.cc_setonop("script3090($string1, $component4, $component5, $component6, $component7)");
-	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
-} else if (%var262 < $int15) {
+	$colour13, $colour14 = 0x9f9f9f, 0x9f9f9f;
+} else if (%var262 < $int16) {
 	cc_setcolour(^red);
 	$string0 = enum(int, string, enum_2634, $int0);
-	if ($int15 > 1) {
-		$string1 = "You must achieve <tostring($int15)> wins before you can have that item.";
+	if ($int16 > 1) {
+		$string1 = "You must achieve <tostring($int16)> wins before you can have that item.";
 	} else {
 		$string1 = "You must achieve one win before you can have that item.";
 	}
 	.cc_setonop("script3090($string1, $component4, $component5, $component6, $component7)");
-	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
-} else if (%var261 < $int14) {
+	$colour13, $colour14 = 0x9f9f9f, 0x9f9f9f;
+} else if (%var261 < $int15) {
 	cc_setcolour(^red);
-	$string0 = "<enum(int, string, enum_2634, $int0)> - <~pest_rewards_costpoints($int14)>";
-	$string1 = "You need <~pest_rewards_costpoints($int14)> to claim that reward.";
+	$string0 = "<enum(int, string, enum_2634, $int0)> - <~pest_rewards_costpoints($int15)>";
+	$string1 = "You need <~pest_rewards_costpoints($int15)> to claim that reward.";
 	.cc_setonop("script3090($string1, $component4, $component5, $component6, $component7)");
-	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
+	$colour13, $colour14 = 0x9f9f9f, 0x9f9f9f;
 } else {
 	if ($int9 = $int0) {
 		cc_setcolour(^white);
@@ -64,7 +70,30 @@ if ((oc_members($namedobj10) = ^true) & (map_members = ^false)) {
 	$string0 = enum(int, string, enum_2634, $int0);
 	.cc_setonop("script3089($int0, $component4, $component5, $component6, $component7)");
 }
-if (parawidth($string0, 512, p12_full) > $int11) {
+if ($int0 = 66) {
+	$int17 = %varbit9520;
+} else if ($int0 = 67) {
+	$int17 = %varbit9521;
+} else if ($int0 = 68) {
+	$int17 = %varbit9522;
+} else if ($int0 = 69) {
+	$int17 = %varbit9523;
+}
+if ($int17 = 1) {
+	cc_setcolour(0x9f9f9f);
+	$string0 = enum(int, string, enum_2634, $int0);
+	$string1 = "You own this item but have it disabled.";
+	.cc_setonop("script3089($int0, $component4, $component5, $component6, $component7)");
+} else if ($int17 = 2) {
+	if ($int9 = $int0) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour(0x00df00);
+	}
+	$string0 = enum(int, string, enum_2634, $int0);
+	.cc_setonop("script3089($int0, $component4, $component5, $component6, $component7)");
+}
+if (parawidth($string0, 512, p12_full) > $int12) {
 	cc_settextfont(p11_full);
 } else {
 	cc_settextfont(p12_full);
@@ -72,29 +101,34 @@ if (parawidth($string0, 512, p12_full) > $int11) {
 cc_settext($string0);
 cc_create($component5, ^iftype_text, $int8);
 $int8 = calc($int8 + 1);
-cc_setsize($int11, 32, ^setsize_abs, ^setsize_abs);
+cc_setsize($int12, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
 cc_settextfont(p11_full);
 cc_settextshadow(true);
-if ($int14 > 0) {
-	cc_settext(~pest_rewards_costpoints($int14));
-} else if ($int15 > 0) {
-	if ($int15 > 1) {
-		cc_settext("<tostring($int15)> wins");
+if ($int15 > 0) {
+	cc_settext(~pest_rewards_costpoints($int15));
+} else if ($int16 > 0) {
+	if ($int16 > 1) {
+		cc_settext("<tostring($int16)> wins");
 	} else {
 		cc_settext("One win");
 	}
 } else {
 	cc_settext("Free");
 }
+if ($int17 = 1) {
+	cc_settext("Enable");
+} else if ($int17 = 2) {
+	cc_settext("Disable");
+}
 if ($int9 = $int0) {
 	cc_setcolour(^white);
 	.cc_setonmouserepeat(null);
 	.cc_setonmouseleave(null);
 } else {
-	cc_setcolour($colour12);
-	.cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour13)");
-	.cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, $colour12)");
+	cc_setcolour($colour13);
+	.cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour14)");
+	.cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, $colour13)");
 }
 return($int8);
