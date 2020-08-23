@@ -33,8 +33,8 @@ while ($int17 <= enum_getoutputcount($enum15)) {
 			} else {
 				$int12 = $int14;
 			}
-			if (($int18 ! 0) & (calc($int18 % 2) = 0)) {
-				$int13 = calc(($int13 + 32) + 8);
+			if ($int18 ! 0 & calc($int18 % 2) = 0) {
+				$int13 = calc($int13 + 32 + 8);
 			}
 			$int21 = ~script544($component4, $int12, $int13, $int14, enum(int, struct, $enum20, $int18), $int18, $int0, $int21, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
 			$int18 = calc($int18 + 1);
@@ -52,7 +52,7 @@ cc_deleteall($component5);
 cc_deleteall($component8);
 cc_deleteall($component10);
 cc_deleteall($component11);
-if (($int0 ! -1) & (~script3292 = 1)) {
+if ($int0 ! -1 & ~script3292 = 1) {
 	$string0, $string1, $int22 = ~script3286($int0);
 	%varbit10110 = $int0;
 	~pest_rewards_confirmdraw(false, $string0, $component6);

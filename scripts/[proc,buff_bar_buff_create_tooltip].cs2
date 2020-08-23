@@ -10,7 +10,7 @@ if (~on_mobile = true) {
 }
 cc_setcolour(^black);
 cc_settrans(255);
-if (((string_length($string0) <= 0) | (%varbit9529 = 1)) | (%varbit9528 = 1)) {
+if (string_length($string0) <= 0 | %varbit9529 = 1 | %varbit9528 = 1) {
 	cc_setonclick(null);
 	cc_setnoclickthrough(false);
 	cc_setonmouserepeat(null);

@@ -9,10 +9,10 @@ def_int $int25 = if_getx($component0);
 def_int $int26 = if_gety($component0);
 def_component $component27 = if_getlayer($component0);
 while ($component27 ! $component2) {
-	$int25, $int26 = calc(($int25 + if_getx($component27)) - if_getscrollx($component27)), calc(($int26 + if_gety($component27)) - if_getscrolly($component27));
+	$int25, $int26 = calc($int25 + if_getx($component27) - if_getscrollx($component27)), calc($int26 + if_gety($component27) - if_getscrolly($component27));
 	$component27 = if_getlayer($component27);
 }
-$int26 = calc(($int26 + if_getheight($component0)) - 1);
+$int26 = calc($int26 + if_getheight($component0) - 1);
 if_setposition($int25, $int26, ^setpos_abs_left, ^setpos_abs_top, $component4);
 def_int $int28 = 15;
 if (~on_mobile = true) {
@@ -125,7 +125,7 @@ if ($component1 = $component8) {
 	if_sethide(false, $component24);
 	$int29 = ~script1031($component1, enum_1625, $component3, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);
 }
-def_int $int30 = calc(($int29 * $int28) + 2);
+def_int $int30 = calc($int29 * $int28 + 2);
 def_int $int31 = calc($int30 + 4);
 def_int $int32 = calc(if_getheight($component2) - $int26);
 if ($int31 > $int32) {

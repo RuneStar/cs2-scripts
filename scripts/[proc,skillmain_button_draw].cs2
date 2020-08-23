@@ -2,7 +2,7 @@
 [proc,skillmain_button_draw](component $component0, string $string0, boolean $boolean1, boolean $boolean2)
 cc_deleteall($component0);
 def_int $int3 = 0;
-if (($boolean1 = true) | ($boolean2 = true)) {
+if ($boolean1 = true | $boolean2 = true) {
 	$int3 = ~v2_stone_button_in_filled($component0);
 } else {
 	$int3 = ~v2_stone_button_out_filled($component0);

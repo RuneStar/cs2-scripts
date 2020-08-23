@@ -5,9 +5,9 @@ def_string $string0 = "";
 def_int $int26 = 0;
 if (.cc_find($component8, $int12) = ^true) {
 	if ($int12 = 0) {
-		cc_create($component8, ^iftype_graphic, calc(($int12 + 9) + 1));
+		cc_create($component8, ^iftype_graphic, calc($int12 + 9 + 1));
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc((($int12 * 40) + $int16) + $int17), $int18, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int12 * 40 + $int16 + $int17), $int18, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("banktab_icons,0");
 		cc_settrans(20);
 		cc_setop(1, "View all items");
@@ -17,9 +17,9 @@ if (.cc_find($component8, $int12) = ^true) {
 	} else if ($int13 > 0) {
 		if (%varbit4170 = 1) {
 			$string0 = tostring($int12);
-			cc_create($component8, ^iftype_text, calc(($int12 + 9) + 1));
+			cc_create($component8, ^iftype_text, calc($int12 + 9 + 1));
 			cc_setsize(41, 40, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc(($int12 * 40) + $int16), 0, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc($int12 * 40 + $int16), 0, ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 			cc_settextfont(quill_oblique_large);
 			cc_settextshadow(true);
@@ -30,9 +30,9 @@ if (.cc_find($component8, $int12) = ^true) {
 			~bankmain_tabicon_highlight($int12);
 		} else if (%varbit4170 = 2) {
 			$string0 = enum(int, string, enum_207, $int12);
-			cc_create($component8, ^iftype_text, calc(($int12 + 9) + 1));
+			cc_create($component8, ^iftype_text, calc($int12 + 9 + 1));
 			cc_setsize(41, 35, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc(($int12 * 40) + $int16), 0, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc($int12 * 40 + $int16), 0, ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 			cc_settextfont(barbassault_font);
 			cc_settextshadow(true);
@@ -43,9 +43,9 @@ if (.cc_find($component8, $int12) = ^true) {
 			~bankmain_tabicon_highlight($int12);
 		} else {
 			$obj25 = inv_getobj(bank, $int14);
-			cc_create($component8, ^iftype_graphic, calc(($int12 + 9) + 1));
+			cc_create($component8, ^iftype_graphic, calc($int12 + 9 + 1));
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc(((($int12 * 40) + $int16) + $int17) + 1), $int18, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc($int12 * 40 + $int16 + $int17 + 1), $int18, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setgraphicshadow(0x333333);
 			cc_setoutline(1);
 			if ($obj25 ! null) {
@@ -66,9 +66,9 @@ if (.cc_find($component8, $int12) = ^true) {
 			~bankmain_tabicon_highlight($int12);
 		}
 	} else if ($int15 = 0) {
-		cc_create($component8, ^iftype_graphic, calc(($int12 + 9) + 1));
+		cc_create($component8, ^iftype_graphic, calc($int12 + 9 + 1));
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc((($int12 * 40) + $int16) + $int17), $int18, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int12 * 40 + $int16 + $int17), $int18, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("banktab_icons,1");
 		cc_settrans(20);
 		cc_setop(1, "New tab");
@@ -78,7 +78,7 @@ if (.cc_find($component8, $int12) = ^true) {
 		.cc_setgraphic("banktabs,3");
 		$int15 = 1;
 	} else {
-		cc_create($component8, ^iftype_graphic, calc(($int12 + 9) + 1));
+		cc_create($component8, ^iftype_graphic, calc($int12 + 9 + 1));
 		cc_sethide(true);
 		.cc_sethide(true);
 	}

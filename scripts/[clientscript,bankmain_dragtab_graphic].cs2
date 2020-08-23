@@ -5,7 +5,7 @@ if ($component2 ! $component0) {
 }
 def_int $int6 = calc($int1 - (9 + 1));
 def_int $int7 = calc($int3 - (9 + 1));
-if (((($int6 = 0) | ($int7 = 0)) | (testbit($int4, $int6) = ^false)) | (testbit($int4, $int7) = ^false)) {
+if ($int6 = 0 | $int7 = 0 | testbit($int4, $int6) = ^false | testbit($int4, $int7) = ^false) {
 	return;
 }
 if (cc_find($component0, $int1) = ^true) {

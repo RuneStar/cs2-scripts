@@ -75,7 +75,7 @@ cc_settext($string0);
 cc_create($component3, ^iftype_graphic, $int6);
 $int6 = calc($int6 + 1);
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(($int8 / 2) - 18), -44, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setposition(calc($int8 / 2 - 18), -44, ^setpos_abs_centre, ^setpos_abs_centre);
 def_graphic $graphic10 = "v2_stone_close_button,0";
 cc_setgraphic($graphic10);
 cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic10, null)");
@@ -83,7 +83,7 @@ $graphic10 = "v2_stone_close_button,1";
 cc_setonmouseover("cc_graphic_swapper(event_com, event_comid, $graphic10, null)");
 cc_setop(1, "Close");
 cc_setonop("bankmain_incinerator_close(1, $component3)");
-def_int $int11 = calc(($int8 / 2) - 42);
+def_int $int11 = calc($int8 / 2 - 42);
 cc_create($component3, ^iftype_model, $int6);
 $int6 = calc($int6 + 1);
 .cc_create($component3, ^iftype_model, $int6);
@@ -100,8 +100,8 @@ cc_setmodelangle(15, 400, 141, 220, 0, 2500);
 cc_create($component3, ^iftype_model, $int6);
 $int6 = calc($int6 + 1);
 cc_setsize(40, 40, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(0 - (($int8 / 2) - 42)), 0, ^setpos_abs_centre, ^setpos_abs_centre);
-if ((($obj5 = coins_995) | ($obj5 = purple_sweets_10476)) & ($int7 > 10)) {
+cc_setposition(calc(0 - ($int8 / 2 - 42)), 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if (($obj5 = coins_995 | $obj5 = purple_sweets_10476) & $int7 > 10) {
 	cc_setobject($obj5, 10);
 } else {
 	cc_setobject(oc_uncert($obj5), $int7);

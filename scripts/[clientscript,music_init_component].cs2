@@ -11,7 +11,7 @@ if (cc_find($component0, $int1) = ^true) {
 	$int4 = enum(int, int, enum_818, $int1);
 	if ($int4 ! 0) {
 		cc_setsize(0, $int3, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, calc(3 + ($int2 * $int3)), ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setposition(0, calc(3 + $int2 * $int3), ^setpos_abs_centre, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -67,7 +67,7 @@ if (cc_find($component0, $int1) = ^true) {
 			}
 			if (testbit($int8, $int7) = ^true) {
 				~music_setcolour(0x0dc10d);
-			} else if (($int4 = 331) & (%varbit1028 > 35)) {
+			} else if ($int4 = 331 & %varbit1028 > 35) {
 				~music_setcolour(0x0dc10d);
 			} else {
 				~music_setcolour(^red);

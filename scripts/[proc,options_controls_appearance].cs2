@@ -14,7 +14,7 @@ if (~on_mobile = true) {
 	if_setposition(-22, 10, ^setpos_abs_centre, ^setpos_abs_top, options:80);
 	if_setposition(22, 6, ^setpos_abs_centre, ^setpos_abs_top, options:75);
 	if_setposition(22, 10, ^setpos_abs_centre, ^setpos_abs_top, options:76);
-	if (($int0 <= _6220) & ($int0 <= _6222)) {
+	if ($int0 <= _6220 & $int0 <= _6222) {
 		if_sethide(true, options:83);
 		if_setposition(0, 71, ^setpos_abs_centre, ^setpos_abs_bottom, options:91);
 		if_setposition(0, 19, ^setpos_abs_centre, ^setpos_abs_bottom, options:92);

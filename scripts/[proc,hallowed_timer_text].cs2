@@ -20,7 +20,7 @@ if ($int4 >= 10) {
 	$string0 = append($string0, "<tostring($int3)>:0<tostring($int4)>");
 }
 if_settext($string0, $component1);
-if ((calc(clientclock % 20) < 10) & ($int2 <= 10)) {
+if (calc(clientclock % 20) < 10 & $int2 <= 10) {
 	if_setcolour(0xfc0000, $component1);
 } else {
 	if_setcolour(0xfcfce7, $component1);

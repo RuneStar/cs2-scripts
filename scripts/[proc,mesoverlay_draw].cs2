@@ -10,7 +10,7 @@ if ($int2 = 2) {
 } else if ($int2 = 3) {
 	$int3 = 24;
 }
-def_int $int4 = calc(($int2 * $int3) + 4);
+def_int $int4 = calc($int2 * $int3 + 4);
 cc_create(interface_263:1, ^iftype_text, 0);
 cc_setsize(0, $int4, ^setsize_minus, ^setsize_abs);
 cc_setcolour(^black);

@@ -13,7 +13,7 @@ def_string $string1 = "Upgrade Now";
 def_graphic $graphic8 = "graphic_2151";
 def_string $string2 = "Bond Pouch";
 def_graphic $graphic9 = "graphic_1705";
-if ((%varcint103 = 1) & (%var1780 > 0)) {
+if (%varcint103 = 1 & %var1780 > 0) {
 	if (%var1780 > 99999) {
 		$string0 = "Membership: 99999+ days left";
 	} else if (%var1780 = 1) {
@@ -22,7 +22,7 @@ if ((%varcint103 = 1) & (%var1780 > 0)) {
 		} else {
 			$string0 = "Membership: 1 day left";
 		}
-	} else if ((%var1780 <= 3) & (%varcint226 = 0)) {
+	} else if (%var1780 <= 3 & %varcint226 = 0) {
 		$string0 = "Membership: <col=ff0000><tostring(%var1780)> days left</col>";
 	} else {
 		$string0 = "Membership: <tostring(%var1780)> days left";

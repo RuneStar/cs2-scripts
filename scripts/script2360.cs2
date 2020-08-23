@@ -10,10 +10,10 @@ $int18, $string0 = ~script2664($struct8);
 if ($int18 = 0) {
 	return;
 }
-if ((%varbit6670 = 1) & ($int17 >= 4)) {
+if (%varbit6670 = 1 & $int17 >= 4) {
 	return;
 }
-if ((%varbit6670 = 2) & ($int17 >= 8)) {
+if (%varbit6670 = 2 & $int17 >= 8) {
 	return;
 }
 def_int $int19 = ~script2665($int10);

@@ -1,6 +1,6 @@
 // 3331
 script3331(component $component0, coord $coord1, mapelement $mapelement2)
-if (($coord1 = null) | (worldmap_isloaded = false)) {
+if ($coord1 = null | worldmap_isloaded = false) {
 	return;
 }
 def_maparea $maparea3 = _6623($coord1);

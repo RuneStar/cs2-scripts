@@ -1,7 +1,7 @@
 // 1086
 [proc,stonebutton_url_draw](boolean $boolean0, boolean $boolean1, component $component2, string $string0, string $string1)
 def_int $int3 = 0;
-if (($boolean0 = true) | ($boolean1 = false)) {
+if ($boolean0 = true | $boolean1 = false) {
 	$int3 = ~v2_stone_button_in_filled($component2);
 } else {
 	$int3 = ~v2_stone_button_out_filled($component2);

@@ -23,7 +23,7 @@ if (%varbit5425 = 0) {
 	.cc_settext("Get out! Get out!<br>GET OUT!");
 }
 def_string $string0 = "Start raid";
-if ((%varbit5423 = 1) & (%varbit5425 = 0)) {
+if (%varbit5423 = 1 & %varbit5425 = 0) {
 	if_setsize(calc(parawidth($string0, 190, p12_full) + 20), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
 	if_sethide(false, $component1);
 	~raids_sidepanel_drawbutton(false, $string0, $component1);

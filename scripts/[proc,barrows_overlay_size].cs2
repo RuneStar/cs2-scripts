@@ -44,7 +44,7 @@ if ($int15 > 0) {
 if_setcolour($colour12, $component8);
 def_int $int20 = 0;
 while ($int20 < 6) {
-	if ((cc_find($component9, calc($int20 * 2)) = ^true) & (.cc_find($component9, calc(($int20 * 2) + 1)) = ^true)) {
+	if (cc_find($component9, calc($int20 * 2)) = ^true & .cc_find($component9, calc($int20 * 2 + 1)) = ^true) {
 		cc_setposition(0, calc($int20 * 17), $setposh14, ^setpos_abs_top);
 		.cc_setposition(0, calc($int20 * 17), $setposh13, ^setpos_abs_top);
 		cc_setcolour($colour12);
@@ -60,7 +60,7 @@ if ($int21 < 334) {
 if ($int21 = $int10) {
 	return;
 }
-def_int $int22 = calc(400 - interpolate(0, invpow(($int21 - 334), 2), 0, invpow((1500 - 334), 2), 280));
+def_int $int22 = calc(400 - interpolate(0, invpow($int21 - 334, 2), 0, invpow(1500 - 334, 2), 280));
 if_setmodelangle(0, 0, 0, 0, 0, $int22, $component2);
 if_setmodelangle(0, 0, 0, 0, 0, $int22, $component3);
 if_setmodelangle(0, 0, 0, 0, 0, $int22, $component4);

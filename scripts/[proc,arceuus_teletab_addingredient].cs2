@@ -1,6 +1,6 @@
 // 3057
 [proc,arceuus_teletab_addingredient](obj $obj0, int $int1, component $component2, int $int3, int $int4)(int, int)
-if (($obj0 = null) | ($int1 <= 0)) {
+if ($obj0 = null | $int1 <= 0) {
 	return($int3, $int4);
 }
 def_int $int5 = 0;

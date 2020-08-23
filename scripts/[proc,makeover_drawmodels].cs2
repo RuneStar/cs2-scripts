@@ -36,7 +36,7 @@ def_int $int16 = calc(if_getheight($component0) - 20);
 if ($int9 = 1) {
 	$int16 = calc($int16 / 2);
 }
-def_int $int17 = calc((20 + $int16) - 25);
+def_int $int17 = calc(20 + $int16 - 25);
 def_int $int18 = 0;
 if ($int9 = 1) {
 	$int18 = calc($int17 + $int16);
@@ -48,7 +48,7 @@ def_int $int22 = 0;
 def_model $model23 = null;
 def_int $int24 = 0;
 while ($int20 < $int10) {
-	if (($int9 = 1) & ($int20 >= $int11)) {
+	if ($int9 = 1 & $int20 >= $int11) {
 		$int24, $int22 = 1, calc(20 + $int16);
 		$int21 = calc(($int20 - $int11) * $int12);
 	} else {

@@ -1,6 +1,6 @@
 // 2357
 [proc,options_bottom_appearance]
-if ((~bonds_hide = 1) & (%varbit6713 = 0)) {
+if (~bonds_hide = 1 & %varbit6713 = 0) {
 	if_sethide(true, options:102);
 	if_sethide(true, options:103);
 	if_setposition(-56, 0, ^setpos_abs_centre, ^setpos_abs_top, options:94);

@@ -7,9 +7,9 @@ $intarray0($int2) = $int5;
 def_int $int6 = $int1;
 def_int $int7 = $int1;
 def_int $int8 = -1;
-def_int $int9 = calc((1000 * oc_param(enum(int, obj, $enum3, $int5), spell_levelreq)) + $int5);
+def_int $int9 = calc(1000 * oc_param(enum(int, obj, $enum3, $int5), spell_levelreq) + $int5);
 while ($int7 < $int2) {
-	if (calc((1000 * oc_param(enum(int, obj, $enum3, $intarray0($int7)), spell_levelreq)) + $intarray0($int7)) <= $int9) {
+	if (calc(1000 * oc_param(enum(int, obj, $enum3, $intarray0($int7)), spell_levelreq) + $intarray0($int7)) <= $int9) {
 		$int8 = $intarray0($int7);
 		$intarray0($int7) = $intarray0($int6);
 		$intarray0($int6) = $int8;

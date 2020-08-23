@@ -1,6 +1,6 @@
 // 805
 script805(int $int0, int $int1, int $int2, component $component3, int $int4, component $component5, component $component6, component $component7, component $component8, component $component9)
-if (($int0 ! 1) & ($int0 ! 2)) {
+if ($int0 ! 1 & $int0 ! 2) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);
@@ -11,11 +11,11 @@ def_inv $inv10 = enum(int, inv, enum_150, $int1);
 if ($inv10 = null) {
 	%varbit4439 = 0;
 } else {
-	if ((stockmarket_isofferempty($int1) = true) & ((inv_getobj($inv10, 0) ! null) | (inv_getobj($inv10, 1) ! null))) {
+	if (stockmarket_isofferempty($int1) = true & (inv_getobj($inv10, 0) ! null | inv_getobj($inv10, 1) ! null)) {
 		return;
 	}
 	%varbit4439 = calc($int1 + 1);
-	if (($int2 ! -1) & (stockmarket_isofferempty($int1) = true)) {
+	if ($int2 ! -1 & stockmarket_isofferempty($int1) = true) {
 		%varbit4397 = $int2;
 	}
 }

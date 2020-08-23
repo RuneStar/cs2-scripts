@@ -18,7 +18,7 @@ while ($int5 < $int6) {
 		cc_create($component1, ^iftype_graphic, $int8);
 		$int8 = calc($int8 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc((36 + $int3) * ($int5 % 4)), calc(($int5 / 4) * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc((36 + $int3) * ($int5 % 4)), calc($int5 / 4 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
 		$string0 = "<col=ff981f><oc_name($namedobj7)>";
 		cc_setobject($namedobj7, -1);
 		cc_setopbase($string0);
@@ -40,7 +40,7 @@ while ($int5 < $int6) {
 		cc_create($component1, ^iftype_text, $int8);
 		$int8 = calc($int8 + 1);
 		cc_setsize(36, 20, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc((36 + $int3) * ($int5 % 4)), calc(38 + (($int5 / 4) * (36 + $int4))), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc((36 + $int3) * ($int5 % 4)), calc(38 + $int5 / 4 * (36 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
 		$int9 = enum(obj, int, enum_1953, $namedobj7);
 		cc_settext(tostring($int9));
 		cc_settextfont(p11_full);

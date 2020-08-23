@@ -1,6 +1,6 @@
 // 1583
 [clientscript,raids_rewards_op](int $int0, component $component1, int $int2)
-if (($int0 ! 1) & ($int0 ! 10)) {
+if ($int0 ! 1 & $int0 ! 10) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

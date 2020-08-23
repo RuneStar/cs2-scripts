@@ -30,7 +30,7 @@ if ($coord8 ! null) {
 	if (inv_getobj(inv_576, coordx($coord8)) ! null) {
 		return(1, 1);
 	}
-	if (($loc0 = inconspicuous_rocks_elite_multi_29032) & (testbit($int2, 31) = ^true)) {
+	if ($loc0 = inconspicuous_rocks_elite_multi_29032 & testbit($int2, 31) = ^true) {
 		return(1, 1);
 	}
 	return(1, 0);
@@ -53,7 +53,7 @@ if ($coord8 ! null) {
 	return(1, 0);
 }
 if ($loc0 = inconspicuous_crate_master_multi_29057) {
-	if ((testbit($int3, 10) = ^true) | (testbit($int3, 12) = ^true)) {
+	if (testbit($int3, 10) = ^true | testbit($int3, 12) = ^true) {
 		return(1, 1);
 	}
 	return(1, 0);

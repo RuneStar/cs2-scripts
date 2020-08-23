@@ -5,12 +5,12 @@ if (~on_mobile = false) {
 }
 def_int $int0 = if_getheight(interface_162:37);
 def_int $int1 = 0;
-if (((if_hassub(interface_162:562) = true) | (if_hassub(interface_162:561) = true)) | (if_gethide(interface_162:40) = false)) {
+if (if_hassub(interface_162:562) = true | if_hassub(interface_162:561) = true | if_gethide(interface_162:40) = false) {
 	$int1 = 1;
 }
 def_int $int2 = calc(165 - 23);
 if ($int1 = 0) {
-	$int2 = calc((165 - 23) - 30);
+	$int2 = calc(165 - 23 - 30);
 }
 if_setsize(519, $int2, ^setsize_abs, ^setsize_abs, interface_162:37);
 if ($int0 ! $int2) {

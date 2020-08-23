@@ -1,7 +1,7 @@
 // 102
 [proc,meslayer_mode1](string $string0)
 def_int $int0 = 0;
-if ((%varcint5 <= 0) | (%varcint5 = 1)) {
+if (%varcint5 <= 0 | %varcint5 = 1) {
 	~meslayer_open(1);
 	$int0 = paraheight($string0, 479, q8_full);
 	if ($int0 = 2) {

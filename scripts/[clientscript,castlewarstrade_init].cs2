@@ -5,11 +5,11 @@ def_int $int2 = 0;
 def_namedobj $namedobj3 = enum(int, namedobj, enum_852, $int2);
 while ($namedobj3 ! null) {
 	cc_create($component0, ^iftype_graphic, $int2);
-	if ((map_members = ^false) & (oc_members($namedobj3) = ^true)) {
+	if (map_members = ^false & oc_members($namedobj3) = ^true) {
 		cc_sethide(true);
 	} else {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc(($int1 % 8) * 46), calc(($int1 / 8) * 50), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int1 % 8 * 46), calc($int1 / 8 * 50), ^setpos_abs_left, ^setpos_abs_top);
 		$int1 = calc($int1 + 1);
 		cc_setobject($namedobj3, 1);
 		cc_setopbase("<col=ff9040><oc_name($namedobj3)>");

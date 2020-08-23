@@ -6,7 +6,7 @@ if (~inzone(0_16_140_0_0, 3_55_161_63_63, $coord1) = 1) {
 }
 def_int $int2 = calc(coordx($coord1) - coordx(0_45_49_32_0));
 def_int $int3 = calc(coordz($coord1) - coordz(0_45_49_32_0));
-if (((($int2 < 0) | ($int2 > 384)) | ($int3 < 0)) | ($int3 > 384)) {
+if ($int2 < 0 | $int2 > 384 | $int3 < 0 | $int3 > 384) {
 	cc_sethide(true);
 	return;
 }
@@ -18,4 +18,4 @@ def_int $int6 = calc(295 - scale($int3, 384, 53));
 $int4 = calc($int4 + scale($int2, 384, $int6));
 $int6 = calc(70 - scale($int3, 384, 20));
 $int5 = calc($int5 + scale($int2, 384, $int6));
-cc_setposition(calc($int4 - (cc_getwidth / 2)), calc($int5 - (cc_getheight / 2)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int4 - cc_getwidth / 2), calc($int5 - cc_getheight / 2), ^setpos_abs_left, ^setpos_abs_top);

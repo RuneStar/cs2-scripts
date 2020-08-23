@@ -11,9 +11,9 @@ def_namedobj $namedobj11 = enum(int, namedobj, $enum5, $int10);
 while ($namedobj11 ! null) {
 	cc_create($component0, ^iftype_graphic, $int10);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	$int9 = calc(($int10 / 9) * $int8);
-	cc_setposition(calc(($int10 % 9) * 50), $int9, ^setpos_abs_left, ^setpos_abs_top);
-	if (($namedobj11 = hunters_honour_12855) & ($int6 = 1)) {
+	$int9 = calc($int10 / 9 * $int8);
+	cc_setposition(calc($int10 % 9 * 50), $int9, ^setpos_abs_left, ^setpos_abs_top);
+	if ($namedobj11 = hunters_honour_12855 & $int6 = 1) {
 		$namedobj11 = rogues_revenge_12856;
 	}
 	if ($enum5 = enum_2855) {
@@ -51,8 +51,8 @@ while ($int10 < $int12) {
 	$intarray0($int10) = oc_param($namedobj11, param_152);
 	cc_create($component1, ^iftype_graphic, $int10);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	$int14 = calc($int13 + (($int10 / 9) * $int8));
-	cc_setposition(calc(($int10 % 9) * 50), $int14, ^setpos_abs_left, ^setpos_abs_top);
+	$int14 = calc($int13 + $int10 / 9 * $int8);
+	cc_setposition(calc($int10 % 9 * 50), $int14, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setobject($namedobj11, 1);
 	cc_setopbase("<col=ff9040><oc_name($namedobj11)></col>");
 	cc_setop(1, "Take");
@@ -77,7 +77,7 @@ while ($int10 < $int12) {
 	cc_create($component1, ^iftype_text, $int15);
 	$int15 = calc($int15 + 1);
 	cc_setsize(36, 12, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc(($int10 % 9) * 50), calc(($int13 + ((($int10 / 9) + 1) * $int8)) - 12), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int10 % 9 * 50), calc($int13 + ($int10 / 9 + 1) * $int8 - 12), ^setpos_abs_left, ^setpos_abs_top);
 	~script24($intarray0($int10));
 	cc_setonvartransmit("script12(event_com, event_comid, $intarray0($int10)){var263}");
 	cc_settextfont(p11_full);
@@ -90,19 +90,19 @@ $int14 = calc($int14 + $int8);
 if_setsize(0, $int14, ^setsize_minus, ^setsize_abs, $component1);
 $int9 = calc($int9 + $int14);
 def_int $int16 = 0;
-if ((($enum5 ! enum_2856) & ($enum5 ! enum_2857)) & ($enum5 ! enum_877)) {
+if ($enum5 ! enum_2856 & $enum5 ! enum_2857 & $enum5 ! enum_877) {
 	if_sethide(false, $component2);
 	$int9 = calc($int9 + 10);
 	if_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top, $component2);
 	$int12 = enum_getoutputcount(enum_2649);
-	$int16 = calc(($int12 * 32) + 33);
+	$int16 = calc($int12 * 32 + 33);
 	if_setsize(if_getwidth($component2), $int16, ^setsize_abs, ^setsize_abs, $component2);
 	$int9 = calc($int9 + $int16);
 	$int15 = 0;
 	while ($int15 < $int12) {
 		cc_create($component2, ^iftype_graphic, $int15);
 		cc_setsize(0, 32, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, calc(($int15 * 32) + 30), ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setposition(0, calc($int15 * 32 + 30), ^setpos_abs_centre, ^setpos_abs_top);
 		cc_settiling(true);
 		cc_setgraphic("tradebacking_light");
 		$int15 = calc($int15 + 1);

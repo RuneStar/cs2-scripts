@@ -168,7 +168,7 @@ while ($int24 < $int15) {
 	.cc_create($component8, ^iftype_graphic, $int21);
 	$int21 = calc($int21 + 1);
 	.cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
-	.cc_setposition(1, calc($int22 + (($int23 - 9) / 2)), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(1, calc($int22 + ($int23 - 9) / 2), ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setgraphic(enum(int, graphic, enum_706, $int17));
 	if (clan_isself($int24) = false) {
 		if (clan_isfriend($int24) = true) {
@@ -184,7 +184,7 @@ while ($int24 < $int15) {
 			.cc_setop(8, "Add ignore");
 		}
 	}
-	if (((~wildwars_world = 0) & ($int18 >= $int19)) & ($int18 > $int17)) {
+	if (~wildwars_world = 0 & $int18 >= $int19 & $int18 > $int17) {
 		cc_setop(6, "Kick user");
 		.cc_setop(6, "Kick user");
 	}
@@ -208,7 +208,7 @@ if (%varbit6363 = 1) {
 	if_settext("<col=ffff64><clan_getchatdisplayname></col>", $component0);
 	if_settext("<col=ffffff><clan_getchatownername></col>", $component1);
 	if_settext("Leave Chat", $component10);
-	if ((%varbit5432 = 1) | (%varbit4289 ! 0)) {
+	if (%varbit5432 = 1 | %varbit4289 ! 0) {
 		if_setop(6, "Leave Chat", $component10);
 		if_setonop("joinchat_onop(event_opindex, 6)", $component10);
 	} else {

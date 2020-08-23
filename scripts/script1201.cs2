@@ -4,7 +4,7 @@ def_int $int5 = inv_total(inv_173, $obj4);
 if ($int5 > 1000) {
 	$int5 = 1000;
 }
-.cc_setsize(calc(($int5 * 16384) / 1000), 0, ^setsize_2, ^setsize_minus);
+.cc_setsize(calc($int5 * 16384 / 1000), 0, ^setsize_2, ^setsize_minus);
 def_int $int6 = 0;
 def_int $int7 = 0;
 if ($int5 <= 500) {

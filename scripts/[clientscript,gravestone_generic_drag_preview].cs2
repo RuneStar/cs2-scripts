@@ -44,16 +44,16 @@ if (cc_find($component5, $int0) = ^true) {
 		$int19 = calc($int19 + $int23);
 	}
 	if ($int22 < calc($int8 + 10)) {
-		$int20, $int22 = calc($int20 + ~max(0, ($int22 - $int8))), $int8;
+		$int20, $int22 = calc($int20 + ~max(0, $int22 - $int8)), $int8;
 	}
-	$int23 = calc(($int25 + $int8) - ($int22 + $int20));
+	$int23 = calc($int25 + $int8 - ($int22 + $int20));
 	if ($int23 < 10) {
 		$int20 = calc($int20 + $int23);
 	}
 	$int19 = ~max($int9, ~min($int19, $int24));
 	$int20 = ~max($int10, ~min($int20, $int25));
 	$int21 = ~max(0, ~min($int21, calc($int24 - $int19)));
-	$int22 = ~max($int8, ~min($int22, calc(($int8 + $int25) - $int20)));
+	$int22 = ~max($int8, ~min($int22, calc($int8 + $int25 - $int20)));
 	if_setposition($int21, $int22, ^setpos_abs_left, ^setpos_abs_top, $component7);
 	if_setsize($int19, $int20, ^setsize_abs, ^setsize_abs, $component7);
 	if_sethide(false, $component7);

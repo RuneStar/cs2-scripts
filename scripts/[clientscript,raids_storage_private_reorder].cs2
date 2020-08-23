@@ -1,10 +1,10 @@
 // 1610
 [clientscript,raids_storage_private_reorder](component $component0, int $int1, int $int2, component $component3)
 def_int $int4 = inv_size(inv_583);
-if (($int1 < 0) | ($int1 >= $int4)) {
+if ($int1 < 0 | $int1 >= $int4) {
 	return;
 }
-if (($int2 < 0) | ($int2 >= $int4)) {
+if ($int2 < 0 | $int2 >= $int4) {
 	return;
 }
 def_obj $obj5 = inv_getobj(inv_583, $int1);

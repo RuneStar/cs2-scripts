@@ -13,7 +13,7 @@ if ($obj1 = watering_can_6797) {
 	}
 	$string0 = oc_name($obj4);
 }
-if ((cc_find($component0, $int2) = ^true) & (.cc_find($component0, calc($int2 + 1)) = ^true)) {
+if (cc_find($component0, $int2) = ^true & .cc_find($component0, calc($int2 + 1)) = ^true) {
 	cc_settext($string0);
 	cc_setcolour($colour5);
 	.cc_setcolour($colour5);

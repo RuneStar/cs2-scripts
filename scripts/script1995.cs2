@@ -4,7 +4,7 @@ def_int $int3 = %varcint197;
 def_int $int4 = 0;
 def_int $int5 = 0;
 if (if_find($component0) = true) {
-	if (($int3 < 10120) | ($int3 > 49220)) {
+	if ($int3 < 10120 | $int3 > 49220) {
 		%varcint197 = 33189;
 		cc_set2dangle(33189);
 		return;

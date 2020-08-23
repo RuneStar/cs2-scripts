@@ -5,7 +5,7 @@ def_string $string1 = "<tostring(%varbit3637)>/<tostring(225)>";
 if (%varbit3637 >= 225) {
 	$string1 = "<col=00ff00><$string1></col>";
 }
-def_int $int0 = calc((parawidth($string0, 512, b12_full) + 5) + parawidth($string1, 512, p12_full));
+def_int $int0 = calc(parawidth($string0, 512, b12_full) + 5 + parawidth($string1, 512, p12_full));
 cc_setsize($int0, 17, ^setsize_abs, ^setsize_abs);
 .cc_setsize($int0, 17, ^setsize_abs, ^setsize_abs);
 cc_settext($string0);

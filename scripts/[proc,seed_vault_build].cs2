@@ -18,7 +18,7 @@ while ($int8 < 90) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	.cc_create($component1, ^iftype_text, $int8);
 	.cc_setsize($int10, 30, ^setsize_abs, ^setsize_abs);
-	if (($obj9 ! null) & (~seed_vault_filteritem($obj9) = 1)) {
+	if ($obj9 ! null & ~seed_vault_filteritem($obj9) = 1) {
 		cc_setop(10, "Examine");
 		cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
 		cc_setgraphicshadow(0x333333);
@@ -40,7 +40,7 @@ while ($int8 < 90) {
 			cc_setop(4, "Withdraw-10");
 			cc_setop(5, "Withdraw-X");
 			cc_setop(6, "Withdraw-All");
-			if ((oc_stackable($obj9) = false) & (oc_cert($obj9) ! $obj9)) {
+			if (oc_stackable($obj9) = false & oc_cert($obj9) ! $obj9) {
 				cc_setop(8, "Withdraw-Notes");
 			}
 		}
@@ -65,7 +65,7 @@ while ($int8 < 90) {
 			.cc_setop(4, "Withdraw-10");
 			.cc_setop(5, "Withdraw-X");
 			.cc_setop(6, "Withdraw-All");
-			if ((oc_stackable($obj9) = false) & (oc_cert($obj9) ! $obj9)) {
+			if (oc_stackable($obj9) = false & oc_cert($obj9) ! $obj9) {
 				.cc_setop(8, "Withdraw-Notes");
 			}
 		}
@@ -116,7 +116,7 @@ if (~seed_vault_searching = 1) {
 	cc_settextshadow(true);
 	cc_settext("Search results: <lowercase(%varcstring359)>");
 	cc_setposition(5, $int14, ^setpos_abs_left, ^setpos_abs_top);
-	$int14 = calc((cc_gety + cc_getheight) + 2);
+	$int14 = calc(cc_gety + cc_getheight + 2);
 	.cc_create($component3, ^iftype_graphic, 0);
 	.cc_setgraphic("tradebacking_dark");
 	.cc_settiling(true);
@@ -134,14 +134,14 @@ if (~seed_vault_searching = 1) {
 		cc_settextshadow(true);
 		cc_settext(enum(int, string, enum_2305, $int13));
 		cc_setposition(5, $int14, ^setpos_abs_left, ^setpos_abs_top);
-		$int14 = calc((cc_gety + cc_getheight) + 2);
+		$int14 = calc(cc_gety + cc_getheight + 2);
 		.cc_create($component3, ^iftype_graphic, $int12);
 		.cc_setgraphic("tradebacking_dark");
 		.cc_settiling(true);
 		.cc_setsize(4, 2, ^setsize_minus, ^setsize_abs);
 		.cc_setposition(2, $int14, ^setpos_abs_left, ^setpos_abs_top);
 		$intarray1($int12) = calc($int14 + 15);
-		$int14 = calc($int14 + ((1 + (($intarray0($int12) - 1) / $int17)) * (($int16 + 32) + $int11)));
+		$int14 = calc($int14 + (1 + ($intarray0($int12) - 1) / $int17) * ($int16 + 32 + $int11));
 		$int12 = calc($int12 + 1);
 	}
 }
@@ -152,18 +152,18 @@ $int14 = 0;
 def_int $int19 = -1;
 while ($int8 < 90) {
 	$obj9 = inv_getobj(inv_626, $int8);
-	if (($obj9 ! null) & (~seed_vault_filteritem($obj9) = 1)) {
+	if ($obj9 ! null & ~seed_vault_filteritem($obj9) = 1) {
 		$int19 = oc_param(oc_unplaceholder($obj9), param_709);
-		if ((~seed_vault_searching = 1) & (~seed_vault_filteritem($obj9) = 1)) {
+		if (~seed_vault_searching = 1 & ~seed_vault_filteritem($obj9) = 1) {
 			$int19 = 0;
 		} else if (~script2828($int8) ! -1) {
 			$int19 = 0;
 		}
 		$int18 = $intarray2($int19);
 		$int14 = $intarray1($int19);
-		if ((cc_find($component0, $int8) = ^true) & (.cc_find($component1, $int8) = ^true)) {
-			cc_setposition(calc(($int18 + ($int15 / 2)) + (($int10 - 36) / 2)), $int14, ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setposition(calc($int18 + ($int15 / 2)), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		if (cc_find($component0, $int8) = ^true & .cc_find($component1, $int8) = ^true) {
+			cc_setposition(calc($int18 + $int15 / 2 + ($int10 - 36) / 2), $int14, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(calc($int18 + $int15 / 2), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
 			if (~seed_vault_searching = 0) {
 				cc_setdragdeadtime(5);
 				cc_setdragdeadzone(5);
@@ -183,11 +183,11 @@ while ($int8 < 90) {
 				cc_setondragcomplete(null);
 				.cc_setondragcomplete(null);
 			}
-			$int18 = calc(($int18 + $int15) + $int10);
+			$int18 = calc($int18 + $int15 + $int10);
 		}
-		if (calc(($int18 + $int15) + $int10) > if_getwidth($component0)) {
+		if (calc($int18 + $int15 + $int10) > if_getwidth($component0)) {
 			$int18 = 0;
-			$intarray1($int19) = calc((($int14 + $int16) + 32) + $int11);
+			$intarray1($int19) = calc($int14 + $int16 + 32 + $int11);
 		}
 		$intarray2($int19) = $int18;
 	}
@@ -213,14 +213,14 @@ if (~seed_vault_searching = 0) {
 	.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	$int18 = $intarray2(0);
 	$int14 = $intarray1(0);
-	cc_setposition(calc(($int18 + ($int15 / 2)) + (($int10 - 36) / 2)), $int14, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition(calc($int18 + ($int15 / 2)), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int18 + $int15 / 2 + ($int10 - 36) / 2), $int14, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(calc($int18 + $int15 / 2), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
 } else {
 	$int7 = 0;
 }
 ~scrollbar_vertical_rebuild($component5, $component4);
 def_int $int20 = 0;
-def_int $int21 = calc((($intarray1($int7) + $int16) + 32) + $int11);
+def_int $int21 = calc($intarray1($int7) + $int16 + 32 + $int11);
 if ($int21 > if_getheight($component4)) {
 	if (%varcint376 > 0) {
 		$int20 = %varcint376;

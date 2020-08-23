@@ -4,7 +4,7 @@ switch_component ($component0) {
 	case magic_spellbook:5, magic_spellbook:99, magic_spellbook:100, magic_spellbook:144 :
 		if_setop(10, "Animation", $component0);
 	case magic_spellbook:20 :
-		if ((%varbit4585 = 1) & (map_members = ^true)) {
+		if (%varbit4585 = 1 & map_members = ^true) {
 			if_setop(1, "", $component0);
 			if_setop(3, "Cast", $component0);
 		} else {
@@ -12,7 +12,7 @@ switch_component ($component0) {
 			if_setop(3, "", $component0);
 		}
 	case magic_spellbook:31 :
-		if ((%varbit4560 = 1) & (map_members = ^true)) {
+		if (%varbit4560 = 1 & map_members = ^true) {
 			if_setop(1, "", $component0);
 			if_setop(3, "Cast", $component0);
 		} else {
@@ -28,7 +28,7 @@ switch_component ($component0) {
 			if_setop(3, "", $component0);
 		}
 	case magic_spellbook:42 :
-		if ((%varbit4548 = 1) & (map_members = ^true)) {
+		if (%varbit4548 = 1 & map_members = ^true) {
 			if_setop(1, "", $component0);
 			if_setop(3, "Cast", $component0);
 		} else {
@@ -36,7 +36,7 @@ switch_component ($component0) {
 			if_setop(3, "", $component0);
 		}
 	case magic_spellbook:104 :
-		if ((%varbit5006 = 10) & (%varbit5037 = 1)) {
+		if (%varbit5006 = 10 & %varbit5037 = 1) {
 			if_setop(2, "Steve", $component0);
 		} else {
 			if_setop(2, enum(int, string, enum_1702, %varbit5006), $component0);

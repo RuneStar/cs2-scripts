@@ -2,7 +2,7 @@
 [proc,br_fogcolour]
 def_int $colour0 = if_getcolour(interface_90:1);
 def_int $int1 = if_gettrans(interface_90:1);
-if ((%varbit5320 <= 0) & (%varbit5316 <= 0)) {
+if (%varbit5320 <= 0 & %varbit5316 <= 0) {
 	if ($colour0 ! 0x882000) {
 		if_setcolour(0x882000, interface_90:1);
 	}

@@ -46,7 +46,7 @@ if ($int5 >= $int6) {
 	if ($int5 <= $int7) {
 		$int8, $int9 = 150, interpolate(0, $int5, 0, $int7, 150);
 	} else {
-		$int8, $int9 = calc(150 - interpolate(0, ($int5 - $int7), 0, $int7, 150)), 150;
+		$int8, $int9 = calc(150 - interpolate(0, $int5 - $int7, 0, $int7, 150)), 150;
 	}
 	$int10 = interpolate(0, $int5, 0, $int6, 1000);
 }

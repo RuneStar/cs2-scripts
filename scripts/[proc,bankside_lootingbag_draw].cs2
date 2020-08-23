@@ -12,7 +12,7 @@ while ($int4 < $int1) {
 		$int3 = calc($int3 + 1);
 		cc_sethide(false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc(($int4 % 4) * (36 + 8)), calc(($int4 / 4) * (32 + 1)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int4 % 4 * (36 + 8)), calc($int4 / 4 * (32 + 1)), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setoutline(1);
 		cc_setgraphicshadow(0x333333);
 		cc_setobject($obj2, inv_getnum(inv_516, $int4));

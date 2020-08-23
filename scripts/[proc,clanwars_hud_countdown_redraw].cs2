@@ -1,6 +1,6 @@
 // 598
 [proc,clanwars_hud_countdown_redraw](component $component0, component $component1, int $int2)
-def_int $int3 = calc(($int2 % 3000) / 50);
+def_int $int3 = calc($int2 % 3000 / 50);
 if ($int3 >= 10) {
 	cc_settext("<tostring(calc($int2 / 3000))>:<tostring($int3)>");
 } else {

@@ -2,7 +2,7 @@
 [clientscript,overlay_portal](component $component0, component $component1, model $model2, int $colour3, int $colour4, int $int5)
 cc_deleteall($component0);
 cc_deleteall($component1);
-if (($colour4 ! null) & ($int5 ! -1)) {
+if ($colour4 ! null & $int5 ! -1) {
 	cc_create($component0, ^iftype_rectangle, 0);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

@@ -50,15 +50,15 @@ while ($int7 < $int8) {
 	$int7 = calc($int7 + 1);
 }
 cc_deleteall($component1);
-def_int $int9 = calc((((if_getwidth($component1) - 6) - (4 * 36)) / 3) + 36);
-def_int $int10 = calc((((if_getheight($component1) - 6) - (7 * 32)) / 6) + 32);
+def_int $int9 = calc((if_getwidth($component1) - 6 - 4 * 36) / 3 + 36);
+def_int $int10 = calc((if_getheight($component1) - 6 - 7 * 32) / 6 + 32);
 $int7 = 0;
 def_int $int11 = inv_size(inv);
 while ($int7 < $int11) {
 	$int5 = ~br_loadout_get_inv($int7);
 	$namedobj6 = enum(int, namedobj, enum_2630, $int5);
 	cc_create($component1, ^iftype_graphic, $int7);
-	cc_setposition(calc(4 + ($int9 * ($int7 % 4))), calc(3 + ($int10 * ($int7 / 4))), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc(4 + $int9 * ($int7 % 4)), calc(3 + $int10 * ($int7 / 4)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	if ($namedobj6 ! null) {
 		cc_settrans(0);
@@ -121,7 +121,7 @@ while ($int7 < $int11) {
 		} else {
 			cc_sethide(false);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc(4 + ($int9 * ($int7 % 4))), calc(3 + ($int10 * ($int7 / 4))), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc(4 + $int9 * ($int7 % 4)), calc(3 + $int10 * ($int7 / 4)), ^setpos_abs_left, ^setpos_abs_top);
 			cc_setmodel(bank_filler_7669);
 			cc_setmodelangle(0, 0, 512, 512, 0, 1800);
 			$int13 = 1;

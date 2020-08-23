@@ -12,15 +12,15 @@ switch_int ($int2) {
 			return(1);
 		}
 	case 1 :
-		if (($int1 ! 1) & ($int1 ! 5)) {
+		if ($int1 ! 1 & $int1 ! 5) {
 			return(1);
 		}
 	case 2 :
-		if ((($int1 ! 1) & ($int1 ! 2)) & ($int1 ! 4)) {
+		if ($int1 ! 1 & $int1 ! 2 & $int1 ! 4) {
 			return(1);
 		}
 	case 3 :
-		if ((($int1 ! 1) & ($int1 ! 3)) & ($int1 ! 4)) {
+		if ($int1 ! 1 & $int1 ! 3 & $int1 ! 4) {
 			return(1);
 		}
 }

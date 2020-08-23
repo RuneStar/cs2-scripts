@@ -34,7 +34,7 @@ if ($int3 < 15) {
 	}
 	~scrollbar_resize($component4, $component0, $int8);
 } else {
-	$int7 = calc((if_getheight($component0) - 32) - $int3);
+	$int7 = calc(if_getheight($component0) - 32 - $int3);
 	if ($int7 < 20) {
 		if ($int7 < -5) {
 			$int6 = 10;

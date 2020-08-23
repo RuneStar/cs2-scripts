@@ -1,7 +1,7 @@
 // 214
 [clientscript,clan_op](string $string0, int $int0)
 def_string $string1 = removetags($string0);
-if (($int0 = 6) & (~wildwars_world = 0)) {
+if ($int0 = 6 & ~wildwars_world = 0) {
 	~clan_sendkick($string1);
 } else if ($int0 = 7) {
 	friend_add($string1);

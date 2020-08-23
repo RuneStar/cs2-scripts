@@ -13,14 +13,14 @@ def_int $int16 = 0;
 def_int $int17 = 0;
 def_namedobj $namedobj18 = enum(int, namedobj, enum_840, $int17);
 while ($namedobj18 ! null) {
-	$int13, $int14 = calc(($int17 % 5) * $int10), calc(($int17 / 5) * $int11);
+	$int13, $int14 = calc($int17 % 5 * $int10), calc($int17 / 5 * $int11);
 	cc_create($component1, ^iftype_graphic, $int17);
 	.cc_create($component2, ^iftype_text, $int17);
 	cc_setposition(calc($int13 + $int12), $int14, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setposition($int13, calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	.cc_setsize($int10, 15, ^setsize_abs, ^setsize_abs);
-	$int15 = calc(($int14 + 32) + 15);
+	$int15 = calc($int14 + 32 + 15);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	$int16 = enum(obj, int, enum_841, $namedobj18);
@@ -31,7 +31,7 @@ while ($namedobj18 ! null) {
 	.cc_settextshadow(true);
 	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	.cc_settext(~tostring_spacer(enum(obj, int, enum_842, $namedobj18), ","));
-	if (($namedobj18 = herb_sack_13226) | ($namedobj18 = rune_pouch_12791)) {
+	if ($namedobj18 = herb_sack_13226 | $namedobj18 = rune_pouch_12791) {
 		cc_setop(2, "Buy 1");
 	} else if ($int16 = 1) {
 		cc_setop(2, "Buy 1");

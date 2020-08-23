@@ -5,7 +5,7 @@ def_int $int1 = if_getwidth(interface_90:25);
 def_int $int2 = if_getwidth(interface_90:20);
 def_int $int3 = parawidth($string0, $int1, q8_full);
 def_int $int4 = paraheight($string0, $int1, q8_full);
-if (($int4 = 1) & ($int2 > calc($int3 + 20))) {
+if ($int4 = 1 & $int2 > calc($int3 + 20)) {
 	$int2 = calc($int3 + 20);
 }
 if_setsize($int2, $int0, ^setsize_abs, ^setsize_abs, interface_90:21);

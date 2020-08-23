@@ -54,7 +54,7 @@ if (cc_find($component2, $int7) = ^true) {
 	cc_setposition($int9, $int10, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic($graphic11);
 	cc_set2dangle($int13);
-	if ((($int14 = 1) & (testbit(%varbit5640, 4) = ^false)) & (struct_param($struct1, param_986) = true)) {
+	if ($int14 = 1 & testbit(%varbit5640, 4) = ^false & struct_param($struct1, param_986) = true) {
 		cc_setontimer("script1758(event_com, event_comid, $struct1)");
 	} else {
 		cc_setontimer(null);
@@ -69,7 +69,7 @@ if (cc_find($component2, $int7) = ^true) {
 	cc_setposition($int9, $int10, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphic($graphic11);
 	cc_set2dangle($int13);
-	if ((($int14 = 1) & (testbit(%varbit5640, 4) = ^false)) & (struct_param($struct1, param_986) = true)) {
+	if ($int14 = 1 & testbit(%varbit5640, 4) = ^false & struct_param($struct1, param_986) = true) {
 		cc_setontimer("script1758(event_com, event_comid, $struct1)");
 	} else {
 		cc_setontimer(null);

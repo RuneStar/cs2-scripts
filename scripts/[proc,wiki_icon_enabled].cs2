@@ -3,7 +3,7 @@
 if (%varbit10113 = 1) {
 	return(0);
 }
-if ((%varbit4084 = 1) & (~on_mobile = false)) {
+if (%varbit4084 = 1 & ~on_mobile = false) {
 	return(0);
 }
 return(1);

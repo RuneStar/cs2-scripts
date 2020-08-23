@@ -6,13 +6,13 @@ if ($enum0 ! enum_1745) {
 }
 def_component $component1 = enum(int, component, enum_1137, %varcint171);
 def_component $component2 = enum(component, component, $enum0, interface_164:67);
-if ((if_hassub(enum(component, component, $enum0, interface_161:69)) = true) & (if_hassub(enum(component, component, $enum0, interface_161:15)) = true)) {
+if (if_hassub(enum(component, component, $enum0, interface_161:69)) = true & if_hassub(enum(component, component, $enum0, interface_161:15)) = true) {
 	return(1);
 }
-if ((((((($component1 = interface_161:72) | ($component1 = interface_161:73)) | ($component1 = interface_161:74)) | ($component1 = interface_161:75)) | ($component1 = interface_161:81)) | ($component1 = interface_161:82)) | ($component1 = interface_161:84)) {
+if ($component1 = interface_161:72 | $component1 = interface_161:73 | $component1 = interface_161:74 | $component1 = interface_161:75 | $component1 = interface_161:81 | $component1 = interface_161:82 | $component1 = interface_161:84) {
 	return(1);
 }
-if ((if_getx($component2) ! 37) & (if_hassub(enum(component, component, $enum0, interface_161:69)) = true)) {
+if (if_getx($component2) ! 37 & if_hassub(enum(component, component, $enum0, interface_161:69)) = true) {
 	return(1);
 }
 return(0);

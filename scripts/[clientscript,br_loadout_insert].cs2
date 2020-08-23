@@ -16,7 +16,7 @@ if ($namedobj11 = null) {
 def_int $int12 = 0;
 def_int $int13 = -1;
 if ($component2 = $component8) {
-	if (($int3 >= 0) & ($int3 < inv_size(inv))) {
+	if ($int3 >= 0 & $int3 < inv_size(inv)) {
 		$int13 = $int3;
 	}
 	$int12 = 1;
@@ -25,7 +25,7 @@ def_int $int14 = inv_size(worn);
 if ($int13 = -1) {
 	while ($int14 > 0) {
 		$int14 = calc($int14 - 1);
-		if (($int13 = -1) & (enum(int, component, enum_2632, $int14) = $component2)) {
+		if ($int13 = -1 & enum(int, component, enum_2632, $int14) = $component2) {
 			$int13, $int12 = $int14, 0;
 		}
 	}

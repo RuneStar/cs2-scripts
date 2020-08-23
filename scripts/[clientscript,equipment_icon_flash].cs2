@@ -1,7 +1,7 @@
 // 2643
 [clientscript,equipment_icon_flash](component $component0)
 if (%var281 ! 400) {
-	if ((%var2686 > 0) & (%var2686 ! 400)) {
+	if (%var2686 > 0 & %var2686 ! 400) {
 		if_setgraphic("options_icons,16", $component0);
 		return;
 	} else if (%var2686 = 0) {

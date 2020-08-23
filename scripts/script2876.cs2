@@ -2,7 +2,7 @@
 script2876(component $component0, component $component1, component $component2, component $component3, int $int4, int $int5, int $int6)
 def_int $int7 = if_getwidth($component0);
 def_int $int8 = if_getheight($component0);
-if (($int7 = $int5) & ($int8 = $int6)) {
+if ($int7 = $int5 & $int8 = $int6) {
 	return;
 }
 def_int $int9 = ~max(300, ~min($int4, calc($int8 - 10)));

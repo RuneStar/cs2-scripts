@@ -11,5 +11,5 @@ if ($int2 >= 25) {
 	return;
 }
 if_sethide(false, $component3);
-if_settrans(calc($int0 + interpolate(0, $int2, 0, 25, ($int1 - $int0))), $component3);
+if_settrans(calc($int0 + interpolate(0, $int2, 0, 25, $int1 - $int0)), $component3);
 if_setontimer("raids_fader_update($int0, $int1, calc($int2 + 1), $component3)", $component3);

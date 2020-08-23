@@ -5,7 +5,7 @@ def_int $int6 = 0;
 def_int $int7 = enum(int, int, enum_2653, $colour2);
 $int5, $int6 = ~buff_bar_buff_position($component0, $int1);
 $int1 = calc($int1 * 7);
-if (($int5 < 0) | ($int6 < 0)) {
+if ($int5 < 0 | $int6 < 0) {
 	return;
 }
 cc_create($component0, ^iftype_rectangle, $int1);

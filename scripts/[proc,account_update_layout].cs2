@@ -2,7 +2,7 @@
 [proc,account_update_layout]
 def_int $int0 = 0;
 if (~bonds_hide = 1) {
-	if ((%varbit6713 = 0) & (%varcint103 = 1)) {
+	if (%varbit6713 = 0 & %varcint103 = 1) {
 		if_sethide(true, interface_109:31);
 		if_setsize(190, 56, ^setsize_abs, ^setsize_abs, interface_109:24);
 		$int0 = calc($int0 + 32);

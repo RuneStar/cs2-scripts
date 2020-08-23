@@ -51,9 +51,9 @@ if (%varbit5703 = 1) {
 	$int14 = %varbit5704;
 	$int16 = calc((300 - 6) / 6);
 	$int15 = ~max(calc($int14 - $int16), 6);
-	if (($int2 < $int15) | ($int2 < 6)) {
+	if ($int2 < $int15 | $int2 < 6) {
 		$int5, $int6, $int7, $int19 = $int20, $int21, $int22, $int18;
-	} else if (($int2 < $int14) & ($int2 >= $int15)) {
+	} else if ($int2 < $int14 & $int2 >= $int15) {
 		$int5, $int6, $int7, $int19 = $int11, $int12, $int13, $int17;
 	} else if ($int2 >= $int14) {
 		$int5, $int6, $int7, $int19 = $int8, $int9, $int10, $int17;

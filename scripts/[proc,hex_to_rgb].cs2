@@ -1,3 +1,3 @@
 // 2
 [proc,hex_to_rgb](int $colour0)(int, int, int)
-return(calc(($colour0 / pow(2, 16)) % 256), calc(($colour0 / pow(2, 8)) % 256), calc($colour0 % 256));
+return(calc($colour0 / pow(2, 16) % 256), calc($colour0 / pow(2, 8) % 256), calc($colour0 % 256));

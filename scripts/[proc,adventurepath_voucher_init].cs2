@@ -16,7 +16,7 @@ cc_deleteall($component3);
 cc_deleteall($component4);
 def_int $int5 = if_getwidth($component3);
 def_int $int6 = if_getheight($component3);
-def_int $int7 = calc(($int5 - 64) - (36 * 2));
+def_int $int7 = calc($int5 - 64 - 36 * 2);
 def_int $int8 = 0;
 def_int $int9 = enum_getoutputcount($enum1);
 if ($int9 = 0) {
@@ -37,7 +37,7 @@ while ($int13 < $int9) {
 	if ($structarray0($int13) ! null) {
 		$enum11 = struct_param($structarray0($int13), param_838);
 		$enum12 = struct_param($structarray0($int13), param_840);
-		if (($enum11 ! null) & ($enum12 ! null)) {
+		if ($enum11 ! null & $enum12 ! null) {
 			if ($int14 = 0) {
 				cc_create($component3, ^iftype_text, $int10);
 				cc_setsize(calc(16 + $int5), 40, ^setsize_abs, ^setsize_abs);
@@ -62,7 +62,7 @@ while ($int13 < $int9) {
 	if ($structarray0($int13) ! null) {
 		$enum11 = struct_param($structarray0($int13), param_839);
 		$enum12 = struct_param($structarray0($int13), param_841);
-		if (($enum11 ! null) & ($enum12 ! null)) {
+		if ($enum11 ! null & $enum12 ! null) {
 			if ($int15 = 0) {
 				cc_create($component3, ^iftype_text, $int10);
 				cc_setsize(calc(16 + $int5), 40, ^setsize_abs, ^setsize_abs);

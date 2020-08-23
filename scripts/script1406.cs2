@@ -32,19 +32,19 @@ if ($int0 <= 3) {
 } else if ($int0 <= 8) {
 	$int3 = 5;
 } else {
-	$int3 = calc((($int0 / 2) + ($int0 % 2)) + 1);
+	$int3 = calc($int0 / 2 + $int0 % 2 + 1);
 }
 def_component $component6 = null;
 def_int $int7 = $int4;
 $int2 = 1;
-while (($int2 <= $int0) & ($int2 < $int3)) {
+while ($int2 <= $int0 & $int2 < $int3) {
 	$component6 = enum(int, component, enum_1461, $intarray0($int2));
 	if_sethide(false, $component6);
 	if_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top, $component6);
 	if ($int1 = 0) {
 		~script1631($int2, $intarray0($int2), $component6);
 	}
-	$int7, $int2 = calc(($int7 + if_getheight($component6)) + $int5), calc($int2 + 1);
+	$int7, $int2 = calc($int7 + if_getheight($component6) + $int5), calc($int2 + 1);
 }
 if ($int2 > 1) {
 	$int7 = calc($int7 - $int5);
@@ -68,7 +68,7 @@ while ($int2 <= $int0) {
 	if ($int1 = 0) {
 		~script1631($int2, $intarray0($int2), $component6);
 	}
-	$int7, $int2 = calc(($int7 + if_getheight($component6)) + $int5), calc($int2 + 1);
+	$int7, $int2 = calc($int7 + if_getheight($component6) + $int5), calc($int2 + 1);
 }
 while ($int2 <= 31) {
 	if_sethide(true, enum(int, component, enum_1461, $int2));

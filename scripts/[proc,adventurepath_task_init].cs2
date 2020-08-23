@@ -36,7 +36,7 @@ while ($int29 < enum_getoutputcount($enum27)) {
 		if (%var2358 = 0) {
 			%var2358 = $int32;
 		}
-		if (($int32 ! 0) & ($int32 = %var2358)) {
+		if ($int32 ! 0 & $int32 = %var2358) {
 			$int33 = 1;
 		} else {
 			$int33 = 0;
@@ -46,7 +46,7 @@ while ($int29 < enum_getoutputcount($enum27)) {
 			$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), ^red, ^white, $int32, $int33, $graphic34);
 			cc_setonop("adventurepath_set_info($int32, $component7, $component8, $component9, $component10, $struct25, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $int1, $component2, $component5, $component6, $int32, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24)");
 		} else if (~adventurepath_return_task_status($int32) = ^true) {
-			if ((~adventurepath_return_reward_f2p($int32) = ^false) | (~adventurepath_return_reward_p2p($int32) = ^false)) {
+			if (~adventurepath_return_reward_f2p($int32) = ^false | ~adventurepath_return_reward_p2p($int32) = ^false) {
 				$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), 0x32dbe9, ^white, $int32, $int33, $graphic34);
 				cc_setonop("adventurepath_set_info($int32, $component7, $component8, $component9, $component10, $struct25, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $int1, $component2, $component5, $component6, $int32, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24)");
 			} else {
@@ -64,7 +64,7 @@ while ($int29 < enum_getoutputcount($enum27)) {
 	}
 	$int29 = calc(1 + $int29);
 }
-def_int $int36 = calc(((50 + 5) * $int30) - 5);
+def_int $int36 = calc((50 + 5) * $int30 - 5);
 if ($int36 > if_getheight($component4)) {
 	if_setscrollsize(0, $int36, $component4);
 } else {

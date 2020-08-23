@@ -52,7 +52,7 @@ switch_enum ($enum1) {
 					if_setgraphic("graphic_1715", interface_601:35);
 					if_setop(1, "", interface_601:33);
 			}
-			if ((%varbit6255 ! 3) & (%varbit6256 = 0)) {
+			if (%varbit6255 ! 3 & %varbit6256 = 0) {
 				if_settrans(155, interface_601:35);
 			} else {
 				if_settrans(0, interface_601:35);

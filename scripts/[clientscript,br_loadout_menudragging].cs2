@@ -14,7 +14,7 @@ if (cc_find($component0, $int1) = ^true) {
 	if (.cc_find($component3, $int5) = ^true) {
 		.cc_setsize(calc(cc_getwidth - (8 + 36)), cc_getheight, ^setsize_abs, ^setsize_abs);
 		.cc_settext($string0);
-		.cc_setposition(calc((($int7 + 3) + 36) + 2), $int8, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc($int7 + 3 + 36 + 2), $int8, ^setpos_abs_left, ^setpos_abs_top);
 		.cc_sethide(false);
 	}
 }

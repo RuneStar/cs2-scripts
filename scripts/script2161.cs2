@@ -1,6 +1,6 @@
 // 2161
 script2161(char $char0, component $component1, string $string0)
-if (($char0 = null) | (~keypress_permit(608, -1) = 0)) {
+if ($char0 = null | ~keypress_permit(608, -1) = 0) {
 	return;
 }
 if (string_indexof_char($string0, $char0) ! -1) {

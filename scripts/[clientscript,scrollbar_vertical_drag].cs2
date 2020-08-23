@@ -7,10 +7,10 @@ if (cc_find($component0, 1) = ^true) {
 		.cc_setposition(0, calc($int2 + 16), ^setpos_abs_centre, ^setpos_abs_top);
 	}
 	if (.cc_find($component0, 3) = ^true) {
-		.cc_setposition(0, calc((($int2 + 16) + cc_getheight) - 5), ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setposition(0, calc($int2 + 16 + cc_getheight - 5), ^setpos_abs_centre, ^setpos_abs_top);
 	}
-	$int4 = calc((if_getheight($component0) - 32) - cc_getheight);
+	$int4 = calc(if_getheight($component0) - 32 - cc_getheight);
 	$int5 = calc(if_getscrollheight($component1) - if_getheight($component1));
-	$int2 = calc(($int2 * $int5) / ~max(1, $int4));
+	$int2 = calc($int2 * $int5 / ~max(1, $int4));
 	~scrollbar_vertical_doscroll($component0, $component1, $int2, $boolean3);
 }

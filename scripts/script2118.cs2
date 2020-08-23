@@ -7,7 +7,7 @@ if (%varbit1776 = $int4) {
 	if_setonmouserepeat(null, $component0);
 	if_setonmouseleave(null, $component0);
 	if_setonop("opsound(event_opindex, 0)", $component0);
-} else if ((($int4 = 0) & (%varbit1776 = 1)) & ($int7 >= 1000)) {
+} else if ($int4 = 0 & %varbit1776 = 1 & $int7 >= 1000) {
 	cc_setgraphic("options_radio_buttons,0");
 	if_setonmouserepeat("cc_settrans(event_com, $int1, 225, null)", $component0);
 	if_setonmouseleave("cc_settrans(event_com, $int1, 255, null)", $component0);

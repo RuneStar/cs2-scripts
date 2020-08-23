@@ -16,7 +16,7 @@ if ($int0 = 3) {
 	$int4 = 500;
 }
 if (char_isprintable($char2) = false) {
-	if (($int0 = 5) & ($key1 = ^key_return)) {
+	if ($int0 = 5 & $key1 = ^key_return) {
 		if ($int3 >= $int4) {
 			return($string0);
 		}
@@ -31,7 +31,7 @@ if (char_isprintable($char2) = false) {
 	return($string0);
 }
 if ($int0 = 2) {
-	if (((char_isalphanumeric($char2) = true) | (string_indexof_char(" _-", $char2) ! -1)) & ($int3 < 12)) {
+	if ((char_isalphanumeric($char2) = true | string_indexof_char(" _-", $char2) ! -1) & $int3 < 12) {
 		return(append_char($string0, $char2));
 	}
 	return($string0);
@@ -41,22 +41,22 @@ def_string $string1 = "";
 if ($int0 = 1) {
 	if ($int3 > 0) {
 		$string1 = lowercase(substring($string0, calc($int3 - 1), $int3));
-		if (((compare($string1, "k") = 0) | (compare($string1, "m") = 0)) | (compare($string1, "b") = 0)) {
+		if (compare($string1, "k") = 0 | compare($string1, "m") = 0 | compare($string1, "b") = 0) {
 			return($string0);
 		}
 	}
 	if (string_indexof_char("kKmMbB", $char2) ! -1) {
 		$int5 = 1;
 	}
-	if ((($int5 = 1) | (char_isnumeric($char2) = true)) & ($int3 < 10)) {
-		if (($int5 = 1) & ($int3 <= 0)) {
+	if (($int5 = 1 | char_isnumeric($char2) = true) & $int3 < 10) {
+		if ($int5 = 1 & $int3 <= 0) {
 			return($string0);
 		}
 		return(append_char($string0, $char2));
 	}
 	return($string0);
 }
-if (($int0 = 5) & (string_indexof_char("|", $char2) ! -1)) {
+if ($int0 = 5 & string_indexof_char("|", $char2) ! -1) {
 	return($string0);
 }
 if ($int3 < $int4) {

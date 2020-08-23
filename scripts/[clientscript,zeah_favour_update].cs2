@@ -14,7 +14,7 @@ switch_int ($int2) {
 		$int3 = %varbit4894;
 }
 if_setsize(scale($int3, 1000, 16384), 0, ^setsize_2, ^setsize_minus, $component0);
-if (($int3 > 0) & (if_getwidth($component0) < 2)) {
+if ($int3 > 0 & if_getwidth($component0) < 2) {
 	if_setsize(2, 0, ^setsize_abs, ^setsize_minus, $component0);
 }
 def_int $int4 = scale($int3, 1000, 1000);

@@ -1,6 +1,6 @@
 // 436
 [clientscript,grouping_mouseover](component $component0, int $int1, int $int2, boolean $boolean3)
-if ((.cc_find($component0, $int1) = ^true) & (cc_find($component0, $int2) = ^true)) {
+if (.cc_find($component0, $int1) = ^true & cc_find($component0, $int2) = ^true) {
 	if ($boolean3 = true) {
 		cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 		cc_sethide(false);

@@ -10,7 +10,7 @@ cc_create($component0, ^iftype_graphic, $int2);
 $int2 = calc($int2 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(4, 0, ^setpos_abs_left, ^setpos_abs_centre);
-$int3 = calc((($int3 + 4) + 36) + 4);
+$int3 = calc($int3 + 4 + 36 + 4);
 cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
 cc_setobject_nonum($obj1, 1);

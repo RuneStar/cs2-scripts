@@ -18,12 +18,12 @@ while ($int5 < $int7) {
 		cc_create($component0, ^iftype_graphic, $int8);
 		cc_setoutline(1);
 		cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc(($int4 / 2) - 16), calc(5 + ($int3 * $int5)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int4 / 2 - 16), calc(5 + $int3 * $int5), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setobject($namedobj13, 1);
 		$int8 = calc($int8 + 1);
 		cc_create($component0, ^iftype_text, $int8);
 		cc_setsize($int4, 15, ^setsize_abs, ^setsize_abs);
-		cc_setposition(0, calc(36 + ($int3 * $int5)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(0, calc(36 + $int3 * $int5), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextfont(p11_full);
 		cc_setcolour(0xff981f);
@@ -33,7 +33,7 @@ while ($int5 < $int7) {
 	}
 	cc_create($component0, ^iftype_text, $int8);
 	cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int4 - 12), calc(($int3 * $int5) + (($int3 / 2) - 7)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int4 - 12), calc($int3 * $int5 + ($int3 / 2 - 7)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextfont(p12_full);
 	cc_setcolour(0xff981f);

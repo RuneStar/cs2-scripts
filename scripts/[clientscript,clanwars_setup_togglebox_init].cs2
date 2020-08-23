@@ -23,10 +23,10 @@ while ($int9 ! -1) {
 	cc_setop(1, $string1);
 	cc_setonop("clanwars_setup_togglebox_op(event_opindex, $component3, event_comid, $int9)");
 	cc_setonvartransmit("clanwars_setup_togglebox_update($component3, event_comid, $int9){var92}");
-	cc_create($component3, ^iftype_graphic, calc(($int8 * 3) + 1));
+	cc_create($component3, ^iftype_graphic, calc($int8 * 3 + 1));
 	cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-	.cc_create($component3, ^iftype_text, calc(($int8 * 3) + 2));
+	.cc_create($component3, ^iftype_text, calc($int8 * 3 + 2));
 	.cc_setposition(17, calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setsize(calc($int6 - 17), 16, ^setsize_abs, ^setsize_abs);
 	.cc_settextshadow(true);

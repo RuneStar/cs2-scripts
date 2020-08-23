@@ -1,7 +1,7 @@
 // 1997
 [clientscript,fossil_oxygen_level](component $component0, component $component1, component $component2)
 if_setsize(interpolate(0, 16384, 0, 1000, %varbit5811), 0, ^setsize_2, ^setsize_minus, $component0);
-if ((if_getwidth($component0) = 0) & (%varbit5811 ! 0)) {
+if (if_getwidth($component0) = 0 & %varbit5811 ! 0) {
 	if_setsize(1, 0, ^setsize_abs, ^setsize_minus, $component0);
 }
 if (%varbit5811 = 0) {
@@ -9,6 +9,6 @@ if (%varbit5811 = 0) {
 	return;
 }
 if_settext("Oxygen Level: <tostring(calc(%varbit5811 / 10))>%", $component1);
-if ((%varbit5811 <= 100) & (%varcint198 ! 1)) {
+if (%varbit5811 <= 100 & %varcint198 ! 1) {
 	if_setontimer("fossil_warning_flasher($component2, $component1, clientclock, 250)", $component1);
 }

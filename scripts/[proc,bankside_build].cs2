@@ -2,7 +2,7 @@
 [proc,bankside_build](component $component0, component $component1, component $component2, component $component3, component $component4)
 if_setontimer("script3277(%varcint386, $component0, $component1, $component2, $component3, $component4)", $component0);
 cc_deleteall($component2);
-def_int $int5 = calc(((42 - 36) * 3) - 2);
+def_int $int5 = calc((42 - 36) * 3 - 2);
 def_int $int6 = calc((36 - 32) * 2);
 def_obj $obj7 = null;
 def_int $int8 = 0;
@@ -15,7 +15,7 @@ if (%varcint386 = true) {
 		$int8 = calc($int8 - 1);
 		if (cc_find($component3, $int8) = ^true) {
 			cc_clearops;
-			cc_setposition(calc($int5 + (($int8 % 4) * 42)), calc($int6 + (($int8 / 4) * 36)), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc($int5 + $int8 % 4 * 42), calc($int6 + $int8 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
 			~script3327(inv_getobj(inv, $int8), inv_getnum(inv, $int8), $int8);
 			cc_setontimer(null);
 		}
@@ -27,7 +27,7 @@ if_sethide(false, $component2);
 if_sethide(true, $component3);
 def_int $int9 = 0;
 $int8 = inv_size(inv_516);
-while (($int8 > 0) & ($int9 = 0)) {
+while ($int8 > 0 & $int9 = 0) {
 	$int8 = calc($int8 - 1);
 	if (inv_getobj(inv_516, $int8) ! null) {
 		$int9 = 1;
@@ -40,8 +40,8 @@ while ($int8 > 0) {
 	if (cc_find($component1, $int8) = ^true) {
 		$obj7 = inv_getobj(inv, $int8);
 		~bankside_drawitem($obj7, inv_getnum(inv, $int8), $int8, $component1, $component2, $int9, $component0, $component4);
-		cc_setposition(calc($int5 + (($int8 % 4) * 42)), calc($int6 + (($int8 / 4) * 36)), ^setpos_abs_left, ^setpos_abs_top);
-		if ((($obj7 = looting_bag_11941) | ($obj7 = looting_bag_22586)) & ($int9 = 1)) {
+		cc_setposition(calc($int5 + $int8 % 4 * 42), calc($int6 + $int8 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+		if (($obj7 = looting_bag_11941 | $obj7 = looting_bag_22586) & $int9 = 1) {
 			.cc_create($component2, ^iftype_graphic, $int10);
 			$int10 = calc($int10 + 1);
 			.cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);

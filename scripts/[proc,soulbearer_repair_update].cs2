@@ -2,13 +2,13 @@
 [proc,soulbearer_repair_update](component $component0, int $int1)
 def_int $int2 = 0;
 if ($int1 <= 50) {
-	cc_settrans(calc(255 - ($int1 * 5)));
-	.cc_setmodelangle(0, 300, 100, 1536, calc($int1 * 3), calc(10100 - ($int1 * 200)));
+	cc_settrans(calc(255 - $int1 * 5));
+	.cc_setmodelangle(0, 300, 100, 1536, calc($int1 * 3), calc(10100 - $int1 * 200));
 	return;
 }
 if ($int1 <= 75) {
 	$int1 = calc($int1 - 50);
-	cc_settrans(calc(5 + ($int1 * 10)));
+	cc_settrans(calc(5 + $int1 * 10));
 	.cc_setmodel(model_16238);
 	return;
 }

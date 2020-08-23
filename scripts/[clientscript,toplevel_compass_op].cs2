@@ -1,6 +1,6 @@
 // 1050
 [clientscript,toplevel_compass_op](int $int0)
-if ((($int0 ! 1) | (%varbit542 = ^true)) | (%varbit4606 ! 0)) {
+if ($int0 ! 1 | %varbit542 = ^true | %varbit4606 ! 0) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

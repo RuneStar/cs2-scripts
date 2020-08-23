@@ -28,12 +28,12 @@ if (%varbit4606 ! 0) {
 		viewport_clampfov(512, 512, 512, 512);
 	}
 	cam_setfollowheight(50);
-	if (($component2 ! null) & ($component3 ! null)) {
+	if ($component2 ! null & $component3 ! null) {
 		$int10, $int11 = viewport_geteffectivesize;
 		$int12, $int13 = ~max(0, calc($int16 - $int10)), ~max(0, calc($int17 - $int11));
 		if_setsize($int10, $int11, ^setsize_abs, ^setsize_abs, $component2);
-		if_setsize(calc($int10 - ~max(0, ($int14 - $int12))), calc($int11 - ~max(0, ($int15 - $int13))), ^setsize_abs, ^setsize_abs, $component3);
-		if (($component4 ! null) & ($component5 ! null)) {
+		if_setsize(calc($int10 - ~max(0, $int14 - $int12)), calc($int11 - ~max(0, $int15 - $int13)), ^setsize_abs, ^setsize_abs, $component3);
+		if ($component4 ! null & $component5 ! null) {
 			$int12, $int13 = calc(($int12 - $int14) / 2), calc(($int13 - $int15) / 2);
 			$int6, $int8 = ~max(0, calc($int6 - $int12)), ~max(0, calc($int8 - $int12));
 			$int7, $int9 = ~max(0, calc($int7 - $int13)), ~max(0, calc($int9 - $int13));
@@ -48,16 +48,16 @@ if (%varbit4606 ! 0) {
 	}
 } else {
 	viewport_clampfov(0, 0, 0, 0);
-	if ((((%varcint73 >= 128) & (%varcint73 <= 896)) & (%varcint74 >= 128)) & (%varcint74 <= 896)) {
+	if (%varcint73 >= 128 & %varcint73 <= 896 & %varcint74 >= 128 & %varcint74 <= 896) {
 		~camera_do_zoom(%varcint73, %varcint74);
 	} else {
 		~camera_do_zoom(512, 512);
 	}
 	$int10, $int11 = viewport_geteffectivesize;
-	if (($component2 ! null) & ($component3 ! null)) {
+	if ($component2 ! null & $component3 ! null) {
 		if_setsize($int10, $int11, ^setsize_abs, ^setsize_abs, $component2);
 		if_setsize(calc($int10 - $int14), calc($int11 - $int15), ^setsize_abs, ^setsize_abs, $component3);
-		if (($component4 ! null) & ($component5 ! null)) {
+		if ($component4 ! null & $component5 ! null) {
 			if_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top, $component4);
 			if_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top, $component5);
 			if_setsize(calc($int6 + $int8), calc($int7 + $int9), ^setsize_minus, ^setsize_minus, $component4);
@@ -70,7 +70,7 @@ if (%varbit4606 ! 0) {
 }
 def_component $component18 = enum(component, component, $enum1, interface_161:15);
 if ($component18 ! null) {
-	if ((~on_mobile = false) & (if_hassub($component18) = true)) {
+	if (~on_mobile = false & if_hassub($component18) = true) {
 		if (%varcint173 = -2) {
 			if_setsize(512, 0, ^setsize_abs, ^setsize_minus, $component18);
 		} else if (%varcint173 = -3) {

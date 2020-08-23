@@ -13,25 +13,25 @@ if ($int13 <= 0) {
 	return;
 }
 $int13 = calc(20 - $int13);
-$int5 = calc($int1 + ($int13 * $int5));
+$int5 = calc($int1 + $int13 * $int5);
 if ($int9 > $int1) {
 	$int5 = ~min($int5, $int9);
 } else if ($int9 < $int1) {
 	$int5 = ~max($int5, $int9);
 }
-$int6 = calc($int2 + ($int13 * $int6));
+$int6 = calc($int2 + $int13 * $int6);
 if ($int10 > $int2) {
 	$int6 = ~min($int6, $int10);
 } else if ($int10 < $int2) {
 	$int6 = ~max($int6, $int10);
 }
-$int7 = calc($int3 + ($int13 * $int7));
+$int7 = calc($int3 + $int13 * $int7);
 if ($int11 > $int3) {
 	$int7 = ~min($int7, $int11);
 } else if ($int11 < $int3) {
 	$int7 = ~max($int7, $int11);
 }
-$int8 = calc($int4 + ($int13 * $int8));
+$int8 = calc($int4 + $int13 * $int8);
 if ($int12 > $int4) {
 	$int8 = ~min($int8, $int12);
 } else if ($int12 < $int4) {

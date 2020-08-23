@@ -10,7 +10,7 @@ cc_settrans($int4);
 cc_clearops;
 if ($boolean3 = true) {
 	cc_setop(1, "Stats");
-	if (((%varbit5428 = 1) & (clan_getchatcount > 0)) & (clan_getchatrank >= clan_getchatminkick)) {
+	if (%varbit5428 = 1 & clan_getchatcount > 0 & clan_getchatrank >= clan_getchatminkick) {
 		cc_setop(6, "Kick");
 	}
 	cc_setonmouserepeat("cc_settrans(event_com, event_comid, 220, null)");

@@ -15,7 +15,7 @@ if (~on_mobile = true) {
 	$int2 = calc($int2 - 50);
 }
 def_int $int3 = calc(parawidth($string0, $int2, p11_full) + 8);
-def_int $int4 = calc(((paraheight($string0, $int2, p11_full) * 10) + 3) + 8);
+def_int $int4 = calc(paraheight($string0, $int2, p11_full) * 10 + 3 + 8);
 ~create_graphic($component1, 0, "tradebacking", 0, 2, ^setpos_abs_centre, ^setpos_abs_top, $int3, $int4, ^setsize_abs, ^setsize_abs);
 cc_settrans(50);
 cc_create($component1, ^iftype_rectangle, 1);

@@ -7,19 +7,19 @@ def_int $int3 = ~script1372;
 def_int $int4 = ~script1373;
 def_int $int5 = 200;
 $int5 = enum(int, int, enum_1408, %varbit3251);
-if (($int1 >= $int5) & ($int5 > 0)) {
+if ($int1 >= $int5 & $int5 > 0) {
 	$int0 = setbit($int0, 0);
 }
 $int5 = enum(int, int, enum_1408, %varbit3254);
-if (($int2 >= $int5) & ($int5 > 0)) {
+if ($int2 >= $int5 & $int5 > 0) {
 	$int0 = setbit($int0, 1);
 }
 $int5 = enum(int, int, enum_1408, %varbit3253);
-if (($int3 >= $int5) & ($int5 > 0)) {
+if ($int3 >= $int5 & $int5 > 0) {
 	$int0 = setbit($int0, 2);
 }
 $int5 = enum(int, int, enum_1408, %varbit3255);
-if (($int4 >= $int5) & ($int5 > 0)) {
+if ($int4 >= $int5 & $int5 > 0) {
 	$int0 = setbit($int0, 3);
 }
 def_int $int6 = ~min(~min($int1, $int2), ~min($int3, $int4));
@@ -43,10 +43,10 @@ if ($int6 >= 100) {
 if ($int7 >= 500) {
 	$int0 = setbit($int0, 15);
 }
-if (($int7 >= 400) & (%var262 > 5)) {
+if ($int7 >= 400 & %var262 > 5) {
 	$int0 = setbit($int0, 14);
 }
-if (($int7 >= 200) & (%var262 > 2)) {
+if ($int7 >= 200 & %var262 > 2) {
 	$int0 = setbit($int0, 13);
 }
 if (inv_total(inv, coins_995) >= 95000) {

@@ -1,6 +1,6 @@
 // 685
 [clientscript,bankpin_button_op](int $int0, int $int1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19)
-if (($int0 < 0) | ($int0 >= 10)) {
+if ($int0 < 0 | $int0 >= 10) {
 	return;
 }
 sound_synth(synth_1041, 1, 0);
@@ -11,9 +11,9 @@ if ($int1 = 3) {
 	return;
 }
 if ($int1 = 2) {
-	$int2 = calc($int2 + (10 * $int0));
+	$int2 = calc($int2 + 10 * $int0);
 } else if ($int1 = 1) {
-	$int2 = calc($int2 + (100 * $int0));
+	$int2 = calc($int2 + 100 * $int0);
 } else if ($int1 = 0) {
 	$int2 = calc(1000 * $int0);
 } else {

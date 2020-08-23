@@ -6,7 +6,7 @@
 def_int $intarray0($int0);
 def_int $int1 = 0;
 def_int $int2 = 0;
-while (($int2 = 0) & ($int1 < $int0)) {
+while ($int2 = 0 & $int1 < $int0) {
 	if (cc_find(interface_500:10, calc($int1 * 7)) = ^true) {
 		$intarray0($int1) = $int1;
 		$int1 = calc($int1 + 1);
@@ -16,9 +16,9 @@ while (($int2 = 0) & ($int1 < $int0)) {
 }
 def_string $string0 = "";
 if ($int1 >= 2) {
-	if ((%varcint181 = 2) | (%varcint181 = 3)) {
+	if (%varcint181 = 2 | %varcint181 = 3) {
 		~raids_sidepanel_sort(intarray0, 0, calc($int1 - 1), 5);
-	} else if ((%varcint181 = 4) | (%varcint181 = 5)) {
+	} else if (%varcint181 = 4 | %varcint181 = 5) {
 		~raids_sidepanel_sort(intarray0, 0, calc($int1 - 1), 6);
 	} else {
 		~raids_sidepanel_sort(intarray0, 0, calc($int1 - 1), 4);
@@ -26,7 +26,7 @@ if ($int1 >= 2) {
 }
 def_int $int3 = 0;
 def_int $int4 = 0;
-if (((%varcint181 = 3) | (%varcint181 = 5)) | (%varcint181 = 1)) {
+if (%varcint181 = 3 | %varcint181 = 5 | %varcint181 = 1) {
 	$int3 = $int1;
 	while ($int3 > 0) {
 		$int3 = calc($int3 - 1);
@@ -34,13 +34,13 @@ if (((%varcint181 = 3) | (%varcint181 = 5)) | (%varcint181 = 1)) {
 			cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
 			~raids_sidepanel_entry_init($int3, true);
 		}
-		if (cc_find(interface_500:10, calc(($intarray0($int3) * 7) + 1)) = ^true) {
+		if (cc_find(interface_500:10, calc($intarray0($int3) * 7 + 1)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find(interface_500:10, calc(($intarray0($int3) * 7) + 2)) = ^true) {
+		if (cc_find(interface_500:10, calc($intarray0($int3) * 7 + 2)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find(interface_500:10, calc(($intarray0($int3) * 7) + 3)) = ^true) {
+		if (cc_find(interface_500:10, calc($intarray0($int3) * 7 + 3)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
 		$int4 = calc($int4 + 13);
@@ -51,13 +51,13 @@ if (((%varcint181 = 3) | (%varcint181 = 5)) | (%varcint181 = 1)) {
 			cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
 			~raids_sidepanel_entry_init($int3, true);
 		}
-		if (cc_find(interface_500:10, calc(($intarray0($int3) * 7) + 1)) = ^true) {
+		if (cc_find(interface_500:10, calc($intarray0($int3) * 7 + 1)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find(interface_500:10, calc(($intarray0($int3) * 7) + 2)) = ^true) {
+		if (cc_find(interface_500:10, calc($intarray0($int3) * 7 + 2)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
-		if (cc_find(interface_500:10, calc(($intarray0($int3) * 7) + 3)) = ^true) {
+		if (cc_find(interface_500:10, calc($intarray0($int3) * 7 + 3)) = ^true) {
 			cc_setposition(cc_getx, $int4, ^setpos_abs_left, ^setpos_abs_top);
 		}
 		$int4 = calc($int4 + 13);

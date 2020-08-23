@@ -1,6 +1,6 @@
 // 3513
 script3513(component $component0, component $component1, boolean $boolean2)
-def_int $int3 = calc(clientclock + ((%varbit4163 - 100) * 30));
+def_int $int3 = calc(clientclock + (%varbit4163 - 100) * 30);
 $int3 = calc(($int3 - clientclock) / 50);
 def_int $int4 = calc($int3 / 60);
 def_int $int5 = calc($int3 % 60);

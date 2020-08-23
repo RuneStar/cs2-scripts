@@ -1,7 +1,7 @@
 // 976
 [proc,deathkeep_left_protecteditem](obj $obj0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6)(int, int, int)
-def_int $int7 = calc($int4 + (($int6 % $int2) * (36 + $int3)));
-def_int $int8 = calc(17 + (($int6 / $int2) * (32 + $int3)));
+def_int $int7 = calc($int4 + $int6 % $int2 * (36 + $int3));
+def_int $int8 = calc(17 + $int6 / $int2 * (32 + $int3));
 cc_create(interface_4:6, ^iftype_graphic, $int5);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition($int7, $int8, ^setpos_abs_left, ^setpos_abs_top);

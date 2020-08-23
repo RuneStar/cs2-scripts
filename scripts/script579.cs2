@@ -3,7 +3,7 @@ script579(int $int0, int $int1, enum $enum2, component $component3, component $c
 if ($int0 ! 1) {
 	return;
 }
-if (($int1 < 0) | ($int1 >= $int6)) {
+if ($int1 < 0 | $int1 >= $int6) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

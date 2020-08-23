@@ -16,7 +16,7 @@ if_setopbase("<col=ff9040><oc_name($obj3)></col>", $component0);
 if_setop(1, "Remove", $component0);
 def_string $string0 = "";
 if ($boolean2 = true) {
-	if ((map_members = ^true) | (oc_members($obj3) = ^false)) {
+	if (map_members = ^true | oc_members($obj3) = ^false) {
 		$string0 = oc_param($obj3, param_451);
 		if (string_length($string0) > 0) {
 			if_setop(2, $string0, $component0);
@@ -50,7 +50,7 @@ if ($boolean2 = true) {
 			if_setop(9, $string0, $component0);
 		}
 		if ($obj3 = camulet_6707) {
-			if ((%varbit4525 = 1) | (%varbit4526 = 1)) {
+			if (%varbit4525 = 1 | %varbit4526 = 1) {
 				if_setop(3, "Temple", $component0);
 				if_setop(4, "Surface", $component0);
 			}

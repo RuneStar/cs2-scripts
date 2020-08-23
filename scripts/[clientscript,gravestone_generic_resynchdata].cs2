@@ -1,6 +1,6 @@
 // 3477
 [clientscript,gravestone_generic_resynchdata](int $int0, component $component1, int $int2, component $component3, component $component4, component $component5)
-if ((%varcint400 ! $int2) | (%varcint399 ! $int0)) {
+if (%varcint400 ! $int2 | %varcint399 ! $int0) {
 	if_settext(~gravestone_generic_parsefee(%varcint399), $component1);
 	if_settext(~gravestone_generic_parsecoffer(%varcint400), $component3);
 	if (%varcint399 ! 0) {

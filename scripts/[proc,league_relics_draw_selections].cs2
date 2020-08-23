@@ -52,7 +52,7 @@ def_int $int27 = 0;
 def_int $int28 = 0;
 if ($int15 > 0) {
 	$int24 = calc($int22 / $int15);
-	$int27 = calc(($int22 - ($int24 * $int15)) / 2);
+	$int27 = calc(($int22 - $int24 * $int15) / 2);
 }
 def_graphic $graphic29 = null;
 def_int $int30 = -1;
@@ -91,14 +91,14 @@ while ($int43 < $int15) {
 			$int41 = 0;
 	}
 	$struct42 = enum(int, struct, $enum18, $int41);
-	if (($enum18 ! null) & ($struct42 ! null)) {
+	if ($enum18 ! null & $struct42 ! null) {
 		cc_create($component1, ^iftype_graphic, $int43);
 		cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
 		cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("tradebacking_dark");
 		cc_settiling(true);
 		$graphic29, $int30, $string0, $int31, $int32, $int38, $colour34, $colour36 = null, 255, "", 1, 0, 1, 0xaaaaaa, 0xdddddd;
-	} else if ((($int28 = 0) & ($enum18 ! null)) & (%var2615 >= struct_param($struct16, param_877))) {
+	} else if ($int28 = 0 & $enum18 ! null & %var2615 >= struct_param($struct16, param_877)) {
 		cc_create($component1, ^iftype_graphic, $int43);
 		cc_setsize($int24, 0, ^setsize_abs, ^setsize_minus);
 		cc_setposition($int27, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -129,7 +129,7 @@ while ($int43 < $int15) {
 	}
 	if ($int17 > 0) {
 		$int25 = calc($int23 / $int17);
-		$int26 = calc(($int23 - ($int25 * $int17)) / 2);
+		$int26 = calc(($int23 - $int25 * $int17) / 2);
 	}
 	$int44 = 0;
 	while ($int44 < $int17) {
@@ -141,7 +141,7 @@ while ($int43 < $int15) {
 			$string1 = struct_param($struct39, param_879);
 		}
 		cc_setsize(calc($int24 - 10), 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($int27 + 5), calc(($int26 + ($int25 / 2)) + 1), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int27 + 5), calc($int26 + $int25 / 2 + 1), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settext($string1);
 		cc_settextfont(p11_full);
 		if ($struct39 ! $struct42) {
@@ -163,7 +163,7 @@ while ($int43 < $int15) {
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_create($component2, ^iftype_graphic, $int45);
 		cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc(($int27 + ($int24 / 2)) - 15), calc(($int26 + ($int25 / 2)) - 31), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int27 + $int24 / 2 - 15), calc($int26 + $int25 / 2 - 31), ^setpos_abs_left, ^setpos_abs_top);
 		if ($graphic29 ! null) {
 			$graphic40, $int37 = $graphic29, calc($int30 - 128);
 		} else if ($struct39 = $struct42) {
@@ -174,7 +174,7 @@ while ($int43 < $int15) {
 		cc_setgraphic($graphic40);
 		cc_create($component3, ^iftype_graphic, $int45);
 		cc_setsize(34, 34, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc(($int27 + ($int24 / 2)) - 17), calc(($int26 + ($int25 / 2)) - 33), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int27 + $int24 / 2 - 17), calc($int26 + $int25 / 2 - 33), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("league_relics_outline");
 		if ($int30 ! -1) {
 			cc_settrans($int30);
@@ -191,7 +191,7 @@ while ($int43 < $int15) {
 			cc_setopbase("<col=ff981f><$string1></col>");
 			cc_setonop("league_relics_loading($component9, $int45)");
 		}
-		if (($int31 = 1) & (~on_mobile = false)) {
+		if ($int31 = 1 & ~on_mobile = false) {
 			if ($int32 = 1) {
 				cc_setonmouseover("league_relic_hover($component3, $int37, $component2, struct_param($struct39, param_881), $component4, $colour35, $int45)");
 			} else {

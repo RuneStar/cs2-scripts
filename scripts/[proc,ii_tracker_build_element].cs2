@@ -5,7 +5,7 @@ def_int $int7 = 6;
 def_int $int8 = 50;
 def_int $int9 = 32;
 def_int $int10 = 32;
-if (calc((($int4 + $int9) + $int7) + $int8) > if_getwidth($component0)) {
+if (calc($int4 + $int9 + $int7 + $int8) > if_getwidth($component0)) {
 	$int4 = 15;
 	$int5 = calc($int5 + 80);
 } else if ($int3 > 0) {
@@ -14,7 +14,7 @@ if (calc((($int4 + $int9) + $int7) + $int8) > if_getwidth($component0)) {
 cc_create($component2, ^iftype_model, $int3);
 cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
-$int4 = calc(($int4 + 6) + cc_getwidth);
+$int4 = calc($int4 + 6 + cc_getwidth);
 cc_setmodel(enum(int, model, enum_1316, $int3));
 cc_setmodelangle(0, 20, 0, 1871, 0, 600);
 cc_setmodelanim(baby_impling_ready_6613);

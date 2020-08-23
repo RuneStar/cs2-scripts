@@ -5,7 +5,7 @@ def_string $string0 = "";
 if ($obj0 ! null) {
 	cc_setobject($obj0, $int1);
 	if (testbit(%var262, $int2) = ^true) {
-		if ((map_members = ^true) | (oc_members($obj0) = ^false)) {
+		if (map_members = ^true | oc_members($obj0) = ^false) {
 			$string0 = oc_iop($obj0, oc_param($obj0, param_148));
 		} else {
 			$string0 = "";

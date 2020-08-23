@@ -1,6 +1,6 @@
 // 490
 [clientscript,bankside_switchview](int $int0, component $component1, component $component2, int $int3)
-if (($int0 = 1) & (($int3 = 1) | ($int3 = 0))) {
+if ($int0 = 1 & ($int3 = 1 | $int3 = 0)) {
 	sound_synth(synth_2266, 1, 0);
 	%varbit4139 = $int3;
 }

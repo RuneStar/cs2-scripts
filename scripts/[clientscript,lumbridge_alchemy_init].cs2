@@ -6,7 +6,7 @@ while ($int7 < $int6) {
 	cc_create($component4, ^iftype_graphic, $int7);
 	cc_sethide(true);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc(($int7 % 4) * (36 + 8)), calc(($int7 / 4) * 32), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int7 % 4 * (36 + 8)), calc($int7 / 4 * 32), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setoutline(1);
 	cc_setgraphicshadow(0x333333);
 	cc_setop(10, "Examine");

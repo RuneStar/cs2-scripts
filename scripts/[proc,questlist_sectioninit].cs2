@@ -22,7 +22,7 @@ while ($int9 < $int2) {
 	$string1 = struct_param(enum(int, struct, $enum1, $int9), param_610);
 	cc_settext($string1);
 	cc_setopbase("<col=ff9040><$string1></col>");
-	$intarray0($int9) = calc(($int6 * $int7) + $int9);
+	$intarray0($int9) = calc($int6 * $int7 + $int9);
 	cc_setop(1, "Read Journal:");
 	cc_setop(2, "Guide:");
 	cc_setop(3, "Quick-guide:");

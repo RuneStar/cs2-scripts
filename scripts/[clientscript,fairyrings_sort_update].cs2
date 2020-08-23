@@ -1,7 +1,7 @@
 // 402
 [clientscript,fairyrings_sort_update](component $component0, component $component1, int $int2, component $component3, component $component4)
 if ($int2 = 1) {
-	if ((%varcint54 = 1) | (%varcint54 = 0)) {
+	if (%varcint54 = 1 | %varcint54 = 0) {
 		%varcint54 = %varcint54;
 	} else {
 		%varcint54 = 0;
@@ -35,9 +35,9 @@ while ($int11 < 4) {
 	$component5 = enum(int, component, enum_1297, $int11);
 	$component7 = enum(int, component, enum_1298, $int11);
 	$component6 = enum(int, component, enum_1299, $int11);
-	if ((($component5 ! null) & ($component6 ! null)) & ($component7 ! null)) {
+	if ($component5 ! null & $component6 ! null & $component7 ! null) {
 		if (string_length(if_gettext($component5)) > 0) {
-			$int9 = calc((paraheight(if_gettext($component5), $int8, p12_full) * 12) + 5);
+			$int9 = calc(paraheight(if_gettext($component5), $int8, p12_full) * 12 + 5);
 			if_sethide(false, $component5);
 			if_sethide(false, $component7);
 			if_sethide(false, $component6);
@@ -50,7 +50,7 @@ while ($int11 < 4) {
 			if_setonmouseover("text_colour_swapper($component7, 0xff7f7f)", $component5);
 			if_setonmouseleave("text_colour_swapper($component7, 0xff3f3f)", $component5);
 			$boolean12 = false;
-			$int10 = calc(($int10 + $int9) + 3);
+			$int10 = calc($int10 + $int9 + 3);
 		} else {
 			if_sethide(true, $component5);
 			if_sethide(true, $component6);
@@ -101,7 +101,7 @@ cc_deleteall($component0);
 while ($int13 < $int15) {
 	$component6 = enum(component, component, enum_1296, $componentarray0($int13));
 	$string0 = enum(component, string, enum_823, $componentarray0($int13));
-	$int9 = calc((paraheight(if_gettext($componentarray0($int13)), $int8, p12_full) * 12) + 5);
+	$int9 = calc(paraheight(if_gettext($componentarray0($int13)), $int8, p12_full) * 12 + 5);
 	if ($component6 ! null) {
 		if_setposition(2, $int10, ^setpos_abs_left, ^setpos_abs_top, $component6);
 	}
@@ -118,19 +118,19 @@ while ($int13 < $int15) {
 	if_setopbase("<col=ff981f><$string0></col>", $componentarray0($int13));
 	if_setonmouseover("cc_colour_swapper($component0, cc_getid, 0xff7f7f)", $componentarray0($int13));
 	if_setonmouseleave("cc_colour_swapper($component0, cc_getid, 0xff3f3f)", $componentarray0($int13));
-	$int10 = calc(($int10 + $int9) + 3);
+	$int10 = calc($int10 + $int9 + 3);
 	$int13 = calc($int13 + 1);
 }
 $string0 = if_gettext(interface_381:139);
 if (string_length($string0) > 0) {
 	if_sethide(false, interface_381:139);
-	$int9 = calc((paraheight($string0, $int8, p12_full) * 12) + 5);
+	$int9 = calc(paraheight($string0, $int8, p12_full) * 12 + 5);
 	if_setsize($int8, $int9, ^setsize_abs, ^setsize_abs, interface_381:139);
 	if_setposition(20, $int10, ^setpos_abs_left, ^setpos_abs_top, interface_381:139);
 	if_setcolour(0xff3f3f, interface_381:139);
 	if_setonmouseover("text_colour_swapper(event_com, 0xff7f7f)", interface_381:139);
 	if_setonmouseleave("text_colour_swapper(event_com, 0xff3f3f)", interface_381:139);
-	$int10 = calc(($int10 + $int9) + 3);
+	$int10 = calc($int10 + $int9 + 3);
 } else {
 	if_sethide(true, interface_381:139);
 }

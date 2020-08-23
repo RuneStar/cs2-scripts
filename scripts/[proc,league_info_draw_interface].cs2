@@ -30,11 +30,11 @@ def_string $string0 = "";
 def_int $int27 = if_getwidth($component3);
 def_int $int28 = if_getwidth($component5);
 def_string $string1 = "<img=13> <~text_device("Click", "Tap")> to open the Leagues blog!<br>";
-def_int $int29 = calc((12 * paraheight($string1, ($int27 - 10), p12_full)) + 10);
+def_int $int29 = calc(12 * paraheight($string1, $int27 - 10, p12_full) + 10);
 def_string $string2 = "<img=13> <~text_device("Click", "Tap")> to open the <~league_get_league_name> blog!<br>";
 def_string $string3 = "https://osrs.game/Leagues";
 def_string $string4 = "https://osrs.game/Twisted-League";
-def_int $int30 = calc((12 * paraheight($string2, ($int28 - 10), p12_full)) + 10);
+def_int $int30 = calc(12 * paraheight($string2, $int28 - 10, p12_full) + 10);
 def_int $int31 = $int30;
 if ($int29 > $int30) {
 	$int31 = $int29;
@@ -56,7 +56,7 @@ $int22 = 0;
 ~league_create_dropdown($component8, $component9, $component10, $int22, 0);
 $int22 = 0;
 while ($int21 < enum_getoutputcount($enum15)) {
-	if (($int21 = 0) & (clienttype ! ^clienttype_ios)) {
+	if ($int21 = 0 & clienttype ! ^clienttype_ios) {
 		cc_create($component3, ^iftype_rectangle, $int22);
 		cc_setsize($int27, $int31, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -102,7 +102,7 @@ while ($int21 < enum_getoutputcount($enum15)) {
 	$string0 = ~script1299($string0, "|", "<br><br>");
 	$int26 = paraheight($string0, calc($int27 - 10), p11_full);
 	cc_create($component3, ^iftype_rectangle, $int22);
-	cc_setsize($int27, calc((12 * $int26) + 15), ^setsize_abs, ^setsize_abs);
+	cc_setsize($int27, calc(12 * $int26 + 15), ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, $int24, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
@@ -115,16 +115,16 @@ while ($int21 < enum_getoutputcount($enum15)) {
 	cc_settextshadow(true);
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 12);
-	cc_setsize(calc($int27 - 10), calc((12 * $int26) + 15), ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int27 - 10), calc(12 * $int26 + 15), ^setsize_abs, ^setsize_abs);
 	$int22 = calc($int22 + 1);
-	$int24 = calc($int24 + ((12 * $int26) + 15));
+	$int24 = calc($int24 + (12 * $int26 + 15));
 	$int21 = calc($int21 + 1);
 }
 $int21 = 0;
 $int22 = 0;
 $int23 = 5;
 while ($int21 < enum_getoutputcount($enum17)) {
-	if (($int21 = 0) & (clienttype ! ^clienttype_ios)) {
+	if ($int21 = 0 & clienttype ! ^clienttype_ios) {
 		cc_create($component5, ^iftype_rectangle, $int22);
 		cc_setsize($int28, $int31, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -178,7 +178,7 @@ while ($int21 < enum_getoutputcount($enum17)) {
 	$string0 = ~script1299($string0, "|", "<br><br>");
 	$int26 = paraheight($string0, calc($int28 - 10), p11_full);
 	cc_create($component5, ^iftype_rectangle, $int22);
-	cc_setsize($int28, calc((12 * $int26) + 15), ^setsize_abs, ^setsize_abs);
+	cc_setsize($int28, calc(12 * $int26 + 15), ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, $int25, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
@@ -191,9 +191,9 @@ while ($int21 < enum_getoutputcount($enum17)) {
 	cc_settextshadow(true);
 	cc_setcolour(0xff981f);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 12);
-	cc_setsize(calc($int28 - 10), calc((12 * $int26) + 15), ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($int28 - 10), calc(12 * $int26 + 15), ^setsize_abs, ^setsize_abs);
 	$int22 = calc($int22 + 1);
-	$int25 = calc($int25 + ((12 * $int26) + 15));
+	$int25 = calc($int25 + (12 * $int26 + 15));
 	$int21 = calc($int21 + 1);
 }
 cc_deleteall($component6);

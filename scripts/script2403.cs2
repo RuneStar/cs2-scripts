@@ -1,7 +1,7 @@
 // 2403
 script2403(component $component0, int $int1, int $int2, component $component3, int $int4)
 def_int $int5 = 0;
-if ((cc_find($component0, $int1) = ^true) & (.cc_find($component3, $int4) = ^true)) {
+if (cc_find($component0, $int1) = ^true & .cc_find($component3, $int4) = ^true) {
 	$int5 = calc(clientclock - $int2);
 	if ($int5 < 30) {
 		.cc_settrans(scale($int5, 30, 255));
@@ -12,7 +12,7 @@ if ((cc_find($component0, $int1) = ^true) & (.cc_find($component3, $int4) = ^tru
 		return;
 	}
 	if ($int5 < 220) {
-		.cc_settrans(calc(255 - scale(($int5 - 150), 70, 255)));
+		.cc_settrans(calc(255 - scale($int5 - 150, 70, 255)));
 		return;
 	}
 	cc_setontimer("script2404(event_com, event_comid, clientclock)");

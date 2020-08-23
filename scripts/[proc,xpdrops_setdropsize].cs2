@@ -13,8 +13,8 @@ while ($int7 <= 5) {
 	}
 	$int7 = calc($int7 + 1);
 }
-def_int $int8 = calc((($int5 * $int6) + 3) + $int4);
-if ((~on_mobile = true) | (%varbit4692 = 0)) {
+def_int $int8 = calc($int5 * $int6 + 3 + $int4);
+if (~on_mobile = true | %varbit4692 = 0) {
 	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre, $component0);
 } else if (%varbit4692 = 2) {
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre, $component0);

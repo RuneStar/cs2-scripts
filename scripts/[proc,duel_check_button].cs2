@@ -4,4 +4,4 @@ if_settext("Check...", $component0);
 if_setcolour(~duel_colour_variation(0xff991f), $component0);
 if_setonmouseover(null, $component0);
 if_setonmouseleave(null, $component0);
-if_setontimer("duel_accept_button($component0, calc(clientclock + ($int1 * 30)))", $component0);
+if_setontimer("duel_accept_button($component0, calc(clientclock + $int1 * 30))", $component0);

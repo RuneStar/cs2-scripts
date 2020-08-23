@@ -52,7 +52,7 @@ while ($int15 <= enum_getoutputcount(enum_1375)) {
 		}
 		.cc_create($component4, ^iftype_graphic, $int20);
 		.cc_setsize(7, 11, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(0, calc(($int17 + 2) + ($int16 / 2)), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(0, calc($int17 + 2 + $int16 / 2), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setgraphic("drag_handle");
 		.cc_create($component3, ^iftype_rectangle, $int20);
 		.cc_setsize(0, calc(18 + $int16), ^setsize_minus, ^setsize_abs);
@@ -73,7 +73,7 @@ while ($int15 <= enum_getoutputcount(enum_1375)) {
 	$int15 = calc($int15 + 1);
 }
 if_setscrollsize(0, $int17, $component1);
-if (($boolean14 = true) | ($int17 < if_getheight($component1))) {
+if ($boolean14 = true | $int17 < if_getheight($component1)) {
 	if_setscrollpos(0, 0, $component1);
 	~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 } else {

@@ -38,11 +38,11 @@ if ($graphic14 ! null) {
 } else {
 	cc_setobject($obj1, -1);
 }
-if (((%varbit4371 = 22) & ($int5 >= 1)) & ($int5 <= 11)) {
+if (%varbit4371 = 22 & $int5 >= 1 & $int5 <= 11) {
 	cc_setop(1, "Check materials");
 }
-cc_create($component2, ^iftype_text, calc(($int6 * 2) + 1));
-$int9 = ~max(~max(calc((paraheight($string0, $int4, p12_full) * 12) + 5), $int9), 32);
+cc_create($component2, ^iftype_text, calc($int6 * 2 + 1));
+$int9 = ~max(~max(calc(paraheight($string0, $int4, p12_full) * 12 + 5), $int9), 32);
 cc_setsize($int4, $int9, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(if_getwidth($component2) - $int4), $int7, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);

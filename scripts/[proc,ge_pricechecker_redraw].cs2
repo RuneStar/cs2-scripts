@@ -2,7 +2,7 @@
 [proc,ge_pricechecker_redraw]
 def_int $int0 = if_getwidth(interface_464:2);
 def_int $int1 = calc($int0 / 5);
-def_int $int2 = calc((($int0 - (5 * $int1)) / 4) + $int1);
+def_int $int2 = calc(($int0 - 5 * $int1) / 4 + $int1);
 def_int $int3 = calc(32 + 35);
 def_int $int4 = calc(($int1 - 36) / 2);
 cc_deleteall(interface_464:2);
@@ -45,7 +45,7 @@ while ($int10 < $int9) {
 	cc_create(interface_464:2, ^iftype_graphic, $int10);
 	$obj8 = inv_getobj(inv_90, $int10);
 	if ($obj8 ! null) {
-		$int6, $int7 = calc(($int10 % 5) * $int2), calc(($int10 / 5) * $int3);
+		$int6, $int7 = calc($int10 % 5 * $int2), calc($int10 / 5 * $int3);
 		$int5 = $int7;
 		cc_sethide(false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -73,8 +73,8 @@ def_int $int13 = $int10;
 $int10 = 0;
 while ($int10 < $int9) {
 	$obj8, $int11 = inv_getobj(inv_90, $int10), inv_getnum(inv_90, $int10);
-	if (($obj8 ! null) & ($int11 > 0)) {
-		$int6, $int7 = calc(($int10 % 5) * $int2), calc(($int10 / 5) * $int3);
+	if ($obj8 ! null & $int11 > 0) {
+		$int6, $int7 = calc($int10 % 5 * $int2), calc($int10 / 5 * $int3);
 		cc_create(interface_464:2, ^iftype_text, $int13);
 		$int13 = calc($int13 + 1);
 		cc_sethide(false);
@@ -90,7 +90,7 @@ while ($int10 < $int9) {
 			$int12 = calc($int11 * $intarray0($int10));
 		}
 		if ($int11 > 1) {
-			if (($int12 >= 0) & ($int12 < ^max_32bit_int)) {
+			if ($int12 >= 0 & $int12 < ^max_32bit_int) {
 				cc_settext("<~tostring_spacer($int11, $string0)> x <~tostring_spacer($intarray0($int10), $string0)><br>= <~tostring_spacer($int12, $string0)>");
 			} else {
 				cc_settext("<~tostring_spacer($int11, $string0)> x <~tostring_spacer($intarray0($int10), $string0)>");

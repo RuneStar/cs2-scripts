@@ -17,11 +17,11 @@ def_string $string1 = "";
 def_string $string2 = "";
 def_int $int19 = 0;
 def_int $int20 = enum(int, int, $enum0, $int19);
-while (($int20 ! -1) & ($int20 <= 50)) {
+while ($int20 ! -1 & $int20 <= 50) {
 	$string1 = enum(int, string, enum_834, $int20);
 	$string2 = ~slayer_rewards_unlock_desc($int20);
 	$string0 = "<$string2> <col=ff0000>(<tostring(enum(int, int, enum_836, $int20))> points)</col>";
-	$int15 = calc((paraheight($string0, $int11, p11_full) * 10) + 2);
+	$int15 = calc(paraheight($string0, $int11, p11_full) * 10 + 2);
 	if (calc($int19 % 2) = 1) {
 		$int16 = enum(int, int, $enum0, calc($int19 - 1));
 		$int14 = $int10;
@@ -30,12 +30,12 @@ while (($int20 ! -1) & ($int20 <= 50)) {
 		$int14 = 0;
 	}
 	if ($int16 ! -1) {
-		$int17 = calc((paraheight("<~slayer_rewards_unlock_desc($int16)> <col=ff0000>(<tostring(enum(int, int, enum_836, $int16))> points)</col>", $int11, p11_full) * 10) + 2);
+		$int17 = calc(paraheight("<~slayer_rewards_unlock_desc($int16)> <col=ff0000>(<tostring(enum(int, int, enum_836, $int16))> points)</col>", $int11, p11_full) * 10 + 2);
 		if ($int17 > $int15) {
 			$int15 = $int17;
 		}
 	}
-	$int18 = calc(($int15 + 10) + 32);
+	$int18 = calc($int15 + 10 + 32);
 	.cc_create($component1, ^iftype_rectangle, $int12);
 	$int12 = calc($int12 + 1);
 	.cc_setposition($int14, $int13, ^setpos_abs_left, ^setpos_abs_top);
@@ -69,12 +69,12 @@ while (($int20 ! -1) & ($int20 <= 50)) {
 	$int12 = calc($int12 + 1);
 	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 	cc_settiling(true);
-	cc_setposition(calc(($int14 + 5) + 36), calc($int13 + 14), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int14 + 5 + 36), calc($int13 + 14), ^setpos_abs_left, ^setpos_abs_top);
 	~script413($int20, $string2, $component3, $component4, $component5, $component6, $component7);
 	.cc_setonvartransmit("script412(event_com, .cc_getid, cc_getid, $int20, $string2, $component3, $component4, $component5, $component6, $component7){var1076, var1344, var695}");
 	cc_create($component1, ^iftype_text, $int12);
 	$int12 = calc($int12 + 1);
-	cc_setposition(calc(($int14 + 21) + 36), calc($int13 + 6), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int14 + 21 + 36), calc($int13 + 6), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(calc($int9 - (26 + 36)), 32, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p12_full);
@@ -83,7 +83,7 @@ while (($int20 ! -1) & ($int20 <= 50)) {
 	cc_settext($string1);
 	cc_create($component1, ^iftype_text, $int12);
 	$int12 = calc($int12 + 1);
-	cc_setposition(calc($int14 + 5), calc(($int13 + 5) + 32), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int14 + 5), calc($int13 + 5 + 32), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int11, $int15, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(0xff981f);
 	cc_settextfont(p11_full);
@@ -95,7 +95,7 @@ while (($int20 ! -1) & ($int20 <= 50)) {
 	if ($int20 = -1) {
 		$int13 = calc($int13 + $int18);
 	} else if (calc($int19 % 2) = 0) {
-		$int13 = calc(($int13 + $int18) + 3);
+		$int13 = calc($int13 + $int18 + 3);
 	}
 }
 if_setscrollpos(0, 0, $component1);

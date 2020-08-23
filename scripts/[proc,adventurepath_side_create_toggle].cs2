@@ -5,8 +5,8 @@ def_int $int10 = 5;
 if ($int10 < 5) {
 	$int3 = calc($int3 + 16);
 }
-def_int $int11 = calc(($int3 - 9) + $int5);
-def_int $int12 = calc(($int4 - 9) + $int6);
+def_int $int11 = calc($int3 - 9 + $int5);
+def_int $int12 = calc($int4 - 9 + $int6);
 def_int $int13 = calc($int3 - 18);
 def_int $int14 = calc($int4 - 18);
 ~create_graphic($component2, $int0, "tradebacking", $int5, $int6, ^setpos_abs_left, ^setpos_abs_top, $int3, $int4, ^setsize_abs, ^setsize_abs);
@@ -34,9 +34,9 @@ $int0 = calc($int0 + 10);
 cc_create($component2, ^iftype_graphic, $int0);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 if ($int10 > 4) {
-	cc_setposition(calc($int3 - 46), calc($int6 + (($int4 / 2) - 8)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int3 - 46), calc($int6 + ($int4 / 2 - 8)), ^setpos_abs_left, ^setpos_abs_top);
 } else {
-	cc_setposition(calc($int3 - 29), calc($int6 + (($int4 / 2) - 8)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int3 - 29), calc($int6 + ($int4 / 2 - 8)), ^setpos_abs_left, ^setpos_abs_top);
 }
 if ($int7 = 1) {
 	cc_setgraphic("options_radio_buttons,1");

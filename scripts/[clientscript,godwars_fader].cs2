@@ -10,7 +10,7 @@ if ($int2 < 195) {
 	return;
 }
 if ($int2 < 255) {
-	if_settrans(calc(255 - interpolate(0, (255 - $int2), 0, 60, 255)), $component0);
+	if_settrans(calc(255 - interpolate(0, 255 - $int2, 0, 60, 255)), $component0);
 	return;
 }
 if_settrans(255, $component0);

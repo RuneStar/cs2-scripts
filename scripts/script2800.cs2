@@ -7,7 +7,7 @@ script2800(component $component0, component $component1, component $component2, 
 if (%varbit9340 ! 0) {
 	~script2802($component17, $component18, $component19);
 }
-if ((~league_world = 1) & (%varbit10037 >= 5)) {
+if (~league_world = 1 & %varbit10037 >= 5) {
 	~script2802($component21, $component22, $component23);
 }
 switch_int (%varbit8168) {

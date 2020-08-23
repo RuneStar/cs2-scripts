@@ -16,7 +16,7 @@ if (~toplevel_check_sidepanel(11) = false) {
 	if_sethide(true, $component6);
 } else {
 	if_sethide(false, $component6);
-	if ((%var281 = 200) | (%var2686 = 200)) {
+	if (%var281 = 200 | %var2686 = 200) {
 		if_setontimer("script2647($component5)", $component5);
 		if_setonmouserepeat(null, $component6);
 		if_setonmouseleave(null, $component6);

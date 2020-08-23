@@ -3,7 +3,7 @@ script1755(boolean $boolean0, component $component1, int $int2, int $int3, int $
 if (cc_find($component1, $int2) = ^true) {
 	cc_setcolour($colour5);
 }
-if (($int3 ! -1) & (cc_find($component1, $int3) = ^true)) {
+if ($int3 ! -1 & cc_find($component1, $int3) = ^true) {
 	cc_setcolour($colour5);
 }
 if ($boolean0 = true) {

@@ -1,7 +1,7 @@
 // 1472
 [proc,notifications_lootdrop_redraw](component $component0)
 def_string $string0 = "Enable (1 coin)";
-if ((%varbit5399 = 0) | (%varbit5400 <= 0)) {
+if (%varbit5399 = 0 | %varbit5400 <= 0) {
 	cc_setcolour(0x9f9f9f);
 	cc_settext("Off");
 	if_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, ^white)", $component0);

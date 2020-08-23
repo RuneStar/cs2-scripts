@@ -4,7 +4,7 @@ $int0 = calc($int0 + 10);
 if_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top, $component1);
 if_setonmouserepeat("tooltip_mouserepeat($component1, -1, $component2, $string3, 25, 150)", $component1);
 if_setonmouseleave("deltooltip($component2)", $component1);
-def_int $int5 = calc(((paraheight($string0, if_getwidth(if_getlayer($component1)), p12_full) * 12) + 5) + 17);
+def_int $int5 = calc(paraheight($string0, if_getwidth(if_getlayer($component1)), p12_full) * 12 + 5 + 17);
 if_setsize(0, $int5, ^setsize_minus, ^setsize_abs, $component1);
 cc_deleteall($component1);
 def_int $int6 = calc(parawidth($string1, 190, p11_full) + 20);

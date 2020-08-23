@@ -4,7 +4,7 @@ def_string $string1 = lowercase($string0);
 def_int $int0 = string_length($string1);
 def_string $string2 = "::tele n ";
 def_int $int1 = string_length($string2);
-if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
+if ($int0 >= $int1 & compare(substring($string1, 0, $int1), $string2) = 0) {
 	if ($int0 <= $int1) {
 		return(~script225("", 0, 1));
 	}
@@ -12,7 +12,7 @@ if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
 }
 $string2 = "::tele s ";
 $int1 = string_length($string2);
-if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
+if ($int0 >= $int1 & compare(substring($string1, 0, $int1), $string2) = 0) {
 	if ($int0 <= $int1) {
 		return(~script225("", 0, -1));
 	}
@@ -20,7 +20,7 @@ if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
 }
 $string2 = "::tele e ";
 $int1 = string_length($string2);
-if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
+if ($int0 >= $int1 & compare(substring($string1, 0, $int1), $string2) = 0) {
 	if ($int0 <= $int1) {
 		return(~script225("", 1, 0));
 	}
@@ -28,7 +28,7 @@ if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
 }
 $string2 = "::tele w ";
 $int1 = string_length($string2);
-if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
+if ($int0 >= $int1 & compare(substring($string1, 0, $int1), $string2) = 0) {
 	if ($int0 <= $int1) {
 		return(~script225("", -1, 0));
 	}
@@ -36,7 +36,7 @@ if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
 }
 $string2 = "::tele nw ";
 $int1 = string_length($string2);
-if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
+if ($int0 >= $int1 & compare(substring($string1, 0, $int1), $string2) = 0) {
 	if ($int0 <= $int1) {
 		return(~script225("", -1, 1));
 	}
@@ -44,7 +44,7 @@ if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
 }
 $string2 = "::tele sw ";
 $int1 = string_length($string2);
-if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
+if ($int0 >= $int1 & compare(substring($string1, 0, $int1), $string2) = 0) {
 	if ($int0 <= $int1) {
 		return(~script225("", -1, -1));
 	}
@@ -52,7 +52,7 @@ if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
 }
 $string2 = "::tele ne ";
 $int1 = string_length($string2);
-if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
+if ($int0 >= $int1 & compare(substring($string1, 0, $int1), $string2) = 0) {
 	if ($int0 <= $int1) {
 		return(~script225("", 1, 1));
 	}
@@ -60,7 +60,7 @@ if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
 }
 $string2 = "::tele se ";
 $int1 = string_length($string2);
-if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
+if ($int0 >= $int1 & compare(substring($string1, 0, $int1), $string2) = 0) {
 	if ($int0 <= $int1) {
 		return(~script225("", 1, -1));
 	}
@@ -68,12 +68,12 @@ if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
 }
 $string2 = "::tele up";
 $int1 = string_length($string2);
-if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
+if ($int0 >= $int1 & compare(substring($string1, 0, $int1), $string2) = 0) {
 	return(~script1410(1));
 }
 $string2 = "::tele down";
 $int1 = string_length($string2);
-if (($int0 >= $int1) & (compare(substring($string1, 0, $int1), $string2) = 0)) {
+if ($int0 >= $int1 & compare(substring($string1, 0, $int1), $string2) = 0) {
 	return(~script1410(-1));
 }
 return($string0);

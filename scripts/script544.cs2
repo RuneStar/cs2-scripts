@@ -16,7 +16,7 @@ if ($namedobj19 = null) {
 }
 cc_create($component0, ^iftype_graphic, $int7);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int1 + ((40 - 36) / 2)), $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int1 + (40 - 36) / 2), $int2, ^setpos_abs_left, ^setpos_abs_top);
 cc_setobject_nonum($namedobj19, 1);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
@@ -34,7 +34,7 @@ def_int $int22 = 16758847;
 def_int $int23 = struct_param($struct4, param_151);
 def_string $string0 = "";
 def_string $string1 = ",";
-if ((oc_members($namedobj19) = ^true) & (map_members = ^false)) {
+if (oc_members($namedobj19) = ^true & map_members = ^false) {
 	cc_setcolour(0x9f9f9f);
 	cc_settext(struct_param($struct4, param_363));
 	$string0 = "You must be on a members' world to purchase that item.";
@@ -53,7 +53,7 @@ if ((oc_members($namedobj19) = ^true) & (map_members = ^false)) {
 	.cc_setonop("script3285($string0, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18)");
 	$int21, $int22 = 10461087, 10461087;
 } else {
-	if (($int6 = $int5) & (~script3292 = 1)) {
+	if ($int6 = $int5 & ~script3292 = 1) {
 		cc_setcolour(^white);
 		if ($int23 = 1) {
 			cc_settext("<struct_param($struct4, param_363)><br>  <~tostring_spacer($int23, $string1)> point</col>");

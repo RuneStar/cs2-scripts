@@ -4,7 +4,7 @@ def_string $string0 = ",";
 def_obj $obj6 = null;
 def_int $int7 = 0;
 def_int $int8 = 0;
-if ((%var262 >= 0) & (%var262 < inv_size(inv))) {
+if (%var262 >= 0 & %var262 < inv_size(inv)) {
 	$obj6 = inv_getobj(inv, %var262);
 }
 if ($obj6 ! null) {

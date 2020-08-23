@@ -3,7 +3,7 @@ script1468(component $component0, int $int1, int $int2, component $component3, c
 def_int $int5 = 0;
 if ($component0 = $component3) {
 	if (%varbit5399 = 0) {
-		if ((cc_find($component0, 0) = ^true) & (.cc_find($component0, $int1) = ^true)) {
+		if (cc_find($component0, 0) = ^true & .cc_find($component0, $int1) = ^true) {
 			.cc_setgraphic("options_radio_buttons,0");
 			.cc_settrans(120);
 			cc_setcolour(0x7f7f7f);
@@ -11,7 +11,7 @@ if ($component0 = $component3) {
 			cc_setonmouseleave(null);
 			cc_setonop(null);
 		}
-		if ((cc_find($component0, 1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
+		if (cc_find($component0, 1) = ^true & .cc_find($component0, $int2) = ^true) {
 			.cc_setgraphic("options_radio_buttons,0");
 			.cc_settrans(120);
 			cc_setcolour(0x7f7f7f);
@@ -26,7 +26,7 @@ if ($component0 = $component3) {
 	$int5 = %varbit4930;
 }
 if ($int5 = 1) {
-	if ((cc_find($component0, 1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
+	if (cc_find($component0, 1) = ^true & .cc_find($component0, $int2) = ^true) {
 		.cc_setgraphic("options_radio_buttons,2");
 		.cc_settrans(0);
 		cc_setcolour(0xffa82f);
@@ -34,7 +34,7 @@ if ($int5 = 1) {
 		cc_setonmouseleave(null);
 		cc_setonop(null);
 	}
-	if ((cc_find($component0, 0) = ^true) & (.cc_find($component0, $int1) = ^true)) {
+	if (cc_find($component0, 0) = ^true & .cc_find($component0, $int1) = ^true) {
 		.cc_setgraphic("options_radio_buttons,0");
 		.cc_settrans(0);
 		cc_setcolour(0xff981f);
@@ -43,7 +43,7 @@ if ($int5 = 1) {
 		cc_setonop("script1469(event_opindex, 0, $component0, $int1, $int2, $component3, $component4)");
 	}
 } else {
-	if ((cc_find($component0, 0) = ^true) & (.cc_find($component0, $int1) = ^true)) {
+	if (cc_find($component0, 0) = ^true & .cc_find($component0, $int1) = ^true) {
 		.cc_setgraphic("options_radio_buttons,2");
 		.cc_settrans(0);
 		cc_setcolour(0xffa82f);
@@ -51,7 +51,7 @@ if ($int5 = 1) {
 		cc_setonmouseleave(null);
 		cc_setonop(null);
 	}
-	if ((cc_find($component0, 1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
+	if (cc_find($component0, 1) = ^true & .cc_find($component0, $int2) = ^true) {
 		.cc_setgraphic("options_radio_buttons,0");
 		.cc_settrans(0);
 		cc_setcolour(0xff981f);

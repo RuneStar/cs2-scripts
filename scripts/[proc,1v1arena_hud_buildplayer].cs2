@@ -53,7 +53,7 @@ if (string_length($string1) > 0) {
 			~script2720(interface_618:12, $int7, $component8);
 			$int7 = calc($int7 + 1);
 		case default :
-			if_setposition(calc(if_getwidth($component8) * ($int2 % 4)), calc(if_getheight($component8) * (4 - ($int2 / 4))), ^setpos_abs_left, ^setpos_abs_bottom, $component8);
+			if_setposition(calc(if_getwidth($component8) * ($int2 % 4)), calc(if_getheight($component8) * (4 - $int2 / 4)), ^setpos_abs_left, ^setpos_abs_bottom, $component8);
 	}
 	$int2 = calc($int2 + 1);
 } else {

@@ -3,12 +3,12 @@
 def_fontmetrics $fontmetrics6 = p11_full;
 def_fontmetrics $fontmetrics7 = p11_full;
 def_int $int8 = 16;
-if ((%varbit4693 = 1) & (~on_mobile = false)) {
+if (%varbit4693 = 1 & ~on_mobile = false) {
 	$fontmetrics6, $fontmetrics7, $int8 = p12_full, p12_full, 25;
-} else if ((%varbit4693 = 2) & (~on_mobile = false)) {
+} else if (%varbit4693 = 2 & ~on_mobile = false) {
 	$fontmetrics6, $fontmetrics7, $int8 = b12_full, b12_full, 25;
 }
-def_int $int9 = calc((28 + parawidth("+8,888,888,888", 512, $fontmetrics6)) + 2);
+def_int $int9 = calc(28 + parawidth("+8,888,888,888", 512, $fontmetrics6) + 2);
 if_setsize($int9, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
 if_settextfont($fontmetrics7, $component2);
 def_int $int10 = 0;

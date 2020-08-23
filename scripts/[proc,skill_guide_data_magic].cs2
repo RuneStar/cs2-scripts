@@ -10,7 +10,7 @@ switch_int ($int0) {
 				$string1 = "You can see what each spell does by<br>activating the spellbook's Info mode, then tapping the spells.";
 				return(-1, battlestaff_1391, "To view the available spells, select the<br>spellbook icon on the side interface.<br><~text_device($string0, $string1)>");
 			case 1 :
-				if ((~league_world = 1) & (%varbit10032 = 1)) {
+				if (~league_world = 1 & %varbit10032 = 1) {
 					return(-1, kourend_home_teleport_24369, "Home teleport (Kourend)");
 				}
 				return(-1, lumbridge_home_teleport_9712, "Home teleport (Lumbridge)");

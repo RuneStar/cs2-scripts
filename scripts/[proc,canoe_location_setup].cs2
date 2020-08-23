@@ -27,7 +27,7 @@ cc_settextfont(q8_full);
 cc_settext($string0);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 $int6 = calc($int6 + 1);
-if ((($boolean1 = false) & ($model2 ! null)) & ($model3 ! null)) {
+if ($boolean1 = false & $model2 ! null & $model3 ! null) {
 	cc_create($component0, ^iftype_model, $int6);
 	cc_setsize($int7, 0, ^setsize_abs, ^setsize_minus);
 	cc_setposition($int5, 0, ^setpos_abs_right, ^setpos_abs_top);

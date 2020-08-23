@@ -1,19 +1,19 @@
 // 2031
 script2031(int $int0)(int)
 def_int $int1 = %var1588;
-def_int $int2 = calc(~max((10 * stat_xp(attack)), %var1435) - %var1714);
-$int2 = calc(~min($int2, (%var1588 / 2)) * 2);
+def_int $int2 = calc(~max(10 * stat_xp(attack), %var1435) - %var1714);
+$int2 = calc(~min($int2, %var1588 / 2) * 2);
 $int1 = calc($int1 - ~min($int2, $int1));
-$int2 = calc(~max((10 * stat_xp(strength)), %var1436) - %var1715);
-$int2 = calc(~min($int2, (%var1588 / 2)) * 2);
+$int2 = calc(~max(10 * stat_xp(strength), %var1436) - %var1715);
+$int2 = calc(~min($int2, %var1588 / 2) * 2);
 $int1 = calc($int1 - ~min($int2, $int1));
-$int2 = calc(~max((10 * stat_xp(defence)), %var1439) - %var1718);
-$int2 = calc(~min($int2, (%var1588 / 4)) * 4);
+$int2 = calc(~max(10 * stat_xp(defence), %var1439) - %var1718);
+$int2 = calc(~min($int2, %var1588 / 4) * 4);
 $int1 = calc($int1 - ~min($int2, $int1));
-$int2 = calc(~max((10 * stat_xp(ranged)), %var1437) - %var1716);
-$int2 = calc(~min($int2, (%var1588 / 3)) * 3);
+$int2 = calc(~max(10 * stat_xp(ranged), %var1437) - %var1716);
+$int2 = calc(~min($int2, %var1588 / 3) * 3);
 $int1 = calc($int1 - ~min($int2, $int1));
-$int2 = calc(~max((10 * stat_xp(magic)), %var1438) - %var1717);
-$int2 = calc(~min($int2, (%var1588 / 2)) * 2);
+$int2 = calc(~max(10 * stat_xp(magic), %var1438) - %var1717);
+$int2 = calc(~min($int2, %var1588 / 2) * 2);
 $int1 = calc($int1 - ~min($int2, $int1));
 return(calc($int1 / $int0));

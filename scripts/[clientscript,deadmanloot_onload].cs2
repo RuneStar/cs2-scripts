@@ -15,7 +15,7 @@ $int0 = 0;
 while ($int0 < 5) {
 	cc_create(interface_234:14, ^iftype_graphic, calc(5 + $int0));
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc(($int0 * 40) + 3), 4, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int0 * 40 + 3), 4, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setobject_nonum(bank_key_13302, 1);
 	cc_setgraphicshadow(0x111111);
 	cc_setoutline(1);
@@ -23,7 +23,7 @@ while ($int0 < 5) {
 }
 $int0 = 0;
 while ($int0 < 5) {
-	cc_create(interface_234:14, ^iftype_text, calc((5 * 2) + $int0));
+	cc_create(interface_234:14, ^iftype_text, calc(5 * 2 + $int0));
 	cc_setsize(41, 38, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int0 * 40), 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p11_full);
@@ -36,9 +36,9 @@ def_int $int1 = 0;
 def_int $int2 = 0;
 while ($int1 < 5) {
 	while ($int2 < 28) {
-		cc_create(interface_234:15, ^iftype_graphic, calc(($int1 * 28) + $int2));
+		cc_create(interface_234:15, ^iftype_graphic, calc($int1 * 28 + $int2));
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc(($int2 % 7) * 39), calc(($int2 / 7) * 38), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int2 % 7 * 39), calc($int2 / 7 * 38), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphicshadow(0x111111);
 		cc_setoutline(1);
 		cc_setop(1, "Bank 1");

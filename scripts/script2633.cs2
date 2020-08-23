@@ -16,8 +16,8 @@ if ($int5 > 0) {
 }
 if_settext(tostring($int6), interface_616:41);
 if_settext(tostring($int7), interface_616:47);
-def_int $int9 = calc(($int1 + $int2) + $int3);
-def_int $int10 = calc(($int5 + $int6) + $int7);
+def_int $int9 = calc($int1 + $int2 + $int3);
+def_int $int10 = calc($int5 + $int6 + $int7);
 if_settext(tostring($int9), interface_616:10);
 if_settext(tostring($int10), interface_616:34);
 if ($int1 > 0) {
@@ -37,7 +37,7 @@ if ($int10 > 0) {
 	if_sethide(true, interface_616:50);
 	if_setposition(94, 45, ^setpos_abs_left, ^setpos_abs_top, interface_616:30);
 }
-if (($int4 > 0) | ($int8 > 0)) {
+if ($int4 > 0 | $int8 > 0) {
 	if_sethide(true, interface_616:57);
 	if_sethide(false, interface_616:58);
 	if_settext("Redemption in progress", interface_616:59);

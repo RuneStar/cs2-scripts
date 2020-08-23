@@ -10,7 +10,7 @@ while ($int2 <= 45) {
 	cc_create(interface_210:3, ^iftype_graphic, $int0);
 	$int0 = calc($int0 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(5, calc(($int2 * 40) + $int1), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(5, calc($int2 * 40 + $int1), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	$namedobj3 = enum(int, namedobj, enum_985, $int2);
@@ -42,7 +42,7 @@ while ($int2 <= 45) {
 		cc_setgraphic("tradebacking");
 		cc_settiling(true);
 		cc_setsize($int4, 1, ^setsize_abs, ^setsize_abs);
-		cc_setposition(0, calc(($int2 * 40) + 39), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(0, calc($int2 * 40 + 39), ^setpos_abs_left, ^setpos_abs_top);
 	}
 	$int2 = calc($int2 + 1);
 }

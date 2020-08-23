@@ -19,7 +19,7 @@ def_obj $obj5 = null;
 while ($int2 <= 52) {
 	cc_create($component0, ^iftype_graphic, $int2);
 	$int3, $int4, $obj5 = ~autocast_spellpos($int2, %var664), enum(int, obj, enum_1986, $int2);
-	if ((($int3 ! -1) & ($int4 ! -1)) & ($obj5 ! null)) {
+	if ($int3 ! -1 & $int4 ! -1 & $obj5 ! null) {
 		cc_setposition($int3, $int4, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(24, 24, ^setsize_abs, ^setsize_abs);
 		cc_setop(1, oc_param($obj5, spell_name));

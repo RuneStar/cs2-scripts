@@ -18,7 +18,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext($string0);
 def_int $int2 = parawidth($string0, 479, q8_full);
 $int2 = ~max($int2, 330);
-$int2 = calc((($int2 + 57) / 2) + 5);
+$int2 = calc(($int2 + 57) / 2 + 5);
 cc_create(confirm_destroy:0, ^iftype_graphic, 3);
 .cc_create(confirm_destroy:0, ^iftype_graphic, 4);
 cc_setsize(57, 13, ^setsize_abs, ^setsize_abs);

@@ -5,10 +5,10 @@ def_int $int2 = 0;
 def_int $int3 = 0;
 def_obj $obj4 = inv_getobj(worn, 3);
 if (map_members = ^true) {
-	if ((inv_total(inv, rune_pouch_12791) > 0) | (inv_total(inv, rune_pouch_l_24416) > 0)) {
+	if (inv_total(inv, rune_pouch_12791) > 0 | inv_total(inv, rune_pouch_l_24416) > 0) {
 		$int1, $int2, $int3 = %varbit29, %varbit1622, %varbit1623;
 	}
-} else if (($obj4 ! null) & (oc_members($obj4) = ^true)) {
+} else if ($obj4 ! null & oc_members($obj4) = ^true) {
 	$obj4 = null;
 }
 def_int $int5 = 0;
@@ -104,7 +104,7 @@ switch_obj ($obj0) {
 		if (~script234 = 1) {
 			return(inv_total(inv, fire_rune_11686));
 		}
-		if ((inv_getobj(worn, 5) = tome_of_fire_20714) & (map_members = ^true)) {
+		if (inv_getobj(worn, 5) = tome_of_fire_20714 & map_members = ^true) {
 			return(^max_32bit_int);
 		}
 		$int5 = inv_total(inv, fire_rune_554);
@@ -165,25 +165,25 @@ switch_obj ($obj0) {
 				return(0);
 		}
 	case ibans_staff_1409 :
-		if (($obj4 = ibans_staff_1409) | ($obj4 = ibans_staff_u_12658)) {
+		if ($obj4 = ibans_staff_1409 | $obj4 = ibans_staff_u_12658) {
 			return(1);
 		}
 		return(0);
 	case saradomin_staff_2415 :
-		if (($obj4 = $obj0) | ($obj4 = staff_of_light_22296)) {
+		if ($obj4 = $obj0 | $obj4 = staff_of_light_22296) {
 			return(1);
 		}
 		return(0);
 }
 def_obj $obj6 = enum(obj, obj, enum_13, $obj0);
-if (($obj6 ! null) & (~script234 = 1)) {
-	if ((map_members = ^true) | (oc_members($obj6) = ^false)) {
+if ($obj6 ! null & ~script234 = 1) {
+	if (map_members = ^true | oc_members($obj6) = ^false) {
 		return(inv_total(inv, $obj6));
 	}
 	return(0);
 }
-if ((%varbit4145 = 1) & (enum(obj, int, enum_55, $obj0) ! 0)) {
-	if ((map_members = ^true) | (oc_members($obj0) = ^false)) {
+if (%varbit4145 = 1 & enum(obj, int, enum_55, $obj0) ! 0) {
+	if (map_members = ^true | oc_members($obj0) = ^false) {
 		return(^max_32bit_int);
 	}
 	return(0);

@@ -11,7 +11,7 @@ if (%varbit5605 = 1) {
 } else if (%varbit5605 = 4) {
 	~displayname_statusstatic($component0);
 	~displayname_button_init($component1, "Another name");
-	if ((%varbit5606 = 1) & (%varbit5607 = 0)) {
+	if (%varbit5606 = 1 & %varbit5607 = 0) {
 		if (string_length(%varcstring229) <= 0) {
 			%varcstring229 = "-";
 		}

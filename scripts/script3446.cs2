@@ -12,7 +12,7 @@ def_int $intarray0(50);
 def_int $int1 = 0;
 def_string $string1 = "";
 $string1, $string0 = ~script632($string0);
-while (($int1 < 50) & (string_length($string1) > 0)) {
+while ($int1 < 50 & string_length($string1) > 0) {
 	cc_create(interface_120:5, ^iftype_text, $int0);
 	$intarray0($int1) = $int0;
 	cc_setsize(0, 22, ^setsize_minus, ^setsize_abs);
@@ -46,7 +46,7 @@ if ($int1 <= 0) {
 def_int $int2 = 0;
 $int0 = 0;
 while ($int0 < $int1) {
-	if ((cc_find(interface_120:5, $intarray0($int0)) = ^true) & (.cc_find(interface_120:5, calc($intarray0($int0) - 50)) = ^true)) {
+	if (cc_find(interface_120:5, $intarray0($int0)) = ^true & .cc_find(interface_120:5, calc($intarray0($int0) - 50)) = ^true) {
 		cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
 		.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
 		.cc_setonmouserepeat("cc_settrans(event_com, event_comid, 200, null)");

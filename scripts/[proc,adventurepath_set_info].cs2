@@ -54,7 +54,7 @@ def_int $int30 = -1;
 if ($struct29 ! null) {
 	$int30 = struct_param($struct29, param_806);
 }
-if (((($int30 = -1) | (~adventurepath_return_task_status($int30) = ^true)) & (~adventurepath_return_task_status($int0) = ^false)) & (struct_param($struct5, param_927) ! null)) {
+if (($int30 = -1 | ~adventurepath_return_task_status($int30) = ^true) & ~adventurepath_return_task_status($int0) = ^false & struct_param($struct5, param_927) ! null) {
 	if_setop(1, "Show<col=ff9040> Hint", interface_642:22);
 	if_setop(2, "Remove<col=ff9040> Hint arrow", interface_642:22);
 	$int23 = ~v2_stone_button_filled(interface_642:22);
@@ -86,13 +86,13 @@ def_int $int37 = 0;
 def_int $bit38 = ^false;
 $enum33 = struct_param($struct5, param_820);
 $enum34 = struct_param($struct5, param_821);
-if (($enum33 ! null) & ($enum34 ! null)) {
+if ($enum33 ! null & $enum34 ! null) {
 	while ($int31 < 4) {
 		$enumarray0($int31) = enum(int, enum, $enum33, $int31);
 		$enumarray1($int31) = enum(int, enum, $enum34, $int31);
 		$int31 = calc($int31 + 1);
 	}
-	if (($enumarray0(0) ! null) | ($enumarray0(1) ! null)) {
+	if ($enumarray0(0) ! null | $enumarray0(1) ! null) {
 		$int23, $int37 = ~script3004($component4, 0, "Free:", $int23, $int37, 0, 0, 0);
 		$int23, $int37 = ~script3004($component4, 0, "Members:", $int23, $int37, 0, 1, 1);
 		if ($enumarray0(0) ! null) {
@@ -127,7 +127,7 @@ if (($enum33 ! null) & ($enum34 ! null)) {
 		}
 		$int37 = calc($int37 + 16);
 	}
-	if (($enumarray0(2) ! null) | ($enumarray0(3) ! null)) {
+	if ($enumarray0(2) ! null | $enumarray0(3) ! null) {
 		$int23, $int37 = ~script3004($component4, 0, "Reclaimable Free:", $int23, $int37, $int27, 0, 0);
 		$int23, $int37 = ~script3004($component4, 0, "Reclaimable Members:", $int23, $int37, $int27, 1, 1);
 		$bit38 = ^false;
@@ -167,15 +167,15 @@ cc_create($component4, ^iftype_graphic, $int23);
 cc_setgraphic("v2_borders_slim,1");
 $int23 = calc($int23 + 1);
 $int37 = calc(16 + $int37);
-$int39 = calc((32 * $int26) + $int37);
+$int39 = calc(32 * $int26 + $int37);
 if ($int39 > $int40) {
 	cc_setsize(32, calc($int39 - 15), ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc((if_getwidth($component4) / 2) - 18), 10, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc(if_getwidth($component4) / 2 - 18), 10, ^setpos_abs_left, ^setpos_abs_top);
 	if_setscrollsize(0, $int39, $component4);
 	if_sethide(false, $component13);
 } else {
 	cc_setsize(32, calc($int40 - 20), ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc((if_getwidth($component4) / 2) - 18), 10, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc(if_getwidth($component4) / 2 - 18), 10, ^setpos_abs_left, ^setpos_abs_top);
 	if_setscrollsize(0, 0, $component4);
 	if_sethide(true, $component13);
 }

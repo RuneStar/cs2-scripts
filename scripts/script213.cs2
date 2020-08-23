@@ -5,7 +5,7 @@ if (%varbit4286 > 0) {
 	$int0 = calc(%varbit4577 * 30);
 	cc_setontimer(null);
 } else {
-	$int0 = calc((%varbit4577 * 30) - 10);
+	$int0 = calc(%varbit4577 * 30 - 10);
 	cc_setontimer("script743(event_com, event_comid, $int0)");
 }
 return(~script744($int0));

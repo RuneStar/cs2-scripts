@@ -178,7 +178,7 @@ if (string_length($string0) > 0) {
 		}
 	}
 	$int5 = calc($int5 + $int4);
-	if ((cc_find(interface_52:19, $int0) = ^true) & (.cc_find(interface_52:10, $int0) = ^true)) {
+	if (cc_find(interface_52:19, $int0) = ^true & .cc_find(interface_52:10, $int0) = ^true) {
 		cc_setposition($int5, calc(%varcint377 * $int3), ^setpos_abs_left, ^setpos_abs_centre);
 		cc_setsize(32, 21, ^setsize_abs, ^setsize_abs);
 		cc_setgraphic("rightarrow_small_stone,0");
@@ -191,7 +191,7 @@ if (string_length($string0) > 0) {
 		.cc_settextfont(p12_full);
 		.cc_settext(~poh_board_loc($string2));
 		if (compare(tostring($int1), $string2) = 0) {
-			if (($int2 > 0) | (compare(chat_playername, $string1) = 0)) {
+			if ($int2 > 0 | compare(chat_playername, $string1) = 0) {
 				cc_sethide(false);
 				.cc_sethide(true);
 				cc_setonop("poh_board_set_last_name($string1, interface_52:19, $int0)");
@@ -328,7 +328,7 @@ if ($int0 >= 200) {
 		cc_settext("No houses are currently listed.");
 		return;
 	}
-	if ((((((((((((((((%varcint379 ! 0) & (%varcint379 ! 1)) & (%varcint379 ! 2)) & (%varcint379 ! 3)) & (%varcint379 ! 4)) & (%varcint379 ! 5)) & (%varcint379 ! 6)) & (%varcint379 ! 7)) & (%varcint379 ! 8)) & (%varcint379 ! 9)) & (%varcint379 ! 10)) & (%varcint379 ! 11)) & (%varcint379 ! 12)) & (%varcint379 ! 13)) & (%varcint379 ! 14)) & (%varcint379 ! 15)) {
+	if (%varcint379 ! 0 & %varcint379 ! 1 & %varcint379 ! 2 & %varcint379 ! 3 & %varcint379 ! 4 & %varcint379 ! 5 & %varcint379 ! 6 & %varcint379 ! 7 & %varcint379 ! 8 & %varcint379 ! 9 & %varcint379 ! 10 & %varcint379 ! 11 & %varcint379 ! 12 & %varcint379 ! 13 & %varcint379 ! 14 & %varcint379 ! 15) {
 		%varcint379 = 5;
 	}
 	~poh_board_setsort(interface_52:5, interface_52:2, interface_52:21);

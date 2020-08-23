@@ -3,7 +3,7 @@
 $string0 = escape($string0);
 def_int $int1 = string_length($string0);
 def_int $int2 = 0;
-if (($int1 > 0) & (compare(substring($string0, calc($int1 - 1), $int1), "|") = 0)) {
+if ($int1 > 0 & compare(substring($string0, calc($int1 - 1), $int1), "|") = 0) {
 	$int2 = 1;
 }
 def_string $string1 = "";
@@ -16,7 +16,7 @@ while (string_length($string0) > 0) {
 		$string1 = $string2;
 	}
 }
-if (($int2 = 1) & ($int0 = 1)) {
+if ($int2 = 1 & $int0 = 1) {
 	return(append($string1, "<br>"));
 }
 return($string1);

@@ -90,7 +90,7 @@ if ($int7 > if_getheight($component1)) {
 }
 ~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 def_int $int11 = calc((40 - 32) / 2);
-def_int $int12 = calc((3 + 36) + 3);
+def_int $int12 = calc(3 + 36 + 3);
 def_int $int13 = calc($int4 - $int12);
 def_int $int14 = 0;
 while ($int9 > 0) {
@@ -128,10 +128,10 @@ while ($int9 > 0) {
 		.cc_settextshadow(true);
 		.cc_settextfont(p11_full);
 		$int14 = enum(obj, int, enum_1780, $namedobj10);
-		if (($namedobj10 = heat_proof_vessel_21539) & (%varbit5959 = 1)) {
+		if ($namedobj10 = heat_proof_vessel_21539 & %varbit5959 = 1) {
 			.cc_settext("<col=ff0000>Already unlocked</col>");
 			.cc_settextshadow(false);
-		} else if (($namedobj10 = ash_covered_tome_21697) & (%varbit5960 = 1)) {
+		} else if ($namedobj10 = ash_covered_tome_21697 & %varbit5960 = 1) {
 			.cc_settext("<col=ff0000>Already unlocked</col>");
 			.cc_settextshadow(false);
 		} else if ($int14 > 1) {

@@ -5,7 +5,7 @@ if ($int2 = 1) {
 } else {
 	$int1 = calc($int1 - 1);
 }
-if (($int1 = 25) | ($int1 = 0)) {
+if ($int1 = 25 | $int1 = 0) {
 	$int2 = calc(1 - $int2);
 }
 if_settrans(scale($int1, 25, 255), $component0);

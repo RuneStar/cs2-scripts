@@ -1,6 +1,6 @@
 // 2711
 [clientscript,1v1arena_clear_opbutton](component $component0, int $int1, int $int2)
-if ((.cc_find($component0, $int1) = ^true) & (cc_find($component0, $int2) = ^true)) {
+if (.cc_find($component0, $int1) = ^true & cc_find($component0, $int2) = ^true) {
 	sound_synth(synth_2266, 1, 0);
 	cc_setcolour(^red);
 	if_setonmouserepeat(null, $component0);

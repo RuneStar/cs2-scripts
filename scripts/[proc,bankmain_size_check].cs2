@@ -2,7 +2,7 @@
 [proc,bankmain_size_check](component $component0, component $component1, int $int2, int $int3, component $component4, component $component5)
 def_int $int6 = if_getwidth($component1);
 def_int $int7 = if_getheight($component1);
-if (($int6 = $int2) & ($int7 = $int3)) {
+if ($int6 = $int2 & $int7 = $int3) {
 	return;
 }
 def_int $int8 = ~min(800, calc($int7 - 3));

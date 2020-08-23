@@ -1,7 +1,7 @@
 // 1750
 [clientscript,worldmap_overlay](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, coord $coord6)
 def_maparea $maparea7 = worldmap_getcurrentmap;
-if (((worldmap_isloaded = false) | ($maparea7 = null)) | (if_getwidth($component0) <= 0)) {
+if (worldmap_isloaded = false | $maparea7 = null | if_getwidth($component0) <= 0) {
 	~worldmap_overlay_clear($component0, $component1);
 	return;
 }
@@ -17,23 +17,23 @@ $int10, $int11 = worldmap_getdisplayposition;
 def_int $int12 = 0;
 def_int $int13 = 0;
 def_coord $coord14 = null;
-if ((%varcint188 ! $coord6) & (%varcint188 ! null)) {
+if (%varcint188 ! $coord6 & %varcint188 ! null) {
 	$coord14 = ~worldmap_findcoordinmap($maparea7, %varcint188);
 	if ($coord14 ! null) {
 		$int12, $int13 = worldmap_getdisplaycoord($coord6);
-		if (((($int12 >= calc($int10 - 25)) & ($int12 <= calc($int10 + 25))) & ($int13 >= calc($int11 - 25))) & ($int13 <= calc($int11 + 25))) {
+		if ($int12 >= calc($int10 - 25) & $int12 <= calc($int10 + 25) & $int13 >= calc($int11 - 25) & $int13 <= calc($int11 + 25)) {
 			worldmap_jumptosourcecoord($coord14);
 		}
 	}
 }
-if ((((($int10 = $int2) & ($int11 = $int3)) & ($int8 = $int4)) & ($int9 = $int5)) & (%varcint188 = $coord6)) {
+if ($int10 = $int2 & $int11 = $int3 & $int8 = $int4 & $int9 = $int5 & %varcint188 = $coord6) {
 	return;
 }
 if_setontimer("worldmap_overlay($component0, $component1, $int10, $int11, $int8, $int9, %varcint188)", $component0);
-def_int $int15 = calc($int11 + ($int9 / 2));
-def_int $int16 = calc($int11 - ($int9 / 2));
-def_int $int17 = calc($int10 + ($int8 / 2));
-def_int $int18 = calc($int10 - ($int8 / 2));
+def_int $int15 = calc($int11 + $int9 / 2);
+def_int $int16 = calc($int11 - $int9 / 2);
+def_int $int17 = calc($int10 + $int8 / 2);
+def_int $int18 = calc($int10 - $int8 / 2);
 ~worldmap_elements_update($component0, $int15, $int16, $int17, $int18);
 def_int $int19 = if_getwidth($component1);
 def_int $int20 = if_getheight($component1);
@@ -50,7 +50,7 @@ def_int $int27 = scale(calc($int18 - $int24), $int25, $int19);
 def_int $int28 = scale(calc($int21 - $int15), $int26, $int20);
 def_int $int29 = scale(calc($int17 - $int18), $int25, $int19);
 def_int $int30 = scale(calc($int15 - $int16), $int26, $int20);
-if ((cc_find($component1, 0) = ^true) & (.cc_find($component1, 1) = ^true)) {
+if (cc_find($component1, 0) = ^true & .cc_find($component1, 1) = ^true) {
 	cc_setposition($int27, $int28, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setposition($int27, $int28, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int29, $int30, ^setsize_abs, ^setsize_abs);

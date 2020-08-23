@@ -1,7 +1,7 @@
 // 672
 [clientscript,rune_pouch_inventoryreorder](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5)
 def_int $int6 = inv_size(inv);
-if (($int2 < 0) | ($int2 >= $int6)) {
+if ($int2 < 0 | $int2 >= $int6) {
 	return;
 }
 if ($component1 ! $component0) {
@@ -11,7 +11,7 @@ if ($component1 ! $component0) {
 	}
 	return;
 }
-if ((($int2 = $int3) | ($int3 < 0)) | ($int3 >= $int6)) {
+if ($int2 = $int3 | $int3 < 0 | $int3 >= $int6) {
 	return;
 }
 def_obj $obj7 = inv_getobj(inv, $int2);

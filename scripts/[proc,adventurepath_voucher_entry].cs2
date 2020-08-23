@@ -32,15 +32,15 @@ while ($int10 < $int9) {
 	$obj13 = enum(int, obj, $enum4, $int10);
 	$int14 = enum(obj, int, $enum5, $obj13);
 	if ($obj13 ! null) {
-		$int3 = ~stoneborder_free($component1, $int3, calc((36 * 2) + 16), 88, 64, $int0);
+		$int3 = ~stoneborder_free($component1, $int3, calc(36 * 2 + 16), 88, 64, $int0);
 		cc_create($component1, ^iftype_graphic, $int3);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		if ($int15 = 1) {
-			cc_setposition(calc(72 + (36 / 2)), calc(($int0 + (32 / 2)) + 14), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc(72 + 36 / 2), calc($int0 + 32 / 2 + 14), ^setpos_abs_left, ^setpos_abs_top);
 		} else if ($int15 = 2) {
-			cc_setposition(calc(72 + (36 * $int11)), calc(($int0 + (32 / 2)) + 14), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc(72 + 36 * $int11), calc($int0 + 32 / 2 + 14), ^setpos_abs_left, ^setpos_abs_top);
 		} else {
-			cc_setposition(calc(72 + (36 * $int11)), calc(($int0 + (32 * $int12)) + 14), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc(72 + 36 * $int11), calc($int0 + 32 * $int12 + 14), ^setpos_abs_left, ^setpos_abs_top);
 		}
 		cc_setoutline(1);
 		cc_setobject(oc_uncert($obj13), $int14);
@@ -59,7 +59,7 @@ while ($int10 < $int9) {
 	}
 	$int10 = calc($int10 + 1);
 }
-def_int $int16 = calc(80 + (36 * 2));
+def_int $int16 = calc(80 + 36 * 2);
 $int3 = ~stoneborder_free($component1, $int3, calc($int2 - 16), 88, $int16, $int0);
 cc_create($component1, ^iftype_text, $int3);
 cc_setsize(calc($int2 - 36), 88, ^setsize_abs, ^setsize_abs);
@@ -67,7 +67,7 @@ cc_setposition(calc($int16 + 10), $int0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($string0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
-if (($int8 ! -1) & (~adventurepath_return_voucher($int8) = ^false)) {
+if ($int8 ! -1 & ~adventurepath_return_voucher($int8) = ^false) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x0dc10d);

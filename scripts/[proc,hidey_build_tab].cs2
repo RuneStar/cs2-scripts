@@ -29,7 +29,7 @@ while ($loc18 ! null) {
 		$int7 = -1;
 	}
 	$string0 = enum(loc, string, enum_1531, $loc18);
-	$int8 = calc((paraheight($string0, 143, p12_full) * 12) + 9);
+	$int8 = calc(paraheight($string0, 143, p12_full) * 12 + 9);
 	if ($int8 < 20) {
 		$int8 = 20;
 	}
@@ -38,12 +38,12 @@ while ($loc18 ! null) {
 	$loc18 = enum(int, loc, $enum2, $int17);
 	if ($loc18 ! null) {
 		$string1 = enum(loc, string, enum_1531, $loc18);
-		$int9 = calc((paraheight($string1, 143, p12_full) * 12) + 9);
+		$int9 = calc(paraheight($string1, 143, p12_full) * 12 + 9);
 		$int12, $int14 = ~hh_get_status($loc18, $int3, $int4, $int5);
 		if ($int8 < $int9) {
 			$int8 = $int9;
 		}
-		$int10 = calc($int15 + (($int8 - 17) / 2));
+		$int10 = calc($int15 + ($int8 - 17) / 2);
 		cc_create($component0, ^iftype_text, $int6);
 		$int6 = calc($int6 + 1);
 		cc_setsize(143, $int8, ^setsize_abs, ^setsize_abs);
@@ -71,7 +71,7 @@ while ($loc18 ! null) {
 		$loc18 = enum(int, loc, $enum2, $int16);
 	} else {
 		$loc18 = null;
-		$int10 = calc($int15 + (($int8 - 17) / 2));
+		$int10 = calc($int15 + ($int8 - 17) / 2);
 	}
 	cc_create($component0, ^iftype_text, $int6);
 	$int6 = calc($int6 + 1);
@@ -96,7 +96,7 @@ while ($loc18 ! null) {
 		cc_setposition(54, $int10, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("tick");
 	}
-	if (($int7 ! -1) & (cc_find($component0, $int7) = ^true)) {
+	if ($int7 ! -1 & cc_find($component0, $int7) = ^true) {
 		cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
 	}
 	$int15 = calc($int15 + $int8);

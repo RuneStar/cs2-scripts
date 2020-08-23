@@ -5,7 +5,7 @@ def_int $int10 = 0;
 cc_deleteall(interface_4:3);
 def_int $int11 = 0;
 if (string_length($string0) > 0) {
-	$int9 = calc(((3 + (paraheight($string0, (if_getwidth(interface_4:2) - 6), p12_full) * 12)) + 4) + 3);
+	$int9 = calc(3 + paraheight($string0, if_getwidth(interface_4:2) - 6, p12_full) * 12 + 4 + 3);
 	cc_create(interface_4:3, ^iftype_graphic, $int11);
 	$int11 = calc($int11 + 1);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
@@ -31,9 +31,9 @@ def_int $int12 = if_getwidth(interface_4:5);
 def_int $int13 = ~max(1, calc($int12 / (36 + 5)));
 def_int $int14 = 0;
 if ($int13 > 1) {
-	$int14 = calc(($int12 - ($int13 * 36)) / ($int13 - 1));
+	$int14 = calc(($int12 - $int13 * 36) / ($int13 - 1));
 }
-def_int $int15 = calc(($int12 - (($int13 * 36) + (($int13 - 1) * $int14))) / 2);
+def_int $int15 = calc(($int12 - ($int13 * 36 + ($int13 - 1) * $int14)) / 2);
 ~deathkeep_left_redraw($int3, $int13, $int14, $int15, $int4, $obj5, $obj6, $obj7, $obj8);
 if_setoninvtransmit("deathkeep_left_redraw($int3, $int13, $int14, $int15, $int4, $obj5, $obj6, $obj7, $obj8){inv, inv_584, inv_468}", interface_4:0);
 if_setonvartransmit("deathkeep_left_redraw($int3, $int13, $int14, $int15, $int4, $obj5, $obj6, $obj7, $obj8){var499}", interface_4:0);

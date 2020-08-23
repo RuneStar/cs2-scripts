@@ -1,6 +1,6 @@
 // 1714
 [clientscript,worldmap_overview_click](int $int0, int $int1, int $int2, component $component3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11)
-if ((worldmap_isloaded = false) | (clientclock < $int2)) {
+if (worldmap_isloaded = false | clientclock < $int2) {
 	return;
 }
 def_int $int12 = calc($int8 + scale($int0, $int4, $int6));

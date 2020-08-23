@@ -1,8 +1,8 @@
 // 2844
 [proc,adventurepath_item_entry](int $int0, component $component1, int $int2, namedobj $namedobj3, int $int4, string $string0, int $int5)(int, int, int)
-def_int $int6 = calc((if_getwidth($component1) - (36 * 2)) - 10);
+def_int $int6 = calc(if_getwidth($component1) - 36 * 2 - 10);
 def_int $int7 = paraheight($string0, $int6, p12_full);
-def_int $int8 = ~max(50, calc(($int7 * 13) + 8));
+def_int $int8 = ~max(50, calc($int7 * 13 + 8));
 if ($namedobj3 = null) {
 	return($int2, $int5, $int0);
 }
@@ -20,7 +20,7 @@ $int2 = calc($int2 + 1);
 $int2 = ~stoneborder_free($component1, $int2, calc(36 * 2), $int8, 0, $int0);
 cc_create($component1, ^iftype_graphic, $int2);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(36 / 2), calc(($int0 + ($int8 / 2)) - (32 / 2)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc(36 / 2), calc($int0 + $int8 / 2 - 32 / 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setoutline(1);
 cc_setobject(oc_uncert($namedobj3), $int4);
 $int2 = calc($int2 + 1);
@@ -42,7 +42,7 @@ if (~on_mobile = false) {
 $int2 = ~stoneborder_free($component1, $int2, calc($int6 + 10), $int8, calc(36 * 2), $int0);
 cc_create($component1, ^iftype_text, $int2);
 cc_setsize($int6, $int8, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc((36 * 2) + 5), $int0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc(36 * 2 + 5), $int0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($string0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);

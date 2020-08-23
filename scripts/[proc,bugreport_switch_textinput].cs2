@@ -11,12 +11,12 @@ if ($component0 = $component5) {
 }
 $string0 = ~bugreport_parse($string0, 1);
 $string1 = ~bugreport_parse($string1, 1);
-def_int $int8 = calc((paraheight($string1, if_getwidth($component2), p12_full) * 12) + 5);
+def_int $int8 = calc(paraheight($string1, if_getwidth($component2), p12_full) * 12 + 5);
 def_int $int9 = if_getheight($component2);
 if ($int8 < $int9) {
 	$int8 = $int9;
 }
-if ((cc_find($component2, 0) = ^true) & (.cc_find($component2, 1) = ^true)) {
+if (cc_find($component2, 0) = ^true & .cc_find($component2, 1) = ^true) {
 	cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
 	.cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
 	cc_settrans(255);
@@ -32,12 +32,12 @@ if ($int8 > $int9) {
 ~scrollbar_resize($component3, $component2, if_getscrolly($component2));
 if_setonclick("bugreport_switch_textinput($component2, $component3, $component0, $component1, $component4, $component5, $component6, $component7)", $component2);
 $string0 = append($string0, "<col=ffffff>*</col>");
-$int8 = calc((paraheight($string0, if_getwidth($component0), p12_full) * 12) + 5);
+$int8 = calc(paraheight($string0, if_getwidth($component0), p12_full) * 12 + 5);
 $int9 = if_getheight($component0);
 if ($int8 < $int9) {
 	$int8 = $int9;
 }
-if ((cc_find($component0, 0) = ^true) & (.cc_find($component0, 1) = ^true)) {
+if (cc_find($component0, 0) = ^true & .cc_find($component0, 1) = ^true) {
 	cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
 	.cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
 	cc_settrans(0);

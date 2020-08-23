@@ -4,7 +4,7 @@ def_int $int0 = 0;
 def_component $component1 = enum(int, component, enum_580, $int0);
 while ($component1 ! null) {
 	cc_create(interface_163:0, ^iftype_text, calc($int0 * 2));
-	.cc_create(interface_163:0, ^iftype_text, calc(($int0 * 2) + 1));
+	.cc_create(interface_163:0, ^iftype_text, calc($int0 * 2 + 1));
 	cc_setcolour(^cyan);
 	.cc_setcolour(^cyan);
 	cc_settextfont(p12_full);

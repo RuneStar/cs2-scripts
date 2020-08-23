@@ -2,8 +2,8 @@
 [proc,deathkeep_left_graveitem](obj $obj0, int $int1, obj $obj2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8)(int, int, int)
 cc_create(interface_4:7, ^iftype_graphic, $int8);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-def_int $int9 = calc(17 + (($int8 / $int5) * (32 + $int6)));
-cc_setposition(calc($int7 + (($int8 % $int5) * (36 + $int6))), $int9, ^setpos_abs_left, ^setpos_abs_top);
+def_int $int9 = calc(17 + $int8 / $int5 * (32 + $int6));
+cc_setposition(calc($int7 + $int8 % $int5 * (36 + $int6)), $int9, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphicshadow(0x333333);
 cc_setobject($obj0, $int1);
 cc_setop(1, "Check");

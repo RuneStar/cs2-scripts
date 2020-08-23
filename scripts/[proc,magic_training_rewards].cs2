@@ -17,7 +17,7 @@ while ($int3 < $int4) {
 		cc_create($component0, ^iftype_graphic, $int5);
 		cc_setoutline(1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc((($int7 / 2) - (36 / 2)) + ($int10 * $int7)), calc((($int8 / 2) - (32 / 2)) + ($int9 * $int8)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int7 / 2 - 36 / 2 + $int10 * $int7), calc($int8 / 2 - 32 / 2 + $int9 * $int8), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setobject($namedobj6, 1);
 		cc_setop(1, "Select <col=ff981f><$string0>");
 		cc_setop(2, "Examine <col=ff981f><$string0>");

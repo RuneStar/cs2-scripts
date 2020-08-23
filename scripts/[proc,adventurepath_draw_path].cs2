@@ -3,7 +3,7 @@
 def_int $int32 = struct_param($struct3, param_829);
 cc_create($component1, ^iftype_graphic, $int2);
 cc_setsize($int6, 69, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc((($int4 / 2) * $int7) + (($int4 / 4) - ($int6 / 2))), calc((($int5 / 2) * $int8) + 5), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int4 / 2 * $int7 + ($int4 / 4 - $int6 / 2)), calc($int5 / 2 * $int8 + 5), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(struct_param($struct3, param_830));
 cc_setop(1, "Select <col=ff9040><struct_param($struct3, param_828)>");
 cc_setonop("adventurepath_task_init($component0, $int32, $component1, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, event_opindex, $component22, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31)");
@@ -12,19 +12,19 @@ if (~on_mobile = false) {
 	cc_setonmouseleave("cc_settrans($component1, cc_getid, 0, null)");
 }
 $int2 = calc($int2 + 1);
-$int2 = ~create_v2_stone_button_filled_free($component1, $int2, calc(($int4 / 2) - (5 * 2)), calc(5 * 7), calc((($int4 / 2) * $int7) + 5), calc((($int5 / 2) * ($int8 + 1)) - (5 * 8)), struct_param($struct3, param_828), 0xff981f, ^white, 0, 0);
+$int2 = ~create_v2_stone_button_filled_free($component1, $int2, calc($int4 / 2 - 5 * 2), calc(5 * 7), calc($int4 / 2 * $int7 + 5), calc($int5 / 2 * ($int8 + 1) - 5 * 8), struct_param($struct3, param_828), 0xff981f, ^white, 0, 0);
 cc_setop(1, "Select <col=ff9040><struct_param($struct3, param_828)>");
 cc_setonop("adventurepath_task_init($component0, $int32, $component1, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, event_opindex, $component22, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31)");
 def_int $int33 = ~adventurepath_return_path_length($int32);
 def_int $int34 = ~adventurepath_return_path_tasks_done($int32);
-$int2 = ~script2990($component1, $int2, calc($int6 - 30), 29, calc((($int4 / 2) * $int7) + (($int4 / 4) - ($int6 / 2))), calc((($int5 / 2) * ($int8 + 1)) - 69), $int34, $int33, 0, " Tasks done");
-$int2 = ~stoneborder_free($component1, $int2, calc($int4 / 2), calc($int5 / 2), calc(($int4 / 2) * $int7), calc(($int5 / 2) * $int8));
+$int2 = ~script2990($component1, $int2, calc($int6 - 30), 29, calc($int4 / 2 * $int7 + ($int4 / 4 - $int6 / 2)), calc($int5 / 2 * ($int8 + 1) - 69), $int34, $int33, 0, " Tasks done");
+$int2 = ~stoneborder_free($component1, $int2, calc($int4 / 2), calc($int5 / 2), calc($int4 / 2 * $int7), calc($int5 / 2 * $int8));
 def_graphic $graphic35 = "tick";
 if (~adventurepath_return_path_status($int32) = ^true) {
-	$int2 = ~script2984($component1, $int2, 29, 29, calc((($int4 / 2) * $int7) + ((($int4 / 4) + ($int6 / 2)) - 30)), calc((($int5 / 2) * ($int8 + 1)) - 69), "", $graphic35, $graphic35, 12, 12, 1, 0, 0);
+	$int2 = ~script2984($component1, $int2, 29, 29, calc($int4 / 2 * $int7 + ($int4 / 4 + $int6 / 2 - 30)), calc($int5 / 2 * ($int8 + 1) - 69), "", $graphic35, $graphic35, 12, 12, 1, 0, 0);
 } else if ($int32 = %varbit9324) {
-	$int2 = ~script2984($component1, $int2, 29, 29, calc((($int4 / 2) * $int7) + ((($int4 / 4) + ($int6 / 2)) - 30)), calc((($int5 / 2) * ($int8 + 1)) - 69), "Drop<col=ff9040> Focus", "graphic_2223", "graphic_2223", 4, 4, 0, 0, 0);
+	$int2 = ~script2984($component1, $int2, 29, 29, calc($int4 / 2 * $int7 + ($int4 / 4 + $int6 / 2 - 30)), calc($int5 / 2 * ($int8 + 1) - 69), "Drop<col=ff9040> Focus", "graphic_2223", "graphic_2223", 4, 4, 0, 0, 0);
 } else {
-	$int2 = ~script2984($component1, $int2, 29, 29, calc((($int4 / 2) * $int7) + ((($int4 / 4) + ($int6 / 2)) - 30)), calc((($int5 / 2) * ($int8 + 1)) - 69), "Set<col=ff9040> Focus", "graphic_2224", "graphic_2224", 4, 4, 0, 0, 0);
+	$int2 = ~script2984($component1, $int2, 29, 29, calc($int4 / 2 * $int7 + ($int4 / 4 + $int6 / 2 - 30)), calc($int5 / 2 * ($int8 + 1) - 69), "Set<col=ff9040> Focus", "graphic_2224", "graphic_2224", 4, 4, 0, 0, 0);
 }
 return($int2);

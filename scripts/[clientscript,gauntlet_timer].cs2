@@ -14,7 +14,7 @@ if ($int5 < 10) {
 	$string0 = "Time Left: <tostring($int4)>:0<tostring($int5)>";
 }
 if_settext($string0, $component2);
-if ((calc(clientclock % 20) < 10) & ($int3 <= 10)) {
+if (calc(clientclock % 20) < 10 & $int3 <= 10) {
 	if_setcolour(0xfc0000, $component2);
 } else {
 	if_setcolour(0xfcfce7, $component2);

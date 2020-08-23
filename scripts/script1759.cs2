@@ -1,6 +1,6 @@
 // 1759
 script1759(struct $struct0)(int)
-if ((testbit(%varbit5640, 4) = ^true) | (struct_param($struct0, param_986) = false)) {
+if (testbit(%varbit5640, 4) = ^true | struct_param($struct0, param_986) = false) {
 	return(0);
 }
 def_int $int1 = calc(clientclock % 40);

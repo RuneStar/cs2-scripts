@@ -5,7 +5,7 @@ if ($int3 = 1) {
 } else {
 	$int2 = calc($int2 - 1);
 }
-if (($int2 = 25) | ($int2 = 0)) {
+if ($int2 = 25 | $int2 = 0) {
 	$int3 = calc(1 - $int3);
 }
 if (cc_find($component0, $int1) = ^true) {

@@ -4,8 +4,8 @@ def_int $int4 = coordx($coord1);
 def_int $int5 = coordz($coord1);
 def_int $int6 = coordx($coord2);
 def_int $int7 = coordz($coord2);
-def_int $int8 = calc(($int6 - $int4) + 1);
-def_int $int9 = calc(($int7 - $int5) + 1);
+def_int $int8 = calc($int6 - $int4 + 1);
+def_int $int9 = calc($int7 - $int5 + 1);
 def_int $int10 = $int8;
 if ($int9 > $int10) {
 	$int10 = $int9;
@@ -21,20 +21,20 @@ def_int $int13 = 0;
 def_int $int14 = 0;
 def_int $int15 = 0;
 def_int $int16 = 0;
-if (($int8 >= 7) & ($int9 >= 7)) {
+if ($int8 >= 7 & $int9 >= 7) {
 	$int12, $int13, $int14 = $int11, $int11, calc(7 * $int11);
 } else {
 	$int12, $int13 = calc(($int4 - 1) * $int11), calc(($int5 - 1) * $int11);
 	$int14 = calc(($int10 + 2) * $int11);
 	$int15 = calc((7 + 2) * $int11);
-	$int16 = calc(($int12 + $int14) - $int15);
+	$int16 = calc($int12 + $int14 - $int15);
 	if ($int16 > 0) {
 		$int12 = calc($int12 - $int16);
 		if ($int12 < 0) {
 			$int12 = 0;
 		}
 	}
-	$int16 = calc(($int13 + $int14) - $int15);
+	$int16 = calc($int13 + $int14 - $int15);
 	if ($int16 > 0) {
 		$int13 = calc($int13 - $int16);
 		if ($int13 < 0) {
@@ -55,7 +55,7 @@ while ($int22 < $int18) {
 	$int21 = calc($int21 + 1);
 	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
 	$int19, $int20 = calc($int22 % $int17), calc($int22 / $int17);
-	cc_setposition(calc(($int19 * $int11) - $int12), calc(($int20 * $int11) - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setposition(calc($int19 * $int11 - $int12), calc($int20 * $int11 - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setfill(false);
 	cc_sethide(true);
 	$int22 = calc($int22 + 1);
@@ -66,7 +66,7 @@ while ($int22 < $int18) {
 	$int21 = calc($int21 + 1);
 	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
 	$int19, $int20 = calc($int22 % $int17), calc($int22 / $int17);
-	cc_setposition(calc(($int19 * $int11) - $int12), calc(($int20 * $int11) - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setposition(calc($int19 * $int11 - $int12), calc($int20 * $int11 - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setfill(false);
 	cc_sethide(true);
 	$int22 = calc($int22 + 1);
@@ -77,7 +77,7 @@ while ($int22 < $int18) {
 	$int21 = calc($int21 + 1);
 	cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
 	$int19, $int20 = calc($int22 % $int17), calc($int22 / $int17);
-	cc_setposition(calc(($int19 * $int11) - $int12), calc(($int20 * $int11) - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
+	cc_setposition(calc($int19 * $int11 - $int12), calc($int20 * $int11 - $int13), ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setfill(false);
 	cc_sethide(true);
 	$int22 = calc($int22 + 1);

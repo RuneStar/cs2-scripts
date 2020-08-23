@@ -41,7 +41,7 @@ if ($namedobj5 ! null) {
 	.cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
-	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(calc(cc_getx + 36 - 15), calc(cc_gety + 32 - 15), ^setpos_abs_left, ^setpos_abs_top);
 	if (calc(inv_total(inv, $namedobj5) - inv_total(inv_619, $namedobj5)) >= $int6) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
@@ -61,7 +61,7 @@ if ($namedobj7 ! null) {
 	.cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
-	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(calc(cc_getx + 36 - 15), calc(cc_gety + 32 - 15), ^setpos_abs_left, ^setpos_abs_top);
 	if (calc(inv_total(inv, $namedobj7) - inv_total(inv_619, $namedobj7)) >= $int8) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
@@ -81,7 +81,7 @@ if ($namedobj9 ! null) {
 	.cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
-	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(calc(cc_getx + 36 - 15), calc(cc_gety + 32 - 15), ^setpos_abs_left, ^setpos_abs_top);
 	if (calc(inv_total(inv, $namedobj9) - inv_total(inv_619, $namedobj9)) >= $int10) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
@@ -101,7 +101,7 @@ if ($namedobj11 ! null) {
 	.cc_create($component0, ^iftype_graphic, $int15);
 	$int15 = calc($int15 + 1);
 	$int16 = calc($int16 + 50);
-	.cc_setposition(calc((cc_getx + 36) - 15), calc((cc_gety + 32) - 15), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(calc(cc_getx + 36 - 15), calc(cc_gety + 32 - 15), ^setpos_abs_left, ^setpos_abs_top);
 	if (calc(inv_total(inv, $namedobj11) - inv_total(inv_619, $namedobj11)) >= $int12) {
 		.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		.cc_setgraphic("tick");
@@ -125,7 +125,7 @@ def_string $string0 = "";
 def_int $int17 = 0;
 $int17, $string0 = ~script2664($struct1);
 $int16 = ~max(150, $int16);
-def_int $int18 = calc(70 + (15 * paraheight($string0, $int16, p12_full)));
+def_int $int18 = calc(70 + 15 * paraheight($string0, $int16, p12_full));
 if_setsize($int16, $int18, ^setsize_abs, ^setsize_abs, $component0);
 cc_setsize(10, 75, ^setsize_minus, ^setsize_abs);
 cc_setposition(5, 5, ^setpos_abs_left, ^setpos_abs_bottom);

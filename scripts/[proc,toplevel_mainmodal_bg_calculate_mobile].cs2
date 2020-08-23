@@ -1,7 +1,7 @@
 // 2542
 [proc,toplevel_mainmodal_bg_calculate_mobile](enum $enum0, component $component1)
 cc_deleteall($component1);
-if ((%varcint173 ! 0) | (if_hassub(enum(component, component, $enum0, interface_161:15)) = false)) {
+if (%varcint173 ! 0 | if_hassub(enum(component, component, $enum0, interface_161:15)) = false) {
 	return;
 }
 cc_create($component1, ^iftype_rectangle, 0);

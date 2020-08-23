@@ -2,7 +2,7 @@
 script2236(component $component0, component $component1, int $int2, int $int3, int $int4)
 def_int $int5 = if_getwidth($component1);
 def_int $int6 = if_getheight($component1);
-if (((($int5 = $int2) & ($int6 = $int3)) & (%varcint381 = $int4)) & (calc(clientclock % 75) ! 0)) {
+if ($int5 = $int2 & $int6 = $int3 & %varcint381 = $int4 & calc(clientclock % 75) ! 0) {
 	return;
 }
 def_int $int7 = scale(%varcint381, 16384, $int5);

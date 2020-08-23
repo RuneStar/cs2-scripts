@@ -9,7 +9,7 @@ def_int $int4 = enum_getoutputcount($enum2);
 def_struct $struct5 = null;
 while ($int3 < $int4) {
 	$struct5 = enum(int, struct, $enum2, $int3);
-	if (($struct5 ! null) & (struct_param($struct5, param_806) = $int0)) {
+	if ($struct5 ! null & struct_param($struct5, param_806) = $int0) {
 		$int3 = $int4;
 	}
 	$int3 = calc($int3 + 1);

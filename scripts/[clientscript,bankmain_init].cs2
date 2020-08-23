@@ -32,7 +32,7 @@ while ($int35 < 816) {
 	cc_setdragdeadtime(5);
 	$int35 = calc($int35 + 1);
 }
-def_int $int36 = calc((if_getwidth($component7) - 51) - 35);
+def_int $int36 = calc(if_getwidth($component7) - 51 - 35);
 $int35 = 1;
 while ($int35 <= 9) {
 	cc_create($component7, ^iftype_graphic, $int34);

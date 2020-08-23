@@ -3,7 +3,7 @@
 cc_deleteall($component0);
 def_string $string0 = "Click on an item to imbue it.";
 def_int $int1 = if_getwidth($component0);
-def_int $int2 = calc((paraheight($string0, $int1, p12_full) * 12) + 5);
+def_int $int2 = calc(paraheight($string0, $int1, p12_full) * 12 + 5);
 def_int $int3 = calc($int1 / 7);
 def_int $int4 = calc(($int3 - 36) / 2);
 def_int $int5 = calc(32 + 20);
@@ -14,10 +14,10 @@ def_obj $obj9 = null;
 while ($int6 < $int7) {
 	$obj9 = inv_getobj(inv, $int6);
 	cc_create($component0, ^iftype_graphic, calc($int6 * 2));
-	.cc_create($component0, ^iftype_text, calc(($int6 * 2) + 1));
+	.cc_create($component0, ^iftype_text, calc($int6 * 2 + 1));
 	if ($obj9 ! null) {
 		if (enum(obj, namedobj, enum_815, $obj9) ! null) {
-			cc_setposition(calc($int4 + (($int8 % 7) * $int3)), calc($int2 + (($int8 / 7) * $int5)), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc($int4 + $int8 % 7 * $int3), calc($int2 + $int8 / 7 * $int5), ^setpos_abs_left, ^setpos_abs_top);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 			cc_setobject($obj9, inv_getnum(inv, $int6));
 			cc_setgraphicshadow(0x333333);
@@ -54,7 +54,7 @@ cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settextshadow(true);
 cc_settext($string0);
 if ($int8 <= 0) {
-	cc_create($component0, ^iftype_text, calc(($int6 * 2) + 1));
+	cc_create($component0, ^iftype_text, calc($int6 * 2 + 1));
 	cc_setsize($int1, calc(if_getheight($component0) - $int2), ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(b12_full);

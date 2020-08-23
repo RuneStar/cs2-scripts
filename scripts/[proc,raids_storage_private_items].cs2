@@ -10,8 +10,8 @@ while ($int3 < $int4) {
 	$obj6 = inv_getobj(inv_583, $int3);
 	cc_create($component0, ^iftype_graphic, $int3);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	$int5 = calc(($int3 / 8) * (32 + 8));
-	cc_setposition(calc(($int3 % 8) * (36 + 8)), $int5, ^setpos_abs_left, ^setpos_abs_top);
+	$int5 = calc($int3 / 8 * (32 + 8));
+	cc_setposition(calc($int3 % 8 * (36 + 8)), $int5, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setoutline(1);
 	cc_setgraphicshadow(0x333333);
 	$int7 = ~raids_storage_private_drawitem($obj6, inv_getnum(inv_583, $int3), $int7, $component1);

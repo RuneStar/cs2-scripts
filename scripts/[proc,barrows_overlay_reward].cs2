@@ -8,6 +8,6 @@ if (%varbit10465 > 0) {
 		return;
 	}
 }
-def_int $int2 = calc(((((%varbit457 + %varbit458) + %varbit459) + %varbit460) + %varbit461) + %varbit462);
-def_int $int3 = calc(%varbit463 + ($int2 * 2));
+def_int $int2 = calc(%varbit457 + %varbit458 + %varbit459 + %varbit460 + %varbit461 + %varbit462);
+def_int $int3 = calc(%varbit463 + $int2 * 2);
 if_settext("Rewards potential: <tostring(interpolate(0, 100, 0, 1012, $int3))>%", $component0);

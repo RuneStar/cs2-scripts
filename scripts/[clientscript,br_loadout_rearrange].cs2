@@ -10,26 +10,26 @@ def_int $int12 = 0;
 def_int $int13 = 0;
 def_int $int14 = -1;
 if ($component0 = $component6) {
-	if (($int1 >= 0) & ($int1 < $int10)) {
+	if ($int1 >= 0 & $int1 < $int10) {
 		$int14 = $int1;
 	}
 	$int12 = 1;
 }
 def_int $int15 = -1;
 if ($component2 = $component6) {
-	if (($int3 >= 0) & ($int3 < $int10)) {
+	if ($int3 >= 0 & $int3 < $int10) {
 		$int15 = $int3;
 	}
 	$int13 = 1;
 }
 def_int $int16 = $int11;
-if (($int14 = -1) | ($int15 = -1)) {
+if ($int14 = -1 | $int15 = -1) {
 	while ($int16 > 0) {
 		$int16 = calc($int16 - 1);
-		if (($int14 = -1) & (enum(int, component, enum_2632, $int16) = $component0)) {
+		if ($int14 = -1 & enum(int, component, enum_2632, $int16) = $component0) {
 			$int14, $int12 = $int16, 0;
 		}
-		if (($int15 = -1) & (enum(int, component, enum_2632, $int16) = $component2)) {
+		if ($int15 = -1 & enum(int, component, enum_2632, $int16) = $component2) {
 			$int15, $int13 = $int16, 0;
 		}
 	}
@@ -60,7 +60,7 @@ if ($int13 = 0) {
 	$int17 = ~br_loadout_get_inv($int15);
 }
 def_namedobj $namedobj18 = enum(int, namedobj, enum_2630, $int17);
-if ((($namedobj18 ! null) & ($int12 = 0)) & (oc_param($namedobj18, param_850) ! $int14)) {
+if ($namedobj18 ! null & $int12 = 0 & oc_param($namedobj18, param_850) ! $int14) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

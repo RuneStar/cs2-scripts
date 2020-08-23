@@ -4,14 +4,14 @@ cc_deleteall($component0);
 cc_deleteall($component2);
 def_int $int5 = if_getwidth($component0);
 def_int $int6 = if_getheight($component0);
-def_int $int7 = calc((($int5 - (36 * 7)) / 6) + 36);
+def_int $int7 = calc(($int5 - 36 * 7) / 6 + 36);
 def_int $int8 = 0;
 def_obj $obj9 = null;
 def_int $int10 = 0;
 def_int $int11 = 0;
 while ($int11 <= 45) {
 	cc_create($component0, ^iftype_graphic, $int11);
-	if ((($int11 < $int1) & (testbit($int3, $int11) = ^true)) | (($int11 >= $int1) & (testbit($int4, calc($int11 - $int1)) = ^true))) {
+	if ($int11 < $int1 & testbit($int3, $int11) = ^true | $int11 >= $int1 & testbit($int4, calc($int11 - $int1)) = ^true) {
 		$obj9 = enum(int, namedobj, enum_985, $int11);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		$int10 = calc(40 * ($int8 / 7));

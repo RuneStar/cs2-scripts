@@ -36,7 +36,7 @@ if (cc_find($component0, 4) = ^true) {
 }
 def_int $int2 = calc(50 * 3);
 def_int $int3 = 0;
-if ((cc_find($component0, 3) = ^true) & (.cc_find($component0, 5) = ^true)) {
+if (cc_find($component0, 3) = ^true & .cc_find($component0, 5) = ^true) {
 	cc_sethide(false);
 	.cc_sethide(false);
 	if ($int1 < interpolate(0, 40, 0, 100, 50)) {

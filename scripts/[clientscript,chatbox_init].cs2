@@ -23,7 +23,7 @@ def_int $int0 = 0;
 def_component $component1 = enum(int, component, enum_579, $int0);
 while ($component1 ! null) {
 	cc_create(interface_162:59, ^iftype_text, calc($int0 * 2));
-	.cc_create(interface_162:59, ^iftype_text, calc(($int0 * 2) + 1));
+	.cc_create(interface_162:59, ^iftype_text, calc($int0 * 2 + 1));
 	cc_setcolour(^black);
 	.cc_setcolour(^black);
 	cc_settextfont(p12_full);

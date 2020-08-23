@@ -1,10 +1,10 @@
 // 3328
 script3328(component $component0, component $component1, int $int2, int $int3)
 def_int $int4 = inv_size(inv);
-if (($int2 < 0) | ($int2 >= $int4)) {
+if ($int2 < 0 | $int2 >= $int4) {
 	return;
 }
-if (($int3 < 0) | ($int3 >= $int4)) {
+if ($int3 < 0 | $int3 >= $int4) {
 	return;
 }
 if ($component0 ! $component1) {

@@ -16,7 +16,7 @@ if ($int8 <= 0) {
 }
 def_int $int9 = 0;
 if ($int8 > 0) {
-	$int9 = calc(((if_getheight($component0) - 32) * if_getheight($component1)) / $int8);
+	$int9 = calc((if_getheight($component0) - 32) * if_getheight($component1) / $int8);
 } else {
 	$int9 = calc(if_getheight($component0) - 32);
 }
@@ -36,7 +36,7 @@ cc_setsize(0, 5, ^setsize_minus, ^setsize_abs);
 cc_setgraphic($graphic3);
 cc_settiling(false);
 cc_create($component0, ^iftype_graphic, 3);
-cc_setposition(0, calc((.cc_gety + .cc_getheight) - 5), ^setpos_abs_centre, ^setpos_abs_top);
+cc_setposition(0, calc(.cc_gety + .cc_getheight - 5), ^setpos_abs_centre, ^setpos_abs_top);
 cc_setsize(0, 5, ^setsize_minus, ^setsize_abs);
 cc_setgraphic($graphic5);
 cc_settiling(false);

@@ -106,7 +106,7 @@ if ($int16 <= -2) {
 		.cc_create($component3, ^iftype_graphic, $int10);
 		$int10 = calc($int10 + 1);
 		.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(calc(parawidth($string0, $int9, b12_full) + 9), calc($int11 + (($int12 - 14) / 2)), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc(parawidth($string0, $int9, b12_full) + 9), calc($int11 + ($int12 - 14) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setgraphic("friends_changed_name");
 		.cc_setgraphicshadow(0x333333);
 		if (string_length($string1) > 0) {

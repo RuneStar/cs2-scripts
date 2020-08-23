@@ -9,7 +9,7 @@ while ($int14 < 48) {
 	$int14 = calc($int14 + 1);
 }
 ~zeah_favour_sort(intarray0, 0, calc(48 - 1));
-if (((((%varcint79 ! 3) & (%varcint79 ! 2)) & (%varcint79 ! 4)) & (%varcint79 ! 5)) & (%varcint79 ! 1)) {
+if (%varcint79 ! 3 & %varcint79 ! 2 & %varcint79 ! 4 & %varcint79 ! 5 & %varcint79 ! 1) {
 	%varcint79 = 3;
 }
 def_int $int15 = calc(parawidth("Favour", 512, b12_full) + 15);

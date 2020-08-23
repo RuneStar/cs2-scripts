@@ -4,7 +4,7 @@ if (~keypress_permit(-1, 162) = 0) {
 	return;
 }
 if ($key0 = ^key_return) {
-	if ((%varcint56 = 1) & (string_length(%varcstring359) <= 0)) {
+	if (%varcint56 = 1 & string_length(%varcstring359) <= 0) {
 		if (%varcint5 = 8) {
 			%varcstring359 = %varcstring361;
 			~script222($string0);

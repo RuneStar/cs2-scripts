@@ -26,7 +26,7 @@ switch_int ($int0) {
 			if_setcolour(0xff981f, $component5);
 		}
 	case default :
-		if ((((%var2195 ! 1) & (%var2195 ! 5)) & (%var2195 ! 10)) & (%var2195 ! ^max_32bit_int)) {
+		if (%var2195 ! 1 & %var2195 ! 5 & %var2195 ! 10 & %var2195 ! ^max_32bit_int) {
 			if_setcolour(^white, $component4);
 		} else {
 			if_setcolour(0xff981f, $component4);

@@ -59,9 +59,9 @@ while ($int11 < $int0) {
 				cc_settextfont(p12_full);
 			}
 			if (calc($int17 % 2) = 0) {
-				cc_setposition($int2, calc(($int17 / 2) * 12), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setposition($int2, calc($int17 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
 			} else {
-				cc_setposition($int1, calc(($int17 / 2) * 12), ^setpos_abs_left, ^setpos_abs_top);
+				cc_setposition($int1, calc($int17 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
 			}
 		} else {
 			if (parawidth($string0, 512, p12_full) > $int1) {
@@ -91,7 +91,7 @@ while ($int11 < $int0) {
 			} else {
 				cc_settextfont(p12_full);
 			}
-			$int16 = calc(($int18 / 2) * 12);
+			$int16 = calc($int18 / 2 * 12);
 			if (calc($int18 % 2) = 0) {
 				cc_setposition($int2, $int16, ^setpos_abs_left, ^setpos_abs_top);
 				$int15 = 0;
@@ -171,9 +171,9 @@ while ($int21 > 0) {
 	.cc_setsize($int14, 12, ^setsize_abs, ^setsize_abs);
 	if ($int10 > $int7) {
 		if (calc($int18 % 2) = 0) {
-			cc_setposition($int2, calc(($int18 / 2) * 12), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition($int2, calc($int18 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
 		} else {
-			cc_setposition($int1, calc(($int18 / 2) * 12), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition($int1, calc($int18 / 2 * 12), ^setpos_abs_left, ^setpos_abs_top);
 		}
 	} else {
 		cc_setposition(0, calc($int18 * 12), ^setpos_abs_left, ^setpos_abs_top);

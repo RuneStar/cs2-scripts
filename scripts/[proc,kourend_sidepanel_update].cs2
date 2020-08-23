@@ -15,7 +15,7 @@ if ($int0 = 3) {
 	return;
 }
 cc_setsize(interpolate(0, $int1, 0, 1000, 16384), 0, ^setsize_2, ^setsize_minus);
-if (($int1 > 0) & (cc_getwidth < 1)) {
+if ($int1 > 0 & cc_getwidth < 1) {
 	cc_setsize(1, 0, ^setsize_abs, ^setsize_minus);
 }
 def_int $int2 = interpolate(0, $int1, 0, 1000, 1000);
@@ -24,4 +24,4 @@ def_int $int3 = 0;
 def_int $int4 = 0;
 def_int $int5 = 0;
 $int3, $int4, $int5 = ~hex_to_rgb(0xff981f);
-.cc_setcolour(~rgb_to_hex(calc($int3 + interpolate(0, $int1, 0, 1000, (255 - $int3))), calc($int4 + interpolate(0, $int1, 0, 1000, (255 - $int4))), calc($int5 + interpolate(0, $int1, 0, 1000, (255 - $int5)))));
+.cc_setcolour(~rgb_to_hex(calc($int3 + interpolate(0, $int1, 0, 1000, 255 - $int3)), calc($int4 + interpolate(0, $int1, 0, 1000, 255 - $int4)), calc($int5 + interpolate(0, $int1, 0, 1000, 255 - $int5))));

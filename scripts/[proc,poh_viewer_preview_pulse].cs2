@@ -5,7 +5,7 @@ def_int $int3 = 0;
 if ($int2 <= 20) {
 	$int3 = calc(120 + interpolate(0, $int2, 0, 20, 100));
 } else {
-	$int3 = calc(120 + (100 - interpolate(0, ($int2 - 20), 0, 20, 100)));
+	$int3 = calc(120 + (100 - interpolate(0, $int2 - 20, 0, 20, 100)));
 }
 def_int $int4 = calc($int3 + 30);
 if (cc_find($component0, 1) = ^true) {

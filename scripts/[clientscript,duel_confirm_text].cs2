@@ -5,7 +5,7 @@ def_string $string1 = "";
 if (%varbit642 > 0) {
 	$string0 = "<$string0>Some worn items will be taken off.<br>";
 }
-if ((testbit(%var286, 7) = ^true) | (testbit(%var286, 13) = ^true)) {
+if (testbit(%var286, 7) = ^true | testbit(%var286, 13) = ^true) {
 	$string0 = "<$string0>Boosted stats will be restored.<br>";
 }
 if (testbit(%var286, 9) = ^true) {
@@ -47,7 +47,7 @@ if (testbit(%var286, 9) = ^true) {
 if (testbit(%var286, 10) = ^true) {
 	$string1 = "<$string1>There will be obstacles in the arena.<br>";
 }
-if ((testbit(%var286, 17) = ^true) | (testbit(%var286, 19) = ^true)) {
+if (testbit(%var286, 17) = ^true | testbit(%var286, 19) = ^true) {
 	$string1 = "<$string1>You can't use 2H weapons such as bows.<br>";
 }
 if_settext($string0, interface_476:68);
@@ -59,14 +59,14 @@ if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, interface_476:71);
 if (if_gethide(interface_476:71) = true) {
 	if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, interface_476:65);
 } else {
-	if_setposition(2, calc((if_gety(interface_476:71) + if_getheight(interface_476:71)) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:65);
+	if_setposition(2, calc(if_gety(interface_476:71) + if_getheight(interface_476:71) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:65);
 }
-if_setposition(2, calc((if_gety(interface_476:65) + if_getheight(interface_476:65)) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:66);
-if_setposition(2, calc((if_gety(interface_476:66) + if_getheight(interface_476:66)) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:67);
-if_setposition(2, calc((if_gety(interface_476:67) + if_getheight(interface_476:67)) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:68);
-if_setposition(2, calc((if_gety(interface_476:68) + if_getheight(interface_476:68)) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:69);
-if_setposition(2, calc((if_gety(interface_476:69) + if_getheight(interface_476:69)) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:70);
-def_int $int0 = calc((if_gety(interface_476:70) + if_getheight(interface_476:70)) + 2);
+if_setposition(2, calc(if_gety(interface_476:65) + if_getheight(interface_476:65) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:66);
+if_setposition(2, calc(if_gety(interface_476:66) + if_getheight(interface_476:66) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:67);
+if_setposition(2, calc(if_gety(interface_476:67) + if_getheight(interface_476:67) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:68);
+if_setposition(2, calc(if_gety(interface_476:68) + if_getheight(interface_476:68) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:69);
+if_setposition(2, calc(if_gety(interface_476:69) + if_getheight(interface_476:69) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:70);
+def_int $int0 = calc(if_gety(interface_476:70) + if_getheight(interface_476:70) + 2);
 if ($int0 > if_getheight(interface_476:62)) {
 	if_setscrollsize(0, $int0, interface_476:63);
 	if_sethide(false, interface_476:64);

@@ -4,19 +4,19 @@ def_model $model2 = doll_34414;
 if (calc($int1 % 50) < 25) {
 	$model2 = model_34415;
 }
-def_int $int3 = calc(($int1 * 34) % 2048);
+def_int $int3 = calc($int1 * 34 % 2048);
 if ($int1 <= 30) {
 	.cc_setmodel($model2);
-	cc_settrans(calc(255 - ($int1 * 8)));
+	cc_settrans(calc(255 - $int1 * 8));
 	cc_setcolour(^white);
-	.cc_setmodelangle(0, 60, 30, $int3, 0, calc(1580 - ($int1 * 50)));
+	.cc_setmodelangle(0, 60, 30, $int3, 0, calc(1580 - $int1 * 50));
 	return;
 }
 def_int $int4 = 0;
 if ($int1 <= 60) {
 	.cc_setmodel($model2);
 	$int1 = calc($int1 - 30);
-	cc_settrans(calc(15 - ($int1 / 2)));
+	cc_settrans(calc(15 - $int1 / 2));
 	$int4 = calc(255 - scale($int1, 30, 255));
 	cc_setcolour(~rgb_to_hex(calc(255 - scale($int1, 30, 127)), $int4, $int4));
 	.cc_setmodelangle(0, 60, 30, $int3, 0, calc(80 - scale($int1, 30, 20)));
@@ -47,7 +47,7 @@ if ($int1 <= 180) {
 	.cc_setmodel($model2);
 	$int1 = calc($int1 - 150);
 	cc_setcolour(~rgb_to_hex(scale($int1, 30, 96), 0, 0));
-	.cc_setmodelangle(0, 60, 30, $int3, 0, calc(80 + ($int1 * 50)));
+	.cc_setmodelangle(0, 60, 30, $int3, 0, calc(80 + $int1 * 50));
 	return;
 }
 if ($int1 <= 210) {

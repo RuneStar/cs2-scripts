@@ -9,7 +9,7 @@ $int4, $int5 = ~ds2_fossil_map_getslot($int1);
 def_int $int6 = 0;
 def_int $int7 = 0;
 $int6, $int7 = ~ds2_fossil_map_getslot($int3);
-if (($int4 = 0) | ($int6 = 0)) {
+if ($int4 = 0 | $int6 = 0) {
 	return;
 }
 ~ds2_fossil_map_setslot($int3, $int4, $int5);

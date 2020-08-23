@@ -7,9 +7,9 @@ if (~keypress_permit(-1, 162) = 0) {
 	return;
 }
 def_int $int8 = 0;
-if (($key0 ! null) & ($key0 = $key5)) {
+if ($key0 ! null & $key0 = $key5) {
 	$int8 = 1;
-} else if (($char1 ! null) & ((string_indexof_char($string0, $char1) ! -1) | (string_indexof_char($string1, $char1) ! -1))) {
+} else if ($char1 ! null & (string_indexof_char($string0, $char1) ! -1 | string_indexof_char($string1, $char1) ! -1)) {
 	$int8 = 1;
 } else {
 	return;

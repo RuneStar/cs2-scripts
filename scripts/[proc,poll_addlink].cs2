@@ -1,7 +1,7 @@
 // 611
 [proc,poll_addlink](string $string0, string $string1, component $component0, int $int1, int $int2, fontmetrics $fontmetrics3, fontmetrics $fontmetrics4, int $int5, int $int6)
 $string0 = removetags($string0);
-if ((string_length($string0) <= 0) | (string_length($string1) <= 0)) {
+if (string_length($string0) <= 0 | string_length($string1) <= 0) {
 	return;
 }
 if (clienttype = ^clienttype_ios) {
@@ -9,12 +9,12 @@ if (clienttype = ^clienttype_ios) {
 }
 def_int $int7 = calc($int1 - (15 + $int6));
 def_int $int8 = parawidth($string0, $int7, $fontmetrics4);
-def_int $int9 = calc((paraheight($string0, $int7, $fontmetrics4) * $int5) + $int6);
+def_int $int9 = calc(paraheight($string0, $int7, $fontmetrics4) * $int5 + $int6);
 $int9 = ~max($int9, 15);
 if (~on_mobile = true) {
 	$int9 = ~max($int9, 25);
 }
-$int7 = calc(($int8 + 15) + $int6);
+$int7 = calc($int8 + 15 + $int6);
 cc_create($component0, ^iftype_rectangle, %varcint43);
 %varcint43 = calc(%varcint43 + 1);
 cc_setsize($int7, $int9, ^setsize_abs, ^setsize_abs);
@@ -25,7 +25,7 @@ cc_settrans(255);
 .cc_create($component0, ^iftype_text, %varcint43);
 %varcint43 = calc(%varcint43 + 1);
 .cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);
-.cc_setposition(calc(($int7 + 15) + $int6), %varcint49, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(calc($int7 + 15 + $int6), %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 .cc_settextfont($fontmetrics3);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextshadow(true);
@@ -33,8 +33,8 @@ cc_settrans(255);
 .cc_create($component0, ^iftype_graphic, %varcint43);
 %varcint43 = calc(%varcint43 + 1);
 .cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
-.cc_setposition($int7, calc(%varcint49 + (($int9 - 15) / 2)), ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition($int7, calc(%varcint49 + ($int9 - 15) / 2), ^setpos_abs_left, ^setpos_abs_top);
 .cc_setgraphicshadow(0x333333);
 .cc_settiling(true);
 .cc_setgraphic("mapfunction_infoicon");
-%varcint49 = calc((%varcint49 + $int9) + 3);
+%varcint49 = calc(%varcint49 + $int9 + 3);

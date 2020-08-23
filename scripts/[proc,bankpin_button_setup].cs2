@@ -9,7 +9,7 @@ cc_setfill(true);
 cc_settrans(255);
 .cc_create($component0, ^iftype_text, 1);
 .cc_setsize(10, 15, ^setsize_abs, ^setsize_abs);
-.cc_setposition(calc(5 + randominc((if_getwidth($component0) - 15))), calc(5 + randominc((if_getheight($component0) - 20))), ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(calc(5 + randominc(if_getwidth($component0) - 15)), calc(5 + randominc(if_getheight($component0) - 20)), ^setpos_abs_left, ^setpos_abs_top);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextfont(b12_full);
 .cc_setcolour(0xff7f00);

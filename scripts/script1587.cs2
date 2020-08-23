@@ -2,7 +2,7 @@
 script1587(component $component0, int $int1)
 def_int $int2 = 0;
 def_int $int3 = 0;
-if ((cc_find($component0, $int1) = ^true) & (.cc_find(interface_549:13, $int1) = ^true)) {
+if (cc_find($component0, $int1) = ^true & .cc_find(interface_549:13, $int1) = ^true) {
 	if_settext("Reset streak:<br><.cc_gettext>", interface_549:24);
 	if_setsize(calc(parawidth(if_gettext(interface_549:24), 75, p11_full) + 10), 50, ^setsize_abs, ^setsize_abs, interface_549:19);
 	if (paraheight(if_gettext(interface_549:24), if_getwidth(interface_549:24), p11_full) > 4) {
@@ -13,8 +13,8 @@ if ((cc_find($component0, $int1) = ^true) & (.cc_find(interface_549:13, $int1) =
 		if_setsize(if_getwidth(interface_549:19), 60, ^setsize_abs, ^setsize_abs, interface_549:19);
 	}
 	$int2 = if_getscrolly(interface_549:5);
-	$int3 = calc((if_getscrolly(interface_549:5) + if_getheight(interface_549:5)) - if_getheight(interface_549:19));
+	$int3 = calc(if_getscrolly(interface_549:5) + if_getheight(interface_549:5) - if_getheight(interface_549:19));
 	if_sethide(false, interface_549:17);
 	if_sethide(false, interface_549:19);
-	if_setposition(12, ~minmax($int2, $int3, calc((18 * $int1) + 5)), ^setpos_abs_right, ^setpos_abs_top, interface_549:19);
+	if_setposition(12, ~minmax($int2, $int3, calc(18 * $int1 + 5)), ^setpos_abs_right, ^setpos_abs_top, interface_549:19);
 }

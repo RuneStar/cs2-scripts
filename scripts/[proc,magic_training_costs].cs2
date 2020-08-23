@@ -6,7 +6,7 @@ if ($int1 = 63) {
 def_int $int2 = %var2224;
 def_int $int3 = ~magic_training_costs_background($component0);
 def_int $int4 = calc(if_getwidth($component0) / 2);
-def_int $int5 = calc((if_getheight($component0) / 3) - 1);
+def_int $int5 = calc(if_getheight($component0) / 3 - 1);
 def_int $int6 = 0;
 def_obj $obj7 = enum(int, namedobj, enum_2753, $int1);
 def_int $int8 = 0;
@@ -28,7 +28,7 @@ if ($namedobj10 ! null) {
 	cc_create($component0, ^iftype_graphic, $int3);
 	cc_setoutline(1);
 	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(9, calc((if_getheight($component0) / 2) - 20), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(9, calc(if_getheight($component0) / 2 - 20), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setobject($namedobj10, 1);
 	$int3 = calc($int3 + 1);
 	$int9 = inv_total(inv, $namedobj10);
@@ -60,7 +60,7 @@ cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
 cc_setposition($int6, calc(2 + $int5), ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextfont(p11_full);
-if ((%var261 < $int8) | (%var2224 = 0)) {
+if (%var261 < $int8 | %var2224 = 0) {
 	cc_setcolour(^red);
 } else {
 	cc_setcolour(^green);
@@ -78,7 +78,7 @@ cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int4 + $int6), calc(2 + $int5), ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextfont(p11_full);
-if ((%var264 < $int8) | (%var2224 = 0)) {
+if (%var264 < $int8 | %var2224 = 0) {
 	cc_setcolour(^red);
 } else {
 	cc_setcolour(^green);
@@ -93,10 +93,10 @@ $int3 = calc($int3 + 1);
 $int8 = calc(enum(obj, int, enum_2757, $obj7) * $int2);
 cc_create($component0, ^iftype_text, $int3);
 cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
-cc_setposition($int6, calc(2 + ($int5 * 2)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition($int6, calc(2 + $int5 * 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextfont(p11_full);
-if ((%var263 < $int8) | (%var2224 = 0)) {
+if (%var263 < $int8 | %var2224 = 0) {
 	cc_setcolour(^red);
 } else {
 	cc_setcolour(^green);
@@ -111,10 +111,10 @@ $int3 = calc($int3 + 1);
 $int8 = calc(enum(obj, int, enum_2758, $obj7) * $int2);
 cc_create($component0, ^iftype_text, $int3);
 cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int4 + $int6), calc(2 + ($int5 * 2)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int4 + $int6), calc(2 + $int5 * 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextfont(p11_full);
-if ((%var262 < $int8) | (%var2224 = 0)) {
+if (%var262 < $int8 | %var2224 = 0) {
 	cc_setcolour(^red);
 } else {
 	cc_setcolour(^green);

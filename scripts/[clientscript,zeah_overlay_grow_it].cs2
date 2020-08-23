@@ -3,7 +3,7 @@
 def_int $int4 = ~min(calc(if_getwidth($component0) + 5), 240);
 def_int $int5 = ~min(calc(if_getheight($component0) + 2), 100);
 if_setsize($int4, $int5, ^setsize_abs, ^setsize_abs, $component0);
-if (($int4 >= 240) & ($int5 >= 100)) {
+if ($int4 >= 240 & $int5 >= 100) {
 	if_sethide(false, $component2);
 	if_setnoclickthrough(true, $component2);
 	if ($boolean3 = true) {

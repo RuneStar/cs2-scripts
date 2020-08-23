@@ -4,7 +4,7 @@ def_int $int1 = calc(%var261 - 1);
 def_int $int2 = 0;
 def_int $int3 = 0;
 while ($int3 < $int0) {
-	if ((cc_find(interface_100:31, $int3) = ^true) & (.cc_find(interface_100:31, calc($int0 + $int3)) = ^true)) {
+	if (cc_find(interface_100:31, $int3) = ^true & .cc_find(interface_100:31, calc($int0 + $int3)) = ^true) {
 		if ($int3 = $int1) {
 			cc_settrans(200);
 			.cc_setcolour(0xffb83f);

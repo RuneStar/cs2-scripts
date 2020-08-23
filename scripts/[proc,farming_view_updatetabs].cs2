@@ -2,7 +2,7 @@
 [proc,farming_view_updatetabs](component $component0, component $component1, component $component2)
 def_int $int3 = 0;
 while ($int3 <= 5) {
-	if ((cc_find($component0, calc($int3 * 2)) = ^true) & (.cc_find($component0, calc(($int3 * 2) + 1)) = ^true)) {
+	if (cc_find($component0, calc($int3 * 2)) = ^true & .cc_find($component0, calc($int3 * 2 + 1)) = ^true) {
 		.cc_setcolour(0xff981f);
 		if (%varbit4776 = $int3) {
 			cc_setgraphic("combatboxes,3");
@@ -118,7 +118,7 @@ $int9 = ~farming_view_tabpanel(141, 5, $int5, $int6, $int7, $int8, $int9);
 $int9 = ~farming_view_tabpanel(170, 5, $int5, $int6, $int7, $int8, $int9);
 def_int $int10 = calc(($int9 + 2) / 3);
 if ($int10 > 0) {
-	$int10 = calc(($int10 * $int6) + (($int10 - 1) * 2));
+	$int10 = calc($int10 * $int6 + ($int10 - 1) * 2);
 }
 if ($int10 > if_getheight($component1)) {
 	if_setscrollsize(0, $int10, $component1);

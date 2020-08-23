@@ -11,7 +11,7 @@ def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 1;
 while (enum(int, int, enum_1740, $int5) > 0) {
-	if (((($int5 = 0) | ($int5 = 5)) | ($int5 = 19)) | ($int5 = 33)) {
+	if ($int5 = 0 | $int5 = 5 | $int5 = 19 | $int5 = 33) {
 		if ($int5 > 0) {
 			$int7 = calc($int7 + 15);
 		}
@@ -34,7 +34,7 @@ while (enum(int, int, enum_1740, $int5) > 0) {
 		cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 		cc_setcolour(0xff981f);
 		cc_settextshadow(true);
-		$int7 = calc($int7 + (15 * paraheight(cc_gettext, cc_getwidth, p12_full)));
+		$int7 = calc($int7 + 15 * paraheight(cc_gettext, cc_getwidth, p12_full));
 		$int6 = calc($int6 + 1);
 	}
 	cc_create($component1, ^iftype_text, $int5);
@@ -76,7 +76,7 @@ while (enum(int, int, enum_1740, $int5) > 0) {
 	} else {
 		$int10 = 1;
 	}
-	$int7 = calc(($int7 + (15 * $int8)) + 5);
+	$int7 = calc($int7 + 15 * $int8 + 5);
 	$int5 = calc($int5 + 1);
 	$string0 = "<tostring(enum(int, int, enum_1740, $int5))> - <enum(int, string, enum_1741, $int5)>";
 	$string1 = enum(int, string, enum_1742, $int5);

@@ -3,14 +3,14 @@
 def_string $string0 = "";
 def_string $string1 = ",";
 def_int $int3 = 0;
-if (($int1 >= 0) & ($int0 > 0)) {
+if ($int1 >= 0 & $int0 > 0) {
 	if (calc(^max_32bit_int / $int0) < $int1) {
 		$int3 = ^max_32bit_int;
 	} else {
 		$int3 = calc($int0 * $int1);
 	}
 	if ($int0 > 1) {
-		if (($int3 >= 0) & ($int3 < ^max_32bit_int)) {
+		if ($int3 >= 0 & $int3 < ^max_32bit_int) {
 			$string0 = "<~tostring_spacer($int0, $string1)> x <~tostring_spacer($int1, $string1)><br>= <~tostring_spacer($int3, $string1)>";
 		} else {
 			$string0 = "<~tostring_spacer($int0, $string1)> x <~tostring_spacer($int1, $string1)>";

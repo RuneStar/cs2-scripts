@@ -1,19 +1,19 @@
 // 146
 [proc,bank_depositbox_update](component $component0, component $component1, component $component2)
-def_int $int3 = calc((if_getwidth($component0) - (36 * 7)) / 6);
-def_int $int4 = calc((if_getheight($component0) - (32 * 4)) / 3);
+def_int $int3 = calc((if_getwidth($component0) - 36 * 7) / 6);
+def_int $int4 = calc((if_getheight($component0) - 32 * 4) / 3);
 def_int $int5 = inv_size(inv);
 while ($int5 > 0) {
 	$int5 = calc($int5 - 1);
 	if (cc_find($component0, $int5) = ^true) {
 		cc_clearops;
-		cc_setposition(calc(($int5 % 7) * (36 + $int3)), calc(($int5 / 7) * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int5 % 7 * (36 + $int3)), calc($int5 / 7 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
 		~bank_depositbox_drawslot($component0, inv_getobj(inv, $int5), inv_getnum(inv, $int5), $int5);
 	}
 }
 def_graphic $graphic6 = "miscgraphics,0";
 def_graphic $graphic7 = "miscgraphics,9";
-if ((inv_total(inv, looting_bag_11941) > 0) | (inv_total(inv, looting_bag_22586) > 0)) {
+if (inv_total(inv, looting_bag_11941) > 0 | inv_total(inv, looting_bag_22586) > 0) {
 	if_setonmouseover("settrans($component2, 75)", $component1);
 	if_setonmouseleave("settrans($component2, 0)", $component1);
 	if_setonop("bankmain_depositall(event_com, $graphic7, $graphic6, event_opindex)", $component1);

@@ -11,9 +11,9 @@ if ($int4 >= 3) {
 cc_create($component0, ^iftype_graphic, $int1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 if ($boolean8 = false) {
-	cc_setposition(calc((($int6 / 6) * $int4) + 5), calc(((32 * $int5) + $int7) + 10), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int6 / 6 * $int4 + 5), calc(32 * $int5 + $int7 + 10), ^setpos_abs_left, ^setpos_abs_top);
 } else {
-	cc_setposition(calc((($int6 / 6) * ($int4 + 3)) + 5), calc(((32 * $int5) + $int7) + 10), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int6 / 6 * ($int4 + 3) + 5), calc(32 * $int5 + $int7 + 10), ^setpos_abs_left, ^setpos_abs_top);
 }
 cc_setobject(oc_uncert($namedobj2), $int3);
 cc_setoutline(1);

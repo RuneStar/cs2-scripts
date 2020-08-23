@@ -1,6 +1,6 @@
 // 1552
 [clientscript,raids_sidepanel_entry_op](string $string0)
-if ((clan_getchatcount > 0) & (clan_getchatrank >= clan_getchatminkick)) {
+if (clan_getchatcount > 0 & clan_getchatrank >= clan_getchatminkick) {
 	sound_synth(synth_2266, 1, 0);
 	~clan_sendkick($string0);
 } else {

@@ -9,7 +9,7 @@ while ($int5 < 7) {
 	cc_setsize($int4, $int4, ^setsize_minus, ^setsize_minus);
 	cc_setcolour(0x4d4d2f);
 	cc_setfill(false);
-	cc_settrans(calc(125 + ((7 - $int5) * 18)));
+	cc_settrans(calc(125 + (7 - $int5) * 18));
 	$int5, $int4 = calc($int5 + 1), calc($int4 + 2);
 }
 cc_create($component0, ^iftype_rectangle, $int5);

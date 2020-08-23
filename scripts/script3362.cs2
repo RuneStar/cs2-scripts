@@ -2,11 +2,11 @@
 script3362(boolean $boolean0, enum $enum1)(int)
 def_int $int2 = if_getwidth(interface_162:53);
 def_int $int3 = 0;
-def_int $int4 = calc(($int2 / 3) + 95);
-def_int $int5 = calc(($int2 / 2) - ($int4 / 2));
+def_int $int4 = calc($int2 / 3 + 95);
+def_int $int5 = calc($int2 / 2 - $int4 / 2);
 def_int $int6 = 0;
 def_obj $obj7 = %var2674;
-if ((($enum1 = null) | (enum(obj, boolean, $enum1, %var2674) = true)) & (($boolean0 = false) | (~deadman_restricted_item($obj7) = 0))) {
+if (($enum1 = null | enum(obj, boolean, $enum1, %var2674) = true) & ($boolean0 = false | ~deadman_restricted_item($obj7) = 0)) {
 	cc_create(interface_162:53, ^iftype_rectangle, $int6);
 	$int6 = calc($int6 + 1);
 	cc_setonkey("meslayer_mode14_select($obj7, event_keypressed)");

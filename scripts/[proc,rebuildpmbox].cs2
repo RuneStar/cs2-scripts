@@ -10,7 +10,7 @@ if (enum(enum, int, enum_1136, $enum6) > 0) {
 	if ($enum6 = enum_1745) {
 		$setposv2, $int3, $int1, $int5 = ^setpos_abs_top, 102, enum(enum, int, enum_1960, $enum6), 30;
 	}
-	if ((%varcint41 = 1337) & (~script922 = 1)) {
+	if (%varcint41 = 1337 & ~script922 = 1) {
 		$int4 = calc($int4 + $int5);
 	} else {
 		$int4 = calc($int4 + if_getheight(enum(component, component, $enum6, interface_161:32)));
@@ -23,7 +23,7 @@ def_component $component10 = enum(int, component, enum_580, $int9);
 def_int $int11 = 0;
 def_string $string0 = "";
 if (reboottimer > 0) {
-	$int11 = calc((reboottimer / 50) % 60);
+	$int11 = calc(reboottimer / 50 % 60);
 	if ($int11 < 10) {
 		$string0 = "System update in: <tostring(calc(reboottimer / 3000))>:0<tostring($int11)>";
 	} else {
@@ -46,13 +46,13 @@ def_string $string2 = "";
 def_string $string3 = "";
 def_int $int15 = -1;
 def_boolean $boolean16 = false;
-if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (chat_gethistorylength(^chattype_broadcast) > 0)) {
+if (%varcint55 >= %varcint202 & %varcint55 > calc(clientclock - 3000) & chat_gethistorylength(^chattype_broadcast) > 0) {
 	$int12, $int13, $string1, $string2, $string0, $int14 = chat_gethistory_bytypeandline(^chattype_broadcast, 0);
 	if ($int12 ! -1) {
 		$string0, $string3, $int15 = ~chat_broadcast_parseurl($string0);
 		$int7 = calc($int7 + ~script199($string0, $int9, $component10, interface_163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^yellow, true));
 		if_clearops($component10);
-		if ((string_length($string3) > 0) & ($int15 ! -1)) {
+		if (string_length($string3) > 0 & $int15 ! -1) {
 			$boolean16 = enum(int, boolean, enum_2761, $int15);
 			if (clienttype ! ^clienttype_ios) {
 				$boolean16 = false;
@@ -79,8 +79,8 @@ if (((%varcint55 >= %varcint202) & (%varcint55 > calc(clientclock - 3000))) & (c
 }
 $int12 = $int0;
 def_int $chattype17 = ^chattype_gamemessage;
-if ((%var287 = 1) & ((%varcint41 ! 1337) | (%varbit4089 = 0))) {
-	while ((($int12 ! -1) & ($component10 ! null)) & (calc($int7 - $int4) < 57)) {
+if (%var287 = 1 & (%varcint41 ! 1337 | %varbit4089 = 0)) {
+	while ($int12 ! -1 & $component10 ! null & calc($int7 - $int4) < 57) {
 		$chattype17, $int13, $string1, $string2, $string0, $int14 = chat_gethistory_byuid($int12);
 		if (~pm_filtertest($chattype17, $string1, $int13, $int14) = 1) {
 			switch_int ($chattype17) {
@@ -90,13 +90,13 @@ if ((%var287 = 1) & ((%varcint41 ! 1337) | (%varbit4089 = 0))) {
 					$int7 = calc($int7 + ~script203("To <$string1>:", $string0, $int9, $component10, interface_163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 				case default :
 					$int7 = calc($int7 + ~script199($string0, $int9, $component10, interface_163:0, $int8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
-					if (($chattype17 = ^chattype_loginlogoutnotification) & (%varbit1627 = 0)) {
-						%varcint65 = calc(($int13 + 500) + 1);
+					if ($chattype17 = ^chattype_loginlogoutnotification & %varbit1627 = 0) {
+						%varcint65 = calc($int13 + 500 + 1);
 						if_setontimer("script664(false)", interface_162:0);
 					}
 			}
 			if_clearops($component10);
-			if ((($chattype17 = ^chattype_privatechat) | ($chattype17 = ^chattype_privatechatout)) | ($chattype17 = ^chattype_modprivatechat)) {
+			if ($chattype17 = ^chattype_privatechat | $chattype17 = ^chattype_privatechatout | $chattype17 = ^chattype_modprivatechat) {
 				if ($int14 = 1) {
 					if_setop(8, "Message", $component10);
 				} else {
@@ -127,7 +127,7 @@ while ($component10 ! null) {
 		cc_settext("");
 		cc_sethide(true);
 	}
-	if (cc_find(interface_163:0, calc(($int9 * 2) + 1)) = ^true) {
+	if (cc_find(interface_163:0, calc($int9 * 2 + 1)) = ^true) {
 		cc_settext("");
 		cc_sethide(true);
 	}

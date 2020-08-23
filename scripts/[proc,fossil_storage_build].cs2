@@ -11,14 +11,14 @@ def_int $int10 = 0;
 def_int $int11 = 5;
 def_namedobj $namedobj12 = enum(int, namedobj, enum_1782, $int4);
 while ($namedobj12 ! null) {
-	if (((((($namedobj12 = rare_fossilised_limbs_21610) | ($namedobj12 = rare_fossilised_spine_21612)) | ($namedobj12 = rare_fossilised_ribs_21614)) | ($namedobj12 = rare_fossilised_pelvis_21616)) | ($namedobj12 = rare_fossilised_skull_21618)) | ($namedobj12 = rare_fossilised_tusk_21620)) {
+	if ($namedobj12 = rare_fossilised_limbs_21610 | $namedobj12 = rare_fossilised_spine_21612 | $namedobj12 = rare_fossilised_ribs_21614 | $namedobj12 = rare_fossilised_pelvis_21616 | $namedobj12 = rare_fossilised_skull_21618 | $namedobj12 = rare_fossilised_tusk_21620) {
 		$int11 = 6;
 	} else {
 		$int11 = 5;
 	}
 	if (compare(enum(obj, string, enum_1783, $namedobj12), "") ! 0) {
 		if ($int4 ! 0) {
-			$int7 = calc((3 + $int7) + ((if_getheight($component1) - $int6) / 6));
+			$int7 = calc(3 + $int7 + (if_getheight($component1) - $int6) / 6);
 			$int9 = $int8;
 		}
 		cc_create($component0, ^iftype_text, $int5);
@@ -54,7 +54,7 @@ while ($namedobj12 ! null) {
 		cc_setop(10, "Examine");
 	}
 	$int4 = calc($int4 + 1);
-	$int9 = calc((3 + $int9) + (if_getwidth($component1) / $int11));
+	$int9 = calc(3 + $int9 + if_getwidth($component1) / $int11);
 	$namedobj12 = enum(int, namedobj, enum_1782, $int4);
 }
 def_int $int13 = 0;

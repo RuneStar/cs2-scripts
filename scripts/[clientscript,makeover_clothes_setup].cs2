@@ -34,7 +34,7 @@ while ($int7 < 29) {
 	if ($int7 < 15) {
 		cc_setposition(calc($int7 * 25), 0, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc((($int7 - 15) * 25) + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc(($int7 - 15) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	cc_setfill(true);
 	cc_setcolour(enum(int, int, $enum5, $int7));
@@ -48,7 +48,7 @@ while ($int7 < 29) {
 	if ($int7 < 15) {
 		cc_setposition(calc($int7 * 25), 0, ^setpos_abs_left, ^setpos_abs_top);
 	} else {
-		cc_setposition(calc((($int7 - 15) * 25) + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc(($int7 - 15) * 25 + 12), 26, ^setpos_abs_left, ^setpos_abs_top);
 	}
 	cc_setgraphic("overlay_multiway");
 	~makeover_indicator($int7, 3);

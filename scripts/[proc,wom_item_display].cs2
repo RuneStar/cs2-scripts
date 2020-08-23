@@ -23,14 +23,14 @@ while ($enum14 ! null) {
 		if (~questlist_progress(enum(enum, struct, enum_2074, $enum14)) = 2) {
 			$int16 = 1;
 		}
-	} else if (($int2 = 2) & (~questlist_progress(enum(enum, struct, enum_2075, $enum14)) = 2)) {
+	} else if ($int2 = 2 & ~questlist_progress(enum(enum, struct, enum_2075, $enum14)) = 2) {
 		$int16 = 1;
 	}
 	while ($int8 < $int10) {
 		$obj11 = enum(int, namedobj, $enum14, $int8);
 		cc_create($component0, ^iftype_graphic, calc($int8 + $int3));
-		$int15 = calc((inv_total(bank, $obj11) + inv_total(inv, $obj11)) + inv_total(worn, $obj11));
-		if (($int15 > 0) & ($int16 = 1)) {
+		$int15 = calc(inv_total(bank, $obj11) + inv_total(inv, $obj11) + inv_total(worn, $obj11));
+		if ($int15 > 0 & $int16 = 1) {
 			cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 			cc_setobject($obj11, $int15);
@@ -42,9 +42,9 @@ while ($enum14 ! null) {
 			cc_setdragdeadtime(5);
 			cc_setonop("wom_item_hide(event_comid, $component0, event_opindex, $component1)");
 			cc_setondragcomplete("wom_item_move(event_comid, event_com, event_dragtarget)");
-			$int5 = calc($int5 + (3 * $int12));
+			$int5 = calc($int5 + 3 * $int12);
 			if ($int5 >= calc(if_getwidth($component0) - $int12)) {
-				$int6 = calc($int6 + (3 * $int13));
+				$int6 = calc($int6 + 3 * $int13);
 				$int5 = $int12;
 			}
 		} else {
@@ -57,5 +57,5 @@ while ($enum14 ! null) {
 	$int9 = calc($int9 + 1);
 	$enum14 = enum(int, enum, $enum7, $int9);
 }
-$int4 = calc($int6 + (2 * $int13));
+$int4 = calc($int6 + 2 * $int13);
 return($int4, $int5, $int6);

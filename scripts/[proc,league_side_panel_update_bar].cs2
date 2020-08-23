@@ -11,7 +11,7 @@ if ($struct2 ! null) {
 	$int3 = 400;
 }
 def_int $int4 = -1;
-if (($int3 ! -1) & ($int3 > 0)) {
+if ($int3 ! -1 & $int3 > 0) {
 	$int4 = scale($int1, $int3, 130);
 } else {
 	$int4 = 130;

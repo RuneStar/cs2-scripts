@@ -1,6 +1,6 @@
 // 1397
 [proc,poh_viewer_sideupdate](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
-def_int $int15 = calc(pow((7 + 2), 2) * 3);
+def_int $int15 = calc(pow(7 + 2, 2) * 3);
 def_int $int16 = $int15;
 if (%varbit5330 > $int15) {
 	while ($int16 > 0) {
@@ -14,7 +14,7 @@ if (%varbit5330 > $int15) {
 			cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0x8f8f8f)");
 		}
 	}
-} else if ((%varbit5332 = 0) & (%varbit5330 = 0)) {
+} else if (%varbit5332 = 0 & %varbit5330 = 0) {
 	while ($int16 > 0) {
 		$int16 = calc($int16 - 1);
 		if (cc_find(interface_422:5, $int16) = ^true) {
@@ -65,7 +65,7 @@ def_obj $obj18 = enum(int, obj, enum_250, %varbit5333);
 if_settext(oc_name($obj18), $component0);
 def_graphic $graphic19 = enum(int, graphic, enum_1423, %varbit5333);
 if_setgraphic($graphic19, $component1);
-def_int $int20 = calc((16384 * (4 - %varbit5331)) % 65536);
+def_int $int20 = calc(16384 * (4 - %varbit5331) % 65536);
 if_set2dangle($int20, $component1);
 if (cc_find($component17, 0) = ^true) {
 	if (%varbit5330 ! 0) {

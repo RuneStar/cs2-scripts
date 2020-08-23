@@ -2,8 +2,8 @@
 [proc,deathkeep_left_keepitem](obj $obj0, int $int1, obj $obj2, int $int3, int $int4, int $int5, int $int6, int $int7)(int, int, int)
 cc_create(interface_4:6, ^iftype_graphic, $int6);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-def_int $int8 = calc(17 + (($int7 / $int3) * (32 + $int4)));
-cc_setposition(calc($int5 + (($int7 % $int3) * (36 + $int4))), $int8, ^setpos_abs_left, ^setpos_abs_top);
+def_int $int8 = calc(17 + $int7 / $int3 * (32 + $int4));
+cc_setposition(calc($int5 + $int7 % $int3 * (36 + $int4)), $int8, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphicshadow(0x333333);
 cc_setobject($obj0, $int1);
 cc_setop(1, "Check");

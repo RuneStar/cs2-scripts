@@ -1,7 +1,7 @@
 // 3489
 [proc,death_coffer_drawbutton](boolean $boolean0, boolean $boolean1, component $component2, string $string0, component $component3)
 def_int $int4 = 0;
-if (($boolean0 = true) & ($boolean1 = false)) {
+if ($boolean0 = true & $boolean1 = false) {
 	$int4 = ~v2_stone_button_out_filled($component2);
 } else {
 	$int4 = ~v2_stone_button_in_filled($component2);

@@ -1,6 +1,6 @@
 // 285
 [clientscript,bankmain_reorder](component $component0, int $int1, component $component2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8)
-if (($int1 < 0) | ($int1 >= 816)) {
+if ($int1 < 0 | $int1 >= 816) {
 	return;
 }
 if ($component2 = $component6) {
@@ -8,7 +8,7 @@ if ($component2 = $component6) {
 	return;
 }
 def_int $int9 = ~bank_tabforslot($int3);
-if (((($component2 ! $component0) | ($int3 < 0)) | ($int3 >= 816)) | (~bank_tabforslot($int1) ! $int9)) {
+if ($component2 ! $component0 | $int3 < 0 | $int3 >= 816 | ~bank_tabforslot($int1) ! $int9) {
 	if (cc_find($component0, $int1) = ^true) {
 		cc_settrans(200);
 		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, $int4, calc(clientclock + 10))");
@@ -20,7 +20,7 @@ if ($obj10 = null) {
 	return;
 }
 def_obj $obj11 = inv_getobj(bank, $int3);
-if ((((%varbit3959 = 0) | ($int3 = calc($int1 + 1))) | ($int3 = calc($int1 - 1))) | (($obj11 = null) & ($int9 = 0))) {
+if (%varbit3959 = 0 | $int3 = calc($int1 + 1) | $int3 = calc($int1 - 1) | $obj11 = null & $int9 = 0) {
 	if (cc_find($component0, $int3) = ^true) {
 		~bankmain_drawitem($obj10, inv_getnum(bank, $int1), $component0, $component5, $component6, $component7, $component8);
 	}
@@ -29,7 +29,7 @@ if ((((%varbit3959 = 0) | ($int3 = calc($int1 + 1))) | ($int3 = calc($int1 - 1))
 	}
 	return;
 }
-if (($obj11 = null) | (~bankmain_searching = 1)) {
+if ($obj11 = null | ~bankmain_searching = 1) {
 	if (cc_find($component0, $int1) = ^true) {
 		cc_settrans(200);
 		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, $int4, calc(clientclock + 10))");

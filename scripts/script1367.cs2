@@ -85,7 +85,7 @@ while ($model10 ! null) {
 	}
 	cc_create($component0, ^iftype_text, $int2);
 	cc_setcolour(0xccccff);
-	cc_setposition(248, calc(6 + (50 * ($int4 - 1))), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(248, calc(6 + 50 * ($int4 - 1)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(83, 40, ^setsize_abs, ^setsize_abs);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -93,15 +93,15 @@ while ($model10 ! null) {
 	cc_settext($string1);
 	$int2 = calc($int2 + 1);
 	cc_create($component0, ^iftype_rectangle, $int2);
-	cc_setposition(244, calc(3 + (50 * ($int4 - 1))), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(244, calc(3 + 50 * ($int4 - 1)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(90, 46, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(0x333300);
 	$int2 = calc($int2 + 1);
 	$boolean7 = enum(int, boolean, enum_1404, $int4);
 	if ($boolean7 = true) {
-		$int6 = calc((6 + (50 * ($int4 - 2))) + 49);
+		$int6 = calc(6 + 50 * ($int4 - 2) + 49);
 	} else {
-		$int6 = calc(6 + (50 * ($int4 - 1)));
+		$int6 = calc(6 + 50 * ($int4 - 1));
 	}
 	cc_create($component0, ^iftype_text, $int2);
 	cc_setcolour(0xcc0000);
@@ -135,19 +135,19 @@ while ($model10 ! null) {
 		$int2 = calc($int2 + 1);
 	}
 	cc_create($component0, ^iftype_rectangle, $int2);
-	cc_setposition(338, calc(3 + (50 * ($int4 - 1))), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(338, calc(3 + 50 * ($int4 - 1)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(90, 46, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(0x333300);
 	$int2 = calc($int2 + 1);
 	cc_create($component0, ^iftype_model, $int2);
 	cc_setmodel($model10);
-	cc_setposition(11, calc(9 + (50 * ($int4 - 1))), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(11, calc(9 + 50 * ($int4 - 1)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(49, 34, ^setsize_abs, ^setsize_abs);
 	cc_setmodelangle(0, 0, 0, 0, 0, 2372);
 	$int2 = calc($int2 + 1);
 	cc_create($component0, ^iftype_text, $int2);
 	cc_setcolour(0xccccff);
-	cc_setposition(70, calc(18 + (50 * ($int4 - 1))), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(70, calc(18 + 50 * ($int4 - 1)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(162, 15, ^setsize_abs, ^setsize_abs);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
@@ -155,7 +155,7 @@ while ($model10 ! null) {
 	cc_settext($string0);
 	$int2 = calc($int2 + 1);
 	.cc_create($component1, ^iftype_rectangle, $int3);
-	.cc_setposition(2, calc(3 + (50 * ($int4 - 1))), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(2, calc(3 + 50 * ($int4 - 1)), ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setsize(238, 46, ^setsize_abs, ^setsize_abs);
 	if (%var261 = $int4) {
 		.cc_setcolour(^blue);

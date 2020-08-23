@@ -15,14 +15,14 @@ if (struct_param($struct14, param_680) ! null) {
 	$struct14 = struct_param($struct14, param_680);
 }
 if_setonop("telenexus_tick_op($component0, $component1, $component2, $component3, $component4)", $component4);
-if ((%varbit6669 = 0) | ($struct14 = null)) {
+if (%varbit6669 = 0 | $struct14 = null) {
 	if_sethide(true, $component2);
 	if_sethide(false, $component1);
 	if_settext("None set", $component1);
 	if_setgraphic($graphic9, $component3);
 	if_setonmouseover("telenexus_tick_mouseover($component3, $component4, $graphic10)", $component4);
 	if_setonmouseleave("telenexus_tick_mouseleave($component3, $component4, $graphic9)", $component4);
-} else if ((((%varbit6669 < 150) & (%varbit6669 ! 1)) & (%varbit6669 ! 4)) & (%varbit6669 ! 6)) {
+} else if (%varbit6669 < 150 & %varbit6669 ! 1 & %varbit6669 ! 4 & %varbit6669 ! 6) {
 	if_sethide(true, $component2);
 	if_sethide(false, $component1);
 	if_settext(struct_param($struct14, param_660), $component1);
@@ -64,7 +64,7 @@ if ((%varbit6669 = 0) | ($struct14 = null)) {
 	if ($int13 = 1) {
 		cc_setcolour(0xff981f);
 		cc_setonop("telenexus_radio_click($component0, $component1, $component2, event_com, event_comid, $component3, $component4)");
-		if ((%varbit6669 < 150) & (%varbit6669 > 0)) {
+		if (%varbit6669 < 150 & %varbit6669 > 0) {
 			cc_setonmouseover("script2648($component2, 0, 2, $graphic8, null)");
 			cc_setonmouseleave("script2649($component2, 0, 2, $graphic7, null)");
 		} else {

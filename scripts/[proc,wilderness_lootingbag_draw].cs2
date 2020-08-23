@@ -43,12 +43,12 @@ while ($int5 < $int1) {
 		$int3, $int4 = inv_getnum($inv0, $int5), calc($int4 + 1);
 		cc_sethide(false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc(($int5 % 4) * (36 + 8)), calc(($int5 / 4) * 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int5 % 4 * (36 + 8)), calc($int5 / 4 * 32), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setoutline(1);
 		cc_setgraphicshadow(0x333333);
 		cc_setobject($obj2, $int3);
 		if ($inv0 = inv) {
-			if (($obj2 = looting_bag_11941) | ($obj2 = looting_bag_22586)) {
+			if ($obj2 = looting_bag_11941 | $obj2 = looting_bag_22586) {
 				cc_settrans(150);
 				cc_setonmouserepeat(null);
 				cc_setonmouseleave(null);
@@ -78,7 +78,7 @@ while ($int5 < $int1) {
 	}
 	$int5 = calc($int5 + 1);
 }
-if (($inv0 = inv_516) & ($int4 <= 0)) {
+if ($inv0 = inv_516 & $int4 <= 0) {
 	cc_create(interface_81:5, ^iftype_text, $int5);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(if_getwidth(interface_81:5), if_getheight(interface_81:5), ^setsize_abs, ^setsize_abs);

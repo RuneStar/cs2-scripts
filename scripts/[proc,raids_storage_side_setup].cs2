@@ -2,7 +2,7 @@
 [proc,raids_storage_side_setup](component $component0, component $component1, component $component2)
 ~raids_storage_side_warning($component1);
 cc_deleteall($component2);
-if ((%varbit5509 = 1) | (%varbit3459 = 1)) {
+if (%varbit5509 = 1 | %varbit3459 = 1) {
 	if_sethide(true, $component0);
 	if_setonop(null, $component2);
 	if_setontimer(null, $component2);

@@ -13,7 +13,7 @@ def_int $int6 = 0;
 while ($chattype5 <= ^chattype_108) {
 	if (chat_gethistorylength($chattype5) > 0) {
 		$int0, $int1, $string0, $string1, $string2, $int6 = chat_gethistory_bytypeandline($chattype5, 0);
-		if (($int1 > $int3) | ($int0 > $int2)) {
+		if ($int1 > $int3 | $int0 > $int2) {
 			$int3 = $int1;
 			$int2 = $int0;
 		}
@@ -24,7 +24,7 @@ while ($chattype5 <= ^chattype_108) {
 					%varcstring356 = removetags($string0);
 				}
 			case ^chattype_broadcast :
-				if ((($int0 ! -1) & ($int1 >= %varcint202)) & ($int1 > calc(clientclock - 3000))) {
+				if ($int0 ! -1 & $int1 >= %varcint202 & $int1 > calc(clientclock - 3000)) {
 					%varcint55 = $int1;
 					if_setontimer("script664(false)", interface_162:0);
 				}

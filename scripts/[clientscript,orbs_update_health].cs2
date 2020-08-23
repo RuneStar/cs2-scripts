@@ -7,7 +7,7 @@ if ($component0 ! null) {
 	if_setonsubchange("orbs_update_health(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8)", $component0);
 }
 ~orbs_update($component1, $component2, stat(hitpoints), stat_base(hitpoints));
-if (((%var102 > 0) | (%var456 > 0)) | (%varbit10151 > 0)) {
+if (%var102 > 0 | %var456 > 0 | %varbit10151 > 0) {
 	if_settrans(100, $component3);
 } else {
 	if_settrans(0, $component3);
@@ -34,7 +34,7 @@ if (%var102 > 0) {
 	if_sethide(true, $component5);
 }
 def_graphic $graphic9 = "orb_frame,1";
-if ((((%var102 > 0) | (%var456 > 0)) | (%varbit10151 > 0)) & (~toplevel_check_sidepanel(3) = true)) {
+if ((%var102 > 0 | %var456 > 0 | %varbit10151 > 0) & ~toplevel_check_sidepanel(3) = true) {
 	if_setonmouserepeat("graphic_swapper($component7, $graphic9)", $component8);
 	$graphic9 = "orb_frame,0";
 	if_setonmouseleave("graphic_swapper($component7, $graphic9)", $component8);

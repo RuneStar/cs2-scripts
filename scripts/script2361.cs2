@@ -6,12 +6,12 @@ if (%varbit6670 = 2) {
 } else if (%varbit6670 = 3) {
 	$int11 = 30;
 }
-if (($int10 < 0) | ($int10 > $int11)) {
+if ($int10 < 0 | $int10 > $int11) {
 	return;
 }
 def_int $int12 = 0;
 if ($component8 = $component0) {
-	if (($int9 < 0) | ($int9 >= $int11)) {
+	if ($int9 < 0 | $int9 >= $int11) {
 		return;
 	}
 	$int12 = ~telenexus_get_slot_value($int10);

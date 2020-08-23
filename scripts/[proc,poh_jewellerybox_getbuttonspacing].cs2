@@ -2,8 +2,8 @@
 [proc,poh_jewellerybox_getbuttonspacing](component $component0, int $int1)(int, int)
 $int1 = ~max($int1, 1);
 def_int $int2 = ~min(calc((if_getheight($component0) - 10) / $int1), 25);
-def_int $int3 = calc(0 - ($int2 * ($int1 / 2)));
+def_int $int3 = calc(0 - $int2 * ($int1 / 2));
 if (calc($int1 % 2) = 0) {
-	$int3 = calc($int3 + ($int2 / 2));
+	$int3 = calc($int3 + $int2 / 2);
 }
 return($int3, $int2);

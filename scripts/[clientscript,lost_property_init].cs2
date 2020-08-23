@@ -2,7 +2,7 @@
 [clientscript,lost_property_init](int $int0, int $int1, int $int2)
 cc_deleteall(interface_557:2);
 cc_deleteall(interface_557:3);
-def_int $int3 = calc(((if_getwidth(interface_557:2) - 20) - (6 * 36)) / 5);
+def_int $int3 = calc((if_getwidth(interface_557:2) - 20 - 6 * 36) / 5);
 def_int $int4 = calc(32 + 36);
 def_int $int5 = 0;
 def_int $int6 = 0;
@@ -11,7 +11,7 @@ def_int $int8 = 0;
 def_obj $obj9 = null;
 while ($int5 <= 40) {
 	cc_create(interface_557:2, ^iftype_graphic, calc($int5 * 2));
-	.cc_create(interface_557:2, ^iftype_text, calc(($int5 * 2) + 1));
+	.cc_create(interface_557:2, ^iftype_text, calc($int5 * 2 + 1));
 	if ($int5 < 32) {
 		$bit7 = testbit($int0, $int5);
 	} else {
@@ -21,7 +21,7 @@ while ($int5 <= 40) {
 		$obj9 = enum(int, namedobj, enum_767, $int5);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		.cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc((($int6 % 6) * (36 + $int3)) + 10), calc(($int6 / 6) * $int4), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int6 % 6 * (36 + $int3) + 10), calc($int6 / 6 * $int4), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setposition(cc_getx, calc(cc_gety + 32), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setobject($obj9, 1);
 		cc_setgraphicshadow(0x333333);

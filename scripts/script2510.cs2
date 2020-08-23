@@ -4,19 +4,19 @@ def_int $int4 = 0;
 def_int $int5 = 4;
 def_int $int6 = 4;
 def_int $setposh7 = $setposh1;
-if (($setposh1 = ^setpos_abs_left) & (%varbit4692 = 2)) {
+if ($setposh1 = ^setpos_abs_left & %varbit4692 = 2) {
 	$int4 = 1;
-} else if (($setposh1 = ^setpos_abs_centre) & (%varbit4692 = 1)) {
+} else if ($setposh1 = ^setpos_abs_centre & %varbit4692 = 1) {
 	$int4 = 1;
-} else if (($setposh1 = ^setpos_abs_right) & (%varbit4692 = 0)) {
+} else if ($setposh1 = ^setpos_abs_right & %varbit4692 = 0) {
 	$int4 = 1;
 }
-if ((%varbit4702 = 0) & ($int2 = 1)) {
+if (%varbit4702 = 0 & $int2 = 1) {
 	$int4 = 0;
 }
 if ($int4 = 1) {
 	if ($int3 = 0) {
-		if (($setposh1 = ^setpos_abs_left) & (~on_mobile = false)) {
+		if ($setposh1 = ^setpos_abs_left & ~on_mobile = false) {
 			$int5 = calc(35 + 23);
 		} else {
 			$int5 = 35;
@@ -47,7 +47,7 @@ if ($int4 = 1) {
 		$int6 = 4;
 	}
 } else {
-	if ((~on_mobile = false) & (($setposh1 = ^setpos_abs_left) | ($setposh1 = ^setpos_abs_centre))) {
+	if (~on_mobile = false & ($setposh1 = ^setpos_abs_left | $setposh1 = ^setpos_abs_centre)) {
 		$int5 = 23;
 	} else {
 		$int5 = 4;

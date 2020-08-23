@@ -1,6 +1,6 @@
 // 3514
 script3514(component $component0, component $component1, int $int2)
-def_int $int3 = calc(clientclock + ((%varbit4163 - 100) * 30));
+def_int $int3 = calc(clientclock + (%varbit4163 - 100) * 30);
 $int3 = calc(($int3 - clientclock) / 50);
 def_int $int4 = calc($int3 % 60);
 if ($int4 = $int2) {

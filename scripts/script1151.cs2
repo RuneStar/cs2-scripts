@@ -6,7 +6,7 @@ def_int $int2 = 0;
 while ($int2 < $int1) {
 	cc_create($component0, ^iftype_graphic, $int2);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc(($int2 % 5) * 39), calc(($int2 / 5) * 38), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int2 % 5 * 39), calc($int2 / 5 * 38), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x111111);
 	cc_setoutline(1);
 	cc_setdragdeadzone(5);

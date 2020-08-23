@@ -22,7 +22,7 @@ switch_obj ($obj0) {
 			$string0 = "Empty";
 		}
 	case default :
-		if ((string_length($string0) <= 0) & ((map_members = ^true) | (oc_members($obj0) = ^false))) {
+		if (string_length($string0) <= 0 & (map_members = ^true | oc_members($obj0) = ^false)) {
 			if (testbit(%var262, $int1) = ^true) {
 				$string0 = oc_iop($obj0, oc_param($obj0, param_148));
 			} else if (testbit(%var263, $int1) = ^true) {

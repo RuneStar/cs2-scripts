@@ -10,7 +10,7 @@ if_setontimer(null, $component2);
 def_string $string0 = "";
 def_namedobj $namedobj6 = enum(int, namedobj, enum_1756, %var261);
 def_int $int7 = enum(int, int, enum_1757, %var261);
-if (($namedobj6 ! null) & ($int7 > 0)) {
+if ($namedobj6 ! null & $int7 > 0) {
 	if_setgraphic("bankbuttons,7", $component3);
 	if_setop(1, "Unlock", $component2);
 	if ($namedobj6 = coins_995) {

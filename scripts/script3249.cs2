@@ -4,7 +4,7 @@ if ($graphic8 ! null) {
 	cc_create($component1, ^iftype_graphic, $int0);
 	cc_setgraphic($graphic8);
 	cc_setsize(50, 50, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int3 + 5), calc($int2 + (($int5 / 2) - 25)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int3 + 5), calc($int2 + ($int5 / 2 - 25)), ^setpos_abs_left, ^setpos_abs_top);
 	$int0 = calc($int0 + 1);
 }
 cc_create($component1, ^iftype_text, $int0);
@@ -40,7 +40,7 @@ $int0 = calc($int0 + 1);
 if ($int9 = 1) {
 	cc_create($component1, ^iftype_text, $int0);
 	cc_setsize(15, 15, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int3 + ($int4 - 8)), calc($int2 + (($int5 / 2) - 7)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int3 + ($int4 - 8)), calc($int2 + ($int5 / 2 - 7)), ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextfont(p12_full);
 	cc_setcolour(0xff981f);

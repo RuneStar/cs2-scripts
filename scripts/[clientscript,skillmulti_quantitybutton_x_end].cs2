@@ -3,7 +3,7 @@
 if (%varcint5 = 16) {
 	return;
 }
-if ((%varcint200 >= 0) & (%varcint200 <= $int1)) {
+if (%varcint200 >= 0 & %varcint200 <= $int1) {
 	%varcint201 = ~max(%varcint200, 1);
 } else {
 	%varcint200 = $int1;

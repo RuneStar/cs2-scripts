@@ -3,7 +3,7 @@
 cc_setontimer(null);
 cc_clearops;
 cc_setop(10, "Examine");
-if ((map_members = ^false) & (oc_members(enum(int, namedobj, $enum0, -1)) = ^true)) {
+if (map_members = ^false & oc_members(enum(int, namedobj, $enum0, -1)) = ^true) {
 	cc_settrans(130);
 	cc_setonop(null);
 	return;
@@ -12,7 +12,7 @@ def_int $int1 = 0;
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_namedobj $namedobj4 = enum(int, namedobj, $enum0, $int3);
-while (($namedobj4 ! null) & (($int1 = 0) | ($int2 = 0))) {
+while ($namedobj4 ! null & ($int1 = 0 | $int2 = 0)) {
 	if (inv_total(inv, $namedobj4) <= 0) {
 		$int1 = 1;
 	}
@@ -22,7 +22,7 @@ while (($namedobj4 ! null) & (($int1 = 0) | ($int2 = 0))) {
 	$int3 = calc($int3 + 1);
 	$namedobj4 = enum(int, namedobj, $enum0, $int3);
 }
-if (($int1 = 1) & ($int2 = 1)) {
+if ($int1 = 1 & $int2 = 1) {
 	cc_settrans(130);
 	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 170, 130)");
 	cc_setop(1, "Contents");

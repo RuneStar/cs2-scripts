@@ -35,9 +35,9 @@ while ($int5 < $int0) {
 	cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
 	cc_setop(1, "View");
 	cc_setonop("poll_historyop(event_com, $int5, .cc_getid, $string2)");
-	$int3 = calc((paraheight($string2, $int4, p12_full) * 12) + 5);
+	$int3 = calc(paraheight($string2, $int4, p12_full) * 12 + 5);
 	$string2, $string1 = ~script632($string1);
-	$int3 = calc(($int3 + (paraheight($string2, $int4, p11_full) * 10)) + 2);
+	$int3 = calc($int3 + paraheight($string2, $int4, p11_full) * 10 + 2);
 	cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 	.cc_setsize($int4, $int3, ^setsize_abs, ^setsize_abs);
 	.cc_create(interface_310:4, ^iftype_text, $int1);

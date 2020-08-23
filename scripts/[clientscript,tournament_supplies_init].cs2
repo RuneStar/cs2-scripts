@@ -2,7 +2,7 @@
 [clientscript,tournament_supplies_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 cc_deleteall($component3);
 cc_deleteall($component4);
-def_int $int8 = calc((if_getwidth($component3) - (10 * 36)) / (10 - 1));
+def_int $int8 = calc((if_getwidth($component3) - 10 * 36) / (10 - 1));
 def_int $int9 = calc(32 + 10);
 def_int $int10 = 0;
 def_enum $enum11 = enum_1124;

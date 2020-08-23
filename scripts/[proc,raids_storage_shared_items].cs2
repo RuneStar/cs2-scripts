@@ -11,8 +11,8 @@ while ($obj7 ! null) {
 	$int4 = invother_total(inv_582, $obj7);
 	if ($int4 > 0) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		$int5 = calc(($int3 / 10) * (32 + 8));
-		cc_setposition(calc(2 + (($int3 % 10) * (36 + 8))), $int5, ^setpos_abs_left, ^setpos_abs_top);
+		$int5 = calc($int3 / 10 * (32 + 8));
+		cc_setposition(calc(2 + $int3 % 10 * (36 + 8)), $int5, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setoutline(1);
 		cc_settrans(0);
 		cc_setgraphicshadow(0x333333);

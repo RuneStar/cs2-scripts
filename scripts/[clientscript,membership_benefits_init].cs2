@@ -50,15 +50,15 @@ while ($int7 < 5) {
 	cc_setsize(24, 23, ^setsize_abs, ^setsize_abs);
 	cc_setposition(5, calc($int6 + 5), ^setpos_abs_right, ^setpos_abs_top);
 	cc_setgraphic("open_buttons,0");
-	$int6 = calc(($int6 + 33) + 10);
+	$int6 = calc($int6 + 33 + 10);
 	$int7 = calc($int7 + 1);
 }
 def_string $string1 = "Upgrade Now";
-if ((map_members = ^true) | (%varcint103 = 1)) {
+if (map_members = ^true | %varcint103 = 1) {
 	$string1 = "Open Store";
 }
 ~membership_benefits_button_init($component4, $string1);
-if (((~on_mobile = true) & (~bonds_hide = 1)) & (%varbit6713 = 0)) {
+if (~on_mobile = true & ~bonds_hide = 1 & %varbit6713 = 0) {
 	~membership_benefits_hide_bonds($component4, $component5);
 } else {
 	~membership_benefits_button_init($component5, "Bond Pouch");

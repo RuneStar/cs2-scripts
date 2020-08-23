@@ -9,7 +9,7 @@ if ($obj17 = null) {
 	return;
 }
 def_boolean $boolean18 = false;
-if ((stat(magic) >= oc_param($obj17, spell_levelreq)) & (~magic_spellbook_hasrunes($obj17) = 1)) {
+if (stat(magic) >= oc_param($obj17, spell_levelreq) & ~magic_spellbook_hasrunes($obj17) = 1) {
 	$boolean18 = true;
 }
 if (%varbit9363 = $int0) {

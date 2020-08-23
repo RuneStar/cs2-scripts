@@ -3,7 +3,7 @@
 if ($int12 ! 1) {
 	return;
 }
-if (($int13 >= 0) & ($int13 <= 9)) {
+if ($int13 >= 0 & $int13 <= 9) {
 	if ($int13 ! %varbit4150) {
 		sound_synth(synth_2266, 1, 0);
 	}

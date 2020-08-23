@@ -15,4 +15,4 @@ if ($int2 > 255) {
 } else if ($int2 < 0) {
 	$int2 = 0;
 }
-return(calc((($int0 * 65536) | ($int1 * 256)) | $int2));
+return(calc($int0 * 65536 | $int1 * 256 | $int2));

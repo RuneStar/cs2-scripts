@@ -3,6 +3,6 @@
 if ($key1 ! ^key_space) {
 	return;
 }
-if (((%varcint5 = $int0) | (%varcint5 <= 0)) | ($int0 <= 0)) {
+if (%varcint5 = $int0 | %varcint5 <= 0 | $int0 <= 0) {
 	~meslayer_close(1, 1);
 }

@@ -6,7 +6,7 @@ if_sethide(true, interface_162:55);
 def_int $int3 = if_getwidth(interface_162:53);
 def_int $int4 = if_getheight(interface_162:53);
 if (string_length(%varcstring359) <= 0) {
-	if ((((%varbit10295 = 0) & ($boolean2 = true)) & (%var2674 ! null)) & (~script3362($boolean0, $enum1) = 1)) {
+	if (%varbit10295 = 0 & $boolean2 = true & %var2674 ! null & ~script3362($boolean0, $enum1) = 1) {
 		return;
 	}
 	~script753($int3, $int4, "Start typing the name of an item to search for it.", $boolean2);
@@ -37,7 +37,7 @@ def_int $int18 = 0;
 def_int $int19 = 0;
 def_obj $obj20 = oc_findnext;
 while ($obj20 ! null) {
-	if ((($enum1 = null) | (enum(obj, boolean, $enum1, $obj20) = true)) & (($boolean0 = false) | (~deadman_restricted_item($obj20) = 0))) {
+	if (($enum1 = null | enum(obj, boolean, $enum1, $obj20) = true) & ($boolean0 = false | ~deadman_restricted_item($obj20) = 0)) {
 		$int15 = calc($int19 % 3);
 		if ($int15 = 0) {
 			$int16, $int17 = $int10, $int14;

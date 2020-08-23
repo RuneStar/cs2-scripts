@@ -3,7 +3,7 @@
 if ($int0 ! 1) {
 	return;
 }
-if ((~on_mobile = false) & (%varbit4084 = 1)) {
+if (~on_mobile = false & %varbit4084 = 1) {
 	mes("The wiki lookup also requires data orbs to be turned on.");
 	sound_synth(pillory_wrong, 1, 0);
 	return;

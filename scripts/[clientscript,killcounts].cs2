@@ -23,7 +23,7 @@ cc_deleteall($component3);
 cc_deleteall($component4);
 cc_deleteall($component5);
 ~script1586;
-while (((($int8 <= $int0) & ($int9 ! -1)) & ($int10 ! -1)) & ($int11 ! -1)) {
+while ($int8 <= $int0 & $int9 ! -1 & $int10 ! -1 & $int11 ! -1) {
 	$string4 = substring($string0, 0, $int9);
 	$string5 = substring($string1, 0, $int10);
 	$string6 = substring($string2, 0, $int11);
@@ -75,7 +75,7 @@ while (((($int8 <= $int0) & ($int9 ! -1)) & ($int10 ! -1)) & ($int11 ! -1)) {
 	$int10 = string_indexof_string($string1, "|", 0);
 	$int11 = string_indexof_string($string2, "|", 0);
 }
-if_setscrollsize(0, calc(($int8 * $int14) + $int14), $component6);
+if_setscrollsize(0, calc($int8 * $int14 + $int14), $component6);
 if_setscrollpos(0, 0, $component6);
 ~scrollbar_vertical($component7, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if_settext($string3, interface_549:3);

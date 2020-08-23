@@ -17,12 +17,12 @@ while ($int7 < enum_getoutputcount(enum_2323)) {
 		cc_setobject(wizard_blizzard_9489, 1);
 	}
 	cc_setsize(70, 70, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc(((117 * $int5) + (117 / 2)) - (70 / 2)), calc(95 * $int6), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc(117 * $int5 + 117 / 2 - 70 / 2), calc(95 * $int6), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setmodelangle(0, 0, 0, 0, 0, 400);
 	cc_setop(1, "Create");
 	cc_setonop("cocktail_show_ingredients($component2, $struct8, $component3)");
 	cc_create($component1, ^iftype_text, $int4);
-	cc_setposition(calc(((117 * $int5) + (117 / 2)) - (100 / 2)), calc((95 * $int6) + 70), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc(117 * $int5 + 117 / 2 - 100 / 2), calc(95 * $int6 + 70), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(100, 16, ^setsize_abs, ^setsize_abs);
 	if ($int9 = 1) {
 		cc_setcolour(^green);

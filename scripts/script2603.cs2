@@ -65,7 +65,7 @@ if ($component0 = $component2) {
 	if_sethide(true, $component7);
 }
 cc_deleteall($component2);
-if (($boolean1 = true) & (($component0 = null) | ($component0 = $component2))) {
+if ($boolean1 = true & ($component0 = null | $component0 = $component2)) {
 	if ($component0 = $component2) {
 		$int11 = ~options_button_on($component2, 0);
 	} else {
@@ -83,7 +83,7 @@ if (($boolean1 = true) & (($component0 = null) | ($component0 = $component2))) {
 	if_setonmouseleave("cc_colour_swapper(event_com, $int11, 0xff981f)", $component2);
 }
 cc_deleteall($component3);
-if (($component0 = null) | ($component0 = $component3)) {
+if ($component0 = null | $component0 = $component3) {
 	if ($component0 = $component3) {
 		$int11 = ~options_button_on($component3, 0);
 	} else {

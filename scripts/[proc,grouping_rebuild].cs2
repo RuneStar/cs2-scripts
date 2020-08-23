@@ -1,7 +1,7 @@
 // 435
 [proc,grouping_rebuild]
 def_string $string0 = "";
-if ((%varcint64 > 0) & (%varcint64 <= 20)) {
+if (%varcint64 > 0 & %varcint64 <= 20) {
 	$string0 = enum(int, string, enum_848, %varcint64);
 	if_settext($string0, interface_76:8);
 } else {
@@ -13,7 +13,7 @@ if ($int0 = -1) {
 	if_settext("---", interface_76:22);
 	if_setcolour(0xff981f, interface_76:22);
 } else {
-	if ((%varcint64 = 4) & (%varcint103 = 0)) {
+	if (%varcint64 = 4 & %varcint103 = 0) {
 		$int0 = 383;
 	}
 	if_settext(tostring($int0), interface_76:22);
@@ -86,7 +86,7 @@ if (if_gethide(interface_76:14) = true) {
 	if_setonclick(null, interface_76:2);
 	$int5 = if_getwidth(interface_76:12);
 	if_sethide(false, interface_76:9);
-	if (($int2 = 0) | (%varcint64 ! $int2)) {
+	if ($int2 = 0 | %varcint64 ! $int2) {
 		if_setscrollsize(0, 0, interface_76:12);
 		~scrollbar_resize(interface_76:13, interface_76:12, 0);
 		cc_create(interface_76:12, ^iftype_text, $int1);
@@ -102,7 +102,7 @@ if (if_gethide(interface_76:14) = true) {
 			return;
 		}
 		$string1 = "You are currently talking in the <col=ffffff><enum(int, string, enum_848, $int2)></col> channel.";
-		$int10 = calc((paraheight($string1, $int5, p12_full) * 12) + 5);
+		$int10 = calc(paraheight($string1, $int5, p12_full) * 12 + 5);
 		cc_setsize($int5, $int10, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, calc((if_getheight(interface_76:12) - $int10) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settext($string1);
@@ -161,7 +161,7 @@ if (if_gethide(interface_76:14) = true) {
 				cc_setop(8, "Add ignore <$string3>");
 			}
 		}
-		if (($int8 >= $int7) & ($int8 > $int6)) {
+		if ($int8 >= $int7 & $int8 > $int6) {
 			cc_setop(6, "Kick user <$string3>");
 		}
 		$int10 = calc($int10 + $int11);

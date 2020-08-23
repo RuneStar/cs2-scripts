@@ -1,5 +1,5 @@
 // 394
 [clientscript,stats_setlevels](stat $stat0, component $component1, string $string0, int $int2, int $int3, component $component4)
-if ((cc_find($component1, $int2) = ^true) & (.cc_find($component1, $int3) = ^true)) {
+if (cc_find($component1, $int2) = ^true & .cc_find($component1, $int3) = ^true) {
 	~stats_setlevels($stat0, $component1, $string0, $component4);
 }

@@ -3,7 +3,7 @@
 cc_deleteall(interface_92:4);
 cc_deleteall(interface_92:5);
 def_int $int1 = if_getwidth(interface_92:4);
-def_int $int2 = calc((paraheight($string0, $int1, p12_full) * 12) + 5);
+def_int $int2 = calc(paraheight($string0, $int1, p12_full) * 12 + 5);
 cc_create(interface_92:4, ^iftype_text, 0);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize($int1, $int2, ^setsize_abs, ^setsize_abs);

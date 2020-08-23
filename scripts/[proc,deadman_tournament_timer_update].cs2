@@ -6,10 +6,10 @@ if (%varbit6462 = 1) {
 }
 $int1 = calc($int1 - clientclock);
 if ($int1 < 0) {
-	$int1 = calc((500 * 30) + $int1);
+	$int1 = calc(500 * 30 + $int1);
 }
 $int1 = calc($int1 / 50);
-if (($int1 > %varcint221) & ($int1 < calc(%varcint221 + 20))) {
+if ($int1 > %varcint221 & $int1 < calc(%varcint221 + 20)) {
 	return;
 }
 %varcint221 = $int1;

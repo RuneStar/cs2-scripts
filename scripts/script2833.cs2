@@ -22,7 +22,7 @@ while ($int2 < $int3) {
 		$string0 = struct_param($struct4, param_729);
 		$int1 = ~options_button_off($component5, 0);
 		if_setsize(84, 30, ^setsize_abs, ^setsize_abs, $component5);
-		$int7 = calc(($int0 + (($int6 / 2) * 36)) + (($int6 / 2) * 2));
+		$int7 = calc($int0 + $int6 / 2 * 36 + $int6 / 2 * 2);
 		if (calc($int6 % 2) = 0) {
 			if (calc($int6 + 1) = $int3) {
 				if_setposition(0, $int7, ^setpos_abs_centre, ^setpos_abs_top, $component5);

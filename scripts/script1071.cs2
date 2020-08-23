@@ -1,7 +1,7 @@
 // 1071
 script1071(string $string0, int $int0, component $component1)(int)
 cc_create($component1, ^iftype_text, calc($int0 * 2));
-.cc_create($component1, ^iftype_graphic, calc(($int0 * 2) + 1));
+.cc_create($component1, ^iftype_graphic, calc($int0 * 2 + 1));
 cc_setsize(20, 17, ^setsize_minus, ^setsize_abs);
 .cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p12_full);

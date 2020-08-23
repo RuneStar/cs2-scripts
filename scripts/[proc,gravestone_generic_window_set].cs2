@@ -5,20 +5,20 @@ def_int $int15 = calc(if_getheight($component0) - $int3);
 %varcint395 = ~max($int4, ~min(%varcint395, $int14));
 %varcint396 = ~max($int5, ~min(%varcint396, $int15));
 %varcint397 = ~max(0, ~min(%varcint397, calc($int14 - %varcint395)));
-%varcint398 = ~max($int3, ~min(%varcint398, calc(($int3 + $int15) - %varcint396)));
+%varcint398 = ~max($int3, ~min(%varcint398, calc($int3 + $int15 - %varcint396)));
 if_setsize(%varcint395, %varcint396, ^setsize_abs, ^setsize_abs, $component1);
 if_setposition(%varcint397, %varcint398, ^setpos_abs_left, ^setpos_abs_top, $component1);
 def_int $int16 = calc(%varcint396 - $int5);
 def_int $int17 = calc($int16 / 2);
-if_setsize(20, calc(($int7 + $int17) + 1), ^setsize_minus, ^setsize_abs, $component6);
+if_setsize(20, calc($int7 + $int17 + 1), ^setsize_minus, ^setsize_abs, $component6);
 if_setsize(20, calc($int9 + ($int16 - $int17)), ^setsize_minus, ^setsize_abs, $component8);
 def_int $int18 = if_getwidth($component10);
 def_int $int19 = ~max(1, calc($int18 / (36 + 3)));
 def_int $int20 = 0;
 if ($int19 > 1) {
-	$int20 = calc(($int18 - ($int19 * 36)) / ($int19 - 1));
+	$int20 = calc(($int18 - $int19 * 36) / ($int19 - 1));
 }
-def_int $int21 = calc($int18 - (($int19 * 36) + (($int19 - 1) * $int20)));
+def_int $int21 = calc($int18 - ($int19 * 36 + ($int19 - 1) * $int20));
 def_int $int22 = calc(($int21 + 1) / 2);
 def_obj $obj23 = null;
 def_int $int24 = 0;
@@ -51,8 +51,8 @@ while ($int33 < 120) {
 				cc_sethide(false);
 				cc_setobject($obj23, inv_getnum(inv_525, $int33));
 				cc_setopbase("<col=ff9040><oc_name($obj23)></col>");
-				$int25 = calc(($int24 / $int19) * (32 + 4));
-				cc_setposition(calc($int22 + (($int24 % $int19) * (36 + $int20))), $int25, ^setpos_abs_left, ^setpos_abs_top);
+				$int25 = calc($int24 / $int19 * (32 + 4));
+				cc_setposition(calc($int22 + $int24 % $int19 * (36 + $int20)), $int25, ^setpos_abs_left, ^setpos_abs_top);
 				$int24 = calc($int24 + 1);
 			} else {
 				cc_sethide(true);
@@ -61,7 +61,7 @@ while ($int33 < 120) {
 			cc_sethide(true);
 		}
 	}
-	if ((cc_find($component12, $int33) = ^true) & (.cc_find($component12, calc($int33 + 120)) = ^true)) {
+	if (cc_find($component12, $int33) = ^true & .cc_find($component12, calc($int33 + 120)) = ^true) {
 		if ($int33 < $int28) {
 			$obj23 = inv_getobj(inv_525, $int33);
 			if ($obj23 ! null) {
@@ -95,8 +95,8 @@ while ($int33 < 120) {
 				} else {
 					.cc_settext(tostring($int31));
 				}
-				$int27 = calc(($int26 / $int19) * (32 + 16));
-				cc_setposition(calc($int22 + (($int26 % $int19) * (36 + $int20))), $int27, ^setpos_abs_left, ^setpos_abs_top);
+				$int27 = calc($int26 / $int19 * (32 + 16));
+				cc_setposition(calc($int22 + $int26 % $int19 * (36 + $int20)), $int27, ^setpos_abs_left, ^setpos_abs_top);
 				.cc_setposition(cc_getx, calc($int27 + 32), ^setpos_abs_left, ^setpos_abs_top);
 				$int26 = calc($int26 + 1);
 			} else {
@@ -120,7 +120,7 @@ if ($int25 >= 0) {
 }
 ~scrollbar_vertical_rebuild($component11, $component10);
 if ($int27 >= 0) {
-	$int27 = calc(($int27 + 32) + 12);
+	$int27 = calc($int27 + 32 + 12);
 	if_setscrollpos(0, ~min(if_getscrolly($component12), calc($int27 - if_getheight($component12))), $component12);
 	if_setscrollsize(0, $int27, $component12);
 } else {
@@ -130,12 +130,12 @@ if ($int27 >= 0) {
 ~scrollbar_vertical_rebuild($component13, $component12);
 if_sethide(false, $component1);
 if_sethide(true, $component2);
-def_int $int34 = calc(%varcint395 - (6 * 2));
-def_int $int35 = calc(%varcint396 - (6 * 2));
-def_int $int36 = calc((%varcint397 + %varcint395) - 6);
-def_int $int37 = calc((%varcint398 + %varcint396) - 6);
+def_int $int34 = calc(%varcint395 - 6 * 2);
+def_int $int35 = calc(%varcint396 - 6 * 2);
+def_int $int36 = calc(%varcint397 + %varcint395 - 6);
+def_int $int37 = calc(%varcint398 + %varcint396 - 6);
 def_int $int38 = 0;
-if ((cc_find($component0, 0) = ^true) & (.cc_find($component0, 1) = ^true)) {
+if (cc_find($component0, 0) = ^true & .cc_find($component0, 1) = ^true) {
 	cc_setsize($int34, 29, ^setsize_abs, ^setsize_abs);
 	.cc_setsize($int34, 6, ^setsize_abs, ^setsize_abs);
 	$int38 = calc(%varcint397 + 6);
@@ -143,7 +143,7 @@ if ((cc_find($component0, 0) = ^true) & (.cc_find($component0, 1) = ^true)) {
 	.cc_setposition($int38, $int37, ^setpos_abs_left, ^setpos_abs_top);
 	~script3465($component0, $component1, $component2, $int3, $int4, $int5, $component6, $int7, $component8, $int9, $component10, $component11, $component12, $component13);
 }
-if ((cc_find($component0, 2) = ^true) & (.cc_find($component0, 3) = ^true)) {
+if (cc_find($component0, 2) = ^true & .cc_find($component0, 3) = ^true) {
 	cc_setsize(6, $int35, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(6, $int35, ^setsize_abs, ^setsize_abs);
 	$int38 = calc(%varcint398 + 6);
@@ -151,14 +151,14 @@ if ((cc_find($component0, 2) = ^true) & (.cc_find($component0, 3) = ^true)) {
 	.cc_setposition($int36, $int38, ^setpos_abs_left, ^setpos_abs_top);
 	~script3465($component0, $component1, $component2, $int3, $int4, $int5, $component6, $int7, $component8, $int9, $component10, $component11, $component12, $component13);
 }
-if ((cc_find($component0, 4) = ^true) & (.cc_find($component0, 5) = ^true)) {
+if (cc_find($component0, 4) = ^true & .cc_find($component0, 5) = ^true) {
 	cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	cc_setposition(%varcint397, %varcint398, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setposition($int36, %varcint398, ^setpos_abs_left, ^setpos_abs_top);
 	~script3465($component0, $component1, $component2, $int3, $int4, $int5, $component6, $int7, $component8, $int9, $component10, $component11, $component12, $component13);
 }
-if ((cc_find($component0, 6) = ^true) & (.cc_find($component0, 7) = ^true)) {
+if (cc_find($component0, 6) = ^true & .cc_find($component0, 7) = ^true) {
 	cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	cc_setposition(%varcint397, $int37, ^setpos_abs_left, ^setpos_abs_top);

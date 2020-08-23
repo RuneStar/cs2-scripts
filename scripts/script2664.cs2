@@ -88,7 +88,7 @@ if ($int11 = 1) {
 			}
 			$string0 = "<$string0>Complete Making Friends with My Arm.  </col>";
 		case grand_exchange_451 :
-			if (((%varbit4520 = 1) | (%varbit4521 = 1)) | (%varbit4522 = 1)) {
+			if (%varbit4520 = 1 | %varbit4521 = 1 | %varbit4522 = 1) {
 				$string0 = "<$string0><col=0dc10d>";
 			} else {
 				$string0 = "<$string0><col=ff0000>";
@@ -96,7 +96,7 @@ if ($int11 = 1) {
 			}
 			$string0 = "<$string0>Complete the medium, hard or elite tier of the Varrock achievement diary.</col>";
 		case seers_village_455 :
-			if ((%varbit4517 = 1) | (%varbit4518 = 1)) {
+			if (%varbit4517 = 1 | %varbit4518 = 1) {
 				$string0 = "<$string0><col=0dc10d>";
 			} else {
 				$string0 = "<$string0><col=ff0000>";
@@ -104,7 +104,7 @@ if ($int11 = 1) {
 			}
 			$string0 = "<$string0>Complete the hard or elite tier of the Kandarin achievement diary.</col>";
 		case yanille_458 :
-			if ((%varbit4501 = 1) | (%varbit4502 = 1)) {
+			if (%varbit4501 = 1 | %varbit4502 = 1) {
 				$string0 = "<$string0><col=0dc10d>";
 			} else {
 				$string0 = "<$string0><col=ff0000>";
@@ -197,19 +197,19 @@ if ($int11 = 1) {
 	}
 }
 def_string $string1 = "";
-if (($namedobj1 ! null) & (calc(inv_total(inv, $namedobj1) - inv_total(inv_619, $namedobj1)) < $int2)) {
+if ($namedobj1 ! null & calc(inv_total(inv, $namedobj1) - inv_total(inv_619, $namedobj1)) < $int2) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }
-if (($namedobj3 ! null) & (calc(inv_total(inv, $namedobj3) - inv_total(inv_619, $namedobj3)) < $int4)) {
+if ($namedobj3 ! null & calc(inv_total(inv, $namedobj3) - inv_total(inv_619, $namedobj3)) < $int4) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }
-if (($namedobj5 ! null) & (calc(inv_total(inv, $namedobj5) - inv_total(inv_619, $namedobj5)) < $int6)) {
+if ($namedobj5 ! null & calc(inv_total(inv, $namedobj5) - inv_total(inv_619, $namedobj5)) < $int6) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }
-if (($namedobj7 ! null) & (calc(inv_total(inv, $namedobj7) - inv_total(inv_619, $namedobj7)) < $int8)) {
+if ($namedobj7 ! null & calc(inv_total(inv, $namedobj7) - inv_total(inv_619, $namedobj7)) < $int8) {
 	$int12 = 0;
 	$string1 = "<br><col=ff0000>Can not afford cost.";
 }

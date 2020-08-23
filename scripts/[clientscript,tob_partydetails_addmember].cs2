@@ -29,7 +29,7 @@ if (calc(%varcint178 % 2) = 0) {
 	$int4 = 235;
 }
 cc_settrans($int4);
-if (($int0 = 2) & (string_length($string1) > 0)) {
+if ($int0 = 2 & string_length($string1) > 0) {
 	cc_setonmouserepeat("cc_settrans(event_com, event_comid, 220, null)");
 	cc_setonmouseleave("cc_settrans(event_com, event_comid, $int4, null)");
 	if (%varcint178 > 0) {

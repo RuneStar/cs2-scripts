@@ -33,7 +33,7 @@ if (~deadman_world = 1) {
 			$int8 = 1;
 		}
 	}
-	if (($int8 = 0) & (%var1588 > 0)) {
+	if ($int8 = 0 & %var1588 > 0) {
 		switch_stat ($stat0) {
 			case attack, strength, magic :
 				$int10 = ~script2031(20);
@@ -86,13 +86,13 @@ if (.cc_find($component1, 5) = ^true) {
 		.cc_sethide(true);
 	}
 }
-if ((($boolean3 = true) & (map_members = ^false)) & (%varcint103 = 0)) {
+if ($boolean3 = true & map_members = ^false & %varcint103 = 0) {
 	$string2 = "<col=ff0000><$string0>:</col>";
 	$string3 = "<col=ff0000>Members Only</col>";
 }
 if (~on_mobile = true) {
 	if_setonop("stats_op(event_opindex, event_com, -1, $component2, $string2, $string3, p12_full)", $component1);
-	if ((%varcint218 = $component1) & (%varcint217 = -1)) {
+	if (%varcint218 = $component1 & %varcint217 = -1) {
 		~script2344($component1, -1, $component2, $string2, $string3, p12_full);
 	}
 } else {

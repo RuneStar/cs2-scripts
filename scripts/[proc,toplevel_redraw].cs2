@@ -12,7 +12,7 @@ if ($component2 ! null) {
 }
 $component2 = enum(component, component, $enum1, interface_161:29);
 if ($component2 ! null) {
-	if ((%varbit542 = ^true) | (%varbit4606 ! 0)) {
+	if (%varbit542 = ^true | %varbit4606 ! 0) {
 		if_sethide(true, $component2);
 	} else {
 		if_sethide(false, $component2);
@@ -22,7 +22,7 @@ def_component $component3 = enum(component, component, $enum1, interface_161:3);
 def_int $int4 = 0;
 def_int $int5 = 0;
 $int5, $int4 = viewport_getfov;
-if (((%varcint73 > 0) & (%varcint74 > 0)) & (($int5 ! %varcint73) | ($int4 ! %varcint74))) {
+if (%varcint73 > 0 & %varcint74 > 0 & ($int5 ! %varcint73 | $int4 ! %varcint74)) {
 	~camera_do_zoom(%varcint73, %varcint74);
 }
 if_setonscrollwheel("camera_zoom(event_mousey)", $component3);
@@ -30,10 +30,10 @@ _2309(1, $component3);
 def_int $int6 = calc(%varbit3756 - 1);
 def_component $component7 = enum(int, component, enum_1139, $int6);
 def_component $component8 = enum(int, component, enum_1138, $int6);
-if (($component7 ! null) & ($component8 ! null)) {
+if ($component7 ! null & $component8 ! null) {
 	$component7 = enum(component, component, $enum1, $component7);
 	$component8 = enum(component, component, $enum1, $component8);
-	if (($component7 ! null) & ($component8 ! null)) {
+	if ($component7 ! null & $component8 ! null) {
 		if_setontimer("toplevel_timer($component7, $component8)", $component0);
 	} else {
 		if_setontimer(null, $component0);
@@ -45,7 +45,7 @@ if (($component7 ! null) & ($component8 ! null)) {
 def_component $component9 = enum(int, component, enum_1138, 2);
 $component7 = enum(int, component, enum_1139, 2);
 $component9, $component7 = enum(component, component, $enum1, $component9), enum(component, component, $enum1, $component7);
-if (($component9 ! null) & ($component7 ! null)) {
+if ($component9 ! null & $component7 ! null) {
 	switch_int (%varbit8168) {
 		case 1 :
 			if_setop(1, "Achievement Diaries", $component9);
@@ -100,7 +100,7 @@ if ($component9 ! null) {
 $component9 = enum(int, component, enum_1138, 9);
 $component7 = enum(int, component, enum_1139, 9);
 $component9, $component7 = enum(component, component, $enum1, $component9), enum(component, component, $enum1, $component7);
-if (($component9 ! null) & ($component7 ! null)) {
+if ($component9 ! null & $component7 ! null) {
 	if (%varbit6516 = 0) {
 		if_setop(1, "Friends List", $component9);
 		if_setgraphic("sideicons_interface,8", $component7);
@@ -130,14 +130,14 @@ if ($component7 ! null) {
 			if_setposition(15, 13, ^setpos_abs_right, ^setpos_abs_bottom, $component7);
 		}
 	}
-	if ((%varbit4605 = 1) & (%varbit542 = ^false)) {
+	if (%varbit4605 = 1 & %varbit542 = ^false) {
 		if_sethide(false, $component7);
 	} else {
 		if_sethide(true, $component7);
 	}
 }
 $component2 = enum(component, component, $enum1, interface_161:5);
-if ((%varbit9528 = 0) & (%varbit542 = ^false)) {
+if (%varbit9528 = 0 & %varbit542 = ^false) {
 	if_sethide(false, $component2);
 } else {
 	if_sethide(true, $component2);

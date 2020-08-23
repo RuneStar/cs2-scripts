@@ -36,8 +36,8 @@ while ($int4 < $int5) {
 	$int4 = calc($int4 + 1);
 }
 cc_deleteall($component0);
-def_int $int6 = calc((((if_getwidth($component0) - 4) - (4 * 36)) / 3) + 36);
-def_int $int7 = calc((((if_getheight($component0) - 4) - (7 * 32)) / 6) + 32);
+def_int $int6 = calc((if_getwidth($component0) - 4 - 4 * 36) / 3 + 36);
+def_int $int7 = calc((if_getheight($component0) - 4 - 7 * 32) / 6 + 32);
 def_int $int8 = 0;
 def_int $int9 = inv_size(inv);
 while ($int8 < $int9) {
@@ -45,7 +45,7 @@ while ($int8 < $int9) {
 	cc_create($component0, ^iftype_graphic, $int8);
 	if ($obj3 ! null) {
 		cc_sethide(false);
-		cc_setposition(calc(2 + ($int6 * ($int8 % 4))), calc(2 + ($int7 * ($int8 / 4))), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc(2 + $int6 * ($int8 % 4)), calc(2 + $int7 * ($int8 / 4)), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);

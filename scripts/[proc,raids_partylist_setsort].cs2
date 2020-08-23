@@ -19,17 +19,17 @@ while ($int1 < 40) {
 }
 def_string $string0 = "";
 if ($int0 >= 2) {
-	if ((%varcint180 = 2) | (%varcint180 = 3)) {
+	if (%varcint180 = 2 | %varcint180 = 3) {
 		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 9, enum_1537);
-	} else if ((%varcint180 = 4) | (%varcint180 = 5)) {
+	} else if (%varcint180 = 4 | %varcint180 = 5) {
 		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 3, enum_1537);
-	} else if ((%varcint180 = 6) | (%varcint180 = 7)) {
+	} else if (%varcint180 = 6 | %varcint180 = 7) {
 		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 10, enum_1537);
-	} else if ((%varcint180 = 8) | (%varcint180 = 9)) {
+	} else if (%varcint180 = 8 | %varcint180 = 9) {
 		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 11, enum_1537);
-	} else if ((%varcint180 = 10) | (%varcint180 = 11)) {
+	} else if (%varcint180 = 10 | %varcint180 = 11) {
 		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 12, enum_1537);
-	} else if ((%varcint180 = 12) | (%varcint180 = 13)) {
+	} else if (%varcint180 = 12 | %varcint180 = 13) {
 		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 13, enum_1537);
 	} else {
 		~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 8, enum_1537);
@@ -39,14 +39,14 @@ def_int $int2 = 0;
 def_int $int3 = 0;
 def_component $component4 = null;
 def_string $string1 = "";
-if (((((((%varcint180 = 1) | (%varcint180 = 3)) | (%varcint180 = 5)) | (%varcint180 = 7)) | (%varcint180 = 9)) | (%varcint180 = 11)) | (%varcint180 = 13)) {
+if (%varcint180 = 1 | %varcint180 = 3 | %varcint180 = 5 | %varcint180 = 7 | %varcint180 = 9 | %varcint180 = 11 | %varcint180 = 13) {
 	$int2 = $int0;
 	while ($int2 > 0) {
 		$int2 = calc($int2 - 1);
 		$component4 = enum(int, component, enum_1537, $intarray0($int2));
 		if ($component4 ! null) {
 			if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-			if ((cc_find($component4, 0) = ^true) & (.cc_find($component4, 3) = ^true)) {
+			if (cc_find($component4, 0) = ^true & .cc_find($component4, 3) = ^true) {
 				~raids_partylist_entry_init($int2, $component4, $intarray0($int2), .cc_gettext, interface_499:14);
 			}
 		}
@@ -57,7 +57,7 @@ if (((((((%varcint180 = 1) | (%varcint180 = 3)) | (%varcint180 = 5)) | (%varcint
 		$component4 = enum(int, component, enum_1537, $intarray0($int2));
 		if ($component4 ! null) {
 			if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
-			if ((cc_find($component4, 0) = ^true) & (.cc_find($component4, 3) = ^true)) {
+			if (cc_find($component4, 0) = ^true & .cc_find($component4, 3) = ^true) {
 				~raids_partylist_entry_init($int2, $component4, $intarray0($int2), .cc_gettext, interface_499:14);
 			}
 		}

@@ -1,6 +1,6 @@
 // 2770
 [proc,tol_pipe_setbuttons](component $component0, component $component1, component $component2, component $component3, component $component4)
-if (((((%varbit3341 = 1) | (%varbit3342 = 1)) | (%varbit3343 = 1)) | (%varbit3344 = 1)) | (%varbit3345 = 1)) {
+if (%varbit3341 = 1 | %varbit3342 = 1 | %varbit3343 = 1 | %varbit3344 = 1 | %varbit3345 = 1) {
 	if_setonop("tol_pressure_valveop(event_opindex, synth_3429)", $component0);
 	if_setonop("tol_pressure_valveop(event_opindex, synth_3429)", $component1);
 	if_setonop("tol_pressure_valveop(event_opindex, synth_3429)", $component2);

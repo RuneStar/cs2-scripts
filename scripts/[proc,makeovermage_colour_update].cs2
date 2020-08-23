@@ -10,7 +10,7 @@ while ($int3 ! -1) {
 	$int2 = calc($int2 + 1);
 	$int3 = enum(int, int, enum_998, $int2);
 }
-def_int $int4 = ~min(27, calc((if_getheight($component0) - 2) / ((7 + 1) + $int1)));
+def_int $int4 = ~min(27, calc((if_getheight($component0) - 2) / (7 + 1 + $int1)));
 def_int $int5 = 1;
 def_int $int6 = -1;
 cc_deleteall($component0);
@@ -46,5 +46,5 @@ if ($int6 ! -1) {
 	cc_create($component0, ^iftype_graphic, $int7);
 	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 	cc_setgraphic("cross");
-	cc_setposition(0, calc($int6 - ((16 - $int4) / 2)), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setposition(0, calc($int6 - (16 - $int4) / 2), ^setpos_abs_centre, ^setpos_abs_top);
 }

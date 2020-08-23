@@ -6,7 +6,7 @@ def_int $int2 = paraheight($string1, $int0, p12_full);
 if ($int2 > $int1) {
 	$int1 = $int2;
 }
-$int1 = calc(($int1 * 12) + 3);
+$int1 = calc($int1 * 12 + 3);
 if ($int1 > if_getheight(interface_380:3)) {
 	if_setscrollsize(0, $int1, interface_380:3);
 } else {

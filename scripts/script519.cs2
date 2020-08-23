@@ -1,5 +1,5 @@
 // 519
 script519(component $component0, int $int1)
 cc_create($component0, ^iftype_graphic, calc($int1 + 4));
-cc_setposition(4, calc(4 + (($int1 + 1) * 17)), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(4, calc(4 + ($int1 + 1) * 17), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);

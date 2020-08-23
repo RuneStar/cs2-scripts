@@ -19,7 +19,7 @@ while ($int2 < 4) {
 	cc_create($component1, ^iftype_rectangle, $int2);
 	cc_sethide(true);
 	cc_setposition($int2, $int2, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize(calc(190 - ($int2 * 2)), calc(261 - ($int2 * 2)), ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc(190 - $int2 * 2), calc(261 - $int2 * 2), ^setsize_abs, ^setsize_abs);
 	cc_setcolour(^yellow);
 	cc_setfill(true);
 	$int2 = calc($int2 + 1);

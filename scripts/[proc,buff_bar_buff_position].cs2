@@ -17,13 +17,13 @@ if (~on_mobile = true) {
 	$int9 = 0;
 }
 if ($int9 = 1) {
-	$int7 = calc((((2 + ($int4 * 31)) - (31 * ($int1 / $int5))) - 31) + ($int2 - (($int4 * 31) + 1)));
-	$int8 = calc(2 + (31 * ($int1 % $int5)));
+	$int7 = calc(2 + $int4 * 31 - 31 * ($int1 / $int5) - 31 + ($int2 - ($int4 * 31 + 1)));
+	$int8 = calc(2 + 31 * ($int1 % $int5));
 } else if ($int9 = 2) {
-	$int7 = calc(2 + (31 * ($int1 / $int5)));
-	$int8 = calc(2 + (31 * ($int1 % $int5)));
+	$int7 = calc(2 + 31 * ($int1 / $int5));
+	$int8 = calc(2 + 31 * ($int1 % $int5));
 } else {
-	$int7 = calc(2 + (31 * ($int1 % $int4)));
-	$int8 = calc(2 + (31 * ($int1 / $int4)));
+	$int7 = calc(2 + 31 * ($int1 % $int4));
+	$int8 = calc(2 + 31 * ($int1 / $int4));
 }
 return($int7, $int8);

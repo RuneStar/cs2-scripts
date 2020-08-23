@@ -8,7 +8,7 @@ def_int $int6 = if_getx($component2);
 def_int $int7 = if_gety($component2);
 def_component $component8 = if_getlayer($component2);
 while ($component8 ! null) {
-	$int6, $int7 = calc(($int6 + if_getx($component8)) - if_getscrollx($component8)), calc(($int7 + if_gety($component8)) - if_getscrolly($component8));
+	$int6, $int7 = calc($int6 + if_getx($component8) - if_getscrollx($component8)), calc($int7 + if_gety($component8) - if_getscrolly($component8));
 	$component8 = if_getlayer($component8);
 }
 def_int $int9 = calc(enum_getoutputcount($enum0) - 1);
@@ -16,8 +16,8 @@ def_int $int10 = 14;
 if (~on_mobile = true) {
 	$int10 = 18;
 }
-if_setposition($int6, calc(($int7 + if_getheight($component2)) - 1), ^setpos_abs_left, ^setpos_abs_top, $component5);
-if_setsize(if_getwidth($component2), calc((2 + ($int9 * $int10)) + 2), ^setsize_abs, ^setsize_abs, $component5);
+if_setposition($int6, calc($int7 + if_getheight($component2) - 1), ^setpos_abs_left, ^setpos_abs_top, $component5);
+if_setsize(if_getwidth($component2), calc(2 + $int9 * $int10 + 2), ^setsize_abs, ^setsize_abs, $component5);
 cc_deleteall($component5);
 ~thinbox($component5, 0);
 ~script3213;

@@ -11,7 +11,7 @@ if (%varcint41 = 1337) {
 	}
 }
 if_sethide($boolean0, interface_162:37);
-if ((%varbit6374 = 1) & (getwindowmode ! ^windowmode_fixed)) {
+if (%varbit6374 = 1 & getwindowmode ! ^windowmode_fixed) {
 	if_setposition(1, 0, ^setpos_abs_right, ^setpos_abs_top, interface_162:59);
 	if_setposition(-1, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:560);
 } else {
@@ -21,7 +21,7 @@ if ((%varbit6374 = 1) & (getwindowmode ! ^windowmode_fixed)) {
 cc_deleteall(interface_162:38);
 cc_deleteall(interface_162:57);
 def_int $int1 = 0;
-if ((clientclock < %varcint223) & (~toplevel_getcomponents ! enum_1129)) {
+if (clientclock < %varcint223 & ~toplevel_getcomponents ! enum_1129) {
 	$int1 = 1;
 	if_setontimer("toplevel_chatbox_resetbackground_soon(%varcint223)", interface_162:38);
 } else {
@@ -69,7 +69,7 @@ if ($int1 = 0) {
 			cc_setfill(true);
 			cc_settrans(254);
 			cc_create(interface_162:57, ^iftype_rectangle, calc($int4 * 2));
-			.cc_create(interface_162:57, ^iftype_rectangle, calc(($int4 * 2) + 1));
+			.cc_create(interface_162:57, ^iftype_rectangle, calc($int4 * 2 + 1));
 			cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
 			.cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -90,7 +90,7 @@ if ($int1 = 0) {
 		cc_setfill(true);
 		cc_settrans(225);
 		cc_create(interface_162:57, ^iftype_rectangle, calc($int4 * 2));
-		.cc_create(interface_162:57, ^iftype_rectangle, calc(($int4 * 2) + 1));
+		.cc_create(interface_162:57, ^iftype_rectangle, calc($int4 * 2 + 1));
 		cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
 		.cc_setsize($int3, 1, ^setsize_2, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);

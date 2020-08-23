@@ -1,6 +1,6 @@
 // 2654
 [clientscript,telenexus_show_cost](component $component0, struct $struct1, int $int2, component $component3, int $int4)
-if ((%varcint227 = $int4) & (if_gethide($component0) = false)) {
+if (%varcint227 = $int4 & if_gethide($component0) = false) {
 	~telenexus_hide_cost($component0, $component3, 0);
 } else {
 	%varcint227 = $int4;

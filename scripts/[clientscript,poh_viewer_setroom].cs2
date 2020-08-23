@@ -194,7 +194,7 @@ cc_create($component5, ^iftype_graphic, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setgraphic(enum(int, graphic, enum_1423, $int10));
-cc_set2dangle(calc((16384 * (4 - $int9)) % 65536));
+cc_set2dangle(calc(16384 * (4 - $int9) % 65536));
 cc_create($component5, ^iftype_graphic, 1);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

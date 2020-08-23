@@ -8,8 +8,8 @@ $int12, $int13 = ~worldmap_elements_chooseposition($coord0, $boolean2, $componen
 def_int $int14 = 0;
 def_int $int15 = 0;
 $int14, $int15 = ~worldmap_elements_chooseposition($coord1, $boolean2, $component4, $int5, $int6, $int7, $int8);
-def_int $int16 = calc($int12 + (($int14 - $int12) / 2));
-def_int $int17 = calc($int13 + (($int15 - $int13) / 2));
+def_int $int16 = calc($int12 + ($int14 - $int12) / 2);
+def_int $int17 = calc($int13 + ($int15 - $int13) / 2);
 def_int $int18 = calc($int14 - $int12);
 def_int $int19 = calc($int15 - $int13);
 def_boolean $boolean20 = false;
@@ -79,7 +79,7 @@ if (cc_find($component4, $int11) = ^true) {
 	cc_setposition($int16, $int17, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize($int18, $int19, ^setsize_abs, ^setsize_abs);
 	cc_setlinedirection($boolean20);
-	cc_setlinewid(calc(1 + ($int3 / 5)));
+	cc_setlinewid(calc(1 + $int3 / 5));
 	cc_setcolour(^yellow);
 	cc_sethide(true);
 }

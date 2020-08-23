@@ -12,7 +12,7 @@ def_string $string0 = enum(int, string, enum_1704, $int0);
 cc_settext($string0);
 cc_create($component1, ^iftype_graphic, $int2);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-cc_setposition(1, calc(($int0 * 21) + 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(1, calc($int0 * 21 + 2), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic("clickcross,5");
 if (.cc_find($component1, $int0) = ^true) {
 	.cc_setopbase("<col=ff9040><$string0></col>");

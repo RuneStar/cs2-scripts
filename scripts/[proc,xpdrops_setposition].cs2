@@ -1,6 +1,6 @@
 // 2165
 [proc,xpdrops_setposition](component $component0)
-if ((~on_mobile = true) | (%varbit4692 = 0)) {
+if (~on_mobile = true | %varbit4692 = 0) {
 	if_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top, $component0);
 } else if (%varbit4692 = 2) {
 	if_setposition(2, 24, ^setpos_abs_left, ^setpos_abs_top, $component0);

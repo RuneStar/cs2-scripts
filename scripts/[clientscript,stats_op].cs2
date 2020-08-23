@@ -1,6 +1,6 @@
 // 2367
 [clientscript,stats_op](int $int0, component $component1, int $int2, component $component3, string $string0, string $string1, fontmetrics $fontmetrics4)
-if (($int0 = 1) & ((%varcint218 ! $component1) | (%varcint217 ! -1))) {
+if ($int0 = 1 & (%varcint218 ! $component1 | %varcint217 ! -1)) {
 	~script2344($component1, $int2, $component3, $string0, $string1, $fontmetrics4);
 	%varcint218, %varcint217 = $component1, $int2;
 	return;

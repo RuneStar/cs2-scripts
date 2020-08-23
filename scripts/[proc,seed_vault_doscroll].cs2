@@ -15,7 +15,7 @@ if ($int2 < calc($int7 + $int4)) {
 		$int4 = 0;
 	}
 	~scrollbar_resize($component1, $component0, $int4);
-} else if ($int2 > calc(($int4 + $int5) - (35 + $int7))) {
+} else if ($int2 > calc($int4 + $int5 - (35 + $int7))) {
 	$int4 = ~min(if_getscrollheight($component0), calc($int4 + $int3));
 	~scrollbar_resize($component1, $component0, $int4);
 }

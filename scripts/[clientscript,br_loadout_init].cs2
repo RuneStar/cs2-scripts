@@ -120,8 +120,8 @@ while ($int9 < $int10) {
 		if ($int17 <= 0) {
 			$string1, $int17 = "-", 1;
 		}
-		if (($int17 > 0) & (parawidth($string1, 512, p12_full) > .cc_getwidth)) {
-			while (($int17 > 1) & ($int16 = 0)) {
+		if ($int17 > 0 & parawidth($string1, 512, p12_full) > .cc_getwidth) {
+			while ($int17 > 1 & $int16 = 0) {
 				$int17 = calc($int17 - 1);
 				$string0 = append(substring($string1, 0, $int17), "...");
 				if (parawidth($string0, 512, p12_full) <= .cc_getwidth) {

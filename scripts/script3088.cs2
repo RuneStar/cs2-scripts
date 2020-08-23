@@ -16,7 +16,7 @@ if ($namedobj10 = null) {
 cc_create($component5, ^iftype_graphic, $int8);
 $int8 = calc($int8 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int2 + ((40 - 36) / 2)), $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int2 + (40 - 36) / 2), $int1, ^setpos_abs_left, ^setpos_abs_top);
 if ($int11 = 1) {
 	cc_setobject_nonum($namedobj10, 1);
 } else {
@@ -39,7 +39,7 @@ def_int $int15 = inv_getnum(inv_422, $int0);
 def_int $int16 = enum(int, int, enum_2636, $int0);
 def_string $string1 = "";
 def_int $int17 = 0;
-if ((oc_members($namedobj10) = ^true) & (map_members = ^false)) {
+if (oc_members($namedobj10) = ^true & map_members = ^false) {
 	cc_setcolour(0x9f9f9f);
 	$string0 = enum(int, string, enum_2634, $int0);
 	$string1 = "You must be on a members' world to purchase that item.";

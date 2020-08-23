@@ -11,7 +11,7 @@ if ($boolean10 = true) {
 	$int13 = calc(~max(parawidth($string0, 190, p11_full), parawidth($string1, 190, p11_full)) + 14);
 	if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $component5);
 	if_setsize($int13, 0, ^setsize_abs, ^setsize_minus, $component6);
-	$int13 = calc((190 - ($int13 * 2)) / 3);
+	$int13 = calc((190 - $int13 * 2) / 3);
 	if_setposition($int13, 0, ^setpos_abs_left, ^setpos_abs_centre, $component5);
 	if_setposition($int13, 0, ^setpos_abs_right, ^setpos_abs_centre, $component6);
 } else if (%varbit6718 = 1) {
@@ -51,7 +51,7 @@ def_int $intarray0($int15);
 def_int $int16 = 0;
 def_obj $obj17 = null;
 def_int $int18 = 0;
-if (($boolean10 = false) & (%varbit6718 = 1)) {
+if ($boolean10 = false & %varbit6718 = 1) {
 	while ($int18 < $int15) {
 		$obj17 = enum(int, obj, $enum14, $int18);
 		if (~league_world = 1) {
@@ -105,12 +105,12 @@ if ($boolean10 = true) {
 	} else {
 		$int20 = ~max(4, ~min(7, calc(($int16 + 8) / 9)));
 	}
-	$int23 = ~max(0, ~min(scale(5, 7, $int19), calc(($int11 - ($int19 * $int20)) / ($int20 - 1))));
+	$int23 = ~max(0, ~min(scale(5, 7, $int19), calc(($int11 - $int19 * $int20) / ($int20 - 1))));
 	$int21 = ~max(1, calc(($int16 + ($int20 - 1)) / $int20));
 	if ($int21 >= 2) {
-		$int22 = ~max(0, ~min($int23, calc(($int12 - ($int19 * $int21)) / ($int21 - 1))));
+		$int22 = ~max(0, ~min($int23, calc(($int12 - $int19 * $int21) / ($int21 - 1))));
 	}
-	$int24 = calc(($int21 * $int19) + (($int21 - 1) * $int22));
+	$int24 = calc($int21 * $int19 + ($int21 - 1) * $int22);
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
 } else if (%varbit6718 = 1) {
 	switch_int (%varbit4070) {
@@ -127,22 +127,22 @@ if ($boolean10 = true) {
 			$int20, $int21, $int23, $int22 = 7, 10, 0, 0;
 			if_setposition(1, 15, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 	}
-	$int24 = calc(($int21 * $int19) + (($int21 - 1) * $int22));
+	$int24 = calc($int21 * $int19 + ($int21 - 1) * $int22);
 } else {
 	if ($int16 <= 28) {
 		$int20 = 4;
 	} else {
 		$int20 = ~max(4, ~min(7, calc(($int16 + 8) / 9)));
 	}
-	$int23 = ~max(0, ~min($int19, calc(($int11 - ($int19 * $int20)) / ($int20 - 1))));
+	$int23 = ~max(0, ~min($int19, calc(($int11 - $int19 * $int20) / ($int20 - 1))));
 	$int21 = ~max(1, calc(($int16 + ($int20 - 1)) / $int20));
 	if ($int21 >= 2) {
-		$int22 = ~max(0, ~min($int23, calc(($int12 - ($int19 * $int21)) / ($int21 - 1))));
+		$int22 = ~max(0, ~min($int23, calc(($int12 - $int19 * $int21) / ($int21 - 1))));
 	}
-	$int24 = ~max(calc(($int21 * $int19) + (($int21 - 1) * $int22)), calc($int12 - 30));
+	$int24 = ~max(calc($int21 * $int19 + ($int21 - 1) * $int22), calc($int12 - 30));
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
 }
-if_setsize(calc(($int20 * $int19) + (($int20 - 1) * $int23)), $int24, ^setsize_abs, ^setsize_abs, $component0);
+if_setsize(calc($int20 * $int19 + ($int20 - 1) * $int23), $int24, ^setsize_abs, ^setsize_abs, $component0);
 def_component $component25 = null;
 def_int $int26 = calc($int19 + $int23);
 def_int $int27 = calc($int19 + $int22);
@@ -156,7 +156,7 @@ while ($int18 < $int16) {
 	}
 	$component25 = oc_param($obj17, spell_button);
 	if_setsize($int19, $int19, ^setsize_abs, ^setsize_abs, $component25);
-	$int28, $int29 = calc(($int18 % $int20) * $int26), calc(($int18 / $int20) * $int27);
+	$int28, $int29 = calc($int18 % $int20 * $int26), calc($int18 / $int20 * $int27);
 	if_setposition($int28, $int29, ^setpos_abs_left, ^setpos_abs_top, $component25);
 	if (~script2614($obj17, $component25) = 1) {
 		if ($int19 >= 40) {

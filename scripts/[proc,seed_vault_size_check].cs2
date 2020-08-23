@@ -2,7 +2,7 @@
 [proc,seed_vault_size_check](component $component0, component $component1, int $int2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8)
 def_int $int9 = if_getwidth($component1);
 def_int $int10 = if_getheight($component1);
-if (($int9 = $int2) & ($int10 = $int3)) {
+if ($int9 = $int2 & $int10 = $int3) {
 	return;
 }
 def_int $int11 = calc($int10 - 3);

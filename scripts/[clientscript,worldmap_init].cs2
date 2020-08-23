@@ -28,7 +28,7 @@ if (~toplevel_getcomponents ! enum_1132) {
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setcolour(0x9f9f9f);
 		cc_setfill(false);
-		cc_settrans(calc(100 + ($int25 * 10)));
+		cc_settrans(calc(100 + $int25 * 10));
 		$int25 = calc($int25 + 1);
 	}
 }
@@ -96,12 +96,12 @@ def_int $int36 = 0;
 def_int $int37 = 0;
 $int26 = 0;
 while ($int36 < $int28) {
-	if (cc_find($component21, calc(($intarray0($int36) * 4) + 3)) = ^true) {
+	if (cc_find($component21, calc($intarray0($int36) * 4 + 3)) = ^true) {
 		$string1, $string0 = ~script632(cc_gettext);
 		$int32 = string_length($string1);
-		if (($int32 > 0) & (compare($string1, tostring($int31)) ! 0)) {
+		if ($int32 > 0 & compare($string1, tostring($int31)) ! 0) {
 			$int33, $int35 = 0, 0;
-			while (($int33 < $int32) & ($int33 < 10)) {
+			while ($int33 < $int32 & $int33 < 10) {
 				$int34 = string_indexof_string("0123456789", substring($string1, calc($int32 - ($int33 + 1)), calc($int32 - $int33)), 0);
 				if ($int34 ! -1) {
 					$int34 = calc($int34 * pow(10, $int33));
@@ -138,10 +138,10 @@ while ($int36 < $int28) {
 	} else {
 		$int37 = $int26;
 	}
-	if (cc_find($component21, calc(($intarray0($int36) * 4) + 1)) = ^true) {
+	if (cc_find($component21, calc($intarray0($int36) * 4 + 1)) = ^true) {
 		cc_setposition(1, $int37, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	if (cc_find($component21, calc(($intarray0($int36) * 4) + 2)) = ^true) {
+	if (cc_find($component21, calc($intarray0($int36) * 4 + 2)) = ^true) {
 		cc_setposition(0, $int26, ^setpos_abs_right, ^setpos_abs_top);
 	}
 	$int26, $int36 = calc($int26 + $int27), calc($int36 + 1);
@@ -242,7 +242,7 @@ $int25, $int38 = ~worldmap_toggles_enablebutton(4, $component10, $int25, $int38,
 $int29 = ~max($int29, calc($int38 + 6));
 if_setsize($int29, 50, ^setsize_abs, ^setsize_minus, $component5);
 ~worldmap_key_toggle(%varbit10294, $int29, $component3, $component5, $component9);
-if ((if_find(interface_595:39) = true) & (~on_mobile = true)) {
+if (if_find(interface_595:39) = true & ~on_mobile = true) {
 	cc_sethide(true);
 }
 cc_deleteall($component11);
@@ -327,13 +327,13 @@ cc_setgraphic(struct_param(struct_317, param_459));
 if ($int28 >= 3) {
 	~quicksort_cctext(intarray0, $component16, 1, 37);
 }
-$int29 = calc((((((3 + $int29) + 2) + 26) + 2) + 16) + 3);
+$int29 = calc(3 + $int29 + 2 + 26 + 2 + 16 + 3);
 if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $component12);
 def_int $int47 = calc(262 + $int29);
 ~worldmap_window_set($component0, $component2, $component24, $component3, $int47);
 ~script1741($component0, $component2, $component24, $component3, ^min_32bit_int, ^min_32bit_int, $component21, $component22, $int29, $int47, $component11, $int39);
 if_setscrollpos(0, 0, $component16);
-$int26 = calc(($int28 * $int27) + 2);
+$int26 = calc($int28 * $int27 + 2);
 def_int $int48 = 124;
 if (~on_mobile = true) {
 	$int48 = 196;
@@ -350,13 +350,13 @@ cc_deleteall($component17);
 $int26 = if_gety($component12);
 def_component $component49 = if_getlayer($component12);
 while ($component49 ! $component2) {
-	$int26 = calc(($int26 + if_gety($component49)) - if_getscrolly($component49));
+	$int26 = calc($int26 + if_gety($component49) - if_getscrolly($component49));
 	$component49 = if_getlayer($component49);
 }
 if (~on_mobile = false) {
-	if_setposition(0, calc((if_getheight($component2) - 1) - $int26), ^setpos_abs_centre, ^setpos_abs_bottom, $component15);
+	if_setposition(0, calc(if_getheight($component2) - 1 - $int26), ^setpos_abs_centre, ^setpos_abs_bottom, $component15);
 } else {
-	if_setposition(0, calc((if_getheight($component2) - 2) - $int26), ^setpos_abs_centre, ^setpos_abs_top, $component15);
+	if_setposition(0, calc(if_getheight($component2) - 2 - $int26), ^setpos_abs_centre, ^setpos_abs_top, $component15);
 }
 while ($int28 > 0) {
 	$int28 = calc($int28 - 1);

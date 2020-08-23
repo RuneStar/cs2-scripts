@@ -57,7 +57,7 @@ def_int $int10 = 36;
 if ($graphic5 = "bankbuttons,2") {
 	$int9, $int10 = 29, 22;
 }
-def_int $int11 = calc($int2 + (($int4 - $int10) / 2));
+def_int $int11 = calc($int2 + ($int4 - $int10) / 2);
 cc_create($component0, ^iftype_graphic, $int6);
 cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, $int11, ^setpos_abs_centre, ^setpos_abs_top);

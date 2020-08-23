@@ -15,10 +15,10 @@ def_int $int9 = ~tournament_beta_world;
 def_namedobj $namedobj10 = enum(int, namedobj, $enum8, $int7);
 while ($namedobj10 ! null) {
 	if (cc_find($component0, $int7) = ^true) {
-		if (($int4 = 1) | (string_indexof_string(lowercase(oc_name($namedobj10)), $string0, 0) ! -1)) {
+		if ($int4 = 1 | string_indexof_string(lowercase(oc_name($namedobj10)), $string0, 0) ! -1) {
 			cc_sethide(false);
-			$int6 = calc(($int5 / 10) * $int3);
-			cc_setposition(calc(($int5 % 10) * (36 + $int2)), $int6, ^setpos_abs_left, ^setpos_abs_top);
+			$int6 = calc($int5 / 10 * $int3);
+			cc_setposition(calc($int5 % 10 * (36 + $int2)), $int6, ^setpos_abs_left, ^setpos_abs_top);
 			$int5 = calc($int5 + 1);
 		} else {
 			cc_sethide(true);
@@ -32,10 +32,10 @@ if ($int9 = 1) {
 	$namedobj10 = enum(int, namedobj, enum_1906, $int11);
 	while ($namedobj10 ! null) {
 		if (cc_find($component0, $int7) = ^true) {
-			if (($int4 = 1) | (string_indexof_string(lowercase(oc_name($namedobj10)), $string0, 0) ! -1)) {
+			if ($int4 = 1 | string_indexof_string(lowercase(oc_name($namedobj10)), $string0, 0) ! -1) {
 				cc_sethide(false);
-				$int6 = calc(($int5 / 10) * $int3);
-				cc_setposition(calc(($int5 % 10) * (36 + $int2)), $int6, ^setpos_abs_left, ^setpos_abs_top);
+				$int6 = calc($int5 / 10 * $int3);
+				cc_setposition(calc($int5 % 10 * (36 + $int2)), $int6, ^setpos_abs_left, ^setpos_abs_top);
 				$int5 = calc($int5 + 1);
 			} else {
 				cc_sethide(true);

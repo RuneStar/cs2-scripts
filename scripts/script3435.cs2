@@ -17,16 +17,16 @@ while ($int3 < 25) {
 	$int3 = calc($int3 + 1);
 }
 def_int $intarray1(10);
-$intarray1(0) = calc(((($intarray0(0) + ($intarray0(5) * 2)) + ($intarray0(10) * 3)) + ($intarray0(15) * 4)) + ($intarray0(20) * 5));
-$intarray1(1) = calc(((($intarray0(1) + ($intarray0(6) * 2)) + ($intarray0(11) * 3)) + ($intarray0(16) * 4)) + ($intarray0(21) * 5));
-$intarray1(2) = calc(((($intarray0(2) + ($intarray0(7) * 2)) + ($intarray0(12) * 3)) + ($intarray0(17) * 4)) + ($intarray0(22) * 5));
-$intarray1(3) = calc(((($intarray0(3) + ($intarray0(8) * 2)) + ($intarray0(13) * 3)) + ($intarray0(18) * 4)) + ($intarray0(23) * 5));
-$intarray1(4) = calc(((($intarray0(4) + ($intarray0(9) * 2)) + ($intarray0(14) * 3)) + ($intarray0(19) * 4)) + ($intarray0(24) * 5));
-$intarray1(5) = calc(((($intarray0(0) + ($intarray0(1) * 2)) + ($intarray0(2) * 3)) + ($intarray0(3) * 4)) + ($intarray0(4) * 5));
-$intarray1(6) = calc(((($intarray0(5) + ($intarray0(6) * 2)) + ($intarray0(7) * 3)) + ($intarray0(8) * 4)) + ($intarray0(9) * 5));
-$intarray1(7) = calc(((($intarray0(10) + ($intarray0(11) * 2)) + ($intarray0(12) * 3)) + ($intarray0(13) * 4)) + ($intarray0(14) * 5));
-$intarray1(8) = calc(((($intarray0(15) + ($intarray0(16) * 2)) + ($intarray0(17) * 3)) + ($intarray0(18) * 4)) + ($intarray0(19) * 5));
-$intarray1(9) = calc(((($intarray0(20) + ($intarray0(21) * 2)) + ($intarray0(22) * 3)) + ($intarray0(23) * 4)) + ($intarray0(24) * 5));
+$intarray1(0) = calc($intarray0(0) + $intarray0(5) * 2 + $intarray0(10) * 3 + $intarray0(15) * 4 + $intarray0(20) * 5);
+$intarray1(1) = calc($intarray0(1) + $intarray0(6) * 2 + $intarray0(11) * 3 + $intarray0(16) * 4 + $intarray0(21) * 5);
+$intarray1(2) = calc($intarray0(2) + $intarray0(7) * 2 + $intarray0(12) * 3 + $intarray0(17) * 4 + $intarray0(22) * 5);
+$intarray1(3) = calc($intarray0(3) + $intarray0(8) * 2 + $intarray0(13) * 3 + $intarray0(18) * 4 + $intarray0(23) * 5);
+$intarray1(4) = calc($intarray0(4) + $intarray0(9) * 2 + $intarray0(14) * 3 + $intarray0(19) * 4 + $intarray0(24) * 5);
+$intarray1(5) = calc($intarray0(0) + $intarray0(1) * 2 + $intarray0(2) * 3 + $intarray0(3) * 4 + $intarray0(4) * 5);
+$intarray1(6) = calc($intarray0(5) + $intarray0(6) * 2 + $intarray0(7) * 3 + $intarray0(8) * 4 + $intarray0(9) * 5);
+$intarray1(7) = calc($intarray0(10) + $intarray0(11) * 2 + $intarray0(12) * 3 + $intarray0(13) * 4 + $intarray0(14) * 5);
+$intarray1(8) = calc($intarray0(15) + $intarray0(16) * 2 + $intarray0(17) * 3 + $intarray0(18) * 4 + $intarray0(19) * 5);
+$intarray1(9) = calc($intarray0(20) + $intarray0(21) * 2 + $intarray0(22) * 3 + $intarray0(23) * 4 + $intarray0(24) * 5);
 $int3 = 0;
 while ($int3 < $int4) {
 	if_settext("(<tostring($intarray1($int3))>)", enum(int, component, enum_2860, $int3));

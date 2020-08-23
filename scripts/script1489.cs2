@@ -2,7 +2,7 @@
 script1489(component $component0, component $component1, component $component2, component $component3, int $int4, int $int5)
 def_int $int6 = if_getwidth($component0);
 def_int $int7 = if_getheight($component0);
-if (($int6 = $int4) & ($int7 = $int5)) {
+if ($int6 = $int4 & $int7 = $int5) {
 	return;
 }
 def_int $int8 = calc($int7 - 10);

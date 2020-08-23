@@ -1,7 +1,7 @@
 // 1111
 [proc,options_hidepm](component $component0, component $component1, component $component2, int $windowmode3)
 def_string $string0 = "Hide private chat when the chatbox is hidden<br>(not applicable)";
-if ((%var287 = 0) | (getwindowmode = ^windowmode_fixed)) {
+if (%var287 = 0 | getwindowmode = ^windowmode_fixed) {
 	if_setgraphic("options_boxes,0", $component0);
 	if_settrans(100, $component1);
 	if_setonop(null, $component0);

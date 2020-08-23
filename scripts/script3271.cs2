@@ -14,7 +14,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
 cc_settext("Music unlock message");
 cc_create($component0, ^iftype_graphic, 1);
 cc_setsize($int1, $int2, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, calc(((if_getheight($component0) / 2) - ($int2 / 2)) - 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(0, calc(if_getheight($component0) / 2 - $int2 / 2 - 1), ^setpos_abs_left, ^setpos_abs_top);
 if (%varbit10078 = 0) {
 	cc_setgraphic("options_radio_buttons,6");
 } else {

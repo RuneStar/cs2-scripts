@@ -14,7 +14,7 @@ if (enum(int, stat, enum_681, coordx(%varcint207)) = $stat0) {
 	%varcint212 = movecoord(%varcint212, 0, 0, $int1);
 } else if (enum(int, stat, enum_681, coordx(%varcint213)) = $stat0) {
 	%varcint213 = movecoord(%varcint213, 0, 0, $int1);
-} else if (($stat0 = hitpoints) & ($int1 = 20000001)) {
+} else if ($stat0 = hitpoints & $int1 = 20000001) {
 	%varcint207 = 1_1_1_1_1;
 } else if (%varcint207 = null) {
 	%varcint207 = movecoord(0_0_0_0_0, enum(stat, int, enum_81, $stat0), 0, $int1);

@@ -11,7 +11,7 @@ if ($int6 > 0) {
 	if ($int4 > clientclock) {
 		$int5 = calc($int4 - clientclock);
 	}
-	if_setontimer("xpdrops_hidepanel($component0, $component1, $component2, $component3, calc((clientclock + $int5) + $int6))", $component0);
+	if_setontimer("xpdrops_hidepanel($component0, $component1, $component2, $component3, calc(clientclock + $int5 + $int6))", $component0);
 } else {
 	if_setontimer(null, $component0);
 }

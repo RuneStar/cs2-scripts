@@ -1,6 +1,6 @@
 // 2202
 [clientscript,deadman_spectator_temp_name](string $string0)
-if ((string_length(%varcstring364) ! 0) & (compare(%varcstring364, $string0) ! 0)) {
+if (string_length(%varcstring364) ! 0 & compare(%varcstring364, $string0) ! 0) {
 	friend_del(%varcstring364);
 }
 if (string_length($string0) = 0) {

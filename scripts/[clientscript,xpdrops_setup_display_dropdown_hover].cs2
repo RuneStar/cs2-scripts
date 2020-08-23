@@ -1,6 +1,6 @@
 // 1035
 [clientscript,xpdrops_setup_display_dropdown_hover](boolean $boolean0, component $component1, int $int2, int $int3, int $colour4)
-if ((cc_find($component1, $int2) = ^true) & (.cc_find($component1, $int3) = ^true)) {
+if (cc_find($component1, $int2) = ^true & .cc_find($component1, $int3) = ^true) {
 	if ($boolean0 = true) {
 		cc_setcolour(0xffb83f);
 		.cc_sethide(false);

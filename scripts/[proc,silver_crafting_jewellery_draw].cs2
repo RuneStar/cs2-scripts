@@ -17,7 +17,7 @@ cc_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
 def_int $int7 = 0;
-if (((inv_total(inv, $obj4) > 0) & (stat(crafting) >= $int2)) & ((map_members = ^true) | (oc_members($obj1) = ^false))) {
+if (inv_total(inv, $obj4) > 0 & stat(crafting) >= $int2 & (map_members = ^true | oc_members($obj1) = ^false)) {
 	cc_setobject_nonum($obj1, 1);
 	cc_settrans(0);
 	$int7 = 1;
@@ -34,7 +34,7 @@ cc_setsize(0, 22, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 def_int $int8 = if_getwidth($component0);
-if ((parawidth($string0, $int8, p12_full) <= $int8) & (paraheight($string0, $int8, p12_full) <= 1)) {
+if (parawidth($string0, $int8, p12_full) <= $int8 & paraheight($string0, $int8, p12_full) <= 1) {
 	cc_settextfont(p12_full);
 } else {
 	cc_settextfont(p11_full);
@@ -52,7 +52,7 @@ if ($int7 = 1) {
 	if_setonmouserepeat("silver_crafting_mouseeffect(^white, event_com, cc_getid, .cc_getid)", $component0);
 	if_setonmouseleave("silver_crafting_mouseeffect(0xff981f, event_com, cc_getid, .cc_getid)", $component0);
 } else {
-	if ((map_members = ^false) & (oc_members($obj1) = ^true)) {
+	if (map_members = ^false & oc_members($obj1) = ^true) {
 		.cc_settext("");
 	} else {
 		.cc_settext("Level <tostring($int2)>");

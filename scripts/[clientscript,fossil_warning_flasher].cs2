@@ -1,7 +1,7 @@
 // 1999
 [clientscript,fossil_warning_flasher](component $component0, component $component1, int $int2, int $int3)
 %varcint198 = 1;
-if ((%varbit5811 >= 100) | (%varbit5811 = 0)) {
+if (%varbit5811 >= 100 | %varbit5811 = 0) {
 	if_settrans(255, $component0);
 	if_setontimer(null, $component1);
 	%varcint198 = 0;

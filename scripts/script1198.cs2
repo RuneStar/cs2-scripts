@@ -26,7 +26,7 @@ if (%var263 > 0) {
 	if_settext("Buy seed box: <tostring($int25)>", $component6);
 }
 if_setonop("opsound(event_opindex, 2)", $component5);
-if ((%varbit4893 < $int25) | (%var263 > 0)) {
+if (%varbit4893 < $int25 | %var263 > 0) {
 	if_setcolour(^red, $component6);
 } else {
 	if_setcolour(^white, $component6);
@@ -40,7 +40,7 @@ if (%var265 > 0) {
 	if_settext("Buy herb sack: <tostring($int25)>", $component8);
 }
 if_setonop("opsound(event_opindex, 2)", $component7);
-if (((%varbit4893 < $int25) | (%var265 > 0)) | (stat_base(herblore) < 58)) {
+if (%varbit4893 < $int25 | %var265 > 0 | stat_base(herblore) < 58) {
 	if_setcolour(^red, $component8);
 } else {
 	if_setcolour(^white, $component8);

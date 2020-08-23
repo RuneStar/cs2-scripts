@@ -18,7 +18,7 @@ if ($component3 ! null) {
 }
 $int2 = calc($int2 - 4);
 def_int $int4 = calc(4 + parawidth($string0, $int2, p12_full));
-def_int $int5 = calc(7 + (12 * paraheight($string0, $int2, p12_full)));
+def_int $int5 = calc(7 + 12 * paraheight($string0, $int2, p12_full));
 if_setsize($int4, $int5, ^setsize_abs, ^setsize_abs, interface_595:41);
 def_int $int6 = calc($int0 + 5);
 def_int $int7 = calc($int1 + 20);

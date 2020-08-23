@@ -52,18 +52,18 @@ def_int $int17 = if_gety($component0);
 def_int $int18 = 0;
 def_component $component19 = if_getlayer($component0);
 while ($component19 ! $component3) {
-	$int16, $int17 = calc(($int16 + if_getx($component19)) - if_getscrollx($component19)), calc(($int17 + if_gety($component19)) - if_getscrolly($component19));
+	$int16, $int17 = calc($int16 + if_getx($component19) - if_getscrollx($component19)), calc($int17 + if_gety($component19) - if_getscrolly($component19));
 	$component19 = if_getlayer($component19);
 }
 if (~on_mobile = true) {
-	$int18 = ~max(0, calc(($int17 + 20) - $int15));
+	$int18 = ~max(0, calc($int17 + 20 - $int15));
 } else {
-	$int18 = calc(($int17 + if_getheight($component0)) - 1);
+	$int18 = calc($int17 + if_getheight($component0) - 1);
 }
 if_setposition($int16, $int18, ^setpos_abs_left, ^setpos_abs_top, $component7);
 def_int $int20 = calc(if_getheight($component3) - $int18);
 if (~on_mobile = true) {
-	$int20 = calc(($int17 + 20) - $int18);
+	$int20 = calc($int17 + 20 - $int18);
 }
 if ($int15 > $int20) {
 	if_setsize(if_getwidth($component0), $int20, ^setsize_abs, ^setsize_abs, $component7);

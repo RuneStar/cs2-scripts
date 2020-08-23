@@ -67,7 +67,7 @@ if ($component6 ! null) {
 	$int15 = 10;
 }
 if ($component9 ! null) {
-	if ((((($int11 ! 1) & ($int11 ! $int14)) & ($int11 ! $int15)) & ($int11 ! 0)) & ($int11 < $int10)) {
+	if ($int11 ! 1 & $int11 ! $int14 & $int11 ! $int15 & $int11 ! 0 & $int11 < $int10) {
 		$int12, $int13 = ~skillmain_button_create(1, $int11, $component9, $int11, $component0, $int1, $int2, $obj3, $component4, $component5, $component6, $component7, $component8, $component9, $int12, $int13);
 	} else {
 		~skillmain_button_wipe($component9);

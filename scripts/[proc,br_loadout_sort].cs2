@@ -16,7 +16,7 @@ def_int $int12 = 0;
 while ($int6 < $int2) {
 	$obj8 = enum(int, namedobj, enum_2630, $intarray0($int6));
 	$int9 = oc_param($obj8, param_850);
-	if (($int9 < $int11) | (($int9 = $int11) & (compare(oc_name($obj8), $string0) <= 0))) {
+	if ($int9 < $int11 | $int9 = $int11 & compare(oc_name($obj8), $string0) <= 0) {
 		$int12 = $intarray0($int6);
 		$intarray0($int6) = $intarray0($int5);
 		$intarray0($int5) = $int12;

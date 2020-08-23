@@ -1,6 +1,6 @@
 // 1114
 [clientscript,farming_view_optab](int $int0, int $int1, component $component2, component $component3, component $component4)
-if ((($int0 ! 1) | ($int1 < 0)) | ($int1 > 5)) {
+if ($int0 ! 1 | $int1 < 0 | $int1 > 5) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

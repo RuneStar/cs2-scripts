@@ -1,6 +1,6 @@
 // 2243
 [proc,logout_layout_update](component $component0, component $component1, component $component2, component $component3, component $component4)
-if ((%varbit6272 = 0) & ((%varbit6273 = 1) | (%varbit6273 = 2))) {
+if (%varbit6272 = 0 & (%varbit6273 = 1 | %varbit6273 = 2)) {
 	if_sethide(false, $component1);
 	if (%varbit6273 = 1) {
 		if_settext("Did you enjoy playing<br>Old School RuneScape today?", $component2);

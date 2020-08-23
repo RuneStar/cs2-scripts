@@ -27,6 +27,6 @@ if (cc_find($component0, calc($int1 + 7)) = ^true) {
 if (cc_find($component0, calc($int1 + 8)) = ^true) {
 	cc_setgraphic("v2_stone_button,7");
 }
-if ((~on_mobile = false) & (cc_find($component0, calc($int1 + 9)) = ^true)) {
+if (~on_mobile = false & cc_find($component0, calc($int1 + 9)) = ^true) {
 	cc_setcolour($colour2);
 }

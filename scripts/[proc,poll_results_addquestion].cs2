@@ -1,7 +1,7 @@
 // 626
 [proc,poll_results_addquestion](int $int0, string $string0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, int $int20, int $int21, int $int22, int $int23, int $int24, int $int25, int $int26, int $int27, int $int28, int $int29, int $int30, int $int31, int $int32, int $int33, int $int34)
 def_int $int35 = if_getwidth(poll_results:11);
-def_int $int36 = calc($int35 - (3 * 2));
+def_int $int36 = calc($int35 - 3 * 2);
 def_int $int37 = %varcint43;
 def_int $int38 = %varcint49;
 cc_create(poll_results:11, ^iftype_rectangle, %varcint43);
@@ -23,7 +23,7 @@ cc_setfill(false);
 %varcint49 = calc(%varcint49 + 3);
 def_string $string1 = "";
 $string1, $string0 = ~script632($string0);
-def_int $int39 = calc((paraheight($string1, $int36, p11_full) * 10) + 2);
+def_int $int39 = calc(paraheight($string1, $int36, p11_full) * 10 + 2);
 if ($int39 < 15) {
 	$int39 = 15;
 }
@@ -38,7 +38,7 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settext($string1);
 $string1, $string0 = ~script632($string0);
-$int39 = calc((paraheight($string1, $int36, p12_full) * 12) + 5);
+$int39 = calc(paraheight($string1, $int36, p12_full) * 12 + 5);
 cc_create(poll_results:11, ^iftype_text, %varcint43);
 %varcint43 = calc(%varcint43 + 1);
 cc_setposition(3, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
@@ -128,7 +128,7 @@ $int41 = 0;
 while ($int41 < $int1) {
 	if ($int41 ! $intarray0(40)) {
 		$intarray1($int41) = interpolate(0, $intarray0($int41), 0, $int40, 2000);
-		if ((calc($intarray1($int41) % 2) = 1) & (((($int0 ! -1) | ($int1 ! 3)) | ($int41 ! 0)) | ($intarray1($int41) ! calc((75 * 20) - 1)))) {
+		if (calc($intarray1($int41) % 2) = 1 & ($int0 ! -1 | $int1 ! 3 | $int41 ! 0 | $intarray1($int41) ! calc(75 * 20 - 1))) {
 			$intarray1($int41) = calc($intarray1($int41) + 1);
 		}
 		$intarray1($int41) = calc($intarray1($int41) / 2);
@@ -154,7 +154,7 @@ while ($int41 < $int1) {
 	}
 	$int41 = calc($int41 + 1);
 }
-if (((($int0 = -1) & ($int42 > 0)) & ($intarray0(33) ! -1)) & ($intarray0(34) = -1)) {
+if ($int0 = -1 & $int42 > 0 & $intarray0(33) ! -1 & $intarray0(34) = -1) {
 	$intarray1($intarray0(33)) = calc($intarray1($intarray0(33)) + $int42);
 }
 if ($intarray0(37) ! -1) {
@@ -164,18 +164,18 @@ if ($intarray0(39) > 230) {
 	$intarray0(39) = 230;
 }
 def_int $int43 = calc($int35 - (3 + 95));
-def_int $int44 = calc((3 + $intarray0(39)) + 5);
-def_int $int45 = calc(($int43 - $int44) - 5);
+def_int $int44 = calc(3 + $intarray0(39) + 5);
+def_int $int45 = calc($int43 - $int44 - 5);
 $string0 = $string3;
 $int41 = 0;
 while ($int41 < $int1) {
 	$string1, $string0 = ~script632($string0);
 	if ($int41 = 0) {
 		$string2 = $string1;
-	} else if ((((((($int41 = 1) & (($int1 = 2) | (($int1 = 3) & ($intarray0(40) = 2)))) & ($int0 = -1)) & (compare(lowercase($string2), "yes") = 0)) & (compare(lowercase($string1), "no") = 0)) & ($intarray1(0) >= calc(75 * 10))) & (cc_find(poll_results:11, $int37) = ^true)) {
+	} else if ($int41 = 1 & ($int1 = 2 | $int1 = 3 & $intarray0(40) = 2) & $int0 = -1 & compare(lowercase($string2), "yes") = 0 & compare(lowercase($string1), "no") = 0 & $intarray1(0) >= calc(75 * 10) & cc_find(poll_results:11, $int37) = ^true) {
 		cc_setcolour(^green);
 	}
-	$int39 = calc((paraheight($string1, $intarray0(39), p11_full) * 10) + 2);
+	$int39 = calc(paraheight($string1, $intarray0(39), p11_full) * 10 + 2);
 	if ($int39 < 15) {
 		$int39 = 15;
 	}
@@ -214,7 +214,7 @@ while ($int41 < $int1) {
 		.cc_settext("<tostring(calc($intarray1($int41) / 10))>.<tostring(calc($intarray1($int41) % 10))>% (<~tostring_spacer($intarray0($int41), $string1)>)");
 		cc_create(poll_results:11, ^iftype_graphic, %varcint43);
 		%varcint43 = calc(%varcint43 + 1);
-		cc_setposition($int44, calc(%varcint49 + (($int39 - 11) / 2)), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($int44, calc(%varcint49 + ($int39 - 11) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setsize(interpolate(0, $intarray0($int41), 0, $int40, $int45), 11, ^setsize_abs, ^setsize_abs);
 		if ($int41 = $intarray0(36)) {
 			cc_setgraphic("tradebacking_dark");

@@ -7,7 +7,7 @@ def_int $int10 = 0;
 def_string $string0 = "";
 def_component $component11 = enum(int, component, enum_990, $int9);
 $string0, $int10 = ~skill_guide_subsection(%varbit4371, $int9);
-while (($component11 ! null) & (string_length($string0) > 0)) {
+while ($component11 ! null & string_length($string0) > 0) {
 	if_settext($string0, $component11);
 	if (%varbit4372 = $int9) {
 		if ($int10 = 1) {
@@ -55,7 +55,7 @@ if ($int12 >= 2) {
 cc_deleteall($component2);
 cc_deleteall($component3);
 cc_deleteall($component4);
-def_int $int13 = calc(if_getwidth($component2) - ((28 + 36) + 3));
+def_int $int13 = calc(if_getwidth($component2) - (28 + 36 + 3));
 def_int $int14 = 3;
 $int9 = 0;
 def_int $int15 = 0;

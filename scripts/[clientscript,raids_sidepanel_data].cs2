@@ -1,5 +1,5 @@
 // 1539
 [clientscript,raids_sidepanel_data](component $component0, int $int1, int $int2, component $component3)
-if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
+if (cc_find($component0, $int1) = ^true & .cc_find($component0, $int2) = ^true) {
 	~raids_sidepanel_data($component0, $component3);
 }

@@ -1,7 +1,7 @@
 // 3503
 script3503(component $component0, boolean $boolean1, boolean $boolean2)
 def_int $int3 = 0;
-if (($boolean1 = true) | ($boolean2 = true)) {
+if ($boolean1 = true | $boolean2 = true) {
 	$int3 = ~v2_stone_button_in_filled($component0);
 } else {
 	$int3 = ~v2_stone_button_filled($component0);

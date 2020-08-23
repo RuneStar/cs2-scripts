@@ -1,8 +1,8 @@
 // 2984
 script2984(component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, string $string0, graphic $graphic6, graphic $graphic7, int $int8, int $int9, int $int10, int $int11, int $int12)(int)
 def_int $int13 = 0;
-def_int $int14 = calc(($int2 - 9) + $int4);
-def_int $int15 = calc(($int3 - 9) + $int5);
+def_int $int14 = calc($int2 - 9 + $int4);
+def_int $int15 = calc($int3 - 9 + $int5);
 def_int $int16 = calc($int2 - 18);
 def_int $int17 = calc($int3 - 18);
 if ($int10 = 0) {
@@ -28,7 +28,7 @@ if ($int10 = 0) {
 }
 cc_create($component0, ^iftype_graphic, calc($int1 + 9));
 cc_setsize(calc($int2 - $int8), calc($int3 - $int9), ^setsize_abs, ^setsize_abs);
-cc_setposition(calc(($int8 / 2) + $int4), calc(($int9 / 2) + $int5), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int8 / 2 + $int4), calc($int9 / 2 + $int5), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic($graphic6);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 20);
 if ($int10 = 0) {
@@ -38,7 +38,7 @@ if ($int10 = 0) {
 		cc_setonop("script1601");
 	}
 	cc_setop(4, $string0);
-	if ((~on_mobile = true) & ($int12 = 0)) {
+	if (~on_mobile = true & $int12 = 0) {
 		cc_setonmouseover("script2988($component0, $int1, $graphic6)");
 	} else {
 		cc_setonmouseover("script2988($component0, $int1, $graphic7)");

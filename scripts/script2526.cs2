@@ -13,11 +13,11 @@ def_int $int5 = if_getheight($component1);
 def_int $int6 = if_getwidth($component1);
 def_int $int7 = if_getheight(if_getlayer($component1));
 def_int $int8 = if_getwidth(if_getlayer($component1));
-def_int $int9 = calc(($int8 - 204) + 3);
-def_int $int10 = calc(($int9 / 2) - ($int6 / 2));
-def_int $int11 = calc(($int7 - 184) + 26);
-def_int $int12 = calc(($int8 - 182) + 40);
-def_int $int13 = calc(($int12 / 2) - ($int6 / 2));
+def_int $int9 = calc($int8 - 204 + 3);
+def_int $int10 = calc($int9 / 2 - $int6 / 2);
+def_int $int11 = calc($int7 - 184 + 26);
+def_int $int12 = calc($int8 - 182 + 40);
+def_int $int13 = calc($int12 / 2 - $int6 / 2);
 if ($int5 >= $int11) {
 	$int4 = 1;
 }
@@ -28,12 +28,12 @@ if (~script2519 = 1) {
 	$int3 = 1;
 }
 def_int $int14 = calc(($int7 - $int5) / 2);
-if (((%varcint41 = 1337) & (if_hassub(interface_162:561) = false)) & (%varbit6538 = 1)) {
-	$int13 = calc((($int12 - 18) / 2) - ($int6 / 2));
+if (%varcint41 = 1337 & if_hassub(interface_162:561) = false & %varbit6538 = 1) {
+	$int13 = calc(($int12 - 18) / 2 - $int6 / 2);
 	if_setposition(~max(0, $int13), 0, ^setpos_abs_left, ^setpos_abs_top, $component1);
 	return(3);
 }
-if ((calc(($int6 + (204 * 2)) + 10) <= $int8) & ($int4 = 0)) {
+if (calc($int6 + 204 * 2 + 10) <= $int8 & $int4 = 0) {
 	if_setposition(0, ~min(64, $int14), ^setpos_abs_centre, ^setpos_abs_centre, $component1);
 	return(0);
 }
@@ -46,7 +46,7 @@ if ($int2 = 1) {
 	return(1);
 }
 if ($int3 = 1) {
-	if (($int4 = 1) & (calc((($int13 + $int6) + 204) + 4) <= $int8)) {
+	if ($int4 = 1 & calc($int13 + $int6 + 204 + 4) <= $int8) {
 		if_setposition(~max(0, $int13), ~min(64, $int14), ^setpos_abs_left, ^setpos_abs_centre, $component1);
 	} else {
 		if_setposition(~max(0, $int10), ~min(64, $int14), ^setpos_abs_left, ^setpos_abs_centre, $component1);

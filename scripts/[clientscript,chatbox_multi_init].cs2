@@ -66,7 +66,7 @@ if ($int2 < 110) {
 if ($int2 > 350) {
 	return;
 }
-def_int $int3 = calc(((479 - ($int2 + 111)) / 2) - 57);
+def_int $int3 = calc((479 - ($int2 + 111)) / 2 - 57);
 if ($int3 < 2) {
 	$int3 = 2;
 }

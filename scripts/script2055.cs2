@@ -43,9 +43,9 @@ if ($boolean2 = true) {
 	} else {
 		~skillmulti_wipebutton(interface_270:9);
 	}
-	if ((((%varcint201 = 1) | (%varcint201 = 5)) | (%varcint201 = 10)) | (%varcint201 = $int1)) {
+	if (%varcint201 = 1 | %varcint201 = 5 | %varcint201 = 10 | %varcint201 = $int1) {
 		~skillmulti_wipebutton(interface_270:10);
-	} else if ((%varcint201 < 1) | (%varcint201 > $int1)) {
+	} else if (%varcint201 < 1 | %varcint201 > $int1) {
 		~skillmulti_wipebutton(interface_270:10);
 	} else if (%varcint200 = %varcint201) {
 		$int3 = ~skillmulti_quantitybutton_setup(1, %varcint201, interface_270:10, $int0, $int1, $int3);
@@ -54,7 +54,7 @@ if ($boolean2 = true) {
 	}
 	if ($int1 > 2) {
 		if_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_centre, interface_270:11);
-		$int3 = calc(($int3 + if_getwidth(interface_270:11)) + 5);
+		$int3 = calc($int3 + if_getwidth(interface_270:11) + 5);
 		~skillmulti_quantitybutton_draw(false, $string0, interface_270:11);
 		if_setonmouseover("skillmulti_quantitybutton_draw(true, $string0, event_com)", interface_270:11);
 		if_setonmouseleave("skillmulti_quantitybutton_draw(false, $string0, event_com)", interface_270:11);

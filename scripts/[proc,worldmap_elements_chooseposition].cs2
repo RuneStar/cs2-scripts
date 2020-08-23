@@ -12,6 +12,6 @@ def_int $int9 = if_getwidth($component2);
 def_int $int10 = if_getheight($component2);
 $int7 = scale($int9, calc($int5 - $int6), calc($int7 - $int6));
 $int8 = scale($int10, calc($int3 - $int4), calc($int8 - $int4));
-$int7 = calc($int7 - ($int9 / 2));
-$int8 = calc(($int10 / 2) - $int8);
+$int7 = calc($int7 - $int9 / 2);
+$int8 = calc($int10 / 2 - $int8);
 return($int7, $int8);

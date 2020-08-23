@@ -16,12 +16,12 @@ if ($int12 > if_getheight($component2)) {
 }
 if_settext(tostring($int13), $component6);
 cc_deleteall($component8);
-def_int $int20 = calc((if_getwidth($component8) - (40 * (9 + 1))) / 2);
+def_int $int20 = calc((if_getwidth($component8) - 40 * (9 + 1)) / 2);
 def_int $int21 = 0;
 while ($int21 <= 9) {
 	cc_create($component8, ^iftype_graphic, $int21);
 	cc_setsize(41, 40, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc(($int21 * 40) + $int20), 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int21 * 40 + $int20), 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settiling(false);
 	$int21 = calc($int21 + 1);
 }

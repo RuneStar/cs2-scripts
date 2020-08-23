@@ -1,6 +1,6 @@
 // 613
 [clientscript,poll_clicklink](component $component0, int $int1, int $int2, string $string0, string $string1)
-if ((cc_find($component0, $int1) = ^true) & (.cc_find($component0, $int2) = ^true)) {
+if (cc_find($component0, $int1) = ^true & .cc_find($component0, $int2) = ^true) {
 	.cc_setcolour(^white);
 	.cc_settext("<u=ffffff><$string0></u>");
 	cc_setontimer("poll_resetlink($component0, $int1, $int2, $string0, $string1, calc(clientclock + 25))");

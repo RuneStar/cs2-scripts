@@ -17,7 +17,7 @@ if ($int4 < 0) {
 } else if ($int4 > 100) {
 	$int4 = 100;
 }
-def_int $int5 = calc($int0 + ((($int1 - $int0) * $int4) / 100));
-cam_setfollowheight(calc(25 + ((25 * $int5) / 256)));
+def_int $int5 = calc($int0 + ($int1 - $int0) * $int4 / 100);
+cam_setfollowheight(calc(25 + 25 * $int5 / 256));
 %varcint73, %varcint74 = $int0, $int1;
 ~zoom_position_slider;

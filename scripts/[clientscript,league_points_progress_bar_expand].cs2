@@ -6,7 +6,7 @@ if (cc_find($component0, 1) = ^true) {
 }
 def_int $int3 = 0;
 if (cc_find($component0, 2) = ^true) {
-	if ((cc_getwidth >= $int2) | (cc_getwidth >= $int1)) {
+	if (cc_getwidth >= $int2 | cc_getwidth >= $int1) {
 		if_setontimer(null, $component0);
 		return;
 	}

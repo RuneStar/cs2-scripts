@@ -13,7 +13,7 @@ def_int $int7 = 4;
 def_int $int8 = 7;
 def_int $int9 = 20;
 def_int $int10 = 0;
-def_int $int11 = calc((3 * $int3) + (2 * $int7));
+def_int $int11 = calc(3 * $int3 + 2 * $int7);
 def_int $int12 = 50;
 def_int $int13 = 44;
 if (~on_mobile = true) {
@@ -24,7 +24,7 @@ if (~on_mobile = true) {
 	$int8 = 4;
 	$int9 = 5;
 	$int13 = $int2;
-	if ((%varbit357 = 18) | (%varbit357 = 21)) {
+	if (%varbit357 = 18 | %varbit357 = 21) {
 		$int4 = calc($int2 - 6);
 	} else {
 		$int4 = calc($int2 - 2);
@@ -34,17 +34,17 @@ if (~on_mobile = true) {
 } else {
 	if_setsize(190, 28, ^setsize_abs, ^setsize_abs, interface_593:2);
 }
-if ((%varbit357 = 18) | (%varbit357 = 21)) {
+if (%varbit357 = 18 | %varbit357 = 21) {
 	if_sethide(false, interface_593:20);
 	$intarray0(0) = $int9;
 	$intarray0(1) = $int9;
 	$intarray0(2) = $int9;
 	$intarray0(3) = $int9;
 	$intarray1(0) = $int0;
-	$intarray1(1) = calc(($int0 + $int3) + $int7);
-	$intarray1(2) = calc($int0 + (2 * ($int3 + $int7)));
-	$intarray1(3) = calc($int0 + (3 * ($int3 + $int7)));
-	$int10 = calc($int0 + (3 * ($int3 + $int7)));
+	$intarray1(1) = calc($int0 + $int3 + $int7);
+	$intarray1(2) = calc($int0 + 2 * ($int3 + $int7));
+	$intarray1(3) = calc($int0 + 3 * ($int3 + $int7));
+	$int10 = calc($int0 + 3 * ($int3 + $int7));
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, interface_593:4);
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, interface_593:8);
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, interface_593:12);
@@ -65,14 +65,14 @@ if ((%varbit357 = 18) | (%varbit357 = 21)) {
 } else {
 	if_sethide(true, interface_593:20);
 	$intarray0(0) = $int9;
-	$intarray0(1) = calc(($int9 + $int1) + $int6);
+	$intarray0(1) = calc($int9 + $int1 + $int6);
 	$intarray0(2) = $int9;
-	$intarray0(3) = calc(($int9 + $int1) + $int6);
+	$intarray0(3) = calc($int9 + $int1 + $int6);
 	$intarray1(0) = $int0;
 	$intarray1(1) = $int0;
-	$intarray1(2) = calc(($int0 + $int2) + $int8);
-	$intarray1(3) = calc(($int0 + $int2) + $int8);
-	$int10 = calc($int0 + (2 * ($int2 + $int8)));
+	$intarray1(2) = calc($int0 + $int2 + $int8);
+	$intarray1(3) = calc($int0 + $int2 + $int8);
+	$int10 = calc($int0 + 2 * ($int2 + $int8));
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, interface_593:4);
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, interface_593:8);
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, interface_593:12);
@@ -96,12 +96,12 @@ if ((%varbit357 = 18) | (%varbit357 = 21)) {
 	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_centre, interface_593:15);
 	if_setposition(0, 13, ^setpos_abs_centre, ^setpos_abs_centre, interface_593:19);
 }
-if_setsize(calc($int6 + (2 * $int1)), $int13, ^setsize_abs, ^setsize_abs, interface_593:30);
+if_setsize(calc($int6 + 2 * $int1), $int13, ^setsize_abs, ^setsize_abs, interface_593:30);
 if_setposition(0, $int10, ^setpos_abs_centre, ^setpos_abs_top, interface_593:30);
-if_setsize(calc($int6 + (2 * $int1)), $int4, ^setsize_abs, ^setsize_abs, interface_593:35);
-if_setposition(0, calc(($int10 + $int13) + $int8), ^setpos_abs_centre, ^setpos_abs_top, interface_593:35);
+if_setsize(calc($int6 + 2 * $int1), $int4, ^setsize_abs, ^setsize_abs, interface_593:35);
+if_setposition(0, calc($int10 + $int13 + $int8), ^setpos_abs_centre, ^setpos_abs_top, interface_593:35);
 if_setsize($int1, $int11, ^setsize_abs, ^setsize_abs, interface_593:20);
-if_setposition(calc(($int9 + $int1) + $int6), $int0, ^setpos_abs_left, ^setpos_abs_top, interface_593:20);
+if_setposition(calc($int9 + $int1 + $int6), $int0, ^setpos_abs_left, ^setpos_abs_top, interface_593:20);
 if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, interface_593:26);
 if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, interface_593:27);
 if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, interface_593:21);

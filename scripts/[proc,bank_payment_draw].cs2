@@ -3,9 +3,9 @@
 def_int $int3 = if_getheight($component0);
 def_int $int4 = if_getwidth($component0);
 def_int $int5 = 44;
-def_int $int6 = calc(($int3 - (5 * $int5)) / 2);
-def_int $int7 = calc(($int4 - (7 * $int5)) / 2);
-if (($int6 < 0) | ($int7 < 0)) {
+def_int $int6 = calc(($int3 - 5 * $int5) / 2);
+def_int $int7 = calc(($int4 - 7 * $int5) / 2);
+if ($int6 < 0 | $int7 < 0) {
 	return;
 }
 def_int $int8 = 1;
@@ -34,13 +34,13 @@ while ($int8 <= 14) {
 	}
 	$int11 = coordz($coord10);
 	$int12 = coordx($coord10);
-	$int13 = calc($int7 + (($int12 - 1) * $int5));
-	$int14 = calc($int6 + (($int11 - 1) * $int5));
+	$int13 = calc($int7 + ($int12 - 1) * $int5);
+	$int14 = calc($int6 + ($int11 - 1) * $int5);
 	if_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top, $component9);
 	if_setsize($int5, $int5, ^setsize_abs, ^setsize_abs, $component9);
 	$obj17 = enum(int, namedobj, enum_982, $int8);
 	$int18 = inv_total(inv, $obj17);
-	if ((inv_total(inv, rune_pouch_12791) > 0) | (inv_total(inv, rune_pouch_l_24416) > 0)) {
+	if (inv_total(inv, rune_pouch_12791) > 0 | inv_total(inv, rune_pouch_l_24416) > 0) {
 		if (%varbit29 = $int8) {
 			$int18 = calc($int18 + %varbit1624);
 		} else if (%varbit1622 = $int8) {
@@ -49,7 +49,7 @@ while ($int8 <= 14) {
 			$int18 = calc($int18 + %varbit1626);
 		}
 	}
-	if (($int18 >= 20) | ($boolean2 = false)) {
+	if ($int18 >= 20 | $boolean2 = false) {
 		$int16 = 1;
 	}
 	cc_deleteall($component9);

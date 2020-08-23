@@ -42,7 +42,7 @@ if (~on_mobile = true) {
 	.cc_settextshadow(true);
 	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	.cc_settext($string0);
-	if ((%var261 >= $int1) & (%var262 >= $int2)) {
+	if (%var261 >= $int1 & %var262 >= $int2) {
 		.cc_setcolour(0xff981f);
 	} else {
 		.cc_setcolour(0x9f9f9f);
@@ -50,7 +50,7 @@ if (~on_mobile = true) {
 } else {
 	cc_setmodelangle(0, 0, 512, 0, 0, 200);
 }
-if ((%var261 >= $int1) & (%var262 >= $int2)) {
+if (%var261 >= $int1 & %var262 >= $int2) {
 	cc_setmodel($model4);
 } else {
 	cc_setmodel($model3);

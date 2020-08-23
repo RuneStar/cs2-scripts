@@ -5,7 +5,7 @@
 def_component $component7 = if_getlayer($component0);
 if_setposition(calc(if_getx($component7) + 40), calc(if_gety($component7) + 22), ^setpos_abs_left, ^setpos_abs_top, $component1);
 if (calc(if_gety($component1) + if_getheight($component1)) > if_getheight($component2)) {
-	if_setposition(if_getx($component1), calc((if_gety($component7) + 6) - if_getheight($component1)), ^setpos_abs_left, ^setpos_abs_top, $component1);
+	if_setposition(if_getx($component1), calc(if_gety($component7) + 6 - if_getheight($component1)), ^setpos_abs_left, ^setpos_abs_top, $component1);
 }
 if (~on_mobile = true) {
 	if_setgraphic("mobile_stones,1", $component6);

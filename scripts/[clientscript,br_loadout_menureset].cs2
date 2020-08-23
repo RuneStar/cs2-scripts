@@ -3,7 +3,7 @@
 if (clientclock < $int0) {
 	return;
 }
-if ((cc_find($component1, $int2) = ^true) & (.cc_find($component1, $int3) = ^true)) {
+if (cc_find($component1, $int2) = ^true & .cc_find($component1, $int3) = ^true) {
 	cc_setonmouserepeat("script1015(event_com, $int3, $colour4, $int5)");
 	cc_setonmouseleave("script1015(event_com, $int3, $colour6, $int7)");
 	.cc_setcolour($colour6);

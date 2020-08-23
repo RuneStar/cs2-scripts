@@ -2,7 +2,7 @@
 [proc,rune_pouch_drawpouch_slot](namedobj $namedobj0, int $int1)
 cc_clearops;
 cc_setontimer(null);
-if (($namedobj0 ! null) & ($int1 > 0)) {
+if ($namedobj0 ! null & $int1 > 0) {
 	cc_settrans(0);
 	cc_setobject($namedobj0, $int1);
 	cc_setopbase("<col=ff9040><oc_name($namedobj0)></col>");

@@ -1,7 +1,7 @@
 // 688
 [clientscript,trail_slidepuzzle_init](component $component0, component $component1, component $component2)
-def_int $int3 = calc(37 + ((if_getwidth($component0) - (5 * 37)) / (5 - 1)));
-def_int $int4 = calc(37 + ((if_getheight($component0) - (5 * 37)) / (5 - 1)));
+def_int $int3 = calc(37 + (if_getwidth($component0) - 5 * 37) / (5 - 1));
+def_int $int4 = calc(37 + (if_getheight($component0) - 5 * 37) / (5 - 1));
 def_int $int5 = pow(5, 2);
 def_int $int6 = calc($int5 - 1);
 cc_deleteall($component0);
@@ -9,7 +9,7 @@ def_int $int7 = 0;
 while ($int7 < $int5) {
 	cc_create($component0, ^iftype_text, $int7);
 	cc_setsize(37, 37, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc(($int7 % 5) * $int3), calc(($int7 / 5) * $int4), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int7 % 5 * $int3), calc($int7 / 5 * $int4), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setopbase("<col=ff9040>Sliding piece</col>");
 	$int7 = calc($int7 + 1);
 }

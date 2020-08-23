@@ -22,7 +22,7 @@ if (%varbit9328 = 1) {
 		$int30 = enum_getoutputcount($enum28);
 		while ($int29 < $int30) {
 			$struct27 = enum(int, struct, $enum28, $int29);
-			if (($struct27 ! null) & (struct_param($struct27, param_806) = %var2358)) {
+			if ($struct27 ! null & struct_param($struct27, param_806) = %var2358) {
 				$int29 = $int30;
 			}
 			$int29 = calc($int29 + 1);

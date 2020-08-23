@@ -1,5 +1,5 @@
 // 2912
 [proc,gauntlet_map_player_update]
-def_int $int0 = calc((%varbit9289 * 35) + 1);
-def_int $int1 = calc((%varbit9290 * 35) + 1);
+def_int $int0 = calc(%varbit9289 * 35 + 1);
+def_int $int1 = calc(%varbit9290 * 35 + 1);
 if_setposition($int0, $int1, ^setpos_abs_left, ^setpos_abs_bottom, interface_638:54);

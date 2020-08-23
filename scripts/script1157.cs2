@@ -1,10 +1,10 @@
 // 1157
 script1157(component $component0, int $int1, int $int2)
 def_int $int3 = inv_size(inv_563);
-if (($int1 < 0) | ($int1 >= $int3)) {
+if ($int1 < 0 | $int1 >= $int3) {
 	return;
 }
-if (($int2 < 0) | ($int2 >= $int3)) {
+if ($int2 < 0 | $int2 >= $int3) {
 	return;
 }
 def_obj $obj4 = inv_getobj(inv_563, $int1);

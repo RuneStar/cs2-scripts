@@ -91,13 +91,13 @@ while ($int18 < 4) {
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0x9f9f9f);
 	cc_setfill(false);
-	cc_settrans(calc(100 + ($int18 * 10)));
+	cc_settrans(calc(100 + $int18 * 10));
 	$int18 = calc($int18 + 1);
 }
-def_int $int22 = calc(((12 + parawidth(~gravestone_generic_parsecoffer(^max_32bit_int), 512, p11_full)) + 2) + 10);
-def_int $int23 = calc((14 + ~max((32 + 4), 42)) + 2);
+def_int $int22 = calc(12 + parawidth(~gravestone_generic_parsecoffer(^max_32bit_int), 512, p11_full) + 2 + 10);
+def_int $int23 = calc(14 + ~max(32 + 4, 42) + 2);
 def_int $int24 = 109;
-def_int $int25 = calc(((40 + $int23) + $int24) + 10);
+def_int $int25 = calc(40 + $int23 + $int24 + 10);
 if (%varcint395 < $int22) {
 	%varcint395 = scale(2, 3, 512);
 }

@@ -10,8 +10,8 @@ def_int $int7 = -1;
 def_int $int8 = 0;
 def_int $int9 = 0;
 while ($int6 < $int2) {
-	$int8 = calc((enum(int, int, enum_1267, $intarray0($int6)) * 1000) + $intarray0($int6));
-	$int9 = calc((enum(int, int, enum_1267, $int4) * 1000) + $int4);
+	$int8 = calc(enum(int, int, enum_1267, $intarray0($int6)) * 1000 + $intarray0($int6));
+	$int9 = calc(enum(int, int, enum_1267, $int4) * 1000 + $int4);
 	if ($int8 <= $int9) {
 		$int7 = $intarray0($int6);
 		$intarray0($int6) = $intarray0($int5);

@@ -1,5 +1,5 @@
 // 10
 [clientscript,wom_item_move](int $int0, component $component1, component $component2)
-if (($component2 = interface_371:22) & (cc_find($component1, $int0) = ^true)) {
+if ($component2 = interface_371:22 & cc_find($component1, $int0) = ^true) {
 	~chatdefault_opt_item;
 }

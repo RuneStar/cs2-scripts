@@ -4,9 +4,9 @@ def_int $int8 = if_getwidth($component0);
 def_int $int9 = ~max(1, calc($int8 / (36 + 10)));
 def_int $int10 = 0;
 if ($int9 > 1) {
-	$int10 = calc(($int8 - ($int9 * 36)) / ($int9 - 1));
+	$int10 = calc(($int8 - $int9 * 36) / ($int9 - 1));
 }
-def_int $int11 = calc($int8 - (($int9 * 36) + (($int9 - 1) * $int10)));
+def_int $int11 = calc($int8 - ($int9 * 36 + ($int9 - 1) * $int10));
 def_int $int12 = calc(($int11 + 1) / 2);
 def_int $int13 = 0;
 def_obj $obj14 = null;
@@ -21,8 +21,8 @@ while ($int18 < 120) {
 			cc_sethide(false);
 			cc_setobject($obj14, inv_getnum(inv_636, $int18));
 			cc_setopbase("<col=ff9040><oc_name($obj14)></col>");
-			$int13 = calc(($int15 / $int9) * (32 + 10));
-			cc_setposition(calc($int12 + (($int15 % $int9) * (36 + $int10))), $int13, ^setpos_abs_left, ^setpos_abs_top);
+			$int13 = calc($int15 / $int9 * (32 + 10));
+			cc_setposition(calc($int12 + $int15 % $int9 * (36 + $int10)), $int13, ^setpos_abs_left, ^setpos_abs_top);
 			if (%var262 = $int18) {
 				cc_setoutline(2);
 				$obj16, $int17 = $obj14, inv_total(inv_636, $obj14);

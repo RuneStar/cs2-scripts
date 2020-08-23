@@ -4,20 +4,20 @@ cc_deleteall($component0);
 def_int $int6 = 0;
 def_int $int7 = 0;
 if (if_getscrollwidth($component0) > 0) {
-	$int6 = calc((if_getscrollwidth($component0) - (36 * $int2)) / ($int2 - 1));
+	$int6 = calc((if_getscrollwidth($component0) - 36 * $int2) / ($int2 - 1));
 } else {
-	$int6 = calc((if_getwidth($component0) - (36 * $int2)) / ($int2 - 1));
+	$int6 = calc((if_getwidth($component0) - 36 * $int2) / ($int2 - 1));
 }
 if (if_getscrollheight($component0) > 0) {
-	$int7 = calc((if_getscrollheight($component0) - (32 * $int3)) / ($int3 - 1));
+	$int7 = calc((if_getscrollheight($component0) - 32 * $int3) / ($int3 - 1));
 } else {
-	$int7 = calc((if_getheight($component0) - (32 * $int3)) / ($int3 - 1));
+	$int7 = calc((if_getheight($component0) - 32 * $int3) / ($int3 - 1));
 }
 def_int $int8 = 0;
 while ($int8 <= calc($int2 * $int3)) {
 	cc_create($component0, ^iftype_graphic, $int8);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc((36 + $int6) * ($int8 % $int2)), calc(($int8 / $int2) * (32 + $int7)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc((36 + $int6) * ($int8 % $int2)), calc($int8 / $int2 * (32 + $int7)), ^setpos_abs_left, ^setpos_abs_top);
 	~script154($inv1, $int8, $component0, $int8, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
 	$int8 = calc($int8 + 1);
 }

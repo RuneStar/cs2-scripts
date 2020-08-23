@@ -6,7 +6,7 @@ if ($int3 <= 0) {
 }
 def_int $int4 = 0;
 if ($int3 > 0) {
-	$int4 = calc(((if_getheight($component0) - 32) * if_getheight($component1)) / $int3);
+	$int4 = calc((if_getheight($component0) - 32) * if_getheight($component1) / $int3);
 } else {
 	$int4 = calc(if_getheight($component0) - 32);
 }

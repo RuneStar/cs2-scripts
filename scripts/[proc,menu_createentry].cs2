@@ -1,6 +1,6 @@
 // 218
 [proc,menu_createentry](string $string0, component $component0, component $component1, int $int2, int $int3, int $int4, int $int5)(int, int)
-def_int $int6 = calc((paraheight($string0, $int2, p12_full) * 14) + 2);
+def_int $int6 = calc(paraheight($string0, $int2, p12_full) * 14 + 2);
 if (~on_mobile = true) {
 	$int6 = scale(4, 3, $int6);
 }
@@ -19,7 +19,7 @@ cc_settext($string0);
 def_string $string1 = "";
 def_string $string2 = "";
 $int3 = calc($int3 + 1);
-if (($int5 = 1) & ($int3 < 36)) {
+if ($int5 = 1 & $int3 < 36) {
 	if ($int3 < 10) {
 		$string1 = tostring($int3);
 	} else {
