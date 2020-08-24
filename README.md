@@ -3309,20 +3309,20 @@
 [**3308**](scripts/script3308.cs2)  
 [**3309**](scripts/script3309.cs2)  
 [**3310**](scripts/script3310.cs2)  
-[**3311**](scripts/script3311.cs2)  
-[**3312**](scripts/script3312.cs2)  
-[**3313**](scripts/script3313.cs2)  
-[**3314**](scripts/script3314.cs2)  
-[**3315**](scripts/script3315.cs2)  
-[**3316**](scripts/script3316.cs2)  
-[**3317**](scripts/script3317.cs2)  
-[**3318**](scripts/script3318.cs2)  
-[**3319**](scripts/script3319.cs2)  
-[**3320**](scripts/script3320.cs2)  
-[**3321**](scripts/script3321.cs2)  
-[**3322**](scripts/script3322.cs2)  
-[**3323**](scripts/script3323.cs2)  
-[**3324**](scripts/script3324.cs2)  
+[**3311**](scripts/[clientscript,nightmare_totems_init].cs2) `[clientscript,nightmare_totems_init]`  
+[**3312**](scripts/[clientscript,nightmare_totem_hud_fade_in].cs2) `[clientscript,nightmare_totem_hud_fade_in]`  
+[**3313**](scripts/[proc,nightmare_totem_hud_fade_in].cs2) `[proc,nightmare_totem_hud_fade_in]`  
+[**3314**](scripts/[proc,nightmare_totem_hud_pos].cs2) `[proc,nightmare_totem_hud_pos]`  
+[**3315**](scripts/[clientscript,nightmare_totem_hud_update].cs2) `[clientscript,nightmare_totem_hud_update]`  
+[**3316**](scripts/[proc,nightmare_totem_hud_update].cs2) `[proc,nightmare_totem_hud_update]`  
+[**3317**](scripts/[clientscript,nightmare_totem_hud_update_bar].cs2) `[clientscript,nightmare_totem_hud_update_bar]`  
+[**3318**](scripts/[proc,nightmare_totem_hud_update_bar].cs2) `[proc,nightmare_totem_hud_update_bar]`  
+[**3319**](scripts/[clientscript,nightmare_totem_hud_bar_fadeout].cs2) `[clientscript,nightmare_totem_hud_bar_fadeout]`  
+[**3320**](scripts/[proc,nightmare_totem_hud_bar_fadeout].cs2) `[proc,nightmare_totem_hud_bar_fadeout]`  
+[**3321**](scripts/[clientscript,nightmare_totem_hud_bar_fadein].cs2) `[clientscript,nightmare_totem_hud_bar_fadein]`  
+[**3322**](scripts/[proc,nightmare_totem_hud_bar_fadein].cs2) `[proc,nightmare_totem_hud_bar_fadein]`  
+[**3323**](scripts/[clientscript,nightmare_totem_hud_fade_out].cs2) `[clientscript,nightmare_totem_hud_fade_out]`  
+[**3324**](scripts/[proc,nightmare_totem_hud_fade_out].cs2) `[proc,nightmare_totem_hud_fade_out]`  
 [**3325**](scripts/[proc,bonds_hide].cs2) `[proc,bonds_hide]`  
 [**3326**](scripts/script3326.cs2)  
 [**3327**](scripts/script3327.cs2)  

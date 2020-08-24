@@ -1,5 +1,5 @@
 // 3316
-script3316(component $component0, component $component1, int $int2, int $int3, component $component4, component $component5, int $int6, int $int7, component $component8, component $component9, int $int10, int $int11, component $component12, component $component13, int $int14, int $int15, int $int16)
+[proc,nightmare_totem_hud_update](component $component0, component $component1, int $int2, int $int3, component $component4, component $component5, int $int6, int $int7, component $component8, component $component9, int $int10, int $int11, component $component12, component $component13, int $int14, int $int15, int $int16)
 def_int $int17 = if_getwidth($component1);
 def_int $int18 = if_getwidth($component0);
 if ($int2 ! -1 & $int3 ! -1) {
@@ -16,7 +16,7 @@ if ($int2 ! -1 & $int3 ! -1) {
 			if_setcolour(^white, $component1);
 		}
 	} else {
-		if_setontimer("script3317($component1, $int18, $component0)", $component0);
+		if_setontimer("nightmare_totem_hud_update_bar($component1, $int18, $component0)", $component0);
 	}
 }
 def_int $int19 = if_getwidth($component5);
@@ -35,7 +35,7 @@ if ($int6 ! -1 & $int7 ! -1) {
 			if_setcolour(^white, $component5);
 		}
 	} else {
-		if_setontimer("script3317($component5, $int20, $component4)", $component4);
+		if_setontimer("nightmare_totem_hud_update_bar($component5, $int20, $component4)", $component4);
 	}
 }
 def_int $int21 = if_getwidth($component9);
@@ -54,7 +54,7 @@ if ($int10 ! -1 & $int11 ! -1) {
 			if_setcolour(^white, $component9);
 		}
 	} else {
-		if_setontimer("script3317($component9, $int22, $component8)", $component8);
+		if_setontimer("nightmare_totem_hud_update_bar($component9, $int22, $component8)", $component8);
 	}
 }
 def_int $int23 = if_getwidth($component13);
@@ -73,6 +73,6 @@ if ($int14 ! -1 & $int15 ! -1) {
 			if_setcolour(^white, $component13);
 		}
 	} else {
-		if_setontimer("script3317($component13, $int24, $component12)", $component12);
+		if_setontimer("nightmare_totem_hud_update_bar($component13, $int24, $component12)", $component12);
 	}
 }

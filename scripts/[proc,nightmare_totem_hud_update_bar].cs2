@@ -1,5 +1,5 @@
 // 3318
-script3318(component $component0, int $int1, component $component2)
+[proc,nightmare_totem_hud_update_bar](component $component0, int $int1, component $component2)
 def_int $int3 = if_getwidth($component0);
 if ($int3 = $int1) {
 	if_setsize($int1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
