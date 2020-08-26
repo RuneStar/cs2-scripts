@@ -43,7 +43,7 @@ def_string $string10 = "";
 def_string $string11 = "";
 def_string $string12 = "";
 def_int $int12 = -1;
-def_boolean $boolean13 = false;
+def_int $int13 = 0;
 def_int $int14 = 0;
 while ($int9 ! -1 & $component8 ! null) {
 	$chattype10, $int11, $string9, $string10, $string11, $int14 = chat_gethistory_byuid($int9);
@@ -126,19 +126,10 @@ while ($int9 ! -1 & $component8 ! null) {
 				}
 			case ^chattype_broadcast :
 				if (string_length($string12) > 0 & $int12 ! -1) {
-					$boolean13 = enum(int, boolean, enum_2761, $int12);
-					if (clienttype ! ^clienttype_ios) {
-						$boolean13 = false;
-					}
-					if ($boolean13 = false) {
-						if_setop(6, "Open", $component8);
-						if_setop(7, "Check", $component8);
-						if_setonmouserepeat("chat_recol(if_getlayer($component8), $int7, 0x3030ff)", $component8);
-						if_setonmouseleave("chat_recol(if_getlayer($component8), $int7, $colour3)", $component8);
-					} else {
-						if_setonmouserepeat(null, $component8);
-						if_setonmouseleave(null, $component8);
-					}
+					if_setop(6, "Open", $component8);
+					if_setop(7, "Check", $component8);
+					if_setonmouserepeat("chat_recol(if_getlayer($component8), $int7, 0x3030ff)", $component8);
+					if_setonmouseleave("chat_recol(if_getlayer($component8), $int7, $colour3)", $component8);
 				} else {
 					if_setonmouserepeat(null, $component8);
 					if_setonmouseleave(null, $component8);

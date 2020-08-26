@@ -13,6 +13,8 @@ if (enum(int, boolean, enum_892, $chattype0) = true & $chattype0 ! ^chattype_pla
 	return(1);
 }
 def_int $int4 = -1;
+def_string $string3 = "";
+def_int $int5 = -1;
 switch_int ($chattype0) {
 	case ^chattype_publicchat, ^chattype_modchat :
 		if ($int1 < %varcint199) {
@@ -128,6 +130,10 @@ switch_int ($chattype0) {
 		return(0);
 	case ^chattype_broadcast :
 		if ($int1 < %varcint202) {
+			return(0);
+		}
+		$string1, $string3, $int5 = ~chat_broadcast_parseurl($string1);
+		if ($int5 = 4 & reboottimer > 0) {
 			return(0);
 		}
 }
