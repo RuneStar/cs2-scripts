@@ -1,0 +1,17 @@
+// 3547
+script3547(component $component0, component $component1, component $component2, component $component3, int $int4, int $int5, int $int6)
+def_int $int7 = if_getheight($component0);
+if ($int7 = $int6) {
+	return;
+}
+def_int $int8 = ~min($int5, calc($int7 - 10));
+def_int $int9 = if_getscrollheight($component2);
+if_setsize(500, $int8, ^setsize_abs, ^setsize_abs, $component1);
+if ($int4 > if_getheight($component2)) {
+	if_setscrollsize(0, $int4, $component2);
+} else {
+	if_setscrollsize(0, 0, $component2);
+}
+~scrollbar_vertical_rebuild($component3, $component2);
+~scrollbar_resize($component3, $component2, %varcint58);
+if_setontimer("script3546($component0, $component1, $component2, $component3, $int4, $int5, $int7)", $component0);

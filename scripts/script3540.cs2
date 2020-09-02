@@ -1,0 +1,14 @@
+// 3540
+script3540(namedobj $namedobj0)(int)
+def_enum $enum1 = enum(obj, enum, enum_3077, $namedobj0);
+if ($enum1 = null) {
+	return(~script3541($namedobj0));
+}
+def_int $int2 = enum_getoutputcount($enum1);
+def_int $int3 = 0;
+def_int $int4 = 0;
+while ($int4 < $int2) {
+	$int3 = calc($int3 + ~script3541(enum(int, namedobj, $enum1, $int4)));
+	$int4 = calc($int4 + 1);
+}
+return($int3);

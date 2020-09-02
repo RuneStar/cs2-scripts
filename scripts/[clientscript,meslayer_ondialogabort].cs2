@@ -1,5 +1,6 @@
 // 138
 [clientscript,meslayer_ondialogabort]
-if (%varcint5 = 7 | %varcint5 = 8 | %varcint5 = 9 | %varcint5 = 11 | %varcint5 = 14 | %varcint5 = 15 | %varcint5 = 16) {
-	~meslayer_close(1, 1);
+switch_int (%varcint5) {
+	case 7, 8, 9, 11, 14, 15, 16, 17 :
+		~meslayer_close(1, 1);
 }

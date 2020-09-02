@@ -2,13 +2,14 @@
 script222(string $string0)
 def_string $string1 = escape(%varcstring359);
 def_int $int0 = 12;
-if (%varcint5 = 6 | %varcint5 = 9 | %varcint5 = 11 | %varcint5 = 13) {
-	$int0 = 80;
-} else if (%varcint5 = 7 | %varcint5 = 12) {
-	$int0 = 10;
-} else if (%varcint5 = 14) {
-	$int0 = 25;
-	$string1, %varcint66 = append("<col=000000><$string0></col> ", $string1), 20;
+switch_int (%varcint5) {
+	case 6, 9, 11, 13 :
+		$int0 = 80;
+	case 7, 12 :
+		$int0 = 10;
+	case 14, 17 :
+		$int0 = 25;
+		$string1, %varcint66 = append("<col=000000><$string0></col> ", $string1), 20;
 }
 if (string_length(%varcstring359) < $int0) {
 	$string1 = append($string1, "*");

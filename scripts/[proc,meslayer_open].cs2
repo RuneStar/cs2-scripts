@@ -12,7 +12,7 @@ if (~on_mobile = true) {
 			if_setposition(0, if_gety(interface_162:44), ^setpos_abs_centre, ^setpos_abs_top, interface_162:41);
 			if_setsize(20, if_gety(interface_162:44), ^setsize_minus, ^setsize_minus, interface_162:41);
 			if_setonclick("meslayer_keyboard_show", interface_162:41);
-		case 14 :
+		case 14, 17 :
 			if_sethide(false, interface_162:41);
 			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, interface_162:41);
 			if_setsize(20, 20, ^setsize_minus, ^setsize_abs, interface_162:41);

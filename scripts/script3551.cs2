@@ -1,0 +1,22 @@
+// 3551
+script3551(component $component0, graphic $graphic1, obj $obj2, boolean $boolean3)
+cc_deleteall($component0);
+def_int $int4 = 0;
+if ($boolean3 = true) {
+	$int4 = ~v2_stone_button_in_filled($component0);
+} else {
+	$int4 = ~v2_stone_button_out_filled($component0);
+}
+cc_create($component0, ^iftype_graphic, $int4);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if ($obj2 ! null) {
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setobject_nonum($obj2, 1);
+	cc_setoutline(1);
+} else {
+	cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
+	cc_setgraphic($graphic1);
+}
+cc_settrans(0);
+if_setonmouserepeat("cc_settrans(event_com, $int4, 100, null)", $component0);
+if_setonmouseleave("cc_settrans(event_com, $int4, 0, null)", $component0);

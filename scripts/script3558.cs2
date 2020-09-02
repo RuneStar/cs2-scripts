@@ -1,0 +1,28 @@
+// 3558
+script3558(int $int0, enum $enum1, component $component2, graphic $graphic3)
+if ($int0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+~meslayer_open(17);
+if_sethide(true, interface_162:44);
+if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:45);
+if_sethide(false, interface_162:49);
+~scrollbar_vertical(interface_162:54, interface_162:53, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_string $string0 = "Search for an item:";
+~script222($string0);
+if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string0)", interface_162:45);
+%varcint66 = 0;
+cc_deleteall(interface_162:53);
+if_sethide(true, interface_162:55);
+~script3560($enum1);
+if_setontimer("script3559($enum1)", interface_162:40);
+if_setondialogabort("meslayer_ondialogabort", interface_162:45);
+if (~on_mobile = true) {
+	~keyboard_show(0, 25);
+}
+if_clearops($component2);
+if_setop(2, "Search", $component2);
+if_setonop("opsound(event_opindex, 4)", $component2);
+~script3551($component2, $graphic3, null, true);
+if_setontimer("script3564($enum1, $component2, $graphic3)", $component2);
