@@ -1,0 +1,8 @@
+// 3545
+[proc,poh_costumes_bottomfiller](int $int0)
+.cc_sethide(false);
+.cc_setgraphic("v2_borders_slim,8");
+.cc_settrans(0);
+.cc_settiling(true);
+.cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+.cc_setposition(0, calc($int0 + 3 - 20), ^setpos_abs_centre, ^setpos_abs_top);

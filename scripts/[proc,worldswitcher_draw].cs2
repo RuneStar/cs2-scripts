@@ -3,11 +3,11 @@
 if_setsize(0, $int5, ^setsize_minus, ^setsize_abs, $component6);
 if_setsize(16, $int5, ^setsize_minus, ^setsize_minus, $component0);
 if_setsize(16, $int5, ^setsize_abs, ^setsize_minus, $component1);
-~script760($component7, 2, 3, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
-~script760($component8, 0, 1, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
-~script760($component9, 4, 5, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
-~script760($component10, 8, 9, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
-~script760($component11, 6, 7, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
+~worldswitcher_sortbutton_draw($component7, 2, 3, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
+~worldswitcher_sortbutton_draw($component8, 0, 1, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
+~worldswitcher_sortbutton_draw($component9, 4, 5, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
+~worldswitcher_sortbutton_draw($component10, 8, 9, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
+~worldswitcher_sortbutton_draw($component11, 6, 7, $component0, $component1, $component2, $component3, $int4, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15);
 switch_int (%varbit4596) {
 	case 2 :
 		worldlist_sort(7, false, 0, false);
@@ -82,10 +82,10 @@ if (%varbit4597 > 0) {
 		}
 		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
 	} else {
-		~script893($component13);
+		~worldswitcher_wipe_favourite($component13);
 	}
 } else {
-	~script893($component12);
+	~worldswitcher_wipe_favourite($component12);
 	if (%varbit4598 > 0) {
 		if_sethide(true, $component14);
 		$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4598);
@@ -95,6 +95,6 @@ if (%varbit4597 > 0) {
 		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
 	} else {
 		if_sethide(false, $component14);
-		~script893($component13);
+		~worldswitcher_wipe_favourite($component13);
 	}
 }

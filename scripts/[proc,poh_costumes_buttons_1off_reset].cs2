@@ -1,0 +1,5 @@
+// 3554
+[proc,poh_costumes_buttons_1off_reset](component $component0, graphic $graphic1, obj $obj2)
+~poh_costumes_buttons_draw($component0, $graphic1, $obj2, false);
+if_setontimer(null, $component0);
+if_setonop("poh_costumes_buttons_1off_op(event_opindex, $component0, $graphic1, $obj2)", $component0);

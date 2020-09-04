@@ -1,0 +1,14 @@
+// 3540
+[proc,poh_costumes_countmembers](namedobj $namedobj0)(int)
+def_enum $enum1 = enum(obj, enum, enum_3077, $namedobj0);
+if ($enum1 = null) {
+	return(~poh_costumes_countalternates($namedobj0));
+}
+def_int $int2 = enum_getoutputcount($enum1);
+def_int $int3 = 0;
+def_int $int4 = 0;
+while ($int4 < $int2) {
+	$int3 = calc($int3 + ~poh_costumes_countalternates(enum(int, namedobj, $enum1, $int4)));
+	$int4 = calc($int4 + 1);
+}
+return($int3);

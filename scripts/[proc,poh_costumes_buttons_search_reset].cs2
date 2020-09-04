@@ -1,0 +1,7 @@
+// 3565
+[proc,poh_costumes_buttons_search_reset](enum $enum0, component $component1, graphic $graphic2)
+if_clearops($component1);
+if_setop(1, "Search", $component1);
+~poh_costumes_buttons_draw($component1, $graphic2, null, false);
+if_setontimer(null, $component1);
+if_setonop("poh_costumes_buttons_searchop(event_opindex, $enum0, $component1, $graphic2)", $component1);

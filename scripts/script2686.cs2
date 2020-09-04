@@ -1,6 +1,0 @@
-// 2686
-script2686(component $component0, int $int1, int $key2, string $string0, string $string1, int $int3, int $int4)
-if ($int1 ! -1 & cc_find($component0, $int1) = ^true) {
-	cc_resume_pausebutton;
-	cc_setonkey("script2685(event_keypressed, event_keytyped, event_com, event_comid, $key2, $string0, $string1, $int3, calc(clientclock + 20))");
-}

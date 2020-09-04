@@ -1,0 +1,9 @@
+// 3542
+[clientscript,poh_costumes_opgraphic](int $int0, component $component1, int $int2, int $int3, int $int4)
+if ($int0 = 1) {
+	sound_synth(synth_2266, 1, 0);
+}
+if (cc_find($component1, $int2) = ^true) {
+	cc_settrans($int3);
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, $int4, calc(clientclock + 10))");
+}

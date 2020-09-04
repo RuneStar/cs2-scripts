@@ -1,0 +1,7 @@
+// 3544
+[proc,poh_costumes_rightborder](int $int0, int $int1, int $int2)
+.cc_setgraphic("v2_borders_slim,1");
+.cc_settrans(0);
+.cc_settiling(true);
+.cc_setsize(16, $int1, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc($int0 - 16), $int2, ^setpos_abs_left, ^setpos_abs_top);

@@ -1,0 +1,12 @@
+// 3555
+[clientscript,poh_costumes_buttons_toggle_op](int $int0, component $component1, graphic $graphic2)
+if ($int0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+%varbit10581 = calc(1 - %varbit10581);
+def_boolean $boolean3 = ~int_to_bool(%varbit10581);
+~poh_costumes_buttons_draw($component1, $graphic2, null, $boolean3);
+if_setontimer("poh_costumes_buttons_toggle_reset($component1, $graphic2, calc(clientclock + 30))", $component1);
+if_setonop(null, $component1);
+if_setonvartransmit(null, $component1);

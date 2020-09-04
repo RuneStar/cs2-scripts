@@ -1,0 +1,11 @@
+// 3539
+[proc,poh_costumes_hideitem](int $int0, component $component1, int $int2)(int)
+if ($int0 >= $int2) {
+	return($int0);
+}
+if (cc_find($component1, $int0) = ^true) {
+	cc_sethide(true);
+	cc_clearops;
+	cc_setontimer(null);
+}
+return(calc($int0 + 1));

@@ -1,0 +1,116 @@
+// 3535
+[proc,poh_costumes_draw_big](int $int0, namedobj $namedobj1, int $int2, int $int3, int $int4, fontmetrics $fontmetrics5, int $int6, boolean $boolean7, component $component8)(int, int)
+def_int $int9 = calc($int2 * $int6);
+def_int $int10 = calc($int9 + 4);
+def_int $int11 = calc($int9 + $int6);
+def_int $int12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 1;
+def_int $int18 = 1;
+def_enum $enum19 = enum(obj, enum, enum_3077, $namedobj1);
+if ($enum19 ! null) {
+	$int12 = enum_getoutputcount($enum19);
+	while ($int13 < $int12) {
+		$int14, $int15, $int10, $int16 = ~poh_costumes_drawalternates($int14, $int15, $int10, 10, 3, $int0, enum(int, namedobj, $enum19, $int13), $boolean7, $component8, $int11);
+		if ($int16 = 1) {
+			$int17 = 0;
+		} else {
+			$int18 = 0;
+		}
+		$int13 = calc($int13 + 1);
+	}
+} else {
+	$int14, $int15, $int10, $int16 = ~poh_costumes_drawalternates($int14, $int15, $int10, 10, 3, $int0, $namedobj1, $boolean7, $component8, $int11);
+	if ($int16 = 1) {
+		$int17 = 0;
+	} else {
+		$int18 = 0;
+	}
+}
+if (cc_find($component8, calc($int9 + 3)) = ^true) {
+	cc_setsize(3, 20, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int0, ^setpos_abs_right, ^setpos_abs_top);
+	if ($int17 = 1) {
+		cc_setcolour(0x9f9f9f);
+	} else {
+		cc_setcolour(0xff981f);
+	}
+	cc_settextfont($fontmetrics5);
+}
+while ($int10 < $int11) {
+	if (cc_find($component8, $int10) = ^true) {
+		cc_sethide(true);
+		cc_clearops;
+		cc_setontimer(null);
+	}
+	$int10 = calc($int10 + 1);
+}
+def_int $int20 = 20;
+if ($int14 > 0) {
+	$int20 = calc($int20 + 37 * ($int15 + 1));
+} else {
+	$int20 = calc($int20 + 37 * $int15);
+}
+if (cc_find($component8, $int9) = ^true) {
+	cc_setsize(0, $int20, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top);
+	if ($int18 = 1) {
+		cc_setgraphic("tradebacking_light");
+		cc_settrans(120);
+		if ($boolean7 = true) {
+			cc_setop(1, "Set");
+			cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comid, 0, 120)");
+			cc_setonmouserepeat("cc_settrans(event_com, event_comid, 40, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comid, 120, null)");
+			if (.cc_find($component8, calc($int9 + 1)) = ^true) {
+				.cc_sethide(false);
+				.cc_setposition(3, calc($int0 + 5), ^setpos_abs_right, ^setpos_abs_top);
+			}
+		} else {
+			cc_clearops;
+			cc_setonop(null);
+			cc_setonmouserepeat(null);
+			cc_setonmouseleave(null);
+			if (.cc_find($component8, calc($int9 + 1)) = ^true) {
+				.cc_sethide(true);
+			}
+		}
+	} else {
+		cc_setgraphic("tradebacking_dark");
+		cc_settrans(0);
+		if ($boolean7 = true & $int17 = 0) {
+			cc_setop(1, "Set");
+			cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comid, 120, 0)");
+			cc_setonmouserepeat("cc_settrans(event_com, event_comid, 80, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comid, 0, null)");
+			if (.cc_find($component8, calc($int9 + 1)) = ^true) {
+				.cc_sethide(false);
+				.cc_setposition(3, calc($int0 + 5), ^setpos_abs_right, ^setpos_abs_top);
+			}
+		} else {
+			cc_clearops;
+			cc_setonop(null);
+			cc_setonmouserepeat(null);
+			cc_setonmouseleave(null);
+			if (.cc_find($component8, calc($int9 + 1)) = ^true) {
+				.cc_sethide(true);
+			}
+		}
+	}
+	cc_setontimer(null);
+}
+$int0 = calc($int0 + $int20);
+if (cc_find($component8, calc($int9 + 2)) = ^true) {
+	if ($int3 < calc($int4 - 1)) {
+		$int0 = calc($int0 + 3);
+		cc_sethide(false);
+		cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, calc($int0 - 20), ^setpos_abs_centre, ^setpos_abs_top);
+	} else {
+		cc_sethide(true);
+	}
+}
+return($int0, $int18);

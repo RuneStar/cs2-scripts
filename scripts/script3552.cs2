@@ -1,9 +1,0 @@
-// 3552
-script3552(int $int0, component $component1, graphic $graphic2, obj $obj3)
-if ($int0 ! 1) {
-	return;
-}
-sound_synth(synth_2266, 1, 0);
-~script3551($component1, $graphic2, $obj3, true);
-if_setontimer("script3553($component1, $graphic2, $obj3, calc(clientclock + 30))", $component1);
-if_setonop(null, $component1);
