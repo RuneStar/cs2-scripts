@@ -1,6 +1,0 @@
-// 2743
-[clientscript,longscroll_init](component $component0, component $component1, component $component2)
-def_int $int3 = if_getheight($component0);
-if_setscrollsize(0, $int3, $component2);
-~scrollbar_vertical($component1, $component2, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-if_setscrollpos(0, 0, $component2);

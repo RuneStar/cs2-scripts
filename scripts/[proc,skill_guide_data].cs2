@@ -4356,44 +4356,46 @@ switch_int ($int0) {
 				case 1 :
 					return(1, rock_hammer_4162, "Rock hammer & Rock Thrownhammer");
 				case 2 :
-					return(10, facemask_4164, "Facemask");
+					return(1, reinforced_goggles_24942, "Reinforced Goggles");
 				case 3 :
-					return(15, earmuffs_4166, "Earmuffs");
+					return(10, facemask_4164, "Facemask");
 				case 4 :
-					return(25, mirror_shield_4156, "Mirror shield<br> (with 20 Defence)");
+					return(15, earmuffs_4166, "Earmuffs");
 				case 5 :
-					return(32, fishing_explosive_6660, "Fishing explosive");
+					return(25, mirror_shield_4156, "Mirror shield<br> (with 20 Defence)");
 				case 6 :
-					return(33, lit_bug_lantern_7053, "Harpie bug lantern<br> (not a light source)");
+					return(32, fishing_explosive_6660, "Fishing explosive");
 				case 7 :
-					return(35, witchwood_icon_8923, "Witchwood icon");
+					return(33, lit_bug_lantern_7053, "Harpie bug lantern<br> (not a light source)");
 				case 8 :
-					return(37, insulated_boots_7159, "Insulated boots");
+					return(35, witchwood_icon_8923, "Witchwood icon");
 				case 9 :
-					return(39, slayer_bell_10952, "Slayer bell");
+					return(37, insulated_boots_7159, "Insulated boots");
 				case 10 :
-					return(42, slayer_gloves_6720, "Slayer gloves");
+					return(39, slayer_bell_10952, "Slayer bell");
 				case 11 :
-					return(44, boots_of_stone_23037, "Boots of Stone");
+					return(42, slayer_gloves_6720, "Slayer gloves");
 				case 12 :
-					return(55, leaf_bladed_spear_4158, "Leaf-bladed spear and sword<br> (with 50 Attack)");
+					return(44, boots_of_stone_23037, "Boots of Stone");
 				case 13 :
-					return(55, leaf_bladed_battleaxe_20727, "Leaf-bladed battleaxe<br> (with 65 Attack)");
+					return(55, leaf_bladed_spear_4158, "Leaf-bladed spear and sword<br> (with 50 Attack)");
 				case 14 :
-					return(55, broad_arrows_4150, "Broad arrows<br> (with 50 Ranged)");
+					return(55, leaf_bladed_battleaxe_20727, "Leaf-bladed battleaxe<br> (with 65 Attack)");
 				case 15 :
-					return(55, broad_bolts_5_4296, "Broad bolts<br> (with 61 Ranged)");
+					return(55, broad_arrows_4150, "Broad arrows<br> (with 50 Ranged)");
 				case 16 :
-					return(55, slayers_staff_4170, "Slayer's staff<br> (with 50 Magic)");
+					return(55, broad_bolts_5_4296, "Broad bolts<br> (with 61 Ranged)");
 				case 17 :
-					return(55, slayers_staff_e_21255, "Slayer's staff (e)<br> (with 75 Magic)");
+					return(55, slayers_staff_4170, "Slayer's staff<br> (with 50 Magic)");
 				case 18 :
-					return(57, fungicide_spray_10_7421, "Fungicide spray");
+					return(55, slayers_staff_e_21255, "Slayer's staff (e)<br> (with 75 Magic)");
 				case 19 :
-					return(60, nose_peg_4168, "Nose peg");
+					return(57, fungicide_spray_10_7421, "Fungicide spray");
 				case 20 :
-					return(60, vs_shield_24266, "V's shield<br> (with 40 Defence)");
+					return(60, nose_peg_4168, "Nose peg");
 				case 21 :
+					return(60, vs_shield_24266, "V's shield<br> (with 40 Defence)");
+				case 22 :
 					return(65, amethyst_broad_bolts_5_3902, "Amethyst broad bolts<br> (with 61 Ranged)");
 				case default :
 					return(-1, null, "");
@@ -4404,24 +4406,27 @@ switch_int ($int0) {
 				return(1, enchanted_gem_4155, "Wilderness master<br> (no requirements)");
 			}
 			if ($int2 = 1) {
-				return(1, enchanted_gem_4155, "Burthorpe master<br> (with level 3 combat)");
+				return(1, enchanted_gem_4155, "Draynor Village master<br> (after A Porcine of Interest)");
 			}
 			if ($int2 = 2) {
-				return(1, enchanted_gem_4155, "Canifis master<br> (with level 20 combat)");
+				return(1, enchanted_gem_4155, "Burthorpe master<br> (with level 3 combat)");
 			}
 			if ($int2 = 3) {
-				return(1, enchanted_gem_4155, "Edgeville Dungeon master<br> (with level 40 combat)");
+				return(1, enchanted_gem_4155, "Canifis master<br> (with level 20 combat)");
 			}
 			if ($int2 = 4) {
-				return(1, enchanted_gem_4155, "Zanaris master<br> (with level 70 combat)");
+				return(1, enchanted_gem_4155, "Edgeville Dungeon master<br> (with level 40 combat)");
 			}
 			if ($int2 = 5) {
-				return(1, enchanted_gem_4155, "Mount Karuulm master<br> (with level 75 combat)");
+				return(1, enchanted_gem_4155, "Zanaris master<br> (with level 70 combat)");
 			}
 			if ($int2 = 6) {
-				return(1, enchanted_gem_4155, "Gnome Stronghold master<br> (with level 85 combat)");
+				return(1, enchanted_gem_4155, "Mount Karuulm master<br> (with level 75 combat)");
 			}
 			if ($int2 = 7) {
+				return(1, enchanted_gem_4155, "Gnome Stronghold master<br> (with level 85 combat)");
+			}
+			if ($int2 = 8) {
 				return(50, enchanted_gem_4155, "Shilo Village master<br> (with level 100 combat)");
 			}
 			return(-1, null, "");

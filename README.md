@@ -418,6 +418,7 @@
 [**415**](scripts/[clientscript,smithing_init].cs2) `[clientscript,smithing_init]`  
 [**416**](scripts/[clientscript,smithing_setup].cs2) `[clientscript,smithing_setup]`  
 [**417**](scripts/script417.cs2)  
+[**418**](scripts/script418.cs2)  
 [**420**](scripts/[clientscript,combat_interface_setup].cs2) `[clientscript,combat_interface_setup]`  
 [**421**](scripts/[clientscript,slayer_rewards_tasks_currenttask].cs2) `[clientscript,slayer_rewards_tasks_currenttask]`  
 [**422**](scripts/[proc,slayer_rewards_tasks_currenttask].cs2) `[proc,slayer_rewards_tasks_currenttask]`  
@@ -2741,7 +2742,6 @@
 [**2740**](scripts/script2740.cs2)  
 [**2741**](scripts/script2741.cs2)  
 [**2742**](scripts/script2742.cs2)  
-[**2743**](scripts/[clientscript,longscroll_init].cs2) `[clientscript,longscroll_init]`  
 [**2744**](scripts/script2744.cs2)  
 [**2745**](scripts/[clientscript,farming_tools_main_create_quantitybutton].cs2) `[clientscript,farming_tools_main_create_quantitybutton]`  
 [**2746**](scripts/script2746.cs2)  
@@ -3529,7 +3529,6 @@
 [**3528**](scripts/script3528.cs2)  
 [**3529**](scripts/script3529.cs2)  
 [**3530**](scripts/script3530.cs2)  
-[**3531**](scripts/script3531.cs2)  
 [**3532**](scripts/[clientscript,poh_costumes_init].cs2) `[clientscript,poh_costumes_init]`  
 [**3533**](scripts/[clientscript,poh_costumes_build].cs2) `[clientscript,poh_costumes_build]`  
 [**3534**](scripts/[proc,poh_costumes_build].cs2) `[proc,poh_costumes_build]`  
