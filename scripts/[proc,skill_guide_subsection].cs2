@@ -304,16 +304,7 @@ switch_int ($int0) {
 		}
 		return("", -1);
 	case 20 :
-		if ($int1 = 0) {
-			return("Monsters", 1);
-		}
-		if ($int1 = 1) {
-			return("Equipment", 1);
-		}
-		if ($int1 = 2) {
-			return("Slayer Masters", 1);
-		}
-		return("", -1);
+		return(~script419($int1));
 	case 21 :
 		if ($int1 = 0) {
 			return("Allotments", 1);

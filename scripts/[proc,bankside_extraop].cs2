@@ -21,6 +21,10 @@ switch_obj ($obj0) {
 		if (testbit(%var261, 3) = ^true) {
 			$string0 = "Empty";
 		}
+	case coal_bag_12019, open_coal_bag_24480 :
+		if (testbit(%var261, 4) = ^true) {
+			$string0 = "Fill";
+		}
 	case default :
 		if (string_length($string0) <= 0 & (map_members = ^true | oc_members($obj0) = ^false)) {
 			if (testbit(%var262, $int1) = ^true) {

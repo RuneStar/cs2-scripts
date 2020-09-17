@@ -419,6 +419,7 @@
 [**416**](scripts/[clientscript,smithing_setup].cs2) `[clientscript,smithing_setup]`  
 [**417**](scripts/script417.cs2)  
 [**418**](scripts/script418.cs2)  
+[**419**](scripts/script419.cs2)  
 [**420**](scripts/[clientscript,combat_interface_setup].cs2) `[clientscript,combat_interface_setup]`  
 [**421**](scripts/[clientscript,slayer_rewards_tasks_currenttask].cs2) `[clientscript,slayer_rewards_tasks_currenttask]`  
 [**422**](scripts/[proc,slayer_rewards_tasks_currenttask].cs2) `[proc,slayer_rewards_tasks_currenttask]`  
@@ -2742,6 +2743,7 @@
 [**2740**](scripts/script2740.cs2)  
 [**2741**](scripts/script2741.cs2)  
 [**2742**](scripts/script2742.cs2)  
+[**2743**](scripts/script2743.cs2)  
 [**2744**](scripts/script2744.cs2)  
 [**2745**](scripts/[clientscript,farming_tools_main_create_quantitybutton].cs2) `[clientscript,farming_tools_main_create_quantitybutton]`  
 [**2746**](scripts/script2746.cs2)  
