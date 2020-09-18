@@ -1,8 +1,8 @@
 // 970
-[clientscript,logout_op](int $int0, int $int1, int $int2)
-if ($int0 = 1) {
+[clientscript,logout_op](int $opindex0, int $flags1, int $world2)
+if ($opindex0 = 1) {
 	logout;
 }
-if (testbit($int1, $int0) = ^true) {
+if (testbit($flags1, $opindex0) = ^true) {
 	sound_synth(synth_2266, 1, 0);
 }

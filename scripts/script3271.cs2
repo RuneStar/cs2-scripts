@@ -3,9 +3,9 @@ script3271(component $component0)
 cc_deleteall($component0);
 def_int $int1 = 17;
 def_int $int2 = 17;
-def_int $int3 = calc(if_getwidth($component0) - $int1);
+def_int $width3 = calc(if_getwidth($component0) - $int1);
 cc_create($component0, ^iftype_text, 0);
-cc_setsize($int3, 0, ^setsize_abs, ^setsize_minus);
+cc_setsize($width3, 0, ^setsize_abs, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour(0xff981f);
 cc_settextfont(p12_full);

@@ -1,6 +1,6 @@
 // 854
-[clientscript,options_chattrans_op](int $int0, boolean $boolean1, component $component2, component $component3, component $component4)
-if ($int0 ! 1) {
+[clientscript,options_chattrans_op](int $opindex0, boolean $boolean1, component $component2, component $component3, component $component4)
+if ($opindex0 ! 1) {
 	return;
 }
 if (~mobile_setting_check = 0) {

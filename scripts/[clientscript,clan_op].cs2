@@ -1,14 +1,14 @@
 // 214
-[clientscript,clan_op](string $string0, int $int0)
-def_string $string1 = removetags($string0);
-if ($int0 = 6 & ~wildwars_world = 0) {
-	~clan_sendkick($string1);
-} else if ($int0 = 7) {
-	friend_add($string1);
-} else if ($int0 = 8) {
-	ignore_add($string1);
-} else if ($int0 = 9) {
-	friend_del($string1);
-} else if ($int0 = 10) {
-	ignore_del($string1);
+[clientscript,clan_op](string $string0, int $opindex0)
+def_string $username1 = removetags($string0);
+if ($opindex0 = 6 & ~wildwars_world = 0) {
+	~clan_sendkick($username1);
+} else if ($opindex0 = 7) {
+	friend_add($username1);
+} else if ($opindex0 = 8) {
+	ignore_add($username1);
+} else if ($opindex0 = 9) {
+	friend_del($username1);
+} else if ($opindex0 = 10) {
+	ignore_del($username1);
 }

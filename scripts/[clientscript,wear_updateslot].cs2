@@ -1,5 +1,5 @@
 // 545
-[clientscript,wear_updateslot](component $component0, int $int1, boolean $boolean2, int $int3, int $int4)
-if (cc_find($component0, $int3) = ^true & .cc_find($component0, $int4) = ^true) {
+[clientscript,wear_updateslot](component $component0, int $int1, boolean $boolean2, int $comsubid3, int $comsubid4)
+if (cc_find($component0, $comsubid3) = ^true & .cc_find($component0, $comsubid4) = ^true) {
 	~wear_updateslot($component0, $int1, $boolean2);
 }

@@ -78,15 +78,15 @@ cc_setcolour(0xff981f);
 cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-def_string $string0 = "";
+def_string $text0 = "";
 if ($int4 = 1) {
-	$string0 = "1 coin";
+	$text0 = "1 coin";
 } else {
-	$string0 = "<~tostring_spacer($int4, ",")> coins";
+	$text0 = "<~tostring_spacer($int4, ",")> coins";
 }
 if ($int3 >= 2) {
-	cc_settext("<$string0><br><col=9f9f9f>= <~tostring_spacer(calc($int4 / $int3), ",")> each</col>");
+	cc_settext("<$text0><br><col=9f9f9f>= <~tostring_spacer(calc($int4 / $int3), ",")> each</col>");
 } else {
-	cc_settext($string0);
+	cc_settext($text0);
 }
 %varcint43 = calc($int0 + 1);

@@ -30,57 +30,57 @@ switch_int (%varbit4596) {
 	case default :
 		worldlist_sort(0, false, 7, false);
 }
-def_int $int16 = 0;
-def_int $int17 = if_getwidth($component7);
-def_int $int18 = if_getwidth($component8);
-def_int $int19 = if_getwidth($component9);
-def_int $int20 = if_getwidth($component10);
-def_int $int21 = if_getwidth($component11);
+def_int $height16 = 0;
+def_int $width17 = if_getwidth($component7);
+def_int $width18 = if_getwidth($component8);
+def_int $width19 = if_getwidth($component9);
+def_int $width20 = if_getwidth($component10);
+def_int $width21 = if_getwidth($component11);
 cc_deleteall($component2);
 def_int $int22 = ~stat_totallevel;
 def_int $int23 = ~stat_f2plevel;
 def_int $int24 = 0;
-def_int $int25 = 0;
-def_int $int26 = 0;
+def_int $world25 = 0;
+def_int $flags26 = 0;
 def_string $string0 = "";
 def_int $int27 = -1;
 def_int $int28 = 0;
 def_string $string1 = "";
-$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_start;
-while ($int25 > 0) {
-	if (~script961($int25, $int26) = 1) {
-		$int24 = ~worldswitcher_entry_draw($component2, $int24, $int16, $component3, $int25, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int21, $int22, $int23, $component15);
-		$int16 = calc($int16 + $int4);
+$world25, $flags26, $string0, $int27, $int28, $string1 = worldlist_start;
+while ($world25 > 0) {
+	if (~script961($world25, $flags26) = 1) {
+		$int24 = ~worldswitcher_entry_draw($component2, $int24, $height16, $component3, $world25, $world25, $flags26, $string0, $int27, $int28, $int4, $width17, $width18, $width19, $width20, $width21, $int22, $int23, $component15);
+		$height16 = calc($height16 + $int4);
 	}
-	$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_next;
+	$world25, $flags26, $string0, $int27, $int28, $string1 = worldlist_next;
 }
-if ($int16 > if_getheight($component0)) {
-	if_setscrollsize(0, $int16, $component0);
+if ($height16 > if_getheight($component0)) {
+	if_setscrollsize(0, $height16, $component0);
 } else {
 	if_setscrollsize(0, 0, $component0);
 }
-if_setsize(0, $int16, ^setsize_minus, ^setsize_abs, $component3);
-if_setsize(0, $int16, ^setsize_minus, ^setsize_abs, $component2);
+if_setsize(0, $height16, ^setsize_minus, ^setsize_abs, $component3);
+if_setsize(0, $height16, ^setsize_minus, ^setsize_abs, $component2);
 if (%varcint69 < 0) {
 	%varcint69 = 0;
 }
 ~scrollbar_resize($component1, $component0, %varcint69);
 cc_deleteall($component12);
 cc_deleteall($component13);
-def_int $int29 = calc(if_getwidth($component12) - ($int17 + $int18 + $int19 + $int20));
+def_int $x29 = calc(if_getwidth($component12) - ($width17 + $width18 + $width19 + $width20));
 if (%varbit4597 > 0) {
 	if_sethide(true, $component14);
-	$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4597);
-	if (~script961($int25, $int26) = 0) {
-		$int25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
+	$world25, $flags26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4597);
+	if (~script961($world25, $flags26) = 0) {
+		$world25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
 	}
-	~worldswitcher_entry_draw($component12, 0, 0, $component12, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
+	~worldswitcher_entry_draw($component12, 0, 0, $component12, -1, $world25, $flags26, $string0, $int27, $int28, $int4, $width17, $width18, $width19, $width20, $x29, $int22, $int23, $component15);
 	if (%varbit4598 > 0) {
-		$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4598);
-		if (~script961($int25, $int26) = 0) {
-			$int25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
+		$world25, $flags26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4598);
+		if (~script961($world25, $flags26) = 0) {
+			$world25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
 		}
-		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
+		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $world25, $flags26, $string0, $int27, $int28, $int4, $width17, $width18, $width19, $width20, $x29, $int22, $int23, $component15);
 	} else {
 		~worldswitcher_wipe_favourite($component13);
 	}
@@ -88,11 +88,11 @@ if (%varbit4597 > 0) {
 	~worldswitcher_wipe_favourite($component12);
 	if (%varbit4598 > 0) {
 		if_sethide(true, $component14);
-		$int25, $int26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4598);
-		if (~script961($int25, $int26) = 0) {
-			$int25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
+		$world25, $flags26, $string0, $int27, $int28, $string1 = worldlist_specific(%varbit4598);
+		if (~script961($world25, $flags26) = 0) {
+			$world25, $string0, $int27, $int28 = 0, "Unavailable", -1, 0;
 		}
-		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $int25, $int26, $string0, $int27, $int28, $int4, $int17, $int18, $int19, $int20, $int29, $int22, $int23, $component15);
+		~worldswitcher_entry_draw($component13, 0, 0, $component13, -1, $world25, $flags26, $string0, $int27, $int28, $int4, $width17, $width18, $width19, $width20, $x29, $int22, $int23, $component15);
 	} else {
 		if_sethide(false, $component14);
 		~worldswitcher_wipe_favourite($component13);

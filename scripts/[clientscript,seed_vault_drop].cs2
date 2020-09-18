@@ -1,5 +1,5 @@
 // 2827
-[clientscript,seed_vault_drop](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5)
+[clientscript,seed_vault_drop](component $component0, component $component1, int $comsubid2, int $dropsubid3, int $x4, int $y5)
 def_int $int6 = 15;
 def_int $int7 = 20;
 def_int $int8 = 50;
@@ -8,47 +8,47 @@ if (~on_mobile = true) {
 	$int6 = 20;
 	$int7 = 25;
 }
-if (cc_find($component0, $int2) = ^true) {
-	cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
+if (cc_find($component0, $comsubid2) = ^true) {
+	cc_setposition($x4, $y5, ^setpos_abs_left, ^setpos_abs_top);
 }
-if (cc_find($component1, $int2) = ^true) {
-	cc_setposition(calc($int4 - 7), calc($int5 + 32), ^setpos_abs_left, ^setpos_abs_top);
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_setposition(calc($x4 - 7), calc($y5 + 32), ^setpos_abs_left, ^setpos_abs_top);
 }
 def_int $int10 = 0;
-def_int $int11 = 0;
-def_obj $obj12 = inv_getobj(inv_626, $int2);
-def_obj $obj13 = inv_getobj(inv_626, $int3);
-if (cc_find($component0, $int2) = ^true & .cc_find($component0, $int3) = ^true) {
-	if ($int3 = 90) {
-		if (~script2828($int2) ! -1) {
+def_int $y11 = 0;
+def_obj $obj12 = inv_getobj(inv_626, $comsubid2);
+def_obj $obj13 = inv_getobj(inv_626, $dropsubid3);
+if (cc_find($component0, $comsubid2) = ^true & .cc_find($component0, $dropsubid3) = ^true) {
+	if ($dropsubid3 = 90) {
+		if (~script2828($comsubid2) ! -1) {
 			cc_sethide(true);
 		} else {
 			$int10 = .cc_getx;
-			$int11 = .cc_gety;
-			cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setposition(calc($int10 + $int6 + $int8), $int11, ^setpos_abs_left, ^setpos_abs_top);
+			$y11 = .cc_gety;
+			cc_setposition($int10, $y11, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(calc($int10 + $int6 + $int8), $y11, ^setpos_abs_left, ^setpos_abs_top);
 		}
-	} else if ($obj12 ! null & $obj13 ! null & (oc_param(oc_unplaceholder($obj12), param_709) = oc_param(oc_unplaceholder($obj13), param_709) | ~script2828($int2) ! -1 & ~script2828($int3) ! -1)) {
+	} else if ($obj12 ! null & $obj13 ! null & (oc_param(oc_unplaceholder($obj12), param_709) = oc_param(oc_unplaceholder($obj13), param_709) | ~script2828($comsubid2) ! -1 & ~script2828($dropsubid3) ! -1)) {
 		$int10 = cc_getx;
-		$int11 = cc_gety;
+		$y11 = cc_gety;
 		cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition($int10, $y11, ^setpos_abs_left, ^setpos_abs_top);
 	}
 }
-if (cc_find($component1, $int2) = ^true & .cc_find($component1, $int3) = ^true) {
-	if ($int3 = 90) {
-		if (~script2828($int2) ! -1) {
+if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $dropsubid3) = ^true) {
+	if ($dropsubid3 = 90) {
+		if (~script2828($comsubid2) ! -1) {
 			cc_sethide(true);
 		} else {
 			$int10 = .cc_getx;
-			$int11 = .cc_gety;
-			cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
-			.cc_setposition(calc($int10 + $int6 + $int8), $int11, ^setpos_abs_left, ^setpos_abs_top);
+			$y11 = .cc_gety;
+			cc_setposition($int10, $y11, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(calc($int10 + $int6 + $int8), $y11, ^setpos_abs_left, ^setpos_abs_top);
 		}
-	} else if ($obj12 ! null & $obj13 ! null & (oc_param(oc_unplaceholder($obj12), param_709) = oc_param(oc_unplaceholder($obj13), param_709) | ~script2828($int2) ! -1 & ~script2828($int3) ! -1)) {
+	} else if ($obj12 ! null & $obj13 ! null & (oc_param(oc_unplaceholder($obj12), param_709) = oc_param(oc_unplaceholder($obj13), param_709) | ~script2828($comsubid2) ! -1 & ~script2828($dropsubid3) ! -1)) {
 		$int10 = cc_getx;
-		$int11 = cc_gety;
+		$y11 = cc_gety;
 		cc_setposition(.cc_getx, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition($int10, $y11, ^setpos_abs_left, ^setpos_abs_top);
 	}
 }

@@ -1,6 +1,6 @@
 // 1579
 [clientscript,raids_rewards_init](component $component0, component $component1)
-def_int $int2 = inv_size(inv_581);
-~raids_rewards_build($component1, $int2);
-if_setoninvtransmit("raids_rewards_build($component1, $int2){inv_581}", $component0);
-if_setonvartransmit("raids_rewards_build($component1, $int2){var1432}", $component0);
+def_int $size2 = inv_size(inv_581);
+~raids_rewards_build($component1, $size2);
+if_setoninvtransmit("raids_rewards_build($component1, $size2){inv_581}", $component0);
+if_setonvartransmit("raids_rewards_build($component1, $size2){var1432}", $component0);

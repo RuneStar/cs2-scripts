@@ -1,15 +1,15 @@
 // 3139
 script3139(component $component0, int $int1, int $int2)
 cc_create($component0, ^iftype_graphic, $int1);
-def_int $int3 = 113;
+def_int $x3 = 113;
 if (calc($int1 % 2) ! 0) {
-	$int3 = 127;
+	$x3 = 127;
 }
-def_int $int4 = 1;
+def_int $y4 = 1;
 if ($int1 > 5) {
-	$int4 = 15;
+	$y4 = 15;
 }
-cc_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition($x3, $y4, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
 def_graphic $graphic5 = enum(int, graphic, enum_2637, $int2);
 if ($graphic5 = null) {

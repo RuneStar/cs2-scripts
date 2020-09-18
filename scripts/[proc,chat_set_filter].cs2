@@ -1,12 +1,12 @@
 // 184
-[proc,chat_set_filter](int $int0, int $int1)
+[proc,chat_set_filter](int $int0, int $chatfilter1)
 switch_int ($int0) {
 	case 2 :
-		chat_setfilter($int1, chat_getfilter_private, chat_getfilter_trade);
+		chat_setfilter($chatfilter1, chat_getfilter_private, chat_getfilter_trade);
 	case 3 :
-		chat_setfilter(chat_getfilter_public, $int1, chat_getfilter_trade);
+		chat_setfilter(chat_getfilter_public, $chatfilter1, chat_getfilter_trade);
 	case 4 :
-		%var1054 = $int1;
+		%var1054 = $chatfilter1;
 	case 5 :
-		chat_setfilter(chat_getfilter_public, chat_getfilter_private, $int1);
+		chat_setfilter(chat_getfilter_public, chat_getfilter_private, $chatfilter1);
 }

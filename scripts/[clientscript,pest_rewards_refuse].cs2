@@ -1,5 +1,5 @@
 // 2783
-[clientscript,pest_rewards_refuse](string $string0, component $component0, component $component1, component $component2, component $component3)
+[clientscript,pest_rewards_refuse](string $mes0, component $component0, component $component1, component $component2, component $component3)
 sound_synth(pillory_wrong, 1, 0);
-mes($string0);
+mes($mes0);
 ~pest_rewards_draw(-1, $component0, $component1, $component2, $component3);

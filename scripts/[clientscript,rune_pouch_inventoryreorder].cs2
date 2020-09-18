@@ -1,27 +1,27 @@
 // 672
-[clientscript,rune_pouch_inventoryreorder](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5)
-def_int $int6 = inv_size(inv);
-if ($int2 < 0 | $int2 >= $int6) {
+[clientscript,rune_pouch_inventoryreorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, int $trans4, int $trans5)
+def_int $size6 = inv_size(inv);
+if ($comsubid2 < 0 | $comsubid2 >= $size6) {
 	return;
 }
-if ($component1 ! $component0) {
-	if (cc_find($component0, $int2) = ^true) {
-		cc_settrans($int4);
-		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, $int5, calc(clientclock + 30))");
+if ($drop1 ! $drop0) {
+	if (cc_find($drop0, $comsubid2) = ^true) {
+		cc_settrans($trans4);
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans5, calc(clientclock + 30))");
 	}
 	return;
 }
-if ($int2 = $int3 | $int3 < 0 | $int3 >= $int6) {
+if ($comsubid2 = $dropsubid3 | $dropsubid3 < 0 | $dropsubid3 >= $size6) {
 	return;
 }
-def_obj $obj7 = inv_getobj(inv, $int2);
+def_obj $obj7 = inv_getobj(inv, $comsubid2);
 if ($obj7 = null) {
 	return;
 }
-def_obj $obj8 = inv_getobj(inv, $int3);
-if (cc_find($component0, $int3) = ^true) {
-	~rune_pouch_drawinventory_slot($obj7, inv_getnum(inv, $int2));
+def_obj $obj8 = inv_getobj(inv, $dropsubid3);
+if (cc_find($drop0, $dropsubid3) = ^true) {
+	~rune_pouch_drawinventory_slot($obj7, inv_getnum(inv, $comsubid2));
 }
-if (cc_find($component0, $int2) = ^true) {
-	~rune_pouch_drawinventory_slot($obj8, inv_getnum(inv, $int3));
+if (cc_find($drop0, $comsubid2) = ^true) {
+	~rune_pouch_drawinventory_slot($obj8, inv_getnum(inv, $dropsubid3));
 }

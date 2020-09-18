@@ -1,9 +1,9 @@
 // 3125
-[clientscript,poh_board_send_name](component $component0, int $int1, string $string0, int $int2)
-if (clientclock < $int2) {
+[clientscript,poh_board_send_name](component $component0, int $comsubid1, string $string0, int $clock2)
+if (clientclock < $clock2) {
 	return;
 }
 resume_namedialog($string0);
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $comsubid1) = ^true) {
 	cc_setontimer(null);
 }

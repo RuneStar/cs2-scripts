@@ -1,13 +1,13 @@
 // 59
-[proc,chatbox_multi_addoption](int $int0, string $string0, int $int1, int $int2, int $settextalignv3)
+[proc,chatbox_multi_addoption](int $int0, string $text0, int $y1, int $height2, int $settextalignv3)
 cc_create(interface_219:1, ^iftype_text, $int0);
-cc_setsize(479, $int2, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(479, $height2, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $y1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(^black);
 cc_settextshadow(false);
 cc_settextfont(q8_full);
 cc_settextalign(^settextalign_centre, $settextalignv3, 0);
-cc_settext($string0);
-cc_setonmouseover("cc_colour_swapper(event_com, event_comid, ^white)");
-cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, ^black)");
-cc_setonkey("chatbox_keyinput_listener(event_keypressed, event_keytyped, event_com, event_comid, null, null, tostring($int0), "", ^black, 0)");
+cc_settext($text0);
+cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
+cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, ^black)");
+cc_setonkey("chatbox_keyinput_listener(event_key, event_keychar, event_com, event_comsubid, null, null, tostring($int0), "", ^black, 0)");

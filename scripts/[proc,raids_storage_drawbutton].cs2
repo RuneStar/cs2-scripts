@@ -1,8 +1,8 @@
 // 1611
 [proc,raids_storage_drawbutton](string $string0, component $component0, graphic $graphic1)(int)
 cc_deleteall($component0);
-def_int $int2 = ~options_button_off($component0, 0);
-cc_create($component0, ^iftype_text, $int2);
+def_int $comsubid2 = ~options_button_off($component0, 0);
+cc_create($component0, ^iftype_text, $comsubid2);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setcolour(0xff981f);
@@ -10,9 +10,9 @@ cc_settextfont($graphic1);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_settext($string0);
-if_setonmouserepeat("cc_colour_swapper(event_com, $int2, ^white)", $component0);
-if_setonmouseleave("cc_colour_swapper(event_com, $int2, 0xff981f)", $component0);
+if_setonmouserepeat("cc_colour_swapper(event_com, $comsubid2, ^white)", $component0);
+if_setonmouseleave("cc_colour_swapper(event_com, $comsubid2, 0xff981f)", $component0);
 if_setop(1, $string0, $component0);
 if_setonop("raids_storage_opbutton(event_opindex, $component0, $string0, $graphic1)", $component0);
 if_setontimer(null, $component0);
-return($int2);
+return($comsubid2);

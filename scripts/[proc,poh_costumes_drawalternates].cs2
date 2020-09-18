@@ -3,7 +3,7 @@
 def_boolean $boolean10 = enum(obj, boolean, enum_3305, $namedobj6);
 def_int $int11 = 0;
 def_namedobj $namedobj12 = null;
-def_int $int13 = 0;
+def_int $num13 = 0;
 def_int $int14 = 0;
 def_enum $enum15 = enum(obj, enum, enum_3304, $namedobj6);
 if ($enum15 ! null) {
@@ -12,9 +12,9 @@ if ($enum15 ! null) {
 		$int11 = calc($int11 - 1);
 		$namedobj12 = enum(int, namedobj, $enum15, $int11);
 		if ($namedobj12 ! null) {
-			$int13 = invother_total(inv_637, $namedobj12);
-			if ($int13 > 0) {
-				$int0, $int1, $int2, $int14 = ~poh_costumes_drawitem($int0, $int1, $int2, $int3, $int4, $int5, $namedobj12, $int13, $boolean7, $component8, $int9), 1;
+			$num13 = invother_total(inv_637, $namedobj12);
+			if ($num13 > 0) {
+				$int0, $int1, $int2, $int14 = ~poh_costumes_drawitem($int0, $int1, $int2, $int3, $int4, $int5, $namedobj12, $num13, $boolean7, $component8, $int9), 1;
 				if ($boolean10 = true) {
 					return($int0, $int1, $int2, $int14);
 				}
@@ -26,9 +26,9 @@ if ($enum15 ! null) {
 } else {
 	$namedobj12 = enum(obj, namedobj, enum_3303, $namedobj6);
 	if ($namedobj12 ! null) {
-		$int13 = invother_total(inv_637, $namedobj12);
-		if ($int13 > 0) {
-			$int0, $int1, $int2, $int14 = ~poh_costumes_drawitem($int0, $int1, $int2, $int3, $int4, $int5, $namedobj12, $int13, $boolean7, $component8, $int9), 1;
+		$num13 = invother_total(inv_637, $namedobj12);
+		if ($num13 > 0) {
+			$int0, $int1, $int2, $int14 = ~poh_costumes_drawitem($int0, $int1, $int2, $int3, $int4, $int5, $namedobj12, $num13, $boolean7, $component8, $int9), 1;
 			if ($boolean10 = true) {
 				return($int0, $int1, $int2, $int14);
 			}
@@ -37,10 +37,10 @@ if ($enum15 ! null) {
 		}
 	}
 }
-$int13 = invother_total(inv_637, $namedobj6);
-if ($int14 = 0 | $int13 > 0) {
-	$int0, $int1, $int2 = ~poh_costumes_drawitem($int0, $int1, $int2, $int3, $int4, $int5, $namedobj6, $int13, $boolean7, $component8, $int9);
-	if ($int13 > 0) {
+$num13 = invother_total(inv_637, $namedobj6);
+if ($int14 = 0 | $num13 > 0) {
+	$int0, $int1, $int2 = ~poh_costumes_drawitem($int0, $int1, $int2, $int3, $int4, $int5, $namedobj6, $num13, $boolean7, $component8, $int9);
+	if ($num13 > 0) {
 		$int14 = 1;
 	}
 } else {

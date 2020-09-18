@@ -1,5 +1,5 @@
 // 3519
-script3519(component $component0, component $component1, component $component2, boolean $boolean3, string $string0, boolean $boolean4, component $component5, component $component6)
+script3519(component $component0, component $component1, component $component2, boolean $boolean3, string $text0, boolean $boolean4, component $component5, component $component6)
 if ($boolean4 = false) {
 	~v2_stone_button_out_filled($component0);
 } else {
@@ -12,7 +12,7 @@ cc_settextfont(p11_full);
 cc_settextshadow(true);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_settext($string0);
+cc_settext($text0);
 if ($boolean4 = false) {
 	cc_setcolour(0xff981f);
 } else {

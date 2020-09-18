@@ -1,9 +1,9 @@
 // 488
-[clientscript,cc_settrans_temporarily_end](component $component0, int $int1, int $int2, int $int3)
-if (clientclock < $int3) {
+[clientscript,cc_settrans_temporarily_end](component $component0, int $comsubid1, int $trans2, int $clock3)
+if (clientclock < $clock3) {
 	return;
 }
-if (cc_find($component0, $int1) = ^true) {
-	cc_settrans($int2);
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settrans($trans2);
 	cc_setontimer(null);
 }

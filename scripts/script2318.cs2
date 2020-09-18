@@ -1,11 +1,11 @@
 // 2318
-script2318(int $int0, component $component1, string $string0, int $int2, int $int3, int $int4, int $colour5)(string, int)
+script2318(int $int0, component $component1, string $string0, int $int2, int $int3, int $y4, int $colour5)(string, int)
 def_string $string1 = "";
 $string1, $string0 = ~script632($string0);
 cc_create(interface_50:26, ^iftype_text, calc($int2 + $int0));
-cc_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_top);
-def_int $int6 = if_getwidth($component1);
-cc_setsize($int6, 13, ^setsize_abs, ^setsize_abs);
+cc_setposition($int3, $y4, ^setpos_abs_left, ^setpos_abs_top);
+def_int $width6 = if_getwidth($component1);
+cc_setsize($width6, 13, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
@@ -16,4 +16,4 @@ if (string_length($string1) > 0) {
 	cc_setcolour(0x7f7f7f);
 	cc_settext("-");
 }
-return($string0, calc($int3 + $int6));
+return($string0, calc($int3 + $width6));

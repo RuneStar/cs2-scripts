@@ -2,14 +2,14 @@
 [proc,orbs_xpdrops_update](component $component0)
 def_graphic $graphic1 = "orb_xp,0";
 def_graphic $graphic2 = "orb_xp,2";
-def_string $string0 = "Show";
+def_string $op0 = "Show";
 if (%varbit4702 = 1) {
-	$graphic1, $graphic2, $string0 = "orb_xp,1", "orb_xp,3", "Hide";
+	$graphic1, $graphic2, $op0 = "orb_xp,1", "orb_xp,3", "Hide";
 	if_setonop("orbs_xpdrops_op(event_opindex, event_com, 0)", $component0);
 } else {
 	if_setonop("orbs_xpdrops_op(event_opindex, event_com, 1)", $component0);
 }
-if_setop(1, $string0, $component0);
+if_setop(1, $op0, $component0);
 if_setgraphic($graphic1, $component0);
 if_setonmouserepeat("graphic_swapper(event_com, $graphic2)", $component0);
 if_setonmouseleave("graphic_swapper(event_com, $graphic1)", $component0);

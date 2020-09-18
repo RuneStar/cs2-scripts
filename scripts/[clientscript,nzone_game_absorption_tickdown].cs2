@@ -1,12 +1,12 @@
 // 261
-[clientscript,nzone_game_absorption_tickdown](component $component0, int $int1, int $int2, int $int3)
+[clientscript,nzone_game_absorption_tickdown](component $component0, int $int1, int $int2, int $clock3)
 def_int $int4 = calc($int2 - $int1);
 if ($int4 = 0) {
 	if_setontimer(null, $component0);
 	~nzone_game_absorption_set($component0, $int2);
 	return;
 }
-if (clientclock < $int3) {
+if (clientclock < $clock3) {
 	if ($int4 <= -2) {
 		$int4 = calc($int4 / 2);
 	} else if ($int4 >= 2) {
@@ -14,7 +14,7 @@ if (clientclock < $int3) {
 	}
 }
 $int1 = calc($int1 + $int4);
-if_setontimer("nzone_game_absorption_tickdown($component0, $int1, $int2, $int3)", $component0);
+if_setontimer("nzone_game_absorption_tickdown($component0, $int1, $int2, $clock3)", $component0);
 ~nzone_game_absorption_set($component0, $int1);
 if ($int4 < 0) {
 	if (calc(clientclock % 2) = 0) {

@@ -1,16 +1,16 @@
 // 1521
-[clientscript,raids_partydetails_entry_op](int $int0, int $int1, string $string0, string $string1)
+[clientscript,raids_partydetails_entry_op](int $opindex0, int $int1, string $string0, string $string1)
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
-def_int $int5 = 0;
-def_int $int6 = 0;
+def_int $x5 = 0;
+def_int $y6 = 0;
 def_int $int7 = 1;
 def_stat $stat8 = null;
-def_string $string2 = "";
+def_string $text2 = "";
 def_string $string3 = "";
 if (string_length($string0) > 0) {
-	if ($int0 = 6) {
+	if ($opindex0 = 6) {
 		if (clan_getchatcount > 0 & clan_getchatrank >= clan_getchatminkick) {
 			sound_synth(synth_2266, 1, 0);
 			~clan_sendkick($string0);
@@ -39,24 +39,24 @@ if (string_length($string0) > 0) {
 	$int3 = calc((if_getwidth(interface_507:28) - 216) / 2);
 	$stat8 = enum(int, stat, enum_681, $int7);
 	while ($stat8 ! null) {
-		$int5, $int6 = calc($int3 + $int4 / 5 * 44), calc(15 + $int4 % 5 * 25);
-		$string2, $string1 = ~script632($string1);
+		$x5, $y6 = calc($int3 + $int4 / 5 * 44), calc(15 + $int4 % 5 * 25);
+		$text2, $string1 = ~script632($string1);
 		cc_create(interface_507:28, ^iftype_graphic, $int2);
 		$int2 = calc($int2 + 1);
 		.cc_create(interface_507:28, ^iftype_text, $int2);
 		$int2 = calc($int2 + 1);
 		cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
 		.cc_setsize(40, 25, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($x5, $y6, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition($x5, $y6, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic(enum(stat, graphic, enum_255, $stat8));
 		.cc_setcolour(0xff981f);
 		.cc_settextfont(p11_full);
 		.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 		.cc_settextshadow(true);
-		.cc_settext($string2);
-		$string3 = "<$string0>:<br>Level <col=7f0000><$string2></col> <enum(stat, string, enum_680, $stat8)>";
-		.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, interface_507:35, $string3, 25, 200)");
+		.cc_settext($text2);
+		$string3 = "<$string0>:<br>Level <col=7f0000><$text2></col> <enum(stat, string, enum_680, $stat8)>";
+		.cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, interface_507:35, $string3, 25, 200)");
 		.cc_setonmouseleave("deltooltip(interface_507:35)");
 		$int7, $int4 = calc($int7 + 1), calc($int4 + 1);
 		$stat8 = enum(int, stat, enum_681, $int7);

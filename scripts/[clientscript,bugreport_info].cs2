@@ -1,6 +1,6 @@
 // 1095
 [clientscript,bugreport_info](string $string0)
-def_int $int0 = calc(paraheight($string0, if_getwidth(interface_156:8), p12_full) * 12 + 5);
+def_int $height0 = calc(paraheight($string0, if_getwidth(interface_156:8), p12_full) * 12 + 5);
 cc_deleteall(interface_156:8);
 cc_create(interface_156:8, ^iftype_text, 0);
 cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
@@ -11,7 +11,7 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext("Bug News");
 cc_create(interface_156:8, ^iftype_text, 1);
-cc_setsize(0, $int0, ^setsize_minus, ^setsize_abs);
+cc_setsize(0, $height0, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 40, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setcolour(0xff981f);
 cc_settextfont(p12_full);
@@ -20,9 +20,9 @@ cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settext($string0);
 if_setscrollpos(0, 0, interface_156:8);
 cc_deleteall(interface_156:9);
-$int0 = calc($int0 + 40);
-if ($int0 > if_getheight(interface_156:8)) {
-	if_setscrollsize(0, $int0, interface_156:8);
+$height0 = calc($height0 + 40);
+if ($height0 > if_getheight(interface_156:8)) {
+	if_setscrollsize(0, $height0, interface_156:8);
 } else {
 	if_setscrollsize(0, 0, interface_156:8);
 }

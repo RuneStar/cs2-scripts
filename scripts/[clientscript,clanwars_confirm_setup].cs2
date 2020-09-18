@@ -2,19 +2,19 @@
 [clientscript,clanwars_confirm_setup](int $int0, string $string0)
 cc_deleteall(interface_92:4);
 cc_deleteall(interface_92:5);
-def_int $int1 = if_getwidth(interface_92:4);
-def_int $int2 = calc(paraheight($string0, $int1, p12_full) * 12 + 5);
+def_int $width1 = if_getwidth(interface_92:4);
+def_int $height2 = calc(paraheight($string0, $width1, p12_full) * 12 + 5);
 cc_create(interface_92:4, ^iftype_text, 0);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize($int1, $int2, ^setsize_abs, ^setsize_abs);
+cc_setsize($width1, $height2, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextfont(p12_full);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settext($string0);
 if_setscrollpos(0, 0, interface_92:4);
-if ($int2 > if_getheight(interface_92:4)) {
-	if_setscrollsize(0, $int2, interface_92:4);
+if ($height2 > if_getheight(interface_92:4)) {
+	if_setscrollsize(0, $height2, interface_92:4);
 } else {
 	if_setscrollsize(0, 0, interface_92:4);
 }
@@ -34,4 +34,4 @@ if ($int0 = 0) {
 	~clanwars_confirm_notpressed(interface_92:7);
 	if_setonop("closebutton_click", interface_92:7);
 }
-~script2876(interface_92:0, interface_92:1, interface_92:4, interface_92:5, calc($int2 + 85), ^min_32bit_int, ^min_32bit_int);
+~script2876(interface_92:0, interface_92:1, interface_92:4, interface_92:5, calc($height2 + 85), ^min_32bit_int, ^min_32bit_int);

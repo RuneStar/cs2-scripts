@@ -1,6 +1,6 @@
 // 2401
-[clientscript,options_fps_op](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5)
-if ($int0 ! 1) {
+[clientscript,options_fps_op](int $opindex0, int $int1, component $component2, component $component3, component $component4, component $component5)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

@@ -1,7 +1,7 @@
 // 809
 [proc,ge_offers_priceicon](component $component0)
-def_string $string0 = if_gettext($component0);
-if (string_length($string0) <= 0) {
+def_string $text0 = if_gettext($component0);
+if (string_length($text0) <= 0) {
 	cc_settrans(255);
 	if_sethide(true, $component0);
 	return;

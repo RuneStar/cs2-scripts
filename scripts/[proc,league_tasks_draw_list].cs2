@@ -19,8 +19,8 @@ cc_setgraphic("menu_buttons,0");
 def_graphic $graphic15 = "menu_buttons,1";
 def_graphic $graphic16 = "menu_buttons,0";
 if (~on_mobile = false) {
-	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic15, null)");
-	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic16, null)");
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic15, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic16, null)");
 }
 if_setonop("league_menu_click(event_opindex, $component10, $component11, $int14, $component12)", $component10);
 if_setop(1, "Show Menu", $component10);
@@ -28,18 +28,18 @@ $int14 = 0;
 ~league_create_dropdown($component10, $component11, $component12, $int14, 1);
 $int14 = 0;
 def_enum $enum17 = struct_param(enum(int, struct, enum_2670, %varbit10032), param_868);
-def_int $int18 = enum_getoutputcount($enum17);
+def_int $count18 = enum_getoutputcount($enum17);
 def_int $int19 = 0;
 def_int $int20 = 0;
 def_struct $struct21 = null;
-def_int $int22 = 0;
+def_int $height22 = 0;
 def_int $int23 = 40;
-def_int $int24 = 255;
+def_int $trans24 = 255;
 def_graphic $graphic25 = "open_buttons_small,1";
 def_graphic $graphic26 = "open_buttons_small,0";
-def_int $bit27 = null;
+def_int $bool27 = null;
 def_int $int28 = -1;
-def_string $string0 = "null";
+def_string $text0 = "null";
 def_string $string1 = "null";
 def_int $int29 = -1;
 def_int $int30 = -1;
@@ -47,14 +47,14 @@ def_int $int31 = 0;
 if (%var2615 < %var2614) {
 	$int31 = 1;
 }
-while ($int19 < $int18) {
+while ($int19 < $count18) {
 	$struct21 = enum(int, struct, $enum17, $int19);
-	$bit27 = ~league_task_is_completed($struct21);
+	$bool27 = ~league_task_is_completed($struct21);
 	$int28 = struct_param($struct21, param_876);
-	$string0 = struct_param($struct21, param_874);
+	$text0 = struct_param($struct21, param_874);
 	$string1 = struct_param($struct21, param_875);
 	$int29 = enum(int, int, enum_2671, $int28);
-	if ((%varbit10033 = 0 | %varbit10033 = $int28) & (%varbit10034 = 0 | calc(%varbit10034 - 1) = $bit27)) {
+	if ((%varbit10033 = 0 | %varbit10033 = $int28) & (%varbit10034 = 0 | calc(%varbit10034 - 1) = $bool27)) {
 		cc_create($component2, ^iftype_rectangle, $int14);
 		if ($int19 = $int0) {
 			$int30 = paraheight($string1, calc(if_getwidth($component2) - 10), p11_full);
@@ -66,23 +66,23 @@ while ($int19 < $int18) {
 			$graphic25 = "open_buttons_small,1";
 			$graphic26 = "open_buttons_small,0";
 		}
-		cc_setposition(0, $int22, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setposition(0, $height22, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		if (calc($int14 % 2) = 1) {
-			$int24 = 235;
+			$trans24 = 235;
 		} else {
-			$int24 = 255;
+			$trans24 = 255;
 		}
-		cc_settrans($int24);
+		cc_settrans($trans24);
 		if (~on_mobile = false) {
-			cc_setonmouseover("league_task_hover(event_comid, $component2, $component6, 225, $graphic25)");
-			cc_setonmouseleave("league_task_hover(event_comid, $component2, $component6, $int24, $graphic26)");
+			cc_setonmouseover("league_task_hover(event_comsubid, $component2, $component6, 225, $graphic25)");
+			cc_setonmouseleave("league_task_hover(event_comsubid, $component2, $component6, $trans24, $graphic26)");
 		} else {
 			cc_setonmouseover(null);
 			cc_setonmouseleave(null);
 		}
-		cc_setopbase("<col=ff981f><$string0></col>");
+		cc_setopbase("<col=ff981f><$text0></col>");
 		if ($int19 = $int0) {
 			cc_setop(1, "Collapse");
 			cc_setonop("league_tasks_draw_list(-1, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, -1)");
@@ -92,20 +92,20 @@ while ($int19 < $int18) {
 		}
 		cc_create($component6, ^iftype_graphic, $int14);
 		cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
-		cc_setposition(5, calc($int22 + ($int23 - 18) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(5, calc($height22 + ($int23 - 18) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic($graphic26);
 		cc_create($component7, ^iftype_graphic, $int14);
 		cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
-		cc_setposition(28, calc($int22 + ($int23 - 18) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(28, calc($height22 + ($int23 - 18) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic(enum(int, graphic, enum_2674, $int28));
 		cc_create($component3, ^iftype_text, $int14);
-		cc_settext($string0);
+		cc_settext($text0);
 		cc_setsize(51, 16, ^setsize_minus, ^setsize_abs);
-		cc_setposition(51, calc($int22 + $int23 / 2 - 16), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(51, calc($height22 + $int23 / 2 - 16), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		if ($bit27 = ^true) {
+		if ($bool27 = ^true) {
 			cc_setcolour(0x0dc10d);
 		} else {
 			cc_setcolour(^red);
@@ -117,7 +117,7 @@ while ($int19 < $int18) {
 			cc_settext("Reward: <col=ffffff><tostring(enum(int, int, enum_2671, $int28))> points</col>");
 		}
 		cc_setsize(51, 11, ^setsize_minus, ^setsize_abs);
-		cc_setposition(51, calc($int22 + $int23 / 2 + 2), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(51, calc($height22 + $int23 / 2 + 2), ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p11_full);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		cc_settextshadow(true);
@@ -126,23 +126,23 @@ while ($int19 < $int18) {
 			cc_create($component5, ^iftype_text, 0);
 			cc_settext($string1);
 			cc_setsize(10, calc(10 * $int30), ^setsize_minus, ^setsize_abs);
-			cc_setposition(5, calc($int22 + $int23 + 5), ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(5, calc($height22 + $int23 + 5), ^setpos_abs_left, ^setpos_abs_top);
 			cc_settextfont(p11_full);
 			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 			cc_settextshadow(true);
 			cc_setcolour(0xff981f);
 		}
 		if ($int19 = $int0) {
-			$int22 = calc($int22 + $int30 * 10 + $int23 + 10);
+			$height22 = calc($height22 + $int30 * 10 + $int23 + 10);
 		} else {
-			$int22 = calc($int22 + $int23);
+			$height22 = calc($height22 + $int23);
 		}
 		$int14 = calc($int14 + 1);
 	}
 	$int19 = calc($int19 + 1);
 }
-if ($int22 > if_getheight($component1)) {
-	if_setscrollsize(0, $int22, $component1);
+if ($height22 > if_getheight($component1)) {
+	if_setscrollsize(0, $height22, $component1);
 } else {
 	if_setscrollsize(0, 0, $component1);
 }

@@ -1,22 +1,22 @@
 // 3073
 [proc,br_loadout_sort](intarray $intarray0, int $int1, int $int2)
-def_int $int3 = calc(($int1 + $int2) / 2);
-def_int $int4 = $intarray0($int3);
-$intarray0($int3) = $intarray0($int2);
+def_int $index3 = calc(($int1 + $int2) / 2);
+def_int $int4 = $intarray0($index3);
+$intarray0($index3) = $intarray0($int2);
 $intarray0($int2) = $int4;
 def_int $int5 = $int1;
 def_int $int6 = $int1;
 def_int $int7 = 0;
-def_obj $obj8 = null;
+def_namedobj $namedobj8 = null;
 def_int $int9 = 0;
-def_obj $obj10 = enum(int, namedobj, enum_2630, $int4);
-def_int $int11 = oc_param($obj10, param_850);
-def_string $string0 = oc_name($obj10);
+def_namedobj $namedobj10 = enum(int, namedobj, enum_2630, $int4);
+def_int $int11 = oc_param($namedobj10, param_850);
+def_string $string0 = oc_name($namedobj10);
 def_int $int12 = 0;
 while ($int6 < $int2) {
-	$obj8 = enum(int, namedobj, enum_2630, $intarray0($int6));
-	$int9 = oc_param($obj8, param_850);
-	if ($int9 < $int11 | $int9 = $int11 & compare(oc_name($obj8), $string0) <= 0) {
+	$namedobj8 = enum(int, namedobj, enum_2630, $intarray0($int6));
+	$int9 = oc_param($namedobj8, param_850);
+	if ($int9 < $int11 | $int9 = $int11 & compare(oc_name($namedobj8), $string0) <= 0) {
 		$int12 = $intarray0($int6);
 		$intarray0($int6) = $intarray0($int5);
 		$intarray0($int5) = $int12;

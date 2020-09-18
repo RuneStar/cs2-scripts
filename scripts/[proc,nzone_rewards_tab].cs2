@@ -1,5 +1,5 @@
 // 309
-[proc,nzone_rewards_tab](component $component0, component $component1, string $string0, int $int2, int $int3, component $component4, component $component5, component $component6, component $component7)(int, int)
+[proc,nzone_rewards_tab](component $component0, component $component1, string $op0, int $int2, int $int3, component $component4, component $component5, component $component6, component $component7)(int, int)
 cc_create($component0, ^iftype_graphic, $int2);
 .cc_create($component0, ^iftype_text, calc($int2 + 1));
 cc_setsize(85, 22, ^setsize_abs, ^setsize_abs);
@@ -10,12 +10,12 @@ cc_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_top);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_setcolour(0xff981f);
 .cc_settextshadow(true);
-.cc_settext($string0);
+.cc_settext($op0);
 if ($component1 ! $component7) {
 	cc_setgraphic("combatboxesmed,0");
 	cc_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)");
 	cc_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)");
-	cc_setop(1, $string0);
+	cc_setop(1, $op0);
 	cc_setonop("nzone_rewards_tabs($component0, $component4, $component5, $component6, $component1)");
 } else {
 	cc_setgraphic("combatboxesmed,1");

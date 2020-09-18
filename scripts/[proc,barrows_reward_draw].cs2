@@ -1,18 +1,18 @@
 // 1067
-[proc,barrows_reward_draw](component $component0, int $int1)
+[proc,barrows_reward_draw](component $component0, int $size1)
 cc_deleteall($component0);
 def_int $int2 = calc(32 + 10);
 def_int $int3 = 0;
 def_int $int4 = 0;
 def_obj $obj5 = null;
-def_int $int6 = 0;
-while ($int6 < $int1) {
-	cc_create($component0, ^iftype_graphic, $int6);
-	$obj5 = inv_getobj(inv_141, $int6);
+def_int $size6 = 0;
+while ($size6 < $size1) {
+	cc_create($component0, ^iftype_graphic, $size6);
+	$obj5 = inv_getobj(inv_141, $size6);
 	if ($obj5 ! null) {
 		cc_sethide(false);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		$int4, $int3 = calc($int6 / 3), calc($int6 % 3);
+		$int4, $int3 = calc($size6 / 3), calc($size6 % 3);
 		if ($int4 < 2) {
 			if ($int3 = 0) {
 				cc_setposition(0, calc($int4 * $int2), ^setpos_abs_left, ^setpos_abs_top);
@@ -30,11 +30,11 @@ while ($int6 < $int1) {
 		}
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		cc_setobject($obj5, inv_getnum(inv_141, $int6));
+		cc_setobject($obj5, inv_getnum(inv_141, $size6));
 		cc_setop(10, "Examine");
 		cc_setopbase("<col=ff9040><oc_name($obj5)></col>");
 	} else {
 		cc_sethide(true);
 	}
-	$int6 = calc($int6 + 1);
+	$size6 = calc($size6 + 1);
 }

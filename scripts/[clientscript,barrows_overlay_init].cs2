@@ -4,27 +4,27 @@
 ~barrows_overlay_reward($component9);
 if_setonvartransmit("barrows_overlay_reward($component9){var453, var1697}", $component0);
 cc_deleteall($component10);
-def_int $int11 = ~script1071("Ahrim", 0, $component10);
-def_int $int12 = ~script1071("Dharok", 1, $component10);
-if ($int12 > $int11) {
-	$int11 = $int12;
+def_int $width11 = ~script1071("Ahrim", 0, $component10);
+def_int $width12 = ~script1071("Dharok", 1, $component10);
+if ($width12 > $width11) {
+	$width11 = $width12;
 }
-$int12 = ~script1071("Guthan", 2, $component10);
-if ($int12 > $int11) {
-	$int11 = $int12;
+$width12 = ~script1071("Guthan", 2, $component10);
+if ($width12 > $width11) {
+	$width11 = $width12;
 }
-$int12 = ~script1071("Karil", 3, $component10);
-if ($int12 > $int11) {
-	$int11 = $int12;
+$width12 = ~script1071("Karil", 3, $component10);
+if ($width12 > $width11) {
+	$width11 = $width12;
 }
-$int12 = ~script1071("Torag", 4, $component10);
-if ($int12 > $int11) {
-	$int11 = $int12;
+$width12 = ~script1071("Torag", 4, $component10);
+if ($width12 > $width11) {
+	$width11 = $width12;
 }
-$int12 = ~script1071("Verac", 5, $component10);
-if ($int12 > $int11) {
-	$int11 = $int12;
+$width12 = ~script1071("Verac", 5, $component10);
+if ($width12 > $width11) {
+	$width11 = $width12;
 }
-if_setsize(calc($int11 + 20), 102, ^setsize_abs, ^setsize_abs, $component10);
+if_setsize(calc($width11 + 20), 102, ^setsize_abs, ^setsize_abs, $component10);
 ~barrows_overlay_size($component0, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, ^min_32bit_int);
 if_setonsubchange("barrows_overlay_size($component0, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, ^min_32bit_int)", $component0);

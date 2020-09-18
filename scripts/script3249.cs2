@@ -1,5 +1,5 @@
 // 3249
-script3249(int $int0, component $component1, int $int2, int $int3, int $int4, int $int5, obj $obj6, int $int7, graphic $graphic8, string $string0, int $int9)(int)
+script3249(int $int0, component $component1, int $int2, int $int3, int $int4, int $int5, namedobj $namedobj6, int $int7, graphic $graphic8, string $text0, int $int9)(int)
 if ($graphic8 ! null) {
 	cc_create($component1, ^iftype_graphic, $int0);
 	cc_setgraphic($graphic8);
@@ -14,11 +14,11 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextfont(p11_full);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
-cc_settext($string0);
+cc_settext($text0);
 $int0 = calc($int0 + 1);
 def_int $int10 = 0;
-$int10 = inv_total(inv, $obj6);
-$int10 = calc($int10 + inv_total(inv, oc_cert($obj6)));
+$int10 = inv_total(inv, $namedobj6);
+$int10 = calc($int10 + inv_total(inv, oc_cert($namedobj6)));
 cc_create($component1, ^iftype_text, $int0);
 cc_setsize(calc($int4 - 52), 30, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc($int3 + 52), calc($int2 + 30), ^setpos_abs_left, ^setpos_abs_top);

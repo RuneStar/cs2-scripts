@@ -1,19 +1,19 @@
 // 2020
 [proc,volcanic_mine_set_venttext]
-def_string $string0 = "A: -%";
-def_string $string1 = "B: -%";
-def_string $string2 = "C: -%";
+def_string $text0 = "A: -%";
+def_string $text1 = "B: -%";
+def_string $text2 = "C: -%";
 if (%varbit5941 >= 2) {
 	if (%varbit5939 ! 127) {
-		$string0 = "A: <~volcanic_mine_ventcolour(%varbit5939)>";
+		$text0 = "A: <~volcanic_mine_ventcolour(%varbit5939)>";
 	}
 	if (%varbit5940 ! 127) {
-		$string1 = "B: <~volcanic_mine_ventcolour(%varbit5940)>";
+		$text1 = "B: <~volcanic_mine_ventcolour(%varbit5940)>";
 	}
 	if (%varbit5942 ! 127) {
-		$string2 = "C: <~volcanic_mine_ventcolour(%varbit5942)>";
+		$text2 = "C: <~volcanic_mine_ventcolour(%varbit5942)>";
 	}
 }
-if_settext($string0, interface_611:20);
-if_settext($string1, interface_611:21);
-if_settext($string2, interface_611:22);
+if_settext($text0, interface_611:20);
+if_settext($text1, interface_611:21);
+if_settext($text2, interface_611:22);

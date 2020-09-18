@@ -1,5 +1,5 @@
 // 240
-[clientscript,autocast_tooltip_runecount](boolean $boolean0, obj $obj1, int $int2, component $component3, int $int4, int $int5)
-if (cc_find($component3, $int4) = ^true & .cc_find($component3, $int5) = ^true) {
+[clientscript,autocast_tooltip_runecount](boolean $boolean0, obj $obj1, int $int2, component $component3, int $comsubid4, int $comsubid5)
+if (cc_find($component3, $comsubid4) = ^true & .cc_find($component3, $comsubid5) = ^true) {
 	~autocast_tooltip_runecount($boolean0, $obj1, $int2);
 }

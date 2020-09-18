@@ -18,5 +18,5 @@ cc_setmodel(saradomins_light_29403);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 .cc_setcolour(^white);
 .cc_setfill(true);
-cc_setontimer("saradomin_light_effect_update(event_com, event_comid, .cc_getid, clientclock)");
+cc_setontimer("saradomin_light_effect_update(event_com, event_comsubid, .cc_getid, clientclock)");
 ~saradomin_light_effect_update($component1, 0);

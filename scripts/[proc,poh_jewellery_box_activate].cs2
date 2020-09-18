@@ -4,5 +4,5 @@ sound_synth(synth_2266, 1, 0);
 cc_settext("<col=ffffff>Please wait...</col>");
 cc_setonop(null);
 .cc_setonkey(null);
-.cc_setontimer("poh_jewellery_box_timeout(event_comid, cc_getlayer, cc_getid, $string0, $string1, $string2, calc(clientclock + 40))");
+.cc_setontimer("poh_jewellery_box_timeout(event_comsubid, cc_getlayer, cc_getid, $string0, $string1, $string2, calc(clientclock + 40))");
 .cc_resume_pausebutton;

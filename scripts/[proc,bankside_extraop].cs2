@@ -1,5 +1,5 @@
 // 2576
-[proc,bankside_extraop](obj $obj0, int $int1)(string)
+[proc,bankside_extraop](obj $obj0, int $index1)(string)
 if (%varbit10079 = 1) {
 	return("");
 }
@@ -27,9 +27,9 @@ switch_obj ($obj0) {
 		}
 	case default :
 		if (string_length($string0) <= 0 & (map_members = ^true | oc_members($obj0) = ^false)) {
-			if (testbit(%var262, $int1) = ^true) {
+			if (testbit(%var262, $index1) = ^true) {
 				$string0 = oc_iop($obj0, oc_param($obj0, param_148));
-			} else if (testbit(%var263, $int1) = ^true) {
+			} else if (testbit(%var263, $index1) = ^true) {
 				$string0 = oc_iop($obj0, 1);
 			}
 		}

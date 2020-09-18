@@ -1,17 +1,17 @@
 // 322
-[clientscript,slayer_rewards_buy_op](int $int0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7)
+[clientscript,slayer_rewards_buy_op](int $opindex0, component $component1, int $comsubid2, component $component3, component $component4, component $component5, component $component6, component $component7)
 def_namedobj $namedobj8 = null;
 def_string $string0 = "Choose an item from the shop.";
 def_int $int9 = 0;
 def_int $int10 = 0;
-if ($int0 <= 1) {
+if ($opindex0 <= 1) {
 	sound_synth(synth_2266, 1, 0);
 	if_sethide(true, $component3);
 	if_sethide(false, $component4);
 	cc_deleteall($component6);
 	if_setposition(92, 165, ^setpos_abs_left, ^setpos_abs_top, $component7);
 	if_sethide(true, $component6);
-	$namedobj8 = enum(int, namedobj, enum_840, $int2);
+	$namedobj8 = enum(int, namedobj, enum_840, $comsubid2);
 	if ($namedobj8 ! null) {
 		$string0 = "<u=ff981f><oc_name($namedobj8)></u><br><br><enum(obj, string, enum_843, $namedobj8)><br><br>";
 		$int9 = enum(obj, int, enum_842, $namedobj8);
@@ -33,11 +33,11 @@ if ($int0 <= 1) {
 	if_setonop("slayer_rewards_confirm_back(false, event_opindex, $component3, $component4, $component5, $component6, $component7)", $component7);
 	return;
 }
-if ($int0 >= 10) {
+if ($opindex0 >= 10) {
 	return;
 }
-if (cc_find($component1, $int2) = ^true) {
+if (cc_find($component1, $comsubid2) = ^true) {
 	cc_settrans(75);
 	sound_synth(synth_2266, 1, 0);
-	cc_setontimer("slayer_rewards_buy_release($component1, $int2, calc(clientclock + 10))");
+	cc_setontimer("slayer_rewards_buy_release($component1, $comsubid2, calc(clientclock + 10))");
 }

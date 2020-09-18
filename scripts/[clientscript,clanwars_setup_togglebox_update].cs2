@@ -1,5 +1,5 @@
 // 584
-[clientscript,clanwars_setup_togglebox_update](component $component0, int $int1, int $int2)
-if (cc_find($component0, calc($int1 + 1)) = ^true & .cc_find($component0, calc($int1 + 2)) = ^true) {
-	~clanwars_setup_togglebox_update($component0, $int2);
+[clientscript,clanwars_setup_togglebox_update](component $component0, int $comsubid1, int $index2)
+if (cc_find($component0, calc($comsubid1 + 1)) = ^true & .cc_find($component0, calc($comsubid1 + 2)) = ^true) {
+	~clanwars_setup_togglebox_update($component0, $index2);
 }

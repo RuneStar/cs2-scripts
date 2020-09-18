@@ -9,7 +9,7 @@ def_int $int6 = struct_param($struct0, param_670);
 def_namedobj $namedobj7 = struct_param($struct0, param_667);
 def_int $int8 = struct_param($struct0, param_671);
 def_stat $stat9 = struct_param($struct0, param_672);
-def_int $int10 = struct_param($struct0, param_673);
+def_int $lvl10 = struct_param($struct0, param_673);
 def_int $int11 = struct_param($struct0, param_674);
 def_string $string0 = "";
 def_int $int12 = 1;
@@ -18,13 +18,13 @@ if (%varbit4896 < 600) {
 	$int13 = 0;
 }
 if ($stat9 ! null) {
-	if (stat_base($stat9) >= $int10) {
+	if (stat_base($stat9) >= $lvl10) {
 		$string0 = "<$string0><col=0dc10d>";
 	} else {
 		$string0 = "<$string0><col=ff0000>";
 		$int12 = 0;
 	}
-	$string0 = "<$string0>Level <tostring($int10)> <enum(stat, string, enum_680, $stat9)>.</col>";
+	$string0 = "<$string0>Level <tostring($lvl10)> <enum(stat, string, enum_680, $stat9)>.</col>";
 }
 if ($int11 = 1) {
 	if ($stat9 ! null) {

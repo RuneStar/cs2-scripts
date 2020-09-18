@@ -1,16 +1,16 @@
 // 2917
 [clientscript,gauntlet_recipes_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23)
-def_int $int24 = if_getheight($component2);
-if_setscrollsize(0, $int24, $component1);
+def_int $height24 = if_getheight($component2);
+if_setscrollsize(0, $height24, $component1);
 ~scrollbar_vertical($component3, $component1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 if_setscrollpos(0, 0, $component1);
 if_settext("Crystal Singing Recipes", $component0);
 ~script2918($component4, "Crystal Vial", "<tostring(10)> <~script2920> Shards", ~gauntlet_select_item(vial_23879, %varbit9292));
-def_string $string0 = "Teleport Crystal";
+def_string $text0 = "Teleport Crystal";
 if (%varbit9292 = 1) {
-	$string0 = "Corrupted Teleport Crystal";
+	$text0 = "Corrupted Teleport Crystal";
 }
-~script2918($component5, $string0, "<tostring(40)> <~script2920> Shards", ~gauntlet_select_item(teleport_crystal_23904, %varbit9292));
+~script2918($component5, $text0, "<tostring(40)> <~script2920> Shards", ~gauntlet_select_item(teleport_crystal_23904, %varbit9292));
 ~script2918($component6, "Basic <~script2920> Halberd", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(crystal_halberd_basic_23895, %varbit9292));
 ~script2918($component7, "Basic <~script2920> Bow", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(crystal_bow_basic_23901, %varbit9292));
 ~script2918($component8, "Basic <~script2920> Staff", "<tostring(20)> <~script2920> Shards & 1 Weapon Frame", ~gauntlet_select_item(crystal_staff_basic_23898, %varbit9292));

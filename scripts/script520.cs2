@@ -1,5 +1,5 @@
 // 520
-script520(component $component0, int $int1, string $string0, int $int2)
+script520(component $component0, int $int1, string $text0, int $int2)
 cc_create($component0, ^iftype_text, calc($int1 + 8));
 cc_setposition(25, calc(4 + ($int1 + 1) * 17), ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(calc($int2 - 25), 17, ^setsize_abs, ^setsize_abs);
@@ -7,4 +7,4 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
-cc_settext($string0);
+cc_settext($text0);

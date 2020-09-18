@@ -1,5 +1,5 @@
 // 3283
-script3283(component $component0, int $int1, int $int2, int $int3, int $int4, graphic $graphic5, int $int6, string $string0)(int, int)
+script3283(component $component0, int $int1, int $int2, int $int3, int $int4, graphic $graphic5, int $int6, string $op0)(int, int)
 def_int $int7 = calc($int3 - 12);
 def_int $int8 = calc($int3 - 12);
 cc_create($component0, ^iftype_graphic, $int6);
@@ -52,21 +52,21 @@ cc_setposition($int1, calc($int2 + (6 + $int8)), ^setpos_abs_right, ^setpos_abs_
 cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 cc_setgraphic("graphic_1149");
 $int6 = calc($int6 + 1);
-def_int $int9 = 33;
+def_int $width9 = 33;
 def_int $int10 = 36;
 if ($graphic5 = "bankbuttons,2") {
-	$int9, $int10 = 29, 22;
+	$width9, $int10 = 29, 22;
 }
-def_int $int11 = calc($int2 + ($int4 - $int10) / 2);
+def_int $y11 = calc($int2 + ($int4 - $int10) / 2);
 cc_create($component0, ^iftype_graphic, $int6);
-cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, $int11, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize($width9, $int10, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $y11, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setgraphic($graphic5);
 $int6 = calc($int6 + 1);
 cc_create($component0, ^iftype_graphic, $int6);
 cc_setsize(calc($int7 + 6), calc($int8 + 6), ^setsize_abs, ^setsize_abs);
 cc_setposition($int1, $int2, ^setpos_abs_left, ^setpos_abs_top);
-cc_setop(1, $string0);
+cc_setop(1, $op0);
 $int6 = calc($int6 + 1);
 $int2 = calc($int2 + 40);
 return($int6, $int2);

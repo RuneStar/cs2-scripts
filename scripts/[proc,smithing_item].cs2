@@ -1,31 +1,31 @@
 // 431
-[proc,smithing_item](component $component0, string $string0, obj $obj1, int $int2, obj $obj3)
+[proc,smithing_item](component $component0, string $text0, namedobj $namedobj1, int $int2, obj $obj3)
 cc_deleteall($component0);
-if ($obj1 = null) {
+if ($namedobj1 = null) {
 	if_sethide(true, $component0);
 	return;
 }
 if_sethide(false, $component0);
-if (~inzone(0_48_148_0_0, 0_48_148_63_63, coord) = 1 & $obj1 ! bronze_dagger_1205) {
+if (~inzone(0_48_148_0_0, 0_48_148_63_63, coord) = 1 & $namedobj1 ! bronze_dagger_1205) {
 	$int2 = 1;
 }
-def_int $int4 = if_getwidth($component0);
+def_int $width4 = if_getwidth($component0);
 cc_create($component0, ^iftype_text, 0);
-cc_setsize($int4, 13, ^setsize_abs, ^setsize_abs);
+cc_setsize($width4, 13, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, calc(32 - 1), ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-if ($int2 = 1 | stat(smithing) < enum(obj, int, enum_846, $obj1)) {
+if ($int2 = 1 | stat(smithing) < enum(obj, int, enum_846, $namedobj1)) {
 	cc_setcolour(^black);
 	cc_settextshadow(false);
 } else {
 	cc_setcolour(^white);
 	cc_settextshadow(true);
 }
-cc_settext($string0);
-def_int $int5 = enum(obj, int, enum_845, $obj1);
+cc_settext($text0);
+def_int $int5 = enum(obj, int, enum_845, $namedobj1);
 cc_create($component0, ^iftype_text, 1);
-cc_setsize($int4, 13, ^setsize_abs, ^setsize_abs);
+cc_setsize($width4, 13, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, calc(32 + 11), ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
@@ -45,14 +45,14 @@ cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
-if (~inzone(0_26_195_0_0, 0_26_195_63_63, coord) = 1 & $obj1 = bronze_dagger_1205 & %var2686 < 350) {
-	cc_setontimer("cc_flash_component_timer(event_com, event_comid, 0, 1)");
+if (~inzone(0_26_195_0_0, 0_26_195_63_63, coord) = 1 & $namedobj1 = bronze_dagger_1205 & %var2686 < 350) {
+	cc_setontimer("cc_flash_component_timer(event_com, event_comsubid, 0, 1)");
 }
-def_int $int6 = enum(obj, int, enum_844, $obj1);
-cc_setobject($obj1, $int6);
-if ($int6 > 1) {
+def_int $num6 = enum(obj, int, enum_844, $namedobj1);
+cc_setobject($namedobj1, $num6);
+if ($num6 > 1) {
 	if_setop(1, "Smith set", $component0);
 } else {
 	if_setop(1, "Smith", $component0);
 }
-if_setopbase("<col=ff9040><oc_name($obj1)></col>", $component0);
+if_setopbase("<col=ff9040><oc_name($namedobj1)></col>", $component0);

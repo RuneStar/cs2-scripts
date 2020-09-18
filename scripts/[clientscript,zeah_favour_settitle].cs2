@@ -1,5 +1,5 @@
 // 1210
-[clientscript,zeah_favour_settitle](component $component0, int $int1, int $int2)
+[clientscript,zeah_favour_settitle](component $component0, int $comsubid1, int $int2)
 def_int $int3 = 0;
 if ($int2 = 3) {
 	$int3 = %varbit4896;
@@ -12,6 +12,6 @@ if ($int2 = 3) {
 } else if ($int2 = 1) {
 	$int3 = %varbit4894;
 }
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $comsubid1) = ^true) {
 	~zeah_favour_settitle($int2, $int3);
 }

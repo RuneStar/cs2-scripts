@@ -8,13 +8,13 @@ if (clienttype = ^clienttype_ios) {
 	$string0 = "There is more info on the OSRS website.";
 }
 def_int $int7 = calc($int1 - (15 + $int6));
-def_int $int8 = parawidth($string0, $int7, $fontmetrics4);
+def_int $width8 = parawidth($string0, $int7, $fontmetrics4);
 def_int $int9 = calc(paraheight($string0, $int7, $fontmetrics4) * $int5 + $int6);
 $int9 = ~max($int9, 15);
 if (~on_mobile = true) {
 	$int9 = ~max($int9, 25);
 }
-$int7 = calc($int8 + 15 + $int6);
+$int7 = calc($width8 + 15 + $int6);
 cc_create($component0, ^iftype_rectangle, %varcint43);
 %varcint43 = calc(%varcint43 + 1);
 cc_setsize($int7, $int9, ^setsize_abs, ^setsize_abs);
@@ -24,7 +24,7 @@ cc_setfill(true);
 cc_settrans(255);
 .cc_create($component0, ^iftype_text, %varcint43);
 %varcint43 = calc(%varcint43 + 1);
-.cc_setsize($int8, $int9, ^setsize_abs, ^setsize_abs);
+.cc_setsize($width8, $int9, ^setsize_abs, ^setsize_abs);
 .cc_setposition(calc($int7 + 15 + $int6), %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 .cc_settextfont($fontmetrics3);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

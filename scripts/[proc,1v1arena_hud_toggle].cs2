@@ -3,7 +3,7 @@
 cc_deleteall($component1);
 cc_deleteall($component2);
 if_sethide($boolean0, $component3);
-def_int $int4 = 0;
+def_int $comsubid4 = 0;
 if ($boolean0 = true) {
 	if_sethide(true, $component2);
 	if_setonmouseover(null, $component2);
@@ -11,8 +11,8 @@ if ($boolean0 = true) {
 	if_clearops($component2);
 	if_setonop(null, $component2);
 	if_sethide(false, $component1);
-	$int4 = ~options_button_off($component1, 0);
-	cc_create($component1, ^iftype_text, $int4);
+	$comsubid4 = ~options_button_off($component1, 0);
+	cc_create($component1, ^iftype_text, $comsubid4);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0xff981f);
@@ -31,8 +31,8 @@ if ($boolean0 = true) {
 	if_clearops($component1);
 	if_setonop(null, $component1);
 	if_sethide(false, $component2);
-	$int4 = ~options_button_off($component2, 0);
-	cc_create($component2, ^iftype_text, $int4);
+	$comsubid4 = ~options_button_off($component2, 0);
+	cc_create($component2, ^iftype_text, $comsubid4);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0xff981f);

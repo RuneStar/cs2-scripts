@@ -24,10 +24,10 @@ while ($namedobj4 ! null & ($int1 = 0 | $int2 = 0)) {
 }
 if ($int1 = 1 & $int2 = 1) {
 	cc_settrans(130);
-	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 170, 130)");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 170, 130)");
 	cc_setop(1, "Contents");
 } else {
 	cc_settrans(0);
-	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 	cc_setop(1, "Pack");
 }

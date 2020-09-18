@@ -1,5 +1,5 @@
 // 1436
-[proc,cws_init_button](component $component0, string $string0)
+[proc,cws_init_button](component $component0, string $op0)
 def_graphic $graphic1 = "graphic_833";
 def_graphic $graphic2 = "graphic_834";
 cc_deleteall($component0);
@@ -14,7 +14,7 @@ cc_setgraphic($graphic1);
 .cc_settextfont(b12_full);
 .cc_settextshadow(true);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-.cc_settext($string0);
+.cc_settext($op0);
 if_setonmouserepeat("cc_graphic_swapper(event_com, cc_getid, $graphic2, null)", $component0);
 if_setonmouseleave("cc_graphic_swapper(event_com, cc_getid, $graphic1, null)", $component0);
-if_setop(1, $string0, $component0);
+if_setop(1, $op0, $component0);

@@ -1,6 +1,6 @@
 // 320
-script320(int $int0, component $component1, component $component2, component $component3, component $component4)
-if (clientclock < $int0) {
+script320(int $clock0, component $component1, component $component2, component $component3, component $component4)
+if (clientclock < $clock0) {
 	return;
 }
 if_setontimer(null, $component3);

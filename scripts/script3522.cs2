@@ -22,7 +22,7 @@ if (%varbit10542 > 0 & %varbit10542 < 6) {
 		$string0 = append($string0, "Graceful Cape:  +3%.<br>");
 	}
 }
-def_int $int2 = calc(paraheight($string0, if_getwidth($component0), p12_full) * 12 + 5);
+def_int $height2 = calc(paraheight($string0, if_getwidth($component0), p12_full) * 12 + 5);
 cc_create($component0, ^iftype_text, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -32,8 +32,8 @@ cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_setcolour(0xff981f);
 cc_settext($string0);
 if_setscrollpos(0, 0, $component0);
-if_setscrollsize(0, $int2, $component0);
-if ($int2 > if_getheight($component0)) {
+if_setscrollsize(0, $height2, $component0);
+if ($height2 > if_getheight($component0)) {
 	~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 	if_sethide(false, $component1);
 } else {

@@ -3,24 +3,24 @@
 if ($int2 = 1) {
 	%varcint58 = 0;
 }
-def_int $int3 = ~steelborder(interface_675:2, "", 0);
+def_int $comsubid3 = ~steelborder(interface_675:2, "", 0);
 ~scrollbar_vertical(interface_675:5, interface_675:4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 def_int $int4 = calc(4 + 32);
 def_int $int5 = 0;
 def_int $int6 = 0;
 cc_deleteall(interface_675:4);
-def_obj $obj7 = null;
+def_namedobj $namedobj7 = null;
 def_string $string0 = "";
 def_int $int8 = calc(if_getwidth(interface_675:4) / 2);
-def_int $int9 = calc($int8 - 20);
+def_int $width9 = calc($int8 - 20);
 def_graphic $graphic10 = "p12_full";
 def_int $int11 = 0;
-def_int $int12 = enum_getoutputcount($enum0);
-def_int $int13 = 0;
-while ($int13 < $int12) {
-	$obj7 = enum(int, namedobj, $enum0, $int13);
-	$string0 = enum(obj, string, enum_3302, $obj7);
-	if ($graphic10 = "p12_full" & parawidth($string0, 512, p12_full) > $int9) {
+def_int $count12 = enum_getoutputcount($enum0);
+def_int $count13 = 0;
+while ($count13 < $count12) {
+	$namedobj7 = enum(int, namedobj, $enum0, $count13);
+	$string0 = enum(obj, string, enum_3302, $namedobj7);
+	if ($graphic10 = "p12_full" & parawidth($string0, 512, p12_full) > $width9) {
 		$graphic10 = "p11_full";
 	}
 	cc_create(interface_675:4, ^iftype_graphic, $int6);
@@ -49,13 +49,13 @@ while ($int13 < $int12) {
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
 	}
-	if (enum(obj, enum, enum_3077, $obj7) ! null | enum(obj, namedobj, enum_3303, $obj7) ! null | enum(obj, enum, enum_3304, $obj7) ! null) {
+	if (enum(obj, enum, enum_3077, $namedobj7) ! null | enum(obj, namedobj, enum_3303, $namedobj7) ! null | enum(obj, enum, enum_3304, $namedobj7) ! null) {
 		$int11 = 1;
 	}
-	$int5, $int13 = 0, calc($int13 + 1);
+	$int5, $count13 = 0, calc($count13 + 1);
 }
-~poh_costumes_build($enum0, $int12, $int4, $int6, $boolean1, interface_675:4, interface_675:5, $int8, $graphic10, interface_675:2, $int3);
-if_setoninvtransmit("poh_costumes_build($enum0, $int12, $int4, $int6, $boolean1, event_com, interface_675:5, $int8, $graphic10, interface_675:2, $int3){inv_637}", interface_675:4);
+~poh_costumes_build($enum0, $count12, $int4, $int6, $boolean1, interface_675:4, interface_675:5, $int8, $graphic10, interface_675:2, $comsubid3);
+if_setoninvtransmit("poh_costumes_build($enum0, $count12, $int4, $int6, $boolean1, event_com, interface_675:5, $int8, $graphic10, interface_675:2, $comsubid3){inv_637}", interface_675:4);
 ~poh_costumes_buttons_search_reset($enum0, interface_675:9, "bankbuttons,2");
 if ($boolean1 = true & $int11 = 1) {
 	if_sethide(false, interface_675:8);

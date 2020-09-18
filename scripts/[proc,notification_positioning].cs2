@@ -1,30 +1,30 @@
 // 3351
-[proc,notification_positioning](component $component0, int $int1)
+[proc,notification_positioning](component $component0, int $clock1)
 def_enum $enum2 = null;
-def_int $int3 = 0;
-def_int $int4 = 0;
-def_int $int5 = 0;
-def_int $int6 = 0;
+def_int $x3 = 0;
+def_int $y4 = 0;
+def_int $width5 = 0;
+def_int $height6 = 0;
 def_int $setposh7 = ^setpos_abs_left;
 def_int $setposv8 = ^setpos_abs_bottom;
-if ($int1 ! %varcint384) {
+if ($clock1 ! %varcint384) {
 	$enum2 = ~toplevel_getcomponents;
 	if ($enum2 = enum_1745) {
-		$int3 = 0;
-		$int4 = 10;
-		$int5 = 178;
-		$int6 = 100;
+		$x3 = 0;
+		$y4 = 10;
+		$width5 = 178;
+		$height6 = 100;
 		$setposh7 = ^setpos_abs_centre;
 		$setposv8 = ^setpos_abs_bottom;
 	} else {
-		$int3 = 0;
-		$int4 = 10;
-		$int5 = 178;
-		$int6 = 100;
+		$x3 = 0;
+		$y4 = 10;
+		$width5 = 178;
+		$height6 = 100;
 		$setposh7 = ^setpos_abs_centre;
 		$setposv8 = ^setpos_abs_top;
 	}
-	if_setposition($int3, $int4, $setposh7, $setposv8, $component0);
-	if_setsize($int5, $int6, ^setsize_abs, ^setsize_abs, $component0);
+	if_setposition($x3, $y4, $setposh7, $setposv8, $component0);
+	if_setsize($width5, $height6, ^setsize_abs, ^setsize_abs, $component0);
 	if_setontimer("notification_positioning($component0, %varcint384)", $component0);
 }

@@ -1,10 +1,10 @@
 // 15
-script15(component $component0, int $int1, int $int2)
+script15(component $component0, int $int1, int $clock2)
 if (if_gethide(interface_90:53) = false) {
 	if_settext("", $component0);
 	return;
 }
-def_int $int3 = calc($int1 - (clientclock - $int2) / 50);
+def_int $int3 = calc($int1 - (clientclock - $clock2) / 50);
 if ($int3 <= 0) {
 	if_settext("Hurry!", $component0);
 	return;

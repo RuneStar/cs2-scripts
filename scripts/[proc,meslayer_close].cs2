@@ -3,11 +3,11 @@
 if_sethide(true, interface_162:40);
 if_sethide(false, interface_162:56);
 ~toplevel_chatbox_background;
-def_int $int2 = 0;
+def_int $mesuid2 = 0;
 if ($int1 = 1) {
-	$int2 = ~script553;
-	~rebuildchatbox($int2);
-	~rebuildpmbox($int2);
+	$mesuid2 = ~script553;
+	~rebuildchatbox($mesuid2);
+	~rebuildpmbox($mesuid2);
 	~script223;
 	~chatdefault_setonkey(1);
 	if (~on_mobile = true) {

@@ -149,18 +149,18 @@ $int8 = 0;
 def_int $intarray2(calc($int7 + 1));
 def_int $int18 = 0;
 $int14 = 0;
-def_int $int19 = -1;
+def_int $index19 = -1;
 while ($int8 < 90) {
 	$obj9 = inv_getobj(inv_626, $int8);
 	if ($obj9 ! null & ~seed_vault_filteritem($obj9) = 1) {
-		$int19 = oc_param(oc_unplaceholder($obj9), param_709);
+		$index19 = oc_param(oc_unplaceholder($obj9), param_709);
 		if (~seed_vault_searching = 1 & ~seed_vault_filteritem($obj9) = 1) {
-			$int19 = 0;
+			$index19 = 0;
 		} else if (~script2828($int8) ! -1) {
-			$int19 = 0;
+			$index19 = 0;
 		}
-		$int18 = $intarray2($int19);
-		$int14 = $intarray1($int19);
+		$int18 = $intarray2($index19);
+		$int14 = $intarray1($index19);
 		if (cc_find($component0, $int8) = ^true & .cc_find($component1, $int8) = ^true) {
 			cc_setposition(calc($int18 + $int15 / 2 + ($int10 - 36) / 2), $int14, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setposition(calc($int18 + $int15 / 2), calc($int14 + 32), ^setpos_abs_left, ^setpos_abs_top);
@@ -171,8 +171,8 @@ while ($int8 < 90) {
 				.cc_setondrag("seed_vault_drag_text($component0, $component1, $int8, event_mousex, event_mousey, $component4, $component5, %varcint374)");
 				.cc_setdragdeadtime(5);
 				.cc_setdragdeadzone(5);
-				cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comid, event_dragtargetid, cc_getx, cc_gety)");
-				.cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comid, event_dragtargetid, cc_getx, cc_gety)");
+				cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comsubid, event_dropsubid, cc_getx, cc_gety)");
+				.cc_setondragcomplete("seed_vault_drop($component0, $component1, event_comsubid, event_dropsubid, cc_getx, cc_gety)");
 			} else {
 				cc_setdragdeadtime(10000);
 				cc_setdragdeadzone(10000);
@@ -187,9 +187,9 @@ while ($int8 < 90) {
 		}
 		if (calc($int18 + $int15 + $int10) > if_getwidth($component0)) {
 			$int18 = 0;
-			$intarray1($int19) = calc($int14 + $int16 + 32 + $int11);
+			$intarray1($index19) = calc($int14 + $int16 + 32 + $int11);
 		}
-		$intarray2($int19) = $int18;
+		$intarray2($index19) = $int18;
 	}
 	$int8 = calc($int8 + 1);
 }
@@ -220,12 +220,12 @@ if (~seed_vault_searching = 0) {
 }
 ~scrollbar_vertical_rebuild($component5, $component4);
 def_int $int20 = 0;
-def_int $int21 = calc($intarray1($int7) + $int16 + 32 + $int11);
-if ($int21 > if_getheight($component4)) {
+def_int $height21 = calc($intarray1($int7) + $int16 + 32 + $int11);
+if ($height21 > if_getheight($component4)) {
 	if (%varcint376 > 0) {
 		$int20 = %varcint376;
 	}
-	if_setscrollsize(0, $int21, $component4);
+	if_setscrollsize(0, $height21, $component4);
 	~scrollbar_resize($component5, $component4, $int20);
 } else {
 	if_setscrollsize(0, 0, $component4);

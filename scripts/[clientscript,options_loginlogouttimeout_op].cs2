@@ -1,6 +1,6 @@
 // 675
-[clientscript,options_loginlogouttimeout_op](int $int0, component $component1, component $component2)
-if ($int0 ! 1) {
+[clientscript,options_loginlogouttimeout_op](int $opindex0, component $component1, component $component2)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

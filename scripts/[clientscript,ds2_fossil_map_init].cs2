@@ -35,10 +35,10 @@ while ($int2 < 36) {
 		case default :
 			cc_setop(1, "Rotate-right");
 			cc_setop(2, "Rotate-left");
-			cc_setonop("ds2_fossil_map_rotate(event_opindex, event_com, event_comid)");
+			cc_setonop("ds2_fossil_map_rotate(event_opindex, event_com, event_comsubid)");
 			cc_setdragdeadzone(5);
 			cc_setdragdeadtime(5);
-			cc_setondragcomplete("ds2_fossil_map_swap(event_com, event_comid, event_dragtarget, event_dragtargetid)");
+			cc_setondragcomplete("ds2_fossil_map_swap(event_com, event_comsubid, event_drop, event_dropsubid)");
 	}
 	$int2 = calc($int2 + 1);
 }

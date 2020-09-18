@@ -3,15 +3,15 @@ script2143(component $component0)
 cc_deleteall($component0);
 def_int $int1 = calc((42 - 36) * 3 - 2);
 def_int $int2 = calc((36 - 32) * 2);
-def_int $int3 = 0;
-def_int $int4 = inv_size(inv);
-while ($int3 < $int4) {
-	cc_create($component0, ^iftype_graphic, $int3);
+def_int $size3 = 0;
+def_int $size4 = inv_size(inv);
+while ($size3 < $size4) {
+	cc_create($component0, ^iftype_graphic, $size3);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int1 + $int3 % 4 * 42), calc($int2 + $int3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int1 + $size3 % 4 * 42), calc($int2 + $size3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	$int3 = calc($int3 + 1);
+	$size3 = calc($size3 + 1);
 }
 ~script2145($component0);
 if_setoninvtransmit("script2144($component0){inv}", $component0);

@@ -1,6 +1,6 @@
 // 1426
-[clientscript,tol_pressure_leverop](int $int0, int $int1, component $component2, component $component3, component $component4)
-if ($int0 ! 1) {
+[clientscript,tol_pressure_leverop](int $opindex0, int $int1, component $component2, component $component3, component $component4)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2400, 1, 0);

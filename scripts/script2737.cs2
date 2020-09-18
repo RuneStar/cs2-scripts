@@ -8,7 +8,7 @@ while ($int2 < 36) {
 	cc_setsize(50, 50, ^setsize_abs, ^setsize_abs);
 	cc_setop(1, "Rotate-right");
 	cc_setop(2, "Rotate-left");
-	cc_setonop("script2740(event_opindex, event_com, event_comid)");
+	cc_setonop("script2740(event_opindex, event_com, event_comsubid)");
 	$int2 = calc($int2 + 1);
 }
 ~script2739($component1);

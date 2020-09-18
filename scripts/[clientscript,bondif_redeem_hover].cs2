@@ -1,12 +1,12 @@
 // 2287
-[clientscript,bondif_redeem_hover](boolean $boolean0, component $component1, int $int2)
-if (cc_find($component1, $int2) = ^true) {
+[clientscript,bondif_redeem_hover](boolean $boolean0, component $component1, int $comsubid2)
+if (cc_find($component1, $comsubid2) = ^true) {
 	if ($boolean0 = true) {
 		cc_setgraphic("tradebacking_light");
 		cc_settrans(~max(0, calc(cc_gettrans - 40)));
 		cc_setontimer(null);
 	} else if (cc_gettrans < 255) {
 		cc_setgraphic("tradebacking_light");
-		cc_setontimer("bondif_redeem_fadeend(event_com, event_comid)");
+		cc_setontimer("bondif_redeem_fadeend(event_com, event_comsubid)");
 	}
 }

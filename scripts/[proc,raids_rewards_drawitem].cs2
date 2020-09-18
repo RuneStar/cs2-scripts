@@ -1,12 +1,12 @@
 // 1582
-[proc,raids_rewards_drawitem](obj $obj0, int $int1, int $int2)
+[proc,raids_rewards_drawitem](obj $obj0, int $num1, int $int2)
 cc_sethide(false);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setoutline(1);
 cc_settrans(0);
 cc_setgraphicshadow(0x333333);
-cc_setobject($obj0, $int1);
+cc_setobject($obj0, $num1);
 cc_setop(1, "Take");
 cc_setop(10, "Examine");
 cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
-cc_setonop("raids_rewards_op(event_opindex, event_com, event_comid)");
+cc_setonop("raids_rewards_op(event_opindex, event_com, event_comsubid)");

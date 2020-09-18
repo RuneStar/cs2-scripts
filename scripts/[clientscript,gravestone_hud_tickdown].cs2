@@ -1,7 +1,7 @@
 // 3460
-[clientscript,gravestone_hud_tickdown](component $component0, int $int1, int $int2, int $int3)
+[clientscript,gravestone_hud_tickdown](component $component0, int $comsubid1, int $int2, int $clock3)
 def_int $int4 = 0;
-if (cc_find($component0, $int1) = ^true) {
-	$int4 = ~min(calc(clientclock - $int3), calc(3 * 30));
+if (cc_find($component0, $comsubid1) = ^true) {
+	$int4 = ~min(calc(clientclock - $clock3), calc(3 * 30));
 	~gravestone_hud_write(calc($int2 - $int4));
 }

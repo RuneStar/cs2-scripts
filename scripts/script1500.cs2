@@ -1,6 +1,6 @@
 // 1500
 script1500(component $component0)
-def_string $string0 = "Enable (1 coin)";
+def_string $op0 = "Enable (1 coin)";
 if (%varbit5411 = 0 | %varbit5412 <= 0) {
 	cc_setcolour(0x9f9f9f);
 	cc_settext("Off");
@@ -8,9 +8,9 @@ if (%varbit5411 = 0 | %varbit5412 <= 0) {
 	if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0x9f9f9f)", $component0);
 	if (%varbit5412 > 0) {
 		if (%varbit5412 > 1) {
-			$string0 = "Enable (<~tostring_spacer(%varbit5412, ",")> coins)";
+			$op0 = "Enable (<~tostring_spacer(%varbit5412, ",")> coins)";
 		}
-		if_setop(1, $string0, $component0);
+		if_setop(1, $op0, $component0);
 	} else {
 		if_setop(1, "Enable", $component0);
 	}

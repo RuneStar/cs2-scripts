@@ -1,6 +1,6 @@
 // 284
-[clientscript,bankmain_dragscroll](component $component0, int $int1, int $int2, int $int3, component $component4, int $int5)
-if (calc($int2 - if_getx($component0)) < calc(51 - 10)) {
+[clientscript,bankmain_dragscroll](component $component0, int $comsubid1, int $mousex2, int $int3, component $component4, int $clock5)
+if (calc($mousex2 - if_getx($component0)) < calc(51 - 10)) {
 	return;
 }
 $int3 = calc($int3 - if_gety($component0));
@@ -11,18 +11,18 @@ if ($int3 < 15) {
 	if ($int3 < -8) {
 		return;
 	}
-	if ($int5 <= clientclock) {
-		if (cc_find($component0, $int1) = ^true) {
-			cc_setondrag("bankmain_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc(clientclock + 2))");
+	if ($clock5 <= clientclock) {
+		if (cc_find($component0, $comsubid1) = ^true) {
+			cc_setondrag("bankmain_dragscroll(event_com, event_comsubid, event_mousex, event_mousey, $component4, calc(clientclock + 2))");
 			return;
 		}
-	} else if (calc($int5 - clientclock) < 5) {
-		if (cc_find($component0, $int1) = ^true) {
-			cc_setondrag("bankmain_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc($int5 + 2))");
+	} else if (calc($clock5 - clientclock) < 5) {
+		if (cc_find($component0, $comsubid1) = ^true) {
+			cc_setondrag("bankmain_dragscroll(event_com, event_comsubid, event_mousex, event_mousey, $component4, calc($clock5 + 2))");
 			return;
 		}
-	} else if (cc_find($component0, $int1) = ^true) {
-		cc_setondrag("bankmain_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc($int5 + 1))");
+	} else if (cc_find($component0, $comsubid1) = ^true) {
+		cc_setondrag("bankmain_dragscroll(event_com, event_comsubid, event_mousex, event_mousey, $component4, calc($clock5 + 1))");
 	}
 	if ($int3 < 5) {
 		$int6 = 8;

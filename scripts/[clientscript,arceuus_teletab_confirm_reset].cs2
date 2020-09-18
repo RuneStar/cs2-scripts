@@ -1,6 +1,6 @@
 // 3066
-[clientscript,arceuus_teletab_confirm_reset](int $int0, component $component1, string $string0)
-if (clientclock < $int0) {
+[clientscript,arceuus_teletab_confirm_reset](int $clock0, component $component1, string $string0)
+if (clientclock < $clock0) {
 	return;
 }
 ~arceuus_teletab_confirm_draw(false, $string0, $component1);

@@ -2,11 +2,11 @@
 [proc,clanwars_setup_corner_update](component $component0, int $int1, component $component2, int $int3)
 if_setonvartransmit("clanwars_setup_corner_update($component0, $int1, $component2, %varbit4285){var92}", $component0);
 if_setontimer("clanwars_setup_corner_update($component0, $int1, $component2, %varbit4285)", $component0);
-def_int $int4 = -1;
+def_int $comsubid4 = -1;
 if (%varbit4285 ! $int3) {
 	if (%varbit4285 = 1) {
-		$int4 = ~v2_stone_button_in_filled($component2);
-		cc_create($component2, ^iftype_text, $int4);
+		$comsubid4 = ~v2_stone_button_in_filled($component2);
+		cc_create($component2, ^iftype_text, $comsubid4);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_settextfont(p12_full);
@@ -17,8 +17,8 @@ if (%varbit4285 ! $int3) {
 		if_setonmouserepeat(null, $component2);
 		if_setonmouseleave(null, $component2);
 	} else {
-		$int4 = ~v2_stone_button_out_filled($component2);
-		cc_create($component2, ^iftype_text, $int4);
+		$comsubid4 = ~v2_stone_button_out_filled($component2);
+		cc_create($component2, ^iftype_text, $comsubid4);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_settextfont(p12_full);
@@ -26,8 +26,8 @@ if (%varbit4285 ! $int3) {
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
 		cc_settext("Accept");
-		if_setonmouserepeat("cc_colour_swapper($component2, $int4, ^white)", $component2);
-		if_setonmouseleave("cc_colour_swapper($component2, $int4, 0xff981f)", $component2);
+		if_setonmouserepeat("cc_colour_swapper($component2, $comsubid4, ^white)", $component2);
+		if_setonmouseleave("cc_colour_swapper($component2, $comsubid4, 0xff981f)", $component2);
 	}
 }
 if (%varbit4271 = 1 & %varbit4272 = 1) {

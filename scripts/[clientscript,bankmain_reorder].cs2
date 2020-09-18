@@ -1,62 +1,62 @@
 // 285
-[clientscript,bankmain_reorder](component $component0, int $int1, component $component2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8)
-if ($int1 < 0 | $int1 >= 816) {
+[clientscript,bankmain_reorder](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, int $trans4, component $component5, component $drop6, component $component7, component $component8)
+if ($comsubid1 < 0 | $comsubid1 >= 816) {
 	return;
 }
-if ($component2 = $component6) {
-	~script1317($int1, $component0, $component6, $component7, $component8);
+if ($drop2 = $drop6) {
+	~script1317($comsubid1, $drop0, $drop6, $component7, $component8);
 	return;
 }
-def_int $int9 = ~bank_tabforslot($int3);
-if ($component2 ! $component0 | $int3 < 0 | $int3 >= 816 | ~bank_tabforslot($int1) ! $int9) {
-	if (cc_find($component0, $int1) = ^true) {
+def_int $int9 = ~bank_tabforslot($dropsubid3);
+if ($drop2 ! $drop0 | $dropsubid3 < 0 | $dropsubid3 >= 816 | ~bank_tabforslot($comsubid1) ! $int9) {
+	if (cc_find($drop0, $comsubid1) = ^true) {
 		cc_settrans(200);
-		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, $int4, calc(clientclock + 10))");
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans4, calc(clientclock + 10))");
 	}
 	return;
 }
-def_obj $obj10 = inv_getobj(bank, $int1);
+def_obj $obj10 = inv_getobj(bank, $comsubid1);
 if ($obj10 = null) {
 	return;
 }
-def_obj $obj11 = inv_getobj(bank, $int3);
-if (%varbit3959 = 0 | $int3 = calc($int1 + 1) | $int3 = calc($int1 - 1) | $obj11 = null & $int9 = 0) {
-	if (cc_find($component0, $int3) = ^true) {
-		~bankmain_drawitem($obj10, inv_getnum(bank, $int1), $component0, $component5, $component6, $component7, $component8);
+def_obj $obj11 = inv_getobj(bank, $dropsubid3);
+if (%varbit3959 = 0 | $dropsubid3 = calc($comsubid1 + 1) | $dropsubid3 = calc($comsubid1 - 1) | $obj11 = null & $int9 = 0) {
+	if (cc_find($drop0, $dropsubid3) = ^true) {
+		~bankmain_drawitem($obj10, inv_getnum(bank, $comsubid1), $drop0, $component5, $drop6, $component7, $component8);
 	}
-	if (cc_find($component0, $int1) = ^true) {
-		~bankmain_drawitem($obj11, inv_getnum(bank, $int3), $component0, $component5, $component6, $component7, $component8);
+	if (cc_find($drop0, $comsubid1) = ^true) {
+		~bankmain_drawitem($obj11, inv_getnum(bank, $dropsubid3), $drop0, $component5, $drop6, $component7, $component8);
 	}
 	return;
 }
 if ($obj11 = null | ~bankmain_searching = 1) {
-	if (cc_find($component0, $int1) = ^true) {
+	if (cc_find($drop0, $comsubid1) = ^true) {
 		cc_settrans(200);
-		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, $int4, calc(clientclock + 10))");
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans4, calc(clientclock + 10))");
 	}
 	return;
 }
-def_int $int12 = -1;
-def_int $int13 = -1;
-if ($int3 < $int1) {
-	$int12 = $int1;
-	while ($int12 > $int3) {
-		if (cc_find($component0, $int12) = ^true) {
-			$int13 = calc($int12 - 1);
-			~bankmain_drawitem(inv_getobj(bank, $int13), inv_getnum(bank, $int13), $component0, $component5, $component6, $component7, $component8);
+def_int $dropsubid12 = -1;
+def_int $slot13 = -1;
+if ($dropsubid3 < $comsubid1) {
+	$dropsubid12 = $comsubid1;
+	while ($dropsubid12 > $dropsubid3) {
+		if (cc_find($drop0, $dropsubid12) = ^true) {
+			$slot13 = calc($dropsubid12 - 1);
+			~bankmain_drawitem(inv_getobj(bank, $slot13), inv_getnum(bank, $slot13), $drop0, $component5, $drop6, $component7, $component8);
 		}
-		$int12 = calc($int12 - 1);
+		$dropsubid12 = calc($dropsubid12 - 1);
 	}
 } else {
-	$int12 = $int1;
-	while ($int12 < $int3) {
-		if (cc_find($component0, $int12) = ^true) {
-			$int13 = calc($int12 + 1);
-			~bankmain_drawitem(inv_getobj(bank, $int13), inv_getnum(bank, $int13), $component0, $component5, $component6, $component7, $component8);
+	$dropsubid12 = $comsubid1;
+	while ($dropsubid12 < $dropsubid3) {
+		if (cc_find($drop0, $dropsubid12) = ^true) {
+			$slot13 = calc($dropsubid12 + 1);
+			~bankmain_drawitem(inv_getobj(bank, $slot13), inv_getnum(bank, $slot13), $drop0, $component5, $drop6, $component7, $component8);
 		}
-		$int12 = calc($int12 + 1);
+		$dropsubid12 = calc($dropsubid12 + 1);
 	}
 }
-if (cc_find($component0, $int3) = ^true) {
-	~bankmain_drawitem($obj10, inv_getnum(bank, $int1), $component0, $component5, $component6, $component7, $component8);
+if (cc_find($drop0, $dropsubid3) = ^true) {
+	~bankmain_drawitem($obj10, inv_getnum(bank, $comsubid1), $drop0, $component5, $drop6, $component7, $component8);
 }

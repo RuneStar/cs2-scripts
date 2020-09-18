@@ -1,8 +1,8 @@
 // 3257
 [proc,magic_training_highlight_selected](component $component0, int $int1)
 def_int $int2 = 0;
-def_int $int3 = enum_getoutputcount(enum_2753);
-while ($int2 < $int3) {
+def_int $count3 = enum_getoutputcount(enum_2753);
+while ($int2 < $count3) {
 	if (cc_find($component0, $int2) = ^true) {
 		if ($int2 = $int1) {
 			cc_setoutline(2);

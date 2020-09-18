@@ -1,12 +1,12 @@
 // 3492
 [proc,death_office_redraw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
-def_int $int8 = if_getwidth($component0);
-def_int $int9 = ~max(1, calc($int8 / (36 + 10)));
+def_int $width8 = if_getwidth($component0);
+def_int $int9 = ~max(1, calc($width8 / (36 + 10)));
 def_int $int10 = 0;
 if ($int9 > 1) {
-	$int10 = calc(($int8 - $int9 * 36) / ($int9 - 1));
+	$int10 = calc(($width8 - $int9 * 36) / ($int9 - 1));
 }
-def_int $int11 = calc($int8 - ($int9 * 36 + ($int9 - 1) * $int10));
+def_int $int11 = calc($width8 - ($int9 * 36 + ($int9 - 1) * $int10));
 def_int $int12 = calc(($int11 + 1) / 2);
 def_int $int13 = 0;
 def_obj $obj14 = null;

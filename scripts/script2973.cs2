@@ -4,23 +4,23 @@ def_enum $enum2 = enum(int, enum, enum_2620, $int1);
 if ($enum2 = null) {
 	return($int0);
 }
-def_int $int3 = 0;
-def_int $int4 = enum_getoutputcount($enum2);
+def_int $count3 = 0;
+def_int $count4 = enum_getoutputcount($enum2);
 def_struct $struct5 = null;
-while ($int3 < $int4) {
-	$struct5 = enum(int, struct, $enum2, $int3);
+while ($count3 < $count4) {
+	$struct5 = enum(int, struct, $enum2, $count3);
 	if ($struct5 ! null & struct_param($struct5, param_806) = $int0) {
-		$int3 = $int4;
+		$count3 = $count4;
 	}
-	$int3 = calc($int3 + 1);
+	$count3 = calc($count3 + 1);
 }
-$int3 = 0;
+$count3 = 0;
 def_struct $struct6 = struct_param($struct5, param_808);
 if ($struct6 = null) {
 	return($int0);
 }
 def_int $int7 = 0;
-while ($int3 < $int4) {
+while ($count3 < $count4) {
 	$int7 = struct_param($struct6, param_806);
 	if (~adventurepath_return_task_status($int7) = ^true) {
 		return($int0);
@@ -30,6 +30,6 @@ while ($int3 < $int4) {
 	if ($struct6 = null) {
 		return($int0);
 	}
-	$int3 = calc($int3 + 1);
+	$count3 = calc($count3 + 1);
 }
 return($int0);

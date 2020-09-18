@@ -1,5 +1,5 @@
 // 1113
-[proc,farming_view_createtab](int $int0, string $string0, component $component1)
+[proc,farming_view_createtab](int $int0, string $op0, component $component1)
 def_int $int2 = calc($int0 * 2);
 cc_create($component1, ^iftype_graphic, $int2);
 .cc_create($component1, ^iftype_text, calc($int2 + 1));
@@ -8,9 +8,9 @@ cc_setsize(72, 36, ^setsize_abs, ^setsize_abs);
 $int2 = calc($int0 * 72);
 cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 .cc_setposition($int2, 0, ^setpos_abs_left, ^setpos_abs_centre);
-cc_setop(1, $string0);
+cc_setop(1, $op0);
 .cc_settextfont(p11_full);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_setcolour(0xff981f);
 .cc_settextshadow(true);
-.cc_settext($string0);
+.cc_settext($op0);

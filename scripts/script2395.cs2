@@ -1,8 +1,8 @@
 // 2395
-script2395(component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6)
+script2395(component $component0, int $comsubid1, int $int2, int $int3, int $int4, int $int5, int $clock6)
 def_int $int7 = 0;
-if (cc_find($component0, $int1) = ^true) {
-	$int7 = calc(clientclock - $int6);
+if (cc_find($component0, $comsubid1) = ^true) {
+	$int7 = calc(clientclock - $clock6);
 	if ($int7 < 20) {
 		return;
 	}

@@ -1,13 +1,13 @@
 // 1398
-[proc,poh_viewer_disablebutton](component $component0, string $string0, int $int1)
+[proc,poh_viewer_disablebutton](component $component0, string $text0, int $int1)
 cc_deleteall($component0);
-def_int $int2 = 0;
+def_int $comsubid2 = 0;
 if ($int1 = 1) {
-	$int2 = ~options_button_on($component0, 0);
+	$comsubid2 = ~options_button_on($component0, 0);
 } else {
-	$int2 = ~options_button_off($component0, 0);
+	$comsubid2 = ~options_button_off($component0, 0);
 }
-cc_create($component0, ^iftype_text, $int2);
+cc_create($component0, ^iftype_text, $comsubid2);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if ($int1 = 1) {
@@ -18,7 +18,7 @@ if ($int1 = 1) {
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext($string0);
+cc_settext($text0);
 if_setonmouserepeat(null, $component0);
 if_setonmouseleave(null, $component0);
 if_setonop(null, $component0);

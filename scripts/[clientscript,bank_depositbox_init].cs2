@@ -2,17 +2,17 @@
 [clientscript,bank_depositbox_init](component $component0, component $component1, component $component2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
 ~bank_depositbox_layout($component0, $component2, $int3);
 cc_deleteall($component1);
-def_int $int10 = 0;
-def_int $int11 = inv_size(inv);
-while ($int10 < $int11) {
-	cc_create($component1, ^iftype_graphic, $int10);
+def_int $size10 = 0;
+def_int $size11 = inv_size(inv);
+while ($size10 < $size11) {
+	cc_create($component1, ^iftype_graphic, $size10);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
 	cc_sethide(false);
-	$int10 = calc($int10 + 1);
+	$size10 = calc($size10 + 1);
 }
 ~bank_depositbox_update($component1, $component8, $component9);
 if_setoninvtransmit("bank_depositbox_update($component1, $component8, $component9){inv}", $component1);

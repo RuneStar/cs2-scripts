@@ -1,20 +1,20 @@
 // 1610
-[clientscript,raids_storage_private_reorder](component $component0, int $int1, int $int2, component $component3)
-def_int $int4 = inv_size(inv_583);
-if ($int1 < 0 | $int1 >= $int4) {
+[clientscript,raids_storage_private_reorder](component $component0, int $comsubid1, int $dropsubid2, component $component3)
+def_int $size4 = inv_size(inv_583);
+if ($comsubid1 < 0 | $comsubid1 >= $size4) {
 	return;
 }
-if ($int2 < 0 | $int2 >= $int4) {
+if ($dropsubid2 < 0 | $dropsubid2 >= $size4) {
 	return;
 }
-def_obj $obj5 = inv_getobj(inv_583, $int1);
+def_obj $obj5 = inv_getobj(inv_583, $comsubid1);
 if ($obj5 = null) {
 	return;
 }
-def_obj $obj6 = inv_getobj(inv_583, $int2);
-if (cc_find($component0, $int2) = ^true) {
-	~raids_storage_private_drawitem($obj5, inv_getnum(inv_583, $int1), 0, $component3);
+def_obj $obj6 = inv_getobj(inv_583, $dropsubid2);
+if (cc_find($component0, $dropsubid2) = ^true) {
+	~raids_storage_private_drawitem($obj5, inv_getnum(inv_583, $comsubid1), 0, $component3);
 }
-if (cc_find($component0, $int1) = ^true) {
-	~raids_storage_private_drawitem($obj6, inv_getnum(inv_583, $int2), 0, $component3);
+if (cc_find($component0, $comsubid1) = ^true) {
+	~raids_storage_private_drawitem($obj6, inv_getnum(inv_583, $dropsubid2), 0, $component3);
 }

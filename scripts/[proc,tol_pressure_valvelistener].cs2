@@ -1,12 +1,12 @@
 // 2766
-[proc,tol_pressure_valvelistener](component $component0, int $int1, int $bit2)
-def_int $bit3 = ^false;
+[proc,tol_pressure_valvelistener](component $component0, int $int1, int $bool2)
+def_int $bool3 = ^false;
 if ($int1 = 1) {
-	$bit3 = %varbit3356;
+	$bool3 = %varbit3356;
 } else if ($int1 = 2) {
-	$bit3 = %varbit3357;
+	$bool3 = %varbit3357;
 }
-if ($bit3 = $bit2) {
+if ($bool3 = $bool2) {
 	if_setonop("tol_pressure_valveop(event_opindex, synth_3436)", $component0);
 } else {
 	if_setonop("tol_pressure_valveop(event_opindex, synth_2402)", $component0);

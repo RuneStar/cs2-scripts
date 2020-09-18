@@ -1,9 +1,9 @@
 // 3172
 [proc,buff_bar_buff_position](component $component0, int $int1)(int, int)
-def_int $int2 = if_getwidth($component0);
-def_int $int3 = if_getheight($component0);
-def_int $int4 = calc($int2 / 31);
-def_int $int5 = calc($int3 / 31);
+def_int $width2 = if_getwidth($component0);
+def_int $height3 = if_getheight($component0);
+def_int $int4 = calc($width2 / 31);
+def_int $int5 = calc($height3 / 31);
 def_int $int6 = calc($int4 * $int5);
 if ($int1 >= $int6) {
 	return(-1, -1);
@@ -17,7 +17,7 @@ if (~on_mobile = true) {
 	$int9 = 0;
 }
 if ($int9 = 1) {
-	$int7 = calc(2 + $int4 * 31 - 31 * ($int1 / $int5) - 31 + ($int2 - ($int4 * 31 + 1)));
+	$int7 = calc(2 + $int4 * 31 - 31 * ($int1 / $int5) - 31 + ($width2 - ($int4 * 31 + 1)));
 	$int8 = calc(2 + 31 * ($int1 % $int5));
 } else if ($int9 = 2) {
 	$int7 = calc(2 + 31 * ($int1 / $int5));

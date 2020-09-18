@@ -1,9 +1,9 @@
 // 2825
-[clientscript,seed_vault_drag_text](component $component0, component $component1, int $int2, int $int3, int $int4, component $component5, component $component6, int $int7)
-if ($int7 ! %varcint374) {
+[clientscript,seed_vault_drag_text](component $component0, component $component1, int $comsubid2, int $mousex3, int $mousey4, component $component5, component $component6, int $clock7)
+if ($clock7 ! %varcint374) {
 	return;
 }
-if (cc_find($component0, $int2) = ^true & .cc_find($component1, $int2) = ^true) {
-	cc_setposition(calc($int3 + 7), calc($int4 - 32), ^setpos_abs_left, ^setpos_abs_top);
+if (cc_find($component0, $comsubid2) = ^true & .cc_find($component1, $comsubid2) = ^true) {
+	cc_setposition(calc($mousex3 + 7), calc($mousey4 - 32), ^setpos_abs_left, ^setpos_abs_top);
 }
-~seed_vault_doscroll($component5, $component6, $int4);
+~seed_vault_doscroll($component5, $component6, $mousey4);

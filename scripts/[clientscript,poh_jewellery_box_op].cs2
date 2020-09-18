@@ -1,5 +1,5 @@
 // 1690
-[clientscript,poh_jewellery_box_op](int $int0, int $int1, component $component2, int $int3, string $string0, string $string1, string $string2)
-if ($int0 = 1 & cc_find($component2, $int3) = ^true & .cc_find(poh_jewellery_box:0, $int1) = ^true) {
+[clientscript,poh_jewellery_box_op](int $opindex0, int $comsubid1, component $component2, int $comsubid3, string $string0, string $string1, string $string2)
+if ($opindex0 = 1 & cc_find($component2, $comsubid3) = ^true & .cc_find(poh_jewellery_box:0, $comsubid1) = ^true) {
 	~poh_jewellery_box_activate($string0, $string1, $string2);
 }

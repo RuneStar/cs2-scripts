@@ -1,17 +1,17 @@
 // 3142
-[clientscript,target_system_hideop](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+[clientscript,target_system_hideop](int $opindex0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
 if ($int1 = 1) {
-	switch_int ($int0) {
+	switch_int ($opindex0) {
 		case 1 :
 			%varbit6704 = $int1;
 		case 2, 3, 4 :
 			if (~on_mobile = false) {
-				%varbit6715 = $int0;
+				%varbit6715 = $opindex0;
 			}
 		case default :
 			return;
 	}
-} else if ($int0 = 1) {
+} else if ($opindex0 = 1) {
 	%varbit6704 = $int1;
 } else {
 	return;

@@ -17,18 +17,18 @@ if (cc_find(interface_500:10, calc($int0 * 7)) = ^true) {
 	cc_setonop("raids_sidepanel_entry_op($string2)");
 }
 def_int $int1 = 0;
-def_int $int2 = 0;
+def_int $width2 = 0;
 def_int $int3 = 0;
 def_string $string4 = "";
 if (cc_find(interface_500:10, calc($int0 * 7 + 1)) = ^true) {
-	$int1, $int2 = string_length($string1), cc_getwidth;
-	if ($int1 > 0 & parawidth($string1, 512, p11_full) > $int2) {
-		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, interface_500:15, $string2, 25, 190)");
+	$int1, $width2 = string_length($string1), cc_getwidth;
+	if ($int1 > 0 & parawidth($string1, 512, p11_full) > $width2) {
+		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, interface_500:15, $string2, 25, 190)");
 		cc_setonmouseleave("deltooltip(interface_500:15)");
 		while ($int1 > 1 & $int3 = 0) {
 			$int1 = calc($int1 - 1);
 			$string4 = append(substring($string1, 0, $int1), "...");
-			if (parawidth($string4, 512, p11_full) <= $int2) {
+			if (parawidth($string4, 512, p11_full) <= $width2) {
 				$string1, $int3 = $string4, 1;
 			}
 		}

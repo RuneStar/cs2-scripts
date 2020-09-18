@@ -1,5 +1,5 @@
 // 253
-[clientscript,nzone_listbosses](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, string $string0, string $string1)
+[clientscript,nzone_listbosses](int $flags0, int $flags1, int $flags2, int $flags3, int $flags4, int $flags5, int $int6, int $int7, string $string0, string $string1)
 if (string_length($string0) > 0 | string_length($string1) > 0) {
 	if_setsize(400, if_getheight(interface_129:1), ^setsize_abs, ^setsize_abs, interface_129:1);
 	~script1246(interface_129:6, "<col=00ff00><$string1></col>");
@@ -31,14 +31,14 @@ if ($int6 ! -1) {
 		$int8 = calc($int8 + 1);
 	}
 }
-def_int $int9 = 0;
+def_int $width9 = 0;
 if ($int6 ! -1) {
-	$int9 = 17;
+	$width9 = 17;
 }
 def_int $int10 = -1;
 def_int $int11 = -1;
 def_int $int12 = 0;
-def_int $int13 = 0;
+def_int $height13 = 0;
 def_string $string2 = "";
 def_int $int14 = 0;
 def_int $int15 = 0;
@@ -46,11 +46,11 @@ while ($int15 < 62) {
 	$int10 = enum(int, int, enum_797, $int15);
 	if ($int10 ! -1) {
 		$int11 = enum(int, int, enum_803, $int10);
-		if ($int11 ! -1 & ~script1260($int0, $int1, $int11) = 1) {
+		if ($int11 ! -1 & ~script1260($flags0, $flags1, $int11) = 1) {
 			cc_create(interface_129:13, ^iftype_graphic, $int8);
 			$int8 = calc($int8 + 1);
 			cc_setsize(0, 17, ^setsize_minus, ^setsize_abs);
-			cc_setposition(0, $int13, ^setpos_abs_centre, ^setpos_abs_top);
+			cc_setposition(0, $height13, ^setpos_abs_centre, ^setpos_abs_top);
 			if (calc($int12 % 2) = 0) {
 				cc_setgraphic("tradebacking");
 			} else {
@@ -59,16 +59,16 @@ while ($int15 < 62) {
 			cc_settiling(true);
 			.cc_create(interface_129:13, ^iftype_text, $int8);
 			$int8 = calc($int8 + 1);
-			.cc_setsize($int9, 17, ^setsize_minus, ^setsize_abs);
-			.cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setsize($width9, 17, ^setsize_minus, ^setsize_abs);
+			.cc_setposition(0, $height13, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_settextfont(p12_full);
 			.cc_settextshadow(true);
 			.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-			if (~script1260($int2, $int3, $int11) = 1) {
+			if (~script1260($flags2, $flags3, $int11) = 1) {
 				$string2 = enum(int, string, enum_802, $int10);
 				.cc_settext($string2);
 				if ($int6 ! -1) {
-					$int14 = ~script1260($int4, $int5, $int11);
+					$int14 = ~script1260($flags4, $flags5, $int11);
 					if ($int14 = 1) {
 						.cc_setcolour(0x8f8f8f);
 					} else {
@@ -77,14 +77,14 @@ while ($int15 < 62) {
 					cc_setop(1, "Toggle");
 					cc_setopbase("<col=ff9040><enum(int, string, enum_804, $int11)></col> bosses");
 					cc_setonop("script1258(event_opindex, $int15, event_com, .cc_getid, $string2)");
-					cc_setonmouseover("cc_settrans(event_com, event_comid, 255, null)");
-					cc_setonmouseleave("cc_settrans(event_com, event_comid, 0, interface_129:15)");
+					cc_setonmouseover("cc_settrans(event_com, event_comsubid, 255, null)");
+					cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, interface_129:15)");
 					$string2 = "<$string2>:<br>Unlocked from <col=7f0000><enum(int, string, enum_804, $int11)></col>";
-					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, interface_129:15, $string2, 25, 512)");
+					cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, interface_129:15, $string2, 25, 512)");
 					.cc_create(interface_129:13, ^iftype_graphic, $int8);
 					$int8 = calc($int8 + 1);
 					.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-					.cc_setposition(0, $int13, ^setpos_abs_right, ^setpos_abs_top);
+					.cc_setposition(0, $height13, ^setpos_abs_right, ^setpos_abs_top);
 					if ($int14 = 1) {
 						.cc_setgraphic("options_radio_buttons,1");
 					} else {
@@ -97,13 +97,13 @@ while ($int15 < 62) {
 				.cc_setcolour(0xff981f);
 				.cc_settext("<str><col=8f8f8f><enum(int, string, enum_802, $int10)></col></str>");
 			}
-			$int12, $int13 = calc($int12 + 1), calc($int13 + 17);
+			$int12, $height13 = calc($int12 + 1), calc($height13 + 17);
 		}
 	}
 	$int15 = calc($int15 + 1);
 }
-if ($int13 > if_getheight(interface_129:13)) {
-	if_setscrollsize(0, $int13, interface_129:13);
+if ($height13 > if_getheight(interface_129:13)) {
+	if_setscrollsize(0, $height13, interface_129:13);
 	if ($int6 ! 1) {
 		if_setscrollpos(0, 0, interface_129:13);
 		%varcint138 = 0;
@@ -114,7 +114,7 @@ if ($int13 > if_getheight(interface_129:13)) {
 	%varcint138 = 0;
 	cc_create(interface_129:13, ^iftype_graphic, $int8);
 	$int8 = calc($int8 + 1);
-	cc_setsize(0, $int13, ^setsize_minus, ^setsize_minus);
+	cc_setsize(0, $height13, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_setgraphic("tradebacking_dark");
 	cc_settiling(true);

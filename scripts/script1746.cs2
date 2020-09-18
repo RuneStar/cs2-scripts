@@ -4,5 +4,5 @@ cc_setgraphic("tradebacking_light");
 .cc_setgraphic("tradebacking_light");
 cc_setontimer(null);
 .cc_setontimer(null);
-cc_setondrag("worldmap_window_drag_preview(event_comid, event_mousex, event_mousey, cc_getx, cc_gety, $component0, $component1, $component2, $component3, $int4)");
-.cc_setondrag("worldmap_window_drag_preview(event_comid, event_mousex, event_mousey, .cc_getx, .cc_gety, $component0, $component1, $component2, $component3, $int4)");
+cc_setondrag("worldmap_window_drag_preview(event_comsubid, event_mousex, event_mousey, cc_getx, cc_gety, $component0, $component1, $component2, $component3, $int4)");
+.cc_setondrag("worldmap_window_drag_preview(event_comsubid, event_mousex, event_mousey, .cc_getx, .cc_gety, $component0, $component1, $component2, $component3, $int4)");

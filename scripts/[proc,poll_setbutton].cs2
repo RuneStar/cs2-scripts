@@ -7,14 +7,14 @@ if (string_length($string0) <= 0) {
 	return;
 }
 if_sethide(false, $component0);
-def_int $int2 = if_getwidth($component0);
-def_int $int3 = if_getheight($component0);
+def_int $width2 = if_getwidth($component0);
+def_int $height3 = if_getheight($component0);
 cc_create($component0, ^iftype_graphic, 0);
 .cc_create($component0, ^iftype_text, 1);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
-.cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
+cc_setsize($width2, $height3, ^setsize_abs, ^setsize_abs);
+.cc_setsize($width2, $height3, ^setsize_abs, ^setsize_abs);
 cc_settiling(true);
 cc_setgraphic("combatboxesmed,0");
 .cc_settextfont(p11_full);

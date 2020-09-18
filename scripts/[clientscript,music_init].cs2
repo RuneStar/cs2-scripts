@@ -2,35 +2,35 @@
 [clientscript,music_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 cc_deleteall($component1);
 if_setscrollpos(0, 0, $component1);
-def_int $int7 = enum_getoutputcount(enum_818);
-if_setontimer("music_init_counter(event_com, $int7)", $component3);
-if_setonvartransmit("music_vartransmit(event_com, $component3, $int7){var568, var20, var21, var22, var23, var24, var25, var298, var311, var346, var414, var464, var598, var662, var721, var906, var1009, var1338, var1681, var2065, var2237}", $component1);
-def_int $intarray0($int7);
-def_int $int8 = 0;
-while ($int8 < $int7) {
-	$intarray0($int8) = $int8;
-	cc_create($component1, ^iftype_text, $int8);
+def_int $count7 = enum_getoutputcount(enum_818);
+if_setontimer("music_init_counter(event_com, $count7)", $component3);
+if_setonvartransmit("music_vartransmit(event_com, $component3, $count7){var568, var20, var21, var22, var23, var24, var25, var298, var311, var346, var414, var464, var598, var662, var721, var906, var1009, var1338, var1681, var2065, var2237}", $component1);
+def_int $countarray0($count7);
+def_int $count8 = 0;
+while ($count8 < $count7) {
+	$countarray0($count8) = $count8;
+	cc_create($component1, ^iftype_text, $count8);
 	cc_sethide(true);
-	$int8 = calc($int8 + 1);
+	$count8 = calc($count8 + 1);
 }
 def_int $int9 = 15;
 if (~on_mobile = true) {
 	$int9 = scale(4, 3, $int9);
 }
-def_int $int10 = calc(3 + $int7 * $int9 + 3);
+def_int $int10 = calc(3 + $count7 * $int9 + 3);
 if_setscrollsize(0, $int10, $component1);
-if ($int7 > 1) {
-	~music_sort(intarray0, 0, calc($int7 - 1));
+if ($count7 > 1) {
+	~music_sort(countarray0, 0, calc($count7 - 1));
 }
-$int8 = 0;
-while ($int8 < $int7) {
-	if (cc_find($component1, $intarray0($int8)) = ^true) {
+$count8 = 0;
+while ($count8 < $count7) {
+	if (cc_find($component1, $countarray0($count8)) = ^true) {
 		cc_sethide(false);
 		cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
-		cc_setontimer("music_init_component(event_com, event_comid, $int8, $int9)");
+		cc_setontimer("music_init_component(event_com, event_comsubid, $count8, $int9)");
 	}
-	$int8 = calc($int8 + 1);
+	$count8 = calc($count8 + 1);
 }
 ~music_optionbuttons($component4, $component5, $component6);
 if_setonvartransmit("music_optionbuttons_resynch($component4, $component5, $component6){var18, var19}", $component0);

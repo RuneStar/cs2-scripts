@@ -1,6 +1,6 @@
 // 563
-[clientscript,clanwars_view_op](int $int0, int $int1, model $model2)
-if ($int0 ! 1) {
+[clientscript,clanwars_view_op](int $opindex0, int $int1, model $model2)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

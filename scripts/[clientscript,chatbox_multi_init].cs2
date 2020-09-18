@@ -1,12 +1,12 @@
 // 58
 [clientscript,chatbox_multi_init](string $string0, string $string1)
-def_string $string2 = "";
-def_string $string3 = "";
+def_string $text2 = "";
+def_string $text3 = "";
 def_string $string4 = "";
 def_string $string5 = "";
 def_string $string6 = "";
-$string2, $string1 = ~script632($string1);
-$string3, $string1 = ~script632($string1);
+$text2, $string1 = ~script632($string1);
+$text3, $string1 = ~script632($string1);
 def_int $int0 = 2;
 $string4, $string1 = ~script632($string1);
 if (string_length($string4) > 0) {
@@ -24,26 +24,26 @@ cc_deleteall(interface_219:1);
 .cc_create(interface_219:1, ^iftype_text, 0);
 def_int $int1 = 10;
 if ($int0 <= 2) {
-	~chatbox_multi_addoption(1, $string2, ~int_device(40, 36), ~int_device(24, 32), ^settextalign_centre);
-	~chatbox_multi_addoption(2, $string3, ~int_device(72, 68), ~int_device(24, 32), ^settextalign_centre);
+	~chatbox_multi_addoption(1, $text2, ~int_device(40, 36), ~int_device(24, 32), ^settextalign_centre);
+	~chatbox_multi_addoption(2, $text3, ~int_device(72, 68), ~int_device(24, 32), ^settextalign_centre);
 } else if ($int0 = 3) {
-	~chatbox_multi_addoption(1, $string2, ~int_device(34, 29), ~int_device(20, 28), ^settextalign_centre);
-	~chatbox_multi_addoption(2, $string3, ~int_device(58, 57), ~int_device(20, 28), ^settextalign_centre);
+	~chatbox_multi_addoption(1, $text2, ~int_device(34, 29), ~int_device(20, 28), ^settextalign_centre);
+	~chatbox_multi_addoption(2, $text3, ~int_device(58, 57), ~int_device(20, 28), ^settextalign_centre);
 	~chatbox_multi_addoption(3, $string4, ~int_device(82, 85), ~int_device(20, 28), ^settextalign_centre);
 	if (~on_mobile = true) {
 		$int1 = 7;
 	}
 } else if ($int0 = 4) {
-	~chatbox_multi_addoption(1, $string2, ~int_device(27, 25), ~int_device(20, 23), ^settextalign_centre);
-	~chatbox_multi_addoption(2, $string3, ~int_device(47, 48), ~int_device(20, 23), ^settextalign_centre);
+	~chatbox_multi_addoption(1, $text2, ~int_device(27, 25), ~int_device(20, 23), ^settextalign_centre);
+	~chatbox_multi_addoption(2, $text3, ~int_device(47, 48), ~int_device(20, 23), ^settextalign_centre);
 	~chatbox_multi_addoption(3, $string4, ~int_device(67, 71), ~int_device(20, 23), ^settextalign_centre);
 	~chatbox_multi_addoption(4, $string5, ~int_device(87, 94), ~int_device(20, 23), ^settextalign_centre);
 	if (~on_mobile = true) {
 		$int1 = 6;
 	}
 } else {
-	~chatbox_multi_addoption(1, $string2, ~int_device(28, 25), ~int_device(16, 18), ^settextalign_centre);
-	~chatbox_multi_addoption(2, $string3, ~int_device(44, 43), ~int_device(16, 18), ^settextalign_centre);
+	~chatbox_multi_addoption(1, $text2, ~int_device(28, 25), ~int_device(16, 18), ^settextalign_centre);
+	~chatbox_multi_addoption(2, $text3, ~int_device(44, 43), ~int_device(16, 18), ^settextalign_centre);
 	~chatbox_multi_addoption(3, $string4, ~int_device(60, 61), ~int_device(16, 18), ^settextalign_centre);
 	~chatbox_multi_addoption(4, $string5, ~int_device(76, 79), ~int_device(16, 18), ^settextalign_centre);
 	~chatbox_multi_addoption(5, $string6, ~int_device(92, 97), ~int_device(16, 18), ^settextalign_centre);

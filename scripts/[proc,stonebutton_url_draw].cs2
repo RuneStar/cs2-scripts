@@ -1,12 +1,12 @@
 // 1086
 [proc,stonebutton_url_draw](boolean $boolean0, boolean $boolean1, component $component2, string $string0, string $string1)
-def_int $int3 = 0;
+def_int $comsubid3 = 0;
 if ($boolean0 = true | $boolean1 = false) {
-	$int3 = ~v2_stone_button_in_filled($component2);
+	$comsubid3 = ~v2_stone_button_in_filled($component2);
 } else {
-	$int3 = ~v2_stone_button_out_filled($component2);
+	$comsubid3 = ~v2_stone_button_out_filled($component2);
 }
-cc_create($component2, ^iftype_text, $int3);
+cc_create($component2, ^iftype_text, $comsubid3);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if ($boolean1 = false) {

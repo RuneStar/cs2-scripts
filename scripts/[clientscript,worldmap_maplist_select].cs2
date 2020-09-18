@@ -1,6 +1,6 @@
 // 1711
-[clientscript,worldmap_maplist_select](int $int0, maparea $maparea1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
-if ($int0 ! 1) {
+[clientscript,worldmap_maplist_select](int $opindex0, maparea $maparea1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

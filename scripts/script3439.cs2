@@ -1,17 +1,17 @@
 // 3439
-script3439(int $int0)(int)
-def_int $bit1 = testbit(%var2715, $int0);
-def_int $bit2 = testbit(%var2716, $int0);
-if ($bit1 = ^true & $bit2 = ^true) {
+script3439(int $index0)(int)
+def_int $bool1 = testbit(%var2715, $index0);
+def_int $bool2 = testbit(%var2716, $index0);
+if ($bool1 = ^true & $bool2 = ^true) {
 	return(-1);
 }
-if ($bit1 = ^false & $bit2 = ^false) {
+if ($bool1 = ^false & $bool2 = ^false) {
 	return(0);
 }
-if ($bit1 = ^true) {
+if ($bool1 = ^true) {
 	return(2);
 }
-if ($bit2 = ^true) {
+if ($bool2 = ^true) {
 	return(1);
 }
 return(-1);

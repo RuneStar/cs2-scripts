@@ -1,11 +1,11 @@
 // 1064
-script1064(obj $obj0)(int, obj)
+script1064(obj $obj0)(int, namedobj)
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_namedobj $namedobj3 = null;
 def_int $int4 = 0;
 def_namedobj $namedobj5 = null;
-def_obj $obj6 = null;
+def_namedobj $namedobj6 = null;
 switch_obj ($obj0) {
 	case rake_5341 :
 		return(~script716(rake_5341), rake_5341);
@@ -50,9 +50,9 @@ switch_obj ($obj0) {
 	case bottomless_compost_bucket_22994 :
 		$int1 = ~script716(bottomless_compost_bucket_22997);
 		if ($int1 > 0) {
-			$obj6 = bottomless_compost_bucket_22997;
+			$namedobj6 = bottomless_compost_bucket_22997;
 		} else {
-			$obj6 = bottomless_compost_bucket_22994;
+			$namedobj6 = bottomless_compost_bucket_22994;
 		}
 		$int4 = ~script716(bottomless_compost_bucket_22994);
 		if (calc(^max_32bit_int - $int4) < $int1) {
@@ -60,7 +60,7 @@ switch_obj ($obj0) {
 		} else {
 			$int4 = calc($int4 + $int1);
 		}
-		return($int4, $obj6);
+		return($int4, $namedobj6);
 	case bucket_1925 :
 		return(~script716(bucket_1925), bucket_1925);
 	case compost_6032 :

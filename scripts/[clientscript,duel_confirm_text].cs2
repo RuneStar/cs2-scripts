@@ -66,9 +66,9 @@ if_setposition(2, calc(if_gety(interface_476:66) + if_getheight(interface_476:66
 if_setposition(2, calc(if_gety(interface_476:67) + if_getheight(interface_476:67) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:68);
 if_setposition(2, calc(if_gety(interface_476:68) + if_getheight(interface_476:68) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:69);
 if_setposition(2, calc(if_gety(interface_476:69) + if_getheight(interface_476:69) + 2), ^setpos_abs_left, ^setpos_abs_top, interface_476:70);
-def_int $int0 = calc(if_gety(interface_476:70) + if_getheight(interface_476:70) + 2);
-if ($int0 > if_getheight(interface_476:62)) {
-	if_setscrollsize(0, $int0, interface_476:63);
+def_int $height0 = calc(if_gety(interface_476:70) + if_getheight(interface_476:70) + 2);
+if ($height0 > if_getheight(interface_476:62)) {
+	if_setscrollsize(0, $height0, interface_476:63);
 	if_sethide(false, interface_476:64);
 	~scrollbar_vertical(interface_476:64, interface_476:63, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 } else {

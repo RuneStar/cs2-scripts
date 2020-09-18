@@ -1,5 +1,5 @@
 // 2036
-[proc,agilityarena_rewards_gracefulbutton_drawcomponents](component $component0, int $int1, obj $obj2, string $string0, int $colour3)
+[proc,agilityarena_rewards_gracefulbutton_drawcomponents](component $component0, int $int1, obj $obj2, string $text0, int $colour3)
 cc_create($component0, ^iftype_model, $int1);
 $int1 = calc($int1 + 1);
 cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
@@ -20,4 +20,4 @@ cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
 cc_setcolour($colour3);
 cc_settextshadow(true);
-cc_settext($string0);
+cc_settext($text0);

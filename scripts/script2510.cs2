@@ -2,7 +2,7 @@
 script2510(component $component0, int $setposh1, int $int2, int $int3)
 def_int $int4 = 0;
 def_int $int5 = 4;
-def_int $int6 = 4;
+def_int $x6 = 4;
 def_int $setposh7 = $setposh1;
 if ($setposh1 = ^setpos_abs_left & %varbit4692 = 2) {
 	$int4 = 1;
@@ -25,9 +25,9 @@ if ($int4 = 1) {
 			$int5 = calc($int5 + 9);
 		}
 		if ($setposh1 = ^setpos_abs_centre) {
-			$int6 = 0;
+			$x6 = 0;
 		} else {
-			$int6 = 4;
+			$x6 = 4;
 		}
 	} else if ($setposh1 ! ^setpos_abs_centre) {
 		$setposh7 = ^setpos_abs_centre;
@@ -36,7 +36,7 @@ if ($int4 = 1) {
 		} else {
 			$int5 = 23;
 		}
-		$int6 = 0;
+		$x6 = 0;
 	} else {
 		$setposh7 = ^setpos_abs_left;
 		if (~on_mobile = true) {
@@ -44,7 +44,7 @@ if ($int4 = 1) {
 		} else {
 			$int5 = 23;
 		}
-		$int6 = 4;
+		$x6 = 4;
 	}
 } else {
 	if (~on_mobile = false & ($setposh1 = ^setpos_abs_left | $setposh1 = ^setpos_abs_centre)) {
@@ -53,9 +53,9 @@ if ($int4 = 1) {
 		$int5 = 4;
 	}
 	if ($setposh1 = ^setpos_abs_centre) {
-		$int6 = 0;
+		$x6 = 0;
 	} else {
-		$int6 = 4;
+		$x6 = 4;
 	}
 }
-if_setposition($int6, $int5, $setposh7, ^setpos_abs_top, $component0);
+if_setposition($x6, $int5, $setposh7, ^setpos_abs_top, $component0);

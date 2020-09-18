@@ -175,16 +175,16 @@ if (string_length($string0) > 0) {
 }
 if_setontimer(null, $component1);
 def_component $component4 = null;
-def_int $int5 = 0;
+def_int $height5 = 0;
 if ($int0 >= calc(40 - 1)) {
 	if (%varcint180 ! 0 & %varcint180 ! 1 & %varcint180 ! 2 & %varcint180 ! 3 & %varcint180 ! 4 & %varcint180 ! 5 & %varcint180 ! 6 & %varcint180 ! 7 & %varcint180 ! 8 & %varcint180 ! 9 & %varcint180 ! 10 & %varcint180 ! 11 & %varcint180 ! 12 & %varcint180 ! 13) {
 		%varcint180 = 1;
 	}
 	~raids_partylist_setsort;
 	$component4 = if_getlayer($component1);
-	$int5 = calc(%varcint178 * 18);
-	if ($int5 > if_getheight($component4)) {
-		if_setscrollsize(0, $int5, $component4);
+	$height5 = calc(%varcint178 * 18);
+	if ($height5 > if_getheight($component4)) {
+		if_setscrollsize(0, $height5, $component4);
 		~scrollbar_resize(interface_499:55, $component4, %varcint179);
 	} else {
 		if_setscrollsize(0, 0, $component4);

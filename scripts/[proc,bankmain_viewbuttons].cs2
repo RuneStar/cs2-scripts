@@ -46,7 +46,7 @@ if ($component0 = $component16) {
 	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component3);
 	if_setop(1, "Hide worn items", $component3);
 	if_setonop("bankmain_viewbuttons($component14, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component3);
-	if_setonkey("script3326(event_keypressed, event_keytyped, $component14, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component3);
+	if_setonkey("script3326(event_key, event_keychar, $component14, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component3);
 	if (~bankmain_searching = 1) {
 		~meslayer_close(1, 1);
 	}
@@ -86,7 +86,7 @@ if ($component0 = $component16) {
 	if_setonmouseleave("cc_settrans(event_com, .cc_getid, 0, null)", $component3);
 	if_setop(1, "Show worn items", $component3);
 	if_setonop("bankmain_viewbuttons($component15, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component3);
-	if_setonkey("script3326(event_keypressed, event_keytyped, $component15, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component3);
+	if_setonkey("script3326(event_key, event_keychar, $component15, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component3);
 	~bankmain_build($component1, $component2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component17, $component18, $component19, $component20, $component21);
 	%varcint386 = false;
 }

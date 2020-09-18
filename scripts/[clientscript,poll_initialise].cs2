@@ -1,12 +1,12 @@
 // 603
-[clientscript,poll_initialise](component $component0, component $component1, component $component2, component $component3, string $string0, string $string1)
+[clientscript,poll_initialise](component $component0, component $component1, component $component2, component $component3, string $text0, string $text1)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
-~steelborder($component0, $string0, 0);
+~steelborder($component0, $text0, 0);
 cc_deleteall($component2);
 %varcint43, %varcint49 = 0, 0;
 if_sethide(true, $component2);
 if_sethide(false, $component3);
-if_settext($string1, $component3);
+if_settext($text1, $component3);
 cc_deleteall($component1);

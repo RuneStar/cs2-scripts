@@ -15,10 +15,10 @@ cc_settextshadow(true);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 def_string $string0 = removetags(lowercase(%varcstring359));
-def_int $int6 = string_length($string0);
-if ($int6 > 9) {
+def_int $length6 = string_length($string0);
+if ($length6 > 9) {
 	cc_settext(substring($string0, 0, 9));
-} else if ($int6 > 0) {
+} else if ($length6 > 0) {
 	cc_settext($string0);
 } else {
 	cc_settext("<lt>Search term<gt>");

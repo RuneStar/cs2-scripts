@@ -3,7 +3,7 @@ script609(int $colour0, int $settextalignh1, fontmetrics $fontmetrics2, fontmetr
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
-def_int $int7 = if_getwidth($component6);
+def_int $width7 = if_getwidth($component6);
 def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 0;
@@ -29,11 +29,11 @@ def_int $colour13 = ~rgb_to_hex($int10, $int11, $int12);
 def_string $string1 = "";
 $string1, $string0 = ~script632($string0);
 while (string_length($string1) > 0) {
-	$int8 = calc(paraheight($string1, $int7, $fontmetrics3) * $int4 + $int5);
+	$int8 = calc(paraheight($string1, $width7, $fontmetrics3) * $int4 + $int5);
 	cc_create($component6, ^iftype_text, %varcint43);
 	%varcint43 = calc(%varcint43 + 1);
 	cc_setposition(0, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize($int7, $int8, ^setsize_abs, ^setsize_abs);
+	cc_setsize($width7, $int8, ^setsize_abs, ^setsize_abs);
 	if (calc($int9 % 2) = 0) {
 		cc_setcolour($colour0);
 	} else {

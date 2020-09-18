@@ -1,8 +1,8 @@
 // 2845
-[proc,adventurepath_return_head_pos](npc $npc0, int $int1)(int)
+[proc,adventurepath_return_head_pos](npc $npc0, int $height1)(int)
 switch_npc ($npc0) {
 	case apothecary_5036 :
-		return(calc($int1 + 24));
+		return(calc($height1 + 24));
 	case default :
-		return(calc($int1 + 14));
+		return(calc($height1 + 14));
 }

@@ -1,10 +1,10 @@
 // 1456
 [proc,bank_payment_draw](component $component0, int $int1, boolean $boolean2)
-def_int $int3 = if_getheight($component0);
-def_int $int4 = if_getwidth($component0);
+def_int $height3 = if_getheight($component0);
+def_int $width4 = if_getwidth($component0);
 def_int $int5 = 44;
-def_int $int6 = calc(($int3 - 5 * $int5) / 2);
-def_int $int7 = calc(($int4 - 7 * $int5) / 2);
+def_int $int6 = calc(($height3 - 5 * $int5) / 2);
+def_int $int7 = calc(($width4 - 7 * $int5) / 2);
 if ($int6 < 0 | $int7 < 0) {
 	return;
 }
@@ -13,11 +13,11 @@ def_component $component9 = null;
 def_coord $coord10 = null;
 def_int $int11 = 0;
 def_int $int12 = 0;
-def_int $int13 = 0;
-def_int $int14 = 0;
-def_int $int15 = 0;
+def_int $x13 = 0;
+def_int $y14 = 0;
+def_int $comsubid15 = 0;
 def_int $int16 = 0;
-def_obj $obj17 = null;
+def_namedobj $namedobj17 = null;
 cc_deleteall($component0);
 .cc_create($component0, ^iftype_rectangle, 0);
 .cc_sethide(true);
@@ -34,12 +34,12 @@ while ($int8 <= 14) {
 	}
 	$int11 = coordz($coord10);
 	$int12 = coordx($coord10);
-	$int13 = calc($int7 + ($int12 - 1) * $int5);
-	$int14 = calc($int6 + ($int11 - 1) * $int5);
-	if_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top, $component9);
+	$x13 = calc($int7 + ($int12 - 1) * $int5);
+	$y14 = calc($int6 + ($int11 - 1) * $int5);
+	if_setposition($x13, $y14, ^setpos_abs_left, ^setpos_abs_top, $component9);
 	if_setsize($int5, $int5, ^setsize_abs, ^setsize_abs, $component9);
-	$obj17 = enum(int, namedobj, enum_982, $int8);
-	$int18 = inv_total(inv, $obj17);
+	$namedobj17 = enum(int, namedobj, enum_982, $int8);
+	$int18 = inv_total(inv, $namedobj17);
 	if (inv_total(inv, rune_pouch_12791) > 0 | inv_total(inv, rune_pouch_l_24416) > 0) {
 		if (%varbit29 = $int8) {
 			$int18 = calc($int18 + %varbit1624);
@@ -55,20 +55,20 @@ while ($int8 <= 14) {
 	cc_deleteall($component9);
 	if ($int16 = 1) {
 		if ($int8 = $int1) {
-			$int15 = ~v2_stone_button_in_filled($component9);
+			$comsubid15 = ~v2_stone_button_in_filled($component9);
 		} else {
-			$int15 = ~v2_stone_button_out_filled($component9);
+			$comsubid15 = ~v2_stone_button_out_filled($component9);
 		}
 		if_setonmouseover("bank_payment_draw($component0, $int8, $boolean2)", $component9);
 		if_setonmouseleave("bank_payment_draw($component0, -1, $boolean2)", $component9);
 	} else {
-		$int15 = ~v2_stone_button_filled($component9);
+		$comsubid15 = ~v2_stone_button_filled($component9);
 	}
-	if_setopbase("<col=ff9040><oc_name($obj17)></col>", $component9);
+	if_setopbase("<col=ff9040><oc_name($namedobj17)></col>", $component9);
 	if_setop(1, "Choose", $component9);
-	if_setonop("script1457($int8, $component0, $component9, $int15, $boolean2)", $component9);
-	cc_create($component9, ^iftype_graphic, $int15);
-	cc_setobject($obj17, $int18);
+	if_setonop("script1457($int8, $component0, $component9, $comsubid15, $boolean2)", $component9);
+	cc_create($component9, ^iftype_graphic, $comsubid15);
+	cc_setobject($namedobj17, $int18);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(2, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setgraphicshadow(0x333333);

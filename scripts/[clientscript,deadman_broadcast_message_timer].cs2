@@ -1,6 +1,6 @@
 // 2808
-[clientscript,deadman_broadcast_message_timer](int $int0)
-def_int $int1 = calc(clientclock - $int0);
+[clientscript,deadman_broadcast_message_timer](int $clock0)
+def_int $int1 = calc(clientclock - $clock0);
 if ($int1 < 475) {
 	if_setsize(scale(~min($int1, 25), 25, 16384), 60, ^setsize_2, ^setsize_abs, interface_90:22);
 } else if ($int1 < 500) {

@@ -1,14 +1,14 @@
 // 1076
-[proc,shop_main_update](component $component0, int $int1, inv $inv2, obj $obj3, int $int4)
+[proc,shop_main_update](component $component0, int $size1, inv $inv2, obj $obj3, int $int4)
 def_obj $obj5 = null;
 def_int $int6 = -1;
-def_int $int7 = 0;
-while ($int7 < $int1) {
-	if (cc_find($component0, calc($int7 + 1)) = ^true) {
-		$obj5 = inv_getobj($inv2, $int7);
+def_int $size7 = 0;
+while ($size7 < $size1) {
+	if (cc_find($component0, calc($size7 + 1)) = ^true) {
+		$obj5 = inv_getobj($inv2, $size7);
 		if ($obj5 ! null) {
 			cc_sethide(false);
-			cc_setobject($obj5, inv_getnum($inv2, $int7));
+			cc_setobject($obj5, inv_getnum($inv2, $size7));
 			if (~on_mobile = true & %varbit6348 > 0) {
 				cc_setop(1, ~script2228);
 				cc_setop(6, "Value");
@@ -41,7 +41,7 @@ while ($int7 < $int1) {
 			cc_setontimer(null);
 		}
 	}
-	$int7 = calc($int7 + 1);
+	$size7 = calc($size7 + 1);
 }
 if ($int6 ! -1) {
 	$int6 = calc($int6 + 32);

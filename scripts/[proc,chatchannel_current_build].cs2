@@ -128,38 +128,38 @@ if (%varbit6363 = 1) {
 	if_setop(1, "Clan Setup", $component12);
 	if_setonop("opsound(event_opindex, 1)", $component12);
 }
-def_string $string0 = "";
-def_int $int16 = -1;
-def_int $int17 = -1;
-def_int $int18 = clan_getchatrank;
-def_int $int19 = clan_getchatminkick;
-def_int $int20 = if_getwidth($component3);
+def_string $text0 = "";
+def_int $world16 = -1;
+def_int $rank17 = -1;
+def_int $rank18 = clan_getchatrank;
+def_int $rank19 = clan_getchatminkick;
+def_int $width20 = if_getwidth($component3);
 def_int $int21 = 0;
-def_int $int22 = 0;
+def_int $height22 = 0;
 def_int $int23 = 15;
 if (~on_mobile = true) {
 	$int23 = scale(8, 5, $int23);
 }
 def_int $int24 = 0;
 while ($int24 < $int15) {
-	$string0, $int16, $int17 = clan_getchatusername($int24), clan_getchatuserworld($int24), clan_getchatuserrank($int24);
+	$text0, $world16, $rank17 = clan_getchatusername($int24), clan_getchatuserworld($int24), clan_getchatuserrank($int24);
 	cc_create($component8, ^iftype_text, $int21);
 	$int21 = calc($int21 + 1);
-	cc_setsize($int20, $int23, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, $int22, ^setpos_abs_right, ^setpos_abs_top);
+	cc_setsize($width20, $int23, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $height22, ^setpos_abs_right, ^setpos_abs_top);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	cc_settext($string0);
+	cc_settext($text0);
 	cc_setcolour(^white);
 	cc_settextshadow(false);
 	.cc_create($component8, ^iftype_text, $int21);
 	$int21 = calc($int21 + 1);
-	.cc_setsize($int20, $int23, ^setsize_minus, ^setsize_abs);
-	.cc_setposition(0, $int22, ^setpos_abs_right, ^setpos_abs_top);
+	.cc_setsize($width20, $int23, ^setsize_minus, ^setsize_abs);
+	.cc_setposition(0, $height22, ^setpos_abs_right, ^setpos_abs_top);
 	.cc_settextfont(p11_full);
 	.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
-	.cc_settext("World <tostring($int16)>");
-	if ($int16 = map_world) {
+	.cc_settext("World <tostring($world16)>");
+	if ($world16 = map_world) {
 		.cc_setcolour(0x0dc10d);
 	} else {
 		.cc_setcolour(0xffff64);
@@ -168,8 +168,8 @@ while ($int24 < $int15) {
 	.cc_create($component8, ^iftype_graphic, $int21);
 	$int21 = calc($int21 + 1);
 	.cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
-	.cc_setposition(1, calc($int22 + ($int23 - 9) / 2), ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setgraphic(enum(int, graphic, enum_706, $int17));
+	.cc_setposition(1, calc($height22 + ($int23 - 9) / 2), ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setgraphic(enum(int, graphic, enum_706, $rank17));
 	if (clan_isself($int24) = false) {
 		if (clan_isfriend($int24) = true) {
 			cc_setop(9, "Remove friend");
@@ -184,18 +184,18 @@ while ($int24 < $int15) {
 			.cc_setop(8, "Add ignore");
 		}
 	}
-	if (~wildwars_world = 0 & $int18 >= $int19 & $int18 > $int17) {
+	if (~wildwars_world = 0 & $rank18 >= $rank19 & $rank18 > $rank17) {
 		cc_setop(6, "Kick user");
 		.cc_setop(6, "Kick user");
 	}
-	cc_setopbase("<col=ff9040><$string0></col>");
-	.cc_setopbase("<col=ff9040><$string0></col>");
+	cc_setopbase("<col=ff9040><$text0></col>");
+	.cc_setopbase("<col=ff9040><$text0></col>");
 	cc_setonop("clan_op(event_opbase, event_opindex)");
 	.cc_setonop("clan_op(event_opbase, event_opindex)");
-	$int24, $int22 = calc($int24 + 1), calc($int22 + $int23);
+	$int24, $height22 = calc($int24 + 1), calc($height22 + $int23);
 }
 if ($int15 >= 1) {
-	$int22 = calc($int22 + 5);
+	$height22 = calc($height22 + 5);
 }
 if_clearops($component10);
 if (%varbit6363 = 1) {
@@ -222,8 +222,8 @@ if (%varbit6363 = 1) {
 	if_setop(1, "Join Chat", $component10);
 	if_setonop("joinchat_onop(event_opindex, 1)", $component10);
 }
-if ($int22 > if_getheight($component8)) {
-	if_setscrollsize(0, $int22, $component8);
+if ($height22 > if_getheight($component8)) {
+	if_setscrollsize(0, $height22, $component8);
 	~scrollbar_resize($component9, $component8, if_getscrolly($component8));
 } else {
 	if_setscrollsize(0, 0, $component8);

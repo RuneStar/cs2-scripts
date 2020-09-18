@@ -12,8 +12,8 @@ if ($boolean1 = true) {
 if (%varcint62 = 1) {
 	return;
 }
-if (chat_getfilter_public ! 4) {
-	chat_setfilter(4, chat_getfilter_private, chat_getfilter_trade);
+if (chat_getfilter_public ! ^chatfilter_autochat) {
+	chat_setfilter(^chatfilter_autochat, chat_getfilter_private, chat_getfilter_trade);
 	~redraw_chat_buttons;
 	~rebuildchatbox(~script553);
 }

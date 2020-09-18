@@ -5,7 +5,7 @@ if (string_length($string0) > 0) {
 	$int4 = 0;
 }
 def_int $int5 = 0;
-def_int $int6 = 0;
+def_int $height6 = 0;
 def_int $int7 = 0;
 def_enum $enum8 = enum_1124;
 if (~wildwars_world = 1) {
@@ -17,8 +17,8 @@ while ($namedobj10 ! null) {
 	if (cc_find($component0, $int7) = ^true) {
 		if ($int4 = 1 | string_indexof_string(lowercase(oc_name($namedobj10)), $string0, 0) ! -1) {
 			cc_sethide(false);
-			$int6 = calc($int5 / 10 * $int3);
-			cc_setposition(calc($int5 % 10 * (36 + $int2)), $int6, ^setpos_abs_left, ^setpos_abs_top);
+			$height6 = calc($int5 / 10 * $int3);
+			cc_setposition(calc($int5 % 10 * (36 + $int2)), $height6, ^setpos_abs_left, ^setpos_abs_top);
 			$int5 = calc($int5 + 1);
 		} else {
 			cc_sethide(true);
@@ -34,8 +34,8 @@ if ($int9 = 1) {
 		if (cc_find($component0, $int7) = ^true) {
 			if ($int4 = 1 | string_indexof_string(lowercase(oc_name($namedobj10)), $string0, 0) ! -1) {
 				cc_sethide(false);
-				$int6 = calc($int5 / 10 * $int3);
-				cc_setposition(calc($int5 % 10 * (36 + $int2)), $int6, ^setpos_abs_left, ^setpos_abs_top);
+				$height6 = calc($int5 / 10 * $int3);
+				cc_setposition(calc($int5 % 10 * (36 + $int2)), $height6, ^setpos_abs_left, ^setpos_abs_top);
 				$int5 = calc($int5 + 1);
 			} else {
 				cc_sethide(true);
@@ -53,9 +53,9 @@ if (cc_find($component0, $int7) = ^true) {
 		cc_sethide(false);
 	}
 }
-$int6 = calc($int6 + 32);
-if ($int6 > if_getheight($component0)) {
-	if_setscrollsize(0, $int6, $component0);
+$height6 = calc($height6 + 32);
+if ($height6 > if_getheight($component0)) {
+	if_setscrollsize(0, $height6, $component0);
 } else {
 	if_setscrollsize(0, 0, $component0);
 }

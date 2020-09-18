@@ -1,5 +1,5 @@
 // 3064
-[proc,arceuus_teletab_confirm_draw](boolean $boolean0, string $string0, component $component1)
+[proc,arceuus_teletab_confirm_draw](boolean $boolean0, string $text0, component $component1)
 cc_deleteall($component1);
 def_int $int2 = 0;
 if ($boolean0 = true) {
@@ -15,4 +15,4 @@ cc_settextfont(p12_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
-cc_settext($string0);
+cc_settext($text0);

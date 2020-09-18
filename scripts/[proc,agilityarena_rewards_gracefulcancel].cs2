@@ -1,5 +1,5 @@
 // 2038
-[proc,agilityarena_rewards_gracefulcancel](component $component0, string $string0, boolean $boolean1)
+[proc,agilityarena_rewards_gracefulcancel](component $component0, string $text0, boolean $boolean1)
 cc_deleteall($component0);
 def_int $int2 = 0;
 if ($boolean1 = true) {
@@ -19,4 +19,4 @@ if ($boolean1 = true) {
 	cc_setcolour(0xff981f);
 }
 cc_settextshadow(true);
-cc_settext($string0);
+cc_settext($text0);

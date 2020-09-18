@@ -1,5 +1,5 @@
 // 3553
-[clientscript,poh_costumes_buttons_1off_reset](component $component0, graphic $graphic1, obj $obj2, int $int3)
-if (clientclock >= $int3) {
+[clientscript,poh_costumes_buttons_1off_reset](component $component0, graphic $graphic1, obj $obj2, int $clock3)
+if (clientclock >= $clock3) {
 	~poh_costumes_buttons_1off_reset($component0, $graphic1, $obj2);
 }

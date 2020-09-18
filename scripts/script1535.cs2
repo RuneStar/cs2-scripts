@@ -1,6 +1,6 @@
 // 1535
-script1535(component $component0, int $int1, string $string0, int $int2)
-if (clientclock < $int2) {
+script1535(component $component0, int $int1, string $string0, int $clock2)
+if (clientclock < $clock2) {
 	return;
 }
 if (cc_find($component0, $int1) = ^true) {

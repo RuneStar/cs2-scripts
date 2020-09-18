@@ -1,6 +1,6 @@
 // 1142
-[clientscript,deadman_stats_click](int $int0, component $component1, int $int2)
-if ($int0 ! 1) {
+[clientscript,deadman_stats_click](int $opindex0, component $component1, int $int2)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

@@ -1,5 +1,5 @@
 // 1255
-script1255(boolean $boolean0, component $component1, string $string0, string $string1, obj $obj2)
+script1255(boolean $boolean0, component $component1, string $text0, string $text1, obj $obj2)
 def_int $int3 = 0;
 if ($boolean0 = true) {
 	$int3 = ~v2_stone_button_in_filled($component1);
@@ -27,5 +27,5 @@ cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 .cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
 cc_settextshadow(true);
 .cc_settextshadow(true);
-cc_settext($string0);
-.cc_settext($string1);
+cc_settext($text0);
+.cc_settext($text1);

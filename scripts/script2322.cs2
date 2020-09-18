@@ -4,8 +4,8 @@ def_string $string1 = "";
 $string1, $string0 = ~script632($string0);
 cc_create(interface_50:41, ^iftype_text, calc($int3 + $int0));
 cc_setposition($int4, -13, ^setpos_abs_left, ^setpos_abs_top);
-def_int $int6 = if_getwidth($component2);
-cc_setsize($int6, 13, ^setsize_abs, ^setsize_abs);
+def_int $width6 = if_getwidth($component2);
+cc_setsize($width6, 13, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
@@ -18,4 +18,4 @@ if ($int1 ! -1) {
 	cc_sethide(true);
 	cc_settext("<~string_prependzero(removetags($string1), 13)><tostring($int3)>");
 }
-return($string0, calc($int4 + $int6));
+return($string0, calc($int4 + $width6));

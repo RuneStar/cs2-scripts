@@ -1,6 +1,6 @@
 // 2399
-[proc,openurl_raw](string $string0, boolean $boolean0, boolean $boolean1)
+[proc,openurl_raw](string $url0, boolean $boolean0, boolean $boolean1)
 if ($boolean1 = true) {
 	sound_synth(synth_2266, 1, 0);
 }
-openurl($string0, $boolean0);
+openurl($url0, $boolean0);

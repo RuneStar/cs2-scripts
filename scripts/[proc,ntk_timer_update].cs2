@@ -1,9 +1,9 @@
 // 482
 [proc,ntk_timer_update](component $component0, int $int1)
-def_int $int2 = interpolate(0, $int1, 0, 500, 182);
-if ($int2 > 182) {
-	$int2 = 182;
-} else if ($int2 < 0) {
-	$int2 = 0;
+def_int $width2 = interpolate(0, $int1, 0, 500, 182);
+if ($width2 > 182) {
+	$width2 = 182;
+} else if ($width2 < 0) {
+	$width2 = 0;
 }
-if_setsize($int2, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+if_setsize($width2, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);

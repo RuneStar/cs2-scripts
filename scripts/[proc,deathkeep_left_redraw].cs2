@@ -72,25 +72,25 @@ while ($int25 > 0) {
 cc_deleteall(interface_4:5);
 def_int $int26 = 0;
 def_int $int27 = 0;
-def_string $string0 = "";
+def_string $text0 = "";
 $int26, $int27 = ~deathkeep_left_setsection("Items that are <col=ffffff>KEPT</col>:", interface_4:6, $int9, $int10, $int26, $int27);
 if (%varbit1777 = 2) {
-	$string0 = "Items <col=ff0000>DROPPED</col> near where you die:";
+	$text0 = "Items <col=ff0000>DROPPED</col> near where you die:";
 } else if ($int22 > 1) {
-	$string0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: <~tostring_spacer($int22, ",")> coins)</col>";
+	$text0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: <~tostring_spacer($int22, ",")> coins)</col>";
 } else if ($int22 = 1) {
-	$string0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: 1 coin)</col>";
+	$text0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: 1 coin)</col>";
 } else {
-	$string0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: None)</col>";
+	$text0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: None)</col>";
 }
-$int26, $int27 = ~deathkeep_left_setsection($string0, interface_4:7, $int12, $int13, $int26, $int27);
+$int26, $int27 = ~deathkeep_left_setsection($text0, interface_4:7, $int12, $int13, $int26, $int27);
 $int26, $int27 = ~deathkeep_left_setsection("Items <col=ff0000>LOST</col> to the player who kills you:", interface_4:8, $int14, $int15, $int26, $int27);
 if (%varbit1777 = 2) {
-	$string0 = "Items <col=ff0000>DROPPED</col> as coins:";
+	$text0 = "Items <col=ff0000>DROPPED</col> as coins:";
 } else {
-	$string0 = "Items that go to your <col=ffffff>GRAVESTONE</col> as coins:";
+	$text0 = "Items that go to your <col=ffffff>GRAVESTONE</col> as coins:";
 }
-$int26, $int27 = ~deathkeep_left_setsection($string0, interface_4:9, $int16, $int17, $int26, $int27);
+$int26, $int27 = ~deathkeep_left_setsection($text0, interface_4:9, $int16, $int17, $int26, $int27);
 $int26, $int27 = ~deathkeep_left_setsection("Items that are <col=ff0000>DELETED</col>:", interface_4:10, $int18, $int19, $int26, $int27);
 if ($int27 > 0) {
 	$int27 = calc($int27 + 3);

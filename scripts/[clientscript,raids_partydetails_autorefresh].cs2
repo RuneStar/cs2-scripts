@@ -1,9 +1,9 @@
 // 139
-[clientscript,raids_partydetails_autorefresh](component $component0, int $int1, int $int2)
-if (clientclock < $int2) {
+[clientscript,raids_partydetails_autorefresh](component $component0, int $comsubid1, int $clock2)
+if (clientclock < $clock2) {
 	return;
 }
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $comsubid1) = ^true) {
 	cc_setontimer(null);
 }
 ~script890(interface_507:34, "Refresh", interface_507:3, enum(component, int, enum_1539, interface_507:34));

@@ -8,8 +8,8 @@ if (%varbit4693 = 1 & ~on_mobile = false) {
 } else if (%varbit4693 = 2 & ~on_mobile = false) {
 	$fontmetrics6, $fontmetrics7, $int8 = b12_full, b12_full, 25;
 }
-def_int $int9 = calc(28 + parawidth("+8,888,888,888", 512, $fontmetrics6) + 2);
-if_setsize($int9, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
+def_int $width9 = calc(28 + parawidth("+8,888,888,888", 512, $fontmetrics6) + 2);
+if_setsize($width9, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
 if_settextfont($fontmetrics7, $component2);
 def_int $int10 = 0;
 def_component $component11 = enum(int, component, enum_1163, $int10);

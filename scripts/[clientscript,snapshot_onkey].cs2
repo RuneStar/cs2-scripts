@@ -1,10 +1,10 @@
 // 133
-[clientscript,snapshot_onkey](int $key0, char $char1)
+[clientscript,snapshot_onkey](int $key0, char $keychar1)
 if (~keypress_permit(553, -1) = 0) {
 	return;
 }
 if ($key0 = ^key_return & ~on_mobile = true) {
 	~keyboard_hide;
 }
-%varcstring370 = ~add_to_inputstring(%varcstring370, 2, $key0, $char1);
+%varcstring370 = ~add_to_inputstring(%varcstring370, 2, $key0, $keychar1);
 if_settext("<escape(%varcstring370)><col=ffff00>|", snapshot_main:5);

@@ -15,20 +15,20 @@ while ($int3 < $int0) {
 		} else if (calc($int3 % 2) = 0) {
 			cc_settrans(255);
 			.cc_setcolour(0xff891f);
-			cc_setonmouserepeat("cc_settrans(event_com, event_comid, 200, null)");
-			cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
 			cc_setonop("script2689(event_opindex, $int3, $int0)");
 		} else {
 			cc_settrans(220);
 			.cc_setcolour(0xff891f);
-			cc_setonmouserepeat("cc_settrans(event_com, event_comid, 200, null)");
-			cc_setonmouseleave("cc_settrans(event_com, event_comid, 220, null)");
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 220, null)");
 			cc_setonop("script2689(event_opindex, $int3, $int0)");
 		}
 	}
 	$int3 = calc($int3 + 1);
 }
-def_int $int4 = 0;
+def_int $comsubid4 = 0;
 if ($int2 = 1) {
 	~script2692(false, false);
 	if_setonmouserepeat("script2691(true, false)", interface_100:33);
@@ -36,8 +36,8 @@ if ($int2 = 1) {
 	if_setonop("script2693(event_opindex)", interface_100:33);
 } else {
 	cc_deleteall(interface_100:33);
-	$int4 = ~v2_stone_button_in_filled(interface_100:33);
-	cc_create(interface_100:33, ^iftype_text, $int4);
+	$comsubid4 = ~v2_stone_button_in_filled(interface_100:33);
+	cc_create(interface_100:33, ^iftype_text, $comsubid4);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setcolour(0x9f9f9f);

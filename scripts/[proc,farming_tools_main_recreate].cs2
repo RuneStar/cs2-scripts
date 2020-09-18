@@ -1,5 +1,5 @@
 // 2749
-[proc,farming_tools_main_recreate](component $component0, obj $obj1, string $string0, int $int2, boolean $boolean3)
+[proc,farming_tools_main_recreate](component $component0, obj $obj1, string $text0, int $int2, boolean $boolean3)
 cc_deleteall($component0);
 def_int $int4 = 0;
 def_int $int5 = 0;
@@ -30,5 +30,5 @@ cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 if_setonop("cc_settrans_temporarily(event_com, cc_getid, 125, 0)", $component0);
-~farming_tools_main_update($component0, $obj1, $string0, $int2, $int5);
-if_setonvartransmit("farming_tools_main_update($component0, $obj1, $string0, $int2, $int5){var615, var2084, var439, var967, var1785, var1704}", $component0);
+~farming_tools_main_update($component0, $obj1, $text0, $int2, $int5);
+if_setonvartransmit("farming_tools_main_update($component0, $obj1, $text0, $int2, $int5){var615, var2084, var439, var967, var1785, var1704}", $component0);

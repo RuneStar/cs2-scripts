@@ -16,7 +16,7 @@ while ($int4 < 4) {
 	if (cc_find($component1, $int4) = ^true) {
 		if ($int3 = 1) {
 			cc_settrans(240);
-			cc_setontimer("script811(event_com, event_comid, calc(clientclock + 3 - $int4 * 2), 240, 250)");
+			cc_setontimer("script811(event_com, event_comsubid, calc(clientclock + 3 - $int4 * 2), 240, 250)");
 			cc_sethide(false);
 		} else {
 			cc_sethide(true);
@@ -39,7 +39,7 @@ while ($int4 > 0) {
 			cc_setobject($obj7, inv_getnum(inv, $int4));
 			if ($int3 = 1) {
 				cc_setop(1, "Offer");
-				cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 			} else {
 				cc_setonop(null);
 			}

@@ -1,5 +1,5 @@
 // 806
-[proc,ge_offers_switchpanel](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6)
+[proc,ge_offers_switchpanel](component $component0, int $comsubid1, component $component2, component $component3, component $component4, component $component5, component $component6)
 ~deltooltip_action($component6);
 def_int $int7 = calc(%varbit4439 - 1);
 def_inv $inv8 = enum(int, inv, enum_150, $int7);
@@ -8,7 +8,7 @@ if ($inv8 = null) {
 	if_sethide(false, $component3);
 	if_sethide(true, $component4);
 	if_sethide(true, $component5);
-	if (cc_find($component0, $int1) = ^true) {
+	if (cc_find($component0, $comsubid1) = ^true) {
 		cc_settext("Grand Exchange");
 	}
 	return;
@@ -19,7 +19,7 @@ if (stockmarket_isofferempty($int7) = true) {
 	if_sethide(true, $component3);
 	if_sethide(true, $component4);
 	if_sethide(false, $component5);
-	if (cc_find($component0, $int1) = ^true) {
+	if (cc_find($component0, $comsubid1) = ^true) {
 		cc_settext("Grand Exchange: Set up offer");
 	}
 	return;
@@ -27,6 +27,6 @@ if (stockmarket_isofferempty($int7) = true) {
 if_sethide(true, $component3);
 if_sethide(false, $component4);
 if_sethide(true, $component5);
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $comsubid1) = ^true) {
 	cc_settext("Grand Exchange: Offer status");
 }

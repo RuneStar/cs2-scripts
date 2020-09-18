@@ -1,63 +1,63 @@
 // 3175
-script3175(component $component0, int $int1)
+script3175(component $component0, int $clock1)
 def_enum $enum2 = null;
-def_int $int3 = 0;
-def_int $int4 = 0;
-def_int $int5 = 0;
-def_int $int6 = 0;
+def_int $x3 = 0;
+def_int $y4 = 0;
+def_int $width5 = 0;
+def_int $height6 = 0;
 def_int $setposh7 = ^setpos_abs_left;
 def_int $setposv8 = ^setpos_abs_bottom;
-if ($int1 ! %varcint384) {
+if ($clock1 ! %varcint384) {
 	$enum2 = ~toplevel_getcomponents;
 	if ($enum2 = enum_1745) {
 		if (~script2519 = 1) {
-			$int3 = calc(204 - 1);
+			$x3 = calc(204 - 1);
 		} else {
-			$int3 = 0;
+			$x3 = 0;
 		}
-		$int4 = 80;
-		$int5 = 75;
-		$int6 = 249;
+		$y4 = 80;
+		$width5 = 75;
+		$height6 = 249;
 		$setposh7 = ^setpos_abs_right;
 		$setposv8 = ^setpos_abs_centre;
 	} else if ($enum2 = enum_1130 | $enum2 = enum_1131) {
 		if (%varbit9530 = 0) {
-			$int3 = 1;
-			$int4 = -66;
-			$int5 = 75;
-			$int6 = 249;
+			$x3 = 1;
+			$y4 = -66;
+			$width5 = 75;
+			$height6 = 249;
 			$setposh7 = ^setpos_abs_left;
 			$setposv8 = ^setpos_abs_centre;
 		} else {
-			$int3 = 1;
+			$x3 = 1;
 			if (~chatbox_open = 1) {
-				$int4 = calc(165 + 1);
+				$y4 = calc(165 + 1);
 			} else {
-				$int4 = calc(23 + 1);
+				$y4 = calc(23 + 1);
 			}
-			$int5 = 497;
-			$int6 = 63;
+			$width5 = 497;
+			$height6 = 63;
 			$setposh7 = ^setpos_abs_left;
 			$setposv8 = ^setpos_abs_bottom;
 		}
 	} else if ($enum2 = enum_1129) {
 		if (%varbit9530 = 0) {
-			$int3 = 1;
-			$int4 = 76;
-			$int5 = 75;
-			$int6 = 249;
+			$x3 = 1;
+			$y4 = 76;
+			$width5 = 75;
+			$height6 = 249;
 			$setposh7 = ^setpos_abs_left;
 			$setposv8 = ^setpos_abs_bottom;
 		} else {
-			$int3 = 1;
-			$int4 = 1;
-			$int5 = 435;
-			$int6 = 63;
+			$x3 = 1;
+			$y4 = 1;
+			$width5 = 435;
+			$height6 = 63;
 			$setposh7 = ^setpos_abs_left;
 			$setposv8 = ^setpos_abs_bottom;
 		}
 	}
-	if_setposition($int3, $int4, $setposh7, $setposv8, $component0);
-	if_setsize($int5, $int6, ^setsize_abs, ^setsize_abs, $component0);
+	if_setposition($x3, $y4, $setposh7, $setposv8, $component0);
+	if_setsize($width5, $height6, ^setsize_abs, ^setsize_abs, $component0);
 	if_setontimer("script3174($component0, %varcint384)", $component0);
 }

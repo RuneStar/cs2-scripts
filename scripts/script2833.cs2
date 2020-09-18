@@ -1,18 +1,18 @@
 // 2833
 script2833
 def_int $int0 = 5;
-def_int $int1 = 0;
-def_int $int2 = 0;
-def_int $int3 = enum_getoutputcount(enum_2320);
+def_int $comsubid1 = 0;
+def_int $count2 = 0;
+def_int $count3 = enum_getoutputcount(enum_2320);
 def_struct $struct4 = null;
 def_component $component5 = null;
 def_string $string0 = "";
 def_int $int6 = 0;
-def_int $int7 = -1;
+def_int $y7 = -1;
 def_boolean $boolean8 = null;
-while ($int2 < $int3) {
-	$struct4 = enum(int, struct, enum_2320, $int2);
-	$component5 = enum(int, component, enum_2321, $int2);
+while ($count2 < $count3) {
+	$struct4 = enum(int, struct, enum_2320, $count2);
+	$component5 = enum(int, component, enum_2321, $count2);
 	$boolean8 = struct_param($struct4, param_925);
 	if (clienttype ! ^clienttype_ios) {
 		$boolean8 = false;
@@ -20,19 +20,19 @@ while ($int2 < $int3) {
 	if ($boolean8 = false) {
 		if_sethide(false, $component5);
 		$string0 = struct_param($struct4, param_729);
-		$int1 = ~options_button_off($component5, 0);
+		$comsubid1 = ~options_button_off($component5, 0);
 		if_setsize(84, 30, ^setsize_abs, ^setsize_abs, $component5);
-		$int7 = calc($int0 + $int6 / 2 * 36 + $int6 / 2 * 2);
+		$y7 = calc($int0 + $int6 / 2 * 36 + $int6 / 2 * 2);
 		if (calc($int6 % 2) = 0) {
-			if (calc($int6 + 1) = $int3) {
-				if_setposition(0, $int7, ^setpos_abs_centre, ^setpos_abs_top, $component5);
+			if (calc($int6 + 1) = $count3) {
+				if_setposition(0, $y7, ^setpos_abs_centre, ^setpos_abs_top, $component5);
 			} else {
-				if_setposition(3, $int7, ^setpos_abs_left, ^setpos_abs_top, $component5);
+				if_setposition(3, $y7, ^setpos_abs_left, ^setpos_abs_top, $component5);
 			}
 		} else {
-			if_setposition(3, $int7, ^setpos_abs_right, ^setpos_abs_top, $component5);
+			if_setposition(3, $y7, ^setpos_abs_right, ^setpos_abs_top, $component5);
 		}
-		cc_create($component5, ^iftype_text, $int1);
+		cc_create($component5, ^iftype_text, $comsubid1);
 		cc_settext($string0);
 		cc_setcolour(0xf7f0df);
 		cc_settextshadow(true);
@@ -40,15 +40,15 @@ while ($int2 < $int3) {
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-		cc_setonmouseover("cc_colour_swapper(event_com, event_comid, 0xc0c0c0)");
-		cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xf7f0df)");
+		cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, 0xc0c0c0)");
+		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0xf7f0df)");
 		$string0 = ~script1299($string0, "<br>", " ");
 		if_setop(1, "Open", $component5);
 		if_setopbase("<col=ff9040><$string0></col>", $component5);
 		if_setonop("opsound(event_opindex, 2)", $component5);
 		$int6 = calc($int6 + 1);
 	}
-	$int2 = calc($int2 + 1);
+	$count2 = calc($count2 + 1);
 }
 if ($int6 <= 0) {
 	$component5 = enum(int, component, enum_2321, 0);

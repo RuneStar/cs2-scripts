@@ -1,8 +1,8 @@
 // 1731
 [proc,worldmap_keysort](intarray $intarray0, component $component1, int $int2, int $int3)
-def_int $int4 = calc(($int2 + $int3) / 2);
-def_int $int5 = $intarray0($int4);
-$intarray0($int4) = $intarray0($int3);
+def_int $index4 = calc(($int2 + $int3) / 2);
+def_int $int5 = $intarray0($index4);
+$intarray0($index4) = $intarray0($int3);
 $intarray0($int3) = $int5;
 def_int $int6 = $int2;
 def_int $int7 = $int2;

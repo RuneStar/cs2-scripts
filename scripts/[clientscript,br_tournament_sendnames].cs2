@@ -15,8 +15,8 @@ while ($int2 < 11) {
 	}
 	cc_setgraphic($graphic0);
 	cc_settiling(true);
-	cc_setonmouseover("cc_graphic_swapper(event_com, event_comid, $graphic1, null)");
-	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic0, null)");
+	cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic1, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic0, null)");
 	$int2 = calc($int2 + 1);
 }
 def_string $string1 = "";

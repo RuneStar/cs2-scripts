@@ -1,9 +1,9 @@
 // 3485
-[proc,death_coffer_inactivebutton](component $component0, string $string0, int $int1, component $component2)
+[proc,death_coffer_inactivebutton](component $component0, string $text0, int $int1, component $component2)
 if ($int1 = 1) {
-	~death_coffer_drawbutton(true, true, $component0, $string0, $component2);
+	~death_coffer_drawbutton(true, true, $component0, $text0, $component2);
 } else {
-	~death_coffer_drawbutton(false, false, $component0, $string0, $component2);
+	~death_coffer_drawbutton(false, false, $component0, $text0, $component2);
 }
 if_setonmouserepeat(null, $component0);
 if_setonmouseleave(null, $component0);

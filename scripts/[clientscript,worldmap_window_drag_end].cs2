@@ -1,6 +1,6 @@
 // 1748
-[clientscript,worldmap_window_drag_end](int $int0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, int $int9)
-if (clientclock < $int0) {
+[clientscript,worldmap_window_drag_end](int $clock0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, int $int9)
+if (clientclock < $clock0) {
 	return;
 }
 %varcint191, %varcint192, %varcint193, %varcint194 = $int1, $int2, $int3, $int4;

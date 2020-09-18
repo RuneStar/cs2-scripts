@@ -134,9 +134,9 @@ if (string_length($string0) > 0) {
 }
 if_setontimer(null, $component1);
 def_component $component4 = null;
-def_int $int5 = 0;
-def_int $int6 = enum_getoutputcount(enum_1937);
-if ($int0 >= calc($int6 - 1)) {
+def_int $height5 = 0;
+def_int $count6 = enum_getoutputcount(enum_1937);
+if ($int0 >= calc($count6 - 1)) {
 	switch_int (%varcint180) {
 		case 0, 1, 2, 3, 4, 5, 6, 7, 12, 13 :
 		case default :
@@ -144,9 +144,9 @@ if ($int0 >= calc($int6 - 1)) {
 	}
 	~tob_partylist_setsort;
 	$component4 = if_getlayer($component1);
-	$int5 = calc(%varcint178 * 18);
-	if ($int5 > if_getheight($component4)) {
-		if_setscrollsize(0, $int5, $component4);
+	$height5 = calc(%varcint178 * 18);
+	if ($height5 > if_getheight($component4)) {
+		if_setscrollsize(0, $height5, $component4);
 		~scrollbar_resize(interface_364:62, $component4, %varcint179);
 	} else {
 		if_setscrollsize(0, 0, $component4);
@@ -155,14 +155,14 @@ if ($int0 >= calc($int6 - 1)) {
 	}
 	cc_deleteall($component4);
 	$int0 = 0;
-	while ($int0 < $int6) {
+	while ($int0 < $count6) {
 		if_sethide(false, enum(int, component, enum_1937, $int0));
 		cc_create($component4, ^iftype_text, $int0);
 		cc_sethide(true);
 		$int0 = calc($int0 + 1);
 	}
 	if (%varcint178 <= 0) {
-		cc_create($component4, ^iftype_text, $int6);
+		cc_create($component4, ^iftype_text, $count6);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 		cc_setcolour(0xff981f);

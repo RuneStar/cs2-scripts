@@ -2,31 +2,31 @@
 [proc,skillmain_button_create](int $int0, int $int1, component $component2, int $int3, component $component4, int $int5, int $int6, obj $obj7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, int $int14, int $int15)(int, int)
 if_sethide(false, $component2);
 if_setposition($int14, $int15, ^setpos_abs_left, ^setpos_abs_top, $component2);
-def_string $string0 = "";
+def_string $text0 = "";
 if ($int1 = 0) {
 	if ($int0 = 1) {
-		$string0 = "?";
+		$text0 = "?";
 	} else {
-		$string0 = "X";
+		$text0 = "X";
 	}
 } else if ($obj7 = bones_to_peaches_6926 & $component2 = $component12) {
-	$string0 = "25";
+	$text0 = "25";
 } else if ($int1 = 28) {
-	$string0 = "All";
+	$text0 = "All";
 } else {
-	$string0 = tostring($int1);
+	$text0 = tostring($int1);
 }
 if ($int0 = 1) {
-	~skillmain_button_draw($component2, $string0, true, false);
+	~skillmain_button_draw($component2, $text0, true, false);
 	if_setonmouserepeat(null, $component2);
 	if_setonmouseleave(null, $component2);
 	if_setonop("opsound(event_opindex, 2)", $component2);
 } else {
-	~skillmain_button_draw($component2, $string0, false, false);
-	if_setonmouserepeat("skillmain_button_draw($component2, $string0, false, true)", $component2);
-	if_setonmouseleave("skillmain_button_draw($component2, $string0, false, false)", $component2);
+	~skillmain_button_draw($component2, $text0, false, false);
+	if_setonmouserepeat("skillmain_button_draw($component2, $text0, false, true)", $component2);
+	if_setonmouseleave("skillmain_button_draw($component2, $text0, false, false)", $component2);
 	if_setonop("skillmain_setquantity(event_opindex, $int1, $component4, $int5, $int6, $obj7, $component8, $component9, $component10, $component11, $component12, $component13)", $component2);
 }
 if_setop(1, "Quantity:", $component2);
-if_setopbase("<col=ff9040><$string0></col>", $component2);
+if_setopbase("<col=ff9040><$text0></col>", $component2);
 return(calc($int14 + $int5), calc($int15 + $int6));

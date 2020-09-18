@@ -1,8 +1,8 @@
 // 130
-[clientscript,ignore_op](int $int0, string $string0, component $component1, int $int2, int $int3, string $string1, string $string2)
+[clientscript,ignore_op](int $opindex0, string $opbase0, component $component1, int $comsubid2, int $comsubid3, string $string1, string $text2)
 sound_synth(synth_2266, 1, 0);
-if ($int0 = 1) {
-	ignore_del(removetags($string0));
-} else if ($int0 = 10 & $component1 ! null & cc_find($component1, $int2) = ^true & .cc_find($component1, $int3) = ^true) {
-	~script2467($string1, $string2);
+if ($opindex0 = 1) {
+	ignore_del(removetags($opbase0));
+} else if ($opindex0 = 10 & $component1 ! null & cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
+	~script2467($string1, $text2);
 }

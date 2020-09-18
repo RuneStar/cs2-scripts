@@ -1,5 +1,5 @@
 // 470
-[clientscript,quickprayer_button_update](int $int0, component $component1, int $int2)
-if (.cc_find($component1, $int2) = ^true) {
-	~quickprayer_button_update($int0);
+[clientscript,quickprayer_button_update](int $index0, component $component1, int $comsubid2)
+if (.cc_find($component1, $comsubid2) = ^true) {
+	~quickprayer_button_update($index0);
 }

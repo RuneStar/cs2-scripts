@@ -1,6 +1,6 @@
 // 597
-[clientscript,clanwars_hud_countdown_tick](component $component0, component $component1, int $int2, int $int3)
-if (cc_find($component1, $int2) = ^true) {
+[clientscript,clanwars_hud_countdown_tick](component $component0, component $component1, int $comsubid2, int $int3)
+if (cc_find($component1, $comsubid2) = ^true) {
 	if ($int3 > 0) {
 		$int3 = calc($int3 - 1);
 	}

@@ -1,8 +1,8 @@
 // 801
-[clientscript,ge_pricelist_switchmode](int $int0, inv $inv1, int $int2, int $int3)
-if ($int0 ! 1) {
+[clientscript,ge_pricelist_switchmode](int $opindex0, inv $inv1, int $size2, int $comsubid3)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);
 %varbit4440 = calc(1 - %varbit4440);
-~ge_pricelist_draw($inv1, $int2, $int3);
+~ge_pricelist_draw($inv1, $size2, $comsubid3);

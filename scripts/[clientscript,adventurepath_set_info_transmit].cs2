@@ -7,14 +7,14 @@ def_enum $enum21 = enum(int, enum, enum_2620, %var2357);
 if ($enum21 = null) {
 	return;
 }
-def_int $int22 = 0;
+def_int $count22 = 0;
 def_struct $struct23 = null;
 def_int $int24 = struct_param($struct23, param_806);
-while ($int22 < enum_getoutputcount($enum21)) {
-	$struct23 = enum(int, struct, $enum21, $int22);
+while ($count22 < enum_getoutputcount($enum21)) {
+	$struct23 = enum(int, struct, $enum21, $count22);
 	if ($struct23 ! null & $int24 = %var2358) {
 		~adventurepath_set_info($int24, $component0, $component1, $component2, $component3, $struct23, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20);
 		return;
 	}
-	$int22 = calc($int22 + 1);
+	$count22 = calc($count22 + 1);
 }

@@ -1,7 +1,7 @@
 // 1267
-[clientscript,deadman_tournament_op](int $int0, string $string0, component $component1, int $int2)
-if (cc_find($component1, $int2) = ^true) {
+[clientscript,deadman_tournament_op](int $opindex0, string $string0, component $component1, int $comsubid2)
+if (cc_find($component1, $comsubid2) = ^true) {
 	sound_synth(synth_2266, 1, 0);
 	cc_setcolour(0x8f8f8f);
-	cc_setontimer("deadman_tournament_submit(calc(clientclock + 30), $string0, $component1, $int2)");
+	cc_setontimer("deadman_tournament_submit(calc(clientclock + 30), $string0, $component1, $comsubid2)");
 }

@@ -1,5 +1,5 @@
 // 3472
-[clientscript,gravestone_generic_resetbutton](int $int0, component $component1, component $component2)
-if (clientclock >= $int0) {
+[clientscript,gravestone_generic_resetbutton](int $clock0, component $component1, component $component2)
+if (clientclock >= $clock0) {
 	~gravestone_generic_resetbutton($component1, $component2);
 }

@@ -10,13 +10,13 @@ if ($struct2 ! null) {
 } else {
 	$int3 = 400;
 }
-def_int $int4 = -1;
+def_int $width4 = -1;
 if ($int3 ! -1 & $int3 > 0) {
-	$int4 = scale($int1, $int3, 130);
+	$width4 = scale($int1, $int3, 130);
 } else {
-	$int4 = 130;
+	$width4 = 130;
 }
 if (if_find($component0) = true) {
-	cc_setsize($int4, 0, ^setsize_abs, ^setsize_minus);
+	cc_setsize($width4, 0, ^setsize_abs, ^setsize_minus);
 }
 ~league_side_panel_update_text(interface_656:14, interface_656:11, interface_656:13, $int1, $int3);

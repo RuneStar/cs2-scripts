@@ -1,14 +1,14 @@
 // 643
 [clientscript,poh_menagerie_initroaming](component $component0)
-def_int $int1 = if_getwidth($component0);
-def_int $int2 = calc(if_getheight($component0) - 17);
+def_int $width1 = if_getwidth($component0);
+def_int $y2 = calc(if_getheight($component0) - 17);
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(0, $y2, ^setpos_abs_left, ^setpos_abs_top);
 .cc_create($component0, ^iftype_text, 1);
-.cc_setsize(calc($int1 - 22), 17, ^setsize_abs, ^setsize_abs);
-.cc_setposition(22, $int2, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setsize(calc($width1 - 22), 17, ^setsize_abs, ^setsize_abs);
+.cc_setposition(22, $y2, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setcolour(0xff981f);
 .cc_settextfont(p12_full);
 .cc_settextalign(^settextalign_left, ^settextalign_centre, 0);

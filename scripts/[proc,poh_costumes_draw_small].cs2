@@ -1,5 +1,5 @@
 // 3536
-[proc,poh_costumes_draw_small](int $int0, int $int1, int $int2, int $int3, namedobj $namedobj4, int $int5, int $int6, int $int7, fontmetrics $fontmetrics8, int $int9, boolean $boolean10, component $component11)(int, int, int)
+[proc,poh_costumes_draw_small](int $int0, int $int1, int $int2, int $int3, namedobj $namedobj4, int $int5, int $int6, int $count7, graphic $graphic8, int $int9, boolean $boolean10, component $component11)(int, int, int)
 def_int $int12 = 3;
 if ($int2 = 1) {
 	$int12 = calc($int12 + $int3);
@@ -42,7 +42,7 @@ if (cc_find($component11, calc($int13 + 3)) = ^true) {
 	} else {
 		cc_setcolour(0xff981f);
 	}
-	cc_settextfont($fontmetrics8);
+	cc_settextfont($graphic8);
 }
 while ($int14 < $int15) {
 	if (cc_find($component11, $int14) = ^true) {
@@ -78,9 +78,9 @@ if (cc_find($component11, $int13) = ^true) {
 		cc_settrans(120);
 		if ($boolean10 = true) {
 			cc_setop(1, "Set");
-			cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comid, 0, 120)");
-			cc_setonmouserepeat("cc_settrans(event_com, event_comid, 40, null)");
-			cc_setonmouseleave("cc_settrans(event_com, event_comid, 120, null)");
+			cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comsubid, 0, 120)");
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 40, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 120, null)");
 			if (.cc_find($component11, calc($int13 + 1)) = ^true) {
 				.cc_sethide(false);
 				if ($int2 = 1) {
@@ -103,9 +103,9 @@ if (cc_find($component11, $int13) = ^true) {
 		cc_settrans(0);
 		if ($boolean10 = true & $int21 = 0) {
 			cc_setop(1, "Set");
-			cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comid, 120, 0)");
-			cc_setonmouserepeat("cc_settrans(event_com, event_comid, 80, null)");
-			cc_setonmouseleave("cc_settrans(event_com, event_comid, 0, null)");
+			cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comsubid, 120, 0)");
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 80, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
 			if (.cc_find($component11, calc($int13 + 1)) = ^true) {
 				.cc_sethide(false);
 				if ($int2 = 1) {
@@ -128,7 +128,7 @@ if (cc_find($component11, $int13) = ^true) {
 }
 if (cc_find($component11, calc($int13 + 2)) = ^true) {
 	if ($int2 = 1) {
-		if ($int6 < calc($int7 - 1)) {
+		if ($int6 < calc($count7 - 1)) {
 			$int0 = calc($int0 + $int24 + 3);
 			cc_sethide(false);
 			cc_setsize($int3, 20, ^setsize_minus, ^setsize_abs);
@@ -137,7 +137,7 @@ if (cc_find($component11, calc($int13 + 2)) = ^true) {
 			cc_sethide(true);
 			$int0 = calc($int0 + $int24);
 		}
-	} else if ($int6 < calc($int7 - 2)) {
+	} else if ($int6 < calc($count7 - 2)) {
 		cc_sethide(false);
 		cc_setsize($int3, 20, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, calc($int0 + $int24 + 3 - 20), ^setpos_abs_left, ^setpos_abs_top);

@@ -32,13 +32,13 @@ switch_enum ($enum1) {
 }
 cc_sethide(false);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-def_int $int4 = calc(40 * ($int3 / 6));
-cc_setposition(calc($int2 * ($int3 % 6)), $int4, ^setpos_abs_left, ^setpos_abs_top);
+def_int $y4 = calc(40 * ($int3 / 6));
+cc_setposition(calc($int2 * ($int3 % 6)), $y4, ^setpos_abs_left, ^setpos_abs_top);
 cc_setobject($obj0, 1);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 cc_setop(1, "Take");
 cc_setop(10, "Examine");
 cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
-cc_setonop("pet_insurance_op(event_opindex, event_com, event_comid)");
-return($int4);
+cc_setonop("pet_insurance_op(event_opindex, event_com, event_comsubid)");
+return($y4);

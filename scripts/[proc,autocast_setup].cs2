@@ -6,21 +6,21 @@ cc_setsize(parawidth("Cancel", 190, p12_full), 15, ^setsize_abs, ^setsize_abs);
 cc_setposition(5, 0, ^setpos_abs_right, ^setpos_abs_bottom);
 cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 cc_setcolour(0x8f8f8f);
-cc_setonmouseover("cc_colour_swapper(event_com, event_comid, 0xcfcfcf)");
-cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0x8f8f8f)");
+cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, 0xcfcfcf)");
+cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x8f8f8f)");
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_settext("Cancel");
 cc_setop(1, "Cancel");
 def_int $int2 = 1;
-def_int $int3 = -1;
-def_int $int4 = -1;
+def_int $x3 = -1;
+def_int $y4 = -1;
 def_obj $obj5 = null;
 while ($int2 <= 52) {
 	cc_create($component0, ^iftype_graphic, $int2);
-	$int3, $int4, $obj5 = ~autocast_spellpos($int2, %var664), enum(int, obj, enum_1986, $int2);
-	if ($int3 ! -1 & $int4 ! -1 & $obj5 ! null) {
-		cc_setposition($int3, $int4, ^setpos_abs_centre, ^setpos_abs_centre);
+	$x3, $y4, $obj5 = ~autocast_spellpos($int2, %var664), enum(int, obj, enum_1986, $int2);
+	if ($x3 ! -1 & $y4 ! -1 & $obj5 ! null) {
+		cc_setposition($x3, $y4, ^setpos_abs_centre, ^setpos_abs_centre);
 		cc_setsize(24, 24, ^setsize_abs, ^setsize_abs);
 		cc_setop(1, oc_param($obj5, spell_name));
 		cc_setoninvtransmit("autocast_spellhighlight(event_com, $int2, $obj5){inv, worn}");

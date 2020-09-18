@@ -3,17 +3,17 @@ script3517(component $component0, component $component1, component $component2, 
 if (map_members = ^false) {
 	return;
 }
-def_string $string0 = "null";
+def_string $op0 = "null";
 if ($boolean3 = true) {
-	$string0 = "Set Bonus";
+	$op0 = "Set Bonus";
 } else if ($boolean3 = false) {
-	$string0 = "Stat Bonus";
+	$op0 = "Stat Bonus";
 }
-~script3519($component0, $component1, $component2, $boolean3, $string0, false, $component4, $component5);
+~script3519($component0, $component1, $component2, $boolean3, $op0, false, $component4, $component5);
 if (~on_mobile = false) {
-	if_setonmouseover("script3518($component0, $component1, $component2, $boolean3, $string0, true, $component4, $component5)", $component0);
-	if_setonmouseleave("script3518($component0, $component1, $component2, $boolean3, $string0, false, $component4, $component5)", $component0);
+	if_setonmouseover("script3518($component0, $component1, $component2, $boolean3, $op0, true, $component4, $component5)", $component0);
+	if_setonmouseleave("script3518($component0, $component1, $component2, $boolean3, $op0, false, $component4, $component5)", $component0);
 }
-if_setop(1, $string0, $component0);
+if_setop(1, $op0, $component0);
 if_setonop("script3520($component0, $component1, $component2, $boolean3)", $component0);
-if_setoninvtransmit("script3518($component0, $component1, $component2, $boolean3, $string0, false, $component4, $component5){worn}", $component0);
+if_setoninvtransmit("script3518($component0, $component1, $component2, $boolean3, $op0, false, $component4, $component5){worn}", $component0);

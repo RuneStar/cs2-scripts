@@ -1,9 +1,9 @@
 // 3262
 [proc,magic_training_confirm](component $component0, int $int1)
-def_int $int2 = 0;
+def_int $comsubid2 = 0;
 def_int $int3 = -1;
-$int2 = ~v2_stone_button_filled($component0);
-cc_create($component0, ^iftype_text, $int2);
+$comsubid2 = ~v2_stone_button_filled($component0);
+cc_create($component0, ^iftype_text, $comsubid2);
 cc_setsize(5, 5, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);

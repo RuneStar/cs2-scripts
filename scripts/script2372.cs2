@@ -1,14 +1,14 @@
 // 2372
-script2372(component $component0, int $int1, int $int2)
+script2372(component $component0, int $int1, int $clock2)
 def_enum $enum3 = null;
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_int $int6 = 0;
 def_int $int7 = 0;
-def_int $int8 = 0;
+def_int $y8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 0;
-if ($int2 ! %varcint222) {
+if ($clock2 ! %varcint222) {
 	$enum3 = ~toplevel_getcomponents;
 	if ($enum3 = enum_1745) {
 		if (testbit($int1, 0) = ^true | testbit($int1, 4) = ^true) {
@@ -52,10 +52,10 @@ if ($int2 ! %varcint222) {
 			}
 		}
 		if ($int7 = 1) {
-			$int8 = calc(165 - 23 - enum(enum, int, enum_1961, $enum3) + 2);
+			$y8 = calc(165 - 23 - enum(enum, int, enum_1961, $enum3) + 2);
 		}
-		if_setposition($int9, $int8, ^setpos_abs_left, ^setpos_abs_top, $component0);
-		if_setsize(calc($int9 + $int10), $int8, ^setsize_minus, ^setsize_minus, $component0);
+		if_setposition($int9, $y8, ^setpos_abs_left, ^setpos_abs_top, $component0);
+		if_setsize(calc($int9 + $int10), $y8, ^setsize_minus, ^setsize_minus, $component0);
 	}
 	if_setontimer("script2250($component0, $int1, %varcint222)", $component0);
 }

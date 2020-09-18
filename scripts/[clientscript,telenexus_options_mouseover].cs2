@@ -1,8 +1,8 @@
 // 2676
-[clientscript,telenexus_options_mouseover](component $component0, int $int1, int $int2, graphic $graphic3)
-if (cc_find($component0, $int1) = ^true) {
+[clientscript,telenexus_options_mouseover](component $component0, int $comsubid1, int $comsubid2, graphic $graphic3)
+if (cc_find($component0, $comsubid1) = ^true) {
 	cc_setgraphic($graphic3);
 }
-if (cc_find($component0, $int2) = ^true) {
+if (cc_find($component0, $comsubid2) = ^true) {
 	cc_setcolour(^white);
 }

@@ -1,5 +1,5 @@
 // 958
-script958(component $component0, int $int1, int $int2)
-if (calc(clientclock % 250) = 0 & cc_find($component0, $int1) = ^true & .cc_find($component0, $int2) = ^true) {
+script958(component $component0, int $comsubid1, int $comsubid2)
+if (calc(clientclock % 250) = 0 & cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
 	~script1506;
 }

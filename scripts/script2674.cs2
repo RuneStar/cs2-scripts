@@ -28,7 +28,7 @@ if (~on_mobile = true) {
 if ($int17 = 1) {
 	~chatdefault_stopinput;
 }
-def_int $int20 = 0;
+def_int $height20 = 0;
 def_int $int21 = 1;
 def_int $int22 = 1;
 def_int $int23 = 1;
@@ -38,12 +38,12 @@ while ($int21 <= $int12) {
 	$int16 = ~telenexus_get_slot($int21);
 	$struct15 = enum(int, struct, enum_1377, $int16);
 	if ($struct15 ! null) {
-		$int13, $int23, $int20, $int22 = ~script2675($component9, $component1, $component2, $int19, $int13, $int18, $int20, $struct15, $int23, $int17, $int22, $component5);
+		$int13, $int23, $height20, $int22 = ~script2675($component9, $component1, $component2, $int19, $int13, $int18, $height20, $struct15, $int23, $int17, $int22, $component5);
 		$struct15 = struct_param($struct15, param_679);
 		if ($struct15 ! null) {
 			$int24, $string0 = ~script2664($struct15);
 			if ($int24 = 1) {
-				$int14, $int23, $int20, $int22 = ~script2675($component10, $component6, $component8, $int19, $int14, $int18, $int20, $struct15, $int23, $int17, $int22, $component7);
+				$int14, $int23, $height20, $int22 = ~script2675($component10, $component6, $component8, $int19, $int14, $int18, $height20, $struct15, $int23, $int17, $int22, $component7);
 			} else {
 				cc_create($component6, ^iftype_text, $int14);
 				cc_sethide(true);
@@ -59,8 +59,8 @@ while ($int21 <= $int12) {
 	}
 	$int21 = calc($int21 + 1);
 }
-if ($int20 > if_getheight($component0)) {
-	if_setscrollsize(0, $int20, $component3);
+if ($height20 > if_getheight($component0)) {
+	if_setscrollsize(0, $height20, $component3);
 } else {
 	if_setscrollsize(0, 0, $component3);
 	if_setscrollpos(0, 0, $component3);

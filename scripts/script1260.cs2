@@ -1,12 +1,12 @@
 // 1260
-script1260(int $int0, int $int1, int $int2)(int)
+script1260(int $flags0, int $flags1, int $int2)(int)
 if ($int2 < 30) {
-	if (testbit($int0, $int2) = ^true) {
+	if (testbit($flags0, $int2) = ^true) {
 		return(1);
 	}
 	return(0);
 }
-if ($int2 < 60 & testbit($int1, calc($int2 - 30)) = ^true) {
+if ($int2 < 60 & testbit($flags1, calc($int2 - 30)) = ^true) {
 	return(1);
 }
 return(0);

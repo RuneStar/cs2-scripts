@@ -2,21 +2,21 @@
 script1253(component $component0, int $int1, string $string0, obj $obj2, obj $obj3)
 if_setontimer(null, $component0);
 def_obj $obj4 = $obj2;
-def_string $string1 = "<col=ff0000>Not owned</col>";
+def_string $text1 = "<col=ff0000>Not owned</col>";
 if ($int1 >= 3) {
 	if_setop(1, "Take", $component0);
-	$obj4, $string1 = $obj3, "<col=00ff00>Complete</col>";
+	$obj4, $text1 = $obj3, "<col=00ff00>Complete</col>";
 } else if ($int1 = 2) {
 	if_setop(1, "Take", $component0);
-	$string1 = "Incomplete";
+	$text1 = "Incomplete";
 } else if ($int1 = 1) {
 	if_setop(1, "Retrieve", $component0);
-	$string1 = "Missing";
+	$text1 = "Missing";
 } else {
 	if_setop(1, "Unlock", $component0);
 }
 if_setopbase("<col=ff9040><oc_name($obj4)></col>", $component0);
-~script1255(false, $component0, $string0, $string1, $obj4);
-if_setonmouserepeat("script1254(true, $component0, $string0, $string1, $obj4)", $component0);
-if_setonmouseleave("script1254(false, $component0, $string0, $string1, $obj4)", $component0);
+~script1255(false, $component0, $string0, $text1, $obj4);
+if_setonmouserepeat("script1254(true, $component0, $string0, $text1, $obj4)", $component0);
+if_setonmouseleave("script1254(false, $component0, $string0, $text1, $obj4)", $component0);
 if_setonop("script1256(event_opindex, $component0, $int1, $string0, $obj2, $obj3, $obj4)", $component0);

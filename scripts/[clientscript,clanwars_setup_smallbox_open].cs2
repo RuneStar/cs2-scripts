@@ -1,17 +1,17 @@
 // 2877
-[clientscript,clanwars_setup_smallbox_open](enum $enum0, component $component1, component $component2, int $int3, component $component4, component $component5, component $component6)
+[clientscript,clanwars_setup_smallbox_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $component4, component $component5, component $component6)
 sound_synth(synth_2266, 1, 0);
 if_sethide(true, $component6);
 ~deltooltip_action($component6);
 ~xpdrops_setup_display_hoverdisable($component2);
 if_sethide(false, $component4);
-if_setonclick("clanwars_setup_smallbox_close(1, -1, $enum0, $component2, $int3, $component4, $component6)", $component4);
+if_setonclick("clanwars_setup_smallbox_close(1, -1, $enum0, $component2, $comsubid3, $component4, $component6)", $component4);
 def_int $int7 = if_getx($component2);
 def_int $int8 = if_gety($component2);
-def_component $component9 = if_getlayer($component2);
-while ($component9 ! null) {
-	$int7, $int8 = calc($int7 + if_getx($component9) - if_getscrollx($component9)), calc($int8 + if_gety($component9) - if_getscrolly($component9));
-	$component9 = if_getlayer($component9);
+def_component $layer9 = if_getlayer($component2);
+while ($layer9 ! null) {
+	$int7, $int8 = calc($int7 + if_getx($layer9) - if_getscrollx($layer9)), calc($int8 + if_gety($layer9) - if_getscrolly($layer9));
+	$layer9 = if_getlayer($layer9);
 }
 def_int $int10 = calc(enum_getoutputcount($enum0) - 1);
 def_int $int11 = 14;
@@ -42,9 +42,9 @@ while ($int13 < $int10) {
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setop(1, "Select");
-	cc_setonmouserepeat("xpdrops_setup_display_dropdown_hover(true, event_com, event_comid, .cc_getid, 0xff891f)");
-	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comid, .cc_getid, 0xff891f)");
-	cc_setonop("clanwars_setup_smallbox_close(event_opindex, $int13, $enum0, $component2, $int3, $component4, $component6)");
+	cc_setonmouserepeat("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, 0xff891f)");
+	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff891f)");
+	cc_setonop("clanwars_setup_smallbox_close(event_opindex, $int13, $enum0, $component2, $comsubid3, $component4, $component6)");
 	cc_settext(enum(int, string, $enum0, $int13));
 	$int13, $int12 = calc($int13 + 1), calc($int12 + 1);
 }

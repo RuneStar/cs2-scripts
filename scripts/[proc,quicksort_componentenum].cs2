@@ -1,8 +1,8 @@
 // 1342
 [proc,quicksort_componentenum](componentarray $componentarray0, int $int1, int $int2, enum $enum3)
-def_int $int4 = calc(($int1 + $int2) / 2);
-def_component $component5 = $componentarray0($int4);
-$componentarray0($int4) = $componentarray0($int2);
+def_int $index4 = calc(($int1 + $int2) / 2);
+def_component $component5 = $componentarray0($index4);
+$componentarray0($index4) = $componentarray0($int2);
 $componentarray0($int2) = $component5;
 def_int $int6 = $int1;
 def_int $int7 = $int1;

@@ -1,12 +1,12 @@
 // 3023
 [proc,adventurepath_side_settings](component $component0, component $component1, component $component2)
-def_int $int3 = 0;
-$int3 = ~v2_stone_button_filled($component0);
-cc_create($component0, ^iftype_graphic, $int3);
+def_int $comsubid3 = 0;
+$comsubid3 = ~v2_stone_button_filled($component0);
+cc_create($component0, ^iftype_graphic, $comsubid3);
 cc_setgraphic("graphic_2209");
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(26, 26, ^setsize_abs, ^setsize_abs);
 if_setop(1, "Show<col=ff9040> Settings", $component0);
 if_setonop("adventurepath_side_settings_button_op($component1, $component2)", $component0);
-if_setonmouseover("adventurepath_side_settings_mouseover($component0, $int3)", $component0);
-if_setonmouseleave("adventurepath_side_settings_mouseleave($component0, $int3)", $component0);
+if_setonmouseover("adventurepath_side_settings_mouseover($component0, $comsubid3)", $component0);
+if_setonmouseleave("adventurepath_side_settings_mouseleave($component0, $comsubid3)", $component0);

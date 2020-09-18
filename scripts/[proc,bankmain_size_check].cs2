@@ -1,12 +1,12 @@
 // 840
-[proc,bankmain_size_check](component $component0, component $component1, int $int2, int $int3, component $component4, component $component5)
-def_int $int6 = if_getwidth($component1);
-def_int $int7 = if_getheight($component1);
-if ($int6 = $int2 & $int7 = $int3) {
+[proc,bankmain_size_check](component $component0, component $component1, int $width2, int $height3, component $component4, component $component5)
+def_int $width6 = if_getwidth($component1);
+def_int $height7 = if_getheight($component1);
+if ($width6 = $width2 & $height7 = $height3) {
 	return;
 }
-def_int $int8 = ~min(800, calc($int7 - 3));
+def_int $int8 = ~min(800, calc($height7 - 3));
 if_setsize(488, $int8, ^setsize_abs, ^setsize_abs, $component0);
-if_setposition(0, calc(($int7 - $int8) / 2), ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
+if_setposition(0, calc(($height7 - $int8) / 2), ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
 ~scrollbar_vertical_rebuild($component4, $component5);
-if_setontimer("bankmain_size_check($component0, $component1, $int6, $int7, $component4, $component5)", $component0);
+if_setontimer("bankmain_size_check($component0, $component1, $width6, $height7, $component4, $component5)", $component0);

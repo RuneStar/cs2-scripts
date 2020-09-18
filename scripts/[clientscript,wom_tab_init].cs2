@@ -1,17 +1,17 @@
 // 6
 [clientscript,wom_tab_init](component $component0, component $component1, component $component2)
-def_int $int3 = 0;
+def_int $count3 = 0;
 def_component $component4 = null;
 def_component $component5 = null;
 def_string $string0 = "";
 def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
-def_int $int9 = enum_getoutputcount(enum_2070);
-while ($int3 <= $int9) {
-	$component4 = ~wom_get_tab($int3);
-	$component5 = ~wom_get_text($int3);
-	$string0 = enum(int, string, enum_2071, $int3);
+def_int $count9 = enum_getoutputcount(enum_2070);
+while ($count3 <= $count9) {
+	$component4 = ~wom_get_tab($count3);
+	$component5 = ~wom_get_text($count3);
+	$string0 = enum(int, string, enum_2071, $count3);
 	if (map_members = ^false & compare($string0, "Free") ! 0) {
 		$string0 = "";
 	}
@@ -27,7 +27,7 @@ while ($int3 <= $int9) {
 		$int7 = ~max(40, calc(40 + parawidth($string0, 400, p11_full)));
 		if_setonmouseover("text_colour_swapper($component5, ^white)", $component4);
 		if_setonmouseleave("text_colour_swapper($component5, 0xff981f)", $component4);
-		if_setonop("wom_tab_highlight_onclick($int3, $component1, $component2)", $component4);
+		if_setonop("wom_tab_highlight_onclick($count3, $component1, $component2)", $component4);
 		if_setonvartransmit("wom_tab_highlight($component1, $component2){var279}", $component0);
 		if_setoninvtransmit("wom_item_update($component1, $component2){inv, worn, bank}", $component1);
 		if_sethide(false, $component4);
@@ -36,7 +36,7 @@ while ($int3 <= $int9) {
 		if_setposition($int6, 0, ^setpos_abs_left, ^setpos_abs_centre, $component4);
 		$int6 = calc($int6 + $int7);
 	}
-	$int3 = calc($int3 + 1);
+	$count3 = calc($count3 + 1);
 }
 ~wom_build_item_list($component1, $component2);
 if_setscrollpos(0, 0, $component1);

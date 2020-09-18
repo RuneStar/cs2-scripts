@@ -1,19 +1,19 @@
 // 2990
 script2990(component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, string $string0)(int)
 def_int $int9 = 0;
-def_int $int10 = calc($int2 - 9 + $int4);
-def_int $int11 = calc($int3 - 9 + $int5);
-def_int $int12 = calc($int2 - 18);
-def_int $int13 = calc($int3 - 18);
+def_int $x10 = calc($int2 - 9 + $int4);
+def_int $y11 = calc($int3 - 9 + $int5);
+def_int $width12 = calc($int2 - 18);
+def_int $height13 = calc($int3 - 18);
 def_int $int14 = 5;
 cc_create($component0, ^iftype_rectangle, $int1);
-def_int $int15 = 0;
+def_int $width15 = 0;
 if ($int6 >= $int7) {
-	$int15 = calc($int2 - 4);
+	$width15 = calc($int2 - 4);
 } else {
-	$int15 = scale($int6, $int7, calc($int2 - 4));
+	$width15 = scale($int6, $int7, calc($int2 - 4));
 }
-cc_setsize($int15, $int3, ^setsize_abs, ^setsize_abs);
+cc_setsize($width15, $int3, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(2 + $int4), $int5, ^setpos_abs_left, ^setpos_abs_top);
 def_int $int16 = calc($int7 / 2);
 def_int $int17 = 0;
@@ -29,13 +29,13 @@ cc_setcolour(~rgb_to_hex($int17, $int18, 0));
 cc_setfill(true);
 $int1 = calc($int1 + 1);
 ~create_graphic($component0, calc($int1 + 0), "ap_border,0", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, calc($int1 + 1), "ap_border,1", $int10, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, calc($int1 + 2), "ap_border,2", $int4, $int11, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, calc($int1 + 3), "ap_border,3", $int10, $int11, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, calc($int1 + 4), "ap_border,4", $int4, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $int13, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, calc($int1 + 5), "ap_border,5", calc($int4 + 9), $int5, ^setpos_abs_left, ^setpos_abs_top, $int12, 9, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, calc($int1 + 6), "ap_border,6", $int10, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $int13, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, calc($int1 + 7), "ap_border,7", calc($int4 + 9), $int11, ^setpos_abs_left, ^setpos_abs_top, $int12, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 1), "ap_border,1", $x10, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 2), "ap_border,2", $int4, $y11, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 3), "ap_border,3", $x10, $y11, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 4), "ap_border,4", $int4, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $height13, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 5), "ap_border,5", calc($int4 + 9), $int5, ^setpos_abs_left, ^setpos_abs_top, $width12, 9, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 6), "ap_border,6", $x10, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $height13, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, calc($int1 + 7), "ap_border,7", calc($int4 + 9), $y11, ^setpos_abs_left, ^setpos_abs_top, $width12, 9, ^setsize_abs, ^setsize_abs);
 cc_create($component0, ^iftype_text, calc($int1 + 8));
 cc_setsize($int2, calc($int3 - 3), ^setsize_abs, ^setsize_abs);
 cc_setposition($int4, calc($int5 + 3), ^setpos_abs_left, ^setpos_abs_top);

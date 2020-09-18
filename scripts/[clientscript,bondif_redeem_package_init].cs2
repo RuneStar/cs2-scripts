@@ -1,5 +1,5 @@
 // 2278
-[clientscript,bondif_redeem_package_init](int $int0, int $int1, graphic $graphic2, int $int3, int $int4, string $string0, string $string1, string $string2)
+[clientscript,bondif_redeem_package_init](int $int0, int $num1, graphic $graphic2, int $int3, int $height4, string $string0, string $text1, string $string2)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
@@ -23,7 +23,7 @@ if (string_length($string2) > 0) {
 	if_setonmouserepeat(null, $component5);
 	if_setonmouseleave(null, $component5);
 	$int6 = ~v2_stone_button_in_filled($component5);
-	$int6 = ~bondif_redeem_package_details($component5, $int6, $string0, $int1, $graphic2, $int3, $int4, $string1);
+	$int6 = ~bondif_redeem_package_details($component5, $int6, $string0, $num1, $graphic2, $int3, $height4, $text1);
 	cc_create($component5, ^iftype_graphic, $int6);
 	$int6 = calc($int6 + 1);
 	cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
@@ -42,9 +42,9 @@ if (string_length($string2) > 0) {
 	cc_settext($string2);
 } else {
 	if_setop(1, ~script1299($string0, "<br>", " "), $component5);
-	~bondif_redeem_package_draw($int0, $component5, $string0, $int1, $graphic2, $int3, $int4, $string1);
-	if_setonvartransmit("bondif_redeem_package_draw($int0, $component5, $string0, $int1, $graphic2, $int3, $int4, $string1){var1204}", $component5);
-	if_setonop("script2280(event_opindex, $int0, $component5, $string0, $int1, $graphic2, $int3, $int4, $string1)", $component5);
+	~bondif_redeem_package_draw($int0, $component5, $string0, $num1, $graphic2, $int3, $height4, $text1);
+	if_setonvartransmit("bondif_redeem_package_draw($int0, $component5, $string0, $num1, $graphic2, $int3, $height4, $text1){var1204}", $component5);
+	if_setonop("script2280(event_opindex, $int0, $component5, $string0, $num1, $graphic2, $int3, $height4, $text1)", $component5);
 }
 if_setposition(0, %varcint179, ^setpos_abs_centre, ^setpos_abs_top, $component5);
 %varcint179 = calc(%varcint179 + if_getheight($component5));

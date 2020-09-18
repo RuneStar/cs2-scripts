@@ -10,20 +10,20 @@ cc_setonscrollwheel("scrollbar_vertical_wheel($component0, $component1, event_mo
 cc_setnoclickthrough(true);
 .cc_create($component0, ^iftype_graphic, 1);
 .cc_setposition(0, 16, ^setpos_abs_centre, ^setpos_abs_top);
-def_int $int8 = if_getscrollheight($component1);
-if ($int8 <= 0) {
-	$int8 = if_getheight($component1);
+def_int $height8 = if_getscrollheight($component1);
+if ($height8 <= 0) {
+	$height8 = if_getheight($component1);
 }
-def_int $int9 = 0;
-if ($int8 > 0) {
-	$int9 = calc((if_getheight($component0) - 32) * if_getheight($component1) / $int8);
+def_int $height9 = 0;
+if ($height8 > 0) {
+	$height9 = calc((if_getheight($component0) - 32) * if_getheight($component1) / $height8);
 } else {
-	$int9 = calc(if_getheight($component0) - 32);
+	$height9 = calc(if_getheight($component0) - 32);
 }
-if ($int9 < 10) {
-	$int9 = 10;
+if ($height9 < 10) {
+	$height9 = 10;
 }
-.cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
+.cc_setsize(0, $height9, ^setsize_minus, ^setsize_abs);
 .cc_setgraphic($graphic4);
 .cc_settiling(false);
 .cc_setdraggable($component0, 0);

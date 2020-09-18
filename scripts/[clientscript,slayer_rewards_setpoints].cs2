@@ -1,6 +1,6 @@
 // 409
-[clientscript,slayer_rewards_setpoints](component $component0, int $int1)
-if (cc_find($component0, $int1) = ^true) {
+[clientscript,slayer_rewards_setpoints](component $component0, int $comsubid1)
+if (cc_find($component0, $comsubid1) = ^true) {
 	~slayer_rewards_setpoints;
 	sound_synth(synth_73, 1, 0);
 }

@@ -1,13 +1,13 @@
 // 2932
-[proc,skillmain_button_draw](component $component0, string $string0, boolean $boolean1, boolean $boolean2)
+[proc,skillmain_button_draw](component $component0, string $text0, boolean $boolean1, boolean $boolean2)
 cc_deleteall($component0);
-def_int $int3 = 0;
+def_int $comsubid3 = 0;
 if ($boolean1 = true | $boolean2 = true) {
-	$int3 = ~v2_stone_button_in_filled($component0);
+	$comsubid3 = ~v2_stone_button_in_filled($component0);
 } else {
-	$int3 = ~v2_stone_button_out_filled($component0);
+	$comsubid3 = ~v2_stone_button_out_filled($component0);
 }
-cc_create($component0, ^iftype_text, $int3);
+cc_create($component0, ^iftype_text, $comsubid3);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setcolour(0xff981f);
@@ -15,7 +15,7 @@ cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
 if ($boolean1 = true) {
-	cc_settext("<col=ffffff><$string0></col>");
+	cc_settext("<col=ffffff><$text0></col>");
 } else {
-	cc_settext($string0);
+	cc_settext($text0);
 }

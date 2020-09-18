@@ -1,6 +1,6 @@
 // 875
-[proc,wom_telescope_borders](component $component0, int $int1, int $int2, component $component3, component $component4)
-def_int $int5 = $int2;
+[proc,wom_telescope_borders](component $component0, int $width1, int $height2, component $component3, component $component4)
+def_int $int5 = $height2;
 if ($int5 < 334) {
 	$int5 = 334;
 } else if ($int5 > 1000) {
@@ -17,27 +17,27 @@ if ($int5 > $int10) {
 	$int10 = $int5;
 }
 if (cc_find($component0, 0) = ^true & .cc_find($component0, 1) = ^true) {
-	if ($int2 < $int10) {
+	if ($height2 < $int10) {
 		cc_sethide(true);
 		.cc_sethide(true);
 	} else {
 		cc_sethide(false);
 		.cc_sethide(false);
-		$int9 = calc(($int2 - $int10) / 2);
+		$int9 = calc(($height2 - $int10) / 2);
 		cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
 		.cc_setsize(0, $int9, ^setsize_minus, ^setsize_abs);
 	}
 }
 if (cc_find($component0, 2) = ^true & .cc_find($component0, 3) = ^true) {
-	if ($int1 < $int10) {
+	if ($width1 < $int10) {
 		cc_sethide(true);
 		.cc_sethide(true);
 	} else {
 		cc_sethide(false);
 		.cc_sethide(false);
-		$int9 = calc(($int1 - $int10) / 2);
+		$int9 = calc(($width1 - $int10) / 2);
 		cc_setsize($int9, 0, ^setsize_abs, ^setsize_minus);
 		.cc_setsize($int9, 0, ^setsize_abs, ^setsize_minus);
 	}
 }
-if_setontimer("wom_telescope_borders($component0, $int1, $int2, $component3, $component4)", $component0);
+if_setontimer("wom_telescope_borders($component0, $width1, $height2, $component3, $component4)", $component0);

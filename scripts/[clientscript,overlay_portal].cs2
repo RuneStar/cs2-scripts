@@ -1,14 +1,14 @@
 // 2893
-[clientscript,overlay_portal](component $component0, component $component1, model $model2, int $colour3, int $colour4, int $int5)
+[clientscript,overlay_portal](component $component0, component $component1, model $model2, int $colour3, int $colour4, int $trans5)
 cc_deleteall($component0);
 cc_deleteall($component1);
-if ($colour4 ! null & $int5 ! -1) {
+if ($colour4 ! null & $trans5 ! -1) {
 	cc_create($component0, ^iftype_rectangle, 0);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setfill(true);
 	cc_setcolour($colour4);
-	cc_settrans($int5);
+	cc_settrans($trans5);
 }
 cc_create($component1, ^iftype_model, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

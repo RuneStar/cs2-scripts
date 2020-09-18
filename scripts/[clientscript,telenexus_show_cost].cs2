@@ -1,8 +1,8 @@
 // 2654
-[clientscript,telenexus_show_cost](component $component0, struct $struct1, int $int2, component $component3, int $int4)
-if (%varcint227 = $int4 & if_gethide($component0) = false) {
+[clientscript,telenexus_show_cost](component $component0, struct $struct1, int $y2, component $component3, int $count4)
+if (%varcint227 = $count4 & if_gethide($component0) = false) {
 	~telenexus_hide_cost($component0, $component3, 0);
 } else {
-	%varcint227 = $int4;
-	~telenexus_show_cost($component0, $struct1, $int2, $component3, $int4);
+	%varcint227 = $count4;
+	~telenexus_show_cost($component0, $struct1, $y2, $component3, $count4);
 }

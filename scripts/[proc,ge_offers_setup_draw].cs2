@@ -1,65 +1,65 @@
 // 779
-[proc,ge_offers_setup_draw](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, component $component13, int $int14)
+[proc,ge_offers_setup_draw](component $component0, int $comsubid1, int $comsubid2, int $comsubid3, int $comsubid4, int $comsubid5, int $comsubid6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11, int $comsubid12, component $component13, int $comsubid14)
 if (%varbit4397 = 1) {
-	if (cc_find($component0, $int1) = ^true) {
+	if (cc_find($component0, $comsubid1) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($component0, $int6) = ^true) {
+	if (cc_find($component0, $comsubid6) = ^true) {
 		cc_settrans(0);
 		cc_setontimer(null);
 	}
-	if (cc_find($component0, $int12) = ^true) {
+	if (cc_find($component0, $comsubid12) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($component0, $int4) = ^true) {
+	if (cc_find($component0, $comsubid4) = ^true) {
 		cc_settext("Sell offer");
 	}
-	if (cc_find($component0, $int5) = ^true) {
+	if (cc_find($component0, $comsubid5) = ^true) {
 		cc_setgraphic("ge_smallicons,7");
 	}
-	if (cc_find($component0, $int2) = ^true) {
+	if (cc_find($component0, $comsubid2) = ^true) {
 		cc_setop(1, "All");
 	}
-	if (cc_find($component0, $int3) = ^true) {
+	if (cc_find($component0, $comsubid3) = ^true) {
 		cc_settext("All");
 	}
 } else {
-	if (cc_find($component0, $int1) = ^true) {
+	if (cc_find($component0, $comsubid1) = ^true) {
 		cc_sethide(false);
 	}
-	if (cc_find($component0, $int6) = ^true) {
+	if (cc_find($component0, $comsubid6) = ^true) {
 		cc_settrans(100);
-		cc_setontimer("script811(event_com, event_comid, clientclock, 100, 250)");
+		cc_setontimer("script811(event_com, event_comsubid, clientclock, 100, 250)");
 	}
-	if (cc_find($component0, $int12) = ^true) {
+	if (cc_find($component0, $comsubid12) = ^true) {
 		cc_sethide(false);
 	}
-	if (cc_find($component0, $int4) = ^true) {
+	if (cc_find($component0, $comsubid4) = ^true) {
 		cc_settext("Buy offer");
 	}
-	if (cc_find($component0, $int5) = ^true) {
+	if (cc_find($component0, $comsubid5) = ^true) {
 		cc_setgraphic("ge_smallicons,6");
 	}
-	if (cc_find($component0, $int2) = ^true) {
+	if (cc_find($component0, $comsubid2) = ^true) {
 		cc_setop(1, "+1K");
 	}
-	if (cc_find($component0, $int3) = ^true) {
+	if (cc_find($component0, $comsubid3) = ^true) {
 		cc_settext("+1K");
 	}
 }
 def_string $string0 = ",";
 def_int $int15 = 0;
 if (%var1151 ! null) {
-	if (cc_find($component0, $int7) = ^true) {
+	if (cc_find($component0, $comsubid7) = ^true) {
 		cc_setobject_nonum(%var1151, %varbit4396);
 	}
-	if (cc_find($component0, $int8) = ^true) {
+	if (cc_find($component0, $comsubid8) = ^true) {
 		cc_settext(oc_name(%var1151));
 	}
-	if (cc_find($component0, $int9) = ^true) {
+	if (cc_find($component0, $comsubid9) = ^true) {
 		cc_settext(~tostring_spacer(%varbit4396, $string0));
 	}
-	if (cc_find($component0, $int10) = ^true) {
+	if (cc_find($component0, $comsubid10) = ^true) {
 		if (%varbit4398 = 1) {
 			cc_settext("1 coin");
 		} else {
@@ -67,13 +67,13 @@ if (%var1151 ! null) {
 		}
 	}
 	if (%varbit4396 > 0 & calc(^max_32bit_int / %varbit4396) < %varbit4398) {
-		if (cc_find($component0, $int11) = ^true) {
+		if (cc_find($component0, $comsubid11) = ^true) {
 			cc_settext("<col=ff0000>Too much money!</col>");
 		}
-		~ge_offers_setup_draw_disableconfirm($component0, $int14, $component13);
+		~ge_offers_setup_draw_disableconfirm($component0, $comsubid14, $component13);
 	} else {
 		$int15 = calc(%varbit4396 * %varbit4398);
-		if (cc_find($component0, $int11) = ^true) {
+		if (cc_find($component0, $comsubid11) = ^true) {
 			if ($int15 = 1) {
 				cc_settext("1 coin");
 			} else {
@@ -85,28 +85,28 @@ if (%var1151 ! null) {
 			if_setonmouserepeat("v2_stone_button_in_filled(event_com)", $component13);
 			if_setonmouseleave("v2_stone_button_out_filled(event_com)", $component13);
 			if_setonop("opsound(event_opindex, 2)", $component13);
-			if (cc_find($component0, $int14) = ^true) {
+			if (cc_find($component0, $comsubid14) = ^true) {
 				cc_settext("<col=ffffff>Confirm</col>");
 			}
 		} else {
-			~ge_offers_setup_draw_disableconfirm($component0, $int14, $component13);
+			~ge_offers_setup_draw_disableconfirm($component0, $comsubid14, $component13);
 		}
 	}
 } else {
-	if (cc_find($component0, $int7) = ^true) {
+	if (cc_find($component0, $comsubid7) = ^true) {
 		cc_setobject_nonum(obj_6512, 1);
 	}
-	if (cc_find($component0, $int8) = ^true) {
+	if (cc_find($component0, $comsubid8) = ^true) {
 		cc_settext("Choose an item...");
 	}
-	if (cc_find($component0, $int9) = ^true) {
+	if (cc_find($component0, $comsubid9) = ^true) {
 		cc_settext("");
 	}
-	if (cc_find($component0, $int10) = ^true) {
+	if (cc_find($component0, $comsubid10) = ^true) {
 		cc_settext("");
 	}
-	if (cc_find($component0, $int11) = ^true) {
+	if (cc_find($component0, $comsubid11) = ^true) {
 		cc_settext("");
 	}
-	~ge_offers_setup_draw_disableconfirm($component0, $int14, $component13);
+	~ge_offers_setup_draw_disableconfirm($component0, $comsubid14, $component13);
 }

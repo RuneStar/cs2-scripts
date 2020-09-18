@@ -1,6 +1,6 @@
 // 3223
-[clientscript,league_menu_click](int $int0, component $component1, component $component2, int $int3, component $component4)
-if ($int0 ! 1) {
+[clientscript,league_menu_click](int $opindex0, component $component1, component $component2, int $comsubid3, component $component4)
+if ($opindex0 ! 1) {
 	return;
 }
 def_int $int5 = 0;
@@ -16,7 +16,7 @@ if (if_gethide($component2) = false) {
 	if_setnoclickthrough(true, $component2);
 	$int5 = 1;
 }
-if (cc_find($component1, $int3) = ^true) {
+if (cc_find($component1, $comsubid3) = ^true) {
 	if ($int5 = 0) {
 		cc_setgraphic("menu_buttons,0");
 	} else {

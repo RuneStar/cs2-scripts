@@ -1,5 +1,5 @@
 // 619
-[clientscript,poll_voting_addquestion_full](int $int0, int $int1, string $string0)
+[clientscript,poll_voting_addquestion_full](int $int0, int $flags1, string $string0)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
@@ -7,4 +7,4 @@ def_int $int2 = calc($int0 / 256);
 def_boolean $boolean3 = ~int_to_bool(testbit($int0, 1));
 def_int $int4 = calc(($int0 & 252) / 4);
 ~poll_storequestion($int2, $string0);
-~poll_voting_addquestion($int2, $boolean3, $string0, $int4, $int1);
+~poll_voting_addquestion($int2, $boolean3, $string0, $int4, $flags1);

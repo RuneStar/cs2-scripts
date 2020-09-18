@@ -17,7 +17,7 @@ if ($int0 = 3) {
 }
 if (cc_find($component1, 0) = ^true) {
 	cc_setcolour(^white);
-	cc_setontimer("script1233(event_com, event_comid, $int0, calc(clientclock + 30))");
+	cc_setontimer("script1233(event_com, event_comsubid, $int0, calc(clientclock + 30))");
 }
 if_setcolour(^white, $component2);
 if_setontimer("zeah_fade_border($component2, $int0)", $component2);

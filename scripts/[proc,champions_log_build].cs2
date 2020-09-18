@@ -1,5 +1,5 @@
 // 1409
-[proc,champions_log_build](int $int0, int $int1, int $int2, int $int3)(int, int)
+[proc,champions_log_build](int $int0, int $flags1, int $int2, int $int3)(int, int)
 cc_create(interface_468:2, ^iftype_model, $int2);
 $int2 = calc($int2 + 1);
 .cc_create(interface_468:2, ^iftype_text, $int2);
@@ -22,7 +22,7 @@ if ($model4 ! null) {
 .cc_settextfont(q8_full);
 .cc_settextshadow(true);
 .cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-if (testbit($int1, $int0) = ^true) {
+if (testbit($flags1, $int0) = ^true) {
 	.cc_settext("<str><enum(int, string, enum_1470, $int0)></str>");
 } else {
 	.cc_settext(enum(int, string, enum_1470, $int0));

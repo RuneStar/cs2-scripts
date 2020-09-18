@@ -1,10 +1,10 @@
 // 1464
-[proc,lumbridge_alchemy_vartransmit](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5)
+[proc,lumbridge_alchemy_vartransmit](component $component0, component $component1, component $component2, component $component3, component $component4, int $size5)
 if_settrans(0, $component0);
 if_settrans(0, $component1);
-def_string $string0 = "Low-Alchemy";
+def_string $op0 = "Low-Alchemy";
 if (%varbit5398 = 1) {
-	$string0 = "High-Alchemy";
+	$op0 = "High-Alchemy";
 	if_settext("High Alchemy", $component2);
 	if_setgraphic("magicoff,10", $component0);
 	if_setonmouserepeat("settrans(event_com, 120)", $component0);
@@ -31,10 +31,10 @@ if (%varbit4554 < 30) {
 } else {
 	if_setcolour(^red, $component4);
 }
-def_int $int6 = $int5;
+def_int $int6 = $size5;
 while ($int6 > 0) {
 	$int6 = calc($int6 - 1);
 	if (cc_find($component3, $int6) = ^true) {
-		cc_setop(1, $string0);
+		cc_setop(1, $op0);
 	}
 }

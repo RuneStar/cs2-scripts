@@ -36,14 +36,14 @@ cc_setgraphic("menu_buttons,0");
 def_graphic $graphic20 = "menu_buttons,1";
 def_graphic $graphic21 = "menu_buttons,0";
 if (~on_mobile = false) {
-	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic20, null)");
-	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic21, null)");
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic20, null)");
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic21, null)");
 }
 if_setonop("league_menu_click(event_opindex, $component10, $component11, $int19, $component12)", $component10);
 if_setop(1, "Show Menu", $component10);
 $int19 = 0;
 ~league_create_dropdown($component10, $component11, $component12, $int19, 2);
-def_int $int22 = if_getwidth($component6);
+def_int $width22 = if_getwidth($component6);
 def_int $int23 = calc(if_getheight($component6) - 5);
 def_int $int24 = 0;
 def_int $int25 = 0;
@@ -51,8 +51,8 @@ def_int $int26 = 0;
 def_int $int27 = 0;
 def_int $int28 = 0;
 if ($int15 > 0) {
-	$int24 = calc($int22 / $int15);
-	$int27 = calc(($int22 - $int24 * $int15) / 2);
+	$int24 = calc($width22 / $int15);
+	$int27 = calc(($width22 - $int24 * $int15) / 2);
 }
 def_graphic $graphic29 = null;
 def_int $int30 = -1;
@@ -63,11 +63,11 @@ def_int $colour33 = null;
 def_int $colour34 = null;
 def_int $colour35 = null;
 def_int $colour36 = null;
-def_int $int37 = 0;
+def_int $trans37 = 0;
 def_int $int38 = 0;
 def_struct $struct39 = null;
 def_graphic $graphic40 = null;
-def_string $string1 = "";
+def_string $text1 = "";
 def_int $int41 = -1;
 def_struct $struct42 = null;
 def_int $int43 = 0;
@@ -136,13 +136,13 @@ while ($int43 < $int15) {
 		$struct39 = enum(int, struct, $enum18, calc($int44 + 1));
 		cc_create($component4, ^iftype_text, $int45);
 		if (string_length($string0) > 0) {
-			$string1 = $string0;
+			$text1 = $string0;
 		} else {
-			$string1 = struct_param($struct39, param_879);
+			$text1 = struct_param($struct39, param_879);
 		}
 		cc_setsize(calc($int24 - 10), 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int27 + 5), calc($int26 + $int25 / 2 + 1), ^setpos_abs_left, ^setpos_abs_top);
-		cc_settext($string1);
+		cc_settext($text1);
 		cc_settextfont(p11_full);
 		if ($struct39 ! $struct42) {
 			if ($colour34 ! null) {
@@ -165,11 +165,11 @@ while ($int43 < $int15) {
 		cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc($int27 + $int24 / 2 - 15), calc($int26 + $int25 / 2 - 31), ^setpos_abs_left, ^setpos_abs_top);
 		if ($graphic29 ! null) {
-			$graphic40, $int37 = $graphic29, calc($int30 - 128);
+			$graphic40, $trans37 = $graphic29, calc($int30 - 128);
 		} else if ($struct39 = $struct42) {
-			$graphic40, $int37 = struct_param($struct39, param_881), 0;
+			$graphic40, $trans37 = struct_param($struct39, param_881), 0;
 		} else {
-			$graphic40, $int37 = struct_param($struct39, param_883), calc($int30 - 128);
+			$graphic40, $trans37 = struct_param($struct39, param_883), calc($int30 - 128);
 		}
 		cc_setgraphic($graphic40);
 		cc_create($component3, ^iftype_graphic, $int45);
@@ -188,14 +188,14 @@ while ($int43 < $int15) {
 		cc_settrans(255);
 		if ($int38 = 1) {
 			cc_setop(1, "View");
-			cc_setopbase("<col=ff981f><$string1></col>");
+			cc_setopbase("<col=ff981f><$text1></col>");
 			cc_setonop("league_relics_loading($component9, $int45)");
 		}
 		if ($int31 = 1 & ~on_mobile = false) {
 			if ($int32 = 1) {
-				cc_setonmouseover("league_relic_hover($component3, $int37, $component2, struct_param($struct39, param_881), $component4, $colour35, $int45)");
+				cc_setonmouseover("league_relic_hover($component3, $trans37, $component2, struct_param($struct39, param_881), $component4, $colour35, $int45)");
 			} else {
-				cc_setonmouseover("league_relic_hover($component3, $int37, $component2, $graphic40, $component4, $colour35, $int45)");
+				cc_setonmouseover("league_relic_hover($component3, $trans37, $component2, $graphic40, $component4, $colour35, $int45)");
 			}
 			cc_setonmouseleave("league_relic_hover($component3, $int30, $component2, $graphic40, $component4, $colour33, $int45)");
 		}

@@ -1,6 +1,6 @@
 // 1503
-[proc,string_prependzero](string $string0, int $int0)(string)
-while (string_length($string0) < $int0) {
+[proc,string_prependzero](string $string0, int $length0)(string)
+while (string_length($string0) < $length0) {
 	$string0 = append("0", $string0);
 }
 return($string0);

@@ -1,6 +1,6 @@
 // 473
-[clientscript,quickprayer_close_timeout](component $component0, int $int1)
-if (clientclock < $int1) {
+[clientscript,quickprayer_close_timeout](component $component0, int $clock1)
+if (clientclock < $clock1) {
 	return;
 }
 if_setgraphic("combatboxesmed,0", $component0);

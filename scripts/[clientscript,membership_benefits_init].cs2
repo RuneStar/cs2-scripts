@@ -4,25 +4,25 @@ cc_deleteall($component0);
 cc_deleteall($component1);
 def_int $int6 = 0;
 def_int $int7 = 0;
-def_string $string0 = "";
+def_string $text0 = "";
 def_graphic $graphic8 = null;
 while ($int7 < 5) {
 	switch_int ($int7) {
 		case 0 :
 			$graphic8 = "oge_title,0";
-			$string0 = "Explore a world three times larger!";
+			$text0 = "Explore a world three times larger!";
 		case 1 :
 			$graphic8 = "oge_title,1";
-			$string0 = "Master eight extra skills!";
+			$text0 = "Master eight extra skills!";
 		case 2 :
 			$graphic8 = "oge_title,2";
-			$string0 = "Take on a hundred more quests!";
+			$text0 = "Take on a hundred more quests!";
 		case 3 :
 			$graphic8 = "oge_title,3";
-			$string0 = "Defeat twenty additional bosses!";
+			$text0 = "Defeat twenty additional bosses!";
 		case 4 :
 			$graphic8 = "oge_title,4";
-			$string0 = "And much more...";
+			$text0 = "And much more...";
 	}
 	cc_create($component0, ^iftype_graphic, $int7);
 	cc_setsize(0, 33, ^setsize_minus, ^setsize_abs);
@@ -32,12 +32,12 @@ while ($int7 < 5) {
 	cc_setop(1, "View");
 	cc_setopbase("<col=ff9040>Benefits</col>");
 	cc_setonop("membership_benefits_view($int7)");
-	cc_setonmouserepeat("membership_benefits_hover(event_comid, $int6, true)");
-	cc_setonmouseleave("membership_benefits_hover(event_comid, $int6, false)");
+	cc_setonmouserepeat("membership_benefits_hover(event_comsubid, $int6, true)");
+	cc_setonmouseleave("membership_benefits_hover(event_comsubid, $int6, false)");
 	cc_create($component1, ^iftype_text, $int7);
 	cc_setsize(0, 33, ^setsize_minus, ^setsize_abs);
 	cc_setposition(62, $int6, ^setpos_abs_centre, ^setpos_abs_top);
-	cc_settext($string0);
+	cc_settext($text0);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextfont(b12_full);
 	cc_setcolour(0xff981f);
@@ -53,11 +53,11 @@ while ($int7 < 5) {
 	$int6 = calc($int6 + 33 + 10);
 	$int7 = calc($int7 + 1);
 }
-def_string $string1 = "Upgrade Now";
+def_string $op1 = "Upgrade Now";
 if (map_members = ^true | %varcint103 = 1) {
-	$string1 = "Open Store";
+	$op1 = "Open Store";
 }
-~membership_benefits_button_init($component4, $string1);
+~membership_benefits_button_init($component4, $op1);
 if (~on_mobile = true & ~bonds_hide = 1 & %varbit6713 = 0) {
 	~membership_benefits_hide_bonds($component4, $component5);
 } else {

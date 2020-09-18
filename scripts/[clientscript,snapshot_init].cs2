@@ -4,7 +4,7 @@
 if ($int1 = 1) {
 	%varcstring370 = $string0;
 }
-if_setonkey("snapshot_onkey(event_keypressed, event_keytyped)", snapshot_main:5);
+if_setonkey("snapshot_onkey(event_key, event_keychar)", snapshot_main:5);
 if_settext("<escape(%varcstring370)><col=ffff00>|", snapshot_main:5);
 %varcint6, %varcint140, %varcint224 = 0, 1, $int0;
 if (playermod = true | staffmodlevel > 0) {

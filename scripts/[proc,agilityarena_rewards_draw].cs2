@@ -1,49 +1,49 @@
 // 1595
 [proc,agilityarena_rewards_draw](component $component0, string $string0, int $int1, boolean $boolean2, component $component3)
-def_string $string1 = "";
+def_string $text1 = "";
 if ($int1 = 1) {
-	$string1 = "<$string0><br>1 ticket";
+	$text1 = "<$string0><br>1 ticket";
 } else {
-	$string1 = "<$string0><br><~tostring_spacer($int1, ",")> tickets";
+	$text1 = "<$string0><br><~tostring_spacer($int1, ",")> tickets";
 }
 cc_deleteall($component0);
-def_int $int4 = 0;
+def_int $comsubid4 = 0;
 if (inv_total(inv, agility_arena_ticket_2996) < $int1) {
-	$int4 = ~v2_stone_button_filled($component0);
-	cc_create($component0, ^iftype_text, $int4);
+	$comsubid4 = ~v2_stone_button_filled($component0);
+	cc_create($component0, ^iftype_text, $comsubid4);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
 	cc_setcolour(^red);
 	cc_settextshadow(true);
-	cc_settext($string1);
+	cc_settext($text1);
 	if_setonop(null, $component0);
 } else if ($boolean2 = true) {
-	$int4 = ~v2_stone_button_in_filled($component0);
-	cc_create($component0, ^iftype_text, $int4);
+	$comsubid4 = ~v2_stone_button_in_filled($component0);
+	cc_create($component0, ^iftype_text, $comsubid4);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
 	cc_setcolour(^white);
 	cc_settextshadow(true);
-	cc_settext($string1);
+	cc_settext($text1);
 	if ($component3 ! null) {
 		if_setonop("agilityarena_rewards_hidelayer(false, $component3)", $component0);
 	} else {
 		if_setonop("opsound(event_opindex, 2)", $component0);
 	}
 } else {
-	$int4 = ~v2_stone_button_out_filled($component0);
-	cc_create($component0, ^iftype_text, $int4);
+	$comsubid4 = ~v2_stone_button_out_filled($component0);
+	cc_create($component0, ^iftype_text, $comsubid4);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
 	cc_setcolour(0xff981f);
 	cc_settextshadow(true);
-	cc_settext($string1);
+	cc_settext($text1);
 	if ($component3 ! null) {
 		if_setonop("agilityarena_rewards_hidelayer(false, $component3)", $component0);
 	} else {

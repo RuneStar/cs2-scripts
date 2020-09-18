@@ -1,6 +1,6 @@
 // 1150
-[clientscript,deadman_delay_timer](component $component0, string $string0, int $int1, int $int2, int $int3)
-def_int $int4 = calc($int2 - (clientclock - $int1));
+[clientscript,deadman_delay_timer](component $component0, string $string0, int $clock1, int $int2, int $int3)
+def_int $int4 = calc($int2 - (clientclock - $clock1));
 def_int $int5 = calc((49 + $int4) / 50);
 if ($int4 <= 0) {
 	if_setontimer(null, $component0);

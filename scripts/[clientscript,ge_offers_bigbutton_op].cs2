@@ -1,6 +1,6 @@
 // 542
-[clientscript,ge_offers_bigbutton_op](int $int0, component $component1, string $string0)
-if ($int0 ! 1) {
+[clientscript,ge_offers_bigbutton_op](int $opindex0, component $component1, string $string0)
+if ($opindex0 ! 1) {
 	return;
 }
 ~ge_offers_bigbutton($component1, $string0, 1);

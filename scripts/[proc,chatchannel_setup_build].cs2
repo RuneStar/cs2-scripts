@@ -5,32 +5,32 @@
 ~script1665($component2, 0, 1, "Legacy sort", $component0, $component1, $component2, $component3, $component4, $component5);
 if_settext("<~text_device("Right-click", "Long press")> on white text to change options.", interface_94:8);
 cc_deleteall($component3);
-def_int $int6 = if_getwidth($component0);
-def_int $int7 = 0;
-def_int $int8 = 0;
-def_int $int9 = 0;
+def_int $width6 = if_getwidth($component0);
+def_int $width7 = 0;
+def_int $width8 = 0;
+def_int $width9 = 0;
 def_int $int10 = 0;
-def_int $int11 = 0;
+def_int $height11 = 0;
 def_int $int12 = 15;
 def_string $string0 = "";
 def_string $string1 = "";
-def_int $int13 = 0;
-def_int $int14 = 0;
+def_int $rank13 = 0;
+def_int $count14 = 0;
 def_boolean $boolean15 = null;
-def_int $int16 = friend_count;
-if ($int16 <= -2) {
+def_int $count16 = friend_count;
+if ($count16 <= -2) {
 	cc_create($component3, ^iftype_text, 0);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
-	cc_setsize($int6, calc(16384 / 2), ^setsize_abs, ^setsize_2);
+	cc_setsize($width6, calc(16384 / 2), ^setsize_abs, ^setsize_2);
 	cc_setcolour(0xffff64);
 	cc_settextfont(b12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	cc_settext("Loading friend list<br>Please wait...");
-} else if ($int16 = -1) {
+} else if ($count16 = -1) {
 	cc_create($component3, ^iftype_text, 0);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
-	cc_setsize($int6, calc(16384 / 2), ^setsize_abs, ^setsize_2);
+	cc_setsize($width6, calc(16384 / 2), ^setsize_abs, ^setsize_2);
 	cc_setcolour(0xffff64);
 	cc_settextfont(b12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -57,25 +57,25 @@ if ($int16 <= -2) {
 			_3630(true);
 	}
 	_3639;
-	$int9, $int7, $int8 = if_getwidth($component3), calc($int6 - 5), calc(if_getwidth($component1) - 5);
-	while ($int14 < $int16) {
-		$string0, $string1 = friend_getname($int14);
+	$width9, $width7, $width8 = if_getwidth($component3), calc($width6 - 5), calc(if_getwidth($component1) - 5);
+	while ($count14 < $count16) {
+		$string0, $string1 = friend_getname($count14);
 		cc_create($component3, ^iftype_rectangle, $int10);
 		$int10 = calc($int10 + 1);
 		cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, $int11, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setposition(0, $height11, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		cc_settrans(255);
 		cc_setopbase("<col=ff9040><$string0></col>");
-		if (calc($int14 % 2) = 0) {
+		if (calc($count14 % 2) = 0) {
 			cc_settrans(255);
-			cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
 		} else {
 			cc_settrans(245);
-			cc_setonmouseleave("cc_settrans(event_com, event_comid, 245, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 245, null)");
 		}
-		cc_setonmouserepeat("cc_settrans(event_com, event_comid, 230, null)");
+		cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 230, null)");
 		cc_setop(1, enum(int, string, enum_170, 0));
 		cc_setop(2, enum(int, string, enum_170, 1));
 		cc_setop(3, enum(int, string, enum_170, 2));
@@ -85,19 +85,19 @@ if ($int16 <= -2) {
 		cc_setop(7, enum(int, string, enum_170, 6));
 		.cc_create($component3, ^iftype_text, $int10);
 		$int10 = calc($int10 + 1);
-		$int13 = friend_getrank($int14);
-		.cc_setsize($int8, $int12, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(0, $int11, ^setpos_abs_right, ^setpos_abs_top);
+		$rank13 = friend_getrank($count14);
+		.cc_setsize($width8, $int12, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(0, $height11, ^setpos_abs_right, ^setpos_abs_top);
 		.cc_setcolour(^white);
 		.cc_settextshadow(true);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_settextfont(b12_full);
-		.cc_settext(enum(int, string, enum_170, $int13));
+		.cc_settext(enum(int, string, enum_170, $rank13));
 		cc_setonop("chatchannel_setup_setrank($component3, .cc_getid, event_opbase, event_opindex)");
 		cc_create($component3, ^iftype_text, $int10);
 		$int10 = calc($int10 + 1);
-		cc_setsize($int7, $int12, ^setsize_abs, ^setsize_abs);
-		cc_setposition(5, $int11, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize($width7, $int12, ^setsize_abs, ^setsize_abs);
+		cc_setposition(5, $height11, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(0xffff64);
 		cc_settextfont(b12_full);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -106,7 +106,7 @@ if ($int16 <= -2) {
 		.cc_create($component3, ^iftype_graphic, $int10);
 		$int10 = calc($int10 + 1);
 		.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(calc(parawidth($string0, $int9, b12_full) + 9), calc($int11 + ($int12 - 14) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc(parawidth($string0, $width9, b12_full) + 9), calc($height11 + ($int12 - 14) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setgraphic("friends_changed_name");
 		.cc_setgraphicshadow(0x333333);
 		if (string_length($string1) > 0) {
@@ -116,7 +116,7 @@ if ($int16 <= -2) {
 				cc_setonop("script1926(event_com, cc_getid, .cc_getid, $string1, $string0)");
 			} else {
 				$string1 = "Previous name:<br><$string1>";
-				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component5, $string1, 25, $int9)");
+				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component5, $string1, 25, $width9)");
 				cc_setonmouseleave("deltooltip($component5)");
 			}
 			.cc_sethide(false);
@@ -124,14 +124,14 @@ if ($int16 <= -2) {
 			cc_setonmouseover("deltooltip($component5)");
 			.cc_sethide(true);
 		}
-		$int14, $int11 = calc($int14 + 1), calc($int11 + $int12);
+		$count14, $height11 = calc($count14 + 1), calc($height11 + $int12);
 	}
-	if ($int16 >= 1) {
-		$int11 = calc($int11 + 5);
+	if ($count16 >= 1) {
+		$height11 = calc($height11 + 5);
 	}
 }
-if ($int11 > if_getheight($component3)) {
-	if_setscrollsize(0, $int11, $component3);
+if ($height11 > if_getheight($component3)) {
+	if_setscrollsize(0, $height11, $component3);
 	~scrollbar_resize($component4, $component3, if_getscrolly($component3));
 } else {
 	if_setscrollsize(0, 0, $component3);

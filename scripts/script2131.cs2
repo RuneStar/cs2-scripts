@@ -9,10 +9,10 @@ if ($int1 > 700) {
 }
 cc_setobject_nonum(glistening_tear_22207, $int1);
 .cc_settext($string0);
-def_int $int2 = if_getwidth($component0);
-def_int $int3 = parawidth($string0, $int2, p12_full);
+def_int $width2 = if_getwidth($component0);
+def_int $int3 = parawidth($string0, $width2, p12_full);
 .cc_setsize($int3, 32, ^setsize_abs, ^setsize_abs);
 $int3 = calc(36 + 3 + $int3);
-def_int $int4 = calc(($int2 - $int3) / 2);
-cc_setposition($int4, 0, ^setpos_abs_left, ^setpos_abs_bottom);
-.cc_setposition($int4, 0, ^setpos_abs_right, ^setpos_abs_bottom);
+def_int $x4 = calc(($width2 - $int3) / 2);
+cc_setposition($x4, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+.cc_setposition($x4, 0, ^setpos_abs_right, ^setpos_abs_bottom);

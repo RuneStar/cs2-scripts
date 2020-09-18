@@ -1,28 +1,28 @@
 // 1062
-[proc,farming_tools_side_update](component $component0, obj $obj1, string $string0, int $int2)
+[proc,farming_tools_side_update](component $component0, obj $obj1, string $text0, int $int2)
 def_int $int3 = 0;
-def_obj $obj4 = null;
-$int3, $obj4 = ~script1064($obj1);
+def_namedobj $namedobj4 = null;
+$int3, $namedobj4 = ~script1064($obj1);
 def_int $colour5 = 0xbb0000;
 if ($int3 > 0) {
 	$colour5 = 0x20df20;
 }
 if ($obj1 = watering_can_6797) {
-	if ($obj4 = null) {
-		$obj4 = watering_can_6797;
+	if ($namedobj4 = null) {
+		$namedobj4 = watering_can_6797;
 	}
-	$string0 = oc_name($obj4);
+	$text0 = oc_name($namedobj4);
 }
 if (cc_find($component0, $int2) = ^true & .cc_find($component0, calc($int2 + 1)) = ^true) {
-	cc_settext($string0);
+	cc_settext($text0);
 	cc_setcolour($colour5);
 	.cc_setcolour($colour5);
 	.cc_settext(~magic_tostring($int3));
 }
 if (cc_find($component0, calc($int2 + 2)) = ^true) {
-	cc_setobject_nonum($obj4, $int3);
+	cc_setobject_nonum($namedobj4, $int3);
 }
-if_setopbase("<col=ff9040><oc_name($obj4)></col>", $component0);
+if_setopbase("<col=ff9040><oc_name($namedobj4)></col>", $component0);
 if_clearops($component0);
 if_setop(10, "Examine", $component0);
 def_int $int6 = enum(obj, int, enum_2193, $obj1);

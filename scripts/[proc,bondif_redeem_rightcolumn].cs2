@@ -1,14 +1,14 @@
 // 2286
 [proc,bondif_redeem_rightcolumn](component $component0, component $component1)
 cc_deleteall($component1);
-def_int $int2 = 0;
+def_int $comsubid2 = 0;
 def_int $int3 = 0;
 def_component $component4 = enum(int, component, enum_1913, %var1204);
 if ($component4 ! null & %varbit10149 = 1) {
 	if_settext("The required Old School Bonds will be taken from your account.<br>Select <col=ffffff>Confirm</col> to continue.", $component0);
-	$int2, $int3 = ~v2_stone_button_fadable($component1, $int3);
-	if_setonmouserepeat("bondif_redeem_hover(true, $component1, $int2)", $component1);
-	if_setonmouseleave("bondif_redeem_hover(false, $component1, $int2)", $component1);
+	$comsubid2, $int3 = ~v2_stone_button_fadable($component1, $int3);
+	if_setonmouserepeat("bondif_redeem_hover(true, $component1, $comsubid2)", $component1);
+	if_setonmouseleave("bondif_redeem_hover(false, $component1, $comsubid2)", $component1);
 	cc_create($component1, ^iftype_text, $int3);
 	$int3 = calc($int3 + 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);

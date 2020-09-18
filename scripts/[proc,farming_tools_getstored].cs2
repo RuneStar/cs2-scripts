@@ -1,5 +1,5 @@
 // 1063
-[proc,farming_tools_getstored](obj $obj0)(int, obj)
+[proc,farming_tools_getstored](obj $obj0)(int, namedobj)
 switch_obj ($obj0) {
 	case rake_5341 :
 		return(calc(pow(2, 1) * %varbit8357 + %varbit1435), rake_5341);

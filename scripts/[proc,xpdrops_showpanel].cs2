@@ -3,13 +3,13 @@
 if_sethide(false, $component1);
 if_sethide(false, $component2);
 if_sethide(false, $component3);
-def_int $int4 = 0;
+def_int $clock4 = 0;
 def_int $int5 = 0;
 def_int $int6 = enum(int, int, enum_1167, %varbit4694);
 if ($int6 > 0) {
-	$int4 = calc(%varcint71 + enum(int, int, enum_1171, %varbit4722));
-	if ($int4 > clientclock) {
-		$int5 = calc($int4 - clientclock);
+	$clock4 = calc(%varcint71 + enum(int, int, enum_1171, %varbit4722));
+	if ($clock4 > clientclock) {
+		$int5 = calc($clock4 - clientclock);
 	}
 	if_setontimer("xpdrops_hidepanel($component0, $component1, $component2, $component3, calc(clientclock + $int5 + $int6))", $component0);
 } else {

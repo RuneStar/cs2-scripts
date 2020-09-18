@@ -1,6 +1,6 @@
 // 469
-[clientscript,quickprayer_button_op](int $int0, int $int1, component $component2, int $int3)
-if ($int0 = 1 & .cc_find($component2, $int3) = ^true) {
+[clientscript,quickprayer_button_op](int $opindex0, int $int1, component $component2, int $comsubid3)
+if ($opindex0 = 1 & .cc_find($component2, $comsubid3) = ^true) {
 	if (testbit(%varbit4102, $int1) = ^true) {
 		%varbit4102 = clearbit(%varbit4102, $int1);
 	} else {

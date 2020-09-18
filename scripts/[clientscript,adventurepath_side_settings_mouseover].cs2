@@ -1,6 +1,6 @@
 // 3339
-[clientscript,adventurepath_side_settings_mouseover](component $component0, int $int1)
-if (cc_find($component0, $int1) = ^true) {
+[clientscript,adventurepath_side_settings_mouseover](component $component0, int $comsubid1)
+if (cc_find($component0, $comsubid1) = ^true) {
 	cc_settrans(80);
 }
 ~v2_stone_button_change_in($component0, 0);

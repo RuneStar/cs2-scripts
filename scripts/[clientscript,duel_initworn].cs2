@@ -1,7 +1,7 @@
 // 205
 [clientscript,duel_initworn]
 def_int $int0 = 0;
-def_int $int1 = 0;
+def_int $slot1 = 0;
 cc_deleteall(interface_482:63);
 cc_deleteall(interface_482:91);
 while ($int0 < 11) {
@@ -9,118 +9,118 @@ while ($int0 < 11) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	if ($int0 = 0) {
 		cc_setposition(if_getx(interface_482:80), if_gety(interface_482:80), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 0;
+		$slot1 = 0;
 	}
 	if ($int0 = 1) {
 		cc_setposition(if_getx(interface_482:81), if_gety(interface_482:81), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 1;
+		$slot1 = 1;
 	}
 	if ($int0 = 2) {
 		cc_setposition(if_getx(interface_482:82), if_gety(interface_482:82), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 2;
+		$slot1 = 2;
 	}
 	if ($int0 = 3) {
 		cc_setposition(if_getx(interface_482:90), if_gety(interface_482:90), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 13;
+		$slot1 = 13;
 	}
 	if ($int0 = 4) {
 		cc_setposition(if_getx(interface_482:83), if_gety(interface_482:83), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 3;
+		$slot1 = 3;
 	}
 	if ($int0 = 5) {
 		cc_setposition(if_getx(interface_482:84), if_gety(interface_482:84), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 4;
+		$slot1 = 4;
 	}
 	if ($int0 = 6) {
 		cc_setposition(if_getx(interface_482:85), if_gety(interface_482:85), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 5;
+		$slot1 = 5;
 	}
 	if ($int0 = 7) {
 		cc_setposition(if_getx(interface_482:86), if_gety(interface_482:86), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 7;
+		$slot1 = 7;
 	}
 	if ($int0 = 8) {
 		cc_setposition(if_getx(interface_482:87), if_gety(interface_482:87), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 9;
+		$slot1 = 9;
 	}
 	if ($int0 = 9) {
 		cc_setposition(if_getx(interface_482:88), if_gety(interface_482:88), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 10;
+		$slot1 = 10;
 	}
 	if ($int0 = 10) {
 		cc_setposition(if_getx(interface_482:89), if_gety(interface_482:89), ^setpos_abs_left, ^setpos_abs_top);
-		$int1 = 12;
+		$slot1 = 12;
 	}
-	if (inv_getobj(worn, $int1) ! null) {
-		cc_setobject(inv_getobj(worn, $int1), inv_getnum(worn, $int1));
-		cc_setopbase("<col=ff981f><oc_name(inv_getobj(worn, $int1))>");
+	if (inv_getobj(worn, $slot1) ! null) {
+		cc_setobject(inv_getobj(worn, $slot1), inv_getnum(worn, $slot1));
+		cc_setopbase("<col=ff981f><oc_name(inv_getobj(worn, $slot1))>");
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
-		if ($int1 = 0) {
+		if ($slot1 = 0) {
 			if_setgraphic(null, interface_482:80);
 		}
-		if ($int1 = 1) {
+		if ($slot1 = 1) {
 			if_setgraphic(null, interface_482:81);
 		}
-		if ($int1 = 2) {
+		if ($slot1 = 2) {
 			if_setgraphic(null, interface_482:82);
 		}
-		if ($int1 = 13) {
+		if ($slot1 = 13) {
 			if_setgraphic(null, interface_482:90);
 		}
-		if ($int1 = 3) {
+		if ($slot1 = 3) {
 			if_setgraphic(null, interface_482:83);
 		}
-		if ($int1 = 4) {
+		if ($slot1 = 4) {
 			if_setgraphic(null, interface_482:84);
 		}
-		if ($int1 = 5) {
+		if ($slot1 = 5) {
 			if_setgraphic(null, interface_482:85);
 		}
-		if ($int1 = 7) {
+		if ($slot1 = 7) {
 			if_setgraphic(null, interface_482:86);
 		}
-		if ($int1 = 9) {
+		if ($slot1 = 9) {
 			if_setgraphic(null, interface_482:87);
 		}
-		if ($int1 = 10) {
+		if ($slot1 = 10) {
 			if_setgraphic(null, interface_482:88);
 		}
-		if ($int1 = 12) {
+		if ($slot1 = 12) {
 			if_setgraphic(null, interface_482:89);
 		}
 	} else {
-		if ($int1 = 0) {
+		if ($slot1 = 0) {
 			if_setgraphic("wornicons,0", interface_482:80);
 		}
-		if ($int1 = 1) {
+		if ($slot1 = 1) {
 			if_setgraphic("wornicons,1", interface_482:81);
 		}
-		if ($int1 = 2) {
+		if ($slot1 = 2) {
 			if_setgraphic("wornicons,2", interface_482:82);
 		}
-		if ($int1 = 13) {
+		if ($slot1 = 13) {
 			if_setgraphic("wornicons,10", interface_482:90);
 		}
-		if ($int1 = 3) {
+		if ($slot1 = 3) {
 			if_setgraphic("wornicons,3", interface_482:83);
 		}
-		if ($int1 = 4) {
+		if ($slot1 = 4) {
 			if_setgraphic("wornicons,5", interface_482:84);
 		}
-		if ($int1 = 5) {
+		if ($slot1 = 5) {
 			if_setgraphic("wornicons,6", interface_482:85);
 		}
-		if ($int1 = 7) {
+		if ($slot1 = 7) {
 			if_setgraphic("wornicons,7", interface_482:86);
 		}
-		if ($int1 = 9) {
+		if ($slot1 = 9) {
 			if_setgraphic("wornicons,8", interface_482:87);
 		}
-		if ($int1 = 10) {
+		if ($slot1 = 10) {
 			if_setgraphic("wornicons,9", interface_482:88);
 		}
-		if ($int1 = 12) {
+		if ($slot1 = 12) {
 			if_setgraphic("wornicons,4", interface_482:89);
 		}
 	}

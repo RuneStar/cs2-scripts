@@ -9,10 +9,10 @@ cc_deleteall($component13);
 cc_deleteall($component14);
 cc_deleteall($component6);
 def_struct $struct25 = null;
-def_int $int26 = if_getwidth($component4);
+def_int $width26 = if_getwidth($component4);
 def_enum $enum27 = null;
 def_int $int28 = -1;
-def_int $int29 = 0;
+def_int $count29 = 0;
 def_int $int30 = 0;
 def_int $int31 = 0;
 if (~script3512($int1) = 0) {
@@ -23,8 +23,8 @@ def_int $int32 = 0;
 def_int $int33 = 0;
 def_graphic $graphic34 = null;
 def_int $int35 = 0;
-while ($int29 < enum_getoutputcount($enum27)) {
-	$struct25 = enum(int, struct, $enum27, $int29);
+while ($count29 < enum_getoutputcount($enum27)) {
+	$struct25 = enum(int, struct, $enum27, $count29);
 	if ($struct25 = null) {
 		mes("This Adventure path is not available at this time.");
 		if_close;
@@ -43,18 +43,18 @@ while ($int29 < enum_getoutputcount($enum27)) {
 		}
 		$int35 = ~script2973($int32, $int1);
 		if ($int35 ! $int32) {
-			$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), ^red, ^white, $int32, $int33, $graphic34);
+			$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $width26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), ^red, ^white, $int32, $int33, $graphic34);
 			cc_setonop("adventurepath_set_info($int32, $component7, $component8, $component9, $component10, $struct25, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $int1, $component2, $component5, $component6, $int32, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24)");
 		} else if (~adventurepath_return_task_status($int32) = ^true) {
 			if (~adventurepath_return_reward_f2p($int32) = ^false | ~adventurepath_return_reward_p2p($int32) = ^false) {
-				$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), 0x32dbe9, ^white, $int32, $int33, $graphic34);
+				$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $width26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), 0x32dbe9, ^white, $int32, $int33, $graphic34);
 				cc_setonop("adventurepath_set_info($int32, $component7, $component8, $component9, $component10, $struct25, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $int1, $component2, $component5, $component6, $int32, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24)");
 			} else {
-				$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), 0x0dc10d, ^white, $int32, $int33, $graphic34);
+				$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $width26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), 0x0dc10d, ^white, $int32, $int33, $graphic34);
 				cc_setonop("adventurepath_set_info($int32, $component7, $component8, $component9, $component10, $struct25, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $int1, $component2, $component5, $component6, $int32, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24)");
 			}
 		} else {
-			$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $int26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), ^yellow, ^white, $int32, $int33, $graphic34);
+			$int31 = ~create_v2_stone_button_filled_free_icon($component4, $int31, $width26, 50, 0, calc((50 + 5) * $int30), struct_param($struct25, param_810), ^yellow, ^white, $int32, $int33, $graphic34);
 			cc_setonop("adventurepath_set_info($int32, $component7, $component8, $component9, $component10, $struct25, $component11, $component12, $component3, $component0, $component4, $component13, $component14, $int1, $component2, $component5, $component6, $int32, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24)");
 		}
 		if (%var2358 = $int32) {
@@ -62,11 +62,11 @@ while ($int29 < enum_getoutputcount($enum27)) {
 		}
 		$int30 = calc($int30 + 1);
 	}
-	$int29 = calc(1 + $int29);
+	$count29 = calc(1 + $count29);
 }
-def_int $int36 = calc((50 + 5) * $int30 - 5);
-if ($int36 > if_getheight($component4)) {
-	if_setscrollsize(0, $int36, $component4);
+def_int $height36 = calc((50 + 5) * $int30 - 5);
+if ($height36 > if_getheight($component4)) {
+	if_setscrollsize(0, $height36, $component4);
 } else {
 	if_setscrollsize(0, 0, $component4);
 }
@@ -74,12 +74,12 @@ $int31 = ~v2_stone_button_out_filled($component12);
 $int31 = ~adventurepath_back_button_text($component12, $int31, $component3, $component0, $component4, $component16, $component17);
 if_setonmouseover("adventurepath_back_mouseover($component12, $component3, $component0, $component4, $component16, $component17)", $component12);
 if_setonmouseleave("adventurepath_back_mouseleave($component12, $component3, $component0, $component4, $component16, $component17)", $component12);
-def_string $string0 = "Show path reward";
+def_string $text0 = "Show path reward";
 $int31 = 0;
 $int31 = ~v2_stone_button_out_filled($component13);
-$int31 = ~adventurepath_button_text($component13, $int31, $string0);
-if_setonmouserepeat("adventurepath_mouseover_path_reward($int1, $component13, $string0)", $component13);
-if_setonmouseleave("adventurepath_mouseleave_path_reward($int1, $component13, $string0)", $component13);
+$int31 = ~adventurepath_button_text($component13, $int31, $text0);
+if_setonmouserepeat("adventurepath_mouseover_path_reward($int1, $component13, $text0)", $component13);
+if_setonmouseleave("adventurepath_mouseleave_path_reward($int1, $component13, $text0)", $component13);
 cc_setop(1, "Show <col=ff9040>path reward");
 cc_setonop("script1601");
 $int31 = 0;
@@ -96,13 +96,13 @@ cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-def_int $int39 = if_getwidth($component6);
+def_int $width39 = if_getwidth($component6);
 $int31 = 0;
 $int31 = ~stonepanel(0, $component6, $int31);
 cc_create($component6, ^iftype_graphic, $int31);
 cc_setgraphic("v2_borders_slim,0");
 cc_setposition(0, 118, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setsize($int39, 32, ^setsize_abs, ^setsize_abs);
+cc_setsize($width39, 32, ^setsize_abs, ^setsize_abs);
 cc_create($component6, ^iftype_graphic, calc(1 + $int31));
 cc_setgraphic("v2_borders_slim,9");
 cc_setposition(0, 116, ^setpos_abs_left, ^setpos_abs_top);

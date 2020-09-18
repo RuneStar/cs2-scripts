@@ -1,8 +1,8 @@
 // 465
 [proc,prayer_quicksort](intarray $intarray0, int $int1, int $int2)
-def_int $int3 = calc(($int1 + $int2) / 2);
-def_int $int4 = $intarray0($int3);
-$intarray0($int3) = $intarray0($int2);
+def_int $index3 = calc(($int1 + $int2) / 2);
+def_int $int4 = $intarray0($index3);
+$intarray0($index3) = $intarray0($int2);
 $intarray0($int2) = $int4;
 def_int $int5 = $int1;
 def_int $int6 = $int1;

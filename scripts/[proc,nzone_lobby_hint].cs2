@@ -14,18 +14,18 @@ def_int $int2 = calc(512 - 280);
 if (~on_mobile = true) {
 	$int2 = calc($int2 - 50);
 }
-def_int $int3 = calc(parawidth($string0, $int2, p11_full) + 8);
-def_int $int4 = calc(paraheight($string0, $int2, p11_full) * 10 + 3 + 8);
-~create_graphic($component1, 0, "tradebacking", 0, 2, ^setpos_abs_centre, ^setpos_abs_top, $int3, $int4, ^setsize_abs, ^setsize_abs);
+def_int $width3 = calc(parawidth($string0, $int2, p11_full) + 8);
+def_int $height4 = calc(paraheight($string0, $int2, p11_full) * 10 + 3 + 8);
+~create_graphic($component1, 0, "tradebacking", 0, 2, ^setpos_abs_centre, ^setpos_abs_top, $width3, $height4, ^setsize_abs, ^setsize_abs);
 cc_settrans(50);
 cc_create($component1, ^iftype_rectangle, 1);
 cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setsize($int3, $int4, ^setsize_abs, ^setsize_abs);
+cc_setsize($width3, $height4, ^setsize_abs, ^setsize_abs);
 cc_setcolour(^black);
 cc_setfill(false);
 cc_create($component1, ^iftype_text, 2);
 cc_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top);
-cc_setsize($int3, $int4, ^setsize_abs, ^setsize_abs);
+cc_setsize($width3, $height4, ^setsize_abs, ^setsize_abs);
 cc_settextfont(p11_full);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);

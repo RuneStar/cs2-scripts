@@ -1,12 +1,12 @@
 // 968
 [clientscript,duel_options_changed](component $component0, int $int1)
-def_int $int2 = enum(int, int, enum_1504, $int1);
+def_int $comsubid2 = enum(int, int, enum_1504, $int1);
 def_component $component3 = interface_482:116;
 if ($int1 >= 14 & $int1 <= 27) {
 	$component3 = interface_482:91;
 }
-if ($int2 ! -1 & cc_find($component3, $int2) = ^true) {
+if ($comsubid2 ! -1 & cc_find($component3, $comsubid2) = ^true) {
 	cc_sethide(false);
-	cc_setontimer("cc_flasher($component3, $int2, clientclock)");
+	cc_setontimer("cc_flasher($component3, $comsubid2, clientclock)");
 }
 ~duel_wait_button($component0, 5);

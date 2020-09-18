@@ -21,7 +21,7 @@ if ($obj0 ! null) {
 	if_clearops(interface_127:12);
 	if_setonop(null, interface_127:12);
 }
-def_string $string0 = "";
+def_string $mes0 = "";
 cc_create(interface_127:1, ^iftype_rectangle, 1);
 cc_sethide(true);
 if_setmodel(model_5626, interface_127:18);
@@ -39,11 +39,11 @@ if ($obj1 ! null) {
 	if_setonmouseleave(null, interface_127:18);
 	if_clearops(interface_127:18);
 	if ($obj2 ! null) {
-		$string0 = "This is the first key on your key ring.";
+		$mes0 = "This is the first key on your key ring.";
 	} else {
-		$string0 = "There are no more keys on your key ring.";
+		$mes0 = "There are no more keys on your key ring.";
 	}
-	if_setonclick("mes($string0)", interface_127:18);
+	if_setonclick("mes($mes0)", interface_127:18);
 }
 cc_create(interface_127:1, ^iftype_rectangle, 2);
 cc_sethide(true);
@@ -62,10 +62,10 @@ if ($obj2 ! null) {
 	if_setonmouseleave(null, interface_127:15);
 	if_clearops(interface_127:15);
 	if ($obj1 ! null) {
-		$string0 = "This is the last key on your key ring.";
+		$mes0 = "This is the last key on your key ring.";
 	} else {
-		$string0 = "There are no more keys on your key ring.";
+		$mes0 = "There are no more keys on your key ring.";
 	}
-	if_setonclick("mes($string0)", interface_127:15);
+	if_setonclick("mes($mes0)", interface_127:15);
 }
 if_settext("Key total: <tostring($int3)>", interface_127:14);

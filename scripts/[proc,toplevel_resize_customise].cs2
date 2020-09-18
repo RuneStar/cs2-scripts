@@ -1,17 +1,17 @@
 // 920
 [proc,toplevel_resize_customise](component $component0, enum $enum1)
-def_int $int2 = 0;
+def_int $x2 = 0;
 def_int $int3 = 0;
 def_int $int4 = -1;
 switch_enum ($enum1) {
 	case enum_1131 :
-		$int2, $int3 = calc(if_getwidth(interface_164:35) - 33), if_getheight(interface_164:35);
+		$x2, $int3 = calc(if_getwidth(interface_164:35) - 33), if_getheight(interface_164:35);
 		if (calc(if_getwidth($component0) - if_getwidth(enum(component, component, $enum1, interface_161:32))) < 429) {
 			if_setposition(0, calc($int3 + if_getheight(interface_164:50)), ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, interface_164:67));
 			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:50);
 		} else {
 			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, interface_164:67));
-			if_setposition($int2, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:50);
+			if_setposition($x2, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:50);
 		}
 		if (%varbit4084 = 1) {
 			_2122("graphic_1178", enum(component, component, $enum1, interface_161:28));

@@ -1,5 +1,5 @@
 // 814
-[clientscript,confirmdestroy_init](obj $obj0, int $int1, string $string0, string $string1)
+[clientscript,confirmdestroy_init](obj $obj0, int $num1, string $string0, string $text1)
 cc_deleteall(confirm_destroy:0);
 cc_create(confirm_destroy:0, ^iftype_rectangle, 0);
 .cc_create(confirm_destroy:0, ^iftype_rectangle, 1);
@@ -33,6 +33,6 @@ if (~inzone(0_30_77_0_0, 3_30_77_63_63, coord) = 1) {
 	~confirmdestroy_setupbutton(confirm_destroy:1, "Yes", 1, "1Yy");
 }
 ~confirmdestroy_setupbutton(confirm_destroy:3, "No", 0, "2Nn");
-if_setobject($obj0, $int1, confirm_destroy:5);
+if_setobject($obj0, $num1, confirm_destroy:5);
 if_settext(oc_name($obj0), confirm_destroy:6);
-if_settext($string1, confirm_destroy:7);
+if_settext($text1, confirm_destroy:7);

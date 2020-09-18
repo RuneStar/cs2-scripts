@@ -1,5 +1,5 @@
 // 2058
-[proc,skillmulti_quantitybutton_draw](boolean $boolean0, string $string0, component $component1)
+[proc,skillmulti_quantitybutton_draw](boolean $boolean0, string $text0, component $component1)
 cc_deleteall($component1);
 def_int $int2 = 0;
 if ($boolean0 = true) {
@@ -14,4 +14,4 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour(if_getcolour(interface_270:5));
 cc_settextshadow(false);
 cc_settextfont(p11_full);
-cc_settext($string0);
+cc_settext($text0);

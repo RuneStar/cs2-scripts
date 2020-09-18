@@ -40,12 +40,12 @@ while ($int7 < $int4) {
 	$int7, $int5 = calc($int7 + 1), calc($int5 + 1);
 }
 def_int $int8 = -1;
-def_int $int9 = calc(%varbit5330 - 1);
-if ($int9 >= 0 & $int9 < $int4) {
+def_int $comsubid9 = calc(%varbit5330 - 1);
+if ($comsubid9 >= 0 & $comsubid9 < $int4) {
 	$int8 = 0;
-} else if ($int9 >= $int4 & $int9 < calc($int4 * 2)) {
+} else if ($comsubid9 >= $int4 & $comsubid9 < calc($int4 * 2)) {
 	$int8 = 1;
-} else if ($int9 >= calc($int4 * 2) & $int9 < calc($int4 * 3)) {
+} else if ($comsubid9 >= calc($int4 * 2) & $comsubid9 < calc($int4 * 3)) {
 	$int8 = 2;
 }
 def_component $component10 = enum(int, component, enum_1424, -1);
@@ -114,6 +114,6 @@ if_setposition(calc($int11 + $int13 / 2), 0, ^setpos_abs_left, ^setpos_abs_centr
 ~poh_viewer_handlelevel(31, %varcint174, $int0, $int3, $int4);
 ~poh_viewer_handlelevel(32, %varcint176, $int0, $int3, $int4);
 ~poh_viewer_handlelevel(33, %varcint177, $int0, $int3, $int4);
-if ($int9 ! -1 & cc_find(interface_422:5, $int9) = ^true) {
+if ($comsubid9 ! -1 & cc_find(interface_422:5, $comsubid9) = ^true) {
 	cc_sethide(true);
 }

@@ -1,8 +1,8 @@
 // 263
-[clientscript,nzone_game_subtitle](component $component0, int $int1, int $int2, int $int3)
+[clientscript,nzone_game_subtitle](component $component0, int $comsubid1, int $comsubid2, int $clock3)
 def_int $int4 = pow(50, 2);
 def_int $int5 = calc(50 * 2);
-def_int $int6 = calc(clientclock - $int3);
+def_int $int6 = calc(clientclock - $clock3);
 if ($int6 < 50) {
 	if ($int6 < 0) {
 		$int6 = 0;
@@ -10,10 +10,10 @@ if ($int6 < 50) {
 		sound_synth(synth_2201, 1, 0);
 	}
 	$int6 = calc(50 - $int6);
-	if (cc_find($component0, $int1) = ^true) {
+	if (cc_find($component0, $comsubid1) = ^true) {
 		cc_settrans(interpolate(0, $int6, 0, 50, 255));
 	}
-	if (cc_find($component0, $int2) = ^true) {
+	if (cc_find($component0, $comsubid2) = ^true) {
 		cc_setposition(interpolate(0, pow($int6, 2), 0, $int4, 16384), cc_gety, ^setpos_3, ^setpos_abs_top);
 	}
 	return;
@@ -26,17 +26,17 @@ if ($int6 < calc(50 * 3)) {
 		sound_synth(synth_2201, 1, 0);
 	}
 	$int6 = calc($int6 - $int5);
-	if (cc_find($component0, $int1) = ^true) {
+	if (cc_find($component0, $comsubid1) = ^true) {
 		cc_settrans(interpolate(0, $int6, 0, 50, 255));
 	}
-	if (cc_find($component0, $int2) = ^true) {
+	if (cc_find($component0, $comsubid2) = ^true) {
 		cc_setposition(interpolate(0, pow($int6, 2), 0, $int4, 16384), cc_gety, ^setpos_5, ^setpos_abs_top);
 	}
 	return;
 }
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $comsubid1) = ^true) {
 	cc_delete;
 }
-if (cc_find($component0, $int2) = ^true) {
+if (cc_find($component0, $comsubid2) = ^true) {
 	cc_delete;
 }

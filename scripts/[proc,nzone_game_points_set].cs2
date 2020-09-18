@@ -20,5 +20,5 @@ if (cc_find($component0, 3) = ^true) {
 	cc_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top);
 	cc_setsize($int2, $int3, ^setsize_abs, ^setsize_abs);
 	cc_settext($string0);
-	cc_setonvartransmit("nzone_game_points_transmit(event_com, event_comid, $int1){var1059}");
+	cc_setonvartransmit("nzone_game_points_transmit(event_com, event_comsubid, $int1){var1059}");
 }

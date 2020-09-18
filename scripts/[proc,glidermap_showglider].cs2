@@ -1,7 +1,7 @@
 // 1625
-[proc,glidermap_showglider](int $int0, int $int1, int $int2, int $int3, int $int4, seq $seq5)
+[proc,glidermap_showglider](int $x0, int $y1, int $int2, int $int3, int $int4, seq $seq5)
 cc_setmodel(model_3063);
 cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition($int0, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition($x0, $y1, ^setpos_abs_left, ^setpos_abs_top);
 cc_setmodelangle(0, 0, $int2, $int3, 0, $int4);
 cc_setmodelanim($seq5);

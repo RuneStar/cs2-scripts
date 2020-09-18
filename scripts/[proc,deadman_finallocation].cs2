@@ -1,11 +1,11 @@
 // 2084
 [proc,deadman_finallocation](component $component0)
-def_string $string0 = "North of Falador";
+def_string $text0 = "North of Falador";
 if (%varbit1497 = 2) {
-	$string0 = "Demonic Ruins (Annakarl)";
+	$text0 = "Demonic Ruins (Annakarl)";
 }
 if (~wildwars_world = 1) {
 	if_settext("The Graveyard of Shadows", $component0);
 } else {
-	if_settext($string0, $component0);
+	if_settext($text0, $component0);
 }

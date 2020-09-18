@@ -24,13 +24,13 @@ if (%varbit26 = 1) {
 def_int $int1 = 0;
 while ($int0 <= 5) {
 	switch_int (~chat_get_filter($int0)) {
-		case 1 :
+		case ^chatfilter_friends :
 			if_settext("<col=ffff00>Friends", enum(int, component, enum_684, $int0));
-		case 2 :
+		case ^chatfilter_off :
 			if_settext("<col=ff0000>Off", enum(int, component, enum_684, $int0));
-		case 3 :
+		case ^chatfilter_hide :
 			if_settext("<col=00ffff>Hide", enum(int, component, enum_684, $int0));
-		case 4 :
+		case ^chatfilter_autochat :
 			if_settext("<col=00afff>Autochat", enum(int, component, enum_684, $int0));
 		case default :
 			if_settext("On", enum(int, component, enum_684, $int0));

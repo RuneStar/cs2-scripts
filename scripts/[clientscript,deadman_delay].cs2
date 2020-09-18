@@ -1,5 +1,5 @@
 // 1149
-[clientscript,deadman_delay](int $int0, int $int1, string $string0, string $string1)
+[clientscript,deadman_delay](int $int0, int $int1, string $string0, string $text1)
 def_int $int2 = calc($int0 * 30);
 def_int $int3 = calc((49 + $int2) / 50);
 if ($int3 = 1) {
@@ -7,7 +7,7 @@ if ($int3 = 1) {
 } else {
 	if_settext("There are <tostring($int3)> seconds remaining <$string0>", interface_228:2);
 }
-if_settext($string1, interface_228:0);
+if_settext($text1, interface_228:0);
 if_sethide(false, interface_228:1);
 def_component $component4 = enum(component, component, ~toplevel_getcomponents, interface_161:32);
 if ($component4 = null) {

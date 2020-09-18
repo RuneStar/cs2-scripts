@@ -4,8 +4,8 @@ def_int $int4 = calc(if_getwidth($component1) / 2);
 cc_deleteall($component1);
 def_int $int5 = 0;
 def_int $int6 = 0;
-def_int $int7 = 0;
-def_int $int8 = 0;
+def_int $height7 = 0;
+def_int $trans8 = 0;
 def_int $int9 = 0;
 def_namedobj $namedobj10 = enum(int, namedobj, enum_1779, $int9);
 while ($namedobj10 ! null) {
@@ -15,27 +15,27 @@ while ($namedobj10 ! null) {
 	cc_setfill(true);
 	if (calc($int9 % 2) = 0) {
 		cc_setsize($int4, 40, ^setsize_abs, ^setsize_abs);
-		$int7 = calc($int6 * 40);
-		cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
+		$height7 = calc($int6 * 40);
+		cc_setposition(0, $height7, ^setpos_abs_left, ^setpos_abs_top);
 		if (calc($int6 % 2) = 0) {
-			$int8 = 245;
+			$trans8 = 245;
 		} else {
-			$int8 = 235;
+			$trans8 = 235;
 		}
 	} else {
 		cc_setsize($int4, 40, ^setsize_minus, ^setsize_abs);
-		$int7 = calc($int6 * 40);
-		cc_setposition(0, $int7, ^setpos_abs_right, ^setpos_abs_top);
+		$height7 = calc($int6 * 40);
+		cc_setposition(0, $height7, ^setpos_abs_right, ^setpos_abs_top);
 		if (calc($int6 % 2) = 0) {
-			$int8 = 235;
+			$trans8 = 235;
 		} else {
-			$int8 = 245;
+			$trans8 = 245;
 		}
 		$int6 = calc($int6 + 1);
 	}
-	cc_settrans($int8);
-	cc_setonmouseover("cc_settrans(event_com, event_comid, 225, null)");
-	cc_setonmouseleave("cc_settrans(event_com, event_comid, $int8, null)");
+	cc_settrans($trans8);
+	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 225, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $trans8, null)");
 	cc_setop(1, "Value");
 	cc_setop(10, "Examine");
 	if ($namedobj10 = heat_proof_vessel_21539) {
@@ -64,7 +64,7 @@ if ($int9 > 0) {
 		cc_create($component1, ^iftype_rectangle, $int5);
 		$int5 = calc($int5 + 1);
 		cc_setsize($int4, 40, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, $int7, ^setpos_abs_right, ^setpos_abs_top);
+		cc_setposition(0, $height7, ^setpos_abs_right, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		if (calc($int6 % 2) = 0) {
@@ -73,16 +73,16 @@ if ($int9 > 0) {
 			cc_settrans(245);
 		}
 	}
-	$int7 = calc($int7 + 40);
+	$height7 = calc($height7 + 40);
 }
 if_setscrollpos(0, 0, $component1);
-if ($int7 > if_getheight($component1)) {
-	if_setscrollsize(0, $int7, $component1);
+if ($height7 > if_getheight($component1)) {
+	if_setscrollsize(0, $height7, $component1);
 } else {
 	if_setscrollsize(0, 0, $component1);
 	cc_create($component1, ^iftype_rectangle, $int5);
 	$int5 = calc($int5 + 1);
-	cc_setsize(0, $int7, ^setsize_minus, ^setsize_minus);
+	cc_setsize(0, $height7, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 	cc_setcolour(^black);
 	cc_setfill(true);
@@ -91,7 +91,7 @@ if ($int7 > if_getheight($component1)) {
 ~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 def_int $int11 = calc((40 - 32) / 2);
 def_int $int12 = calc(3 + 36 + 3);
-def_int $int13 = calc($int4 - $int12);
+def_int $width13 = calc($int4 - $int12);
 def_int $int14 = 0;
 while ($int9 > 0) {
 	$int9 = calc($int9 - 1);
@@ -106,7 +106,7 @@ while ($int9 > 0) {
 		.cc_setgraphicshadow(0x333333);
 		.cc_create($component1, ^iftype_text, $int5);
 		$int5 = calc($int5 + 1);
-		.cc_setsize($int13, 27, ^setsize_abs, ^setsize_abs);
+		.cc_setsize($width13, 27, ^setsize_abs, ^setsize_abs);
 		.cc_setposition(calc(cc_getx + $int12), cc_gety, ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setcolour(0xff981f);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -121,7 +121,7 @@ while ($int9 > 0) {
 		}
 		.cc_create($component1, ^iftype_text, $int5);
 		$int5 = calc($int5 + 1);
-		.cc_setsize($int13, calc(40 - 27), ^setsize_abs, ^setsize_abs);
+		.cc_setsize($width13, calc(40 - 27), ^setsize_abs, ^setsize_abs);
 		.cc_setposition(calc(cc_getx + $int12), calc(cc_gety + 27), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setcolour(0xafafaf);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);

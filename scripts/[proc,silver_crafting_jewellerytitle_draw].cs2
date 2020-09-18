@@ -1,5 +1,5 @@
 // 2937
-[proc,silver_crafting_jewellerytitle_draw](component $component0, obj $obj1, string $string0, string $string1)
+[proc,silver_crafting_jewellerytitle_draw](component $component0, obj $obj1, string $text0, string $text1)
 cc_deleteall($component0);
 if (inv_total(inv, $obj1) > 0) {
 	return;
@@ -30,5 +30,5 @@ cc_settextshadow(true);
 .cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
 .cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-cc_settext($string0);
-.cc_settext($string1);
+cc_settext($text0);
+.cc_settext($text1);

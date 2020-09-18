@@ -1,6 +1,6 @@
 // 1224
-[clientscript,zeah_overlay_shrink](component $component0, component $component1, component $component2, int $int3, boolean $boolean4)
-if (clientclock < $int3) {
+[clientscript,zeah_overlay_shrink](component $component0, component $component1, component $component2, int $clock3, boolean $boolean4)
+if (clientclock < $clock3) {
 	return;
 }
 if_sethide(true, $component2);

@@ -1,5 +1,5 @@
 // 1686
-[proc,poh_jewellery_box_prepbox](component $component0, int $int1, string $string0, obj $obj2, int $int3)(int)
+[proc,poh_jewellery_box_prepbox](component $component0, int $int1, string $text0, namedobj $namedobj2, int $int3)(int)
 cc_deleteall($component0);
 def_int $int4 = 0;
 cc_create($component0, ^iftype_graphic, $int4);
@@ -25,12 +25,12 @@ if ($int3 >= $int1) {
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-cc_settext($string0);
+cc_settext($text0);
 cc_create($component0, ^iftype_graphic, $int4);
 $int4 = calc($int4 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 cc_setposition(calc(7 + (70 - 36) / 2), -10, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
-cc_setobject_nonum($obj2, 1);
+cc_setobject_nonum($namedobj2, 1);
 return($int4);

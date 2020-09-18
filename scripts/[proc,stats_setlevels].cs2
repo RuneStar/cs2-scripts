@@ -2,22 +2,22 @@
 [proc,stats_setlevels](stat $stat0, component $component1, string $string0, component $component2)
 def_boolean $boolean3 = enum(stat, boolean, enum_1497, $stat0);
 cc_settext(tostring(stat($stat0)));
-def_int $int4 = stat_base($stat0);
-.cc_settext(tostring($int4));
-def_int $int5 = stat_xp($stat0);
+def_int $lvl4 = stat_base($stat0);
+.cc_settext(tostring($lvl4));
+def_int $xp5 = stat_xp($stat0);
 def_string $string1 = ",";
 def_string $string2 = "<$string0> XP:";
-def_string $string3 = ~tostring_spacer($int5, $string1);
+def_string $string3 = ~tostring_spacer($xp5, $string1);
 def_int $int6 = 0;
 if (%varbit4181 = 0) {
-	if ($int4 < 99) {
-		$int6 = enum(int, int, enum_256, calc($int4 + 1));
+	if ($lvl4 < 99) {
+		$int6 = enum(int, int, enum_256, calc($lvl4 + 1));
 		$string2 = append($string2, "|Next level at:|Remaining XP:");
-		$string3 = append($string3, "|<~tostring_spacer($int6, $string1)>|<~tostring_spacer(calc($int6 - $int5), $string1)>");
+		$string3 = append($string3, "|<~tostring_spacer($int6, $string1)>|<~tostring_spacer(calc($int6 - $xp5), $string1)>");
 	}
 } else {
 	$string2 = append($string2, "|Next level at:");
-	$string3 = append($string3, "|<~tostring_spacer(enum(int, int, enum_256, calc($int4 + 1)), $string1)>");
+	$string3 = append($string3, "|<~tostring_spacer(enum(int, int, enum_256, calc($lvl4 + 1)), $string1)>");
 }
 def_int $int7 = 0;
 def_int $int8 = 0;
@@ -27,9 +27,9 @@ if (~deadman_world = 1) {
 	$int7 = ~script1936($stat0);
 	if ($int7 ! -1) {
 		$int7 = calc($int7 / 10);
-		if ($int7 > $int5) {
+		if ($int7 > $xp5) {
 			$string2 = append($string2, "|<col=7c0808>XP to regain:</col>");
-			$string3 = append($string3, "|<col=7c0808><~tostring_spacer(calc($int7 - $int5), $string1)></col>");
+			$string3 = append($string3, "|<col=7c0808><~tostring_spacer(calc($int7 - $xp5), $string1)></col>");
 			$int8 = 1;
 		}
 	}

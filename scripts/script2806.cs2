@@ -9,7 +9,7 @@ if (if_gettop = interface_80) {
 	if_setposition(-35, 32, ^setpos_abs_centre, ^setpos_abs_top, interface_90:20);
 }
 if_setsize(calc($int0 - 20), calc($int1 - 10), ^setsize_abs, ^setsize_abs, interface_90:25);
-def_string $string0 = if_gettext(interface_90:25);
-if (compare($string0, "") ! 0) {
-	~deadman_broadcast_message_sizing($string0);
+def_string $text0 = if_gettext(interface_90:25);
+if (compare($text0, "") ! 0) {
+	~deadman_broadcast_message_sizing($text0);
 }

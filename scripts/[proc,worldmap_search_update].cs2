@@ -3,7 +3,7 @@
 def_mapelement $mapelement1 = null;
 def_coord $coord2 = null;
 def_int $int3 = 0;
-def_int $int4 = 0;
+def_int $index4 = 0;
 def_string $string1 = "";
 def_int $int5 = 0;
 def_string $string2 = "";
@@ -19,18 +19,18 @@ if (string_length($string0) > 0) {
 			$mapelement1, $coord2 = worldmap_listelement_start;
 			while ($coord6 = null & $mapelement1 ! null) {
 				$string1 = mec_text($mapelement1);
-				$int4 = string_length($string1);
-				if ($int4 > 0) {
+				$index4 = string_length($string1);
+				if ($index4 > 0) {
 					$string1 = ~script1299($string1, "<br>", " ");
-					$int4 = string_length($string1);
+					$index4 = string_length($string1);
 					$int5 = string_indexof_string(lowercase($string1), lowercase(%varcstring363), 0);
 					if ($int5 ! -1) {
 						if ($int5 > 0) {
 							$string2 = "<col=ff0000><substring($string1, 0, $int5)>";
 						}
 						$string2 = append($string2, "<col=ffffff><substring($string1, $int5, calc($int5 + $int3))>");
-						if (calc($int5 + $int3) < $int4) {
-							$string2 = append($string2, "<col=ff0000><substring($string1, calc($int5 + $int3), $int4)>");
+						if (calc($int5 + $int3) < $index4) {
+							$string2 = append($string2, "<col=ff0000><substring($string1, calc($int5 + $int3), $index4)>");
 						}
 						$coord6 = $coord2;
 					}
@@ -46,7 +46,7 @@ if (string_length($string0) > 0) {
 	} else {
 		.cc_settext("<col=ff0000>*</col>");
 	}
-	cc_setonkey("worldmap_search_input(event_keypressed, event_keytyped, $component0, cc_getid, .cc_getid, $coord6)");
+	cc_setonkey("worldmap_search_input(event_key, event_keychar, $component0, cc_getid, .cc_getid, $coord6)");
 	%varcint190 = 1;
 }
 ~script1739(if_getwidth($component0));

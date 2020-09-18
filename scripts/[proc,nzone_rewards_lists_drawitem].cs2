@@ -14,8 +14,8 @@ if (~kots_world = 0) {
 cc_setop(5, "Buy-X");
 cc_setop(10, "Examine");
 cc_setopbase("<col=ff9040><oc_name($namedobj0)>");
-cc_setonmouseover("cc_settrans(event_com, event_comid, 50, null)");
-cc_setonmouseleave("cc_settrans(event_com, event_comid, 0, null)");
+cc_setonmouseover("cc_settrans(event_com, event_comsubid, 50, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, null)");
 .cc_settextfont(p11_full);
 .cc_setcolour(0xff981f);
 .cc_settextshadow(true);

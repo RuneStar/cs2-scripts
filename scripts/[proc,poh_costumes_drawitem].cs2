@@ -1,5 +1,5 @@
 // 3538
-[proc,poh_costumes_drawitem](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, obj $obj6, int $int7, boolean $boolean8, component $component9, int $int10)(int, int, int)
+[proc,poh_costumes_drawitem](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, namedobj $namedobj6, int $num7, boolean $boolean8, component $component9, int $int10)(int, int, int)
 if ($int2 >= $int10) {
 	return($int0, $int1, $int2);
 }
@@ -7,20 +7,20 @@ if (cc_find($component9, $int2) = ^true) {
 	cc_sethide(false);
 	cc_clearops;
 	cc_setposition(calc($int4 + 42 * $int0), calc($int5 + 20 + 37 * $int1), ^setpos_abs_left, ^setpos_abs_top);
-	if ($int7 > 0) {
-		cc_setobject($obj6, $int7);
+	if ($num7 > 0) {
+		cc_setobject($namedobj6, $num7);
 		cc_settrans(0);
-		cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comid, 100, 0)");
+		cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comsubid, 100, 0)");
 		if ($boolean8 = true) {
 			cc_setop(1, "Take");
 		}
 	} else {
-		cc_setobject_nonum($obj6, 1);
+		cc_setobject_nonum($namedobj6, 1);
 		cc_settrans(140);
-		cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comid, 180, 140)");
+		cc_setonop("poh_costumes_opgraphic(event_opindex, event_com, event_comsubid, 180, 140)");
 	}
 	cc_setop(10, "Examine");
-	cc_setopbase("<col=ff9040><oc_name($obj6)></col>");
+	cc_setopbase("<col=ff9040><oc_name($namedobj6)></col>");
 	cc_setontimer(null);
 }
 $int0, $int2 = calc($int0 + 1), calc($int2 + 1);

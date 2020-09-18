@@ -14,11 +14,11 @@ def_int $int12 = 0;
 def_int $int13 = 0;
 def_int $int14 = 0;
 def_int $int15 = 0;
-def_int $int16 = if_getwidth($component0);
-def_int $int17 = if_getheight($component0);
+def_int $width16 = if_getwidth($component0);
+def_int $height17 = if_getheight($component0);
 if ($enum1 = enum_1745) {
-	$int14 = ~max(0, calc($int16 - if_getwidth(interface_601:14)));
-	$int15 = ~max(0, calc($int17 - if_getheight(interface_601:14)));
+	$int14 = ~max(0, calc($width16 - if_getwidth(interface_601:14)));
+	$int15 = ~max(0, calc($height17 - if_getheight(interface_601:14)));
 }
 if (%varbit4606 ! 0) {
 	if (%varbit4606 = 2) {
@@ -30,7 +30,7 @@ if (%varbit4606 ! 0) {
 	cam_setfollowheight(50);
 	if ($component2 ! null & $component3 ! null) {
 		$int10, $int11 = viewport_geteffectivesize;
-		$int12, $int13 = ~max(0, calc($int16 - $int10)), ~max(0, calc($int17 - $int11));
+		$int12, $int13 = ~max(0, calc($width16 - $int10)), ~max(0, calc($height17 - $int11));
 		if_setsize($int10, $int11, ^setsize_abs, ^setsize_abs, $component2);
 		if_setsize(calc($int10 - ~max(0, $int14 - $int12)), calc($int11 - ~max(0, $int15 - $int13)), ^setsize_abs, ^setsize_abs, $component3);
 		if ($component4 ! null & $component5 ! null) {
@@ -83,39 +83,39 @@ if ($component18 ! null) {
 	}
 }
 $component18 = enum(component, component, $enum1, interface_161:17);
-def_int $int19 = 0;
-def_int $int20 = 0;
+def_int $x19 = 0;
+def_int $y20 = 0;
 if ($component18 ! null) {
 	if (if_hassub(enum(component, component, $enum1, interface_161:9)) = true) {
 		if (%varbit4692 ! 0) {
-			$int20 = 0;
+			$y20 = 0;
 		} else {
-			$int20 = 38;
+			$y20 = 38;
 		}
 	}
 	if (~on_mobile = true) {
 		if (%varbit6254 = ^false) {
-			$int19 = calc(182 + 4);
+			$x19 = calc(182 + 4);
 		} else {
-			$int19 = calc(120 + 4);
+			$x19 = calc(120 + 4);
 		}
 	} else {
-		$int19 = 0;
+		$x19 = 0;
 	}
-	if_setposition($int19, $int20, ^setpos_abs_right, ^setpos_abs_top, $component18);
+	if_setposition($x19, $y20, ^setpos_abs_right, ^setpos_abs_top, $component18);
 }
 $component18 = enum(component, component, $enum1, interface_161:9);
-$int19 = 0;
+$x19 = 0;
 if ($component18 ! null) {
 	if (~on_mobile = true) {
 		if (%varbit6254 = ^false) {
-			$int19 = 182;
+			$x19 = 182;
 		} else {
-			$int19 = 120;
+			$x19 = 120;
 		}
 	} else {
-		$int19 = 0;
+		$x19 = 0;
 	}
-	if_setsize($int19, 0, ^setsize_minus, ^setsize_minus, $component18);
+	if_setsize($x19, 0, ^setsize_minus, ^setsize_minus, $component18);
 }
 ~toplevel_resize_customise($component0, $enum1);

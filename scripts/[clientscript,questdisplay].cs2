@@ -1,6 +1,6 @@
 // 1411
-[clientscript,questdisplay](coord $coord0, string $string0, string $string1, string $string2, string $string3)
-if_settext($string0, interface_473:2);
+[clientscript,questdisplay](coord $coord0, string $text0, string $string1, string $string2, string $string3)
+if_settext($text0, interface_473:2);
 def_int $int1 = 0;
 $int1 = ~questdisplay_setup($int1, "Free Quests", $string1, interface_473:4, ~quest_f2p_count, enum_2098);
 $int1 = ~questdisplay_setup($int1, "Members' Quests", $string2, interface_473:5, ~quest_members_count, enum_2099);

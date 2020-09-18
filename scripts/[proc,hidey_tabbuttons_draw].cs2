@@ -1,5 +1,5 @@
 // 1482
-[proc,hidey_tabbuttons_draw](component $component0, string $string0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+[proc,hidey_tabbuttons_draw](component $component0, string $text0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 cc_deleteall($component0);
 if ($component0 = $component1) {
 	cc_create($component0, ^iftype_graphic, 0);
@@ -22,7 +22,7 @@ if ($component0 = $component1) {
 	cc_settextshadow(true);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	cc_settext($string0);
+	cc_settext($text0);
 	if_setonmouseover(null, $component0);
 	if_setonmouseleave(null, $component0);
 	if_setonclick(null, $component0);
@@ -48,7 +48,7 @@ cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-cc_settext($string0);
+cc_settext($text0);
 if_setonmouseover("hidey_tabbuttons_hover(true, $component0)", $component0);
 if_setonmouseleave("hidey_tabbuttons_hover(false, $component0)", $component0);
 if_setonclick("hidey_tabbuttons($component0, $component2, $component3, $component4, $component5, $component6, $component7)", $component0);

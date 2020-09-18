@@ -2,7 +2,7 @@
 [clientscript,death_office_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
 def_int $int10 = ~steelborder($component1, ~death_office_title, 0);
 if (cc_find($component1, $int10) = ^true) {
-	cc_setoninvtransmit("death_office_title(event_com, event_comid){inv_636}");
+	cc_setoninvtransmit("death_office_title(event_com, event_comsubid){inv_636}");
 }
 ~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 $int10 = 0;
@@ -13,7 +13,7 @@ while ($int10 < 120) {
 	cc_setgraphicshadow(0x333333);
 	cc_setop(1, "Select");
 	cc_setop(10, "Examine");
-	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 	$int10 = calc($int10 + 1);
 }
 ~death_office_redraw($component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9);

@@ -1,14 +1,14 @@
 // 1718
-[clientscript,worldmap_toggles_op](int $int0, component $component1, int $int2, int $int3, component $component4, component $component5, component $component6)
-if ($int0 ! 1 | $int2 < 0 | $int2 > 4) {
+[clientscript,worldmap_toggles_op](int $opindex0, component $component1, int $index2, int $comsubid3, component $component4, component $component5, component $component6)
+if ($opindex0 ! 1 | $index2 < 0 | $index2 > 4) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);
-if (cc_find($component1, $int3) = ^true & .cc_find($component1, $int2) = ^true) {
-	if (testbit(%varbit5640, $int2) = ^true) {
-		%varbit5640 = clearbit(%varbit5640, $int2);
+if (cc_find($component1, $comsubid3) = ^true & .cc_find($component1, $index2) = ^true) {
+	if (testbit(%varbit5640, $index2) = ^true) {
+		%varbit5640 = clearbit(%varbit5640, $index2);
 	} else {
-		%varbit5640 = setbit(%varbit5640, $int2);
+		%varbit5640 = setbit(%varbit5640, $index2);
 	}
-	~worldmap_toggles_set($component1, $int2, $component4, $component5, $component6);
+	~worldmap_toggles_set($component1, $index2, $component4, $component5, $component6);
 }

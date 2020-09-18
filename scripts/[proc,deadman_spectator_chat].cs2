@@ -1,7 +1,7 @@
 // 2072
 [proc,deadman_spectator_chat](int $int0)
 if ($int0 = 1) {
-	~chat_set_filter(2, 2);
+	~chat_set_filter(2, ^chatfilter_off);
 } else if ($int0 = 2) {
-	~chat_set_filter(2, 0);
+	~chat_set_filter(2, ^chatfilter_on);
 }

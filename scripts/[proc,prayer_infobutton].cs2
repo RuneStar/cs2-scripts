@@ -4,13 +4,13 @@ if_sethide($boolean0, $component6);
 ~deltooltip_action($component7);
 %varcint218 = null;
 cc_deleteall($component5);
-def_int $int8 = 0;
+def_int $comsubid8 = 0;
 if ($boolean0 = true) {
-	$int8 = ~options_button_off($component5, 0);
+	$comsubid8 = ~options_button_off($component5, 0);
 } else {
-	$int8 = ~options_button_on($component5, 0);
+	$comsubid8 = ~options_button_on($component5, 0);
 }
-cc_create($component5, ^iftype_text, $int8);
+cc_create($component5, ^iftype_text, $comsubid8);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

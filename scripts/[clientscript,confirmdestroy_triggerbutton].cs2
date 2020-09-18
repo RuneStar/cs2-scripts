@@ -1,11 +1,11 @@
 // 1651
-[clientscript,confirmdestroy_triggerbutton](int $int0, char $char1, component $component2, string $string0, int $int3, string $string1, int $int4)
+[clientscript,confirmdestroy_triggerbutton](int $int0, char $char1, component $component2, string $string0, int $int3, string $string1, int $comsubid4)
 if ($int0 = 1 | $char1 ! null & string_indexof_char($string1, $char1) ! -1) {
 	if ($int0 ! 1 & ~keypress_permit(584, -1) = 0) {
 		return;
 	}
 	sound_synth(synth_2266, 1, 0);
-	if (cc_find($component2, $int4) = ^true) {
+	if (cc_find($component2, $comsubid4) = ^true) {
 		cc_setcolour(^white);
 		cc_settext("...");
 	}

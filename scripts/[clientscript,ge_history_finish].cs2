@@ -1,8 +1,8 @@
 // 1646
 [clientscript,ge_history_finish]
-def_int $int0 = 0;
+def_int $height0 = 0;
 if (%varcint43 > 0) {
-	$int0 = calc(%varcint43 * 38);
+	$height0 = calc(%varcint43 * 38);
 } else {
 	cc_deleteall(interface_383:3);
 	cc_create(interface_383:3, ^iftype_text, 0);
@@ -15,8 +15,8 @@ if (%varcint43 > 0) {
 	cc_settext("You have no recorded Grand Exchange trades.");
 }
 if_setscrollpos(0, 0, interface_383:3);
-if ($int0 > if_getheight(interface_383:3)) {
-	if_setscrollsize(0, $int0, interface_383:3);
+if ($height0 > if_getheight(interface_383:3)) {
+	if_setscrollsize(0, $height0, interface_383:3);
 } else {
 	if_setscrollsize(0, 0, interface_383:3);
 }

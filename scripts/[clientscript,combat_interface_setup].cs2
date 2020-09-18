@@ -1,20 +1,20 @@
 // 420
 [clientscript,combat_interface_setup]
-def_int $intarray0(4);
-def_int $intarray1(4);
+def_int $xarray0(4);
+def_int $yarray1(4);
 def_int $int0 = 45;
 def_int $int1 = 71;
 def_int $int2 = 47;
 def_int $int3 = 32;
-def_int $int4 = 26;
+def_int $height4 = 26;
 def_int $int5 = 12;
 def_int $int6 = 8;
 def_int $int7 = 4;
 def_int $int8 = 7;
 def_int $int9 = 20;
 def_int $int10 = 0;
-def_int $int11 = calc(3 * $int3 + 2 * $int7);
-def_int $int12 = 50;
+def_int $height11 = calc(3 * $int3 + 2 * $int7);
+def_int $height12 = 50;
 def_int $int13 = 44;
 if (~on_mobile = true) {
 	$int0 = 43;
@@ -25,9 +25,9 @@ if (~on_mobile = true) {
 	$int9 = 5;
 	$int13 = $int2;
 	if (%varbit357 = 18 | %varbit357 = 21) {
-		$int4 = calc($int2 - 6);
+		$height4 = calc($int2 - 6);
 	} else {
-		$int4 = calc($int2 - 2);
+		$height4 = calc($int2 - 2);
 	}
 	$int5 = 20;
 	if_setsize(190, 16, ^setsize_abs, ^setsize_abs, interface_593:2);
@@ -36,14 +36,14 @@ if (~on_mobile = true) {
 }
 if (%varbit357 = 18 | %varbit357 = 21) {
 	if_sethide(false, interface_593:20);
-	$intarray0(0) = $int9;
-	$intarray0(1) = $int9;
-	$intarray0(2) = $int9;
-	$intarray0(3) = $int9;
-	$intarray1(0) = $int0;
-	$intarray1(1) = calc($int0 + $int3 + $int7);
-	$intarray1(2) = calc($int0 + 2 * ($int3 + $int7));
-	$intarray1(3) = calc($int0 + 3 * ($int3 + $int7));
+	$xarray0(0) = $int9;
+	$xarray0(1) = $int9;
+	$xarray0(2) = $int9;
+	$xarray0(3) = $int9;
+	$yarray1(0) = $int0;
+	$yarray1(1) = calc($int0 + $int3 + $int7);
+	$yarray1(2) = calc($int0 + 2 * ($int3 + $int7));
+	$yarray1(3) = calc($int0 + 3 * ($int3 + $int7));
 	$int10 = calc($int0 + 3 * ($int3 + $int7));
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, interface_593:4);
 	if_setsize($int1, $int3, ^setsize_abs, ^setsize_abs, interface_593:8);
@@ -64,14 +64,14 @@ if (%varbit357 = 18 | %varbit357 = 21) {
 	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_centre, interface_593:19);
 } else {
 	if_sethide(true, interface_593:20);
-	$intarray0(0) = $int9;
-	$intarray0(1) = calc($int9 + $int1 + $int6);
-	$intarray0(2) = $int9;
-	$intarray0(3) = calc($int9 + $int1 + $int6);
-	$intarray1(0) = $int0;
-	$intarray1(1) = $int0;
-	$intarray1(2) = calc($int0 + $int2 + $int8);
-	$intarray1(3) = calc($int0 + $int2 + $int8);
+	$xarray0(0) = $int9;
+	$xarray0(1) = calc($int9 + $int1 + $int6);
+	$xarray0(2) = $int9;
+	$xarray0(3) = calc($int9 + $int1 + $int6);
+	$yarray1(0) = $int0;
+	$yarray1(1) = $int0;
+	$yarray1(2) = calc($int0 + $int2 + $int8);
+	$yarray1(3) = calc($int0 + $int2 + $int8);
 	$int10 = calc($int0 + 2 * ($int2 + $int8));
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, interface_593:4);
 	if_setsize($int1, $int2, ^setsize_abs, ^setsize_abs, interface_593:8);
@@ -98,21 +98,21 @@ if (%varbit357 = 18 | %varbit357 = 21) {
 }
 if_setsize(calc($int6 + 2 * $int1), $int13, ^setsize_abs, ^setsize_abs, interface_593:30);
 if_setposition(0, $int10, ^setpos_abs_centre, ^setpos_abs_top, interface_593:30);
-if_setsize(calc($int6 + 2 * $int1), $int4, ^setsize_abs, ^setsize_abs, interface_593:35);
+if_setsize(calc($int6 + 2 * $int1), $height4, ^setsize_abs, ^setsize_abs, interface_593:35);
 if_setposition(0, calc($int10 + $int13 + $int8), ^setpos_abs_centre, ^setpos_abs_top, interface_593:35);
-if_setsize($int1, $int11, ^setsize_abs, ^setsize_abs, interface_593:20);
+if_setsize($int1, $height11, ^setsize_abs, ^setsize_abs, interface_593:20);
 if_setposition(calc($int9 + $int1 + $int6), $int0, ^setpos_abs_left, ^setpos_abs_top, interface_593:20);
-if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, interface_593:26);
-if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, interface_593:27);
-if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, interface_593:21);
-if_setsize($int1, $int12, ^setsize_abs, ^setsize_abs, interface_593:22);
+if_setsize($int1, $height12, ^setsize_abs, ^setsize_abs, interface_593:26);
+if_setsize($int1, $height12, ^setsize_abs, ^setsize_abs, interface_593:27);
+if_setsize($int1, $height12, ^setsize_abs, ^setsize_abs, interface_593:21);
+if_setsize($int1, $height12, ^setsize_abs, ^setsize_abs, interface_593:22);
 if_setsize(if_getwidth(interface_593:37), $int5, ^setsize_abs, ^setsize_abs, interface_593:37);
 if_setsize(if_getwidth(interface_593:41), calc($int5 + 2), ^setsize_abs, ^setsize_abs, interface_593:41);
 if_setsize(if_getwidth(interface_593:38), $int5, ^setsize_abs, ^setsize_abs, interface_593:38);
-def_string $string0 = "";
-def_string $string1 = "";
-def_string $string2 = "";
-def_string $string3 = "";
+def_string $op0 = "";
+def_string $op1 = "";
+def_string $op2 = "";
+def_string $op3 = "";
 def_string $string4 = "";
 def_string $string5 = "";
 def_string $string6 = "";
@@ -122,136 +122,136 @@ def_graphic $graphic15 = null;
 def_graphic $graphic16 = null;
 def_graphic $graphic17 = null;
 if (%varbit357 = 1) {
-	$string0, $string4, $graphic14 = "Chop", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons,1";
-	$string1, $string5, $graphic15 = "Hack", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,2";
-	$string2, $string6, $graphic16 = "Smash", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,3";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons,0";
+	$op0, $string4, $graphic14 = "Chop", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons,1";
+	$op1, $string5, $graphic15 = "Hack", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,2";
+	$op2, $string6, $graphic16 = "Smash", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,3";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons,0";
 } else if (%varbit357 = 2) {
-	$string0, $string4, $graphic14 = "Pound", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons2,2";
-	$string1, $string5, $graphic15 = "Pummel", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,3";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons2,0";
+	$op0, $string4, $graphic14 = "Pound", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons2,2";
+	$op1, $string5, $graphic15 = "Pummel", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,3";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons2,0";
 } else if (%varbit357 = 26) {
-	$string0, $string4, $graphic14 = "Pound", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,2";
-	$string1, $string5, $graphic15 = "Pummel", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,3";
-	$string3, $string7, $graphic17 = "Smash", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,0";
+	$op0, $string4, $graphic14 = "Pound", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,2";
+	$op1, $string5, $graphic15 = "Pummel", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,3";
+	$op3, $string7, $graphic17 = "Smash", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,0";
 } else if (%varbit357 = 3) {
-	$string0, $string4, $graphic14 = "Accurate", "(Accurate)<br>(Ranged XP)", "combaticons2,15";
-	$string1, $string5, $graphic15 = "Rapid", "(Rapid)<br>(Ranged XP)", "combaticons2,16";
-	$string3, $string7, $graphic17 = "Longrange", "(Longrange)<br>(Ranged XP)<br>(Defence XP)", "combaticons2,17";
+	$op0, $string4, $graphic14 = "Accurate", "(Accurate)<br>(Ranged XP)", "combaticons2,15";
+	$op1, $string5, $graphic15 = "Rapid", "(Rapid)<br>(Ranged XP)", "combaticons2,16";
+	$op3, $string7, $graphic17 = "Longrange", "(Longrange)<br>(Ranged XP)<br>(Defence XP)", "combaticons2,17";
 } else if (%varbit357 = 4) {
-	$string0, $string4, $graphic14 = "Chop", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons3,6";
-	$string1, $string5, $graphic15 = "Slash", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons3,5";
-	$string2, $string6, $graphic16 = "Lunge", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons3,4";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons3,7";
+	$op0, $string4, $graphic14 = "Chop", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons3,6";
+	$op1, $string5, $graphic15 = "Slash", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons3,5";
+	$op2, $string6, $graphic16 = "Lunge", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons3,4";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons3,7";
 } else if (%varbit357 = 5) {
-	$string0, $string4, $graphic14 = "Accurate", "(Accurate)<br>(Ranged XP)", "combaticons2,5";
-	$string1, $string5, $graphic15 = "Rapid", "(Rapid)<br>(Ranged XP)", "combaticons2,6";
-	$string3, $string7, $graphic17 = "Longrange", "(Longrange)<br>(Ranged XP)<br>(Defence XP)", "combaticons2,7";
+	$op0, $string4, $graphic14 = "Accurate", "(Accurate)<br>(Ranged XP)", "combaticons2,5";
+	$op1, $string5, $graphic15 = "Rapid", "(Rapid)<br>(Ranged XP)", "combaticons2,6";
+	$op3, $string7, $graphic17 = "Longrange", "(Longrange)<br>(Ranged XP)<br>(Defence XP)", "combaticons2,7";
 } else if (%varbit357 = 6) {
-	$string0, $string4, $graphic14 = "Scorch", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons3,16";
-	$string1, $string5, $graphic15 = "Flare", "(Accurate)<br>(Ranged)<br>(Ranged XP)", "combaticons3,17";
-	$string2, $string6, $graphic16 = "Blaze", "(Defensive)<br>(Magic)<br>(Magic XP)", "combaticons3,18";
+	$op0, $string4, $graphic14 = "Scorch", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons3,16";
+	$op1, $string5, $graphic15 = "Flare", "(Accurate)<br>(Ranged)<br>(Ranged XP)", "combaticons3,17";
+	$op2, $string6, $graphic16 = "Blaze", "(Defensive)<br>(Magic)<br>(Magic XP)", "combaticons3,18";
 } else if (%varbit357 = 7) {
-	$string0, $string4, $graphic14 = "Short fuse", "(Short fuse)<br>(Ranged XP)", "combaticons3,15";
-	$string1, $string5, $graphic15 = "Medium fuse", "(Medium fuse)<br>(Ranged XP)", "combaticons3,9";
-	$string3, $string7, $graphic17 = "Long fuse", "(Long fuse)<br>(Ranged XP)<br>(Defence XP)", "combaticons3,8";
+	$op0, $string4, $graphic14 = "Short fuse", "(Short fuse)<br>(Ranged XP)", "combaticons3,15";
+	$op1, $string5, $graphic15 = "Medium fuse", "(Medium fuse)<br>(Ranged XP)", "combaticons3,9";
+	$op3, $string7, $graphic17 = "Long fuse", "(Long fuse)<br>(Ranged XP)<br>(Defence XP)", "combaticons3,8";
 } else if (%varbit357 = 8) {
-	$string0, $string4, $graphic14 = "Aim and Fire", "(Aim and Fire)", "prayeron,13";
-	$string1, $string5, $graphic15 = "Kick", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,15";
+	$op0, $string4, $graphic14 = "Aim and Fire", "(Aim and Fire)", "prayeron,13";
+	$op1, $string5, $graphic15 = "Kick", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,15";
 } else if (%varbit357 = 9) {
-	$string0, $string4, $graphic14 = "Chop", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons,6";
-	$string1, $string5, $graphic15 = "Slash", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,5";
-	$string2, $string6, $graphic16 = "Lunge", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons,7";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons,4";
+	$op0, $string4, $graphic14 = "Chop", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons,6";
+	$op1, $string5, $graphic15 = "Slash", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,5";
+	$op2, $string6, $graphic16 = "Lunge", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons,7";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons,4";
 } else if (%varbit357 = 10) {
-	$string0, $string4, $graphic14 = "Chop", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons,6";
-	$string1, $string5, $graphic15 = "Slash", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,5";
-	$string2, $string6, $graphic16 = "Smash", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,5";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons,4";
+	$op0, $string4, $graphic14 = "Chop", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons,6";
+	$op1, $string5, $graphic15 = "Slash", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,5";
+	$op2, $string6, $graphic16 = "Smash", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,5";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons,4";
 } else if (%varbit357 = 22) {
-	$string0, $string4, $graphic14 = "Chop", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons,6";
-	$string1, $string5, $graphic15 = "Slash", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,5";
-	$string2, $string6, $graphic16 = "Smash", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,5";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons,4";
+	$op0, $string4, $graphic14 = "Chop", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons,6";
+	$op1, $string5, $graphic15 = "Slash", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,5";
+	$op2, $string6, $graphic16 = "Smash", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,5";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons,4";
 } else if (%varbit357 = 11) {
-	$string0, $string4, $graphic14 = "Spike", "(Accurate)<br>(Stab)<br>(Attack XP)", "combaticons3,1";
-	$string1, $string5, $graphic15 = "Impale", "(Aggressive)<br>(Stab)<br>(Strength XP)", "combaticons3,3";
-	$string2, $string6, $graphic16 = "Smash", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons3,2";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons3,0";
+	$op0, $string4, $graphic14 = "Spike", "(Accurate)<br>(Stab)<br>(Attack XP)", "combaticons3,1";
+	$op1, $string5, $graphic15 = "Impale", "(Aggressive)<br>(Stab)<br>(Strength XP)", "combaticons3,3";
+	$op2, $string6, $graphic16 = "Smash", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons3,2";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons3,0";
 } else if (%varbit357 = 12) {
-	$string0, $string4, $graphic14 = "Jab", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons3,11";
-	$string1, $string5, $graphic15 = "Swipe", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons3,12";
-	$string3, $string7, $graphic17 = "Fend", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons3,10";
+	$op0, $string4, $graphic14 = "Jab", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons3,11";
+	$op1, $string5, $graphic15 = "Swipe", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons3,12";
+	$op3, $string7, $graphic17 = "Fend", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons3,10";
 } else if (%varbit357 = 25) {
-	$string0, $string4, $graphic14 = "Jab", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons3,11";
-	$string1, $string5, $graphic15 = "Swipe", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons3,12";
-	$string3, $string7, $graphic17 = "Fend", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons3,10";
+	$op0, $string4, $graphic14 = "Jab", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons3,11";
+	$op1, $string5, $graphic15 = "Swipe", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons3,12";
+	$op3, $string7, $graphic17 = "Fend", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons3,10";
 } else if (%varbit357 = 13) {
-	$string0, $string4, $graphic14 = "Bash", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons2,13";
-	$string1, $string5, $graphic15 = "Pound", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,14";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons,19";
+	$op0, $string4, $graphic14 = "Bash", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons2,13";
+	$op1, $string5, $graphic15 = "Pound", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,14";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons,19";
 } else if (%varbit357 = 14) {
-	$string0, $string4, $graphic14 = "Reap", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons2,19";
-	$string1, $string5, $graphic15 = "Chop", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons2,9";
-	$string2, $string6, $graphic16 = "Jab", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,18";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons2,8";
+	$op0, $string4, $graphic14 = "Reap", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons2,19";
+	$op1, $string5, $graphic15 = "Chop", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons2,9";
+	$op2, $string6, $graphic16 = "Jab", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,18";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons2,8";
 } else if (%varbit357 = 15) {
-	$string0, $string4, $graphic14 = "Lunge", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons,8";
-	$string1, $string5, $graphic15 = "Swipe", "(Controlled)<br>(Slash)<br>(Shared XP)", "combaticons,18";
-	$string2, $string6, $graphic16 = "Pound", "(Controlled)<br>(Crush)<br>(Shared XP)", "combaticons,9";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons,17";
+	$op0, $string4, $graphic14 = "Lunge", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons,8";
+	$op1, $string5, $graphic15 = "Swipe", "(Controlled)<br>(Slash)<br>(Shared XP)", "combaticons,18";
+	$op2, $string6, $graphic16 = "Pound", "(Controlled)<br>(Crush)<br>(Shared XP)", "combaticons,9";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons,17";
 } else if (%varbit357 = 24) {
-	$string0, $string4, $graphic14 = "Lunge", "(Accurate)<br>(Stab)<br>(Attack XP)", "combaticons,8";
-	$string1, $string5, $graphic15 = "Swipe", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,18";
-	$string2, $string6, $graphic16 = "Pound", "(Controlled)<br>(Crush)<br>(Shared XP)", "combaticons,9";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons,17";
+	$op0, $string4, $graphic14 = "Lunge", "(Accurate)<br>(Stab)<br>(Attack XP)", "combaticons,8";
+	$op1, $string5, $graphic15 = "Swipe", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,18";
+	$op2, $string6, $graphic16 = "Pound", "(Controlled)<br>(Crush)<br>(Shared XP)", "combaticons,9";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons,17";
 } else if (%varbit357 = 16) {
-	$string0, $string4, $graphic14 = "Pound", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons,13";
-	$string1, $string5, $graphic15 = "Pummel", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,11";
-	$string2, $string6, $graphic16 = "Spike", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons,12";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons,10";
+	$op0, $string4, $graphic14 = "Pound", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons,13";
+	$op1, $string5, $graphic15 = "Pummel", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,11";
+	$op2, $string6, $graphic16 = "Spike", "(Controlled)<br>(Stab)<br>(Shared XP)", "combaticons,12";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons,10";
 } else if (%varbit357 = 17) {
-	$string0, $string4, $graphic14 = "Stab", "(Accurate)<br>(Stab)<br>(Attack XP)", "combaticons,7";
-	$string1, $string5, $graphic15 = "Lunge", "(Aggressive)<br>(Stab)<br>(Strength XP)", "combaticons,6";
-	$string2, $string6, $graphic16 = "Slash", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,5";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons,4";
+	$op0, $string4, $graphic14 = "Stab", "(Accurate)<br>(Stab)<br>(Attack XP)", "combaticons,7";
+	$op1, $string5, $graphic15 = "Lunge", "(Aggressive)<br>(Stab)<br>(Strength XP)", "combaticons,6";
+	$op2, $string6, $graphic16 = "Slash", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons,5";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Stab)<br>(Defence XP)", "combaticons,4";
 } else if (%varbit357 = 18) {
-	$string0, $string4, $graphic14 = "Bash", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons2,13";
-	$string1, $string5, $graphic15 = "Pound", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,14";
-	$string3, $string7, $graphic17 = "Focus", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons,19";
+	$op0, $string4, $graphic14 = "Bash", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons2,13";
+	$op1, $string5, $graphic15 = "Pound", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons2,14";
+	$op3, $string7, $graphic17 = "Focus", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons,19";
 } else if (%varbit357 = 21) {
-	$string0, $string4, $graphic14 = "Jab", "(Accurate)<br>(Stab)<br>(Attack XP)", "combaticons2,13";
-	$string1, $string5, $graphic15 = "Swipe", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons2,14";
-	$string3, $string7, $graphic17 = "Fend", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons,19";
+	$op0, $string4, $graphic14 = "Jab", "(Accurate)<br>(Stab)<br>(Attack XP)", "combaticons2,13";
+	$op1, $string5, $graphic15 = "Swipe", "(Aggressive)<br>(Slash)<br>(Strength XP)", "combaticons2,14";
+	$op3, $string7, $graphic17 = "Fend", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons,19";
 } else if (%varbit357 = 19) {
-	$string0, $string4, $graphic14 = "Accurate", "(Accurate)<br>(Ranged XP)", "combaticons2,10";
-	$string1, $string5, $graphic15 = "Rapid", "(Rapid)<br>(Ranged XP)", "combaticons2,11";
-	$string3, $string7, $graphic17 = "Longrange", "(Longrange)<br>(Ranged XP)<br>(Defence XP)", "combaticons2,12";
+	$op0, $string4, $graphic14 = "Accurate", "(Accurate)<br>(Ranged XP)", "combaticons2,10";
+	$op1, $string5, $graphic15 = "Rapid", "(Rapid)<br>(Ranged XP)", "combaticons2,11";
+	$op3, $string7, $graphic17 = "Longrange", "(Longrange)<br>(Ranged XP)<br>(Defence XP)", "combaticons2,12";
 } else if (%varbit357 = 20) {
-	$string0, $string4, $graphic14 = "Flick", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons3,13";
-	$string1, $string5, $graphic15 = "Lash", "(Controlled)<br>(Slash)<br>(Shared XP)", "combaticons3,14";
-	$string3, $string7, $graphic17 = "Deflect", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons3,13";
+	$op0, $string4, $graphic14 = "Flick", "(Accurate)<br>(Slash)<br>(Attack XP)", "combaticons3,13";
+	$op1, $string5, $graphic15 = "Lash", "(Controlled)<br>(Slash)<br>(Shared XP)", "combaticons3,14";
+	$op3, $string7, $graphic17 = "Deflect", "(Defensive)<br>(Slash)<br>(Defence XP)", "combaticons3,13";
 } else if (%varbit357 = 23) {
-	$string0, $string4, $graphic14 = "Accurate", "(Accurate)<br>(Magic XP)", "combaticons2,10";
-	$string1, $string5, $graphic15 = "Accurate", "(Accurate)<br>(Magic XP)", "combaticons2,10";
-	$string3, $string7, $graphic17 = "Longrange", "(Longrange)<br>(Magic XP)<br>(Defence XP)", "combaticons2,12";
+	$op0, $string4, $graphic14 = "Accurate", "(Accurate)<br>(Magic XP)", "combaticons2,10";
+	$op1, $string5, $graphic15 = "Accurate", "(Accurate)<br>(Magic XP)", "combaticons2,10";
+	$op3, $string7, $graphic17 = "Longrange", "(Longrange)<br>(Magic XP)<br>(Defence XP)", "combaticons2,12";
 } else if (%varbit357 = 27) {
-	$string0, $string4, $graphic14 = "Pummel", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons2,1";
-	$string3, $string7, $graphic17 = "Block", "No attacking!", "combaticons2,0";
+	$op0, $string4, $graphic14 = "Pummel", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons2,1";
+	$op3, $string7, $graphic17 = "Block", "No attacking!", "combaticons2,0";
 } else {
-	$string0, $string4, $graphic14 = "Punch", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons,14";
-	$string1, $string5, $graphic15 = "Kick", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,15";
-	$string3, $string7, $graphic17 = "Block", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons,16";
+	$op0, $string4, $graphic14 = "Punch", "(Accurate)<br>(Crush)<br>(Attack XP)", "combaticons,14";
+	$op1, $string5, $graphic15 = "Kick", "(Aggressive)<br>(Crush)<br>(Strength XP)", "combaticons,15";
+	$op3, $string7, $graphic17 = "Block", "(Defensive)<br>(Crush)<br>(Defence XP)", "combaticons,16";
 }
 ~combat_interface_setbuttons($graphic14, $graphic15, $graphic16, $graphic17);
 def_int $int18 = 0;
 if ($graphic14 ! null) {
 	if_sethide(false, interface_593:4);
-	if_setposition($intarray0($int18), $intarray1($int18), ^setpos_abs_left, ^setpos_abs_top, interface_593:4);
+	if_setposition($xarray0($int18), $yarray1($int18), ^setpos_abs_left, ^setpos_abs_top, interface_593:4);
 	$int18 = calc($int18 + 1);
 	if_setgraphic($graphic14, interface_593:6);
-	if_settext($string0, interface_593:7);
-	if_setop(1, $string0, interface_593:4);
+	if_settext($op0, interface_593:7);
+	if_setop(1, $op0, interface_593:4);
 	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 0)", interface_593:4);
 	if_setonmouseleave("deltooltip(interface_593:42)", interface_593:4);
 	if (string_length($string4) > 0) {
@@ -262,11 +262,11 @@ if ($graphic14 ! null) {
 }
 if ($graphic15 ! null) {
 	if_sethide(false, interface_593:8);
-	if_setposition($intarray0($int18), $intarray1($int18), ^setpos_abs_left, ^setpos_abs_top, interface_593:8);
+	if_setposition($xarray0($int18), $yarray1($int18), ^setpos_abs_left, ^setpos_abs_top, interface_593:8);
 	$int18 = calc($int18 + 1);
 	if_setgraphic($graphic15, interface_593:10);
-	if_settext($string1, interface_593:11);
-	if_setop(1, $string1, interface_593:8);
+	if_settext($op1, interface_593:11);
+	if_setop(1, $op1, interface_593:8);
 	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 1)", interface_593:8);
 	if_setonmouseleave("deltooltip(interface_593:42)", interface_593:8);
 	if (string_length($string5) > 0) {
@@ -277,11 +277,11 @@ if ($graphic15 ! null) {
 }
 if ($graphic16 ! null) {
 	if_sethide(false, interface_593:12);
-	if_setposition($intarray0($int18), $intarray1($int18), ^setpos_abs_left, ^setpos_abs_top, interface_593:12);
+	if_setposition($xarray0($int18), $yarray1($int18), ^setpos_abs_left, ^setpos_abs_top, interface_593:12);
 	$int18 = calc($int18 + 1);
 	if_setgraphic($graphic16, interface_593:14);
-	if_settext($string2, interface_593:15);
-	if_setop(1, $string2, interface_593:12);
+	if_settext($op2, interface_593:15);
+	if_setop(1, $op2, interface_593:12);
 	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 2)", interface_593:12);
 	if_setonmouseleave("deltooltip(interface_593:42)", interface_593:12);
 	if (string_length($string6) > 0) {
@@ -292,11 +292,11 @@ if ($graphic16 ! null) {
 }
 if ($graphic17 ! null) {
 	if_sethide(false, interface_593:16);
-	if_setposition($intarray0($int18), $intarray1($int18), ^setpos_abs_left, ^setpos_abs_top, interface_593:16);
+	if_setposition($xarray0($int18), $yarray1($int18), ^setpos_abs_left, ^setpos_abs_top, interface_593:16);
 	$int18 = calc($int18 + 1);
 	if_setgraphic($graphic17, interface_593:18);
-	if_settext($string3, interface_593:19);
-	if_setop(1, $string3, interface_593:16);
+	if_settext($op3, interface_593:19);
+	if_setop(1, $op3, interface_593:16);
 	if_setonop("combat_interface_opbutton($graphic14, $graphic15, $graphic16, $graphic17, event_opindex, 3)", interface_593:16);
 	if_setonmouseleave("deltooltip(interface_593:42)", interface_593:16);
 	if (string_length($string7) > 0) {

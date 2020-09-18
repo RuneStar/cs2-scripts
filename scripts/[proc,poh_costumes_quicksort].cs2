@@ -1,18 +1,18 @@
 // 3543
 [proc,poh_costumes_quicksort](intarray $intarray0, int $int1, int $int2, enum $enum3)
-def_int $int4 = calc(($int1 + $int2) / 2);
-def_int $int5 = $intarray0($int4);
-$intarray0($int4) = $intarray0($int2);
+def_int $index4 = calc(($int1 + $int2) / 2);
+def_int $int5 = $intarray0($index4);
+$intarray0($index4) = $intarray0($int2);
 $intarray0($int2) = $int5;
-def_obj $obj6 = null;
-def_obj $obj7 = enum(int, namedobj, $enum3, $int5);
-def_string $string0 = enum(obj, string, enum_3302, $obj7);
+def_namedobj $namedobj6 = null;
+def_namedobj $namedobj7 = enum(int, namedobj, $enum3, $int5);
+def_string $string0 = enum(obj, string, enum_3302, $namedobj7);
 def_int $int8 = $int1;
 def_int $int9 = $int1;
 def_int $int10 = -1;
 while ($int9 < $int2) {
-	$obj6 = enum(int, namedobj, $enum3, $intarray0($int9));
-	if (compare(enum(obj, string, enum_3302, $obj6), $string0) <= 0) {
+	$namedobj6 = enum(int, namedobj, $enum3, $intarray0($int9));
+	if (compare(enum(obj, string, enum_3302, $namedobj6), $string0) <= 0) {
 		$int10 = $intarray0($int9);
 		$intarray0($int9) = $intarray0($int8);
 		$intarray0($int8) = $int10;

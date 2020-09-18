@@ -1,14 +1,14 @@
 // 2807
 [proc,deadman_broadcast_message_sizing](string $string0)
-def_int $int0 = 60;
-def_int $int1 = if_getwidth(interface_90:25);
+def_int $height0 = 60;
+def_int $width1 = if_getwidth(interface_90:25);
 def_int $int2 = if_getwidth(interface_90:20);
-def_int $int3 = parawidth($string0, $int1, q8_full);
-def_int $int4 = paraheight($string0, $int1, q8_full);
-if ($int4 = 1 & $int2 > calc($int3 + 20)) {
-	$int2 = calc($int3 + 20);
+def_int $width3 = parawidth($string0, $width1, q8_full);
+def_int $height4 = paraheight($string0, $width1, q8_full);
+if ($height4 = 1 & $int2 > calc($width3 + 20)) {
+	$int2 = calc($width3 + 20);
 }
-if_setsize($int2, $int0, ^setsize_abs, ^setsize_abs, interface_90:21);
-if_setsize($int2, $int0, ^setsize_abs, ^setsize_abs, interface_90:24);
-if_setsize(calc($int2 - 4), $int0, ^setsize_abs, ^setsize_abs, interface_90:23);
-if_setsize($int2, $int0, ^setsize_abs, ^setsize_abs, interface_90:22);
+if_setsize($int2, $height0, ^setsize_abs, ^setsize_abs, interface_90:21);
+if_setsize($int2, $height0, ^setsize_abs, ^setsize_abs, interface_90:24);
+if_setsize(calc($int2 - 4), $height0, ^setsize_abs, ^setsize_abs, interface_90:23);
+if_setsize($int2, $height0, ^setsize_abs, ^setsize_abs, interface_90:22);

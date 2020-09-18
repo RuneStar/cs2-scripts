@@ -1,5 +1,5 @@
 // 1263
-[clientscript,deadman_tournament_refresh_reset](int $int0, component $component1)
-if (clientclock >= $int0) {
+[clientscript,deadman_tournament_refresh_reset](int $clock0, component $component1)
+if (clientclock >= $clock0) {
 	~deadman_tournament_refresh_reset($component1);
 }

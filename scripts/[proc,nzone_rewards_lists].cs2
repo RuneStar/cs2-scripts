@@ -2,8 +2,8 @@
 [proc,nzone_rewards_lists](component $component0, component $component1)
 cc_deleteall($component0);
 cc_deleteall($component1);
-def_int $int2 = if_getwidth($component0);
-def_int $int3 = calc($int2 / 7);
+def_int $width2 = if_getwidth($component0);
+def_int $int3 = calc($width2 / 7);
 def_int $int4 = calc(($int3 - 36) / 2);
 def_int $int5 = calc(32 + 20);
 def_int $int6 = 0;
@@ -18,9 +18,9 @@ while ($namedobj7 ! null) {
 	$namedobj7 = enum(int, namedobj, enum_709, $int6);
 }
 def_string $string0 = "These items will give you a benefit in future Nightmare Zone dreams, and cannot be used elsewhere.<br><br>Dominic's potions are sold by the dose. When you purchase a dose, it is automatically stored in Dominic's barrels until you collect it.<br><br>The figures in <col=ffffff>white</col> show the number of doses you've got stored already.";
-$int2 = if_getwidth($component1);
-def_int $int8 = calc(paraheight($string0, $int2, p12_full) * 12 + 5);
-$int3 = calc($int2 / 7);
+$width2 = if_getwidth($component1);
+def_int $int8 = calc(paraheight($string0, $width2, p12_full) * 12 + 5);
+$int3 = calc($width2 / 7);
 $int4 = calc(($int3 - 36) / 2);
 $int5 = calc(32 + 40);
 $int6 = 0;
@@ -39,12 +39,12 @@ while ($namedobj7 ! null) {
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	~nzone_rewards_updatepotion($namedobj7);
-	cc_setonvartransmit("nzone_rewards_updatepotion(event_com, event_comid, $namedobj7){var1066}");
+	cc_setonvartransmit("nzone_rewards_updatepotion(event_com, event_comsubid, $namedobj7){var1066}");
 	$int6 = calc($int6 + 1);
 	$namedobj7 = enum(int, namedobj, enum_814, $int6);
 }
 cc_create($component1, ^iftype_text, calc($int6 * 3));
-cc_setsize($int2, $int8, ^setsize_abs, ^setsize_abs);
+cc_setsize($width2, $int8, ^setsize_abs, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextfont(p12_full);
 cc_setcolour(0xff981f);

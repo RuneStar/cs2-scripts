@@ -1,11 +1,11 @@
 // 2348
 script2348(component $component0)
 def_obj $obj1 = inv_getobj(inv_612, 0);
-def_string $string0 = "";
+def_string $opbase0 = "";
 if ($obj1 ! null) {
-	$string0 = "<col=ff981f><oc_name($obj1)>";
+	$opbase0 = "<col=ff981f><oc_name($obj1)>";
 	if_setobject($obj1, -1, $component0);
-	if_setopbase($string0, $component0);
+	if_setopbase($opbase0, $component0);
 	if_setmodelangle(0, 0, 512, 458, 0, 400, $component0);
 	if_setop(1, "Take", $component0);
 	if_setop(10, "Examine<col=ff9040>", $component0);

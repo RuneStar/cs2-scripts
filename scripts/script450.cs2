@@ -1,6 +1,6 @@
 // 450
-script450(int $int0, int $int1, int $int2, int $int3, string $string0)
-if_settext($string0, interface_78:1);
+script450(int $flags0, int $flags1, int $flags2, int $flags3, string $text0)
+if_settext($text0, interface_78:1);
 cc_deleteall(interface_78:3);
 cc_deleteall(interface_78:4);
 def_int $int4 = calc((if_getwidth(interface_78:3) - 10 * 36) / 9 + 36);
@@ -11,25 +11,25 @@ def_namedobj $namedobj8 = null;
 def_int $int9 = 0;
 while ($int9 <= 127) {
 	if ($int9 < 32) {
-		if (testbit($int0, $int9) = ^true) {
+		if (testbit($flags0, $int9) = ^true) {
 			$int7 = 1;
 		} else {
 			$int7 = 0;
 		}
 	} else if ($int9 < 64) {
-		if (testbit($int1, calc($int9 - 32)) = ^true) {
+		if (testbit($flags1, calc($int9 - 32)) = ^true) {
 			$int7 = 1;
 		} else {
 			$int7 = 0;
 		}
 	} else if ($int9 < 96) {
-		if (testbit($int2, calc($int9 - 64)) = ^true) {
+		if (testbit($flags2, calc($int9 - 64)) = ^true) {
 			$int7 = 1;
 		} else {
 			$int7 = 0;
 		}
 	} else if ($int9 < 128) {
-		if (testbit($int3, calc($int9 - 96)) = ^true) {
+		if (testbit($flags3, calc($int9 - 96)) = ^true) {
 			$int7 = 1;
 		} else {
 			$int7 = 0;
@@ -79,4 +79,4 @@ if ($int5 <= if_getheight(interface_78:3)) {
 }
 if_setscrollpos(0, 0, interface_78:3);
 ~scrollbar_vertical(interface_78:4, interface_78:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-if_setoninvtransmit("script474($int0, $int1, $int2, $int3){inv}", interface_78:3);
+if_setoninvtransmit("script474($flags0, $flags1, $flags2, $flags3){inv}", interface_78:3);

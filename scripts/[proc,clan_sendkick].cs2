@@ -1,8 +1,8 @@
 // 215
-[proc,clan_sendkick](string $string0)
+[proc,clan_sendkick](string $username0)
 if (~wildwars_world = 1) {
 	mes("You can't kick players from your team during Wilderness Wars.");
 	return;
 }
 ~chat_sendpublic("-Attempting to kick player from friends chat...", 2);
-clan_kickuser($string0);
+clan_kickuser($username0);

@@ -1,22 +1,22 @@
 // 1621
-[proc,raids_storage_side_items](component $component0, int $int1)
+[proc,raids_storage_side_items](component $component0, int $size1)
 def_int $int2 = 0;
 def_int $int3 = 0;
 def_obj $obj4 = null;
 def_obj $obj5 = null;
-def_int $int6 = 0;
-while ($int6 < $int1) {
-	if (cc_find($component0, $int6) = ^true) {
+def_int $size6 = 0;
+while ($size6 < $size1) {
+	if (cc_find($component0, $size6) = ^true) {
 		cc_clearops;
-		$obj5 = inv_getobj(inv, $int6);
+		$obj5 = inv_getobj(inv, $size6);
 		if (%varbit3459 = 1) {
 			cc_sethide(false);
-			~raids_storage_side_private_drawitem($obj5, inv_getnum(inv, $int6));
+			~raids_storage_side_private_drawitem($obj5, inv_getnum(inv, $size6));
 			cc_setdragdeadzone(10);
 			cc_setdragdeadtime(10);
 		} else if ($obj5 ! null) {
 			cc_sethide(false);
-			cc_setobject($obj5, inv_getnum(inv, $int6));
+			cc_setobject($obj5, inv_getnum(inv, $size6));
 			cc_setopbase("<col=ff9040><oc_name($obj5)></col>");
 			$int2, $int3 = 0, 0;
 			$obj4 = enum(int, obj, enum_1666, $int3);
@@ -35,7 +35,7 @@ while ($int6 < $int1) {
 				cc_setop(5, "Donate-X");
 				cc_setop(10, "Examine");
 				cc_settrans(0);
-				cc_setonop("raids_storage_items_op(event_opindex, event_com, event_comid)");
+				cc_setonop("raids_storage_items_op(event_opindex, event_com, event_comsubid)");
 			} else {
 				cc_setop(10, "Donate");
 				cc_settrans(150);
@@ -46,5 +46,5 @@ while ($int6 < $int1) {
 			cc_setonop(null);
 		}
 	}
-	$int6 = calc($int6 + 1);
+	$size6 = calc($size6 + 1);
 }

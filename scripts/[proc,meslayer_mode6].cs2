@@ -1,5 +1,5 @@
 // 107
-[proc,meslayer_mode6](string $string0)
+[proc,meslayer_mode6](string $username0)
 if (%varbit8119 = 0) {
 	mes("You must set a name before you can chat.");
 	return;
@@ -8,12 +8,12 @@ if (%varcint11 = 1) {
 	mes("You can't do that right now.");
 	return;
 }
-%varcstring360 = $string0;
+%varcstring360 = $username0;
 ~meslayer_open(6);
 if_settext("Enter message to send to <%varcstring360>", interface_162:44);
 ~script222("");
 def_string $string1 = "";
-if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string1)", interface_162:45);
+if_setonkey("meslayer_onkey(event_key, event_keychar, $string1)", interface_162:45);
 if (~on_mobile = true) {
 	~keyboard_show(0, 80);
 }

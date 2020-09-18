@@ -1,7 +1,7 @@
 // 244
-[clientscript,cc_settrans](component $component0, int $int1, int $int2, component $component3)
-if (cc_find($component0, $int1) = ^true) {
-	cc_settrans($int2);
+[clientscript,cc_settrans](component $component0, int $comsubid1, int $trans2, component $component3)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settrans($trans2);
 }
 if ($component3 ! null) {
 	~deltooltip_action($component3);

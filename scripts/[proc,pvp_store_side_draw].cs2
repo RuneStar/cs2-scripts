@@ -1,7 +1,7 @@
 // 3367
 [proc,pvp_store_side_draw](component $component0)
-def_int $int1 = enum_getoutputcount(enum_2850);
-def_int $int2 = 0;
+def_int $count1 = enum_getoutputcount(enum_2850);
+def_int $count2 = 0;
 def_int $int3 = 0;
 def_obj $obj4 = null;
 def_int $int5 = 0;
@@ -15,19 +15,19 @@ while ($int6 > 0) {
 		if ($obj4 ! null) {
 			cc_sethide(false);
 			cc_setobject($obj4, inv_getnum(inv, $int6));
-			$int3, $int2 = 0, 0;
-			while ($int2 < $int1) {
-				if ($obj4 = enum(int, namedobj, enum_2850, $int2)) {
-					$int3, $int2 = 1, $int1;
+			$int3, $count2 = 0, 0;
+			while ($count2 < $count1) {
+				if ($obj4 = enum(int, namedobj, enum_2850, $count2)) {
+					$int3, $count2 = 1, $count1;
 				}
-				$int2 = calc($int2 + 1);
+				$count2 = calc($count2 + 1);
 			}
 			if ($int3 = 1) {
 				cc_setop(1, "Value");
 				cc_setop(2, "Sell-1");
 				cc_setop(3, "Sell-All");
 				cc_settrans(0);
-				cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 			} else {
 				cc_settrans(130);
 				cc_setonop(null);

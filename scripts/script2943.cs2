@@ -1,5 +1,5 @@
 // 2943
-script2943(component $component0, obj $obj1, int $int2, obj $obj3, string $string0)
+script2943(component $component0, obj $obj1, int $lvl2, obj $obj3, string $string0)
 cc_deleteall($component0);
 def_int $int4 = 0;
 cc_create($component0, ^iftype_graphic, $int4);
@@ -25,8 +25,8 @@ cc_setsize(0, 22, ^setsize_minus, ^setsize_abs);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-def_int $int6 = if_getwidth($component0);
-if (parawidth($string0, $int6, p12_full) <= $int6 & paraheight($string0, $int6, p12_full) <= 1) {
+def_int $width6 = if_getwidth($component0);
+if (parawidth($string0, $width6, p12_full) <= $width6 & paraheight($string0, $width6, p12_full) <= 1) {
 	cc_settextfont(p12_full);
 } else {
 	cc_settextfont(p11_full);
@@ -37,7 +37,7 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 .cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
 cc_settext($string0);
-if ($int5 = 1 & stat(crafting) >= $int2 & (map_members = ^true | oc_members($obj1) = ^false)) {
+if ($int5 = 1 & stat(crafting) >= $lvl2 & (map_members = ^true | oc_members($obj1) = ^false)) {
 	.cc_settext("");
 	cc_setcolour(0xff981f);
 	.cc_setcolour(0xff981f);
@@ -47,7 +47,7 @@ if ($int5 = 1 & stat(crafting) >= $int2 & (map_members = ^true | oc_members($obj
 	if (map_members = ^false & oc_members($obj1) = ^true) {
 		.cc_settext("");
 	} else if ($int5 = 1) {
-		.cc_settext("Level <tostring($int2)>");
+		.cc_settext("Level <tostring($lvl2)>");
 	} else {
 		.cc_settext(oc_name($obj3));
 	}

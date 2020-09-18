@@ -1,10 +1,10 @@
 // 1583
-[clientscript,raids_rewards_op](int $int0, component $component1, int $int2)
-if ($int0 ! 1 & $int0 ! 10) {
+[clientscript,raids_rewards_op](int $opindex0, component $component1, int $comsubid2)
+if ($opindex0 ! 1 & $opindex0 ! 10) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);
-if (cc_find($component1, $int2) = ^true) {
+if (cc_find($component1, $comsubid2) = ^true) {
 	cc_settrans(120);
-	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, 0, calc(clientclock + 10))");
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 10))");
 }

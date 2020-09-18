@@ -1,14 +1,14 @@
 // 583
-[clientscript,clanwars_setup_togglebox_op](int $int0, component $component1, int $int2, int $int3)
-if ($int0 ! 1 | $int3 < 0 | $int3 >= 32) {
+[clientscript,clanwars_setup_togglebox_op](int $opindex0, component $component1, int $comsubid2, int $index3)
+if ($opindex0 ! 1 | $index3 < 0 | $index3 >= 32) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);
-if (testbit(%var92, $int3) = ^true) {
-	%var92 = clearbit(%var92, $int3);
+if (testbit(%var92, $index3) = ^true) {
+	%var92 = clearbit(%var92, $index3);
 } else {
-	%var92 = setbit(%var92, $int3);
+	%var92 = setbit(%var92, $index3);
 }
-if (cc_find($component1, calc($int2 + 1)) = ^true & .cc_find($component1, calc($int2 + 2)) = ^true) {
-	~clanwars_setup_togglebox_update($component1, $int3);
+if (cc_find($component1, calc($comsubid2 + 1)) = ^true & .cc_find($component1, calc($comsubid2 + 2)) = ^true) {
+	~clanwars_setup_togglebox_update($component1, $index3);
 }

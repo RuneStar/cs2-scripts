@@ -2,13 +2,13 @@
 [proc,ge_offers_bigbutton](component $component0, string $string0, int $int1)
 if_setsize(calc(parawidth($string0, 512, p11_full) + 10), if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
 cc_deleteall($component0);
-def_int $int2 = 0;
+def_int $comsubid2 = 0;
 if ($int1 = 1) {
-	$int2 = ~options_button_on($component0, 0);
+	$comsubid2 = ~options_button_on($component0, 0);
 } else {
-	$int2 = ~options_button_off($component0, 0);
+	$comsubid2 = ~options_button_off($component0, 0);
 }
-cc_create($component0, ^iftype_text, $int2);
+cc_create($component0, ^iftype_text, $comsubid2);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(p11_full);
@@ -23,7 +23,7 @@ if ($int1 = 1) {
 	if_setonop(null, $component0);
 } else {
 	cc_setcolour(0xff981f);
-	if_setonmouserepeat("cc_colour_swapper(event_com, $int2, ^white)", $component0);
-	if_setonmouseleave("cc_colour_swapper(event_com, $int2, 0xff981f)", $component0);
+	if_setonmouserepeat("cc_colour_swapper(event_com, $comsubid2, ^white)", $component0);
+	if_setonmouseleave("cc_colour_swapper(event_com, $comsubid2, 0xff981f)", $component0);
 	if_setonop("ge_offers_bigbutton_op(event_opindex, $component0, $string0)", $component0);
 }

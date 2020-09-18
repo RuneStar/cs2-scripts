@@ -5,16 +5,16 @@ cc_deleteall($component2);
 def_graphic $graphic11 = "zeah_book,0";
 def_graphic $graphic12 = "zeah_book,1";
 cc_deleteall($component1);
-def_int $int13 = 0;
+def_int $comsubid13 = 0;
 if (~on_mobile = true) {
 	if_setsize(25, 25, ^setsize_abs, ^setsize_abs, $component1);
-	$int13 = ~v2_stone_button_filled($component1);
+	$comsubid13 = ~v2_stone_button_filled($component1);
 } else {
 	if_setsize(11, 11, ^setsize_abs, ^setsize_abs, $component1);
-	if_setonmouseover("cc_graphic_swapper(event_com, $int13, $graphic12, null)", $component1);
-	if_setonmouseleave("cc_graphic_swapper(event_com, $int13, $graphic11, null)", $component1);
+	if_setonmouseover("cc_graphic_swapper(event_com, $comsubid13, $graphic12, null)", $component1);
+	if_setonmouseleave("cc_graphic_swapper(event_com, $comsubid13, $graphic11, null)", $component1);
 }
-cc_create($component1, ^iftype_graphic, $int13);
+cc_create($component1, ^iftype_graphic, $comsubid13);
 cc_setgraphic($graphic11);
 cc_setsize(11, 11, ^setsize_abs, ^setsize_abs);
 cc_setvflip(false);
@@ -23,10 +23,10 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 if_setop(1, "Expand", $component1);
 if_setonop("target_system_hideop(event_opindex, 0, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component10)", $component1);
 cc_deleteall($component10);
-$int13 = 0;
-if_setonmouseover("cc_graphic_swapper(event_com, $int13, $graphic12, null)", $component10);
-if_setonmouseleave("cc_graphic_swapper(event_com, $int13, $graphic11, null)", $component10);
-cc_create($component10, ^iftype_graphic, $int13);
+$comsubid13 = 0;
+if_setonmouseover("cc_graphic_swapper(event_com, $comsubid13, $graphic12, null)", $component10);
+if_setonmouseleave("cc_graphic_swapper(event_com, $comsubid13, $graphic11, null)", $component10);
+cc_create($component10, ^iftype_graphic, $comsubid13);
 cc_setgraphic($graphic11);
 cc_setsize(11, 11, ^setsize_abs, ^setsize_abs);
 cc_setvflip(false);

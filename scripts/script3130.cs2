@@ -1,15 +1,15 @@
 // 3130
-script3130(int $int0, int $int1, int $int2, int $int3, int $colour4, component $component5)
+script3130(int $clock0, int $clock1, int $int2, int $int3, int $colour4, component $component5)
 if (cc_find($component5, 0) = ^true) {
-	if (clientclock < $int0) {
+	if (clientclock < $clock0) {
 		return;
 	}
-	if (clientclock >= $int1) {
+	if (clientclock >= $clock1) {
 		cc_setontimer(null);
 		return;
 	}
 	cc_setcolour($colour4);
 	cc_setfillcolour($colour4);
-	cc_settrans(interpolate($int2, $int3, $int0, $int1, clientclock));
+	cc_settrans(interpolate($int2, $int3, $clock0, $clock1, clientclock));
 	_1124(255);
 }

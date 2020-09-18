@@ -1,13 +1,13 @@
 // 506
-[proc,bankmain_tabicon](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, component $component20, component $component21, component $component22, component $component23, component $component24)(int, int)
+[proc,bankmain_tabicon](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $y18, int $flags19, component $component20, component $component21, component $component22, component $component23, component $component24)(int, int)
 def_obj $obj25 = null;
-def_string $string0 = "";
+def_string $text0 = "";
 def_int $int26 = 0;
 if (.cc_find($component8, $int12) = ^true) {
 	if ($int12 = 0) {
 		cc_create($component8, ^iftype_graphic, calc($int12 + 9 + 1));
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($int12 * 40 + $int16 + $int17), $int18, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int12 * 40 + $int16 + $int17), $y18, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("banktab_icons,0");
 		cc_settrans(20);
 		cc_setop(1, "View all items");
@@ -16,7 +16,7 @@ if (.cc_find($component8, $int12) = ^true) {
 		~bankmain_tabicon_highlight($int12);
 	} else if ($int13 > 0) {
 		if (%varbit4170 = 1) {
-			$string0 = tostring($int12);
+			$text0 = tostring($int12);
 			cc_create($component8, ^iftype_text, calc($int12 + 9 + 1));
 			cc_setsize(41, 40, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc($int12 * 40 + $int16), 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -24,12 +24,12 @@ if (.cc_find($component8, $int12) = ^true) {
 			cc_settextfont(quill_oblique_large);
 			cc_settextshadow(true);
 			cc_setcolour(0xe4d8a2);
-			cc_settext($string0);
-			cc_setondragcomplete("bankmain_dragtab_text(event_com, event_comid, event_dragtarget, event_dragtargetid, $int19)");
+			cc_settext($text0);
+			cc_setondragcomplete("bankmain_dragtab_text(event_com, event_comsubid, event_drop, event_dropsubid, $flags19)");
 			~script507($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $int12, $component20, $component21, $component22, $component23, $component24);
 			~bankmain_tabicon_highlight($int12);
 		} else if (%varbit4170 = 2) {
-			$string0 = enum(int, string, enum_207, $int12);
+			$text0 = enum(int, string, enum_207, $int12);
 			cc_create($component8, ^iftype_text, calc($int12 + 9 + 1));
 			cc_setsize(41, 35, ^setsize_abs, ^setsize_abs);
 			cc_setposition(calc($int12 * 40 + $int16), 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -37,30 +37,30 @@ if (.cc_find($component8, $int12) = ^true) {
 			cc_settextfont(barbassault_font);
 			cc_settextshadow(true);
 			cc_setcolour(0xe4d8a2);
-			cc_settext($string0);
-			cc_setondragcomplete("bankmain_dragtab_text(event_com, event_comid, event_dragtarget, event_dragtargetid, $int19)");
+			cc_settext($text0);
+			cc_setondragcomplete("bankmain_dragtab_text(event_com, event_comsubid, event_drop, event_dropsubid, $flags19)");
 			~script507($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $int12, $component20, $component21, $component22, $component23, $component24);
 			~bankmain_tabicon_highlight($int12);
 		} else {
 			$obj25 = inv_getobj(bank, $int14);
 			cc_create($component8, ^iftype_graphic, calc($int12 + 9 + 1));
 			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-			cc_setposition(calc($int12 * 40 + $int16 + $int17 + 1), $int18, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(calc($int12 * 40 + $int16 + $int17 + 1), $y18, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setgraphicshadow(0x333333);
 			cc_setoutline(1);
 			if ($obj25 ! null) {
 				cc_setobject_nonum($obj25, inv_getnum(bank, $int14));
 				if (oc_unplaceholder($obj25) ! $obj25) {
 					cc_settrans(120);
-					cc_setondragcomplete("bankmain_dragtab_graphic(event_com, event_comid, event_dragtarget, event_dragtargetid, $int19, 120)");
+					cc_setondragcomplete("bankmain_dragtab_graphic(event_com, event_comsubid, event_drop, event_dropsubid, $flags19, 120)");
 				} else {
 					cc_settrans(0);
-					cc_setondragcomplete("bankmain_dragtab_graphic(event_com, event_comid, event_dragtarget, event_dragtargetid, $int19, 0)");
+					cc_setondragcomplete("bankmain_dragtab_graphic(event_com, event_comsubid, event_drop, event_dropsubid, $flags19, 0)");
 				}
 			} else {
 				cc_setobject_nonum(obj_6512, 1);
 				cc_settrans(0);
-				cc_setondragcomplete("bankmain_dragtab_graphic(event_com, event_comid, event_dragtarget, event_dragtargetid, $int19, 0)");
+				cc_setondragcomplete("bankmain_dragtab_graphic(event_com, event_comsubid, event_drop, event_dropsubid, $flags19, 0)");
 			}
 			~script507($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $int12, $component20, $component21, $component22, $component23, $component24);
 			~bankmain_tabicon_highlight($int12);
@@ -68,7 +68,7 @@ if (.cc_find($component8, $int12) = ^true) {
 	} else if ($int15 = 0) {
 		cc_create($component8, ^iftype_graphic, calc($int12 + 9 + 1));
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition(calc($int12 * 40 + $int16 + $int17), $int18, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(calc($int12 * 40 + $int16 + $int17), $y18, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("banktab_icons,1");
 		cc_settrans(20);
 		cc_setop(1, "New tab");

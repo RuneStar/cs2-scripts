@@ -1,5 +1,5 @@
 // 763
-[proc,trade_main_drawitems](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5)
+[proc,trade_main_drawitems](int $size0, int $int1, component $component2, component $component3, component $component4, component $component5)
 if (%varbit4374 = 1) {
 	if_settext("Trade modified", $component3);
 } else {
@@ -11,7 +11,7 @@ if (%varbit4375 = 1) {
 	if_settext("", $component5);
 }
 def_int $intarray0(4);
-def_int $int6 = calc($int0 / 4);
+def_int $int6 = calc($size0 / 4);
 if ($int6 < 2) {
 	$int6 = 2;
 }
@@ -21,7 +21,7 @@ $intarray0(0) = 6;
 $intarray0(1) = calc($intarray0(0) + $int8 + 36);
 $intarray0(2) = calc($intarray0(1) + $int8 + 36);
 $intarray0(3) = calc($intarray0(2) + $int8 + 36);
-def_int $intarray1($int0);
+def_int $intarray1($size0);
 $intarray1(0) = %varcint81;
 $intarray1(1) = %varcint82;
 $intarray1(2) = %varcint83;
@@ -53,15 +53,15 @@ $intarray1(27) = %varcint109;
 def_obj $obj9 = null;
 def_int $int10 = 0;
 def_int $int11 = 0;
-def_int $int12 = 0;
+def_int $index12 = 0;
 def_int $int13 = 0;
-def_int $int14 = 0;
-def_int $int15 = 0;
-while ($int15 < $int0) {
-	if (cc_find($component2, $int15) = ^true & .cc_find($component2, calc($int0 + $int15)) = ^true) {
-		$obj9 = inv_getobj(inv_90, $int15);
+def_int $y14 = 0;
+def_int $size15 = 0;
+while ($size15 < $size0) {
+	if (cc_find($component2, $size15) = ^true & .cc_find($component2, calc($size0 + $size15)) = ^true) {
+		$obj9 = inv_getobj(inv_90, $size15);
 		if ($obj9 ! null) {
-			$int10 = inv_getnum(inv_90, $int15);
+			$int10 = inv_getnum(inv_90, $size15);
 			cc_sethide(false);
 			cc_setobject($obj9, $int10);
 			cc_setop(1, "Remove");
@@ -71,20 +71,20 @@ while ($int15 < $int0) {
 			cc_setop(5, "Remove-X");
 			cc_setop(10, "Examine");
 			cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
-			~trade_tooltip($int10, $intarray1($int15), trademain:32);
+			~trade_tooltip($int10, $intarray1($size15), trademain:32);
 		} else {
 			cc_sethide(true);
 			cc_clearops;
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
 		}
-		$int12, $int11 = calc($int15 % 4), calc($int15 / 4);
-		$int13 = $intarray0($int12);
-		$int14 = calc($int11 * (32 + $int7));
-		cc_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setposition(calc($int13 + $int1), $int14, ^setpos_abs_left, ^setpos_abs_top);
+		$index12, $int11 = calc($size15 % 4), calc($size15 / 4);
+		$int13 = $intarray0($index12);
+		$y14 = calc($int11 * (32 + $int7));
+		cc_setposition($int13, $y14, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc($int13 + $int1), $y14, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	$int15 = calc($int15 + 1);
+	$size15 = calc($size15 + 1);
 }
 $int8 = calc((if_getwidth($component4) - 12 - 4 * 36) / 3);
 $intarray0(0) = 6;
@@ -119,28 +119,28 @@ $intarray1(24) = %varcint134;
 $intarray1(25) = %varcint135;
 $intarray1(26) = %varcint136;
 $intarray1(27) = %varcint137;
-$int15 = 0;
-while ($int15 < $int0) {
-	if (cc_find($component4, $int15) = ^true & .cc_find($component4, calc($int0 + $int15)) = ^true) {
-		$obj9 = invother_getobj(inv_90, $int15);
+$size15 = 0;
+while ($size15 < $size0) {
+	if (cc_find($component4, $size15) = ^true & .cc_find($component4, calc($size0 + $size15)) = ^true) {
+		$obj9 = invother_getobj(inv_90, $size15);
 		if ($obj9 ! null) {
-			$int10 = invother_getnum(inv_90, $int15);
+			$int10 = invother_getnum(inv_90, $size15);
 			cc_sethide(false);
 			cc_setobject($obj9, $int10);
 			cc_setop(10, "Examine");
 			cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
-			~trade_tooltip($int10, $intarray1($int15), trademain:32);
+			~trade_tooltip($int10, $intarray1($size15), trademain:32);
 		} else {
 			cc_sethide(true);
 			cc_clearops;
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);
 		}
-		$int12, $int11 = calc($int15 % 4), calc($int15 / 4);
-		$int13 = $intarray0($int12);
-		$int14 = calc($int11 * (32 + $int7));
-		cc_setposition($int13, $int14, ^setpos_abs_left, ^setpos_abs_top);
-		.cc_setposition(calc($int13 + $int1), $int14, ^setpos_abs_left, ^setpos_abs_top);
+		$index12, $int11 = calc($size15 % 4), calc($size15 / 4);
+		$int13 = $intarray0($index12);
+		$y14 = calc($int11 * (32 + $int7));
+		cc_setposition($int13, $y14, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc($int13 + $int1), $y14, ^setpos_abs_left, ^setpos_abs_top);
 	}
-	$int15 = calc($int15 + 1);
+	$size15 = calc($size15 + 1);
 }

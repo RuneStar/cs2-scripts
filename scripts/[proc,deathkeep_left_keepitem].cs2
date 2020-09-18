@@ -8,21 +8,21 @@ cc_setgraphicshadow(0x333333);
 cc_setobject($obj0, $int1);
 cc_setop(1, "Check");
 cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
-def_string $string0 = "";
+def_string $mes0 = "";
 if ($obj2 = burnt_fish_343) {
 	if ($int1 > 1) {
-		$string0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: You'll keep a downgraded version of these items.";
+		$mes0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: You'll keep a downgraded version of these items.";
 	} else {
-		$string0 = "<oc_name($obj0)>: You'll keep a downgraded version of this item.";
+		$mes0 = "<oc_name($obj0)>: You'll keep a downgraded version of this item.";
 	}
 	cc_setoutline(2);
 } else {
 	if ($int1 > 1) {
-		$string0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: You'll always keep these items.";
+		$mes0 = "<~tostring_spacer($int1, ",")> x <oc_name($obj0)>: You'll always keep these items.";
 	} else {
-		$string0 = "<oc_name($obj0)>: You'll always keep this item.";
+		$mes0 = "<oc_name($obj0)>: You'll always keep this item.";
 	}
 	cc_setoutline(1);
 }
-cc_setonop("deathkeep_opitem(event_com, event_comid, $string0)");
+cc_setonop("deathkeep_opitem(event_com, event_comsubid, $mes0)");
 return(calc($int6 + 1), $int8, calc($int7 + 1));

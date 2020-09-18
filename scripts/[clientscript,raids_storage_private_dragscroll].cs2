@@ -1,23 +1,23 @@
 // 1609
-[clientscript,raids_storage_private_dragscroll](component $component0, int $int1, int $int2, int $int3, component $component4, int $int5)
+[clientscript,raids_storage_private_dragscroll](component $component0, int $comsubid1, int $mousex2, int $mousey3, component $component4, int $clock5)
 def_int $int6 = 5;
 def_int $int7 = 0;
 def_int $int8 = if_getscrolly($component0);
-if (calc($int3 - $int8) < 15) {
-	if ($int5 <= clientclock) {
-		if (cc_find($component0, $int1) = ^true) {
-			cc_setondrag("raids_storage_private_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc(clientclock + 2))");
+if (calc($mousey3 - $int8) < 15) {
+	if ($clock5 <= clientclock) {
+		if (cc_find($component0, $comsubid1) = ^true) {
+			cc_setondrag("raids_storage_private_dragscroll(event_com, event_comsubid, event_mousex, event_mousey, $component4, calc(clientclock + 2))");
 			return;
 		}
-	} else if (calc($int5 - clientclock) < 5) {
-		if (cc_find($component0, $int1) = ^true) {
-			cc_setondrag("raids_storage_private_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc($int5 + 2))");
+	} else if (calc($clock5 - clientclock) < 5) {
+		if (cc_find($component0, $comsubid1) = ^true) {
+			cc_setondrag("raids_storage_private_dragscroll(event_com, event_comsubid, event_mousex, event_mousey, $component4, calc($clock5 + 2))");
 			return;
 		}
-	} else if (cc_find($component0, $int1) = ^true) {
-		cc_setondrag("raids_storage_private_dragscroll(event_com, event_comid, event_mousex, event_mousey, $component4, calc($int5 + 1))");
+	} else if (cc_find($component0, $comsubid1) = ^true) {
+		cc_setondrag("raids_storage_private_dragscroll(event_com, event_comsubid, event_mousex, event_mousey, $component4, calc($clock5 + 1))");
 	}
-	if ($int3 < 5) {
+	if ($mousey3 < 5) {
 		$int6 = 8;
 	}
 	if ($int8 > $int6) {
@@ -27,7 +27,7 @@ if (calc($int3 - $int8) < 15) {
 	}
 	~scrollbar_resize($component4, $component0, $int8);
 } else {
-	$int7 = calc(if_getheight($component0) - 32 - $int3);
+	$int7 = calc(if_getheight($component0) - 32 - $mousey3);
 	if ($int7 < 20) {
 		if ($int7 < -5) {
 			$int6 = 10;

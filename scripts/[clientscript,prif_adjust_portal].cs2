@@ -1,6 +1,6 @@
 // 2923
-[clientscript,prif_adjust_portal](int $int0, boolean $boolean1)
-def_int $int2 = calc(clientclock - $int0);
+[clientscript,prif_adjust_portal](int $clock0, boolean $boolean1)
+def_int $int2 = calc(clientclock - $clock0);
 def_int $int3 = 0;
 if ($int2 >= 20) {
 	if ($boolean1 = false) {

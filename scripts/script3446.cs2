@@ -43,31 +43,31 @@ if ($int1 <= 0) {
 } else if ($int1 >= 2) {
 	~quicksort_cctext(intarray0, interface_120:5, 0, calc($int1 - 1));
 }
-def_int $int2 = 0;
+def_int $height2 = 0;
 $int0 = 0;
 while ($int0 < $int1) {
 	if (cc_find(interface_120:5, $intarray0($int0)) = ^true & .cc_find(interface_120:5, calc($intarray0($int0) - 50)) = ^true) {
-		cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
-		.cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
-		.cc_setonmouserepeat("cc_settrans(event_com, event_comid, 200, null)");
+		cc_setposition(0, $height2, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setposition(0, $height2, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
 		if (calc($int0 % 2) = 0) {
 			.cc_settrans(230);
-			.cc_setonmouseleave("cc_settrans(event_com, event_comid, 230, null)");
-			.cc_setonop("script3447(event_opindex, event_com, event_comid, 230)");
+			.cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 230, null)");
+			.cc_setonop("script3447(event_opindex, event_com, event_comsubid, 230)");
 		} else {
 			.cc_settrans(245);
-			.cc_setonmouseleave("cc_settrans(event_com, event_comid, 245, null)");
-			.cc_setonop("script3447(event_opindex, event_com, event_comid, 245)");
+			.cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 245, null)");
+			.cc_setonop("script3447(event_opindex, event_com, event_comsubid, 245)");
 		}
 	}
-	$int0, $int2 = calc($int0 + 1), calc($int2 + 22);
+	$int0, $height2 = calc($int0 + 1), calc($height2 + 22);
 }
 cc_deleteall(interface_120:6);
-def_int $int3 = if_getheight(interface_120:5);
-if ($int2 > $int3) {
-	if_setscrollsize(0, $int2, interface_120:5);
+def_int $height3 = if_getheight(interface_120:5);
+if ($height2 > $height3) {
+	if_setscrollsize(0, $height2, interface_120:5);
 	~scrollbar_vertical(interface_120:6, interface_120:5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-	~scrollbar_resize(interface_120:6, interface_120:5, ~max(0, ~min(calc($int2 - $int3), if_getscrolly(interface_120:5))));
+	~scrollbar_resize(interface_120:6, interface_120:5, ~max(0, ~min(calc($height2 - $height3), if_getscrolly(interface_120:5))));
 } else {
 	if_setscrollpos(0, 0, interface_120:5);
 	if_setscrollsize(0, 0, interface_120:5);

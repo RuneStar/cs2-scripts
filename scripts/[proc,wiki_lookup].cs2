@@ -1,42 +1,42 @@
 // 3301
 [proc,wiki_lookup](string $string0, string $string1, string $string2, string $string3, string $string4)
-def_string $string5 = "https://oldschool.runescape.wiki/w/Special:";
+def_string $url5 = "https://oldschool.runescape.wiki/w/Special:";
 def_int $int0 = 0;
 if (string_length($string0) > 0) {
-	$string5 = "<$string5><~script3303($string0)>";
+	$url5 = "<$url5><~script3303($string0)>";
 	if (string_length($string1) > 0) {
-		$string5 = "<$string5>?type=<~script3303($string1)>";
+		$url5 = "<$url5>?type=<~script3303($string1)>";
 		$int0 = 1;
 	}
 	if (string_length($string2) > 0) {
 		if ($int0 = 1) {
-			$string5 = "<$string5>&id=<~script3303($string2)>";
+			$url5 = "<$url5>&id=<~script3303($string2)>";
 		} else {
-			$string5 = "<$string5>?id=<$string2>";
+			$url5 = "<$url5>?id=<$string2>";
 		}
 		$int0 = 1;
 	}
 	if (string_length($string3) > 0) {
 		if ($int0 = 1) {
-			$string5 = "<$string5>&name=<~script3303($string3)>";
+			$url5 = "<$url5>&name=<~script3303($string3)>";
 		} else {
-			$string5 = "<$string5>?name=<~script3303($string3)>";
+			$url5 = "<$url5>?name=<~script3303($string3)>";
 		}
 		$int0 = 1;
 	}
 	if (string_length($string4) > 0) {
 		if ($int0 = 1) {
-			$string5 = "<$string5>&search=<~script3303($string4)>";
+			$url5 = "<$url5>&search=<~script3303($string4)>";
 		} else {
-			$string5 = "<$string5>?search=<~script3303($string4)>";
+			$url5 = "<$url5>?search=<~script3303($string4)>";
 		}
 		$int0 = 1;
 	}
 	if ($int0 = 1) {
-		$string5 = "<$string5>&utm_source=osrs";
+		$url5 = "<$url5>&utm_source=osrs";
 	}
 }
 if ($int0 = 0) {
-	$string5 = "https://oldschool.runescape.wiki/";
+	$url5 = "https://oldschool.runescape.wiki/";
 }
-~openurl_raw($string5, true, true);
+~openurl_raw($url5, true, true);

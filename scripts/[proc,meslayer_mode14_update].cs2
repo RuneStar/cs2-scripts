@@ -3,68 +3,68 @@
 %varcint66 = 0;
 cc_deleteall(interface_162:53);
 if_sethide(true, interface_162:55);
-def_int $int3 = if_getwidth(interface_162:53);
-def_int $int4 = if_getheight(interface_162:53);
+def_int $width3 = if_getwidth(interface_162:53);
+def_int $height4 = if_getheight(interface_162:53);
 if (string_length(%varcstring359) <= 0) {
 	if (%varbit10295 = 0 & $boolean2 = true & %var2674 ! null & ~script3362($boolean0, $enum1) = 1) {
 		return;
 	}
-	~script753($int3, $int4, "Start typing the name of an item to search for it.", $boolean2);
+	~script753($width3, $height4, "Start typing the name of an item to search for it.", $boolean2);
 	return;
 }
 def_int $int5 = oc_find(%varcstring359, $boolean0);
 if ($int5 < 0) {
-	~script753($int3, $int4, "Too many matches found. Please refine your search.", $boolean2);
+	~script753($width3, $height4, "Too many matches found. Please refine your search.", $boolean2);
 	return;
 }
 if ($int5 = 0) {
-	~script753($int3, $int4, "No matches found.", $boolean2);
+	~script753($width3, $height4, "No matches found.", $boolean2);
 	return;
 }
-def_int $int6 = calc($int3 / 3);
+def_int $int6 = calc($width3 / 3);
 def_int $int7 = 0;
-def_int $int8 = calc($int3 - $int6);
+def_int $int8 = calc($width3 - $int6);
 def_int $int9 = calc($int8 - $int6);
 def_int $int10 = calc($int9 - $int6);
-def_int $int11 = calc($int6 - 40);
-def_int $int12 = calc($int8 + 40);
-def_int $int13 = calc($int9 + 40);
-def_int $int14 = calc($int10 + 40);
+def_int $width11 = calc($int6 - 40);
+def_int $x12 = calc($int8 + 40);
+def_int $x13 = calc($int9 + 40);
+def_int $x14 = calc($int10 + 40);
 def_int $int15 = 0;
-def_int $int16 = 0;
-def_int $int17 = 0;
-def_int $int18 = 0;
+def_int $x16 = 0;
+def_int $x17 = 0;
+def_int $height18 = 0;
 def_int $int19 = 0;
 def_obj $obj20 = oc_findnext;
 while ($obj20 ! null) {
 	if (($enum1 = null | enum(obj, boolean, $enum1, $obj20) = true) & ($boolean0 = false | ~deadman_restricted_item($obj20) = 0)) {
 		$int15 = calc($int19 % 3);
 		if ($int15 = 0) {
-			$int16, $int17 = $int10, $int14;
+			$x16, $x17 = $int10, $x14;
 		} else if ($int15 = 1) {
-			$int16, $int17 = $int9, $int13;
+			$x16, $x17 = $int9, $x13;
 		} else {
-			$int16, $int17 = $int8, $int12;
+			$x16, $x17 = $int8, $x12;
 		}
 		cc_create(interface_162:53, ^iftype_rectangle, $int7);
 		if ($int7 = 0) {
-			cc_setonkey("meslayer_mode14_select($obj20, event_keypressed)");
+			cc_setonkey("meslayer_mode14_select($obj20, event_key)");
 		}
 		$int7 = calc($int7 + 1);
 		cc_setsize($int6, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int16, $int18, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($x16, $height18, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		cc_settrans(255);
-		cc_setonmouseover("cc_settrans(event_com, event_comid, 200, null)");
-		cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+		cc_setonmouseover("cc_settrans(event_com, event_comsubid, 200, null)");
+		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
 		cc_setopbase("<col=ff9040><oc_name($obj20)></col>");
 		cc_setop(1, "Select");
 		cc_setonop("meslayer_mode14_select($obj20, ^key_return)");
 		cc_create(interface_162:53, ^iftype_text, $int7);
 		$int7 = calc($int7 + 1);
-		cc_setsize($int11, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int17, $int18, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setsize($width11, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition($x17, $height18, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextfont(p12_full);
 		cc_settextshadow(false);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -73,7 +73,7 @@ while ($obj20 ! null) {
 		cc_create(interface_162:53, ^iftype_graphic, $int7);
 		$int7 = calc($int7 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		cc_setposition($int16, $int18, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition($x16, $height18, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setoutline(1);
 		cc_setgraphicshadow(0x555555);
 		if (oc_stackable($obj20) = true) {
@@ -83,20 +83,20 @@ while ($obj20 ! null) {
 		}
 		$int19 = calc($int19 + 1);
 		if ($int15 >= 2) {
-			$int18 = calc($int18 + 32);
+			$height18 = calc($height18 + 32);
 		}
 	}
 	$obj20 = oc_findnext;
 }
 if ($int19 <= 0) {
-	~script753($int3, $int4, "No matches found.", $boolean2);
+	~script753($width3, $height4, "No matches found.", $boolean2);
 	return;
 }
 if ($int15 < 2) {
-	$int18 = calc($int18 + 32);
+	$height18 = calc($height18 + 32);
 }
-if ($int18 > $int4) {
-	if_setscrollsize(0, $int18, interface_162:53);
+if ($height18 > $height4) {
+	if_setscrollsize(0, $height18, interface_162:53);
 } else {
 	if_setscrollpos(0, 0, interface_162:53);
 	if_setscrollsize(0, 0, interface_162:53);

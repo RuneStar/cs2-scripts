@@ -1,11 +1,11 @@
 // 2033
-[proc,agilityarena_rewards_gracefulbutton_init](component $component0, obj $obj1, obj $obj2, string $string0, int $int3)
+[proc,agilityarena_rewards_gracefulbutton_init](component $component0, namedobj $namedobj1, namedobj $namedobj2, string $string0, int $int3)
 if ($int3 = 1) {
 	if_setop(1, "Buy for 1 ticket", $component0);
 } else {
 	if_setop(1, "Buy for <~tostring_spacer($int3, ",")> tickets", $component0);
 }
-~agilityarena_rewards_gracefulbutton_draw($component0, $obj1, $obj2, $string0, $int3, false);
-if_setoninvtransmit("agilityarena_rewards_gracefulbutton_draw($component0, $obj1, $obj2, $string0, $int3, false){inv}", $component0);
-if_setonmouserepeat("agilityarena_rewards_gracefulbutton_draw($component0, $obj1, $obj2, $string0, $int3, true)", $component0);
-if_setonmouseleave("agilityarena_rewards_gracefulbutton_draw($component0, $obj1, $obj2, $string0, $int3, false)", $component0);
+~agilityarena_rewards_gracefulbutton_draw($component0, $namedobj1, $namedobj2, $string0, $int3, false);
+if_setoninvtransmit("agilityarena_rewards_gracefulbutton_draw($component0, $namedobj1, $namedobj2, $string0, $int3, false){inv}", $component0);
+if_setonmouserepeat("agilityarena_rewards_gracefulbutton_draw($component0, $namedobj1, $namedobj2, $string0, $int3, true)", $component0);
+if_setonmouseleave("agilityarena_rewards_gracefulbutton_draw($component0, $namedobj1, $namedobj2, $string0, $int3, false)", $component0);

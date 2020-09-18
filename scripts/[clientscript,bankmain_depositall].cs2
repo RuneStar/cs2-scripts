@@ -1,6 +1,6 @@
 // 292
-[clientscript,bankmain_depositall](component $component0, graphic $graphic1, graphic $graphic2, int $int3)
-if ($int3 ! 1) {
+[clientscript,bankmain_depositall](component $component0, graphic $graphic1, graphic $graphic2, int $opindex3)
+if ($opindex3 ! 1) {
 	return;
 }
 if_setgraphic($graphic1, $component0);

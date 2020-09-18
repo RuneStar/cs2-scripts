@@ -6,6 +6,6 @@ if (~target_world = 0) {
 	return;
 }
 def_int $int1 = interpolate(0, 60, 0, 100, %varbit877);
-def_int $int2 = clientclock;
-if_setontimer("script14($component0, $int1, $int2)", $component0);
-~script15($component0, $int1, $int2);
+def_int $clock2 = clientclock;
+if_setontimer("script14($component0, $int1, $clock2)", $component0);
+~script15($component0, $int1, $clock2);

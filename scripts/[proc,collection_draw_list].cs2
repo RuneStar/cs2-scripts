@@ -1,40 +1,40 @@
 // 2731
-[proc,collection_draw_list](component $component0, component $component1, component $component2, component $component3, struct $struct4, int $int5, int $int6)
+[proc,collection_draw_list](component $component0, component $component1, component $component2, component $component3, struct $struct4, int $int5, int $y6)
 def_enum $enum7 = struct_param($struct4, param_683);
 def_int $int8 = 0;
-def_int $int9 = enum_getoutputcount($enum7);
+def_int $count9 = enum_getoutputcount($enum7);
 def_int $int10 = 15;
-def_int $int11 = 0;
-def_int $int12 = 255;
-def_string $string0 = "";
+def_int $height11 = 0;
+def_int $trans12 = 255;
+def_string $text0 = "";
 def_struct $struct13 = null;
 if (~on_mobile = true) {
 	$int10 = scale(8, 5, $int10);
 }
-while ($int8 < $int9) {
+while ($int8 < $count9) {
 	$struct13 = enum(int, struct, $enum7, $int8);
-	$string0 = struct_param($struct13, param_689);
+	$text0 = struct_param($struct13, param_689);
 	cc_create($component2, ^iftype_text, $int8);
-	cc_settext($string0);
+	cc_settext($text0);
 	cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, $int11, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setposition(0, $height11, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	cc_setcolour(0xff981f);
 	cc_create($component1, ^iftype_rectangle, $int8);
 	cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
-	cc_setposition(0, $int11, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setposition(0, $height11, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	if (calc($int8 % 2) = 0) {
-		$int12 = 235;
+		$trans12 = 235;
 	} else {
-		$int12 = 255;
+		$trans12 = 255;
 	}
-	cc_settrans($int12);
+	cc_settrans($trans12);
 	cc_setop(1, "View");
-	cc_setopbase("<col=ff9040><$string0></col>");
+	cc_setopbase("<col=ff9040><$text0></col>");
 	if ($int8 = $int5) {
 		cc_setcolour(^white);
 		cc_setfill(true);
@@ -43,21 +43,21 @@ while ($int8 < $int9) {
 		cc_setonmouseleave(null);
 		~collection_draw_log($struct13);
 	} else if (~on_mobile = false) {
-		cc_setonmouseover("cc_settrans(event_com, event_comid, 225, null)");
-		cc_setonmouseleave("cc_settrans(event_com, event_comid, $int12, null)");
+		cc_setonmouseover("cc_settrans(event_com, event_comsubid, 225, null)");
+		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $trans12, null)");
 	} else {
 		cc_setonmouseover(null);
 		cc_setonmouseleave(null);
 	}
-	$int11 = calc($int11 + $int10);
+	$height11 = calc($height11 + $int10);
 	$int8 = calc($int8 + 1);
 }
-if ($int11 > if_getheight($component0)) {
-	if_setscrollsize(0, $int11, $component0);
+if ($height11 > if_getheight($component0)) {
+	if_setscrollsize(0, $height11, $component0);
 } else {
 	if_setscrollsize(0, 0, $component0);
 }
-if_setscrollpos(0, $int6, $component0);
+if_setscrollpos(0, $y6, $component0);
 cc_deleteall($component3);
 ~scrollbar_vertical($component3, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~scrollbar_resize($component3, $component0, $int6);
+~scrollbar_resize($component3, $component0, $y6);

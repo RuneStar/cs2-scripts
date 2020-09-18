@@ -28,13 +28,13 @@
 %varcint37 = 0;
 %varcint38 = 0;
 %varcint39 = 0;
-def_int $int5 = inv_size(inv_90);
+def_int $size5 = inv_size(inv_90);
 cc_deleteall($component1);
 cc_deleteall($component3);
-def_int $int6 = 0;
-while ($int6 < $int5) {
-	cc_create($component1, ^iftype_graphic, $int6);
-	.cc_create($component3, ^iftype_graphic, $int6);
+def_int $size6 = 0;
+while ($size6 < $size5) {
+	cc_create($component1, ^iftype_graphic, $size6);
+	.cc_create($component3, ^iftype_graphic, $size6);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
@@ -43,14 +43,14 @@ while ($int6 < $int5) {
 	.cc_setoutline(1);
 	cc_sethide(true);
 	.cc_sethide(true);
-	$int6 = calc($int6 + 1);
+	$size6 = calc($size6 + 1);
 }
-def_int $int7 = 0;
-$int6 = 0;
-while ($int6 < $int5) {
-	$int7 = calc($int5 + $int6);
-	cc_create($component1, ^iftype_graphic, $int7);
-	.cc_create($component3, ^iftype_graphic, $int7);
+def_int $comsubid7 = 0;
+$size6 = 0;
+while ($size6 < $size5) {
+	$comsubid7 = calc($size5 + $size6);
+	cc_create($component1, ^iftype_graphic, $comsubid7);
+	.cc_create($component3, ^iftype_graphic, $comsubid7);
 	cc_setgraphic("exclamation_mark");
 	.cc_setgraphic("exclamation_mark");
 	cc_setsize(10, 32, ^setsize_abs, ^setsize_abs);
@@ -59,9 +59,9 @@ while ($int6 < $int5) {
 	.cc_sethide(false);
 	cc_settrans(255);
 	.cc_settrans(255);
-	$int6 = calc($int6 + 1);
+	$size6 = calc($size6 + 1);
 }
 def_int $int8 = calc((36 - 10) / 2);
-~trade_main_drawitems($int5, $int8, $component1, $component2, $component3, $component4);
-if_setoninvtransmit("trade_main_drawitems($int5, $int8, $component1, $component2, $component3, $component4){inv_90}", $component0);
-if_setonvartransmit("trade_main_drawitems($int5, $int8, $component1, $component2, $component3, $component4){var1042}", $component0);
+~trade_main_drawitems($size5, $int8, $component1, $component2, $component3, $component4);
+if_setoninvtransmit("trade_main_drawitems($size5, $int8, $component1, $component2, $component3, $component4){inv_90}", $component0);
+if_setonvartransmit("trade_main_drawitems($size5, $int8, $component1, $component2, $component3, $component4){var1042}", $component0);

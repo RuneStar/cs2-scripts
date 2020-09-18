@@ -3,22 +3,22 @@
 ~script1653($component1, 2, 3, "Sort by name", $component0, $component1, $component2, $component3, $component4, $component5, $component6);
 ~script1653($component2, 0, 1, "Legacy sort", $component0, $component1, $component2, $component3, $component4, $component5, $component6);
 cc_deleteall($component3);
-def_int $int7 = 0;
+def_int $count7 = 0;
 def_int $int8 = 0;
 def_string $string0 = "";
 def_string $string1 = "";
-def_int $int9 = 0;
+def_int $height9 = 0;
 def_int $int10 = 15;
 def_boolean $boolean11 = null;
-def_int $int12 = ignore_count;
-if ($int12 < 0) {
+def_int $count12 = ignore_count;
+if ($count12 < 0) {
 	if (%varbit8119 = 1) {
 		if_settext("Loading ignore list<br>Please wait...", $component5);
 	} else {
 		if_settext("You must set a name<br>before using this.", $component5);
 	}
 	if_sethide(true, $component0);
-} else if ($int12 = 0) {
+} else if ($count12 = 0) {
 	if_settext("You may ignore users by using the button below, or by <~text_device("right-clicking", "long pressing")> on a message from them and selecting to add them to your ignore list.", $component5);
 	if_sethide(true, $component0);
 } else {
@@ -38,13 +38,13 @@ if ($int12 < 0) {
 			_3642(false);
 	}
 	_3643;
-	while ($int7 < $int12) {
-		$string0, $string1 = ignore_getname($int7);
+	while ($count7 < $count12) {
+		$string0, $string1 = ignore_getname($count7);
 		cc_create($component3, ^iftype_text, $int8);
 		$int8 = calc($int8 + 1);
 		cc_settext($string0);
 		cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setposition(0, $height9, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -54,7 +54,7 @@ if ($int12 < 0) {
 		.cc_create($component3, ^iftype_graphic, $int8);
 		$int8 = calc($int8 + 1);
 		.cc_setsize(14, 14, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(calc(parawidth($string0, 190, p12_full) + 3), calc($int9 + ($int10 - 14) / 2), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(calc(parawidth($string0, 190, p12_full) + 3), calc($height9 + ($int10 - 14) / 2), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setgraphic("friends_changed_name");
 		.cc_setgraphicshadow(0x333333);
 		if (string_length($string1) > 0) {
@@ -63,7 +63,7 @@ if ($int12 < 0) {
 				cc_setonop("ignore_op(event_opindex, event_opbase, event_com, cc_getid, .cc_getid, $string1, $string0)");
 			} else {
 				$string1 = "Previous name:<br><$string1>";
-				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component6, $string1, 25, 190)");
+				cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component6, $string1, 25, 190)");
 				cc_setonmouseleave("deltooltip($component6)");
 				cc_setonop("ignore_op(event_opindex, event_opbase, null, -1, -1, "null", "null")");
 			}
@@ -73,14 +73,14 @@ if ($int12 < 0) {
 			.cc_sethide(true);
 			cc_setonop("ignore_op(event_opindex, event_opbase, null, -1, -1, "null", "null")");
 		}
-		$int7, $int9 = calc($int7 + 1), calc($int9 + $int10);
+		$count7, $height9 = calc($count7 + 1), calc($height9 + $int10);
 	}
-	if ($int12 >= 1) {
-		$int9 = calc($int9 + 5);
+	if ($count12 >= 1) {
+		$height9 = calc($height9 + 5);
 	}
 }
-if ($int9 > if_getheight($component3)) {
-	if_setscrollsize(0, $int9, $component3);
+if ($height9 > if_getheight($component3)) {
+	if_setscrollsize(0, $height9, $component3);
 	~scrollbar_resize($component4, $component3, if_getscrolly($component3));
 } else {
 	if_setscrollsize(0, 0, $component3);

@@ -1,10 +1,10 @@
 // 1420
-[clientscript,br_tournament_submit](int $int0, string $string0, component $component1, int $int2)
-if (clientclock < $int0) {
+[clientscript,br_tournament_submit](int $clock0, string $string0, component $component1, int $comsubid2)
+if (clientclock < $clock0) {
 	return;
 }
 resume_namedialog($string0);
-if (cc_find($component1, $int2) = ^true) {
+if (cc_find($component1, $comsubid2) = ^true) {
 	cc_setcolour(^white);
 	cc_setontimer(null);
 }

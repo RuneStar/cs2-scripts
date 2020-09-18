@@ -2,11 +2,11 @@
 [clientscript,raids_overlay_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 def_string $string0 = ~tostring_spacer(5000000, ",");
 def_string $string1 = ~tostring_spacer(131071, ",");
-def_int $int7 = parawidth("Total: <$string0>", 512, p12_full);
-def_int $int8 = parawidth("<chat_playername>: <$string1>", 512, p12_full);
-def_int $int9 = $int7;
-if ($int8 > $int7) {
-	$int9 = $int8;
+def_int $width7 = parawidth("Total: <$string0>", 512, p12_full);
+def_int $width8 = parawidth("<chat_playername>: <$string1>", 512, p12_full);
+def_int $width9 = $width7;
+if ($width8 > $width7) {
+	$width9 = $width8;
 }
 ~script1490($component1);
 ~hud_clamp_init($component2);
@@ -14,7 +14,7 @@ if ($int8 > $int7) {
 ~script1486($component4, ^setpos_abs_left, 1, 0);
 if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $component5);
 if (~on_mobile = true) {
-	if_setposition(calc($int9 + 30), 2, ^setpos_abs_left, ^setpos_abs_top, $component6);
+	if_setposition(calc($width9 + 30), 2, ^setpos_abs_left, ^setpos_abs_top, $component6);
 }
 cc_deleteall($component5);
 def_int $int10 = 0;

@@ -1,5 +1,5 @@
 // 3487
-[clientscript,death_coffer_resetbutton](int $int0, component $component1, string $string0, component $component2)
-if (clientclock >= $int0) {
+[clientscript,death_coffer_resetbutton](int $clock0, component $component1, string $string0, component $component2)
+if (clientclock >= $clock0) {
 	~death_coffer_activebutton($component1, $string0, $component2);
 }

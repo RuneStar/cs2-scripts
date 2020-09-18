@@ -1,12 +1,12 @@
 // 1294
-[clientscript,br_loadout_menureset](int $int0, component $component1, int $int2, int $int3, int $colour4, int $int5, int $colour6, int $int7)
-if (clientclock < $int0) {
+[clientscript,br_loadout_menureset](int $clock0, component $component1, int $comsubid2, int $comsubid3, int $colour4, int $trans5, int $colour6, int $trans7)
+if (clientclock < $clock0) {
 	return;
 }
-if (cc_find($component1, $int2) = ^true & .cc_find($component1, $int3) = ^true) {
-	cc_setonmouserepeat("script1015(event_com, $int3, $colour4, $int5)");
-	cc_setonmouseleave("script1015(event_com, $int3, $colour6, $int7)");
+if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
+	cc_setonmouserepeat("script1015(event_com, $comsubid3, $colour4, $trans5)");
+	cc_setonmouseleave("script1015(event_com, $comsubid3, $colour6, $trans7)");
 	.cc_setcolour($colour6);
-	.cc_settrans($int7);
+	.cc_settrans($trans7);
 	.cc_setontimer(null);
 }

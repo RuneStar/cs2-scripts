@@ -77,7 +77,7 @@ def_int $int16 = 20;
 def_int $int17 = calc($int13 - 1);
 def_int $int18 = 4;
 def_int $int19 = 0;
-def_int $int20 = 0;
+def_int $y20 = 0;
 def_int $setposv21 = ^setpos_abs_centre;
 def_int $int22 = 75;
 cc_deleteall(interface_270:13);
@@ -91,7 +91,7 @@ if ($int13 > 1) {
 		}
 	}
 	$int19 = calc($int15 + $int16);
-	$int20, $setposv21, $int22 = 14, ^setpos_abs_bottom, calc(75 - 3);
+	$y20, $setposv21, $int22 = 14, ^setpos_abs_bottom, calc(75 - 3);
 	while ($int23 < $int13) {
 		cc_create(interface_270:13, ^iftype_text, $int23);
 		cc_setposition(calc($int23 * $int19), 0, ^setpos_abs_left, ^setpos_abs_bottom);
@@ -110,16 +110,16 @@ if ($int13 > 1) {
 } else {
 	$int19 = $int15;
 }
-if_setposition(calc(0 * $int19), $int20, ^setpos_abs_left, $setposv21, interface_270:14);
-if_setposition(calc(1 * $int19), $int20, ^setpos_abs_left, $setposv21, interface_270:15);
-if_setposition(calc(2 * $int19), $int20, ^setpos_abs_left, $setposv21, interface_270:16);
-if_setposition(calc(3 * $int19), $int20, ^setpos_abs_left, $setposv21, interface_270:17);
-if_setposition(calc(4 * $int19), $int20, ^setpos_abs_left, $setposv21, interface_270:18);
-if_setposition(calc(5 * $int19), $int20, ^setpos_abs_left, $setposv21, interface_270:19);
-if_setposition(calc(6 * $int19), $int20, ^setpos_abs_left, $setposv21, interface_270:20);
-if_setposition(calc(7 * $int19), $int20, ^setpos_abs_left, $setposv21, interface_270:21);
-if_setposition(calc(8 * $int19), $int20, ^setpos_abs_left, $setposv21, interface_270:22);
-if_setposition(calc(9 * $int19), $int20, ^setpos_abs_left, $setposv21, interface_270:23);
+if_setposition(calc(0 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:14);
+if_setposition(calc(1 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:15);
+if_setposition(calc(2 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:16);
+if_setposition(calc(3 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:17);
+if_setposition(calc(4 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:18);
+if_setposition(calc(5 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:19);
+if_setposition(calc(6 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:20);
+if_setposition(calc(7 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:21);
+if_setposition(calc(8 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:22);
+if_setposition(calc(9 * $int19), $y20, ^setpos_abs_left, $setposv21, interface_270:23);
 if_setsize(calc($int13 * $int15 + $int17 * $int16), 50, ^setsize_abs, ^setsize_minus, interface_270:13);
 def_int $keyarray0(10);
 $keyarray0(0) = null;

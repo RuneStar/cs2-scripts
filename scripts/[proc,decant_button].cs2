@@ -21,4 +21,4 @@ cc_setcolour(0x46320a);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(false);
 cc_settext($string0);
-if_setonkey("decant_itembutton_key($component0, event_keytyped, event_keypressed, $string1, $obj2, $string0)", $component0);
+if_setonkey("decant_itembutton_key($component0, event_keychar, event_key, $string1, $obj2, $string0)", $component0);

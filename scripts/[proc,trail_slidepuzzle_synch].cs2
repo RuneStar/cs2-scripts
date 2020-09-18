@@ -28,7 +28,7 @@ while ($int11 < $int1) {
 				cc_setonop(null);
 			} else {
 				cc_setop(1, "Move");
-				cc_setonop("trail_slidepuzzle_op(event_opindex, event_com, event_comid, $int1, $int2, $int3, $int4)");
+				cc_setonop("trail_slidepuzzle_op(event_opindex, event_com, event_comsubid, $int1, $int2, $int3, $int4)");
 			}
 		}
 		if ($int11 < $int2 & cc_find($component0, calc($int1 + $int11)) = ^true) {

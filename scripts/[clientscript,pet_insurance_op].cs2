@@ -1,9 +1,9 @@
 // 638
-[clientscript,pet_insurance_op](int $int0, component $component1, int $int2)
-if ($int0 = 1) {
+[clientscript,pet_insurance_op](int $opindex0, component $component1, int $comsubid2)
+if ($opindex0 = 1) {
 	sound_synth(synth_2266, 1, 0);
-	if (cc_find($component1, $int2) = ^true) {
+	if (cc_find($component1, $comsubid2) = ^true) {
 		cc_settrans(100);
-		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, 0, calc(clientclock + 10))");
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 10))");
 	}
 }

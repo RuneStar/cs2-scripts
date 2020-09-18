@@ -1,8 +1,8 @@
 // 2314
-[clientscript,tob_hud_playportal](int $int0, int $int1)
+[clientscript,tob_hud_playportal](int $comsubid0, int $clock1)
 def_int $int2 = 0;
-if (cc_find(interface_28:1, $int0) = ^true) {
-	$int2 = calc(clientclock - $int1);
+if (cc_find(interface_28:1, $comsubid0) = ^true) {
+	$int2 = calc(clientclock - $clock1);
 	if ($int2 >= 20) {
 		cc_setontimer(null);
 		cc_sethide(true);

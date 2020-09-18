@@ -1,8 +1,8 @@
 // 172
-[proc,bank_depositbox_drawslot](component $component0, obj $obj1, int $int2, int $int3)
+[proc,bank_depositbox_drawslot](component $component0, obj $obj1, int $num2, int $index3)
 if ($obj1 ! null) {
 	cc_settrans(0);
-	cc_setobject($obj1, $int2);
+	cc_setobject($obj1, $num2);
 	cc_clearops;
 	cc_setop(1, ~script2599);
 	if (%varbit4430 = 0) {
@@ -26,10 +26,10 @@ if ($obj1 ! null) {
 		cc_setop(5, "Deposit-All");
 	}
 	cc_setop(6, "Deposit-X");
-	cc_setop(9, ~bankside_extraop($obj1, $int3));
+	cc_setop(9, ~bankside_extraop($obj1, $index3));
 	cc_setop(10, "Examine");
 	cc_setopbase("<col=ff9040><oc_name($obj1)></col>");
-	cc_setondragcomplete("bank_depositbox_drag(event_com, event_comid, event_dragtargetid)");
+	cc_setondragcomplete("bank_depositbox_drag(event_com, event_comsubid, event_dropsubid)");
 } else {
 	cc_settrans(255);
 	cc_setobject(obj_6512, 1);

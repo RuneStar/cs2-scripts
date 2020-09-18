@@ -1,7 +1,7 @@
 // 1685
-[clientscript,poh_jewellery_box_init](int $int0, int $int1, string $string0)
+[clientscript,poh_jewellery_box_init](int $int0, int $flags1, string $text0)
 ~chatdefault_stopinput;
-~steelborder(poh_jewellery_box:1, $string0, 0);
+~steelborder(poh_jewellery_box:1, $text0, 0);
 cc_deleteall(poh_jewellery_box:0);
 def_int $int2 = 0;
 def_int $int3 = 0;
@@ -12,14 +12,14 @@ def_int $int6 = if_getheight(poh_jewellery_box:0);
 $int6 = calc($int6 - 40 - 10 - 5 - 5);
 def_int $int7 = 0;
 def_int $int8 = 0;
-def_int $int9 = 0;
+def_int $height9 = 0;
 def_int $int10 = 5;
 def_int $int11 = 6;
 def_int $int12 = 4;
 def_int $int13 = calc($int10 + $int11 + $int12);
 $int7 = scale($int10, $int13, $int6);
 $int8 = scale($int11, $int13, $int6);
-$int9 = scale($int12, $int13, $int6);
+$height9 = scale($int12, $int13, $int6);
 if_setsize($int5, $int7, ^setsize_abs, ^setsize_abs, poh_jewellery_box:2);
 if_setposition(10, 40, ^setpos_abs_left, ^setpos_abs_top, poh_jewellery_box:2);
 if_setsize($int5, $int7, ^setsize_abs, ^setsize_abs, poh_jewellery_box:3);
@@ -28,9 +28,9 @@ if_setsize($int5, $int8, ^setsize_abs, ^setsize_abs, poh_jewellery_box:4);
 if_setposition(10, calc(40 + $int7 + 5), ^setpos_abs_left, ^setpos_abs_top, poh_jewellery_box:4);
 if_setsize($int5, $int8, ^setsize_abs, ^setsize_abs, poh_jewellery_box:5);
 if_setposition(calc(10 + $int5 + 5), calc(40 + $int7 + 5), ^setpos_abs_left, ^setpos_abs_top, poh_jewellery_box:5);
-if_setsize($int5, $int9, ^setsize_abs, ^setsize_abs, poh_jewellery_box:6);
+if_setsize($int5, $height9, ^setsize_abs, ^setsize_abs, poh_jewellery_box:6);
 if_setposition(10, calc(40 + $int7 + $int8 + 5 + 5), ^setpos_abs_left, ^setpos_abs_top, poh_jewellery_box:6);
-if_setsize($int5, $int9, ^setsize_abs, ^setsize_abs, poh_jewellery_box:7);
+if_setsize($int5, $height9, ^setsize_abs, ^setsize_abs, poh_jewellery_box:7);
 if_setposition(calc(10 + $int5 + 5), calc(40 + $int7 + $int8 + 5 + 5), ^setpos_abs_left, ^setpos_abs_top, poh_jewellery_box:7);
 def_int $int14 = ~poh_jewellery_box_prepbox(poh_jewellery_box:2, 1, "Ring of Dueling", ring_of_dueling_8_2552, $int0);
 $int2, $int3 = ~poh_jewellerybox_getbuttonspacing(poh_jewellery_box:2, 3);
@@ -43,12 +43,12 @@ $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, "Burthorpe"
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, "Barbarian Outpost", $int3, $int0, $int14, $int2, 4);
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, "Corporeal Beast", $int3, $int0, $int14, $int2, 5);
 def_string $string1 = "Tears of Guthix";
-if (testbit($int1, 0) = ^false) {
+if (testbit($flags1, 0) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int14, $int2, 6);
 $string1 = "Wintertodt Camp";
-if (testbit($int1, 1) = ^false) {
+if (testbit($flags1, 1) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:3, 1, $string1, $int3, $int0, $int14, $int2, 7);
@@ -65,26 +65,26 @@ $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, "Mining Gui
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, "Crafting Guild", $int3, $int0, $int14, $int2, 14);
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, "Cooking Guild", $int3, $int0, $int14, $int2, 15);
 $string1 = "Woodcutting Guild";
-if (testbit($int1, 1) = ^false) {
+if (testbit($flags1, 1) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int14, $int2, 16);
 $string1 = "Farming Guild";
-if (testbit($int1, 1) = ^false) {
+if (testbit($flags1, 1) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:5, 2, $string1, $int3, $int0, $int14, $int2, 17);
 $int14 = ~poh_jewellery_box_prepbox(poh_jewellery_box:6, 3, "Ring of Wealth", ring_of_wealth_5_11980, $int0);
 $int2, $int3 = ~poh_jewellerybox_getbuttonspacing(poh_jewellery_box:6, 4);
 $string1 = "Miscellania";
-if (testbit($int1, 2) = ^false) {
+if (testbit($flags1, 2) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, $string1, $int3, $int0, $int14, $int2, 18);
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, "Grand Exchange", $int3, $int0, $int14, $int2, 19);
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, "Falador Park", $int3, $int0, $int14, $int2, 20);
 $string1 = "Dondakan's Rock";
-if (testbit($int1, 3) = ^false) {
+if (testbit($flags1, 3) = ^false) {
 	$string1 = "<str><$string1></str>";
 }
 $int14, $int2 = ~poh_jewellery_box_addbutton(poh_jewellery_box:6, 3, $string1, $int3, $int0, $int14, $int2, 21);

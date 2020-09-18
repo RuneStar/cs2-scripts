@@ -1,6 +1,6 @@
 // 417
-script417(int $int0, int $int1, int $int2)
-if (~chat_get_filter($int0) = $int1) {
-	~chat_set_filter($int0, $int2);
+script417(int $int0, int $chatfilter1, int $chatfilter2)
+if (~chat_get_filter($int0) = $chatfilter1) {
+	~chat_set_filter($int0, $chatfilter2);
 	~script113;
 }

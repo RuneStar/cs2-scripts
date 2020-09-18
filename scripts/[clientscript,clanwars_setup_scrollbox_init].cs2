@@ -18,9 +18,9 @@ while (string_length($string0) > 0) {
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(255);
-	cc_setonmouseover("cc_settrans(event_com, event_comid, 220, null)");
-	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component5, enum(int, string, $enum6, $int9), 25, 512)");
-	cc_setonmouseleave("clanwars_setup_mouseleave(event_com, event_comid, $component5)");
+	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 220, null)");
+	cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component5, enum(int, string, $enum6, $int9), 25, 512)");
+	cc_setonmouseleave("clanwars_setup_mouseleave(event_com, event_comsubid, $component5)");
 	cc_setop(1, $string0);
 	cc_create($component3, ^iftype_graphic, calc($int9 * 3 + 1));
 	cc_setposition(0, $int8, ^setpos_abs_left, ^setpos_abs_top);

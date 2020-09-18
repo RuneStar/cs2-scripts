@@ -1,12 +1,12 @@
 // 2692
 script2692(boolean $boolean0, boolean $boolean1)
-def_int $int2 = 0;
+def_int $comsubid2 = 0;
 if ($boolean0 = true) {
-	$int2 = ~v2_stone_button_in_filled(interface_100:33);
+	$comsubid2 = ~v2_stone_button_in_filled(interface_100:33);
 } else {
-	$int2 = ~v2_stone_button_out_filled(interface_100:33);
+	$comsubid2 = ~v2_stone_button_out_filled(interface_100:33);
 }
-cc_create(interface_100:33, ^iftype_text, $int2);
+cc_create(interface_100:33, ^iftype_text, $comsubid2);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(b12_full);

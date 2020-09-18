@@ -1,17 +1,17 @@
 // 2236
-script2236(component $component0, component $component1, int $int2, int $int3, int $int4)
-def_int $int5 = if_getwidth($component1);
-def_int $int6 = if_getheight($component1);
-if ($int5 = $int2 & $int6 = $int3 & %varcint381 = $int4 & calc(clientclock % 75) ! 0) {
+script2236(component $component0, component $component1, int $width2, int $height3, int $int4)
+def_int $width5 = if_getwidth($component1);
+def_int $height6 = if_getheight($component1);
+if ($width5 = $width2 & $height6 = $height3 & %varcint381 = $int4 & calc(clientclock % 75) ! 0) {
 	return;
 }
-def_int $int7 = scale(%varcint381, 16384, $int5);
+def_int $int7 = scale(%varcint381, 16384, $width5);
 def_int $int8 = ~max(_6220, $int7);
 def_int $int9 = _6221;
-def_int $int10 = ~min(_6222, calc($int5 - $int7));
+def_int $int10 = ~min(_6222, calc($width5 - $int7));
 def_int $int11 = _6223;
 if_setposition($int8, $int9, ^setpos_abs_left, ^setpos_abs_top, $component0);
-if_setsize(calc($int5 - ($int10 - $int8)), calc($int6 - ($int11 - $int9)), ^setsize_minus, ^setsize_minus, $component0);
+if_setsize(calc($width5 - ($int10 - $int8)), calc($height6 - ($int11 - $int9)), ^setsize_minus, ^setsize_minus, $component0);
 def_component $component12 = null;
 if ($component0 = interface_601:14) {
 	if (.cc_find(interface_601:2, 0) = ^true) {
@@ -59,6 +59,6 @@ if ($component0 = interface_601:14) {
 		~script3506($component12);
 	}
 }
-if_setonresize("script2235($component0, $component1, $int5, $int6, %varcint381)", $component0);
-if_setonsubchange("script2235($component0, $component1, $int5, $int6, %varcint381)", $component0);
-if_setontimer("script2235($component0, $component1, $int5, $int6, %varcint381)", $component0);
+if_setonresize("script2235($component0, $component1, $width5, $height6, %varcint381)", $component0);
+if_setonsubchange("script2235($component0, $component1, $width5, $height6, %varcint381)", $component0);
+if_setontimer("script2235($component0, $component1, $width5, $height6, %varcint381)", $component0);

@@ -1,9 +1,9 @@
 // 1140
 [clientscript,deadman_stats_init](component $component0, int $int1, int $int2)
-def_string $string0 = enum(int, string, enum_108, $int1);
+def_string $opbase0 = enum(int, string, enum_108, $int1);
 def_stat $stat3 = enum(int, stat, enum_681, $int1);
 if_setop(1, "Protect", $component0);
-if_setopbase($string0, $component0);
+if_setopbase($opbase0, $component0);
 if_setonop("deadman_stats_click(event_opindex, $component0, $int1)", $component0);
 if_setonvartransmit("deadman_stats_vartransmit($component0, $int1){var1295}", $component0);
 cc_deleteall($component0);

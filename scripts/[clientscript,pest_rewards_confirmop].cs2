@@ -1,6 +1,6 @@
 // 2774
-[clientscript,pest_rewards_confirmop](int $int0, component $component1, component $component2, component $component3, component $component4)
-if ($int0 ! 1) {
+[clientscript,pest_rewards_confirmop](int $opindex0, component $component1, component $component2, component $component3, component $component4)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

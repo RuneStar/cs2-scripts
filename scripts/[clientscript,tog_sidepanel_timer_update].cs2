@@ -1,6 +1,6 @@
 // 1307
-[clientscript,tog_sidepanel_timer_update](component $component0, component $component1, int $int2, int $int3, int $int4)
-$int2 = calc($int2 - $int3 * (clientclock - $int4));
+[clientscript,tog_sidepanel_timer_update](component $component0, component $component1, int $int2, int $int3, int $clock4)
+$int2 = calc($int2 - $int3 * (clientclock - $clock4));
 if ($int2 > 0) {
 	if_setsize($int2, 0, ^setsize_2, ^setsize_minus, $component1);
 } else {

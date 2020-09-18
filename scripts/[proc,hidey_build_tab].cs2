@@ -1,53 +1,53 @@
 // 1478
-[proc,hidey_build_tab](component $component0, component $component1, enum $enum2, int $int3, int $int4, int $int5)
+[proc,hidey_build_tab](component $component0, component $component1, enum $enum2, int $flags3, int $flags4, int $flags5)
 cc_deleteall($component0);
 def_int $int6 = 0;
-def_int $int7 = -1;
+def_int $comsubid7 = -1;
 def_int $int8 = 0;
 def_int $int9 = 0;
-def_int $int10 = 0;
+def_int $y10 = 0;
 def_string $string0 = "";
 def_string $string1 = "";
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $int13 = 0;
 def_int $int14 = 0;
-def_int $int15 = 0;
+def_int $height15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
 def_loc $loc18 = enum(int, loc, $enum2, $int16);
 while ($loc18 ! null) {
 	if (calc($int16 % 4) = 0) {
 		cc_create($component0, ^iftype_rectangle, $int6);
-		$int7 = $int6;
+		$comsubid7 = $int6;
 		$int6 = calc($int6 + 1);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		cc_settrans(245);
-		cc_setposition(0, $int15, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setposition(0, $height15, ^setpos_abs_centre, ^setpos_abs_top);
 	} else {
-		$int7 = -1;
+		$comsubid7 = -1;
 	}
 	$string0 = enum(loc, string, enum_1531, $loc18);
 	$int8 = calc(paraheight($string0, 143, p12_full) * 12 + 9);
 	if ($int8 < 20) {
 		$int8 = 20;
 	}
-	$int11, $int13 = ~hh_get_status($loc18, $int3, $int4, $int5);
+	$int11, $int13 = ~hh_get_status($loc18, $flags3, $flags4, $flags5);
 	$int17 = calc($int16 + 1);
 	$loc18 = enum(int, loc, $enum2, $int17);
 	if ($loc18 ! null) {
 		$string1 = enum(loc, string, enum_1531, $loc18);
 		$int9 = calc(paraheight($string1, 143, p12_full) * 12 + 9);
-		$int12, $int14 = ~hh_get_status($loc18, $int3, $int4, $int5);
+		$int12, $int14 = ~hh_get_status($loc18, $flags3, $flags4, $flags5);
 		if ($int8 < $int9) {
 			$int8 = $int9;
 		}
-		$int10 = calc($int15 + ($int8 - 17) / 2);
+		$y10 = calc($height15 + ($int8 - 17) / 2);
 		cc_create($component0, ^iftype_text, $int6);
 		$int6 = calc($int6 + 1);
 		cc_setsize(143, $int8, ^setsize_abs, ^setsize_abs);
-		cc_setposition(317, $int15, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(317, $height15, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(0xff981f);
 		cc_settextshadow(true);
 		cc_settextfont(p12_full);
@@ -57,26 +57,26 @@ while ($loc18 ! null) {
 			cc_create($component0, ^iftype_graphic, $int6);
 			$int6 = calc($int6 + 1);
 			cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-			cc_setposition(244, $int10, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(244, $y10, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setgraphic("tick");
 		}
 		if ($int14 = 1) {
 			cc_create($component0, ^iftype_graphic, $int6);
 			$int6 = calc($int6 + 1);
 			cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-			cc_setposition(286, $int10, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition(286, $y10, ^setpos_abs_left, ^setpos_abs_top);
 			cc_setgraphic("tick");
 		}
 		$int16 = calc($int17 + 1);
 		$loc18 = enum(int, loc, $enum2, $int16);
 	} else {
 		$loc18 = null;
-		$int10 = calc($int15 + ($int8 - 17) / 2);
+		$y10 = calc($height15 + ($int8 - 17) / 2);
 	}
 	cc_create($component0, ^iftype_text, $int6);
 	$int6 = calc($int6 + 1);
 	cc_setsize(143, $int8, ^setsize_abs, ^setsize_abs);
-	cc_setposition(85, $int15, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(85, $height15, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(0xff981f);
 	cc_settextshadow(true);
 	cc_settextfont(p12_full);
@@ -86,23 +86,23 @@ while ($loc18 ! null) {
 		cc_create($component0, ^iftype_graphic, $int6);
 		$int6 = calc($int6 + 1);
 		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-		cc_setposition(12, $int10, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(12, $y10, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("tick");
 	}
 	if ($int13 = 1) {
 		cc_create($component0, ^iftype_graphic, $int6);
 		$int6 = calc($int6 + 1);
 		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-		cc_setposition(54, $int10, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(54, $y10, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setgraphic("tick");
 	}
-	if ($int7 ! -1 & cc_find($component0, $int7) = ^true) {
+	if ($comsubid7 ! -1 & cc_find($component0, $comsubid7) = ^true) {
 		cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
 	}
-	$int15 = calc($int15 + $int8);
+	$height15 = calc($height15 + $int8);
 }
-if ($int15 > if_getheight($component0)) {
-	if_setscrollsize(0, $int15, $component0);
+if ($height15 > if_getheight($component0)) {
+	if_setscrollsize(0, $height15, $component0);
 } else {
 	if_setscrollsize(0, 0, $component0);
 }

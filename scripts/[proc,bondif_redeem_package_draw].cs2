@@ -1,15 +1,15 @@
 // 2282
-[proc,bondif_redeem_package_draw](int $int0, component $component1, string $string0, int $int2, graphic $graphic3, int $int4, int $int5, string $string1)
-def_int $int6 = -1;
+[proc,bondif_redeem_package_draw](int $int0, component $component1, string $text0, int $num2, graphic $graphic3, int $int4, int $height5, string $text1)
+def_int $comsubid6 = -1;
 def_int $int7 = 0;
 if (%var1204 ! $int0) {
-	$int6, $int7 = ~v2_stone_button_fadable($component1, $int7);
-	$int7 = ~bondif_redeem_package_details($component1, $int7, $string0, $int2, $graphic3, $int4, $int5, $string1);
-	if_setonmouserepeat("bondif_redeem_hover(true, $component1, $int6)", $component1);
-	if_setonmouseleave("bondif_redeem_hover(false, $component1, $int6)", $component1);
+	$comsubid6, $int7 = ~v2_stone_button_fadable($component1, $int7);
+	$int7 = ~bondif_redeem_package_details($component1, $int7, $text0, $num2, $graphic3, $int4, $height5, $text1);
+	if_setonmouserepeat("bondif_redeem_hover(true, $component1, $comsubid6)", $component1);
+	if_setonmouseleave("bondif_redeem_hover(false, $component1, $comsubid6)", $component1);
 } else {
 	$int7 = ~v2_stone_button_in_filled($component1);
-	$int7 = ~bondif_redeem_package_details($component1, $int7, $string0, $int2, $graphic3, $int4, $int5, $string1);
+	$int7 = ~bondif_redeem_package_details($component1, $int7, $text0, $num2, $graphic3, $int4, $height5, $text1);
 	if_setonmouserepeat(null, $component1);
 	if_setonmouseleave(null, $component1);
 }

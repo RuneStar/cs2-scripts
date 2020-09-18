@@ -1,6 +1,6 @@
 // 2237
 [proc,hud_clamp_init](component $component0)
-def_component $component1 = if_getlayer($component0);
-if ($component1 ! null) {
-	~hud_clamp_review($component0, $component1, -1, -1);
+def_component $layer1 = if_getlayer($component0);
+if ($layer1 ! null) {
+	~hud_clamp_review($component0, $layer1, -1, -1);
 }

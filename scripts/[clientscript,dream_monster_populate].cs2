@@ -13,20 +13,20 @@ if_settext($string1, dream_monster_stat:20);
 if_settext($string2, dream_monster_stat:22);
 if_settext($string3, dream_monster_stat:24);
 if_settext($string4, dream_monster_stat:26);
-def_int $int0 = calc(paraheight($string1, if_getwidth(dream_monster_stat:20), p12_full) * 12);
-if ($int0 > if_getheight(dream_monster_stat:18)) {
-	if_setscrollsize(0, $int0, dream_monster_stat:19);
+def_int $height0 = calc(paraheight($string1, if_getwidth(dream_monster_stat:20), p12_full) * 12);
+if ($height0 > if_getheight(dream_monster_stat:18)) {
+	if_setscrollsize(0, $height0, dream_monster_stat:19);
 }
-$int0 = calc(paraheight($string2, if_getwidth(dream_monster_stat:22), p12_full) * 12);
-if ($int0 > if_getheight(dream_monster_stat:18)) {
-	if_setscrollsize(0, $int0, dream_monster_stat:21);
+$height0 = calc(paraheight($string2, if_getwidth(dream_monster_stat:22), p12_full) * 12);
+if ($height0 > if_getheight(dream_monster_stat:18)) {
+	if_setscrollsize(0, $height0, dream_monster_stat:21);
 }
-$int0 = calc(paraheight($string3, if_getwidth(dream_monster_stat:24), p12_full) * 12);
-if ($int0 > if_getheight(dream_monster_stat:18)) {
-	if_setscrollsize(0, $int0, dream_monster_stat:23);
+$height0 = calc(paraheight($string3, if_getwidth(dream_monster_stat:24), p12_full) * 12);
+if ($height0 > if_getheight(dream_monster_stat:18)) {
+	if_setscrollsize(0, $height0, dream_monster_stat:23);
 }
-$int0 = calc(paraheight($string4, if_getwidth(dream_monster_stat:26), p12_full) * 12);
-if ($int0 > if_getheight(dream_monster_stat:18)) {
-	if_setscrollsize(0, $int0, dream_monster_stat:25);
+$height0 = calc(paraheight($string4, if_getwidth(dream_monster_stat:26), p12_full) * 12);
+if ($height0 > if_getheight(dream_monster_stat:18)) {
+	if_setscrollsize(0, $height0, dream_monster_stat:25);
 }
 ~dream_monster_switch_tab(dream_monster_stat:5);

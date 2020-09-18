@@ -1,9 +1,9 @@
 // 2268
-[clientscript,text_device](component $component0, int $int1, string $string0, string $string1)
-if ($int1 = -1 & if_find($component0) = true | cc_find($component0, $int1) = ^true) {
+[clientscript,text_device](component $component0, int $comsubid1, string $text0, string $text1)
+if ($comsubid1 = -1 & if_find($component0) = true | cc_find($component0, $comsubid1) = ^true) {
 	if (~on_mobile = true) {
-		cc_settext($string1);
+		cc_settext($text1);
 	} else {
-		cc_settext($string0);
+		cc_settext($text0);
 	}
 }

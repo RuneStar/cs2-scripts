@@ -1,9 +1,9 @@
 // 2779
-[proc,pest_rewards_itemdraw](obj $obj0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, int $int9, int $int10)(int)
+[proc,pest_rewards_itemdraw](namedobj $namedobj0, int $y1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, int $int9, int $int10)(int)
 .cc_create($component6, ^iftype_rectangle, $int9);
 $int9 = calc($int9 + 1);
 .cc_setsize($int3, 32, ^setsize_abs, ^setsize_abs);
-.cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition($int2, $y1, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setcolour(^black);
 .cc_setfill(true);
 .cc_settrans(255);
@@ -11,41 +11,41 @@ $int9 = calc($int9 + 1);
 cc_create($component6, ^iftype_graphic, $int9);
 $int9 = calc($int9 + 1);
 cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int2 + (40 - 36) / 2), $int1, ^setpos_abs_left, ^setpos_abs_top);
-cc_setobject_nonum($obj0, 1);
+cc_setposition(calc($int2 + (40 - 36) / 2), $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setobject_nonum($namedobj0, 1);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
-def_int $int11 = calc($int3 - 40);
+def_int $width11 = calc($int3 - 40);
 $int2 = calc($int2 + 40);
 cc_create($component6, ^iftype_text, $int9);
 $int9 = calc($int9 + 1);
-cc_setsize($int11, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width11, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int2, $y1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 def_int $colour12 = 0xff981f;
 def_int $colour13 = 0xffb83f;
 def_int $int14 = enum(int, int, enum_2286, $int4);
-def_string $string0 = "";
+def_string $mes0 = "";
 def_stat $stat15 = enum(int, stat, enum_2288, $int4);
 if (enum(int, boolean, enum_2287, $int4) = true & (stat_base(hitpoints) < 42 | stat_base(attack) < 42 | stat_base(defence) < 42 | stat_base(strength) < 42 | stat_base(ranged) < 42 | stat_base(magic) < 42 | stat_base(prayer) < 22)) {
 	cc_setcolour(^red);
 	cc_settext(enum(int, string, enum_2285, $int4));
-	$string0 = "You need level 42 in Attack, Strength, Defence, Ranged, Magic and Hitpoints, and level 22 Prayer, to purchase that item.";
-	.cc_setonop("pest_rewards_refuse($string0, $component5, $component6, $component7, $component8)");
+	$mes0 = "You need level 42 in Attack, Strength, Defence, Ranged, Magic and Hitpoints, and level 22 Prayer, to purchase that item.";
+	.cc_setonop("pest_rewards_refuse($mes0, $component5, $component6, $component7, $component8)");
 	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
 } else if ($stat15 ! null & stat($stat15) < 25) {
 	cc_setcolour(^red);
 	cc_settext("<enum(int, string, enum_2285, $int4)> - requires level <tostring(25)>");
-	$string0 = "You need level <tostring(25)> <enum(stat, string, enum_680, $stat15)> to purchase that item.";
-	.cc_setonop("pest_rewards_refuse($string0, $component5, $component6, $component7, $component8)");
+	$mes0 = "You need level <tostring(25)> <enum(stat, string, enum_680, $stat15)> to purchase that item.";
+	.cc_setonop("pest_rewards_refuse($mes0, $component5, $component6, $component7, $component8)");
 	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
 } else if (%var261 < $int14) {
 	cc_setcolour(^red);
 	cc_settext("<enum(int, string, enum_2285, $int4)> - <~pest_rewards_costpoints($int14)>");
-	$string0 = "You need <~pest_rewards_costpoints($int14)> to claim that reward.";
-	.cc_setonop("pest_rewards_refuse($string0, $component5, $component6, $component7, $component8)");
+	$mes0 = "You need <~pest_rewards_costpoints($int14)> to claim that reward.";
+	.cc_setonop("pest_rewards_refuse($mes0, $component5, $component6, $component7, $component8)");
 	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
 } else {
 	if ($int10 = $int4) {
@@ -58,8 +58,8 @@ if (enum(int, boolean, enum_2287, $int4) = true & (stat_base(hitpoints) < 42 | s
 }
 cc_create($component6, ^iftype_text, $int9);
 $int9 = calc($int9 + 1);
-cc_setsize($int11, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width11, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int2, $y1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
 cc_settextfont(p11_full);
 cc_settextshadow(true);

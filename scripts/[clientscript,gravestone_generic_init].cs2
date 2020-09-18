@@ -2,7 +2,7 @@
 [clientscript,gravestone_generic_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, int $int16, component $component17)
 def_int $int18 = ~steelborder($component1, ~gravestone_generic_title, 3);
 if (cc_find($component1, $int18) = ^true) {
-	cc_setoninvtransmit("gravestone_generic_title(event_com, event_comid){inv_525}");
+	cc_setoninvtransmit("gravestone_generic_title(event_com, event_comsubid){inv_525}");
 }
 def_int $int19 = 0;
 def_graphic $graphic20 = null;
@@ -50,8 +50,8 @@ while ($int18 < 120) {
 	.cc_setop(1, "Take");
 	cc_setop(10, "Examine");
 	.cc_setop(10, "Examine");
-	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
-	.cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	.cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 	$int18 = calc($int18 + 1);
 }
 def_int $int21 = calc(120 * 2);
@@ -75,8 +75,8 @@ while ($int18 < 8) {
 	cc_sethide(false);
 	cc_settiling(true);
 	cc_settrans(255);
-	cc_setonmouserepeat("cc_settrans(event_com, event_comid, 200, null)");
-	cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
 	cc_setdraggable($component0, -1);
 	cc_setdragdeadzone(1);
 	cc_setdragdeadtime(5);

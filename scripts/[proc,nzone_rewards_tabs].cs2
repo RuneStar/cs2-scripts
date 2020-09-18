@@ -14,7 +14,7 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 ~nzone_rewards_setpoints;
-cc_setonvartransmit("nzone_rewards_setpoints(event_com, event_comid){var1060}");
+cc_setonvartransmit("nzone_rewards_setpoints(event_com, event_comsubid){var1060}");
 if_sethide(false, $component4);
 if ($component4 ! $component1) {
 	if_sethide(true, $component1);

@@ -1,6 +1,6 @@
 // 18
-[clientscript,wom_item_hide](int $int0, component $component1, int $int2, component $component3)
-if ($int2 = 1 & cc_find($component1, $int0) = ^true) {
+[clientscript,wom_item_hide](int $comsubid0, component $component1, int $opindex2, component $component3)
+if ($opindex2 = 1 & cc_find($component1, $comsubid0) = ^true) {
 	~chatdefault_opt_item;
 	~wom_build_item_list($component1, $component3);
 }

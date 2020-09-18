@@ -1,21 +1,21 @@
 // 2182
-[proc,deadman_spectator_stats](string $string0, string $string1, int $int0, int $int1, int $int2, int $int3, int $int4, int $int5)
+[proc,deadman_spectator_stats](string $text0, string $text1, int $int0, int $int1, int $int2, int $int3, int $int4, int $int5)
 def_enum $enum6 = enum_140;
 if ($int5 = 1) {
 	$enum6 = enum_142;
 }
-if_settext($string0, enum(component, component, $enum6, interface_154:9));
-if_settext($string1, enum(component, component, $enum6, interface_154:11));
-def_string $string2 = "<tostring($int0)> / <tostring($int1)>";
-if_settext($string2, enum(component, component, $enum6, interface_154:52));
+if_settext($text0, enum(component, component, $enum6, interface_154:9));
+if_settext($text1, enum(component, component, $enum6, interface_154:11));
+def_string $text2 = "<tostring($int0)> / <tostring($int1)>";
+if_settext($text2, enum(component, component, $enum6, interface_154:52));
 $int0 = calc($int0 * 100 / $int1 * 500 / 100);
 if ($int0 > 500) {
 	$int0 = 500;
 }
 if_setsize($int0, 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum6, interface_154:51));
 if_setsize(calc(500 - $int0), 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum6, interface_154:50));
-def_string $string3 = "<tostring($int2)> / <tostring($int3)>";
-if_settext($string3, enum(component, component, $enum6, interface_154:40));
+def_string $text3 = "<tostring($int2)> / <tostring($int3)>";
+if_settext($text3, enum(component, component, $enum6, interface_154:40));
 $int2 = calc($int2 * 100 / $int3 * 247 / 100);
 if ($int2 > 247) {
 	$int2 = 247;
@@ -26,8 +26,8 @@ $int4 = calc($int4 / 10);
 if ($int4 > 100) {
 	$int4 = 100;
 }
-def_string $string4 = "<tostring($int4)>%";
-if_settext($string4, enum(component, component, $enum6, interface_154:46));
+def_string $text4 = "<tostring($int4)>%";
+if_settext($text4, enum(component, component, $enum6, interface_154:46));
 $int4 = calc($int4 * 247 / 100);
 if_setsize($int4, 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum6, interface_154:45));
 if_setsize(calc(247 - $int4), 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum6, interface_154:44));

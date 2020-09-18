@@ -1,6 +1,6 @@
 // 2580
-[proc,int_device](int $int0, int $int1)(int)
+[proc,int_device](int $y0, int $y1)(int)
 if (~on_mobile = true) {
-	return($int1);
+	return($y1);
 }
-return($int0);
+return($y0);

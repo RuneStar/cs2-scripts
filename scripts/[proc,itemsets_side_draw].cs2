@@ -19,7 +19,7 @@ while ($int3 > 0) {
 				} else {
 					cc_settrans(0);
 					cc_setop(1, "Unpack");
-					cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+					cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 				}
 			} else {
 				cc_settrans(130);

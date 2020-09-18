@@ -11,29 +11,29 @@ def_int $int15 = calc(inv_total(inv, medium_fossilised_limbs_21580) + inv_total(
 def_int $int16 = calc(inv_total(inv, large_fossilised_limbs_21600) + inv_total(inv, large_fossilised_spine_21602) + inv_total(inv, large_fossilised_ribs_21604) + inv_total(inv, large_fossilised_pelvis_21606) + inv_total(inv, large_fossilised_skull_21608));
 def_int $int17 = calc(inv_total(inv, fossilised_roots_21590) + inv_total(inv, fossilised_stump_21592) + inv_total(inv, fossilised_branch_21594) + inv_total(inv, fossilised_leaf_21596) + inv_total(inv, fossilised_mushroom_21598));
 def_int $int18 = calc(inv_total(inv, rare_fossilised_limbs_21610) + inv_total(inv, rare_fossilised_spine_21612) + inv_total(inv, rare_fossilised_ribs_21614) + inv_total(inv, rare_fossilised_pelvis_21616) + inv_total(inv, rare_fossilised_skull_21618));
-def_int $int19 = inv_total(inv, unidentified_small_fossil_21562);
-def_int $int20 = inv_total(inv, unidentified_medium_fossil_21564);
-def_int $int21 = inv_total(inv, unidentified_large_fossil_21566);
-def_int $int22 = inv_total(inv, unidentified_rare_fossil_21568);
-def_int $int23 = calc($int19 + $int20 + $int21 + $int22);
-def_int $int24 = inv_total(inv, calcite_21543);
-def_int $int25 = inv_total(inv, pyrophosphite_21545);
-if ($int14 > 0 | $int19 > 0) {
+def_int $total19 = inv_total(inv, unidentified_small_fossil_21562);
+def_int $total20 = inv_total(inv, unidentified_medium_fossil_21564);
+def_int $total21 = inv_total(inv, unidentified_large_fossil_21566);
+def_int $total22 = inv_total(inv, unidentified_rare_fossil_21568);
+def_int $int23 = calc($total19 + $total20 + $total21 + $total22);
+def_int $total24 = inv_total(inv, calcite_21543);
+def_int $total25 = inv_total(inv, pyrophosphite_21545);
+if ($int14 > 0 | $total19 > 0) {
 	if_setcolour(^green, $component1);
 } else {
 	if_setcolour(0xff981f, $component1);
 }
-if ($int15 > 0 | $int20 > 0) {
+if ($int15 > 0 | $total20 > 0) {
 	if_setcolour(^green, $component3);
 } else {
 	if_setcolour(0xff981f, $component3);
 }
-if ($int16 > 0 | $int21 > 0) {
+if ($int16 > 0 | $total21 > 0) {
 	if_setcolour(^green, $component5);
 } else {
 	if_setcolour(0xff981f, $component5);
 }
-if ($int18 > 0 | $int22 > 0) {
+if ($int18 > 0 | $total22 > 0) {
 	if_setcolour(^green, $component9);
 } else {
 	if_setcolour(0xff981f, $component9);
@@ -43,17 +43,17 @@ if ($int17 > 0) {
 } else {
 	if_setcolour(0xff981f, $component7);
 }
-if ($int19 > 0 | $int20 > 0 | $int21 > 0 | $int22 > 0) {
+if ($total19 > 0 | $total20 > 0 | $total21 > 0 | $total22 > 0) {
 	if_setcolour(^green, $component11);
 } else {
 	if_setcolour(0xff981f, $component11);
 }
-if ($int24 > 0) {
+if ($total24 > 0) {
 	if_setcolour(^green, $component12);
 } else {
 	if_setcolour(0xff981f, $component12);
 }
-if ($int25 > 0) {
+if ($total25 > 0) {
 	if_setcolour(^green, $component13);
 } else {
 	if_setcolour(0xff981f, $component13);

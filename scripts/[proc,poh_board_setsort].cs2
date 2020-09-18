@@ -16,8 +16,8 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 def_string $string0 = "Sort by name";
-cc_setonmouserepeat("poh_board_hoversort(event_com, event_comid, 120, $component1, $string0)");
-cc_setonmouseleave("cc_settrans(event_com, event_comid, 0, $component1)");
+cc_setonmouserepeat("poh_board_hoversort(event_com, event_comsubid, 120, $component1, $string0)");
+cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 0, $component1)");
 if (%varcint379 = 0) {
 	cc_setonclick("poh_board_clicksort(1)");
 } else {

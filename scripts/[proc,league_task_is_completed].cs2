@@ -12,41 +12,41 @@ def_int $int3 = struct_param($struct0, param_873);
 if ($int3 = -1 | $int3 < 0) {
 	return(^false);
 }
-def_int $int4 = calc($int3 % 32);
+def_int $index4 = calc($int3 % 32);
 def_int $int5 = calc($int3 / 32);
 switch_int ($int5) {
 	case 0 :
-		return(testbit(%var2616, $int4));
+		return(testbit(%var2616, $index4));
 	case 1 :
-		return(testbit(%var2617, $int4));
+		return(testbit(%var2617, $index4));
 	case 2 :
-		return(testbit(%var2618, $int4));
+		return(testbit(%var2618, $index4));
 	case 3 :
-		return(testbit(%var2619, $int4));
+		return(testbit(%var2619, $index4));
 	case 4 :
-		return(testbit(%var2620, $int4));
+		return(testbit(%var2620, $index4));
 	case 5 :
-		return(testbit(%var2621, $int4));
+		return(testbit(%var2621, $index4));
 	case 6 :
-		return(testbit(%var2622, $int4));
+		return(testbit(%var2622, $index4));
 	case 7 :
-		return(testbit(%var2623, $int4));
+		return(testbit(%var2623, $index4));
 	case 8 :
-		return(testbit(%var2624, $int4));
+		return(testbit(%var2624, $index4));
 	case 9 :
-		return(testbit(%var2625, $int4));
+		return(testbit(%var2625, $index4));
 	case 10 :
-		return(testbit(%var2626, $int4));
+		return(testbit(%var2626, $index4));
 	case 11 :
-		return(testbit(%var2627, $int4));
+		return(testbit(%var2627, $index4));
 	case 12 :
-		return(testbit(%var2628, $int4));
+		return(testbit(%var2628, $index4));
 	case 13 :
-		return(testbit(%var2629, $int4));
+		return(testbit(%var2629, $index4));
 	case 14 :
-		return(testbit(%var2630, $int4));
+		return(testbit(%var2630, $index4));
 	case 15 :
-		return(testbit(%var2631, $int4));
+		return(testbit(%var2631, $index4));
 	case default :
 		return(^false);
 }

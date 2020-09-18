@@ -1,12 +1,12 @@
 // 3541
-[proc,poh_costumes_countalternates](obj $obj0)(int)
-if (enum(obj, boolean, enum_3305, $obj0) = true) {
+[proc,poh_costumes_countalternates](namedobj $namedobj0)(int)
+if (enum(obj, boolean, enum_3305, $namedobj0) = true) {
 	return(1);
 }
-if (enum(obj, namedobj, enum_3303, $obj0) ! null) {
+if (enum(obj, namedobj, enum_3303, $namedobj0) ! null) {
 	return(2);
 }
-def_enum $enum1 = enum(obj, enum, enum_3304, $obj0);
+def_enum $enum1 = enum(obj, enum, enum_3304, $namedobj0);
 if ($enum1 ! null) {
 	return(calc(1 + enum_getoutputcount($enum1)));
 }

@@ -2,7 +2,7 @@
 [proc,clanwars_view_updatebutton](component $component0, int $int1, int $int2, model $model3)
 .cc_setmodel($model3);
 if ($int1 = 1) {
-	.cc_setontimer("clanwars_view_spin(event_com, event_comid)");
+	.cc_setontimer("clanwars_view_spin(event_com, event_comsubid)");
 	cc_settrans(255);
 	cc_setonmouseover(null);
 	cc_setonmouseleave(null);
@@ -10,6 +10,6 @@ if ($int1 = 1) {
 	return;
 }
 .cc_setontimer(null);
-cc_setonmouseover("cc_settrans(event_com, event_comid, 225, null)");
-cc_setonmouseleave("cc_settrans(event_com, event_comid, 255, null)");
+cc_setonmouseover("cc_settrans(event_com, event_comsubid, 225, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
 if_setonop("clanwars_view_op(event_opindex, $int2, $model3)", $component0);

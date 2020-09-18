@@ -1,9 +1,9 @@
 // 1099
 [proc,bugreport_parse](string $string0, int $int0)(string)
 $string0 = escape($string0);
-def_int $int1 = string_length($string0);
+def_int $length1 = string_length($string0);
 def_int $int2 = 0;
-if ($int1 > 0 & compare(substring($string0, calc($int1 - 1), $int1), "|") = 0) {
+if ($length1 > 0 & compare(substring($string0, calc($length1 - 1), $length1), "|") = 0) {
 	$int2 = 1;
 }
 def_string $string1 = "";

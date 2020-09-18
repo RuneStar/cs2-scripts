@@ -11,14 +11,14 @@ if (cc_find(interface_226:4, calc($int0 * 2)) = ^true) {
 %varcint139 = $int0;
 ~deadmanprotect_stats_refresh_all;
 ~script1280;
-def_string $string0 = "";
+def_string $text0 = "";
 if ($int0 = 0) {
-	$string0 = "In Deadman mode, when you die <col=ffffff>unskulled</col> from <col=ffffff>PvM combat</col>, you only lose the items you are carrying at the time. Your 3 most valuable items are protected. You do not lose any experience.<br><br>You may lose more if you die from <col=ffffff>PvP combat</col> or if you are <col=ffffff>skulled</col> at the time.";
+	$text0 = "In Deadman mode, when you die <col=ffffff>unskulled</col> from <col=ffffff>PvM combat</col>, you only lose the items you are carrying at the time. Your 3 most valuable items are protected. You do not lose any experience.<br><br>You may lose more if you die from <col=ffffff>PvP combat</col> or if you are <col=ffffff>skulled</col> at the time.";
 } else if ($int0 = 1) {
-	$string0 = "In Deadman mode, when you die from <col=ffffff>PvP combat</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>You will not lose any experience in your protected and unprotected skills if you die <col=ffffff>unskulled</col>.";
+	$text0 = "In Deadman mode, when you die from <col=ffffff>PvP combat</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>You will not lose any experience in your protected and unprotected skills if you die <col=ffffff>unskulled</col>.";
 } else if ($int0 = 2) {
-	$string0 = "In Deadman mode, if you die whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Dependent on level difference, you may also lose <col=ffffff>up to 50%</col> of your experience in any unprotected skills. You may lose even more in a <col=ffffff>guarded</col> area.";
+	$text0 = "In Deadman mode, if you die whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Dependent on level difference, you may also lose <col=ffffff>up to 50%</col> of your experience in any unprotected skills. You may lose even more in a <col=ffffff>guarded</col> area.";
 } else if ($int0 = 3) {
-	$string0 = "In Deadman mode, if you die in a <col=ffffff>guarded</col> area whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Dependent on level difference, you may also lose <col=ffffff>up to 10%</col> of your experience in any protected skills, and <col=ffffff>up to 50%</col> in any unprotected skills.";
+	$text0 = "In Deadman mode, if you die in a <col=ffffff>guarded</col> area whilst <col=ffffff>skulled</col>, you lose the <col=ffffff>10</col> most valuable stacks of items in your bank, as well as <col=ffffff>all</col> of the items you are carrying at the time.<br><br>Dependent on level difference, you may also lose <col=ffffff>up to 10%</col> of your experience in any protected skills, and <col=ffffff>up to 50%</col> in any unprotected skills.";
 }
-if_settext($string0, interface_226:5);
+if_settext($text0, interface_226:5);

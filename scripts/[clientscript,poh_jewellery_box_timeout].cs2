@@ -1,11 +1,11 @@
 // 1692
-[clientscript,poh_jewellery_box_timeout](int $int0, component $component1, int $int2, string $string0, string $string1, string $string2, int $int3)
-if (clientclock < $int3) {
+[clientscript,poh_jewellery_box_timeout](int $comsubid0, component $layer1, int $comsubid2, string $string0, string $string1, string $string2, int $clock3)
+if (clientclock < $clock3) {
 	return;
 }
-if (cc_find($component1, $int2) = ^true & .cc_find(poh_jewellery_box:0, $int0) = ^true) {
+if (cc_find($layer1, $comsubid2) = ^true & .cc_find(poh_jewellery_box:0, $comsubid0) = ^true) {
 	.cc_setontimer(null);
 	cc_settext($string0);
-	cc_setonop("poh_jewellery_box_op(event_opindex, $int0, $component1, $int2, $string0, $string1, $string2)");
-	.cc_setonkey("poh_jewellery_box_keypress(event_keytyped, $int0, $component1, $int2, $string0, $string1, $string2)");
+	cc_setonop("poh_jewellery_box_op(event_opindex, $comsubid0, $layer1, $comsubid2, $string0, $string1, $string2)");
+	.cc_setonkey("poh_jewellery_box_keypress(event_keychar, $comsubid0, $layer1, $comsubid2, $string0, $string1, $string2)");
 }

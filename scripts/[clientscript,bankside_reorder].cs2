@@ -1,25 +1,25 @@
 // 298
-[clientscript,bankside_reorder](component $component0, component $component1, int $int2, int $int3, component $component4, component $component5, component $component6)
-def_int $int7 = inv_size(inv);
-if ($int2 < 0 | $int2 >= $int7) {
+[clientscript,bankside_reorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, component $component4, component $component5, component $component6)
+def_int $size7 = inv_size(inv);
+if ($comsubid2 < 0 | $comsubid2 >= $size7) {
 	return;
 }
-if ($int3 < 0 | $int3 >= $int7) {
+if ($dropsubid3 < 0 | $dropsubid3 >= $size7) {
 	return;
 }
-if ($component0 ! $component1) {
+if ($drop0 ! $drop1) {
 	return;
 }
-def_obj $obj8 = inv_getobj(inv, $int2);
+def_obj $obj8 = inv_getobj(inv, $comsubid2);
 if ($obj8 = null) {
 	return;
 }
-def_obj $obj9 = inv_getobj(inv, $int3);
-if (cc_find($component0, $int3) = ^true) {
-	~bankside_drawitem($obj8, inv_getnum(inv, $int2), $int2, $component0, $component4, 0, $component5, $component6);
+def_obj $obj9 = inv_getobj(inv, $dropsubid3);
+if (cc_find($drop0, $dropsubid3) = ^true) {
+	~bankside_drawitem($obj8, inv_getnum(inv, $comsubid2), $comsubid2, $drop0, $component4, 0, $component5, $component6);
 }
-if (cc_find($component0, $int2) = ^true) {
-	~bankside_drawitem($obj9, inv_getnum(inv, $int3), $int3, $component0, $component4, 0, $component5, $component6);
+if (cc_find($drop0, $comsubid2) = ^true) {
+	~bankside_drawitem($obj9, inv_getnum(inv, $dropsubid3), $dropsubid3, $drop0, $component4, 0, $component5, $component6);
 }
 if ($obj8 = looting_bag_11941 | $obj8 = looting_bag_22586 | $obj9 = looting_bag_11941 | $obj9 = looting_bag_22586) {
 	cc_deleteall($component4);

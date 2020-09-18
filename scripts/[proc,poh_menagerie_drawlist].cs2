@@ -1,11 +1,11 @@
 // 641
-[proc,poh_menagerie_drawlist](component $component0, component $component1, int $int2)
+[proc,poh_menagerie_drawlist](component $component0, component $component1, int $y2)
 cc_deleteall($component0);
-def_int $int3 = if_getwidth($component0);
-def_int $int4 = if_getheight($component0);
-def_int $int5 = calc(($int3 - 36 * 6) / 5 + 36);
+def_int $width3 = if_getwidth($component0);
+def_int $height4 = if_getheight($component0);
+def_int $int5 = calc(($width3 - 36 * 6) / 5 + 36);
 def_int $int6 = 0;
-def_int $int7 = 0;
+def_int $height7 = 0;
 def_enum $enum8 = null;
 def_int $int9 = 0;
 while ($int9 <= 45) {
@@ -46,7 +46,7 @@ while ($int9 <= 45) {
 		} else {
 			$enum8 = null;
 		}
-		$int7 = ~poh_menagerie_drawpet(enum(int, namedobj, enum_985, $int9), $enum8, $int5, $int6);
+		$height7 = ~poh_menagerie_drawpet(enum(int, namedobj, enum_985, $int9), $enum8, $int5, $int6);
 		$int6 = calc($int6 + 1);
 	} else {
 		cc_sethide(true);
@@ -54,28 +54,28 @@ while ($int9 <= 45) {
 	$int9 = calc($int9 + 1);
 }
 def_obj $obj10 = null;
-def_int $int11 = 0;
-def_int $int12 = inv_size(inv_517);
-while ($int11 < $int12) {
+def_int $size11 = 0;
+def_int $size12 = inv_size(inv_517);
+while ($size11 < $size12) {
 	cc_create($component0, ^iftype_graphic, $int9);
-	$obj10 = inv_getobj(inv_517, $int11);
+	$obj10 = inv_getobj(inv_517, $size11);
 	if ($obj10 ! null) {
-		$int7 = ~poh_menagerie_drawpet($obj10, null, $int5, $int6);
+		$height7 = ~poh_menagerie_drawpet($obj10, null, $int5, $int6);
 		$int6 = calc($int6 + 1);
 	} else {
 		cc_sethide(true);
 	}
-	$int9, $int11 = calc($int9 + 1), calc($int11 + 1);
+	$int9, $size11 = calc($int9 + 1), calc($size11 + 1);
 }
 if ($int6 > 0) {
-	$int7 = calc($int7 + 32);
+	$height7 = calc($height7 + 32);
 }
-if ($int7 > $int4) {
-	if_setscrollsize(0, $int7, $component0);
-	if_setscrollpos(0, $int2, $component0);
+if ($height7 > $height4) {
+	if_setscrollsize(0, $height7, $component0);
+	if_setscrollpos(0, $y2, $component0);
 } else {
-	$int7 = 0;
+	$height7 = 0;
 	if_setscrollsize(0, 0, $component0);
 	if_setscrollpos(0, 0, $component0);
 }
-~scrollbar_resize($component1, $component0, $int7);
+~scrollbar_resize($component1, $component0, $height7);

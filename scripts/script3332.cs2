@@ -1,13 +1,13 @@
 // 3332
 script3332(component $component0, coord $coord1, mapelement $mapelement2, int $int3)
-def_int $int4 = -1;
-def_int $int5 = -1;
+def_int $x4 = -1;
+def_int $z5 = -1;
 switch_int ($int3) {
 	case 60 :
 		worldmap_jumptosourcecoord($coord1);
 	case 61 :
-		$int4, $int5 = worldmap_getdisplayposition;
-		if ($int4 ! coordx($coord1) | $int5 ! coordz($coord1)) {
+		$x4, $z5 = worldmap_getdisplayposition;
+		if ($x4 ! coordx($coord1) | $z5 ! coordz($coord1)) {
 			return;
 		}
 	case 62 :

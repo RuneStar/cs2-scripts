@@ -1,5 +1,5 @@
 // 509
-script509(int $int0, int $int1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, int $int8, int $int9, int $int10, int $int11)(int, int)
+script509(int $int0, int $int1, int $int2, component $component3, component $component4, component $drop5, component $component6, component $component7, int $int8, int $int9, int $int10, int $int11)(int, int)
 def_int $int12 = 0;
 if ($int11 = 0 & $int2 > 0 & ~bankmain_searching = 1) {
 	$int12 = calc($int8 + 15);
@@ -16,7 +16,7 @@ while ($int0 < $int1) {
 		$obj13 = inv_getobj(bank, $int0);
 		if (~bankmain_filteritem($obj13) = 1) {
 			cc_sethide(false);
-			~bankmain_drawitem($obj13, inv_getnum(bank, $int0), $component3, $component4, $component5, $component6, $component7);
+			~bankmain_drawitem($obj13, inv_getnum(bank, $int0), $component3, $component4, $drop5, $component6, $component7);
 			$int15 = calc($int15 + 1);
 			$int14 = calc($int12 + $int17 * 36);
 			cc_setposition(calc(51 + $int16 * (36 + $int9)), $int14, ^setpos_abs_left, ^setpos_abs_top);

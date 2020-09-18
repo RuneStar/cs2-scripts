@@ -1,8 +1,8 @@
 // 2334
 [proc,tob_partydetails_sort](intarray $intarray0, int $int1, int $int2, int $int3)
-def_int $int4 = calc(($int1 + $int2) / 2);
-def_int $int5 = $intarray0($int4);
-$intarray0($int4) = $intarray0($int2);
+def_int $index4 = calc(($int1 + $int2) / 2);
+def_int $int5 = $intarray0($index4);
+$intarray0($index4) = $intarray0($int2);
 $intarray0($int2) = $int5;
 def_int $int6 = $int1;
 def_int $int7 = $int1;

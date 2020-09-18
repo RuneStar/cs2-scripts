@@ -1,30 +1,30 @@
 // 637
-[proc,pet_insurance_drawlist](component $component0, int $int1, component $component2, int $int3, int $int4)
+[proc,pet_insurance_drawlist](component $component0, int $int1, component $component2, int $flags3, int $flags4)
 cc_deleteall($component0);
 cc_deleteall($component2);
-def_int $int5 = if_getwidth($component0);
-def_int $int6 = if_getheight($component0);
-def_int $int7 = calc(($int5 - 36 * 7) / 6 + 36);
+def_int $width5 = if_getwidth($component0);
+def_int $height6 = if_getheight($component0);
+def_int $int7 = calc(($width5 - 36 * 7) / 6 + 36);
 def_int $int8 = 0;
-def_obj $obj9 = null;
-def_int $int10 = 0;
+def_namedobj $namedobj9 = null;
+def_int $height10 = 0;
 def_int $int11 = 0;
 while ($int11 <= 45) {
 	cc_create($component0, ^iftype_graphic, $int11);
-	if ($int11 < $int1 & testbit($int3, $int11) = ^true | $int11 >= $int1 & testbit($int4, calc($int11 - $int1)) = ^true) {
-		$obj9 = enum(int, namedobj, enum_985, $int11);
+	if ($int11 < $int1 & testbit($flags3, $int11) = ^true | $int11 >= $int1 & testbit($flags4, calc($int11 - $int1)) = ^true) {
+		$namedobj9 = enum(int, namedobj, enum_985, $int11);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		$int10 = calc(40 * ($int8 / 7));
-		cc_setposition(calc($int7 * ($int8 % 7)), $int10, ^setpos_abs_left, ^setpos_abs_top);
-		cc_setobject($obj9, 1);
+		$height10 = calc(40 * ($int8 / 7));
+		cc_setposition(calc($int7 * ($int8 % 7)), $height10, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject($namedobj9, 1);
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);
 		if ($component0 = interface_148:14) {
 			cc_setop(1, "Reclaim");
-			cc_setonop("pet_insurance_op(event_opindex, event_com, event_comid)");
+			cc_setonop("pet_insurance_op(event_opindex, event_com, event_comsubid)");
 		}
 		cc_setop(10, "Examine");
-		cc_setopbase("<col=ff9040><oc_name($obj9)></col>");
+		cc_setopbase("<col=ff9040><oc_name($namedobj9)></col>");
 		cc_sethide(false);
 		$int8 = calc($int8 + 1);
 	} else {
@@ -34,7 +34,7 @@ while ($int11 <= 45) {
 }
 if ($int8 <= 0) {
 	cc_create($component0, ^iftype_text, $int11);
-	cc_setsize($int5, $int6, ^setsize_abs, ^setsize_abs);
+	cc_setsize($width5, $height6, ^setsize_abs, ^setsize_abs);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(p12_full);
 	cc_setcolour(^white);
@@ -42,11 +42,11 @@ if ($int8 <= 0) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext("None");
 } else {
-	$int10 = calc($int10 + 32);
+	$height10 = calc($height10 + 32);
 }
 if_setscrollpos(0, 0, $component0);
-if ($int10 > $int6) {
-	if_setscrollsize(0, $int10, $component0);
+if ($height10 > $height6) {
+	if_setscrollsize(0, $height10, $component0);
 } else {
 	if_setscrollsize(0, 0, $component0);
 }

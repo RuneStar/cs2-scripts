@@ -28,8 +28,8 @@ while ($int10 <= 28) {
 if ($int6 > 0) {
 	~prayer_quicksort(intarray0, 0, calc($int6 - 1));
 }
-def_int $int11 = if_getwidth(enum(int, component, enum_859, 0));
-def_int $int12 = calc((if_getwidth($component2) - 5 * $int11) / 4 + $int11);
+def_int $width11 = if_getwidth(enum(int, component, enum_859, 0));
+def_int $int12 = calc((if_getwidth($component2) - 5 * $width11) / 4 + $width11);
 def_int $int13 = 0;
 def_int $int14 = 0;
 while ($int14 < $int6) {

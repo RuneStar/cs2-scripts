@@ -1,28 +1,28 @@
 // 796
-[proc,ge_offers_index_drawtop](int $int0, int $int1, component $component2, int $int3, int $int4, int $int5)
+[proc,ge_offers_index_drawtop](int $width0, int $height1, component $component2, int $comsubid3, int $comsubid4, int $comsubid5)
 def_graphic $graphic6 = "combatboxesmed,0";
 def_graphic $graphic7 = "combatboxesmed,1";
 if (~script708 = 1) {
-	if (cc_find($component2, $int3) = ^true) {
+	if (cc_find($component2, $comsubid3) = ^true) {
 		cc_sethide(false);
 		cc_setgraphic($graphic6);
-		cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comid, $graphic7, null)");
-		cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic6, null)");
+		cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic7, null)");
+		cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic6, null)");
 	}
-	if (cc_find($component2, $int4) = ^true) {
+	if (cc_find($component2, $comsubid4) = ^true) {
 		cc_sethide(false);
 	}
-	if (cc_find($component2, $int5) = ^true) {
-		cc_setsize(calc($int0 - 85), $int1, ^setsize_abs, ^setsize_abs);
+	if (cc_find($component2, $comsubid5) = ^true) {
+		cc_setsize(calc($width0 - 85), $height1, ^setsize_abs, ^setsize_abs);
 	}
 } else {
-	if (cc_find($component2, $int3) = ^true) {
+	if (cc_find($component2, $comsubid3) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($component2, $int4) = ^true) {
+	if (cc_find($component2, $comsubid4) = ^true) {
 		cc_sethide(true);
 	}
-	if (cc_find($component2, $int5) = ^true) {
-		cc_setsize($int0, $int1, ^setsize_abs, ^setsize_abs);
+	if (cc_find($component2, $comsubid5) = ^true) {
+		cc_setsize($width0, $height1, ^setsize_abs, ^setsize_abs);
 	}
 }

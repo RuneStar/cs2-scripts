@@ -1,9 +1,9 @@
 // 2781
-[proc,pest_rewards_statbuttondraw](stat $stat0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, int $int9, int $int10)(int, int)
+[proc,pest_rewards_statbuttondraw](stat $stat0, int $y1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, int $int9, int $int10)(int, int)
 def_int $int11 = enum(int, int, enum_2286, $int4);
 cc_create($component6, ^iftype_text, $int9);
 cc_setsize($int3, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition($int2, $y1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
 cc_settextfont(p11_full);
 cc_settextshadow(true);
@@ -29,7 +29,7 @@ if ($int10 = $int4) {
 	cc_setonmouseleave(null);
 } else {
 	cc_setcolour(0xff981f);
-	cc_setonmouserepeat("cc_colour_swapper(event_com, event_comid, 0xffb83f)");
-	cc_setonmouseleave("cc_colour_swapper(event_com, event_comid, 0xff981f)");
+	cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, 0xffb83f)");
+	cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0xff981f)");
 }
 return(calc($int9 + 1), calc($int2 + $int3));

@@ -1,5 +1,5 @@
 // 2469
-[proc,meslayer_button_draw](component $component0, string $string0, int $int1)
+[proc,meslayer_button_draw](component $component0, string $text0, int $int1)
 if_sethide(false, $component0);
 cc_deleteall($component0);
 def_int $int2 = 0;
@@ -14,7 +14,7 @@ cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(false);
-cc_settext($string0);
+cc_settext($text0);
 if ($int1 = 1) {
 	cc_setcolour(0x8f8f8f);
 	if_setonmouserepeat(null, $component0);

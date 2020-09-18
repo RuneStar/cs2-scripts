@@ -1,52 +1,52 @@
 // 3534
-[proc,poh_costumes_build](enum $enum0, int $int1, int $int2, int $int3, boolean $boolean4, component $component5, component $component6, int $int7, graphic $graphic8, component $component9, int $int10)
-def_int $intarray0($int1);
+[proc,poh_costumes_build](enum $enum0, int $count1, int $int2, int $int3, boolean $boolean4, component $component5, component $component6, int $int7, graphic $graphic8, component $component9, int $comsubid10)
+def_int $intarray0($count1);
 def_int $int11 = 0;
-while ($int11 < $int1) {
+while ($int11 < $count1) {
 	$intarray0($int11) = $int11;
 	$int11 = calc($int11 + 1);
 }
 if ($int11 >= 2) {
-	~poh_costumes_quicksort(intarray0, 0, calc($int1 - 1), $enum0);
+	~poh_costumes_quicksort(intarray0, 0, calc($count1 - 1), $enum0);
 }
 def_namedobj $namedobj12 = null;
 def_namedobj $namedobj13 = null;
-def_int $int14 = 0;
+def_int $count14 = 0;
 def_int $int15 = 0;
 def_int $int16 = 0;
 def_int $int17 = 0;
 $int11 = 0;
-while ($int11 < $int1) {
+while ($int11 < $count1) {
 	$namedobj12 = enum(int, namedobj, $enum0, $intarray0($int11));
-	$int14 = calc($int11 + 1);
-	if ($int14 >= $int1 | ~poh_costumes_countmembers($namedobj12) > 4) {
-		$int15, $int16 = ~poh_costumes_draw_big($int15, $namedobj12, $intarray0($int11), $int11, $int1, $graphic8, $int2, $boolean4, $component5);
+	$count14 = calc($int11 + 1);
+	if ($count14 >= $count1 | ~poh_costumes_countmembers($namedobj12) > 4) {
+		$int15, $int16 = ~poh_costumes_draw_big($int15, $namedobj12, $intarray0($int11), $int11, $count1, $graphic8, $int2, $boolean4, $component5);
 		if ($int16 = 1) {
 			$int17 = calc($int17 + 1);
 		}
 	} else {
-		$namedobj13 = enum(int, namedobj, $enum0, $intarray0($int14));
+		$namedobj13 = enum(int, namedobj, $enum0, $intarray0($count14));
 		if (~poh_costumes_countmembers($namedobj13) > 4) {
-			$int15, $int16 = ~poh_costumes_draw_big($int15, $namedobj12, $intarray0($int11), $int11, $int1, $graphic8, $int2, $boolean4, $component5);
+			$int15, $int16 = ~poh_costumes_draw_big($int15, $namedobj12, $intarray0($int11), $int11, $count1, $graphic8, $int2, $boolean4, $component5);
 			if ($int16 = 1) {
 				$int17 = calc($int17 + 1);
 			}
 		} else {
-			$int15, $int16, $int3 = ~poh_costumes_draw_small($int15, $int3, 0, $int7, $namedobj12, $intarray0($int11), $int11, $int1, $graphic8, $int2, $boolean4, $component5);
+			$int15, $int16, $int3 = ~poh_costumes_draw_small($int15, $int3, 0, $int7, $namedobj12, $intarray0($int11), $int11, $count1, $graphic8, $int2, $boolean4, $component5);
 			if ($int16 = 1) {
 				$int17 = calc($int17 + 1);
 			}
-			$int15, $int16, $int3 = ~poh_costumes_draw_small($int15, $int3, 1, $int7, $namedobj13, $intarray0($int14), $int14, $int1, $graphic8, $int2, $boolean4, $component5);
+			$int15, $int16, $int3 = ~poh_costumes_draw_small($int15, $int3, 1, $int7, $namedobj13, $intarray0($count14), $count14, $count1, $graphic8, $int2, $boolean4, $component5);
 			if ($int16 = 1) {
 				$int17 = calc($int17 + 1);
 			}
-			$int14 = calc($int14 + 1);
+			$count14 = calc($count14 + 1);
 		}
 	}
-	$int11 = $int14;
+	$int11 = $count14;
 }
-if (cc_find($component9, $int10) = ^true) {
-	cc_settext("<enum(enum, string, enum_3301, $enum0)> (<tostring($int17)> / <tostring($int1)>)");
+if (cc_find($component9, $comsubid10) = ^true) {
+	cc_settext("<enum(enum, string, enum_3301, $enum0)> (<tostring($int17)> / <tostring($count1)>)");
 }
 def_int $int18 = 0;
 if ($int15 < 250) {

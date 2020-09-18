@@ -1,16 +1,16 @@
 // 1454
-[clientscript,zmi_bank_payment_init](boolean $boolean0, string $string0, string $string1)
+[clientscript,zmi_bank_payment_init](boolean $boolean0, string $text0, string $text1)
 def_component $component1 = interface_106:1;
 def_component $component2 = interface_106:2;
 def_component $component3 = interface_106:17;
-~steelborder($component1, $string0, 0);
+~steelborder($component1, $text0, 0);
 if_setonvartransmit("bank_payment_draw($component2, -1, $boolean0){var1139, var1140}", $component2);
 if_setoninvtransmit("bank_payment_draw($component2, -1, $boolean0){inv}", $component2);
 ~bank_payment_draw($component2, -1, $boolean0);
 cc_create($component3, ^iftype_text, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_4, ^setpos_4);
-cc_settext($string1);
+cc_settext($text1);
 cc_settextfont(b12_full);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);

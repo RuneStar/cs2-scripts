@@ -1,12 +1,12 @@
 // 73
-[clientscript,chatdefault_onkey](int $key0, char $char1)
+[clientscript,chatdefault_onkey](int $key0, char $keychar1)
 if (if_gethide(interface_162:56) = true | if_gethide(interface_162:57) = true) {
 	return;
 }
 if (%varbit8119 = 0 | ~keypress_permit(-1, 162) = 0) {
 	return;
 }
-def_int $int2 = string_length(%varcstring335);
+def_int $length2 = string_length(%varcstring335);
 def_int $int3 = 0;
 def_int $int4 = 0;
 if (~on_mobile = true & %varcint41 = 4) {
@@ -15,15 +15,15 @@ if (~on_mobile = true & %varcint41 = 4) {
 if (staffmodlevel > 0) {
 	$int3 = 1;
 }
-if ($int3 = 1 & string_indexof_char("`", $char1) ! -1 & $int2 = 0) {
+if ($int3 = 1 & string_indexof_char("`", $keychar1) ! -1 & $length2 = 0) {
 	return;
 }
 if ($key0 = ^key_return) {
 	~keyboard_hide;
-	if ($int2 > 0) {
+	if ($length2 > 0) {
 		if (string_indexof_string(%varcstring335, "/", 0) = 0 | $int4 = 1) {
 			if (clan_getchatcount > 0) {
-				if ($int2 <= 1 & $int4 = 0) {
+				if ($length2 <= 1 & $int4 = 0) {
 					return;
 				}
 				if (%varbit4394 = 1) {
@@ -38,7 +38,7 @@ if ($key0 = ^key_return) {
 				~chat_sendpublic(%varcstring335, 0);
 			}
 		} else if (string_indexof_string(%varcstring335, "::", 0) = 0) {
-			if ($int2 > 2) {
+			if ($length2 > 2) {
 				if (string_indexof_string(%varcstring335, "::toggleroof", 0) = 0) {
 					if (getremoveroofs = true) {
 						setremoveroofs(false);
@@ -53,8 +53,8 @@ if ($key0 = ^key_return) {
 					~chat_sendpublic("Hey, everyone, I just tried to do something very silly!", 0);
 				} else {
 					%varcstring335 = ~script224(%varcstring335);
-					$int2 = string_length(%varcstring335);
-					docheat(substring(%varcstring335, 2, $int2));
+					$length2 = string_length(%varcstring335);
+					docheat(substring(%varcstring335, 2, $length2));
 				}
 			} else {
 				~chat_sendpublic(%varcstring335, 0);
@@ -94,6 +94,6 @@ if ($key0 = ^key_return) {
 		mes("You haven't received any messages to which you can reply.");
 		return;
 	}
-	%varcstring335 = ~add_to_inputstring(%varcstring335, 0, $key0, $char1);
+	%varcstring335 = ~add_to_inputstring(%varcstring335, 0, $key0, $keychar1);
 }
 ~script223;

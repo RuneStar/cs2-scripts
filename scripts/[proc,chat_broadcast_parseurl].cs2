@@ -5,15 +5,15 @@ $string0, $string1 = ~script632($string0);
 if (string_length($string1) <= 0) {
 	return($string0, "", -1);
 }
-def_int $int0 = string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz", substring($string1, 0, 1), 0);
-$string1 = enum(int, string, enum_63, $int0);
+def_int $index0 = string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz", substring($string1, 0, 1), 0);
+$string1 = enum(int, string, enum_63, $index0);
 if (string_length($string1) <= 0) {
 	return($string0, "", -1);
 }
 if (clienttype = ^clienttype_ios) {
-	if (enum(int, boolean, enum_2761, $int0) = true) {
+	if (enum(int, boolean, enum_2761, $index0) = true) {
 		return($string0, "", -1);
 	}
-	return($string0, $string1, $int0);
+	return($string0, $string1, $index0);
 }
-return("<img=12> <$string0>", $string1, $int0);
+return("<img=12> <$string0>", $string1, $index0);

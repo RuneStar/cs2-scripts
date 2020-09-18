@@ -1,11 +1,11 @@
 // 3195
-[clientscript,league_relic_button_hover](component $component0, boolean $boolean1, string $string0)
+[clientscript,league_relic_button_hover](component $component0, boolean $boolean1, string $text0)
 if ($boolean1 = true) {
 	~v2_stone_button_in($component0);
 	cc_create($component0, ^iftype_text, 9);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_settext($string0);
+	cc_settext($text0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_setcolour(0xaaaaaa);
@@ -15,7 +15,7 @@ if ($boolean1 = true) {
 	cc_create($component0, ^iftype_text, 8);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_settext($string0);
+	cc_settext($text0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_setcolour(^white);

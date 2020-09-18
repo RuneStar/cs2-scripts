@@ -1,51 +1,51 @@
 // 1351
-[proc,questlist_sectioninit](string $string0, component $component0, enum $enum1, int $int2, component $component3, component $component4, component $component5)(int)
+[proc,questlist_sectioninit](string $text0, component $component0, enum $enum1, int $count2, component $component3, component $component4, component $component5)(int)
 cc_deleteall($component0);
-if ($int2 <= 0) {
+if ($count2 <= 0) {
 	return(0);
 }
-def_string $string1 = "";
+def_string $text1 = "";
 def_int $int6 = 0;
 def_int $int7 = pow(2, 16);
 def_int $int8 = 15;
 if (~on_mobile = true) {
 	$int8 = scale(4, 3, $int8);
 }
-def_int $intarray0($int2);
-def_int $int9 = 0;
-while ($int9 < $int2) {
-	cc_create($component0, ^iftype_text, $int9);
+def_int $intarray0($count2);
+def_int $count9 = 0;
+while ($count9 < $count2) {
+	cc_create($component0, ^iftype_text, $count9);
 	cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
 	cc_settextfont(p11_full);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	$string1 = struct_param(enum(int, struct, $enum1, $int9), param_610);
-	cc_settext($string1);
-	cc_setopbase("<col=ff9040><$string1></col>");
-	$intarray0($int9) = calc($int6 * $int7 + $int9);
+	$text1 = struct_param(enum(int, struct, $enum1, $count9), param_610);
+	cc_settext($text1);
+	cc_setopbase("<col=ff9040><$text1></col>");
+	$intarray0($count9) = calc($int6 * $int7 + $count9);
 	cc_setop(1, "Read Journal:");
 	cc_setop(2, "Guide:");
 	cc_setop(3, "Quick-guide:");
-	$int9 = calc($int9 + 1);
+	$count9 = calc($count9 + 1);
 }
-if ($int2 > 1) {
-	~questlist_sort(intarray0, 0, calc($int2 - 1), $enum1, $int7);
+if ($count2 > 1) {
+	~questlist_sort(intarray0, 0, calc($count2 - 1), $enum1, $int7);
 }
 def_int $int10 = 20;
-$int9 = 0;
-while ($int9 < $int2) {
-	if (cc_find($component0, calc($intarray0($int9) % $int7)) = ^true) {
+$count9 = 0;
+while ($count9 < $count2) {
+	if (cc_find($component0, calc($intarray0($count9) % $int7)) = ^true) {
 		cc_setposition(0, $int10, ^setpos_abs_centre, ^setpos_abs_top);
 	}
-	$int9, $int10 = calc($int9 + 1), calc($int10 + $int8);
+	$count9, $int10 = calc($count9 + 1), calc($int10 + $int8);
 }
-cc_create($component0, ^iftype_text, $int9);
+cc_create($component0, ^iftype_text, $count9);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setcolour(0xff981f);
 cc_settextfont(b12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-cc_settext($string0);
+cc_settext($text0);
 if_setsize(0, $int10, ^setsize_minus, ^setsize_abs, $component0);
 return($int10);

@@ -1,10 +1,10 @@
 // 2035
 [proc,agilityarena_rewards_gracefulbutton_draw](component $component0, obj $obj1, obj $obj2, string $string0, int $int3, boolean $boolean4)
-def_string $string1 = "";
+def_string $text1 = "";
 if ($int3 = 1) {
-	$string1 = "<$string0><br>1 ticket";
+	$text1 = "<$string0><br>1 ticket";
 } else {
-	$string1 = "<$string0><br><~tostring_spacer($int3, ",")> tickets";
+	$text1 = "<$string0><br><~tostring_spacer($int3, ",")> tickets";
 }
 def_int $int5 = 0;
 if ($obj2 ! null) {
@@ -18,14 +18,14 @@ cc_deleteall($component0);
 def_int $int6 = 0;
 if (inv_total(inv, agility_arena_ticket_2996) < $int3 | $int5 = 0) {
 	$int6 = ~v2_stone_button_filled($component0);
-	~agilityarena_rewards_gracefulbutton_drawcomponents($component0, $int6, $obj1, $string1, ^red);
+	~agilityarena_rewards_gracefulbutton_drawcomponents($component0, $int6, $obj1, $text1, ^red);
 	if_setonop(null, $component0);
 } else if ($boolean4 = true) {
 	$int6 = ~v2_stone_button_in_filled($component0);
-	~agilityarena_rewards_gracefulbutton_drawcomponents($component0, $int6, $obj1, $string1, ^white);
+	~agilityarena_rewards_gracefulbutton_drawcomponents($component0, $int6, $obj1, $text1, ^white);
 	if_setonop("opsound(event_opindex, 2)", $component0);
 } else {
 	$int6 = ~v2_stone_button_out_filled($component0);
-	~agilityarena_rewards_gracefulbutton_drawcomponents($component0, $int6, $obj1, $string1, 0xff981f);
+	~agilityarena_rewards_gracefulbutton_drawcomponents($component0, $int6, $obj1, $text1, 0xff981f);
 	if_setonop("opsound(event_opindex, 2)", $component0);
 }

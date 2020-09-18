@@ -1,5 +1,5 @@
 // 1438
-[clientscript,cws_set_toggle](component $component0, int $int1, int $int2, int $int3)
-if (cc_find($component0, $int1) = ^true) {
-	~cws_set_toggle($component0, $int2, $int3, ~cws_cc_getvar($int2));
+[clientscript,cws_set_toggle](component $component0, int $comsubid1, int $int2, int $comsubid3)
+if (cc_find($component0, $comsubid1) = ^true) {
+	~cws_set_toggle($component0, $int2, $comsubid3, ~cws_cc_getvar($int2));
 }

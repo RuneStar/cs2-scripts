@@ -1,6 +1,6 @@
 // 2260
-[clientscript,options_chatscrollside_op](int $int0, component $component1, component $component2)
-if ($int0 ! 1) {
+[clientscript,options_chatscrollside_op](int $opindex0, component $component1, component $component2)
+if ($opindex0 ! 1) {
 	return;
 }
 if (~mobile_setting_check = 0) {

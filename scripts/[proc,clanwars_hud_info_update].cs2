@@ -124,12 +124,12 @@ if ($int7 > 0 | $int8 > 0 | $int9 > 0 | $int10 > 0) {
 	$int6 = parawidth($string5, 512, p11_full);
 }
 def_int $int11 = parawidth($string0, 512, p11_full);
-def_int $int12 = parawidth($string1, 512, p11_full);
-def_int $int13 = parawidth($string2, 512, p11_full);
-$int4 = calc($int11 + 4 + $int12 + 4 + $int13);
+def_int $width12 = parawidth($string1, 512, p11_full);
+def_int $width13 = parawidth($string2, 512, p11_full);
+$int4 = calc($int11 + 4 + $width12 + 4 + $width13);
 if ($int6 > $int4) {
 	$int11 = calc($int11 + ($int6 - $int4));
-	$int5 = $int12;
+	$int5 = $width12;
 }
 $int3 = calc($int3 * 10 + 2);
 def_int $int14 = 4;
@@ -140,22 +140,22 @@ if (cc_find($component1, $int2) = ^true) {
 	$int14 = calc($int14 + $int11);
 }
 if (cc_find($component1, calc($int2 + 1)) = ^true) {
-	$int4 = calc(($int12 - $int5) / 2);
+	$int4 = calc(($width12 - $int5) / 2);
 	$int4 = calc($int4 - 4);
 	$int14 = calc($int14 - $int4);
 	if ($int14 < 4) {
 		$int14 = 4;
 	}
-	cc_setsize($int12, $int3, ^setsize_abs, ^setsize_abs);
+	cc_setsize($width12, $int3, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int14, 4, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string1);
-	$int14 = calc($int14 + $int12 + 4);
+	$int14 = calc($int14 + $width12 + 4);
 }
 if (cc_find($component1, calc($int2 + 2)) = ^true) {
-	cc_setsize($int13, $int3, ^setsize_abs, ^setsize_abs);
+	cc_setsize($width13, $int3, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int14, 4, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string2);
-	$int14 = calc($int14 + $int13);
+	$int14 = calc($int14 + $width13);
 }
 if (cc_find($component1, calc($int2 + 3)) = ^true) {
 	cc_setsize(calc($int14 - 4), 11, ^setsize_abs, ^setsize_abs);

@@ -57,15 +57,15 @@ $componentarray0(6) = $component10;
 $componentarray0(7) = $component11;
 $componentarray0(8) = $component12;
 $componentarray0(9) = $component13;
-def_int $int19 = 0;
+def_int $index19 = 0;
 def_component $component20 = null;
 def_int $int21 = 20;
 while ($int21 > 0) {
 	$int21 = calc($int21 - 1);
-	$int19 = random(9);
+	$index19 = random(9);
 	$component20 = $componentarray0(9);
-	$componentarray0(9) = $componentarray0($int19);
-	$componentarray0($int19) = $component20;
+	$componentarray0(9) = $componentarray0($index19);
+	$componentarray0($index19) = $component20;
 }
 ~bankpin_button_setup($componentarray0(0), 0, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);
 ~bankpin_button_setup($componentarray0(1), 1, $int0, $int1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18);

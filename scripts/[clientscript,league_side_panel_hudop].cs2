@@ -1,9 +1,9 @@
 // 3231
-[clientscript,league_side_panel_hudop](int $int0, component $component1, int $int2, int $int3, component $component4)
-if ($int0 ! 1) {
+[clientscript,league_side_panel_hudop](int $opindex0, component $component1, int $comsubid2, int $comsubid3, component $component4)
+if ($opindex0 ! 1) {
 	return;
 }
-if (cc_find($component1, $int2) = ^true & .cc_find($component1, $int3) = ^true) {
+if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
 	sound_synth(synth_2266, 1, 0);
 	%varbit9528 = calc(1 - %varbit9528);
 	~league_side_panel_hudtoggle($component1, $component4);

@@ -1,20 +1,20 @@
 // 705
-[clientscript,bank_depositbox_drag](component $component0, int $int1, int $int2)
-def_int $int3 = inv_size(inv);
-if ($int1 < 0 | $int1 >= $int3) {
+[clientscript,bank_depositbox_drag](component $component0, int $comsubid1, int $dropsubid2)
+def_int $size3 = inv_size(inv);
+if ($comsubid1 < 0 | $comsubid1 >= $size3) {
 	return;
 }
-if ($int2 < 0 | $int2 >= $int3) {
+if ($dropsubid2 < 0 | $dropsubid2 >= $size3) {
 	return;
 }
-def_obj $obj4 = inv_getobj(inv, $int1);
+def_obj $obj4 = inv_getobj(inv, $comsubid1);
 if ($obj4 = null) {
 	return;
 }
-def_obj $obj5 = inv_getobj(inv, $int2);
-if (cc_find($component0, $int2) = ^true) {
-	~bank_depositbox_drawslot($component0, $obj4, inv_getnum(inv, $int1), $int1);
+def_obj $obj5 = inv_getobj(inv, $dropsubid2);
+if (cc_find($component0, $dropsubid2) = ^true) {
+	~bank_depositbox_drawslot($component0, $obj4, inv_getnum(inv, $comsubid1), $comsubid1);
 }
-if (cc_find($component0, $int1) = ^true) {
-	~bank_depositbox_drawslot($component0, $obj5, inv_getnum(inv, $int2), $int2);
+if (cc_find($component0, $comsubid1) = ^true) {
+	~bank_depositbox_drawslot($component0, $obj5, inv_getnum(inv, $dropsubid2), $dropsubid2);
 }

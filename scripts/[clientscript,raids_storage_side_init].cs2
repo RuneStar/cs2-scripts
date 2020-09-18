@@ -5,16 +5,16 @@ if_setonvartransmit("raids_storage_side_setup($component1, $component2, $compone
 cc_deleteall($component4);
 def_int $int5 = calc((42 - 36) * 3 - 2);
 def_int $int6 = calc((36 - 32) * 2);
-def_int $int7 = 0;
-def_int $int8 = inv_size(inv);
-while ($int7 < $int8) {
-	cc_create($component4, ^iftype_graphic, $int7);
+def_int $size7 = 0;
+def_int $size8 = inv_size(inv);
+while ($size7 < $size8) {
+	cc_create($component4, ^iftype_graphic, $size7);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int5 + $int7 % 4 * 42), calc($int6 + $int7 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($int5 + $size7 % 4 * 42), calc($int6 + $size7 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	$int7 = calc($int7 + 1);
+	$size7 = calc($size7 + 1);
 }
-~raids_storage_side_items($component4, $int7);
-if_setoninvtransmit("raids_storage_side_items($component4, $int7){inv}", $component0);
-if_setonvartransmit("raids_storage_side_items($component4, $int7){var115}", $component0);
+~raids_storage_side_items($component4, $size7);
+if_setoninvtransmit("raids_storage_side_items($component4, $size7){inv}", $component0);
+if_setonvartransmit("raids_storage_side_items($component4, $size7){var115}", $component0);

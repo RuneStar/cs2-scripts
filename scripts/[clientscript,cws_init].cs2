@@ -1,17 +1,17 @@
 // 1435
-[clientscript,cws_init](component $component0, component $component1, component $component2, component $component3, int $int4, string $string0, string $string1)
+[clientscript,cws_init](component $component0, component $component1, component $component2, component $component3, int $int4, string $op0, string $op1)
 cc_deleteall($component0);
 cc_create($component0, ^iftype_rectangle, 0);
 .cc_create($component0, ^iftype_rectangle, 1);
 cc_sethide(true);
 .cc_sethide(true);
-~cws_init_button($component1, $string0);
+~cws_init_button($component1, $op0);
 if_setonop("script1437($component0, 1)", $component1);
-~cws_init_button($component2, $string1);
+~cws_init_button($component2, $op1);
 if_setonop("script1437($component0, 0)", $component2);
 cc_deleteall($component3);
 cc_create($component3, ^iftype_rectangle, 0);
-def_int $int5 = cc_getid;
+def_int $comsubid5 = cc_getid;
 cc_sethide(true);
 def_string $string2 = "Don't ask me this again";
 cc_create($component3, ^iftype_graphic, 1);
@@ -28,5 +28,5 @@ cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 if_setonmouserepeat("cc_colour_swapper(event_com, .cc_getid, ^white)", $component3);
 if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $component3);
 if_setsize(calc(parawidth($string2, if_getwidth($component0), p12_full) + 26), if_getheight($component3), ^setsize_abs, ^setsize_abs, $component3);
-~cws_set_toggle($component3, $int4, $int5, ~cws_cc_getvar($int4));
-if_setonvartransmit("cws_set_toggle($component3, cc_getid, $int4, $int5){var1045, var1046, var1047}", $component3);
+~cws_set_toggle($component3, $int4, $comsubid5, ~cws_cc_getvar($int4));
+if_setonvartransmit("cws_set_toggle($component3, cc_getid, $int4, $comsubid5){var1045, var1046, var1047}", $component3);

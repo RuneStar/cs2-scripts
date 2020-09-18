@@ -1,9 +1,9 @@
 // 3373
-script3373(int $int0, component $component1, int $int2, string $string0)
-if (clientclock < $int0) {
+script3373(int $clock0, component $component1, int $comsubid2, string $text0)
+if (clientclock < $clock0) {
 	return;
 }
-if (cc_find($component1, $int2) = ^true) {
+if (cc_find($component1, $comsubid2) = ^true) {
 	cc_setontimer(null);
-	cc_settext($string0);
+	cc_settext($text0);
 }

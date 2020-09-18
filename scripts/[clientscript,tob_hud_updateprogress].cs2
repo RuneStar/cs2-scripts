@@ -1,5 +1,5 @@
 // 2304
-[clientscript,tob_hud_updateprogress](int $int0, component $component1, int $int2)
-if (.cc_find($component1, $int2) = ^true) {
+[clientscript,tob_hud_updateprogress](int $int0, component $component1, int $comsubid2)
+if (.cc_find($component1, $comsubid2) = ^true) {
 	~tob_hud_updateprogress($int0, $component1);
 }

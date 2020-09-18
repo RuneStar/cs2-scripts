@@ -6,9 +6,9 @@ if (~on_mobile = true) {
 }
 ~poh_board_location_filter_build($component0, $component1);
 ~poh_board_redraw;
-def_int $int4 = calc(%varcint377 * $int3);
-if ($int4 > if_getheight(interface_52:7)) {
-	if_setscrollsize(0, $int4, interface_52:7);
+def_int $height4 = calc(%varcint377 * $int3);
+if ($height4 > if_getheight(interface_52:7)) {
+	if_setscrollsize(0, $height4, interface_52:7);
 	~scrollbar_resize(interface_52:20, interface_52:7, %varcint378);
 } else {
 	if_setscrollsize(0, 0, interface_52:7);

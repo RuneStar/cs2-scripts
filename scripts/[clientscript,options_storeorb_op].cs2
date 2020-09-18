@@ -1,6 +1,6 @@
 // 2412
-[clientscript,options_storeorb_op](int $int0, component $component1, component $component2)
-if ($int0 ! 1) {
+[clientscript,options_storeorb_op](int $opindex0, component $component1, component $component2)
+if ($opindex0 ! 1) {
 	return;
 }
 if (~on_mobile = false) {

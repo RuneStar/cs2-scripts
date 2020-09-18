@@ -11,7 +11,7 @@ def_struct $struct6 = null;
 def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = 0;
-def_int $int10 = -1;
+def_int $comsubid10 = -1;
 def_struct $struct11 = ~script3180($int3);
 def_int $int12 = -1;
 def_int $int13 = if_getwidth($component0);
@@ -87,10 +87,10 @@ if (cc_find($component0, 0) = ^false) {
 					$string0 = "Relic unlocked at <tostring(struct_param($struct6, param_877))> points.";
 					if (~on_mobile = true) {
 						cc_setop(1, "Show Threshold");
-						cc_setonop("script3183(event_com, event_comid, $component1, $string0, 512)");
+						cc_setonop("script3183(event_com, event_comsubid, $component1, $string0, 512)");
 					} else {
 						cc_setop(1, "");
-						cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comid, $component1, $string0, 25, 512)");
+						cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component1, $string0, 25, 512)");
 						cc_setonmouseleave("deltooltip($component1)");
 					}
 					$int8 = calc($int8 + 1);
@@ -106,7 +106,7 @@ if (cc_find($component0, 0) = ^false) {
 		cc_settextshadow(true);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settext("");
-		$int10 = $int9;
+		$comsubid10 = $int9;
 		$int9 = calc($int9 + 1);
 		cc_create($component0, ^iftype_rectangle, $int9);
 		cc_setsize($int13, 31, ^setsize_abs, ^setsize_abs);
@@ -117,28 +117,28 @@ if (cc_find($component0, 0) = ^false) {
 	}
 }
 if ($int3 = 0) {
-	$int10 = 3;
+	$comsubid10 = 3;
 }
-def_int $int15 = calc($int13 - 4);
-def_int $int16 = $int15;
+def_int $width15 = calc($int13 - 4);
+def_int $width16 = $width15;
 if ($int12 ! -1 & $int12 > 0) {
-	$int16 = scale(%var2615, $int12, $int15);
+	$width16 = scale(%var2615, $int12, $width15);
 }
-if ($int16 > $int15) {
-	$int16 = $int15;
+if ($width16 > $width15) {
+	$width16 = $width15;
 }
 if (cc_find($component0, 2) = ^true) {
 	if ($int2 = 1) {
-		if (cc_getwidth > $int16) {
+		if (cc_getwidth > $width16) {
 			cc_setsize(0, cc_getheight, ^setsize_abs, ^setsize_abs);
 		}
-		if_setontimer("league_points_progress_bar_expand($component0, $int16)", $component0);
+		if_setontimer("league_points_progress_bar_expand($component0, $width16)", $component0);
 	} else {
-		cc_setsize($int16, cc_getheight, ^setsize_abs, ^setsize_abs);
+		cc_setsize($width16, cc_getheight, ^setsize_abs, ^setsize_abs);
 	}
 }
 def_int $int17 = -1;
-if ($int10 ! -1 & cc_find($component0, $int10) = ^true) {
+if ($comsubid10 ! -1 & cc_find($component0, $comsubid10) = ^true) {
 	if ($int3 = 0 & $int12 ! -1) {
 		if (%var2615 >= $int12) {
 			cc_settext("<~text_device("Click", "Tap")> here to select your next relic");

@@ -36,12 +36,12 @@ if ($component3 = null) {
 	return;
 }
 def_int $int9 = 0;
-def_int $int10 = if_getscrolly($component2);
-if ($int7 < $int10) {
+def_int $y10 = if_getscrolly($component2);
+if ($int7 < $y10) {
 	~scrollbar_resize($component3, $component2, $int7);
 } else {
 	$int7, $int9 = calc($int7 + 17), if_getheight($component2);
-	if ($int7 > calc($int10 + $int9)) {
+	if ($int7 > calc($y10 + $int9)) {
 		~scrollbar_resize($component3, $component2, calc($int7 - $int9));
 	}
 }

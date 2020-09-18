@@ -13,7 +13,7 @@ while ($int2 > 0) {
 		} else if (oc_uncert($obj1) = drift_net_21652) {
 			cc_sethide(false);
 			cc_settrans(0);
-			cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 			cc_setobject($obj1, inv_getnum(inv, $int2));
 			cc_setop(1, "Store-1");
 			cc_setop(2, "Store-5");
@@ -24,7 +24,7 @@ while ($int2 > 0) {
 		} else {
 			cc_sethide(false);
 			cc_settrans(130);
-			cc_setonop("cc_settrans_temporarily(event_com, event_comid, 170, 130)");
+			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 170, 130)");
 			cc_setobject($obj1, inv_getnum(inv, $int2));
 			cc_setop(1, "Store");
 			cc_setop(10, "Examine");

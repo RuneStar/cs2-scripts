@@ -1,8 +1,8 @@
 // 1571
-[proc,raids_partylist_sort](intarray $intarray0, int $int1, int $int2, int $int3, enum $enum4)
-def_int $int5 = calc(($int1 + $int2) / 2);
-def_int $int6 = $intarray0($int5);
-$intarray0($int5) = $intarray0($int2);
+[proc,raids_partylist_sort](intarray $intarray0, int $int1, int $int2, int $comsubid3, enum $enum4)
+def_int $index5 = calc(($int1 + $int2) / 2);
+def_int $int6 = $intarray0($index5);
+$intarray0($index5) = $intarray0($int2);
 $intarray0($int2) = $int6;
 def_int $int7 = $int1;
 def_int $int8 = $int1;
@@ -10,12 +10,12 @@ def_int $int9 = -1;
 def_string $string0 = "";
 def_string $string1 = "";
 while ($int8 < $int2) {
-	if (cc_find(enum(int, component, $enum4, $intarray0($int8)), $int3) = ^true) {
+	if (cc_find(enum(int, component, $enum4, $intarray0($int8)), $comsubid3) = ^true) {
 		$string0 = removetags(cc_gettext);
 	} else {
 		$string0 = "";
 	}
-	if (cc_find(enum(int, component, $enum4, $int6), $int3) = ^true) {
+	if (cc_find(enum(int, component, $enum4, $int6), $comsubid3) = ^true) {
 		$string1 = removetags(cc_gettext);
 	} else {
 		$string1 = "";
@@ -31,8 +31,8 @@ while ($int8 < $int2) {
 $intarray0($int2) = $intarray0($int7);
 $intarray0($int7) = $int6;
 if ($int1 < calc($int7 - 1)) {
-	~raids_partylist_sort(intarray0, $int1, calc($int7 - 1), $int3, $enum4);
+	~raids_partylist_sort(intarray0, $int1, calc($int7 - 1), $comsubid3, $enum4);
 }
 if (calc($int7 + 1) < $int2) {
-	~raids_partylist_sort(intarray0, calc($int7 + 1), $int2, $int3, $enum4);
+	~raids_partylist_sort(intarray0, calc($int7 + 1), $int2, $comsubid3, $enum4);
 }

@@ -18,10 +18,10 @@ if (compare(lowercase($string1), lowercase(removetags(chat_playername))) = 0) {
 	$colour1 = ^white;
 }
 def_int $int2 = calc(~max(0, %varcint178) * 11);
-def_int $int3 = calc(%varcint178 * 13);
+def_int $y3 = calc(%varcint178 * 13);
 cc_create(interface_50:26, ^iftype_rectangle, $int2);
 cc_setsize(0, 13, ^setsize_minus, ^setsize_abs);
-cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setposition(0, $y3, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setfill(true);
 cc_setcolour(^black);
 def_int $int4 = 255;
@@ -30,25 +30,25 @@ if (calc(%varcint178 % 2) = 0) {
 }
 cc_settrans($int4);
 if ($int0 = 2 & string_length($string1) > 0) {
-	cc_setonmouserepeat("cc_settrans(event_com, event_comid, 220, null)");
-	cc_setonmouseleave("cc_settrans(event_com, event_comid, $int4, null)");
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 220, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int4, null)");
 	if (%varcint178 > 0) {
 		cc_setop(10, "Kick");
 		cc_setopbase("<col=ff9040><$string1></col>");
 	} else {
 		cc_setop(10, "Quit party");
 	}
-	cc_setonop("tob_partydetails_kickmember(event_opindex, %varcint178, event_com, event_comid, $string1, $int4)");
+	cc_setonop("tob_partydetails_kickmember(event_opindex, %varcint178, event_com, event_comsubid, $string1, $int4)");
 }
 def_int $int5 = 0;
-$string0, $int5 = ~script2318(1, interface_50:31, $string0, $int2, $int5, $int3, $colour1);
-$string0, $int5 = ~script2318(2, interface_50:32, $string0, $int2, $int5, $int3, $colour1);
-$string0, $int5 = ~script2318(3, interface_50:33, $string0, $int2, $int5, $int3, $colour1);
-$string0, $int5 = ~script2318(4, interface_50:34, $string0, $int2, $int5, $int3, $colour1);
-$string0, $int5 = ~script2318(5, interface_50:35, $string0, $int2, $int5, $int3, $colour1);
-$string0, $int5 = ~script2318(6, interface_50:36, $string0, $int2, $int5, $int3, $colour1);
-$string0, $int5 = ~script2318(7, interface_50:37, $string0, $int2, $int5, $int3, $colour1);
-$string0, $int5 = ~script2318(8, interface_50:38, $string0, $int2, $int5, $int3, $colour1);
-$string0, $int5 = ~script2318(9, interface_50:39, $string0, $int2, $int5, $int3, $colour1);
-$string0, $int5 = ~script2318(10, interface_50:40, $string0, $int2, $int5, $int3, $colour1);
+$string0, $int5 = ~script2318(1, interface_50:31, $string0, $int2, $int5, $y3, $colour1);
+$string0, $int5 = ~script2318(2, interface_50:32, $string0, $int2, $int5, $y3, $colour1);
+$string0, $int5 = ~script2318(3, interface_50:33, $string0, $int2, $int5, $y3, $colour1);
+$string0, $int5 = ~script2318(4, interface_50:34, $string0, $int2, $int5, $y3, $colour1);
+$string0, $int5 = ~script2318(5, interface_50:35, $string0, $int2, $int5, $y3, $colour1);
+$string0, $int5 = ~script2318(6, interface_50:36, $string0, $int2, $int5, $y3, $colour1);
+$string0, $int5 = ~script2318(7, interface_50:37, $string0, $int2, $int5, $y3, $colour1);
+$string0, $int5 = ~script2318(8, interface_50:38, $string0, $int2, $int5, $y3, $colour1);
+$string0, $int5 = ~script2318(9, interface_50:39, $string0, $int2, $int5, $y3, $colour1);
+$string0, $int5 = ~script2318(10, interface_50:40, $string0, $int2, $int5, $y3, $colour1);
 %varcint178 = calc(%varcint178 + 1);

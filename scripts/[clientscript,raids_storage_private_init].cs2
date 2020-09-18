@@ -1,15 +1,15 @@
 // 404
 [clientscript,raids_storage_private_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
 ~raids_storage_drawbutton("Withdraw all", $component4, "p12_full");
-def_int $int8 = -1;
+def_int $comsubid8 = -1;
 if (%varbit5432 = 1) {
-	$int8 = ~raids_storage_drawbutton("Deposit all", $component5, "p12_full");
+	$comsubid8 = ~raids_storage_drawbutton("Deposit all", $component5, "p12_full");
 } else {
-	$int8 = ~raids_storage_drawbutton("Bank all", $component5, "p12_full");
+	$comsubid8 = ~raids_storage_drawbutton("Bank all", $component5, "p12_full");
 }
 ~raids_storage_drawbutton("Shared", $component7, "p11_full");
-~raids_storage_private_prompt($component4, $component5, $component6, $int8);
-if_setonvartransmit("raids_storage_private_prompt($component4, $component5, $component6, $int8){var1431}", $component6);
+~raids_storage_private_prompt($component4, $component5, $component6, $comsubid8);
+if_setonvartransmit("raids_storage_private_prompt($component4, $component5, $component6, $comsubid8){var1431}", $component6);
 ~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~raids_storage_private_items($component1, $component2, $component3);
 if_setoninvtransmit("raids_storage_private_items($component1, $component2, $component3){inv_583}", $component0);

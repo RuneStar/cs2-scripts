@@ -21,34 +21,34 @@ while ($int2 <= 45) {
 	}
 	$int2 = calc($int2 + 1);
 }
-def_string $string1 = "";
-def_int $int4 = if_getwidth(interface_210:3);
-def_int $int5 = calc($int4 - (36 + 10));
+def_string $text1 = "";
+def_int $width4 = if_getwidth(interface_210:3);
+def_int $width5 = calc($width4 - (36 + 10));
 $int2 = 0;
 while ($int2 <= 45) {
 	cc_create(interface_210:3, ^iftype_text, $int0);
 	$int0 = calc($int0 + 1);
-	cc_setsize($int5, 40, ^setsize_abs, ^setsize_abs);
+	cc_setsize($width5, 40, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc(36 + 5), calc($int2 * 40), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(0xff981f);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextfont(p12_full);
-	$string1, $string0 = ~script632($string0);
-	cc_settext($string1);
+	$text1, $string0 = ~script632($string0);
+	cc_settext($text1);
 	if ($int2 < 45) {
 		cc_create(interface_210:3, ^iftype_graphic, $int0);
 		$int0 = calc($int0 + 1);
 		cc_setgraphic("tradebacking");
 		cc_settiling(true);
-		cc_setsize($int4, 1, ^setsize_abs, ^setsize_abs);
+		cc_setsize($width4, 1, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, calc($int2 * 40 + 39), ^setpos_abs_left, ^setpos_abs_top);
 	}
 	$int2 = calc($int2 + 1);
 }
-def_int $int6 = calc(40 * (45 + 1));
-if ($int6 > if_getheight(interface_210:3)) {
-	if_setscrollsize(0, $int6, interface_210:3);
+def_int $height6 = calc(40 * (45 + 1));
+if ($height6 > if_getheight(interface_210:3)) {
+	if_setscrollsize(0, $height6, interface_210:3);
 } else {
 	if_setscrollsize(0, 0, interface_210:3);
 }

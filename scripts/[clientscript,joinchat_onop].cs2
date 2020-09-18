@@ -1,6 +1,6 @@
 // 194
-[clientscript,joinchat_onop](int $int0, int $int1)
-if ($int0 = $int1) {
+[clientscript,joinchat_onop](int $opindex0, int $opindex1)
+if ($opindex0 = $opindex1) {
 	sound_synth(synth_2266, 1, 0);
 	if (clan_getchatcount > 0) {
 		if (~wildwars_world = 1) {

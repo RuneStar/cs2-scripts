@@ -1,5 +1,5 @@
 // 1125
-script1125(component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+script1125(component $component0, component $component1, component $component2, component $layer3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
 sound_synth(synth_2266, 1, 0);
 if_sethide(true, $component11);
 ~deltooltip_action($component11);
@@ -28,9 +28,9 @@ while (string_length($string0) > 0) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext($string0);
 	cc_setop(1, "Select");
-	cc_setonmouseover("script1126(true, event_com, event_comid, .cc_getid)");
-	cc_setonmouseleave("script1126(false, event_com, event_comid, .cc_getid)");
-	cc_setonop("script1127(event_opindex, event_com, event_comid, $component6, $component11, $component4, $component8, $component5, $component9)");
+	cc_setonmouseover("script1126(true, event_com, event_comsubid, .cc_getid)");
+	cc_setonmouseleave("script1126(false, event_com, event_comsubid, .cc_getid)");
+	cc_setonop("script1127(event_opindex, event_com, event_comsubid, $component6, $component11, $component4, $component8, $component5, $component9)");
 	$int13 = calc($int13 + 1);
 	if (~on_mobile = true) {
 		$string0 = enum(int, string, enum_1879, $int13);
@@ -46,31 +46,31 @@ if ($component1 ! $component9) {
 	if_sethide(true, $component9);
 }
 def_int $int14 = calc($int13 * $int12);
-def_int $int15 = calc($int14 + 4);
+def_int $height15 = calc($int14 + 4);
 def_int $int16 = if_getx($component0);
 def_int $int17 = if_gety($component0);
 def_int $int18 = 0;
-def_component $component19 = if_getlayer($component0);
-while ($component19 ! $component3) {
-	$int16, $int17 = calc($int16 + if_getx($component19) - if_getscrollx($component19)), calc($int17 + if_gety($component19) - if_getscrolly($component19));
-	$component19 = if_getlayer($component19);
+def_component $layer19 = if_getlayer($component0);
+while ($layer19 ! $layer3) {
+	$int16, $int17 = calc($int16 + if_getx($layer19) - if_getscrollx($layer19)), calc($int17 + if_gety($layer19) - if_getscrolly($layer19));
+	$layer19 = if_getlayer($layer19);
 }
 if (~on_mobile = true) {
-	$int18 = ~max(0, calc($int17 + 20 - $int15));
+	$int18 = ~max(0, calc($int17 + 20 - $height15));
 } else {
 	$int18 = calc($int17 + if_getheight($component0) - 1);
 }
 if_setposition($int16, $int18, ^setpos_abs_left, ^setpos_abs_top, $component7);
-def_int $int20 = calc(if_getheight($component3) - $int18);
+def_int $height20 = calc(if_getheight($layer3) - $int18);
 if (~on_mobile = true) {
-	$int20 = calc($int17 + 20 - $int18);
+	$height20 = calc($int17 + 20 - $int18);
 }
-if ($int15 > $int20) {
-	if_setsize(if_getwidth($component0), $int20, ^setsize_abs, ^setsize_abs, $component7);
+if ($height15 > $height20) {
+	if_setsize(if_getwidth($component0), $height20, ^setsize_abs, ^setsize_abs, $component7);
 	if_setscrollpos(0, 0, $component1);
 	if_setscrollsize(0, $int14, $component1);
 } else {
-	if_setsize(if_getwidth($component0), $int15, ^setsize_abs, ^setsize_abs, $component7);
+	if_setsize(if_getwidth($component0), $height15, ^setsize_abs, ^setsize_abs, $component7);
 	if_setscrollpos(0, 0, $component1);
 	if_setscrollsize(0, 0, $component1);
 }

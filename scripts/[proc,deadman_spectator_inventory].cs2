@@ -5,7 +5,7 @@ if ($int0 = 1) {
 	$enum1 = enum_142;
 }
 def_obj $obj2 = null;
-def_int $int3 = 0;
+def_int $num3 = 0;
 def_int $int4 = 0;
 def_int $int5 = 14;
 def_int $int6 = 6;
@@ -16,8 +16,8 @@ while ($int4 < 28) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
-	$int3 = invother_getnum(inv, $int4);
-	cc_setobject($obj2, $int3);
+	$num3 = invother_getnum(inv, $int4);
+	cc_setobject($obj2, $num3);
 	$int4 = calc($int4 + 1);
 	if (calc($int4 % 4) = 0) {
 		$int5, $int6 = 14, calc($int6 + 36);

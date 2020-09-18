@@ -1,9 +1,9 @@
 // 221
-[clientscript,cc_colour_temporarily_end](component $component0, int $int1, int $colour2, int $int3)
-if (clientclock < $int3) {
+[clientscript,cc_colour_temporarily_end](component $component0, int $comsubid1, int $colour2, int $clock3)
+if (clientclock < $clock3) {
 	return;
 }
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $comsubid1) = ^true) {
 	cc_setcolour($colour2);
 	cc_setontimer(null);
 }

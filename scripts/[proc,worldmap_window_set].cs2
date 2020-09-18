@@ -12,38 +12,38 @@ if (~toplevel_getcomponents = enum_1132) {
 %varcint193, %varcint194 = ~max(~min(%varcint193, %varcint191), 0), ~max(~min(%varcint194, %varcint192), 0);
 if_setposition(%varcint193, %varcint194, ^setpos_abs_left, ^setpos_abs_top, $component1);
 if_setsize(%varcint191, %varcint192, ^setsize_minus, ^setsize_minus, $component1);
-def_int $int5 = calc(%varcint191 + 6 * 2);
-def_int $int6 = calc(%varcint192 + 6 * 2);
-def_int $int7 = calc(%varcint191 - %varcint193);
-def_int $int8 = calc(%varcint192 - %varcint194);
+def_int $width5 = calc(%varcint191 + 6 * 2);
+def_int $height6 = calc(%varcint192 + 6 * 2);
+def_int $x7 = calc(%varcint191 - %varcint193);
+def_int $y8 = calc(%varcint192 - %varcint194);
 def_int $int9 = 0;
 if (cc_find($component0, 0) = ^true & .cc_find($component0, 1) = ^true) {
-	cc_setsize($int5, 6, ^setsize_minus, ^setsize_abs);
-	.cc_setsize($int5, 6, ^setsize_minus, ^setsize_abs);
+	cc_setsize($width5, 6, ^setsize_minus, ^setsize_abs);
+	.cc_setsize($width5, 6, ^setsize_minus, ^setsize_abs);
 	$int9 = calc(%varcint193 + 6);
 	cc_setposition($int9, %varcint194, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition($int9, $int8, ^setpos_abs_left, ^setpos_abs_bottom);
+	.cc_setposition($int9, $y8, ^setpos_abs_left, ^setpos_abs_bottom);
 	~script1746($component0, $component1, $component2, $component3, $int4);
 }
 if (cc_find($component0, 2) = ^true & .cc_find($component0, 3) = ^true) {
-	cc_setsize(6, $int6, ^setsize_abs, ^setsize_minus);
-	.cc_setsize(6, $int6, ^setsize_abs, ^setsize_minus);
+	cc_setsize(6, $height6, ^setsize_abs, ^setsize_minus);
+	.cc_setsize(6, $height6, ^setsize_abs, ^setsize_minus);
 	$int9 = calc(%varcint194 + 6);
 	cc_setposition(%varcint193, $int9, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition($int7, $int9, ^setpos_abs_right, ^setpos_abs_top);
+	.cc_setposition($x7, $int9, ^setpos_abs_right, ^setpos_abs_top);
 	~script1746($component0, $component1, $component2, $component3, $int4);
 }
 if (cc_find($component0, 4) = ^true & .cc_find($component0, 5) = ^true) {
 	cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	cc_setposition(%varcint193, %varcint194, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition($int7, %varcint194, ^setpos_abs_right, ^setpos_abs_top);
+	.cc_setposition($x7, %varcint194, ^setpos_abs_right, ^setpos_abs_top);
 	~script1746($component0, $component1, $component2, $component3, $int4);
 }
 if (cc_find($component0, 6) = ^true & .cc_find($component0, 7) = ^true) {
 	cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
 	.cc_setsize(6, 6, ^setsize_abs, ^setsize_abs);
-	cc_setposition(%varcint193, $int8, ^setpos_abs_left, ^setpos_abs_bottom);
-	.cc_setposition($int7, $int8, ^setpos_abs_right, ^setpos_abs_bottom);
+	cc_setposition(%varcint193, $y8, ^setpos_abs_left, ^setpos_abs_bottom);
+	.cc_setposition($x7, $y8, ^setpos_abs_right, ^setpos_abs_bottom);
 	~script1746($component0, $component1, $component2, $component3, $int4);
 }

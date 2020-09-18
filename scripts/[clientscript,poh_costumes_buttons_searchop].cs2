@@ -1,6 +1,6 @@
 // 3558
-[clientscript,poh_costumes_buttons_searchop](int $int0, enum $enum1, component $component2, graphic $graphic3)
-if ($int0 ! 1) {
+[clientscript,poh_costumes_buttons_searchop](int $opindex0, enum $enum1, component $component2, graphic $graphic3)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);
@@ -11,7 +11,7 @@ if_sethide(false, interface_162:49);
 ~scrollbar_vertical(interface_162:54, interface_162:53, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 def_string $string0 = "Search for an item:";
 ~script222($string0);
-if_setonkey("meslayer_onkey(event_keypressed, event_keytyped, $string0)", interface_162:45);
+if_setonkey("meslayer_onkey(event_key, event_keychar, $string0)", interface_162:45);
 %varcint66 = 0;
 cc_deleteall(interface_162:53);
 if_sethide(true, interface_162:55);

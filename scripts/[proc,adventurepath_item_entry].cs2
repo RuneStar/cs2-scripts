@@ -1,8 +1,8 @@
 // 2844
 [proc,adventurepath_item_entry](int $int0, component $component1, int $int2, namedobj $namedobj3, int $int4, string $string0, int $int5)(int, int, int)
 def_int $int6 = calc(if_getwidth($component1) - 36 * 2 - 10);
-def_int $int7 = paraheight($string0, $int6, p12_full);
-def_int $int8 = ~max(50, calc($int7 * 13 + 8));
+def_int $height7 = paraheight($string0, $int6, p12_full);
+def_int $int8 = ~max(50, calc($height7 * 13 + 8));
 if ($namedobj3 = null) {
 	return($int2, $int5, $int0);
 }
@@ -24,12 +24,12 @@ cc_setposition(calc(36 / 2), calc($int0 + $int8 / 2 - 32 / 2), ^setpos_abs_left,
 cc_setoutline(1);
 cc_setobject(oc_uncert($namedobj3), $int4);
 $int2 = calc($int2 + 1);
-def_string $string1 = "";
+def_string $text1 = "";
 switch_namedobj ($namedobj3) {
 	case combat_path_voucher_24131 :
 		cc_setop(1, "Show voucher items");
-		$string1 = "Combat path voucher";
-		cc_setonop("adventurepath_voucher_op_init(0, $string1)");
+		$text1 = "Combat path voucher";
+		cc_setonop("adventurepath_voucher_op_init(0, $text1)");
 		$string0 = append($string0, " <~text_device("Click", "Tap")> the voucher icon to see the rewards.");
 	case default :
 		cc_setop(1, "Check reward");

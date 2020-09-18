@@ -64,12 +64,12 @@ switch_int (%varcint181) {
 				.cc_setposition(.cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 				cc_settrans($int6);
 				if ($int0 = 2) {
-					cc_setonmouserepeat("cc_settrans(event_com, event_comid, 220, null)");
-					cc_setonmouseleave("cc_settrans(event_com, event_comid, $int6, null)");
+					cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 220, null)");
+					cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int6, null)");
 					cc_setop(1, "Accept");
 					cc_setop(10, "Reject");
 					cc_setopbase("<col=ff9040><.cc_gettext></col>");
-					cc_setonop("script2330(event_opindex, $intarray0($int4), event_com, event_comid, .cc_gettext, $int6)");
+					cc_setonop("script2330(event_opindex, $intarray0($int4), event_com, event_comsubid, .cc_gettext, $int6)");
 				}
 			}
 			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 2)) = ^true) {
@@ -113,12 +113,12 @@ switch_int (%varcint181) {
 				.cc_setposition(.cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 				cc_settrans($int6);
 				if ($int0 = 2) {
-					cc_setonmouserepeat("cc_settrans(event_com, event_comid, 220, null)");
-					cc_setonmouseleave("cc_settrans(event_com, event_comid, $int6, null)");
+					cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 220, null)");
+					cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int6, null)");
 					cc_setop(1, "Accept");
 					cc_setop(10, "Reject");
 					cc_setopbase("<col=ff9040><.cc_gettext></col>");
-					cc_setonop("script2330(event_opindex, $intarray0($int4), event_com, event_comid, .cc_gettext, $int6)");
+					cc_setonop("script2330(event_opindex, $intarray0($int4), event_com, event_comsubid, .cc_gettext, $int6)");
 				}
 			}
 			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 2)) = ^true) {

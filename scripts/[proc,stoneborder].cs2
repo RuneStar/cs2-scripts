@@ -1,52 +1,52 @@
 // 711
-[proc,stoneborder](component $component0, string $string0, int $int1)(int)
+[proc,stoneborder](component $component0, string $text0, int $flags1)(int)
 cc_deleteall($component0);
-def_int $int2 = if_getwidth($component0);
-def_int $int3 = if_getheight($component0);
-~create_graphic($component0, 0, "tradebacking", 1, 1, ^setpos_abs_left, ^setpos_abs_top, calc($int2 - 2), calc($int3 - 2), ^setsize_abs, ^setsize_abs);
+def_int $width2 = if_getwidth($component0);
+def_int $height3 = if_getheight($component0);
+~create_graphic($component0, 0, "tradebacking", 1, 1, ^setpos_abs_left, ^setpos_abs_top, calc($width2 - 2), calc($height3 - 2), ^setsize_abs, ^setsize_abs);
 cc_create($component0, ^iftype_text, 1);
 cc_setposition(6, 6, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(calc($int2 - 12), 23, ^setsize_abs, ^setsize_abs);
+cc_setsize(calc($width2 - 12), 23, ^setsize_abs, ^setsize_abs);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setcolour(0xff981f);
 cc_settextshadow(true);
 cc_settextfont(b12_full);
-cc_settext($string0);
-def_int $int4 = cc_getid;
-def_int $int5 = calc($int2 - 32);
-def_int $int6 = calc($int3 - 32);
+cc_settext($text0);
+def_int $comsubid4 = cc_getid;
+def_int $x5 = calc($width2 - 32);
+def_int $y6 = calc($height3 - 32);
 ~create_graphic($component0, 2, "v2_stone_borders,4", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, 3, "v2_stone_borders,5", $int5, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, 4, "v2_stone_borders,6", 0, $int6, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, 5, "v2_stone_borders,7", $int5, $int6, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
-def_int $int7 = calc($int2 - 64);
-~create_graphic($component0, 6, "v2_stone_borders,0", 32, -13, ^setpos_abs_left, ^setpos_abs_top, $int7, 32, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, 7, "v2_stone_borders,2", 32, calc($int3 - 20), ^setpos_abs_left, ^setpos_abs_top, $int7, 32, ^setsize_abs, ^setsize_abs);
-def_int $int8 = calc($int3 - 64);
-~create_graphic($component0, 8, "v2_stone_borders,1", -13, 32, ^setpos_abs_left, ^setpos_abs_top, 32, $int8, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, 9, "v2_stone_borders,3", calc($int2 - 20), 32, ^setpos_abs_left, ^setpos_abs_top, 32, $int8, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 3, "v2_stone_borders,5", $x5, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 4, "v2_stone_borders,6", 0, $y6, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 5, "v2_stone_borders,7", $x5, $y6, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+def_int $width7 = calc($width2 - 64);
+~create_graphic($component0, 6, "v2_stone_borders,0", 32, -13, ^setpos_abs_left, ^setpos_abs_top, $width7, 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 7, "v2_stone_borders,2", 32, calc($height3 - 20), ^setpos_abs_left, ^setpos_abs_top, $width7, 32, ^setsize_abs, ^setsize_abs);
+def_int $height8 = calc($height3 - 64);
+~create_graphic($component0, 8, "v2_stone_borders,1", -13, 32, ^setpos_abs_left, ^setpos_abs_top, 32, $height8, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 9, "v2_stone_borders,3", calc($width2 - 20), 32, ^setpos_abs_left, ^setpos_abs_top, 32, $height8, ^setsize_abs, ^setsize_abs);
 ~create_graphic($component0, 10, "v2_stone_borders,9", 0, 17, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, 11, "v2_stone_borders,10", $int5, 17, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
-~create_graphic($component0, 12, "v2_stone_borders,8", 11, 15, ^setpos_abs_left, ^setpos_abs_top, calc($int2 - 22), 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 11, "v2_stone_borders,10", $x5, 17, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 12, "v2_stone_borders,8", 11, 15, ^setpos_abs_left, ^setpos_abs_top, calc($width2 - 22), 32, ^setsize_abs, ^setsize_abs);
 def_graphic $graphic9 = "v2_stone_close_button,0";
 def_graphic $graphic10 = "v2_stone_close_button,1";
-def_int $int11 = calc($int2 - 26);
-def_int $int12 = 10;
-def_int $int13 = 16;
-def_int $int14 = 16;
+def_int $x11 = calc($width2 - 26);
+def_int $y12 = 10;
+def_int $width13 = 16;
+def_int $height14 = 16;
 if (~on_mobile = true) {
 	$graphic9 = "stoneborder_close_button,0";
 	$graphic10 = "stoneborder_close_button,0";
-	$int11 = calc($int2 - 34);
-	$int12 = 2;
-	$int13 = 32;
-	$int14 = 32;
+	$x11 = calc($width2 - 34);
+	$y12 = 2;
+	$width13 = 32;
+	$height14 = 32;
 }
-if (testbit($int1, 0) = ^false) {
-	~create_graphic($component0, 13, $graphic9, $int11, $int12, ^setpos_abs_left, ^setpos_abs_top, $int13, $int14, ^setsize_abs, ^setsize_abs);
-	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comid, $graphic9, null)");
-	cc_setonmouseover("cc_graphic_swapper(event_com, event_comid, $graphic10, null)");
+if (testbit($flags1, 0) = ^false) {
+	~create_graphic($component0, 13, $graphic9, $x11, $y12, ^setpos_abs_left, ^setpos_abs_top, $width13, $height14, ^setsize_abs, ^setsize_abs);
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic9, null)");
+	cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic10, null)");
 	cc_setop(1, "Close");
 	cc_setonop("closebutton_click");
 }
-return($int4);
+return($comsubid4);

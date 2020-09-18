@@ -1,5 +1,5 @@
 // 2155
-[clientscript,toplevel_chatbox_resetbackground_soon](int $int0)
-if (clientclock >= $int0) {
+[clientscript,toplevel_chatbox_resetbackground_soon](int $clock0)
+if (clientclock >= $clock0) {
 	~toplevel_chatbox_background;
 }

@@ -1,12 +1,12 @@
 // 1381
-[clientscript,poh_viewer_room_hover](boolean $boolean0, component $component1, int $int2, string $string0)
+[clientscript,poh_viewer_room_hover](boolean $boolean0, component $component1, int $comsubid2, string $string0)
 if ($boolean0 = true) {
-	if (cc_find($component1, $int2) = ^true) {
+	if (cc_find($component1, $comsubid2) = ^true) {
 		cc_settrans(175);
 	}
 	~tooltip_mouserepeat($component1, -1, interface_422:65, $string0, 25, calc(512 / 2));
 } else {
-	if (cc_find($component1, $int2) = ^true) {
+	if (cc_find($component1, $comsubid2) = ^true) {
 		cc_settrans(0);
 	}
 	~deltooltip_action(interface_422:65);

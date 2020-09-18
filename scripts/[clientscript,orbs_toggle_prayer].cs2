@@ -1,6 +1,6 @@
 // 455
-[clientscript,orbs_toggle_prayer](int $int0, component $component1, component $component2, component $component3)
-if ($int0 ! 1) {
+[clientscript,orbs_toggle_prayer](int $opindex0, component $component1, component $component2, component $component3)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

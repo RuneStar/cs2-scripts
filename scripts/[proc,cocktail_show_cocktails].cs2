@@ -4,11 +4,11 @@ cc_deleteall($component0);
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_int $int6 = 0;
-def_int $int7 = 0;
+def_int $count7 = 0;
 def_struct $struct8 = null;
 def_int $int9 = 0;
-while ($int7 < enum_getoutputcount(enum_2323)) {
-	$struct8 = enum(int, struct, enum_2323, $int7);
+while ($count7 < enum_getoutputcount(enum_2323)) {
+	$struct8 = enum(int, struct, enum_2323, $count7);
 	$int9 = ~cocktail_check_inv($struct8);
 	cc_create($component0, ^iftype_model, $int4);
 	if ($int9 = 1) {
@@ -41,5 +41,5 @@ while ($int7 < enum_getoutputcount(enum_2323)) {
 		$int5 = 0;
 		$int6 = calc($int6 + 1);
 	}
-	$int7 = calc($int7 + 1);
+	$count7 = calc($count7 + 1);
 }

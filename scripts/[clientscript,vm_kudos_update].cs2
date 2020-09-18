@@ -1,5 +1,5 @@
 // 2078
-[clientscript,vm_kudos_update](component $component0, int $int1, int $int2)
-if (cc_find($component0, $int1) = ^true & .cc_find($component0, $int2) = ^true) {
+[clientscript,vm_kudos_update](component $component0, int $comsubid1, int $comsubid2)
+if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
 	~vm_kudos_update;
 }

@@ -1,11 +1,11 @@
 // 1004
-[clientscript,xpdrops_stattransmit](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, int $int20, int $int21, int $int22, int $int23, int $int24, int $int25, int $int26, int $int27, int $int28, int $int29, int $int30, int $int31, int $int32, int $int33)
+[clientscript,xpdrops_stattransmit](boolean $boolean0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, int $int10, int $xp11, int $xp12, int $xp13, int $xp14, int $xp15, int $xp16, int $xp17, int $xp18, int $xp19, int $xp20, int $xp21, int $xp22, int $xp23, int $xp24, int $xp25, int $xp26, int $xp27, int $xp28, int $xp29, int $xp30, int $xp31, int $xp32, int $xp33)
 if ($boolean0 = true & %varcint207 = null) {
 	return;
 }
-def_int $int34 = calc(23 + 1);
-def_stat $statarray0($int34);
-def_int $intarray1($int34);
+def_int $length34 = calc(23 + 1);
+def_stat $statarray0($length34);
+def_int $intarray1($length34);
 def_int $int35 = 0;
 def_int $int36 = 0;
 if ($boolean0 = true) {
@@ -22,139 +22,139 @@ if ($boolean0 = true) {
 		%varcint207, %varcint208, %varcint209, %varcint210, %varcint211, %varcint212, %varcint213 = %varcint208, %varcint209, %varcint210, %varcint211, %varcint212, %varcint213, null;
 	}
 } else {
-	$int36 = calc(stat_xp(fishing) - $int25);
+	$int36 = calc(stat_xp(fishing) - $xp25);
 	if ($int36 > 0) {
 		$statarray0($int35) = fishing;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(attack) - $int11);
+	$int36 = calc(stat_xp(attack) - $xp11);
 	if ($int36 > 0) {
 		$statarray0($int35) = attack;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(strength) - $int12);
+	$int36 = calc(stat_xp(strength) - $xp12);
 	if ($int36 > 0) {
 		$statarray0($int35) = strength;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(ranged) - $int13);
+	$int36 = calc(stat_xp(ranged) - $xp13);
 	if ($int36 > 0) {
 		$statarray0($int35) = ranged;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(magic) - $int14);
+	$int36 = calc(stat_xp(magic) - $xp14);
 	if ($int36 > 0) {
 		$statarray0($int35) = magic;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(defence) - $int15);
+	$int36 = calc(stat_xp(defence) - $xp15);
 	if ($int36 > 0) {
 		$statarray0($int35) = defence;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(hitpoints) - $int16);
+	$int36 = calc(stat_xp(hitpoints) - $xp16);
 	if ($int36 > 0) {
 		$statarray0($int35) = hitpoints;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(prayer) - $int17);
+	$int36 = calc(stat_xp(prayer) - $xp17);
 	if ($int36 > 0) {
 		$statarray0($int35) = prayer;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(agility) - $int18);
+	$int36 = calc(stat_xp(agility) - $xp18);
 	if ($int36 > 0) {
 		$statarray0($int35) = agility;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(herblore) - $int19);
+	$int36 = calc(stat_xp(herblore) - $xp19);
 	if ($int36 > 0) {
 		$statarray0($int35) = herblore;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(thieving) - $int20);
+	$int36 = calc(stat_xp(thieving) - $xp20);
 	if ($int36 > 0) {
 		$statarray0($int35) = thieving;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(crafting) - $int21);
+	$int36 = calc(stat_xp(crafting) - $xp21);
 	if ($int36 > 0) {
 		$statarray0($int35) = crafting;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(runecraft) - $int22);
+	$int36 = calc(stat_xp(runecraft) - $xp22);
 	if ($int36 > 0) {
 		$statarray0($int35) = runecraft;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(mining) - $int23);
+	$int36 = calc(stat_xp(mining) - $xp23);
 	if ($int36 > 0) {
 		$statarray0($int35) = mining;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(smithing) - $int24);
+	$int36 = calc(stat_xp(smithing) - $xp24);
 	if ($int36 > 0) {
 		$statarray0($int35) = smithing;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(cooking) - $int26);
+	$int36 = calc(stat_xp(cooking) - $xp26);
 	if ($int36 > 0) {
 		$statarray0($int35) = cooking;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(firemaking) - $int27);
+	$int36 = calc(stat_xp(firemaking) - $xp27);
 	if ($int36 > 0) {
 		$statarray0($int35) = firemaking;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(woodcutting) - $int28);
+	$int36 = calc(stat_xp(woodcutting) - $xp28);
 	if ($int36 > 0) {
 		$statarray0($int35) = woodcutting;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(fletching) - $int29);
+	$int36 = calc(stat_xp(fletching) - $xp29);
 	if ($int36 > 0) {
 		$statarray0($int35) = fletching;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(slayer) - $int30);
+	$int36 = calc(stat_xp(slayer) - $xp30);
 	if ($int36 > 0) {
 		$statarray0($int35) = slayer;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(farming) - $int31);
+	$int36 = calc(stat_xp(farming) - $xp31);
 	if ($int36 > 0) {
 		$statarray0($int35) = farming;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(construction) - $int32);
+	$int36 = calc(stat_xp(construction) - $xp32);
 	if ($int36 > 0) {
 		$statarray0($int35) = construction;
 		$intarray1($int35) = $int36;
 		$int35 = calc($int35 + 1);
 	}
-	$int36 = calc(stat_xp(hunter) - $int33);
+	$int36 = calc(stat_xp(hunter) - $xp33);
 	if ($int36 > 0) {
 		$statarray0($int35) = hunter;
 		$intarray1($int35) = $int36;
@@ -173,7 +173,7 @@ def_int $int45 = 0;
 def_int $int46 = 0;
 def_component $component47 = null;
 def_string $string0 = "";
-if ($int35 > 0 & $int16 > 0 & calc(clientclock - %varcint76) > 10) {
+if ($int35 > 0 & $xp16 > 0 & calc(clientclock - %varcint76) > 10) {
 	if (%varbit4693 = 1 & ~on_mobile = false) {
 		$fontmetrics39, $fontmetrics40, $int41 = p12_full, p12_full, 25;
 	} else if (%varbit4693 = 2 & ~on_mobile = false) {

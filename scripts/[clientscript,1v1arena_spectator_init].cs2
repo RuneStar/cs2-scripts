@@ -18,4 +18,4 @@ cc_settextshadow(true);
 cc_settextfont(quill_oblique_large);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext("<col=ffffff>F12</col>: Exit<br><col=ffffff>PageUP</col>: Faster<br><col=ffffff>PageDOWN</col>: Slower<br>");
-cc_setontimer("1v1arena_spectator_endhint(event_com, event_comid, calc(clientclock + 400))");
+cc_setontimer("1v1arena_spectator_endhint(event_com, event_comsubid, calc(clientclock + 400))");

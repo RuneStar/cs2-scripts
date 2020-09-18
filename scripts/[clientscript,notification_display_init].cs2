@@ -1,13 +1,13 @@
 // 3343
-[clientscript,notification_display_init](string $string0, string $string1)
+[clientscript,notification_display_init](string $string0, string $text1)
 if_settext("<u=ff981f><$string0>", interface_660:4);
-if_settext($string1, interface_660:8);
+if_settext($text1, interface_660:8);
 if_settrans(255, interface_660:4);
 if_settrans(255, interface_660:8);
 if_setposition(0, calc((100 - 2) / 2), ^setpos_abs_centre, ^setpos_abs_top, interface_660:1);
 if_setsize(1, 2, ^setsize_abs, ^setsize_abs, interface_660:1);
 %varcstring387 = $string0;
-%varcstring388 = $string1;
+%varcstring388 = $text1;
 %varcint391 = 1;
 %varcint392 = 0;
 if_setontimer("notification_start(1, 0, 2)", interface_660:2);

@@ -1,6 +1,6 @@
 // 2895
-[clientscript,overlay_portal_adjust](int $int0, boolean $boolean1, component $component2)
-def_int $int3 = calc(clientclock - $int0);
+[clientscript,overlay_portal_adjust](int $clock0, boolean $boolean1, component $component2)
+def_int $int3 = calc(clientclock - $clock0);
 def_int $int4 = 0;
 if ($int3 >= 20) {
 	if ($boolean1 = false) {

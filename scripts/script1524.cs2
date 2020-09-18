@@ -1,12 +1,12 @@
 // 1524
-script1524(int $int0, int $int1, int $int2, string $string0)
+script1524(int $int0, int $int1, int $int2, string $text0)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
 if_sethide(false, interface_507:11);
-def_int $int3 = calc(%varcint178 * 14);
-if ($int3 > if_getheight(interface_507:11)) {
-	if_setscrollsize(0, $int3, interface_507:11);
+def_int $height3 = calc(%varcint178 * 14);
+if ($height3 > if_getheight(interface_507:11)) {
+	if_setscrollsize(0, $height3, interface_507:11);
 	~scrollbar_resize(interface_507:12, interface_507:11, %varcint179);
 } else {
 	if_setscrollsize(0, 0, interface_507:11);
@@ -20,7 +20,7 @@ if (%varcint181 ! 0 & %varcint181 ! 1 & %varcint181 ! 2 & %varcint181 ! 3 & %var
 ~raids_partydetails_closestats;
 ~script1537;
 if_setonvartransmit("script1536{var1430}", interface_507:11);
-~steelborder(interface_507:2, $string0, 0);
+~steelborder(interface_507:2, $text0, 0);
 def_string $string1 = "";
 if ($int0 = 2) {
 	if ($int1 = 1) {

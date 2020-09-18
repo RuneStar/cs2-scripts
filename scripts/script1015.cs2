@@ -1,6 +1,6 @@
 // 1015
-script1015(component $component0, int $int1, int $colour2, int $int3)
-if (cc_find($component0, $int1) = ^true) {
+script1015(component $component0, int $comsubid1, int $colour2, int $trans3)
+if (cc_find($component0, $comsubid1) = ^true) {
 	cc_setcolour($colour2);
-	cc_settrans($int3);
+	cc_settrans($trans3);
 }

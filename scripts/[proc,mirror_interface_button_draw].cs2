@@ -1,5 +1,5 @@
 // 2900
-[proc,mirror_interface_button_draw](component $component0, string $string0, boolean $boolean1)
+[proc,mirror_interface_button_draw](component $component0, string $text0, boolean $boolean1)
 cc_deleteall($component0);
 def_int $int2 = 0;
 def_int $int3 = 0;
@@ -15,4 +15,4 @@ cc_setcolour(0x403020);
 cc_settextfont(q8_full);
 cc_settextshadow(false);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-cc_settext($string0);
+cc_settext($text0);

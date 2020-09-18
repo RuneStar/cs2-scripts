@@ -1,6 +1,6 @@
 // 3555
-[clientscript,poh_costumes_buttons_toggle_op](int $int0, component $component1, graphic $graphic2)
-if ($int0 ! 1) {
+[clientscript,poh_costumes_buttons_toggle_op](int $opindex0, component $component1, graphic $graphic2)
+if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);

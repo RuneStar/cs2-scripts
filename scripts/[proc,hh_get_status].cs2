@@ -1,28 +1,28 @@
 // 1479
-[proc,hh_get_status](loc $loc0, int $int1, int $int2, int $int3)(int, int)
+[proc,hh_get_status](loc $loc0, int $flags1, int $flags2, int $flags3)(int, int)
 def_coord $coord4 = enum(loc, coord, enum_1368, $loc0);
 if ($coord4 = null) {
 	return(0, 0);
 }
-def_int $int5 = coordx($coord4);
-def_int $int6 = coordz($coord4);
-def_int $int7 = 0;
-if ($int5 = 1) {
-	$int7 = %var1365;
-} else if ($int5 = 2) {
-	$int7 = %var1366;
-} else if ($int5 = 3) {
-	$int7 = %var1367;
-} else if ($int5 = 4) {
-	$int7 = %var1368;
-} else if ($int5 = 5) {
-	$int7 = %var1369;
-} else if ($int5 = 6) {
-	$int7 = %var2202;
+def_int $x5 = coordx($coord4);
+def_int $z6 = coordz($coord4);
+def_int $flags7 = 0;
+if ($x5 = 1) {
+	$flags7 = %var1365;
+} else if ($x5 = 2) {
+	$flags7 = %var1366;
+} else if ($x5 = 3) {
+	$flags7 = %var1367;
+} else if ($x5 = 4) {
+	$flags7 = %var1368;
+} else if ($x5 = 5) {
+	$flags7 = %var1369;
+} else if ($x5 = 6) {
+	$flags7 = %var2202;
 } else {
 	return(0, 0);
 }
-if (testbit($int7, $int6) = ^false) {
+if (testbit($flags7, $z6) = ^false) {
 	return(0, 0);
 }
 def_coord $coord8 = enum(loc, coord, enum_1525, $loc0);
@@ -31,33 +31,33 @@ if ($coord8 ! null) {
 		return(1, 1);
 	}
 	if ($loc0 = inconspicuous_rocks_elite_multi_29032) {
-		if (testbit($int2, 31) = ^true) {
+		if (testbit($flags2, 31) = ^true) {
 			return(1, 1);
 		}
-	} else if ($loc0 = inconspicuous_bush_master_multi_29060 & testbit($int3, 11) = ^true) {
+	} else if ($loc0 = inconspicuous_bush_master_multi_29060 & testbit($flags3, 11) = ^true) {
 		return(1, 1);
 	}
 	return(1, 0);
 }
 $coord8 = enum(loc, coord, enum_1440, $loc0);
 if ($coord8 ! null) {
-	$int5, $int6 = coordx($coord8), coordz($coord8);
-	if ($int5 = 1) {
-		$int7 = $int1;
-	} else if ($int5 = 2) {
-		$int7 = $int2;
-	} else if ($int5 = 3) {
-		$int7 = $int3;
+	$x5, $z6 = coordx($coord8), coordz($coord8);
+	if ($x5 = 1) {
+		$flags7 = $flags1;
+	} else if ($x5 = 2) {
+		$flags7 = $flags2;
+	} else if ($x5 = 3) {
+		$flags7 = $flags3;
 	} else {
 		return(0, 0);
 	}
-	if (testbit($int7, $int6) = ^true) {
+	if (testbit($flags7, $z6) = ^true) {
 		return(1, 1);
 	}
 	return(1, 0);
 }
 if ($loc0 = inconspicuous_crate_master_multi_29057) {
-	if (testbit($int3, 10) = ^true | testbit($int3, 12) = ^true) {
+	if (testbit($flags3, 10) = ^true | testbit($flags3, 12) = ^true) {
 		return(1, 1);
 	}
 	return(1, 0);

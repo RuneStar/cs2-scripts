@@ -1,10 +1,10 @@
 // 1329
-[proc,ii_tracker_build_element](string $string0, component $component0, component $component1, component $component2, int $int3, int $int4, int $int5)(int, int, int)
+[proc,ii_tracker_build_element](string $text0, component $component0, component $component1, component $component2, int $int3, int $int4, int $int5)(int, int, int)
 def_int $int6 = 18;
 def_int $int7 = 6;
 def_int $int8 = 50;
 def_int $int9 = 32;
-def_int $int10 = 32;
+def_int $height10 = 32;
 if (calc($int4 + $int9 + $int7 + $int8) > if_getwidth($component0)) {
 	$int4 = 15;
 	$int5 = calc($int5 + 80);
@@ -13,17 +13,17 @@ if (calc($int4 + $int9 + $int7 + $int8) > if_getwidth($component0)) {
 }
 cc_create($component2, ^iftype_model, $int3);
 cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize($int9, $int10, ^setsize_abs, ^setsize_abs);
+cc_setsize($int9, $height10, ^setsize_abs, ^setsize_abs);
 $int4 = calc($int4 + 6 + cc_getwidth);
 cc_setmodel(enum(int, model, enum_1316, $int3));
 cc_setmodelangle(0, 20, 0, 1871, 0, 600);
 cc_setmodelanim(baby_impling_ready_6613);
 .cc_create($component1, ^iftype_text, $int3);
 .cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
-.cc_setsize($int8, $int10, ^setsize_abs, ^setsize_abs);
+.cc_setsize($int8, $height10, ^setsize_abs, ^setsize_abs);
 .cc_settextfont(p11_full);
 .cc_setcolour(0xff9900);
 .cc_settextalign(^settextalign_left, ^settextalign_top, 0);
-.cc_settext($string0);
+.cc_settext($text0);
 $int4 = calc($int4 + .cc_getwidth);
 return(calc($int3 + 1), $int4, $int5);

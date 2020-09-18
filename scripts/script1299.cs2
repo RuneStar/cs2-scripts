@@ -3,15 +3,15 @@ script1299(string $string0, string $string1, string $string2)(string)
 if (compare($string1, $string2) = 0) {
 	return($string0);
 }
-def_int $int0 = string_length($string1);
-if ($int0 <= 0) {
+def_int $length0 = string_length($string1);
+if ($length0 <= 0) {
 	return($string0);
 }
-def_int $int1 = 0;
-def_int $int2 = string_indexof_string($string0, $string1, 0);
-while ($int2 ! -1) {
-	$int1 = string_length($string0);
-	$string0 = append(append(substring($string0, 0, $int2), $string2), substring($string0, calc($int2 + $int0), $int1));
-	$int2 = string_indexof_string($string0, $string1, 0);
+def_int $index1 = 0;
+def_int $index2 = string_indexof_string($string0, $string1, 0);
+while ($index2 ! -1) {
+	$index1 = string_length($string0);
+	$string0 = append(append(substring($string0, 0, $index2), $string2), substring($string0, calc($index2 + $length0), $index1));
+	$index2 = string_indexof_string($string0, $string1, 0);
 }
 return($string0);

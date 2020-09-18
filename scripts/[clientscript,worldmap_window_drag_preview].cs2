@@ -1,40 +1,40 @@
 // 1747
-[clientscript,worldmap_window_drag_preview](int $int0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, int $int9)
+[clientscript,worldmap_window_drag_preview](int $comsubid0, int $mousex1, int $mousey2, int $x3, int $y4, component $component5, component $component6, component $component7, component $component8, int $int9)
 def_int $int10 = %varcint191;
 def_int $int11 = %varcint192;
 def_int $int12 = %varcint193;
 def_int $int13 = %varcint194;
 def_int $int14 = 0;
-def_int $int15 = if_getwidth($component5);
-def_int $int16 = if_getheight($component5);
-if (cc_find($component5, $int0) = ^true) {
+def_int $width15 = if_getwidth($component5);
+def_int $height16 = if_getheight($component5);
+if (cc_find($component5, $comsubid0) = ^true) {
 	cc_setgraphic(null);
-	switch_int ($int0) {
+	switch_int ($comsubid0) {
 		case 0 :
-			$int12, $int13 = calc($int12 + ($int1 - $int3)), calc($int13 + ($int2 - $int4));
+			$int12, $int13 = calc($int12 + ($mousex1 - $x3)), calc($int13 + ($mousey2 - $y4));
 		case 1 :
-			$int11 = calc($int11 - ($int2 - $int4));
+			$int11 = calc($int11 - ($mousey2 - $y4));
 		case 2 :
-			$int14 = calc($int1 - $int3);
+			$int14 = calc($mousex1 - $x3);
 			$int10, $int12 = calc($int10 + $int14), calc($int12 + $int14);
 		case 3 :
-			$int10 = calc($int10 - ($int1 - $int3));
+			$int10 = calc($int10 - ($mousex1 - $x3));
 		case 4 :
-			$int14 = calc($int1 - $int3);
+			$int14 = calc($mousex1 - $x3);
 			$int10, $int12 = calc($int10 + $int14), calc($int12 + $int14);
-			$int14 = calc($int2 - $int4);
+			$int14 = calc($mousey2 - $y4);
 			$int11, $int13 = calc($int11 + $int14), calc($int13 + $int14);
 		case 5 :
-			$int10 = calc($int10 - ($int1 - $int3));
-			$int14 = calc($int2 - $int4);
+			$int10 = calc($int10 - ($mousex1 - $x3));
+			$int14 = calc($mousey2 - $y4);
 			$int11, $int13 = calc($int11 + $int14), calc($int13 + $int14);
 		case 6 :
-			$int14 = calc($int1 - $int3);
+			$int14 = calc($mousex1 - $x3);
 			$int10, $int12 = calc($int10 + $int14), calc($int12 + $int14);
-			$int11 = calc($int11 - ($int2 - $int4));
+			$int11 = calc($int11 - ($mousey2 - $y4));
 		case 7 :
-			$int10 = calc($int10 - ($int1 - $int3));
-			$int11 = calc($int11 - ($int2 - $int4));
+			$int10 = calc($int10 - ($mousex1 - $x3));
+			$int11 = calc($int11 - ($mousey2 - $y4));
 	}
 	if ($int12 < 10) {
 		$int10 = calc($int10 - $int12);
@@ -50,8 +50,8 @@ if (cc_find($component5, $int0) = ^true) {
 	if ($int11 < calc($int13 + 10)) {
 		$int11 = $int13;
 	}
-	$int10 = ~max(~min($int10, calc($int15 - $int9)), 0);
-	$int11 = ~max(~min($int11, calc($int16 - 280)), 0);
+	$int10 = ~max(~min($int10, calc($width15 - $int9)), 0);
+	$int11 = ~max(~min($int11, calc($height16 - 280)), 0);
 	$int12, $int13 = ~max(~min($int12, $int10), 0), ~max(~min($int13, $int11), 0);
 	if_setposition($int12, $int13, ^setpos_abs_left, ^setpos_abs_top, $component7);
 	if_setsize($int10, $int11, ^setsize_minus, ^setsize_minus, $component7);

@@ -1,5 +1,5 @@
 // 1519
-[clientscript,raids_partydetails_entry_setup](component $component0, int $int1, int $int2, int $int3, int $int4, boolean $boolean5)
-if (cc_find($component0, $int1) = ^true) {
+[clientscript,raids_partydetails_entry_setup](component $component0, int $comsubid1, int $int2, int $int3, int $int4, boolean $boolean5)
+if (cc_find($component0, $comsubid1) = ^true) {
 	~raids_partydetails_entry_setup($int2, $int3, $int4, $boolean5);
 }

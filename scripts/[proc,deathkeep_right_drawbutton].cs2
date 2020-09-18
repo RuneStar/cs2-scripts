@@ -1,5 +1,5 @@
 // 3454
-[proc,deathkeep_right_drawbutton](component $component0, int $int1, string $string0, boolean $boolean2, int $int3)(int)
+[proc,deathkeep_right_drawbutton](component $component0, int $int1, string $text0, boolean $boolean2, int $int3)(int)
 if_setontimer(null, $component0);
 def_int $int4 = 0;
 if ($boolean2 = true) {
@@ -27,5 +27,5 @@ if ($int3 = 1) {
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 12);
 cc_settextshadow(true);
-cc_settext($string0);
+cc_settext($text0);
 return($int4);

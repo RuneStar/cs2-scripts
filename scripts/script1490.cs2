@@ -5,8 +5,8 @@ if (~on_mobile = false) {
 	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
 	return;
 }
-def_component $component1 = if_getlayer($component0);
-if ($component1 ! null) {
+def_component $layer1 = if_getlayer($component0);
+if ($layer1 ! null) {
 	~script1282;
-	~script2236($component0, $component1, -1, -1, -1);
+	~script2236($component0, $layer1, -1, -1, -1);
 }

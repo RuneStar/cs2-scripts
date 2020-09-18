@@ -1,6 +1,6 @@
 // 1990
-[clientscript,gravestone_retrieval_buttonreset](int $int0, component $component1, component $component2, component $component3, component $component4)
-if (clientclock < $int0) {
+[clientscript,gravestone_retrieval_buttonreset](int $clock0, component $component1, component $component2, component $component3, component $component4)
+if (clientclock < $clock0) {
 	return;
 }
 if ($component3 ! null) {

@@ -10,18 +10,18 @@ def_struct $struct10 = enum(int, struct, enum_2619, %varbit9324);
 if ($struct10 = null) {
 	$struct10 = struct_1268;
 }
-def_int $int11 = 0;
-def_int $int12 = enum_getoutputcount($enum9);
+def_int $count11 = 0;
+def_int $count12 = enum_getoutputcount($enum9);
 def_struct $struct13 = null;
-def_int $int14 = ~adventurepath_return_task_focus(%varbit9324);
-while ($int11 < $int12) {
-	$struct13 = enum(int, struct, $enum9, $int11);
-	if ($struct13 ! null & struct_param($struct13, param_806) = $int14) {
-		$int11 = $int12;
+def_int $index14 = ~adventurepath_return_task_focus(%varbit9324);
+while ($count11 < $count12) {
+	$struct13 = enum(int, struct, $enum9, $count11);
+	if ($struct13 ! null & struct_param($struct13, param_806) = $index14) {
+		$count11 = $count12;
 	} else {
 		$struct13 = null;
 	}
-	$int11 = calc($int11 + 1);
+	$count11 = calc($count11 + 1);
 }
 cc_create($component1, ^iftype_graphic, $int8);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -84,7 +84,7 @@ if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_colour_swapper($component3, cc_getid, 0xbebebe)");
 	cc_setonmouseleave("cc_colour_swapper($component3, cc_getid, 0xff981f)");
 }
-$int11 = 0;
+$count11 = 0;
 $int8 = 0;
 def_int $int15 = 0;
 def_int $int16 = 0;
@@ -100,7 +100,7 @@ if ($struct13 ! null) {
 	$int8 = ~script2990($component4, $int8, if_getwidth($component4), if_getheight($component4), 0, 0, 0, 0, 0, "");
 }
 $int8 = 0;
-if ($struct13 ! null & ~adventurepath_return_task_status($int14) = ^false & struct_param($struct13, param_927) ! null) {
+if ($struct13 ! null & ~adventurepath_return_task_status($index14) = ^false & struct_param($struct13, param_927) ! null) {
 	$int8 = ~v2_stone_button_filled($component6);
 	cc_create($component6, ^iftype_graphic, $int8);
 	cc_setgraphic("worldmap_icon,0");

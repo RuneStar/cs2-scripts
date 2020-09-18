@@ -18,19 +18,19 @@ while ($int3 < 12) {
 	$int3 = calc($int3 + 1);
 }
 ~quicksort_intenum(intarray0, 0, calc(12 - 1), enum_595);
-def_int $int5 = 8;
+def_int $height5 = 8;
 $int3 = 0;
 while ($int3 < 12) {
 	if (cc_find($component0, $intarray0($int3)) = ^true) {
-		cc_setposition(0, $int5, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setposition(0, $height5, ^setpos_abs_centre, ^setpos_abs_top);
 	}
-	$int4 = ~setup_diary_entry($component0, $intarray0($int3), $int4, $int5);
-	$int3, $int5 = calc($int3 + 1), calc($int5 + 28);
+	$int4 = ~setup_diary_entry($component0, $intarray0($int3), $int4, $height5);
+	$int3, $height5 = calc($int3 + 1), calc($height5 + 28);
 }
-$int5 = calc($int5 + 8);
+$height5 = calc($height5 + 8);
 if_setscrollpos(0, 0, $component0);
-if ($int5 > if_getheight($component0)) {
-	if_setscrollsize(0, $int5, $component0);
+if ($height5 > if_getheight($component0)) {
+	if_setscrollsize(0, $height5, $component0);
 } else {
 	if_setscrollsize(0, 0, $component0);
 }

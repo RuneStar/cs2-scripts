@@ -1,16 +1,16 @@
 // 3431
 script3431(component $component0)
 def_int $int1 = 0;
-def_int $int2 = 0;
-def_int $int3 = 0;
+def_int $x2 = 0;
+def_int $y3 = 0;
 def_int $int4 = 0;
 def_graphic $graphic5 = null;
 while ($int1 < 25) {
 	cc_create($component0, ^iftype_graphic, $int1);
 	cc_setsize(35, 35, ^setsize_abs, ^setsize_abs);
-	$int2 = calc(35 * ($int1 % 5));
-	$int3 = calc(35 * ($int1 / 5));
-	cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
+	$x2 = calc(35 * ($int1 % 5));
+	$y3 = calc(35 * ($int1 / 5));
+	cc_setposition($x2, $y3, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic("graphic_2540");
 	cc_settrans(0);
 	cc_setop(1, "Toggle");

@@ -1,12 +1,12 @@
 // 1458
-[clientscript,zmi_bank_payment_selection_reset](int $int0, int $int1, component $component2, component $component3, int $int4, boolean $boolean5)
-if (clientclock < $int1) {
+[clientscript,zmi_bank_payment_selection_reset](int $clock0, int $clock1, component $component2, component $component3, int $comsubid4, boolean $boolean5)
+if (clientclock < $clock1) {
 	return;
 }
-if (.cc_find($component3, $int4) = ^true & .cc_gethide = true) {
+if (.cc_find($component3, $comsubid4) = ^true & .cc_gethide = true) {
 	.cc_sethide(false);
 }
-if (clientclock < $int0) {
+if (clientclock < $clock0) {
 	return;
 }
 ~bank_payment_draw($component2, -1, $boolean5);

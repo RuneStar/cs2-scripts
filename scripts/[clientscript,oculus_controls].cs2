@@ -1,5 +1,5 @@
 // 2220
-[clientscript,oculus_controls](int $key0, component $component1, int $int2)
+[clientscript,oculus_controls](int $key0, component $component1, int $comsubid2)
 if (~keypress_permit(16, -1) = 0) {
 	return;
 }
@@ -7,7 +7,7 @@ switch_int ($key0) {
 	case ^key_escape :
 		if_close;
 	case ^key_space :
-		if (cc_find($component1, $int2) = ^true) {
+		if (cc_find($component1, $comsubid2) = ^true) {
 			cc_resume_pausebutton;
 		}
 	case ^key_page_up :

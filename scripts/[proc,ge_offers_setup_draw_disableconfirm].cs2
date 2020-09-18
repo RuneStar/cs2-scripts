@@ -1,9 +1,9 @@
 // 780
-[proc,ge_offers_setup_draw_disableconfirm](component $component0, int $int1, component $component2)
+[proc,ge_offers_setup_draw_disableconfirm](component $component0, int $comsubid1, component $component2)
 ~v2_stone_button_in_filled($component2);
 if_setonmouserepeat(null, $component2);
 if_setonmouseleave(null, $component2);
 if_setonop(null, $component2);
-if (cc_find($component0, $int1) = ^true) {
+if (cc_find($component0, $comsubid1) = ^true) {
 	cc_settext("---");
 }

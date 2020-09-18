@@ -1,6 +1,6 @@
 // 998
-[clientscript,xpdrops_hidepanel](component $component0, component $component1, component $component2, component $component3, int $int4)
-if (clientclock < $int4) {
+[clientscript,xpdrops_hidepanel](component $component0, component $component1, component $component2, component $component3, int $clock4)
+if (clientclock < $clock4) {
 	return;
 }
 def_int $int5 = 0;

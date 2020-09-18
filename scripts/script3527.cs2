@@ -19,12 +19,12 @@ $int6 = calc($int6 + 32 + 3);
 $int5 = ~script3528(2, $int6, 0, $int7, $component1, $component2, $component3, $component4, $int5, $int0);
 $int5 = ~script3528(3, $int6, $int7, $int7, $component1, $component2, $component3, $component4, $int5, $int0);
 $int6 = calc($int6 + 32 + 5);
-def_string $string0 = "";
+def_string $text0 = "";
 cc_deleteall($component3);
 $int5 = 0;
 if ($int0 ! -1) {
-	$string0 = enum(int, string, enum_2646, $int0);
-	~pest_rewards_confirmdraw(false, $string0, $component4);
+	$text0 = enum(int, string, enum_2646, $int0);
+	~pest_rewards_confirmdraw(false, $text0, $component4);
 	while ($int5 < $int0) {
 		cc_create($component3, ^iftype_rectangle, $int5);
 		cc_sethide(true);
@@ -35,8 +35,8 @@ if ($int0 ! -1) {
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setop(1, "Confirm");
-	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $string0, $component4)");
-	cc_setonmouseleave("pest_rewards_confirmdraw(false, $string0, $component4)");
+	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $text0, $component4)");
+	cc_setonmouseleave("pest_rewards_confirmdraw(false, $text0, $component4)");
 	cc_setonop("script3525(event_opindex, $component1, $component2, $component3, $component4)");
 } else {
 	$int5 = ~v2_stone_button_in_filled($component4);

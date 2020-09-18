@@ -1,5 +1,5 @@
 // 217
-[clientscript,menu](int $int0, string $string0, string $string1)
+[clientscript,menu](int $int0, string $text0, string $string1)
 def_component $component1 = interface_187:0;
 def_component $component2 = interface_187:3;
 def_component $component3 = interface_187:2;
@@ -10,22 +10,22 @@ if (~on_mobile = true) {
 if ($int0 = 1) {
 	~chatdefault_stopinput;
 }
-~script219($component1, $component2, $component3, $string0, 33);
+~script219($component1, $component2, $component3, $text0, 33);
 cc_deleteall($component4);
-def_int $int5 = if_getwidth($component2);
+def_int $width5 = if_getwidth($component2);
 def_int $int6 = 0;
-def_int $int7 = 0;
-def_int $int8 = string_indexof_string($string1, "|", 0);
+def_int $height7 = 0;
+def_int $index8 = string_indexof_string($string1, "|", 0);
 def_string $string2 = "";
-while ($int8 ! -1) {
-	$string2 = substring($string1, 0, $int8);
-	$int6, $int7 = ~menu_createentry($string2, $component2, $component4, $int5, $int6, $int7, $int0);
-	$string1 = substring($string1, calc($int8 + 1), string_length($string1));
-	$int8 = string_indexof_string($string1, "|", 0);
+while ($index8 ! -1) {
+	$string2 = substring($string1, 0, $index8);
+	$int6, $height7 = ~menu_createentry($string2, $component2, $component4, $width5, $int6, $height7, $int0);
+	$string1 = substring($string1, calc($index8 + 1), string_length($string1));
+	$index8 = string_indexof_string($string1, "|", 0);
 }
-$int6, $int7 = ~menu_createentry($string1, $component2, $component4, $int5, $int6, $int7, $int0);
-if_setscrollsize(0, $int7, $component2);
+$int6, $height7 = ~menu_createentry($string1, $component2, $component4, $width5, $int6, $height7, $int0);
+if_setscrollsize(0, $height7, $component2);
 if_setscrollpos(0, 0, $component2);
-if ($int7 > if_getheight($component2)) {
+if ($height7 > if_getheight($component2)) {
 	~scrollbar_vertical($component3, $component2, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 }

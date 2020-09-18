@@ -2,8 +2,8 @@
 [clientscript,ge_offer_side_init](component $component0, component $component1)
 cc_deleteall($component0);
 def_int $int2 = 0;
-def_int $int3 = inv_size(inv);
-while ($int2 < $int3) {
+def_int $size3 = inv_size(inv);
+while ($int2 < $size3) {
 	cc_create($component0, ^iftype_graphic, $int2);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);

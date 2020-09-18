@@ -1,5 +1,5 @@
 // 2940
-[proc,silver_crafting_jewellery_draw](component $component0, obj $obj1, int $int2, obj $obj3, string $string0, obj $obj4, obj $obj5)
+[proc,silver_crafting_jewellery_draw](component $component0, obj $obj1, int $lvl2, obj $obj3, string $string0, obj $obj4, obj $obj5)
 cc_deleteall($component0);
 if (inv_total(inv, $obj3) <= 0) {
 	if_clearops($component0);
@@ -17,7 +17,7 @@ cc_setposition(0, 3, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
 def_int $int7 = 0;
-if (inv_total(inv, $obj4) > 0 & stat(crafting) >= $int2 & (map_members = ^true | oc_members($obj1) = ^false)) {
+if (inv_total(inv, $obj4) > 0 & stat(crafting) >= $lvl2 & (map_members = ^true | oc_members($obj1) = ^false)) {
 	cc_setobject_nonum($obj1, 1);
 	cc_settrans(0);
 	$int7 = 1;
@@ -33,8 +33,8 @@ cc_setsize(0, 22, ^setsize_minus, ^setsize_abs);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
 .cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-def_int $int8 = if_getwidth($component0);
-if (parawidth($string0, $int8, p12_full) <= $int8 & paraheight($string0, $int8, p12_full) <= 1) {
+def_int $width8 = if_getwidth($component0);
+if (parawidth($string0, $width8, p12_full) <= $width8 & paraheight($string0, $width8, p12_full) <= 1) {
 	cc_settextfont(p12_full);
 } else {
 	cc_settextfont(p11_full);
@@ -55,7 +55,7 @@ if ($int7 = 1) {
 	if (map_members = ^false & oc_members($obj1) = ^true) {
 		.cc_settext("");
 	} else {
-		.cc_settext("Level <tostring($int2)>");
+		.cc_settext("Level <tostring($lvl2)>");
 	}
 	cc_setcolour(^red);
 	.cc_setcolour(0x7f7f7f);

@@ -3,12 +3,12 @@
 def_component $component0 = null;
 def_component $component1 = null;
 def_component $component2 = null;
-def_int $int3 = 0;
+def_int $count3 = 0;
 def_component $component4 = null;
 def_component $component5 = ~wom_get_tab(%varbit6610);
-def_int $int6 = enum_getoutputcount(enum_2071);
-while ($int3 < $int6) {
-	$component4 = ~wom_get_tab($int3);
+def_int $count6 = enum_getoutputcount(enum_2071);
+while ($count3 < $count6) {
+	$component4 = ~wom_get_tab($count3);
 	$component0, $component1, $component2 = ~wom_get_graphics($component4);
 	if ($component5 = $component4) {
 		if_setgraphic("tabs_split,0", $component0);
@@ -19,5 +19,5 @@ while ($int3 < $int6) {
 		if_setgraphic("tabs_split,4", $component1);
 		if_setgraphic("tabs_split,5", $component2);
 	}
-	$int3 = calc($int3 + 1);
+	$count3 = calc($count3 + 1);
 }

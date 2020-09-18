@@ -1,7 +1,7 @@
 // 1462
-[proc,lumbridge_alchemy_invtransmit](component $component0, int $int1)
+[proc,lumbridge_alchemy_invtransmit](component $component0, int $size1)
 def_obj $obj2 = null;
-def_int $int3 = $int1;
+def_int $int3 = $size1;
 while ($int3 > 0) {
 	$int3 = calc($int3 - 1);
 	if (cc_find($component0, $int3) = ^true) {

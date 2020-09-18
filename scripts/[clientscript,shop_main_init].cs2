@@ -1,17 +1,17 @@
 // 1074
-[clientscript,shop_main_init](inv $inv0, obj $obj1, int $int2, string $string0)
+[clientscript,shop_main_init](inv $inv0, obj $obj1, int $int2, string $text0)
 cc_deleteall(interface_300:1);
 cc_deleteall(interface_300:16);
 cc_deleteall(interface_300:17);
-~steelborder(interface_300:1, $string0, 0);
+~steelborder(interface_300:1, $text0, 0);
 def_int $int3 = calc((if_getwidth(interface_300:16) - 8 * 36) / 7 + 36);
-def_int $int4 = inv_size($inv0);
-def_int $int5 = 0;
+def_int $size4 = inv_size($inv0);
+def_int $size5 = 0;
 cc_create(interface_300:16, ^iftype_graphic, 0);
-while ($int5 < $int4) {
-	cc_create(interface_300:16, ^iftype_graphic, calc($int5 + 1));
+while ($size5 < $size4) {
+	cc_create(interface_300:16, ^iftype_graphic, calc($size5 + 1));
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc($int5 % 8 * $int3), calc($int5 / 8 * $int3), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc($size5 % 8 * $int3), calc($size5 / 8 * $int3), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	cc_setop(2, "Buy 1");
@@ -21,9 +21,9 @@ while ($int5 < $int4) {
 		cc_setop(5, "Buy 50");
 	}
 	cc_setop(10, "Examine");
-	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 125, 0)");
-	$int5 = calc($int5 + 1);
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 125, 0)");
+	$size5 = calc($size5 + 1);
 }
 ~scrollbar_vertical(interface_300:17, interface_300:16, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~shop_main_update(interface_300:16, $int4, $inv0, $obj1, $int2);
-if_setoninvtransmit("shop_main_update(event_com, $int4, $inv0, $obj1, $int2){$inv0}", interface_300:16);
+~shop_main_update(interface_300:16, $size4, $inv0, $obj1, $int2);
+if_setoninvtransmit("shop_main_update(event_com, $size4, $inv0, $obj1, $int2){$inv0}", interface_300:16);

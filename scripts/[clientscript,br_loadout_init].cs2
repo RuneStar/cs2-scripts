@@ -1,45 +1,45 @@
 // 1292
 [clientscript,br_loadout_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 cc_deleteall($component5);
-def_int $int7 = 0;
-cc_create($component5, ^iftype_graphic, $int7);
-$int7 = calc($int7 + 1);
+def_int $count7 = 0;
+cc_create($component5, ^iftype_graphic, $count7);
+$count7 = calc($count7 + 1);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
 cc_setgraphic("miscgraphics,0");
-cc_create($component5, ^iftype_graphic, $int7);
-$int7 = calc($int7 + 1);
+cc_create($component5, ^iftype_graphic, $count7);
+$count7 = calc($count7 + 1);
 cc_setposition(2, 0, ^setpos_abs_left, ^setpos_abs_centre);
 cc_setsize(29, 22, ^setsize_abs, ^setsize_abs);
 cc_setgraphic("bankbuttons,6");
-cc_create($component5, ^iftype_text, $int7);
+cc_create($component5, ^iftype_text, $count7);
 cc_setcolour(0xff981f);
-if_setonmouserepeat("cc_colour_swapper(event_com, $int7, ^white)", $component5);
-if_setonmouseleave("cc_colour_swapper(event_com, $int7, 0xff981f)", $component5);
-$int7 = calc($int7 + 1);
+if_setonmouserepeat("cc_colour_swapper(event_com, $count7, ^white)", $component5);
+if_setonmouseleave("cc_colour_swapper(event_com, $count7, 0xff981f)", $component5);
+$count7 = calc($count7 + 1);
 cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setsize(38, 0, ^setsize_minus, ^setsize_minus);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settext("Drag items here to discard them.");
-def_int $int8 = enum_getoutputcount(enum_2630);
-def_int $intarray0($int8);
+def_int $count8 = enum_getoutputcount(enum_2630);
+def_int $countarray0($count8);
 def_int $int9 = 0;
 cc_deleteall($component3);
-$int7 = 0;
-while ($int7 < $int8) {
-	if (enum(int, namedobj, enum_2630, $int7) ! null) {
-		$intarray0($int9) = $int7;
+$count7 = 0;
+while ($count7 < $count8) {
+	if (enum(int, namedobj, enum_2630, $count7) ! null) {
+		$countarray0($int9) = $count7;
 		$int9 = calc($int9 + 1);
 	}
-	cc_create($component3, ^iftype_graphic, $int7);
+	cc_create($component3, ^iftype_graphic, $count7);
 	cc_sethide(true);
-	$int7 = calc($int7 + 1);
+	$count7 = calc($count7 + 1);
 }
 def_int $int10 = $int9;
 if ($int10 > 1) {
-	~br_loadout_sort(intarray0, 0, calc($int10 - 1));
+	~br_loadout_sort(countarray0, 0, calc($int10 - 1));
 }
 cc_deleteall($component1);
 cc_create($component1, ^iftype_graphic, 0);
@@ -48,70 +48,70 @@ cc_setoutline(1);
 cc_setgraphicshadow(0x333333);
 cc_sethide(true);
 cc_settrans(125);
-def_int $int11 = cc_getid;
+def_int $comsubid11 = cc_getid;
 cc_create($component1, ^iftype_text, 1);
 cc_setcolour(0xff981f);
 cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_sethide(true);
-def_int $int12 = cc_getid;
-def_int $int13 = 0;
+def_int $comsubid12 = cc_getid;
+def_int $height13 = 0;
 def_int $int14 = calc((36 - 32) / 2);
-def_obj $obj15 = null;
+def_namedobj $namedobj15 = null;
 def_int $int16 = 0;
 def_string $string0 = "";
 def_string $string1 = "";
 def_int $int17 = 0;
 $int9 = 0;
 while ($int9 < $int10) {
-	if (cc_find($component3, $intarray0($int9)) = ^true) {
+	if (cc_find($component3, $countarray0($int9)) = ^true) {
 		cc_sethide(false);
 		cc_settiling(true);
 		cc_setgraphic("tradebacking_light");
 		cc_settrans(255);
 		cc_setsize(0, 36, ^setsize_minus, ^setsize_abs);
-		cc_setposition(0, $int13, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setposition(0, $height13, ^setpos_abs_centre, ^setpos_abs_top);
 		cc_setop(1, "Add");
 		cc_setop(10, "Examine");
 		cc_setdraggable($component1, -1);
 		cc_setdragdeadzone(5);
 		cc_setdragdeadtime(5);
-		$obj15 = enum(int, namedobj, enum_2630, $intarray0($int9));
-		$string1 = oc_name($obj15);
+		$namedobj15 = enum(int, namedobj, enum_2630, $countarray0($int9));
+		$string1 = oc_name($namedobj15);
 		cc_setopbase("<col=ff9040><$string1></col>");
-		.cc_create($component3, ^iftype_rectangle, $int7);
-		$int7 = calc($int7 + 1);
+		.cc_create($component3, ^iftype_rectangle, $count7);
+		$count7 = calc($count7 + 1);
 		.cc_setsize(0, 36, ^setsize_minus, ^setsize_abs);
-		.cc_setposition(0, $int13, ^setpos_abs_centre, ^setpos_abs_top);
+		.cc_setposition(0, $height13, ^setpos_abs_centre, ^setpos_abs_top);
 		.cc_setfill(true);
 		cc_setonmouserepeat("script1015(event_com, .cc_getid, ^white, 225)");
 		if (calc($int9 % 2) = 0) {
 			.cc_setcolour(^white);
 			.cc_settrans(255);
 			cc_setonmouseleave("script1015(event_com, .cc_getid, ^white, 255)");
-			cc_setonop("br_loadout_menuop(event_opindex, event_com, event_comid, .cc_getid, ^white, 225, ^white, 255, $component1, $component2, $component5, $component6)");
+			cc_setonop("br_loadout_menuop(event_opindex, event_com, event_comsubid, .cc_getid, ^white, 225, ^white, 255, $component1, $component2, $component5, $component6)");
 		} else {
 			.cc_setcolour(^black);
 			.cc_settrans(225);
 			cc_setonmouseleave("script1015(event_com, .cc_getid, ^black, 225)");
-			cc_setonop("br_loadout_menuop(event_opindex, event_com, event_comid, .cc_getid, ^white, 225, ^black, 225, $component1, $component2, $component5, $component6)");
+			cc_setonop("br_loadout_menuop(event_opindex, event_com, event_comsubid, .cc_getid, ^white, 225, ^black, 225, $component1, $component2, $component5, $component6)");
 		}
-		.cc_create($component3, ^iftype_graphic, $int7);
-		$int7 = calc($int7 + 1);
+		.cc_create($component3, ^iftype_graphic, $count7);
+		$count7 = calc($count7 + 1);
 		.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-		.cc_setposition(3, calc($int13 + $int14), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(3, calc($height13 + $int14), ^setpos_abs_left, ^setpos_abs_top);
 		.cc_setoutline(1);
 		.cc_setgraphicshadow(0x333333);
-		if (oc_stackable($obj15) = true) {
-			.cc_setobject($obj15, 5000);
+		if (oc_stackable($namedobj15) = true) {
+			.cc_setobject($namedobj15, 5000);
 		} else {
-			.cc_setobject_nonum($obj15, 1);
+			.cc_setobject_nonum($namedobj15, 1);
 		}
-		.cc_create($component3, ^iftype_text, $int7);
-		$int7 = calc($int7 + 1);
+		.cc_create($component3, ^iftype_text, $count7);
+		$count7 = calc($count7 + 1);
 		.cc_setsize(calc(8 + 36), 36, ^setsize_minus, ^setsize_abs);
-		.cc_setposition(3, $int13, ^setpos_abs_right, ^setpos_abs_top);
+		.cc_setposition(3, $height13, ^setpos_abs_right, ^setpos_abs_top);
 		.cc_setcolour(0xff981f);
 		.cc_settextfont(p12_full);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -130,14 +130,14 @@ while ($int9 < $int10) {
 			}
 		}
 		.cc_settext($string1);
-		cc_setondrag("br_loadout_menudragging(event_com, event_comid, $obj15, $string1, $component1, $int11, $int12, $int14, event_mousex, event_mousey)");
-		cc_setondragcomplete("br_loadout_insert(event_com, event_comid, event_dragtarget, event_dragtargetid, $intarray0($int9), $component1, $int11, $int12, $component2, $component5, $component6)");
-		$int13 = calc($int13 + 36);
+		cc_setondrag("br_loadout_menudragging(event_com, event_comsubid, $namedobj15, $string1, $component1, $comsubid11, $comsubid12, $int14, event_mousex, event_mousey)");
+		cc_setondragcomplete("br_loadout_insert(event_com, event_comsubid, event_drop, event_dropsubid, $countarray0($int9), $component1, $comsubid11, $comsubid12, $component2, $component5, $component6)");
+		$height13 = calc($height13 + 36);
 	}
 	$int9 = calc($int9 + 1);
 }
-if ($int13 > if_getheight($component3)) {
-	if_setscrollsize(0, $int13, $component3);
+if ($height13 > if_getheight($component3)) {
+	if_setscrollsize(0, $height13, $component3);
 } else {
 	if_setscrollsize(0, 0, $component3);
 }

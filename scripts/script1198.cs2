@@ -126,7 +126,7 @@ if (%varbit4893 < $int25) {
 }
 def_int $int26 = calc(if_getwidth($component3) / 3);
 def_int $int27 = calc(32 + 18);
-def_int $int28 = calc(($int26 - 36) / 2);
+def_int $x28 = calc(($int26 - 36) / 2);
 def_int $int29 = 0;
 cc_deleteall($component3);
 cc_deleteall($component4);
@@ -149,7 +149,7 @@ while ($namedobj32 ! null) {
 		cc_setop(5, "Buy-50");
 		cc_setop(6, "Buy-X");
 		cc_setop(10, "Examine");
-		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 120, 0)");
+		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 120, 0)");
 		.cc_setsize($int26, 18, ^setsize_abs, ^setsize_abs);
 		.cc_setcolour(^white);
 		.cc_settextfont(p11_full);
@@ -163,13 +163,13 @@ while ($namedobj32 ! null) {
 			.cc_setcolour(^white);
 		}
 		if (calc($int30 % 3) = 0) {
-			cc_setposition($int28, $int29, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition($x28, $int29, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_left, ^setpos_abs_top);
 		} else if (calc($int30 % 3) = 1) {
 			cc_setposition(0, $int29, ^setpos_abs_centre, ^setpos_abs_top);
 			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_centre, ^setpos_abs_top);
 		} else {
-			cc_setposition($int28, $int29, ^setpos_abs_right, ^setpos_abs_top);
+			cc_setposition($x28, $int29, ^setpos_abs_right, ^setpos_abs_top);
 			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_right, ^setpos_abs_top);
 			$int29 = calc($int29 + $int27);
 		}
@@ -187,7 +187,7 @@ while ($namedobj32 ! null) {
 		cc_setop(5, "Buy-50");
 		cc_setop(6, "Buy-X");
 		cc_setop(10, "Examine");
-		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 120, 0)");
+		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 120, 0)");
 		.cc_setsize($int26, 18, ^setsize_abs, ^setsize_abs);
 		.cc_setcolour(^white);
 		.cc_settextfont(p11_full);
@@ -201,13 +201,13 @@ while ($namedobj32 ! null) {
 			.cc_setcolour(^white);
 		}
 		if (calc($int30 % 3) = 0) {
-			cc_setposition($int28, $int29, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setposition($x28, $int29, ^setpos_abs_left, ^setpos_abs_top);
 			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_left, ^setpos_abs_top);
 		} else if (calc($int30 % 3) = 1) {
 			cc_setposition(0, $int29, ^setpos_abs_centre, ^setpos_abs_top);
 			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_centre, ^setpos_abs_top);
 		} else {
-			cc_setposition($int28, $int29, ^setpos_abs_right, ^setpos_abs_top);
+			cc_setposition($x28, $int29, ^setpos_abs_right, ^setpos_abs_top);
 			.cc_setposition(0, calc($int29 + 32), ^setpos_abs_right, ^setpos_abs_top);
 			$int29 = calc($int29 + $int27);
 		}

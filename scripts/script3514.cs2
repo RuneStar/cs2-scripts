@@ -7,11 +7,11 @@ if ($int4 = $int2) {
 	return;
 }
 def_int $int5 = calc($int3 / 60);
-def_string $string0 = "Time Remaining : <tostring($int5)>:<tostring($int4)>";
+def_string $text0 = "Time Remaining : <tostring($int5)>:<tostring($int4)>";
 if ($int4 < 10) {
-	$string0 = "Time Remaining : <tostring($int5)>:0<tostring($int4)>";
+	$text0 = "Time Remaining : <tostring($int5)>:0<tostring($int4)>";
 }
 if (cc_find($component1, 2) = ^true) {
-	cc_settext($string0);
+	cc_settext($text0);
 }
 if_setontimer("script3514($component0, $component1, $int4)", interface_90:49);

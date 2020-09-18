@@ -7,36 +7,36 @@ while ($int2 <= 28) {
 	cc_sethide(true);
 	$int2 = calc($int2 + 1);
 }
-def_int $int3 = 5;
-$int3 = ~poh_add_room_initbutton($int3, 1, "Parlour", 1);
-$int3 = ~poh_add_room_initbutton($int3, 2, "Garden", 1);
-$int3 = ~poh_add_room_initbutton($int3, 3, "Kitchen", 5);
-$int3 = ~poh_add_room_initbutton($int3, 4, "Dining room", 10);
-$int3 = ~poh_add_room_initbutton($int3, 12, "Workshop", 15);
-$int3 = ~poh_add_room_initbutton($int3, 5, "Bedroom", 20);
-$int3 = ~poh_add_room_initbutton($int3, 7, "Hall - Skill trophies", 25);
-$int3 = ~poh_add_room_initbutton($int3, 6, "Games room", 30);
-$int3 = ~poh_add_room_initbutton($int3, 22, "Combat room", 32);
-$int3 = ~poh_add_room_initbutton($int3, 9, "Hall - Quest trophies", 35);
-$int3 = ~poh_add_room_initbutton($int3, 25, "Menagerie (outdoors)", 37);
-$int3 = ~poh_add_room_initbutton($int3, 24, "Menagerie (indoors)", 37);
-$int3 = ~poh_add_room_initbutton($int3, 13, "Study", 40);
-$int3 = ~poh_add_room_initbutton($int3, 23, "Costume room", 42);
-$int3 = ~poh_add_room_initbutton($int3, 11, "Chapel", 45);
-$int3 = ~poh_add_room_initbutton($int3, 14, "Portal chamber", 50);
-$int3 = ~poh_add_room_initbutton($int3, 21, "Formal garden", 55);
-$int3 = ~poh_add_room_initbutton($int3, 15, "Throne room", 60);
-$int3 = ~poh_add_room_initbutton($int3, 16, "Oubliette", 65);
-$int3 = ~poh_add_room_initbutton($int3, 26, "Superior garden", 65);
-$int3 = ~poh_add_room_initbutton($int3, 17, "Dungeon - Corridor", 70);
-$int3 = ~poh_add_room_initbutton($int3, 18, "Dungeon - Junction", 70);
-$int3 = ~poh_add_room_initbutton($int3, 19, "Dungeon - Stairs", 70);
-$int3 = ~poh_add_room_initbutton($int3, 28, "Portal Nexus", 72);
-$int3 = ~poh_add_room_initbutton($int3, 20, "Treasure room", 75);
-$int3 = ~poh_add_room_initbutton($int3, 27, "Achievement gallery", 80);
+def_int $height3 = 5;
+$height3 = ~poh_add_room_initbutton($height3, 1, "Parlour", 1);
+$height3 = ~poh_add_room_initbutton($height3, 2, "Garden", 1);
+$height3 = ~poh_add_room_initbutton($height3, 3, "Kitchen", 5);
+$height3 = ~poh_add_room_initbutton($height3, 4, "Dining room", 10);
+$height3 = ~poh_add_room_initbutton($height3, 12, "Workshop", 15);
+$height3 = ~poh_add_room_initbutton($height3, 5, "Bedroom", 20);
+$height3 = ~poh_add_room_initbutton($height3, 7, "Hall - Skill trophies", 25);
+$height3 = ~poh_add_room_initbutton($height3, 6, "Games room", 30);
+$height3 = ~poh_add_room_initbutton($height3, 22, "Combat room", 32);
+$height3 = ~poh_add_room_initbutton($height3, 9, "Hall - Quest trophies", 35);
+$height3 = ~poh_add_room_initbutton($height3, 25, "Menagerie (outdoors)", 37);
+$height3 = ~poh_add_room_initbutton($height3, 24, "Menagerie (indoors)", 37);
+$height3 = ~poh_add_room_initbutton($height3, 13, "Study", 40);
+$height3 = ~poh_add_room_initbutton($height3, 23, "Costume room", 42);
+$height3 = ~poh_add_room_initbutton($height3, 11, "Chapel", 45);
+$height3 = ~poh_add_room_initbutton($height3, 14, "Portal chamber", 50);
+$height3 = ~poh_add_room_initbutton($height3, 21, "Formal garden", 55);
+$height3 = ~poh_add_room_initbutton($height3, 15, "Throne room", 60);
+$height3 = ~poh_add_room_initbutton($height3, 16, "Oubliette", 65);
+$height3 = ~poh_add_room_initbutton($height3, 26, "Superior garden", 65);
+$height3 = ~poh_add_room_initbutton($height3, 17, "Dungeon - Corridor", 70);
+$height3 = ~poh_add_room_initbutton($height3, 18, "Dungeon - Junction", 70);
+$height3 = ~poh_add_room_initbutton($height3, 19, "Dungeon - Stairs", 70);
+$height3 = ~poh_add_room_initbutton($height3, 28, "Portal Nexus", 72);
+$height3 = ~poh_add_room_initbutton($height3, 20, "Treasure room", 75);
+$height3 = ~poh_add_room_initbutton($height3, 27, "Achievement gallery", 80);
 cc_deleteall($component1);
-if ($int3 > if_getheight($component0)) {
-	if_setscrollsize(0, $int3, $component0);
+if ($height3 > if_getheight($component0)) {
+	if_setscrollsize(0, $height3, $component0);
 } else {
 	if_setscrollsize(0, 0, $component0);
 }

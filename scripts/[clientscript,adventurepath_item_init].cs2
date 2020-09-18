@@ -12,7 +12,7 @@ if_setposition(6, 0, ^setpos_abs_left, ^setpos_abs_top, $component3);
 cc_deleteall($component1);
 cc_deleteall($component2);
 cc_deleteall($component3);
-def_int $int4 = 0;
+def_int $height4 = 0;
 def_int $int5 = 0;
 def_int $int6 = 0;
 def_enum $enum7 = struct_param($struct0, param_820);
@@ -33,7 +33,7 @@ while ($int13 < 4) {
 	if ($enum10 ! null & $enum11 ! null) {
 		cc_create($component2, ^iftype_text, $int5);
 		cc_setsize(calc(16 + if_getwidth($component2)), 40, ^setsize_abs, ^setsize_abs);
-		cc_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setposition(0, $height4, ^setpos_abs_left, ^setpos_abs_top);
 		if ($int13 = 0) {
 			cc_settext("<u=ff981f>Free to play</u>");
 		} else if ($int13 = 1) {
@@ -48,11 +48,11 @@ while ($int13 < 4) {
 		cc_setcolour(0xff981f);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		$int5 = calc($int5 + 1);
-		$int4 = calc($int4 + 40);
+		$height4 = calc($height4 + 40);
 		$int15 = enum_getoutputcount($enum10);
 		while ($int14 < $int15) {
 			$namedobj12 = enum(int, namedobj, $enum10, $int14);
-			$int5, $int6, $int4 = ~adventurepath_item_entry($int4, $component2, $int5, $namedobj12, enum(namedobj, int, $enum11, $namedobj12), enum(namedobj, string, $enum9, $namedobj12), $int6);
+			$int5, $int6, $height4 = ~adventurepath_item_entry($height4, $component2, $int5, $namedobj12, enum(namedobj, int, $enum11, $namedobj12), enum(namedobj, string, $enum9, $namedobj12), $int6);
 			$int14 = calc($int14 + 1);
 		}
 	}
@@ -64,15 +64,15 @@ while ($int13 < 4) {
 	$int15 = 0;
 }
 def_int $int16 = 0;
-def_int $int17 = if_getheight($component3);
-def_int $int18 = calc($int17 - if_getheight($component2));
-if ($int4 > $int17) {
-	if_setscrollsize(0, $int4, $component2);
+def_int $height17 = if_getheight($component3);
+def_int $int18 = calc($height17 - if_getheight($component2));
+if ($height4 > $height17) {
+	if_setscrollsize(0, $height4, $component2);
 	~scrollbar_vertical($component1, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 	if_sethide(false, $component1);
 } else {
-	$int16 = calc($int17 - $int4);
-	if_setsize(if_getwidth($component3), calc($int18 + $int4), ^setsize_abs, ^setsize_abs, $component3);
+	$int16 = calc($height17 - $height4);
+	if_setsize(if_getwidth($component3), calc($int18 + $height4), ^setsize_abs, ^setsize_abs, $component3);
 	if_setposition(if_getx($component3), calc($int16 / 2), ^setpos_abs_left, ^setpos_abs_top, $component3);
 	if_sethide(true, $component1);
 }

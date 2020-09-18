@@ -1,9 +1,9 @@
 // 2161
-script2161(char $char0, component $component1, string $string0)
-if ($char0 = null | ~keypress_permit(608, -1) = 0) {
+script2161(char $keychar0, component $component1, string $string0)
+if ($keychar0 = null | ~keypress_permit(608, -1) = 0) {
 	return;
 }
-if (string_indexof_char($string0, $char0) ! -1) {
+if (string_indexof_char($string0, $keychar0) ! -1) {
 	~v2_stone_button_in($component1);
 	if_setonkey(null, $component1);
 	if_setontimer("script2162($component1, $string0, calc(clientclock + 40))", $component1);

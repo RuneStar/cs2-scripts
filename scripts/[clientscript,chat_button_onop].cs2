@@ -1,6 +1,6 @@
 // 175
 [clientscript,chat_button_onop](int $int0, int $int1)
-def_int $int2 = ~script553;
+def_int $mesuid2 = ~script553;
 if ($int0 = 1) {
 	if (getwindowmode = ^windowmode_resizable & %varcint41 = $int1) {
 		%varcint41 = 1337;
@@ -12,14 +12,14 @@ if ($int0 = 1) {
 	~toplevel_chatbox_background;
 	~chat_alert_set($int1, 0);
 	~redraw_chat_buttons;
-	~rebuildchatbox($int2);
-	~rebuildpmbox($int2);
+	~rebuildchatbox($mesuid2);
+	~rebuildpmbox($mesuid2);
 } else if ($int0 = 2) {
 	if ($int1 = 2) {
-		~chat_set_filter($int1, 4);
+		~chat_set_filter($int1, ^chatfilter_autochat);
 		~redraw_chat_buttons;
-		~rebuildchatbox($int2);
-		~rebuildpmbox($int2);
+		~rebuildchatbox($mesuid2);
+		~rebuildpmbox($mesuid2);
 	} else if ($int1 = 1) {
 		if (%varbit26 = 0) {
 			%varbit26 = 1;
@@ -27,37 +27,37 @@ if ($int0 = 1) {
 			%varbit26 = 0;
 		}
 		~redraw_chat_buttons;
-		~rebuildchatbox($int2);
-		~rebuildpmbox($int2);
+		~rebuildchatbox($mesuid2);
+		~rebuildpmbox($mesuid2);
 	}
 } else if ($int0 = 3) {
 	if ($int1 = 1) {
 		return;
 	}
-	~chat_set_filter($int1, 0);
+	~chat_set_filter($int1, ^chatfilter_on);
 	~redraw_chat_buttons;
-	~rebuildchatbox($int2);
-	~rebuildpmbox($int2);
+	~rebuildchatbox($mesuid2);
+	~rebuildpmbox($mesuid2);
 } else if ($int0 = 4) {
-	~chat_set_filter($int1, 1);
+	~chat_set_filter($int1, ^chatfilter_friends);
 	~redraw_chat_buttons;
-	~rebuildchatbox($int2);
-	~rebuildpmbox($int2);
+	~rebuildchatbox($mesuid2);
+	~rebuildpmbox($mesuid2);
 } else if ($int0 = 5) {
-	~chat_set_filter($int1, 2);
+	~chat_set_filter($int1, ^chatfilter_off);
 	~redraw_chat_buttons;
-	~rebuildchatbox($int2);
-	~rebuildpmbox($int2);
+	~rebuildchatbox($mesuid2);
+	~rebuildpmbox($mesuid2);
 } else if ($int1 = 2) {
 	switch_int ($int0) {
 		case 6 :
-			~chat_set_filter($int1, 3);
+			~chat_set_filter($int1, ^chatfilter_hide);
 			~redraw_chat_buttons;
-			~rebuildchatbox($int2);
-			~rebuildpmbox($int2);
+			~rebuildchatbox($mesuid2);
+			~rebuildpmbox($mesuid2);
 		case 7 :
 			%varcint199 = clientclock;
-			~rebuildchatbox($int2);
+			~rebuildchatbox($mesuid2);
 		case 8 :
 			~meslayer_mode12;
 		case 9 :
@@ -77,6 +77,6 @@ if ($int0 = 1) {
 	}
 } else if ($int1 = 3 & $int0 = 6) {
 	%varcint175 = clientclock;
-	~rebuildchatbox($int2);
-	~rebuildpmbox($int2);
+	~rebuildchatbox($mesuid2);
+	~rebuildpmbox($mesuid2);
 }

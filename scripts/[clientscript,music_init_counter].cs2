@@ -1,36 +1,36 @@
 // 2257
-[clientscript,music_init_counter](component $component0, int $int1)
+[clientscript,music_init_counter](component $component0, int $count1)
 if_setontimer(null, $component0);
-def_int $intarray0(calc(20 + 1));
-$intarray0(1) = %var20;
-$intarray0(2) = %var21;
-$intarray0(3) = %var22;
-$intarray0(4) = %var23;
-$intarray0(5) = %var24;
-$intarray0(6) = %var25;
-$intarray0(7) = %var298;
-$intarray0(8) = %var311;
-$intarray0(9) = %var346;
-$intarray0(10) = %var414;
-$intarray0(11) = %var464;
-$intarray0(12) = %var598;
-$intarray0(13) = %var662;
-$intarray0(14) = %var721;
-$intarray0(15) = %var906;
-$intarray0(16) = %var1009;
-$intarray0(17) = %var1338;
-$intarray0(18) = %var1681;
-$intarray0(19) = %var2065;
-$intarray0(20) = %var2237;
+def_int $flagsarray0(calc(20 + 1));
+$flagsarray0(1) = %var20;
+$flagsarray0(2) = %var21;
+$flagsarray0(3) = %var22;
+$flagsarray0(4) = %var23;
+$flagsarray0(5) = %var24;
+$flagsarray0(6) = %var25;
+$flagsarray0(7) = %var298;
+$flagsarray0(8) = %var311;
+$flagsarray0(9) = %var346;
+$flagsarray0(10) = %var414;
+$flagsarray0(11) = %var464;
+$flagsarray0(12) = %var598;
+$flagsarray0(13) = %var662;
+$flagsarray0(14) = %var721;
+$flagsarray0(15) = %var906;
+$flagsarray0(16) = %var1009;
+$flagsarray0(17) = %var1338;
+$flagsarray0(18) = %var1681;
+$flagsarray0(19) = %var2065;
+$flagsarray0(20) = %var2237;
 def_int $int2 = 0;
 def_coord $coord3 = null;
 def_int $int4 = 0;
-def_int $int5 = 0;
-while ($int5 < $int1) {
-	$int2 = enum(int, int, enum_818, $int5);
+def_int $count5 = 0;
+while ($count5 < $count1) {
+	$int2 = enum(int, int, enum_818, $count5);
 	$coord3 = enum(int, coord, enum_819, $int2);
 	if ($coord3 ! null) {
-		if (testbit($intarray0(coordx($coord3)), coordz($coord3)) = ^true) {
+		if (testbit($flagsarray0(coordx($coord3)), coordz($coord3)) = ^true) {
 			$int4 = calc($int4 + 1);
 		} else if ($int2 = 331 & %varbit1028 > 35) {
 			$int4 = calc($int4 + 1);
@@ -38,6 +38,6 @@ while ($int5 < $int1) {
 	} else {
 		$int4 = calc($int4 + 1);
 	}
-	$int5 = calc($int5 + 1);
+	$count5 = calc($count5 + 1);
 }
-if_settext("<~tostring_spacer(~min($int4, $int1), ",")> / <~tostring_spacer($int1, ",")>", $component0);
+if_settext("<~tostring_spacer(~min($int4, $count1), ",")> / <~tostring_spacer($count1, ",")>", $component0);

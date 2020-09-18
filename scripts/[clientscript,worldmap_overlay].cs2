@@ -35,8 +35,8 @@ def_int $int16 = calc($int11 - $int9 / 2);
 def_int $int17 = calc($int10 + $int8 / 2);
 def_int $int18 = calc($int10 - $int8 / 2);
 ~worldmap_elements_update($component0, $int15, $int16, $int17, $int18);
-def_int $int19 = if_getwidth($component1);
-def_int $int20 = if_getheight($component1);
+def_int $width19 = if_getwidth($component1);
+def_int $height20 = if_getheight($component1);
 def_int $int21 = 0;
 def_int $int22 = 0;
 def_int $int23 = 0;
@@ -46,15 +46,15 @@ def_int $int25 = 0;
 def_int $int26 = 0;
 $int25, $int26 = worldmap_getconfigsize($maparea7);
 $int25, $int26 = ~max($int25, 1), ~max($int26, 1);
-def_int $int27 = scale(calc($int18 - $int24), $int25, $int19);
-def_int $int28 = scale(calc($int21 - $int15), $int26, $int20);
-def_int $int29 = scale(calc($int17 - $int18), $int25, $int19);
-def_int $int30 = scale(calc($int15 - $int16), $int26, $int20);
+def_int $x27 = scale(calc($int18 - $int24), $int25, $width19);
+def_int $y28 = scale(calc($int21 - $int15), $int26, $height20);
+def_int $width29 = scale(calc($int17 - $int18), $int25, $width19);
+def_int $height30 = scale(calc($int15 - $int16), $int26, $height20);
 if (cc_find($component1, 0) = ^true & .cc_find($component1, 1) = ^true) {
-	cc_setposition($int27, $int28, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition($int27, $int28, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize($int29, $int30, ^setsize_abs, ^setsize_abs);
-	.cc_setsize($int29, $int30, ^setsize_abs, ^setsize_abs);
+	cc_setposition($x27, $y28, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition($x27, $y28, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($width29, $height30, ^setsize_abs, ^setsize_abs);
+	.cc_setsize($width29, $height30, ^setsize_abs, ^setsize_abs);
 } else {
 	cc_create($component1, ^iftype_rectangle, 0);
 	.cc_create($component1, ^iftype_rectangle, 1);
@@ -64,8 +64,8 @@ if (cc_find($component1, 0) = ^true & .cc_find($component1, 1) = ^true) {
 	.cc_setfill(true);
 	cc_settrans(100);
 	.cc_settrans(200);
-	cc_setposition($int27, $int28, ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setposition($int27, $int28, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setsize($int29, $int30, ^setsize_abs, ^setsize_abs);
-	.cc_setsize($int29, $int30, ^setsize_abs, ^setsize_abs);
+	cc_setposition($x27, $y28, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition($x27, $y28, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize($width29, $height30, ^setsize_abs, ^setsize_abs);
+	.cc_setsize($width29, $height30, ^setsize_abs, ^setsize_abs);
 }

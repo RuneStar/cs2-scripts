@@ -1,6 +1,6 @@
 // 1443
-[clientscript,duel_accept_button](component $component0, int $int1)
-if (clientclock < $int1) {
+[clientscript,duel_accept_button](component $component0, int $clock1)
+if (clientclock < $clock1) {
 	return;
 }
 if_settext("Accept", $component0);

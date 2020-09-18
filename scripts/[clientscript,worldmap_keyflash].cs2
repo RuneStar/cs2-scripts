@@ -1,14 +1,14 @@
 // 1728
-[clientscript,worldmap_keyflash](int $int0, category $category1, component $component2, int $int3)
-if ($int0 ! 1) {
+[clientscript,worldmap_keyflash](int $opindex0, category $category1, component $component2, int $comsubid3)
+if ($opindex0 ! 1) {
 	return;
 }
-if (cc_find($component2, $int3) = ^true) {
+if (cc_find($component2, $comsubid3) = ^true) {
 	sound_synth(synth_2266, 1, 0);
 	cc_settrans(200);
 	cc_setonop(null);
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);
-	cc_setontimer("worldmap_keyreset($category1, $component2, $int3, calc(clientclock + 50))");
+	cc_setontimer("worldmap_keyreset($category1, $component2, $comsubid3, calc(clientclock + 50))");
 	worldmap_flashelementcategory($category1);
 }

@@ -1,6 +1,6 @@
 // 651
-[proc,poh_add_room_costupdate](int $int0)
-if (inv_total(inv, coins_995) < $int0) {
+[proc,poh_add_room_costupdate](int $total0)
+if (inv_total(inv, coins_995) < $total0) {
 	cc_setcolour(^red);
 } else {
 	cc_setcolour(^yellow);

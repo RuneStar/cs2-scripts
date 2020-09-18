@@ -1,6 +1,6 @@
 // 555
-[clientscript,clanwars_confirm_challenge_wait](component $component0, component $component1, int $int2)
-if (clientclock < $int2) {
+[clientscript,clanwars_confirm_challenge_wait](component $component0, component $component1, int $clock2)
+if (clientclock < $clock2) {
 	return;
 }
 if_setontimer(null, $component0);

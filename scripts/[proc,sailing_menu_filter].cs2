@@ -1,45 +1,45 @@
 // 2075
 [proc,sailing_menu_filter](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
-def_int $int12 = ~script2076(coord);
-def_int $int13 = setbit(0, $int12);
-switch_int ($int12) {
+def_int $index12 = ~script2076(coord);
+def_int $flags13 = setbit(0, $index12);
+switch_int ($index12) {
 	case 6 :
-		$int13 = setbit($int13, 3);
+		$flags13 = setbit($flags13, 3);
 	case 3 :
-		$int13 = setbit($int13, 6);
+		$flags13 = setbit($flags13, 6);
 	case 7 :
-		$int13 = setbit($int13, 4);
+		$flags13 = setbit($flags13, 4);
 	case 4 :
-		$int13 = setbit($int13, 7);
+		$flags13 = setbit($flags13, 7);
 }
 if (%var302 < 61) {
-	$int13 = setbit($int13, 3);
-	$int13 = setbit($int13, 6);
+	$flags13 = setbit($flags13, 3);
+	$flags13 = setbit($flags13, 6);
 }
 if (%var655 < 140) {
-	$int13 = setbit($int13, 3);
+	$flags13 = setbit($flags13, 3);
 }
 if (%var365 < 2 | %var150 < 160) {
-	$int13 = setbit($int13, 8);
+	$flags13 = setbit($flags13, 8);
 }
 if (%var328 < 15) {
-	$int13 = setbit($int13, 9);
+	$flags13 = setbit($flags13, 9);
 }
 if (%var176 < 2 | %var176 > 9) {
-	$int13 = setbit($int13, 0);
+	$flags13 = setbit($flags13, 0);
 }
 if (%varbit9016 < 200) {
-	$int13 = setbit($int13, 11);
+	$flags13 = setbit($flags13, 11);
 }
-if_sethide(~int_to_bool(testbit($int13, 1)), $component5);
-if_sethide(~int_to_bool(testbit($int13, 2)), $component2);
-if_sethide(~int_to_bool(testbit($int13, 3)), $component8);
-if_sethide(~int_to_bool(testbit($int13, 4)), $component4);
-if_sethide(~int_to_bool(testbit($int13, 5)), $component6);
-if_sethide(~int_to_bool(testbit($int13, 6)), $component1);
-if_sethide(~int_to_bool(testbit($int13, 7)), $component7);
-if_sethide(~int_to_bool(testbit($int13, 8)), $component3);
-if_sethide(~int_to_bool(testbit($int13, 9)), $component0);
-if_sethide(~int_to_bool(testbit($int13, 0)), $component9);
-if_sethide(~int_to_bool(testbit($int13, 10)), $component10);
-if_sethide(~int_to_bool(testbit($int13, 11)), $component11);
+if_sethide(~int_to_bool(testbit($flags13, 1)), $component5);
+if_sethide(~int_to_bool(testbit($flags13, 2)), $component2);
+if_sethide(~int_to_bool(testbit($flags13, 3)), $component8);
+if_sethide(~int_to_bool(testbit($flags13, 4)), $component4);
+if_sethide(~int_to_bool(testbit($flags13, 5)), $component6);
+if_sethide(~int_to_bool(testbit($flags13, 6)), $component1);
+if_sethide(~int_to_bool(testbit($flags13, 7)), $component7);
+if_sethide(~int_to_bool(testbit($flags13, 8)), $component3);
+if_sethide(~int_to_bool(testbit($flags13, 9)), $component0);
+if_sethide(~int_to_bool(testbit($flags13, 0)), $component9);
+if_sethide(~int_to_bool(testbit($flags13, 10)), $component10);
+if_sethide(~int_to_bool(testbit($flags13, 11)), $component11);

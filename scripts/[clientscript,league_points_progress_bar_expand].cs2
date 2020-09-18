@@ -1,12 +1,12 @@
 // 3184
-[clientscript,league_points_progress_bar_expand](component $component0, int $int1)
-def_int $int2 = 0;
+[clientscript,league_points_progress_bar_expand](component $component0, int $width1)
+def_int $width2 = 0;
 if (cc_find($component0, 1) = ^true) {
-	$int2 = cc_getwidth;
+	$width2 = cc_getwidth;
 }
 def_int $int3 = 0;
 if (cc_find($component0, 2) = ^true) {
-	if (cc_getwidth >= $int2 | cc_getwidth >= $int1) {
+	if (cc_getwidth >= $width2 | cc_getwidth >= $width1) {
 		if_setontimer(null, $component0);
 		return;
 	}

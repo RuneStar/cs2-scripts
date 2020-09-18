@@ -1,6 +1,6 @@
 // 2600
-[clientscript,depositbox_mobile_button_op](int $int0, component $component1, component $component2, component $component3, component $component4)
-if ($int0 ! 1) {
+[clientscript,depositbox_mobile_button_op](int $opindex0, component $component1, component $component2, component $component3, component $component4)
+if ($opindex0 ! 1) {
 	return;
 }
 %varbit4430 = enum(component, int, enum_1980, $component1);

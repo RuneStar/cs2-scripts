@@ -1,23 +1,23 @@
 // 621
-[proc,poll_voting_addquestion](int $int0, boolean $boolean1, string $string0, int $int2, int $int3)
-def_int $int4 = if_getwidth(interface_400:10);
-def_int $int5 = calc($int4 - 4 * 2);
+[proc,poll_voting_addquestion](int $int0, boolean $boolean1, string $string0, int $int2, int $flags3)
+def_int $width4 = if_getwidth(interface_400:10);
+def_int $int5 = calc($width4 - 4 * 2);
 def_int $int6 = %varcint43;
-def_int $int7 = %varcint49;
+def_int $height7 = %varcint49;
 cc_create(interface_400:10, ^iftype_rectangle, %varcint43);
 %varcint43 = calc(%varcint43 + 1);
-cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(0, $height7, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(^white);
 cc_setfill(true);
 cc_settrans(225);
 cc_create(interface_400:10, ^iftype_rectangle, %varcint43);
 %varcint43 = calc(%varcint43 + 1);
-cc_setposition(0, $int7, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(0, $height7, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(0x777775);
 cc_setfill(false);
 cc_create(interface_400:10, ^iftype_rectangle, %varcint43);
 %varcint43 = calc(%varcint43 + 1);
-cc_setposition(1, calc($int7 + 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(1, calc($height7 + 1), ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(0x474745);
 cc_setfill(false);
 %varcint49 = calc(%varcint49 + 4);
@@ -52,11 +52,11 @@ $string1, $string0 = ~script632($string0);
 $string2, $string0 = ~script632($string0);
 ~poll_addlink($string1, $string2, interface_400:10, $int5, 4, p11_full, p11_full, 10, 2);
 def_int $int9 = calc(4 + 17 + 4);
-def_int $int10 = calc($int5 - (4 + $int9));
+def_int $width10 = calc($int5 - (4 + $int9));
 def_int $int11 = 0;
 while ($int11 < $int2) {
 	$string1, $string0 = ~script632($string0);
-	$int8 = calc(paraheight($string1, $int10, p11_full) * 10 + 2);
+	$int8 = calc(paraheight($string1, $width10, p11_full) * 10 + 2);
 	$int8 = ~max($int8, 17);
 	if (~on_mobile = true) {
 		$int8 = ~max($int8, 27);
@@ -71,7 +71,7 @@ while ($int11 < $int2) {
 	cc_setposition(4, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setposition($int9, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($int5, $int8, ^setsize_abs, ^setsize_abs);
-	.cc_setsize($int10, $int8, ^setsize_abs, ^setsize_abs);
+	.cc_setsize($width10, $int8, ^setsize_abs, ^setsize_abs);
 	.cc_settextfont(p11_full);
 	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	.cc_settextshadow(true);
@@ -83,7 +83,7 @@ while ($int11 < $int2) {
 	%varcint43 = calc(%varcint43 + 1);
 	.cc_setposition(4, calc(%varcint49 + ($int8 - 17) / 2), ^setpos_abs_left, ^setpos_abs_top);
 	.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-	if (testbit($int3, $int11) = ^true) {
+	if (testbit($flags3, $int11) = ^true) {
 		.cc_setgraphic("options_radio_buttons,2");
 	} else if ($boolean1 = true) {
 		.cc_setgraphic("options_radio_buttons,1");
@@ -91,23 +91,23 @@ while ($int11 < $int2) {
 		.cc_setgraphic("options_radio_buttons,0");
 	}
 	.cc_settiling(false);
-	if ($boolean1 = true & testbit($int3, $int11) = ^true) {
+	if ($boolean1 = true & testbit($flags3, $int11) = ^true) {
 		cc_setop(1, "De-select");
 	} else {
 		cc_setop(1, "Select");
 	}
-	cc_setonop("script623(event_com, event_comid, $int0, $int11)");
+	cc_setonop("script623(event_com, event_comsubid, $int0, $int11)");
 	$int11, %varcint49 = calc($int11 + 1), calc(%varcint49 + $int8);
 }
 %varcint49 = calc(%varcint49 + 4);
-$int8 = calc(%varcint49 - $int7);
+$int8 = calc(%varcint49 - $height7);
 if (cc_find(interface_400:10, $int6) = ^true) {
-	cc_setsize($int4, $int8, ^setsize_abs, ^setsize_abs);
+	cc_setsize($width4, $int8, ^setsize_abs, ^setsize_abs);
 }
 if (cc_find(interface_400:10, calc($int6 + 1)) = ^true) {
-	cc_setsize($int4, $int8, ^setsize_abs, ^setsize_abs);
+	cc_setsize($width4, $int8, ^setsize_abs, ^setsize_abs);
 }
 if (cc_find(interface_400:10, calc($int6 + 2)) = ^true) {
-	cc_setsize(calc($int4 - 2), calc($int8 - 2), ^setsize_abs, ^setsize_abs);
+	cc_setsize(calc($width4 - 2), calc($int8 - 2), ^setsize_abs, ^setsize_abs);
 }
 %varcint49 = calc(%varcint49 + 4);

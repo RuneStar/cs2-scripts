@@ -1,5 +1,5 @@
 // 2623
-[proc,magic_spellbook_settooltip](boolean $boolean0, obj $obj1, component $component2, int $int3, component $component4, int $int5)
+[proc,magic_spellbook_settooltip](boolean $boolean0, obj $obj1, component $component2, int $comsubid3, component $component4, int $int5)
 cc_deleteall($component4);
 if ($boolean0 = false) {
 	return;
@@ -63,7 +63,7 @@ if ($obj7 = null) {
 	$int17 = calc($int17 - 32 - 14);
 }
 def_int $int18 = 5;
-if ($int3 ! -1 & cc_find($component2, $int3) = ^true) {
+if ($comsubid3 ! -1 & cc_find($component2, $comsubid3) = ^true) {
 	if (cc_gety < 130) {
 		$int18 = calc($int5 - $int17);
 		if ($int5 >= 261) {

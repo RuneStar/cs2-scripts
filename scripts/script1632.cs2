@@ -1,19 +1,19 @@
 // 1632
-script1632(char $char0, int $int1, component $component2, string $string0, string $string1, int $int3)
-if (clientclock < $int3) {
+script1632(char $keychar0, int $comsubid1, component $component2, string $string0, string $string1, int $clock3)
+if (clientclock < $clock3) {
 	return;
 }
 if (~keypress_permit(458, -1) = 0) {
 	return;
 }
-if ($char0 ! null & (string_indexof_char($string0, $char0) ! -1 | string_indexof_char($string1, $char0) ! -1)) {
-	if_setonkey("script1632(event_keytyped, $int1, event_com, $string0, $string1, calc(clientclock + 20))", $component2);
+if ($keychar0 ! null & (string_indexof_char($string0, $keychar0) ! -1 | string_indexof_char($string1, $keychar0) ! -1)) {
+	if_setonkey("script1632(event_keychar, $comsubid1, event_com, $string0, $string1, calc(clientclock + 20))", $component2);
 	if (cc_find($component2, 4) = ^true) {
 		cc_settrans(120);
-		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comid, 0, calc(clientclock + 10))");
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 10))");
 	}
 	sound_synth(synth_2266, 1, 0);
-	if (cc_find(interface_458:2, $int1) = ^true) {
+	if (cc_find(interface_458:2, $comsubid1) = ^true) {
 		cc_resume_pausebutton;
 	}
 }

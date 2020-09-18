@@ -14,7 +14,7 @@ if ($boolean2 = true) {
 	%varcint200 = ~min(%varcint200, $int1);
 }
 def_int $int3 = 0;
-def_string $string0 = "X";
+def_string $text0 = "X";
 if ($boolean2 = true) {
 	if ($int1 > 1) {
 		if (%varcint200 = 1) {
@@ -55,9 +55,9 @@ if ($boolean2 = true) {
 	if ($int1 > 2) {
 		if_setposition($int3, 0, ^setpos_abs_left, ^setpos_abs_centre, interface_270:11);
 		$int3 = calc($int3 + if_getwidth(interface_270:11) + 5);
-		~skillmulti_quantitybutton_draw(false, $string0, interface_270:11);
-		if_setonmouseover("skillmulti_quantitybutton_draw(true, $string0, event_com)", interface_270:11);
-		if_setonmouseleave("skillmulti_quantitybutton_draw(false, $string0, event_com)", interface_270:11);
+		~skillmulti_quantitybutton_draw(false, $text0, interface_270:11);
+		if_setonmouseover("skillmulti_quantitybutton_draw(true, $text0, event_com)", interface_270:11);
+		if_setonmouseleave("skillmulti_quantitybutton_draw(false, $text0, event_com)", interface_270:11);
 		if_setop(1, "Other quantity", interface_270:11);
 		if_setonop("skillmulti_quantitybutton_x_start(event_opindex, $int0, $int1)", interface_270:11);
 		if_setontimer(null, interface_270:11);

@@ -7,33 +7,33 @@ if (compare($string0, "") = 0) {
 	if_sethide(false, $component3);
 	if_settext($string0, $component4);
 }
-def_string $string1 = "<tostring(%varbit6099)> / <tostring(%varbit6100)>";
-if_settext($string1, $component0);
-def_int $int10 = if_getwidth($component1);
-def_int $int11 = $int10;
+def_string $text1 = "<tostring(%varbit6099)> / <tostring(%varbit6100)>";
+if_settext($text1, $component0);
+def_int $width10 = if_getwidth($component1);
+def_int $int11 = $width10;
 def_int $int12 = calc(%varbit6100 + 1);
 $int11 = scale(%varbit6099, %varbit6100, $int11);
 if (%varbit10338 > 0 & %varbit10338 <= $int12) {
 	if_sethide(false, $component5);
-	if_setposition(scale(calc(%varbit10338 - 1), %varbit6100, $int10), 0, ^setpos_abs_left, ^setpos_abs_centre, $component5);
+	if_setposition(scale(calc(%varbit10338 - 1), %varbit6100, $width10), 0, ^setpos_abs_left, ^setpos_abs_centre, $component5);
 } else {
 	if_sethide(true, $component5);
 }
 if (%varbit10339 > 0 & %varbit10339 <= $int12) {
 	if_sethide(false, $component6);
-	if_setposition(calc($int10 - scale(%varbit10339 - 1, %varbit6100, $int10)), 0, ^setpos_abs_right, ^setpos_abs_centre, $component6);
+	if_setposition(calc($width10 - scale(%varbit10339 - 1, %varbit6100, $width10)), 0, ^setpos_abs_right, ^setpos_abs_centre, $component6);
 } else {
 	if_sethide(true, $component6);
 }
 if (%varbit10340 > 0 & %varbit10340 <= $int12) {
 	if_sethide(false, $component7);
-	if_setposition(scale(calc(%varbit10340 - 1), %varbit6100, $int10), 0, ^setpos_abs_left, ^setpos_abs_centre, $component7);
+	if_setposition(scale(calc(%varbit10340 - 1), %varbit6100, $width10), 0, ^setpos_abs_left, ^setpos_abs_centre, $component7);
 } else {
 	if_sethide(true, $component7);
 }
 if (%varbit10341 > 0 & %varbit10341 <= $int12) {
 	if_sethide(false, $component8);
-	if_setposition(scale(calc(%varbit10341 - 1), %varbit6100, $int10), 0, ^setpos_abs_left, ^setpos_abs_centre, $component8);
+	if_setposition(scale(calc(%varbit10341 - 1), %varbit6100, $width10), 0, ^setpos_abs_left, ^setpos_abs_centre, $component8);
 } else {
 	if_sethide(true, $component8);
 }

@@ -1,6 +1,6 @@
 // 1005
 [clientscript,xpdrops_dropletmove](component $component0, int $int1)
-def_int $int2 = 0;
+def_int $y2 = 0;
 def_int $int3 = 1;
 def_int $int4 = 0;
 if (cc_find($component0, 0) = ^true) {
@@ -17,13 +17,13 @@ if (cc_find($component0, 0) = ^true) {
 	}
 	$int4 = enum(int, int, enum_1171, %varbit4722);
 	if ($int1 < $int4) {
-		$int2 = interpolate(0, $int1, 0, $int4, 16384);
-		cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_5);
+		$y2 = interpolate(0, $int1, 0, $int4, 16384);
+		cc_setposition(cc_getx, $y2, ^setpos_abs_left, ^setpos_5);
 		cc_sethide(false);
 		while ($int3 <= 5) {
 			if (cc_find($component0, $int3) = ^true) {
 				cc_sethide(false);
-				cc_setposition(cc_getx, $int2, ^setpos_abs_left, ^setpos_5);
+				cc_setposition(cc_getx, $y2, ^setpos_abs_left, ^setpos_5);
 			}
 			$int3 = calc($int3 + 1);
 		}

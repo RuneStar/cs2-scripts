@@ -1,7 +1,7 @@
 // 897
-[clientscript,mole_go_splat_off](component $component0, int $int1, int $int2)
-if (cc_find($component0, $int1) = ^true) {
-	if (clientclock >= $int2) {
+[clientscript,mole_go_splat_off](component $component0, int $comsubid1, int $clock2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (clientclock >= $clock2) {
 		cc_delete;
 	} else {
 		~mole_splat_zoom($component0);

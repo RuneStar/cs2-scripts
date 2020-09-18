@@ -40,6 +40,6 @@ while ($int3 < 25) {
 	}
 	cc_setgraphic("overlay_multiway");
 	~makeover_indicator($int3, 3);
-	cc_setonvartransmit("makeover_indicator(event_com, event_comid, $int3, 3){var263}");
+	cc_setonvartransmit("makeover_indicator(event_com, event_comsubid, $int3, 3){var263}");
 	$int3 = calc($int3 + 1);
 }

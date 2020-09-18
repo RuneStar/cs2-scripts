@@ -1,10 +1,10 @@
 // 7
 [proc,tt_reward_highlight_selected](component $component0, component $component1, component $component2, component $component3, component $component4)
-def_int $int5 = 0;
+def_int $comsubid5 = 0;
 if_sethide(true, $component3);
 if_sethide(true, $component4);
-while (cc_find($component0, $int5) = ^true) {
-	if ($int5 = %varbit2459) {
+while (cc_find($component0, $comsubid5) = ^true) {
+	if ($comsubid5 = %varbit2459) {
 		cc_setoutline(2);
 		if_settext(enum(int, string, enum_1383, %varbit2459), $component3);
 		if_sethide(false, $component3);
@@ -13,5 +13,5 @@ while (cc_find($component0, $int5) = ^true) {
 		cc_setoutline(0);
 	}
 	if_settext(~tt_reward_set_desc, $component2);
-	$int5 = calc($int5 + 1);
+	$comsubid5 = calc($comsubid5 + 1);
 }

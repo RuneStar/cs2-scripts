@@ -6,14 +6,14 @@ def_int $int13 = 5;
 def_int $int14 = calc(if_getwidth($component4) / 2);
 def_enum $enum15 = enum_2670;
 def_int $int16 = 0;
-def_int $int17 = 1;
+def_int $count17 = 1;
 def_int $int18 = 0;
 def_struct $struct19 = null;
 def_enum $enum20 = null;
 def_int $int21 = 0;
 %varbit10110 = -1;
-while ($int17 <= enum_getoutputcount($enum15)) {
-	$struct19 = enum(int, struct, $enum15, $int17);
+while ($count17 <= enum_getoutputcount($enum15)) {
+	$struct19 = enum(int, struct, $enum15, $count17);
 	$enum20 = struct_param($struct19, param_87);
 	if ($enum20 ! null) {
 		cc_create($component4, ^iftype_text, $int21);
@@ -40,22 +40,22 @@ while ($int17 <= enum_getoutputcount($enum15)) {
 			$int18 = calc($int18 + 1);
 		}
 	}
-	$int17 = calc($int17 + 1);
+	$count17 = calc($count17 + 1);
 }
 $int21 = 0;
-def_string $string0 = "";
+def_string $text0 = "";
 def_string $string1 = "";
 def_int $int22 = 0;
-def_string $string2 = "";
+def_string $op2 = "";
 def_string $string3 = ",";
 cc_deleteall($component5);
 cc_deleteall($component8);
 cc_deleteall($component10);
 cc_deleteall($component11);
 if ($int0 ! -1 & ~script3292 = 1) {
-	$string0, $string1, $int22 = ~script3286($int0);
+	$text0, $string1, $int22 = ~script3286($int0);
 	%varbit10110 = $int0;
-	~pest_rewards_confirmdraw(false, $string0, $component6);
+	~pest_rewards_confirmdraw(false, $text0, $component6);
 	while ($int21 < $int0) {
 		cc_create($component5, ^iftype_rectangle, $int21);
 		cc_sethide(true);
@@ -66,39 +66,39 @@ if ($int0 ! -1 & ~script3292 = 1) {
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setop(1, "Confirm");
-	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $string0, $component6)");
-	cc_setonmouseleave("pest_rewards_confirmdraw(false, $string0, $component6)");
+	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $text0, $component6)");
+	cc_setonmouseleave("pest_rewards_confirmdraw(false, $text0, $component6)");
 	cc_setonop("script3287(event_opindex, $component7)");
-	~steelborder($component8, $string0, 1);
-	if_settext("<col=ffffff><$string0></col>:<br><$string1><br><br>Are you sure that you wish to buy this item for <col=ffffff><~tostring_spacer($int22, $string3)></col> points?<br><col=ff0000>You cannot sell this item back to the shop</col> if you change your mind.", $component9);
+	~steelborder($component8, $text0, 1);
+	if_settext("<col=ffffff><$text0></col>:<br><$string1><br><br>Are you sure that you wish to buy this item for <col=ffffff><~tostring_spacer($int22, $string3)></col> points?<br><col=ff0000>You cannot sell this item back to the shop</col> if you change your mind.", $component9);
 	$int21 = ~v2_stone_button($component10);
 	cc_create($component10, ^iftype_text, $int21);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	$string2 = "Confirm";
-	cc_settext($string2);
+	$op2 = "Confirm";
+	cc_settext($op2);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_setcolour(^white);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	if_setop(1, $string2, $component10);
+	if_setop(1, $op2, $component10);
 	if_setopbase("<col=ff981f>Selection</col>", $component10);
-	if_setonmouseleave("league_relic_button_hover($component10, false, $string2)", $component10);
-	if_setonmouseover("league_relic_button_hover($component10, true, $string2)", $component10);
+	if_setonmouseleave("league_relic_button_hover($component10, false, $op2)", $component10);
+	if_setonmouseover("league_relic_button_hover($component10, true, $op2)", $component10);
 	if_setonop("script3288(event_opindex, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)", $component10);
 	$int21 = ~v2_stone_button($component11);
 	cc_create($component11, ^iftype_text, $int21);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	$string2 = "Cancel";
-	cc_settext($string2);
+	$op2 = "Cancel";
+	cc_settext($op2);
 	cc_settextfont(p12_full);
 	cc_settextshadow(true);
 	cc_setcolour(^white);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	if_setop(1, $string2, $component11);
-	if_setonmouseleave("league_relic_button_hover($component11, false, $string2)", $component11);
-	if_setonmouseover("league_relic_button_hover($component11, true, $string2)", $component11);
+	if_setop(1, $op2, $component11);
+	if_setonmouseleave("league_relic_button_hover($component11, false, $op2)", $component11);
+	if_setonmouseover("league_relic_button_hover($component11, true, $op2)", $component11);
 	if_setonop("script3289($int0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)", $component11);
 } else {
 	$int21 = ~v2_stone_button_in_filled($component6);

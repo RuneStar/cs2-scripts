@@ -1,5 +1,5 @@
 // 1401
-[proc,poh_viewer_enablerotate](component $component0, string $string0, graphic $graphic1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
+[proc,poh_viewer_enablerotate](component $component0, string $op0, graphic $graphic1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0);
 .cc_create($component0, ^iftype_graphic, 1);
@@ -14,4 +14,4 @@ cc_settrans(0);
 if_setonmouserepeat("cc_settrans(event_com, .cc_getid, 0, null)", $component0);
 if_setonmouseleave("cc_settrans(event_com, .cc_getid, 75, null)", $component0);
 if_setonop("poh_viewer_opbutton(event_opindex, event_com, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16)", $component0);
-if_setop(1, $string0, $component0);
+if_setop(1, $op0, $component0);

@@ -1,15 +1,15 @@
 // 3212
-[clientscript,league_task_filter_open](enum $enum0, component $component1, component $component2, int $int3, component $component4, component $component5)
+[clientscript,league_task_filter_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $component4, component $component5)
 sound_synth(synth_2266, 1, 0);
 ~xpdrops_setup_display_hoverdisable($component2);
 if_sethide(false, $component4);
-if_setonclick("league_task_filter_close(1, -1, $enum0, $component2, $int3, $component4)", $component4);
+if_setonclick("league_task_filter_close(1, -1, $enum0, $component2, $comsubid3, $component4)", $component4);
 def_int $int6 = if_getx($component2);
 def_int $int7 = if_gety($component2);
-def_component $component8 = if_getlayer($component2);
-while ($component8 ! null) {
-	$int6, $int7 = calc($int6 + if_getx($component8) - if_getscrollx($component8)), calc($int7 + if_gety($component8) - if_getscrolly($component8));
-	$component8 = if_getlayer($component8);
+def_component $layer8 = if_getlayer($component2);
+while ($layer8 ! null) {
+	$int6, $int7 = calc($int6 + if_getx($layer8) - if_getscrollx($layer8)), calc($int7 + if_gety($layer8) - if_getscrolly($layer8));
+	$layer8 = if_getlayer($layer8);
 }
 def_int $int9 = calc(enum_getoutputcount($enum0) - 1);
 def_int $int10 = 14;
@@ -40,9 +40,9 @@ while ($int12 < $int9) {
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setop(1, "Select");
-	cc_setonmouserepeat("xpdrops_setup_display_dropdown_hover(true, event_com, event_comid, .cc_getid, 0xff981f)");
-	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comid, .cc_getid, 0xff981f)");
-	cc_setonop("league_task_filter_close(event_opindex, $int12, $enum0, $component2, $int3, $component4)");
+	cc_setonmouserepeat("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, 0xff981f)");
+	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff981f)");
+	cc_setonop("league_task_filter_close(event_opindex, $int12, $enum0, $component2, $comsubid3, $component4)");
 	cc_settext(enum(int, string, $enum0, $int12));
 	$int12, $int11 = calc($int12 + 1), calc($int11 + 1);
 }

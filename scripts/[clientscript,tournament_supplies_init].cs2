@@ -25,7 +25,7 @@ while ($namedobj13 ! null) {
 	cc_setop(4, "Take-X");
 	cc_setop(10, "Examine");
 	cc_setopbase("<col=ff9040><oc_name($namedobj13)></col>");
-	cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 	cc_sethide(true);
 	$int10 = calc($int10 + 1);
 	$namedobj13 = enum(int, namedobj, $enum11, $int10);
@@ -48,7 +48,7 @@ if ($int12 = 1) {
 		cc_setop(4, "Take-X");
 		cc_setop(10, "Examine");
 		cc_setopbase("<col=ff9040><oc_name($namedobj13)></col>");
-		cc_setonop("cc_settrans_temporarily(event_com, event_comid, 100, 0)");
+		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 		cc_sethide(true);
 		$int14 = calc($int14 + 1);
 		$int10 = calc($int10 + 1);

@@ -30,17 +30,17 @@ if_setonvartransmit("rune_pouch_drawpouch($component1){var1139, var1140}", $comp
 cc_deleteall($component2);
 $int3 = calc((if_getwidth($component2) - (10 + 7 * 36)) / 6 + 36);
 def_int $int4 = calc((if_getheight($component2) - (30 + 4 * 32)) / 3 + 32);
-def_int $int5 = inv_size(inv);
-def_int $int6 = 0;
-while ($int6 < $int5) {
-	cc_create($component2, ^iftype_graphic, $int6);
+def_int $size5 = inv_size(inv);
+def_int $size6 = 0;
+while ($size6 < $size5) {
+	cc_create($component2, ^iftype_graphic, $size6);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
-	cc_setposition(calc(5 + $int6 % 7 * $int3), calc(25 + $int6 / 7 * $int4), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(calc(5 + $size6 % 7 * $int3), calc(25 + $size6 / 7 * $int4), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphicshadow(0x333333);
 	cc_setoutline(1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
-	$int6 = calc($int6 + 1);
+	$size6 = calc($size6 + 1);
 }
 ~rune_pouch_drawinventory($component2);
 if_setoninvtransmit("rune_pouch_drawinventory($component2){inv}", $component0);

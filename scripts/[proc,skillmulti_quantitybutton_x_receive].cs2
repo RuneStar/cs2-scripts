@@ -3,8 +3,8 @@
 sound_synth(synth_2266, 1, 0);
 $string0 = ~script212($string0);
 def_int $int0 = string_length($string0);
-def_int $int1 = string_length(tostring(28));
-if ($int0 > $int1) {
+def_int $length1 = string_length(tostring(28));
+if ($int0 > $length1) {
 	%varcint200 = 28;
 	return;
 }

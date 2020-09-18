@@ -1,6 +1,6 @@
 // 1720
-[proc,worldmap_toggles_set](component $component0, int $int1, component $component2, component $component3, component $component4)
-if (testbit(%varbit5640, $int1) = ^true) {
+[proc,worldmap_toggles_set](component $component0, int $index1, component $component2, component $component3, component $component4)
+if (testbit(%varbit5640, $index1) = ^true) {
 	.cc_setop(1, "Enable");
 	cc_sethide(false);
 } else {
@@ -8,7 +8,7 @@ if (testbit(%varbit5640, $int1) = ^true) {
 	cc_sethide(true);
 }
 def_boolean $boolean5 = true;
-switch_int ($int1) {
+switch_int ($index1) {
 	case 0, 1, 4 :
 		~worldmap_overlay_clear($component2, $component3);
 	case 2 :
