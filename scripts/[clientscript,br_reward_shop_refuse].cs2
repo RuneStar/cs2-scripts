@@ -1,0 +1,5 @@
+// 3090
+[clientscript,br_reward_shop_refuse](string $mes0, component $component0, component $component1, component $component2, component $component3)
+sound_synth(pillory_wrong, 1, 0);
+mes($mes0);
+~br_reward_shop_draw(-1, $component0, $component1, $component2, $component3);

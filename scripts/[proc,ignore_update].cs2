@@ -1,7 +1,7 @@
 // 129
 [proc,ignore_update](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
-~script1653($component1, 2, 3, "Sort by name", $component0, $component1, $component2, $component3, $component4, $component5, $component6);
-~script1653($component2, 0, 1, "Legacy sort", $component0, $component1, $component2, $component3, $component4, $component5, $component6);
+~ignore_sortbutton_draw($component1, 2, 3, "Sort by name", $component0, $component1, $component2, $component3, $component4, $component5, $component6);
+~ignore_sortbutton_draw($component2, 0, 1, "Legacy sort", $component0, $component1, $component2, $component3, $component4, $component5, $component6);
 cc_deleteall($component3);
 def_int $count7 = 0;
 def_int $int8 = 0;

@@ -3,14 +3,14 @@
 def_string $url5 = "https://oldschool.runescape.wiki/w/Special:";
 def_int $int0 = 0;
 if (string_length($string0) > 0) {
-	$url5 = "<$url5><~script3303($string0)>";
+	$url5 = "<$url5><~encode_for_url($string0)>";
 	if (string_length($string1) > 0) {
-		$url5 = "<$url5>?type=<~script3303($string1)>";
+		$url5 = "<$url5>?type=<~encode_for_url($string1)>";
 		$int0 = 1;
 	}
 	if (string_length($string2) > 0) {
 		if ($int0 = 1) {
-			$url5 = "<$url5>&id=<~script3303($string2)>";
+			$url5 = "<$url5>&id=<~encode_for_url($string2)>";
 		} else {
 			$url5 = "<$url5>?id=<$string2>";
 		}
@@ -18,17 +18,17 @@ if (string_length($string0) > 0) {
 	}
 	if (string_length($string3) > 0) {
 		if ($int0 = 1) {
-			$url5 = "<$url5>&name=<~script3303($string3)>";
+			$url5 = "<$url5>&name=<~encode_for_url($string3)>";
 		} else {
-			$url5 = "<$url5>?name=<~script3303($string3)>";
+			$url5 = "<$url5>?name=<~encode_for_url($string3)>";
 		}
 		$int0 = 1;
 	}
 	if (string_length($string4) > 0) {
 		if ($int0 = 1) {
-			$url5 = "<$url5>&search=<~script3303($string4)>";
+			$url5 = "<$url5>&search=<~encode_for_url($string4)>";
 		} else {
-			$url5 = "<$url5>?search=<~script3303($string4)>";
+			$url5 = "<$url5>?search=<~encode_for_url($string4)>";
 		}
 		$int0 = 1;
 	}

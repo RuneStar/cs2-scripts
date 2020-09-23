@@ -1,9 +1,9 @@
 // 125
 [proc,friend_update](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
-~script1669($component1, 2, 3, 2, "Sort by name", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
-~script1669($component2, 8, 9, 9, "Sort by last world change", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
-~script1669($component3, 4, 5, 4, "Sort by world", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
-~script1669($component4, 0, 1, 0, "Legacy sort", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+~friends_sortbutton_draw($component1, 2, 3, 2, "Sort by name", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+~friends_sortbutton_draw($component2, 8, 9, 9, "Sort by last world change", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+~friends_sortbutton_draw($component3, 4, 5, 4, "Sort by world", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
+~friends_sortbutton_draw($component4, 0, 1, 0, "Legacy sort", $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8);
 cc_deleteall($component5);
 def_int $count9 = 0;
 def_int $int10 = 0;

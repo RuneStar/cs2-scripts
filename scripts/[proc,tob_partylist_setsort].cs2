@@ -1,10 +1,10 @@
 // 2341
 [proc,tob_partylist_setsort]
-~script2342(interface_364:11, 0, 1, "Sort by members");
-~script2342(interface_364:12, 2, 3, "Sort by target size");
-~script2342(interface_364:13, 4, 5, "Sort by leader name");
-~script2342(interface_364:14, 6, 7, "Sort by preferred combat level");
-~script2342(interface_364:15, 12, 13, "Sort by age");
+~tob_partylist_sortbutton_draw(interface_364:11, 0, 1, "Sort by members");
+~tob_partylist_sortbutton_draw(interface_364:12, 2, 3, "Sort by target size");
+~tob_partylist_sortbutton_draw(interface_364:13, 4, 5, "Sort by leader name");
+~tob_partylist_sortbutton_draw(interface_364:14, 6, 7, "Sort by preferred combat level");
+~tob_partylist_sortbutton_draw(interface_364:15, 12, 13, "Sort by age");
 def_int $count0 = enum_getoutputcount(enum_1937);
 def_int $intarray0($count0);
 def_int $int1 = 0;

@@ -1,0 +1,17 @@
+// 3514
+[clientscript,teleblock_timer](component $component0, component $component1, int $int2)
+def_int $int3 = calc(clientclock + (%varbit4163 - 100) * 30);
+$int3 = calc(($int3 - clientclock) / 50);
+def_int $int4 = calc($int3 % 60);
+if ($int4 = $int2) {
+	return;
+}
+def_int $int5 = calc($int3 / 60);
+def_string $text0 = "Time Remaining : <tostring($int5)>:<tostring($int4)>";
+if ($int4 < 10) {
+	$text0 = "Time Remaining : <tostring($int5)>:0<tostring($int4)>";
+}
+if (cc_find($component1, 2) = ^true) {
+	cc_settext($text0);
+}
+if_setontimer("teleblock_timer($component0, $component1, $int4)", interface_90:49);

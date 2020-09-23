@@ -30,7 +30,7 @@ $intarray1(9) = calc($intarray0(20) + $intarray0(21) * 2 + $intarray0(22) * 3 + 
 $int3 = 0;
 while ($int3 < $int4) {
 	if_settext("(<tostring($intarray1($int3))>)", enum(int, component, enum_2860, $int3));
-	$int1 = ~script3436(if_gettext(enum(int, component, enum_2644, $int3)));
+	$int1 = ~string_to_int(if_gettext(enum(int, component, enum_2644, $int3)));
 	$int2 = $intarray1($int3);
 	if ($int2 = $int1) {
 		$colour5 = 0x07d907;

@@ -1,0 +1,12 @@
+// 419
+[proc,skill_guide_subsection_slayer](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Monsters", 1);
+	case 1 :
+		return("Equipment", 1);
+	case 2 :
+		return("Slayer Masters", 1);
+	case default :
+		return("", -1);
+}

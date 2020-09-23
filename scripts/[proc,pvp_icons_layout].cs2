@@ -149,7 +149,7 @@ if (~pvpw_check = 1) {
 			if_setgraphic("pvpw_icons,3", interface_90:49);
 			if_setop(1, "Show time remaining", interface_90:49);
 			if (%varbit10531 = 0) {
-				if_setonop("script3513(interface_90:49, interface_90:56, true)", interface_90:49);
+				if_setonop("teleblock_timer_tooltip(interface_90:49, interface_90:56, true)", interface_90:49);
 			}
 		} else {
 			if_setgraphic("pvpw_icons,0", interface_90:49);
