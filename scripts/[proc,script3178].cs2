@@ -1,0 +1,63 @@
+// 3178
+[proc,script3178](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27, component $component28, component $component29, component $component30, component $component31, component $component32)
+def_int $width33 = 34;
+if (~league_world = 1 & %varbit10037 >= 5) {
+	if_clearops($component6);
+	if_sethide(true, $component6);
+	if (%varbit8168 = 4) {
+		%varbit8168 = 0;
+	}
+	~script2800($component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31);
+	if_setop(1, "Leagues", $component7);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("script2803($component29, $component30, $component31, 5)", $component7);
+		if_setonmouseleave("script2804($component29, $component30, $component31, 5)", $component7);
+	}
+	if_setonop("script2798(event_opindex, 5, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31)", $component7);
+	if_sethide(false, $component7);
+	$width33 = 34;
+	if_setposition(-74, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component2);
+	if_setposition(-37, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component3);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component4);
+	if_setposition(37, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component5);
+	if_setposition(74, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component7);
+} else if (%varbit9340 = 1 & ~league_world = 0) {
+	if_clearops($component7);
+	if_sethide(true, $component7);
+	if (%varbit8168 = 5) {
+		%varbit8168 = 0;
+	}
+	~script2800($component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31);
+	if_setop(1, "Adventure Paths", $component6);
+	if_setop(2, "Disable Adventure Paths", $component6);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("script2803($component25, $component26, $component27, 4)", $component6);
+		if_setonmouseleave("script2804($component25, $component26, $component27, 4)", $component6);
+	}
+	if_setonop("script2798(event_opindex, 4, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31)", $component6);
+	if_sethide(false, $component6);
+	$width33 = 34;
+	if_setposition(-74, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component2);
+	if_setposition(-37, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component3);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component4);
+	if_setposition(37, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component5);
+	if_setposition(74, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component6);
+} else {
+	if_clearops($component6);
+	if_sethide(true, $component6);
+	if_clearops($component7);
+	if_sethide(true, $component7);
+	if (%varbit8168 = 4 | %varbit8168 = 5) {
+		%varbit8168 = 0;
+	}
+	~script2800($component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31);
+	$width33 = 44;
+	if_setposition(-69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component2);
+	if_setposition(-23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component3);
+	if_setposition(23, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component4);
+	if_setposition(69, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component5);
+}
+if_setsize($width33, 0, ^setsize_abs, ^setsize_minus, $component2);
+if_setsize($width33, 0, ^setsize_abs, ^setsize_minus, $component3);
+if_setsize($width33, 0, ^setsize_abs, ^setsize_minus, $component4);
+if_setsize($width33, 0, ^setsize_abs, ^setsize_minus, $component5);

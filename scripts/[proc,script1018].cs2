@@ -1,0 +1,18 @@
+// 1018
+[proc,script1018](boolean $boolean0, int $colour1, string $op0, component $component2)(int)
+def_int $int3 = 0;
+if ($boolean0 = true) {
+	$int3 = ~v2_stone_button_in_filled($component2);
+} else {
+	$int3 = ~v2_stone_button_out_filled($component2);
+}
+if_setop(1, $op0, $component2);
+cc_create($component2, ^iftype_text, $int3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour($colour1);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($op0);
+return($int3);

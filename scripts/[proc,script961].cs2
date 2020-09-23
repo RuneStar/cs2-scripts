@@ -1,0 +1,6 @@
+// 961
+[proc,script961](int $world0, int $flags1)(int)
+if ($world0 <= 0 | testbit($flags1, 21) = ^true) {
+	return(0);
+}
+return(1);

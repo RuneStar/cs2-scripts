@@ -1,0 +1,30 @@
+// 2116
+[proc,script2116](component $component0, int $int1, string $op0, component $component2, component $component3)
+cc_deleteall($component0);
+def_int $int4 = 0;
+.cc_create($component0, ^iftype_rectangle, $int4);
+def_int $int5 = $int4;
+$int4 = calc($int4 + 1);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setfill(true);
+.cc_setcolour(^white);
+$int4 = ~thinbox($component0, $int4);
+cc_create($component0, ^iftype_text, $int4);
+def_int $int6 = $int4;
+$int4 = calc($int4 + 1);
+cc_setsize(30, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(5, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_create($component0, ^iftype_graphic, $int4);
+def_int $int7 = $int4;
+$int4 = calc($int4 + 1);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_centre);
+~script2118($component0, $int5, $int6, $int7, $int1, $component2, $component3);
+if_setonvartransmit("script2117($component0, $int5, $int6, $int7, $int1, $component2, $component3){var499}", $component0);
+if_setonstattransmit("script2117($component0, $int5, $int6, $int7, $int1, $component2, $component3)", $component0);
+if_setop(1, $op0, $component0);

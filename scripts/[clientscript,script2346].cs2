@@ -1,0 +1,52 @@
+// 2346
+[clientscript,script2346](component $component0, component $component1, component $component2)
+if_settext("Points Available: <col=ffffff><tostring(%varbit6460)></col>", $component0);
+if_setonvartransmit("script2349($component0){var1746}", $component0);
+if_setoninvtransmit("script2347($component2){inv_612}", $component2);
+~script2348($component2);
+cc_deleteall($component1);
+def_int $int3 = 14;
+def_int $int4 = 43;
+def_int $count5 = 0;
+def_int $count6 = enum_getoutputcount(enum_1952);
+def_namedobj $namedobj7 = null;
+def_int $int8 = 0;
+def_string $opbase0 = "";
+while ($count5 < $count6) {
+	$namedobj7 = enum(int, namedobj, enum_1952, $count5);
+	if ($namedobj7 ! null) {
+		cc_create($component1, ^iftype_graphic, $int8);
+		$int8 = calc($int8 + 1);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc((36 + $int3) * ($count5 % 4)), calc($count5 / 4 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
+		$opbase0 = "<col=ff981f><oc_name($namedobj7)>";
+		cc_setobject($namedobj7, -1);
+		cc_setopbase($opbase0);
+		cc_setop(1, "Value");
+		cc_setop(2, "Buy-1");
+		cc_setop(3, "Buy-All");
+		cc_setop(4, "Buy-X");
+		cc_setop(10, "Examine<col=ff9040>");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+	}
+	$count5 = calc($count5 + 1);
+}
+$count5 = 0;
+def_int $int9 = 0;
+while ($count5 < $count6) {
+	$namedobj7 = enum(int, namedobj, enum_1952, $count5);
+	if ($namedobj7 ! null) {
+		cc_create($component1, ^iftype_text, $int8);
+		$int8 = calc($int8 + 1);
+		cc_setsize(36, 20, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc((36 + $int3) * ($count5 % 4)), calc(38 + $count5 / 4 * (36 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
+		$int9 = enum(obj, int, enum_1953, $namedobj7);
+		cc_settext(tostring($int9));
+		cc_settextfont(p11_full);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_setcolour(0xff981f);
+	}
+	$count5 = calc($count5 + 1);
+}

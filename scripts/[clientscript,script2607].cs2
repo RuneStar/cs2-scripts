@@ -1,0 +1,6 @@
+// 2607
+[clientscript,script2607](int $opindex0, component $component1, int $comsubid2)
+if ($opindex0 = 1 & cc_find($component1, $comsubid2) = ^true) {
+	sound_synth(synth_2266, 1, 0);
+	~script2608(1);
+}

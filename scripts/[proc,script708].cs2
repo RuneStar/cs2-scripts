@@ -1,0 +1,12 @@
+// 708
+[proc,script708]()(int)
+def_int $int0 = 0;
+def_inv $inv1 = enum(int, inv, enum_150, $int0);
+while ($inv1 ! null) {
+	if (inv_getnum($inv1, 0) > 0 | inv_getnum($inv1, 1) > 0) {
+		return(1);
+	}
+	$int0 = calc($int0 + 1);
+	$inv1 = enum(int, inv, enum_150, $int0);
+}
+return(0);

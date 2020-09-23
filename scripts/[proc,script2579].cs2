@@ -1,0 +1,14 @@
+// 2579
+[proc,script2579]()(string)
+switch_int (%varbit6590) {
+	case 1 :
+		return("5");
+	case 2 :
+		return("10");
+	case 3 :
+		return(tostring(~max(1, %varbit3960)));
+	case 4 :
+		return("All");
+	case default :
+		return("1");
+}

@@ -1,0 +1,11 @@
+// 2705
+[clientscript,script2705](component $component0, int $clock1, component $component2)
+if (%varcint2 = 0) {
+	if_setontimer(null, $component2);
+	return;
+}
+if (clientclock < $clock1) {
+	return;
+}
+~deltooltip_action($component0);
+if_setontimer(null, $component2);

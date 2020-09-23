@@ -1,0 +1,12 @@
+// 3516
+[proc,script3516](obj $obj0)(int)
+def_int $int1 = 0;
+def_namedobj $namedobj2 = enum(int, namedobj, enum_1533, $int1);
+while ($namedobj2 ! null) {
+	if ($obj0 = $namedobj2) {
+		return(1);
+	}
+	$int1 = calc($int1 + 1);
+	$namedobj2 = enum(int, namedobj, enum_1533, $int1);
+}
+return(0);

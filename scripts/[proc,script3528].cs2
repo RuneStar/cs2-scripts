@@ -1,0 +1,80 @@
+// 3528
+[proc,script3528](int $int0, int $y1, int $int2, int $int3, component $component4, component $component5, component $component6, component $component7, int $int8, int $int9)(int)
+.cc_create($component5, ^iftype_rectangle, $int8);
+$int8 = calc($int8 + 1);
+.cc_setsize($int3, 32, ^setsize_abs, ^setsize_abs);
+.cc_setposition($int2, $y1, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(^black);
+.cc_setfill(true);
+.cc_settrans(255);
+.cc_setop(1, enum(int, string, enum_2646, $int0));
+def_namedobj $namedobj10 = enum(int, namedobj, enum_2645, $int0);
+if ($namedobj10 = null) {
+	$namedobj10 = obj_6512;
+}
+cc_create($component5, ^iftype_graphic, $int8);
+$int8 = calc($int8 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int2 + (40 - 36) / 2), $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setobject_nonum($namedobj10, 1);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+def_int $width11 = calc($int3 - 40);
+$int2 = calc($int2 + 40);
+cc_create($component5, ^iftype_text, $int8);
+$int8 = calc($int8 + 1);
+cc_setsize($width11, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int2, $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextshadow(true);
+def_int $colour12 = 0xff981f;
+def_int $colour13 = 0xffb83f;
+def_int $num14 = inv_getnum(inv_247, $int0);
+def_string $mes0 = "";
+if (oc_members($namedobj10) = ^true & map_members = ^false) {
+	cc_setcolour(0x9f9f9f);
+	$mes0 = "You must be on a members' world to purchase that item.";
+	.cc_setonop("script3530($mes0, $component4, $component5, $component6, $component7)");
+	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
+} else if (%var261 < $num14) {
+	cc_setcolour(0x9f9f9f);
+	$mes0 = "You need <~pest_rewards_costpoints($num14)> to claim that reward.";
+	.cc_setonop("script3530($mes0, $component4, $component5, $component6, $component7)");
+	$colour12, $colour13 = 0x9f9f9f, 0x9f9f9f;
+} else {
+	if ($int9 = $int0) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour(0x00df00);
+	}
+	.cc_setonop("script3529($int0, $component4, $component5, $component6, $component7)");
+}
+def_string $string1 = enum(int, string, enum_2646, $int0);
+if (parawidth($string1, 512, p12_full) > $width11) {
+	cc_settextfont(p11_full);
+} else {
+	cc_settextfont(p12_full);
+}
+cc_settext($string1);
+cc_create($component5, ^iftype_text, $int8);
+$int8 = calc($int8 + 1);
+cc_setsize($width11, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int2, $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+if ($num14 > 0) {
+	cc_settext(~pest_rewards_costpoints($num14));
+} else {
+	cc_settext("Free");
+}
+if ($int9 = $int0) {
+	cc_setcolour(^white);
+	.cc_setonmouserepeat(null);
+	.cc_setonmouseleave(null);
+} else {
+	cc_setcolour($colour12);
+	.cc_setonmouserepeat("cc_colour_swapper(event_com, cc_getid, $colour13)");
+	.cc_setonmouseleave("cc_colour_swapper(event_com, cc_getid, $colour12)");
+}
+return($int8);

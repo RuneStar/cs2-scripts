@@ -1,9 +1,0 @@
-// 1144
-script1144(component $component0, int $int1)
-%var1295 = clearbit(%var1295, calc($int1 - 1));
-~deadman_stats_set_unprotect($component0, $int1);
-def_int $int2 = 0;
-def_int $int3 = 0;
-$int2, $int3 = ~deadmanprotect_xp_counts;
-if_settext("Combat <tostring($int2)>/2", interface_226:46);
-if_settext("Other <tostring($int3)>/3", interface_226:47);

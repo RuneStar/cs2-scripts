@@ -1,8 +1,0 @@
-// 1152
-script1152(component $component0, graphic $graphic1, graphic $graphic2, int $int3)
-if ($int3 ! 1) {
-	return;
-}
-if_setgraphic($graphic1, $component0);
-sound_synth(synth_2266, 1, 0);
-if_setontimer("script1153(event_com, $graphic2, calc(clientclock + 20))", $component0);

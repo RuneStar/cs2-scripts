@@ -1,0 +1,16 @@
+// 753
+[proc,script753](int $width0, int $height1, string $text0, boolean $boolean2)
+cc_create(interface_162:53, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width0, $height1, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_settextshadow(false);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(^black);
+cc_settext($text0);
+if_setscrollpos(0, 0, interface_162:53);
+if_setscrollsize(0, 0, interface_162:53);
+~scrollbar_resize(interface_162:54, interface_162:53, 0);
+if ($boolean2 = true) {
+	~script3397(5);
+}

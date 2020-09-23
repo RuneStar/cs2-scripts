@@ -1,0 +1,9 @@
+// 2135
+[clientscript,script2135](int $clock0, component $component1, string $string0, graphic $graphic2, string $string1, component $component3, component $component4, component $component5, component $component6)
+if (clientclock < $clock0) {
+	return;
+}
+if ($component3 ! null & if_gethide($component3) = false) {
+	return;
+}
+~script2133($component1, $string0, $graphic2, $string1, $component3, $component4, $component5, $component6);

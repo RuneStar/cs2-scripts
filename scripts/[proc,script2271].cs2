@@ -1,0 +1,82 @@
+// 2271
+[proc,script2271](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, boolean $boolean14)
+cc_deleteall($component3);
+cc_deleteall($component4);
+cc_deleteall($component5);
+def_int $count15 = 0;
+def_int $int16 = 0;
+def_int $height17 = 0;
+def_struct $struct18 = null;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_string $string0 = "";
+def_int $int22 = 0;
+if (~on_mobile = true) {
+	$int16 = 20;
+}
+cc_create($component5, ^iftype_rectangle, $count15);
+$count15 = 1;
+cc_setfill(true);
+cc_setcolour(^black);
+cc_setsize(0, calc(18 + $int16), ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_sethide(true);
+while ($count15 <= enum_getoutputcount(enum_1375)) {
+	$int22 = enum(int, int, enum_1375, $count15);
+	$struct18 = enum(int, struct, enum_1377, $int22);
+	if ($struct18 = null) {
+		return;
+	}
+	cc_create($component5, ^iftype_text, $count15);
+	if (~script2670($int22) = 0) {
+		cc_setsize(0, calc(18 + $int16), ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $height17, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_settext("    <struct_param($struct18, param_660)>");
+		cc_setopbase("Show cost");
+		cc_setop(1, struct_param($struct18, param_660));
+		cc_setonop("telenexus_show_cost($component7, $struct18, cc_gety, $component5, $count15)");
+		$int21, $string0 = ~script2664($struct18);
+		cc_setondrag("telenexus_hide_cost($component7, $component5, 0)");
+		if ($int21 = 1) {
+			$int19 = calc($int19 + 1);
+			cc_setondragcomplete("script2360($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $struct18, event_drop, $int22, $component8, $component9, $component10, $component11, $component12, $component13)");
+			cc_setcolour(0xff981f);
+			cc_setdragdeadtime(5);
+			cc_setdragdeadzone(5);
+		} else {
+			cc_setcolour(0xcccccc);
+		}
+		.cc_create($component4, ^iftype_graphic, $int20);
+		.cc_setsize(7, 11, ^setsize_abs, ^setsize_abs);
+		.cc_setposition(0, calc($height17 + 2 + $int16 / 2), ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setgraphic("drag_handle");
+		.cc_create($component3, ^iftype_rectangle, $int20);
+		.cc_setsize(0, calc(18 + $int16), ^setsize_minus, ^setsize_abs);
+		.cc_setposition(0, $height17, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setfill(true);
+		if (calc($int20 % 2) = 0) {
+			.cc_setcolour(^white);
+			.cc_settrans(255);
+		} else {
+			.cc_setcolour(^black);
+			.cc_settrans(225);
+		}
+		$int20 = calc($int20 + 1);
+		$height17 = calc(cc_gety + cc_getheight);
+	} else {
+		cc_sethide(true);
+	}
+	$count15 = calc($count15 + 1);
+}
+if_setscrollsize(0, $height17, $component1);
+if ($boolean14 = true | $height17 < if_getheight($component1)) {
+	if_setscrollpos(0, 0, $component1);
+	~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+} else {
+	~scrollbar_vertical_rebuild($component2, $component1);
+}
+if_settext("Available <tostring($int19)>/<tostring(calc($count15 - 1))>", $component6);

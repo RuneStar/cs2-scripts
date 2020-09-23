@@ -1,0 +1,12 @@
+// 1457
+[clientscript,script1457](int $comsubid0, component $component1, component $component2, int $comsubid3, boolean $boolean4)
+sound_synth(synth_2266, 1, 0);
+if_setonmouseover(null, $component2);
+if_setonmouseleave(null, $component2);
+if (.cc_find($component2, $comsubid3) = ^true) {
+	.cc_sethide(true);
+}
+if_setontimer("zmi_bank_payment_selection_reset(calc(clientclock + 60), calc(clientclock + 10), $component1, $component2, $comsubid3, $boolean4)", $component2);
+if (cc_find($component1, $comsubid0) = ^true) {
+	cc_resume_pausebutton;
+}

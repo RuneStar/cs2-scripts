@@ -1,0 +1,17 @@
+// 3439
+[proc,script3439](int $index0)(int)
+def_int $bool1 = testbit(%var2715, $index0);
+def_int $bool2 = testbit(%var2716, $index0);
+if ($bool1 = ^true & $bool2 = ^true) {
+	return(-1);
+}
+if ($bool1 = ^false & $bool2 = ^false) {
+	return(0);
+}
+if ($bool1 = ^true) {
+	return(2);
+}
+if ($bool2 = ^true) {
+	return(1);
+}
+return(-1);

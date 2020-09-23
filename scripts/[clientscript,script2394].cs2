@@ -1,0 +1,45 @@
+// 2394
+[clientscript,script2394](component $component0, int $comsubid1, int $clock2, component $component3)
+def_int $int4 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	$int4 = calc(clientclock - $clock2);
+	if ($int4 < 90) {
+		cc_settrans(calc(255 - scale($int4, 90, 255)));
+		return;
+	}
+	cc_settrans(0);
+	if ($int4 < 70) {
+		return;
+	}
+	.cc_create($component3, ^iftype_model, 0);
+	.cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(-130, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setnpchead(snowflake_8431);
+	.cc_setmodelanim(seq_8167);
+	.cc_setmodeltransparent(false);
+	.cc_setmodelangle(0, 0, 27, 2047, 0, 550);
+	.cc_setontimer("script2395(event_com, event_comsubid, 2047, 1786, 27, 550, clientclock)");
+	.cc_create($component3, ^iftype_model, 1);
+	.cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(130, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setnpchead(my_arm_742);
+	.cc_setmodelanim(seq_579);
+	.cc_setmodeltransparent(false);
+	.cc_setmodelangle(0, 0, 105, 0, 0, 650);
+	.cc_setontimer("script2395(event_com, event_comsubid, 0, 213, 105, 650, clientclock)");
+	.cc_create($component3, ^iftype_text, 2);
+	.cc_setsize(0, 80, ^setsize_minus, ^setsize_abs);
+	.cc_setposition(0, 90, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setcolour(0x680038);
+	.cc_settextfont(quill_oblique_large);
+	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	.cc_settextshadow(true);
+	.cc_settext("Snowflake & My Arm<br>forever");
+	.cc_create($component3, ^iftype_rectangle, 3);
+	.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	.cc_setcolour(^black);
+	.cc_setfill(true);
+	.cc_settrans(0);
+	cc_setontimer("script2403(event_com, event_comsubid, clientclock, $component3, .cc_getid)");
+}

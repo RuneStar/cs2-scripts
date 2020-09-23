@@ -1,0 +1,7 @@
+// 2160
+[proc,script2160](component $component0, string $string0)
+~v2_stone_button($component0);
+if_setonmouserepeat("v2_stone_button_in($component0)", $component0);
+if_setonmouseleave("v2_stone_button($component0)", $component0);
+if_setonkey("script2161(event_keychar, $component0, $string0)", $component0);
+if_setontimer(null, $component0);

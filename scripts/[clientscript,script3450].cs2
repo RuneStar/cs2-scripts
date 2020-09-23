@@ -1,0 +1,19 @@
+// 3450
+[clientscript,script3450](int $opindex0, component $component1)
+if ($opindex0 ! 1) {
+	return;
+}
+cc_deleteall($component1);
+def_int $comsubid2 = ~options_button_on($component1, 0);
+cc_create($component1, ^iftype_text, $comsubid2);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^white);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("---");
+if_setonmouserepeat(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setonop(null, $component1);
+if_setontimer("script3451(calc(clientclock + 20), event_com)", $component1);

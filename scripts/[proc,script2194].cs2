@@ -1,0 +1,16 @@
+// 2194
+[proc,script2194](component $component0, int $int1)
+if ($int1 <= 80) {
+	.cc_settrans(calc(255 - $int1 * 3));
+	cc_setmodel(model_16238);
+	return;
+}
+if ($int1 <= 110) {
+	$int1 = calc($int1 - 30);
+	.cc_settrans(calc(55 + $int1 * 4));
+	cc_setmodel(little_nightmare_39197);
+	cc_settrans(255);
+	cc_setmodelangle(-25, 30, 0, 1950, 0, calc(1050 - $int1 * 12));
+	return;
+}
+cc_deleteall($component0);

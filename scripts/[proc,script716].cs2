@@ -1,0 +1,12 @@
+// 716
+[proc,script716](namedobj $namedobj0)(int)
+def_int $total1 = inv_total(inv, $namedobj0);
+def_obj $obj2 = oc_cert($namedobj0);
+if ($obj2 = $namedobj0) {
+	return($total1);
+}
+def_int $total3 = inv_total(inv, $obj2);
+if (calc(^max_32bit_int - $total1) < $total3) {
+	return(^max_32bit_int);
+}
+return(calc($total1 + $total3));

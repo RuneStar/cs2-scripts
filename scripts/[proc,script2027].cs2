@@ -1,0 +1,4 @@
+// 2027
+[proc,script2027](component $component0, int $int1, int $clock2)
+def_int $int3 = calc($int1 * 30 - (clientclock - $clock2));
+~script2029($component0, $int3);

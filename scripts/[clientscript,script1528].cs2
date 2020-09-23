@@ -1,0 +1,6 @@
+// 1528
+[clientscript,script1528](component $component0, int $comsubid1, int $trans2, component $component3, string $string0)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settrans($trans2);
+}
+~tooltip_mouserepeat($component0, -1, $component3, $string0, 25, 190);

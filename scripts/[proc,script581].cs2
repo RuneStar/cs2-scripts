@@ -1,0 +1,47 @@
+// 581
+[proc,script581](enum $enum0, component $component1, component $component2, component $component3, int $int4)
+def_int $int5 = 0;
+if ($component1 = $component2) {
+	$int5 = 3;
+}
+def_int $int6 = ~script572($enum0);
+def_int $int7 = 0;
+def_int $int8 = $int4;
+while ($int8 > 0) {
+	$int8 = calc($int8 - 1);
+	if ($int8 = $int6) {
+		if (cc_find($component2, calc($int8 * 3 + $int5)) = ^true) {
+			cc_setonop(null);
+		}
+		if (cc_find($component2, calc($int8 * 3 + $int5 + 1)) = ^true) {
+			cc_setgraphic("options_radio_buttons,2");
+		}
+		if (cc_find($component2, calc($int8 * 3 + $int5 + 2)) = ^true) {
+			cc_setcolour(^white);
+		}
+		$int7 = calc($int8 * 17);
+	} else {
+		if (cc_find($component2, calc($int8 * 3 + $int5)) = ^true) {
+			cc_setonop("script579(event_opindex, $int8, $enum0, $component1, $component2, $component3, $int4)");
+		}
+		if (cc_find($component2, calc($int8 * 3 + $int5 + 1)) = ^true) {
+			cc_setgraphic("options_radio_buttons,0");
+		}
+		if (cc_find($component2, calc($int8 * 3 + $int5 + 2)) = ^true) {
+			cc_setcolour(0xff981f);
+		}
+	}
+}
+if ($component3 = null) {
+	return;
+}
+def_int $int9 = 0;
+def_int $y10 = if_getscrolly($component2);
+if ($int7 < $y10) {
+	~scrollbar_resize($component3, $component2, $int7);
+} else {
+	$int7, $int9 = calc($int7 + 17), if_getheight($component2);
+	if ($int7 > calc($y10 + $int9)) {
+		~scrollbar_resize($component3, $component2, calc($int7 - $int9));
+	}
+}

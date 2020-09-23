@@ -1,0 +1,38 @@
+// 1407
+[proc,script1407](intarray $intarray0, int $int1, int $int2)
+def_int $index3 = calc(($int1 + $int2) / 2);
+def_int $int4 = $intarray0($index3);
+$intarray0($index3) = $intarray0($int2);
+$intarray0($int2) = $int4;
+def_int $int5 = $int1;
+def_int $int6 = $int1;
+def_int $int7 = -1;
+def_string $string0 = "";
+def_string $string1 = "";
+while ($int6 < $int2) {
+	if (cc_find(enum(int, component, enum_1461, $intarray0($int6)), 0) = ^true) {
+		$string0 = cc_gettext;
+	} else {
+		$string0 = "";
+	}
+	if (cc_find(enum(int, component, enum_1461, $int4), 0) = ^true) {
+		$string1 = cc_gettext;
+	} else {
+		$string1 = "";
+	}
+	if (compare($string0, $string1) <= 0) {
+		$int7 = $intarray0($int6);
+		$intarray0($int6) = $intarray0($int5);
+		$intarray0($int5) = $int7;
+		$int5 = calc($int5 + 1);
+	}
+	$int6 = calc($int6 + 1);
+}
+$intarray0($int2) = $intarray0($int5);
+$intarray0($int5) = $int4;
+if ($int1 < calc($int5 - 1)) {
+	~script1407(intarray0, $int1, calc($int5 - 1));
+}
+if (calc($int5 + 1) < $int2) {
+	~script1407(intarray0, calc($int5 + 1), $int2);
+}

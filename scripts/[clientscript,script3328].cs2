@@ -1,0 +1,23 @@
+// 3328
+[clientscript,script3328](component $drop0, component $drop1, int $comsubid2, int $dropsubid3)
+def_int $size4 = inv_size(inv);
+if ($comsubid2 < 0 | $comsubid2 >= $size4) {
+	return;
+}
+if ($dropsubid3 < 0 | $dropsubid3 >= $size4) {
+	return;
+}
+if ($drop0 ! $drop1) {
+	return;
+}
+def_obj $obj5 = inv_getobj(inv, $comsubid2);
+if ($obj5 = null) {
+	return;
+}
+def_obj $obj6 = inv_getobj(inv, $dropsubid3);
+if (cc_find($drop0, $dropsubid3) = ^true) {
+	~script3327($obj5, inv_getnum(inv, $comsubid2), $comsubid2);
+}
+if (cc_find($drop0, $comsubid2) = ^true) {
+	~script3327($obj6, inv_getnum(inv, $dropsubid3), $dropsubid3);
+}

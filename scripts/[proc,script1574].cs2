@@ -1,0 +1,13 @@
+// 1574
+[proc,script1574](string $string0, int $int0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = string_length($string0);
+while ($int3 > 0) {
+	$int2 = string_indexof_string("0123456789", substring($string0, 0, 1), 0);
+	$int1 = calc($int1 + $int2 * pow(10, $int3 - 1));
+	$string0 = substring($string0, 1, $int3);
+	$int3 = calc($int3 - 1);
+}
+def_int $int4 = scale(60, 100, $int1);
+~script1575($int4, $int4, $int0);

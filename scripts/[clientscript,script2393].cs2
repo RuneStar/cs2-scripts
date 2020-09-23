@@ -1,0 +1,20 @@
+// 2393
+[clientscript,script2393]
+def_enum $enum0 = ~toplevel_getcomponents;
+if ($enum0 = null) {
+	return;
+}
+def_component $component1 = enum(component, component, $enum0, interface_161:3);
+def_component $component2 = enum(component, component, $enum0, interface_161:8);
+if ($component1 = null | $component2 = null) {
+	return;
+}
+cc_deleteall($component2);
+cc_deleteall($component1);
+cc_create($component1, ^iftype_rectangle, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_settrans(255);
+cc_setontimer("script2394(event_com, event_comsubid, clientclock, $component2)");

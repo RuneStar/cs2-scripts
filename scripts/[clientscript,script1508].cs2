@@ -1,0 +1,13 @@
+// 1508
+[clientscript,script1508](string $string0)
+if (string_length($string0) <= 0 | compare($string0, " ") = 0) {
+	%varcint223 = calc(clientclock + 20);
+	~toplevel_chatbox_background;
+	if_setontimer("script1509", interface_229:0);
+} else {
+	if (%varcint223 > clientclock) {
+		%varcint223 = 0;
+		~toplevel_chatbox_background;
+	}
+	if_setontimer(null, interface_229:0);
+}

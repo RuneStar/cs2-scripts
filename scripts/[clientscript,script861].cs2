@@ -1,0 +1,71 @@
+// 861
+[clientscript,script861](obj $obj0, obj $obj1, obj $obj2, int $int3)
+cc_deleteall(interface_127:1);
+cc_deleteall(interface_127:12);
+~options_button_off(interface_127:12, 0);
+cc_create(interface_127:1, ^iftype_rectangle, 0);
+cc_sethide(true);
+if_setcolour(0xa6a692, interface_127:13);
+if_setontimer(null, interface_127:12);
+if ($obj0 ! null) {
+	if_settext("Remove this key", interface_127:13);
+	if_setonmouserepeat("text_colour_swapper(interface_127:13, ^white)", interface_127:12);
+	if_setonmouseleave("text_colour_swapper(interface_127:13, 0xa6a692)", interface_127:12);
+	if_setop(1, "Remove", interface_127:12);
+	if_setopbase("<col=ff9040><oc_name($obj0)></col>", interface_127:12);
+	if_setonop("script862(event_opindex, event_com, cc_getlayer, cc_getid)", interface_127:12);
+} else {
+	if_settext("---", interface_127:13);
+	if_setonmouserepeat(null, interface_127:12);
+	if_setonmouseleave(null, interface_127:12);
+	if_clearops(interface_127:12);
+	if_setonop(null, interface_127:12);
+}
+def_string $mes0 = "";
+cc_create(interface_127:1, ^iftype_rectangle, 1);
+cc_sethide(true);
+if_setmodel(model_5626, interface_127:18);
+if_sethide(true, interface_127:19);
+if_setontimer(null, interface_127:18);
+if ($obj1 ! null) {
+	if_setonmouserepeat("comp_sethide(false, interface_127:19)", interface_127:18);
+	if_setonmouseleave("comp_sethide(true, interface_127:19)", interface_127:18);
+	if_setop(1, "Previous:", interface_127:18);
+	if_setopbase("<col=ff9040><oc_name($obj1)></col>", interface_127:18);
+	if_setonop("script864(event_opindex, event_com, model_5626, model_5627, interface_127:19, cc_getlayer, cc_getid)", interface_127:18);
+	if_setonclick(null, interface_127:18);
+} else {
+	if_setonmouserepeat(null, interface_127:18);
+	if_setonmouseleave(null, interface_127:18);
+	if_clearops(interface_127:18);
+	if ($obj2 ! null) {
+		$mes0 = "This is the first key on your key ring.";
+	} else {
+		$mes0 = "There are no more keys on your key ring.";
+	}
+	if_setonclick("mes($mes0)", interface_127:18);
+}
+cc_create(interface_127:1, ^iftype_rectangle, 2);
+cc_sethide(true);
+if_setmodel(model_5625, interface_127:15);
+if_sethide(true, interface_127:16);
+if_setontimer(null, interface_127:15);
+if ($obj2 ! null) {
+	if_setonmouserepeat("comp_sethide(false, interface_127:16)", interface_127:15);
+	if_setonmouseleave("comp_sethide(true, interface_127:16)", interface_127:15);
+	if_setop(1, "Next:", interface_127:15);
+	if_setopbase("<col=ff9040><oc_name($obj2)></col>", interface_127:15);
+	if_setonop("script864(event_opindex, event_com, model_5625, model_5629, interface_127:16, cc_getlayer, cc_getid)", interface_127:15);
+	if_setonclick(null, interface_127:15);
+} else {
+	if_setonmouserepeat(null, interface_127:15);
+	if_setonmouseleave(null, interface_127:15);
+	if_clearops(interface_127:15);
+	if ($obj1 ! null) {
+		$mes0 = "This is the last key on your key ring.";
+	} else {
+		$mes0 = "There are no more keys on your key ring.";
+	}
+	if_setonclick("mes($mes0)", interface_127:15);
+}
+if_settext("Key total: <tostring($int3)>", interface_127:14);

@@ -1,0 +1,9 @@
+// 1684
+[clientscript,script1684](int $key0, component $component1, int $comsubid2, component $component3, component $component4, component $component5, component $component6)
+def_int $int7 = 0;
+if ($key0 = ^key_f1 & cc_find($component1, $comsubid2) = ^true) {
+	$int7 = calc(clientclock + 20);
+	~script1694($int7, $component1, $component3, $component4, $component5, $component6);
+	cc_setontimer("script1693($int7, event_com, event_comsubid, $component3, $component4, $component5, $component6)");
+	cc_setonkey(null);
+}

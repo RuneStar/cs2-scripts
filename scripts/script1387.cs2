@@ -1,7 +1,0 @@
-// 1387
-script1387(int $int0)(int, int, int)
-def_int $int1 = calc($int0 / pow(2, 28));
-$int0 = calc($int0 % pow(2, 28));
-def_int $int2 = calc($int0 / pow(2, 14));
-$int0 = calc($int0 % pow(2, 14));
-return($int2, $int1, $int0);

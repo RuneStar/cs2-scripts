@@ -1,0 +1,18 @@
+// 3137
+[clientscript,script3137]
+if (%varcint380 = %varbit9481 | %varbit9481 = 0) {
+	return;
+}
+%varcint380 = %varbit9481;
+def_component $component0 = enum(int, component, enum_2638, %varbit9481);
+if ($component0 = null) {
+	return;
+}
+~script3138($component0, 0, %varbit9477);
+~script3138($component0, 1, %varbit9478);
+~script3138($component0, 2, %varbit9479);
+~script3138($component0, 3, %varbit9480);
+~script3139($component0, 4, %varbit9482);
+~script3139($component0, 5, %varbit9483);
+~script3139($component0, 6, %varbit9484);
+~script3139($component0, 7, %varbit9485);

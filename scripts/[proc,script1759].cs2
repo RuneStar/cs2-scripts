@@ -1,0 +1,11 @@
+// 1759
+[proc,script1759](struct $struct0)(int)
+if (testbit(%varbit5640, 4) = ^true | struct_param($struct0, param_986) = false) {
+	return(0);
+}
+def_int $int1 = calc(clientclock % 40);
+if ($int1 < 20) {
+	return(scale(pow($int1, 2), 400, 8192));
+}
+$int1 = calc(40 - $int1);
+return(calc(16384 - scale(pow($int1, 2), 400, 8192)));

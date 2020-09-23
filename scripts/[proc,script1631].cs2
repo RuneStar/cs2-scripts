@@ -1,0 +1,16 @@
+// 1631
+[proc,script1631](int $int0, int $comsubid1, component $component2)
+if ($int0 < 1 | $component2 = null | $int0 > 31) {
+	return;
+}
+def_string $string0 = "";
+def_string $string1 = "";
+if (cc_find($component2, 6) = ^true) {
+	if ($int0 <= 9) {
+		$string0 = tostring($int0);
+	} else {
+		$string0, $string1 = enum(int, string, enum_1401, calc($int0 - 9)), enum(int, string, enum_1402, calc($int0 - 9));
+	}
+	cc_settext("<$string0>:");
+	if_setonkey("script1632(event_keychar, $comsubid1, event_com, $string0, $string1, 0)", $component2);
+}

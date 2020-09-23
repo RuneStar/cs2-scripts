@@ -1,0 +1,7 @@
+// 944
+[clientscript,script944](component $component0, int $width1, int $height2, component $component3)
+def_int $width4 = if_getwidth($component0);
+def_int $height5 = if_getheight($component0);
+if ($width1 ! $width4 | $height2 ! $height5) {
+	~script945($component0, $width4, $height5, $component3);
+}

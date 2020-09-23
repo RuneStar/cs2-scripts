@@ -1,0 +1,10 @@
+// 1683
+[proc,script1683](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5)
+def_int $int6 = calc(clientclock - $int0);
+if ($int6 >= 20) {
+	~script1655(true, $component1, $component2, $component3, $component4, $component5);
+	return;
+}
+def_int $int7 = calc((if_getheight($component1) + if_getheight($component2)) / 2);
+if_setposition(0, calc(0 - scale(pow($int6 + 1, 2), pow(21, 2), $int7)), ^setpos_abs_centre, ^setpos_abs_centre, $component2);
+~oculus_flashers($component3, $component4, $component5);

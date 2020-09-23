@@ -1,0 +1,11 @@
+// 2395
+[clientscript,script2395](component $component0, int $comsubid1, int $int2, int $int3, int $int4, int $int5, int $clock6)
+def_int $int7 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	$int7 = calc(clientclock - $clock6);
+	if ($int7 < 20) {
+		return;
+	}
+	$int7 = calc($int7 - 20);
+	cc_setmodelangle(0, 0, $int4, calc($int2 + scale(~min(170, $int7), 170, $int3 - $int2)), 0, $int5);
+}

@@ -1,0 +1,6 @@
+// 1015
+[clientscript,script1015](component $component0, int $comsubid1, int $colour2, int $trans3)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setcolour($colour2);
+	cc_settrans($trans3);
+}

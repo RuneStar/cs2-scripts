@@ -1,0 +1,61 @@
+// 2526
+[proc,script2526]()(int)
+def_enum $enum0 = ~toplevel_getcomponents;
+if ($enum0 ! enum_1745) {
+	return(0);
+}
+%varcint222 = clientclock;
+def_component $component1 = enum(component, component, $enum0, interface_161:15);
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $height5 = if_getheight($component1);
+def_int $width6 = if_getwidth($component1);
+def_int $height7 = if_getheight(if_getlayer($component1));
+def_int $width8 = if_getwidth(if_getlayer($component1));
+def_int $int9 = calc($width8 - 204 + 3);
+def_int $int10 = calc($int9 / 2 - $width6 / 2);
+def_int $height11 = calc($height7 - 184 + 26);
+def_int $int12 = calc($width8 - 182 + 40);
+def_int $int13 = calc($int12 / 2 - $width6 / 2);
+if ($height5 >= $height11) {
+	$int4 = 1;
+}
+if (~script2518 = 1) {
+	$int2 = 1;
+}
+if (~script2519 = 1) {
+	$int3 = 1;
+}
+def_int $int14 = calc(($height7 - $height5) / 2);
+if (%varcint41 = 1337 & if_hassub(interface_162:561) = false & %varbit6538 = 1) {
+	$int13 = calc(($int12 - 18) / 2 - $width6 / 2);
+	if_setposition(~max(0, $int13), 0, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	return(3);
+}
+if (calc($width6 + 204 * 2 + 10) <= $width8 & $int4 = 0) {
+	if_setposition(0, ~min(64, $int14), ^setpos_abs_centre, ^setpos_abs_centre, $component1);
+	return(0);
+}
+if ($int2 = 1) {
+	if ($int4 = 0) {
+		if_setposition(~max(0, $int10), ~min(64, $int14), ^setpos_abs_right, ^setpos_abs_centre, $component1);
+	} else {
+		if_setposition(~max(calc($width8 - $int12), $int13), ~min(64, $int14), ^setpos_abs_right, ^setpos_abs_centre, $component1);
+	}
+	return(1);
+}
+if ($int3 = 1) {
+	if ($int4 = 1 & calc($int13 + $width6 + 204 + 4) <= $width8) {
+		if_setposition(~max(0, $int13), ~min(64, $int14), ^setpos_abs_left, ^setpos_abs_centre, $component1);
+	} else {
+		if_setposition(~max(0, $int10), ~min(64, $int14), ^setpos_abs_left, ^setpos_abs_centre, $component1);
+	}
+	return(2);
+}
+if ($int4 = 0) {
+	if_setposition(0, ~min(64, $int14), ^setpos_abs_centre, ^setpos_abs_centre, $component1);
+} else {
+	if_setposition(~max(0, $int13), ~min(64, $int14), ^setpos_abs_left, ^setpos_abs_centre, $component1);
+}
+return(0);

@@ -1,0 +1,10 @@
+// 3138
+[proc,script3138](component $component0, int $int1, int $int2)
+cc_create($component0, ^iftype_graphic, $int1);
+cc_setposition(calc(1 + 28 * $int1), 1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(27, 27, ^setsize_abs, ^setsize_abs);
+def_graphic $graphic3 = enum(int, graphic, enum_1386, $int2);
+if ($graphic3 ! null) {
+	cc_setgraphic($graphic3);
+}
+cc_setfill(true);

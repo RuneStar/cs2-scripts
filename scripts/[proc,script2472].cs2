@@ -1,0 +1,24 @@
+// 2472
+[proc,script2472](string $string0, int $int0, string $string1)(string)
+def_int $int1 = 0;
+def_string $string2 = "";
+def_int $length2 = string_length($string0);
+if (string_length($string1) > 0 & $int0 = 1) {
+	if ($length2 > 0) {
+		$string2 = lowercase(substring($string0, calc($length2 - 1), $length2));
+		if (compare($string2, "k") = 0 | compare($string2, "m") = 0 | compare($string2, "b") = 0) {
+			return($string0);
+		}
+	}
+	$string1 = substring($string1, 0, 1);
+	if (string_indexof_string("kKmMbB", $string1, 0) ! -1) {
+		$int1 = 1;
+	}
+	if (($int1 = 1 | string_indexof_string("0123456789", $string1, 0) ! -1) & $length2 < 10) {
+		if ($int1 = 1 & $length2 <= 0) {
+			return($string0);
+		}
+		return(append($string0, $string1));
+	}
+}
+return($string0);

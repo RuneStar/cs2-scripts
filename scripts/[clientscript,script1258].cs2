@@ -1,0 +1,13 @@
+// 1258
+[clientscript,script1258](int $opindex0, int $comsubid1, component $component2, int $comsubid3, string $text0)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+if (cc_find($component2, $comsubid1) = ^true) {
+	if (.cc_find($component2, $comsubid3) = ^true) {
+		.cc_settext("---");
+		.cc_setontimer("script1259(calc(clientclock + 60), $component2, $comsubid3, $text0)");
+	}
+	cc_resume_pausebutton;
+}

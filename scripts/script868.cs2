@@ -1,8 +1,0 @@
-// 868
-script868(component $component0)
-cc_deleteall($component0);
-cc_create($component0, ^iftype_graphic, 0);
-cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-~script955;
-if_setontimer("script954(event_com, cc_getid)", $component0);

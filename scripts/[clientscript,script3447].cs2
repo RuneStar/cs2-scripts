@@ -1,0 +1,9 @@
+// 3447
+[clientscript,script3447](int $opindex0, component $component1, int $comsubid2, int $trans3)
+if ($opindex0 = 1 & cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans(140);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	cc_setonmouseleave(null);
+	cc_setontimer("script3448(calc(clientclock + 20), $component1, $comsubid2, $trans3)");
+}

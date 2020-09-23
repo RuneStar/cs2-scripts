@@ -1,0 +1,79 @@
+// 1406
+[clientscript,script1406](int $int0, int $int1)
+if ($int0 > 31) {
+	$int0 = 31;
+}
+cc_deleteall(interface_458:2);
+cc_create(interface_458:2, ^iftype_rectangle, 0);
+cc_sethide(true);
+def_int $intarray0(calc($int0 + 1));
+def_int $int2 = 1;
+while ($int2 <= $int0) {
+	$intarray0($int2) = $int2;
+	cc_create(interface_458:2, ^iftype_rectangle, $int2);
+	cc_sethide(true);
+	$int2 = calc($int2 + 1);
+}
+~script1407(intarray0, 1, $int0);
+def_int $int3 = ^max_32bit_int;
+def_int $height4 = 0;
+def_int $int5 = 4;
+if ($int0 <= 3) {
+	$height4, $int5 = 36, 18;
+	cc_deleteall(interface_458:3);
+	cc_create(interface_458:3, ^iftype_text, 0);
+	cc_setsize(0, $height4, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+	cc_settext("Select a piece of furniture to build.");
+} else if ($int0 <= 8) {
+	$int3 = 5;
+} else {
+	$int3 = calc($int0 / 2 + $int0 % 2 + 1);
+}
+def_component $component6 = null;
+def_int $height7 = $height4;
+$int2 = 1;
+while ($int2 <= $int0 & $int2 < $int3) {
+	$component6 = enum(int, component, enum_1461, $intarray0($int2));
+	if_sethide(false, $component6);
+	if_setposition(0, $height7, ^setpos_abs_left, ^setpos_abs_top, $component6);
+	if ($int1 = 0) {
+		~script1631($int2, $intarray0($int2), $component6);
+	}
+	$height7, $int2 = calc($height7 + if_getheight($component6) + $int5), calc($int2 + 1);
+}
+if ($int2 > 1) {
+	$height7 = calc($height7 - $int5);
+}
+if_setscrollpos(0, 0, interface_458:3);
+if ($height7 > if_getheight(interface_458:3)) {
+	if_setscrollsize(0, $height7, interface_458:3);
+} else {
+	if_setscrollsize(0, 0, interface_458:3);
+	%varcint58 = 0;
+}
+~scrollbar_vertical(interface_458:35, interface_458:3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if (cc_find(interface_458:35, 1) = ^true) {
+	~scrollbar_vertical_doscroll(interface_458:35, interface_458:3, %varcint58, true);
+}
+$height7 = $height4;
+while ($int2 <= $int0) {
+	$component6 = enum(int, component, enum_1461, $intarray0($int2));
+	if_sethide(false, $component6);
+	if_setposition(0, $height7, ^setpos_abs_right, ^setpos_abs_top, $component6);
+	if ($int1 = 0) {
+		~script1631($int2, $intarray0($int2), $component6);
+	}
+	$height7, $int2 = calc($height7 + if_getheight($component6) + $int5), calc($int2 + 1);
+}
+while ($int2 <= 31) {
+	if_sethide(true, enum(int, component, enum_1461, $int2));
+	$int2 = calc($int2 + 1);
+}
+if ($int1 = 0) {
+	~chatdefault_stopinput;
+}

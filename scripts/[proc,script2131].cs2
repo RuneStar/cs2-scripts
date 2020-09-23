@@ -1,0 +1,18 @@
+// 2131
+[proc,script2131](component $component0)
+def_int $int1 = inv_total(inv, glistening_tear_22207);
+def_string $string0 = "";
+if ($int1 > 700) {
+	$string0, $int1 = "Only <col=ffffff><~tostring_spacer(700, ",")></col> may be exchanged.", 700;
+} else {
+	$string0 = "<col=ffffff><~tostring_spacer($int1, ",")></col> x <oc_name(glistening_tear_22207)>";
+}
+cc_setobject_nonum(glistening_tear_22207, $int1);
+.cc_settext($string0);
+def_int $width2 = if_getwidth($component0);
+def_int $int3 = parawidth($string0, $width2, p12_full);
+.cc_setsize($int3, 32, ^setsize_abs, ^setsize_abs);
+$int3 = calc(36 + 3 + $int3);
+def_int $x4 = calc(($width2 - $int3) / 2);
+cc_setposition($x4, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+.cc_setposition($x4, 0, ^setpos_abs_right, ^setpos_abs_bottom);

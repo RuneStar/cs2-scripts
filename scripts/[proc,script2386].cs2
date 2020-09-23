@@ -1,0 +1,12 @@
+// 2386
+[proc,script2386]
+def_enum $enum0 = ~toplevel_getcomponents;
+def_component $component1 = enum(component, component, $enum0, interface_601:72);
+if ($component1 = null) {
+	return;
+}
+if (~script2387 = 0) {
+	if_sethide(true, $component1);
+} else {
+	if_sethide(false, $component1);
+}

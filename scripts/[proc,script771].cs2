@@ -1,0 +1,15 @@
+// 771
+[proc,script771](component $component0, int $int1, int $int2, int $int3, int $width4, int $height5)(int)
+cc_create($component0, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition(calc($int2 + 1), calc($int3 + 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width4, $height5, ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x5a5245);
+cc_create($component0, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width4, $height5, ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x383023);
+return($int1);

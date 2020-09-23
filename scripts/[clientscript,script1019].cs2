@@ -1,0 +1,10 @@
+// 1019
+[clientscript,script1019](int $opindex0, component $component1, int $comsubid2, int $colour3)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_setcolour(^white);
+	cc_setontimer("script1020(event_com, event_comsubid, $colour3, calc(clientclock + 30))");
+}

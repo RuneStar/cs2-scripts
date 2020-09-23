@@ -1,0 +1,23 @@
+// 1023
+[clientscript,script1023](int $opindex0, int $int1, stat $stat2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+def_int $int25 = 0;
+def_int $int26 = 0;
+if ($int1 = -1) {
+	%varbit4703 = 0;
+} else {
+	%varbit4703 = calc($int1 + 1);
+	$int25, $int26 = ~xpdrops_data_get($stat2);
+	if ($int26 = -1) {
+		%varbit4704 = 1;
+	} else if ($int26 > $int25) {
+		%varbit4704 = 2;
+	} else {
+		%varbit4704 = 0;
+	}
+	%var261, %var262 = $int25, $int26;
+}
+~script1026($component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21, $component22, $component23, $component24);

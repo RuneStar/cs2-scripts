@@ -1,0 +1,7 @@
+// 1257
+[clientscript,script1257](int $clock0, component $component1, int $int2, string $string0, obj $obj3, obj $obj4)
+if (clientclock < $clock0) {
+	return;
+}
+if_setontimer(null, $component1);
+~script1253($component1, $int2, $string0, $obj3, $obj4);

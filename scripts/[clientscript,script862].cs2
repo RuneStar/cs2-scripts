@@ -1,0 +1,15 @@
+// 862
+[clientscript,script862](int $opindex0, component $component1, component $layer2, int $comsubid3)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+cc_deleteall($component1);
+~options_button_on($component1, 0);
+if_setcolour(^white, interface_127:13);
+if_setonmouserepeat(null, interface_127:12);
+if_setonmouseleave(null, interface_127:12);
+if_setontimer("script863($component1, calc(clientclock + 20))", $component1);
+if (cc_find($layer2, $comsubid3) = ^true) {
+	cc_resume_pausebutton;
+}

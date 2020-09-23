@@ -1,0 +1,18 @@
+// 2134
+[clientscript,script2134](int $opindex0, int $comsubid1, int $comsubid2, component $component3, string $string0, graphic $graphic4, string $string1, component $component5, component $component6, component $component7, component $component8)
+if ($opindex0 = 1 & cc_find($component3, $comsubid1) = ^true & .cc_find($component3, $comsubid2) = ^true) {
+	sound_synth(synth_2266, 1, 0);
+	cc_setgraphic("miscgraphics,9");
+	.cc_settrans(0);
+	if_clearops($component3);
+	if_setonmouserepeat(null, $component3);
+	if_setonmouseleave(null, $component3);
+	if_setonop(null, $component3);
+	if ($component5 ! null & $component6 ! null & $component7 ! null & $component8 ! null) {
+		if_sethide(false, $component5);
+		if_settext($string1, $component6);
+		if_sethide(false, $component7);
+		if_sethide(true, $component8);
+	}
+	if_setontimer("script2135(calc(clientclock + 20), $component3, $string0, $graphic4, $string1, $component5, $component6, $component7, $component8)", $component3);
+}

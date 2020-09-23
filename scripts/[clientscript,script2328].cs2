@@ -1,0 +1,10 @@
+// 2328
+[clientscript,script2328](component $component0, int $int1, string $string0, int $int2, int $clock3)
+if (clientclock < $clock3) {
+	return;
+}
+if (cc_find($component0, $int1) = ^true) {
+	cc_setcolour(0xff981f);
+	~script2325($string0, $int2);
+}
+~script2326($component0, $int1, $string0, $int2);

@@ -1,0 +1,29 @@
+// 2211
+[clientscript,script2211](component $component0)
+def_int $width1 = if_getwidth($component0);
+def_int $height2 = if_getheight($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setgraphic("graphic_1049");
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settiling(true);
+cc_setsize(130, 36, ^setsize_abs, ^setsize_abs);
+cc_create($component0, ^iftype_graphic, 1);
+cc_setgraphic("miscgraphics,7");
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_create($component0, ^iftype_graphic, 2);
+cc_setgraphic("miscgraphics,8");
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_create($component0, ^iftype_text, 3);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(0xf7f0df);
+cc_settextshadow(true);
+cc_settext("Fill");
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($width1, $height2, ^setsize_abs, ^setsize_abs);
+cc_setonmouseover("cc_colour_swapper(event_com, 3, ^red)");
+cc_setonmouseleave("cc_colour_swapper(event_com, 3, 0xf7f0df)");
+if_setop(1, "Fill", $component0);
+if_setonop("script2212(event_opindex)", $component0);

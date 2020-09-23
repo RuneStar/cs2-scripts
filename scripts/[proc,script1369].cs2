@@ -1,0 +1,55 @@
+// 1369
+[proc,script1369]()(int)
+def_int $flags0 = 0;
+def_int $int1 = ~script1371;
+def_int $int2 = ~script1374;
+def_int $int3 = ~script1372;
+def_int $int4 = ~script1373;
+def_int $int5 = 200;
+$int5 = enum(int, int, enum_1408, %varbit3251);
+if ($int1 >= $int5 & $int5 > 0) {
+	$flags0 = setbit($flags0, 0);
+}
+$int5 = enum(int, int, enum_1408, %varbit3254);
+if ($int2 >= $int5 & $int5 > 0) {
+	$flags0 = setbit($flags0, 1);
+}
+$int5 = enum(int, int, enum_1408, %varbit3253);
+if ($int3 >= $int5 & $int5 > 0) {
+	$flags0 = setbit($flags0, 2);
+}
+$int5 = enum(int, int, enum_1408, %varbit3255);
+if ($int4 >= $int5 & $int5 > 0) {
+	$flags0 = setbit($flags0, 3);
+}
+def_int $int6 = ~min(~min($int1, $int2), ~min($int3, $int4));
+def_int $int7 = ~max(~max($int1, $int2), ~max($int3, $int4));
+if ($int6 >= 375) {
+	$flags0 = setbit($flags0, 8);
+	$flags0 = setbit($flags0, 9);
+}
+if ($int6 >= 275) {
+	$flags0 = setbit($flags0, 4);
+	$flags0 = setbit($flags0, 5);
+	$flags0 = setbit($flags0, 6);
+	$flags0 = setbit($flags0, 7);
+}
+if ($int6 >= 150) {
+	$flags0 = setbit($flags0, 11);
+}
+if ($int6 >= 100) {
+	$flags0 = setbit($flags0, 10);
+}
+if ($int7 >= 500) {
+	$flags0 = setbit($flags0, 15);
+}
+if ($int7 >= 400 & %var262 > 5) {
+	$flags0 = setbit($flags0, 14);
+}
+if ($int7 >= 200 & %var262 > 2) {
+	$flags0 = setbit($flags0, 13);
+}
+if (inv_total(inv, coins_995) >= 95000) {
+	$flags0 = setbit($flags0, 12);
+}
+return($flags0);

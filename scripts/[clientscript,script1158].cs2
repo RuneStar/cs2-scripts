@@ -1,0 +1,20 @@
+// 1158
+[clientscript,script1158](component $component0)
+cc_deleteall($component0);
+def_int $size1 = 0;
+def_int $size2 = inv_size(inv);
+def_int $int3 = calc((42 - 36) * 3 - 2);
+def_int $int4 = calc((36 - 32) * 2);
+while ($size1 < $size2) {
+	cc_create($component0, ^iftype_graphic, $size1);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int3 + $size1 % 4 * 42), calc($int4 + $size1 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	cc_sethide(false);
+	$size1 = calc($size1 + 1);
+}
+~script1160($component0);
+if_setoninvtransmit("script1159($component0){inv}", $component0);

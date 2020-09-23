@@ -1,0 +1,20 @@
+// 3139
+[proc,script3139](component $component0, int $int1, int $int2)
+cc_create($component0, ^iftype_graphic, $int1);
+def_int $x3 = 113;
+if (calc($int1 % 2) ! 0) {
+	$x3 = 127;
+}
+def_int $y4 = 1;
+if ($int1 > 5) {
+	$y4 = 15;
+}
+cc_setposition($x3, $y4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+def_graphic $graphic5 = enum(int, graphic, enum_2637, $int2);
+if ($graphic5 = null) {
+	cc_sethide(true);
+} else {
+	cc_sethide(false);
+	cc_setgraphic($graphic5);
+}

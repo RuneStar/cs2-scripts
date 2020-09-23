@@ -1,0 +1,13 @@
+// 1682
+[proc,script1682](component $component0, boolean $boolean1)
+cc_deleteall($component0);
+def_int $comsubid2 = 0;
+if ($boolean1 = true) {
+	$comsubid2 = ~v2_stone_button_in_filled($component0);
+} else {
+	$comsubid2 = ~v2_stone_button_out_filled($component0);
+}
+cc_create($component0, ^iftype_model, $comsubid2);
+cc_setsize(42, 42, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setobject_nonum(old_school_bond_13190, 1);

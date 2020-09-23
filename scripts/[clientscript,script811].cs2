@@ -1,0 +1,12 @@
+// 811
+[clientscript,script811](component $component0, int $comsubid1, int $int2, int $int3, int $int4)
+def_int $int5 = calc((clientclock - $int2) % 100);
+if ($int5 >= 50) {
+	$int5 = calc(100 - $int5);
+}
+def_int $trans6 = calc($int3 + interpolate(0, $int5, 0, 50, $int4 - $int3));
+if ($comsubid1 = -1) {
+	if_settrans($trans6, $component0);
+} else if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settrans($trans6);
+}

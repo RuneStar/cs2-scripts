@@ -1,0 +1,5 @@
+// 958
+[clientscript,script958](component $component0, int $comsubid1, int $comsubid2)
+if (calc(clientclock % 250) = 0 & cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
+	~script1506;
+}

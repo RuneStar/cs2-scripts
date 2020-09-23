@@ -1,0 +1,12 @@
+// 3437
+[proc,script3437](int $index0)(int)
+def_int $int1 = ~script3439($index0);
+def_int $int2 = -1;
+if ($int1 = 0) {
+	$int2 = ~script3438($index0, 2);
+} else if ($int1 = 2) {
+	$int2 = ~script3438($index0, 1);
+} else if ($int1 = 1) {
+	$int2 = ~script3438($index0, 0);
+}
+return($int2);

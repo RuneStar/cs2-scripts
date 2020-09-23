@@ -1,0 +1,10 @@
+// 3029
+[clientscript,script3029](component $component0, int $comsubid1)
+sound_synth(synth_2266, 1, 0);
+if (%varbit9330 = 0) {
+	~script3034($component0, $comsubid1, 1);
+	%varbit9330 = 1;
+} else {
+	~script3034($component0, $comsubid1, 0);
+	%varbit9330 = 0;
+}

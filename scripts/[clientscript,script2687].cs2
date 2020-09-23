@@ -1,0 +1,42 @@
+// 2687
+[clientscript,script2687](string $string0)
+cc_deleteall(interface_100:31);
+cc_deleteall(interface_100:32);
+def_int $int0 = 0;
+def_string $string1 = "";
+def_string $string2 = "";
+$string1, $string2 = ~script632($string0);
+while (string_length($string1) > 0) {
+	cc_create(interface_100:31, ^iftype_rectangle, $int0);
+	cc_setposition(0, calc($int0 * 25), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
+	cc_setcolour(^white);
+	cc_setfill(true);
+	cc_setop(1, "Preview");
+	cc_setopbase("<col=ff9040><$string1></col>");
+	$int0 = calc($int0 + 1);
+	$string1, $string2 = ~script632($string2);
+}
+def_int $height1 = calc($int0 * 25);
+if ($height1 < if_getheight(interface_100:31)) {
+	if_setscrollsize(0, 0, interface_100:31);
+} else {
+	if_setscrollsize(0, $height1, interface_100:31);
+}
+if_setscrollpos(0, 0, interface_100:31);
+~scrollbar_vertical(interface_100:32, interface_100:31, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+$string1, $string2 = ~script632($string0);
+def_int $int2 = 0;
+while ($int2 < $int0) {
+	cc_create(interface_100:31, ^iftype_text, calc($int0 + $int2));
+	cc_setposition(0, calc($int2 * 25), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
+	cc_settextfont(p11_full);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext($string1);
+	$int2 = calc($int2 + 1);
+	$string1, $string2 = ~script632($string2);
+}
+~script2690($int0);
+if_setonvartransmit("script2688($int0){var261}", interface_100:29);

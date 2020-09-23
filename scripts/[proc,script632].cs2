@@ -1,0 +1,17 @@
+// 632
+[proc,script632](string $string0)(string, string)
+def_int $length0 = string_length($string0);
+if ($length0 <= 0) {
+	return("", "");
+}
+def_int $index1 = string_indexof_string($string0, "|", 0);
+if ($index1 = -1) {
+	return($string0, "");
+}
+if ($index1 = 0) {
+	return("", substring($string0, 1, $length0));
+}
+if (calc($index1 + 1) >= $length0) {
+	return(substring($string0, 0, $index1), "");
+}
+return(substring($string0, 0, $index1), substring($string0, calc($index1 + 1), $length0));

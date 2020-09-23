@@ -1,6 +1,0 @@
-// 2467
-script2467(string $string0, string $text1)
-sound_synth(synth_2266, 1, 0);
-cc_settext("<col=ff2020><$string0></col>");
-.cc_settrans(255);
-.cc_setontimer("script2468(event_com, cc_getid, .cc_getid, $text1, calc(clientclock + 150))");

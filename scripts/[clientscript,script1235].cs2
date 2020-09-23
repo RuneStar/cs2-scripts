@@ -1,0 +1,73 @@
+// 1235
+[clientscript,script1235](inv $inv0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14, int $int15, int $int16, int $int17, int $int18, int $int19, int $int20, int $int21, int $int22, int $int23, int $int24, int $int25, int $int26, int $int27, int $int28)
+%varcint81 = $int1;
+%varcint82 = $int2;
+%varcint83 = $int3;
+%varcint84 = $int4;
+%varcint85 = $int5;
+%varcint86 = $int6;
+%varcint87 = $int7;
+%varcint88 = $int8;
+%varcint89 = $int9;
+%varcint90 = $int10;
+%varcint91 = $int11;
+%varcint92 = $int12;
+%varcint93 = $int13;
+%varcint94 = $int14;
+%varcint95 = $int15;
+%varcint96 = $int16;
+%varcint97 = $int17;
+%varcint98 = $int18;
+%varcint99 = $int19;
+%varcint100 = $int20;
+%varcint101 = $int21;
+%varcint102 = $int22;
+%varcint104 = $int23;
+%varcint105 = $int24;
+%varcint106 = $int25;
+%varcint107 = $int26;
+%varcint108 = $int27;
+%varcint109 = $int28;
+def_int $int29 = inv_size($inv0);
+def_int $intarray0($int29);
+$intarray0(0) = $int1;
+$intarray0(1) = $int2;
+$intarray0(2) = $int3;
+$intarray0(3) = $int4;
+$intarray0(4) = $int5;
+$intarray0(5) = $int6;
+$intarray0(6) = $int7;
+$intarray0(7) = $int8;
+$intarray0(8) = $int9;
+$intarray0(9) = $int10;
+$intarray0(10) = $int11;
+$intarray0(11) = $int12;
+$intarray0(12) = $int13;
+$intarray0(13) = $int14;
+$intarray0(14) = $int15;
+$intarray0(15) = $int16;
+$intarray0(16) = $int17;
+$intarray0(17) = $int18;
+$intarray0(18) = $int19;
+$intarray0(19) = $int20;
+$intarray0(20) = $int21;
+$intarray0(21) = $int22;
+$intarray0(22) = $int23;
+$intarray0(23) = $int24;
+$intarray0(24) = $int25;
+$intarray0(25) = $int26;
+$intarray0(26) = $int27;
+$intarray0(27) = $int28;
+def_string $string0 = "Invalid item.";
+while ($int29 > 0) {
+	$int29 = calc($int29 - 1);
+	if (cc_find(interface_81:5, $int29) = ^true) {
+		if ($inv0 = inv & $intarray0($int29) <= -1 & inv_getobj(inv, $int29) ! null) {
+			cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, interface_81:7, $string0, 25, 512)");
+			cc_setonmouseleave("deltooltip(interface_81:7)");
+		} else {
+			~trade_tooltip(inv_getnum($inv0, $int29), $intarray0($int29), interface_81:7);
+		}
+	}
+}
+~deltooltip_action(interface_81:7);

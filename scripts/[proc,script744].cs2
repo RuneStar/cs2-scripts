@@ -1,0 +1,20 @@
+// 744
+[proc,script744](int $int0)(string)
+def_int $int1 = calc($int0 / 180000);
+def_int $int2 = calc($int0 % 180000 / 3000);
+def_int $int3 = calc($int0 % 3000 / 50);
+def_string $string0 = tostring($int1);
+if ($int2 >= 10) {
+	$string0 = append($string0, ":<tostring($int2)>");
+} else {
+	$string0 = append($string0, ":0<tostring($int2)>");
+}
+if ($int3 >= 10) {
+	$string0 = append($string0, ":<tostring($int3)>");
+} else {
+	$string0 = append($string0, ":0<tostring($int3)>");
+}
+if ($int0 <= 3000) {
+	$string0 = "<col=ff0000><$string0></col>";
+}
+return($string0);

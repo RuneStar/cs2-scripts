@@ -1,9 +1,0 @@
-// 2511
-script2511(component $component0)
-if (~on_mobile = false) {
-	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
-	return;
-}
-if (if_getlayer($component0) ! null) {
-	~script2513($component0, ^min_32bit_int);
-}

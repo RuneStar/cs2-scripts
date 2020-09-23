@@ -1,0 +1,8 @@
+// 2649
+[clientscript,script2649](component $component0, int $comsubid1, int $comsubid2, graphic $graphic3, component $component4)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setgraphic($graphic3);
+}
+if (cc_find($component0, $comsubid2) = ^true) {
+	cc_setcolour(0xff981f);
+}

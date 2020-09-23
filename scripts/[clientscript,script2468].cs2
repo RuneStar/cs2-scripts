@@ -1,0 +1,7 @@
+// 2468
+[clientscript,script2468](component $component0, int $comsubid1, int $comsubid2, string $text0, int $clock3)
+if (clientclock >= $clock3 & cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
+	cc_settext($text0);
+	.cc_settrans(0);
+	.cc_setontimer(null);
+}

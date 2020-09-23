@@ -1,0 +1,11 @@
+// 1679
+[clientscript,script1679](int $opindex0, component $component1, component $component2)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+~script1682($component1, true);
+if_setonmouserepeat(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setonop(null, $component1);
+if_setontimer("script1680(event_com, $component2, calc(clientclock + 40))", $component1);

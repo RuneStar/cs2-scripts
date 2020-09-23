@@ -1,0 +1,19 @@
+// 2348
+[proc,script2348](component $component0)
+def_obj $obj1 = inv_getobj(inv_612, 0);
+def_string $opbase0 = "";
+if ($obj1 ! null) {
+	$opbase0 = "<col=ff981f><oc_name($obj1)>";
+	if_setobject($obj1, -1, $component0);
+	if_setopbase($opbase0, $component0);
+	if_setmodelangle(0, 0, 512, 458, 0, 400, $component0);
+	if_setop(1, "Take", $component0);
+	if_setop(10, "Examine<col=ff9040>", $component0);
+	if_setgraphicshadow(0x333333, $component0);
+	if_setoutline(1, $component0);
+} else {
+	if_setobject(null, 0, $component0);
+	if_setopbase("", $component0);
+	if_setop(1, "", $component0);
+	if_setop(10, "", $component0);
+}

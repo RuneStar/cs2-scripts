@@ -1,0 +1,31 @@
+// 1255
+[proc,script1255](boolean $boolean0, component $component1, string $text0, string $text1, obj $obj2)
+def_int $int3 = 0;
+if ($boolean0 = true) {
+	$int3 = ~v2_stone_button_in_filled($component1);
+} else {
+	$int3 = ~v2_stone_button_out_filled($component1);
+}
+cc_create($component1, ^iftype_model, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(calc(if_getwidth($component1) - 40), calc(if_getheight($component1) - 40), ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setobject_nonum($obj2, 1);
+cc_create($component1, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+.cc_create($component1, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+.cc_setsize(0, 15, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setcolour(0xff981f);
+.cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+.cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+.cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+cc_settextshadow(true);
+.cc_settextshadow(true);
+cc_settext($text0);
+.cc_settext($text1);

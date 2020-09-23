@@ -1,0 +1,10 @@
+// 3438
+[proc,script3438](int $index0, int $int1)(int)
+%var2715 = clearbit(%var2715, $index0);
+%var2716 = clearbit(%var2716, $index0);
+if ($int1 = 2) {
+	%var2715 = setbit(%var2715, $index0);
+} else if ($int1 = 1) {
+	%var2716 = setbit(%var2716, $index0);
+}
+return($int1);

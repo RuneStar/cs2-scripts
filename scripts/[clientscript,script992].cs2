@@ -1,0 +1,13 @@
+// 992
+[clientscript,script992](component $component0, int $comsubid1, component $component2, string $string0, string $string1, fontmetrics $fontmetrics3, int $int4)
+if (%varcint1 < calc(clientclock + $int4)) {
+	if (%varcint1 < clientclock) {
+		%varcint1 = clientclock;
+	}
+	%varcint1 = calc(%varcint1 + 2);
+	return;
+}
+%varcint1 = calc(clientclock + $int4 + 10);
+if (%varcint2 = 0 & if_gethide($component2) = false) {
+	~script2344($component0, $comsubid1, $component2, $string0, $string1, $fontmetrics3);
+}

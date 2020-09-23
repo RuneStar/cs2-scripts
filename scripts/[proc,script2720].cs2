@@ -1,0 +1,7 @@
+// 2720
+[proc,script2720](component $component0, int $int1, component $component2)
+if ($int1 < 2) {
+	if_setposition(calc(if_getx($component0) + (if_getwidth($component0) - if_getwidth($component2)) / 2), calc(if_gety($component0) + 40 + (if_getheight($component2) + 5) * $int1), ^setpos_abs_left, ^setpos_abs_top, $component2);
+} else {
+	if_setposition(calc(if_getx($component0) + (if_getwidth($component0) - if_getwidth($component2)) / 2), calc(if_gety($component0) + if_getheight($component0) - if_getheight($component2)), ^setpos_abs_left, ^setpos_abs_top, $component2);
+}

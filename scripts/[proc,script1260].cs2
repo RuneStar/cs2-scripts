@@ -1,0 +1,12 @@
+// 1260
+[proc,script1260](int $flags0, int $flags1, int $int2)(int)
+if ($int2 < 30) {
+	if (testbit($flags0, $int2) = ^true) {
+		return(1);
+	}
+	return(0);
+}
+if ($int2 < 60 & testbit($flags1, calc($int2 - 30)) = ^true) {
+	return(1);
+}
+return(0);

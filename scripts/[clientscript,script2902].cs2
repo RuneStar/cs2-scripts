@@ -1,0 +1,7 @@
+// 2902
+[clientscript,script2902](int $int0, int $int1)
+$int1 = calc(clientclock + $int1 * 30);
+if_setontimer("script2903($int1)", interface_636:8);
+$int0 = calc($int0 * 100 / 600 * 150 / 100);
+if_setsize($int0, 20, ^setsize_abs, ^setsize_abs, interface_636:5);
+if_setsize(calc(150 - $int0), 20, ^setsize_abs, ^setsize_abs, interface_636:4);

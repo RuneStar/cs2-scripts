@@ -1,0 +1,11 @@
+// 2161
+[clientscript,script2161](char $keychar0, component $component1, string $string0)
+if ($keychar0 = null | ~keypress_permit(608, -1) = 0) {
+	return;
+}
+if (string_indexof_char($string0, $keychar0) ! -1) {
+	~v2_stone_button_in($component1);
+	if_setonkey(null, $component1);
+	if_setontimer("script2162($component1, $string0, calc(clientclock + 40))", $component1);
+	if_resume_pausebutton($component1);
+}

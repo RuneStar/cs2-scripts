@@ -1,0 +1,22 @@
+// 222
+[proc,script222](string $string0)
+def_string $string1 = escape(%varcstring359);
+def_int $length0 = 12;
+switch_int (%varcint5) {
+	case 6, 9, 11, 13 :
+		$length0 = 80;
+	case 7, 12 :
+		$length0 = 10;
+	case 14, 17 :
+		$length0 = 25;
+		$string1, %varcint66 = append("<col=000000><$string0></col> ", $string1), 20;
+}
+if (string_length(%varcstring359) < $length0) {
+	$string1 = append($string1, "*");
+}
+if (parawidth($string1, ^max_32bit_int, b12_full) > if_getwidth(interface_162:45)) {
+	if_settextalign(^settextalign_right, ^settextalign_centre, 0, interface_162:45);
+} else {
+	if_settextalign(^settextalign_centre, ^settextalign_centre, 0, interface_162:45);
+}
+if_settext($string1, interface_162:45);

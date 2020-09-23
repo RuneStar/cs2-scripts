@@ -1,0 +1,19 @@
+// 1392
+[proc,script1392](component $component0, string $string0)(int)
+def_int $int1 = calc(parawidth($string0, 512, p11_full) + 10);
+if_setsize($int1, if_getheight($component0), ^setsize_abs, ^setsize_abs, $component0);
+cc_deleteall($component0);
+def_int $comsubid2 = ~options_button_off($component0, 0);
+cc_create($component0, ^iftype_text, $comsubid2);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0x7f7f7f);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+if_setonmouserepeat(null, $component0);
+if_setonmouseleave(null, $component0);
+if_setonop(null, $component0);
+if_clearops($component0);
+return($int1);

@@ -1,0 +1,19 @@
+// 939
+[proc,script939](component $component0, int $width1, int $height2, component $component3)
+def_int $width4 = if_getwidth($component0);
+def_int $height5 = if_getheight($component0);
+if ($width4 = $width1 & $height5 = $height2) {
+	return;
+}
+if ($width4 > 700) {
+	if ($height5 > 500) {
+		if_setsize(700, 500, ^setsize_abs, ^setsize_abs, $component3);
+	} else {
+		if_setsize(700, 0, ^setsize_abs, ^setsize_minus, $component3);
+	}
+} else if ($height5 > 500) {
+	if_setsize(0, 500, ^setsize_minus, ^setsize_abs, $component3);
+} else {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component3);
+}
+if_setontimer("script938($component0, $width4, $height5, $component3)", $component0);

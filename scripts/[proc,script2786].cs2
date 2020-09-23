@@ -1,0 +1,10 @@
+// 2786
+[proc,script2786](stat $stat0)(int)
+switch_stat ($stat0) {
+	case ranged, magic :
+		return(calc(pow(stat_base($stat0), 2) / 600 * 32));
+	case prayer :
+		return(calc(pow(stat_base($stat0), 2) / 600 * 18));
+	case default :
+		return(calc(pow(stat_base($stat0), 2) / 600 * 35));
+}

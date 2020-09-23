@@ -1,0 +1,16 @@
+// 664
+[clientscript,script664](boolean $boolean0)
+def_int $clock1 = clientclock;
+def_int $mesuid2 = -1;
+if ($boolean0 = true | $clock1 = %varcint65 | calc($clock1 % 25) = 0) {
+	$mesuid2 = ~script553;
+	if ($clock1 = %varcint65) {
+		~rebuildchatbox($mesuid2);
+	}
+	~rebuildpmbox($mesuid2);
+	if (%varcint65 > $clock1 | reboottimer > 0 | %varcint55 > calc($clock1 - 3000)) {
+		if_setontimer("script664(false)", interface_162:0);
+	} else {
+		if_setontimer(null, interface_162:0);
+	}
+}

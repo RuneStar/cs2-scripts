@@ -1,0 +1,54 @@
+// 81
+[proc,script81](enum $enum0, int $count1, component $component2, int $int3)(int)
+def_int $int4 = 0;
+def_int $int5 = 255;
+def_int $int6 = 0;
+def_struct $struct7 = enum(int, struct, enum_2649, $count1);
+if ($struct7 ! null & cc_find($component2, $count1) = ^true) {
+	$int4 = calc($count1 * 32 + 30);
+	.cc_create($component2, ^iftype_graphic, $int3);
+	$int3 = calc($int3 + 1);
+	.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(6, $int4, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setobject_nonum(struct_param($struct7, param_855), 1);
+	.cc_setgraphicshadow(0x333333);
+	.cc_setoutline(1);
+	.cc_create($component2, ^iftype_text, $int3);
+	$int3 = calc($int3 + 1);
+	.cc_setsize(calc(6 + 36 + 30), 16, ^setsize_minus, ^setsize_abs);
+	.cc_setposition(30, $int4, ^setpos_abs_right, ^setpos_abs_top);
+	.cc_setcolour(0xff981f);
+	.cc_settextfont(p12_full);
+	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	.cc_settextshadow(true);
+	if ($enum0 = enum_2855) {
+		$int6 = struct_param($struct7, param_944);
+	} else {
+		$int6 = struct_param($struct7, param_943);
+	}
+	.cc_settext("<col=ffb83f><struct_param($struct7, param_853)></col> - <~tostring_spacer($int6, ",")> points");
+	cc_setopbase("<col=ff9040><struct_param($struct7, param_853)></col>");
+	.cc_create($component2, ^iftype_text, $int3);
+	$int3 = calc($int3 + 1);
+	.cc_setsize(calc(6 + 36 + 30), calc(32 - 16), ^setsize_minus, ^setsize_abs);
+	.cc_setposition(30, calc($int4 + 16), ^setpos_abs_right, ^setpos_abs_top);
+	.cc_setcolour(0xff981f);
+	.cc_settextfont(p11_full);
+	.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	.cc_settextshadow(true);
+	.cc_settext(struct_param($struct7, param_854));
+	.cc_create($component2, ^iftype_graphic, $int3);
+	$int3 = calc($int3 + 1);
+	.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+	.cc_setposition(10, calc($int4 + (32 - 17) / 2), ^setpos_abs_right, ^setpos_abs_top);
+	if (calc($count1 % 2) = 1) {
+		$int5 = 100;
+	}
+	cc_settrans($int5);
+	cc_setonmouseover("cc_settrans(event_com, event_comsubid, 50, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int5, null)");
+	cc_setontimer(null);
+	~script2725($struct7, $int5);
+	cc_setonvartransmit("script2724(event_com, event_comsubid, .cc_getid, $struct7, $int5){var1141}");
+}
+return($int3);

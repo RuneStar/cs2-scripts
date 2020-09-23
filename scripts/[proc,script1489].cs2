@@ -1,0 +1,17 @@
+// 1489
+[proc,script1489](component $component0, component $component1, component $component2, component $component3, int $width4, int $height5)
+def_int $width6 = if_getwidth($component0);
+def_int $height7 = if_getheight($component0);
+if ($width6 = $width4 & $height7 = $height5) {
+	return;
+}
+def_int $height8 = calc($height7 - 10);
+def_int $height9 = 800;
+if ($height9 > $height8) {
+	$height9 = $height8;
+}
+def_int $height10 = if_getscrollheight($component2);
+if_setsize(500, $height9, ^setsize_abs, ^setsize_abs, $component1);
+~scrollbar_vertical_rebuild($component3, $component2);
+~scrollbar_resize($component3, $component2, %varcint63);
+if_setontimer("script1488($component0, $component1, $component2, $component3, $width6, $height7)", $component0);

@@ -1,0 +1,11 @@
+// 863
+[clientscript,script863](component $component0, int $clock1)
+if (clientclock < $clock1) {
+	return;
+}
+cc_deleteall($component0);
+~options_button_off($component0, 0);
+if_setcolour(0xa6a692, interface_127:13);
+if_setonmouserepeat("text_colour_swapper(interface_127:13, ^white)", interface_127:12);
+if_setonmouseleave("text_colour_swapper(interface_127:13, 0xa6a692)", interface_127:12);
+if_setontimer(null, $component0);

@@ -1,0 +1,51 @@
+// 474
+[clientscript,script474](int $flags0, int $flags1, int $flags2, int $flags3)
+def_int $int4 = 0;
+def_namedobj $namedobj5 = null;
+def_int $int6 = 0;
+while ($int6 <= 127) {
+	if (cc_find(interface_78:3, $int6) = ^true) {
+		if ($int6 < 32) {
+			if (testbit($flags0, $int6) = ^true) {
+				$int4 = 1;
+			} else {
+				$int4 = 0;
+			}
+		} else if ($int6 < 64) {
+			if (testbit($flags1, calc($int6 - 32)) = ^true) {
+				$int4 = 1;
+			} else {
+				$int4 = 0;
+			}
+		} else if ($int6 < 96) {
+			if (testbit($flags2, calc($int6 - 64)) = ^true) {
+				$int4 = 1;
+			} else {
+				$int4 = 0;
+			}
+		} else if ($int6 < 128) {
+			if (testbit($flags3, calc($int6 - 96)) = ^true) {
+				$int4 = 1;
+			} else {
+				$int4 = 0;
+			}
+		} else {
+			$int4 = 0;
+		}
+		if ($int4 = 1) {
+			$namedobj5 = enum(int, namedobj, enum_708, $int6);
+			if ($namedobj5 ! null) {
+				if (inv_total(inv, $namedobj5) = 0) {
+					cc_sethide(false);
+				} else {
+					cc_sethide(true);
+				}
+			} else {
+				cc_sethide(true);
+			}
+		} else {
+			cc_sethide(true);
+		}
+	}
+	$int6 = calc($int6 + 1);
+}

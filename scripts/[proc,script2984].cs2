@@ -1,0 +1,48 @@
+// 2984
+[proc,script2984](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, string $op0, graphic $graphic6, graphic $graphic7, int $int8, int $int9, int $int10, int $int11, int $int12)(int)
+def_int $int13 = 0;
+def_int $x14 = calc($int2 - 9 + $int4);
+def_int $y15 = calc($int3 - 9 + $int5);
+def_int $width16 = calc($int2 - 18);
+def_int $height17 = calc($int3 - 18);
+if ($int10 = 0) {
+	~create_graphic($component0, $int1, "tradebacking", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $int2, $int3, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 1), "v2_stone_button,0", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 2), "v2_stone_button,1", $x14, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 3), "v2_stone_button,2", $int4, $y15, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 4), "v2_stone_button,3", $x14, $y15, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 5), "v2_stone_button,4", $int4, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $height17, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 6), "v2_stone_button,5", calc($int4 + 9), $int5, ^setpos_abs_left, ^setpos_abs_top, $width16, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 7), "v2_stone_button,6", $x14, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $height17, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 8), "v2_stone_button,7", calc($int4 + 9), $y15, ^setpos_abs_left, ^setpos_abs_top, $width16, 9, ^setsize_abs, ^setsize_abs);
+} else {
+	~create_graphic($component0, $int1, "tradebacking_dark", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, $int2, $int3, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 1), "v2_stone_button_in,0", $int4, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 2), "v2_stone_button_in,1", $x14, $int5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 3), "v2_stone_button_in,2", $int4, $y15, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 4), "v2_stone_button_in,3", $x14, $y15, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 5), "v2_stone_button_in,4", $int4, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $height17, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 6), "v2_stone_button_in,5", calc(9 + $int4), $int5, ^setpos_abs_left, ^setpos_abs_top, $width16, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 7), "v2_stone_button_in,6", $x14, calc(9 + $int5), ^setpos_abs_left, ^setpos_abs_top, 9, $height17, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component0, calc($int1 + 8), "v2_stone_button_in,7", calc($int4 + 9), $y15, ^setpos_abs_left, ^setpos_abs_top, $width16, 9, ^setsize_abs, ^setsize_abs);
+}
+cc_create($component0, ^iftype_graphic, calc($int1 + 9));
+cc_setsize(calc($int2 - $int8), calc($int3 - $int9), ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int8 / 2 + $int4), calc($int9 / 2 + $int5), ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic6);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 20);
+if ($int10 = 0) {
+	if ($int11 = 1) {
+		cc_setonop("script2985($component0, $int1, $graphic7)");
+	} else {
+		cc_setonop("script1601");
+	}
+	cc_setop(4, $op0);
+	if (~on_mobile = true & $int12 = 0) {
+		cc_setonmouseover("script2988($component0, $int1, $graphic6)");
+	} else {
+		cc_setonmouseover("script2988($component0, $int1, $graphic7)");
+	}
+	cc_setonmouseleave("script2986($component0, $int1, $graphic6)");
+}
+return(calc($int1 + 10));

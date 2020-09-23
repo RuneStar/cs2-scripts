@@ -1,0 +1,11 @@
+// 2404
+[clientscript,script2404](component $component0, int $comsubid1, int $clock2)
+def_int $int3 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	$int3 = calc(clientclock - $clock2);
+	if ($int3 < 40) {
+		cc_settrans(scale($int3, 40, 255));
+		return;
+	}
+	cc_deleteall($component0);
+}

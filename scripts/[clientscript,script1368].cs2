@@ -1,0 +1,19 @@
+// 1368
+[clientscript,script1368](component $component0, int $comsubid1, int $int2, int $bool3, boolean $boolean4, int $int5)
+def_int $int6 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	if ($bool3 = ^true & ($boolean4 = false | $int5 > 0)) {
+		cc_setcolour(^blue);
+		cc_setonmouseover(null);
+		cc_setonmouseleave(null);
+		%var261 = $int2;
+		while ($int6 <= 16) {
+			if ($int6 ! $comsubid1 & .cc_find($component0, $int6) = ^true) {
+				.cc_setcolour(0x333300);
+			}
+			$int6 = calc($int6 + 1);
+		}
+		return;
+	}
+	cc_setcolour(0x333300);
+}

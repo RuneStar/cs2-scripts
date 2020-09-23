@@ -1,0 +1,7 @@
+// 1153
+[clientscript,script1153](component $component0, graphic $graphic1, int $clock2)
+if (clientclock < $clock2) {
+	return;
+}
+if_setgraphic($graphic1, $component0);
+if_setontimer(null, $component0);
