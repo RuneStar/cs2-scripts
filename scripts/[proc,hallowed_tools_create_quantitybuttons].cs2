@@ -1,0 +1,14 @@
+// 3566
+[proc,hallowed_tools_create_quantitybuttons](int $int0, int $int1, int $int2, int $int3)
+if ($int0 = 1) {
+	~farming_tools_main_create_quantitybutton(interface_666:11, "1", false, 0);
+}
+if ($int1 = 1) {
+	~farming_tools_main_create_quantitybutton(interface_666:12, "5", false, 1);
+}
+if ($int2 = 1) {
+	~farming_tools_main_create_quantitybutton(interface_666:14, "All", false, 2);
+}
+if ($int3 = 1) {
+	~farming_tools_main_create_quantitybutton(interface_666:13, "X", false, 3);
+}

@@ -1,0 +1,6 @@
+// 417
+[clientscript,chat_set_filter_conditional](int $int0, int $chatfilter1, int $chatfilter2)
+if (~chat_get_filter($int0) = $chatfilter1) {
+	~chat_set_filter($int0, $chatfilter2);
+	~script113;
+}

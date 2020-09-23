@@ -87,7 +87,7 @@ if (cc_find($component0, 0) = ^false) {
 					$string0 = "Relic unlocked at <tostring(struct_param($struct6, param_877))> points.";
 					if (~on_mobile = true) {
 						cc_setop(1, "Show Threshold");
-						cc_setonop("script3183(event_com, event_comsubid, $component1, $string0, 512)");
+						cc_setonop("league_progress_bar_mobile_tooltip(event_com, event_comsubid, $component1, $string0, 512)");
 					} else {
 						cc_setop(1, "");
 						cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component1, $string0, 25, 512)");

@@ -331,7 +331,7 @@ $int29 = calc(3 + $int29 + 2 + 26 + 2 + 16 + 3);
 if_setsize($int29, 20, ^setsize_abs, ^setsize_abs, $component12);
 def_int $int47 = calc(262 + $int29);
 ~worldmap_window_set($component0, $layer2, $component24, $component3, $int47);
-~script1741($component0, $layer2, $component24, $component3, ^min_32bit_int, ^min_32bit_int, $component21, $component22, $int29, $int47, $component11, $int39);
+~worldmap_size_handler($component0, $layer2, $component24, $component3, ^min_32bit_int, ^min_32bit_int, $component21, $component22, $int29, $int47, $component11, $int39);
 if_setscrollpos(0, 0, $component16);
 $int26 = calc($int28 * $int27 + 2);
 def_int $int48 = 124;

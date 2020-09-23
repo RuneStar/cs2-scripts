@@ -1,0 +1,5 @@
+// 3568
+[proc,hallowed_tools_main_create](component $component0, namedobj $namedobj1, string $text0, int $int2)
+if_setonmouserepeat("hallowed_tools_main_recreate($component0, $namedobj1, $text0, $int2, true)", $component0);
+if_setonmouseleave("hallowed_tools_main_recreate($component0, $namedobj1, $text0, $int2, false)", $component0);
+~hallowed_tools_main_recreate($component0, $namedobj1, $text0, $int2, false);

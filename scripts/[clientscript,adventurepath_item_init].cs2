@@ -26,7 +26,7 @@ def_int $int14 = 0;
 def_int $int15 = 0;
 $int5 = ~create_v2_stone_button_filled_free($component2, $int5, calc(36 * 2), 40, 0, 0, "<lt><lt>   Back", 0xff981f, 0xff981f, 0, 0);
 cc_setop(1, "Back");
-cc_setonop("script1601");
+cc_setonop("button_select_sound");
 while ($int13 < 4) {
 	$enum10 = enum(int, enum, $enum7, $int13);
 	$enum11 = enum(int, enum, $enum8, $int13);

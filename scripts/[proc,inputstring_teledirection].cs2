@@ -1,0 +1,29 @@
+// 225
+[proc,inputstring_teledirection](string $string0, int $int0, int $int1)(string)
+def_int $int2 = 0;
+def_int $int3 = string_length($string0);
+def_string $string1 = "";
+def_int $int4 = 0;
+def_int $int5 = 0;
+if ($int3 > 0) {
+	if ($int3 > 4) {
+		$int3 = 4;
+	}
+	while ($int5 < $int3) {
+		$string1 = substring($string0, $int5, calc($int5 + 1));
+		$int4 = string_indexof_string("0123456789", $string1, 0);
+		if ($int4 ! -1) {
+			$int2 = calc($int2 + $int4 * pow(10, $int3 - 1 - $int5));
+		} else {
+			$int2 = calc($int2 / 10);
+		}
+		$int5 = calc($int5 + 1);
+	}
+} else {
+	$int2 = 1;
+}
+def_int $int6 = calc(coordx(coord) + $int2 * $int0);
+def_int $int7 = calc(coordz(coord) + $int2 * $int1);
+def_string $string2 = "::tele <tostring(coordy(coord))>,<tostring(calc($int6 / 64))>,<tostring(calc($int7 / 64))>,<tostring(calc($int6 % 64))>,<tostring(calc($int7 % 64))>";
+mes($string2);
+return($string2);

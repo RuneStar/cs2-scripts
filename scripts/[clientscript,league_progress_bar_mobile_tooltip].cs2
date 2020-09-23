@@ -1,0 +1,9 @@
+// 3183
+[clientscript,league_progress_bar_mobile_tooltip](component $component0, int $comsubid1, component $component2, string $string0, int $width3)
+if (%varcint385 = $comsubid1) {
+	~deltooltip_action($component2);
+	%varcint385 = -1;
+} else {
+	~tooltip_build($component0, $comsubid1, $component2, $string0, $width3);
+	%varcint385 = $comsubid1;
+}

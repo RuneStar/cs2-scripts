@@ -1,0 +1,50 @@
+// 3578
+[proc,hallowed_tools_main_update](component $component0, obj $obj1, string $text0, int $int2, int $int3)
+def_int $int4 = 0;
+def_namedobj $namedobj5 = null;
+$int4, $namedobj5 = ~hallowed_tools_getstored($obj1);
+def_int $colour6 = 0xbb0000;
+if ($int4 > 0) {
+	$colour6 = 0x20df20;
+}
+if (cc_find($component0, $int3) = ^true & .cc_find($component0, calc($int3 + 1)) = ^true) {
+	cc_settext($text0);
+	cc_setcolour($colour6);
+	.cc_setcolour($colour6);
+	.cc_settext("<tostring($int4)>/<tostring($int2)>");
+}
+if (cc_find($component0, calc($int3 + 2)) = ^true) {
+	cc_setobject_nonum($namedobj5, $int4);
+}
+if_setopbase("<col=ff9040><oc_name($namedobj5)></col>", $component0);
+if_clearops($component0);
+if_setop(10, "Examine", $component0);
+if ($int2 <= 1) {
+	if_setop(1, "Remove", $component0);
+} else {
+	if (oc_cert($namedobj5) ! $namedobj5) {
+		if_setop(9, "Banknotes", $component0);
+	}
+	switch_int (%varbit7792) {
+		case 0 :
+			if_setop(1, "Remove-1", $component0);
+			if_setop(2, "Remove-5", $component0);
+			if_setop(3, "Remove-X", $component0);
+			if_setop(4, "Remove-All", $component0);
+		case 1 :
+			if_setop(1, "Remove-5", $component0);
+			if_setop(2, "Remove-1", $component0);
+			if_setop(3, "Remove-X", $component0);
+			if_setop(4, "Remove-All", $component0);
+		case 3 :
+			if_setop(1, "Remove-X", $component0);
+			if_setop(2, "Remove-1", $component0);
+			if_setop(3, "Remove-5", $component0);
+			if_setop(4, "Remove-All", $component0);
+		case 2 :
+			if_setop(1, "Remove-All", $component0);
+			if_setop(2, "Remove-1", $component0);
+			if_setop(3, "Remove-5", $component0);
+			if_setop(4, "Remove-X", $component0);
+	}
+}

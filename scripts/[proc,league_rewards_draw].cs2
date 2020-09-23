@@ -36,7 +36,7 @@ while ($count17 <= enum_getoutputcount($enum15)) {
 			if ($int18 ! 0 & calc($int18 % 2) = 0) {
 				$int13 = calc($int13 + 32 + 8);
 			}
-			$int21 = ~script544($component4, $int12, $int13, $int14, enum(int, struct, $enum20, $int18), $int18, $int0, $int21, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
+			$int21 = ~league_reward_draw_item($component4, $int12, $int13, $int14, enum(int, struct, $enum20, $int18), $int18, $int0, $int21, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
 			$int18 = calc($int18 + 1);
 		}
 	}
@@ -68,7 +68,7 @@ if ($int0 ! -1 & ~script3292 = 1) {
 	cc_setop(1, "Confirm");
 	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $text0, $component6)");
 	cc_setonmouseleave("pest_rewards_confirmdraw(false, $text0, $component6)");
-	cc_setonop("script3287(event_opindex, $component7)");
+	cc_setonop("league_reward_shop_confirmop(event_opindex, $component7)");
 	~steelborder($component8, $text0, 1);
 	if_settext("<col=ffffff><$text0></col>:<br><$string1><br><br>Are you sure that you wish to buy this item for <col=ffffff><~tostring_spacer($int22, $string3)></col> points?<br><col=ff0000>You cannot sell this item back to the shop</col> if you change your mind.", $component9);
 	$int21 = ~v2_stone_button($component10);
@@ -85,7 +85,7 @@ if ($int0 ! -1 & ~script3292 = 1) {
 	if_setopbase("<col=ff981f>Selection</col>", $component10);
 	if_setonmouseleave("league_relic_button_hover($component10, false, $op2)", $component10);
 	if_setonmouseover("league_relic_button_hover($component10, true, $op2)", $component10);
-	if_setonop("script3288(event_opindex, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)", $component10);
+	if_setonop("league_reward_shop_buy(event_opindex, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)", $component10);
 	$int21 = ~v2_stone_button($component11);
 	cc_create($component11, ^iftype_text, $int21);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -99,7 +99,7 @@ if ($int0 ! -1 & ~script3292 = 1) {
 	if_setop(1, $op2, $component11);
 	if_setonmouseleave("league_relic_button_hover($component11, false, $op2)", $component11);
 	if_setonmouseover("league_relic_button_hover($component11, true, $op2)", $component11);
-	if_setonop("script3289($int0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)", $component11);
+	if_setonop("league_reward_confirm_back($int0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)", $component11);
 } else {
 	$int21 = ~v2_stone_button_in_filled($component6);
 	cc_create($component6, ^iftype_text, $int21);

@@ -1,0 +1,11 @@
+// 1410
+[proc,inputstring_televertical](int $int0)(string)
+def_int $x1 = coordx(coord);
+def_int $z2 = coordz(coord);
+def_int $int3 = calc(coordy(coord) + $int0);
+def_string $string0 = "No such level: <tostring($int3)>";
+if ($int3 >= 0 & $int3 <= 3) {
+	$string0 = "::tele <tostring($int3)>,<tostring(calc($x1 / 64))>,<tostring(calc($z2 / 64))>,<tostring(calc($x1 % 64))>,<tostring(calc($z2 % 64))>";
+}
+mes($string0);
+return($string0);

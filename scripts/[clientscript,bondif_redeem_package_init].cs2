@@ -18,7 +18,7 @@ if_clearops($component5);
 def_int $int6 = 0;
 if (string_length($string2) > 0) {
 	if_setop(2, ~script1299($string0, "<br>", " "), $component5);
-	if_setonop("script2279(removetags($string2))", $component5);
+	if_setonop("bondif_redeem_package_op_disabled(removetags($string2))", $component5);
 	if_setonvartransmit(null, $component5);
 	if_setonmouserepeat(null, $component5);
 	if_setonmouseleave(null, $component5);
@@ -44,7 +44,7 @@ if (string_length($string2) > 0) {
 	if_setop(1, ~script1299($string0, "<br>", " "), $component5);
 	~bondif_redeem_package_draw($int0, $component5, $string0, $num1, $graphic2, $int3, $height4, $text1);
 	if_setonvartransmit("bondif_redeem_package_draw($int0, $component5, $string0, $num1, $graphic2, $int3, $height4, $text1){var1204}", $component5);
-	if_setonop("script2280(event_opindex, $int0, $component5, $string0, $num1, $graphic2, $int3, $height4, $text1)", $component5);
+	if_setonop("bondif_redeem_package_op_permitted(event_opindex, $int0, $component5, $string0, $num1, $graphic2, $int3, $height4, $text1)", $component5);
 }
 if_setposition(0, %varcint179, ^setpos_abs_centre, ^setpos_abs_top, $component5);
 %varcint179 = calc(%varcint179 + if_getheight($component5));

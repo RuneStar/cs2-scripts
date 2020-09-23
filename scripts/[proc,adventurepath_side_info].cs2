@@ -41,7 +41,7 @@ cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 17);
 if_setop(1, "Show<col=ff9040> Paths", $component0);
-if_setonop("script1601", $component0);
+if_setonop("button_select_sound", $component0);
 if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_colour_swapper($component0, cc_getid, 0xbebebe)");
 	cc_setonmouseleave("cc_colour_swapper($component0, cc_getid, 0xff981f)");
@@ -60,7 +60,7 @@ cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
 if_setop(1, "Show<col=ff9040> Task information", $component2);
-if_setonop("script1601", $component2);
+if_setonop("button_select_sound", $component2);
 if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_colour_swapper($component2, cc_getid, 0xbebebe)");
 	cc_setonmouseleave("cc_colour_swapper($component2, cc_getid, 0xff981f)");
@@ -79,7 +79,7 @@ cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_settextalign(^settextalign_left, ^settextalign_top, 15);
 if_setop(1, "Show<col=ff9040> Task information", $component3);
-if_setonop("script1601", $component3);
+if_setonop("button_select_sound", $component3);
 if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_colour_swapper($component3, cc_getid, 0xbebebe)");
 	cc_setonmouseleave("cc_colour_swapper($component3, cc_getid, 0xff981f)");
@@ -119,7 +119,7 @@ if ($struct13 ! null & ~adventurepath_return_task_status($index14) = ^false & st
 	if_setop(2, "Remove<col=ff9040> Hint arrow", $component6);
 	if_setonmouseover("adventurepath_side_hint_mouseover($component6, $int8)", $component6);
 	if_setonmouseleave("adventurepath_side_hint_mouseleave($component6, $int8)", $component6);
-	if_setonop("script1601", $component6);
+	if_setonop("button_select_sound", $component6);
 } else {
 	$int8 = ~v2_stone_button_in_filled($component6);
 	cc_create($component6, ^iftype_graphic, $int8);
@@ -160,4 +160,4 @@ cc_settextalign(^settextalign_centre, ^settextalign_centre, 17);
 if_setop(1, "Show<col=ff9040> Paths", $component7);
 if_setonmouseover("script3335($component7, $int8)", $component7);
 if_setonmouseleave("script3336($component7, $int8)", $component7);
-if_setonop("script1601", $component7);
+if_setonop("button_select_sound", $component7);

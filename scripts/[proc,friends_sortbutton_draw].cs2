@@ -9,17 +9,17 @@ if (%varcint183 = $int2) {
 	cc_settrans(0);
 	if_setonmouserepeat("script1528(event_com, cc_getid, 120, $component12, $string0)", $component0);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 0, $component12)", $component0);
-	if_setonclick("script1670($int1, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component0);
+	if_setonclick("friends_sortbutton_clicksort($int1, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component0);
 } else if (%varcint183 = $int1) {
 	cc_setgraphic("sortarrows,0");
 	cc_settrans(0);
 	if_setonmouserepeat("script1528(event_com, cc_getid, 120, $component12, $string0)", $component0);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 0, $component12)", $component0);
-	if_setonclick("script1670($int2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component0);
+	if_setonclick("friends_sortbutton_clicksort($int2, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component0);
 } else {
 	cc_setgraphic("sortarrows,0");
 	cc_settrans(100);
 	if_setonmouserepeat("script1528(event_com, cc_getid, 200, $component12, $string0)", $component0);
 	if_setonmouseleave("cc_settrans(event_com, cc_getid, 100, $component12)", $component0);
-	if_setonclick("script1670($int3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component0);
+	if_setonclick("friends_sortbutton_clicksort($int3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component0);
 }

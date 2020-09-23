@@ -1,0 +1,18 @@
+// 3581
+[proc,hallowed_tools_getstored](obj $obj0)(int, namedobj)
+switch_obj ($obj0) {
+	case hallowed_token_24719 :
+		return(%varbit10592, hallowed_token_24719);
+	case hallowed_grapple_24721 :
+		return(%varbit10593, hallowed_grapple_24721);
+	case hallowed_focus_24723 :
+		return(%varbit10594, hallowed_focus_24723);
+	case hallowed_symbol_24725 :
+		return(%varbit10595, hallowed_symbol_24725);
+	case hallowed_hammer_24727 :
+		return(%varbit10596, hallowed_hammer_24727);
+	case hallowed_ring_24731 :
+		return(%varbit10597, hallowed_ring_24731);
+	case default :
+		return(0, null);
+}

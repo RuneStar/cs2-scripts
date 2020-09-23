@@ -1,0 +1,34 @@
+// 3570
+[proc,hallowed_tools_main_recreate](component $component0, obj $obj1, string $text0, int $int2, boolean $boolean3)
+cc_deleteall($component0);
+def_int $int4 = 0;
+def_int $int5 = 0;
+if ($boolean3 = false) {
+	$int4 = ~v2_stone_button_out_filled($component0);
+} else {
+	$int4 = ~v2_stone_button_in_filled($component0);
+}
+cc_create($component0, ^iftype_text, $int4);
+$int5 = $int4;
+$int4 = calc($int4 + 1);
+cc_setposition(0, 6, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 16, ^setsize_minus, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+cc_create($component0, ^iftype_text, $int4);
+$int4 = calc($int4 + 1);
+cc_setposition(10, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_create($component0, ^iftype_graphic, $int4);
+$int4 = calc($int4 + 1);
+cc_setposition(10, 20, ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+if_setonop("cc_settrans_temporarily(event_com, cc_getid, 125, 0)", $component0);
+~hallowed_tools_main_update($component0, $obj1, $text0, $int2, $int5);
+if_setonvartransmit("hallowed_tools_main_update($component0, $obj1, $text0, $int2, $int5){var2767}", $component0);

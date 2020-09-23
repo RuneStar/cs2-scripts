@@ -8,7 +8,7 @@ cc_deleteall($component5);
 if_setonop(null, $component6);
 if ($boolean0 = true) {
 	if_settext("Requesting...", $component4);
-	if_setontimer("script320(calc(clientclock + 45), $component2, $component3, $component5, $component6)", $component5);
+	if_setontimer("slayer_rewards_confirm_backlater(calc(clientclock + 45), $component2, $component3, $component5, $component6)", $component5);
 	return;
 }
 if_settext("", $component4);

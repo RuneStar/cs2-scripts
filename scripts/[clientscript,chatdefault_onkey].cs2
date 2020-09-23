@@ -52,7 +52,7 @@ if ($key0 = ^key_return) {
 				} else if (string_indexof_string(%varcstring335, "::bank", 0) = 0) {
 					~chat_sendpublic("Hey, everyone, I just tried to do something very silly!", 0);
 				} else {
-					%varcstring335 = ~script224(%varcstring335);
+					%varcstring335 = ~inputstring_handlecheat(%varcstring335);
 					$length2 = string_length(%varcstring335);
 					docheat(substring(%varcstring335, 2, $length2));
 				}
