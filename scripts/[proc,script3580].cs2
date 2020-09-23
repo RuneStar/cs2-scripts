@@ -1,0 +1,48 @@
+// 3580
+[proc,script3580](component $component0, obj $obj1, string $text0, int $int2)
+def_int $int3 = 0;
+def_namedobj $namedobj4 = null;
+$int3, $namedobj4 = ~script3582($obj1);
+def_int $colour5 = 0xbb0000;
+if ($int3 > 0) {
+	$colour5 = 0x20df20;
+}
+if (cc_find($component0, $int2) = ^true & .cc_find($component0, calc($int2 + 1)) = ^true) {
+	cc_settext($text0);
+	cc_setcolour($colour5);
+	.cc_setcolour($colour5);
+	.cc_settext(~magic_tostring($int3));
+}
+if (cc_find($component0, calc($int2 + 2)) = ^true) {
+	cc_setobject_nonum($namedobj4, $int3);
+}
+if_setopbase("<col=ff9040><oc_name($namedobj4)></col>", $component0);
+if_clearops($component0);
+if_setop(10, "Examine", $component0);
+def_int $int6 = enum(obj, int, enum_342, $obj1);
+if ($int6 <= 1) {
+	if_setop(1, "Store", $component0);
+} else {
+	switch_int (%varbit7792) {
+		case 0 :
+			if_setop(1, "Store-1", $component0);
+			if_setop(2, "Store-5", $component0);
+			if_setop(3, "Store-X", $component0);
+			if_setop(4, "Store-All", $component0);
+		case 1 :
+			if_setop(1, "Store-5", $component0);
+			if_setop(2, "Store-1", $component0);
+			if_setop(3, "Store-X", $component0);
+			if_setop(4, "Store-All", $component0);
+		case 3 :
+			if_setop(1, "Store-X", $component0);
+			if_setop(2, "Store-1", $component0);
+			if_setop(3, "Store-5", $component0);
+			if_setop(4, "Store-All", $component0);
+		case 2 :
+			if_setop(1, "Store-All", $component0);
+			if_setop(2, "Store-1", $component0);
+			if_setop(3, "Store-5", $component0);
+			if_setop(4, "Store-X", $component0);
+	}
+}
