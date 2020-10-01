@@ -3054,19 +3054,19 @@
 [**3051**](scripts/[clientscript,script3051].cs2)  
 [**3052**](scripts/[clientscript,script3052].cs2)  
 [**3053**](scripts/[proc,script3053].cs2)  
-[**3054**](scripts/[clientscript,arceuus_teletab_init].cs2) `[clientscript,arceuus_teletab_init]`  
-[**3055**](scripts/[clientscript,arceuus_teletab_redraw].cs2) `[clientscript,arceuus_teletab_redraw]`  
-[**3056**](scripts/[proc,arceuus_teletab_redraw].cs2) `[proc,arceuus_teletab_redraw]`  
-[**3057**](scripts/[proc,arceuus_teletab_addingredient].cs2) `[proc,arceuus_teletab_addingredient]`  
-[**3058**](scripts/[proc,arceuus_teletab_placeingredient].cs2) `[proc,arceuus_teletab_placeingredient]`  
-[**3059**](scripts/[proc,arceuus_teletab_button_redraw].cs2) `[proc,arceuus_teletab_button_redraw]`  
-[**3060**](scripts/[clientscript,arceuus_teletab_button_draw].cs2) `[clientscript,arceuus_teletab_button_draw]`  
-[**3061**](scripts/[proc,arceuus_teletab_button_draw].cs2) `[proc,arceuus_teletab_button_draw]`  
-[**3062**](scripts/[clientscript,arceuus_teletab_button_op].cs2) `[clientscript,arceuus_teletab_button_op]`  
-[**3063**](scripts/[clientscript,arceuus_teletab_confirm_draw].cs2) `[clientscript,arceuus_teletab_confirm_draw]`  
-[**3064**](scripts/[proc,arceuus_teletab_confirm_draw].cs2) `[proc,arceuus_teletab_confirm_draw]`  
-[**3065**](scripts/[clientscript,arceuus_teletab_confirm_op].cs2) `[clientscript,arceuus_teletab_confirm_op]`  
-[**3066**](scripts/[clientscript,arceuus_teletab_confirm_reset].cs2) `[clientscript,arceuus_teletab_confirm_reset]`  
+[**3054**](scripts/[clientscript,script3054].cs2)  
+[**3055**](scripts/[proc,script3055].cs2)  
+[**3056**](scripts/[clientscript,script3056].cs2)  
+[**3057**](scripts/[clientscript,script3057].cs2)  
+[**3058**](scripts/[clientscript,script3058].cs2)  
+[**3059**](scripts/[clientscript,script3059].cs2)  
+[**3060**](scripts/[proc,script3060].cs2)  
+[**3061**](scripts/[proc,script3061].cs2)  
+[**3062**](scripts/[clientscript,script3062].cs2)  
+[**3063**](scripts/[clientscript,script3063].cs2)  
+[**3064**](scripts/[clientscript,script3064].cs2)  
+[**3065**](scripts/[clientscript,script3065].cs2)  
+[**3066**](scripts/[clientscript,script3066].cs2)  
 [**3067**](scripts/[proc,br_loadout_drawloadout].cs2) `[proc,br_loadout_drawloadout]`  
 [**3068**](scripts/[clientscript,br_loadout_insert].cs2) `[clientscript,br_loadout_insert]`  
 [**3069**](scripts/[clientscript,br_loadout_rearrange].cs2) `[clientscript,br_loadout_rearrange]`  
@@ -3583,3 +3583,24 @@
 [**3580**](scripts/[proc,hallowed_tools_side_update].cs2) `[proc,hallowed_tools_side_update]`  
 [**3581**](scripts/[proc,hallowed_tools_getstored].cs2) `[proc,hallowed_tools_getstored]`  
 [**3582**](scripts/[proc,hallowed_tools_getcarried].cs2) `[proc,hallowed_tools_getcarried]`  
+[**3583**](scripts/[clientscript,teletab_init].cs2) `[clientscript,teletab_init]`  
+[**3584**](scripts/[clientscript,script3584].cs2)  
+[**3585**](scripts/[clientscript,script3585].cs2)  
+[**3586**](scripts/[clientscript,script3586].cs2)  
+[**3587**](scripts/[proc,script3587].cs2)  
+[**3588**](scripts/[proc,script3588].cs2)  
+[**3589**](scripts/[proc,script3589].cs2)  
+[**3590**](scripts/[proc,script3590].cs2)  
+[**3591**](scripts/[proc,script3591].cs2)  
+[**3592**](scripts/[clientscript,script3592].cs2)  
+[**3593**](scripts/[proc,script3593].cs2)  
+[**3594**](scripts/[clientscript,script3594].cs2)  
+[**3595**](scripts/[clientscript,script3595].cs2)  
+[**3596**](scripts/[proc,script3596].cs2)  
+[**3597**](scripts/[clientscript,script3597].cs2)  
+[**3598**](scripts/[clientscript,script3598].cs2)  
+[**3599**](scripts/[proc,script3599].cs2)  
+[**3600**](scripts/[clientscript,script3600].cs2)  
+[**3601**](scripts/[clientscript,script3601].cs2)  
+[**3602**](scripts/[clientscript,script3602].cs2)  
+[**3603**](scripts/[proc,script3603].cs2)  

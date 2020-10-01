@@ -1,0 +1,29 @@
+// 3593
+[proc,script3593](boolean $boolean0, enum $enum1, enum $enum2, int $int3, component $component4, boolean $boolean5)
+cc_deleteall($component4);
+def_int $int6 = 0;
+if ($boolean0 = true) {
+	$int6 = ~v2_stone_button_in_filled($component4);
+} else {
+	$int6 = ~v2_stone_button_out_filled($component4);
+}
+cc_create($component4, ^iftype_graphic, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setoutline(1);
+cc_setgraphicshadow(0x333333);
+cc_setobject_nonum(enum(int, namedobj, $enum1, $int3), 1);
+cc_create($component4, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize(calc(36 + 10), 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(5, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_settextfont(p11_full);
+if ($boolean5 = true) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(0x9f9f9f);
+}
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext(enum(int, string, $enum2, $int3));
