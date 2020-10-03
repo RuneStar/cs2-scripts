@@ -1,0 +1,9 @@
+// 3373
+[clientscript,graphicbox_reset](int $clock0, component $component1, int $comsubid2, string $text0)
+if (clientclock < $clock0) {
+	return;
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_setontimer(null);
+	cc_settext($text0);
+}

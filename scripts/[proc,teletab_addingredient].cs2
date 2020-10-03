@@ -1,0 +1,36 @@
+// 3589
+[proc,teletab_addingredient](obj $obj0, int $int1, component $component2, int $int3, int $int4)(int, int)
+if ($obj0 = null | $int1 <= 0) {
+	return($int3, $int4);
+}
+def_int $int5 = 0;
+if ($obj0 = ~script3588) {
+	$int5 = inv_total(inv, $obj0);
+} else {
+	$int5 = ~magic_runecount($obj0);
+}
+cc_create($component2, ^iftype_graphic, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setoutline(1);
+cc_setgraphicshadow(0x333333);
+cc_setobject_nonum($obj0, 1);
+cc_create($component2, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(36, 12, ^setsize_abs, ^setsize_abs);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+.cc_create($component2, ^iftype_graphic, $int3);
+$int3 = calc($int3 + 1);
+if ($int5 >= $int1) {
+	cc_setcolour(0xff981f);
+	.cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+	.cc_setgraphic("tick");
+} else {
+	cc_setcolour(0x9f9f9f);
+	.cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+	.cc_setgraphic("cross");
+}
+cc_settext("<~magic_tostring($int5)>/<tostring($int1)>");
+return($int3, calc($int4 + 1));

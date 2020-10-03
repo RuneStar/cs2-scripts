@@ -1,0 +1,74 @@
+// 1064
+[proc,farming_tools_getcarried](obj $obj0)(int, namedobj)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_namedobj $namedobj3 = null;
+def_int $int4 = 0;
+def_namedobj $namedobj5 = null;
+def_namedobj $namedobj6 = null;
+switch_obj ($obj0) {
+	case rake_5341 :
+		return(~script716(rake_5341), rake_5341);
+	case seed_dibber_5343 :
+		return(~script716(seed_dibber_5343), seed_dibber_5343);
+	case spade_952 :
+		return(~script716(spade_952), spade_952);
+	case secateurs_5329 :
+		$int1 = ~script716(magic_secateurs_7409);
+		if ($int1 > 0) {
+			$int4 = ~script716(secateurs_5329);
+			if (calc(^max_32bit_int - $int4) < $int1) {
+				return(^max_32bit_int, magic_secateurs_7409);
+			}
+			return(calc($int1 + $int4), magic_secateurs_7409);
+		}
+		return(~script716(secateurs_5329), secateurs_5329);
+	case watering_can_6797 :
+		$int2 = enum_getoutputcount(enum_136);
+		while ($int2 >= 0) {
+			$namedobj3 = enum(int, namedobj, enum_136, $int2);
+			if ($namedobj3 ! null) {
+				$int1 = ~script716($namedobj3);
+				if ($int1 > 0) {
+					if (calc(^max_32bit_int - $int4) < $int1) {
+						$int4 = ^max_32bit_int;
+					} else {
+						$int4 = calc($int4 + $int1);
+					}
+					if ($namedobj5 = null) {
+						$namedobj5 = $namedobj3;
+					}
+				}
+			}
+			$int2 = calc($int2 - 1);
+		}
+		return($int4, $namedobj5);
+	case gardening_trowel_5325 :
+		return(~script716(gardening_trowel_5325), gardening_trowel_5325);
+	case plant_cure_6036 :
+		return(~script716(plant_cure_6036), plant_cure_6036);
+	case bottomless_compost_bucket_22994 :
+		$int1 = ~script716(bottomless_compost_bucket_22997);
+		if ($int1 > 0) {
+			$namedobj6 = bottomless_compost_bucket_22997;
+		} else {
+			$namedobj6 = bottomless_compost_bucket_22994;
+		}
+		$int4 = ~script716(bottomless_compost_bucket_22994);
+		if (calc(^max_32bit_int - $int4) < $int1) {
+			$int4 = ^max_32bit_int;
+		} else {
+			$int4 = calc($int4 + $int1);
+		}
+		return($int4, $namedobj6);
+	case bucket_1925 :
+		return(~script716(bucket_1925), bucket_1925);
+	case compost_6032 :
+		return(~script716(compost_6032), compost_6032);
+	case supercompost_6034 :
+		return(~script716(supercompost_6034), supercompost_6034);
+	case ultracompost_21483 :
+		return(~script716(ultracompost_21483), ultracompost_21483);
+	case default :
+		return(0, null);
+}

@@ -1,0 +1,12 @@
+// 3590
+[proc,teletab_placeingredient](int $int0, int $int1, component $component2)
+def_int $int3 = calc($int0 * 3);
+if (cc_find($component2, $int3) = ^true) {
+	cc_setposition($int1, 10, ^setpos_abs_centre, ^setpos_abs_top);
+}
+if (cc_find($component2, calc($int3 + 1)) = ^true) {
+	cc_setposition($int1, calc(10 + 32), ^setpos_abs_centre, ^setpos_abs_top);
+}
+if (cc_find($component2, calc($int3 + 2)) = ^true) {
+	cc_setposition(calc($int1 + 19), 26, ^setpos_abs_centre, ^setpos_abs_top);
+}

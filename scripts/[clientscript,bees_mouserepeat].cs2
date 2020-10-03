@@ -1,0 +1,19 @@
+// 3600
+[clientscript,bees_mouserepeat](component $component0, int $mousex1, int $mousey2)
+def_int $int3 = if_getx($component0);
+def_int $int4 = if_gety($component0);
+if ($mousex1 >= 0 & $mousex1 <= calc(if_getwidth($component0) / 2)) {
+	$int3 = calc($int3 - (random(2) + 2));
+} else if ($mousex1 <= if_getwidth($component0)) {
+	$int3 = calc($int3 + random(2) + 2);
+}
+if ($mousey2 >= 0 & $mousey2 <= calc(if_getheight($component0) / 2)) {
+	$int4 = calc($int4 - (random(2) + 2));
+} else if ($mousey2 <= if_getheight($component0)) {
+	$int4 = calc($int4 + random(2) + 2);
+}
+$int3 = ~max($int3, 0);
+$int4 = ~max($int4, 0);
+$int3 = ~min($int3, calc(if_getwidth(if_getlayer($component0)) - if_getwidth($component0)));
+$int4 = ~min($int4, calc(if_getheight(if_getlayer($component0)) - if_getheight($component0)));
+if_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_top, $component0);

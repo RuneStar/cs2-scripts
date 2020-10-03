@@ -2,7 +2,7 @@
 [proc,farming_tools_side_update](component $component0, obj $obj1, string $text0, int $int2)
 def_int $int3 = 0;
 def_namedobj $namedobj4 = null;
-$int3, $namedobj4 = ~script1064($obj1);
+$int3, $namedobj4 = ~farming_tools_getcarried($obj1);
 def_int $colour5 = 0xbb0000;
 if ($int3 > 0) {
 	$colour5 = 0x20df20;

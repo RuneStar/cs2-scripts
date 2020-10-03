@@ -1,0 +1,15 @@
+// 2740
+[clientscript,lovaquest_power_grid_rotate](int $opindex0, component $component1, int $comsubid2)
+def_int $int3 = 0;
+if ($opindex0 = 1) {
+	$int3 = 1;
+} else if ($opindex0 = 2) {
+	$int3 = 3;
+} else {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+def_int $int4 = ~lovaquest_power_grid_getslot($comsubid2);
+def_int $int5 = calc(($int4 + $int3) % 4);
+~lovaquest_power_grid_setslot($comsubid2, $int5);
+~lovaquest_power_grid_redraw($component1);

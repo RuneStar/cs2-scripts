@@ -1,0 +1,12 @@
+// 2739
+[proc,lovaquest_power_grid_redraw](component $component0)
+def_int $int1 = 0;
+def_int $int2 = 0;
+while ($int1 < 36) {
+	if (cc_find($component0, $int1) = ^true) {
+		$int2 = ~lovaquest_power_grid_getslot($int1);
+		cc_setmodel(enum(int, model, enum_2177, $int1));
+		cc_setmodelangle(0, 0, 512, calc(512 * $int2), 0, 625);
+	}
+	$int1 = calc($int1 + 1);
+}

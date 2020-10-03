@@ -1,0 +1,41 @@
+// 3064
+[clientscript,bees](component $component0, int $int1, int $int2, component $component3, int $clock4)
+def_int $int5 = calc(if_getx($component0) + $int1);
+def_int $int6 = calc(if_gety($component0) + $int2);
+if (if_getx($component3) >= $int5 & if_getx($component3) < calc($int5 + if_getwidth($component0))) {
+	if (if_gety($component3) >= $int6 & if_gety($component3) < calc($int6 + if_getheight($component0))) {
+		$int5 = calc($int5 - (random(3) + 2));
+		$int6 = calc($int6 - (random(3) + 2));
+		if ($clock4 <= clientclock) {
+			sound_synth(synth_819, 1, 0);
+			$clock4 = calc(clientclock + 20 + random(40));
+		}
+	}
+} else if ($int5 >= if_getx($component3) & $int5 < calc(if_getx($component3) + if_getwidth($component3)) & $int6 >= if_gety($component3) & $int6 < calc(if_gety($component3) + if_getheight($component3))) {
+	$int5 = calc($int5 + random(3) + 2);
+	$int6 = calc($int6 + random(3) + 2);
+	if ($clock4 <= clientclock) {
+		sound_synth(synth_819, 1, 0);
+		$clock4 = calc(clientclock + 20 + random(40));
+	}
+}
+$int5 = ~max($int5, 0);
+$int6 = ~max($int6, 0);
+def_int $int7 = calc(if_getwidth(if_getlayer($component0)) - if_getwidth($component0));
+$int5 = ~min($int5, $int7);
+def_int $int8 = calc(if_getheight(if_getlayer($component0)) - if_getheight($component0));
+$int6 = ~min($int6, $int8);
+if ($int5 <= 0 & $int1 < 0 | $int5 >= $int7 & $int1 > 0) {
+	$int1 = calc(0 - $int1);
+}
+if ($int6 <= 0 & $int2 < 0 | $int6 >= $int8 & $int2 > 0) {
+	$int2 = calc(0 - $int2);
+}
+if ($int1 = 0) {
+	$int1 = calc(random(3) + 1);
+}
+if ($int2 = 0) {
+	$int2 = calc(random(3) + 1);
+}
+if_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top, $component0);
+if_setontimer("bees($component0, $int1, $int2, $component3, $clock4)", $component0);

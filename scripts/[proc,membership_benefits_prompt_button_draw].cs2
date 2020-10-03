@@ -4,9 +4,9 @@ cc_deleteall($component0);
 def_int $int2 = 0;
 def_int $int3 = 0;
 if ($boolean1 = true) {
-	$int2 = ~script2044($component0, $int2);
+	$int2 = ~beige_stone_button_in($component0, $int2);
 } else {
-	$int2 = ~script2045($component0, $int2);
+	$int2 = ~beige_stone_button_out($component0, $int2);
 }
 cc_create($component0, ^iftype_text, $int2);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
