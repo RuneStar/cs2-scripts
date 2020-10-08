@@ -22,10 +22,11 @@ switch_struct ($struct0) {
 			$boolean1 = true;
 		}
 	case health_overlay_1277 :
-		if (%varbit10345 = 0) {
+		if (%varbit10345 = ^false) {
 			$boolean1 = true;
 		}
 }
+if_sethide(~int_to_bool(%varbit10345), interface_303:6);
 if ($boolean1 = true) {
 	cc_setop(1, "Disable");
 	.cc_setgraphic("options_boxes,1");

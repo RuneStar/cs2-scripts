@@ -4,9 +4,9 @@ if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(synth_2266, 1, 0);
-if (%varbit10345 = 0) {
-	%varbit10345 = 1;
+if (%varbit10345 = ^false) {
+	%varbit10345 = ^true;
 } else {
-	%varbit10345 = 0;
+	%varbit10345 = ^false;
 }
 ~script3426($component1, $component2);
