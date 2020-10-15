@@ -1,0 +1,11 @@
+// 3629
+[clientscript,script3629](component $component0)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(quill_oblique_large);
+cc_settextshadow(true);
+cc_settext(tostring(%varbit3433));
+cc_setonvartransmit("script3632($component0){var986}");

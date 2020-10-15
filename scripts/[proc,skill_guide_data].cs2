@@ -208,7 +208,7 @@ switch_int ($int0) {
 		}
 		if ($int1 = 4) {
 			if ($int2 = 0) {
-				return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing and level 15 Agility.");
+				return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
 			}
 			if ($int2 = 1) {
 				return(15, leaping_trout_11328, "Leaping trout<br> (with 15 Agility & 48 Fishing)");
@@ -1203,7 +1203,7 @@ switch_int ($int0) {
 			case 3 :
 				switch_int ($int2) {
 					case 0 :
-						return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing and level 15 Agility.");
+						return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
 					case 1 :
 						return(15, leaping_trout_11328, "Leaping trout<br> (with 15 Strength & 48 Fishing)");
 					case 2 :
@@ -3142,127 +3142,133 @@ switch_int ($int0) {
 	case 15 :
 		if ($int1 = 0) {
 			if ($int2 = 0) {
-				return(1, raw_shrimps_317, "Shrimp - Net fishing");
+				return(1, raw_shrimps_317, "Shrimp - Small fishing net");
 			}
 			if ($int2 = 1) {
-				return(5, raw_sardine_327, "Sardine - Sea bait fishing");
+				return(5, raw_karambwanji_3150, "Members: Karambwanji - Small fishing net");
 			}
 			if ($int2 = 2) {
-				return(5, raw_karambwanji_3150, "Members: Karambwanji - Net fishing");
+				return(15, raw_anchovies_321, "Anchovies - Small fishing net");
 			}
 			if ($int2 = 3) {
-				return(10, raw_herring_345, "Herring - Sea bait fishing");
+				return(33, frog_spawn_5004, "Members: Giant frogspawn - Small fishing net");
 			}
 			if ($int2 = 4) {
-				return(15, raw_anchovies_321, "Anchovies - Net fishing");
+				return(62, raw_monkfish_7944, "Members: Monkfish - Small fishing net");
 			}
 			if ($int2 = 5) {
-				return(16, raw_mackerel_353, "Members: Mackerel - Big net fishing");
-			}
-			if ($int2 = 6) {
-				return(16, oyster_407, "Members: Oyster - Big net fishing");
-			}
-			if ($int2 = 7) {
-				return(16, casket_405, "Members: Caskets - Big net fishing");
-			}
-			if ($int2 = 8) {
-				return(20, raw_trout_335, "Trout - Fly-fishing");
-			}
-			if ($int2 = 9) {
-				return(23, raw_cod_341, "Members: Cod - Big net fishing");
-			}
-			if ($int2 = 10) {
-				return(25, raw_pike_349, "Pike - River bait fishing");
-			}
-			if ($int2 = 11) {
-				return(28, raw_slimy_eel_3379, "Members: Slimy eel - River bait fishing");
-			}
-			if ($int2 = 12) {
-				return(30, raw_salmon_331, "Salmon - Fly-fishing");
-			}
-			if ($int2 = 13) {
-				return(33, frog_spawn_5004, "Members: Giant frogspawn - Net fishing");
-			}
-			if ($int2 = 14) {
-				return(35, raw_tuna_359, "Tuna - Harpoon fishing");
-			}
-			if ($int2 = 15) {
-				return(38, raw_rainbow_fish_10138, "Members: Rainbow fish - Stripy fly-fishing");
-			}
-			if ($int2 = 16) {
-				return(38, raw_cave_eel_5001, "Members: Cave eel - River bait fishing");
-			}
-			if ($int2 = 17) {
-				return(40, raw_lobster_377, "Lobster - Lobster pot fishing");
-			}
-			if ($int2 = 18) {
-				return(43, bluegill_22826, "Members: Bluegill - Aerial fishing<br>(With 35 hunter)");
-			}
-			if ($int2 = 19) {
-				return(46, raw_bass_363, "Members: Bass - Big net fishing");
-			}
-			if ($int2 = 20) {
-				return(50, raw_swordfish_371, "Swordfish - Harpoon fishing");
-			}
-			if ($int2 = 21) {
-				return(53, raw_lava_eel_2148, "Members: Lava eel - Lava bait fishing");
-			}
-			if ($int2 = 22) {
-				return(56, common_tench_22829, "Members: Common tench - Aerial fishing<br>(With 51 hunter)");
-			}
-			if ($int2 = 23) {
-				return(62, raw_monkfish_7944, "Members: Monkfish - Net fishing");
-			}
-			if ($int2 = 24) {
-				return(65, raw_karambwan_3142, "Members: Karambwan - Vessel fishing");
-			}
-			if ($int2 = 25) {
-				return(73, mottled_eel_22832, "Members: Mottled eel - Aerial fishing<br>(With 68 hunter)");
-			}
-			if ($int2 = 26) {
-				return(76, raw_shark_383, "Members: Shark - Harpoon fishing");
-			}
-			if ($int2 = 27) {
-				return(79, raw_sea_turtle_395, "Members: Sea turtle - Trawler minigame");
-			}
-			if ($int2 = 28) {
-				return(80, infernal_eel_21293, "Members: Infernal eel - Lava bait fishing");
-			}
-			if ($int2 = 29) {
-				return(81, raw_manta_ray_389, "Members: Manta ray - Trawler minigame");
-			}
-			if ($int2 = 30) {
-				return(82, raw_anglerfish_13439, "Members: Anglerfish - Sandworm bait fishing");
-			}
-			if ($int2 = 31) {
-				return(82, minnow_3_10572, "Members: Minnow - Net fishing<br>(after Fishing Contest)");
-			}
-			if ($int2 = 32) {
-				return(85, raw_dark_crab_11934, "Members: Dark crab - Bait Pot fishing");
-			}
-			if ($int2 = 33) {
-				return(87, sacred_eel_13339, "Members: Sacred eel - Swamp bait fishing");
-			}
-			if ($int2 = 34) {
-				return(91, greater_siren_22835, "Members: Greater siren - Aerial fishing<br>(With 87 hunter)");
+				return(82, minnow_3_10572, "Members: Minnow - Small fishing net<br>(after Fishing Contest)");
 			}
 			return(-1, null, "");
 		}
 		if ($int1 = 1) {
 			if ($int2 = 0) {
-				return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing and level 15 Agility.");
+				return(16, raw_mackerel_353, "Members: Mackerel - Big fishing net");
 			}
 			if ($int2 = 1) {
-				return(48, leaping_trout_11328, "Leaping trout<br> (with 15 Agility & 15 Strength)");
+				return(16, oyster_407, "Members: Oyster - Big fishing net");
+			}
+			if ($int2 = 2) {
+				return(16, casket_405, "Members: Caskets - Big fishing net");
+			}
+			if ($int2 = 3) {
+				return(23, raw_cod_341, "Members: Cod - Big fishing net");
+			}
+			if ($int2 = 4) {
+				return(46, raw_bass_363, "Members: Bass - Big fishing net");
+			}
+			return(-1, null, "");
+		}
+		if ($int1 = 2) {
+			if ($int2 = 0) {
+				return(5, raw_sardine_327, "Sardine - Fishing rod & Fishing bait");
+			}
+			if ($int2 = 1) {
+				return(10, raw_herring_345, "Herring - Fishing rod & Fishing bait");
+			}
+			if ($int2 = 2) {
+				return(20, raw_trout_335, "Trout - Fly fishing rod & Feathers");
+			}
+			if ($int2 = 3) {
+				return(25, raw_pike_349, "Pike - Fishing rod & Fishing bait");
+			}
+			if ($int2 = 4) {
+				return(28, raw_slimy_eel_3379, "Members: Slimy eel - Fishing rod & Fishing bait");
+			}
+			if ($int2 = 5) {
+				return(30, raw_salmon_331, "Salmon - Fly fishing rod & feathers");
+			}
+			if ($int2 = 6) {
+				return(38, raw_rainbow_fish_10138, "Members: Rainbow fish - Fly fishing rod & Stripy feathers");
+			}
+			if ($int2 = 7) {
+				return(38, raw_cave_eel_5001, "Members: Cave eel - Fishing rod & Fishing bait");
+			}
+			if ($int2 = 8) {
+				return(53, raw_lava_eel_2148, "Members: Lava eel - Oily fishing rod & Fishing bait");
+			}
+			if ($int2 = 9) {
+				return(80, infernal_eel_21293, "Members: Infernal eel - Oily fishing rod & Fishing bait");
+			}
+			if ($int2 = 10) {
+				return(82, raw_anglerfish_13439, "Members: Anglerfish - Fishing rod & Sandworms");
+			}
+			if ($int2 = 11) {
+				return(87, sacred_eel_13339, "Members: Sacred eel - Fishing rod & Fishing bait");
+			}
+			return(-1, null, "");
+		}
+		if ($int1 = 3) {
+			if ($int2 = 0) {
+				return(35, raw_tuna_359, "Tuna - Harpoon");
+			}
+			if ($int2 = 1) {
+				return(50, raw_swordfish_371, "Swordfish - Harpoon");
+			}
+			if ($int2 = 2) {
+				return(76, raw_shark_383, "Members: Shark - Harpoon");
+			}
+			return(-1, null, "");
+		}
+		if ($int1 = 4) {
+			if ($int2 = 0) {
+				return(43, bluegill_22826, "Members: Bluegill - Aerial fishing<br>(With 35 hunter)");
+			}
+			if ($int2 = 1) {
+				return(56, common_tench_22829, "Members: Common tench - Aerial fishing<br>(With 51 hunter)");
+			}
+			if ($int2 = 2) {
+				return(73, mottled_eel_22832, "Members: Mottled eel - Aerial fishing<br>(With 68 hunter)");
+			}
+			if ($int2 = 3) {
+				return(91, greater_siren_22835, "Members: Greater siren - Aerial fishing<br>(With 87 hunter)");
+			}
+			return(-1, null, "");
+		}
+		if ($int1 = 5) {
+			if ($int2 = 0) {
+				return(40, raw_lobster_377, "Lobster - Lobster cage");
+			}
+			if ($int2 = 1) {
+				return(85, raw_dark_crab_11934, "Members: Dark crab - Lobster cage & Dark fishing bait");
+			}
+			return(-1, null, "");
+		}
+		if ($int1 = 6) {
+			if ($int2 = 0) {
+				return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
+			}
+			if ($int2 = 1) {
+				return(48, leaping_trout_11328, "Leaping trout - Barbarian rod & most bait types<br> (with 15 Agility & 15 Strength)");
 			}
 			if ($int2 = 2) {
 				return(55, raw_tuna_359, "Tuna<br> (with 35 Strength)");
 			}
 			if ($int2 = 3) {
-				return(58, leaping_salmon_11330, "Leaping salmon<br> (with 30 Agility & 30 Strength)");
+				return(58, leaping_salmon_11330, "Leaping salmon - Barbarian rod & most bait types<br> (with 30 Agility & 30 Strength)");
 			}
 			if ($int2 = 4) {
-				return(70, leaping_sturgeon_11332, "Leaping sturgeon<br> (with 45 Agility & 45 Strength)");
+				return(70, leaping_sturgeon_11332, "Leaping sturgeon - Barbarian rod & most bait types<br> (with 45 Agility & 45 Strength)");
 			}
 			if ($int2 = 5) {
 				return(70, raw_swordfish_371, "Swordfish<br> (with 50 Strength)");
@@ -3272,22 +3278,49 @@ switch_int ($int0) {
 			}
 			return(-1, null, "");
 		}
-		if ($int1 = 2) {
+		if ($int1 = 7) {
 			if ($int2 = 0) {
-				return(34, angler_hat_13258, "Angler's outfit");
+				return(1, small_fishing_net_303, "Small fishing net");
 			}
 			if ($int2 = 1) {
-				return(61, dragon_harpoon_21028, "Dragon harpoon");
+				return(1, fishing_rod_307, "Fishing rod");
 			}
 			if ($int2 = 2) {
-				return(71, crystal_harpoon_23762, "Crystal harpoon<br>(after Song of the Elves)");
+				return(1, big_fishing_net_305, "Members: Big fishing net");
 			}
 			if ($int2 = 3) {
-				return(75, infernal_harpoon_21031, "Infernal harpoon<br>(with 85 Cooking)");
+				return(1, harpoon_311, "Harpoon");
+			}
+			if ($int2 = 4) {
+				return(1, fly_fishing_rod_309, "Fly fishing rod");
+			}
+			if ($int2 = 5) {
+				return(1, lobster_cage_301, "Lobster cage");
+			}
+			if ($int2 = 6) {
+				return(1, karambwan_vessel_3157, "Members: Karambwan vessel (after Tai Bwo Wannai Trio)");
+			}
+			if ($int2 = 7) {
+				return(34, angler_hat_13258, "Members: Angler's outfit");
+			}
+			if ($int2 = 8) {
+				return(43, cormorants_glove_22816, "Members: Cormorant's glove<br>(with 35 hunter)");
+			}
+			if ($int2 = 9) {
+				return(48, barbarian_rod_11323, "Members: Barbarian rod<br>(with 15 strength & 15 agility)");
+			}
+			if ($int2 = 10) {
+				return(61, dragon_harpoon_21028, "Members: Dragon harpoon");
+			}
+			if ($int2 = 11) {
+				return(71, crystal_harpoon_23762, "Members: Crystal harpoon<br>(after Song of the Elves)");
+			}
+			if ($int2 = 12) {
+				return(75, infernal_harpoon_21031, "Members: Infernal harpoon<br>(with 85 Cooking)");
 			}
 			return(-1, null, "");
 		}
-		if ($int1 = 3) {
+		if ($int1 = 8) {
 			if ($int2 = 0) {
 				return(1, raw_pysk_fish_0_20855, "Pysk fish");
 			}
@@ -3311,12 +3344,21 @@ switch_int ($int0) {
 			}
 			return(-1, null, "");
 		}
-		if ($int1 = 4) {
+		if ($int1 = 9) {
 			if ($int2 = 0) {
-				return(15, fresh_fish_13429, "Collecting from barrels of fresh fish");
+				return(15, fresh_fish_13429, "Members: Collecting from barrels of fresh fish");
 			}
 			if ($int2 = 1) {
-				return(47, pufferfish_21655, "Accessing drift net fishing on Fossil Island (with 44 hunter)");
+				return(47, pufferfish_21655, "Members: Accessing drift net fishing on Fossil Island (with 44 hunter)");
+			}
+			if ($int2 = 2) {
+				return(65, raw_karambwan_3142, "Members: Karambwan - Karambwan vessel");
+			}
+			if ($int2 = 3) {
+				return(79, raw_sea_turtle_395, "Members: Sea turtle - Trawler minigame");
+			}
+			if ($int2 = 4) {
+				return(81, raw_manta_ray_389, "Members: Manta ray - Trawler minigame");
 			}
 			return(-1, null, "");
 		}

@@ -220,18 +220,33 @@ switch_int ($int0) {
 		return("", -1);
 	case 15 :
 		if ($int1 = 0) {
-			return("Catches", 0);
+			return("Small Net", 0);
 		}
 		if ($int1 = 1) {
-			return("Barbarian", 1);
+			return("Big Net", 0);
 		}
 		if ($int1 = 2) {
-			return("Equipment", 1);
+			return("Rod", 0);
 		}
 		if ($int1 = 3) {
-			return("Raids", 1);
+			return("Harpoon", 0);
 		}
 		if ($int1 = 4) {
+			return("Aerial", 1);
+		}
+		if ($int1 = 5) {
+			return("Cage", 0);
+		}
+		if ($int1 = 6) {
+			return("Barbarian", 1);
+		}
+		if ($int1 = 7) {
+			return("Equipment", 0);
+		}
+		if ($int1 = 8) {
+			return("Raids", 1);
+		}
+		if ($int1 = 9) {
 			return("Other", 1);
 		}
 		return("", -1);

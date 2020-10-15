@@ -1,3 +1,8 @@
 // 2026
-[clientscript,script2026](component $component0)
+[clientscript,script2026](component $component0, component $component1)
+if (%varbit5941 >= 2) {
+	if_settext("Time Remaining", $component1);
+} else {
+	if_settext("Starting in", $component1);
+}
 ~script2027($component0, %varbit5944, clientclock);
