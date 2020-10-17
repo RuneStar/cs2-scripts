@@ -3,6 +3,6 @@
 if_sethide(false, $component0);
 if_setop(1, "Craft", $component0);
 if_setopbase("<col=ff9040><$string0></col>", $component0);
-~script2943($component0, $namedobj1, $lvl2, $namedobj3, $string0);
-if_setoninvtransmit("script2942($component0, $namedobj1, $lvl2, $namedobj3, $string0){inv}", $component0);
-if_setonstattransmit("script2942($component0, $namedobj1, $lvl2, $namedobj3, $string0){crafting}", $component0);
+~silver_crafting_miscellaneous_draw($component0, $namedobj1, $lvl2, $namedobj3, $string0);
+if_setoninvtransmit("silver_crafting_miscellaneous_draw($component0, $namedobj1, $lvl2, $namedobj3, $string0){inv}", $component0);
+if_setonstattransmit("silver_crafting_miscellaneous_draw($component0, $namedobj1, $lvl2, $namedobj3, $string0){crafting}", $component0);

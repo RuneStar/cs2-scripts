@@ -1,0 +1,25 @@
+// 3614
+[proc,partydrop_main_quantitybutton](boolean $boolean0, boolean $boolean1, component $component2, string $string0)
+cc_deleteall($component2);
+def_int $comsubid3 = 0;
+if ($boolean0 = true) {
+	$comsubid3 = ~options_button_on($component2, 0);
+	if_setonmouserepeat(null, $component2);
+	if_setonmouseleave(null, $component2);
+} else {
+	$comsubid3 = ~options_button_off($component2, 0);
+	if_setonmouserepeat("partydrop_main_quantitybutton(false, true, $component2, $string0)", $component2);
+	if_setonmouseleave("partydrop_main_quantitybutton(false, false, $component2, $string0)", $component2);
+}
+cc_create($component2, ^iftype_text, $comsubid3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if ($boolean0 = true | $boolean1 = true) {
+	cc_setcolour(^white);
+} else {
+	cc_setcolour(0xff981f);
+}
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);

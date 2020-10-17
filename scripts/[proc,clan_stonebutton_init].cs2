@@ -1,0 +1,6 @@
+// 3622
+[proc,clan_stonebutton_init](string $string0, component $component0, graphic $graphic1)
+~clan_stonebutton_draw(false, $string0, $graphic1, $component0);
+if_setonmouserepeat("clan_stonebutton_draw(true, $string0, $graphic1, event_com)", $component0);
+if_setonmouseleave("clan_stonebutton_draw(false, $string0, $graphic1, event_com)", $component0);
+if_setop(1, removetags($string0), $component0);

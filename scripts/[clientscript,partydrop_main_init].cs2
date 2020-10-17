@@ -1,0 +1,53 @@
+// 3607
+[clientscript,partydrop_main_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+def_int $int9 = inv_size(inv_91);
+def_int $int10 = calc(if_getwidth($component5) / 9 - 36);
+def_int $int11 = calc($int10 / 2);
+def_int $int12 = 0;
+cc_deleteall($component5);
+def_int $int13 = 0;
+while ($int13 < $int9) {
+	cc_create($component5, ^iftype_graphic, $int13);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	$int12 = calc($int13 / 9 * (32 + $int10));
+	cc_setposition(calc($int11 + $int13 % 9 * (36 + $int10)), $int12, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setop(10, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 125, 0)");
+	$int13 = calc($int13 + 1);
+}
+if ($int12 ! -1) {
+	$int12 = calc($int12 + 32);
+}
+if_setscrollpos(0, 0, $component5);
+if ($int12 > if_getheight($component5)) {
+	if_setscrollsize(0, $int12, $component5);
+}
+~scrollbar_vertical($component6, $component5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~partydrop_main_chestitems($int9, $component5);
+if_setoninvtransmit("partydrop_main_chestitems($int9, $component5){inv_91}", $component5);
+$int9, $int13 = ~max(1, inv_size(inv_92)), 0;
+$int10 = ~min($int10, calc(if_getwidth($component7) / $int9 - 36));
+$int11 = calc($int10 / 2);
+cc_deleteall($component7);
+while ($int13 < $int9) {
+	cc_create($component7, ^iftype_graphic, $int13);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int11 + $int13 * (36 + $int10)), 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 125, 0)");
+	$int13 = calc($int13 + 1);
+}
+if_setop(1, "1", $component1);
+if_setonop("partydrop_quantity_op(event_opindex, 0, $int9, $component7, $component1, $component2, $component3, $component4, $component8)", $component1);
+if_setop(1, "5", $component2);
+if_setonop("partydrop_quantity_op(event_opindex, 1, $int9, $component7, $component1, $component2, $component3, $component4, $component8)", $component2);
+if_setop(1, "X", $component3);
+if_setonop("partydrop_quantity_op(event_opindex, 3, $int9, $component7, $component1, $component2, $component3, $component4, $component8)", $component3);
+if_setop(1, "All", $component4);
+if_setonop("partydrop_quantity_op(event_opindex, 2, $int9, $component7, $component1, $component2, $component3, $component4, $component8)", $component4);
+~partydrop_main_offeritems($int9, $component7, $component1, $component2, $component3, $component4, $component8);
+if_setonvartransmit("partydrop_main_offeritems($int9, $component7, $component1, $component2, $component3, $component4, $component8){var675}", $component0);
+if_setoninvtransmit("partydrop_main_offeritems($int9, $component7, $component1, $component2, $component3, $component4, $component8){inv_92}", $component0);

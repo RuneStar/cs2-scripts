@@ -68,7 +68,7 @@ if ($boolean10 = false & %varbit6718 = 1) {
 		if (~league_world = 1) {
 			$obj17 = ~script3159($obj17);
 		}
-		if (~script2619($obj17) = 1) {
+		if (~magic_spellbook_passfilter($obj17) = 1) {
 			if_sethide(false, oc_param($obj17, spell_button));
 			$intarray0($int16) = $int18;
 			$int16 = calc($int16 + 1);

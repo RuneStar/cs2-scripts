@@ -1,0 +1,76 @@
+// 3612
+[proc,partydrop_main_offeritems](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+def_int $int7 = 0;
+def_obj $obj8 = null;
+def_int $int9 = $int0;
+while ($int9 > 0) {
+	$int9 = calc($int9 - 1);
+	if (cc_find($component1, $int9) = ^true) {
+		cc_clearops;
+		$obj8 = inv_getobj(inv_92, $int9);
+		if ($obj8 ! null) {
+			$int7 = 1;
+			cc_sethide(false);
+			cc_setobject($obj8, inv_getnum(inv_92, $int9));
+			switch_int (%varbit7792) {
+				case 1 :
+					cc_setop(1, "Withdraw 5");
+					cc_setop(2, "Withdraw 1");
+					cc_setop(4, "Withdraw X");
+					cc_setop(5, "Withdraw All");
+				case 3 :
+					cc_setop(1, "Withdraw X");
+					cc_setop(2, "Withdraw 1");
+					cc_setop(3, "Withdraw 5");
+					cc_setop(5, "Withdraw All");
+				case 2 :
+					cc_setop(1, "Withdraw All");
+					cc_setop(2, "Withdraw 1");
+					cc_setop(3, "Withdraw 5");
+					cc_setop(4, "Withdraw X");
+				case default :
+					cc_setop(1, "Withdraw 1");
+					cc_setop(3, "Withdraw 5");
+					cc_setop(4, "Withdraw X");
+					cc_setop(5, "Withdraw All");
+			}
+			cc_setop(10, "Examine");
+			cc_setopbase("<col=ff9040><oc_name($obj8)></col>");
+		} else {
+			cc_sethide(true);
+		}
+	}
+}
+def_int $int10 = 0;
+if ($int7 = 1) {
+	~clan_stonebutton_init("Confirm", $component6, "p12_full");
+	if_setonop("partydrop_main_confirm_op(event_opindex, event_com)", $component6);
+} else {
+	~clan_stonebutton_draw(true, "<col=9f9f9f>Confirm</col>", "p12_full", $component6);
+	if_setonmouserepeat(null, $component6);
+	if_setonmouseleave(null, $component6);
+	if_setonop("opsound(event_opindex, 2)", $component6);
+}
+if_setontimer(null, $component6);
+switch_int (%varbit7792) {
+	case 1 :
+		~partydrop_main_quantitybutton(false, false, $component2, "1");
+		~partydrop_main_quantitybutton(true, null, $component3, "5");
+		~partydrop_main_quantitybutton(false, false, $component4, "X");
+		~partydrop_main_quantitybutton(false, false, $component5, "All");
+	case 3 :
+		~partydrop_main_quantitybutton(false, false, $component2, "1");
+		~partydrop_main_quantitybutton(false, false, $component3, "5");
+		~partydrop_main_quantitybutton(true, null, $component4, "X");
+		~partydrop_main_quantitybutton(false, false, $component5, "All");
+	case 2 :
+		~partydrop_main_quantitybutton(false, false, $component2, "1");
+		~partydrop_main_quantitybutton(false, false, $component3, "5");
+		~partydrop_main_quantitybutton(false, false, $component4, "X");
+		~partydrop_main_quantitybutton(true, null, $component5, "All");
+	case default :
+		~partydrop_main_quantitybutton(true, null, $component2, "1");
+		~partydrop_main_quantitybutton(false, false, $component3, "5");
+		~partydrop_main_quantitybutton(false, false, $component4, "X");
+		~partydrop_main_quantitybutton(false, false, $component5, "All");
+}

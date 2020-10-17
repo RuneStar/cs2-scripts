@@ -1,0 +1,13 @@
+// 3627
+[proc,imp_box_text_update](component $component0)
+def_int $int1 = calc(inv_total(inv, imp_in_a_box_2_10027) * 2);
+$int1 = calc($int1 + inv_total(inv, imp_in_a_box_1_10028));
+if ($int1 <= 0) {
+	if_close;
+	return;
+}
+if ($int1 > 1) {
+	if_settext("Select an item or stack of items to deposit.<br><col=ff7000>You can deposit up to <tostring($int1)> items or stacks.", $component0);
+} else {
+	if_settext("Select an item or stack of items to deposit.<br><col=ff7000>You can deposit up to 1 item or stack.", $component0);
+}

@@ -1,0 +1,5 @@
+// 2120
+[clientscript,ironman_miscellaneous_redraw](component $component0, component $component1, int $comsubid2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+if (.cc_find($component1, $comsubid2) = ^true) {
+	~ironman_miscellaneous_redraw($component0, $component1, $component3, $component4, $component5, $component6, $component7, $component8);
+}

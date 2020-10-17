@@ -1,0 +1,4 @@
+// 3625
+[clientscript,imp_box_deposit_init](component $component0)
+~imp_box_text_update($component0);
+if_setoninvtransmit("imp_box_text_update($component0){inv}", $component0);

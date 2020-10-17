@@ -1,0 +1,15 @@
+// 1316
+[proc,jar_of_darkness_update](component $component0, int $int1)
+if ($int1 <= 17) {
+	cc_settrans(calc(255 - $int1 * 15));
+	return;
+}
+if ($int1 <= 50) {
+	return;
+}
+if ($int1 <= 67) {
+	$int1 = calc($int1 - 50);
+	cc_settrans(calc($int1 * 15));
+	return;
+}
+cc_deleteall($component0);

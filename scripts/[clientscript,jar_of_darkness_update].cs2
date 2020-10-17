@@ -1,0 +1,5 @@
+// 1315
+[clientscript,jar_of_darkness_update](component $component0, int $comsubid1, int $clock2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	~jar_of_darkness_update($component0, calc(clientclock - $clock2));
+}

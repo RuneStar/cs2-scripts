@@ -1,0 +1,22 @@
+// 3621
+[clientscript,partydrop_side_reorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3, int $comsubid4)
+if ($comsubid2 < 0 | $comsubid2 >= $comsubid4) {
+	return;
+}
+if ($dropsubid3 < 0 | $dropsubid3 >= $comsubid4) {
+	return;
+}
+if ($drop0 ! $drop1) {
+	return;
+}
+def_obj $obj5 = inv_getobj(inv, $comsubid2);
+if ($obj5 = null) {
+	return;
+}
+def_obj $obj6 = inv_getobj(inv, $dropsubid3);
+if (cc_find($drop0, $dropsubid3) = ^true) {
+	~partydrop_side_drawitem($obj5, inv_getnum(inv, $comsubid2), $drop0, $comsubid4);
+}
+if (cc_find($drop0, $comsubid2) = ^true) {
+	~partydrop_side_drawitem($obj6, inv_getnum(inv, $dropsubid3), $drop0, $comsubid4);
+}
