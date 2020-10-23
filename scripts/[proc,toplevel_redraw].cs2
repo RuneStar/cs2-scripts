@@ -131,6 +131,10 @@ if ($component7 ! null) {
 		}
 	}
 	if (%varbit4605 = 1 & %varbit542 = ^false) {
+		if_setgraphic("overlay_multiway", $component7);
+		if_sethide(false, $component7);
+	} else if (%varbit5961 = 1 & %varbit542 = ^false) {
+		if_setgraphic("graphic_2518", $component7);
 		if_sethide(false, $component7);
 	} else {
 		if_sethide(true, $component7);

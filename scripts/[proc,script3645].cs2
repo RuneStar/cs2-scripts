@@ -1,0 +1,14 @@
+// 3645
+[proc,script3645](component $component0, int $size1)
+def_int $int2 = calc((42 - 36) * 3 - 2);
+def_int $int3 = calc((36 - 32) * 2);
+def_obj $obj4 = null;
+def_int $int5 = $size1;
+while ($int5 > 0) {
+	$int5 = calc($int5 - 1);
+	if (cc_find($component0, $int5) = ^true) {
+		$obj4 = inv_getobj(inv, $int5);
+		~script3646($obj4, inv_getnum(inv, $int5), $component0, $size1);
+		cc_setposition(calc($int2 + $int5 % 4 * 42), calc($int3 + $int5 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+	}
+}

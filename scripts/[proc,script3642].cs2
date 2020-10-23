@@ -1,0 +1,36 @@
+// 3642
+[proc,script3642](boolean $boolean0, boolean $boolean1, component $component2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, component $component9)
+cc_deleteall($component2);
+def_int $comsubid10 = 0;
+if ($boolean0 = true) {
+	$comsubid10 = ~options_button_on($component2, 0);
+	if_setonmouserepeat(null, $component2);
+	if_setonmouseleave(null, $component2);
+} else {
+	$comsubid10 = ~options_button_off($component2, 0);
+	if_setonmouserepeat("script3641(false, true, $component2, $int3, $int4, $component5, $component6, $component7, $component8, $component9)", $component2);
+	if_setonmouseleave("script3641(false, false, $component2, $int3, $int4, $component5, $component6, $component7, $component8, $component9)", $component2);
+}
+if ($int3 ! -1) {
+	cc_create($component2, ^iftype_text, $comsubid10);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	if ($boolean0 = true | $boolean1 = true) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour(0xff981f);
+	}
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	if ($int3 > 0) {
+		cc_settext(tostring($int3));
+	} else {
+		cc_settext("X");
+	}
+} else {
+	cc_create($component2, ^iftype_graphic, $comsubid10);
+	cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setgraphic("options_icons,28");
+}

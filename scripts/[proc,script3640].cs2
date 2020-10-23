@@ -1,0 +1,54 @@
+// 3640
+[proc,script3640](int $count0, component $component1, component $component2, component $component3, component $component4, component $component5)
+def_int $count6 = 0;
+while ($count6 < $count0) {
+	if (cc_find($component1, $count6) = ^true) {
+		cc_clearops;
+		switch_int (%varbit6348) {
+			case 1 :
+				cc_setop(1, "Buy 1");
+				cc_setop(2, "Value");
+				cc_setop(4, "Buy 5");
+				cc_setop(5, "Buy X");
+			case 2 :
+				cc_setop(1, "Buy 5");
+				cc_setop(2, "Value");
+				cc_setop(3, "Buy 1");
+				cc_setop(5, "Buy X");
+			case 3 :
+				cc_setop(1, "Buy X");
+				cc_setop(2, "Value");
+				cc_setop(3, "Buy 1");
+				cc_setop(4, "Buy 5");
+			case default :
+				cc_setop(1, "Value");
+				cc_setop(3, "Buy 1");
+				cc_setop(4, "Buy 5");
+				cc_setop(5, "Buy X");
+		}
+		cc_setop(10, "Examine");
+	}
+	$count6 = calc($count6 + 1);
+}
+switch_int (%varbit6348) {
+	case 1 :
+		~script3642(false, false, $component2, -1, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(true, null, $component3, 1, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(false, false, $component4, 5, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(false, false, $component5, 0, $count0, $component1, $component2, $component3, $component4, $component5);
+	case 2 :
+		~script3642(false, false, $component2, -1, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(false, false, $component3, 1, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(true, null, $component4, 5, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(false, false, $component5, 0, $count0, $component1, $component2, $component3, $component4, $component5);
+	case 3 :
+		~script3642(false, false, $component2, -1, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(false, false, $component3, 1, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(false, false, $component4, 5, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(true, null, $component5, 0, $count0, $component1, $component2, $component3, $component4, $component5);
+	case default :
+		~script3642(true, null, $component2, -1, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(false, false, $component3, 1, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(false, false, $component4, 5, $count0, $component1, $component2, $component3, $component4, $component5);
+		~script3642(false, false, $component5, 0, $count0, $component1, $component2, $component3, $component4, $component5);
+}
