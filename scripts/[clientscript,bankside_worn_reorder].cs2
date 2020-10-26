@@ -1,5 +1,5 @@
 // 3328
-[clientscript,script3328](component $drop0, component $drop1, int $comsubid2, int $dropsubid3)
+[clientscript,bankside_worn_reorder](component $drop0, component $drop1, int $comsubid2, int $dropsubid3)
 def_int $size4 = inv_size(inv);
 if ($comsubid2 < 0 | $comsubid2 >= $size4) {
 	return;
@@ -16,8 +16,8 @@ if ($obj5 = null) {
 }
 def_obj $obj6 = inv_getobj(inv, $dropsubid3);
 if (cc_find($drop0, $dropsubid3) = ^true) {
-	~script3327($obj5, inv_getnum(inv, $comsubid2), $comsubid2);
+	~bankside_worn_drawitem($obj5, inv_getnum(inv, $comsubid2), $comsubid2);
 }
 if (cc_find($drop0, $comsubid2) = ^true) {
-	~script3327($obj6, inv_getnum(inv, $dropsubid3), $dropsubid3);
+	~bankside_worn_drawitem($obj6, inv_getnum(inv, $dropsubid3), $dropsubid3);
 }

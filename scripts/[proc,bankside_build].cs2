@@ -16,7 +16,7 @@ if (%varcint386 = true) {
 		if (cc_find($component3, $int8) = ^true) {
 			cc_clearops;
 			cc_setposition(calc($int5 + $int8 % 4 * 42), calc($int6 + $int8 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
-			~script3327(inv_getobj(inv, $int8), inv_getnum(inv, $int8), $int8);
+			~bankside_worn_drawitem(inv_getobj(inv, $int8), inv_getnum(inv, $int8), $int8);
 			cc_setontimer(null);
 		}
 	}

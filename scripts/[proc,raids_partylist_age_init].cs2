@@ -1,5 +1,5 @@
 // 1574
-[proc,script1574](string $string0, int $int0)
+[proc,raids_partylist_age_init](string $string0, int $int0)
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_int $int3 = string_length($string0);
@@ -10,4 +10,4 @@ while ($int3 > 0) {
 	$int3 = calc($int3 - 1);
 }
 def_int $int4 = scale(60, 100, $int1);
-~script1575($int4, $int4, $int0);
+~raids_partylist_age_write($int4, $int4, $int0);

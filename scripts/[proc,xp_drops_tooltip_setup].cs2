@@ -1,0 +1,7 @@
+// 2504
+[proc,xp_drops_tooltip_setup](string $string0, string $string1, component $component0, component $component1, component $component2)
+if (~on_mobile = true) {
+	~xp_drops_tooltip_mobile($string0, $string1, $component0, $component1, $component2);
+} else {
+	~xp_drops_tooltip_desktop($string0, $string1, $component0, $component1);
+}

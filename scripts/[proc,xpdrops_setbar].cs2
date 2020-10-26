@@ -102,7 +102,7 @@ if ($stat7 ! null) {
 	}
 }
 def_component $layer19 = if_getlayer($component2);
-~script2504($string2, $string1, $component6, $layer19, $component0);
+~xp_drops_tooltip_setup($string2, $string1, $component6, $layer19, $component0);
 if (~on_mobile = true) {
 	if_setnoclickthrough($boolean9, $layer19);
 } else {
@@ -186,7 +186,7 @@ if ($stat8 ! null) {
 	$string1, $string2 = "", "";
 	~deltooltip_action($component6);
 }
-~script2504($string2, $string1, $component6, $component3, $component0);
+~xp_drops_tooltip_setup($string2, $string1, $component6, $component3, $component0);
 if (~on_mobile = true) {
 	if_setnoclickthrough($boolean20, $component3);
 } else {

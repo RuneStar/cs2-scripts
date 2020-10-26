@@ -1,0 +1,26 @@
+// 2800
+[proc,side_journal_switchtab](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23)
+~side_journal_inactive($component1, $component2, $component3);
+~side_journal_inactive($component5, $component6, $component7);
+~side_journal_inactive($component9, $component10, $component11);
+~side_journal_inactive($component13, $component14, $component15);
+if (%varbit9340 ! 0) {
+	~side_journal_inactive($component17, $component18, $component19);
+}
+if (~league_world = 1 & %varbit10037 >= 5) {
+	~side_journal_inactive($component21, $component22, $component23);
+}
+switch_int (%varbit8168) {
+	case 0 :
+		~side_journal_active($component1, $component2, $component3);
+	case 1 :
+		~side_journal_active($component5, $component6, $component7);
+	case 2 :
+		~side_journal_active($component9, $component10, $component11);
+	case 3 :
+		~side_journal_active($component13, $component14, $component15);
+	case 4 :
+		~side_journal_active($component17, $component18, $component19);
+	case 5 :
+		~side_journal_active($component21, $component22, $component23);
+}

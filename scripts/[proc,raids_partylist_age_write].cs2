@@ -1,6 +1,6 @@
 // 1575
-[proc,script1575](int $int0, int $int1, int $int2)
-cc_setontimer("script1576(event_com, event_comsubid, $int1, $int2)");
+[proc,raids_partylist_age_write](int $int0, int $int1, int $int2)
+cc_setontimer("raids_partylist_age_update(event_com, event_comsubid, $int1, $int2)");
 def_int $int3 = calc($int0 / 60);
 $int0 = calc($int0 % 60);
 if ($int0 < 10) {

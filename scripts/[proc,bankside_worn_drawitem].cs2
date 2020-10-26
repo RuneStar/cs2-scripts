@@ -1,5 +1,5 @@
 // 3327
-[proc,script3327](obj $obj0, int $num1, int $index2)
+[proc,bankside_worn_drawitem](obj $obj0, int $num1, int $index2)
 cc_clearops;
 def_string $string0 = "";
 if ($obj0 ! null) {
@@ -24,7 +24,7 @@ if ($obj0 ! null) {
 	}
 	cc_setop(10, "Examine");
 	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
-	cc_setondragcomplete("script3328(event_com, event_drop, event_comsubid, event_dropsubid)");
+	cc_setondragcomplete("bankside_worn_reorder(event_com, event_drop, event_comsubid, event_dropsubid)");
 } else {
 	cc_settrans(255);
 	cc_setobject(obj_6512, 1);
