@@ -1,0 +1,46 @@
+// 3728
+[proc,script3728](component $component0, int $int1, string $string0)(int)
+def_graphic $graphic2 = "graphic_2572";
+def_graphic $graphic3 = "graphic_2573";
+def_int $colour4 = 0xff981f;
+if ($int1 = 1) {
+	$colour4 = 0xffa82f;
+} else if ($int1 = 0) {
+	$graphic2, $graphic3 = "graphic_2574", "graphic_2575";
+} else if ($int1 = 2) {
+	$graphic2, $graphic3 = "graphic_2576", "graphic_2577";
+}
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(20, 26, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic2);
+cc_create($component0, ^iftype_graphic, 1);
+cc_setsize(40, 26, ^setsize_minus, ^setsize_abs);
+cc_setposition(20, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic3);
+cc_settiling(true);
+cc_create($component0, ^iftype_graphic, 2);
+cc_setsize(20, 26, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
+cc_setgraphic($graphic2);
+cc_sethflip(true);
+if ($int1 = 1) {
+	if_setonmouseover(null, $component0);
+	if_setonmouseleave(null, $component0);
+} else {
+	if_setonmouseover("script3727($component0, 2, $string0)", $component0);
+	if_setonmouseleave("script3727($component0, 0, $string0)", $component0);
+}
+if (string_length($string0) > 0) {
+	cc_create($component0, ^iftype_text, 3);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext($string0);
+	cc_setcolour($colour4);
+	return(4);
+}
+return(3);

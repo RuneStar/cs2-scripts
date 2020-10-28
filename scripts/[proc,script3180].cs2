@@ -1,43 +1,50 @@
 // 3180
-[proc,script3180](int $int0)(struct)
-def_struct $struct1 = enum(int, struct, enum_2670, %varbit10032);
-def_enum $enum2 = null;
-def_struct $struct3 = null;
-def_int $int4 = 0;
-def_int $int5 = -1;
+[proc,script3180](int $int0, int $int1)(struct)
+def_struct $struct2 = enum(int, struct, enum_2670, %varbit10032);
+def_enum $enum3 = null;
+def_struct $struct4 = null;
+def_struct $struct5 = null;
 def_int $int6 = 0;
-def_int $int7 = 0;
-if ($struct1 ! null) {
-	$enum2 = struct_param($struct1, param_870);
-	if ($enum2 ! null) {
-		$int4 = enum_getoutputcount($enum2);
+def_int $int7 = -1;
+def_int $int8 = 0;
+def_int $int9 = 0;
+if ($struct2 ! null) {
+	$enum3 = struct_param($struct2, param_870);
+	if ($enum3 ! null) {
+		$int6 = enum_getoutputcount($enum3);
 		if ($int0 = 1) {
-			return(enum(int, struct, $enum2, calc($int4 - 1)));
+			return(enum(int, struct, $enum3, calc($int6 - 1)));
 		}
-		while ($int6 < $int4) {
-			$struct3 = enum(int, struct, $enum2, $int6);
-			$int5 = struct_param($struct3, param_877);
-			if (%var2615 < $int5) {
-				return($struct3);
+		while ($int8 < $int6) {
+			$struct4 = enum(int, struct, $enum3, $int8);
+			$int7 = struct_param($struct4, param_877);
+			if (%var2615 < $int7) {
+				if ($int1 = 0) {
+					return($struct4);
+				}
+				return($struct5);
 			}
-			switch_int ($int6) {
+			$struct5 = enum(int, struct, $enum3, $int8);
+			switch_int ($int8) {
 				case 0 :
-					$int7 = %varbit10049;
+					$int9 = %varbit10049;
 				case 1 :
-					$int7 = %varbit10050;
+					$int9 = %varbit10050;
 				case 2 :
-					$int7 = %varbit10051;
+					$int9 = %varbit10051;
 				case 3 :
-					$int7 = %varbit10052;
+					$int9 = %varbit10052;
 				case 4 :
-					$int7 = %varbit10053;
+					$int9 = %varbit10053;
+				case 5 :
+					$int9 = %varbit11696;
 				case default :
-					$int7 = 0;
+					$int9 = 0;
 			}
-			if ($int7 = 0) {
-				return($struct3);
+			if ($int9 = 0) {
+				return($struct4);
 			}
-			$int6 = calc($int6 + 1);
+			$int8 = calc($int8 + 1);
 		}
 	}
 }

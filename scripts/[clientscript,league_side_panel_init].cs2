@@ -1,45 +1,68 @@
 // 3225
-[clientscript,league_side_panel_init](component $component0, component $component1, component $component2)
+[clientscript,league_side_panel_init](component $component0, component $component1, component $component2, component $component3, component $component4)
 cc_deleteall($component0);
 cc_deleteall($component1);
 cc_deleteall($component2);
+cc_deleteall($component3);
+if_settext(~league_get_league_name, $component4);
 ~v2_stone_button_filled($component0);
 if (~on_mobile = false) {
 	if_setonmouseleave("league_side_panel_button_hover($component0, 0)", $component0);
 	if_setonmouseover("league_side_panel_button_hover($component0, 1)", $component0);
 }
+if_setonop("button_select_sound", $component0);
 ~v2_stone_button_filled($component1);
 if (~on_mobile = false) {
 	if_setonmouseleave("league_side_panel_button_hover($component1, 0)", $component1);
 	if_setonmouseover("league_side_panel_button_hover($component1, 1)", $component1);
 }
+if_setonop("button_select_sound", $component1);
 ~v2_stone_button_filled($component2);
 if (~on_mobile = false) {
 	if_setonmouseleave("league_side_panel_button_hover($component2, 0)", $component2);
 	if_setonmouseover("league_side_panel_button_hover($component2, 1)", $component2);
 }
+if_setonop("button_select_sound", $component2);
+~v2_stone_button_filled($component3);
+if (~on_mobile = false) {
+	if_setonmouseleave("league_side_panel_button_hover($component3, 0)", $component3);
+	if_setonmouseover("league_side_panel_button_hover($component3, 1)", $component3);
+}
+if_setonop("button_select_sound", $component3);
+def_struct $struct5 = enum(int, struct, enum_2670, %varbit10032);
+def_int $colour6 = 0xff981f;
+if ($struct5 ! null) {
+	if_setgraphic(struct_param($struct5, param_1024), interface_656:11);
+	if_setgraphic(struct_param($struct5, param_1025), interface_656:10);
+	$colour6 = struct_param($struct5, param_1027);
+}
+if_setcolour($colour6, interface_656:2);
+if_setcolour($colour6, interface_656:6);
+if_setcolour($colour6, interface_656:7);
+if_setcolour($colour6, interface_656:13);
+if_setcolour($colour6, interface_656:15);
 def_string $string0 = "Relics Overlay";
-def_component $component3 = interface_656:25;
-def_component $component4 = interface_656:24;
-if_setopbase("<col=ff9040><$string0></col>", $component4);
-if_setsize(calc(parawidth($string0, 190, p11_full) + 20), if_getheight($component4), ^setsize_abs, ^setsize_abs, $component4);
-cc_create($component4, ^iftype_graphic, 0);
+def_component $component7 = interface_656:35;
+def_component $component8 = interface_656:34;
+if_setopbase("<col=ff9040><$string0></col>", $component8);
+if_setsize(calc(parawidth($string0, 190, p11_full) + 20), if_getheight($component8), ^setsize_abs, ^setsize_abs, $component8);
+cc_create($component8, ^iftype_graphic, 0);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
-.cc_create($component4, ^iftype_text, 1);
+cc_setposition(0, 5, ^setpos_abs_left, ^setpos_abs_top);
+.cc_create($component8, ^iftype_text, 1);
 .cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-.cc_setcolour(0xff981f);
+.cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setcolour($colour6);
 .cc_settextfont(p11_full);
 .cc_settextshadow(true);
 .cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
 .cc_settext($string0);
-.cc_setonmouseleave("deltooltip($component3)");
+.cc_setonmouseleave("deltooltip($component7)");
 if (~on_mobile = false) {
-	if_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)", $component4);
-	if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, 0xff981f)", $component4);
+	if_setonmouseover("cc_colour_swapper(event_com, .cc_getid, ^white)", $component8);
+	if_setonmouseleave("cc_colour_swapper(event_com, .cc_getid, $colour6)", $component8);
 }
-~league_side_panel_hudtoggle($component4, $component3);
-if_setonvartransmit("league_side_panel_hudtoggle($component4, cc_getid, .cc_getid, $component3){var1734}", $component4);
-if_setonop("league_side_panel_hudop(event_opindex, $component4, cc_getid, .cc_getid, $component3)", $component4);
-~league_side_panel_update_bar(interface_656:8, %var2615);
+~league_side_panel_hudtoggle($component8, $component7);
+if_setonvartransmit("league_side_panel_hudtoggle($component8, cc_getid, .cc_getid, $component7){var1734}", $component8);
+if_setonop("league_side_panel_hudop(event_opindex, $component8, cc_getid, .cc_getid, $component7)", $component8);
+~league_side_panel_update_bar(interface_656:11, %var2615);

@@ -1,5 +1,5 @@
 // 3286
-[proc,script3286](int $int0)(string, string, int)
+[proc,script3286](int $int0)(string, string, int, struct)
 def_enum $enum1 = enum_2670;
 def_int $count2 = 1;
 def_int $int3 = 0;
@@ -11,19 +11,19 @@ while ($count2 <= enum_getoutputcount($enum1)) {
 	$struct6 = enum(int, struct, $enum1, $count2);
 	$enum7 = struct_param($struct6, param_87);
 	if ($enum7 ! null) {
-		$count4 = 0;
-		while ($count4 <= enum_getoutputcount($enum7)) {
+		while ($count4 < enum_getoutputcount($enum7)) {
 			if ($int3 = $int0) {
 				$struct5 = enum(int, struct, $enum7, $count4);
 				if ($struct5 ! null) {
-					return(struct_param($struct5, param_363), struct_param($struct5, param_914), struct_param($struct5, param_151));
+					return(struct_param($struct5, param_363), struct_param($struct5, param_914), struct_param($struct5, param_151), $struct6);
 				}
-				return("", "", -1);
+				return("", "", -1, null);
 			}
 			$int3 = calc($int3 + 1);
 			$count4 = calc($count4 + 1);
 		}
 	}
 	$count2 = calc($count2 + 1);
+	$count4 = 0;
 }
-return("", "", -1);
+return("", "", -1, null);

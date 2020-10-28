@@ -3,6 +3,9 @@
 def_graphic $graphic1 = "close_buttons,0";
 def_graphic $graphic2 = "close_buttons,1";
 ~create_graphic($component0, 0, $graphic1, 0, 0, ^setpos_abs_centre, ^setpos_abs_centre, 0, 0, ^setsize_minus, ^setsize_minus);
-cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic1, null)");
-cc_setonmouseover("cc_graphic_swapper(event_com, event_comsubid, $graphic2, null)");
+if (~on_mobile = false) {
+	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic1, null)");
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic2, null)");
+}
+cc_setop(1, "Close");
 cc_setonop("highlight_close_op");

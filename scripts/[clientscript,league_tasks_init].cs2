@@ -1,4 +1,6 @@
 // 3202
-[clientscript,league_tasks_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
-if_setonvartransmit("league_tasks_draw_list(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, 0){var2606}", $component1);
-~league_tasks_draw_list(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, 0);
+[clientscript,league_tasks_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
+~script3691($component14, false);
+def_int $comsubid15 = ~steelborder(interface_657:2, "Trailblazer Tasks", 1);
+if_setonvartransmit("league_tasks_draw_list(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, 0, $comsubid15){var2606, var2805}", $component1);
+~league_tasks_draw_list(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, 0, $comsubid15);

@@ -3,20 +3,29 @@
 if ($int1 = -1) {
 	$int1 = %var2615;
 }
-def_struct $struct2 = ~script3180(0);
-def_int $int3 = -1;
+def_struct $struct2 = ~script3180(0, 0);
+def_struct $struct3 = ~script3180(0, 1);
+def_int $int4 = -1;
+def_int $int5 = -1;
 if ($struct2 ! null) {
-	$int3 = struct_param($struct2, param_877);
+	$int4 = struct_param($struct2, param_877);
 } else {
-	$int3 = 400;
+	$int4 = 400;
 }
-def_int $width4 = -1;
-if ($int3 ! -1 & $int3 > 0) {
-	$width4 = scale($int1, $int3, 130);
+if ($struct3 ! null) {
+	$int5 = struct_param($struct3, param_877);
 } else {
-	$width4 = 130;
+	$int5 = 400;
+}
+def_int $width6 = -1;
+def_int $int7 = calc($int1 - $int5);
+def_int $int8 = calc($int4 - $int5);
+if ($int4 ! -1 & $int5 ! -1 & $int4 > 0 & $int5 ! $int4) {
+	$width6 = scale($int7, $int8, 130);
+} else {
+	$width6 = 130;
 }
 if (if_find($component0) = true) {
-	cc_setsize($width4, 0, ^setsize_abs, ^setsize_minus);
+	cc_setsize($width6, 0, ^setsize_abs, ^setsize_minus);
 }
-~league_side_panel_update_text(interface_656:14, interface_656:11, interface_656:13, $int1, $int3);
+~league_side_panel_update_text(interface_656:6, interface_656:7, interface_656:16, interface_656:14, $int1, $int4);

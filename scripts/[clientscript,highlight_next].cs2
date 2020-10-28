@@ -1,9 +1,10 @@
 // 3420
 [clientscript,highlight_next](boolean $boolean0, component $component1, int $comsubid2)
+sound_synth(synth_2266, 1, 0);
 if (cc_find($component1, $comsubid2) = ^true) {
 	cc_setonop(null);
 	cc_setop(1, "");
 	if ($boolean0 = true) {
-		if_resume_pausebutton(interface_664:28);
+		if_resume_pausebutton(interface_664:9);
 	}
 }

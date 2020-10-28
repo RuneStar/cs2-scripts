@@ -1,0 +1,26 @@
+// 3749
+[proc,script3749](component $component0, boolean $boolean1)
+cc_deleteall($component0);
+def_int $comsubid2 = 0;
+if (%varbit11697 = 1) {
+	$comsubid2 = ~v2_stone_button_in_filled($component0);
+} else {
+	$comsubid2 = ~v2_stone_button_filled($component0);
+}
+cc_create($component0, ^iftype_graphic, $comsubid2);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(27, 16, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("graphic_2519");
+cc_sethflip($boolean1);
+if (%varbit11697 = 1) {
+	if_setop(1, "", $component0);
+} else {
+	if_setop(1, "Select", $component0);
+}
+if (~on_mobile = false & %varbit11697 ! 1) {
+	if_setonmouseleave("script3756($component0, 0, "", $boolean1)", $component0);
+	if_setonmouserepeat("script3756($component0, 1, "", $boolean1)", $component0);
+} else {
+	if_setonmouseleave(null, $component0);
+	if_setonmouserepeat(null, $component0);
+}

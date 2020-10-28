@@ -12,11 +12,14 @@ def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $comsubid10 = -1;
-def_struct $struct11 = ~script3180($int3);
+def_struct $struct11 = ~script3180($int3, 0);
 def_int $int12 = -1;
 def_int $int13 = if_getwidth($component0);
 def_string $string0 = "";
-def_int $int14 = -1;
+def_int $int14 = 0;
+def_int $int15 = -1;
+def_graphic $graphic16 = struct_param($struct4, param_1022);
+def_graphic $graphic17 = struct_param($struct4, param_1023);
 if ($struct11 ! null) {
 	$int12 = struct_param($struct11, param_877);
 }
@@ -25,44 +28,50 @@ if ($int12 ! -1 & $int3 = 0) {
 }
 if (cc_find($component0, 0) = ^false) {
 	cc_create($component0, ^iftype_rectangle, $int9);
-	cc_setsize(calc($int13 - 2), 29, ^setsize_abs, ^setsize_abs);
-	cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc($int13 - 4), 29, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setfill(false);
 	cc_setcolour(0x474745);
 	$int9 = calc($int9 + 1);
 	cc_create($component0, ^iftype_graphic, $int9);
-	cc_setsize(calc($int13 - 4), 27, ^setsize_abs, ^setsize_abs);
-	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("league_progress_bar,1");
+	cc_setsize(calc($int13 - 6), 27, ^setsize_abs, ^setsize_abs);
+	cc_setposition(3, 3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic(struct_param($struct4, param_1025));
 	cc_settiling(true);
 	$int9 = calc($int9 + 1);
 	cc_create($component0, ^iftype_graphic, $int9);
-	cc_setsize(0, 27, ^setsize_abs, ^setsize_abs);
-	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
-	cc_setgraphic("league_progress_bar,0");
+	cc_setsize(1, 27, ^setsize_abs, ^setsize_abs);
+	cc_setposition(3, 3, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic(struct_param($struct4, param_1024));
 	cc_settiling(true);
 	$int9 = calc($int9 + 1);
 	if ($int3 = 0) {
 		cc_create($component0, ^iftype_text, $int9);
 		cc_setsize($int13, 0, ^setsize_abs, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-		cc_settextfont(p12_full);
-		cc_setcolour(^white);
-		cc_settextshadow(true);
+		cc_settextfont(struct_param($struct4, param_1032));
+		cc_setcolour(struct_param($struct4, param_1029));
+		cc_settextshadow(struct_param($struct4, param_1030));
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settext("");
 		$int9 = calc($int9 + 1);
 		cc_create($component0, ^iftype_rectangle, $int9);
-		cc_setsize($int13, 31, ^setsize_abs, ^setsize_abs);
+		cc_setsize($int13, 33, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setfill(false);
+		cc_setcolour(0x0e0e0c);
+		$int9 = calc($int9 + 1);
+		cc_create($component0, ^iftype_rectangle, $int9);
+		cc_setsize(calc($int13 - 2), 31, ^setsize_abs, ^setsize_abs);
+		cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setfill(false);
 		cc_setcolour(0x0e0e0c);
 		$int9 = calc($int9 + 1);
 		if ($int12 ! -1) {
 			cc_create($component0, ^iftype_graphic, $int9);
 			cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
-			cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
-			cc_setgraphic("league_relics,1");
+			cc_setposition(1, 2, ^setpos_abs_right, ^setpos_abs_bottom);
+			cc_setgraphic($graphic17);
 			$int9 = calc($int9 + 1);
 		}
 	} else {
@@ -74,17 +83,22 @@ if (cc_find($component0, 0) = ^false) {
 					$struct6 = enum(int, struct, $enum5, $int8);
 					cc_create($component0, ^iftype_graphic, $int9);
 					cc_setsize(10, 31, ^setsize_abs, ^setsize_abs);
-					$int14 = scale(struct_param($struct6, param_877), $int12, calc($int13 - 4));
-					if ($int14 <= 2) {
-						$int14 = 0;
-					} else if ($int14 >= calc($int13 - 4)) {
-						$int14 = $int13;
+					$int14 = struct_param($struct6, param_877);
+					$int15 = scale($int14, $int12, calc($int13 - 4));
+					if ($int15 <= 2) {
+						$int15 = 0;
+					} else if ($int15 >= calc($int13 - 4)) {
+						$int15 = $int13;
 					} else {
-						$int14 = calc($int14 + 2);
+						$int15 = calc($int15 + 2);
 					}
-					cc_setposition(calc($int14 - 5), 0, ^setpos_abs_left, ^setpos_abs_top);
-					cc_setgraphic("league_progress_bar_indicator");
-					$string0 = "Relic unlocked at <tostring(struct_param($struct6, param_877))> points.";
+					cc_setposition(calc($int15 - 4), 1, ^setpos_abs_left, ^setpos_abs_top);
+					cc_setgraphic(struct_param($struct4, param_1031));
+					if ($int14 = 1) {
+						$string0 = "Relic unlocked at <tostring($int14)> point.";
+					} else {
+						$string0 = "Relic unlocked at <tostring($int14)> points.";
+					}
 					if (~on_mobile = true) {
 						cc_setop(1, "Show Threshold");
 						cc_setonop("league_progress_bar_mobile_tooltip(event_com, event_comsubid, $component1, $string0, 512)");
@@ -99,18 +113,24 @@ if (cc_find($component0, 0) = ^false) {
 			}
 		}
 		cc_create($component0, ^iftype_text, $int9);
-		cc_setsize($int13, 0, ^setsize_abs, ^setsize_minus);
-		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-		cc_settextfont(p12_full);
-		cc_setcolour(^white);
-		cc_settextshadow(true);
+		cc_setsize(calc($int13 - 2), 2, ^setsize_abs, ^setsize_minus);
+		cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
+		cc_settextfont(struct_param($struct4, param_1032));
+		cc_setcolour(struct_param($struct4, param_1029));
+		cc_settextshadow(struct_param($struct4, param_1030));
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settext("");
 		$comsubid10 = $int9;
 		$int9 = calc($int9 + 1);
 		cc_create($component0, ^iftype_rectangle, $int9);
-		cc_setsize($int13, 31, ^setsize_abs, ^setsize_abs);
+		cc_setsize($int13, 33, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setfill(false);
+		cc_setcolour(0x0e0e0c);
+		$int9 = calc($int9 + 1);
+		cc_create($component0, ^iftype_rectangle, $int9);
+		cc_setsize(calc($int13 - 2), 31, ^setsize_abs, ^setsize_abs);
+		cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setfill(false);
 		cc_setcolour(0x0e0e0c);
 		$int9 = calc($int9 + 1);
@@ -119,47 +139,53 @@ if (cc_find($component0, 0) = ^false) {
 if ($int3 = 0) {
 	$comsubid10 = 3;
 }
-def_int $width15 = calc($int13 - 4);
-def_int $width16 = $width15;
+def_int $width18 = calc($int13 - 4);
+def_int $width19 = $width18;
 if ($int12 ! -1 & $int12 > 0) {
-	$width16 = scale(%var2615, $int12, $width15);
+	$width19 = scale(%var2615, $int12, $width18);
 }
-if ($width16 > $width15) {
-	$width16 = $width15;
+if ($width19 > $width18) {
+	$width19 = $width18;
 }
 if (cc_find($component0, 2) = ^true) {
 	if ($int2 = 1) {
-		if (cc_getwidth > $width16) {
+		if (cc_getwidth > $width19) {
 			cc_setsize(0, cc_getheight, ^setsize_abs, ^setsize_abs);
 		}
-		if_setontimer("league_points_progress_bar_expand($component0, $width16)", $component0);
+		if_setontimer("league_points_progress_bar_expand($component0, $width19)", $component0);
 	} else {
-		cc_setsize($width16, cc_getheight, ^setsize_abs, ^setsize_abs);
+		cc_setsize($width19, cc_getheight, ^setsize_abs, ^setsize_abs);
 	}
 }
-def_int $int17 = -1;
+def_int $int20 = -1;
 if ($comsubid10 ! -1 & cc_find($component0, $comsubid10) = ^true) {
 	if ($int3 = 0 & $int12 ! -1) {
 		if (%var2615 >= $int12) {
-			cc_settext("<~text_device("Click", "Tap")> here to select your next relic");
-			if_setop(1, "View", $component0);
-			if_setopbase("<col=ff981f>Relics</col>", $component0);
-		} else {
-			$int17 = calc($int12 - %var2615);
-			if ($int17 > 1) {
-				cc_settext("<tostring($int17)> points until your next relic");
+			if (%varbit10037 < 9) {
+				cc_settext("You have enough points to unlock your next Relic!");
 			} else {
-				cc_settext("<tostring($int17)> point until your next relic");
+				cc_settext("<~text_device("Click", "Tap")> here to select your next Relic!");
+				if_setop(1, "View", $component0);
+				if_setopbase("<col=ff981f>Relics</col>", $component0);
+			}
+		} else {
+			$int20 = calc($int12 - %var2615);
+			if ($int20 = 1) {
+				cc_settext("<tostring($int20)> point until your next Relic.");
+			} else {
+				cc_settext("<tostring($int20)> points until your next Relic.");
 			}
 		}
+	} else if (%var2615 = 1) {
+		cc_settext("<tostring(%var2615)> point earned");
 	} else {
-		cc_settext("<tostring(%var2615)> points");
+		cc_settext("<tostring(%var2615)> points earned");
 	}
 }
-if ($int3 = 0 & cc_find($component0, 5) = ^true) {
+if ($int3 = 0 & cc_find($component0, 6) = ^true) {
 	if (%var2615 >= $int12) {
-		cc_setgraphic("league_relics,0");
+		cc_setgraphic($graphic16);
 	} else {
-		cc_setgraphic("league_relics,1");
+		cc_setgraphic($graphic17);
 	}
 }

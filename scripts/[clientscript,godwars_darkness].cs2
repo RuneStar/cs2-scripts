@@ -1,8 +1,9 @@
 // 342
 [clientscript,godwars_darkness](component $component0)
 def_int $int1 = 255;
+def_coord $coord2 = coord;
 if (%varbit4733 = 0) {
-	if (~inzone(2_45_83_32_0, 2_45_83_63_23, coord) = 1) {
+	if (~inzone(2_45_83_32_0, 2_45_83_63_23, coord) = 1 | %varbit11710 = 1) {
 		$int1 = 125;
 	} else if (~inzone(2_45_83_24_24, 2_45_83_63_63, coord) = 1) {
 		$int1 = 150;
@@ -10,19 +11,19 @@ if (%varbit4733 = 0) {
 		$int1 = 175;
 	}
 }
-def_int $int2 = %varcint50;
-if ($int2 > $int1) {
-	$int2 = calc($int2 - 4);
-	if ($int2 < $int1) {
-		$int2 = $int1;
+def_int $int3 = %varcint50;
+if ($int3 > $int1) {
+	$int3 = calc($int3 - 4);
+	if ($int3 < $int1) {
+		$int3 = $int1;
 	}
-} else if ($int2 < $int1) {
-	$int2 = calc($int2 + 4);
-	if ($int2 > $int1) {
-		$int2 = $int1;
+} else if ($int3 < $int1) {
+	$int3 = calc($int3 + 4);
+	if ($int3 > $int1) {
+		$int3 = $int1;
 	}
 }
-if ($int2 ! %varcint50) {
-	if_settrans($int2, $component0);
-	%varcint50 = $int2;
+if ($int3 ! %varcint50) {
+	if_settrans($int3, $component0);
+	%varcint50 = $int3;
 }

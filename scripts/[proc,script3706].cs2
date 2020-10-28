@@ -1,0 +1,59 @@
+// 3706
+[proc,script3706](inv $inv0)
+cc_deleteall(interface_678:5);
+def_int $size1 = inv_size($inv0);
+def_obj $obj2 = null;
+def_int $num3 = 0;
+def_int $int4 = 0;
+def_string $string0 = "Invalid item.";
+def_int $size5 = 0;
+while ($size5 < $size1) {
+	cc_create(interface_678:5, ^iftype_graphic, $size5);
+	$obj2 = inv_getobj($inv0, $size5);
+	if ($obj2 ! null) {
+		$num3, $int4 = inv_getnum($inv0, $size5), calc($int4 + 1);
+		cc_sethide(false);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($size5 % 4 * (36 + 8)), calc($size5 / 4 * 32), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setoutline(1);
+		cc_setgraphicshadow(0x333333);
+		cc_setobject($obj2, $num3);
+		if ($inv0 = inv) {
+			if ($obj2 = extradimensional_bag_25106 | $obj2 = extradimensional_bag_25108) {
+				cc_settrans(150);
+				cc_setonmouserepeat(null);
+				cc_setonmouseleave(null);
+			} else {
+				cc_settrans(0);
+				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 150, 0)");
+			}
+			cc_setop(1, "Store-1");
+			cc_setop(2, "Store-5");
+			cc_setop(3, "Store-All");
+			cc_setop(4, "Store-X");
+			cc_setop(9, "Examine");
+		} else {
+			cc_settrans(0);
+			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 150, 0)");
+			cc_setop(5, "Withdraw-1");
+			cc_setop(6, "Withdraw-5");
+			cc_setop(7, "Withdraw-All");
+			cc_setop(8, "Withdraw-X");
+			cc_setop(10, "Examine");
+		}
+		cc_setopbase("<col=ff9040><oc_name($obj2)>");
+	} else {
+		cc_sethide(true);
+	}
+	$size5 = calc($size5 + 1);
+}
+if ($inv0 = inv_646 & $int4 <= 0) {
+	cc_create(interface_678:5, ^iftype_text, $size5);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(if_getwidth(interface_678:5), if_getheight(interface_678:5), ^setsize_abs, ^setsize_abs);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settext("The bag is empty.");
+}

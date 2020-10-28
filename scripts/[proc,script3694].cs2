@@ -1,0 +1,17 @@
+// 3694
+[proc,script3694](component $component0, int $trans1, component $component2, graphic $graphic3, component $component4, int $colour5, int $comsubid6)
+if ($trans1 > 255) {
+	$trans1 = 255;
+}
+if ($trans1 < 0) {
+	$trans1 = 0;
+}
+if (cc_find($component0, $comsubid6) = ^true) {
+	cc_settrans($trans1);
+}
+if (cc_find($component2, $comsubid6) = ^true) {
+	cc_setgraphic($graphic3);
+}
+if (cc_find($component4, $comsubid6) = ^true) {
+	cc_setcolour($colour5);
+}

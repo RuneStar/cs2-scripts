@@ -1,0 +1,21 @@
+// 3713
+[proc,script3713](component $component0, string $string0)
+if_sethide(false, $component0);
+def_int $comsubid1 = ~v2_stone_button_filled($component0);
+cc_create($component0, ^iftype_text, $comsubid1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour(^white);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+if (string_length($string0) > 0) {
+	cc_settext($string0);
+	if_setop(1, removetags($string0), $component0);
+}
+if (~on_mobile = false) {
+	if_setonmouseleave("script3710($component0, 0, $string0)", $component0);
+	if_setonmouserepeat("script3710($component0, 1, $string0)", $component0);
+}
+if_setonop("script3711(event_opindex, $component0, $string0)", $component0);
+if_setontimer(null, $component0);

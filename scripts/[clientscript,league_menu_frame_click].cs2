@@ -1,5 +1,6 @@
 // 3224
 [clientscript,league_menu_frame_click](component $component0, component $component1, component $component2)
+sound_synth(synth_2266, 1, 0);
 if_sethide(true, $component1);
 if_sethide(true, $component2);
 if (cc_find($component0, 0) = ^true) {

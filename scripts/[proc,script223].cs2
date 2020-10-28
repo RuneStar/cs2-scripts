@@ -16,7 +16,11 @@ def_string $string2 = "";
 def_int $width3 = 0;
 def_boolean $boolean4 = ~on_mobile;
 if (%varbit8119 = 1) {
-	$string2 = "<enum(int, string, enum_1894, %varbit1777)><chat_playername>";
+	if (~league_world = 1) {
+		$string2 = "<img=22><chat_playername>";
+	} else {
+		$string2 = "<enum(int, string, enum_1894, %varbit1777)><chat_playername>";
+	}
 	if ($boolean4 = true) {
 		$string2 = append($string2, "<img=19>");
 	}
@@ -42,7 +46,11 @@ if (%varbit8119 = 1) {
 	if_setonmouseleave(null, interface_162:58);
 	if_setonop(null, interface_162:58);
 } else {
-	$string2 = "<enum(int, string, enum_1894, %varbit1777)> You must set a name before you can chat.";
+	if (~league_world = 1) {
+		$string2 = "<img=22> You must set a name before you can chat.";
+	} else {
+		$string2 = "<enum(int, string, enum_1894, %varbit1777)> You must set a name before you can chat.";
+	}
 	if_settextalign(^settextalign_centre, ^settextalign_bottom, 0, interface_162:58);
 	if_setop(10, "Configure", interface_162:58);
 	if_setopbase("<col=ff9040>Display name</col>", interface_162:58);

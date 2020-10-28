@@ -5,5 +5,7 @@ if (~league_world = 0) {
 }
 switch_int (%varbit10032) {
 	case 1 :
-		~league_relic_display_twisted($component0, $component1);
+		~script3696($component0, $component1, 0x00bb00);
+	case 2 :
+		~script3696($component0, $component1, 0x0098b1);
 }

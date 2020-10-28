@@ -1,0 +1,32 @@
+// 3659
+[proc,script3659]
+def_component $component0 = enum(int, component, enum_3332, %varbit10662);
+def_component $component1 = enum(int, component, enum_3332, %varbit10663);
+def_component $component2 = enum(int, component, enum_3332, %varbit10664);
+def_component $component3 = enum(int, component, enum_3332, %varbit10665);
+def_component $component4 = enum(int, component, enum_3332, %varbit10666);
+def_component $component5 = enum(int, component, enum_3332, %varbit10667);
+def_graphic $graphic6 = enum(int, graphic, enum_3331, %varbit10662);
+def_graphic $graphic7 = enum(int, graphic, enum_3331, %varbit10663);
+def_graphic $graphic8 = enum(int, graphic, enum_3331, %varbit10664);
+def_graphic $graphic9 = enum(int, graphic, enum_3331, %varbit10665);
+def_graphic $graphic10 = enum(int, graphic, enum_3331, %varbit10666);
+def_graphic $graphic11 = enum(int, graphic, enum_3331, %varbit10667);
+if ($component0 ! null & $graphic6 ! null) {
+	if_setgraphic($graphic6, $component0);
+}
+if ($component1 ! null & $graphic7 ! null) {
+	if_setgraphic($graphic7, $component1);
+}
+if ($component2 ! null & $graphic8 ! null) {
+	if_setgraphic($graphic8, $component2);
+}
+if ($component3 ! null & $graphic9 ! null) {
+	if_setgraphic($graphic9, $component3);
+}
+if ($component4 ! null & $graphic10 ! null) {
+	if_setgraphic($graphic10, $component4);
+}
+if ($component5 ! null & $graphic11 ! null) {
+	if_setgraphic($graphic11, $component5);
+}

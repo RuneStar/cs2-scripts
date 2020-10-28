@@ -1,18 +1,38 @@
 // 3228
-[proc,league_side_panel_update_text](component $component0, component $component1, component $component2, int $int3, int $int4)
-def_int $int5 = calc($int4 - $int3);
-if ($int5 <= 0 & if_find($component0) = true) {
-	if (%varbit10053 = 0) {
-		cc_settext("<col=ffffff>You can unlock a new relic!</col>");
+[proc,league_side_panel_update_text](component $component0, component $component1, component $component2, component $component3, int $int4, int $int5)
+def_int $int6 = -1;
+if ($int5 ! -1 & $int4 ! -1) {
+	$int6 = calc($int5 - $int4);
+}
+if ($int6 <= 0 & if_find($component1) = true) {
+	if (%varbit11696 = 0) {
+		cc_settext("<col=ffffff>You can unlock a new Relic!</col>");
 	} else {
-		cc_settext("<col=ffffff>You have unlocked all relics!</col>");
+		cc_settext("<col=ffffff>You have unlocked all Relics!</col>");
+	}
+} else if (if_find($component1) = true) {
+	cc_settext("<col=ffffff><tostring($int6)></col> points until next Relic.");
+}
+def_int $int7 = -1;
+def_struct $struct8 = ~script3682(0);
+if ($struct8 ! null) {
+	$int7 = struct_param($struct8, param_1010);
+} else {
+	$int7 = 1;
+}
+$int6 = calc($int7 - %varbit10046);
+if ($int6 <= 0 & if_find($component0) = true) {
+	if (%varbit10666 = 0) {
+		cc_settext("<col=ffffff>You can unlock a new area!</col>");
+	} else {
+		cc_settext("<col=ffffff>You have unlocked all areas!</col>");
 	}
 } else if (if_find($component0) = true) {
-	cc_settext("<col=ffffff><tostring($int5)></col> points until next relic.");
-}
-if (if_find($component1) = true) {
-	cc_settext(tostring($int3));
+	cc_settext("<col=ffffff><tostring($int6)></col> tasks until next area.");
 }
 if (if_find($component2) = true) {
+	cc_settext(tostring($int4));
+}
+if (if_find($component3) = true) {
 	cc_settext(tostring(%varbit10046));
 }

@@ -1,113 +1,138 @@
 // 503
-[proc,league_rewards_draw](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+[proc,league_rewards_draw](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
 cc_deleteall($component4);
-def_int $int12 = 0;
-def_int $int13 = 5;
-def_int $int14 = calc(if_getwidth($component4) / 2);
-def_enum $enum15 = enum_2670;
-def_int $int16 = 0;
-def_int $count17 = 1;
-def_int $int18 = 0;
-def_struct $struct19 = null;
-def_enum $enum20 = null;
-def_int $int21 = 0;
+def_int $int13 = 0;
+def_int $height14 = 7;
+def_int $int15 = calc(if_getwidth($component4) / 2);
+def_enum $enum16 = enum_2670;
+def_int $int17 = 0;
+def_int $int18 = 1;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_struct $struct21 = null;
+def_enum $enum22 = null;
+def_int $int23 = 0;
 %varbit10110 = -1;
-while ($count17 <= enum_getoutputcount($enum15)) {
-	$struct19 = enum(int, struct, $enum15, $count17);
-	$enum20 = struct_param($struct19, param_87);
-	if ($enum20 ! null) {
-		cc_create($component4, ^iftype_text, $int21);
-		cc_settext("<struct_param($struct19, param_858)> Rewards");
+while ($int18 <= enum_getoutputcount($enum16)) {
+	$struct21 = enum(int, struct, $enum16, $int18);
+	$enum22 = struct_param($struct21, param_87);
+	if ($enum22 ! null & enum_getoutputcount($enum22) > 0) {
+		if ($int18 ! 1) {
+			$height14, $int23 = ~pest_rewards_divider(5, $component4, $height14, $int23);
+		}
+		cc_create($component4, ^iftype_text, $int23);
+		cc_settext(struct_param($struct21, param_858));
 		cc_settextfont(b12_full);
 		cc_settextshadow(true);
 		cc_setcolour(0xff891f);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_setsize(if_getwidth($component4), 13, ^setsize_abs, ^setsize_abs);
-		cc_setposition(0, $int13, ^setpos_abs_left, ^setpos_abs_top);
-		$int13 = calc($int13 + 13);
-		$int21 = calc($int21 + 1);
-		$int13, $int21 = ~pest_rewards_divider(5, $component4, $int13, $int21);
-		while ($int18 < enum_getoutputcount($enum20)) {
-			if (calc($int18 % 2) = 0) {
-				$int12 = 0;
+		cc_setposition(0, $height14, ^setpos_abs_left, ^setpos_abs_top);
+		$height14 = calc($height14 + 13);
+		$int23 = calc($int23 + 1);
+		$height14, $int23 = ~pest_rewards_divider(5, $component4, $height14, $int23);
+		while ($int19 < enum_getoutputcount($enum22)) {
+			if (calc($int19 % 2) = 0) {
+				$int13 = 0;
 			} else {
-				$int12 = $int14;
+				$int13 = calc($int15 - 1);
 			}
-			if ($int18 ! 0 & calc($int18 % 2) = 0) {
-				$int13 = calc($int13 + 32 + 8);
+			$int13 = calc($int13 + 4);
+			if ($int19 ! 0 & calc($int19 % 2) = 0) {
+				$height14 = calc($height14 + 32 + 8);
 			}
-			$int21 = ~league_reward_draw_item($component4, $int12, $int13, $int14, enum(int, struct, $enum20, $int18), $int18, $int0, $int21, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11);
-			$int18 = calc($int18 + 1);
+			$int23 = ~league_reward_draw_item($component4, $int13, $height14, $int15, enum(int, struct, $enum22, $int19), $int20, $int0, $int23, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $struct21);
+			$int19 = calc($int19 + 1);
+			$int20 = calc($int20 + 1);
 		}
+		$height14 = calc($height14 + 32 + 10);
 	}
-	$count17 = calc($count17 + 1);
+	$int18 = calc($int18 + 1);
+	$int19 = 0;
 }
-$int21 = 0;
+$int23 = 0;
 def_string $text0 = "";
 def_string $string1 = "";
-def_int $int22 = 0;
+def_int $int24 = 0;
 def_string $op2 = "";
 def_string $string3 = ",";
+def_struct $struct25 = null;
 cc_deleteall($component5);
 cc_deleteall($component8);
 cc_deleteall($component10);
 cc_deleteall($component11);
-if ($int0 ! -1 & ~script3292 = 1) {
-	$text0, $string1, $int22 = ~script3286($int0);
-	%varbit10110 = $int0;
-	~pest_rewards_confirmdraw(false, $text0, $component6);
-	while ($int21 < $int0) {
-		cc_create($component5, ^iftype_rectangle, $int21);
-		cc_sethide(true);
-		$int21 = calc($int21 + 1);
+if ($int0 ! -1) {
+	$text0, $string1, $int24, $struct25 = ~script3286($int0);
+	if (~script3292($struct25) = 1) {
+		%varbit10110 = $int0;
+		~pest_rewards_confirmdraw(false, $text0, $component6);
+		while ($int23 < $int0) {
+			cc_create($component5, ^iftype_rectangle, $int23);
+			cc_sethide(true);
+			$int23 = calc($int23 + 1);
+		}
+		cc_create($component5, ^iftype_rectangle, $int23);
+		cc_sethide(false);
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setop(1, "Confirm");
+		cc_setopbase("<col=ff981f><$text0></col>");
+		if (~on_mobile = false) {
+			cc_setonmouserepeat("pest_rewards_confirmdraw(true, $text0, $component6)");
+			cc_setonmouseleave("pest_rewards_confirmdraw(false, $text0, $component6)");
+		}
+		cc_setonop("league_reward_shop_confirmop(event_opindex, $component7, $struct25)");
+		~steelborder($component8, $text0, 1);
+		if_settext("<col=ffffff><$text0></col><br><$string1><br><br>Are you sure that you wish to buy this item for <col=ffffff><~tostring_spacer($int24, $string3)></col> points?<br><col=ffffff>You cannot sell this item back</col> if you change your mind.", $component9);
+		$int23 = ~v2_stone_button($component10);
+		cc_create($component10, ^iftype_text, $int23);
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		$op2 = "Confirm";
+		cc_settext($op2);
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_setcolour(^white);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		if_setop(1, $op2, $component10);
+		if (~on_mobile = false) {
+			if_setonmouseleave("league_relic_button_hover($component10, false, $op2, ^white)", $component10);
+			if_setonmouseover("league_relic_button_hover($component10, true, $op2, 0xaaaaaa)", $component10);
+		}
+		if_setonop("league_reward_shop_buy(event_opindex, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component10);
+		$int23 = ~v2_stone_button($component11);
+		cc_create($component11, ^iftype_text, $int23);
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		$op2 = "Cancel";
+		cc_settext($op2);
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_setcolour(^white);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		if_setop(1, $op2, $component11);
+		if (~on_mobile = false) {
+			if_setonmouseleave("league_relic_button_hover($component11, false, $op2, ^white)", $component11);
+			if_setonmouseover("league_relic_button_hover($component11, true, $op2, 0xaaaaaa)", $component11);
+		}
+		if_setonop("league_reward_confirm_back($int0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12)", $component11);
 	}
-	cc_create($component5, ^iftype_rectangle, $int21);
-	cc_sethide(false);
-	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setop(1, "Confirm");
-	cc_setonmouserepeat("pest_rewards_confirmdraw(true, $text0, $component6)");
-	cc_setonmouseleave("pest_rewards_confirmdraw(false, $text0, $component6)");
-	cc_setonop("league_reward_shop_confirmop(event_opindex, $component7)");
-	~steelborder($component8, $text0, 1);
-	if_settext("<col=ffffff><$text0></col>:<br><$string1><br><br>Are you sure that you wish to buy this item for <col=ffffff><~tostring_spacer($int22, $string3)></col> points?<br><col=ff0000>You cannot sell this item back to the shop</col> if you change your mind.", $component9);
-	$int21 = ~v2_stone_button($component10);
-	cc_create($component10, ^iftype_text, $int21);
-	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	$op2 = "Confirm";
-	cc_settext($op2);
-	cc_settextfont(p12_full);
-	cc_settextshadow(true);
-	cc_setcolour(^white);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	if_setop(1, $op2, $component10);
-	if_setopbase("<col=ff981f>Selection</col>", $component10);
-	if_setonmouseleave("league_relic_button_hover($component10, false, $op2)", $component10);
-	if_setonmouseover("league_relic_button_hover($component10, true, $op2)", $component10);
-	if_setonop("league_reward_shop_buy(event_opindex, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)", $component10);
-	$int21 = ~v2_stone_button($component11);
-	cc_create($component11, ^iftype_text, $int21);
-	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	$op2 = "Cancel";
-	cc_settext($op2);
-	cc_settextfont(p12_full);
-	cc_settextshadow(true);
-	cc_setcolour(^white);
-	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	if_setop(1, $op2, $component11);
-	if_setonmouseleave("league_relic_button_hover($component11, false, $op2)", $component11);
-	if_setonmouseover("league_relic_button_hover($component11, true, $op2)", $component11);
-	if_setonop("league_reward_confirm_back($int0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11)", $component11);
 } else {
-	$int21 = ~v2_stone_button_in_filled($component6);
-	cc_create($component6, ^iftype_text, $int21);
+	$int23 = ~v2_stone_button_in_filled($component6);
+	cc_create($component6, ^iftype_text, $int23);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-	cc_setcolour(0x7f7f7f);
+	cc_setcolour(0x9f9f9f);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(false);
 	cc_settext("Confirm");
 }
+cc_deleteall($component12);
+if ($height14 > if_getheight($component4)) {
+	if_setscrollsize(0, $height14, $component4);
+} else {
+	if_setscrollsize(0, 0, $component4);
+}
+if_setscrollpos(0, 0, $component4);
+~scrollbar_vertical($component12, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

@@ -1,48 +1,55 @@
 // 3212
-[clientscript,league_task_filter_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $component4, component $component5)
+[clientscript,league_task_filter_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $component4, component $component5, int $colour6)
 sound_synth(synth_2266, 1, 0);
-~xpdrops_setup_display_hoverdisable($component2);
+~script3702($component2, $colour6);
 if_sethide(false, $component4);
-if_setonclick("league_task_filter_close(1, -1, $enum0, $component2, $comsubid3, $component4)", $component4);
-def_int $int6 = if_getx($component2);
-def_int $int7 = if_gety($component2);
-def_component $layer8 = if_getlayer($component2);
-while ($layer8 ! null) {
-	$int6, $int7 = calc($int6 + if_getx($layer8) - if_getscrollx($layer8)), calc($int7 + if_gety($layer8) - if_getscrolly($layer8));
-	$layer8 = if_getlayer($layer8);
+if_setonclick("league_task_filter_close(1, -1, $enum0, $component2, $comsubid3, $component4, $colour6)", $component4);
+def_int $int7 = if_getx($component2);
+def_int $int8 = if_gety($component2);
+def_component $layer9 = if_getlayer($component2);
+while ($layer9 ! null) {
+	$int7, $int8 = calc($int7 + if_getx($layer9) - if_getscrollx($layer9)), calc($int8 + if_gety($layer9) - if_getscrolly($layer9));
+	$layer9 = if_getlayer($layer9);
 }
-def_int $int9 = calc(enum_getoutputcount($enum0) - 1);
-def_int $int10 = 14;
+def_int $int10 = calc(enum_getoutputcount($enum0) - 1);
+def_int $int11 = 14;
 if (~on_mobile = true) {
-	$int10 = 18;
+	$int11 = 18;
 }
-if_setposition($int6, calc($int7 + if_getheight($component2) - 1), ^setpos_abs_left, ^setpos_abs_top, $component5);
-if_setsize(if_getwidth($component2), calc(2 + $int9 * $int10 + 2), ^setsize_abs, ^setsize_abs, $component5);
+def_int $int12 = calc($int8 + if_getheight($component2) - 1);
+def_int $int13 = calc(2 + $int10 * $int11 + 2);
+if (calc($int12 + $int13 + 2) > if_getheight(if_getlayer($component5))) {
+	$int12 = calc($int8 + if_getheight($component2) - $int13 - 19);
+}
+if_setposition($int7, $int12, ^setpos_abs_left, ^setpos_abs_top, $component5);
+if_setsize(if_getwidth($component2), $int13, ^setsize_abs, ^setsize_abs, $component5);
 cc_deleteall($component5);
 ~thinbox($component5, 0);
 ~script3213;
 if_sethide(false, $component1);
-def_int $int11 = 0;
-.cc_create($component1, ^iftype_rectangle, $int11);
-$int11 = calc($int11 + 1);
-.cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
+def_int $int14 = 0;
+.cc_create($component1, ^iftype_rectangle, $int14);
+$int14 = calc($int14 + 1);
+.cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
 .cc_setfill(true);
 .cc_setcolour(^white);
 .cc_settrans(200);
 .cc_sethide(true);
-def_int $int12 = 0;
-while ($int12 < $int9) {
-	cc_create($component1, ^iftype_text, $int11);
-	cc_setposition(0, calc($int12 * $int10), ^setpos_abs_centre, ^setpos_abs_top);
-	cc_setsize(0, $int10, ^setsize_minus, ^setsize_abs);
-	cc_setcolour(0xff981f);
+def_int $int15 = 0;
+while ($int15 < $int10) {
+	cc_create($component1, ^iftype_text, $int14);
+	cc_setposition(0, calc($int15 * $int11), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
+	cc_setcolour($colour6);
 	cc_settextshadow(true);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setop(1, "Select");
-	cc_setonmouserepeat("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, 0xff981f)");
-	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff981f)");
-	cc_setonop("league_task_filter_close(event_opindex, $int12, $enum0, $component2, $comsubid3, $component4)");
-	cc_settext(enum(int, string, $enum0, $int12));
-	$int12, $int11 = calc($int12 + 1), calc($int11 + 1);
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("script3703(true, event_com, event_comsubid, .cc_getid, $colour6)");
+		cc_setonmouseleave("script3703(false, event_com, event_comsubid, .cc_getid, $colour6)");
+	}
+	cc_setonop("league_task_filter_close(event_opindex, $int15, $enum0, $component2, $comsubid3, $component4, $colour6)");
+	cc_settext(enum(int, string, $enum0, $int15));
+	$int15, $int14 = calc($int15 + 1), calc($int14 + 1);
 }

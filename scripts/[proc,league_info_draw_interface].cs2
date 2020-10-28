@@ -1,214 +1,231 @@
 // 3218
-[proc,league_info_draw_interface](int $int0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, int $int11, int $int12)
-~steelborder($component2, "General League Information", 1);
-~steelborder($component4, "<~league_get_league_name> Information", 1);
+[proc,league_info_draw_interface](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, int $int9, int $int10, int $comsubid11)
+cc_deleteall($component0);
+cc_deleteall($component1);
+cc_deleteall($component2);
 cc_deleteall($component3);
-cc_deleteall($component5);
-cc_deleteall($component8);
-cc_deleteall($component9);
-def_struct $struct13 = enum(int, struct, enum_2670, %varbit10032);
-def_struct $struct14 = struct_1239;
-if ($struct13 = null) {
+cc_deleteall($component6);
+cc_deleteall($component7);
+def_struct $struct12 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct12 = null) {
 	return;
 }
-def_enum $enum15 = struct_param($struct14, param_886);
-def_enum $enum16 = struct_param($struct14, param_887);
-def_enum $enum17 = struct_param($struct13, param_888);
-def_enum $enum18 = struct_param($struct13, param_889);
-def_int $int19 = struct_param($struct13, param_872);
+def_struct $struct13 = struct_1239;
+def_int $colour14 = 0xff981f;
+$colour14 = struct_param($struct12, param_1027);
+if (cc_find(interface_654:2, $comsubid11) = ^true) {
+	cc_setcolour($colour14);
+} else {
+	mes("Couldn't find the frame.");
+}
+cc_create($component0, ^iftype_text, 0);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 1, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour($colour14);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_settext("General League Information");
+cc_create($component1, ^iftype_text, 0);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 1, ^setsize_minus, ^setsize_minus);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour($colour14);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_settext("League Specific Information");
+def_enum $enum15 = struct_param($struct13, param_886);
+def_enum $enum16 = struct_param($struct13, param_887);
+def_enum $enum17 = struct_param($struct12, param_888);
+def_enum $enum18 = struct_param($struct12, param_889);
+def_int $int19 = struct_param($struct12, param_872);
 def_int $int20 = calc(1 + ($int19 - %varbit9535));
+def_fontmetrics $fontmetrics21 = p12_full;
+def_fontmetrics $fontmetrics22 = p12_full;
+if (~on_mobile = true) {
+	$fontmetrics21, $fontmetrics22 = p12_full, p12_full;
+}
 if ($int20 < 1) {
 	$int20 = 1;
 }
-def_int $int21 = 0;
-def_int $int22 = 0;
-def_int $x23 = 0;
-def_int $height24 = 0;
-def_int $height25 = 0;
-def_int $int26 = 0;
+def_int $int23 = 0;
+def_int $int24 = 0;
+def_int $x25 = 0;
+def_int $height26 = 0;
+def_int $height27 = 0;
+def_int $int28 = 0;
 def_string $string0 = "";
-def_int $width27 = if_getwidth($component3);
-def_int $width28 = if_getwidth($component5);
+def_int $width29 = if_getwidth($component2);
+def_int $width30 = if_getwidth($component3);
 def_string $string1 = "<img=13> <~text_device("Click", "Tap")> to open the Leagues blog!<br>";
-def_int $int29 = calc(12 * paraheight($string1, $width27 - 10, p12_full) + 10);
+def_int $int31 = calc(12 * paraheight($string1, $width29 - 10, p12_full) + 10);
 def_string $string2 = "<img=13> <~text_device("Click", "Tap")> to open the <~league_get_league_name> blog!<br>";
 def_string $url3 = "https://osrs.game/Leagues";
-def_string $url4 = "https://osrs.game/Twisted-League";
-def_int $int30 = calc(12 * paraheight($string2, $width28 - 10, p12_full) + 10);
-def_int $int31 = $int30;
-if ($int29 > $int30) {
-	$int31 = $int29;
+def_string $url4 = "https://osrs.game/Trailblazer-League";
+def_int $int32 = calc(12 * paraheight($string2, $width30 - 10, p12_full) + 10);
+def_int $int33 = $int32;
+if ($int31 > $int32) {
+	$int33 = $int31;
 }
-$int31 = calc($int31 + 10);
-cc_create($component8, ^iftype_graphic, $int22);
-cc_setsize(21, 21, ^setsize_abs, ^setsize_abs);
-cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic("menu_buttons,0");
-def_graphic $graphic32 = "menu_buttons,1";
-def_graphic $graphic33 = "menu_buttons,0";
-if (~on_mobile = false) {
-	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic32, null)");
-	cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic33, null)");
-}
-if_setonop("league_menu_click(event_opindex, $component8, $component9, $int22, $component10)", $component8);
-if_setop(1, "Show Menu", $component8);
-$int22 = 0;
-~league_create_dropdown($component8, $component9, $component10, $int22, 0);
-$int22 = 0;
-while ($int21 < enum_getoutputcount($enum15)) {
-	if ($int21 = 0 & clienttype ! ^clienttype_ios) {
-		cc_create($component3, ^iftype_rectangle, $int22);
-		cc_setsize($width27, $int31, ^setsize_abs, ^setsize_abs);
+$int33 = calc($int33 + 10);
+~script3693($component6, $int24, $component7, $component8);
+$int24 = 0;
+~league_create_dropdown($component6, $component7, $component8, $int24, 0);
+$int24 = 0;
+while ($int23 < enum_getoutputcount($enum15)) {
+	if ($int23 = 0 & clienttype ! ^clienttype_ios) {
+		cc_create($component2, ^iftype_rectangle, $int24);
+		cc_setsize($width29, $int33, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		cc_settrans(235);
-		$int22 = calc($int22 + 1);
-		cc_create($component3, ^iftype_text, $int22);
-		cc_setposition(5, $height24, ^setpos_abs_left, ^setpos_abs_top);
+		$int24 = calc($int24 + 1);
+		cc_create($component2, ^iftype_text, $int24);
+		cc_setposition(5, $height26, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settext($string1);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
-		cc_setcolour(0xff981f);
-		cc_setsize(calc($width27 - 10), $int31, ^setsize_abs, ^setsize_abs);
+		cc_setcolour($colour14);
+		cc_setsize(calc($width29 - 10), $int33, ^setsize_abs, ^setsize_abs);
 		if (~on_mobile = false) {
-			cc_setonmouseover("league_info_mouseover($component3, $int22)");
-			cc_setonmouseleave("league_info_mouseleave($component3, $int22)");
+			cc_setonmouseover("league_info_mouseover($component2, $int24)");
+			cc_setonmouseleave("league_info_mouseleave($component2, $int24, $colour14)");
 		}
 		cc_setop(1, "Open Link");
 		cc_setonop("league_blog_click($url3)");
-		$height24 = calc($height24 + $int31);
-		$int22 = calc($int22 + 1);
+		$height26 = calc($height26 + $int33);
+		$int24 = calc($int24 + 1);
 	}
-	cc_create($component3, ^iftype_rectangle, $int22);
-	cc_setsize($width27, 20, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, $height24, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($component2, ^iftype_rectangle, $int24);
+	cc_setsize($width29, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $height26, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(255);
-	$int22 = calc($int22 + 1);
-	cc_create($component3, ^iftype_text, $int22);
-	cc_settext(enum(int, string, $enum15, $int21));
-	cc_setposition(0, $height24, ^setpos_abs_left, ^setpos_abs_top);
+	$int24 = calc($int24 + 1);
+	cc_create($component2, ^iftype_text, $int24);
+	cc_settext(enum(int, string, $enum15, $int23));
+	cc_setposition(0, $height26, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(b12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_setcolour(0xff981f);
+	cc_setcolour($colour14);
 	cc_settextshadow(true);
-	cc_setsize($width27, 20, ^setsize_abs, ^setsize_abs);
-	$int22 = calc($int22 + 1);
-	$height24 = calc($height24 + 20);
-	$string0 = enum(int, string, $enum16, $int21);
+	cc_setsize($width29, 20, ^setsize_abs, ^setsize_abs);
+	$int24 = calc($int24 + 1);
+	$height26 = calc($height26 + 20);
+	$string0 = enum(int, string, $enum16, $int23);
 	$string0 = ~script1299($string0, "|", "<br><br>");
-	$int26 = paraheight($string0, calc($width27 - 10), p11_full);
-	cc_create($component3, ^iftype_rectangle, $int22);
-	cc_setsize($width27, calc(12 * $int26 + 15), ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, $height24, ^setpos_abs_left, ^setpos_abs_top);
+	$int28 = paraheight($string0, calc($width29 - 10), $fontmetrics22);
+	cc_create($component2, ^iftype_rectangle, $int24);
+	cc_setsize($width29, calc(15 * $int28 + 15), ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $height26, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(235);
-	$int22 = calc($int22 + 1);
-	cc_create($component3, ^iftype_text, $int22);
-	cc_setposition(5, $height24, ^setpos_abs_left, ^setpos_abs_top);
+	$int24 = calc($int24 + 1);
+	cc_create($component2, ^iftype_text, $int24);
+	cc_setposition(5, $height26, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string0);
-	cc_settextfont(p11_full);
+	cc_settextfont($fontmetrics21);
 	cc_settextshadow(true);
-	cc_setcolour(0xff981f);
-	cc_settextalign(^settextalign_left, ^settextalign_centre, 12);
-	cc_setsize(calc($width27 - 10), calc(12 * $int26 + 15), ^setsize_abs, ^setsize_abs);
-	$int22 = calc($int22 + 1);
-	$height24 = calc($height24 + (12 * $int26 + 15));
-	$int21 = calc($int21 + 1);
+	cc_setcolour($colour14);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+	cc_setsize(calc($width29 - 10), calc(15 * $int28 + 15), ^setsize_abs, ^setsize_abs);
+	$int24 = calc($int24 + 1);
+	$height26 = calc($height26 + (15 * $int28 + 15));
+	$int23 = calc($int23 + 1);
 }
-$int21 = 0;
-$int22 = 0;
-$x23 = 5;
-while ($int21 < enum_getoutputcount($enum17)) {
-	if ($int21 = 0 & clienttype ! ^clienttype_ios) {
-		cc_create($component5, ^iftype_rectangle, $int22);
-		cc_setsize($width28, $int31, ^setsize_abs, ^setsize_abs);
+$int23 = 0;
+$int24 = 0;
+$x25 = 5;
+while ($int23 < enum_getoutputcount($enum17)) {
+	if ($int23 = 0 & clienttype ! ^clienttype_ios) {
+		cc_create($component3, ^iftype_rectangle, $int24);
+		cc_setsize($width30, $int33, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(^white);
 		cc_setfill(true);
 		cc_settrans(235);
-		$int22 = calc($int22 + 1);
-		cc_create($component5, ^iftype_text, $int22);
-		cc_setposition(5, $height25, ^setpos_abs_left, ^setpos_abs_top);
+		$int24 = calc($int24 + 1);
+		cc_create($component3, ^iftype_text, $int24);
+		cc_setposition(5, $height27, ^setpos_abs_left, ^setpos_abs_top);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settext($string2);
 		cc_settextfont(p12_full);
 		cc_settextshadow(true);
-		cc_setcolour(0xff981f);
+		cc_setcolour($colour14);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		cc_setsize(calc($width28 - 10), $int31, ^setsize_abs, ^setsize_abs);
+		cc_setsize(calc($width30 - 10), $int33, ^setsize_abs, ^setsize_abs);
 		if (~on_mobile = false) {
-			cc_setonmouseover("league_info_mouseover($component5, $int22)");
-			cc_setonmouseleave("league_info_mouseleave($component5, $int22)");
+			cc_setonmouseover("league_info_mouseover($component3, $int24)");
+			cc_setonmouseleave("league_info_mouseleave($component3, $int24, $colour14)");
 		}
 		cc_setop(1, "Open Link");
 		cc_setonop("league_blog_click($url4)");
-		$height25 = calc($height25 + $int31);
-		$int22 = calc($int22 + 1);
+		$height27 = calc($height27 + $int33);
+		$int24 = calc($int24 + 1);
 	}
-	cc_create($component5, ^iftype_rectangle, $int22);
-	cc_setsize($width28, 20, ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, $height25, ^setpos_abs_left, ^setpos_abs_top);
+	cc_create($component3, ^iftype_rectangle, $int24);
+	cc_setsize($width30, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $height27, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(255);
-	$int22 = calc($int22 + 1);
-	cc_create($component5, ^iftype_text, $int22);
-	cc_settext(enum(int, string, $enum17, $int21));
-	cc_setposition(0, $height25, ^setpos_abs_left, ^setpos_abs_top);
+	$int24 = calc($int24 + 1);
+	cc_create($component3, ^iftype_text, $int24);
+	cc_settext(enum(int, string, $enum17, $int23));
+	cc_setposition(0, $height27, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settextfont(b12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-	cc_setcolour(0xff981f);
+	cc_setcolour($colour14);
 	cc_settextshadow(true);
-	cc_setsize($width28, 20, ^setsize_abs, ^setsize_abs);
-	$int22 = calc($int22 + 1);
-	$height25 = calc($height25 + 20);
-	$string0 = enum(int, string, $enum18, $int21);
-	if ($int21 = 0) {
+	cc_setsize($width30, 20, ^setsize_abs, ^setsize_abs);
+	$int24 = calc($int24 + 1);
+	$height27 = calc($height27 + 20);
+	$string0 = enum(int, string, $enum18, $int23);
+	if ($int23 = 0) {
 		if ($int20 = 1) {
-			$string0 = append($string0, "|There is <tostring($int20)> day left in the <~league_get_league_name>!");
+			$string0 = append($string0, "|There is <tostring($int20)> day left in<br><~league_get_league_name>!");
 		} else {
-			$string0 = append($string0, "|There are <tostring($int20)> days left in the <~league_get_league_name>!");
+			$string0 = append($string0, "|There are <tostring($int20)> days left in<br><~league_get_league_name>!");
 		}
 	}
 	$string0 = ~script1299($string0, "|", "<br><br>");
-	$int26 = paraheight($string0, calc($width28 - 10), p11_full);
-	cc_create($component5, ^iftype_rectangle, $int22);
-	cc_setsize($width28, calc(12 * $int26 + 15), ^setsize_abs, ^setsize_abs);
-	cc_setposition(0, $height25, ^setpos_abs_left, ^setpos_abs_top);
+	$int28 = paraheight($string0, calc($width30 - 10), $fontmetrics22);
+	cc_create($component3, ^iftype_rectangle, $int24);
+	cc_setsize($width30, calc(15 * $int28 + 15), ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $height27, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setcolour(^white);
 	cc_setfill(true);
 	cc_settrans(235);
-	$int22 = calc($int22 + 1);
-	cc_create($component5, ^iftype_text, $int22);
-	cc_setposition($x23, $height25, ^setpos_abs_left, ^setpos_abs_top);
+	$int24 = calc($int24 + 1);
+	cc_create($component3, ^iftype_text, $int24);
+	cc_setposition($x25, $height27, ^setpos_abs_left, ^setpos_abs_top);
 	cc_settext($string0);
-	cc_settextfont(p11_full);
+	cc_settextfont($fontmetrics21);
 	cc_settextshadow(true);
-	cc_setcolour(0xff981f);
-	cc_settextalign(^settextalign_left, ^settextalign_centre, 12);
-	cc_setsize(calc($width28 - 10), calc(12 * $int26 + 15), ^setsize_abs, ^setsize_abs);
-	$int22 = calc($int22 + 1);
-	$height25 = calc($height25 + (12 * $int26 + 15));
-	$int21 = calc($int21 + 1);
+	cc_setcolour($colour14);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+	cc_setsize(calc($width30 - 10), calc(15 * $int28 + 15), ^setsize_abs, ^setsize_abs);
+	$int24 = calc($int24 + 1);
+	$height27 = calc($height27 + (15 * $int28 + 15));
+	$int23 = calc($int23 + 1);
 }
-cc_deleteall($component6);
-cc_deleteall($component7);
-def_int $height34 = if_getheight($component3);
-if ($height24 > $height34) {
-	if_setscrollsize(0, $height24, $component3);
+cc_deleteall($component4);
+cc_deleteall($component5);
+def_int $height34 = if_getheight($component2);
+if ($height26 > $height34) {
+	if_setscrollsize(0, $height26, $component2);
+} else {
+	if_setscrollsize(0, 0, $component2);
+}
+~scrollbar_vertical($component4, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $height35 = if_getheight($component3);
+if ($height27 > $height35) {
+	if_setscrollsize(0, $height27, $component3);
 } else {
 	if_setscrollsize(0, 0, $component3);
 }
-~scrollbar_vertical($component6, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-def_int $height35 = if_getheight($component5);
-if ($height25 > $height35) {
-	if_setscrollsize(0, $height25, $component5);
-} else {
-	if_setscrollsize(0, 0, $component5);
-}
-~scrollbar_vertical($component7, $component5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($component5, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

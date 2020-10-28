@@ -5,7 +5,7 @@ def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = enum(int, int, enum_273, $int8);
 while ($int9 ! -1 & $int9 <= 50) {
-	if ($int9 < 32 & testbit(%var1076, $int9) = ^false | $int9 >= 32 & testbit(%var1344, calc($int9 % 32)) = ^false) {
+	if (($int9 < 32 & testbit(%var1076, $int9) = ^false | $int9 >= 32 & testbit(%var1344, calc($int9 % 32)) = ^false) & ~script3689(%varbit10032, $int9) = 0) {
 		$int6, $int7 = calc($int6 + 1), calc($int7 + enum(int, int, enum_836, $int9));
 	}
 	$int8 = calc($int8 + 1);

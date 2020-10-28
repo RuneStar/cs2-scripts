@@ -1,0 +1,10 @@
+// 3662
+[proc,script3662](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
+def_string $string0 = enum(int, string, enum_3330, $int0);
+if ($int0 ! 2 & %varbit10037 < 9 & ~script3681(2) = 0) {
+	sound_synth(pillory_wrong, 1, 0);
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+if_sethide(false, $component14);
+~script3666($int0, $component1, $component2);

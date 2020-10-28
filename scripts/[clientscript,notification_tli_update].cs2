@@ -1,6 +1,8 @@
 // 3344
 [clientscript,notification_tli_update]
-if_settext("<u=ff981f><%varcstring387>", interface_660:4);
+if_setcolour(%varcint415, interface_660:4);
+if_settext(%varcstring387, interface_660:4);
+if_setcolour(%varcint415, interface_660:8);
 if_settext(%varcstring388, interface_660:8);
 if_setsize(%varcint390, %varcint389, ^setsize_abs, ^setsize_abs, interface_660:1);
 def_int $int0 = %varcint391;

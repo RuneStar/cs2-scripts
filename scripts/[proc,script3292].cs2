@@ -1,3 +1,10 @@
 // 3292
-[proc,script3292]()(int)
-return(1);
+[proc,script3292](struct $struct0)(int)
+switch_struct ($struct0) {
+	case struct_723 :
+		return(1);
+	case struct_1721 :
+		return(0);
+	case default :
+		return(0);
+}

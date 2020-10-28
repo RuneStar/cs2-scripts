@@ -1,7 +1,7 @@
 // 3219
 [proc,league_get_league_name]()(string)
-if (%varbit10032 = 0 | %varbit10032 > 1) {
-	mes("League variable was incorrectly set. Previous value: <tostring(%varbit10032)>. New Value: <tostring(1)>.");
-	%varbit10032 = 1;
+if (%varbit10032 = 0 | %varbit10032 > 2) {
+	mes("League variable was incorrectly set. Previous value: <tostring(%varbit10032)>. New Value: <tostring(2)>.");
+	%varbit10032 = 2;
 }
 return(struct_param(enum(int, struct, enum_2670, %varbit10032), param_858));

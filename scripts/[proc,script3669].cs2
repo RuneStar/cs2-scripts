@@ -1,0 +1,151 @@
+// 3669
+[proc,script3669](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, int $int15, component $component16, component $component17, component $component18, int $int19, int $int20, component $component21, component $component22, component $component23, component $component24, component $component25)
+cc_deleteall($component12);
+cc_deleteall($component13);
+def_struct $struct26 = enum(int, struct, enum_2670, %varbit10032);
+def_int $comsubid27 = 0;
+def_string $op0 = "";
+def_string $string1 = "";
+def_string $text2 = enum(int, string, enum_3330, $int0);
+def_graphic $graphic28 = enum(int, graphic, enum_3337, $int0);
+if ($struct26 = null) {
+	return;
+}
+def_int $colour29 = struct_param($struct26, param_1027);
+def_int $colour30 = struct_param($struct26, param_1028);
+if_setcolour($colour29, $component6);
+if_setcolour($colour29, $component11);
+if_setcolour($colour29, $component22);
+if_sethide(false, $component4);
+if_sethide(true, $component25);
+if_sethide(true, $component1);
+if_sethide(true, $component2);
+if_sethide(true, $component3);
+~script3730($component14, enum(int, enum, enum_3339, $int0), 5, 4, 1);
+if_settext($text2, $component6);
+if_setgraphic($graphic28, $component5);
+$string1 = "Overview";
+~script3725($component7, 0, $string1, $colour29, $colour30);
+if_setop(1, $string1, $component7);
+if_setonop("script3670($component7, $int0, $component7, $component8, $component9, $component10, $component11, $colour29, $colour30, $component16, $component17)", $component7);
+$string1 = "Key Info";
+~script3725($component8, 0, $string1, $colour29, $colour30);
+if_setop(1, $string1, $component8);
+if_setonop("script3670($component8, $int0, $component7, $component8, $component9, $component10, $component11, $colour29, $colour30, $component16, $component17)", $component8);
+$string1 = "Unlocks";
+~script3725($component9, 0, $string1, $colour29, $colour30);
+if_setop(1, $string1, $component9);
+if_setonop("script3670($component9, $int0, $component7, $component8, $component9, $component10, $component11, $colour29, $colour30, $component16, $component17)", $component9);
+$string1 = "Drops";
+~script3725($component10, 0, $string1, $colour29, $colour30);
+if_setop(1, $string1, $component10);
+if_setonop("script3670($component10, $int0, $component7, $component8, $component9, $component10, $component11, $colour29, $colour30, $component16, $component17)", $component9);
+~script3671($component7, $int0, $component7, $component8, $component9, $component10, $component11, $colour29, $colour30, $component16, $component17);
+if ($int15 = 2) {
+	$comsubid27 = ~v2_stone_button($component12);
+	$op0 = "Unlock";
+	if_setop(1, $op0, $component12);
+	if_setopbase("<col=ff981f><$text2></col>", $component12);
+} else if ($int15 = 1) {
+	$comsubid27 = ~v2_stone_button($component12);
+	$op0 = "Teleport";
+	if_setop(1, "Teleport to", $component12);
+	if_setopbase("<col=ff981f><$text2></col>", $component12);
+} else {
+	$comsubid27 = ~v2_stone_button_in($component12);
+	$op0 = "Locked";
+	if_setop(1, $op0, $component12);
+	if_setopbase("", $component12);
+}
+cc_create($component12, ^iftype_text, $comsubid27);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settext($op0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if ($int15 = 2) {
+	cc_setcolour(0x53d93c);
+	if (~on_mobile = false) {
+		if_setonmouseleave("script3672($component12, false, $op0, 0x53d93c)", $component12);
+		if_setonmouserepeat("script3672($component12, true, $op0, 0xaaaaaa)", $component12);
+	}
+	if_setonop("script3674($component18, $component12, false, $op0, 0x53d93c)", $component12);
+} else if ($int15 = 1) {
+	if (~script3719 = 1) {
+		cc_setcolour(0xaaaaaa);
+		if_setonmouseleave(null, $component12);
+		if_setonmouserepeat(null, $component12);
+		if_setonop("script3677", $component12);
+	} else {
+		cc_setcolour(0x53d93c);
+		if (~on_mobile = false) {
+			if_setonmouseleave("script3672($component12, false, $op0, 0x53d93c)", $component12);
+			if_setonmouserepeat("script3672($component12, true, $op0, 0xaaaaaa)", $component12);
+		}
+		if_setonop("script3675($component12, false, $op0, 0x53d93c)", $component12);
+	}
+} else {
+	cc_setcolour(0xaaaaaa);
+	if_setonmouseleave(null, $component12);
+	if_setonmouserepeat(null, $component12);
+	if_setonop("script3676($int15)", $component12);
+}
+$comsubid27 = ~v2_stone_button($component13);
+cc_create($component13, ^iftype_text, $comsubid27);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+$op0 = "Back";
+cc_settext($op0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(^white);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setop(1, $op0, $component13);
+if (~on_mobile = false) {
+	if_setonmouseleave("script3672($component13, false, $op0, ^white)", $component13);
+	if_setonmouserepeat("script3672($component13, true, $op0, 0xaaaaaa)", $component13);
+}
+if_setonop("script3678($component1, $component2, $component3, $component4, $component14)", $component13);
+def_int $comsubid31 = ~steelborder($component21, $text2, 1);
+if (cc_find($component21, $comsubid31) = ^true) {
+	cc_setcolour($colour29);
+}
+if ($int0 = 2) {
+	if_settext("You are about to unlock <col=ffffff>Karamja</col> as your second area.<br><br>All participants are given <col=ffffff>Misthalin</col> and <col=ffffff>Karamja</col> as their first two areas. For later unlocks, you can choose which area you want to select.", $component22);
+} else {
+	if_settext("Are you sure that you wish to unlock the <col=ffffff><$text2></col> area?<br><br>You can only unlock <col=ffffff>five</col> areas in total, and you <col=ffffff>cannot</col> go back on this decision at any later point.", $component22);
+}
+$comsubid27 = ~v2_stone_button($component23);
+cc_create($component23, ^iftype_text, $comsubid27);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+$op0 = "Confirm";
+cc_settext($op0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(^white);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setop(1, $op0, $component23);
+if_setopbase("<col=ff981f>Selection</col>", $component23);
+if (~on_mobile = false) {
+	if_setonmouseleave("script3672($component23, false, $op0, ^white)", $component23);
+	if_setonmouserepeat("script3672($component23, true, $op0, 0xaaaaaa)", $component23);
+}
+if_setonop("script3679", $component23);
+$comsubid27 = ~v2_stone_button($component24);
+cc_create($component24, ^iftype_text, $comsubid27);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+$op0 = "Cancel";
+cc_settext($op0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(^white);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if_setop(1, $op0, $component24);
+if (~on_mobile = false) {
+	if_setonmouseleave("script3672($component24, false, $op0, ^white)", $component24);
+	if_setonmouserepeat("script3672($component24, true, $op0, 0xaaaaaa)", $component24);
+}
+if_setonop("script3680($component18)", $component24);

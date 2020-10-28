@@ -1,3 +1,5 @@
 // 3197
-[clientscript,league_relic_confirm](component $component0)
+[clientscript,league_relic_confirm](component $component0, component $component1, boolean $boolean2, string $text0, int $colour3)
+sound_synth(synth_2266, 1, 0);
 if_sethide(false, $component0);
+~script3695($component1, $boolean2, $text0, $colour3);

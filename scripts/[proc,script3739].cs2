@@ -1,0 +1,59 @@
+// 3739
+[proc,script3739](int $colour0, string $string0)(string)
+if ($colour0 = null) {
+	$colour0 = 0xff981f;
+}
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_string $string1 = "";
+def_string $string2 = "";
+def_string $string3 = "";
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_string $string4 = "";
+$int1, $int2, $int3 = ~hex_to_rgb($colour0);
+$int4 = calc($int1 / 16);
+$int5 = calc($int1 % 16);
+if ($int4 < 10) {
+	$string1 = tostring($int4);
+} else {
+	$string1 = enum(int, string, enum_1402, calc($int4 - 9));
+}
+if ($int5 < 10) {
+	$string1 = "<$string1><tostring($int5)>";
+} else {
+	$string1 = "<$string1><enum(int, string, enum_1402, calc($int5 - 9))>";
+}
+$int4 = calc($int2 / 16);
+$int5 = calc($int2 % 16);
+if ($int4 < 10) {
+	$string2 = tostring($int4);
+} else {
+	$string2 = enum(int, string, enum_1402, calc($int4 - 9));
+}
+if ($int5 < 10) {
+	$string2 = "<$string2><tostring($int5)>";
+} else {
+	$string2 = "<$string2><enum(int, string, enum_1402, calc($int5 - 9))>";
+}
+$int4 = calc($int3 / 16);
+$int5 = calc($int3 % 16);
+if ($int4 < 10) {
+	$string3 = tostring($int4);
+} else {
+	$string3 = enum(int, string, enum_1402, calc($int4 - 9));
+}
+if ($int5 < 10) {
+	$string3 = "<$string3><tostring($int5)>";
+} else {
+	$string3 = "<$string3><enum(int, string, enum_1402, calc($int5 - 9))>";
+}
+$string4 = "<col=xxyyzz>";
+if (string_length($string0) > 0) {
+	$string4 = ~script3302($string4, "col", $string0);
+}
+$string4 = ~script3302($string4, "xx", $string1);
+$string4 = ~script3302($string4, "yy", $string2);
+$string4 = ~script3302($string4, "zz", $string3);
+return($string4);

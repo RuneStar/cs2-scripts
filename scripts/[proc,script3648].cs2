@@ -1,0 +1,10 @@
+// 3648
+[proc,script3648](obj $obj0)(int)
+def_int $int1 = enum(obj, int, enum_906, $obj0);
+if ($int1 < 0) {
+	$int1 = 0;
+}
+if (~script3697(struct_1739) = 1 & $int1 > 200) {
+	$int1 = 200;
+}
+return($int1);

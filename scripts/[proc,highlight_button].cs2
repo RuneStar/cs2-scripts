@@ -10,7 +10,11 @@ if ($int1 = 0) {
 cc_create($component0, ^iftype_text, $comsubid3);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setcolour(0xff981f);
+if ($int1 = 0) {
+	cc_setcolour(^white);
+} else {
+	cc_setcolour(0xaaaaaa);
+}
 cc_settextfont(p12_full);
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
@@ -18,8 +22,10 @@ cc_settext($op0);
 if ($int1 = 0) {
 	cc_setop(1, $op0);
 	cc_setonop("highlight_next($boolean2, $component0, event_comsubid)");
-	if_setonmouserepeat("v2_stone_button_change_in(event_com, 0)", $component0);
-	if_setonmouseleave("v2_stone_button_change_out(event_com, 0)", $component0);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("v2_stone_button_change_in(event_com, 0)", $component0);
+		if_setonmouseleave("v2_stone_button_change_out(event_com, 0)", $component0);
+	}
 } else {
 	cc_setop(1, "");
 	cc_setonop(null);

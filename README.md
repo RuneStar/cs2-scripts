@@ -492,8 +492,6 @@
 [**489**](scripts/[clientscript,opsound].cs2) `[clientscript,opsound]`  
 [**490**](scripts/[clientscript,bankside_switchview].cs2) `[clientscript,bankside_switchview]`  
 [**491**](scripts/[proc,bankside_switchview].cs2) `[proc,bankside_switchview]`  
-[**492**](scripts/[clientscript,bankside_lootingbag_draw].cs2) `[clientscript,bankside_lootingbag_draw]`  
-[**493**](scripts/[proc,bankside_lootingbag_draw].cs2) `[proc,bankside_lootingbag_draw]`  
 [**494**](scripts/[proc,tostring_minutes].cs2) `[proc,tostring_minutes]`  
 [**495**](scripts/[clientscript,wilderness_lootingbag_setup].cs2) `[clientscript,wilderness_lootingbag_setup]`  
 [**496**](scripts/[clientscript,wilderness_lootingbag_draw].cs2) `[clientscript,wilderness_lootingbag_draw]`  
@@ -2276,7 +2274,6 @@
 [**2273**](scripts/[proc,script2273].cs2)  
 [**2274**](scripts/[proc,v2_stone_button_fadable].cs2) `[proc,v2_stone_button_fadable]`  
 [**2275**](scripts/[proc,script2275].cs2)  
-[**2276**](scripts/[clientscript,script2276].cs2)  
 [**2277**](scripts/[clientscript,bondif_redeem_subtitle].cs2) `[clientscript,bondif_redeem_subtitle]`  
 [**2278**](scripts/[clientscript,bondif_redeem_package_init].cs2) `[clientscript,bondif_redeem_package_init]`  
 [**2279**](scripts/[clientscript,bondif_redeem_package_op_disabled].cs2) `[clientscript,bondif_redeem_package_op_disabled]`  
@@ -2628,12 +2625,6 @@
 [**2625**](scripts/[proc,wom_get_graphics].cs2) `[proc,wom_get_graphics]`  
 [**2626**](scripts/[proc,wom_get_tab].cs2) `[proc,wom_get_tab]`  
 [**2627**](scripts/[proc,wom_get_text].cs2) `[proc,wom_get_text]`  
-[**2628**](scripts/[clientscript,bondif_mobile_init].cs2) `[clientscript,bondif_mobile_init]`  
-[**2629**](scripts/[clientscript,script2629].cs2)  
-[**2630**](scripts/[proc,script2630].cs2)  
-[**2631**](scripts/[clientscript,script2631].cs2)  
-[**2632**](scripts/[proc,script2632].cs2)  
-[**2633**](scripts/[clientscript,script2633].cs2)  
 [**2634**](scripts/[clientscript,mobile_rating_init].cs2) `[clientscript,mobile_rating_init]`  
 [**2635**](scripts/[clientscript,options_fps_resynch].cs2) `[clientscript,options_fps_resynch]`  
 [**2636**](scripts/[proc,options_fps].cs2) `[proc,options_fps]`  
@@ -3200,7 +3191,6 @@
 [**3197**](scripts/[clientscript,league_relic_confirm].cs2) `[clientscript,league_relic_confirm]`  
 [**3198**](scripts/[clientscript,league_relic_confirm_back].cs2) `[clientscript,league_relic_confirm_back]`  
 [**3199**](scripts/[proc,league_relic_display].cs2) `[proc,league_relic_display]`  
-[**3200**](scripts/[proc,league_relic_display_twisted].cs2) `[proc,league_relic_display_twisted]`  
 [**3201**](scripts/[clientscript,script3201].cs2)  
 [**3202**](scripts/[clientscript,league_tasks_init].cs2) `[clientscript,league_tasks_init]`  
 [**3203**](scripts/[clientscript,league_tasks_draw_list].cs2) `[clientscript,league_tasks_draw_list]`  
@@ -3648,3 +3638,112 @@
 [**3645**](scripts/[proc,script3645].cs2)  
 [**3646**](scripts/[proc,script3646].cs2)  
 [**3647**](scripts/[clientscript,script3647].cs2)  
+[**3648**](scripts/[proc,script3648].cs2)  
+[**3649**](scripts/[clientscript,script3649].cs2)  
+[**3650**](scripts/[clientscript,script3650].cs2)  
+[**3651**](scripts/[clientscript,script3651].cs2)  
+[**3652**](scripts/[proc,script3652].cs2)  
+[**3653**](scripts/[clientscript,script3653].cs2)  
+[**3654**](scripts/[proc,script3654].cs2)  
+[**3655**](scripts/[clientscript,script3655].cs2)  
+[**3656**](scripts/[proc,script3656].cs2)  
+[**3657**](scripts/[clientscript,script3657].cs2)  
+[**3658**](scripts/[proc,script3658].cs2)  
+[**3659**](scripts/[proc,script3659].cs2)  
+[**3660**](scripts/[proc,script3660].cs2)  
+[**3661**](scripts/[clientscript,script3661].cs2)  
+[**3662**](scripts/[proc,script3662].cs2)  
+[**3663**](scripts/[clientscript,script3663].cs2)  
+[**3664**](scripts/[proc,script3664].cs2)  
+[**3665**](scripts/[clientscript,script3665].cs2)  
+[**3666**](scripts/[proc,script3666].cs2)  
+[**3667**](scripts/[clientscript,script3667].cs2)  
+[**3668**](scripts/[clientscript,script3668].cs2)  
+[**3669**](scripts/[proc,script3669].cs2)  
+[**3670**](scripts/[clientscript,script3670].cs2)  
+[**3671**](scripts/[proc,script3671].cs2)  
+[**3672**](scripts/[clientscript,script3672].cs2)  
+[**3673**](scripts/[proc,script3673].cs2)  
+[**3674**](scripts/[clientscript,script3674].cs2)  
+[**3675**](scripts/[clientscript,script3675].cs2)  
+[**3676**](scripts/[clientscript,script3676].cs2)  
+[**3677**](scripts/[clientscript,script3677].cs2)  
+[**3678**](scripts/[clientscript,script3678].cs2)  
+[**3679**](scripts/[clientscript,script3679].cs2)  
+[**3680**](scripts/[clientscript,script3680].cs2)  
+[**3681**](scripts/[proc,script3681].cs2)  
+[**3682**](scripts/[proc,script3682].cs2)  
+[**3683**](scripts/[clientscript,script3683].cs2)  
+[**3684**](scripts/[proc,script3684].cs2)  
+[**3685**](scripts/[clientscript,script3685].cs2)  
+[**3686**](scripts/[clientscript,script3686].cs2)  
+[**3687**](scripts/[clientscript,script3687].cs2)  
+[**3688**](scripts/[proc,script3688].cs2)  
+[**3689**](scripts/[proc,script3689].cs2)  
+[**3690**](scripts/[proc,script3690].cs2)  
+[**3691**](scripts/[proc,script3691].cs2)  
+[**3692**](scripts/[clientscript,script3692].cs2)  
+[**3693**](scripts/[proc,script3693].cs2)  
+[**3694**](scripts/[proc,script3694].cs2)  
+[**3695**](scripts/[proc,script3695].cs2)  
+[**3696**](scripts/[proc,script3696].cs2)  
+[**3697**](scripts/[proc,script3697].cs2)  
+[**3698**](scripts/[clientscript,script3698].cs2)  
+[**3699**](scripts/[proc,script3699].cs2)  
+[**3700**](scripts/[clientscript,script3700].cs2)  
+[**3701**](scripts/[proc,script3701].cs2)  
+[**3702**](scripts/[proc,script3702].cs2)  
+[**3703**](scripts/[clientscript,script3703].cs2)  
+[**3704**](scripts/[clientscript,script3704].cs2)  
+[**3705**](scripts/[clientscript,script3705].cs2)  
+[**3706**](scripts/[proc,script3706].cs2)  
+[**3707**](scripts/[clientscript,script3707].cs2)  
+[**3708**](scripts/[clientscript,script3708].cs2)  
+[**3709**](scripts/[proc,script3709].cs2)  
+[**3710**](scripts/[clientscript,script3710].cs2)  
+[**3711**](scripts/[clientscript,script3711].cs2)  
+[**3712**](scripts/[clientscript,script3712].cs2)  
+[**3713**](scripts/[proc,script3713].cs2)  
+[**3714**](scripts/[proc,script3714].cs2)  
+[**3715**](scripts/[proc,script3715].cs2)  
+[**3716**](scripts/[proc,script3716].cs2)  
+[**3717**](scripts/[proc,script3717].cs2)  
+[**3718**](scripts/[proc,script3718].cs2)  
+[**3719**](scripts/[proc,script3719].cs2)  
+[**3720**](scripts/[proc,script3720].cs2)  
+[**3721**](scripts/[proc,script3721].cs2)  
+[**3722**](scripts/[clientscript,script3722].cs2)  
+[**3723**](scripts/[proc,script3723].cs2)  
+[**3724**](scripts/[clientscript,script3724].cs2)  
+[**3725**](scripts/[proc,script3725].cs2)  
+[**3726**](scripts/[proc,script3726].cs2)  
+[**3727**](scripts/[clientscript,script3727].cs2)  
+[**3728**](scripts/[proc,script3728].cs2)  
+[**3729**](scripts/[clientscript,script3729].cs2)  
+[**3730**](scripts/[proc,script3730].cs2)  
+[**3731**](scripts/[clientscript,script3731].cs2)  
+[**3732**](scripts/[proc,script3732].cs2)  
+[**3733**](scripts/[clientscript,script3733].cs2)  
+[**3734**](scripts/[proc,script3734].cs2)  
+[**3735**](scripts/[clientscript,script3735].cs2)  
+[**3736**](scripts/[clientscript,script3736].cs2)  
+[**3737**](scripts/[clientscript,script3737].cs2)  
+[**3738**](scripts/[clientscript,script3738].cs2)  
+[**3739**](scripts/[proc,script3739].cs2)  
+[**3740**](scripts/[clientscript,script3740].cs2)  
+[**3741**](scripts/[proc,script3741].cs2)  
+[**3742**](scripts/[proc,script3742].cs2)  
+[**3743**](scripts/[clientscript,script3743].cs2)  
+[**3744**](scripts/[proc,script3744].cs2)  
+[**3745**](scripts/[proc,script3745].cs2)  
+[**3746**](scripts/[clientscript,script3746].cs2)  
+[**3747**](scripts/[clientscript,script3747].cs2)  
+[**3748**](scripts/[clientscript,script3748].cs2)  
+[**3749**](scripts/[proc,script3749].cs2)  
+[**3750**](scripts/[clientscript,script3750].cs2)  
+[**3751**](scripts/[clientscript,script3751].cs2)  
+[**3752**](scripts/[proc,script3752].cs2)  
+[**3753**](scripts/[clientscript,script3753].cs2)  
+[**3754**](scripts/[clientscript,script3754].cs2)  
+[**3755**](scripts/[proc,script3755].cs2)  
+[**3756**](scripts/[clientscript,script3756].cs2)  

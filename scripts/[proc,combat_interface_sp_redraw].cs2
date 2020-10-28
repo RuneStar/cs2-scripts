@@ -2,7 +2,7 @@
 [proc,combat_interface_sp_redraw](component $component0)
 def_int $int1 = 0;
 if (map_members = ^true | %varbit5314 = 1) {
-	$int1 = enum(obj, int, enum_906, inv_getobj(worn, 3));
+	$int1 = ~script3648(inv_getobj(worn, 3));
 }
 if ($int1 <= 0) {
 	if_sethide(true, interface_593:35);
@@ -35,14 +35,14 @@ if ($int3 >= $int1) {
 }
 ~options_button_off(interface_593:36, 0);
 def_obj $obj4 = inv_getobj(worn, 3);
-def_string $string0 = "<enum(obj, string, enum_1739, $obj4)> (<tostring(calc(enum(obj, int, enum_906, $obj4) / 10))>%)";
+def_string $string0 = "<enum(obj, string, enum_1739, $obj4)> (<tostring(calc(~script3648($obj4) / 10))>%)";
 switch_obj ($obj4) {
 	case dragon_hasta_22731, dragon_hasta_p_22734, dragon_hasta_p_22737, dragon_hasta_p_22740, dragon_hasta_kp_22743 :
 		$string0 = "<enum(obj, string, enum_1739, $obj4)> 5-100% ";
 }
 if (%varbit5712 = 0) {
 	if (($obj4 = dark_bow_11235 | $obj4 = dark_bow_20408 | $obj4 = dark_bow_12765 | $obj4 = dark_bow_12768 | $obj4 = dark_bow_12767) & (inv_getobj(worn, 13) = dragon_arrow_11212 | inv_getobj(worn, 13) = dragon_arrow_p_11227 | inv_getobj(worn, 13) = dragon_arrow_p_11228 | inv_getobj(worn, 13) = dragon_arrow_p_11229)) {
-		$string0 = "Descent of Dragons: Deal a double attack with dragon arrows that inflicts up to 50% more damage (minimum damage of 8 per hit). (<tostring(calc(enum(obj, int, enum_906, $obj4) / 10))>%)";
+		$string0 = "Descent of Dragons: Deal a double attack with dragon arrows that inflicts up to 50% more damage (minimum damage of 8 per hit). (<tostring(calc(~script3648($obj4) / 10))>%)";
 	}
 	if_setonmouserepeat("tooltip_mouserepeat(event_com, -1, interface_593:42, $string0, 25, 160)", interface_593:35);
 	if_setonmouseleave("deltooltip(interface_593:42)", interface_593:35);

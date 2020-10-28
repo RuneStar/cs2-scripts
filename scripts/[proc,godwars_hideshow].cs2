@@ -1,6 +1,6 @@
 // 336
 [proc,godwars_hideshow](component $component0, component $component1)
-if (~inzone(0_44_82_0_0, 3_45_83_63_63, coord) = 1) {
+if (~inzone(0_44_82_0_0, 3_45_83_63_63, coord) = 1 | %varbit11709 = 1) {
 	if_sethide(false, $component0);
 } else {
 	if_sethide(true, $component0);
