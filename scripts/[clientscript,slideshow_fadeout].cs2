@@ -1,0 +1,10 @@
+// 3735
+[clientscript,slideshow_fadeout](component $component0, int $comsubid1, int $int2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (cc_gettrans = 255) {
+		cc_setontimer(null);
+		cc_setgraphic(null);
+	} else {
+		cc_settrans(~minmax(0, 255, calc(cc_gettrans + $int2)));
+	}
+}

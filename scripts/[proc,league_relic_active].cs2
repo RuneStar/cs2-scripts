@@ -1,0 +1,56 @@
+// 3697
+[proc,league_relic_active](struct $struct0)(int)
+if (~league_world = 0) {
+	return(0);
+}
+def_int $int1 = struct_param($struct0, param_885);
+def_struct $struct2 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct2 = null) {
+	return(0);
+}
+def_enum $enum3 = struct_param($struct2, param_870);
+if ($enum3 = null) {
+	return(0);
+}
+def_struct $struct4 = enum(int, struct, $enum3, $int1);
+if ($struct4 = null) {
+	return(0);
+}
+def_enum $enum5 = struct_param($struct4, param_878);
+if ($enum5 = null) {
+	return(0);
+}
+switch_int ($int1) {
+	case 0 :
+		if (enum(int, struct, $enum5, %varbit10049) = $struct0) {
+			return(1);
+		}
+		return(0);
+	case 1 :
+		if (enum(int, struct, $enum5, %varbit10050) = $struct0) {
+			return(1);
+		}
+		return(0);
+	case 2 :
+		if (enum(int, struct, $enum5, %varbit10051) = $struct0) {
+			return(1);
+		}
+		return(0);
+	case 3 :
+		if (enum(int, struct, $enum5, %varbit10052) = $struct0) {
+			return(1);
+		}
+		return(0);
+	case 4 :
+		if (enum(int, struct, $enum5, %varbit10053) = $struct0) {
+			return(1);
+		}
+		return(0);
+	case 5 :
+		if (enum(int, struct, $enum5, %varbit11696) = $struct0) {
+			return(1);
+		}
+		return(0);
+	case default :
+		return(0);
+}

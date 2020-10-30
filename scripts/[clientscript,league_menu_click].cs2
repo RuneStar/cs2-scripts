@@ -3,7 +3,7 @@
 if ($opindex0 ! 1) {
 	return;
 }
-if (~script3719 = 1) {
+if (~in_league_tutorial = 1) {
 	sound_synth(pillory_wrong, 1, 0);
 	if_sethide(true, $component2);
 	if_sethide(true, $component4);

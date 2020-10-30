@@ -9,7 +9,7 @@ def_string $string2 = "";
 def_int $int3 = 0;
 if (if_hassub(interface_162:561) = true) {
 	$chattype1, $int2, $string0, $string1, $string2, $int3 = chat_gethistory_byuid($mesuid0);
-	if (~script3745($chattype1) = 1) {
+	if (~meslayer_mode1_enabled($chattype1) = 1) {
 		~meslayer_mode1($string2);
 	}
 }

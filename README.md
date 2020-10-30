@@ -2789,8 +2789,8 @@
 [**2795**](scripts/[clientscript,itemsets_info_init].cs2) `[clientscript,itemsets_info_init]`  
 [**2796**](scripts/[clientscript,script2796].cs2)  
 [**2797**](scripts/[clientscript,journal_list_init].cs2) `[clientscript,journal_list_init]`  
-[**2798**](scripts/[clientscript,script2798].cs2)  
-[**2799**](scripts/[clientscript,script2799].cs2)  
+[**2798**](scripts/[clientscript,side_journal_switchtab_onop].cs2) `[clientscript,side_journal_switchtab_onop]`  
+[**2799**](scripts/[clientscript,side_journal_switchtab_ontransmit].cs2) `[clientscript,side_journal_switchtab_ontransmit]`  
 [**2800**](scripts/[proc,side_journal_switchtab].cs2) `[proc,side_journal_switchtab]`  
 [**2801**](scripts/[proc,side_journal_active].cs2) `[proc,side_journal_active]`  
 [**2802**](scripts/[proc,side_journal_inactive].cs2) `[proc,side_journal_inactive]`  
@@ -3640,56 +3640,56 @@
 [**3647**](scripts/[clientscript,script3647].cs2)  
 [**3648**](scripts/[proc,script3648].cs2)  
 [**3649**](scripts/[clientscript,script3649].cs2)  
-[**3650**](scripts/[clientscript,script3650].cs2)  
+[**3650**](scripts/[clientscript,bondif_init].cs2) `[clientscript,bondif_init]`  
 [**3651**](scripts/[clientscript,script3651].cs2)  
 [**3652**](scripts/[proc,script3652].cs2)  
 [**3653**](scripts/[clientscript,script3653].cs2)  
 [**3654**](scripts/[proc,script3654].cs2)  
 [**3655**](scripts/[clientscript,script3655].cs2)  
 [**3656**](scripts/[proc,script3656].cs2)  
-[**3657**](scripts/[clientscript,script3657].cs2)  
-[**3658**](scripts/[proc,script3658].cs2)  
+[**3657**](scripts/[clientscript,trailblazer_areas_init].cs2) `[clientscript,trailblazer_areas_init]`  
+[**3658**](scripts/[proc,league_areas_draw_interface].cs2) `[proc,league_areas_draw_interface]`  
 [**3659**](scripts/[proc,script3659].cs2)  
-[**3660**](scripts/[proc,script3660].cs2)  
-[**3661**](scripts/[clientscript,script3661].cs2)  
-[**3662**](scripts/[proc,script3662].cs2)  
-[**3663**](scripts/[clientscript,script3663].cs2)  
-[**3664**](scripts/[proc,script3664].cs2)  
-[**3665**](scripts/[clientscript,script3665].cs2)  
-[**3666**](scripts/[proc,script3666].cs2)  
-[**3667**](scripts/[clientscript,script3667].cs2)  
-[**3668**](scripts/[clientscript,script3668].cs2)  
-[**3669**](scripts/[proc,script3669].cs2)  
-[**3670**](scripts/[clientscript,script3670].cs2)  
-[**3671**](scripts/[proc,script3671].cs2)  
-[**3672**](scripts/[clientscript,script3672].cs2)  
-[**3673**](scripts/[proc,script3673].cs2)  
-[**3674**](scripts/[clientscript,script3674].cs2)  
-[**3675**](scripts/[clientscript,script3675].cs2)  
-[**3676**](scripts/[clientscript,script3676].cs2)  
+[**3660**](scripts/[proc,league_areas_setup_events].cs2) `[proc,league_areas_setup_events]`  
+[**3661**](scripts/[clientscript,league_areas_onclick].cs2) `[clientscript,league_areas_onclick]`  
+[**3662**](scripts/[proc,league_areas_onclick].cs2) `[proc,league_areas_onclick]`  
+[**3663**](scripts/[clientscript,league_areas_mouseover].cs2) `[clientscript,league_areas_mouseover]`  
+[**3664**](scripts/[proc,league_areas_mouseover].cs2) `[proc,league_areas_mouseover]`  
+[**3665**](scripts/[clientscript,league_areas_mouseleave].cs2) `[clientscript,league_areas_mouseleave]`  
+[**3666**](scripts/[proc,league_areas_mouseleave].cs2) `[proc,league_areas_mouseleave]`  
+[**3667**](scripts/[clientscript,league_areas_stop_loading].cs2) `[clientscript,league_areas_stop_loading]`  
+[**3668**](scripts/[clientscript,league_areas_show_detailed].cs2) `[clientscript,league_areas_show_detailed]`  
+[**3669**](scripts/[proc,league_areas_show_detailed].cs2) `[proc,league_areas_show_detailed]`  
+[**3670**](scripts/[clientscript,league_areas_tab_click].cs2) `[clientscript,league_areas_tab_click]`  
+[**3671**](scripts/[proc,league_areas_tab_details].cs2) `[proc,league_areas_tab_details]`  
+[**3672**](scripts/[clientscript,league_area_button_hover].cs2) `[clientscript,league_area_button_hover]`  
+[**3673**](scripts/[proc,league_area_button_hover].cs2) `[proc,league_area_button_hover]`  
+[**3674**](scripts/[clientscript,league_area_confirm].cs2) `[clientscript,league_area_confirm]`  
+[**3675**](scripts/[clientscript,league_area_teleport].cs2) `[clientscript,league_area_teleport]`  
+[**3676**](scripts/[clientscript,league_area_not_available].cs2) `[clientscript,league_area_not_available]`  
 [**3677**](scripts/[clientscript,script3677].cs2)  
-[**3678**](scripts/[clientscript,script3678].cs2)  
-[**3679**](scripts/[clientscript,script3679].cs2)  
-[**3680**](scripts/[clientscript,script3680].cs2)  
+[**3678**](scripts/[clientscript,league_area_back].cs2) `[clientscript,league_area_back]`  
+[**3679**](scripts/[clientscript,league_area_confirm_selection].cs2) `[clientscript,league_area_confirm_selection]`  
+[**3680**](scripts/[clientscript,league_area_confirm_back].cs2) `[clientscript,league_area_confirm_back]`  
 [**3681**](scripts/[proc,script3681].cs2)  
 [**3682**](scripts/[proc,script3682].cs2)  
-[**3683**](scripts/[clientscript,script3683].cs2)  
-[**3684**](scripts/[proc,script3684].cs2)  
-[**3685**](scripts/[clientscript,script3685].cs2)  
-[**3686**](scripts/[clientscript,script3686].cs2)  
-[**3687**](scripts/[clientscript,script3687].cs2)  
+[**3683**](scripts/[clientscript,league_areas_progress_bar].cs2) `[clientscript,league_areas_progress_bar]`  
+[**3684**](scripts/[proc,league_areas_progress_bar].cs2) `[proc,league_areas_progress_bar]`  
+[**3685**](scripts/[clientscript,league_area_flash_start].cs2) `[clientscript,league_area_flash_start]`  
+[**3686**](scripts/[clientscript,league_area_flash_stop].cs2) `[clientscript,league_area_flash_stop]`  
+[**3687**](scripts/[clientscript,league_area_flash].cs2) `[clientscript,league_area_flash]`  
 [**3688**](scripts/[proc,script3688].cs2)  
 [**3689**](scripts/[proc,script3689].cs2)  
 [**3690**](scripts/[proc,script3690].cs2)  
-[**3691**](scripts/[proc,script3691].cs2)  
-[**3692**](scripts/[clientscript,script3692].cs2)  
-[**3693**](scripts/[proc,script3693].cs2)  
-[**3694**](scripts/[proc,script3694].cs2)  
-[**3695**](scripts/[proc,script3695].cs2)  
-[**3696**](scripts/[proc,script3696].cs2)  
-[**3697**](scripts/[proc,script3697].cs2)  
+[**3691**](scripts/[proc,leagues_close_button].cs2) `[proc,leagues_close_button]`  
+[**3692**](scripts/[clientscript,leagues_closebutton_click].cs2) `[clientscript,leagues_closebutton_click]`  
+[**3693**](scripts/[proc,leagues_menu_button].cs2) `[proc,leagues_menu_button]`  
+[**3694**](scripts/[proc,league_relic_hover].cs2) `[proc,league_relic_hover]`  
+[**3695**](scripts/[proc,league_relic_button_hover].cs2) `[proc,league_relic_button_hover]`  
+[**3696**](scripts/[proc,league_relic_display_core].cs2) `[proc,league_relic_display_core]`  
+[**3697**](scripts/[proc,league_relic_active].cs2) `[proc,league_relic_active]`  
 [**3698**](scripts/[clientscript,script3698].cs2)  
-[**3699**](scripts/[proc,script3699].cs2)  
+[**3699**](scripts/[proc,league_task_display].cs2) `[proc,league_task_display]`  
 [**3700**](scripts/[clientscript,script3700].cs2)  
 [**3701**](scripts/[proc,script3701].cs2)  
 [**3702**](scripts/[proc,script3702].cs2)  
@@ -3697,19 +3697,19 @@
 [**3704**](scripts/[clientscript,script3704].cs2)  
 [**3705**](scripts/[clientscript,script3705].cs2)  
 [**3706**](scripts/[proc,script3706].cs2)  
-[**3707**](scripts/[clientscript,script3707].cs2)  
-[**3708**](scripts/[clientscript,script3708].cs2)  
-[**3709**](scripts/[proc,script3709].cs2)  
-[**3710**](scripts/[clientscript,script3710].cs2)  
-[**3711**](scripts/[clientscript,script3711].cs2)  
-[**3712**](scripts/[clientscript,script3712].cs2)  
-[**3713**](scripts/[proc,script3713].cs2)  
+[**3707**](scripts/[clientscript,league_tutorial_main_init].cs2) `[clientscript,league_tutorial_main_init]`  
+[**3708**](scripts/[clientscript,league_tutorial_interface_update].cs2) `[clientscript,league_tutorial_interface_update]`  
+[**3709**](scripts/[proc,league_tutorial_interface_update].cs2) `[proc,league_tutorial_interface_update]`  
+[**3710**](scripts/[clientscript,league_tutorial_button_hover].cs2) `[clientscript,league_tutorial_button_hover]`  
+[**3711**](scripts/[clientscript,league_tutorial_button_op].cs2) `[clientscript,league_tutorial_button_op]`  
+[**3712**](scripts/[clientscript,league_tutorial_button_reset].cs2) `[clientscript,league_tutorial_button_reset]`  
+[**3713**](scripts/[proc,league_tutorial_button_draw].cs2) `[proc,league_tutorial_button_draw]`  
 [**3714**](scripts/[proc,script3714].cs2)  
-[**3715**](scripts/[proc,script3715].cs2)  
+[**3715**](scripts/[proc,league_tutorial_interface_update_text].cs2) `[proc,league_tutorial_interface_update_text]`  
 [**3716**](scripts/[proc,script3716].cs2)  
 [**3717**](scripts/[proc,script3717].cs2)  
-[**3718**](scripts/[proc,script3718].cs2)  
-[**3719**](scripts/[proc,script3719].cs2)  
+[**3718**](scripts/[proc,league_tutorial_interface_update_graphic].cs2) `[proc,league_tutorial_interface_update_graphic]`  
+[**3719**](scripts/[proc,in_league_tutorial].cs2) `[proc,in_league_tutorial]`  
 [**3720**](scripts/[proc,script3720].cs2)  
 [**3721**](scripts/[proc,script3721].cs2)  
 [**3722**](scripts/[clientscript,script3722].cs2)  
@@ -3719,23 +3719,23 @@
 [**3726**](scripts/[proc,script3726].cs2)  
 [**3727**](scripts/[clientscript,script3727].cs2)  
 [**3728**](scripts/[proc,script3728].cs2)  
-[**3729**](scripts/[clientscript,script3729].cs2)  
-[**3730**](scripts/[proc,script3730].cs2)  
-[**3731**](scripts/[clientscript,script3731].cs2)  
-[**3732**](scripts/[proc,script3732].cs2)  
-[**3733**](scripts/[clientscript,script3733].cs2)  
-[**3734**](scripts/[proc,script3734].cs2)  
-[**3735**](scripts/[clientscript,script3735].cs2)  
-[**3736**](scripts/[clientscript,script3736].cs2)  
+[**3729**](scripts/[clientscript,start_slideshow].cs2) `[clientscript,start_slideshow]`  
+[**3730**](scripts/[proc,start_slideshow].cs2) `[proc,start_slideshow]`  
+[**3731**](scripts/[clientscript,stop_slideshow].cs2) `[clientscript,stop_slideshow]`  
+[**3732**](scripts/[proc,stop_slideshow].cs2) `[proc,stop_slideshow]`  
+[**3733**](scripts/[clientscript,slideshow_timer].cs2) `[clientscript,slideshow_timer]`  
+[**3734**](scripts/[proc,slideshow_transition].cs2) `[proc,slideshow_transition]`  
+[**3735**](scripts/[clientscript,slideshow_fadeout].cs2) `[clientscript,slideshow_fadeout]`  
+[**3736**](scripts/[clientscript,slideshow_skip].cs2) `[clientscript,slideshow_skip]`  
 [**3737**](scripts/[clientscript,script3737].cs2)  
-[**3738**](scripts/[clientscript,script3738].cs2)  
+[**3738**](scripts/[clientscript,closebutton_click_sound].cs2) `[clientscript,closebutton_click_sound]`  
 [**3739**](scripts/[proc,script3739].cs2)  
 [**3740**](scripts/[clientscript,script3740].cs2)  
-[**3741**](scripts/[proc,script3741].cs2)  
+[**3741**](scripts/[proc,in_tutorial].cs2) `[proc,in_tutorial]`  
 [**3742**](scripts/[proc,script3742].cs2)  
-[**3743**](scripts/[clientscript,script3743].cs2)  
-[**3744**](scripts/[proc,script3744].cs2)  
-[**3745**](scripts/[proc,script3745].cs2)  
+[**3743**](scripts/[clientscript,bankside_bag_draw].cs2) `[clientscript,bankside_bag_draw]`  
+[**3744**](scripts/[proc,bankside_bag_draw].cs2) `[proc,bankside_bag_draw]`  
+[**3745**](scripts/[proc,meslayer_mode1_enabled].cs2) `[proc,meslayer_mode1_enabled]`  
 [**3746**](scripts/[clientscript,script3746].cs2)  
 [**3747**](scripts/[clientscript,script3747].cs2)  
 [**3748**](scripts/[clientscript,script3748].cs2)  

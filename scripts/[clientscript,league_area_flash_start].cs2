@@ -1,0 +1,5 @@
+// 3685
+[clientscript,league_area_flash_start](component $component0, component $component1)
+if_settrans(255, $component0);
+if_settrans(255, $component1);
+if_setontimer("league_area_flash($component0, $component1, true, 0)", $component0);

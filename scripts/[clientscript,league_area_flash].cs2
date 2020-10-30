@@ -1,0 +1,17 @@
+// 3687
+[clientscript,league_area_flash](component $component0, component $component1, boolean $boolean2, int $int3)
+def_int $int4 = 30;
+if_settrans(interpolate(0, 255, 0, $int4, $int3), $component0);
+if_settrans(interpolate(0, 255, 0, $int4, $int3), $component1);
+if ($boolean2 = true) {
+	if ($int3 >= $int4) {
+		$int3, $boolean2 = calc($int3 - 1), false;
+	} else {
+		$int3 = calc($int3 + 1);
+	}
+} else if ($int3 <= 0) {
+	$int3, $boolean2 = calc($int3 + 1), true;
+} else {
+	$int3 = calc($int3 - 1);
+}
+if_setontimer("league_area_flash($component0, $component1, $boolean2, $int3)", $component0);

@@ -24,10 +24,10 @@ while ($size11 < $size12) {
 ~bankside_build($component1, $component3, $component2, $component4, $component5, $component8);
 if_setoninvtransmit("bankside_build($component1, $component3, $component2, $component4, $component5, $component8){inv, inv_516, inv_646}", $component1);
 if_setonvartransmit("bankside_build($component1, $component3, $component2, $component4, $component5, $component8){var304, var1666, var1141, var261, var262, var263}", $component1);
-~script3744($component6, inv_516);
-if_setoninvtransmit("script3743($component6, inv_516){inv_516}", $component5);
-~script3744($component9, inv_646);
-if_setoninvtransmit("script3743($component9, inv_646){inv_646}", $component8);
+~bankside_bag_draw($component6, inv_516);
+if_setoninvtransmit("bankside_bag_draw($component6, inv_516){inv_516}", $component5);
+~bankside_bag_draw($component9, inv_646);
+if_setoninvtransmit("bankside_bag_draw($component9, inv_646){inv_646}", $component8);
 ~bankside_switchview($component1, $component5, $component8);
 if_setonvartransmit("bankside_switchview(-1, $component1, $component5, $component8, -1){var115}", $component0);
 if_setonop("bankside_switchview(event_opindex, $component1, $component5, $component8, 0)", $component7);

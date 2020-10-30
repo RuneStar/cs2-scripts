@@ -1,6 +1,6 @@
 // 2524
 [clientscript,toplevel_mainmodal_open](int $colour0, int $trans1)
 ~toplevel_mainmodal_background($colour0, $trans1);
-if (~on_mobile = true & ~script3719 = 0) {
+if (~on_mobile = true & ~in_league_tutorial = 0) {
 	~mobile_mainmodal_open;
 }

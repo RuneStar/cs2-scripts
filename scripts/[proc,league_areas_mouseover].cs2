@@ -1,0 +1,11 @@
+// 3664
+[proc,league_areas_mouseover](int $int0, component $component1, component $component2)
+def_component $component3 = enum(int, component, enum_3332, $int0);
+def_graphic $graphic4 = enum(component, graphic, enum_3334, $component1);
+def_graphic $graphic5 = enum(component, graphic, enum_3336, $component2);
+def_graphic $graphic6 = enum(int, graphic, enum_3331, $int0);
+if_setgraphic($graphic4, $component1);
+if_setgraphic($graphic5, $component2);
+if_setgraphic($graphic6, $component3);
+if_setposition(0, -2, ^setpos_abs_centre, ^setpos_abs_centre, $component3);
+if_settrans(60, $component3);

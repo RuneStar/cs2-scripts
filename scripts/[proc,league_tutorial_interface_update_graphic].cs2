@@ -1,0 +1,16 @@
+// 3718
+[proc,league_tutorial_interface_update_graphic]()(graphic)
+def_struct $struct0 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct0 = null) {
+	return(null);
+}
+def_struct $struct1 = struct_param($struct0, param_1033);
+if ($struct1 = null) {
+	return(null);
+}
+def_enum $enum2 = struct_param($struct1, param_1038);
+if ($enum2 = null) {
+	return(null);
+}
+def_graphic $graphic3 = enum(int, graphic, $enum2, %varbit10037);
+return($graphic3);

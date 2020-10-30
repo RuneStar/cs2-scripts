@@ -18,7 +18,7 @@ def_struct $struct18 = enum(int, struct, enum_2670, %varbit10032);
 if ($struct18 = null) {
 	return;
 }
-~script3693($component12, $int17, $component13, $component14);
+~leagues_menu_button($component12, $int17, $component13, $component14);
 $int17 = 0;
 $int17 = 0;
 ~league_create_dropdown($component12, $component13, $component14, $int17, 1);
@@ -58,7 +58,7 @@ while ($int22 < $count21) {
 	$int32 = enum(int, int, enum_2671, $int31);
 	$int33 = struct_param($struct24, param_1016);
 	$int34 = struct_param($struct24, param_1017);
-	if (~script3699($int31, $bool30, $int33, $int34) = 1) {
+	if (~league_task_display($int31, $bool30, $int33, $int34) = 1) {
 		cc_create($component2, ^iftype_rectangle, $int17);
 		if ($int22 = $int0) {
 			$int35 = paraheight("Description: <$string1>", calc(if_getwidth($component2) - 10), p11_full);

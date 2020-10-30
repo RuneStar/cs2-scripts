@@ -1,0 +1,56 @@
+// 3671
+[proc,league_areas_tab_details](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, int $colour7, int $colour8, component $component9, component $component10)
+def_struct $struct11 = enum(int, struct, enum_3338, $int1);
+def_string $string0 = "";
+def_string $string1 = "Overview";
+if ($component0 = $component2) {
+	~script3725($component0, 1, $string1, $colour7, $colour8);
+	$string0 = struct_param($struct11, param_1012);
+	if_setonop("league_areas_tab_click($component3, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component3);
+	if_setonop("league_areas_tab_click($component4, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component4);
+	if_setonop("league_areas_tab_click($component5, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component5);
+} else {
+	~script3725($component2, 0, $string1, $colour7, $colour8);
+}
+$string1 = "Key Info";
+if ($component0 = $component3) {
+	~script3725($component0, 1, $string1, $colour7, $colour8);
+	$string0 = struct_param($struct11, param_1013);
+	if_setonop("league_areas_tab_click($component2, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component2);
+	if_setonop("league_areas_tab_click($component4, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component4);
+	if_setonop("league_areas_tab_click($component5, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component5);
+} else {
+	~script3725($component3, 0, $string1, $colour7, $colour8);
+}
+$string1 = "Unlocks";
+if ($component0 = $component4) {
+	~script3725($component0, 1, $string1, $colour7, $colour8);
+	$string0 = struct_param($struct11, param_1014);
+	if_setonop("league_areas_tab_click($component2, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component2);
+	if_setonop("league_areas_tab_click($component3, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component3);
+	if_setonop("league_areas_tab_click($component5, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component5);
+} else {
+	~script3725($component4, 0, $string1, $colour7, $colour8);
+}
+$string1 = "Drops";
+if ($component0 = $component5) {
+	~script3725($component0, 1, $string1, $colour7, $colour8);
+	$string0 = struct_param($struct11, param_1015);
+	if_setonop("league_areas_tab_click($component2, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component2);
+	if_setonop("league_areas_tab_click($component3, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component3);
+	if_setonop("league_areas_tab_click($component4, $int1, $component2, $component3, $component4, $component5, $component6, $colour7, $colour8, $component9, $component10)", $component4);
+} else {
+	~script3725($component5, 0, $string1, $colour7, $colour8);
+}
+if_setonmouseleave(null, $component0);
+if_setonop(null, $component0);
+if_settext($string0, $component6);
+if_setscrollpos(0, 0, $component10);
+def_int $height12 = calc(paraheight($string0, if_getwidth($component6), p12_full) * 15 + 11);
+cc_deleteall($component9);
+if ($height12 > if_getheight($component10)) {
+	if_setscrollsize(0, $height12, $component10);
+} else {
+	if_setscrollsize(0, 0, $component10);
+}
+~scrollbar_vertical($component9, $component10, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

@@ -1,0 +1,5 @@
+// 3712
+[clientscript,league_tutorial_button_reset](component $component0, string $string0, int $clock1)
+if (clientclock >= $clock1) {
+	~league_tutorial_button_draw($component0, $string0);
+}

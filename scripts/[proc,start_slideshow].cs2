@@ -1,0 +1,18 @@
+// 3730
+[proc,start_slideshow](component $component0, enum $enum1, int $int2, int $int3, int $int4)
+cc_deleteall($component0);
+def_graphic $graphic5 = enum(int, graphic, $enum1, 0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+cc_settrans(255);
+cc_create($component0, ^iftype_graphic, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setgraphic($graphic5);
+cc_create($component0, ^iftype_graphic, 2);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settrans(255);
+if_setontimer("slideshow_timer($component0, $enum1, $int2, $int3, clientclock)", $component0);
+if ($int4 = 1) {
+	if_setop(1, "View Next Image", $component0);
+	if_setonop("slideshow_skip($component0, $enum1, $int2, $int3)", $component0);
+}

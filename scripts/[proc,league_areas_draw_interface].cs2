@@ -1,0 +1,64 @@
+// 3658
+[proc,league_areas_draw_interface](component $component0, component $component1, component $component2, component $component3, int $comsubid4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23, component $component24, component $component25, component $component26, component $component27, component $component28, component $component29, component $component30, component $component31, component $component32, component $component33, component $component34, component $component35)
+cc_deleteall($component35);
+def_struct $struct36 = enum(int, struct, enum_2670, %varbit10032);
+if ($struct36 = null) {
+	return;
+}
+def_int $colour37 = struct_param($struct36, param_1027);
+if (cc_find(inventory_ranging:2, $comsubid4) = ^true) {
+	cc_setcolour($colour37);
+}
+~script3659;
+~league_areas_setup_events(1, $component5, $component14, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(2, $component6, $component15, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(6, $component7, $component16, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(5, $component8, $component17, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(3, $component9, $component18, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(4, $component10, $component19, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(8, $component11, $component20, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(7, $component12, $component21, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+~league_areas_setup_events(11, $component13, $component22, $component23, $component24, $component25, $component26, $component27, $component28, $component29, $component30, $component31, $component32, $component33, $component34);
+def_struct $struct38 = ~script3682(0);
+def_int $int39 = 0;
+def_string $text0 = "";
+def_int $int40 = 1;
+if (%varbit10666 > 0) {
+	$int40 = 5;
+} else if (%varbit10665 > 0) {
+	$int40 = 4;
+} else if (%varbit10664 > 0) {
+	$int40 = 3;
+} else if (%varbit10663 > 0) {
+	$int40 = 2;
+} else {
+	$int40 = 1;
+}
+if ($struct38 ! null) {
+	$int39 = calc(struct_param($struct38, param_1010) - %varbit10046);
+	if ($int39 < 0) {
+		$int39 = 0;
+	}
+	if ($int39 = 0) {
+		$text0 = "You have a new area available for selection!";
+	} else if ($int39 = 1) {
+		$text0 = "You have unlocked <tostring($int40)>/5 areas.";
+	} else {
+		$text0 = "You have unlocked <tostring($int40)>/5 areas.";
+	}
+}
+if ($int40 = 5) {
+	$text0 = "You have unlocked 5/5 areas!";
+}
+cc_create($component35, ^iftype_graphic, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("tradebacking_light");
+cc_create($component35, ^iftype_text, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p11_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_setcolour($colour37);
+cc_settext($text0);

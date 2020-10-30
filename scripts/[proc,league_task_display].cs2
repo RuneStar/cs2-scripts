@@ -1,0 +1,15 @@
+// 3699
+[proc,league_task_display](int $int0, int $bool1, int $int2, int $int3)(int)
+if (%varbit10033 ! 0 & %varbit10033 ! $int0) {
+	return(0);
+}
+if (%varbit11689 ! 0 & %varbit11689 ! $int2) {
+	return(0);
+}
+if (%varbit11692 ! 0 & enum(int, int, enum_3415, %varbit11692) ! $int3) {
+	return(0);
+}
+if (%varbit10034 ! 0 & calc(%varbit10034 - 1) ! $bool1) {
+	return(0);
+}
+return(1);
