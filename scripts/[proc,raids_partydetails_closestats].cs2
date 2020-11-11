@@ -1,12 +1,12 @@
 // 1523
 [proc,raids_partydetails_closestats]
-if_sethide(true, interface_507:28);
+if_sethide(true, interface_507:29);
+cc_deleteall(interface_507:29);
+if_setonclick(null, interface_507:29);
+~deltooltip_action(interface_507:36);
+if_sethide(false, interface_507:28);
 cc_deleteall(interface_507:28);
-if_setonclick(null, interface_507:28);
-~deltooltip_action(interface_507:35);
-if_sethide(false, interface_507:27);
-cc_deleteall(interface_507:27);
-cc_create(interface_507:27, ^iftype_model, 0);
+cc_create(interface_507:28, ^iftype_model, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setmodel(model_4612);

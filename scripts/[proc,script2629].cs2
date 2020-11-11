@@ -1,16 +1,16 @@
-// 2294
-[proc,raids_challenge_checkbox](component $component0, int $int1)
+// 2629
+[proc,script2629](component $component0, int $int1)
 if ($int1 = 2) {
-	if (%varbit5408 = 1) {
+	if (%varbit6385 = 1) {
 		if_setgraphic("checkbox,4", $component0);
-	} else if (%varbit6385 = 1) {
+	} else if (%varbit5408 = 1) {
 		if_setgraphic("checkbox,5", $component0);
 	} else {
 		if_setgraphic("checkbox,3", $component0);
 	}
-} else if (%varbit5408 = 1) {
+} else if (%varbit6385 = 1) {
 	if_setgraphic("checkbox,1", $component0);
-} else if (%varbit6385 = 1 & %varbit5408 = 0) {
+} else if (%varbit5408 = 1 & %varbit6385 = 0) {
 	if_setgraphic("checkbox,2", $component0);
 } else {
 	if_setgraphic("checkbox,0", $component0);

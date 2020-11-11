@@ -492,6 +492,8 @@
 [**489**](scripts/[clientscript,opsound].cs2) `[clientscript,opsound]`  
 [**490**](scripts/[clientscript,bankside_switchview].cs2) `[clientscript,bankside_switchview]`  
 [**491**](scripts/[proc,bankside_switchview].cs2) `[proc,bankside_switchview]`  
+[**492**](scripts/[clientscript,script492].cs2)  
+[**493**](scripts/[clientscript,script493].cs2)  
 [**494**](scripts/[proc,tostring_minutes].cs2) `[proc,tostring_minutes]`  
 [**495**](scripts/[clientscript,wilderness_lootingbag_setup].cs2) `[clientscript,wilderness_lootingbag_setup]`  
 [**496**](scripts/[clientscript,wilderness_lootingbag_draw].cs2) `[clientscript,wilderness_lootingbag_draw]`  
@@ -2274,6 +2276,7 @@
 [**2273**](scripts/[proc,script2273].cs2)  
 [**2274**](scripts/[proc,v2_stone_button_fadable].cs2) `[proc,v2_stone_button_fadable]`  
 [**2275**](scripts/[proc,script2275].cs2)  
+[**2276**](scripts/[proc,script2276].cs2)  
 [**2277**](scripts/[clientscript,bondif_redeem_subtitle].cs2) `[clientscript,bondif_redeem_subtitle]`  
 [**2278**](scripts/[clientscript,bondif_redeem_package_init].cs2) `[clientscript,bondif_redeem_package_init]`  
 [**2279**](scripts/[clientscript,bondif_redeem_package_op_disabled].cs2) `[clientscript,bondif_redeem_package_op_disabled]`  
@@ -2625,6 +2628,12 @@
 [**2625**](scripts/[proc,wom_get_graphics].cs2) `[proc,wom_get_graphics]`  
 [**2626**](scripts/[proc,wom_get_tab].cs2) `[proc,wom_get_tab]`  
 [**2627**](scripts/[proc,wom_get_text].cs2) `[proc,wom_get_text]`  
+[**2628**](scripts/[clientscript,script2628].cs2)  
+[**2629**](scripts/[proc,script2629].cs2)  
+[**2630**](scripts/[clientscript,script2630].cs2)  
+[**2631**](scripts/[clientscript,script2631].cs2)  
+[**2632**](scripts/[clientscript,script2632].cs2)  
+[**2633**](scripts/[proc,script2633].cs2)  
 [**2634**](scripts/[clientscript,mobile_rating_init].cs2) `[clientscript,mobile_rating_init]`  
 [**2635**](scripts/[clientscript,options_fps_resynch].cs2) `[clientscript,options_fps_resynch]`  
 [**2636**](scripts/[proc,options_fps].cs2) `[proc,options_fps]`  

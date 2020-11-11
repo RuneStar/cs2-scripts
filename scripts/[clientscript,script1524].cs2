@@ -30,22 +30,23 @@ if ($int0 = 2) {
 	} else {
 		$string1 = "<col=7f7f7f>Advertise (0)</col>";
 	}
-	~script1558(interface_507:30, $string1, interface_507:3, enum_1539, -1);
-	if_sethide(false, interface_507:30);
-	~script1558(interface_507:31, "<col=ff0000>Disband</col>", interface_507:3, enum_1539, -1);
+	~script1558(interface_507:31, $string1, interface_507:3, enum_1539, -1);
 	if_sethide(false, interface_507:31);
+	~script1558(interface_507:32, "<col=ff0000>Disband</col>", interface_507:3, enum_1539, -1);
+	if_sethide(false, interface_507:32);
 } else if ($int0 = 1) {
-	~script1558(interface_507:32, "<col=ff0000>Leave</col>", interface_507:3, enum_1539, -1);
-	if_sethide(false, interface_507:32);
+	~script1558(interface_507:33, "<col=ff0000>Leave</col>", interface_507:3, enum_1539, -1);
+	if_sethide(false, interface_507:33);
 } else {
-	~script1558(interface_507:32, "<col=00ff00>Join</col>", interface_507:3, enum_1539, -1);
-	if_sethide(false, interface_507:32);
+	~script1558(interface_507:33, "<col=00ff00>Join</col>", interface_507:3, enum_1539, -1);
+	if_sethide(false, interface_507:33);
 }
-~script1558(interface_507:33, "Back", interface_507:3, enum_1539, -1);
-if_sethide(false, interface_507:33);
-~script1558(interface_507:34, "Refresh", interface_507:3, enum_1539, -1);
+~script1558(interface_507:34, "Back", interface_507:3, enum_1539, -1);
 if_sethide(false, interface_507:34);
+~script1558(interface_507:35, "Refresh", interface_507:3, enum_1539, -1);
+if_sethide(false, interface_507:35);
 ~script1530(interface_507:13, "Preferred party size", $int0);
 ~script1530(interface_507:17, "Preferred combat level", $int0);
 ~script1530(interface_507:21, "Preferred skill total", $int0);
 ~script1530(interface_507:22, "Challenge mode", $int0);
+~script1530(interface_507:23, "Large Raids", $int0);

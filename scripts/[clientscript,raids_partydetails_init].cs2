@@ -1,21 +1,17 @@
 // 1516
-[clientscript,raids_partydetails_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
+[clientscript,raids_partydetails_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
 ~steelborder(interface_507:2, "Loading...", 0);
 if_setscrollsize(0, 0, $component1);
 if_setscrollpos(0, 0, $component1);
 ~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if_sethide(true, $component7);
 if_sethide(true, $component8);
 if_sethide(true, $component9);
 if_sethide(true, $component10);
+if_sethide(true, $component11);
 cc_deleteall($component1);
 if_sethide(true, $component1);
 %varcint178 = 0;
 cc_deleteall(interface_507:3);
-if_sethide(true, $component11);
-cc_deleteall($component11);
-cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $component11));
-cc_sethide(true);
 if_sethide(true, $component12);
 cc_deleteall($component12);
 cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $component12));
@@ -24,13 +20,17 @@ if_sethide(true, $component13);
 cc_deleteall($component13);
 cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $component13));
 cc_sethide(true);
-if_sethide(true, $component15);
-cc_deleteall($component15);
-cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $component15));
-cc_sethide(true);
 if_sethide(true, $component14);
 cc_deleteall($component14);
 cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $component14));
+cc_sethide(true);
+if_sethide(true, $component16);
+cc_deleteall($component16);
+cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $component16));
+cc_sethide(true);
+if_sethide(true, $component15);
+cc_deleteall($component15);
+cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $component15));
 cc_sethide(true);
 if_sethide(true, $component3);
 cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $component3));
@@ -43,4 +43,7 @@ cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $c
 cc_sethide(true);
 if_sethide(true, $component6);
 cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $component6));
+cc_sethide(true);
+if_sethide(true, $component7);
+cc_create(interface_507:3, ^iftype_rectangle, enum(component, int, enum_1539, $component7));
 cc_sethide(true);

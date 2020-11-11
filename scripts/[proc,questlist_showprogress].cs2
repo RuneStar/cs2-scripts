@@ -17,8 +17,10 @@ while ($count5 < $count6) {
 			$colour4 = ^red;
 		}
 		cc_setcolour($colour4);
-		cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
-		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour4)");
+		if (~on_mobile = false) {
+			cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
+			cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour4)");
+		}
 	}
 	$count5 = calc($count5 + 1);
 }
@@ -36,8 +38,10 @@ while ($count5 < $count6) {
 			$colour4 = ^red;
 		}
 		cc_setcolour($colour4);
-		cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
-		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour4)");
+		if (~on_mobile = false) {
+			cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
+			cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour4)");
+		}
 	}
 	$count5 = calc($count5 + 1);
 }
@@ -55,8 +59,10 @@ while ($count5 < $count6) {
 			$colour4 = ^red;
 		}
 		cc_setcolour($colour4);
-		cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
-		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour4)");
+		if (~on_mobile = false) {
+			cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, ^white)");
+			cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, $colour4)");
+		}
 	}
 	$count5 = calc($count5 + 1);
 }
