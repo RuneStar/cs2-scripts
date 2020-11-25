@@ -1,0 +1,26 @@
+// 3757
+[clientscript,script3757]
+cc_deleteall(interface_119:3);
+cc_deleteall(interface_119:179);
+if_setscrollpos(0, 0, interface_119:3);
+if_setscrollsize(0, 0, interface_119:3);
+def_int $count0 = enum_getoutputcount(enum_1540);
+def_int $count1 = 0;
+while ($count1 < $count0) {
+	cc_create(interface_119:3, ^iftype_rectangle, $count1);
+	$count1 = calc($count1 + 1);
+	cc_sethide(true);
+	cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+}
+def_int $int2 = calc(if_getwidth(interface_119:3) / 2);
+def_int $int3 = calc($int2 - 5);
+def_int $int4 = calc($int2 + 5);
+$count1 = ~script3758(0, 0, 0, mountain_dwarf_3390, $int3, $count1, interface_119:3);
+$count1 = ~script3758($int4, 0, 1, general_wartface_3391, $int3, $count1, interface_119:3);
+$count1 = ~script3758(0, 50, 2, pirate_pete_3389, $int3, $count1, interface_119:3);
+$count1 = ~script3758($int4, 50, 3, lumbridge_guide_3393, $int3, $count1, interface_119:3);
+$count1 = ~script3758(0, 100, 4, evil_dave_3394, $int3, $count1, interface_119:3);
+$count1 = ~script3758($int4, 100, 5, skrach_uglogwee_3398, $int3, $count1, interface_119:3);
+$count1 = ~script3758(0, 150, 6, sir_amik_varze_3395, $int3, $count1, interface_119:3);
+$count1 = ~script3758($int4, 150, 7, awowogei_3396, $int3, $count1, interface_119:3);

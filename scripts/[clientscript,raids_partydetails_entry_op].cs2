@@ -13,7 +13,7 @@ if (string_length($string0) > 0) {
 	if ($opindex0 = 6) {
 		if (clan_getchatcount > 0 & clan_getchatrank >= clan_getchatminkick) {
 			sound_synth(synth_2266, 1, 0);
-			~clan_sendkick($string0);
+			~script3764($string0);
 		} else {
 			mes("You don't have permission to do that.");
 		}

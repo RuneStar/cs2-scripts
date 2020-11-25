@@ -1,0 +1,60 @@
+// 3761
+[proc,script3761](int $int0)(int)
+def_int $int1 = 1;
+switch_int ($int0) {
+	case 0 :
+		if (%varbit1892 >= 60) {
+			$int1 = 2;
+		} else if (%varbit1892 > 0) {
+			$int1 = 0;
+		}
+	case 1 :
+		if (%varbit1867 >= 40) {
+			$int1 = 2;
+		} else if (%varbit1867 > 0) {
+			$int1 = 0;
+		}
+	case 2 :
+		if (%varbit1895 >= 110) {
+			$int1 = 2;
+		} else if (%varbit1895 > 0) {
+			$int1 = 0;
+		}
+	case 3 :
+		if (%varbit1896 >= 5) {
+			$int1 = 2;
+		} else if (%varbit1896 > 0) {
+			$int1 = 0;
+		}
+	case 4 :
+		if (%varbit1878 >= 5) {
+			$int1 = 2;
+		} else if (%varbit1878 > 0) {
+			$int1 = 0;
+		}
+	case 5 :
+		if (%varbit1904 >= 170) {
+			$int1 = 2;
+		} else if (%varbit1904 > 0) {
+			$int1 = 0;
+		}
+	case 6 :
+		if (%varbit1910 >= 20) {
+			$int1 = 2;
+		} else if (%varbit1910 > 0) {
+			$int1 = 0;
+		}
+	case 7 :
+		if (%varbit1914 >= 50) {
+			$int1 = 2;
+		} else if (%varbit1914 > 0) {
+			$int1 = 0;
+		}
+}
+if ($int1 = 2) {
+	return(0x0da10d);
+}
+if ($int1 = 0) {
+	return(^yellow);
+}
+return(0xff0d0d);

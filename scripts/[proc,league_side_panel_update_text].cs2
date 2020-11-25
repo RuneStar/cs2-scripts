@@ -23,12 +23,12 @@ if ($struct8 ! null) {
 $int6 = calc($int7 - %varbit10046);
 if ($int6 <= 0 & if_find($component0) = true) {
 	if (%varbit10666 = 0) {
-		cc_settext("<col=ffffff>You can unlock a new area!</col>");
+		cc_settext("<col=ffffff>You can unlock a new Area!</col>");
 	} else {
-		cc_settext("<col=ffffff>You have unlocked all areas!</col>");
+		cc_settext("<col=ffffff>You have unlocked all Areas!</col>");
 	}
 } else if (if_find($component0) = true) {
-	cc_settext("<col=ffffff><tostring($int6)></col> tasks until next area.");
+	cc_settext("<col=ffffff><tostring($int6)></col> tasks until next Area.");
 }
 if (if_find($component2) = true) {
 	cc_settext(tostring($int4));

@@ -1,8 +1,8 @@
-// 214
-[clientscript,clan_op](string $string0, int $opindex0)
+// 3763
+[clientscript,script3763](string $string0, int $opindex0)
 def_string $username1 = removetags($string0);
 if ($opindex0 = 6 & ~wildwars_world = 0) {
-	~clan_sendkick($username1);
+	~script3764($username1);
 } else if ($opindex0 = 7) {
 	friend_add($username1);
 } else if ($opindex0 = 8) {

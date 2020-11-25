@@ -214,8 +214,8 @@
 [**211**](scripts/[clientscript,poh_options_buildmode].cs2) `[clientscript,poh_options_buildmode]`  
 [**212**](scripts/[proc,script212].cs2)  
 [**213**](scripts/[proc,script213].cs2)  
-[**214**](scripts/[clientscript,clan_op].cs2) `[clientscript,clan_op]`  
-[**215**](scripts/[proc,clan_sendkick].cs2) `[proc,clan_sendkick]`  
+[**214**](scripts/[clientscript,script214].cs2)  
+[**215**](scripts/[clientscript,script215].cs2)  
 [**216**](scripts/[clientscript,rebuildchatbox].cs2) `[clientscript,rebuildchatbox]`  
 [**217**](scripts/[clientscript,menu].cs2) `[clientscript,menu]`  
 [**218**](scripts/[proc,menu_createentry].cs2) `[proc,menu_createentry]`  
@@ -452,7 +452,7 @@
 [**449**](scripts/[proc,orbs_update].cs2) `[proc,orbs_update]`  
 [**450**](scripts/[clientscript,script450].cs2)  
 [**451**](scripts/[proc,high_risk_world].cs2) `[proc,high_risk_world]`  
-[**452**](scripts/[clientscript,clanchat_login].cs2) `[clientscript,clanchat_login]`  
+[**452**](scripts/[proc,script452].cs2)  
 [**453**](scripts/[clientscript,rune_pouch_init].cs2) `[clientscript,rune_pouch_init]`  
 [**454**](scripts/[proc,orbs_update_runmode].cs2) `[proc,orbs_update_runmode]`  
 [**455**](scripts/[clientscript,orbs_toggle_prayer].cs2) `[clientscript,orbs_toggle_prayer]`  
@@ -1504,7 +1504,7 @@
 [**1501**](scripts/[clientscript,script1501].cs2)  
 [**1502**](scripts/[clientscript,script1502].cs2)  
 [**1503**](scripts/[proc,string_prependzero].cs2) `[proc,string_prependzero]`  
-[**1504**](scripts/[clientscript,clan_leavechat].cs2) `[clientscript,clan_leavechat]`  
+[**1504**](scripts/[clientscript,script1504].cs2)  
 [**1505**](scripts/[clientscript,raids_overlay_init].cs2) `[clientscript,raids_overlay_init]`  
 [**1506**](scripts/[proc,script1506].cs2)  
 [**1507**](scripts/[clientscript,script1507].cs2)  
@@ -2858,7 +2858,6 @@
 [**2855**](scripts/[proc,cocktail_create_ingredient].cs2) `[proc,cocktail_create_ingredient]`  
 [**2856**](scripts/[proc,cocktail_return_dummy].cs2) `[proc,cocktail_return_dummy]`  
 [**2857**](scripts/[proc,cocktail_check_inv].cs2) `[proc,cocktail_check_inv]`  
-[**2858**](scripts/[clientscript,clock_build].cs2) `[clientscript,clock_build]`  
 [**2859**](scripts/[clientscript,clock_fake_update].cs2) `[clientscript,clock_fake_update]`  
 [**2860**](scripts/[clientscript,clock_update].cs2) `[clientscript,clock_update]`  
 [**2861**](scripts/[proc,clock_set].cs2) `[proc,clock_set]`  
@@ -3200,6 +3199,7 @@
 [**3197**](scripts/[clientscript,league_relic_confirm].cs2) `[clientscript,league_relic_confirm]`  
 [**3198**](scripts/[clientscript,league_relic_confirm_back].cs2) `[clientscript,league_relic_confirm_back]`  
 [**3199**](scripts/[proc,league_relic_display].cs2) `[proc,league_relic_display]`  
+[**3200**](scripts/[clientscript,script3200].cs2)  
 [**3201**](scripts/[clientscript,script3201].cs2)  
 [**3202**](scripts/[clientscript,league_tasks_init].cs2) `[clientscript,league_tasks_init]`  
 [**3203**](scripts/[clientscript,league_tasks_draw_list].cs2) `[clientscript,league_tasks_draw_list]`  
@@ -3756,3 +3756,14 @@
 [**3754**](scripts/[clientscript,script3754].cs2)  
 [**3755**](scripts/[proc,script3755].cs2)  
 [**3756**](scripts/[clientscript,script3756].cs2)  
+[**3757**](scripts/[clientscript,script3757].cs2)  
+[**3758**](scripts/[proc,script3758].cs2)  
+[**3759**](scripts/[clientscript,script3759].cs2)  
+[**3760**](scripts/[clientscript,script3760].cs2)  
+[**3761**](scripts/[proc,script3761].cs2)  
+[**3762**](scripts/[clientscript,script3762].cs2)  
+[**3763**](scripts/[clientscript,script3763].cs2)  
+[**3764**](scripts/[proc,script3764].cs2)  
+[**3765**](scripts/[clientscript,script3765].cs2)  
+[**3766**](scripts/[clientscript,script3766].cs2)  
+[**3769**](scripts/[proc,script3769].cs2)  

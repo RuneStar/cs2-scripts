@@ -76,13 +76,20 @@ if ($count16 <= -2) {
 			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 245, null)");
 		}
 		cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 230, null)");
-		cc_setop(1, enum(int, string, enum_170, 0));
-		cc_setop(2, enum(int, string, enum_170, 1));
-		cc_setop(3, enum(int, string, enum_170, 2));
-		cc_setop(4, enum(int, string, enum_170, 3));
-		cc_setop(5, enum(int, string, enum_170, 4));
-		cc_setop(6, enum(int, string, enum_170, 5));
-		cc_setop(7, enum(int, string, enum_170, 6));
+		$rank13 = enum(int, int, enum_1544, 1);
+		cc_setop(1, enum(int, string, enum_1541, $rank13));
+		$rank13 = enum(int, int, enum_1544, 2);
+		cc_setop(2, enum(int, string, enum_1541, $rank13));
+		$rank13 = enum(int, int, enum_1544, 3);
+		cc_setop(3, enum(int, string, enum_1541, $rank13));
+		$rank13 = enum(int, int, enum_1544, 4);
+		cc_setop(4, enum(int, string, enum_1541, $rank13));
+		$rank13 = enum(int, int, enum_1544, 5);
+		cc_setop(5, enum(int, string, enum_1541, $rank13));
+		$rank13 = enum(int, int, enum_1544, 6);
+		cc_setop(6, enum(int, string, enum_1541, $rank13));
+		$rank13 = enum(int, int, enum_1544, 7);
+		cc_setop(7, enum(int, string, enum_1541, $rank13));
 		.cc_create($component3, ^iftype_text, $int10);
 		$int10 = calc($int10 + 1);
 		$rank13 = friend_getrank($count14);
@@ -92,7 +99,7 @@ if ($count16 <= -2) {
 		.cc_settextshadow(true);
 		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		.cc_settextfont(b12_full);
-		.cc_settext(enum(int, string, enum_170, $rank13));
+		.cc_settext(enum(int, string, enum_1541, $rank13));
 		cc_setonop("chatchannel_setup_setrank($component3, .cc_getid, event_opbase, event_opindex)");
 		cc_create($component3, ^iftype_text, $int10);
 		$int10 = calc($int10 + 1);

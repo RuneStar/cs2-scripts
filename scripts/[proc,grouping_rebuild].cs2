@@ -143,14 +143,14 @@ if (if_gethide(interface_76:14) = true) {
 		$int1 = calc($int1 + 1);
 		cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, calc($int10 + 1), ^setpos_abs_left, ^setpos_abs_top);
-		cc_setgraphic(enum(int, graphic, enum_706, $rank6));
+		cc_setgraphic(enum(int, graphic, enum_1543, $rank6));
 		cc_create(interface_76:12, ^iftype_rectangle, $int1);
 		$int1 = calc($int1 + 1);
 		cc_setsize($int5, $int11, ^setsize_abs, ^setsize_abs);
 		cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setfill(true);
 		cc_settrans(255);
-		cc_setonop("clan_op($string3, event_opindex)");
+		cc_setonop("script3763($string3, event_opindex)");
 		if (clan_isself($int9) = false) {
 			if (clan_isfriend($int9) = true) {
 				cc_setop(9, "Remove friend <$string3>");

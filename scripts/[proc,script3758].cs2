@@ -1,0 +1,50 @@
+// 3758
+[proc,script3758](int $int0, int $y1, int $int2, npc $npc3, int $int4, int $int5, component $component6)(int)
+def_string $op0 = enum(int, string, enum_1540, $int2);
+cc_create($component6, ^iftype_rectangle, $int5);
+$int5 = calc($int5 + 1);
+cc_sethide(false);
+cc_setsize($int4, 50, ^setsize_abs, ^setsize_abs);
+cc_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(255);
+cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 220, null)");
+cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+cc_setop(1, $op0);
+cc_setonop("script3762(event_com, event_comsubid, $int2)");
+cc_create($component6, ^iftype_model, $int5);
+$int5 = calc($int5 + 1);
+cc_sethide(false);
+if ($int2 = 1) {
+	cc_setsize(30, 50, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setnpchead($npc3);
+	cc_setmodelangle(0, 10, 80, 0, 0, 2500);
+	cc_setontimer("script3759(event_com, event_comsubid, calc(clientclock + random(5)), seq_579)");
+	cc_create($component6, ^iftype_model, $int5);
+	$int5 = calc($int5 + 1);
+	cc_setsize(30, 50, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int0 + 20), $y1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setnpchead(general_bentnoze_3392);
+	cc_setmodelangle(0, 10, 80, 0, 0, 2500);
+	cc_setontimer("script3759(event_com, event_comsubid, calc(clientclock + random(5)), seq_579)");
+} else {
+	cc_setsize(50, 50, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setnpchead($npc3);
+	cc_setmodelangle(0, 20, 80, 0, 0, 2100);
+	cc_setontimer("script3759(event_com, event_comsubid, calc(clientclock + random(20)), seq_579)");
+}
+cc_create($component6, ^iftype_text, $int5);
+$int5 = calc($int5 + 1);
+cc_sethide(false);
+cc_setsize(calc($int4 - 60), 50, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int0 + 55), $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(~script3761($int2));
+cc_setonvartransmit("script3760(event_com, event_comsubid, $int2){var681, var679, var683, var680, var684, var685}");
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($op0);
+return($int5);

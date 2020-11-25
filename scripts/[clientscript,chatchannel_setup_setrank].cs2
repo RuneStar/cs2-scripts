@@ -1,7 +1,7 @@
 // 1667
 [clientscript,chatchannel_setup_setrank](component $component0, int $comsubid1, string $opbase0, int $opindex2)
-def_int $rank3 = calc($opindex2 - 1);
+def_int $rank3 = enum(int, int, enum_1544, $opindex2);
 friend_setrank(removetags($opbase0), $rank3);
 if (cc_find($component0, $comsubid1) = ^true) {
-	cc_settext(enum(int, string, enum_170, $rank3));
+	cc_settext(enum(int, string, enum_1541, $rank3));
 }

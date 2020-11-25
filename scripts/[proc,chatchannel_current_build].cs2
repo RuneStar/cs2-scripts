@@ -124,8 +124,8 @@ if (%varbit6363 = 1) {
 	~v2_stone_button($component13);
 	if_setonmouserepeat("v2_stone_button_in(event_com)", $component13);
 	if_setonmouseleave("v2_stone_button(event_com)", $component13);
-	if_settext("Clan Setup", $component12);
-	if_setop(1, "Clan Setup", $component12);
+	if_settext("Chat Setup", $component12);
+	if_setop(1, "Chat Setup", $component12);
 	if_setonop("opsound(event_opindex, 1)", $component12);
 }
 def_string $text0 = "";
@@ -169,7 +169,7 @@ while ($int24 < $int15) {
 	$int21 = calc($int21 + 1);
 	.cc_setsize(9, 9, ^setsize_abs, ^setsize_abs);
 	.cc_setposition(1, calc($height22 + ($int23 - 9) / 2), ^setpos_abs_left, ^setpos_abs_top);
-	.cc_setgraphic(enum(int, graphic, enum_706, $rank17));
+	.cc_setgraphic(enum(int, graphic, enum_1543, $rank17));
 	if (clan_isself($int24) = false) {
 		if (clan_isfriend($int24) = true) {
 			cc_setop(9, "Remove friend");
@@ -190,8 +190,8 @@ while ($int24 < $int15) {
 	}
 	cc_setopbase("<col=ff9040><$text0></col>");
 	.cc_setopbase("<col=ff9040><$text0></col>");
-	cc_setonop("clan_op(event_opbase, event_opindex)");
-	.cc_setonop("clan_op(event_opbase, event_opindex)");
+	cc_setonop("script3763(event_opbase, event_opindex)");
+	.cc_setonop("script3763(event_opbase, event_opindex)");
 	$int24, $height22 = calc($int24 + 1), calc($height22 + $int23);
 }
 if ($int15 >= 1) {
