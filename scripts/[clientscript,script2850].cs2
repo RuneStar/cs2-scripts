@@ -1,12 +1,52 @@
 // 2850
-[clientscript,script2850](component $component0)
-cc_deleteall($component0);
-def_int $comsubid1 = ~v2_stone_button_filled($component0);
-cc_create($component0, ^iftype_text, $comsubid1);
-cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setcolour(0xff981f);
-cc_settextfont(p12_full);
-cc_settextshadow(true);
-cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
-cc_settext("Create");
+[clientscript,script2850](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+if (inv_total(inv, polar_kebbit_fur_10117) >= 2) {
+	if_setcolour(0x0dc10d, $component0);
+} else {
+	if_setcolour(0x9f9f9f, $component0);
+}
+if (inv_total(inv, common_kebbit_fur_10121) >= 2) {
+	if_setcolour(0x0dc10d, $component1);
+} else {
+	if_setcolour(0x9f9f9f, $component1);
+}
+if (inv_total(inv, feldip_weasel_fur_10119) >= 2) {
+	if_setcolour(0x0dc10d, $component2);
+} else {
+	if_setcolour(0x9f9f9f, $component2);
+}
+if (inv_total(inv, desert_devil_fur_10123) >= 2) {
+	if_setcolour(0x0dc10d, $component3);
+} else {
+	if_setcolour(0x9f9f9f, $component3);
+}
+if (inv_total(inv, larupia_fur_10095) >= 1 | inv_total(inv, tatty_larupia_fur_10093) >= 1) {
+	if_setcolour(0x0dc10d, $component4);
+} else {
+	if_setcolour(0x9f9f9f, $component4);
+}
+if (inv_total(inv, graahk_fur_10099) >= 1 | inv_total(inv, tatty_graahk_fur_10097) >= 1) {
+	if_setcolour(0x0dc10d, $component5);
+} else {
+	if_setcolour(0x9f9f9f, $component5);
+}
+if (inv_total(inv, kyatt_fur_10103) >= 1 | inv_total(inv, tatty_kyatt_fur_10101) >= 1) {
+	if_setcolour(0x0dc10d, $component6);
+} else {
+	if_setcolour(0x9f9f9f, $component6);
+}
+if (inv_total(inv, dark_kebbit_fur_10115) >= 2) {
+	if_setcolour(0x0dc10d, $component7);
+} else {
+	if_setcolour(0x9f9f9f, $component7);
+}
+if (inv_total(inv, spotted_kebbit_fur_10125) >= 2) {
+	if_setcolour(0x0dc10d, $component8);
+} else {
+	if_setcolour(0x9f9f9f, $component8);
+}
+if (inv_total(inv, dashing_kebbit_fur_10127) >= 2) {
+	if_setcolour(0x0dc10d, $component9);
+} else {
+	if_setcolour(0x9f9f9f, $component9);
+}

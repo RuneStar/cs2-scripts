@@ -1,0 +1,20 @@
+// 2854
+[proc,script2854](component $component0)
+def_int $int1 = 0;
+def_obj $obj2 = null;
+def_int $int3 = 0;
+def_int $int4 = 4;
+while ($int1 < 28) {
+	if (cc_find($component0, $int1) = ^true) {
+		$obj2 = inv_getobj(inv, $int1);
+		cc_clearops;
+		cc_setposition($int3, $int4, ^setpos_abs_left, ^setpos_abs_top);
+		~script2855($component0, $obj2, $int1, inv_getnum(inv, $int1));
+		$int3 = calc($int3 + 36 + 5);
+		if (calc(($int1 + 1) % 7) = 0) {
+			$int3 = 0;
+			$int4 = calc($int4 + 32 + 7);
+		}
+	}
+	$int1 = calc($int1 + 1);
+}

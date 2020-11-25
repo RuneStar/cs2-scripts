@@ -1,0 +1,11 @@
+// 3773
+[proc,script3773](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+if_setmodel(enum(int, model, enum_1546, %varbit9585), $component1);
+if_setmodel(enum(int, model, enum_1546, calc((%varbit9585 + 1) % 4)), $component2);
+if_setmodel(enum(int, model, enum_1546, calc((%varbit9585 + 3) % 4)), $component0);
+if_setmodel(enum(int, model, enum_1546, %varbit9593), $component4);
+if_setmodel(enum(int, model, enum_1546, calc((%varbit9593 + 1) % 4)), $component5);
+if_setmodel(enum(int, model, enum_1546, calc((%varbit9593 + 3) % 4)), $component3);
+if_setmodel(enum(int, model, enum_1546, %varbit9594), $component7);
+if_setmodel(enum(int, model, enum_1546, calc((%varbit9594 + 1) % 4)), $component8);
+if_setmodel(enum(int, model, enum_1546, calc((%varbit9594 + 3) % 4)), $component6);

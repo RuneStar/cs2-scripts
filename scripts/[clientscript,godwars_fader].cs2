@@ -1,16 +1,18 @@
 // 344
-[clientscript,godwars_fader](component $component0, int $clock1)
-def_int $int2 = calc(clientclock - $clock1);
-if ($int2 < 90) {
-	if_settrans(calc(255 - interpolate(0, $int2, 0, 90, 255)), $component0);
+[clientscript,godwars_fader](component $component0, int $clock1, int $int2, int $int3, int $int4)
+def_int $int5 = calc(clientclock - $clock1);
+if ($int5 < $int2) {
+	if_settrans(calc(255 - scale($int5, $int2, 255)), $component0);
 	return;
 }
-if ($int2 < 195) {
+def_int $int6 = calc($int2 + $int3);
+if ($int5 < $int6) {
 	if_settrans(0, $component0);
 	return;
 }
-if ($int2 < 255) {
-	if_settrans(calc(255 - interpolate(0, 255 - $int2, 0, 60, 255)), $component0);
+$int6 = calc($int6 + $int4);
+if ($int5 < $int6) {
+	if_settrans(calc(255 - scale($int6 - $int5, $int4, 255)), $component0);
 	return;
 }
 if_settrans(255, $component0);

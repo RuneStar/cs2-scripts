@@ -1281,6 +1281,14 @@ switch_struct ($struct0) {
 			return(1);
 		}
 		return(0);
+	case getting_ahead_752 :
+		if (%varbit693 >= 34) {
+			return(2);
+		}
+		if (%varbit693 <= 0) {
+			return(1);
+		}
+		return(0);
 	case default :
 		return(1);
 }

@@ -1,0 +1,23 @@
+// 3797
+[clientscript,script3797](component $component0, component $component1, component $component2)
+if (inv_getobj(inv_438, 0) ! null) {
+	if_sethide(false, $component0);
+	if_setobject_nonum(inv_getobj(inv_438, 0), 1, $component0);
+	if_setopbase("<col=ff9040><oc_name(inv_getobj(inv_438, 0))>", $component0);
+} else {
+	if_sethide(true, $component0);
+}
+if (inv_getobj(inv_438, 1) ! null) {
+	if_sethide(false, $component1);
+	if_setobject_nonum(inv_getobj(inv_438, 1), 1, $component1);
+	if_setopbase("<col=ff9040><oc_name(inv_getobj(inv_438, 1))>", $component1);
+} else {
+	if_sethide(true, $component1);
+}
+if (inv_getobj(inv_438, 2) ! null) {
+	if_sethide(false, $component2);
+	if_setobject_nonum(inv_getobj(inv_438, 2), 1, $component2);
+	if_setopbase("<col=ff9040><oc_name(inv_getobj(inv_438, 2))>", $component2);
+} else {
+	if_sethide(true, $component2);
+}

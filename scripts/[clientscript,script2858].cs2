@@ -1,0 +1,49 @@
+// 2858
+[clientscript,script2858](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19)
+if_setop(1, "Unlock", $component19);
+if_setonop("script3774(event_opindex)", $component19);
+if (~on_mobile = false) {
+	if_setonmouseover("settrans(event_com, 240)", $component19);
+	if_setonmouseleave("settrans(event_com, 255)", $component19);
+	if_setonmouseover("model_swapper($component3, model_38985)", $component1);
+	if_setonmouseleave("model_swapper($component3, model_7747)", $component1);
+	if_setonmouseover("model_swapper($component3, model_38985)", $component2);
+	if_setonmouseleave("model_swapper($component3, model_7747)", $component2);
+	if_setonmouseover("model_swapper($component9, model_38985)", $component7);
+	if_setonmouseleave("model_swapper($component9, model_7747)", $component7);
+	if_setonmouseover("model_swapper($component9, model_38985)", $component8);
+	if_setonmouseleave("model_swapper($component9, model_7747)", $component8);
+	if_setonmouseover("model_swapper($component15, model_38985)", $component13);
+	if_setonmouseleave("model_swapper($component15, model_7747)", $component13);
+	if_setonmouseover("model_swapper($component15, model_38985)", $component14);
+	if_setonmouseleave("model_swapper($component15, model_7747)", $component14);
+}
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $component4);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $component5);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $component6);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $component10);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $component11);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $component12);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $component16);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $component17);
+if_setontimer("spinner(calc(12 + randominc(4)), calc(12 + randominc(4)), 0, event_com)", $component18);
+~script3773($component4, $component5, $component6, $component10, $component11, $component12, $component16, $component17, $component18);
+if_setonvartransmit("script3767($component0, $component4, $component5, $component6, $component10, $component11, $component12, $component16, $component17, $component18){var531}", $component0);
+if_setop(1, "Rotate", $component1);
+if_setop(1, "Rotate", $component2);
+if_setop(1, "Rotate", $component7);
+if_setop(1, "Rotate", $component8);
+if_setop(1, "Rotate", $component13);
+if_setop(1, "Rotate", $component14);
+if_setopbase("<col=ff9040>Left column</col>", $component1);
+if_setopbase("<col=ff9040>Left column</col>", $component2);
+if_setopbase("<col=ff9040>Centre column</col>", $component7);
+if_setopbase("<col=ff9040>Centre column</col>", $component8);
+if_setopbase("<col=ff9040>Right column</col>", $component13);
+if_setopbase("<col=ff9040>Right column</col>", $component14);
+if_setonop("script3770(event_opindex, 1, $component4, $component5, $component6, $component10, $component11, $component12, $component16, $component17, $component18)", $component1);
+if_setonop("script3770(event_opindex, 3, $component4, $component5, $component6, $component10, $component11, $component12, $component16, $component17, $component18)", $component2);
+if_setonop("script3771(event_opindex, 1, $component4, $component5, $component6, $component10, $component11, $component12, $component16, $component17, $component18)", $component7);
+if_setonop("script3771(event_opindex, 3, $component4, $component5, $component6, $component10, $component11, $component12, $component16, $component17, $component18)", $component8);
+if_setonop("script3772(event_opindex, 1, $component4, $component5, $component6, $component10, $component11, $component12, $component16, $component17, $component18)", $component13);
+if_setonop("script3772(event_opindex, 3, $component4, $component5, $component6, $component10, $component11, $component12, $component16, $component17, $component18)", $component14);

@@ -1,0 +1,16 @@
+// 2849
+[proc,script2849](int $int0, int $int1)(int)
+def_int $int2 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+def_struct $struct3 = null;
+while ($int0 <= $int1) {
+	$struct3 = enum(int, struct, enum_1559, $int0);
+	$string1 = struct_param($struct3, param_738);
+	if (compare($string1, $string0) ! 0) {
+		$int2 = calc($int2 + 1);
+		$string0 = $string1;
+	}
+	$int0 = calc($int0 + 1);
+}
+return($int2);

@@ -1,0 +1,10 @@
+// 2857
+[clientscript,script2857](component $component0, int $int1)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_text, 0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settext("Tries left: <tostring($int1)>");
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0xff981f);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);

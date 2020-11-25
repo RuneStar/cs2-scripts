@@ -1,0 +1,41 @@
+// 2848
+[proc,script2848](component $component0, int $int1, int $int2, int $y3, int $int4, int $int5)(int)
+def_int $int6 = $int5;
+def_int $int7 = ~script2849($int1, $int2);
+def_int $int8 = calc(if_getwidth($component0) / $int7);
+def_int $int9 = 20;
+def_int $int10 = 0;
+def_struct $struct11 = null;
+def_obj $obj12 = null;
+def_string $string0 = "";
+while ($int1 <= $int2) {
+	$struct11 = enum(int, struct, enum_1559, $int1);
+	if ($struct11 ! null) {
+		if (compare($string0, struct_param($struct11, param_738)) ! 0) {
+			$int10 = $int9;
+			$int9 = calc($int9 + $int8);
+		}
+		$obj12 = struct_param($struct11, param_737);
+		if ($obj12 ! bones_526) {
+			cc_create($component0, ^iftype_graphic, $int6);
+			cc_setposition(calc($int10 + $int4), $y3, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setobject($obj12, -1);
+			cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+			cc_setgraphicshadow(0x333333);
+			cc_setoutline(1);
+			cc_sethide(false);
+			cc_setopbase("<col=ff9040><oc_name($obj12)></col>");
+			cc_setop(1, "Value");
+			cc_setop(2, "Buy-1");
+			cc_setop(3, "Buy-5");
+			cc_setop(4, "Buy-10");
+			cc_setop(5, "Examine");
+			cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+			$int10 = calc($int10 + 36 + 5);
+			$int6 = calc($int6 + 1);
+		}
+	}
+	$string0 = struct_param($struct11, param_738);
+	$int1 = calc($int1 + 1);
+}
+return($int6);

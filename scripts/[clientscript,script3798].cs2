@@ -1,0 +1,30 @@
+// 3798
+[clientscript,script3798](component $component0, component $component1, component $component2, component $component3)
+if (inv_getobj(inv_439, 0) ! null) {
+	if_sethide(false, $component0);
+	if_setobject_nonum(inv_getobj(inv_439, 0), 1, $component0);
+	if_setopbase("<col=ff9040><oc_name(inv_getobj(inv_439, 0))>", $component0);
+} else {
+	if_sethide(true, $component0);
+}
+if (inv_getobj(inv_439, 1) ! null) {
+	if_sethide(false, $component1);
+	if_setobject_nonum(inv_getobj(inv_439, 1), 1, $component1);
+	if_setopbase("<col=ff9040><oc_name(inv_getobj(inv_439, 1))>", $component1);
+} else {
+	if_sethide(true, $component1);
+}
+if (inv_getobj(inv_439, 2) ! null) {
+	if_sethide(false, $component2);
+	if_setobject_nonum(inv_getobj(inv_439, 2), 1, $component2);
+	if_setopbase("<col=ff9040><oc_name(inv_getobj(inv_439, 2))>", $component2);
+} else {
+	if_sethide(true, $component2);
+}
+if (inv_getobj(inv_439, 3) ! null) {
+	if_sethide(false, $component3);
+	if_setobject_nonum(inv_getobj(inv_439, 3), 1, $component3);
+	if_setopbase("<col=ff9040><oc_name(inv_getobj(inv_439, 3))>", $component3);
+} else {
+	if_sethide(true, $component3);
+}

@@ -1,0 +1,15 @@
+// 732
+[clientscript,script732](component $component0, component $component1, component $component2)
+~steelborder($component0, "Custom Fur Clothing", 0);
+def_int $int3 = 0;
+$int3 = ~script2848($component1, 0, 7, 0, 5, $int3);
+$int3 = ~script2848($component1, 8, 16, 72, 5, $int3);
+$int3 = ~script2848($component1, 17, 19, 144, 40, $int3);
+cc_create($component2, ^iftype_text, 0);
+cc_setsize(if_getwidth($component2), if_getheight($component2), ^setsize_abs, ^setsize_abs);
+cc_settext("<~text_device("Right-click", "Long press")> an item in the shop to have it made for you.");
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+if_setoninvtransmit("script2850(interface_477:13, interface_477:14, interface_477:15, interface_477:16, interface_477:12, interface_477:10, interface_477:11, interface_477:9, interface_477:7, interface_477:8){inv}", $component1);

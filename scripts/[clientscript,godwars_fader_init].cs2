@@ -1,3 +1,4 @@
 // 343
-[clientscript,godwars_fader_init](component $component0)
-if_setontimer("godwars_fader($component0, clientclock)", $component0);
+[clientscript,godwars_fader_init](int $int0, int $int1, int $int2, component $component3)
+$int0, $int2 = ~max(1, $int0), ~max(1, $int2);
+if_setontimer("godwars_fader($component3, clientclock, calc(30 * $int0), calc(30 * $int1), calc(30 * $int2))", $component3);

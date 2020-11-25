@@ -1,0 +1,28 @@
+// 3794
+[clientscript,script3794](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+if_setmodel(enum(int, model, enum_1551, calc(%varbit2513 / 10)), $component0);
+if_setmodel(enum(int, model, enum_1551, calc(%varbit2513 % 10)), $component1);
+if_setobject_nonum(%var853, 1, $component5);
+if_setobject_nonum(%var854, 1, $component6);
+if_setobject_nonum(%var855, 1, $component7);
+if (%varbit2542 = 0) {
+	if_setmodel(model_17219, $component3);
+	if_setmodel(null, $component2);
+	if_setmodel(null, $component4);
+	return;
+}
+if (%varbit2542 > %varbit2513) {
+	if_setmodel(model_17219, $component3);
+	if_setmodel(model_17221, $component2);
+	if_setmodel(model_17217, $component4);
+	return;
+}
+if (%varbit2542 < %varbit2513) {
+	if_setmodel(model_17219, $component3);
+	if_setmodel(model_17220, $component2);
+	if_setmodel(model_17218, $component4);
+	return;
+}
+if_setmodel(model_17216, $component3);
+if_setmodel(null, $component2);
+if_setmodel(null, $component4);

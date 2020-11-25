@@ -1,0 +1,20 @@
+// 2855
+[proc,script2855](component $component0, obj $obj1, int $int2, int $num3)
+if ($obj1 ! null) {
+	cc_setobject($obj1, $num3);
+	cc_setopbase("<col=ff9040><oc_name($obj1)></col>");
+	cc_settrans(0);
+	cc_setop(1, "Value");
+	cc_setop(2, "Pack-1");
+	cc_setop(3, "Pack-5");
+	cc_setop(4, "Pack-10");
+	cc_setop(5, "Pack-All");
+	cc_setop(6, "Pack-X");
+	cc_setop(7, "Examine");
+	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
+	cc_setondragcomplete("script2856(event_com, event_comsubid, event_dropsubid)");
+} else {
+	cc_settrans(255);
+	cc_setobject(obj_6512, 1);
+	cc_setondragcomplete(null);
+}

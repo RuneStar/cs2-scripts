@@ -732,7 +732,7 @@
 [**729**](scripts/[proc,bondif_convert_updatevalues].cs2) `[proc,bondif_convert_updatevalues]`  
 [**730**](scripts/[proc,bondif_convert_disableconfirm].cs2) `[proc,bondif_convert_disableconfirm]`  
 [**731**](scripts/[proc,bondif_convert_enableconfirm].cs2) `[proc,bondif_convert_enableconfirm]`  
-[**732**](scripts/[clientscript,cocktail_update_if].cs2) `[clientscript,cocktail_update_if]`  
+[**732**](scripts/[clientscript,script732].cs2)  
 [**733**](scripts/[clientscript,script733].cs2)  
 [**734**](scripts/[clientscript,bondif_redeem_init].cs2) `[clientscript,bondif_redeem_init]`  
 [**735**](scripts/[clientscript,inferno_hud_init].cs2) `[clientscript,inferno_hud_init]`  
@@ -2848,16 +2848,17 @@
 [**2845**](scripts/[proc,adventurepath_return_head_pos].cs2) `[proc,adventurepath_return_head_pos]`  
 [**2846**](scripts/[clientscript,adventurepath_init].cs2) `[clientscript,adventurepath_init]`  
 [**2847**](scripts/[proc,adventurepath_change_page].cs2) `[proc,adventurepath_change_page]`  
-[**2848**](scripts/[clientscript,cocktail_init_if].cs2) `[clientscript,cocktail_init_if]`  
-[**2849**](scripts/[clientscript,script2849].cs2)  
+[**2848**](scripts/[proc,script2848].cs2)  
+[**2849**](scripts/[proc,script2849].cs2)  
 [**2850**](scripts/[clientscript,script2850].cs2)  
-[**2851**](scripts/[proc,cocktail_show_cocktails].cs2) `[proc,cocktail_show_cocktails]`  
+[**2851**](scripts/[clientscript,script2851].cs2)  
 [**2852**](scripts/[proc,seed_vault_size_check].cs2) `[proc,seed_vault_size_check]`  
-[**2853**](scripts/[clientscript,cocktail_show_ingredients].cs2) `[clientscript,cocktail_show_ingredients]`  
-[**2854**](scripts/[proc,cocktail_show_ingredients].cs2) `[proc,cocktail_show_ingredients]`  
-[**2855**](scripts/[proc,cocktail_create_ingredient].cs2) `[proc,cocktail_create_ingredient]`  
-[**2856**](scripts/[proc,cocktail_return_dummy].cs2) `[proc,cocktail_return_dummy]`  
-[**2857**](scripts/[proc,cocktail_check_inv].cs2) `[proc,cocktail_check_inv]`  
+[**2853**](scripts/[clientscript,script2853].cs2)  
+[**2854**](scripts/[proc,script2854].cs2)  
+[**2855**](scripts/[proc,script2855].cs2)  
+[**2856**](scripts/[clientscript,script2856].cs2)  
+[**2857**](scripts/[clientscript,script2857].cs2)  
+[**2858**](scripts/[clientscript,script2858].cs2)  
 [**2859**](scripts/[clientscript,clock_fake_update].cs2) `[clientscript,clock_fake_update]`  
 [**2860**](scripts/[clientscript,clock_update].cs2) `[clientscript,clock_update]`  
 [**2861**](scripts/[proc,clock_set].cs2) `[proc,clock_set]`  
@@ -3766,4 +3767,40 @@
 [**3764**](scripts/[proc,script3764].cs2)  
 [**3765**](scripts/[clientscript,script3765].cs2)  
 [**3766**](scripts/[clientscript,script3766].cs2)  
+[**3767**](scripts/[clientscript,script3767].cs2)  
+[**3768**](scripts/[clientscript,script3768].cs2)  
 [**3769**](scripts/[proc,script3769].cs2)  
+[**3770**](scripts/[clientscript,script3770].cs2)  
+[**3771**](scripts/[clientscript,script3771].cs2)  
+[**3772**](scripts/[clientscript,script3772].cs2)  
+[**3773**](scripts/[proc,script3773].cs2)  
+[**3774**](scripts/[clientscript,script3774].cs2)  
+[**3775**](scripts/[clientscript,script3775].cs2)  
+[**3776**](scripts/[proc,script3776].cs2)  
+[**3777**](scripts/[clientscript,script3777].cs2)  
+[**3778**](scripts/[clientscript,script3778].cs2)  
+[**3779**](scripts/[clientscript,script3779].cs2)  
+[**3780**](scripts/[proc,script3780].cs2)  
+[**3781**](scripts/[proc,script3781].cs2)  
+[**3782**](scripts/[clientscript,script3782].cs2)  
+[**3783**](scripts/[clientscript,script3783].cs2)  
+[**3784**](scripts/[clientscript,script3784].cs2)  
+[**3785**](scripts/[proc,script3785].cs2)  
+[**3786**](scripts/[clientscript,script3786].cs2)  
+[**3787**](scripts/[proc,script3787].cs2)  
+[**3788**](scripts/[proc,script3788].cs2)  
+[**3789**](scripts/[proc,script3789].cs2)  
+[**3790**](scripts/[proc,script3790].cs2)  
+[**3791**](scripts/[clientscript,script3791].cs2)  
+[**3792**](scripts/[clientscript,script3792].cs2)  
+[**3793**](scripts/[clientscript,script3793].cs2)  
+[**3794**](scripts/[clientscript,script3794].cs2)  
+[**3795**](scripts/[clientscript,script3795].cs2)  
+[**3796**](scripts/[clientscript,script3796].cs2)  
+[**3797**](scripts/[clientscript,script3797].cs2)  
+[**3798**](scripts/[clientscript,script3798].cs2)  
+[**3799**](scripts/[clientscript,script3799].cs2)  
+[**3800**](scripts/[clientscript,script3800].cs2)  
+[**3801**](scripts/[clientscript,script3801].cs2)  
+[**3802**](scripts/[proc,script3802].cs2)  
+[**3803**](scripts/[proc,script3803].cs2)  
