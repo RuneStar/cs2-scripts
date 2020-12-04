@@ -1,0 +1,10 @@
+// 3932
+[proc,script3932](component $component0, int $int1, component $component2)
+if (cc_find($component0, 1) = ^true) {
+	if ($int1 = 0) {
+		cc_setgraphic("options_radio_buttons,6");
+	} else {
+		cc_setgraphic("options_radio_buttons,5");
+	}
+	if_setonop("script3930($component0, $int1, $component2)", $component0);
+}

@@ -1,8 +1,0 @@
-// 1109
-[clientscript,options_hidepm_op](int $opindex0, component $component1, component $component2, component $component3, int $int4)
-if ($opindex0 ! 1) {
-	return;
-}
-sound_synth(synth_2266, 1, 0);
-%varbit4089 = $int4;
-~options_hidepm($component1, $component2, $component3, getwindowmode);

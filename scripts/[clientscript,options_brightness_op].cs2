@@ -1,8 +1,0 @@
-// 346
-[clientscript,options_brightness_op](int $opindex0, int $int1, component $component2, component $component3, component $component4, component $component5)
-if ($opindex0 ! 1) {
-	return;
-}
-sound_synth(synth_2266, 1, 0);
-%var166 = $int1;
-~options_brightness($component2, $component3, $component4, $component5);

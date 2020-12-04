@@ -1,0 +1,32 @@
+// 3868
+[proc,script3868](struct $struct0, component $component1, component $component2, int $int3, int $int4, int $int5, int $trans6)(int, int, int)
+cc_create($component2, ^iftype_rectangle, $int5);
+cc_sethide(true);
+$int5 = calc($int5 + 1);
+def_string $string0 = struct_param($struct0, param_1086);
+if (~on_mobile = true & string_length(struct_param($struct0, param_1087)) > 0) {
+	$string0 = struct_param($struct0, param_1087);
+}
+if (string_length($string0) <= 0) {
+	return($int3, $int4, $int5);
+}
+def_int $int7 = calc(paraheight($string0, if_getwidth($component1) - 20, b12_full) * 14);
+def_int $int8 = calc($int7 + 10);
+cc_create($component1, ^iftype_rectangle, $int4);
+cc_setsize(10, $int8, ^setsize_minus, ^setsize_abs);
+cc_setposition(5, $int3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans($trans6);
+$int4 = calc($int4 + 1);
+cc_create($component1, ^iftype_text, $int4);
+cc_setsize(20, $int7, ^setsize_minus, ^setsize_abs);
+cc_setposition(10, calc($int3 + 6), ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($string0);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(^white);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+$int4 = calc($int4 + 1);
+$int3 = calc($int3 + $int8);
+return($int3, $int4, $int5);

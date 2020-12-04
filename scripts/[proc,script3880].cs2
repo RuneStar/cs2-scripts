@@ -1,0 +1,46 @@
+// 3880
+[proc,script3880](string $string0)(int, string)
+$string0 = lowercase($string0);
+if (compare($string0, "buying gf") = 0) {
+	return(1, "10k.");
+}
+if (compare($string0, "cheat") = 0) {
+	return(1, "::bank");
+}
+if (compare($string0, "cheats") = 0) {
+	return(1, "::bank");
+}
+if (compare($string0, "rng") = 0) {
+	return(1, "There are no settings for rng, you will just need to suck it up I'm afraid.");
+}
+if (compare($string0, "73") = 0) {
+	return(1, "(:");
+}
+if (compare($string0, "yes") = 0) {
+	return(1, "No.");
+}
+if (compare($string0, "goblin league") = 0) {
+	return(1, "Release date TBA.");
+}
+if (compare($string0, "the answer to life, the universe and everything") = 0) {
+	return(1, "42.");
+}
+if (compare($string0, "the answer to life") = 0) {
+	return(1, "42.");
+}
+if (compare($string0, "the answer to life the universe and everything") = 0) {
+	return(1, "42.");
+}
+if (compare($string0, "winter 2017") = 0) {
+	return(1, "Mobile coming soon.");
+}
+if (compare($string0, "a q p") = 0) {
+	return(1, "W");
+}
+if (compare($string0, "paul") = 0) {
+	return(1, "Rargh, I'm a lava monster!");
+}
+if (compare($string0, "andrew") = 0) {
+	return(1, "Cabbage.");
+}
+return(0, "");

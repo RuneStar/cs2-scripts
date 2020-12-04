@@ -1,0 +1,17 @@
+// 3900
+[proc,script3900](component $component0, int $comsubid1, int $int2, int $y3, int $int4)
+def_int $int5 = calc(896 - 128);
+def_int $int6 = calc(896 - 128);
+def_int $int7 = calc($int2 - 16);
+def_int $int8 = 0;
+def_int $int9 = 0;
+$int8, $int9 = viewport_geteffectivesize;
+def_int $int10 = 0;
+if ($int8 > 334) {
+	$int10 = calc((%varcint74 - 128) * $int7 / $int5);
+} else {
+	$int10 = calc((%varcint73 - 128) * $int7 / $int6);
+}
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setposition(calc($int4 + $int10), $y3, ^setpos_abs_left, ^setpos_abs_top);
+}

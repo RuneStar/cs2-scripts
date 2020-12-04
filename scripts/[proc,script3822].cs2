@@ -1,0 +1,30 @@
+// 3822
+[proc,script3822](boolean $boolean0, boolean $boolean1, component $component2)
+cc_deleteall($component2);
+def_int $comsubid3 = 0;
+def_string $text0 = "Start";
+if ($boolean0 = true) {
+	$comsubid3, $text0 = ~options_button_on($component2, 0), "---";
+	if_clearops($component2);
+	if_setonmouserepeat(null, $component2);
+	if_setonmouseleave(null, $component2);
+	if_setonop(null, $component2);
+} else {
+	$comsubid3 = ~options_button_off($component2, 0);
+	if_setop(1, "Start", $component2);
+	if_setonmouserepeat("script3821(false, true, $component2)", $component2);
+	if_setonmouseleave("script3821(false, false, $component2)", $component2);
+	if_setonop("script3823(event_opindex, $component2)", $component2);
+}
+cc_create($component2, ^iftype_text, $comsubid3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if ($boolean0 = true | $boolean1 = true) {
+	cc_setcolour(^white);
+} else {
+	cc_setcolour(0xff981f);
+}
+cc_settext($text0);

@@ -1,0 +1,42 @@
+// 3842
+[proc,script3842](struct $struct0, int $trans1, int $int2, int $int3, int $int4, int $int5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17)(int, int, int)
+def_int $int18 = 20;
+if (~on_mobile = true) {
+	$int18 = 32;
+}
+def_string $op0 = "Show more";
+def_int $int19 = struct_param($struct0, param_1089);
+if (~script3844($int19) = 1) {
+	$op0 = "Show less";
+}
+cc_create($component6, ^iftype_rectangle, $int2);
+cc_setsize(10, $int18, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(255);
+cc_setop(1, $op0);
+cc_setonop("script3843($int19, $int5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17)");
+$int2 = calc($int2 + 1);
+cc_create($component7, ^iftype_rectangle, $int3);
+cc_setsize(10, $int18, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans($trans1);
+if (~on_mobile = false) {
+	cc_setonmouseover("cc_settrans($component7, $int3, 240, null)");
+	cc_setonmouseleave("cc_settrans($component7, $int3, $trans1, null)");
+}
+$int3 = calc($int3 + 1);
+cc_create($component7, ^iftype_text, $int3);
+cc_setsize(20, $int18, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int4, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settext("<u=f4f4f4><$op0>");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xf4f4f4);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+$int3 = calc($int3 + 1);
+$int4 = calc($int4 + $int18);
+return($int4, $int3, $int2);

@@ -1,0 +1,9 @@
+// 3988
+[proc,script3988]
+if (%varbit4608 = 0) {
+	return;
+}
+if (getwindowmode = ^windowmode_fixed) {
+	return;
+}
+%varbit2570 = calc(1 - %varbit2570);

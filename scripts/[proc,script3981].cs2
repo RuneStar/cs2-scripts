@@ -1,0 +1,9 @@
+// 3981
+[proc,script3981]
+if (~on_mobile = true) {
+	return;
+}
+if (getwindowmode = ^windowmode_fixed) {
+	return;
+}
+%varbit4608 = calc(1 - %varbit4608);

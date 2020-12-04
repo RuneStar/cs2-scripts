@@ -1,8 +1,0 @@
-// 354
-[clientscript,options_sounds_op](int $opindex0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6)
-if ($opindex0 ! 1) {
-	return;
-}
-sound_synth(synth_2266, 1, 0);
-%var169 = $int1;
-~options_allsounds($int1, $component2, $component3, $component4, $component5, $component6);

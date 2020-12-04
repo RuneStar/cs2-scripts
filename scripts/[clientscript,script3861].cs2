@@ -1,0 +1,18 @@
+// 3861
+[clientscript,script3861](struct $struct0, int $int1, int $int2, int $int3, int $int4, component $component5, int $comsubid6, int $y7, int $int8, int $int9, component $component10, int $comsubid11, boolean $boolean12)
+if (~script3956($struct0) = 0) {
+	return;
+}
+~script3966($int1, $int2);
+if (cc_find($component5, $comsubid6) = ^true) {
+	if ($int2 = 0) {
+		cc_setposition($int8, $y7, ^setpos_abs_left, ^setpos_abs_top);
+	} else if ($int2 = calc($int3 - 1)) {
+		cc_setposition(calc($int9 - 16), $y7, ^setpos_abs_left, ^setpos_abs_top);
+	} else {
+		cc_setposition(calc($int8 + scale($int2, $int3 - 1, $int4 - 16)), $y7, ^setpos_abs_left, ^setpos_abs_top);
+	}
+}
+if ($boolean12 = false & cc_find($component10, $comsubid11) = ^true) {
+	cc_setontimer("script3862(0, $int1, $int2, $int3, $int4, $component5, $comsubid6, $y7, $int8, $int9, $component10, $comsubid11)");
+}

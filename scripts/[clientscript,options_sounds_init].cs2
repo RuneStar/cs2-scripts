@@ -1,9 +1,0 @@
-// 352
-[clientscript,options_sounds_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-~options_allsounds(%var169, $component1, $component2, $component3, $component4, $component5);
-if_setonvartransmit("options_sounds_resynch($component1, $component2, $component3, $component4, $component5){var169}", $component0);
-if_setonop("options_sounds_op(event_opindex, 4, $component1, $component2, $component3, $component4, $component5)", $component1);
-if_setonop("options_sounds_op(event_opindex, 3, $component1, $component2, $component3, $component4, $component5)", $component2);
-if_setonop("options_sounds_op(event_opindex, 2, $component1, $component2, $component3, $component4, $component5)", $component3);
-if_setonop("options_sounds_op(event_opindex, 1, $component1, $component2, $component3, $component4, $component5)", $component4);
-if_setonop("options_sounds_op(event_opindex, 0, $component1, $component2, $component3, $component4, $component5)", $component5);

@@ -1,6 +1,0 @@
-// 1110
-[clientscript,options_hidepm_checkwindowmode](int $windowmode0, component $component1, component $component2, component $component3)
-def_int $windowmode4 = getwindowmode;
-if ($windowmode4 ! $windowmode0) {
-	~options_hidepm($component1, $component2, $component3, $windowmode4);
-}

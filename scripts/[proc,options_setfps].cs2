@@ -1,5 +1,9 @@
 // 539
 [proc,options_setfps]
+if (~on_mobile = false) {
+	mobile_setfps(0);
+	return;
+}
 switch_int (%varbit6364) {
 	case 1 :
 		mobile_setfps(15);

@@ -1,6 +1,0 @@
-// 116
-[clientscript,options_gfx_windowmode_check](component $component0, int $windowmode1, component $component2, component $component3, component $component4, component $component5)
-def_int $windowmode6 = getwindowmode;
-if ($windowmode6 ! $windowmode1) {
-	~options_gfx_windowmode($component0, $windowmode6, $component2, $component3, $component4, $component5);
-}

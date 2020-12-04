@@ -15,8 +15,8 @@ if_setonsubchange("hp_hud_pos(0, $component0, $component7, $component8, $compone
 if_setonvartransmit("hp_hud_update($component10, $component11, $component12, $component8, $component13, $component17, $component18, $component19, $component20, false){var1682, var1683}", $component10);
 ~hp_hud_pos(0, $component0, $component7, $component8, $component9, $component13, $component10, $component11, $component12, $component17, $component18, $component19, $component20);
 ~hp_hud_update($component10, $component11, $component12, $component8, $component13, $component17, $component18, $component19, $component20, true);
-if (%varbit10345 = ^true) {
+if (%varbit10345 = 1) {
 	if_sethide(true, $component7);
-} else if (%varbit10345 = ^false) {
+} else if (%varbit10345 = 0) {
 	if_sethide(false, $component7);
 }

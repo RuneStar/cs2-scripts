@@ -1,0 +1,22 @@
+// 3998
+[clientscript,script3998](int $int0)
+if (~on_mobile = true & $int0 = 0) {
+	return;
+}
+def_int $windowmode1 = getwindowmode;
+def_int $windowmode2 = ^windowmode_resizable;
+if ($int0 = 0) {
+	$windowmode2 = ^windowmode_fixed;
+}
+def_int $int3 = 1;
+if (($int0 = 1 | $int0 = 2) & $windowmode1 = ^windowmode_resizable) {
+	$int3 = 0;
+} else if ($int0 = 0 & $windowmode1 = ^windowmode_fixed) {
+	$int3 = 0;
+}
+if ($int3 = 1) {
+	setwindowmode($windowmode2);
+	if (getdefaultwindowmode ! $windowmode2) {
+		setdefaultwindowmode($windowmode2);
+	}
+}

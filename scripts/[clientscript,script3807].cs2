@@ -1,0 +1,9 @@
+// 3807
+[clientscript,script3807](int $lvl0, int $int1, component $component2, component $component3)
+def_stat $stat4 = enum(int, stat, enum_681, $int1);
+if ($stat4 ! null & ~script3809($lvl0, $stat4, 1) = 1) {
+	sound_synth(synth_2266, 1, 0);
+	~script3806($int1, $component2, $component3);
+	return;
+}
+~script3806(0, $component2, $component3);

@@ -1,0 +1,54 @@
+// 3806
+[proc,script3806](int $int0, component $component1, component $component2)
+def_stat $stat3 = enum(int, stat, enum_681, $int0);
+if ($stat3 ! null & ~script3809(%var261, $stat3, 0) = 0) {
+	$int0, $stat3 = 0, null;
+}
+def_string $mes0 = "You need to choose which skill you wish to be advanced.";
+if ($stat3 ! null) {
+	if (cc_find($component2, 0) = ^true) {
+		cc_setcolour(0x999999);
+		cc_settext("Confirm: <enum(stat, string, enum_680, $stat3)>");
+	}
+	if_setonmouserepeat("cc_colour_swapper($component2, 0, 0xcccccc)", $component2);
+	if_setonmouseleave("cc_colour_swapper($component2, 0, 0x999999)", $component2);
+	if_setonop("script3808($int0, $component1, $component2)", $component2);
+} else {
+	if (cc_find($component2, 0) = ^true) {
+		cc_setcolour(0x666666);
+		cc_settext("Confirm");
+	}
+	if_setonmouserepeat(null, $component2);
+	if_setonmouseleave(null, $component2);
+	if_setonop("mes($mes0)", $component2);
+}
+if_setonvartransmit("script3805(0, $int0, $component1, $component2){var261, var80, var63, var738}", $component1);
+if_setonstattransmit("script3805(0, $int0, $component1, $component2)", $component1);
+if_setontimer(null, $component1);
+def_int $comsubid4 = 0;
+def_component $component5 = null;
+def_stat $stat6 = null;
+def_int $int7 = 1;
+while ($int7 <= 23) {
+	$component5, $stat6 = enum(int, component, enum_421, $int7), enum(int, stat, enum_681, $int7);
+	if ($component5 ! null & $stat6 ! null) {
+		cc_deleteall($component5);
+		if ($stat6 = $stat3) {
+			$comsubid4 = ~options_button_on($component5, 0);
+		} else {
+			$comsubid4 = ~options_button_off($component5, 0);
+		}
+		cc_create($component5, ^iftype_graphic, $comsubid4);
+		cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setgraphic(enum(stat, graphic, enum_255, $stat6));
+		if (~script3809(%var261, $stat6, 0) = 1) {
+			cc_settrans(0);
+		} else {
+			cc_settrans(150);
+		}
+		if_setop(1, enum(stat, string, enum_680, $stat6), $component5);
+		if_setonop("script3807(%var261, $int7, $component1, $component2)", $component5);
+	}
+	$int7 = calc($int7 + 1);
+}

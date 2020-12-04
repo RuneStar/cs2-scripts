@@ -1,0 +1,40 @@
+// 3858
+[clientscript,script3858](struct $struct0, int $int1, int $comsubid2, int $comsubid3, int $comsubid4, component $component5, int $comsubid6)
+def_int $int7 = ~script3957($struct0);
+def_string $string0 = ",";
+def_int $int8 = 0;
+if (cc_find($component5, $comsubid2) = ^true) {
+	if ($int7 = 1) {
+		cc_setcolour(0xff981f);
+	} else {
+		cc_setcolour(0x9f9f9f);
+	}
+	$int8 = ~script3964($int1);
+	if ($int8 > 1) {
+		cc_settext("<~tostring_spacer($int8, $string0)> <struct_param($struct0, param_1112)>");
+	} else if ($int8 = 0) {
+		cc_settext(struct_param($struct0, param_1113));
+	} else {
+		cc_settext("1 <struct_param($struct0, param_1111)>");
+	}
+}
+if (cc_find($component5, $comsubid4) = ^true) {
+	if ($int7 = 1) {
+		cc_setcolour(0xff981f);
+	} else {
+		cc_setcolour(0x9f9f9f);
+	}
+}
+if (cc_find($component5, $comsubid3) = ^true) {
+	if (~on_mobile = false & $int7 = 1) {
+		cc_setonmouseover("cc_settrans($component5, $comsubid3, 220, null)");
+		cc_setonmouseleave("cc_settrans($component5, $comsubid3, 255, null)");
+	} else {
+		cc_setonmouseover(null);
+		cc_setonmouseleave(null);
+	}
+}
+if (%varbit9647 = 1 & %varbit9657 = $int1 & cc_find($component5, $comsubid6) = ^true) {
+	cc_setcolour(^white);
+	cc_setontimer("script3859($component5, $comsubid6)");
+}

@@ -1,7 +1,0 @@
-// 379
-[clientscript,options_runmode_init](component $component0, component $component1, component $component2)
-if_setonmouseleave("deltooltip($component2)", $component0);
-~options_runmode($component0, $component1, $component2);
-if_setonvartransmit("options_runmode_resynch($component0, $component1, $component2){var173}", $component0);
-if_setonmisctransmit("options_runmode_resynch($component0, $component1, $component2)", $component0);
-if_setonop("options_runmode_op(event_opindex, $component0, $component1, $component2)", $component0);

@@ -1,0 +1,7 @@
+// 3943
+[clientscript,script3943](int $int0, int $int1)
+if (%varcint73 = $int0 & %varcint74 = $int1) {
+	return;
+}
+~zoom_position_slider;
+if_setontimer("script3943(%varcint73, %varcint74)", interface_116:55);

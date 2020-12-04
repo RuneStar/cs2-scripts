@@ -1,0 +1,8 @@
+// 3844
+[proc,script3844](int $int0)(int)
+def_string $string0 = "|";
+$string0 = append($string0, tostring($int0));
+if (string_indexof_string(%varcstring416, $string0, 0) = -1) {
+	return(0);
+}
+return(1);

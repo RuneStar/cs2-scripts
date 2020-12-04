@@ -1,0 +1,10 @@
+// 3928
+[clientscript,script3928](component $component0, component $component1)
+def_string $string0 = "Music unlock message (currently on)";
+if (%varbit10078 = 1) {
+	$string0 = "Music unlock message (currently off)";
+}
+if (~on_mobile = false & cc_find($component0, 0) = ^true) {
+	cc_setcolour(^white);
+}
+~tooltip_mouserepeat($component0, -1, $component1, $string0, 25, 190);

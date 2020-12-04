@@ -1,0 +1,16 @@
+// 3957
+[proc,script3957](struct $struct0)(int)
+if ($struct0 = null) {
+	return(0);
+}
+def_int $int1 = 1;
+if (struct_param($struct0, param_1080) ! null) {
+	$int1 = ~script3958($struct0, 0);
+}
+if ($int1 = 0) {
+	return($int1);
+}
+if (struct_param($struct0, param_1082) ! null) {
+	$int1 = ~script3958($struct0, 1);
+}
+return($int1);

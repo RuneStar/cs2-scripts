@@ -1,0 +1,16 @@
+// 3829
+[clientscript,script3829](component $component0, int $comsubid1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
+%varbit9665 = calc(1 - %varbit9665);
+if_setonclick(null, $component7);
+if_sethide(true, $component10);
+cc_deleteall($component9);
+cc_deleteall($component8);
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (%varbit9665 = 0) {
+		cc_settext("Show <col=ffffff>less <col=ff981f>information");
+	} else {
+		cc_settext("Show <col=ffffff>more <col=ff981f>information");
+	}
+}
+~script3840(1, 1, if_getscrolly($component2), 0, $component3, $component4, $component5, %varbit9656, $component2, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13);
+if_setonvartransmit("script3830(%varbit9665, $component0, $comsubid1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14){var2856}", $component14);

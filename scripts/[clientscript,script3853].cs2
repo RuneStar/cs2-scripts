@@ -1,0 +1,12 @@
+// 3853
+[clientscript,script3853](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, int $comsubid6)
+if (cc_find($component5, $comsubid6) = ^true) {
+	cc_setgraphic("scrollbar_v2,1");
+}
+cc_deleteall($component0);
+cc_deleteall($component1);
+cc_deleteall($component2);
+cc_deleteall($component3);
+cc_deleteall($component4);
+if_setonclick(null, $component1);
+if_sethide(true, $component4);

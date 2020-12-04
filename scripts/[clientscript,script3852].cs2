@@ -1,0 +1,24 @@
+// 3852
+[clientscript,script3852](int $int0, string $text0, int $comsubid1, int $count2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, enum $enum9, int $int10, int $comsubid11, boolean $boolean12)
+~script3879(1);
+if (cc_find($component3, $comsubid1) = ^true) {
+	cc_settext($text0);
+	if ($int0 = 2) {
+		~script3967($int10, $count2);
+	} else {
+		~script3968($int10, $count2);
+	}
+	if ($boolean12 = false) {
+		cc_setontimer("script3854(0, $comsubid1, $component3, $enum9, $int10, $int0)");
+	}
+}
+if (cc_find($component3, $comsubid11) = ^true) {
+	cc_setgraphic("scrollbar_v2,1");
+}
+cc_deleteall($component4);
+cc_deleteall($component5);
+cc_deleteall($component6);
+cc_deleteall($component7);
+cc_deleteall($component8);
+if_setonclick(null, $component5);
+if_sethide(true, $component8);

@@ -1,0 +1,9 @@
+// 3997
+[proc,script3997](int $count0)
+if (~on_mobile = true) {
+	return;
+}
+if (getwindowmode = ^windowmode_fixed) {
+	return;
+}
+%varbit6374 = ~min(1, $count0);

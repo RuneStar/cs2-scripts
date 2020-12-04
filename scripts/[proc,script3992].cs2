@@ -1,0 +1,8 @@
+// 3992
+[proc,script3992]
+%varbit5542 = calc(1 - %varbit5542);
+if (%varbit5542 = 1) {
+	~shiftclick_toggle(true);
+} else {
+	~shiftclick_toggle(false);
+}

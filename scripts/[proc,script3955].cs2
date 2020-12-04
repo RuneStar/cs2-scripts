@@ -1,0 +1,16 @@
+// 3955
+[proc,script3955](struct $struct0)(int)
+def_int $int1 = 0;
+if (~on_mobile = true & struct_param($struct0, param_739) = true) {
+	$int1 = 1;
+}
+if (~on_mobile = false & struct_param($struct0, param_740) = true) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_741) = true & %varbit1777 ! 0) {
+	$int1 = 1;
+}
+if (struct_param($struct0, param_742) = true & %varbit1777 = 0) {
+	$int1 = 1;
+}
+return($int1);

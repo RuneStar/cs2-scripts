@@ -1,8 +1,0 @@
-// 2364
-[proc,mobile_setting_check]()(int)
-if (~on_mobile = false) {
-	return(1);
-}
-mes("You can't modify that setting on this device.");
-sound_synth(pillory_wrong, 1, 0);
-return(0);

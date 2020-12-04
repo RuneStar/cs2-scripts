@@ -1,0 +1,14 @@
+// 3956
+[proc,script3956](struct $struct0)(int)
+def_int $int1 = ~script3957($struct0);
+~script3879($int1);
+def_string $mes0 = "";
+if ($int1 = 0) {
+	if (~on_mobile = true & string_length(struct_param($struct0, param_1117)) > 0) {
+		$mes0 = struct_param($struct0, param_1117);
+	} else {
+		$mes0 = struct_param($struct0, param_1116);
+	}
+	mes($mes0);
+}
+return($int1);

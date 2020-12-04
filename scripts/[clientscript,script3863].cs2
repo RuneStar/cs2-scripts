@@ -1,0 +1,48 @@
+// 3863
+[clientscript,script3863](struct $struct0, int $int1, int $int2, int $int3, component $component4, int $comsubid5, int $y6, int $int7, int $int8, component $component9, int $comsubid10, int $int11, enum $enum12, boolean $boolean13)
+def_int $int14 = ~script3957($struct0);
+def_int $int15 = ~script3961($int1);
+def_int $int16 = 0;
+def_int $int17 = 0;
+if (cc_find($component4, $comsubid5) = ^true) {
+	if ($int15 = 0) {
+		cc_setposition($int7, $y6, ^setpos_abs_left, ^setpos_abs_top);
+	} else if ($int15 = calc($int2 - 1)) {
+		cc_setposition(calc($int8 - 16), $y6, ^setpos_abs_left, ^setpos_abs_top);
+	} else {
+		$int16 = scale($int15, $int2, $int3);
+		$int17 = scale(calc($int15 + 1), $int2, $int3);
+		cc_setposition(calc($int7 + scale($int15, $int2 - 1, $int3 - 16)), $y6, ^setpos_abs_left, ^setpos_abs_top);
+	}
+	if ($int14 = 1) {
+		if ($boolean13 = true) {
+			cc_setgraphic("graphic_2860");
+		} else {
+			cc_setgraphic("graphic_2858");
+		}
+	} else {
+		cc_setgraphic("graphic_2859");
+	}
+}
+if (cc_find($component9, $comsubid10) = ^true) {
+	if ($int14 = 1) {
+		cc_setcolour(0xff981f);
+	} else {
+		cc_setcolour(0x9f9f9f);
+	}
+}
+def_int $int18 = 0;
+if ($enum12 ! null) {
+	$int18 = 0;
+	while ($int18 < $int2) {
+		if (cc_find($component9, $int11) = ^true) {
+			if ($int14 = 1) {
+				cc_setcolour(0xff981f);
+			} else {
+				cc_setcolour(0x9f9f9f);
+			}
+		}
+		$int11 = calc($int11 + 1);
+		$int18 = calc($int18 + 1);
+	}
+}

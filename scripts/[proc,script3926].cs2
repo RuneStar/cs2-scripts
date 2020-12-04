@@ -1,0 +1,27 @@
+// 3926
+[proc,script3926](component $component0, component $component1)
+cc_deleteall($component0);
+def_string $string0 = "Run (currently off) Energy <tostring(runenergy_visible)>%";
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(40, 40, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if (%var173 <= 0) {
+	cc_setgraphic("options_boxes,0");
+} else {
+	cc_setgraphic("options_boxes,1");
+	$string0 = "Run (currently on) Energy <tostring(runenergy_visible)>%";
+}
+cc_create($component0, ^iftype_graphic, 1);
+cc_setsize(17, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, -7, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("options_icons_small,3");
+cc_create($component0, ^iftype_text, 2);
+cc_setsize(40, 17, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 9, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settext("<tostring(runenergy_visible)>%");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component1, $string0, 25, 190)", $component0);
+%varcint2 = 0;

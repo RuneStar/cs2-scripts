@@ -1,0 +1,6 @@
+// 3929
+[clientscript,script3929](component $component0, component $component1)
+if (~on_mobile = false & cc_find($component0, 0) = ^true) {
+	cc_setcolour(0xff981f);
+}
+~deltooltip_action($component1);

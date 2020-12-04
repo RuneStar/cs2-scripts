@@ -1,0 +1,5 @@
+// 3889
+[proc,script3889](component $component0, int $comsubid1, int $int2, int $y3, int $int4)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setposition(calc($int4 + scale(%varcint381, 600, $int2)), $y3, ^setpos_abs_left, ^setpos_abs_top);
+}

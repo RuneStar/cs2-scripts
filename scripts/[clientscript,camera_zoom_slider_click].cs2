@@ -1,3 +1,5 @@
 // 1047
 [clientscript,camera_zoom_slider_click](component $component0, component $component1, int $int2)
+~script3945;
 ~zoom_slider_specific_pos($component0, $component1, calc($int2 - if_getwidth($component0) / 2));
+if_setontimer("script3901(0)", interface_134:3);

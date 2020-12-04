@@ -1,0 +1,22 @@
+// 3867
+[clientscript,script3867](struct $struct0, component $component1, int $comsubid2, int $int3, int $comsubid4)
+def_int $int5 = ~script3957($struct0);
+if ($int5 = 1) {
+	if (cc_find($component1, $comsubid2) = ^true) {
+		cc_setcolour(0xff981f);
+	}
+	~v2_stone_button_change_out($component1, $int3);
+	if (~on_mobile = false & cc_find($component1, $comsubid4) = ^true) {
+		cc_setonmouseover("v2_stone_button_change_in($component1, $int3)");
+		cc_setonmouseleave("v2_stone_button_change_out($component1, $int3)");
+	}
+} else {
+	if (cc_find($component1, $comsubid2) = ^true) {
+		cc_setcolour(0x9f9f9f);
+	}
+	~v2_stone_button_change_in($component1, $int3);
+	if (cc_find($component1, $comsubid4) = ^true) {
+		cc_setonmouseover(null);
+		cc_setonmouseleave(null);
+	}
+}

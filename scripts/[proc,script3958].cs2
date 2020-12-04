@@ -1,0 +1,61 @@
+// 3958
+[proc,script3958](struct $struct0, int $int1)(int)
+if ($struct0 = null) {
+	return(0);
+}
+def_enum $enum2 = struct_param($struct0, param_1080);
+def_enum $enum3 = struct_param($struct0, param_1081);
+if ($int1 = 1) {
+	$enum2 = struct_param($struct0, param_1082);
+	$enum3 = struct_param($struct0, param_1083);
+}
+if ($enum2 = null | $enum3 = null) {
+	return(0);
+}
+def_struct $struct4 = null;
+def_int $count5 = 0;
+def_int $count6 = enum_getoutputcount($enum2);
+def_int $int7 = 0;
+def_int $int8 = -1;
+def_int $int9 = -1;
+def_int $int10 = 0;
+def_int $int11 = 0;
+while ($count5 < $count6) {
+	$struct4 = enum(int, struct, $enum2, $count5);
+	if ($struct4 ! null) {
+		$int8 = struct_param($struct4, param_1078);
+		$int9 = struct_param($struct4, param_1077);
+		$int11 = enum(int, int, $enum3, $count5);
+		if (struct_param($struct4, param_1080) ! null & ~script3958($struct4, 0) = 0) {
+			return(0);
+		}
+		if (struct_param($struct4, param_1082) ! null & ~script3958($struct4, 1) = 0) {
+			return(0);
+		} else if ($int9 ! 0) {
+			switch_int ($int8) {
+				case 0 :
+					$int7 = ~script3960($int9);
+				case 1 :
+					$int7 = ~script3961($int9);
+				case 2 :
+					$int7 = ~script3962($int9);
+				case 3 :
+					$int7 = ~script3963($int9);
+			}
+			if ($int1 = 0) {
+				if ($int11 = $int7) {
+					$int10 = 0;
+				} else {
+					return(0);
+				}
+			} else if ($int11 = $int7) {
+				return(0);
+			}
+			$count5 = calc($count5 + 1);
+		}
+		return(0);
+	} else {
+		return(0);
+	}
+}
+return(1);

@@ -1,0 +1,16 @@
+// 3954
+[proc,script3954](component $component0, component $component1)
+if (cc_find($component0, 4) = ^true) {
+	if (~on_mobile = true) {
+		cc_settext(enum(int, string, enum_3508, %var1107));
+	} else {
+		cc_settext(enum(int, string, enum_3507, %var1107));
+	}
+}
+if (cc_find($component1, 4) = ^true) {
+	if (~on_mobile = true) {
+		cc_settext(enum(int, string, enum_3508, %var1306));
+	} else {
+		cc_settext(enum(int, string, enum_3507, %var1306));
+	}
+}

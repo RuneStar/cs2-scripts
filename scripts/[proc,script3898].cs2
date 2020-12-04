@@ -1,0 +1,15 @@
+// 3898
+[proc,script3898](component $component0, int $comsubid1, int $int2, int $int3, int $y4, int $int5)
+if (%varbit4606 ! 0) {
+	return;
+}
+def_int $int6 = 512;
+def_int $int7 = 512;
+def_int $int8 = calc($int2 - 16);
+$int3 = ~max(0, $int3);
+$int3 = ~min(calc($int2 - 16), $int3);
+def_int $int9 = calc(896 - 128);
+def_int $int10 = calc(896 - 128);
+$int6 = calc($int3 * $int9 / $int8 + 128);
+$int7 = calc($int3 * $int10 / $int8 + 128);
+~script3899($component0, $comsubid1, $int7, $int6, $int2, $y4, $int5);

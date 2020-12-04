@@ -1,0 +1,12 @@
+// 3813
+[proc,script3813](component $component0, component $component1)
+if_settrans(255, $component1);
+if (~on_mobile = true) {
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+} else {
+	if_setonmouserepeat("settrans($component1, 245)", $component0);
+	if_setonmouseleave("settrans($component1, 255)", $component0);
+}
+if_setonop("script3814(event_opindex, $component0, $component1)", $component0);
+if_setontimer(null, $component0);

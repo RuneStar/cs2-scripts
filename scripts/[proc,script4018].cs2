@@ -1,0 +1,11 @@
+// 4018
+[proc,script4018]
+if (%varbit4180 = 0) {
+	if (%varbit1777 ! 0) {
+		mes("<text_gender("Iron Men", "Iron Women")> do not accept aid.");
+	} else {
+		%varbit4180 = 1;
+	}
+} else {
+	%varbit4180 = 0;
+}

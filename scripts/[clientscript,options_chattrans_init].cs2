@@ -1,9 +1,0 @@
-// 852
-[clientscript,options_chattrans_init](component $component0, component $component1, component $component2)
-if_setonmouseleave("deltooltip($component2)", $component0);
-if_setop(1, "Transparent Chatbox", $component0);
-if_setop(1, "<~text_device("Click", "tap")> through chatbox", $component1);
-~options_gfx_togglebox($component1, "Transparent chatbox...", "Can be <~text_device("clicked", "tapped")> through.", "In resizable mode, if the chatbox is transparent, should it be possible to <~text_device("click", "tap")> through the chatbox on the ground beneath?", $component2);
-~options_chattrans($component0, $component1, $component2);
-if_setonvartransmit("options_chattrans_resynch($component0, $component1, $component2){var1055}", $component0);
-if_setonop("options_chattrans_op(event_opindex, false, $component0, $component1, $component2)", $component0);

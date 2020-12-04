@@ -1,0 +1,159 @@
+// 3840
+[proc,script3840](int $int0, int $int1, int $int2, int $int3, component $component4, component $component5, component $component6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
+cc_deleteall($component5);
+cc_deleteall($component4);
+cc_deleteall($component14);
+if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $component15);
+if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component15);
+if ($int3 = 1) {
+	if_setonclick(null, $component10);
+	if_sethide(true, $component13);
+	cc_deleteall($component12);
+	cc_deleteall($component11);
+}
+def_int $int17 = 0;
+def_int $int18 = 1;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_struct $struct21 = null;
+def_enum $enum22 = null;
+def_struct $struct23 = null;
+def_int $int24 = 220;
+def_int $int25 = 0;
+def_int $int26 = 0;
+def_int $int27 = 0;
+def_int $int28 = 5;
+def_int $int29 = 0;
+def_int $int30 = 0;
+def_int $int31 = 0;
+def_int $int32 = 0;
+def_int $int33 = ^max_32bit_int;
+def_int $int34 = 0;
+def_int $int35 = %varbit9638;
+def_string $string0 = %varcstring417;
+def_string $text1 = "null";
+def_int $int36 = 0;
+if ($int35 = 1) {
+	if (string_length($string0) = 0) {
+		cc_create($component5, ^iftype_text, 0);
+		cc_setsize(20, 20, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		if (~on_mobile = false) {
+			cc_settext("<br><br>To search for a setting, type what setting you are looking for.<br>The menu will update based on what you have typed into the search bar.<br><br>You can press the DEL key to clear your current search search text.<br><br>To cancel the search, select one of the settings tabs.");
+		} else {
+			cc_settext("<br><br>To search for a setting, type what setting you are looking for.<br>The menu will update based on what you have input into the search bar.<br><br>To cancel the search, select one of the settings tabs.");
+		}
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_setcolour(0xff981f);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 16);
+		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component5);
+		if_setscrollpos(0, 0, $component8);
+		if_setscrollsize(0, 0, $component8);
+		~scrollbar_vertical($component6, $component8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+		return;
+	}
+	$int36, $text1 = ~script3880(lowercase($string0));
+	if ($int36 = 1) {
+		cc_create($component5, ^iftype_text, 0);
+		cc_setsize(20, 20, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_settextfont(p12_full);
+		cc_settextshadow(true);
+		cc_setcolour(0xff981f);
+		cc_settext($text1);
+		cc_settextalign(^settextalign_centre, ^settextalign_top, 16);
+		if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component5);
+		if_setscrollpos(0, 0, $component8);
+		if_setscrollsize(0, 0, $component8);
+		~scrollbar_vertical($component6, $component8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+		return;
+	}
+	$int18 = enum_getoutputcount(enum_422);
+	$int7 = 0;
+}
+while ($int17 < $int18) {
+	if ($int35 = 0) {
+		$struct21 = enum(int, struct, enum_423, $int7);
+	} else {
+		$struct21 = enum(int, struct, enum_422, $int7);
+	}
+	if ($struct21 = null) {
+		mes("The settings menu is not available currently.");
+		if_close;
+		return;
+	}
+	$enum22 = struct_param($struct21, param_745);
+	if ($enum22 = null) {
+		mes("The settings menu is not available currently.");
+		if_close;
+		return;
+	}
+	$int19 = 0;
+	$int20 = enum_getoutputcount($enum22);
+	if (~script3955($struct21) = 0) {
+		while ($int19 < $int20) {
+			$struct23 = enum(int, struct, $enum22, $int19);
+			if ($struct23 ! null) {
+				$int32 = struct_param($struct23, param_1077);
+				$int28, $int30, $int25, $int26, $int27, $int33, $int34 = ~script3841($struct23, $struct21, $int25, $int26, $int27, $int28, $int30, $int24, $component4, $component5, $component6, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $int7, $int33, $int34, $int35, $string0, $component16);
+				if ($int1 = 1 & $int2 > 0) {
+					if (%varbit9665 = 0 & $int2 >= calc($int29 - $int31) & $int2 < calc($int28 - $int30)) {
+						$int1 = 0;
+						$int2 = $int29;
+					} else if (%varbit9665 = 1 & $int2 >= calc($int29 + $int31) & $int2 < calc($int28 + $int30)) {
+						$int1 = 0;
+						$int2 = $int29;
+					}
+				}
+				if ($int29 ! $int28) {
+					if ($int24 = 220) {
+						$int24 = 200;
+					} else {
+						$int24 = 220;
+					}
+					$int28 = calc($int28 + struct_param($struct23, param_1079));
+					$int29 = $int28;
+					$int31 = $int30;
+				}
+			}
+			$int19 = calc($int19 + 1);
+		}
+	}
+	$int17 = calc($int17 + 1);
+	$int7 = calc($int7 + 1);
+}
+if ($int35 = 1 & $int25 = 0) {
+	cc_create($component5, ^iftype_text, 0);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext("<br><br>Could not find any settings that match what you are looking for.<br><br>Try searching for something else.");
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_centre, ^settextalign_top, 16);
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component5);
+	if_setscrollpos(0, 0, $component8);
+	if_setscrollsize(0, 0, $component8);
+	~scrollbar_vertical($component6, $component8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	return;
+}
+$int28 = calc($int28 + 5);
+%varcint418 = $int28;
+if ($int0 = 0) {
+	if_setscrollpos(0, 0, $component8);
+	if ($int28 > if_getheight($component8)) {
+		if_setscrollsize(0, $int28, $component8);
+	} else {
+		if_setscrollsize(0, 0, $component8);
+	}
+	~scrollbar_vertical($component6, $component8, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+} else {
+	if ($int28 > if_getheight($component8)) {
+		if_setscrollsize(0, $int28, $component8);
+	} else {
+		if_setscrollsize(0, 0, $component8);
+		if_setscrollpos(0, 0, $component8);
+	}
+	~scrollbar_resize($component6, $component8, $int2);
+}

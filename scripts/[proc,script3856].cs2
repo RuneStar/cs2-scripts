@@ -1,0 +1,131 @@
+// 3856
+[proc,script3856](int $int0, int $int1, int $int2, int $int3, int $trans4, struct $struct5, component $component6, component $component7, component $component8)(int, int, int, int)
+def_int $width9 = parawidth(struct_param($struct5, param_1114), 1000, p12_full);
+def_int $int10 = calc($width9 + 10);
+def_string $string0 = struct_param($struct5, param_1086);
+def_boolean $boolean11 = ~on_mobile;
+if ($boolean11 = true & string_length(struct_param($struct5, param_1087)) > 0) {
+	$string0 = struct_param($struct5, param_1087);
+}
+def_string $string1 = struct_param($struct5, param_1096);
+def_int $int12 = 0;
+def_int $int13 = %varbit9665;
+def_boolean $boolean14 = struct_param($struct5, param_1119);
+if ($boolean11 = true & string_length(struct_param($struct5, param_1097)) > 0) {
+	$string1 = struct_param($struct5, param_1097);
+}
+if (string_length($string1) > 0) {
+	$int12 = calc(paraheight($string1, if_getwidth($component7) - ($int10 + 25), p12_full) * 14);
+}
+$int1 = calc($int1 + $int12);
+if ($int13 = 1 | $boolean14 = true) {
+	$int12 = 0;
+}
+def_int $int15 = calc(paraheight($string0, if_getwidth($component7) - ($int10 + 25), b12_full) * 14);
+if ($boolean11 = true & $int15 < 20) {
+	$int15 = 20;
+}
+def_int $int16 = calc($int15 + $int12 + 12);
+def_int $int17 = struct_param($struct5, param_1077);
+def_int $int18 = ~script3957($struct5);
+cc_create($component7, ^iftype_rectangle, $int2);
+cc_setsize(10, $int16, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans($trans4);
+$int2 = calc($int2 + 1);
+cc_create($component7, ^iftype_text, $int2);
+cc_setsize(calc($int10 + 25), $int15, ^setsize_minus, ^setsize_abs);
+cc_setposition(10, calc($int0 + 6), ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($string0);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+if ($int18 = 1) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(0x9f9f9f);
+}
+if ($boolean11 = false & $int13 = 1 & string_length($string1) > 0) {
+	cc_setonmouserepeat("tooltip_mouserepeat($component7, $int2, $component8, $string1, 25, 190)");
+	cc_setonmouseleave("deltooltip($component8)");
+}
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+$int2 = calc($int2 + 1);
+cc_create($component7, ^iftype_graphic, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, calc($int0 + ($int16 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setgraphic("tradebacking");
+cc_settiling(true);
+cc_create($component7, ^iftype_rectangle, $int2);
+def_int $comsubid19 = $int2;
+$int2 = calc($int2 + 1);
+cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, calc($int0 + ($int16 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component7, ^iftype_rectangle, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize(calc($int10 - 2), 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(11, calc($int0 + ($int16 / 2 - 9)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_create($component7, ^iftype_text, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize(calc($width9 + 6), 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(12, calc($int0 + ($int16 / 2 - 8)), ^setpos_abs_right, ^setpos_abs_top);
+cc_settextfont(p12_full);
+if ($int18 = 1) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(0x9f9f9f);
+}
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+def_string $string2 = ",";
+def_int $int20 = ~script3964($int17);
+if ($int20 > 1) {
+	cc_settext("<~tostring_spacer($int20, $string2)> <struct_param($struct5, param_1112)>");
+} else if ($int20 = 0) {
+	cc_settext(struct_param($struct5, param_1113));
+} else {
+	cc_settext("1 <struct_param($struct5, param_1111)>");
+}
+cc_create($component6, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize($int10, 25, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, calc($int0 + ($int16 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(255);
+cc_setop(1, "Select");
+cc_setonop("script3857($struct5)");
+cc_create($component7, ^iftype_rectangle, $int2);
+cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, calc($int0 + ($int16 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(255);
+~script3883($struct5, $int17, calc($int2 - 1), $int2, calc($int2 - 5), $component7, $comsubid19);
+if ($boolean11 = false & $int18 = 1) {
+	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");
+	cc_setonmouseleave("cc_settrans($component7, $int2, 255, null)");
+} else {
+	cc_setonmouseover(null);
+	cc_setonmouseleave(null);
+}
+$int2 = calc($int2 + 1);
+if ($boolean14 = false & $int13 = 0 & $int12 > 0) {
+	cc_create($component7, ^iftype_text, $int2);
+	cc_setsize(calc($int10 + 25), $int12, ^setsize_minus, ^setsize_abs);
+	cc_setposition(10, calc($int0 + $int15 + 6), ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext($string1);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0x9f9f9f);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+	$int2 = calc($int2 + 1);
+}
+$int0 = calc($int16 + $int0);
+return($int0, $int1, $int2, $int3);

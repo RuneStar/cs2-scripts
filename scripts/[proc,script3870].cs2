@@ -1,0 +1,19 @@
+// 3870
+[proc,script3870](component $component0, component $component1)
+cc_deleteall($component0);
+def_int $int2 = 0;
+cc_create($component0, ^iftype_graphic, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize(8, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("graphic_1124");
+cc_create($component0, ^iftype_graphic, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize(4, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setgraphic("graphic_1123");
+cc_create($component0, ^iftype_graphic, $int2);
+$int2 = calc($int2 + 1);
+cc_setsize(4, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setgraphic("graphic_1125");

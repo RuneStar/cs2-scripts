@@ -1,0 +1,9 @@
+// 3894
+[clientscript,script3894](int $int0, int $int1, component $component2, int $comsubid3, int $int4, int $y5, int $int6)
+if (%varcint73 = $int0 & %varcint74 = $int1) {
+	return;
+}
+~script3900($component2, $comsubid3, $int4, $y5, $int6);
+if (cc_find($component2, $comsubid3) = ^true) {
+	cc_setontimer("script3894(%varcint73, %varcint74, $component2, $comsubid3, $int4, $y5, $int6)");
+}

@@ -1,6 +1,0 @@
-// 2004
-[clientscript,options_keybind_init](component $component0, component $component1, component $component2)
-if_setgraphic(~graphic_device("options_icons,32", "options_icons,42"), $component1);
-if_setonmouseleave("deltooltip($component2)", $component0);
-~options_keybind($component0, $component2);
-if_setonop("options_keybind_op(event_opindex, $component0, $component2)", $component0);

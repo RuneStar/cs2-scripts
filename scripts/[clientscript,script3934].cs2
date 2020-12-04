@@ -1,0 +1,26 @@
+// 3934
+[clientscript,script3934](component $component0, component $component1, component $component2, component $component3)
+cc_deleteall($component1);
+def_int $int4 = struct_param(struct_2754, param_1101);
+def_int $int5 = 0;
+def_int $width6 = if_getwidth($component1);
+def_graphic $graphic7 = "options_icons,2";
+def_int $int8 = ~script3961(31);
+def_string $string0 = "Mute Sound Effects";
+def_string $string1 = "Unmute Sound Effects";
+~script3936($int8, 31, $component2, $component1, $int4, $graphic7, $component0, $string0, $string1, $component3);
+if_setonvartransmit("script3939(31, $component2, $component1, $int4, $graphic7, $component0, $string0, $string1, $component3){var169}", $component2);
+if_setnoclickthrough(true, $component2);
+if_setonclick("opsound(0, 0)", $component2);
+while ($int5 <= $int4) {
+	cc_create($component1, ^iftype_rectangle, $int5);
+	cc_setop(1, "Adjust Sound Effect Volume");
+	cc_setposition(scale($int5, $int4, $width6), 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(calc(scale(1 + $int5, $int4, $width6) - scale($int5, $int4, $width6)), 0, ^setsize_abs, ^setsize_minus);
+	cc_setfill(true);
+	cc_setcolour(^white);
+	cc_settrans(255);
+	cc_setonop("script3940(31, $int5, $component2, $component1, $int4, $graphic7, $component0, $string0, $string1, $component3)");
+	$int5 = calc($int5 + 1);
+}
+~script3941($int8, $component2, $component1, $int4);

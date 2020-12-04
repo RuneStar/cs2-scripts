@@ -1,9 +1,0 @@
-// 2352
-[proc,options_display_appearance]
-if (~on_mobile = true) {
-	if_sethide(true, options:32);
-	if_sethide(false, options:22);
-	return;
-}
-if_sethide(false, options:32);
-if_sethide(true, options:22);

@@ -3,8 +3,10 @@
 if_setgraphic(~graphic_device("options_icons,33", "options_icons,43"), $component1);
 if (%varbit6357 = 0) {
 	if_sethide(true, $component2);
+	if_setop(1, "Disable", $component0);
 } else if (%varbit6357 = 1) {
 	if_sethide(false, $component2);
+	if_setop(1, "Enable", $component0);
 }
 if_setondrag("zoom_slider_ondrag($component4, $component3, event_mousex)", $component4);
 if_setondragcomplete("zoom_slider_dragcomplete($component4, $component3, event_mousex)", $component4);
@@ -16,3 +18,4 @@ if_setonmouseover("zoom_outline(1, $component1)", $component1);
 if_setonmouseleave("zoom_outline(0, $component1)", $component1);
 if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component5, $string0, 25, 190)", $component0);
 if_setonmouseleave("deltooltip($component5)", $component0);
+if_setontimer("script3943(%varcint73, %varcint74)", interface_116:55);

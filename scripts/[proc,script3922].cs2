@@ -1,0 +1,18 @@
+// 3922
+[proc,script3922](component $component0, component $component1)
+cc_deleteall($component0);
+def_string $string0 = "Accept Aid (currently off)";
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(40, 40, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if (%varbit4180 = 0) {
+	cc_setgraphic("options_boxes,0");
+} else {
+	cc_setgraphic("options_boxes,1");
+	$string0 = "Accept Aid (currently on)";
+}
+cc_create($component0, ^iftype_graphic, 1);
+cc_setsize(32, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("options_icons,6");
+if_setonmouserepeat("tooltip_mouserepeat($component0, -1, $component1, $string0, 25, 190)", $component0);

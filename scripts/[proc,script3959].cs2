@@ -1,0 +1,13 @@
+// 3959
+[proc,script3959](int $int0)(int)
+def_int $int1 = 0;
+switch_int ($int0) {
+	case 53 :
+		$int1 = scale(600, 16384, if_getwidth(if_getlayer(interface_601:14)));
+		if ($int1 <= _6220 & $int1 <= _6222) {
+			return(0);
+		}
+		return(1);
+	case default :
+		return(1);
+}

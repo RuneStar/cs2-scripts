@@ -1,0 +1,115 @@
+// 3820
+[proc,script3820](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17)
+if (%varbit2386 = 1) {
+	if_setmodel(model_4912, $component1);
+} else {
+	if_setmodel(model_4914, $component1);
+}
+if (%varbit2385 = 1) {
+	if_setmodel(model_4912, $component2);
+} else {
+	if_setmodel(model_4914, $component2);
+}
+if (%varbit2387 = 1) {
+	if_setmodel(model_4913, $component3);
+} else {
+	if_setmodel(model_4915, $component3);
+}
+if (%varbit2388 = 1) {
+	if_setmodel(model_4912, $component4);
+} else {
+	if_setmodel(model_4914, $component4);
+}
+if (%varbit2389 = 1) {
+	if_setmodel(model_4912, $component5);
+} else {
+	if_setmodel(model_4914, $component5);
+}
+if (%varbit2390 = 1) {
+	if_setmodel(model_4913, $component6);
+} else {
+	if_setmodel(model_4915, $component6);
+}
+if (%varbit2391 = 1) {
+	if_setmodel(model_4913, $component7);
+} else {
+	if_setmodel(model_4915, $component7);
+}
+if (%varbit2392 = 1) {
+	if_setmodel(model_4912, $component8);
+} else {
+	if_setmodel(model_4914, $component8);
+}
+def_int $int18 = 0;
+if (%varbit2518 = 1) {
+	$int18 = 1;
+	if_sethide(false, $component10);
+	if_setmodel(model_4910, $component10);
+	if_setmodelanim(seq_1453, $component10);
+} else {
+	if_sethide(true, $component10);
+}
+if (%varbit2519 = 1) {
+	$int18 = 1;
+	if_sethide(false, $component11);
+	if_setmodel(model_4910, $component11);
+	if_setmodelanim(seq_1456, $component11);
+} else {
+	if_sethide(true, $component11);
+}
+if (%varbit2520 = 1) {
+	$int18 = 1;
+	if_sethide(false, $component12);
+	if_setmodel(model_4910, $component12);
+	if_setmodelanim(seq_1456, $component12);
+} else {
+	if_sethide(true, $component12);
+}
+if (%varbit2521 = 1) {
+	$int18 = 1;
+	if_sethide(false, $component13);
+	if_setmodel(model_4910, $component13);
+	if_setmodelanim(seq_1456, $component13);
+} else {
+	if_sethide(true, $component13);
+}
+if (%varbit2522 = 1) {
+	$int18 = 1;
+	if_sethide(false, $component14);
+	if_setmodel(model_4910, $component14);
+	if_setmodelanim(seq_1455, $component14);
+} else {
+	if_sethide(true, $component14);
+}
+if (%varbit2523 = 1) {
+	$int18 = 1;
+	if_sethide(false, $component15);
+	if_setmodel(model_4910, $component15);
+	if_setmodelanim(seq_1455, $component15);
+} else {
+	if_sethide(true, $component15);
+}
+if (%varbit2524 = 1) {
+	$int18 = 1;
+	if_sethide(false, $component16);
+	if_setmodel(model_4910, $component16);
+	if_setmodelanim(seq_1453, $component16);
+} else {
+	if_sethide(true, $component16);
+}
+if (%varbit2525 = 1) {
+	$int18 = 1;
+	if_sethide(false, $component17);
+	if_setmodel(model_4910, $component17);
+	if_setmodelanim(seq_1453, $component17);
+} else {
+	if_sethide(true, $component17);
+}
+if ($int18 = 1) {
+	if_sethide(true, $component9);
+	~script3822(true, null, $component0);
+} else {
+	if_sethide(false, $component9);
+	~script3822(false, false, $component0);
+}
+if_setontimer(null, $component0);

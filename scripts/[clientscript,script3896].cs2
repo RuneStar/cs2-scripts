@@ -1,0 +1,7 @@
+// 3896
+[clientscript,script3896](component $component0, int $comsubid1, int $int2, int $mousex3, int $y4, int $int5)
+~script3898($component0, $comsubid1, $int2, $mousex3, $y4, $int5);
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setontimer(null);
+}
+if_setontimer("script3901(0)", interface_134:3);

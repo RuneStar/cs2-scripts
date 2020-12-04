@@ -1,0 +1,11 @@
+// 3914
+[proc,script3914](component $component0, component $component1, component $component2, int $int3)
+if (%varbit9683 = $int3) {
+	if_setgraphic("tabs_tall,0", $component0);
+	if_setgraphic("tabs_tall,1", $component1);
+	if_setgraphic("tabs_tall,0", $component2);
+} else {
+	if_setgraphic("tabs_tall,2", $component0);
+	if_setgraphic("tabs_tall,3", $component1);
+	if_setgraphic("tabs_tall,2", $component2);
+}
