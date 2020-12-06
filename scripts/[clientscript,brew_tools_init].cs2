@@ -1,0 +1,15 @@
+// 3811
+[clientscript,brew_tools_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23)
+def_int $colour24 = if_getcolour($component21);
+~brew_tools_setupbutton("Bamboo pipe", $component1, $component2, $colour24, 0);
+~brew_tools_setupbutton("Bridge section", $component3, $component4, $colour24, 0);
+~brew_tools_setupbutton("Bucket", $component5, $component6, $colour24, 1);
+~brew_tools_setupbutton("Axe", $component7, $component8, $colour24, 0);
+~brew_tools_setupbutton("Lumber patch", $component9, $component10, $colour24, 0);
+~brew_tools_setupbutton("Torch", $component11, $component12, $colour24, 0);
+~brew_tools_setupbutton("Bowl", $component13, $component14, $colour24, 1);
+~brew_tools_setupbutton("Tinderbox", $component15, $component16, $colour24, 0);
+~brew_tools_setupbutton("Meat", $component17, $component18, $colour24, 1);
+~brew_tools_setupbutton("Knife", $component19, $component20, $colour24, 0);
+~brew_tools_supplies($component21, $component22, $component23);
+if_setoninvtransmit("brew_tools_supplies($component21, $component22, $component23){worn, inv_448, inv_452}", $component0);

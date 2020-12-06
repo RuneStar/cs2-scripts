@@ -34,13 +34,13 @@ while ($count5 < $count6) {
 		} else if ($int9 ! 0) {
 			switch_int ($int8) {
 				case 0 :
-					$int7 = ~script3960($int9);
+					$int7 = ~settings_get_toggle($int9);
 				case 1 :
-					$int7 = ~script3961($int9);
+					$int7 = ~settings_get_slider($int9);
 				case 2 :
-					$int7 = ~script3962($int9);
+					$int7 = ~settings_get_dropdown($int9);
 				case 3 :
-					$int7 = ~script3963($int9);
+					$int7 = ~settings_get_keybind($int9);
 			}
 			if ($int1 = 0) {
 				if ($int11 = $int7) {

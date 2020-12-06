@@ -1,6 +1,6 @@
 // 1043
 [clientscript,zoom_slider_dragcomplete](component $component0, component $component1, int $mousex2)
-~script3945;
+~settings_side_op_sound;
 if ($component0 ! interface_116:55) {
 	return;
 }
@@ -8,4 +8,4 @@ if (%varbit4606 ! 0) {
 	return;
 }
 ~zoom_position_slider;
-if_setontimer("script3943(%varcint73, %varcint74)", interface_116:55);
+if_setontimer("zoom_timer(%varcint73, %varcint74)", interface_116:55);

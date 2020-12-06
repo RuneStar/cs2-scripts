@@ -150,7 +150,7 @@ if (if_gethide(interface_76:14) = true) {
 		cc_setposition(0, $int10, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setfill(true);
 		cc_settrans(255);
-		cc_setonop("script3763($string3, event_opindex)");
+		cc_setonop("friendschat_op($string3, event_opindex)");
 		if (clan_isself($int9) = false) {
 			if (clan_isfriend($int9) = true) {
 				cc_setop(9, "Remove friend <$string3>");

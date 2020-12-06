@@ -1,0 +1,27 @@
+// 3938
+[clientscript,settings_icon_op](int $int0, component $component1, component $component2, int $int3, graphic $graphic4, component $component5, string $string0, string $string1, component $component6)
+~settings_side_op_sound;
+def_int $int7 = ~settings_get_slider($int0);
+if ($int7 > 0) {
+	switch_int ($int0) {
+		case 30 :
+			%varbit9666 = calc(4 - $int7);
+		case 31 :
+			%varbit9674 = calc(4 - $int7);
+		case 32 :
+			%varbit9675 = calc(4 - $int7);
+	}
+	~settings_set_slider($int0, 0);
+} else {
+	switch_int ($int0) {
+		case 30 :
+			~settings_set_slider($int0, calc(4 - %varbit9666));
+		case 31 :
+			~settings_set_slider($int0, calc(4 - %varbit9674));
+		case 32 :
+			~settings_set_slider($int0, calc(4 - %varbit9675));
+	}
+}
+$int7 = ~settings_get_slider($int0);
+~script3941($int7, $component1, $component2, $int3);
+~settings_update_icon($int7, $component5, $string0, $string1, $component6);

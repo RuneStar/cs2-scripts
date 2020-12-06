@@ -1,0 +1,10 @@
+// 3907
+[proc,settings_side_switch_panel](int $int0)
+if_sethide(true, interface_116:4);
+if_sethide(true, interface_116:9);
+switch_int ($int0) {
+	case 0 :
+		if_sethide(false, interface_116:4);
+	case 1 :
+		if_sethide(false, interface_116:9);
+}

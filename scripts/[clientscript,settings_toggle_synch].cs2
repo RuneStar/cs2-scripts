@@ -1,0 +1,20 @@
+// 3848
+[clientscript,settings_toggle_synch](int $int0, component $component1, int $comsubid2, boolean $boolean3, int $int4, int $int5)
+def_int $int6 = 0;
+if (cc_find($component1, $comsubid2) = ^true) {
+	$int0 = calc($int0 + 1);
+	if ($int0 < 35) {
+		cc_setontimer("settings_toggle_synch($int0, $component1, $comsubid2, $boolean3, $int4, $int5)");
+	} else {
+		$int6 = ~settings_get_toggle($int5);
+		if ($boolean3 = true) {
+			$int6 = calc(1 - $int6);
+		}
+		if ($int6 = 1) {
+			cc_setgraphic("graphic_2848");
+		} else {
+			cc_setgraphic("graphic_2847");
+		}
+		cc_setontimer(null);
+	}
+}

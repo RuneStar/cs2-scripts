@@ -1,0 +1,5 @@
+// 3815
+[clientscript,brew_tools_resetbutton](int $clock0, component $component1, component $component2)
+if (clientclock >= $clock0) {
+	~brew_tools_resetbutton($component1, $component2);
+}

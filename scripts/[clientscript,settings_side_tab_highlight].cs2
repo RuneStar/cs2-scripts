@@ -1,0 +1,7 @@
+// 3911
+[clientscript,settings_side_tab_highlight](component $component0, component $component1, component $component2, int $int3)
+if (%varbit9683 = $int3) {
+	~settings_side_tab_highlight_reset($component0, $component1, $component2, $int3);
+} else {
+	~settings_side_tab_highlight($component0, $component1, $component2, $int3);
+}

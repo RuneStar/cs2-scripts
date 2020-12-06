@@ -1,0 +1,22 @@
+// 3962
+[proc,settings_get_dropdown](int $int0)(int)
+def_int $windowmode1 = 0;
+switch_int ($int0) {
+	case 1 :
+		return(%varbit6374);
+	case 55 :
+		return(%var1107);
+	case 56 :
+		return(%var1306);
+	case 12 :
+		$windowmode1 = getwindowmode;
+		if ($windowmode1 = ^windowmode_fixed) {
+			return(0);
+		}
+		if (%varbit4607 = 0) {
+			return(1);
+		}
+		return(2);
+	case default :
+		return(0);
+}

@@ -1,0 +1,18 @@
+// 3812
+[proc,brew_tools_setupbutton](string $text0, component $component0, component $component1, int $colour2, int $int3)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(6, 30, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour($colour2);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(p12_full);
+cc_settext($text0);
+if_clearops($component0);
+if_setop(1, "Take", $component0);
+if ($int3 = 1) {
+	if_setop(2, "Take-5", $component0);
+}
+if_setopbase("<col=ff9040><$text0></col>", $component0);
+~brew_tools_resetbutton($component0, $component1);

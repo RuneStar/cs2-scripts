@@ -190,8 +190,8 @@ while ($int24 < $int15) {
 	}
 	cc_setopbase("<col=ff9040><$text0></col>");
 	.cc_setopbase("<col=ff9040><$text0></col>");
-	cc_setonop("script3763(event_opbase, event_opindex)");
-	.cc_setonop("script3763(event_opbase, event_opindex)");
+	cc_setonop("friendschat_op(event_opbase, event_opindex)");
+	.cc_setonop("friendschat_op(event_opbase, event_opindex)");
 	$int24, $height22 = calc($int24 + 1), calc($height22 + $int23);
 }
 if ($int15 >= 1) {

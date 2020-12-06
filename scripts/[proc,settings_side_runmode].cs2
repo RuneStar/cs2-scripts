@@ -1,0 +1,7 @@
+// 3923
+[proc,settings_side_runmode](component $component0, component $component1)
+if_setonmouseleave("deltooltip($component1)", $component0);
+if_setonvartransmit("settings_side_runmode_resynch($component0, $component1){var173}", $component0);
+if_setonmisctransmit("settings_side_runmode_resynch($component0, $component1)", $component0);
+if_setonop("settings_side_runmode_op($component0, $component1)", $component0);
+~settings_side_runmode_create($component0, $component1);

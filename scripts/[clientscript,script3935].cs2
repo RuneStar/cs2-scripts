@@ -5,13 +5,13 @@ def_int $int4 = struct_param(struct_2755, param_1101);
 def_int $int5 = 0;
 def_int $width6 = if_getwidth($component1);
 def_graphic $graphic7 = "options_icons,14";
-def_int $int8 = ~script3961(32);
+def_int $int8 = ~settings_get_slider(32);
 def_string $string0 = "Mute Area Sound";
 def_string $string1 = "Unmute Area Sound";
-~script3936($int8, 32, $component2, $component1, $int4, $graphic7, $component0, $string0, $string1, $component3);
+~settings_create_icon($int8, 32, $component2, $component1, $int4, $graphic7, $component0, $string0, $string1, $component3);
 if_setonvartransmit("script3939(32, $component2, $component1, $int4, $graphic7, $component0, $string0, $string1, $component3){var872}", $component2);
 if_setnoclickthrough(true, $component2);
-if_setonclick("script3944", $component2);
+if_setonclick("settings_side_op_sound", $component2);
 while ($int5 <= $int4) {
 	cc_create($component1, ^iftype_rectangle, $int5);
 	cc_setop(1, "Adjust Area Sound Volume");

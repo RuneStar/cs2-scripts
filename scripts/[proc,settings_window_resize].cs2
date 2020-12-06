@@ -1,0 +1,20 @@
+// 3832
+[proc,settings_window_resize](component $component0, component $component1, component $component2, component $component3, int $int4, int $width5, int $height6)
+def_int $width7 = if_getwidth($component0);
+def_int $height8 = if_getheight($component0);
+if ($width7 = $width5 & $height8 = $height6) {
+	return;
+}
+def_int $int9 = calc($height8 - $int4);
+if (~on_mobile = true) {
+	if_setsize(512, 334, ^setsize_abs, ^setsize_abs, $component1);
+} else {
+	if_setsize(512, ~min(800, calc($int9 - 3)), ^setsize_abs, ^setsize_abs, $component1);
+}
+if (%varcint418 > if_getheight($component3)) {
+	if_setscrollsize(0, %varcint418, $component3);
+} else {
+	if_setscrollsize(0, 0, $component3);
+}
+~scrollbar_vertical_rebuild($component2, $component3);
+if_setontimer("settings_window_resize($component0, $component1, $component2, $component3, $int4, $width7, $height8)", $component1);

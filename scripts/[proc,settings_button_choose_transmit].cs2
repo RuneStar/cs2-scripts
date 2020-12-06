@@ -1,0 +1,7 @@
+// 3902
+[proc,settings_button_choose_transmit](int $int0, struct $struct1, component $component2, int $comsubid3, int $int4, int $comsubid5)
+switch_int ($int0) {
+	case default :
+		cc_setonvartransmit("settings_button_on_transmit($struct1, $component2, $comsubid3, $int4, $comsubid5){var2855}");
+		return;
+}

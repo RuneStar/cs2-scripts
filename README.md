@@ -2472,8 +2472,8 @@
 [**2629**](scripts/[proc,script2629].cs2)  
 [**2630**](scripts/[clientscript,script2630].cs2)  
 [**2631**](scripts/[clientscript,script2631].cs2)  
-[**2632**](scripts/[clientscript,script2632].cs2)  
-[**2633**](scripts/[proc,script2633].cs2)  
+[**2632**](scripts/[clientscript,book_init].cs2) `[clientscript,book_init]`  
+[**2633**](scripts/[proc,questlist_draw].cs2) `[proc,questlist_draw]`  
 [**2634**](scripts/[clientscript,mobile_rating_init].cs2) `[clientscript,mobile_rating_init]`  
 [**2637**](scripts/[proc,xp_drops_tooltip_desktop].cs2) `[proc,xp_drops_tooltip_desktop]`  
 [**2638**](scripts/[proc,xp_drops_tooltip_mobile].cs2) `[proc,xp_drops_tooltip_mobile]`  
@@ -3036,7 +3036,7 @@
 [**3197**](scripts/[clientscript,league_relic_confirm].cs2) `[clientscript,league_relic_confirm]`  
 [**3198**](scripts/[clientscript,league_relic_confirm_back].cs2) `[clientscript,league_relic_confirm_back]`  
 [**3199**](scripts/[proc,league_relic_display].cs2) `[proc,league_relic_display]`  
-[**3200**](scripts/[clientscript,script3200].cs2)  
+[**3200**](scripts/[clientscript,clock_init].cs2) `[clientscript,clock_init]`  
 [**3201**](scripts/[clientscript,script3201].cs2)  
 [**3202**](scripts/[clientscript,league_tasks_init].cs2) `[clientscript,league_tasks_init]`  
 [**3203**](scripts/[clientscript,league_tasks_draw_list].cs2) `[clientscript,league_tasks_draw_list]`  
@@ -3245,7 +3245,7 @@
 [**3422**](scripts/[proc,script3422].cs2)  
 [**3427**](scripts/[proc,hp_hud_init].cs2) `[proc,hp_hud_init]`  
 [**3428**](scripts/[proc,bool_to_int].cs2) `[proc,bool_to_int]`  
-[**3429**](scripts/[clientscript,script3429].cs2)  
+[**3429**](scripts/[clientscript,hp_bar_reset].cs2) `[clientscript,hp_bar_reset]`  
 [**3430**](scripts/[clientscript,script3430].cs2)  
 [**3431**](scripts/[proc,script3431].cs2)  
 [**3432**](scripts/[clientscript,script3432].cs2)  
@@ -3579,10 +3579,10 @@
 [**3760**](scripts/[clientscript,script3760].cs2)  
 [**3761**](scripts/[proc,script3761].cs2)  
 [**3762**](scripts/[clientscript,script3762].cs2)  
-[**3763**](scripts/[clientscript,script3763].cs2)  
+[**3763**](scripts/[clientscript,friendschat_op].cs2) `[clientscript,friendschat_op]`  
 [**3764**](scripts/[proc,script3764].cs2)  
-[**3765**](scripts/[clientscript,script3765].cs2)  
-[**3766**](scripts/[clientscript,script3766].cs2)  
+[**3765**](scripts/[clientscript,chatchannel_login].cs2) `[clientscript,chatchannel_login]`  
+[**3766**](scripts/[clientscript,friendschat_leavechat].cs2) `[clientscript,friendschat_leavechat]`  
 [**3767**](scripts/[clientscript,script3767].cs2)  
 [**3768**](scripts/[clientscript,script3768].cs2)  
 [**3769**](scripts/[proc,script3769].cs2)  
@@ -3620,20 +3620,20 @@
 [**3801**](scripts/[clientscript,script3801].cs2)  
 [**3802**](scripts/[proc,script3802].cs2)  
 [**3803**](scripts/[proc,script3803].cs2)  
-[**3804**](scripts/[clientscript,script3804].cs2)  
-[**3805**](scripts/[clientscript,script3805].cs2)  
-[**3806**](scripts/[proc,script3806].cs2)  
-[**3807**](scripts/[clientscript,script3807].cs2)  
-[**3808**](scripts/[clientscript,script3808].cs2)  
+[**3804**](scripts/[clientscript,xpreward_init].cs2) `[clientscript,xpreward_init]`  
+[**3805**](scripts/[clientscript,xpreward_update].cs2) `[clientscript,xpreward_update]`  
+[**3806**](scripts/[proc,xpreward_update].cs2) `[proc,xpreward_update]`  
+[**3807**](scripts/[clientscript,xpreward_select].cs2) `[clientscript,xpreward_select]`  
+[**3808**](scripts/[clientscript,xpreward_confirm].cs2) `[clientscript,xpreward_confirm]`  
 [**3809**](scripts/[proc,script3809].cs2)  
 [**3810**](scripts/[clientscript,script3810].cs2)  
-[**3811**](scripts/[clientscript,script3811].cs2)  
-[**3812**](scripts/[proc,script3812].cs2)  
-[**3813**](scripts/[proc,script3813].cs2)  
-[**3814**](scripts/[clientscript,script3814].cs2)  
-[**3815**](scripts/[clientscript,script3815].cs2)  
-[**3816**](scripts/[clientscript,script3816].cs2)  
-[**3817**](scripts/[proc,script3817].cs2)  
+[**3811**](scripts/[clientscript,brew_tools_init].cs2) `[clientscript,brew_tools_init]`  
+[**3812**](scripts/[proc,brew_tools_setupbutton].cs2) `[proc,brew_tools_setupbutton]`  
+[**3813**](scripts/[proc,brew_tools_resetbutton].cs2) `[proc,brew_tools_resetbutton]`  
+[**3814**](scripts/[clientscript,brew_tools_op].cs2) `[clientscript,brew_tools_op]`  
+[**3815**](scripts/[clientscript,brew_tools_resetbutton].cs2) `[clientscript,brew_tools_resetbutton]`  
+[**3816**](scripts/[clientscript,brew_tools_supplies].cs2) `[clientscript,brew_tools_supplies]`  
+[**3817**](scripts/[proc,brew_tools_supplies].cs2) `[proc,brew_tools_supplies]`  
 [**3818**](scripts/[clientscript,script3818].cs2)  
 [**3819**](scripts/[clientscript,script3819].cs2)  
 [**3820**](scripts/[proc,script3820].cs2)  
@@ -3642,67 +3642,67 @@
 [**3823**](scripts/[clientscript,script3823].cs2)  
 [**3824**](scripts/[clientscript,script3824].cs2)  
 [**3825**](scripts/[clientscript,script3825].cs2)  
-[**3826**](scripts/[clientscript,script3826].cs2)  
-[**3827**](scripts/[proc,script3827].cs2)  
-[**3828**](scripts/[proc,script3828].cs2)  
+[**3826**](scripts/[clientscript,settings_init].cs2) `[clientscript,settings_init]`  
+[**3827**](scripts/[proc,settings_init].cs2) `[proc,settings_init]`  
+[**3828**](scripts/[proc,settings_window_setup].cs2) `[proc,settings_window_setup]`  
 [**3829**](scripts/[clientscript,script3829].cs2)  
 [**3830**](scripts/[clientscript,script3830].cs2)  
-[**3831**](scripts/[clientscript,script3831].cs2)  
-[**3832**](scripts/[proc,script3832].cs2)  
+[**3831**](scripts/[clientscript,settings_window_resize].cs2) `[clientscript,settings_window_resize]`  
+[**3832**](scripts/[proc,settings_window_resize].cs2) `[proc,settings_window_resize]`  
 [**3833**](scripts/[clientscript,script3833].cs2)  
 [**3834**](scripts/[proc,script3834].cs2)  
-[**3835**](scripts/[clientscript,script3835].cs2)  
-[**3836**](scripts/[clientscript,script3836].cs2)  
-[**3837**](scripts/[proc,script3837].cs2)  
-[**3838**](scripts/[proc,script3838].cs2)  
-[**3839**](scripts/[proc,script3839].cs2)  
-[**3840**](scripts/[proc,script3840].cs2)  
-[**3841**](scripts/[proc,script3841].cs2)  
-[**3842**](scripts/[proc,script3842].cs2)  
-[**3843**](scripts/[clientscript,script3843].cs2)  
-[**3844**](scripts/[proc,script3844].cs2)  
+[**3835**](scripts/[clientscript,settings_tab_op].cs2) `[clientscript,settings_tab_op]`  
+[**3836**](scripts/[clientscript,settings_tab_transmit].cs2) `[clientscript,settings_tab_transmit]`  
+[**3837**](scripts/[proc,settings_create_tabs].cs2) `[proc,settings_create_tabs]`  
+[**3838**](scripts/[proc,settings_tab_selected].cs2) `[proc,settings_tab_selected]`  
+[**3839**](scripts/[proc,settings_tab_not_selected].cs2) `[proc,settings_tab_not_selected]`  
+[**3840**](scripts/[proc,settings_populate_settings].cs2) `[proc,settings_populate_settings]`  
+[**3841**](scripts/[proc,settings_create_setting].cs2) `[proc,settings_create_setting]`  
+[**3842**](scripts/[proc,settings_seemore].cs2) `[proc,settings_seemore]`  
+[**3843**](scripts/[clientscript,settings_seemore_op].cs2) `[clientscript,settings_seemore_op]`  
+[**3844**](scripts/[proc,settings_seemore_check].cs2) `[proc,settings_seemore_check]`  
 [**3845**](scripts/[proc,script3845].cs2)  
-[**3846**](scripts/[proc,script3846].cs2)  
-[**3847**](scripts/[clientscript,script3847].cs2)  
-[**3848**](scripts/[clientscript,script3848].cs2)  
-[**3849**](scripts/[clientscript,script3849].cs2)  
-[**3850**](scripts/[proc,script3850].cs2)  
-[**3851**](scripts/[clientscript,script3851].cs2)  
-[**3852**](scripts/[clientscript,script3852].cs2)  
-[**3853**](scripts/[clientscript,script3853].cs2)  
-[**3854**](scripts/[clientscript,script3854].cs2)  
-[**3855**](scripts/[clientscript,script3855].cs2)  
-[**3856**](scripts/[proc,script3856].cs2)  
-[**3857**](scripts/[clientscript,script3857].cs2)  
-[**3858**](scripts/[clientscript,script3858].cs2)  
-[**3859**](scripts/[clientscript,script3859].cs2)  
-[**3860**](scripts/[proc,script3860].cs2)  
-[**3861**](scripts/[clientscript,script3861].cs2)  
-[**3862**](scripts/[clientscript,script3862].cs2)  
-[**3863**](scripts/[clientscript,script3863].cs2)  
-[**3864**](scripts/[proc,script3864].cs2)  
-[**3865**](scripts/[proc,script3865].cs2)  
-[**3866**](scripts/[clientscript,script3866].cs2)  
-[**3867**](scripts/[clientscript,script3867].cs2)  
+[**3846**](scripts/[proc,settings_create_toggle].cs2) `[proc,settings_create_toggle]`  
+[**3847**](scripts/[clientscript,settings_toggle_op].cs2) `[clientscript,settings_toggle_op]`  
+[**3848**](scripts/[clientscript,settings_toggle_synch].cs2) `[clientscript,settings_toggle_synch]`  
+[**3849**](scripts/[clientscript,settings_toggle_transmit].cs2) `[clientscript,settings_toggle_transmit]`  
+[**3850**](scripts/[proc,settings_create_drop_down].cs2) `[proc,settings_create_drop_down]`  
+[**3851**](scripts/[clientscript,setting_show_dropdown].cs2) `[clientscript,setting_show_dropdown]`  
+[**3852**](scripts/[clientscript,setting_dropdown_entry_op].cs2) `[clientscript,setting_dropdown_entry_op]`  
+[**3853**](scripts/[clientscript,setting_dropdown_entry_close].cs2) `[clientscript,setting_dropdown_entry_close]`  
+[**3854**](scripts/[clientscript,setting_dropdown_synch].cs2) `[clientscript,setting_dropdown_synch]`  
+[**3855**](scripts/[clientscript,setting_dropdown_transmit].cs2) `[clientscript,setting_dropdown_transmit]`  
+[**3856**](scripts/[proc,settings_create_input_setting].cs2) `[proc,settings_create_input_setting]`  
+[**3857**](scripts/[clientscript,settings_input_op].cs2) `[clientscript,settings_input_op]`  
+[**3858**](scripts/[clientscript,settings_input_setting_transmit].cs2) `[clientscript,settings_input_setting_transmit]`  
+[**3859**](scripts/[clientscript,settings_input_timer].cs2) `[clientscript,settings_input_timer]`  
+[**3860**](scripts/[proc,settings_create_slider].cs2) `[proc,settings_create_slider]`  
+[**3861**](scripts/[clientscript,settings_slider_op].cs2) `[clientscript,settings_slider_op]`  
+[**3862**](scripts/[clientscript,settings_slider_synch].cs2) `[clientscript,settings_slider_synch]`  
+[**3863**](scripts/[clientscript,settings_slider_on_transmit].cs2) `[clientscript,settings_slider_on_transmit]`  
+[**3864**](scripts/[proc,settings_create_keybind_entry].cs2) `[proc,settings_create_keybind_entry]`  
+[**3865**](scripts/[proc,settings_create_button].cs2) `[proc,settings_create_button]`  
+[**3866**](scripts/[clientscript,settings_button_op].cs2) `[clientscript,settings_button_op]`  
+[**3867**](scripts/[clientscript,settings_button_on_transmit].cs2) `[clientscript,settings_button_on_transmit]`  
 [**3868**](scripts/[proc,script3868].cs2)  
-[**3869**](scripts/[proc,script3869].cs2)  
-[**3870**](scripts/[proc,script3870].cs2)  
+[**3869**](scripts/[proc,text_create].cs2) `[proc,text_create]`  
+[**3870**](scripts/[proc,searchbar_create].cs2) `[proc,searchbar_create]`  
 [**3871**](scripts/[proc,script3871].cs2)  
-[**3872**](scripts/[clientscript,script3872].cs2)  
-[**3873**](scripts/[clientscript,script3873].cs2)  
-[**3874**](scripts/[clientscript,script3874].cs2)  
-[**3875**](scripts/[clientscript,script3875].cs2)  
-[**3876**](scripts/[clientscript,script3876].cs2)  
+[**3872**](scripts/[clientscript,settings_show_keyboard].cs2) `[clientscript,settings_show_keyboard]`  
+[**3873**](scripts/[clientscript,searchbar_op].cs2) `[clientscript,searchbar_op]`  
+[**3874**](scripts/[clientscript,searchbar_mouseover].cs2) `[clientscript,searchbar_mouseover]`  
+[**3875**](scripts/[clientscript,searchbar_mouseleave].cs2) `[clientscript,searchbar_mouseleave]`  
+[**3876**](scripts/[clientscript,searchbar_keypress].cs2) `[clientscript,searchbar_keypress]`  
 [**3877**](scripts/[proc,script3877].cs2)  
-[**3878**](scripts/[clientscript,script3878].cs2)  
-[**3879**](scripts/[proc,script3879].cs2)  
+[**3878**](scripts/[clientscript,settings_op_sound].cs2) `[clientscript,settings_op_sound]`  
+[**3879**](scripts/[proc,settings_op_sound].cs2) `[proc,settings_op_sound]`  
 [**3880**](scripts/[proc,script3880].cs2)  
-[**3881**](scripts/[proc,script3881].cs2)  
-[**3882**](scripts/[proc,script3882].cs2)  
+[**3881**](scripts/[proc,settings_toggle_choose_transmit].cs2) `[proc,settings_toggle_choose_transmit]`  
+[**3882**](scripts/[proc,settings_dropdown_choose_transmit].cs2) `[proc,settings_dropdown_choose_transmit]`  
 [**3883**](scripts/[proc,script3883].cs2)  
-[**3884**](scripts/[proc,script3884].cs2)  
-[**3885**](scripts/[proc,script3885].cs2)  
-[**3886**](scripts/[proc,script3886].cs2)  
+[**3884**](scripts/[proc,settings_slider_choose_transmit].cs2) `[proc,settings_slider_choose_transmit]`  
+[**3885**](scripts/[proc,settings_slider_choose_onop].cs2) `[proc,settings_slider_choose_onop]`  
+[**3886**](scripts/[proc,settings_slider_choose_ondrag].cs2) `[proc,settings_slider_choose_ondrag]`  
 [**3887**](scripts/[proc,script3887].cs2)  
 [**3888**](scripts/[proc,script3888].cs2)  
 [**3889**](scripts/[proc,script3889].cs2)  
@@ -3715,34 +3715,34 @@
 [**3896**](scripts/[clientscript,script3896].cs2)  
 [**3897**](scripts/[clientscript,script3897].cs2)  
 [**3898**](scripts/[proc,script3898].cs2)  
-[**3899**](scripts/[proc,script3899].cs2)  
+[**3899**](scripts/[proc,settings_camera_do_zoom].cs2) `[proc,settings_camera_do_zoom]`  
 [**3900**](scripts/[proc,script3900].cs2)  
 [**3901**](scripts/[clientscript,script3901].cs2)  
-[**3902**](scripts/[proc,script3902].cs2)  
-[**3903**](scripts/[clientscript,script3903].cs2)  
-[**3904**](scripts/[clientscript,script3904].cs2)  
-[**3905**](scripts/[clientscript,script3905].cs2)  
-[**3906**](scripts/[clientscript,script3906].cs2)  
-[**3907**](scripts/[proc,script3907].cs2)  
-[**3908**](scripts/[clientscript,script3908].cs2)  
-[**3909**](scripts/[clientscript,script3909].cs2)  
-[**3910**](scripts/[proc,script3910].cs2)  
-[**3911**](scripts/[clientscript,script3911].cs2)  
-[**3912**](scripts/[clientscript,script3912].cs2)  
-[**3913**](scripts/[proc,script3913].cs2)  
-[**3914**](scripts/[proc,script3914].cs2)  
-[**3915**](scripts/[clientscript,script3915].cs2)  
-[**3916**](scripts/[clientscript,script3916].cs2)  
-[**3917**](scripts/[proc,script3917].cs2)  
-[**3918**](scripts/[proc,script3918].cs2)  
-[**3919**](scripts/[proc,script3919].cs2)  
+[**3902**](scripts/[proc,settings_button_choose_transmit].cs2) `[proc,settings_button_choose_transmit]`  
+[**3903**](scripts/[clientscript,settings_button_init].cs2) `[clientscript,settings_button_init]`  
+[**3904**](scripts/[clientscript,settings_button_repeat].cs2) `[clientscript,settings_button_repeat]`  
+[**3905**](scripts/[clientscript,settings_button_leave].cs2) `[clientscript,settings_button_leave]`  
+[**3906**](scripts/[clientscript,settings_side_switch_panel].cs2) `[clientscript,settings_side_switch_panel]`  
+[**3907**](scripts/[proc,settings_side_switch_panel].cs2) `[proc,settings_side_switch_panel]`  
+[**3908**](scripts/[clientscript,settings_side_bottom_init].cs2) `[clientscript,settings_side_bottom_init]`  
+[**3909**](scripts/[clientscript,settings_side_tabs_init].cs2) `[clientscript,settings_side_tabs_init]`  
+[**3910**](scripts/[proc,settings_side_tabs].cs2) `[proc,settings_side_tabs]`  
+[**3911**](scripts/[clientscript,settings_side_tab_highlight].cs2) `[clientscript,settings_side_tab_highlight]`  
+[**3912**](scripts/[clientscript,settings_side_tab_highlight_reset].cs2) `[clientscript,settings_side_tab_highlight_reset]`  
+[**3913**](scripts/[proc,settings_side_tab_highlight].cs2) `[proc,settings_side_tab_highlight]`  
+[**3914**](scripts/[proc,settings_side_tab_highlight_reset].cs2) `[proc,settings_side_tab_highlight_reset]`  
+[**3915**](scripts/[clientscript,settings_side_switch_tab].cs2) `[clientscript,settings_side_switch_tab]`  
+[**3916**](scripts/[clientscript,settings_side_update_tabs].cs2) `[clientscript,settings_side_update_tabs]`  
+[**3917**](scripts/[proc,settings_side_update_tabs].cs2) `[proc,settings_side_update_tabs]`  
+[**3918**](scripts/[proc,settings_side_house_create].cs2) `[proc,settings_side_house_create]`  
+[**3919**](scripts/[proc,settings_side_accept_aid].cs2) `[proc,settings_side_accept_aid]`  
 [**3920**](scripts/[clientscript,script3920].cs2)  
-[**3921**](scripts/[clientscript,script3921].cs2)  
+[**3921**](scripts/[clientscript,settings_accept_aid_op].cs2) `[clientscript,settings_accept_aid_op]`  
 [**3922**](scripts/[proc,script3922].cs2)  
-[**3923**](scripts/[proc,script3923].cs2)  
-[**3924**](scripts/[clientscript,script3924].cs2)  
-[**3925**](scripts/[clientscript,script3925].cs2)  
-[**3926**](scripts/[proc,script3926].cs2)  
+[**3923**](scripts/[proc,settings_side_runmode].cs2) `[proc,settings_side_runmode]`  
+[**3924**](scripts/[clientscript,settings_side_runmode_resynch].cs2) `[clientscript,settings_side_runmode_resynch]`  
+[**3925**](scripts/[clientscript,settings_side_runmode_op].cs2) `[clientscript,settings_side_runmode_op]`  
+[**3926**](scripts/[proc,settings_side_runmode_create].cs2) `[proc,settings_side_runmode_create]`  
 [**3927**](scripts/[clientscript,script3927].cs2)  
 [**3928**](scripts/[clientscript,script3928].cs2)  
 [**3929**](scripts/[clientscript,script3929].cs2)  
@@ -3752,17 +3752,17 @@
 [**3933**](scripts/[clientscript,script3933].cs2)  
 [**3934**](scripts/[clientscript,script3934].cs2)  
 [**3935**](scripts/[clientscript,script3935].cs2)  
-[**3936**](scripts/[proc,script3936].cs2)  
-[**3937**](scripts/[proc,script3937].cs2)  
-[**3938**](scripts/[clientscript,script3938].cs2)  
+[**3936**](scripts/[proc,settings_create_icon].cs2) `[proc,settings_create_icon]`  
+[**3937**](scripts/[proc,settings_update_icon].cs2) `[proc,settings_update_icon]`  
+[**3938**](scripts/[clientscript,settings_icon_op].cs2) `[clientscript,settings_icon_op]`  
 [**3939**](scripts/[clientscript,script3939].cs2)  
 [**3940**](scripts/[clientscript,script3940].cs2)  
 [**3941**](scripts/[proc,script3941].cs2)  
 [**3942**](scripts/[clientscript,script3942].cs2)  
-[**3943**](scripts/[clientscript,script3943].cs2)  
-[**3944**](scripts/[clientscript,script3944].cs2)  
-[**3945**](scripts/[proc,script3945].cs2)  
-[**3946**](scripts/[clientscript,script3946].cs2)  
+[**3943**](scripts/[clientscript,zoom_timer].cs2) `[clientscript,zoom_timer]`  
+[**3944**](scripts/[clientscript,settings_side_op_sound].cs2) `[clientscript,settings_side_op_sound]`  
+[**3945**](scripts/[proc,settings_side_op_sound].cs2) `[proc,settings_side_op_sound]`  
+[**3946**](scripts/[clientscript,settings_controls_init].cs2) `[clientscript,settings_controls_init]`  
 [**3947**](scripts/[proc,script3947].cs2)  
 [**3948**](scripts/[clientscript,script3948].cs2)  
 [**3949**](scripts/[clientscript,script3949].cs2)  
@@ -3776,27 +3776,27 @@
 [**3957**](scripts/[proc,script3957].cs2)  
 [**3958**](scripts/[proc,script3958].cs2)  
 [**3959**](scripts/[proc,script3959].cs2)  
-[**3960**](scripts/[proc,script3960].cs2)  
-[**3961**](scripts/[proc,script3961].cs2)  
-[**3962**](scripts/[proc,script3962].cs2)  
-[**3963**](scripts/[proc,script3963].cs2)  
-[**3964**](scripts/[proc,script3964].cs2)  
-[**3965**](scripts/[proc,script3965].cs2)  
-[**3966**](scripts/[proc,script3966].cs2)  
-[**3967**](scripts/[proc,script3967].cs2)  
-[**3968**](scripts/[proc,script3968].cs2)  
-[**3969**](scripts/[clientscript,script3969].cs2)  
+[**3960**](scripts/[proc,settings_get_toggle].cs2) `[proc,settings_get_toggle]`  
+[**3961**](scripts/[proc,settings_get_slider].cs2) `[proc,settings_get_slider]`  
+[**3962**](scripts/[proc,settings_get_dropdown].cs2) `[proc,settings_get_dropdown]`  
+[**3963**](scripts/[proc,settings_get_keybind].cs2) `[proc,settings_get_keybind]`  
+[**3964**](scripts/[proc,settings_get_number_input].cs2) `[proc,settings_get_number_input]`  
+[**3965**](scripts/[proc,settings_clicked_toggle].cs2) `[proc,settings_clicked_toggle]`  
+[**3966**](scripts/[proc,settings_set_slider].cs2) `[proc,settings_set_slider]`  
+[**3967**](scripts/[proc,settings_set_dropdown].cs2) `[proc,settings_set_dropdown]`  
+[**3968**](scripts/[proc,settings_set_keybind].cs2) `[proc,settings_set_keybind]`  
+[**3969**](scripts/[proc,settings_clicked_button].cs2) `[proc,settings_clicked_button]`  
 [**3970**](scripts/[proc,script3970].cs2)  
-[**3971**](scripts/[proc,script3971].cs2)  
+[**3971**](scripts/[proc,settings_remove_roof].cs2) `[proc,settings_remove_roof]`  
 [**3972**](scripts/[proc,script3972].cs2)  
 [**3973**](scripts/[proc,script3973].cs2)  
-[**3974**](scripts/[proc,script3974].cs2)  
-[**3975**](scripts/[proc,script3975].cs2)  
+[**3974**](scripts/[proc,settings_wiki_lookup].cs2) `[proc,settings_wiki_lookup]`  
+[**3975**](scripts/[proc,settings_data_orbs].cs2) `[proc,settings_data_orbs]`  
 [**3976**](scripts/[proc,script3976].cs2)  
 [**3977**](scripts/[proc,script3977].cs2)  
 [**3978**](scripts/[proc,script3978].cs2)  
 [**3979**](scripts/[proc,script3979].cs2)  
-[**3980**](scripts/[proc,script3980].cs2)  
+[**3980**](scripts/[proc,settings_health_overlay].cs2) `[proc,settings_health_overlay]`  
 [**3981**](scripts/[proc,script3981].cs2)  
 [**3982**](scripts/[proc,script3982].cs2)  
 [**3983**](scripts/[proc,script3983].cs2)  
@@ -3805,16 +3805,16 @@
 [**3986**](scripts/[proc,script3986].cs2)  
 [**3987**](scripts/[proc,script3987].cs2)  
 [**3988**](scripts/[proc,script3988].cs2)  
-[**3989**](scripts/[proc,script3989].cs2)  
-[**3990**](scripts/[proc,script3990].cs2)  
+[**3989**](scripts/[proc,settings_store_button].cs2) `[proc,settings_store_button]`  
+[**3990**](scripts/[proc,settings_mouse_camera].cs2) `[proc,settings_mouse_camera]`  
 [**3991**](scripts/[proc,script3991].cs2)  
 [**3992**](scripts/[proc,script3992].cs2)  
 [**3993**](scripts/[proc,script3993].cs2)  
-[**3994**](scripts/[proc,script3994].cs2)  
+[**3994**](scripts/[proc,settings_function_button].cs2) `[proc,settings_function_button]`  
 [**3995**](scripts/[proc,script3995].cs2)  
 [**3996**](scripts/[proc,script3996].cs2)  
-[**3997**](scripts/[proc,script3997].cs2)  
-[**3998**](scripts/[clientscript,script3998].cs2)  
+[**3997**](scripts/[proc,settings_scrollbar_pos].cs2) `[proc,settings_scrollbar_pos]`  
+[**3998**](scripts/[clientscript,settings_client_mode].cs2) `[clientscript,settings_client_mode]`  
 [**3999**](scripts/[proc,script3999].cs2)  
 [**4000**](scripts/[proc,script4000].cs2)  
 [**4001**](scripts/[proc,script4001].cs2)  
@@ -3832,6 +3832,6 @@
 [**4015**](scripts/[proc,script4015].cs2)  
 [**4016**](scripts/[proc,script4016].cs2)  
 [**4017**](scripts/[proc,script4017].cs2)  
-[**4018**](scripts/[proc,script4018].cs2)  
-[**4019**](scripts/[proc,script4019].cs2)  
+[**4018**](scripts/[proc,settings_accept_aid].cs2) `[proc,settings_accept_aid]`  
+[**4019**](scripts/[proc,settings_set_stone_keybind].cs2) `[proc,settings_set_stone_keybind]`  
 [**4020**](scripts/[clientscript,script4020].cs2)  

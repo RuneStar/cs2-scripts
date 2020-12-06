@@ -1,0 +1,21 @@
+// 3862
+[clientscript,settings_slider_synch](int $int0, int $int1, int $int2, int $int3, int $int4, component $component5, int $comsubid6, int $y7, int $int8, int $int9, component $component10, int $comsubid11)
+def_int $int12 = 0;
+if (cc_find($component10, $comsubid11) = ^true) {
+	$int0 = calc($int0 + 1);
+	if ($int0 < 35) {
+		cc_setontimer("settings_slider_synch($int0, $int1, $int2, $int3, $int4, $component5, $comsubid6, $y7, $int8, $int9, $component10, $comsubid11)");
+	} else {
+		if (.cc_find($component5, $comsubid6) = ^true) {
+			$int12 = ~settings_get_slider($int1);
+			if ($int12 = 0) {
+				.cc_setposition($int8, $y7, ^setpos_abs_left, ^setpos_abs_top);
+			} else if ($int12 = calc($int3 - 1)) {
+				.cc_setposition(calc($int9 - 16), $y7, ^setpos_abs_left, ^setpos_abs_top);
+			} else {
+				.cc_setposition(calc($int8 + scale($int12, $int3 - 1, $int4 - 16)), $y7, ^setpos_abs_left, ^setpos_abs_top);
+			}
+		}
+		cc_setontimer(null);
+	}
+}

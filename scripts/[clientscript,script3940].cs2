@@ -1,7 +1,7 @@
 // 3940
 [clientscript,script3940](int $int0, int $int1, component $component2, component $component3, int $int4, graphic $graphic5, component $component6, string $string0, string $string1, component $component7)
-~script3945;
-~script3966($int0, $int1);
-def_int $int8 = ~script3961($int0);
+~settings_side_op_sound;
+~settings_set_slider($int0, $int1);
+def_int $int8 = ~settings_get_slider($int0);
 ~script3941($int8, $component2, $component3, $int4);
-~script3937($int8, $component6, $string0, $string1, $component7);
+~settings_update_icon($int8, $component6, $string0, $string1, $component7);

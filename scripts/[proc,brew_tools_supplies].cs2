@@ -1,0 +1,15 @@
+// 3817
+[proc,brew_tools_supplies](component $component0, component $component1, component $component2)
+if (inv_getobj(worn, 0) = pirate_hat_8950) {
+	if_settext(~tostring_spacer(inv_total(inv_448, pipe_section_8930), ","), $component0);
+	if_settext(~tostring_spacer(inv_total(inv_448, bridge_section_8979), ","), $component1);
+	if_settext(~tostring_spacer(inv_total(inv_448, lumber_patch_8932), ","), $component2);
+} else if (inv_getobj(worn, 0) = pirate_bandana_8949) {
+	if_settext(~tostring_spacer(inv_total(inv_452, pipe_section_8930), ","), $component0);
+	if_settext(~tostring_spacer(inv_total(inv_452, bridge_section_8979), ","), $component1);
+	if_settext(~tostring_spacer(inv_total(inv_452, lumber_patch_8932), ","), $component2);
+} else {
+	if_settext("", $component0);
+	if_settext("", $component1);
+	if_settext("", $component2);
+}

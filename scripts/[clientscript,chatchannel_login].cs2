@@ -1,0 +1,10 @@
+// 3765
+[clientscript,chatchannel_login](string $string0)
+if (string_length($string0) > 0) {
+	if (string_length(clan_getchatownername) > 0) {
+		clan_leavechat;
+	}
+	~meslayer_initlastnames;
+	%varcstring362 = removetags($string0);
+	clan_joinchat($string0);
+}

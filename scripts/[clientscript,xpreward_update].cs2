@@ -1,0 +1,5 @@
+// 3805
+[clientscript,xpreward_update](int $clock0, int $int1, component $component2, component $component3)
+if (clientclock >= $clock0) {
+	~xpreward_update($int1, $component2, $component3);
+}

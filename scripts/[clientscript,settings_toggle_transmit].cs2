@@ -1,0 +1,38 @@
+// 3849
+[clientscript,settings_toggle_transmit](component $component0, int $int1, boolean $boolean2, int $int3, int $trans4, struct $struct5)
+def_int $int6 = ~script3957($struct5);
+def_int $int7 = 0;
+if (cc_find($component0, $int1) = ^true) {
+	$int7 = ~settings_get_toggle($int3);
+	if ($boolean2 = true) {
+		$int7 = calc(1 - $int7);
+	}
+	if ($int6 = 1) {
+		if ($int7 = 1) {
+			cc_setgraphic("graphic_2848");
+		} else {
+			cc_setgraphic("graphic_2847");
+		}
+		if (~on_mobile = false & .cc_find($component0, calc($int1 - 2)) = ^true) {
+			.cc_setonmouseover("cc_settrans($component0, event_comsubid, 240, null)");
+			.cc_setonmouseleave("cc_settrans($component0, event_comsubid, $trans4, null)");
+		}
+		if (.cc_find($component0, calc($int1 - 1)) = ^true) {
+			.cc_setcolour(0xff981f);
+		}
+	} else {
+		if ($int7 = 1) {
+			cc_setgraphic("graphic_2850");
+		} else {
+			cc_setgraphic("graphic_2849");
+		}
+		if (~on_mobile = false & .cc_find($component0, calc($int1 - 2)) = ^true) {
+			.cc_setonmouseover(null);
+			.cc_setonmouseleave(null);
+			.cc_settrans($trans4);
+		}
+		if (.cc_find($component0, calc($int1 - 1)) = ^true) {
+			.cc_setcolour(0x9f9f9f);
+		}
+	}
+}

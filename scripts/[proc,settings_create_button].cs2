@@ -1,0 +1,114 @@
+// 3865
+[proc,settings_create_button](int $int0, int $int1, int $int2, int $int3, int $int4, struct $struct5, component $component6, component $component7, int $int8)(int, int, int, int, int)
+def_int $int9 = $int1;
+def_string $string0 = struct_param($struct5, param_1086);
+def_boolean $boolean10 = ~on_mobile;
+if ($boolean10 = true & string_length(struct_param($struct5, param_1087)) > 0) {
+	$string0 = struct_param($struct5, param_1087);
+}
+def_int $int11 = calc(if_getwidth($component7) / 3);
+def_int $int12 = calc(paraheight($string0, $int11 - 10, p12_full) * 14);
+if ($int12 < 22) {
+	$int12 = 22;
+}
+def_int $int13 = calc($int12 + 10);
+if ($int0 = ^max_32bit_int) {
+	$int0 = 0;
+} else if ($int0 = 0) {
+	$int0 = 1;
+} else {
+	$int0 = 2;
+}
+def_int $int14 = ^max_32bit_int;
+if (struct_param($struct5, param_1093) ! -1) {
+	$int14 = struct_param($struct5, param_1093);
+	if ($int14 > $int0) {
+		$int0 = $int14;
+	}
+}
+def_int $int15 = 0;
+if ($int0 = 1) {
+	$int15 = $int11;
+} else if ($int0 = 2) {
+	$int15 = calc($int11 * 2);
+}
+def_int $int16 = 5;
+if (struct_param($struct5, param_1100) ! -1 & struct_param($struct5, param_1100) > $int13) {
+	$int16 = calc((struct_param($struct5, param_1100) - $int13) / 2);
+}
+$int1 = calc($int1 + $int16);
+$int15 = calc($int15 + 5);
+$int11 = calc($int11 - 10);
+def_int $int17 = ~script3957($struct5);
+def_int $int18 = struct_param($struct5, param_1077);
+cc_create($component6, ^iftype_rectangle, $int3);
+cc_setsize($int11, $int13, ^setsize_abs, ^setsize_abs);
+cc_setposition($int15, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(255);
+cc_setop(1, "Select");
+cc_setonop("settings_button_op($struct5)");
+$int3 = calc($int3 + 1);
+def_int $x19 = calc($int11 - 9 + $int15);
+def_int $y20 = calc($int13 - 9 + $int1);
+def_int $width21 = calc($int11 - 18);
+def_int $height22 = calc($int13 - 18);
+if ($int17 = 1) {
+	~create_graphic($component7, $int2, "tradebacking", $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, $int11, $int13, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 1), "v2_stone_button,0", $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 2), "v2_stone_button,1", $x19, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 3), "v2_stone_button,2", $int15, $y20, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 4), "v2_stone_button,3", $x19, $y20, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 5), "v2_stone_button,4", $int15, calc(9 + $int1), ^setpos_abs_left, ^setpos_abs_top, 9, $height22, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 6), "v2_stone_button,5", calc($int15 + 9), $int1, ^setpos_abs_left, ^setpos_abs_top, $width21, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 7), "v2_stone_button,6", $x19, calc(9 + $int1), ^setpos_abs_left, ^setpos_abs_top, 9, $height22, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 8), "v2_stone_button,7", calc($int15 + 9), $y20, ^setpos_abs_left, ^setpos_abs_top, $width21, 9, ^setsize_abs, ^setsize_abs);
+} else {
+	~create_graphic($component7, $int2, "tradebacking_dark", $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, $int11, $int13, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 1), "v2_stone_button_in,0", $int15, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 2), "v2_stone_button_in,1", $x19, $int1, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 3), "v2_stone_button_in,2", $int15, $y20, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 4), "v2_stone_button_in,3", $x19, $y20, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 5), "v2_stone_button_in,4", $int15, calc(9 + $int1), ^setpos_abs_left, ^setpos_abs_top, 9, $height22, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 6), "v2_stone_button_in,5", calc(9 + $int15), $int1, ^setpos_abs_left, ^setpos_abs_top, $width21, 9, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 7), "v2_stone_button_in,6", $x19, calc(9 + $int1), ^setpos_abs_left, ^setpos_abs_top, 9, $height22, ^setsize_abs, ^setsize_abs);
+	~create_graphic($component7, calc($int2 + 8), "v2_stone_button_in,7", calc($int15 + 9), $y20, ^setpos_abs_left, ^setpos_abs_top, $width21, 9, ^setsize_abs, ^setsize_abs);
+}
+$int2 = calc($int2 + 9);
+cc_create($component7, ^iftype_text, $int2);
+cc_setsize(calc($int11 - 10), $int12, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int15 + 5), calc($int1 + 5), ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($string0);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int17 = 1) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(0x9f9f9f);
+}
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+$int2 = calc($int2 + 1);
+cc_create($component7, ^iftype_rectangle, $int2);
+cc_setsize($int11, $int13, ^setsize_abs, ^setsize_abs);
+cc_setposition($int15, $int1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(255);
+if ($int17 = 1 & ~on_mobile = false) {
+	cc_setonmouseover("v2_stone_button_change_in($component7, calc($int2 - 10))");
+	cc_setonmouseleave("v2_stone_button_change_out($component7, calc($int2 - 10))");
+}
+if (struct_param($struct5, param_1085) = true) {
+	~settings_button_choose_transmit($int18, $struct5, $component7, calc($int2 - 1), calc($int2 - 10), $int2);
+}
+$int2 = calc($int2 + 1);
+$int1 = calc($int1 + $int13 + $int16);
+if ($int1 < $int8) {
+	$int1 = $int8;
+}
+if ($int0 = 2 | struct_param($struct5, param_1094) = true) {
+	$int0 = ^max_32bit_int;
+	return($int1, $int2, $int3, $int0, 0);
+}
+return($int9, $int2, $int3, $int0, $int1);
