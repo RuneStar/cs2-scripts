@@ -1,0 +1,27 @@
+// 366
+[proc,script366](component $component0, int $int1)
+cc_deleteall($component0);
+def_int $int2 = ~script368;
+def_int $int3 = ~script367;
+def_int $width4 = if_getwidth($component0);
+if ($int1 <= $int3) {
+	$int1 = 0;
+} else if ($int1 >= $int2) {
+	$int1 = $width4;
+} else {
+	$int2 = calc($int2 - $int3);
+	$int1 = calc($int1 - $int3);
+	$int1 = ~minmax(1, calc($width4 - 1), scale($width4, $int2, $int1));
+}
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(calc($width4 - $int1), 0, ^setsize_abs, ^setsize_minus);
+cc_setcolour(0x3366ff);
+cc_setfill(true);
+cc_settrans(110);
+cc_create($component0, ^iftype_rectangle, 1);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize($int1, 0, ^setsize_abs, ^setsize_minus);
+cc_setcolour(0xff3232);
+cc_setfill(true);
+cc_settrans(110);

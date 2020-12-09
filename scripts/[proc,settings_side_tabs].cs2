@@ -1,13 +1,19 @@
 // 3910
 [proc,settings_side_tabs]
-if_setop(1, "Controls", interface_116:59);
-if_setop(1, "Audio", interface_116:64);
-if_setonop("settings_side_switch_tab(0)", interface_116:59);
-if_setonop("settings_side_switch_tab(1)", interface_116:64);
+if_setop(1, "Controls", interface_116:65);
+if_setop(1, "Audio", interface_116:70);
+if_setop(1, "Display", interface_116:71);
+if_setonop("settings_side_switch_tab(0)", interface_116:65);
+if_setonop("settings_side_switch_tab(1)", interface_116:70);
+if_setonop("settings_side_switch_tab(2)", interface_116:71);
 if (~on_mobile = true) {
+	if_setgraphic("graphic_2933", interface_116:103);
 	return;
 }
-if_setonmouserepeat("settings_side_tab_highlight(interface_116:60, interface_116:61, interface_116:62, 0)", interface_116:59);
-if_setonmouserepeat("settings_side_tab_highlight(interface_116:65, interface_116:66, interface_116:67, 1)", interface_116:64);
-if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:60, interface_116:61, interface_116:62, 0)", interface_116:59);
-if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:65, interface_116:66, interface_116:67, 1)", interface_116:64);
+if_setgraphic("graphic_2932", interface_116:103);
+if_setonmouserepeat("settings_side_tab_highlight(interface_116:66, interface_116:67, interface_116:68, 0)", interface_116:65);
+if_setonmouserepeat("settings_side_tab_highlight(interface_116:72, interface_116:73, interface_116:74, 1)", interface_116:70);
+if_setonmouserepeat("settings_side_tab_highlight(interface_116:100, interface_116:101, interface_116:102, 2)", interface_116:71);
+if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:66, interface_116:67, interface_116:68, 0)", interface_116:65);
+if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:72, interface_116:73, interface_116:74, 1)", interface_116:70);
+if_setonmouseleave("settings_side_tab_highlight_reset(interface_116:100, interface_116:101, interface_116:102, 2)", interface_116:71);

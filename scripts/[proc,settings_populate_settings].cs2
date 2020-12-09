@@ -6,7 +6,7 @@ cc_deleteall($component14);
 if_setsize(0, 0, ^setsize_abs, ^setsize_abs, $component15);
 if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component15);
 if ($int3 = 1) {
-	if_setonclick(null, $component10);
+	if_setonop(null, $component10);
 	if_sethide(true, $component13);
 	cc_deleteall($component12);
 	cc_deleteall($component11);
@@ -39,7 +39,7 @@ if ($int35 = 1) {
 		cc_setsize(20, 20, ^setsize_minus, ^setsize_minus);
 		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 		if (~on_mobile = false) {
-			cc_settext("<br><br>To search for a setting, type what setting you are looking for.<br>The menu will update based on what you have typed into the search bar.<br><br>You can press the DEL key to clear your current search search text.<br><br>To cancel the search, select one of the settings tabs.");
+			cc_settext("<br><br>To search for a setting, type what setting you are looking for.<br>The menu will update based on what you have typed into the search bar.<br><br>You can press the DEL key to clear your current search text.<br><br>To cancel the search, select one of the settings tabs.");
 		} else {
 			cc_settext("<br><br>To search for a setting, type what setting you are looking for.<br>The menu will update based on what you have input into the search bar.<br><br>To cancel the search, select one of the settings tabs.");
 		}

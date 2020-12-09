@@ -1,0 +1,7 @@
+// 439
+[clientscript,script439](int $int0, int $int1, component $component2, component $component3, int $int4, component $component5)
+~settings_side_op_sound;
+~deltooltip_action($component5);
+~settings_set_slider($int0, $int1);
+def_int $int6 = ~settings_get_slider($int0);
+~script3941($int6, $component2, $component3, $int4);

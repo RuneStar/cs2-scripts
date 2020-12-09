@@ -1,0 +1,12 @@
+// 373
+[proc,script373](component $component0, int $int1)
+def_int $int2 = ~script374;
+def_int $height3 = if_getheight(if_getlayer($component0));
+if ($int1 <= 0) {
+	$int1 = 0;
+} else if ($int1 >= $int2) {
+	$int1 = $height3;
+} else {
+	$int1 = ~minmax(1, $height3, scale($height3, $int2, $int1));
+}
+if_setsize(0, $int1, ^setsize_minus, ^setsize_abs, $component0);

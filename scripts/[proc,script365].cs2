@@ -1,0 +1,18 @@
+// 365
+[proc,script365](component $component0, int $int1)
+cc_deleteall($component0);
+if ($int1 ! 1 & $int1 ! 2) {
+	~stonepanel(38, $component0, 0);
+	if_setontimer(null, $component0);
+	return;
+}
+if (calc(clientclock % 20) < 10) {
+	~stonepanel(38, $component0, 0);
+} else if ($int1 = 1) {
+	~script356(38, $component0, 0);
+} else if ($int1 = 2) {
+	~script358(38, $component0, 0);
+} else {
+	~stonepanel(38, $component0, 0);
+}
+if_setontimer("script364($component0, $int1)", $component0);

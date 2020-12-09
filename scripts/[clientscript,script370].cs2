@@ -1,0 +1,4 @@
+// 370
+[clientscript,script370](int $int0)
+$int0 = calc(clientclock + $int0 * 30);
+if_setontimer("script371($int0)", interface_375:24);

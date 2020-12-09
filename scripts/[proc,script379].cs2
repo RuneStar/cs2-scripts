@@ -1,0 +1,16 @@
+// 379
+[proc,script379](obj $obj0, obj $obj1, obj $obj2, int $index3, int $index4)(obj, obj, obj)
+def_obj $objarray0(3);
+$objarray0(0) = $obj0;
+$objarray0(1) = $obj1;
+$objarray0(2) = $obj2;
+if ($objarray0($index4) = $objarray0($index3)) {
+	return($obj0, $obj1, $obj2);
+}
+def_obj $obj5 = $objarray0($index3);
+$objarray0($index3) = $objarray0($index4);
+$objarray0($index4) = $obj5;
+$obj0 = $objarray0(0);
+$obj1 = $objarray0(1);
+$obj2 = $objarray0(2);
+return($obj0, $obj1, $obj2);

@@ -1,0 +1,61 @@
+// 371
+[clientscript,script371](int $int0)
+def_component $component1 = interface_375:24;
+$int0 = calc($int0 - clientclock);
+if ($int0 <= 0) {
+	if_settext("0:00", $component1);
+	if_setcolour(0xffa53d, $component1);
+	if_setontimer(null, interface_375:24);
+	return;
+}
+def_int $int2 = calc($int0 / 50);
+def_int $int3 = scale(60, 100, ~script372);
+$int2 = ~minmax(0, $int3, $int2);
+def_int $int4 = calc($int2 / 60);
+def_int $int5 = calc($int2 % 60);
+def_string $text0 = "<tostring($int4)>:<tostring($int5)>";
+if ($int5 < 10) {
+	$text0 = "<tostring($int4)>:0<tostring($int5)>";
+}
+if_settext($text0, $component1);
+if (calc(clientclock % 20) < 10 & $int2 <= 10) {
+	if_setcolour(0xfc0000, $component1);
+} else {
+	if_setcolour(0xffa53d, $component1);
+}
+if (calc($int0 % 50) ! 0) {
+	return;
+}
+if ($int2 = 1201 & $int3 >= 1200) {
+	mes("Time remaining: 20:00");
+}
+if ($int2 = 1051 & $int3 >= 1050) {
+	mes("Time remaining: 17:30");
+}
+if ($int2 = 901 & $int3 >= 900) {
+	mes("Time remaining: 15:00");
+}
+if ($int2 = 751 & $int3 >= 750) {
+	mes("Time remaining: 12:30");
+}
+if ($int2 = 601 & $int3 >= 600) {
+	mes("Time remaining: 10:00");
+}
+if ($int2 = 451 & $int3 >= 450) {
+	mes("Time remaining: 7:30");
+}
+if ($int2 = 301 & $int3 >= 300) {
+	mes("Time remaining: 5:00");
+}
+if ($int2 = 151 & $int3 >= 150) {
+	mes("Time remaining: 2:30");
+}
+if ($int2 = 61 & $int3 >= 60) {
+	mes("Time remaining: 1:00");
+}
+if ($int2 = 31 & $int3 >= 30) {
+	mes("Time remaining: 0:30");
+}
+if ($int2 = 11 & $int3 >= 10) {
+	mes("Time remaining: 0:10");
+}

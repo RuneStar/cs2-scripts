@@ -1,0 +1,7 @@
+// 378
+[proc,script378](int $count0, int $int1, int $int2)(int)
+$int2 = random($count0);
+if ($int1 = $int2) {
+	$int2 = ~script378($count0, $int1, $int2);
+}
+return($int2);

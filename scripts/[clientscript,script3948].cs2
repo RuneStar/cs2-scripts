@@ -49,12 +49,6 @@ while ($int14 < $int15) {
 	}
 }
 if_sethide(false, $component1);
-if ($component1 ! $component8) {
-	if_sethide(true, $component8);
-}
-if ($component1 ! $component9) {
-	if_sethide(true, $component9);
-}
 def_int $int16 = calc($int13 * $int12);
 def_int $height17 = calc($int16 + 4);
 def_int $int18 = if_getx($component0);
@@ -86,3 +80,4 @@ if ($height17 > $height22) {
 }
 cc_deleteall($component10);
 ~scrollbar_vertical($component10, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setonclick("script3951($component6, $component11, $component4, $component5, $component8, $component9)", $component6);

@@ -3,12 +3,12 @@
 ~settings_op_sound(1);
 if (cc_find($component3, $comsubid1) = ^true) {
 	cc_settext($text0);
-	if ($int0 = 2) {
-		~settings_set_dropdown($int10, $count2);
-	} else {
-		~settings_set_keybind($int10, $count2);
-	}
 	if ($boolean12 = false) {
+		if ($int0 = 2) {
+			~settings_set_dropdown($int10, $count2);
+		} else {
+			~settings_set_keybind($int10, $count2);
+		}
 		cc_setontimer("setting_dropdown_synch(0, $comsubid1, $component3, $enum9, $int10, $int0)");
 	}
 }
@@ -20,5 +20,5 @@ cc_deleteall($component5);
 cc_deleteall($component6);
 cc_deleteall($component7);
 cc_deleteall($component8);
-if_setonclick(null, $component5);
+if_setonop(null, $component5);
 if_sethide(true, $component8);
