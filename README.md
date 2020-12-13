@@ -3640,7 +3640,7 @@
 [**3766**](scripts/[clientscript,friendschat_leavechat].cs2) `[clientscript,friendschat_leavechat]`  
 [**3767**](scripts/[clientscript,script3767].cs2)  
 [**3768**](scripts/[clientscript,script3768].cs2)  
-[**3769**](scripts/[proc,script3769].cs2)  
+[**3769**](scripts/[proc,on_steam].cs2) `[proc,on_steam]`  
 [**3770**](scripts/[clientscript,script3770].cs2)  
 [**3771**](scripts/[clientscript,script3771].cs2)  
 [**3772**](scripts/[clientscript,script3772].cs2)  

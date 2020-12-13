@@ -1,0 +1,6 @@
+// 3769
+[proc,on_steam]()(int)
+if (clienttype ! ^clienttype_steam) {
+	return(0);
+}
+return(1);
