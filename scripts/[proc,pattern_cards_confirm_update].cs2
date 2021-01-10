@@ -1,0 +1,44 @@
+// 345
+[proc,pattern_cards_confirm_update](component $component0)
+def_int $int1 = -1;
+def_int $int2 = -1;
+def_int $int3 = -1;
+def_int $int4 = 0;
+while ($int4 < 15) {
+	if (testbit(%varbit9756, $int4) = ^true) {
+		if ($int1 = -1) {
+			$int1 = $int4;
+		} else if ($int2 = -1) {
+			$int2 = $int4;
+		} else if ($int3 = -1) {
+			$int3 = $int4;
+		} else {
+			~clan_stonebutton_draw(true, "<col=9f9f9f>Too many cards!</col>", "p11_full", $component0);
+			if_setonmouserepeat(null, $component0);
+			if_setonmouseleave(null, $component0);
+			if_setonop(null, $component0);
+			if_setontimer(null, $component0);
+			if_clearops($component0);
+			return;
+		}
+	}
+	$int4 = calc($int4 + 1);
+}
+if ($int3 = -1) {
+	if ($int1 = -1) {
+		~clan_stonebutton_draw(true, "<col=9f9f9f>Select 3 more</col>", "p11_full", $component0);
+	} else if ($int2 = -1) {
+		~clan_stonebutton_draw(true, "<col=9f9f9f>Select 2 more</col>", "p11_full", $component0);
+	} else {
+		~clan_stonebutton_draw(true, "<col=9f9f9f>Select 1 more</col>", "p11_full", $component0);
+	}
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+	if_setonop(null, $component0);
+	if_setontimer(null, $component0);
+	if_clearops($component0);
+	return;
+}
+~clan_stonebutton_init("Confirm", $component0, "p12_full");
+if_setonop("pattern_cards_confirm_op(event_opindex, $component0)", $component0);
+if_setontimer(null, $component0);

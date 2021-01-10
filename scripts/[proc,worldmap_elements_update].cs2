@@ -208,7 +208,7 @@ switch_maparea (worldmap_getcurrentmap) {
 		$int5 = ~script1753(2_41_96_10_22, 1_41_96_10_22, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 		$int5 = ~script1753(2_41_96_44_22, 1_41_96_44_22, false, 6, $component0, $int1, $int2, $int3, $int4, $int5);
 }
-$int5 = ~worldmap_elements_marker(%varcint401, struct_317, $component0, $int1, $int2, $int3, $int4, $int5);
+$int5 = ~worldmap_elements_marker(%varcint401, gravestone_317, $component0, $int1, $int2, $int3, $int4, $int5);
 if (testbit(%varbit5640, 0) = ^false) {
-	$int5 = ~worldmap_elements_marker(%varcint188, struct_1, $component0, $int1, $int2, $int3, $int4, $int5);
+	$int5 = ~worldmap_elements_marker(%varcint188, your_position_1, $component0, $int1, $int2, $int3, $int4, $int5);
 }

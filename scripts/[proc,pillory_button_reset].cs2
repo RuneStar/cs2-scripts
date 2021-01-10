@@ -1,0 +1,7 @@
+// 3776
+[proc,pillory_button_reset](component $component0)
+cc_settrans(255);
+if_setonmouserepeat("cc_settrans(event_com, cc_getid, 245, null)", $component0);
+if_setonmouseleave("cc_settrans(event_com, cc_getid, 255, null)", $component0);
+if_setonop("pillory_button_op(event_opindex, event_com, cc_getid)", $component0);
+if_setontimer(null, $component0);

@@ -77,14 +77,14 @@ if ($boolean16 = true) {
 }
 if ($int19 = 1) {
 	if ($int15 = 1) {
-		cc_setgraphic("graphic_2848");
+		cc_setgraphic("toggle_box,1");
 	} else {
-		cc_setgraphic("graphic_2850");
+		cc_setgraphic("toggle_box,3");
 	}
 } else if ($int15 = 1) {
-	cc_setgraphic("graphic_2847");
+	cc_setgraphic("toggle_box,0");
 } else {
-	cc_setgraphic("graphic_2849");
+	cc_setgraphic("toggle_box,2");
 }
 $int2 = calc($int2 + 1);
 if ($boolean12 = false & $int11 = 0 & $int10 > 0) {

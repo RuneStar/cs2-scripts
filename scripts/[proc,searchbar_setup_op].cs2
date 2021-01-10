@@ -1,0 +1,27 @@
+// 3871
+[proc,searchbar_setup_op](component $component0, component $component1, component $component2, component $component3, int $int4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
+def_int $int17 = 0;
+if (%varbit9638 = 0) {
+	if_setop(1, "Search", $component2);
+	if_setonop("searchbar_op($component0, $component1, $component2, $component3, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16)", $component2);
+	if_setonmouseover("searchbar_mouseover($component3)", $component3);
+	if_setonmouseleave("searchbar_mouseleave($component3)", $component3);
+	if_settext("*", $component3);
+	if_setcolour(0xff981f, $component3);
+	if ($int4 = 1) {
+		%varcstring417 = "";
+	}
+	if_setonkey(null, $component3);
+} else {
+	if (~on_mobile = false) {
+		if_setop(1, "", $component2);
+		if_setonop(null, $component2);
+	} else {
+		if_setop(1, "Show keyboard", $component2);
+		if_setonop("settings_show_keyboard", $component2);
+	}
+	if_setonmouseover(null, $component3);
+	if_setonmouseleave(null, $component3);
+	if_settext(append(%varcstring417, "<col=f4f4f4>*</col>"), $component3);
+	if_setonkey("searchbar_keypress(event_key, event_keychar, $component3, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16)", $component3);
+}

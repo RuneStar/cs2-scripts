@@ -1,0 +1,9 @@
+// 51
+[clientscript,pattern_next_setmodel](component $component0, model $model1)
+if_setmodel($model1, $component0);
+if_setmodelangle(0, 0, random(2048), random(2048), 0, calc(randominc(50) + scale(9, 10, enum(model, int, enum_1922, $model1))), $component0);
+if (random(2) = 0) {
+	if_setontimer("spinner(calc(randominc(25) + 10), calc(randominc(25) + 20), 0, event_com)", $component0);
+} else {
+	if_setontimer("spinner(calc(randominc(25) + 20), calc(randominc(25) + 10), 0, event_com)", $component0);
+}

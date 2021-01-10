@@ -58,7 +58,7 @@ switch_int ($int24) {
 		if ($int3 > 0) {
 			$int5 = calc($int5 + 10);
 		}
-		$int5, $int2, $int3 = ~script3868($struct0, $component9, $component8, $int5, $int2, $int3, $int7);
+		$int5, $int2, $int3 = ~header_create($struct0, $component9, $component8, $int5, $int2, $int3, $int7);
 	case 0 :
 		$int5, $int6, $int2, $int3 = ~settings_create_toggle($int5, $int6, $int2, $int3, $int7, $struct0, $component8, $component9, $component23);
 	case 2 :

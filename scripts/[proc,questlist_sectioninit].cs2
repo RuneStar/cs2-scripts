@@ -19,7 +19,7 @@ while ($count9 < $count2) {
 	cc_settextfont(p11_full);
 	cc_settextshadow(true);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-	$text1 = ~script3742(enum(int, struct, $enum1, $count9));
+	$text1 = ~get_quest_name(enum(int, struct, $enum1, $count9));
 	cc_settext($text1);
 	cc_setopbase("<col=ff9040><$text1></col>");
 	$intarray0($count9) = calc($int6 * $int7 + $count9);

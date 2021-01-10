@@ -1,6 +1,6 @@
 // 3919
 [proc,settings_side_accept_aid](component $component0, component $component1)
 if_setonop("settings_accept_aid_op($component0, $component1)", $component0);
-if_setonvartransmit("script3920($component0, $component1){var427, var499}", $component0);
+if_setonvartransmit("settings_side_accept_aid_resynch($component0, $component1){var427, var499}", $component0);
 if_setonmouseleave("deltooltip($component1)", $component0);
-~script3922($component0, $component1);
+~settings_side_accept_aid_create($component0, $component1);

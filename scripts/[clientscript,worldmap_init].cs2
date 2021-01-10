@@ -172,7 +172,7 @@ cc_create($component10, ^iftype_graphic, $int25);
 $int25 = calc($int25 + 1);
 cc_setsize(23, 23, ^setsize_abs, ^setsize_abs);
 cc_setposition(-2, calc($int26 - 2), ^setpos_abs_left, ^setpos_abs_top);
-cc_setgraphic(struct_param(struct_1, param_459));
+cc_setgraphic(struct_param(your_position_1, param_459));
 $int26 = calc(21 * 1);
 cc_create($component10, ^iftype_rectangle, $int25);
 $int25 = calc($int25 + 1);
@@ -317,13 +317,13 @@ cc_create($component16, ^iftype_graphic, $int25);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
-cc_setgraphic(struct_param(struct_1, param_459));
+cc_setgraphic(struct_param(your_position_1, param_459));
 $coord46 = movecoord($coord46, 0, 0, $int25);
 cc_create($component16, ^iftype_graphic, $int25);
 $int25 = calc($int25 + 1);
 cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 cc_sethide(true);
-cc_setgraphic(struct_param(struct_317, param_459));
+cc_setgraphic(struct_param(gravestone_317, param_459));
 if ($int28 >= 3) {
 	~quicksort_cctext(intarray0, $component16, 1, 37);
 }

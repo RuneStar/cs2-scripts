@@ -9,9 +9,9 @@ if (cc_find($component0, $int1) = ^true) {
 	}
 	if ($int6 = 1) {
 		if ($int7 = 1) {
-			cc_setgraphic("graphic_2848");
+			cc_setgraphic("toggle_box,1");
 		} else {
-			cc_setgraphic("graphic_2847");
+			cc_setgraphic("toggle_box,0");
 		}
 		if (~on_mobile = false & .cc_find($component0, calc($int1 - 2)) = ^true) {
 			.cc_setonmouseover("cc_settrans($component0, event_comsubid, 240, null)");
@@ -22,9 +22,9 @@ if (cc_find($component0, $int1) = ^true) {
 		}
 	} else {
 		if ($int7 = 1) {
-			cc_setgraphic("graphic_2850");
+			cc_setgraphic("toggle_box,3");
 		} else {
-			cc_setgraphic("graphic_2849");
+			cc_setgraphic("toggle_box,2");
 		}
 		if (~on_mobile = false & .cc_find($component0, calc($int1 - 2)) = ^true) {
 			.cc_setonmouseover(null);

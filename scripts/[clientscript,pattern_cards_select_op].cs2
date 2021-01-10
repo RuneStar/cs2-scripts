@@ -1,0 +1,14 @@
+// 116
+[clientscript,pattern_cards_select_op](int $opindex0, component $component1, int $comsubid2, int $index3)
+if ($opindex0 ! 1) {
+	return;
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	sound_synth(synth_3809, 1, 0);
+	if (testbit(%varbit9756, $index3) = ^true) {
+		%varbit9756 = clearbit(%varbit9756, $index3);
+	} else {
+		%varbit9756 = setbit(%varbit9756, $index3);
+	}
+	~pattern_cards_select_update($index3);
+}

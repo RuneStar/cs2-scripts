@@ -8,7 +8,7 @@ def_int $width7 = if_getwidth($component1);
 def_int $int8 = calc(if_getwidth($component1) / 3);
 def_int $count9 = 0;
 while ($count9 < enum_getoutputcount(enum_3553)) {
-	$int4 = ~script843($count9, enum_3553, enum_3540, $int5, $int6, $int8, 2, $component1, $component2, $component3, $int4, $int0);
+	$int4 = ~soul_wars_rewards_drawitem($count9, enum_3553, enum_3540, $int5, $int6, $int8, 2, $component1, $component2, $component3, $int4, $int0);
 	$count9 = calc($count9 + 1);
 	$int6 = calc($int6 + $int8);
 	if (calc($int6 + $int8) > $width7) {
@@ -16,4 +16,4 @@ while ($count9 < enum_getoutputcount(enum_3553)) {
 		$int5 = calc($int5 + 32 + 10);
 	}
 }
-~script847($int0, $component1, $component2, $component3, enum_3553, 2);
+~soul_wars_rewards_drawconfirm($int0, $component1, $component2, $component3, enum_3553, 2);

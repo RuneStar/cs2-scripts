@@ -1,0 +1,32 @@
+// 356
+[proc,stonepanel_blue](int $int0, component $component1, int $int2)(int)
+def_int $width3 = if_getwidth($component1);
+def_int $height4 = if_getheight($component1);
+def_int $x5 = calc($width3 - 32);
+def_int $y6 = calc($height4 - 32);
+~create_graphic($component1, $int2, "v2_borders_slim,22", 16, -13, ^setpos_abs_left, ^setpos_abs_top, $x5, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,24", 16, calc($height4 - 20), ^setpos_abs_left, ^setpos_abs_top, $x5, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,23", -14, 16, ^setpos_abs_left, ^setpos_abs_top, 32, $y6, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,25", calc($width3 - 20), 16, ^setpos_abs_left, ^setpos_abs_top, 32, $y6, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,26", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,27", $x5, 0, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,28", 0, $y6, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,29", $x5, $y6, ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+if ($int0 < 6) {
+	return($int2);
+}
+~create_graphic($component1, $int2, "v2_borders_slim,30", 0, calc($int0 - 20), ^setpos_abs_left, ^setpos_abs_top, $width3, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,31", 0, calc($int0 - 18), ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+~create_graphic($component1, $int2, "v2_borders_slim,32", $x5, calc($int0 - 18), ^setpos_abs_left, ^setpos_abs_top, 32, 32, ^setsize_abs, ^setsize_abs);
+$int2 = calc($int2 + 1);
+return($int2);

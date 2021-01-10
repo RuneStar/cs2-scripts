@@ -1,0 +1,16 @@
+// 3701
+[proc,league_setup_display_hoveroff](component $component0, int $colour1)
+if (cc_find($component0, 0) = ^true) {
+	cc_settrans(0);
+	if (~on_mobile = false) {
+		cc_setonmouseover("league_setup_display_hover(true, $component0, $colour1)");
+		cc_setonmouseleave("league_setup_display_hover(false, $component0, $colour1)");
+	}
+}
+if (cc_find($component0, 3) = ^true) {
+	cc_settrans(0);
+	cc_setgraphic("scrollbar_v2,1");
+}
+if (cc_find($component0, 4) = ^true) {
+	cc_setcolour($colour1);
+}

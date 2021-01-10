@@ -31,7 +31,7 @@ while ($size11 < $size13) {
 		$int16 = 0;
 		if ($namedobj19 ! null & $int17 = 1) {
 			$int20 = enum(namedobj, int, enum_3545, $namedobj19);
-			$int12 = ~script843($int20, enum_3544, enum_3543, $height9, $int8, $int7, 1, $component1, $component2, $component3, $int12, $int0);
+			$int12 = ~soul_wars_rewards_drawitem($int20, enum_3544, enum_3543, $height9, $int8, $int7, 1, $component1, $component2, $component3, $int12, $int0);
 			$int8 = calc($int8 + $int7);
 			if (calc($int8 + $int7) > $width5) {
 				$int8 = 0;
@@ -64,4 +64,4 @@ if ($height9 >= if_getheight($component1)) {
 if ($int14 > 0) {
 	~scrollbar_vertical($component4, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 }
-~script847($int0, $component1, $component2, $component3, enum_3544, 1);
+~soul_wars_rewards_drawconfirm($int0, $component1, $component2, $component3, enum_3544, 1);

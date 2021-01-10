@@ -1,0 +1,10 @@
+// 3897
+[clientscript,settings_zoom_slider_dragcomplete](component $component0, int $comsubid1, int $int2, int $y3, int $int4)
+~settings_side_op_sound;
+if (%varbit4606 ! 0) {
+	return;
+}
+~settings_zoom_position_slider($component0, $comsubid1, $int2, $y3, $int4);
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setontimer("settings_zoom_position_timer(%varcint73, %varcint74, $component0, $comsubid1, $int2, $y3, $int4)");
+}

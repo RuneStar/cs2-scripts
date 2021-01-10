@@ -1,7 +1,7 @@
 // 3212
 [clientscript,league_task_filter_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $component4, component $component5, int $colour6)
 sound_synth(synth_2266, 1, 0);
-~script3702($component2, $colour6);
+~league_setup_display_hoverdisable($component2, $colour6);
 if_sethide(false, $component4);
 if_setonclick("league_task_filter_close(1, -1, $enum0, $component2, $comsubid3, $component4, $colour6)", $component4);
 def_int $int7 = if_getx($component2);
@@ -46,8 +46,8 @@ while ($int15 < $int10) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setop(1, "Select");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("script3703(true, event_com, event_comsubid, .cc_getid, $colour6)");
-		cc_setonmouseleave("script3703(false, event_com, event_comsubid, .cc_getid, $colour6)");
+		cc_setonmouserepeat("league_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $colour6)");
+		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $colour6)");
 	}
 	cc_setonop("league_task_filter_close(event_opindex, $int15, $enum0, $component2, $comsubid3, $component4, $colour6)");
 	cc_settext(enum(int, string, $enum0, $int15));

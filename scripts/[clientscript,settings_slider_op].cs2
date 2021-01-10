@@ -1,6 +1,6 @@
 // 3861
 [clientscript,settings_slider_op](struct $struct0, int $int1, int $int2, int $int3, int $int4, component $component5, int $comsubid6, int $y7, int $int8, int $int9, component $component10, int $comsubid11, boolean $boolean12)
-if (~script3956($struct0) = 0) {
+if (~settings_op_checker($struct0) = 0) {
 	return;
 }
 ~settings_set_slider($int1, $int2);

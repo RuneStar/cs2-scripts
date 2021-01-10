@@ -1,8 +1,0 @@
-// 347
-[clientscript,script347](int $clock0, component $component1)
-if (clientclock < $clock0) {
-	return;
-}
-if_setontimer(null, $component1);
-~clan_stonebutton_init("Confirm", $component1, "p12_full");
-if_setonop("script346(event_opindex, event_com)", $component1);

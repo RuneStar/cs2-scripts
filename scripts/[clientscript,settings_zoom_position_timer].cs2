@@ -1,0 +1,9 @@
+// 3894
+[clientscript,settings_zoom_position_timer](int $int0, int $int1, component $component2, int $comsubid3, int $int4, int $y5, int $int6)
+if (%varcint73 = $int0 & %varcint74 = $int1) {
+	return;
+}
+~settings_zoom_position_slider($component2, $comsubid3, $int4, $y5, $int6);
+if (cc_find($component2, $comsubid3) = ^true) {
+	cc_setontimer("settings_zoom_position_timer(%varcint73, %varcint74, $component2, $comsubid3, $int4, $y5, $int6)");
+}

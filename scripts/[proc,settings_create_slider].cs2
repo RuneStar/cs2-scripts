@@ -69,17 +69,17 @@ while ($int29 < 19) {
 	cc_create($component8, ^iftype_graphic, $int2);
 	$int2 = calc(1 + $int2);
 	if ($int29 = 0) {
-		cc_setgraphic("graphic_2852");
+		cc_setgraphic("settings_slider,0");
 	} else if ($int29 = 1) {
-		cc_setgraphic("graphic_2853");
+		cc_setgraphic("settings_slider,1");
 		$intarray0(0) = $int30;
 	} else if ($int29 = 17) {
-		cc_setgraphic("graphic_2856");
+		cc_setgraphic("settings_slider,4");
 		$intarray0(calc($int19 - 1)) = $int30;
 	} else if ($int29 = 18) {
-		cc_setgraphic("graphic_2857");
+		cc_setgraphic("settings_slider,5");
 	} else {
-		cc_setgraphic("graphic_2855");
+		cc_setgraphic("settings_slider,3");
 	}
 	cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int30, $int32, ^setpos_abs_left, ^setpos_abs_top);
@@ -95,7 +95,7 @@ while ($int29 < $int19) {
 	if ($int29 > 0 & $int29 < calc($int19 - 1)) {
 		cc_create($component8, ^iftype_graphic, $int2);
 		$int2 = calc($int2 + 1);
-		cc_setgraphic("graphic_2863");
+		cc_setgraphic("settings_slider,11");
 		cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 		$int30 = calc($int33 + scale($int29, $int19 - 1, $int35 - 16));
 		cc_setposition($int30, $int32, ^setpos_abs_left, ^setpos_abs_top);
@@ -109,12 +109,12 @@ cc_create($component7, ^iftype_graphic, $int3);
 $int3 = calc($int3 + 1);
 if ($int23 = 1) {
 	if ($boolean37 = true) {
-		cc_setgraphic("graphic_2860");
+		cc_setgraphic("settings_slider,8");
 	} else {
-		cc_setgraphic("graphic_2858");
+		cc_setgraphic("settings_slider,6");
 	}
 } else {
-	cc_setgraphic("graphic_2859");
+	cc_setgraphic("settings_slider,7");
 }
 cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
 def_int $int38 = 0;
@@ -135,7 +135,7 @@ if ($boolean37 = true) {
 	cc_setdragdeadzone(struct_param($struct6, param_1109));
 	cc_setdragdeadtime(struct_param($struct6, param_1110));
 	~settings_slider_choose_ondrag($int21, $component7, calc($int3 - 1), $int35, $int32, $int33);
-	~script3887($int21, $component7, calc($int3 - 1), $int35, $int32, $int33);
+	~settings_slider_choose_ondragcomplete($int21, $component7, calc($int3 - 1), $int35, $int32, $int33);
 }
 $int29 = 0;
 $int30 = $int33;

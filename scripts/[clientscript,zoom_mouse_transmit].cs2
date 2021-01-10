@@ -1,0 +1,14 @@
+// 3942
+[clientscript,zoom_mouse_transmit](component $component0, component $component1, component $component2)
+%varcint2 = 0;
+def_string $string0 = "<~text_device("Click", "Tap")> here to enable zooming using <~text_device("the mouse scroll wheel", "the pinch gesture")>.";
+if (%varbit6357 = 0) {
+	if_sethide(true, $component0);
+	if_setop(1, "Disable", $component1);
+	$string0 = "<~text_device("Click", "Tap")> here to disable zooming using <~text_device("the mouse scroll wheel", "the pinch gesture")>.";
+} else if (%varbit6357 = 1) {
+	if_sethide(false, $component0);
+	if_setop(1, "Enable", $component1);
+}
+if_setonmouserepeat("tooltip_mouserepeat($component1, -1, $component2, $string0, 25, 190)", $component1);
+if_setonmouseleave("deltooltip($component2)", $component1);

@@ -29,7 +29,7 @@ if (stat_base($stat0) < 30) {
 	}
 	cc_settext("<enum(stat, string, enum_680, $stat0)> - <tostring(calc(~script575($stat0) / 10))> XP per Token");
 }
-$int10 = ~script538($stat0, $y1, $int2, 56, $int4, $component7, $component8, $component9, $int10, $int11);
-$int10 = ~script538($stat0, $y1, calc($int2 + 56), 69, $int5, $component7, $component8, $component9, $int10, $int11);
-$int10 = ~script538($stat0, $y1, calc($int2 + 125), calc($int12 - 125), $int6, $component7, $component8, $component9, $int10, $int11);
+$int10 = ~soul_wars_rewards_statbuttondraw($stat0, $y1, $int2, 56, $int4, $component7, $component8, $component9, $int10, $int11);
+$int10 = ~soul_wars_rewards_statbuttondraw($stat0, $y1, calc($int2 + 56), 69, $int5, $component7, $component8, $component9, $int10, $int11);
+$int10 = ~soul_wars_rewards_statbuttondraw($stat0, $y1, calc($int2 + 125), calc($int12 - 125), $int6, $component7, $component8, $component9, $int10, $int11);
 return($int10);

@@ -1,0 +1,10 @@
+// 3803
+[proc,macro_mime_emotes_buttontext](component $component0, string $text0, int $comsubid1)
+cc_create($component0, ^iftype_text, $comsubid1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0x403020);
+cc_settextfont(b12_full);
+cc_settextshadow(false);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($text0);

@@ -1,0 +1,5 @@
+// 3778
+[clientscript,pillory_button_reset](int $clock0, component $component1, int $comsubid2)
+if (clientclock >= $clock0 & cc_find($component1, $comsubid2) = ^true) {
+	~pillory_button_reset($component1);
+}

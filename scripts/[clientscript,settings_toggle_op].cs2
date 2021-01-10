@@ -1,6 +1,6 @@
 // 3847
 [clientscript,settings_toggle_op](struct $struct0, int $int1, component $component2, int $comsubid3, boolean $boolean4, boolean $boolean5)
-if (~script3956($struct0) = 0) {
+if (~settings_op_checker($struct0) = 0) {
 	return;
 }
 ~settings_clicked_toggle($int1);
@@ -10,9 +10,9 @@ if ($boolean4 = true) {
 }
 if (cc_find($component2, $comsubid3) = ^true) {
 	if ($int6 = 1) {
-		cc_setgraphic("graphic_2848");
+		cc_setgraphic("toggle_box,1");
 	} else {
-		cc_setgraphic("graphic_2847");
+		cc_setgraphic("toggle_box,0");
 	}
 	if ($boolean5 = false) {
 		cc_setontimer("settings_toggle_synch(0, event_com, event_comsubid, $boolean4, $int6, $int1)");

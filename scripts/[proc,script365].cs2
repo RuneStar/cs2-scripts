@@ -9,9 +9,9 @@ if ($int1 ! 1 & $int1 ! 2) {
 if (calc(clientclock % 20) < 10) {
 	~stonepanel(38, $component0, 0);
 } else if ($int1 = 1) {
-	~script356(38, $component0, 0);
+	~stonepanel_blue(38, $component0, 0);
 } else if ($int1 = 2) {
-	~script358(38, $component0, 0);
+	~stonepanel_red(38, $component0, 0);
 } else {
 	~stonepanel(38, $component0, 0);
 }

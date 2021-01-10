@@ -1,0 +1,36 @@
+// 3799
+[clientscript,quiz_init](component $component0, model $model1, int $int2, model $model3, int $int4, model $model5, int $int6)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_model, 0);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(60, 60, ^setsize_abs, ^setsize_abs);
+cc_setmodel($model1);
+cc_setmodelangle(0, 0, random(2048), 0, random(2048), $int2);
+if (random(2) = 0) {
+	cc_setontimer("spinmodel(0, 0, calc(randominc(25) + 10), calc(randominc(25) + 20), 0, $component0, 0)");
+} else {
+	cc_setontimer("spinmodel(0, 0, calc(randominc(25) + 20), calc(randominc(25) + 10), 0, $component0, 0)");
+}
+cc_setop(1, "Select");
+cc_create($component0, ^iftype_model, 1);
+cc_setposition(175, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(60, 60, ^setsize_abs, ^setsize_abs);
+cc_setmodel($model3);
+cc_setmodelangle(0, 0, random(2048), 0, random(2048), $int4);
+if (random(2) = 0) {
+	cc_setontimer("spinmodel(0, 0, calc(randominc(25) + 10), calc(randominc(25) + 20), 0, $component0, 1)");
+} else {
+	cc_setontimer("spinmodel(0, 0, calc(randominc(25) + 20), calc(randominc(25) + 10), 0, $component0, 1)");
+}
+cc_setop(1, "Select");
+cc_create($component0, ^iftype_model, 2);
+cc_setposition(350, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(60, 60, ^setsize_abs, ^setsize_abs);
+cc_setmodel($model5);
+cc_setmodelangle(0, 0, random(2048), 0, random(2048), $int6);
+if (random(2) = 0) {
+	cc_setontimer("spinmodel(0, 0, calc(randominc(25) + 10), calc(randominc(25) + 20), 0, $component0, 2)");
+} else {
+	cc_setontimer("spinmodel(0, 0, calc(randominc(25) + 20), calc(randominc(25) + 10), 0, $component0, 2)");
+}
+cc_setop(1, "Select");

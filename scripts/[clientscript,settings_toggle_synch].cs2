@@ -11,9 +11,9 @@ if (cc_find($component1, $comsubid2) = ^true) {
 			$int6 = calc(1 - $int6);
 		}
 		if ($int6 = 1) {
-			cc_setgraphic("graphic_2848");
+			cc_setgraphic("toggle_box,1");
 		} else {
-			cc_setgraphic("graphic_2847");
+			cc_setgraphic("toggle_box,0");
 		}
 		cc_setontimer(null);
 	}

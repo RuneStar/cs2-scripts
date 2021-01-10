@@ -1,0 +1,33 @@
+// 2094
+[proc,ironman_modebutton_init](component $component0, int $int1, string $op0, string $string1, component $component2, component $component3, component $component4, component $component5)
+cc_deleteall($component0);
+def_int $int6 = 0;
+.cc_create($component0, ^iftype_rectangle, $int6);
+def_int $int7 = $int6;
+$int6 = calc($int6 + 1);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setfill(true);
+.cc_setcolour(^white);
+$int6 = ~thinbox($component0, $int6);
+cc_create($component0, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize(30, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(5, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+if (if_getheight($component0) < 30) {
+	cc_settext("<col=ffffff><$op0></col> - <$string1>");
+} else {
+	cc_settext("<col=ffffff><$op0></col><br><$string1>");
+}
+cc_create($component0, ^iftype_graphic, $int6);
+def_int $int8 = $int6;
+$int6 = calc($int6 + 1);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_centre);
+~ironman_modebutton_redraw($component0, $int7, $int8, $int1, $component2, $component3, $component4, $component5);
+if_setonvartransmit("ironman_modebutton_redraw($component0, $int7, $int8, $int1, $component2, $component3, $component4, $component5){var499, var281}", $component0);
+if_setop(1, $op0, $component0);

@@ -1,0 +1,45 @@
+// 348
+[clientscript,poh_menu_init](component $component0, component $component1)
+cc_deleteall($component0);
+cc_deleteall($component1);
+def_int $count2 = enum_getoutputcount(enum_3526);
+def_int $count3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $height6 = 0;
+while ($count3 < $count2) {
+	cc_create($component0, ^iftype_rectangle, $int4);
+	cc_setsize(214, 70, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int5, $height6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(0x333300);
+	cc_setop(1, "Select");
+	cc_create($component0, ^iftype_model, calc($int4 + 1));
+	cc_setposition(calc($int5 + 10), calc($height6 + 25), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(66, 66, ^setsize_abs, ^setsize_abs);
+	cc_sethide(false);
+	cc_setmodel(enum(int, model, enum_3525, $count3));
+	~script349($count3);
+	cc_create($component0, ^iftype_text, calc($int4 + 2));
+	cc_settext(enum(int, string, enum_3526, $count3));
+	cc_setposition(calc($int5 + 80), $height6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(154, 66, ^setsize_abs, ^setsize_abs);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_setcolour(0xccccff);
+	if ($int5 = 0) {
+		$int5 = 216;
+	} else {
+		$int5 = 0;
+		$height6 = calc($height6 + 72);
+	}
+	$count3 = calc($count3 + 1);
+	$int4 = calc($int4 + 3);
+}
+if_setscrollpos(0, 0, $component0);
+if ($height6 > if_getheight($component0)) {
+	if_setscrollsize(0, $height6, $component0);
+} else {
+	if_setscrollsize(0, 0, $component0);
+}
+~scrollbar_vertical($component1, $component0, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

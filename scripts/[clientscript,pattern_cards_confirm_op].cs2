@@ -1,0 +1,11 @@
+// 346
+[clientscript,pattern_cards_confirm_op](int $opindex0, component $component1)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+~clan_stonebutton_draw(true, "<col=ffffff>Confirm</col>", "p12_full", $component1);
+if_setonmouserepeat(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setonop(null, $component1);
+if_setontimer("pattern_cards_confirm_reset(calc(clientclock + 40), event_com)", $component1);

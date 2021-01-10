@@ -1,0 +1,7 @@
+// 120
+[proc,pattern_cards_select_update](int $index0)
+if (testbit(%varbit9756, $index0) = ^true) {
+	cc_sethide(false);
+} else {
+	cc_sethide(true);
+}

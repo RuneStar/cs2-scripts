@@ -1,0 +1,16 @@
+// 3802
+[proc,macro_mime_emotes_drawbutton](component $component0, string $string0, boolean $boolean1)
+cc_deleteall($component0);
+def_int $comsubid2 = 0;
+if ($boolean1 = true) {
+	$comsubid2 = ~beige_stone_button_in($component0, 0);
+} else {
+	$comsubid2 = ~beige_stone_button_out($component0, 0);
+}
+~macro_mime_emotes_buttontext($component0, $string0, $comsubid2);
+if (~on_mobile = false) {
+	if_setonmouserepeat("macro_mime_emotes_drawbutton(event_com, $string0, true)", $component0);
+	if_setonmouseleave("macro_mime_emotes_drawbutton(event_com, $string0, false)", $component0);
+}
+if_setop(1, "Perform", $component0);
+if_setopbase("<col=ff9040><$string0></col>", $component0);

@@ -1,6 +1,6 @@
 // 3851
 [clientscript,setting_show_dropdown](int $int0, struct $struct1, component $component2, int $comsubid3, enum $enum4, int $width5, int $int6, int $x7, int $int8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, int $comsubid15, boolean $boolean16)
-if (~script3956($struct1) = 0) {
+if (~settings_op_checker($struct1) = 0) {
 	return;
 }
 cc_deleteall($component9);
