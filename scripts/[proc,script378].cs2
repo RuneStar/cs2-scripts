@@ -1,7 +1,33 @@
 // 378
-[proc,script378](int $count0, int $int1, int $int2)(int)
-$int2 = random($count0);
-if ($int1 = $int2) {
-	$int2 = ~script378($count0, $int1, $int2);
+[proc,script378](int $clock0, component $component1, component $component2)
+def_int $int3 = calc(clientclock - $clock0);
+def_int $int4 = 0;
+def_int $int5 = calc($int3 % 90);
+if ($int5 = 0) {
+	sound_synth(synth_1413, 1, 0);
 }
-return($int2);
+switch_int (calc($int3 / 90 % 12)) {
+	case 1, 3, 5, 7, 9 :
+		$int4 = ~script379($int5, 90, 2048);
+		if_setmodelangle(0, 0, 512, $int4, 0, 400, $component1);
+		if_setmodelangle(0, 0, 512, $int4, 0, 400, $component2);
+	case 2 :
+		if_setmodelangle(0, 0, 512, ~script379($int5, 90, 4096), 0, 400, $component1);
+		if_setmodelangle(0, 0, 512, ~script379($int5, 90, 2048), 0, 400, $component2);
+	case 6 :
+		if_setmodelangle(0, 0, 512, ~script379($int5, 90, 2048), 0, 400, $component1);
+		if_setmodelangle(0, 0, 512, ~script379($int5, 90, 4096), 0, 400, $component2);
+	case 8 :
+		if_setmodelangle(0, 0, 512, ~script379($int5, 90, 6144), 0, 400, $component1);
+		if_setmodelangle(0, 0, 512, ~script379($int5, 90, 2048), 0, 400, $component2);
+	case 10 :
+		$int4 = ~script379($int5, 90, 2048);
+		if_setmodelangle(0, 0, 512, $int4, 0, 400, $component1);
+		if_setmodelangle(0, 0, 512, ~modulo(calc(2048 - $int4), 2048), 0, 400, $component2);
+	case 11 :
+		if_setmodelangle(0, 0, 512, ~modulo(calc(2048 - ~script379($int5, 90, 4096)), 2048), 0, 400, $component1);
+		if_setmodelangle(0, 0, 512, ~script379($int5, 90, 2048), 0, 400, $component2);
+	case default :
+		if_setmodelangle(0, 0, 512, ~script379($int5, 90, 2048), 0, 400, $component1);
+		if_setmodelangle(0, 0, 512, 0, 0, 400, $component2);
+}

@@ -1,0 +1,10 @@
+// 854
+[proc,script854](namedobj $namedobj0)(string)
+if ($namedobj0 = soul_cape_25344 | $namedobj0 = soul_cape_25346) {
+	if (stat_base(prayer) < 70) {
+		return("A Prayer level of at least 70 is required to purchase a Soul cape.");
+	}
+} else if ($namedobj0 = ectoplasmator_25340 & stat_base(prayer) < 40) {
+	return("A Prayer level of at least 40 is required to purchase an Ectoplasmator.");
+}
+return("");

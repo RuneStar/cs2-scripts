@@ -1,0 +1,17 @@
+// 857
+[proc,script857](int $int0, component $component1, int $int2, int $int3)(int, int)
+$int2, $int0 = calc($int2 + 8), calc($int0 * 2);
+cc_create($component1, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setposition(0, $int2, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize($int0, 1, ^setsize_minus, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_create($component1, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setposition(0, calc($int2 + 1), ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize($int0, 1, ^setsize_minus, ^setsize_abs);
+cc_setfill(true);
+cc_setcolour(^black);
+$int2 = calc($int2 + 8);
+return($int2, $int3);

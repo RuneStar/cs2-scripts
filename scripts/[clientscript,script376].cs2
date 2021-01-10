@@ -1,35 +1,5 @@
 // 376
-[clientscript,script376](int $index0)
-def_obj $obj1 = null;
-def_obj $obj2 = null;
-def_obj $obj3 = null;
-$obj1, $obj2, $obj3 = ~script377(enum_3546, enum_3547, $index0);
-def_int $int4 = enum(obj, int, enum_3548, $obj1);
-def_int $int5 = enum(obj, int, enum_3548, $obj2);
-def_int $int6 = enum(obj, int, enum_3548, $obj3);
-def_model $model7 = enum(obj, model, enum_3549, $obj1);
-def_model $model8 = enum(obj, model, enum_3549, $obj2);
-def_model $model9 = enum(obj, model, enum_3549, $obj3);
-def_component $component10 = interface_437:3;
-cc_deleteall($component10);
-cc_create($component10, ^iftype_model, 0);
-cc_setposition(68, 84, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(100, 100, ^setsize_abs, ^setsize_abs);
-cc_setmodel($model7);
-cc_setmodelangle(0, 0, 280, 0, 0, $int4);
-cc_setontimer("spinmodel(0, 0, 0, 5, 0, $component10, 0)");
-cc_setop(1, "Select");
-cc_create($component10, ^iftype_model, 1);
-cc_setposition(213, 84, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(100, 100, ^setsize_abs, ^setsize_abs);
-cc_setmodel($model8);
-cc_setmodelangle(0, 0, 280, 0, 0, $int5);
-cc_setontimer("spinmodel(0, 0, 0, 5, 0, $component10, 1)");
-cc_setop(1, "Select");
-cc_create($component10, ^iftype_model, 2);
-cc_setposition(358, 84, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(100, 100, ^setsize_abs, ^setsize_abs);
-cc_setmodel($model9);
-cc_setmodelangle(0, 0, 280, 0, 0, $int6);
-cc_setontimer("spinmodel(0, 0, 0, 5, 0, $component10, 2)");
-cc_setop(1, "Select");
+[clientscript,script376](component $component0, component $component1, component $component2)
+def_int $clock3 = clientclock;
+~script378($clock3, $component1, $component2);
+if_setontimer("script377($clock3, $component1, $component2)", $component0);

@@ -1,0 +1,52 @@
+// 1126
+[proc,script1126](struct $struct0, int $int1, int $int2)(string)
+switch_struct ($struct0) {
+	case struct_723 :
+		if ($int1 >= 20830) {
+			return("Dragon");
+		}
+		if ($int1 >= 10820) {
+			return("Rune");
+		}
+		if ($int1 >= 5270) {
+			return("Adamant");
+		}
+		if ($int1 >= 1770) {
+			return("Mithril");
+		}
+		if ($int1 >= 510) {
+			return("Steel");
+		}
+		if ($int1 >= 80) {
+			return("Iron");
+		}
+		if ($int1 >= 10) {
+			return("Bronze");
+		}
+		return("No rank");
+	case struct_1721 :
+		if ($int2 >= 56310) {
+			return("Dragon");
+		}
+		if ($int2 >= 35680) {
+			return("Rune");
+		}
+		if ($int2 >= 18720) {
+			return("Adamant");
+		}
+		if ($int2 >= 6480) {
+			return("Mithril");
+		}
+		if ($int2 >= 2000) {
+			return("Steel");
+		}
+		if ($int2 >= 510) {
+			return("Iron");
+		}
+		if ($int2 >= 100) {
+			return("Bronze");
+		}
+		return("-");
+	case default :
+		return("");
+}

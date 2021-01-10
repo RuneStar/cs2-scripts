@@ -1,0 +1,17 @@
+// 1129
+[proc,script1129](namedobj $namedobj0)(int)
+def_int $int1 = 0;
+def_int $int2 = 999999;
+$int1 = oc_param($namedobj0, param_916);
+$int2 = oc_param($namedobj0, param_917);
+switch_int ($int1) {
+	case 1 :
+		if ($int2 > %var2771) {
+			return(0);
+		}
+	case 2 :
+		if ($int2 > %var2772) {
+			return(0);
+		}
+}
+return(1);

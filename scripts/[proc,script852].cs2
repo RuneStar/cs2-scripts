@@ -1,0 +1,8 @@
+// 852
+[proc,script852](component $component0)
+def_string $string0 = ",";
+if ($component0 = interface_442:24) {
+	if_settext("Lifetime Zeal:<br> <col=ffffff><~tostring_spacer(%var2871, $string0)></col>", $component0);
+} else if ($component0 = interface_442:25) {
+	if_settext("Zeal Tokens:<br> <col=ffffff><~tostring_spacer(%var2876, $string0)></col>", $component0);
+}

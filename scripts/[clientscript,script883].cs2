@@ -1,0 +1,20 @@
+// 883
+[clientscript,script883](int $comsubid0, string $text0, string $string1, string $text2)
+if (cc_find(interface_676:11, $comsubid0) = ^true) {
+	if (string_length($string1) > 0) {
+		cc_settext($string1);
+		cc_settextfont(p11_full);
+		cc_setposition(cc_getx, calc(cc_gety - 3), ^setpos_abs_left, ^setpos_abs_top);
+	} else {
+		cc_settext($text0);
+	}
+}
+if (cc_find(interface_676:18, $comsubid0) = ^true) {
+	cc_settext($text2);
+}
+if (cc_find(interface_676:16, $comsubid0) = ^true) {
+	cc_setgraphic(struct_param(enum(int, struct, enum_2670, 2), param_1144));
+	if (string_length($string1) > 0) {
+		cc_setposition(0, calc(cc_gety - 5), ^setpos_abs_centre, ^setpos_abs_top);
+	}
+}

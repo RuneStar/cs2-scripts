@@ -1,0 +1,90 @@
+// 856
+[proc,script856](component $component0, component $component1, component $component2)
+cc_deleteall($component1);
+cc_deleteall($component0);
+def_int $int3 = 0;
+def_struct $struct4 = null;
+def_enum $enum5 = enum_2670;
+def_int $count6 = enum_getoutputcount($enum5);
+def_int $count7 = calc(0 + 1);
+def_int $int8 = 35;
+def_int $height9 = 0;
+def_int $int10 = 15;
+def_enum $enum11 = null;
+def_enum $enum12 = null;
+def_int $int13 = 1;
+def_string $string0 = ",";
+def_string $string1 = "";
+def_int $colour14 = ^white;
+cc_create($component0, ^iftype_text, $int3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 1, ^setpos_4, ^setpos_abs_top);
+cc_settext("League Top 100 Rankings");
+cc_settextfont(b12_full);
+cc_setcolour($colour14);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int3 = 0;
+while ($count7 <= $count6) {
+	$struct4 = enum(int, struct, $enum5, $count7);
+	$enum11 = struct_param($struct4, param_1145);
+	$enum12 = struct_param($struct4, param_1146);
+	$int13 = 1;
+	if ($enum11 ! null & $enum12 ! null) {
+		$height9, $int3 = ~script857(5, $component1, $height9, $int3);
+		cc_create($component1, ^iftype_text, $int3);
+		cc_settext(struct_param($struct4, param_858));
+		cc_settextfont(b12_full);
+		cc_settextshadow(true);
+		cc_setcolour($colour14);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_setsize(if_getwidth($component1), 13, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, $height9, ^setpos_abs_left, ^setpos_abs_top);
+		$height9 = calc($height9 + $int10);
+		$int3 = calc($int3 + 1);
+		$height9, $int3 = ~script857(5, $component1, $height9, $int3);
+		while ($int13 <= 100) {
+			cc_create($component1, ^iftype_text, $int3);
+			cc_settext("Rank <tostring($int13)>");
+			cc_settextfont(p12_full);
+			cc_settextshadow(true);
+			cc_setcolour($colour14);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+			cc_setsize(60, 13, ^setsize_abs, ^setsize_abs);
+			cc_setposition($int8, $height9, ^setpos_abs_left, ^setpos_abs_top);
+			$int8 = calc($int8 + 60);
+			$int3 = calc($int3 + 1);
+			cc_create($component1, ^iftype_text, $int3);
+			cc_settext("<~tostring_spacer(enum(int, int, $enum12, calc($int13 - 1)), $string0)> points");
+			cc_settextfont(p12_full);
+			cc_settextshadow(true);
+			cc_setcolour($colour14);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+			cc_setsize(95, 13, ^setsize_abs, ^setsize_abs);
+			cc_setposition($int8, $height9, ^setpos_abs_left, ^setpos_abs_top);
+			$int8 = calc($int8 + 95);
+			$int3 = calc($int3 + 1);
+			cc_create($component1, ^iftype_text, $int3);
+			cc_settext(enum(int, string, $enum11, calc($int13 - 1)));
+			cc_settextfont(p12_full);
+			cc_settextshadow(true);
+			cc_setcolour($colour14);
+			cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+			cc_setsize(calc(if_getwidth($component1) - $int8), 13, ^setsize_abs, ^setsize_abs);
+			cc_setposition($int8, $height9, ^setpos_abs_left, ^setpos_abs_top);
+			$int3 = calc($int3 + 1);
+			$height9 = calc($height9 + $int10);
+			$int8 = 35;
+			$int13 = calc($int13 + 1);
+		}
+	}
+	$count7 = calc($count7 + 1);
+}
+cc_deleteall($component2);
+if ($height9 > if_getheight($component1)) {
+	if_setscrollsize(0, $height9, $component1);
+} else {
+	if_setscrollsize(0, 0, $component1);
+}
+if_setscrollpos(0, 0, $component1);
+~scrollbar_vertical($component2, $component1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");

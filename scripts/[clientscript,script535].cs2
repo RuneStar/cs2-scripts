@@ -1,0 +1,39 @@
+// 535
+[clientscript,script535](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
+cc_deleteall($component12);
+if_sethide(true, interface_442:22);
+if_sethide(true, interface_442:21);
+if_sethide(true, interface_442:20);
+if_sethide(true, interface_442:14);
+if_sethide(true, interface_442:16);
+if_sethide(true, interface_442:18);
+~script3723(interface_442:4, 0, "Experience");
+~script3723(interface_442:5, 0, "Imbues");
+~script3723(interface_442:6, 0, "Other");
+if ($int0 = 0) {
+	~script536(-1, $component1, $component4, $component5);
+	if_sethide(false, interface_442:22);
+	if_sethide(false, interface_442:14);
+	~script3723(interface_442:4, 1, "Experience");
+	if_setonop("script535(1, interface_442:14, interface_442:16, interface_442:18, interface_442:22, interface_442:23, interface_442:21, interface_442:26, interface_442:20, interface_442:27, interface_442:24, interface_442:25, interface_442:17)", interface_442:5);
+	if_setonop("script535(2, interface_442:14, interface_442:16, interface_442:18, interface_442:22, interface_442:23, interface_442:21, interface_442:26, interface_442:20, interface_442:27, interface_442:24, interface_442:25, interface_442:17)", interface_442:6);
+} else if ($int0 = 1) {
+	~script675(-1, $component2, $component6, $component7, $component12);
+	if_sethide(false, interface_442:21);
+	if_sethide(false, interface_442:16);
+	~script3723(interface_442:5, 1, "Imbues");
+	if_setonop("script535(0, interface_442:14, interface_442:16, interface_442:18, interface_442:22, interface_442:23, interface_442:21, interface_442:26, interface_442:20, interface_442:27, interface_442:24, interface_442:25, interface_442:17)", interface_442:4);
+	if_setonop("script535(2, interface_442:14, interface_442:16, interface_442:18, interface_442:22, interface_442:23, interface_442:21, interface_442:26, interface_442:20, interface_442:27, interface_442:24, interface_442:25, interface_442:17)", interface_442:6);
+	if_setoninvtransmit("script674(-1, $component2, $component6, $component7, interface_442:17){inv}", $component2);
+} else if ($int0 = 2) {
+	~script842(-1, $component3, $component8, $component9);
+	if_sethide(false, interface_442:20);
+	if_sethide(false, interface_442:18);
+	~script3723(interface_442:6, 1, "Other");
+	if_setonop("script535(0, interface_442:14, interface_442:16, interface_442:18, interface_442:22, interface_442:23, interface_442:21, interface_442:26, interface_442:20, interface_442:27, interface_442:24, interface_442:25, interface_442:17)", interface_442:4);
+	if_setonop("script535(1, interface_442:14, interface_442:16, interface_442:18, interface_442:22, interface_442:23, interface_442:21, interface_442:26, interface_442:20, interface_442:27, interface_442:24, interface_442:25, interface_442:17)", interface_442:5);
+}
+~script852($component10);
+~script852($component11);
+if_setonvartransmit("script851($component10){var2871}", $component10);
+if_setonvartransmit("script851($component11){var2876}", $component11);

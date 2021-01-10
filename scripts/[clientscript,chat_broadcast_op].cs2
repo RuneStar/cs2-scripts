@@ -2,18 +2,36 @@
 [clientscript,chat_broadcast_op](int $opindex0, string $string0, int $int1)
 def_int $mesuid2 = -1;
 def_boolean $boolean3 = false;
+def_enum $enum4 = null;
+def_component $component5 = null;
 if ($opindex0 = 9) {
 	%varcint202 = clientclock;
 	$mesuid2 = ~script553;
 	~rebuildchatbox($mesuid2);
 	~rebuildpmbox($mesuid2);
 } else if (string_length($string0) > 0) {
-	$boolean3 = enum(int, boolean, enum_2761, $int1);
-	if (clienttype ! ^clienttype_ios) {
-		$boolean3 = false;
+	if (clienttype = ^clienttype_ios) {
+		$boolean3 = enum(int, boolean, enum_2761, $int1);
 	}
 	if ($boolean3 = false) {
-		if ($opindex0 = 6) {
+		if ($int1 = 25) {
+			if ($opindex0 = 6) {
+				$enum4 = ~toplevel_getcomponents;
+				if ($enum4 ! null) {
+					$component5 = enum(int, component, enum_1137, 8);
+					$component5 = enum(component, component, $enum4, $component5);
+					if ($component5 ! null & if_hassub($component5) = true) {
+						_2928(interface_109:54, -1, 1);
+					} else {
+						mes("You can't open the poll menu at the moment.");
+					}
+				} else {
+					mes("You can't open the poll menu at the moment.");
+				}
+			} else {
+				mes("This link attempts to open the poll menu.");
+			}
+		} else if ($opindex0 = 6) {
 			~openurl_raw($string0, true, true);
 		} else {
 			mes("Link destination: <col=ef1020><$string0></col>");

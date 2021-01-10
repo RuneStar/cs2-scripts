@@ -1,0 +1,7 @@
+// 531
+[proc,script531](int $int0, int $int1, int $int2)(int)
+$int2 = random($int0);
+if ($int1 = $int2) {
+	$int2 = ~script531($int0, $int1, $int2);
+}
+return($int2);

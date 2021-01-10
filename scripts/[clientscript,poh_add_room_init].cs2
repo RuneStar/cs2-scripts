@@ -2,7 +2,7 @@
 [clientscript,poh_add_room_init](component $component0, component $component1)
 cc_deleteall($component0);
 def_int $int2 = 0;
-while ($int2 <= 28) {
+while ($int2 <= 29) {
 	cc_create($component0, ^iftype_rectangle, $int2);
 	cc_sethide(true);
 	$int2 = calc($int2 + 1);
@@ -15,6 +15,7 @@ $height3 = ~poh_add_room_initbutton($height3, 4, "Dining room", 10);
 $height3 = ~poh_add_room_initbutton($height3, 12, "Workshop", 15);
 $height3 = ~poh_add_room_initbutton($height3, 5, "Bedroom", 20);
 $height3 = ~poh_add_room_initbutton($height3, 7, "Hall - Skill trophies", 25);
+$height3 = ~poh_add_room_initbutton($height3, 29, "League Hall", 27);
 $height3 = ~poh_add_room_initbutton($height3, 6, "Games room", 30);
 $height3 = ~poh_add_room_initbutton($height3, 22, "Combat room", 32);
 $height3 = ~poh_add_room_initbutton($height3, 9, "Hall - Quest trophies", 35);

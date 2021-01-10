@@ -1,7 +1,7 @@
 // 435
 [proc,grouping_rebuild]
 def_string $text0 = "";
-if (%varcint64 > 0 & %varcint64 <= 20) {
+if (%varcint64 > 0 & %varcint64 <= 21) {
 	$text0 = enum(int, string, enum_848, %varcint64);
 	if_settext($text0, interface_76:8);
 } else {

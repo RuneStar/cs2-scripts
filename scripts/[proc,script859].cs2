@@ -1,0 +1,16 @@
+// 859
+[proc,script859](enum $enum0)(string)
+def_int $int1 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+def_int $count2 = enum_getoutputcount($enum0);
+while ($int1 < $count2) {
+	$string1 = enum(int, string, $enum0, $int1);
+	if ($int1 = 0) {
+		$string0 = append($string0, $string1);
+	} else {
+		$string0 = append($string0, ", <$string1>");
+	}
+	$int1 = calc($int1 + 1);
+}
+return($string0);

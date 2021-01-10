@@ -1,0 +1,93 @@
+// 858
+[proc,script858](component $component0, int $int1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, int $int9)
+cc_deleteall($component5);
+cc_deleteall($component3);
+cc_deleteall($component6);
+cc_deleteall($component4);
+cc_deleteall($component2);
+~leagues_close_button($component8, false);
+~steelborder($component0, "League Firsts", 1);
+def_int $int10 = 0;
+def_int $count11 = 0;
+def_string $text0 = "-";
+def_string $string1 = "-";
+def_string $text2 = "-";
+def_enum $enum12 = null;
+def_int $height13 = 1;
+def_int $width14 = if_getwidth($component2);
+def_enum $enum15 = enum(int, enum, enum_3417, $int9);
+def_graphic $graphic16 = struct_param(enum(int, struct, enum_2670, $int9), param_1144);
+def_graphic $graphic17 = struct_param(enum(int, struct, enum_2670, $int9), param_1143);
+while ($count11 < enum_getoutputcount($enum15)) {
+	$text0 = struct_param(enum(int, struct, $enum15, $count11), param_1042);
+	$string1 = struct_param(enum(int, struct, $enum15, $count11), param_1043);
+	$text2 = struct_param(enum(int, struct, $enum15, $count11), param_1044);
+	$enum12 = struct_param(enum(int, struct, $enum15, $count11), param_1147);
+	cc_create($component2, ^iftype_rectangle, $int10);
+	cc_setsize($width14, 70, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $height13, ^setpos_abs_left, ^setpos_abs_top);
+	if (calc($count11 % 2) = 0) {
+		cc_setcolour(0xa9a9a9);
+	} else {
+		cc_setcolour(^white);
+	}
+	cc_setfill(true);
+	cc_settrans(235);
+	cc_create($component4, ^iftype_graphic, $int10);
+	if ($enum12 = null) {
+		cc_setposition(0, calc($height13 + 10), ^setpos_abs_centre, ^setpos_abs_top);
+	} else {
+		cc_setposition(0, calc($height13 + 5), ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	cc_setsize(30, 30, ^setsize_abs, ^setsize_abs);
+	if (compare($string1, "-") = 0 & $enum12 = null) {
+		cc_setgraphic($graphic17);
+	} else {
+		cc_setgraphic($graphic16);
+	}
+	cc_create($component3, ^iftype_text, $int10);
+	cc_settextfont(p12_full);
+	if ($enum12 = null) {
+		cc_setposition(0, calc($height13 + 39), ^setpos_abs_left, ^setpos_abs_top);
+	} else {
+		cc_setposition(0, calc($height13 + 36), ^setpos_abs_left, ^setpos_abs_top);
+	}
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	if ($enum12 = null) {
+		cc_settext($string1);
+	} else {
+		cc_settext(~script859($enum12));
+		cc_settextfont(p11_full);
+	}
+	cc_setsize(if_getwidth($component3), 30, ^setsize_abs, ^setsize_abs);
+	cc_create($component5, ^iftype_text, $int10);
+	cc_settext($text0);
+	cc_setposition(0, $height13, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_setsize(calc(if_getwidth($component5) - 10), 70, ^setsize_abs, ^setsize_abs);
+	cc_create($component6, ^iftype_text, $int10);
+	cc_settext($text2);
+	cc_setposition(0, $height13, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0xff981f);
+	cc_setsize(calc(if_getwidth($component6) - 10), 70, ^setsize_abs, ^setsize_abs);
+	$int10 = calc($int10 + 1);
+	$count11 = calc($count11 + 1);
+	$height13 = calc($height13 + 70);
+}
+cc_deleteall($component7);
+def_int $height18 = if_getheight($component2);
+if ($height13 > $height18) {
+	if_setscrollsize(0, $height13, $component2);
+} else {
+	if_setscrollsize(0, 0, $component2);
+}
+if_setscrollpos(0, 0, $component2);
+~scrollbar_vertical($component7, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
