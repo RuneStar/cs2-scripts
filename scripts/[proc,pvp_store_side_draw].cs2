@@ -1,39 +1,22 @@
 // 3367
 [proc,pvp_store_side_draw](component $component0)
-def_int $count1 = enum_getoutputcount(enum_2850);
-def_int $count2 = 0;
+def_int $int1 = 0;
+def_obj $obj2 = null;
 def_int $int3 = 0;
-def_obj $obj4 = null;
-def_int $int5 = 0;
-def_int $int6 = inv_size(inv);
-while ($int6 > 0) {
-	$int6 = calc($int6 - 1);
-	if (cc_find($component0, $int6) = ^true) {
+def_int $int4 = inv_size(inv);
+while ($int4 > 0) {
+	$int4 = calc($int4 - 1);
+	if (cc_find($component0, $int4) = ^true) {
 		cc_clearops;
 		cc_setontimer(null);
-		$obj4 = inv_getobj(inv, $int6);
-		if ($obj4 ! null) {
+		$obj2 = inv_getobj(inv, $int4);
+		if ($obj2 ! null) {
 			cc_sethide(false);
-			cc_setobject($obj4, inv_getnum(inv, $int6));
-			$int3, $count2 = 0, 0;
-			while ($count2 < $count1) {
-				if ($obj4 = enum(int, namedobj, enum_2850, $count2)) {
-					$int3, $count2 = 1, $count1;
-				}
-				$count2 = calc($count2 + 1);
-			}
-			if ($int3 = 1) {
-				cc_setop(1, "Value");
-				cc_setop(2, "Sell-1");
-				cc_setop(3, "Sell-All");
-				cc_settrans(0);
-				cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
-			} else {
-				cc_settrans(130);
-				cc_setonop(null);
-			}
+			cc_setobject($obj2, inv_getnum(inv, $int4));
+			cc_settrans(130);
+			cc_setonop(null);
 			cc_setop(10, "Examine");
-			cc_setopbase("<col=ff9040><oc_name($obj4)></col>");
+			cc_setopbase("<col=ff9040><oc_name($obj2)></col>");
 		} else {
 			cc_sethide(true);
 			cc_setobject(obj_6512, 1);

@@ -1,0 +1,52 @@
+// 1131
+[clientscript,script1131](int $int0)
+def_component $component1 = ship_journey:6;
+def_component $component2 = ship_journey:19;
+if_setmodel(war_ship_3065, $component1);
+def_string $text0 = "You Journey on the ship....";
+if_setmodelorthog(false, $component1);
+switch_int ($int0) {
+	case 1 :
+		if_setmodelanim(seq_632, $component1);
+		$text0 = "You sail to Entrana.";
+	case 2 :
+		if_setmodelanim(seq_633, $component1);
+		$text0 = "You sail to Port Sarim.";
+	case 3 :
+		if_setmodelanim(seq_630, $component1);
+		$text0 = "You sail to Crandor.";
+	case 4 :
+		if_setmodelanim(seq_634, $component1);
+		$text0 = "You sail to Karamja.";
+	case 5 :
+		if_setmodelanim(seq_635, $component1);
+		$text0 = "You sail to Port Sarim.";
+	case 6 :
+		if_setmodelorthog(true, $component1);
+		if_setmodelanim(seq_638, $component1);
+		$text0 = "You sail to Port Khazard.";
+	case 7 :
+		if_setmodelanim(seq_639, $component1);
+		$text0 = "You sail out to Sea.";
+	case 8 :
+		if_setmodelanim(seq_640, $component1);
+		$text0 = "You sail back to Port Khazard.";
+	case 9 :
+		if_setmodelanim(seq_641, $component1);
+		$text0 = "You sail to Port Sarim.";
+	case 10 :
+		if_setmodelanim(seq_3545, $component1);
+		$text0 = "You sail to the Void Knight outpost.";
+	case 11 :
+		if_setmodelanim(seq_3546, $component1);
+		$text0 = "You sail to Port Sarim.";
+	case 12 :
+		if_setmodel(model_13370, $component1);
+		if_setmodelanim(seq_3476, $component1);
+		$text0 = "You're ogre propelled to the beach of Karamja!";
+	case 13 :
+		if_setmodel(model_13371, $component1);
+		if_setmodelanim(seq_3477, $component1);
+		$text0 = "You're ogre propelled to the Feldip Hills!";
+}
+if_settext($text0, $component2);

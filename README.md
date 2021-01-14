@@ -81,7 +81,6 @@
 [**78**](scripts/[proc,chatout_set].cs2) `[proc,chatout_set]`  
 [**79**](scripts/[proc,chatout_get].cs2) `[proc,chatout_get]`  
 [**80**](scripts/[clientscript,chat_onsubchange].cs2) `[clientscript,chat_onsubchange]`  
-[**81**](scripts/[proc,script81].cs2)  
 [**82**](scripts/[clientscript,orbs_update_prayer].cs2) `[clientscript,orbs_update_prayer]`  
 [**83**](scripts/[clientscript,splitpm_changed].cs2) `[clientscript,splitpm_changed]`  
 [**84**](scripts/[proc,rebuildchatbox].cs2) `[proc,rebuildchatbox]`  
@@ -1131,6 +1130,7 @@
 [**1128**](scripts/[clientscript,script1128].cs2)  
 [**1129**](scripts/[proc,script1129].cs2)  
 [**1130**](scripts/[clientscript,script1130].cs2)  
+[**1131**](scripts/[clientscript,script1131].cs2)  
 [**1132**](scripts/[clientscript,script1132].cs2)  
 [**1133**](scripts/[clientscript,script1133].cs2)  
 [**1134**](scripts/[clientscript,script1134].cs2)  
@@ -1280,6 +1280,7 @@
 [**1278**](scripts/[proc,deadmanprotect_stats_refresh].cs2) `[proc,deadmanprotect_stats_refresh]`  
 [**1279**](scripts/[proc,script1279].cs2)  
 [**1280**](scripts/[proc,script1280].cs2)  
+[**1281**](scripts/[clientscript,script1281].cs2)  
 [**1282**](scripts/[proc,script1282].cs2)  
 [**1283**](scripts/[worldmapelementmouserepeat,650].cs2) `[worldmapelementmouserepeat,650]`  
 [**1284**](scripts/[worldmapelementmouseleave,650].cs2) `[worldmapelementmouseleave,650]`  
@@ -1463,6 +1464,16 @@
 [**1462**](scripts/[proc,lumbridge_alchemy_invtransmit].cs2) `[proc,lumbridge_alchemy_invtransmit]`  
 [**1463**](scripts/[clientscript,lumbridge_alchemy_vartransmit].cs2) `[clientscript,lumbridge_alchemy_vartransmit]`  
 [**1464**](scripts/[proc,lumbridge_alchemy_vartransmit].cs2) `[proc,lumbridge_alchemy_vartransmit]`  
+[**1465**](scripts/[clientscript,script1465].cs2)  
+[**1466**](scripts/[clientscript,script1466].cs2)  
+[**1467**](scripts/[clientscript,script1467].cs2)  
+[**1468**](scripts/[proc,script1468].cs2)  
+[**1469**](scripts/[clientscript,script1469].cs2)  
+[**1470**](scripts/[clientscript,script1470].cs2)  
+[**1471**](scripts/[clientscript,script1471].cs2)  
+[**1472**](scripts/[clientscript,script1472].cs2)  
+[**1473**](scripts/[proc,script1473].cs2)  
+[**1474**](scripts/[proc,script1474].cs2)  
 [**1475**](scripts/[clientscript,hidey_build].cs2) `[clientscript,hidey_build]`  
 [**1476**](scripts/[clientscript,hidey_buildlists].cs2) `[clientscript,hidey_buildlists]`  
 [**1477**](scripts/[proc,hidey_buildlists].cs2) `[proc,hidey_buildlists]`  
@@ -1486,6 +1497,7 @@
 [**1495**](scripts/[clientscript,script1495].cs2)  
 [**1496**](scripts/[clientscript,agilityarena_rewards_setgracefulbutton].cs2) `[clientscript,agilityarena_rewards_setgracefulbutton]`  
 [**1497**](scripts/[proc,agilityarena_rewards_setgracefulbutton].cs2) `[proc,agilityarena_rewards_setgracefulbutton]`  
+[**1498**](scripts/[clientscript,script1498].cs2)  
 [**1503**](scripts/[proc,string_prependzero].cs2) `[proc,string_prependzero]`  
 [**1504**](scripts/[clientscript,script1504].cs2)  
 [**1505**](scripts/[clientscript,raids_overlay_init].cs2) `[clientscript,raids_overlay_init]`  
@@ -2661,9 +2673,6 @@
 [**2721**](scripts/[proc,1v1arena_hud_buildarena].cs2) `[proc,1v1arena_hud_buildarena]`  
 [**2722**](scripts/[clientscript,1v1arena_spectator_init].cs2) `[clientscript,1v1arena_spectator_init]`  
 [**2723**](scripts/[clientscript,1v1arena_spectator_endhint].cs2) `[clientscript,1v1arena_spectator_endhint]`  
-[**2724**](scripts/[clientscript,script2724].cs2)  
-[**2725**](scripts/[proc,script2725].cs2)  
-[**2726**](scripts/[clientscript,script2726].cs2)  
 [**2727**](scripts/[clientscript,meslayer_keyboard_show].cs2) `[clientscript,meslayer_keyboard_show]`  
 [**2728**](scripts/[proc,collection_draw_tab].cs2) `[proc,collection_draw_tab]`  
 [**2729**](scripts/[clientscript,collection_hover_tab].cs2) `[clientscript,collection_hover_tab]`  
@@ -3087,8 +3096,6 @@
 [**3148**](scripts/[proc,script3148].cs2)  
 [**3149**](scripts/[clientscript,script3149].cs2)  
 [**3150**](scripts/[proc,script3150].cs2)  
-[**3151**](scripts/[proc,script3151].cs2)  
-[**3152**](scripts/[proc,script3152].cs2)  
 [**3153**](scripts/[clientscript,offer_banner_init].cs2) `[clientscript,offer_banner_init]`  
 [**3154**](scripts/[proc,offer_banner_close].cs2) `[proc,offer_banner_close]`  
 [**3155**](scripts/[clientscript,offer_banner].cs2) `[clientscript,offer_banner]`  

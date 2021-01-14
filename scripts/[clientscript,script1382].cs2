@@ -115,9 +115,10 @@ while ($int22 < $int18) {
 ~script1383(31, %varcint174, $int0, $int11, $int12, $int13);
 ~script1383(32, %varcint176, $int0, $int11, $int12, $int13);
 ~script1383(33, %varcint177, $int0, $int11, $int12, $int13);
+~script1383(34, %varcint419, $int0, $int11, $int12, $int13);
 def_component $component23 = enum(int, component, enum_1424, -1);
 if_setsize($int11, $int11, ^setsize_abs, ^setsize_abs, $component23);
-if_setonvartransmit("poh_viewer_preview_position($component23, $int17, $int18, $int11, $int12, $int13){var780}", interface_422:40);
+if_setonvartransmit("poh_viewer_preview_position($component23, $int17, $int18, $int11, $int12, $int13){var780}", interface_422:41);
 cc_deleteall($component23);
 cc_create($component23, ^iftype_graphic, 0);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

@@ -15,15 +15,15 @@ cc_setopbase("<col=ff9040><~tostring_spacer($int11, $string0)> <enum(stat, strin
 def_string $string1 = "";
 if (stat_base($stat0) < 30) {
 	$string1 = "You need to be at least level <tostring(30)> in a skill to buy experience in it.";
-	cc_setonop("soul_wars_rewards_refuse($string1, $component5, $component6, $component7, 0)");
+	cc_setonop("soul_wars_rewards_refuse($string1, $component5, $component6, $component7, 0, event_opindex)");
 } else if (%var2876 < $int10) {
 	cc_setcolour(0x9f9f9f);
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);
 	$string1 = "You need <~tostring_spacer($int10, $string0)> <~script853($int10)> to claim that reward.";
-	cc_setonop("soul_wars_rewards_refuse($string1, $component5, $component6, $component7, 0)");
+	cc_setonop("soul_wars_rewards_refuse($string1, $component5, $component6, $component7, 0, event_opindex)");
 } else {
-	cc_setonop("soul_wars_rewards_select($int4, $component5, $component6, $component7, 0)");
+	cc_setonop("soul_wars_rewards_select($int4, $component5, $component6, $component7, 0, event_opindex)");
 }
 if ($int9 = $int4) {
 	cc_setcolour(^white);
