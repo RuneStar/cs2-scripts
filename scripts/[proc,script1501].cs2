@@ -1,0 +1,9 @@
+// 1501
+[proc,script1501](component $component0, boolean $boolean1)
+if (%varbit11764 = 1) {
+	~script1502($component0, "Waiting", 0);
+} else if ($boolean1 = true) {
+	~script1502($component0, "Confirm", 1);
+} else {
+	~script1627($component0, "Confirm", 1);
+}

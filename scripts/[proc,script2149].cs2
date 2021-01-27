@@ -1,0 +1,13 @@
+// 2149
+[proc,script2149](namedobj $namedobj0)(int)
+def_int $int1 = inv_total(inv, $namedobj0);
+$int1 = calc($int1 + inv_total(worn, $namedobj0));
+def_obj $obj2 = oc_cert($namedobj0);
+if ($obj2 = $namedobj0) {
+	return($int1);
+}
+def_int $total3 = inv_total(inv, $obj2);
+if (calc(^max_32bit_int - $int1) < $total3) {
+	return(^max_32bit_int);
+}
+return(calc($int1 + $total3));

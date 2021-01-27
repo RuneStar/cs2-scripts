@@ -1,0 +1,20 @@
+// 1647
+[proc,script1647](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, int $int6, int $int7, int $int8)
+cc_deleteall($component0);
+def_int $int9 = 0;
+cc_create($component0, ^iftype_graphic, $int9);
+cc_setgraphic("steelborder2,0");
+cc_settiling(true);
+cc_setposition(0, -10, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+$int9 = calc($int9 + 1);
+cc_create($component0, ^iftype_text, $int9);
+cc_setposition(20, 5, ^setpos_3, ^setpos_abs_centre);
+cc_setsize(140, 36, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Withdrawal / Storage<br>Quantity");
+$int9 = calc($int9 + 1);
+~script1648($component1, $component2, $component3, $component4, $int5, $int6, $int7, $int8);

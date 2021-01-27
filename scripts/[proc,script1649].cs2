@@ -1,0 +1,6 @@
+// 1649
+[proc,script1649](enum $enum0, component $component1, namedobj $namedobj2, string $text0)
+def_int $int3 = enum(obj, int, $enum0, $namedobj2);
+if_setonmouserepeat("script1650($enum0, $component1, $namedobj2, $text0, $int3, true)", $component1);
+if_setonmouseleave("script1650($enum0, $component1, $namedobj2, $text0, $int3, false)", $component1);
+~script1958($enum0, $component1, $namedobj2, $text0, $int3, false);

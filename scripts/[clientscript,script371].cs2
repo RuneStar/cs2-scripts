@@ -23,39 +23,3 @@ if (calc(clientclock % 20) < 10 & $int2 <= 10) {
 } else {
 	if_setcolour(0xffa53d, $component1);
 }
-if (calc($int0 % 50) ! 0) {
-	return;
-}
-if ($int2 = 1201 & $int3 >= 1200) {
-	mes("Time remaining: 20:00");
-}
-if ($int2 = 1051 & $int3 >= 1050) {
-	mes("Time remaining: 17:30");
-}
-if ($int2 = 901 & $int3 >= 900) {
-	mes("Time remaining: 15:00");
-}
-if ($int2 = 751 & $int3 >= 750) {
-	mes("Time remaining: 12:30");
-}
-if ($int2 = 601 & $int3 >= 600) {
-	mes("Time remaining: 10:00");
-}
-if ($int2 = 451 & $int3 >= 450) {
-	mes("Time remaining: 7:30");
-}
-if ($int2 = 301 & $int3 >= 300) {
-	mes("Time remaining: 5:00");
-}
-if ($int2 = 151 & $int3 >= 150) {
-	mes("Time remaining: 2:30");
-}
-if ($int2 = 61 & $int3 >= 60) {
-	mes("Time remaining: 1:00");
-}
-if ($int2 = 31 & $int3 >= 30) {
-	mes("Time remaining: 0:30");
-}
-if ($int2 = 11 & $int3 >= 10) {
-	mes("Time remaining: 0:10");
-}

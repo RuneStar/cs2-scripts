@@ -1,0 +1,18 @@
+// 2259
+[proc,script2259](obj $obj0)(int, namedobj)
+switch_obj ($obj0) {
+	case butterfly_net_10010 :
+		switch_int (%varbit11767) {
+			case 0 :
+				return(0, butterfly_net_10010);
+			case 1 :
+				return(1, butterfly_net_10010);
+			case 2 :
+				return(1, magic_butterfly_net_11259);
+		}
+	case imp_repellent_11262 :
+		return(%varbit11768, imp_repellent_11262);
+	case impling_jar_11260 :
+		return(%varbit11770, impling_jar_11260);
+}
+return(0, null);

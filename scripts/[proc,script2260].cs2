@@ -1,0 +1,22 @@
+// 2260
+[proc,script2260](obj $obj0)(int, namedobj)
+def_int $int1 = 0;
+def_int $int2 = 0;
+switch_obj ($obj0) {
+	case butterfly_net_10010 :
+		$int1 = ~script2149(magic_butterfly_net_11259);
+		$int2 = ~script2149(butterfly_net_10010);
+		if ($int1 > 0) {
+			if (calc(^max_32bit_int - $int2) < $int1) {
+				return(^max_32bit_int, magic_butterfly_net_11259);
+			}
+			return(calc($int1 + $int2), magic_butterfly_net_11259);
+		}
+		return($int2, butterfly_net_10010);
+	case imp_repellent_11262 :
+		return(~script2149(imp_repellent_11262), imp_repellent_11262);
+	case impling_jar_11260 :
+		return(~script2149(impling_jar_11260), impling_jar_11260);
+	case default :
+		return(0, null);
+}
