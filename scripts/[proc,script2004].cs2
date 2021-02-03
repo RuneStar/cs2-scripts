@@ -1,26 +1,26 @@
 // 2004
-[proc,script2004](component $component0, component $component1, component $component2, component $component3, component $component4, string $string0, boolean $boolean5, int $int6)
-cc_deleteall($component4);
-def_int $int7 = 0;
-if_setonvartransmit("script1965($component0, $component1, $component2, $component3, $component4, $string0, false, $int6){var675}", $component4);
-if (%varbit7792 = $int6) {
-	$int7 = ~options_button_on($component4, $int7);
-	if_setonmouserepeat(null, $component4);
-	if_setonmouseleave(null, $component4);
-	if_clearops($component4);
-	if_setonop(null, $component4);
+[proc,script2004](enum $enum0, component $component1, component $component2, component $component3, component $component4, component $component5, string $string0, boolean $boolean6, int $int7)
+cc_deleteall($component5);
+def_int $int8 = 0;
+if_setonvartransmit("script1965($enum0, $component1, $component2, $component3, $component4, $component5, $string0, false, $int7){var675, var2894}", $component5);
+if (~script376($enum0) = $int7) {
+	$int8 = ~options_button_on($component5, $int8);
+	if_setonmouserepeat(null, $component5);
+	if_setonmouseleave(null, $component5);
+	if_clearops($component5);
+	if_setonop(null, $component5);
 } else {
-	$int7 = ~options_button_off($component4, $int7);
-	if_setonmouserepeat("script1965($component0, $component1, $component2, $component3, $component4, $string0, true, $int6)", $component4);
-	if_setonmouseleave("script1965($component0, $component1, $component2, $component3, $component4, $string0, false, $int6)", $component4);
-	if_setopbase("<col=ff9040><$string0></col>", $component4);
-	if_setop(1, "Default Quantity:", $component4);
-	if_setonop("script2005($component0, $component1, $component2, $component3, event_opindex, $int6)", $component4);
+	$int8 = ~options_button_off($component5, $int8);
+	if_setonmouserepeat("script1965($enum0, $component1, $component2, $component3, $component4, $component5, $string0, true, $int7)", $component5);
+	if_setonmouseleave("script1965($enum0, $component1, $component2, $component3, $component4, $component5, $string0, false, $int7)", $component5);
+	if_setopbase("<col=ff9040><$string0></col>", $component5);
+	if_setop(1, "Default Quantity:", $component5);
+	if_setonop("script2005($enum0, $component1, $component2, $component3, $component4, event_opindex, $int7)", $component5);
 }
-cc_create($component4, ^iftype_text, $int7);
+cc_create($component5, ^iftype_text, $int8);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-if ($boolean5 = false) {
+if ($boolean6 = false) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(^white);

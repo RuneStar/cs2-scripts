@@ -10,6 +10,11 @@ if ($component0 = $component2) {
 }
 if_sethide(false, $component0);
 if_sethide(true, $component9);
+if (~tournament_beta_world = 1) {
+	if_sethide(true, $component1);
+	return;
+}
+if_sethide(false, $component1);
 if_setsize(calc(parawidth($string3, 512, p11_full) + 10), if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
 cc_deleteall($component1);
 def_int $comsubid10 = ~options_button_off($component1, 0);

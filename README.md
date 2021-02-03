@@ -376,10 +376,8 @@
 [**373**](scripts/[proc,script373].cs2)  
 [**374**](scripts/[proc,script374].cs2)  
 [**375**](scripts/[proc,script375].cs2)  
-[**376**](scripts/[clientscript,script376].cs2)  
-[**377**](scripts/[clientscript,script377].cs2)  
-[**378**](scripts/[proc,script378].cs2)  
-[**379**](scripts/[proc,script379].cs2)  
+[**376**](scripts/[proc,script376].cs2)  
+[**377**](scripts/[proc,script377].cs2)  
 [**380**](scripts/[clientscript,script380].cs2)  
 [**381**](scripts/[clientscript,script381].cs2)  
 [**382**](scripts/[clientscript,script382].cs2)  
@@ -532,9 +530,6 @@
 [**529**](scripts/[clientscript,script529].cs2)  
 [**530**](scripts/[proc,script530].cs2)  
 [**531**](scripts/[proc,script531].cs2)  
-[**532**](scripts/[clientscript,script532].cs2)  
-[**533**](scripts/[proc,script533].cs2)  
-[**534**](scripts/[clientscript,script534].cs2)  
 [**535**](scripts/[clientscript,soul_wars_rewards_init].cs2) `[clientscript,soul_wars_rewards_init]`  
 [**536**](scripts/[proc,script536].cs2)  
 [**537**](scripts/[proc,script537].cs2)  
@@ -2722,10 +2717,6 @@
 [**2741**](scripts/[proc,lovaquest_power_grid_getslot].cs2) `[proc,lovaquest_power_grid_getslot]`  
 [**2742**](scripts/[proc,lovaquest_power_grid_setslot].cs2) `[proc,lovaquest_power_grid_setslot]`  
 [**2743**](scripts/[proc,skill_guide_data_slayer].cs2) `[proc,skill_guide_data_slayer]`  
-[**2744**](scripts/[proc,script2744].cs2)  
-[**2745**](scripts/[clientscript,script2745].cs2)  
-[**2746**](scripts/[clientscript,script2746].cs2)  
-[**2747**](scripts/[proc,script2747].cs2)  
 [**2748**](scripts/[clientscript,farming_tools_main_recreate].cs2) `[clientscript,farming_tools_main_recreate]`  
 [**2749**](scripts/[proc,farming_tools_main_recreate].cs2) `[proc,farming_tools_main_recreate]`  
 [**2750**](scripts/[clientscript,farming_tools_side_recreate].cs2) `[clientscript,farming_tools_side_recreate]`  
@@ -3521,7 +3512,6 @@
 [**3563**](scripts/[clientscript,poh_costumes_searchtimeout].cs2) `[clientscript,poh_costumes_searchtimeout]`  
 [**3564**](scripts/[clientscript,poh_costumes_buttons_search_reset].cs2) `[clientscript,poh_costumes_buttons_search_reset]`  
 [**3565**](scripts/[proc,poh_costumes_buttons_search_reset].cs2) `[proc,poh_costumes_buttons_search_reset]`  
-[**3566**](scripts/[clientscript,script3566].cs2)  
 [**3567**](scripts/[clientscript,hallowed_tools_side_init].cs2) `[clientscript,hallowed_tools_side_init]`  
 [**3568**](scripts/[proc,hallowed_tools_main_create].cs2) `[proc,hallowed_tools_main_create]`  
 [**3569**](scripts/[clientscript,hallowed_tools_main_recreate].cs2) `[clientscript,hallowed_tools_main_recreate]`  
