@@ -1,0 +1,25 @@
+// 378
+[clientscript,script378](string $text0, string $string1)
+def_component $component0 = interface_187:0;
+def_component $component1 = interface_187:3;
+def_component $component2 = interface_187:2;
+def_component $component3 = interface_187:1;
+~script219($component0, $component1, $component2, $text0, 33);
+cc_deleteall($component3);
+def_int $width4 = if_getwidth($component1);
+def_int $int5 = 0;
+def_int $height6 = 0;
+def_int $index7 = string_indexof_string($string1, "|", 0);
+def_string $string2 = "";
+while ($index7 ! -1) {
+	$string2 = substring($string1, 0, $index7);
+	$int5, $height6 = ~script379($string2, $component1, $component3, $width4, $int5, $height6);
+	$string1 = substring($string1, calc($index7 + 1), string_length($string1));
+	$index7 = string_indexof_string($string1, "|", 0);
+}
+$int5, $height6 = ~script379($string1, $component1, $component3, $width4, $int5, $height6);
+if_setscrollsize(0, $height6, $component1);
+if_setscrollpos(0, 0, $component1);
+if ($height6 > if_getheight($component1)) {
+	~scrollbar_vertical($component2, $component1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
+}

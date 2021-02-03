@@ -378,6 +378,8 @@
 [**375**](scripts/[proc,script375].cs2)  
 [**376**](scripts/[proc,script376].cs2)  
 [**377**](scripts/[proc,script377].cs2)  
+[**378**](scripts/[clientscript,script378].cs2)  
+[**379**](scripts/[proc,script379].cs2)  
 [**380**](scripts/[clientscript,script380].cs2)  
 [**381**](scripts/[clientscript,script381].cs2)  
 [**382**](scripts/[clientscript,script382].cs2)  
@@ -530,6 +532,8 @@
 [**529**](scripts/[clientscript,script529].cs2)  
 [**530**](scripts/[proc,script530].cs2)  
 [**531**](scripts/[proc,script531].cs2)  
+[**532**](scripts/[clientscript,script532].cs2)  
+[**533**](scripts/[clientscript,script533].cs2)  
 [**535**](scripts/[clientscript,soul_wars_rewards_init].cs2) `[clientscript,soul_wars_rewards_init]`  
 [**536**](scripts/[proc,script536].cs2)  
 [**537**](scripts/[proc,script537].cs2)  

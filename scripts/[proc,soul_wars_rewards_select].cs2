@@ -1,9 +1,9 @@
 // 844
-[proc,soul_wars_rewards_select](int $int0, component $component1, component $component2, component $component3, int $int4)
+[proc,soul_wars_rewards_select](int $int0, component $component1, component $component2, component $component3, int $int4, int $y5, component $component6, component $component7)
 if ($int4 = 0) {
-	~script536($int0, $component1, $component2, $component3);
+	~script536($int0, $component1, $component2, $component3, $component6, $component7);
 } else if ($int4 = 1) {
-	~script675($int0, $component1, $component2, $component3, interface_442:17);
+	~script675($int0, $component1, $component2, $component3, interface_442:17, $y5, $component6, $component7);
 } else if ($int4 = 2) {
-	~script842($int0, $component1, $component2, $component3);
+	~script842($int0, $component1, $component2, $component3, interface_442:20, $y5, $component6, $component7);
 }

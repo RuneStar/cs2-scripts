@@ -1,19 +1,32 @@
 // 842
-[proc,script842](int $int0, component $component1, component $component2, component $component3)
+[proc,script842](int $int0, component $component1, component $component2, component $component3, component $component4, int $y5, component $component6, component $component7)
 cc_deleteall($component1);
-def_int $int4 = 0;
-def_int $int5 = 10;
-def_int $int6 = 0;
-def_int $width7 = if_getwidth($component1);
-def_int $int8 = calc(if_getwidth($component1) / 3);
-def_int $count9 = 0;
-while ($count9 < enum_getoutputcount(enum_3553)) {
-	$int4 = ~soul_wars_rewards_drawitem($count9, enum_3553, enum_3540, $int5, $int6, $int8, 2, $component1, $component2, $component3, $int4, $int0);
-	$count9 = calc($count9 + 1);
-	$int6 = calc($int6 + $int8);
-	if (calc($int6 + $int8) > $width7) {
-		$int6 = 0;
-		$int5 = calc($int5 + 32 + 10);
+def_int $int8 = 0;
+def_int $height9 = 10;
+def_int $int10 = 2;
+def_int $width11 = if_getwidth($component1);
+def_int $int12 = calc((if_getwidth($component1) - 2) / 2);
+def_int $count13 = 0;
+def_int $count14 = enum_getoutputcount(enum_3553);
+while ($count13 < $count14) {
+	$int8 = ~soul_wars_rewards_drawitem($count13, enum_3553, enum_3540, $height9, $int10, $int12, 2, $component1, $component2, $component3, $int8, $int0, $component6, $component7);
+	$count13 = calc($count13 + 1);
+	$int10 = calc($int10 + $int12);
+	if (calc($int10 + $int12) > $width11 & $count13 < $count14) {
+		$int10 = 2;
+		$height9 = calc($height9 + 32 + 10);
 	}
 }
-~soul_wars_rewards_drawconfirm($int0, $component1, $component2, $component3, enum_3553, 2);
+~scrollbar_vertical($component4, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+$height9 = calc($height9 + 32 + 10);
+if ($height9 >= if_getheight($component1)) {
+	if_setscrollsize(0, $height9, $component1);
+} else {
+	if_setscrollsize(0, 0, $component1);
+}
+if_setscrollpos(0, $y5, $component1);
+~scrollbar_vertical_rebuild($component4, $component1);
+~soul_wars_rewards_drawconfirm($int0, $component1, $component2, $component3, enum_3553, 2, $component6, $component7);
+if_setonvartransmit("script676(-1, $component1, $component2, $component3, $component4, $component6, $component7){var2876}", $component1);
+if_setonvartransmit(null, $component6);
+if_setonvartransmit(null, $component7);

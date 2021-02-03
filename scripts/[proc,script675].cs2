@@ -1,53 +1,53 @@
 // 675
-[proc,script675](int $int0, component $component1, component $component2, component $component3, component $component4)
+[proc,script675](int $int0, component $component1, component $component2, component $component3, component $component4, int $y5, component $component6, component $component7)
 cc_deleteall($component1);
-def_int $width5 = if_getwidth($component1);
-def_int $int6 = 0;
-def_int $int7 = calc($width5 / 3);
-def_int $int8 = 0;
-def_int $height9 = 10;
-def_int $int10 = calc(32 + 30);
-def_int $size11 = 0;
-def_int $int12 = 0;
-def_int $size13 = inv_size(inv);
-def_int $int14 = 0;
-def_namedobj $namedobjarray0($size13);
+def_int $width8 = if_getwidth($component1);
+def_int $int9 = 0;
+def_int $int10 = calc($width8 / 3);
+def_int $int11 = 0;
+def_int $height12 = 10;
+def_int $int13 = calc(32 + 30);
+def_int $size14 = 0;
 def_int $int15 = 0;
-def_int $int16 = 0;
-def_int $int17 = 1;
-def_obj $obj18 = null;
-def_namedobj $namedobj19 = null;
-def_int $int20 = 0;
-while ($size11 < $size13) {
-	$obj18 = inv_getobj(inv, $size11);
-	if ($obj18 ! null) {
-		$namedobj19 = enum(obj, namedobj, enum_3541, $obj18);
-		while ($int16 <= $int14) {
-			if ($namedobjarray0($int16) ! null & $namedobjarray0($int16) = $namedobj19) {
-				$int17 = 0;
+def_int $size16 = inv_size(inv);
+def_int $int17 = 0;
+def_namedobj $namedobjarray0($size16);
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 1;
+def_obj $obj21 = null;
+def_namedobj $namedobj22 = null;
+def_int $int23 = 0;
+while ($size14 < $size16) {
+	$obj21 = inv_getobj(inv, $size14);
+	if ($obj21 ! null) {
+		$namedobj22 = enum(obj, namedobj, enum_3541, $obj21);
+		while ($int19 <= $int17) {
+			if ($namedobjarray0($int19) ! null & $namedobjarray0($int19) = $namedobj22) {
+				$int20 = 0;
 			}
-			$int16 = calc($int16 + 1);
+			$int19 = calc($int19 + 1);
 		}
-		$int16 = 0;
-		if ($namedobj19 ! null & $int17 = 1) {
-			$int20 = enum(namedobj, int, enum_3545, $namedobj19);
-			$int12 = ~soul_wars_rewards_drawitem($int20, enum_3544, enum_3543, $height9, $int8, $int7, 1, $component1, $component2, $component3, $int12, $int0);
-			$int8 = calc($int8 + $int7);
-			if (calc($int8 + $int7) > $width5) {
-				$int8 = 0;
-				$height9 = calc($height9 + 32 + 10);
+		$int19 = 0;
+		if ($namedobj22 ! null & $int20 = 1) {
+			$int23 = enum(namedobj, int, enum_3545, $namedobj22);
+			$int15 = ~soul_wars_rewards_drawitem($int23, enum_3544, enum_3543, $height12, $int11, $int10, 1, $component1, $component2, $component3, $int15, $int0, $component6, $component7);
+			$int11 = calc($int11 + $int10);
+			if (calc($int11 + $int10) > $width8 & $size14 < $size16) {
+				$int11 = 0;
+				$height12 = calc($height12 + 32 + 10);
 			}
-			$int14 = calc($int14 + 1);
-			$namedobjarray0($int15) = $namedobj19;
-			$int15 = calc($int15 + 1);
+			$int17 = calc($int17 + 1);
+			$namedobjarray0($int18) = $namedobj22;
+			$int18 = calc($int18 + 1);
 		}
 	}
-	$int17 = 1;
-	$size11 = calc($size11 + 1);
+	$int20 = 1;
+	$size14 = calc($size14 + 1);
 }
-if ($int14 <= 0) {
-	cc_create($component1, ^iftype_text, $int12);
-	cc_setsize($width5, if_getheight($component1), ^setsize_abs, ^setsize_abs);
+if ($int17 <= 0) {
+	cc_create($component1, ^iftype_text, $int15);
+	cc_setsize($width8, if_getheight($component1), ^setsize_abs, ^setsize_abs);
 	cc_setposition(9, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_settextfont(b12_full);
 	cc_setcolour(0xff981f);
@@ -55,13 +55,20 @@ if ($int14 <= 0) {
 	cc_settextshadow(true);
 	cc_settext("There are no items in your inventory that can be imbued.<br><br>Black masks, slayer helmets,<br>salve amulets and certain rings can all be imbued.");
 }
-if_setscrollpos(0, 0, $component1);
-if ($height9 >= if_getheight($component1)) {
-	if_setscrollsize(0, calc($height9 + 32 + 10), $component1);
+if ($int17 > 0) {
+	~scrollbar_vertical($component4, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+}
+$height12 = calc($height12 + 32 + 10);
+if ($height12 >= if_getheight($component1)) {
+	if_setscrollsize(0, $height12, $component1);
 } else {
 	if_setscrollsize(0, 0, $component1);
 }
-if ($int14 > 0) {
-	~scrollbar_vertical($component4, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_setscrollpos(0, $y5, $component1);
+if ($int17 > 0) {
+	~scrollbar_vertical_rebuild($component4, $component1);
 }
-~soul_wars_rewards_drawconfirm($int0, $component1, $component2, $component3, enum_3544, 1);
+~soul_wars_rewards_drawconfirm($int0, $component1, $component2, $component3, enum_3544, 1, $component6, $component7);
+if_setonvartransmit("script674(-1, $component1, $component2, $component3, $component4, $component6, $component7){var2876}", $component1);
+if_setonvartransmit(null, $component6);
+if_setonvartransmit(null, $component7);

@@ -1,0 +1,25 @@
+// 379
+[proc,script379](string $string0, component $component0, component $component1, int $width2, int $int3, int $height4)(int, int)
+def_int $int5 = calc(paraheight($string0, $width2, p12_full) * 14 + 2);
+if (~on_mobile = true) {
+	$int5 = scale(4, 3, $int5);
+}
+cc_create($component0, ^iftype_text, $int3);
+.cc_create($component1, ^iftype_rectangle, $int3);
+cc_setposition(0, $height4, ^setpos_abs_centre, ^setpos_abs_top);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, $int5, ^setsize_minus, ^setsize_abs);
+.cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settextfont(p12_full);
+cc_setcolour(0x46320a);
+cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, 0x76623a)");
+cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x46320a)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+cc_settext($string0);
+def_string $string1 = "";
+def_string $string2 = "";
+$int3 = calc($int3 + 1);
+$string0 = append("<col=735a28><tostring($int3)></col>: ", $string0);
+.cc_setonkey("chatbox_keyinput_listener(event_key, event_keychar, $component0, cc_getid, null, null, $string1, $string2, 0x46320a, 0)");
+cc_settext($string0);
+return($int3, calc($height4 + $int5));

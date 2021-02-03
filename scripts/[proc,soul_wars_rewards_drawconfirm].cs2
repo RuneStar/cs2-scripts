@@ -1,8 +1,8 @@
 // 847
-[proc,soul_wars_rewards_drawconfirm](int $int0, component $component1, component $component2, component $component3, enum $enum4, int $int5)
+[proc,soul_wars_rewards_drawconfirm](int $int0, component $component1, component $component2, component $component3, enum $enum4, int $int5, component $component6, component $component7)
 def_string $text0 = "";
 cc_deleteall($component2);
-def_int $int6 = 0;
+def_int $int8 = 0;
 if ($int0 ! -1) {
 	if ($enum4 = enum_3537) {
 		$text0 = enum(int, string, $enum4, $int0);
@@ -10,12 +10,12 @@ if ($int0 ! -1) {
 		$text0 = oc_name(enum(int, namedobj, $enum4, $int0));
 	}
 	~soul_wars_rewards_confirmtext(false, $text0, $component3);
-	while ($int6 < $int0) {
-		cc_create($component2, ^iftype_rectangle, $int6);
+	while ($int8 < $int0) {
+		cc_create($component2, ^iftype_rectangle, $int8);
 		cc_sethide(true);
-		$int6 = calc($int6 + 1);
+		$int8 = calc($int8 + 1);
 	}
-	cc_create($component2, ^iftype_rectangle, $int6);
+	cc_create($component2, ^iftype_rectangle, $int8);
 	cc_sethide(false);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
@@ -25,10 +25,10 @@ if ($int0 ! -1) {
 		cc_setonmouserepeat("script848(true, $text0, $component3)");
 		cc_setonmouseleave("script848(false, $text0, $component3)");
 	}
-	cc_setonop("soul_wars_rewards_confirmop(event_opindex, $component1, $component2, $component3, $int5)");
+	cc_setonop("soul_wars_rewards_confirmop(event_opindex, $component1, $component2, $component3, $int5, $component6, $component7)");
 } else {
-	$int6 = ~v2_stone_button_in_filled($component3);
-	cc_create($component3, ^iftype_text, $int6);
+	$int8 = ~v2_stone_button_in_filled($component3);
+	cc_create($component3, ^iftype_text, $int8);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_setcolour(0x7f7f7f);
