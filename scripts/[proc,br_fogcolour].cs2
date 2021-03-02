@@ -1,18 +1,39 @@
 // 1346
 [proc,br_fogcolour]
-def_int $colour0 = if_getcolour(interface_90:1);
-def_int $int1 = if_gettrans(interface_90:1);
+def_int $colour0 = 0x882000;
+if (%varbit11865 = 0) {
+	switch_int (%varbit11798) {
+		case 1 :
+			$colour0 = 0x882000;
+		case 2 :
+			$colour0 = 0xffcc66;
+	}
+} else {
+	switch_int (%varbit11865) {
+		case 1 :
+			$colour0 = 0x00cc44;
+		case 2 :
+			$colour0 = 0xffcc66;
+		case 3 :
+			$colour0 = 0x882000;
+		case 4 :
+			$colour0 = 0x4dd2ff;
+		case 5 :
+			$colour0 = 0xf5f5f0;
+	}
+}
+def_int $colour1 = $colour0;
+def_int $int2 = if_gettrans(temple_screen:1);
 if (%varbit5320 <= 0 & %varbit5316 <= 0) {
-	if ($colour0 ! 0x882000) {
-		if_setcolour(0x882000, interface_90:1);
+	if ($colour1 ! $colour0) {
+		if_setcolour($colour0, temple_screen:1);
 	}
-	if ($int1 ! 255) {
-		if_settrans(255, interface_90:1);
+	if ($int2 ! 255) {
+		if_settrans(255, temple_screen:1);
 	}
-	_2124(255, interface_90:1);
+	_2124(255, temple_screen:1);
 	return;
 }
-def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
 def_int $int5 = 0;
@@ -23,34 +44,30 @@ def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;
 def_int $int12 = 0;
-$int10, $int11, $int12 = ~hex_to_rgb(0x882000);
-def_int $int13 = 100;
-def_int $int14 = 255;
-def_int $int15 = 0;
+def_int $int13 = 0;
+$int11, $int12, $int13 = ~hex_to_rgb($colour0);
+def_int $int14 = 100;
+def_int $int15 = 255;
 def_int $int16 = 0;
 def_int $int17 = 0;
 def_int $int18 = 0;
-$int16, $int17, $int18 = ~hex_to_rgb($colour0);
-$int3 = invpow(pow(calc(coordx(coord) - %varbit5320), 2), 2);
-$int4 = invpow(pow(calc(coordz(coord) - %varbit5316), 2), 2);
-if ($int3 > $int4) {
-	$int2 = $int3;
+def_int $int19 = 0;
+$int17, $int18, $int19 = ~hex_to_rgb($colour1);
+$int4 = invpow(pow(calc(coordx(coord) - %varbit5320), 2), 2);
+$int5 = invpow(pow(calc(coordz(coord) - %varbit5316), 2), 2);
+if ($int4 > $int5) {
+	$int3 = $int4;
 } else {
-	$int2 = $int4;
+	$int3 = $int5;
 }
-$int5, $int6 = calc(%varbit5317 - 8), calc(%varbit5317 + 8);
-if ($int2 <= $int5) {
-	$int7, $int8, $int9, $int15 = $int16, $int17, $int18, $int14;
-} else if ($int2 >= $int6) {
-	$int7, $int8, $int9, $int15 = $int10, $int11, $int12, $int13;
+$int6, $int7 = calc(%varbit5317 - 8), calc(%varbit5317 + 8);
+if ($int3 <= $int6) {
+	$int8, $int9, $int10, $int16 = $int17, $int18, $int19, $int15;
+} else if ($int3 >= $int7) {
+	$int8, $int9, $int10, $int16 = $int11, $int12, $int13, $int14;
 } else {
-	$int2 = calc($int2 - $int5);
-	$int7, $int8, $int9, $int15 = interpolate(0, $int2, 0, 16, $int10), interpolate(0, $int2, 0, 16, $int11), interpolate(0, $int2, 0, 16, $int12), $int13;
-}
-if ($int16 < $int7) {
-	$int16 = calc($int16 + 1);
-} else if ($int16 > $int7) {
-	$int16 = calc($int16 - 1);
+	$int3 = calc($int3 - $int6);
+	$int8, $int9, $int10, $int16 = interpolate(0, $int3, 0, 16, $int11), interpolate(0, $int3, 0, 16, $int12), interpolate(0, $int3, 0, 16, $int13), $int14;
 }
 if ($int17 < $int8) {
 	$int17 = calc($int17 + 1);
@@ -62,11 +79,16 @@ if ($int18 < $int9) {
 } else if ($int18 > $int9) {
 	$int18 = calc($int18 - 1);
 }
-if_setcolour(~rgb_to_hex($int16, $int17, $int18), interface_90:1);
-if ($int1 < $int15) {
-	$int1 = calc($int1 + 1);
-} else if ($int1 > $int15) {
-	$int1 = calc($int1 - 1);
+if ($int19 < $int10) {
+	$int19 = calc($int19 + 1);
+} else if ($int19 > $int10) {
+	$int19 = calc($int19 - 1);
 }
-if_settrans($int1, interface_90:1);
-_2124(255, interface_90:1);
+if_setcolour(~rgb_to_hex($int17, $int18, $int19), temple_screen:1);
+if ($int2 < $int16) {
+	$int2 = calc($int2 + 1);
+} else if ($int2 > $int16) {
+	$int2 = calc($int2 - 1);
+}
+if_settrans($int2, temple_screen:1);
+_2124(255, temple_screen:1);

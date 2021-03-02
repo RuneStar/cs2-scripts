@@ -1,0 +1,26 @@
+// 2635
+[clientscript,script2635](component $component0, int $colour1, int $colour2, string $text0)
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setposition(6, 6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(12, 12, ^setsize_minus, ^setsize_minus);
+cc_setfill(true);
+~create_graphic($component0, 1, "steelborder,0", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 25, 30, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 2, "steelborder,1", 0, 0, ^setpos_abs_right, ^setpos_abs_top, 25, 30, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 3, "steelborder,2", 0, 0, ^setpos_abs_left, ^setpos_abs_bottom, 25, 30, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 4, "steelborder,3", 0, 0, ^setpos_abs_right, ^setpos_abs_bottom, 25, 30, ^setsize_abs, ^setsize_abs);
+~create_graphic($component0, 5, "miscgraphics,2", -15, 0, ^setpos_abs_left, ^setpos_abs_centre, 36, 60, ^setsize_abs, ^setsize_minus);
+~create_graphic($component0, 6, "steelborder2,1", -15, 0, ^setpos_abs_right, ^setpos_abs_centre, 36, 60, ^setsize_abs, ^setsize_minus);
+~create_graphic($component0, 7, "steelborder2,0", 0, -15, ^setpos_abs_centre, ^setpos_abs_top, 50, 36, ^setsize_minus, ^setsize_abs);
+~create_graphic($component0, 8, "miscgraphics,3", 0, -15, ^setpos_abs_centre, ^setpos_abs_bottom, 50, 36, ^setsize_minus, ^setsize_abs);
+cc_create($component0, ^iftype_text, 9);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_settext($text0);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setcolour($colour1);
+if (~on_mobile = false) {
+	if_setonmouseleave("cc_colour_swapper($component0, 9, $colour1)", $component0);
+	if_setonmouserepeat("cc_colour_swapper($component0, 9, $colour2)", $component0);
+}

@@ -1,0 +1,9 @@
+// 2355
+[proc,script2355]()(int)
+if (~deadman_mode ! 0) {
+	return(0);
+}
+if (~league_world = 1) {
+	return(0);
+}
+return(1);

@@ -1,0 +1,17 @@
+// 2351
+[proc,script2351](int $int0, int $int1, int $int2)(int)
+if ($int0 = -1) {
+	return(0);
+}
+if ($int1 = -1) {
+	return(0);
+}
+if ($int2 = -1) {
+	return(0);
+}
+def_string $string0 = enum_string(enum_1373, $int0);
+if (compare($string0, "") = 0) {
+	return(0);
+}
+def_int $int3 = _3701($string0, $int1, $int2);
+return($int3);
