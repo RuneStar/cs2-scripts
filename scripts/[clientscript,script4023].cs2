@@ -1,0 +1,11 @@
+// 4023
+[clientscript,script4023](string $string0)
+def_component $component0 = interface_35:5;
+def_component $component1 = interface_35:4;
+def_component $component2 = interface_35:2;
+def_int $height3 = calc(paraheight($string0, if_getwidth($component0), p12_full) * 15 + 2);
+if_settext($string0, $component0);
+if_setscrollsize(0, $height3, $component1);
+if_setsize(if_getwidth($component0), $height3, ^setsize_abs, ^setsize_abs, $component0);
+if_setscrollpos(0, 0, $component1);
+~scrollbar_vertical($component2, $component1, "graphic_2959", "graphic_2956", "graphic_2957", "graphic_2958", "graphic_2954", "graphic_2955");
