@@ -1,0 +1,19 @@
+// 3779
+[clientscript,gnome_cuisine_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+cc_deleteall($component1);
+def_enum $enum6 = ~gnome_cuisine_enum;
+~steelborder($component0, ~gnome_cuisine_title, 0);
+if_setonmouseover("gnome_cuisine_confirmation_in($component1)", $component1);
+if_setonmouseleave("gnome_cuisine_confirmation_out($component1)", $component1);
+if_setonvartransmit("gnome_cuisine_update_if($component2, $component3, $component4, $component5, $enum6){var675, var841}", $component5);
+if_setoninvtransmit("gnome_cuisine_update_if($component2, $component3, $component4, $component5, $enum6){inv}", $component5);
+def_int $comsubid7 = ~v2_stone_button_filled($component1);
+cc_create($component1, ^iftype_text, $comsubid7);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 10);
+cc_settext("Create");
+~gnome_show_cuisine($component2, $component3, $component4, $component5, $enum6);

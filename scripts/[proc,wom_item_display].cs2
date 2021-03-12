@@ -20,10 +20,10 @@ while ($enum14 ! null) {
 	$int10 = enum_getoutputcount($enum14);
 	$int16 = 0;
 	if ($int2 = 1) {
-		if (~script4029(enum(enum, struct, enum_2074, $enum14)) = 2) {
+		if (~quest_status_get(enum(enum, struct, enum_2074, $enum14)) = 2) {
 			$int16 = 1;
 		}
-	} else if ($int2 = 2 & ~script4029(enum(enum, struct, enum_2075, $enum14)) = 2) {
+	} else if ($int2 = 2 & ~quest_status_get(enum(enum, struct, enum_2075, $enum14)) = 2) {
 		$int16 = 1;
 	}
 	while ($int8 < $int10) {

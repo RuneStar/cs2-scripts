@@ -1,0 +1,62 @@
+// 4030
+[proc,quest_status_get_exceptions](struct $struct0)(int)
+switch_struct ($struct0) {
+	case shield_of_arrav_316 :
+		if (%var145 = 7 | %var146 = 4) {
+			return(2);
+		}
+		if (%var145 > 0 | %var146 > 0) {
+			return(0);
+		}
+		return(1);
+	case creature_of_fenkenstrain_340 :
+		if (%var399 > 6) {
+			return(2);
+		}
+		if (%var399 = 0 & %varbit203 = 0) {
+			return(1);
+		}
+		return(0);
+	case elemental_workshop_i_354 :
+		if (testbit(%var299, 20) = ^true) {
+			return(2);
+		}
+		if (testbit(%var299, 1) = ^false) {
+			return(1);
+		}
+		return(0);
+	case architectural_alliance_320 :
+		if (%varbit4982 >= 3) {
+			return(2);
+		}
+		if (%varbit4976 = 0) {
+			return(1);
+		}
+		return(0);
+	case alfred_grimhands_barcrawl_322 :
+		if (%var77 = 2 | %var76 >= 6) {
+			return(2);
+		}
+		if (%var77 = 0) {
+			return(1);
+		}
+		return(0);
+	case curse_of_the_empty_lord_323 :
+		if (%varbit821 = 1) {
+			return(2);
+		}
+		if (%varbit816 = 0) {
+			return(1);
+		}
+		return(0);
+	case enchanted_key_324 :
+		if (%varbit1391 = 2047) {
+			return(2);
+		}
+		if (%varbit1383 < 4) {
+			return(1);
+		}
+		return(0);
+	case default :
+		return(-1);
+}

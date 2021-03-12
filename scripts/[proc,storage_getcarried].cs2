@@ -1,0 +1,8 @@
+// 1630
+[proc,storage_getcarried](enum $enum0, obj $obj1)(int, namedobj)
+switch_enum ($enum0) {
+	case enum_2850 :
+		return(~script2260($obj1));
+	case default :
+		return(0, null);
+}

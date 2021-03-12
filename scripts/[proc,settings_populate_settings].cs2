@@ -91,7 +91,7 @@ while ($int17 < $int18) {
 	}
 	$int19 = 0;
 	$int20 = enum_getoutputcount($enum22);
-	if (~script3955($struct21) = 0) {
+	if (~settings_check_block($struct21) = 0) {
 		while ($int19 < $int20) {
 			$struct23 = enum(int, struct, $enum22, $int19);
 			if ($struct23 ! null) {

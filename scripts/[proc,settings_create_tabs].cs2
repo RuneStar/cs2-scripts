@@ -18,7 +18,7 @@ while ($count18 < $count19) {
 	$struct20 = enum(int, struct, enum_422, $count18);
 	if ($struct20 ! null) {
 		$int21 = struct_param($struct20, param_743);
-		$int17 = ~script3955($struct20);
+		$int17 = ~settings_check_block($struct20);
 		if ($int17 = 1) {
 			cc_create($component0, ^iftype_rectangle, $int23);
 			cc_sethide(true);

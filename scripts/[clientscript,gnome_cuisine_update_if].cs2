@@ -1,0 +1,20 @@
+// 3784
+[clientscript,gnome_cuisine_update_if](component $component0, component $component1, component $component2, component $component3, enum $enum4)
+~gnome_show_cuisine($component0, $component1, $component2, $component3, $enum4);
+def_int $count5 = 0;
+def_int $count6 = enum_getoutputcount($enum4);
+def_struct $struct7 = null;
+while ($count5 < $count6) {
+	$struct7 = enum(int, struct, $enum4, $count5);
+	if ($struct7 ! null & %varbit2517 = struct_param($struct7, param_1056)) {
+		$count5 = $count6;
+	} else {
+		$struct7 = null;
+	}
+	$count5 = calc($count5 + 1);
+}
+if ($struct7 = null) {
+	if_close;
+	return;
+}
+~gnome_show_ingredients($component2, $struct7, $component3);

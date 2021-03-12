@@ -3,9 +3,9 @@
 def_graphic $graphic7 = "close_buttons,4";
 def_graphic $graphic8 = "close_buttons,5";
 def_graphic $graphic9 = "leftarrow";
-def_graphic $graphic10 = "graphic_2385";
+def_graphic $graphic10 = "leftarrow_highlight";
 def_graphic $graphic11 = "rightarrow";
-def_graphic $graphic12 = "graphic_2389";
+def_graphic $graphic12 = "rightarrow_highlight";
 if (~on_mobile = false) {
 	if_setonmouseover("graphic_swapper($component1, $graphic8)", $component0);
 	if_setonmouseleave("graphic_swapper($component1, $graphic7)", $component0);

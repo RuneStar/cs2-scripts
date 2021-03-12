@@ -1,0 +1,5 @@
+// 1110
+[clientscript,league_statistics_init](component $component0, component $component1, component $component2, component $component3, int $int4, int $int5, string $string0)
+~leagues_close_button($component3, false);
+if_setposition(50, 5, ^setpos_abs_right, ^setpos_abs_top, $component3);
+~league_statistics_draw($component0, $component1, $component2, $string0, $int4, $int5);

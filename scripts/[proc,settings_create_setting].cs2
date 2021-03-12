@@ -1,8 +1,8 @@
 // 3841
 [proc,settings_create_setting](struct $struct0, struct $struct1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, int $int19, int $int20, int $int21, int $int22, string $string0, component $component23)(int, int, int, int, int, int, int)
 def_int $int24 = struct_param($struct0, param_1078);
-def_int $int25 = ~script3955($struct0);
-if (struct_param($struct0, param_1115) = true & ~script3959(struct_param($struct0, param_1077)) = 0) {
+def_int $int25 = ~settings_check_block($struct0);
+if (struct_param($struct0, param_1115) = true & ~settings_custom_check(struct_param($struct0, param_1077)) = 0) {
 	$int25 = 1;
 }
 def_int $int26 = struct_param($struct0, param_1090);
