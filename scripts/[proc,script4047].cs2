@@ -1,0 +1,27 @@
+// 4047
+[proc,script4047](int $int0)(obj, int)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_obj $obj3 = null;
+switch_int ($int0) {
+	case 0 :
+		$obj3 = inv_getobj(worn, 13);
+		$int2 = inv_total(worn, $obj3);
+	case 1 :
+		$int1 = %varbit2473;
+		$int2 = %varbit2469;
+		$obj3 = enum(int, obj, enum_336, $int1);
+	case 2 :
+		$int1 = %varbit2474;
+		$int2 = %varbit2470;
+		$obj3 = enum(int, obj, enum_336, $int1);
+	case 3 :
+		$int1 = %varbit2475;
+		$int2 = %varbit2471;
+		$obj3 = enum(int, obj, enum_336, $int1);
+	case 4 :
+		$int1 = %varbit2476;
+		$int2 = %varbit2472;
+		$obj3 = enum(int, obj, enum_336, $int1);
+}
+return($obj3, $int2);

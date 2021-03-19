@@ -1,5 +1,8 @@
 // 4029
 [proc,quest_status_get](struct $struct0)(int)
+if ($struct0 = null) {
+	return(1);
+}
 def_int $int1 = ~quest_status_get_exceptions($struct0);
 if ($int1 ! -1) {
 	return($int1);

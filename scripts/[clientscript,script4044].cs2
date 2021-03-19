@@ -1,0 +1,9 @@
+// 4044
+[clientscript,script4044](int $int0, component $component1, component $component2, component $component3, int $int4)
+$int4 = calc($int4 + 1);
+if ($int4 > 30) {
+	~script4042($int0, $component1, $component2, $component3);
+	if_setontimer(null, $component2);
+} else {
+	if_setontimer("script4044($int0, $component1, $component2, $component3, $int4)", $component2);
+}

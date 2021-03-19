@@ -1,19 +1,20 @@
 // 2924
-[clientscript,prif_recipes_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
-def_int $height16 = if_getheight($component2);
-if_setscrollsize(0, $height16, $component1);
+[clientscript,prif_recipes_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
+def_int $height17 = if_getheight($component2);
+if_setscrollsize(0, $height17, $component1);
 ~scrollbar_vertical($component3, $component1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
 if_setscrollpos(0, 0, $component1);
 if_settext("Crystal Singing Recipes", $component0);
-~script2925($component4, "Crystal Helm", "50 Crystal Shards & 1 Crystal Armour Seed", crystal_helm_23971);
-~script2925($component5, "Crystal Legs", "100 Crystal Shards & 2 Crystal Armour Seeds", crystal_legs_23979);
-~script2925($component6, "Crystal Body", "150 Crystal Shards & 3 Crystal Armour Seeds", crystal_body_23975);
-~script2925($component7, "Crystal Pickaxe", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Pickaxe", crystal_pickaxe_23680);
-~script2925($component8, "Crystal Axe", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Axe", crystal_axe_23673);
-~script2925($component9, "Crystal Harpoon", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Harpoon", crystal_harpoon_23762);
-~script2925($component10, "Crystal Bow", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_bow_24123);
-~script2925($component11, "Crystal Halberd", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_halberd_24125);
-~script2925($component12, "Crystal Shield", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_shield_24127);
-~script2925($component13, "Enhanced Crystal Key", "10 Crystal Shards & 1 Crystal Key", enhanced_crystal_key_23951);
-~script2925($component14, "Eternal Teleport Crystal", "100 Crystal Shards & 1 Enhanced Crystal Teleport Seed", eternal_teleport_crystal_23946);
-~script2925($component15, "Infinite Blade of Saeldor", "1,000 Crystal Shards & 1 Blade of Saeldor", blade_of_saeldor_c_24551);
+~script2925($component4, "Celestial Signet", "100 Crystal Shards, 1 Celestial Ring, 1 Elven Signet & 1,000 Stardust", celestial_signet_25545);
+~script2925($component5, "Crystal Helm", "50 Crystal Shards & 1 Crystal Armour Seed", crystal_helm_23971);
+~script2925($component6, "Crystal Legs", "100 Crystal Shards & 2 Crystal Armour Seeds", crystal_legs_23979);
+~script2925($component7, "Crystal Body", "150 Crystal Shards & 3 Crystal Armour Seeds", crystal_body_23975);
+~script2925($component8, "Crystal Pickaxe", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Pickaxe", crystal_pickaxe_23680);
+~script2925($component9, "Crystal Axe", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Axe", crystal_axe_23673);
+~script2925($component10, "Crystal Harpoon", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Harpoon", crystal_harpoon_23762);
+~script2925($component11, "Crystal Bow", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_bow_24123);
+~script2925($component12, "Crystal Halberd", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_halberd_24125);
+~script2925($component13, "Crystal Shield", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_shield_24127);
+~script2925($component14, "Enhanced Crystal Key", "10 Crystal Shards & 1 Crystal Key", enhanced_crystal_key_23951);
+~script2925($component15, "Eternal Teleport Crystal", "100 Crystal Shards & 1 Enhanced Crystal Teleport Seed", eternal_teleport_crystal_23946);
+~script2925($component16, "Blade of Saeldor (c)", "1,000 Crystal Shards & 1 Blade of Saeldor", blade_of_saeldor_c_24551);

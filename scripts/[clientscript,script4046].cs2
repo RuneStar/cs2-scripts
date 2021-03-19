@@ -1,0 +1,7 @@
+// 4046
+[clientscript,script4046](component $component0)
+if (cc_find($component0, 0) = ^true) {
+	cc_settrans(100);
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 10))");
+}
+sound_synth(synth_2266, 1, 0);

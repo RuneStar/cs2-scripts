@@ -1,0 +1,48 @@
+// 4045
+[proc,script4045](int $int0, component $component1, component $component2, obj $obj3, int $num4, component $component5)
+cc_deleteall($component1);
+cc_deleteall($component2);
+def_string $text0 = "";
+if ($num4 > 0 & $obj3 ! null) {
+	cc_create($component1, ^iftype_graphic, 0);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setoutline(1);
+	cc_setobject($obj3, $num4);
+	cc_setdraggable($component5, -1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	cc_setondragcomplete("script4043($component5, event_com, event_drop)");
+	if (~on_mobile = false) {
+		if_setonmouserepeat("cc_settrans($component1, 0, 150, null)", $component1);
+		if_setonmouseleave("cc_settrans($component1, 0, 0, null)", $component1);
+	}
+}
+cc_create($component2, ^iftype_text, 0);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+if ($num4 > 0) {
+	cc_setsize(44, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(40, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setcolour(0xff981f);
+	if ($obj3 ! null) {
+		$text0 = oc_name($obj3);
+	} else {
+		$text0 = "N/A";
+	}
+	cc_settext($text0);
+	if ($int0 ! 0) {
+		if_setop(1, "Remove <col=ff981f><$text0>", $component1);
+	} else {
+		if_setop(1, "Unwield <col=ff981f><$text0>", $component1);
+	}
+	if_setonop("script4046($component1)", $component1);
+} else {
+	cc_setcolour(0x9f9f9f);
+	cc_setsize(44, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(40, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_settext("Empty");
+	if_setop(1, "", $component1);
+	if_setonop(null, $component1);
+}

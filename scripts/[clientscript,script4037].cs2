@@ -1,0 +1,12 @@
+// 4037
+[clientscript,script4037](component $component0, component $component1)
+if_sethide(true, $component0);
+if_sethide(true, $component1);
+if_setop(1, "", $component0);
+if (~deadman_mode ! 0 | map_members = ^false) {
+	return;
+}
+if_sethide(false, $component0);
+~script4039($component0, $component1);
+if_setoninvtransmit("script4038($component0, $component1){inv, worn}", $component0);
+if_setonvartransmit("script4038($component0, $component1){var1598, var1599, var834, var835}", $component0);

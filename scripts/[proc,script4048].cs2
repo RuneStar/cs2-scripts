@@ -1,0 +1,16 @@
+// 4048
+[proc,script4048](component $component0)(int)
+switch_component ($component0) {
+	case xbows_pouch:20 :
+		return(0);
+	case xbows_pouch:6 :
+		return(1);
+	case xbows_pouch:9 :
+		return(2);
+	case xbows_pouch:12 :
+		return(3);
+	case xbows_pouch:16 :
+		return(4);
+	case default :
+		return(-1);
+}

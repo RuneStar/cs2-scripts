@@ -1,0 +1,15 @@
+// 4035
+[clientscript,script4035]
+def_string $string0 = "Unknown";
+mes("Before type of platform call.");
+def_int $int0 = _6527;
+if ($int0 = 1) {
+	$string0 = "Steam";
+} else if ($int0 = 0) {
+	$string0 = "Default";
+} else if ($int0 = 2) {
+	$string0 = "Android";
+} else if ($int0 = 3) {
+	$string0 = "Apple";
+}
+mes("Client: You are on platform type: <$string0>");
