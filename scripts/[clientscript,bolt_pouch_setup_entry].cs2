@@ -1,0 +1,8 @@
+// 4041
+[clientscript,bolt_pouch_setup_entry](int $int0, component $component1, component $component2, component $component3)
+if (inv_total(inv, bolt_pouch_9433) <= 0) {
+	if_close;
+	return;
+}
+if_setontimer(null, $component2);
+~bolt_pouch_setup_entry($int0, $component1, $component2, $component3);

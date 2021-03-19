@@ -1,5 +1,5 @@
 // 4045
-[proc,script4045](int $int0, component $component1, component $component2, obj $obj3, int $num4, component $component5)
+[proc,bolt_pouch_create_entry](int $int0, component $component1, component $component2, obj $obj3, int $num4, component $component5)
 cc_deleteall($component1);
 cc_deleteall($component2);
 def_string $text0 = "";
@@ -12,7 +12,7 @@ if ($num4 > 0 & $obj3 ! null) {
 	cc_setdraggable($component5, -1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
-	cc_setondragcomplete("script4043($component5, event_com, event_drop)");
+	cc_setondragcomplete("bolt_pouch_drag_complete($component5, event_com, event_drop)");
 	if (~on_mobile = false) {
 		if_setonmouserepeat("cc_settrans($component1, 0, 150, null)", $component1);
 		if_setonmouseleave("cc_settrans($component1, 0, 0, null)", $component1);
@@ -37,7 +37,7 @@ if ($num4 > 0) {
 	} else {
 		if_setop(1, "Unwield <col=ff981f><$text0>", $component1);
 	}
-	if_setonop("script4046($component1)", $component1);
+	if_setonop("bolt_pouch_op($component1)", $component1);
 } else {
 	cc_setcolour(0x9f9f9f);
 	cc_setsize(44, 0, ^setsize_minus, ^setsize_minus);

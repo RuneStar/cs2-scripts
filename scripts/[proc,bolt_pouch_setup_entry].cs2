@@ -1,0 +1,6 @@
+// 4042
+[proc,bolt_pouch_setup_entry](int $int0, component $component1, component $component2, component $component3)
+def_int $num4 = 0;
+def_obj $obj5 = null;
+$obj5, $num4 = ~bolt_pouch_return_slot($int0);
+~bolt_pouch_create_entry($int0, $component1, $component2, $obj5, $num4, $component3);

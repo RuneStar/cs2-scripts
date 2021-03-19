@@ -1,0 +1,13 @@
+// 4040
+[clientscript,bolt_pouch_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+~bolt_pouch_setup_entry(0, $component0, $component5, $component10);
+if_setoninvtransmit("bolt_pouch_setup_entry(0, $component0, $component5, $component10){worn}", $component5);
+~bolt_pouch_setup_entry(1, $component1, $component6, $component10);
+if_setonvartransmit("bolt_pouch_setup_entry(1, $component1, $component6, $component10){var834, var1598}", $component6);
+~bolt_pouch_setup_entry(2, $component2, $component7, $component10);
+if_setonvartransmit("bolt_pouch_setup_entry(2, $component2, $component7, $component10){var834, var1598}", $component7);
+~bolt_pouch_setup_entry(3, $component3, $component8, $component10);
+if_setonvartransmit("bolt_pouch_setup_entry(3, $component3, $component8, $component10){var835, var1599}", $component8);
+~bolt_pouch_setup_entry(4, $component4, $component9, $component10);
+if_setonvartransmit("bolt_pouch_setup_entry(4, $component4, $component9, $component10){var835, var1599}", $component9);
+if_setopkey(1, 13, 0, $component11);

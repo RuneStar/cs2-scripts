@@ -1,8 +1,0 @@
-// 4041
-[clientscript,script4041](int $int0, component $component1, component $component2, component $component3)
-if (inv_total(inv, bolt_pouch_9433) <= 0) {
-	if_close;
-	return;
-}
-if_setontimer(null, $component2);
-~script4042($int0, $component1, $component2, $component3);

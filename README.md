@@ -3233,8 +3233,8 @@
 [**3230**](scripts/[clientscript,league_side_panel_hudtoggle].cs2) `[clientscript,league_side_panel_hudtoggle]`  
 [**3231**](scripts/[clientscript,league_side_panel_hudop].cs2) `[clientscript,league_side_panel_hudop]`  
 [**3232**](scripts/[proc,league_side_panel_hudtoggle].cs2) `[proc,league_side_panel_hudtoggle]`  
-[**3233**](scripts/[clientscript,script3233].cs2)  
-[**3234**](scripts/[clientscript,script3234].cs2)  
+[**3233**](scripts/[worldmapelementmouserepeat,645].cs2) `[worldmapelementmouserepeat,645]`  
+[**3234**](scripts/[worldmapelementmouseleave,645].cs2) `[worldmapelementmouseleave,645]`  
 [**3235**](scripts/[proc,update_diary_entry_grey].cs2) `[proc,update_diary_entry_grey]`  
 [**3236**](scripts/[proc,questlist_f2p_progress_grey].cs2) `[proc,questlist_f2p_progress_grey]`  
 [**3237**](scripts/[proc,questlist_members_progress_grey].cs2) `[proc,questlist_members_progress_grey]`  
@@ -3507,8 +3507,8 @@
 [**3504**](scripts/[clientscript,script3504].cs2)  
 [**3505**](scripts/[proc,inv_freespace].cs2) `[proc,inv_freespace]`  
 [**3506**](scripts/[proc,script3506].cs2)  
-[**3507**](scripts/[clientscript,script3507].cs2)  
-[**3508**](scripts/[clientscript,script3508].cs2)  
+[**3507**](scripts/[worldmapelementmouserepeat,652].cs2) `[worldmapelementmouserepeat,652]`  
+[**3508**](scripts/[worldmapelementmouseleave,652].cs2) `[worldmapelementmouseleave,652]`  
 [**3509**](scripts/[proc,adventurepath_voucher_init].cs2) `[proc,adventurepath_voucher_init]`  
 [**3510**](scripts/[proc,script3510].cs2)  
 [**3511**](scripts/[proc,script3511].cs2)  
@@ -4031,21 +4031,21 @@
 [**4028**](scripts/[proc,quest_index_status_get].cs2) `[proc,quest_index_status_get]`  
 [**4029**](scripts/[proc,quest_status_get].cs2) `[proc,quest_status_get]`  
 [**4030**](scripts/[proc,quest_status_get_exceptions].cs2) `[proc,quest_status_get_exceptions]`  
-[**4031**](scripts/[clientscript,script4031].cs2)  
-[**4032**](scripts/[clientscript,script4032].cs2)  
+[**4031**](scripts/[worldmapelementmouserepeat,680].cs2) `[worldmapelementmouserepeat,680]`  
+[**4032**](scripts/[worldmapelementmouseleave,680].cs2) `[worldmapelementmouseleave,680]`  
 [**4033**](scripts/[clientscript,script4033].cs2)  
 [**4034**](scripts/[proc,script4034].cs2)  
-[**4035**](scripts/[clientscript,script4035].cs2)  
+[**4035**](scripts/[clientscript,publishing_platform].cs2) `[clientscript,publishing_platform]`  
 [**4036**](scripts/[proc,script4036].cs2)  
-[**4037**](scripts/[clientscript,script4037].cs2)  
-[**4038**](scripts/[clientscript,script4038].cs2)  
-[**4039**](scripts/[proc,script4039].cs2)  
-[**4040**](scripts/[clientscript,script4040].cs2)  
-[**4041**](scripts/[clientscript,script4041].cs2)  
-[**4042**](scripts/[proc,script4042].cs2)  
-[**4043**](scripts/[clientscript,script4043].cs2)  
-[**4044**](scripts/[clientscript,script4044].cs2)  
-[**4045**](scripts/[proc,script4045].cs2)  
-[**4046**](scripts/[clientscript,script4046].cs2)  
-[**4047**](scripts/[proc,script4047].cs2)  
-[**4048**](scripts/[proc,script4048].cs2)  
+[**4037**](scripts/[clientscript,bolt_pouch_extra_ammo_init].cs2) `[clientscript,bolt_pouch_extra_ammo_init]`  
+[**4038**](scripts/[clientscript,bolt_pouch_extra_ammo_draw].cs2) `[clientscript,bolt_pouch_extra_ammo_draw]`  
+[**4039**](scripts/[proc,bolt_pouch_extra_ammo_draw].cs2) `[proc,bolt_pouch_extra_ammo_draw]`  
+[**4040**](scripts/[clientscript,bolt_pouch_init].cs2) `[clientscript,bolt_pouch_init]`  
+[**4041**](scripts/[clientscript,bolt_pouch_setup_entry].cs2) `[clientscript,bolt_pouch_setup_entry]`  
+[**4042**](scripts/[proc,bolt_pouch_setup_entry].cs2) `[proc,bolt_pouch_setup_entry]`  
+[**4043**](scripts/[clientscript,bolt_pouch_drag_complete].cs2) `[clientscript,bolt_pouch_drag_complete]`  
+[**4044**](scripts/[clientscript,bolt_pouch_setup_entry_timer].cs2) `[clientscript,bolt_pouch_setup_entry_timer]`  
+[**4045**](scripts/[proc,bolt_pouch_create_entry].cs2) `[proc,bolt_pouch_create_entry]`  
+[**4046**](scripts/[clientscript,bolt_pouch_op].cs2) `[clientscript,bolt_pouch_op]`  
+[**4047**](scripts/[proc,bolt_pouch_return_slot].cs2) `[proc,bolt_pouch_return_slot]`  
+[**4048**](scripts/[proc,bolt_pouch_return_id].cs2) `[proc,bolt_pouch_return_id]`  

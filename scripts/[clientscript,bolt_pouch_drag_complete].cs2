@@ -1,0 +1,111 @@
+// 4043
+[clientscript,bolt_pouch_drag_complete](component $component0, component $component1, component $drop2)
+sound_synth(synth_2266, 1, 0);
+def_int $int3 = ~bolt_pouch_return_id($component1);
+def_component $component4 = null;
+def_int $int5 = 0;
+def_obj $obj6 = null;
+def_int $int7 = 0;
+def_int $int8 = ~bolt_pouch_return_id($drop2);
+def_component $component9 = null;
+def_int $int10 = 0;
+def_obj $obj11 = null;
+def_int $int12 = 0;
+def_int $int13 = 0;
+if ($int8 = $int3) {
+	return;
+}
+if ($int8 = -1 | $int3 = -1) {
+	return;
+}
+if ($component1 ! null) {
+	$component4 = if_getlayer($component1);
+	if ($drop2 ! null) {
+		$component9 = if_getlayer($drop2);
+		if ($component4 = null | $component9 = null) {
+			return;
+		}
+		$obj11, $int10 = ~bolt_pouch_return_slot($int8);
+		$int12 = enum(obj, int, enum_337, $obj11);
+		$obj6, $int5 = ~bolt_pouch_return_slot($int3);
+		$int7 = enum(obj, int, enum_337, $obj6);
+		def_int $int14 = 0;
+		def_boolean $boolean15 = true;
+		def_int $int16 = 0;
+		def_int $int17 = 10000;
+		if ($int8 = 0) {
+			if ($int12 = 0) {
+				~bolt_pouch_create_entry($int8, $drop2, $component9, $obj6, $int5, $component0);
+				~bolt_pouch_create_entry($int3, $component1, $component4, null, 0, $component0);
+			} else if ($int12 = $int7) {
+				$int17 = ^max_32bit_int;
+				if (oc_stackable($obj11) = false) {
+					$int17 = 1;
+				}
+				$int13 = calc($int17 - $int10);
+				$int13 = ~min($int13, $int5);
+				if ($int13 <= 0) {
+					return;
+				}
+				~bolt_pouch_create_entry($int8, $drop2, $component9, $obj11, calc($int10 + $int13), $component0);
+				if (calc($int5 - $int13) <= 0) {
+					~bolt_pouch_create_entry($int3, $component1, $component4, null, 0, $component0);
+				} else {
+					~bolt_pouch_create_entry($int3, $component1, $component4, $obj6, calc($int5 - $int13), $component0);
+				}
+			} else if ($int10 > 10000) {
+				$int14 = inv_total(inv, $obj6);
+				$boolean15 = oc_stackable($obj6);
+				$int16 = ~inv_freespace(inv, inv_size(inv));
+				if ($int14 <= 0 & $int16 > 0 | $boolean15 = true & $int14 > 0 & calc(^max_32bit_int - $int14) >= $int5) {
+					~bolt_pouch_create_entry($int3, $component1, $component4, null, 0, $component0);
+					~bolt_pouch_create_entry($int8, $drop2, $component9, $obj6, $int5, $component0);
+				} else {
+					return;
+				}
+			} else {
+				~bolt_pouch_create_entry($int8, $drop2, $component9, $obj6, $int5, $component0);
+				~bolt_pouch_create_entry($int3, $component1, $component4, $obj11, $int10, $component0);
+			}
+		} else if ($int3 = 0) {
+			if ($int7 = 0) {
+				return;
+			}
+			if ($int12 = 0) {
+				if ($int5 > 10000) {
+					return;
+				}
+				~bolt_pouch_create_entry($int3, $component1, $component4, null, 0, $component0);
+				~bolt_pouch_create_entry($int8, $drop2, $component9, $obj6, $int5, $component0);
+			} else if ($int12 = $int7) {
+				if (oc_stackable($obj11) = false) {
+					$int17 = 1;
+				}
+				$int13 = calc($int17 - $int10);
+				$int13 = ~min($int13, $int5);
+				if ($int13 <= 0) {
+					return;
+				}
+				~bolt_pouch_create_entry($int8, $drop2, $component9, $obj11, calc($int10 + $int13), $component0);
+				if (calc($int5 - $int13) <= 0) {
+					~bolt_pouch_create_entry($int3, $component1, $component4, null, 0, $component0);
+				} else {
+					~bolt_pouch_create_entry($int3, $component1, $component4, $obj6, calc($int5 - $int13), $component0);
+				}
+			} else {
+				if ($int5 > 10000) {
+					return;
+				}
+				~bolt_pouch_create_entry($int3, $component1, $component4, $obj11, $int10, $component0);
+				~bolt_pouch_create_entry($int8, $drop2, $component9, $obj6, $int5, $component0);
+			}
+		} else {
+			~bolt_pouch_create_entry($int3, $component1, $component4, $obj11, $int10, $component0);
+			~bolt_pouch_create_entry($int8, $drop2, $component9, $obj6, $int5, $component0);
+		}
+		if_setontimer("bolt_pouch_setup_entry_timer($int3, $component1, $component4, $component0, 0)", $component4);
+		if_setontimer("bolt_pouch_setup_entry_timer($int8, $drop2, $component9, $component0, 0)", $component9);
+		return;
+	}
+	return;
+}

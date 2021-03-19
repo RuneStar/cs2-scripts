@@ -1,0 +1,9 @@
+// 4044
+[clientscript,bolt_pouch_setup_entry_timer](int $int0, component $component1, component $component2, component $component3, int $int4)
+$int4 = calc($int4 + 1);
+if ($int4 > 30) {
+	~bolt_pouch_setup_entry($int0, $component1, $component2, $component3);
+	if_setontimer(null, $component2);
+} else {
+	if_setontimer("bolt_pouch_setup_entry_timer($int0, $component1, $component2, $component3, $int4)", $component2);
+}
