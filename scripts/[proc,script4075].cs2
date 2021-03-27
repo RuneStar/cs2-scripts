@@ -1,0 +1,14 @@
+// 4075
+[proc,script4075](int $int0, int $int1, string $string0, component $component2, component $component3, boolean $boolean4)
+def_int $width5 = 0;
+if ($int1 = 0) {
+	if_setsize(0, 0, ^setsize_abs, ^setsize_minus, $component3);
+	if_settext("<$string0>: 0%", $component2);
+} else {
+	$width5 = ~max(scale($int1, $int0, 172), 1);
+	if ($width5 > 0 & if_getwidth($component3) <= 0) {
+		if_setsize(1, 0, ^setsize_abs, ^setsize_minus, $component3);
+	}
+	if_settext("<$string0>: <tostring(~max(scale($int1, $int0, 100), 1))>%", $component2);
+	if_setontimer("script4076($boolean4, $component3, $width5)", $component3);
+}

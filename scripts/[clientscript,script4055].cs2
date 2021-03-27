@@ -1,0 +1,9 @@
+// 4055
+[clientscript,script4055](int $opindex0, component $component1, int $comsubid2, int $trans3, int $trans4)
+if ($opindex0 ! 10) {
+	sound_synth(synth_2266, 1, 0);
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans($trans3);
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans4, calc(clientclock + 10))");
+}

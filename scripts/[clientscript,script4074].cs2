@@ -1,0 +1,51 @@
+// 4074
+[clientscript,script4074](boolean $boolean0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14)
+~script4075($int4, $int2, "Energy", interface_437:37, interface_437:30, false);
+~script4075($int5, $int3, "Essence", interface_437:47, interface_437:40, $boolean0);
+~script4075(350, $int6, "Storm Intensity", interface_437:57, interface_437:50, false);
+if_settext("Points: <tostring($int1)>", interface_437:27);
+if ($int1 < 2000) {
+	if_setcolour(^red, interface_437:27);
+} else {
+	if_setcolour(^white, interface_437:27);
+}
+if ($int7 = 1) {
+	if_sethide(true, interface_437:24);
+} else {
+	if_sethide(false, interface_437:24);
+}
+if ($int8 = 1) {
+	if_sethide(true, interface_437:20);
+} else {
+	if_sethide(false, interface_437:20);
+}
+if ($int9 = 1) {
+	if_sethide(true, interface_437:19);
+} else {
+	if_sethide(false, interface_437:19);
+}
+if ($int10 = 1) {
+	if_sethide(true, interface_437:22);
+} else {
+	if_sethide(false, interface_437:22);
+}
+if ($int11 = 1) {
+	if_sethide(false, interface_437:9);
+} else {
+	if_sethide(true, interface_437:9);
+}
+if ($int12 = 1) {
+	if_sethide(false, interface_437:11);
+} else {
+	if_sethide(true, interface_437:11);
+}
+if ($int13 = 1) {
+	if_sethide(false, interface_437:10);
+} else {
+	if_sethide(true, interface_437:10);
+}
+if ($int14 = 1) {
+	if_sethide(false, interface_437:15);
+} else {
+	if_sethide(true, interface_437:15);
+}

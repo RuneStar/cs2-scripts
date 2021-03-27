@@ -1,0 +1,37 @@
+// 4051
+[proc,script4051](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+~script4059($component3, "1", 0, $int0, $component1, $component2, $component3, $component4, $component5, $component6);
+~script4059($component4, "5", 1, $int0, $component1, $component2, $component3, $component4, $component5, $component6);
+~script4059($component5, "X", 3, $int0, $component1, $component2, $component3, $component4, $component5, $component6);
+~script4059($component6, "All", 2, $int0, $component1, $component2, $component3, $component4, $component5, $component6);
+def_int $int7 = calc((if_getwidth($component1) - 4 * 36) / 4);
+def_int $int8 = calc($int7 / 2);
+def_int $int9 = $int7;
+def_int $int10 = -1;
+def_obj $obj11 = null;
+def_int $int12 = 0;
+while ($int12 < $int0) {
+	if (cc_find($component1, $int12) = ^true) {
+		cc_clearops;
+		cc_setontimer(null);
+		$int10 = calc($int12 / 4 * (32 + $int9));
+		cc_setposition(calc($int8 + $int12 % 4 * (36 + $int7)), $int10, ^setpos_abs_left, ^setpos_abs_top);
+		$obj11 = inv_getobj(inv_651, $int12);
+		if ($obj11 ! null) {
+			~script4052($obj11, inv_getnum(inv_651, $int12), $component2, $int0);
+		} else {
+			~script4054;
+		}
+	}
+	$int12 = calc($int12 + 1);
+}
+if ($int10 ! -1) {
+	$int10 = calc($int10 + 32);
+}
+if ($int10 > if_getheight($component1)) {
+	if_setscrollsize(0, $int10, $component1);
+} else {
+	if_setscrollpos(0, 0, $component1);
+	if_setscrollsize(0, 0, $component1);
+}
+~scrollbar_resize($component2, $component1, if_getscrolly($component1));

@@ -1,0 +1,7 @@
+// 4066
+[clientscript,script4066](component $component0, graphic $graphic1, int $clock2)
+if (clientclock < $clock2) {
+	return;
+}
+if_setontimer(null, $component0);
+~script4064($component0, $graphic1, 0);

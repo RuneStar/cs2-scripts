@@ -1,0 +1,18 @@
+// 4063
+[proc,script4063](int $size0, component $component1)
+def_obj $obj2 = null;
+def_int $size3 = 0;
+while ($size3 < $size0) {
+	if (cc_find($component1, $size3) = ^true) {
+		cc_clearops;
+		cc_setontimer(null);
+		cc_setposition(calc($size3 % 4 * 42), calc($size3 / 4 * 36), ^setpos_abs_left, ^setpos_abs_top);
+		$obj2 = inv_getobj(inv, $size3);
+		if ($obj2 ! null) {
+			~script4053($obj2, inv_getnum(inv, $size3), $size0);
+		} else {
+			~script4054;
+		}
+	}
+	$size3 = calc($size3 + 1);
+}

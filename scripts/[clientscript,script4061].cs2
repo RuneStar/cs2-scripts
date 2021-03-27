@@ -1,0 +1,17 @@
+// 4061
+[clientscript,script4061](component $component0)
+cc_deleteall($component0);
+def_int $size1 = inv_size(inv);
+def_int $size2 = 0;
+while ($size2 < $size1) {
+	cc_create($component0, ^iftype_graphic, $size2);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$size2 = calc($size2 + 1);
+}
+~script4063($size1, $component0);
+if_setoninvtransmit("script4062($size1, $component0){inv}", $component0);
+if_setonvartransmit("script4062($size1, $component0){var675}", $component0);

@@ -1,0 +1,15 @@
+// 4077
+[proc,script4077](boolean $boolean0, component $component1, int $width2)
+def_int $width3 = if_getwidth($component1);
+if ($width3 = $width2) {
+	if_setsize($width2, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
+	if_setontimer(null, $component1);
+	return;
+}
+if ($boolean0 = true | if_getwidth($component1) = 0) {
+	if_setsize($width2, 0, ^setsize_abs, ^setsize_minus, $component1);
+} else if ($width3 < $width2) {
+	if_setsize(calc($width3 + 1), 0, ^setsize_abs, ^setsize_minus, $component1);
+} else if ($width3 > $width2) {
+	if_setsize(calc($width3 - 1), 0, ^setsize_abs, ^setsize_minus, $component1);
+}

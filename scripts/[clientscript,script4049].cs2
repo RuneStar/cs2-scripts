@@ -1,0 +1,27 @@
+// 4049
+[clientscript,script4049](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+~script4064($component1, "bankbuttons,0", 0);
+if_setop(1, "Fill", $component1);
+~script4064($component2, "bankbuttons,4", 0);
+if_setop(1, "Empty", $component2);
+cc_deleteall($component3);
+cc_deleteall($component4);
+cc_deleteall($component5);
+cc_deleteall($component6);
+cc_deleteall($component7);
+cc_deleteall($component8);
+~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $size9 = inv_size(inv_651);
+def_int $size10 = 0;
+while ($size10 < $size9) {
+	cc_create($component3, ^iftype_graphic, $size10);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setgraphicshadow(0x333333);
+	cc_setoutline(1);
+	cc_setdragdeadzone(5);
+	cc_setdragdeadtime(5);
+	$size10 = calc($size10 + 1);
+}
+~script4051($size9, $component3, $component4, $component5, $component6, $component7, $component8);
+if_setoninvtransmit("script4050($size9, $component3, $component4, $component5, $component6, $component7, $component8){inv_651}", $component0);
+if_setonvartransmit("script4050($size9, $component3, $component4, $component5, $component6, $component7, $component8){var675}", $component0);

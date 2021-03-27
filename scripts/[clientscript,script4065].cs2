@@ -1,0 +1,8 @@
+// 4065
+[clientscript,script4065](int $opindex0, component $component1, graphic $graphic2)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+~script4064($component1, $graphic2, 1);
+if_setontimer("script4066($component1, $graphic2, calc(clientclock + 20))", $component1);

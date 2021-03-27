@@ -220,12 +220,15 @@ switch_int ($int0) {
 				return(35, raw_tuna_359, "Tuna<br> (with 55 Fishing)");
 			}
 			if ($int2 = 4) {
-				return(45, leaping_sturgeon_11332, "Leaping sturgeon<br> (with 45 Agility & 70 Fishing)");
+				return(35, raw_harpoonfish_25564, "Harpoonfish<br> (with 55 Fishing)");
 			}
 			if ($int2 = 5) {
-				return(50, raw_swordfish_371, "Swordfish<br> (with 70 Fishing)");
+				return(45, leaping_sturgeon_11332, "Leaping sturgeon<br> (with 45 Agility & 70 Fishing)");
 			}
 			if ($int2 = 6) {
+				return(50, raw_swordfish_371, "Swordfish<br> (with 70 Fishing)");
+			}
+			if ($int2 = 7) {
 				return(76, raw_shark_383, "Shark<br> (with 96 Fishing)");
 			}
 			return(-1, null, "");
@@ -3310,15 +3313,18 @@ switch_int ($int0) {
 				return(55, raw_tuna_359, "Tuna<br> (with 35 Strength)");
 			}
 			if ($int2 = 3) {
-				return(58, leaping_salmon_11330, "Leaping salmon - Barbarian rod & most bait types<br> (with 30 Agility & 30 Strength)");
+				return(55, raw_harpoonfish_25564, "Harpoonfish<br> (with 35 Strength)");
 			}
 			if ($int2 = 4) {
-				return(70, leaping_sturgeon_11332, "Leaping sturgeon - Barbarian rod & most bait types<br> (with 45 Agility & 45 Strength)");
+				return(58, leaping_salmon_11330, "Leaping salmon - Barbarian rod & most bait types<br> (with 30 Agility & 30 Strength)");
 			}
 			if ($int2 = 5) {
-				return(70, raw_swordfish_371, "Swordfish<br> (with 50 Strength)");
+				return(70, leaping_sturgeon_11332, "Leaping sturgeon - Barbarian rod & most bait types<br> (with 45 Agility & 45 Strength)");
 			}
 			if ($int2 = 6) {
+				return(70, raw_swordfish_371, "Swordfish<br> (with 50 Strength)");
+			}
+			if ($int2 = 7) {
 				return(96, raw_shark_383, "Shark<br> (with 76 Strength)");
 			}
 			return(-1, null, "");
@@ -3394,16 +3400,19 @@ switch_int ($int0) {
 				return(15, fresh_fish_13429, "Members: Collecting from barrels of fresh fish");
 			}
 			if ($int2 = 1) {
-				return(47, pufferfish_21655, "Members: Accessing drift net fishing on Fossil Island (with 44 hunter)");
+				return(35, harpoonfish_25565, "Members: Fighting Tempoross");
 			}
 			if ($int2 = 2) {
-				return(65, raw_karambwan_3142, "Members: Karambwan - Karambwan vessel");
+				return(47, pufferfish_21655, "Members: Accessing drift net fishing on Fossil Island (with 44 hunter)");
 			}
 			if ($int2 = 3) {
-				return(79, raw_sea_turtle_395, "Members: Sea turtle - Trawler minigame");
+				return(65, raw_karambwan_3142, "Members: Karambwan - Karambwan vessel");
 			}
 			if ($int2 = 4) {
-				return(81, raw_manta_ray_389, "Members: Manta ray - Trawler minigame");
+				return(79, raw_sea_turtle_395, "Members: Sea turtle - Trawler & Tempoross");
+			}
+			if ($int2 = 5) {
+				return(81, raw_manta_ray_389, "Members: Manta ray - Trawler & Tempoross");
 			}
 			return(-1, null, "");
 		}

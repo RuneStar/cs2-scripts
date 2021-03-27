@@ -6,7 +6,7 @@ def_int $int0 = 0;
 def_int $int1 = calc((40 - 32) / 2);
 def_int $int2 = 0;
 def_namedobj $namedobj3 = null;
-while ($int2 <= 46) {
+while ($int2 <= 47) {
 	cc_create(interface_210:3, ^iftype_graphic, $int0);
 	$int0 = calc($int0 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
@@ -25,7 +25,7 @@ def_string $text1 = "";
 def_int $width4 = if_getwidth(interface_210:3);
 def_int $width5 = calc($width4 - (36 + 10));
 $int2 = 0;
-while ($int2 <= 46) {
+while ($int2 <= 47) {
 	cc_create(interface_210:3, ^iftype_text, $int0);
 	$int0 = calc($int0 + 1);
 	cc_setsize($width5, 40, ^setsize_abs, ^setsize_abs);
@@ -36,7 +36,7 @@ while ($int2 <= 46) {
 	cc_settextfont(p12_full);
 	$text1, $string0 = ~script632($string0);
 	cc_settext($text1);
-	if ($int2 < 46) {
+	if ($int2 < 47) {
 		cc_create(interface_210:3, ^iftype_graphic, $int0);
 		$int0 = calc($int0 + 1);
 		cc_setgraphic("tradebacking");
@@ -46,7 +46,7 @@ while ($int2 <= 46) {
 	}
 	$int2 = calc($int2 + 1);
 }
-def_int $height6 = calc(40 * (46 + 1));
+def_int $height6 = calc(40 * (47 + 1));
 if ($height6 > if_getheight(interface_210:3)) {
 	if_setscrollsize(0, $height6, interface_210:3);
 } else {
