@@ -1,5 +1,5 @@
 // 4049
-[clientscript,script4049](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+[clientscript,tackle_box_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 ~script4064($component1, "bankbuttons,0", 0);
 if_setop(1, "Fill", $component1);
 ~script4064($component2, "bankbuttons,4", 0);
@@ -22,6 +22,6 @@ while ($size10 < $size9) {
 	cc_setdragdeadtime(5);
 	$size10 = calc($size10 + 1);
 }
-~script4051($size9, $component3, $component4, $component5, $component6, $component7, $component8);
-if_setoninvtransmit("script4050($size9, $component3, $component4, $component5, $component6, $component7, $component8){inv_651}", $component0);
-if_setonvartransmit("script4050($size9, $component3, $component4, $component5, $component6, $component7, $component8){var675}", $component0);
+~tackle_box_draw($size9, $component3, $component4, $component5, $component6, $component7, $component8);
+if_setoninvtransmit("tackle_box_draw($size9, $component3, $component4, $component5, $component6, $component7, $component8){inv_651}", $component0);
+if_setonvartransmit("tackle_box_draw($size9, $component3, $component4, $component5, $component6, $component7, $component8){var675}", $component0);

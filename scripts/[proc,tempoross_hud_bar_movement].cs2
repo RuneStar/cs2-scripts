@@ -1,5 +1,5 @@
 // 4077
-[proc,script4077](boolean $boolean0, component $component1, int $width2)
+[proc,tempoross_hud_bar_movement](boolean $boolean0, component $component1, int $width2)
 def_int $width3 = if_getwidth($component1);
 if ($width3 = $width2) {
 	if_setsize($width2, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);

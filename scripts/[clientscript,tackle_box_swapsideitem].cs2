@@ -1,5 +1,5 @@
 // 4057
-[clientscript,script4057](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, int $comsubid4)
+[clientscript,tackle_box_swapsideitem](component $drop0, int $comsubid1, component $drop2, int $dropsubid3, int $comsubid4)
 if ($comsubid1 < 0 | $comsubid1 >= $comsubid4) {
 	return;
 }
@@ -15,12 +15,12 @@ if ($obj5 = null) {
 }
 def_obj $obj6 = inv_getobj(inv, $dropsubid3);
 if (cc_find($drop0, $dropsubid3) = ^true) {
-	~script4053($obj5, inv_getnum(inv, $comsubid1), $comsubid4);
+	~tackle_box_setsideitem($obj5, inv_getnum(inv, $comsubid1), $comsubid4);
 }
 if (cc_find($drop0, $comsubid1) = ^true) {
 	if ($obj6 ! null) {
-		~script4053($obj6, inv_getnum(inv, $dropsubid3), $comsubid4);
+		~tackle_box_setsideitem($obj6, inv_getnum(inv, $dropsubid3), $comsubid4);
 	} else {
-		~script4054;
+		~tackle_box_setblank;
 	}
 }

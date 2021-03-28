@@ -4049,21 +4049,21 @@
 [**4046**](scripts/[clientscript,bolt_pouch_op].cs2) `[clientscript,bolt_pouch_op]`  
 [**4047**](scripts/[proc,bolt_pouch_return_slot].cs2) `[proc,bolt_pouch_return_slot]`  
 [**4048**](scripts/[proc,bolt_pouch_return_id].cs2) `[proc,bolt_pouch_return_id]`  
-[**4049**](scripts/[clientscript,script4049].cs2)  
-[**4050**](scripts/[clientscript,script4050].cs2)  
-[**4051**](scripts/[proc,script4051].cs2)  
-[**4052**](scripts/[proc,script4052].cs2)  
-[**4053**](scripts/[proc,script4053].cs2)  
-[**4054**](scripts/[proc,script4054].cs2)  
-[**4055**](scripts/[clientscript,script4055].cs2)  
-[**4056**](scripts/[clientscript,script4056].cs2)  
-[**4057**](scripts/[clientscript,script4057].cs2)  
-[**4058**](scripts/[clientscript,script4058].cs2)  
-[**4059**](scripts/[proc,script4059].cs2)  
-[**4060**](scripts/[clientscript,script4060].cs2)  
-[**4061**](scripts/[clientscript,script4061].cs2)  
-[**4062**](scripts/[clientscript,script4062].cs2)  
-[**4063**](scripts/[proc,script4063].cs2)  
+[**4049**](scripts/[clientscript,tackle_box_init].cs2) `[clientscript,tackle_box_init]`  
+[**4050**](scripts/[clientscript,tackle_box_draw].cs2) `[clientscript,tackle_box_draw]`  
+[**4051**](scripts/[proc,tackle_box_draw].cs2) `[proc,tackle_box_draw]`  
+[**4052**](scripts/[proc,tackle_box_setitem].cs2) `[proc,tackle_box_setitem]`  
+[**4053**](scripts/[proc,tackle_box_setsideitem].cs2) `[proc,tackle_box_setsideitem]`  
+[**4054**](scripts/[proc,tackle_box_setblank].cs2) `[proc,tackle_box_setblank]`  
+[**4055**](scripts/[clientscript,tackle_box_opitem].cs2) `[clientscript,tackle_box_opitem]`  
+[**4056**](scripts/[clientscript,tackle_box_swapitem].cs2) `[clientscript,tackle_box_swapitem]`  
+[**4057**](scripts/[clientscript,tackle_box_swapsideitem].cs2) `[clientscript,tackle_box_swapsideitem]`  
+[**4058**](scripts/[clientscript,tackle_box_dragitem].cs2) `[clientscript,tackle_box_dragitem]`  
+[**4059**](scripts/[proc,tackle_box_button_draw].cs2) `[proc,tackle_box_button_draw]`  
+[**4060**](scripts/[clientscript,tackle_box_button_op].cs2) `[clientscript,tackle_box_button_op]`  
+[**4061**](scripts/[clientscript,tackle_box_side_init].cs2) `[clientscript,tackle_box_side_init]`  
+[**4062**](scripts/[clientscript,tackle_box_side_draw].cs2) `[clientscript,tackle_box_side_draw]`  
+[**4063**](scripts/[proc,tackle_box_side_draw].cs2) `[proc,tackle_box_side_draw]`  
 [**4064**](scripts/[proc,script4064].cs2)  
 [**4065**](scripts/[clientscript,script4065].cs2)  
 [**4066**](scripts/[clientscript,script4066].cs2)  
@@ -4071,10 +4071,10 @@
 [**4068**](scripts/[clientscript,script4068].cs2)  
 [**4069**](scripts/[clientscript,script4069].cs2)  
 [**4070**](scripts/[clientscript,script4070].cs2)  
-[**4071**](scripts/[clientscript,script4071].cs2)  
-[**4072**](scripts/[clientscript,script4072].cs2)  
-[**4073**](scripts/[proc,script4073].cs2)  
-[**4074**](scripts/[clientscript,script4074].cs2)  
-[**4075**](scripts/[proc,script4075].cs2)  
-[**4076**](scripts/[clientscript,script4076].cs2)  
-[**4077**](scripts/[proc,script4077].cs2)  
+[**4071**](scripts/[clientscript,tempoross_hud_init].cs2) `[clientscript,tempoross_hud_init]`  
+[**4072**](scripts/[clientscript,tempoross_layout_update].cs2) `[clientscript,tempoross_layout_update]`  
+[**4073**](scripts/[proc,tempoross_layout_update].cs2) `[proc,tempoross_layout_update]`  
+[**4074**](scripts/[clientscript,tempoross_hud_update].cs2) `[clientscript,tempoross_hud_update]`  
+[**4075**](scripts/[proc,tempoross_hud_update_bar].cs2) `[proc,tempoross_hud_update_bar]`  
+[**4076**](scripts/[clientscript,tempoross_hud_bar_movement].cs2) `[clientscript,tempoross_hud_bar_movement]`  
+[**4077**](scripts/[proc,tempoross_hud_bar_movement].cs2) `[proc,tempoross_hud_bar_movement]`  

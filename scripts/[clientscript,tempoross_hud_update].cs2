@@ -1,8 +1,8 @@
 // 4074
-[clientscript,script4074](boolean $boolean0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14)
-~script4075($int4, $int2, "Energy", interface_437:37, interface_437:30, false);
-~script4075($int5, $int3, "Essence", interface_437:47, interface_437:40, $boolean0);
-~script4075(350, $int6, "Storm Intensity", interface_437:57, interface_437:50, false);
+[clientscript,tempoross_hud_update](boolean $boolean0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12, int $int13, int $int14)
+~tempoross_hud_update_bar($int4, $int2, "Energy", interface_437:37, interface_437:30, false);
+~tempoross_hud_update_bar($int5, $int3, "Essence", interface_437:47, interface_437:40, $boolean0);
+~tempoross_hud_update_bar(350, $int6, "Storm Intensity", interface_437:57, interface_437:50, false);
 if_settext("Points: <tostring($int1)>", interface_437:27);
 if ($int1 < 2000) {
 	if_setcolour(^red, interface_437:27);

@@ -1,11 +1,11 @@
 // 4071
-[clientscript,script4071](component $component0, component $component1, component $component2, component $component3, component $component4)
+[clientscript,tempoross_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4)
 if_sethide(true, interface_437:5);
 ~script2249($component2, setbit(setbit(0, 3), 4));
 ~script1486($component3, ^setpos_abs_left, 1, 0);
 ~script1490($component1);
-~script4073($component4);
-if_setonsubchange("script4072($component4)", $component0);
+~tempoross_layout_update($component4);
+if_setonsubchange("tempoross_layout_update($component4)", $component0);
 if_sethide(true, interface_437:9);
 if_sethide(true, interface_437:11);
 if_sethide(true, interface_437:10);

@@ -1,5 +1,5 @@
 // 4059
-[proc,script4059](component $component0, string $string0, int $int1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+[proc,tackle_box_button_draw](component $component0, string $string0, int $int1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
 cc_deleteall($component0);
 if_setop(1, $string0, $component0);
 def_int $comsubid9 = 0;
@@ -20,7 +20,7 @@ if (%varbit11896 = $int1) {
 	cc_setcolour(0xff981f);
 	if_setonmouserepeat("cc_colour_swapper(event_com, $comsubid9, ^white)", $component0);
 	if_setonmouseleave("cc_colour_swapper(event_com, $comsubid9, 0xff981f)", $component0);
-	if_setonop("script4060(event_opindex, $component0, $string0, $int1, $int2, $component3, $component4, $component5, $component6, $component7, $component8)", $component0);
+	if_setonop("tackle_box_button_op(event_opindex, $component0, $string0, $int1, $int2, $component3, $component4, $component5, $component6, $component7, $component8)", $component0);
 }
 cc_settextfont(p11_full);
 cc_settextshadow(true);
