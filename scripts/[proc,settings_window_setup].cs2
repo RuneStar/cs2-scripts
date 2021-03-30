@@ -21,7 +21,7 @@ if ($boolean21 = true) {
 }
 if_setop(1, "Close", $component3);
 if_setonop("opsound(event_opindex, 2)", $component3);
-if_setopkey(2, 13, 0, $component3);
+if_setopkey(2, ^key_escape, 0, $component3);
 if_setop(2, "", $component3);
 cc_deleteall($component5);
 cc_deleteall($component4);
