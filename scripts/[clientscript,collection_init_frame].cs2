@@ -1,0 +1,25 @@
+// 4080
+[clientscript,collection_init_frame]
+~steelborder(interface_621:1, "Collection Log - <tostring(%var2943)>/<tostring(%var2944)>", 1);
+def_graphic $graphic0 = null;
+def_int $int1 = 0;
+def_boolean $boolean2 = ~on_mobile;
+def_component $component3 = interface_621:78;
+if ($boolean2 = true) {
+	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $component3);
+	if_setposition(8, 11, ^setpos_abs_right, ^setpos_abs_top, $component3);
+	if_setgraphic("steelborder_close_button,0", $component3);
+	$int1 = calc(165 - (23 + 30));
+} else {
+	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $component3);
+	if_setposition(10, 16, ^setpos_abs_right, ^setpos_abs_top, $component3);
+	$graphic0 = "close_buttons,0";
+	if_setgraphic($graphic0, $component3);
+	if_setonmouseleave("graphic_swapper(event_com, $graphic0)", $component3);
+	$graphic0 = "close_buttons,1";
+	if_setonmouseover("graphic_swapper(event_com, $graphic0)", $component3);
+}
+if_setop(1, "Close", $component3);
+if_setonop("opsound(event_opindex, 2)", $component3);
+if_setopkey(2, ^key_escape, 0, $component3);
+if_setop(2, "", $component3);

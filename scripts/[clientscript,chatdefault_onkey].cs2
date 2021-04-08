@@ -75,6 +75,9 @@ if ($key0 = ^key_return) {
 	}
 } else {
 	if ($key0 = ^key_tab) {
+		if (cc_find(interface_621:79, 1) = ^true) {
+			return;
+		}
 		if (string_length(%varcstring356) > 0) {
 			if (friend_test(%varcstring356) = true) {
 				~meslayer_mode6(%varcstring356);

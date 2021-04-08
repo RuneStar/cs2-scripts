@@ -1,0 +1,43 @@
+// 4094
+[clientscript,collection_searchbar_keypress](int $key0, char $keychar1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+if (~keypress_permit(621, -1) = 0) {
+	return;
+}
+if (%varbit9639 = 0) {
+	return;
+}
+if (%varbit9638 = 0) {
+	return;
+}
+if ($key0 = ^key_del) {
+	%varcstring417 = "";
+	~collection_searchbar_set_text($component2);
+	~collection_populate_search_results(1);
+	return;
+}
+if ($key0 = ^key_return) {
+	if (~on_mobile = true) {
+		~keyboard_hide;
+	}
+	~collection_populate_search_results(1);
+	return;
+}
+def_string $string0 = %varcstring417;
+def_int $length8 = string_length($string0);
+if ($key0 = ^key_backspace) {
+	if ($length8 > 0) {
+		%varcstring417 = substring($string0, 0, calc($length8 - 1));
+	}
+	~collection_searchbar_set_text($component2);
+	~collection_populate_search_results(0);
+	return;
+}
+if (char_isprintable($keychar1) = false & string_indexof_char(" -/,", $keychar1) = -1) {
+	return;
+}
+if (string_length(append_char($string0, $keychar1)) > 50) {
+	return;
+}
+%varcstring417 = append_char($string0, $keychar1);
+~collection_searchbar_set_text($component2);
+~collection_populate_search_results(0);

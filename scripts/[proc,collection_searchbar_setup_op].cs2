@@ -1,0 +1,34 @@
+// 4088
+[proc,collection_searchbar_setup_op](int $int0, component $component1, component $component2)
+def_component $component3 = interface_621:71;
+def_component $component4 = interface_621:72;
+def_component $component5 = interface_621:76;
+def_component $component6 = interface_621:75;
+def_component $component7 = interface_621:77;
+def_int $int8 = 0;
+if (%varbit9638 = 0) {
+	if_setop(1, "Search", $component3);
+	if_setonop("collection_searchbar_op($component1, $component2)", $component3);
+	if_setonmouseover("collection_searchbar_mouseover($component4)", $component4);
+	if_setonmouseleave("collection_searchbar_mouseleave($component4)", $component4);
+	if_settext("*", $component4);
+	if_setcolour(0xff981f, $component4);
+	if ($int0 = 1) {
+		%varcstring417 = "";
+	}
+	if_setonkey(null, $component4);
+} else {
+	if (~on_mobile = false) {
+		if_setop(1, "", $component3);
+		if_setonop(null, $component3);
+	} else {
+		if_setop(1, "Show keyboard", $component3);
+		if_setonop("settings_show_keyboard", $component3);
+	}
+	if_setonmouseover(null, $component4);
+	if_setonmouseleave(null, $component4);
+	if_settext(append(%varcstring417, "<col=f4f4f4>*</col>"), $component4);
+	if_setonkey("collection_searchbar_keypress(event_key, event_keychar, $component4, $component7, $component5, $component6, $component1, $component2)", $component4);
+	~collection_search_keyboard_listener;
+}
+~collection_populate_search_results(1);

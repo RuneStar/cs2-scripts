@@ -1,0 +1,12 @@
+// 4097
+[proc,collection_search_scrollbar](int $height0, component $component1, component $component2)(int)
+cc_deleteall($component2);
+$height0 = calc($height0 + (36 + 6));
+if ($height0 > if_getheight($component1)) {
+	if_setscrollsize(0, $height0, $component1);
+} else {
+	if_setscrollsize(0, 0, $component1);
+}
+if_setscrollpos(0, 0, $component1);
+~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+return($height0);

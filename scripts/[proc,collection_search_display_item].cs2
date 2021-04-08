@@ -1,0 +1,39 @@
+// 4098
+[proc,collection_search_display_item](int $comsubid0, component $component1, int $int2, int $int3, namedobj $namedobj4, int $int5, string $string0, int $int6, struct $struct7)(int, int)
+def_namedobj $namedobj8 = null;
+def_namedobj $namedobj9 = null;
+if (compare($string0, "") ! 0) {
+	~collection_display_header($comsubid0, $int2, $int3, $string0, $component1, 1, 0);
+	return($int2, $int3);
+}
+if (calc($int2 + 42) > if_getwidth($component1)) {
+	$int2 = 15;
+	$int3 = calc($int3 + 36);
+}
+$namedobj8 = enum(namedobj, namedobj, enum_3721, $namedobj4);
+if ($namedobj8 ! null) {
+	$namedobj4 = $namedobj8;
+}
+$namedobj9 = enum(namedobj, namedobj, enum_2108, $namedobj4);
+if (%varbit6907 = 1 & $namedobj9 ! null) {
+	$namedobj4 = $namedobj9;
+}
+cc_create($component1, ^iftype_graphic, $comsubid0);
+cc_setoutline(1);
+cc_setposition($int2, $int3, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setop(1, "Check");
+cc_setopbase("<col=ff9040><oc_name($namedobj4)></col>");
+cc_settrans(175);
+if ($int5 ! -1) {
+	cc_setonop("collection_item_click($namedobj4, $int5)");
+	cc_setobject($namedobj4, $int5);
+	if ($int5 > 0) {
+		cc_settrans(0);
+	}
+} else {
+	cc_setonop("collection_item_click($namedobj4, 0)");
+	cc_setobject_nonum($namedobj4, 1);
+}
+$int2 = calc($int2 + 42);
+return($int2, $int3);

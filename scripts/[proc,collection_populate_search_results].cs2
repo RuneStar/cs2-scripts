@@ -1,0 +1,119 @@
+// 4096
+[proc,collection_populate_search_results](int $int0)
+def_string $string0 = %varcstring417;
+if (~on_mobile = true & compare($string0, "") ! 0 & $int0 = 0) {
+	return;
+}
+def_component $component1 = interface_621:76;
+def_component $component2 = interface_621:75;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_enum $enum7 = null;
+def_int $int8 = -1;
+def_struct $structarray0(100);
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_namedobj $namedobj11 = null;
+def_string $string1 = "";
+def_string $string2 = "";
+def_int $int12 = 15;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_string $string3 = "";
+def_namedobj $namedobj16 = null;
+def_int $int17 = 0;
+def_int $int18 = 0;
+cc_deleteall($component1);
+$string3, $namedobj16, $int17 = ~script4102;
+if ($namedobj16 ! null | compare($string3, "") ! 0) {
+	if ($namedobj16 ! null) {
+		$int13 = 12;
+	}
+	~collection_search_display_item($int3, $component1, $int12, $int13, $namedobj16, $int17, $string3, -1, null);
+	~collection_search_scrollbar($int13, $component1, $component2);
+	return;
+}
+if (compare($string0, "") = 0) {
+	~collection_search_display_item($int3, $component1, $int12, $int13, null, -1, $string3, -1, null);
+	~collection_search_scrollbar($int13, $component1, $component2);
+	return;
+}
+$int9 = calc(enum_getoutputcount(enum_2103) + enum_getoutputcount(enum_2104) + enum_getoutputcount(enum_2105) + enum_getoutputcount(enum_2106) + enum_getoutputcount(enum_2107));
+while ($int5 < 5) {
+	while ($int4 < 30) {
+		switch_int ($int5) {
+			case 0 :
+				$enum7 = enum_2103;
+			case 1 :
+				$enum7 = enum_2104;
+			case 2 :
+				$enum7 = enum_2105;
+			case 3 :
+				$enum7 = enum_2106;
+			case 4 :
+				$enum7 = enum_2107;
+		}
+		if ($int4 < enum_getoutputcount($enum7)) {
+			$structarray0($int6) = enum(int, struct, $enum7, $int4);
+			$int6 = calc($int6 + 1);
+		}
+		$int4 = calc($int4 + 1);
+	}
+	$int4 = 0;
+	$int5 = calc($int5 + 1);
+}
+$int6 = 0;
+$enum7 = null;
+while ($int6 < $int9) {
+	if ($structarray0($int6) = null) {
+		$int6 = $int9;
+	}
+	$enum7 = struct_param($structarray0($int6), param_690);
+	$string2 = struct_param($structarray0($int6), param_689);
+	$int10 = enum_getoutputcount($enum7);
+	while ($int4 < $int10) {
+		if ($int15 >= 400) {
+			cc_deleteall($component1);
+			$int13 = 0;
+			$int3 = 0;
+			$int12, $int13 = ~collection_display_header($int3, $int12, $int13, "Too many search results, please be more specific.", $component1, 1, 0);
+			$int4 = $int10;
+		} else {
+			$namedobj11 = enum(int, namedobj, $enum7, $int4);
+			$string1 = oc_name($namedobj11);
+			if (string_indexof_string(lowercase($string1), lowercase($string0), 0) ! -1 | string_indexof_string(lowercase($string2), lowercase($string0), 0) ! -1) {
+				if ($int14 = 0) {
+					if ($int13 ! 0) {
+						$int13 = calc($int13 + 36 + 4);
+						cc_create($component1, ^iftype_line, $int3);
+						cc_setposition(0, $int13, ^setpos_abs_centre, ^setpos_abs_top);
+						cc_setsize(20, 0, ^setsize_minus, ^setsize_abs);
+						$int13 = calc($int13 + 6);
+						$int3 = calc($int3 + 1);
+					}
+					$int12, $int13 = ~collection_display_header($int3, $int12, $int13, $string2, $component1, 0, 1);
+					$int3 = calc($int3 + 1);
+					$int14 = 1;
+				}
+				$int12, $int13 = ~collection_search_display_item($int3, $component1, $int12, $int13, $namedobj11, -1, "", $int6, $structarray0($int6));
+				$int15 = calc($int15 + 1);
+				$int3 = calc($int3 + 1);
+				$int18 = 1;
+			}
+		}
+		$int4 = calc($int4 + 1);
+	}
+	$int14 = 0;
+	$int6 = calc($int6 + 1);
+	$int4 = 0;
+}
+if ($int18 = 0) {
+	$int13 = 0;
+	$int12, $int13 = ~collection_display_header($int3, $int12, $int13, "No items matching search criteria found.", $component1, 1, 0);
+	$int13 = ~collection_search_scrollbar($int13, $component1, $component2);
+	return;
+}
+$int13 = ~collection_search_scrollbar($int13, $component1, $component2);

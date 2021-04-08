@@ -24,7 +24,6 @@ cc_deleteall($component4);
 cc_deleteall($component5);
 ~script1586;
 while ($int8 <= $int0 & $index9 ! -1 & $index10 ! -1 & $index11 ! -1) {
-	mes("Iteration: <tostring($int8)>");
 	$text4 = substring($string0, 0, $index9);
 	$text5 = substring($string1, 0, $index10);
 	$text6 = substring($string2, 0, $index11);
@@ -72,7 +71,6 @@ while ($int8 <= $int0 & $index9 ! -1 & $index10 ! -1 & $index11 ! -1) {
 	$string1 = substring($string1, calc($index10 + 1), string_length($string1));
 	$string2 = substring($string2, calc($index11 + 1), string_length($string2));
 	$int8 = calc($int8 + 1);
-	mes("Finished drawing <$text4>");
 	$index9 = string_indexof_string($string0, "|", 0);
 	$index10 = string_indexof_string($string1, "|", 0);
 	$index11 = string_indexof_string($string2, "|", 0);

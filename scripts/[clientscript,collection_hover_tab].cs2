@@ -2,22 +2,22 @@
 [clientscript,collection_hover_tab](component $component0, boolean $boolean1)
 if ($boolean1 = true) {
 	if (cc_find($component0, 0) = ^true) {
-		cc_setgraphic("tabs_split,0");
+		cc_setgraphic("tabs_tall,0");
 	}
 	if (cc_find($component0, 1) = ^true) {
-		cc_setgraphic("tabs_split,1");
+		cc_setgraphic("tabs_tall,1");
 	}
 	if (cc_find($component0, 2) = ^true) {
-		cc_setgraphic("tabs_split,2");
+		cc_setgraphic("tabs_tall,0");
 	}
 } else {
 	if (cc_find($component0, 0) = ^true) {
-		cc_setgraphic("tabs_split,3");
+		cc_setgraphic("tabs_tall,2");
 	}
 	if (cc_find($component0, 1) = ^true) {
-		cc_setgraphic("tabs_split,4");
+		cc_setgraphic("tabs_tall,3");
 	}
 	if (cc_find($component0, 2) = ^true) {
-		cc_setgraphic("tabs_split,5");
+		cc_setgraphic("tabs_tall,2");
 	}
 }

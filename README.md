@@ -4078,3 +4078,29 @@
 [**4075**](scripts/[proc,tempoross_hud_update_bar].cs2) `[proc,tempoross_hud_update_bar]`  
 [**4076**](scripts/[clientscript,tempoross_hud_bar_movement].cs2) `[clientscript,tempoross_hud_bar_movement]`  
 [**4077**](scripts/[proc,tempoross_hud_bar_movement].cs2) `[proc,tempoross_hud_bar_movement]`  
+[**4078**](scripts/[clientscript,script4078].cs2)  
+[**4079**](scripts/[proc,chatdefault_restoreinput].cs2) `[proc,chatdefault_restoreinput]`  
+[**4080**](scripts/[clientscript,collection_init_frame].cs2) `[clientscript,collection_init_frame]`  
+[**4081**](scripts/[proc,script4081].cs2)  
+[**4082**](scripts/[proc,collection_search_init].cs2) `[proc,collection_search_init]`  
+[**4083**](scripts/[proc,collection_search_button].cs2) `[proc,collection_search_button]`  
+[**4084**](scripts/[clientscript,collection_toggle_search].cs2) `[clientscript,collection_toggle_search]`  
+[**4085**](scripts/[proc,collection_toggle_search].cs2) `[proc,collection_toggle_search]`  
+[**4086**](scripts/[proc,collection_searchbar_create].cs2) `[proc,collection_searchbar_create]`  
+[**4087**](scripts/[clientscript,collection_search_button_press].cs2) `[clientscript,collection_search_button_press]`  
+[**4088**](scripts/[proc,collection_searchbar_setup_op].cs2) `[proc,collection_searchbar_setup_op]`  
+[**4089**](scripts/[clientscript,collection_settings_show_keyboard].cs2) `[clientscript,collection_settings_show_keyboard]`  
+[**4090**](scripts/[clientscript,collection_searchbar_op].cs2) `[clientscript,collection_searchbar_op]`  
+[**4091**](scripts/[proc,collection_searchbar_op].cs2) `[proc,collection_searchbar_op]`  
+[**4092**](scripts/[clientscript,collection_searchbar_mouseover].cs2) `[clientscript,collection_searchbar_mouseover]`  
+[**4093**](scripts/[clientscript,collection_searchbar_mouseleave].cs2) `[clientscript,collection_searchbar_mouseleave]`  
+[**4094**](scripts/[clientscript,collection_searchbar_keypress].cs2) `[clientscript,collection_searchbar_keypress]`  
+[**4095**](scripts/[proc,collection_searchbar_set_text].cs2) `[proc,collection_searchbar_set_text]`  
+[**4096**](scripts/[proc,collection_populate_search_results].cs2) `[proc,collection_populate_search_results]`  
+[**4097**](scripts/[proc,collection_search_scrollbar].cs2) `[proc,collection_search_scrollbar]`  
+[**4098**](scripts/[proc,collection_search_display_item].cs2) `[proc,collection_search_display_item]`  
+[**4099**](scripts/[proc,collection_display_header].cs2) `[proc,collection_display_header]`  
+[**4100**](scripts/[clientscript,script4100].cs2)  
+[**4101**](scripts/[proc,collection_search_keyboard_listener].cs2) `[proc,collection_search_keyboard_listener]`  
+[**4102**](scripts/[proc,script4102].cs2)  
+[**4103**](scripts/[proc,script4103].cs2)  

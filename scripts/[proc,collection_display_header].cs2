@@ -1,0 +1,28 @@
+// 4099
+[proc,collection_display_header](int $comsubid0, int $int1, int $int2, string $text0, component $component3, int $int4, int $int5)(int, int)
+if ($int2 = 0) {
+	$int2 = 15;
+}
+cc_create($component3, ^iftype_text, $comsubid0);
+if ($int4 = 0) {
+	cc_setposition(15, $int2, ^setpos_abs_left, ^setpos_abs_top);
+} else {
+	cc_setposition(0, $int2, ^setpos_abs_left, ^setpos_abs_top);
+}
+cc_settext($text0);
+cc_setsize(0, 36, ^setsize_minus, ^setsize_abs);
+if ($int5 = 1) {
+	cc_setcolour(0x868686);
+} else {
+	cc_setcolour(0xff981f);
+}
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+if ($int4 = 0) {
+	cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+} else {
+	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+}
+$int1 = 15;
+$int2 = calc($int2 + 28);
+return($int1, $int2);
