@@ -1,5 +1,5 @@
 // 154
-[proc,script154](inv $inv0, int $slot1, component $component2, int $comsubid3, int $int4, component $component5, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8)
+[proc,interface_inv_draw_slot_big](inv $inv0, int $slot1, component $component2, int $comsubid3, int $int4, component $component5, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8)
 def_obj $obj6 = null;
 if (cc_find($component2, $comsubid3) = ^true) {
 	$obj6 = inv_getobj($inv0, $slot1);
@@ -21,9 +21,9 @@ if (cc_find($component2, $comsubid3) = ^true) {
 			cc_setdragdeadtime(5);
 		}
 		if ($int4 = 1) {
-			cc_setondragcomplete("script155($inv0, event_comsubid, event_dropsubid, event_com, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8)");
+			cc_setondragcomplete("interface_inv_dragcomplete_swap_big($inv0, event_comsubid, event_dropsubid, event_com, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8)");
 		} else if ($int4 = 2) {
-			cc_setondragcomplete("script156($inv0, event_comsubid, event_dropsubid, event_com, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8)");
+			cc_setondragcomplete("interface_inv_dragcomplete_shuffle_big($inv0, event_comsubid, event_dropsubid, event_com, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8)");
 		}
 		if ($int4 ! 0 & $component5 ! null) {
 			cc_setondrag("interface_inv_drag_slot($slot1, $component2, $component5, event_mousey)");

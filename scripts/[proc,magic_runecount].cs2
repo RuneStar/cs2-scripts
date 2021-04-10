@@ -26,7 +26,7 @@ switch_obj ($obj0) {
 		if (enum(obj, boolean, enum_988, $obj4) = true) {
 			return(^max_32bit_int);
 		}
-		if (~script234 = 1) {
+		if (~fake_runes_enabled = 1) {
 			return(inv_total(inv, air_rune_11688));
 		}
 		$int6 = inv_total(inv, air_rune_556);
@@ -53,7 +53,7 @@ switch_obj ($obj0) {
 		if (enum(obj, boolean, enum_989, $obj4) = true) {
 			return(^max_32bit_int);
 		}
-		if (~script234 = 1) {
+		if (~fake_runes_enabled = 1) {
 			return(inv_total(inv, water_rune_11687));
 		}
 		if ($obj5 = tome_of_water_25574) {
@@ -83,7 +83,7 @@ switch_obj ($obj0) {
 		if (enum(obj, boolean, enum_996, $obj4) = true) {
 			return(^max_32bit_int);
 		}
-		if (~script234 = 1) {
+		if (~fake_runes_enabled = 1) {
 			return(inv_total(inv, earth_rune_11689));
 		}
 		$int6 = inv_total(inv, earth_rune_557);
@@ -110,7 +110,7 @@ switch_obj ($obj0) {
 		if (enum(obj, boolean, enum_997, $obj4) = true) {
 			return(^max_32bit_int);
 		}
-		if (~script234 = 1) {
+		if (~fake_runes_enabled = 1) {
 			return(inv_total(inv, fire_rune_11686));
 		}
 		if ($obj5 = tome_of_fire_20714) {
@@ -134,7 +134,7 @@ switch_obj ($obj0) {
 		}
 		return($int6);
 	case nature_rune_561 :
-		if (~script234 = 1) {
+		if (~fake_runes_enabled = 1) {
 			return(inv_total(inv, nature_rune_11693));
 		}
 		$int6 = inv_total(inv, nature_rune_561);
@@ -185,7 +185,7 @@ switch_obj ($obj0) {
 		return(0);
 }
 def_obj $obj7 = enum(obj, obj, enum_13, $obj0);
-if ($obj7 ! null & ~script234 = 1) {
+if ($obj7 ! null & ~fake_runes_enabled = 1) {
 	if (map_members = ^true | oc_members($obj7) = ^false) {
 		return(inv_total(inv, $obj7));
 	}

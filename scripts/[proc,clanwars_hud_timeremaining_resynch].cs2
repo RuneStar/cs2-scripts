@@ -1,0 +1,11 @@
+// 213
+[proc,clanwars_hud_timeremaining_resynch]()(string)
+def_int $int0 = 0;
+if (%varbit4286 > 0) {
+	$int0 = calc(%varbit4577 * 30);
+	cc_setontimer(null);
+} else {
+	$int0 = calc(%varbit4577 * 30 - 10);
+	cc_setontimer("clanwars_hud_timeremaining_tick(event_com, event_comsubid, $int0)");
+}
+return(~clanwars_hud_timeremaining_gettext($int0));

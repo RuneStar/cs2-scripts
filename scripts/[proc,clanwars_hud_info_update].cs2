@@ -119,7 +119,7 @@ if ($int7 > 0 | $int8 > 0 | $int9 > 0 | $int10 > 0) {
 	} else if ($int7 > 0) {
 		$string5 = "Victory: <~tostring_spacer($int7, $string3)> kills";
 	} else if ($int10 > 0 & cc_find($component1, calc($int2 + 3)) = ^true) {
-		$string5 = ~script213;
+		$string5 = ~clanwars_hud_timeremaining_resynch;
 	}
 	$int6 = parawidth($string5, 512, p11_full);
 }

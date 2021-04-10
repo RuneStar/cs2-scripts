@@ -1,8 +1,0 @@
-// 155
-[clientscript,script155](inv $inv0, int $comsubid1, int $dropsubid2, component $component3, int $int4, component $component5, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8)
-if ($dropsubid2 = -1) {
-	~script154($inv0, $comsubid1, $component3, $comsubid1, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
-	return;
-}
-~script154($inv0, $comsubid1, $component3, $dropsubid2, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
-~script154($inv0, $dropsubid2, $component3, $comsubid1, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);

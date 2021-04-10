@@ -18,6 +18,6 @@ while ($int8 <= calc($int2 * $int3)) {
 	cc_create($component0, ^iftype_graphic, $int8);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc((36 + $int6) * ($int8 % $int2)), calc($int8 / $int2 * (32 + $int7)), ^setpos_abs_left, ^setpos_abs_top);
-	~script154($inv1, $int8, $component0, $int8, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
+	~interface_inv_draw_slot_big($inv1, $int8, $component0, $int8, $int4, $component5, $string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);
 	$int8 = calc($int8 + 1);
 }

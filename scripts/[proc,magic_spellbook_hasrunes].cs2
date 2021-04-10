@@ -2,11 +2,11 @@
 [proc,magic_spellbook_hasrunes](obj $obj0)(int)
 switch_obj ($obj0) {
 	case blood_blitz_4644, blood_barrage_4650 :
-		if (inv_total(inv, rune_pouch_23650) > 0 & ~script234 = 1) {
+		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
 			return(1);
 		}
 	case ice_blitz_4645, ice_barrage_4651 :
-		if (inv_total(inv, rune_pouch_23650) > 0 & ~script234 = 1) {
+		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
 			return(1);
 		} else if (%varbit5963 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
 			return(1);

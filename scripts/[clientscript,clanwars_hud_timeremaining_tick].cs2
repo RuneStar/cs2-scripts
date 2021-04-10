@@ -1,0 +1,9 @@
+// 743
+[clientscript,clanwars_hud_timeremaining_tick](component $component0, int $comsubid1, int $int2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	if ($int2 > 0) {
+		$int2 = calc($int2 - 1);
+	}
+	cc_settext(~clanwars_hud_timeremaining_gettext($int2));
+	cc_setontimer("clanwars_hud_timeremaining_tick(event_com, event_comsubid, $int2)");
+}
