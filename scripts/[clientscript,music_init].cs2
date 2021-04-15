@@ -4,7 +4,7 @@ cc_deleteall($component1);
 if_setscrollpos(0, 0, $component1);
 def_int $count7 = enum_getoutputcount(enum_818);
 if_setontimer("music_init_counter(event_com, $count7)", $component3);
-if_setonvartransmit("music_vartransmit(event_com, $component3, $count7){var568, var20, var21, var22, var23, var24, var25, var298, var311, var346, var414, var464, var598, var662, var721, var906, var1009, var1338, var1681, var2065, var2237}", $component1);
+if_setonvartransmit("music_vartransmit(event_com, $component3, $count7){var568, var20, var21, var22, var23, var24, var25, var298, var311, var346, var414, var464, var598, var662, var721, var906, var1009, var1338, var1681, var2065, var2237, var2950}", $component1);
 def_int $countarray0($count7);
 def_int $count8 = 0;
 while ($count8 < $count7) {

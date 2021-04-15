@@ -7,7 +7,7 @@ def_int $y5 = ^min_32bit_int;
 def_int $y6 = ^min_32bit_int;
 def_int $int7 = 0;
 def_maparea $maparea8 = null;
-while ($int7 <= 38) {
+while ($int7 <= 39) {
 	$maparea8 = enum(int, maparea, enum_1697, $int7);
 	if ($maparea8 ! null & cc_find($component2, calc($int7 + 1)) = ^true) {
 		if (~worldmap_findcoordinmap($maparea8, %varcint188) ! null) {

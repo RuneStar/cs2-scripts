@@ -34,6 +34,10 @@ if ($coord8 ! null) {
 		if (testbit($flags2, 31) = ^true) {
 			return(1, 1);
 		}
+	} else if ($loc0 = inconspicuous_hole_elite_multi_29033) {
+		if (testbit($flags3, 0) = ^true) {
+			return(1, 1);
+		}
 	} else if ($loc0 = inconspicuous_bush_master_multi_29060 & testbit($flags3, 11) = ^true) {
 		return(1, 1);
 	}

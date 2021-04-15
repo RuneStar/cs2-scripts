@@ -32,7 +32,7 @@ switch_int ($int0) {
 		return(~int_to_bool(%varbit1371));
 	case 35 :
 		return(~int_to_bool(%varbit2055));
-	case 42 :
+	case 43 :
 		if (%var101 >= %varbit1782 & %varbit1782 > 0) {
 			return(true);
 		}
@@ -51,9 +51,9 @@ switch_int ($int0) {
 			$stat2 = enum(int, stat, enum_681, $int1);
 		}
 		return(false);
-	case 40 :
+	case 41 :
 		return(~int_to_bool(%varbit1000));
-	case 43 :
+	case 44 :
 		if (%varbit4673 = 1) {
 			return(true);
 		}
@@ -66,18 +66,29 @@ switch_int ($int0) {
 		return(~int_to_bool(%varbit4732));
 	case 39 :
 		return(~int_to_bool(%varbit4732));
-	case 41 :
+	case 40 :
+		return(~int_to_bool(%varbit12062));
+	case 42 :
 		return(~int_to_bool(%varbit4802));
-	case 44 :
-		return(~int_to_bool(%varbit5104));
 	case 45 :
-		return(~int_to_bool(%varbit5597));
+		return(~int_to_bool(%varbit5104));
 	case 46 :
-		return(~int_to_bool(%varbit5598));
+		return(~int_to_bool(%varbit5597));
 	case 47 :
-		return(~int_to_bool(%varbit6041));
+		return(~int_to_bool(%varbit5598));
 	case 48 :
+		return(~int_to_bool(%varbit6041));
+	case 49 :
 		return(~int_to_bool(%varbit10115));
+	case 50 :
+		switch_int (%varbit11757) {
+			case 3 :
+				return(true);
+			case 6 :
+				return(true);
+			case default :
+				return(false);
+		}
 	case default :
 		return(true);
 }

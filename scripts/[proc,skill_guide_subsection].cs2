@@ -218,7 +218,7 @@ switch_int ($int0) {
 			return("Crystal", 1);
 		}
 		if ($int1 = 10) {
-			return("Other", 1);
+			return("Other", 0);
 		}
 		return("", -1);
 	case 15 :
@@ -292,6 +292,9 @@ switch_int ($int0) {
 		}
 		if ($int1 = 12) {
 			return("Raids", 1);
+		}
+		if ($int1 = 13) {
+			return("Offerings", 0);
 		}
 		return("", -1);
 	case 17 :

@@ -6,7 +6,7 @@ def_string $string0 = "";
 def_int $int4 = 0;
 def_int $height5 = 0;
 def_int $int6 = 0;
-while ($int6 <= 48) {
+while ($int6 <= 50) {
 	cc_create($component1, ^iftype_graphic, $int6);
 	if (enum(int, graphic, enum_1001, $int6) ! null) {
 		cc_sethide(false);
@@ -14,7 +14,6 @@ while ($int6 <= 48) {
 		$height5 = calc($int4 / 4 * 49 + 6);
 		cc_setposition(calc($int4 % 4 * 43), $height5, ^setpos_abs_left, ^setpos_abs_top);
 		$string0 = enum(int, string, enum_1000, $int6);
-		cc_setop(1, $string0);
 		cc_setonmouserepeat("tooltip_mouserepeat(event_com, event_comsubid, $component3, $string0, 25, 120)");
 		cc_setonmouseleave("deltooltip($component3)");
 		$int4 = calc($int4 + 1);
@@ -34,5 +33,5 @@ if ($height5 > if_getheight($component1)) {
 }
 ~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~emote_update($component1);
-if_setonvartransmit("emote_update($component1){var313, var802, var465, var101, var904, var1336}", $component0);
+if_setonvartransmit("emote_update($component1){var313, var802, var465, var101, var904, var1336, var2886}", $component0);
 if_setonstattransmit("emote_update($component1)", $component0);

@@ -1,0 +1,81 @@
+// 4110
+[proc,script4110](struct $struct0, int $int1, component $component2, component $component3)
+def_string $text0 = struct_param($struct0, param_1182);
+def_model $model4 = struct_param($struct0, param_1184);
+def_string $text1 = struct_param($struct0, param_1183);
+def_int $int5 = struct_param($struct0, param_1185);
+def_int $int6 = 0;
+if ($int5 <= calc(inv_total(inv, barronite_shards_25676) + %var2953)) {
+	$int6 = 1;
+}
+if ($int1 = 1) {
+	~v2_stone_button_out_filled($component3);
+	if_setonmouserepeat(null, $component3);
+	if_setonmouseleave(null, $component3);
+} else {
+	~v2_stone_button($component3);
+	if (~on_mobile = true) {
+		if_setonmouserepeat(null, $component3);
+		if_setonmouseleave(null, $component3);
+	} else {
+		if_setonmouserepeat("v2_stone_button_in(event_com)", $component3);
+		if_setonmouseleave("v2_stone_button(event_com)", $component3);
+	}
+}
+cc_deleteall($component2);
+def_int $int7 = 0;
+cc_create($component2, ^iftype_text, 0);
+cc_setsize(12, 28, ^setsize_minus, ^setsize_abs);
+cc_setposition(12, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+if ($int1 = 1) {
+	cc_settext("<col=0dc10d>Active</col>");
+} else {
+	cc_settext("<col=9f9f9f>Inactive</col>");
+}
+$int7 = 1;
+cc_create($component2, ^iftype_text, $int7);
+cc_setsize(10, 16, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 6, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settext($text0);
+$int7 = calc($int7 + 1);
+cc_create($component2, ^iftype_model, $int7);
+cc_setsize(10, 34, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setmodel($model4);
+cc_setmodelangle(195, 1, 1545, 0, 513, 1190);
+$int7 = calc($int7 + 1);
+cc_create($component2, ^iftype_text, $int7);
+cc_setsize(10, 42, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 31, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settextalign(^settextalign_centre, ^settextalign_bottom, 12);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_setcolour(^white);
+cc_settext($text1);
+$int7 = calc($int7 + 1);
+cc_create($component2, ^iftype_text, $int7);
+cc_setsize(28, 28, ^setsize_minus, ^setsize_abs);
+cc_setposition(28, 0, ^setpos_abs_right, ^setpos_abs_bottom);
+cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settext(tostring($int5));
+if ($int1 = 1 | $int6 ! 1) {
+	cc_setcolour(0x9f9f9f);
+} else {
+	cc_setcolour(0x0dc10d);
+}
+$int7 = calc($int7 + 1);
+cc_create($component2, ^iftype_model, $int7);
+cc_setsize(24, 24, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 3, ^setpos_abs_right, ^setpos_abs_bottom);
+cc_setmodel(barronite_shards_42162);
+cc_setmodelangle(0, 0, 735, 707, 0, 800);
+$int7 = calc($int7 + 1);

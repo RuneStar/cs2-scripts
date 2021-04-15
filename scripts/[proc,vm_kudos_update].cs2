@@ -1,8 +1,8 @@
 // 2079
 [proc,vm_kudos_update]
 def_string $string0 = "Museum Kudos:";
-def_string $string1 = "<tostring(%varbit3637)>/<tostring(225)>";
-if (%varbit3637 >= 225) {
+def_string $string1 = "<tostring(%varbit3637)>/<tostring(230)>";
+if (%varbit3637 >= 230) {
 	$string1 = "<col=00ff00><$string1></col>";
 }
 def_int $width0 = calc(parawidth($string0, 512, b12_full) + 5 + parawidth($string1, 512, p12_full));

@@ -1,0 +1,16 @@
+// 4104
+[proc,script4104](int $int0)
+def_graphic $graphic1 = null;
+if ($int0 = 50) {
+	switch_int (%varbit11757) {
+		case 3 :
+			$graphic1 = "emotes,49";
+		case 6 :
+			$graphic1 = "emotes,50";
+		case default :
+			$graphic1 = "emotes_locked,29";
+	}
+} else {
+	$graphic1 = enum(int, graphic, enum_1001, $int0);
+}
+cc_setgraphic($graphic1);

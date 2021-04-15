@@ -38,7 +38,7 @@ if (compare($string0, "droprate") = 0) {
 	return("50:50 You either get it or you don't.", null, -1);
 }
 if (compare($string0, "woox") = 0) {
-	return("", infernal_cape_21295, -1);
+	return("", infernal_cape_21295, 1);
 }
 if (compare($string0, "tedious") = 0) {
 	return("Theeeeeeeeeeeeeeeeeeeeeeeeeeeeee-<br><br>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-<br><br>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-<br><br>Collection log!", null, -1);
@@ -64,7 +64,7 @@ if (compare($string0, "operators") = 0) {
 if (compare($string0, "never lucky") = 0) {
 	return("How to get lucky - Author: Mod Flippy<br><br>1. Close the Collection log.<br><br>2. Obtain the item.", null, -1);
 }
-if (compare($string0, "rice cup") = 0) {
+if (compare($string0, "ricecup") = 0) {
 	return("", bryophytas_essence_22372, 0);
 }
 if (compare($string0, "only trails") = 0) {
@@ -74,10 +74,16 @@ if (compare($string0, "mr mammal") = 0) {
 	return("", primordial_crystal_13231, 0);
 }
 if (compare($string0, "faux") = 0) {
-	return("", primordial_crystal_13231, 0);
+	return("", pegasian_crystal_13229, 0);
 }
 if (compare($string0, "storgie") = 0) {
 	return("", baby_mole_12646, 0);
+}
+if (compare($string0, "verf") = 0) {
+	return("", rake_5341, 1);
+}
+if (compare($string0, "solomission") = 0) {
+	return("", tanzanite_fang_12922, 0);
 }
 if (compare($string0, "daisyfletchy") = 0) {
 	return("", volcanic_mine_teleport_21541, 100000000);
@@ -101,7 +107,7 @@ if (compare($string0, "g4uafs") = 0) {
 	return("", amulet_of_eternal_glory_19707, 0);
 }
 if (compare($string0, "collection log") = 0 & %var2943 = %var2944) {
-	return("Wait, you're not actally supposed to complete the log. JMODS, GET HIM!", null, -1);
+	return("Wait, you're not actually supposed to complete the log... JMODS, CODE RED!", null, -1);
 }
 if (compare($string0, "collection log") = 0 & %var2943 > 1300) {
 	return("<tostring(%var2943)> unique items? Okay, you're nuts.", null, -1);

@@ -8,9 +8,9 @@ def_component $component1 = interface_621:76;
 def_component $component2 = interface_621:75;
 def_int $int3 = 0;
 def_int $int4 = 0;
-def_int $int5 = 0;
+def_int $count5 = 0;
 def_int $int6 = 0;
-def_enum $enum7 = null;
+def_enum $enum7 = enum_2103;
 def_int $int8 = -1;
 def_struct $structarray0(100);
 def_int $int9 = 0;
@@ -26,6 +26,7 @@ def_string $string3 = "";
 def_namedobj $namedobj16 = null;
 def_int $int17 = 0;
 def_int $int18 = 0;
+def_int $int19 = 0;
 cc_deleteall($component1);
 $string3, $namedobj16, $int17 = ~script4102;
 if ($namedobj16 ! null | compare($string3, "") ! 0) {
@@ -42,9 +43,9 @@ if (compare($string0, "") = 0) {
 	return;
 }
 $int9 = calc(enum_getoutputcount(enum_2103) + enum_getoutputcount(enum_2104) + enum_getoutputcount(enum_2105) + enum_getoutputcount(enum_2106) + enum_getoutputcount(enum_2107));
-while ($int5 < 5) {
-	while ($int4 < 30) {
-		switch_int ($int5) {
+while ($count5 < enum_getoutputcount(enum_2102)) {
+	while ($int4 < enum_getoutputcount($enum7)) {
+		switch_int ($count5) {
 			case 0 :
 				$enum7 = enum_2103;
 			case 1 :
@@ -63,7 +64,7 @@ while ($int5 < 5) {
 		$int4 = calc($int4 + 1);
 	}
 	$int4 = 0;
-	$int5 = calc($int5 + 1);
+	$count5 = calc($count5 + 1);
 }
 $int6 = 0;
 $enum7 = null;
