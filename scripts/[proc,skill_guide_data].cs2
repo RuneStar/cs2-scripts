@@ -120,120 +120,115 @@ switch_int ($int0) {
 		}
 		return(-1, null, "");
 	case 2 :
-		if ($int1 = 0) {
-			switch_int ($int2) {
-				case 0 :
-					return(5, black_halberd_3196, "Black halberd<br> (with 10 Attack)");
-				case 1 :
-					return(5, white_halberd_6599, "White halberd<br> (with 10 Attack)");
-				case 2 :
-					return(10, mithril_halberd_3198, "Mithril halberd<br> (with 20 Attack)");
-				case 3 :
-					return(15, adamant_halberd_3200, "Adamant halberd<br> (with 30 Attack)");
-				case 4 :
-					return(20, rune_halberd_3202, "Rune halberd<br> (with 40 Attack)");
-				case 5 :
-					return(30, dragon_halberd_3204, "Dragon halberd<br> (with 60 Attack)");
-				case 6 :
-					return(40, barrelchest_anchor_10887, "Barrelchest Anchor<br> (with 60 Attack)");
-				case 7 :
-					return(42, void_knight_mace_8841, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
-				case 8 :
-					return(50, granite_maul_4153, "Granite maul<br> (with 50 Attack)");
-				case 9 :
-					return(50, granite_longsword_21646, "Granite longsword<br> (with 50 Attack)");
-				case 10 :
-					return(60, tzhaar_ket_om_6528, "TzHaar-Ket-Om");
-				case 11 :
-					return(70, dharoks_greataxe_4718, "Dharok's greataxe<br> (with 70 Attack)");
-				case 12 :
-					return(70, torags_hammers_4747, "Torag's hammers<br> (with 70 Attack)");
-				case 13 :
-					return(70, abyssal_bludgeon_13263, "Abyssal bludgeon<br> (with 70 Attack)");
-				case 14 :
-					return(75, elder_maul_21003, "Elder maul<br> (with 75 Attack)");
-				case 15 :
-					return(75, scythe_of_vitur_22325, "Scythe of Vitur<br> (with 75 Attack)");
-				case default :
-					return(-1, null, "");
-			}
-		}
-		if ($int1 = 1) {
-			switch_int ($int2) {
-				case 0 :
-					return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
-				case 1 :
-					return(50, granite_helm_10589, "Granite armour<br> (with 50 Defence)");
-				case 2 :
-					return(70, inquisitors_great_helm_24419, "Members: Inquisitor's armour<br> (with 30 Defence)");
-				case 3 :
-					return(75, primordial_boots_13239, "Primordial boots<br> (with 75 Defence)");
-				case default :
-					return(-1, null, "");
-			}
-		}
-		if ($int1 = 2) {
-			if ($int2 = 0) {
-				return(19, agility_balance_6515, "Cross the River Lum to Al Kharid<br> (with 8 Agility and 37 Ranged)");
-			}
-			if ($int2 = 1) {
-				return(21, agility_balance_6515, "Karamja<br> (with 53 Agility and 42 Ranged)");
-			}
-			if ($int2 = 2) {
-				return(22, agility_balance_6515, "Escape from the water obelisk island<br> (with 36 Agility and 39 Ranged)");
-			}
-			if ($int2 = 3) {
-				return(28, agility_balance_6515, "Scale the Observatory cliff<br> (with 23 Agility and 24 Ranged, after completing the Observatory quest)");
-			}
-			if ($int2 = 4) {
-				return(35, agility_climb_6517, "Scale the Catherby cliff<br> (with 32 Agility and 35 Ranged)");
-			}
-			if ($int2 = 5) {
-				return(37, agility_climb_6517, "Scale Falador wall<br> (with 11 Agility and 19 Ranged)");
-			}
-			if ($int2 = 6) {
-				return(38, agility_climb_6517, "Scale Yanille wall<br> (with 39 Agility and 21 Ranged)");
-			}
-			if ($int2 = 7) {
-				return(70, agility_balance_6515, "Cross cave, south of Dorgesh-Kaan <br> (with 70 Agility and 70 Strength, after completing Death to the Dorgeshuun)");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 3) {
-			if ($int2 = 0) {
-				return(60, agility_jump_11793, "Access the God Wars Dungeon via the Strength route");
-			}
-			if ($int2 = 1) {
-				return(70, agility_jump_11793, "Enter the Bandos area of the God Wars Dungeon");
-			}
-			return(-1, null, "");
-		}
-		if ($int1 = 4) {
-			if ($int2 = 0) {
-				return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
-			}
-			if ($int2 = 1) {
-				return(15, leaping_trout_11328, "Leaping trout<br> (with 15 Agility & 48 Fishing)");
-			}
-			if ($int2 = 2) {
-				return(30, leaping_salmon_11330, "Leaping salmon<br> (with 30 Agility & 58 Fishing)");
-			}
-			if ($int2 = 3) {
-				return(35, raw_tuna_359, "Tuna<br> (with 55 Fishing)");
-			}
-			if ($int2 = 4) {
-				return(35, raw_harpoonfish_25564, "Harpoonfish<br> (with 55 Fishing)");
-			}
-			if ($int2 = 5) {
-				return(45, leaping_sturgeon_11332, "Leaping sturgeon<br> (with 45 Agility & 70 Fishing)");
-			}
-			if ($int2 = 6) {
-				return(50, raw_swordfish_371, "Swordfish<br> (with 70 Fishing)");
-			}
-			if ($int2 = 7) {
-				return(76, raw_shark_383, "Shark<br> (with 96 Fishing)");
-			}
-			return(-1, null, "");
+		switch_int ($int1) {
+			case 0 :
+				switch_int ($int2) {
+					case 0 :
+						return(1, bronze_warhammer_1337, "Bronze warhammer");
+					case 1 :
+						return(1, iron_warhammer_1335, "Iron warhammer");
+					case 2 :
+						return(5, steel_warhammer_1339, "Steel warhammer");
+					case 3 :
+						return(5, black_halberd_3196, "Members: Black halberd<br> (with 10 Attack)");
+					case 4 :
+						return(5, white_halberd_6599, "Members: White halberd<br> (with 10 Attack)");
+					case 5 :
+						return(10, black_warhammer_1341, "Black warhammer");
+					case 6 :
+						return(10, white_warhammer_6613, "Members: White warhammer<br> (with 10 Prayer)");
+					case 7 :
+						return(10, mithril_halberd_3198, "Members: Mithril halberd<br> (with 20 Attack)");
+					case 8 :
+						return(15, adamant_halberd_3200, "Members: Adamant halberd<br> (with 30 Attack)");
+					case 9 :
+						return(20, mithril_warhammer_1343, "Mithril warhammer");
+					case 10 :
+						return(20, rune_halberd_3202, "Members: Rune halberd<br> (with 40 Attack)");
+					case 11 :
+						return(30, adamant_warhammer_1345, "Adamant warhammer");
+					case 12 :
+						return(30, dragon_halberd_3204, "Members: Dragon halberd<br> (with 60 Attack)");
+					case 13 :
+						return(40, rune_warhammer_1347, "Rune warhammer");
+					case 14 :
+						return(40, barrelchest_anchor_10887, "Members: Barrelchest Anchor<br> (with 60 Attack)");
+					case 15 :
+						return(42, void_knight_mace_8841, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+					case 16 :
+						return(50, granite_maul_4153, "Members: Granite maul<br> (with 50 Attack)");
+					case 17 :
+						return(50, granite_longsword_21646, "Members: Granite longsword<br> (with 50 Attack)");
+					case 18 :
+						return(60, tzhaar_ket_om_6528, "Members: TzHaar-Ket-Om");
+					case 19 :
+						return(60, dragon_warhammer_13576, "Members: Dragon warhammer");
+					case 20 :
+						return(70, dharoks_greataxe_4718, "Members: Dharok's greataxe<br> (with 70 Attack)");
+					case 21 :
+						return(70, torags_hammers_4747, "Members: Torag's hammers<br> (with 70 Attack)");
+					case 22 :
+						return(70, abyssal_bludgeon_13263, "Members: Abyssal bludgeon<br> (with 70 Attack)");
+					case 23 :
+						return(75, elder_maul_21003, "Members: Elder maul<br> (with 75 Attack)");
+					case 24 :
+						return(75, scythe_of_vitur_22325, "Members: Scythe of Vitur<br> (with 75 Attack)");
+				}
+			case 1 :
+				switch_int ($int2) {
+					case 0 :
+						return(42, void_knight_top_8839, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+					case 1 :
+						return(50, granite_helm_10589, "Granite armour<br> (with 50 Defence)");
+					case 2 :
+						return(70, inquisitors_great_helm_24419, "Members: Inquisitor's armour<br> (with 30 Defence)");
+					case 3 :
+						return(75, primordial_boots_13239, "Primordial boots<br> (with 75 Defence)");
+				}
+			case 2 :
+				switch_int ($int2) {
+					case 0 :
+						return(19, agility_balance_6515, "Cross the River Lum to Al Kharid<br> (with 8 Agility and 37 Ranged)");
+					case 1 :
+						return(21, agility_balance_6515, "Karamja<br> (with 53 Agility and 42 Ranged)");
+					case 2 :
+						return(22, agility_balance_6515, "Escape from the water obelisk island<br> (with 36 Agility and 39 Ranged)");
+					case 3 :
+						return(28, agility_balance_6515, "Scale the Observatory cliff<br> (with 23 Agility and 24 Ranged, after completing the Observatory quest)");
+					case 4 :
+						return(35, agility_climb_6517, "Scale the Catherby cliff<br> (with 32 Agility and 35 Ranged)");
+					case 5 :
+						return(37, agility_climb_6517, "Scale Falador wall<br> (with 11 Agility and 19 Ranged)");
+					case 6 :
+						return(38, agility_climb_6517, "Scale Yanille wall<br> (with 39 Agility and 21 Ranged)");
+					case 7 :
+						return(70, agility_balance_6515, "Cross cave, south of Dorgesh-Kaan <br> (with 70 Agility and 70 Strength, after completing Death to the Dorgeshuun)");
+				}
+			case 3 :
+				if ($int2 = 0) {
+					return(60, agility_jump_11793, "Access the God Wars Dungeon via the Strength route");
+				} else if ($int2 = 1) {
+					return(70, agility_jump_11793, "Enter the Bandos area of the God Wars Dungeon");
+				}
+			case 4 :
+				switch_int ($int2) {
+					case 0 :
+						return(-1, obj_7620, "To start fishing like a Barbarian, talk to<br>Otto Godblessed when you have at least<br>level 48 Fishing, level 15 Agility and level 15 Strength.");
+					case 1 :
+						return(15, leaping_trout_11328, "Leaping trout<br> (with 15 Agility & 48 Fishing)");
+					case 2 :
+						return(30, leaping_salmon_11330, "Leaping salmon<br> (with 30 Agility & 58 Fishing)");
+					case 3 :
+						return(35, raw_tuna_359, "Tuna<br> (with 55 Fishing)");
+					case 4 :
+						return(35, raw_harpoonfish_25564, "Harpoonfish<br> (with 55 Fishing)");
+					case 5 :
+						return(45, leaping_sturgeon_11332, "Leaping sturgeon<br> (with 45 Agility & 70 Fishing)");
+					case 6 :
+						return(50, raw_swordfish_371, "Swordfish<br> (with 70 Fishing)");
+					case 7 :
+						return(76, raw_shark_383, "Shark<br> (with 96 Fishing)");
+				}
 		}
 		return(-1, null, "");
 	case 5 :

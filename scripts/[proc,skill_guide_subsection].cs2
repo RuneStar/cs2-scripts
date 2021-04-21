@@ -13,22 +13,20 @@ switch_int ($int0) {
 		}
 		return("", -1);
 	case 2 :
-		if ($int1 = 0) {
-			return("Weapons", 1);
+		switch_int ($int1) {
+			case 0 :
+				return("Weapons", 0);
+			case 1 :
+				return("Armour", 1);
+			case 2 :
+				return("Shortcuts", 1);
+			case 3 :
+				return("Areas", 1);
+			case 4 :
+				return("Barbarian", 1);
+			case default :
+				return("", -1);
 		}
-		if ($int1 = 1) {
-			return("Armour", 1);
-		}
-		if ($int1 = 2) {
-			return("Shortcuts", 1);
-		}
-		if ($int1 = 3) {
-			return("Areas", 1);
-		}
-		if ($int1 = 4) {
-			return("Barbarian", 1);
-		}
-		return("", -1);
 	case 5 :
 		if ($int1 = 0) {
 			return("Armour", 0);
