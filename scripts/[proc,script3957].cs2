@@ -4,6 +4,9 @@ if ($struct0 = null) {
 	return(0);
 }
 def_int $int1 = 1;
+if (struct_param($struct0, param_1186) = true & ~on_mobile = true) {
+	return($int1);
+}
 if (struct_param($struct0, param_1080) ! null) {
 	$int1 = ~script3958($struct0, 0);
 }

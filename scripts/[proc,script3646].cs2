@@ -2,12 +2,17 @@
 [proc,script3646](obj $obj0, int $num1, component $component2, int $comsubid3)
 cc_clearops;
 if ($obj0 ! null) {
-	cc_settrans(0);
+	cc_settrans(100);
 	cc_setobject($obj0, $num1);
-	cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
-	cc_setop(1, "Examine");
-	cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
-	cc_setondragcomplete("script3647(event_com, event_drop, event_comsubid, event_dropsubid, $comsubid3)");
+	if (%varbit12132 = 1) {
+		cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 150, 100)");
+		cc_setop(1, "Examine");
+		cc_setopbase("<col=ff9040><oc_name($obj0)></col>");
+		cc_setondragcomplete("script3647(event_com, event_drop, event_comsubid, event_dropsubid, $comsubid3)");
+	} else {
+		cc_setonop(null);
+		cc_setondragcomplete(null);
+	}
 } else {
 	cc_settrans(255);
 	cc_setobject(obj_6512, 1);

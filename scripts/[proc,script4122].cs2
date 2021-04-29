@@ -1,0 +1,42 @@
+// 4122
+[proc,script4122](stat $stat0, int $y1, int $x2, int $width3, int $int4, component $component5, component $component6, component $component7, int $int8, int $int9, component $component10, component $component11)(int)
+def_int $int12 = calc(~script575($stat0) / 10);
+cc_create($component5, ^iftype_text, $int8);
+cc_setsize($width3, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($x2, $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_settextalign(^settextalign_left, ^settextalign_bottom, 0);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settext("X <~script853(9)>");
+cc_setop(1, "Select");
+def_string $string0 = ",";
+cc_setopbase("<col=ff9040><~tostring_spacer($int12, $string0)> <enum(stat, string, enum_680, $stat0)> XP/Token</col>");
+def_string $string1 = "";
+if (stat_base($stat0) < 30) {
+	$string1 = "You need to be at least level <tostring(30)> in a skill to buy experience in it.";
+	cc_setonop("soul_wars_rewards_refuse($string1, $component5, $component6, $component7, 0, event_opindex, $component10, $component11)");
+} else if (%var2876 < 1) {
+	cc_setcolour(0x9f9f9f);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	$string1 = "You need at least <~tostring_spacer(1, $string0)> <~script853(1)> to claim that reward.";
+	cc_setonop("soul_wars_rewards_refuse($string1, $component5, $component6, $component7, 0, event_opindex, $component10, $component11)");
+} else {
+	cc_setonop("soul_wars_rewards_select($int4, $component5, $component6, $component7, 0, event_opindex, $component10, $component11)");
+}
+if ($int9 = $int4) {
+	cc_setcolour(^white);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+} else if (string_length($string1) > 0) {
+	cc_setcolour(0x9f9f9f);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+} else {
+	cc_setcolour(0xff981f);
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, 0xfffc00)");
+		cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0xff981f)");
+	}
+}
+return(calc($int8 + 1));

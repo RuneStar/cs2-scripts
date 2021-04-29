@@ -109,7 +109,7 @@ if ($component9 ! null & $component7 ! null) {
 		if_setgraphic("sideicons_interface,9", $component7);
 	}
 }
-$component7 = enum(component, component, $enum1, interface_161:33);
+$component7 = enum(component, component, $enum1, interface_161:34);
 if ($component7 ! null) {
 	if (%varbit4609 = 1) {
 		if_setgraphic("tradebacking_dark", $component7);
@@ -147,6 +147,46 @@ if (%varbit9528 = 0 & %varbit542 = ^false) {
 	if_sethide(true, $component2);
 }
 ~script3175($component2, ^min_32bit_int);
+$component2 = enum(component, component, $enum1, interface_161:11);
+if (%varbit542 = ^false) {
+	if_sethide(false, $component2);
+} else {
+	if_sethide(true, $component2);
+}
+$component2 = enum(component, component, $enum1, interface_161:32);
+if ($enum1 = enum_1745) {
+	if (%varbit542 = ^true & %varbit4606 = 3) {
+		if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, $component2);
+	} else {
+		if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component2);
+	}
+} else if ($enum1 = enum_1130 | $enum1 = enum_1131) {
+	if (%varbit542 = ^true) {
+		if (%varbit4606 = 3) {
+			if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component2);
+		} else {
+			if_setposition(0, calc(23 * -1), ^setpos_abs_left, ^setpos_abs_bottom, $component2);
+		}
+	} else {
+		if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component2);
+	}
+}
+if ($enum1 ! enum_1129) {
+	if (~script4138 = 1) {
+		~script4135($enum1, true);
+	} else {
+		~script4135($enum1, false);
+	}
+}
+if ($enum1 = enum_1745) {
+	if (%varbit542 = ^false) {
+		if_sethide(false, interface_601:31);
+		if_sethide(false, interface_601:32);
+	} else {
+		if_sethide(true, interface_601:31);
+		if_sethide(true, interface_601:32);
+	}
+}
 if (%varbit4134 = 1) {
 	mousecam(false);
 } else {

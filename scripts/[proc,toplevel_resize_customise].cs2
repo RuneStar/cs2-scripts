@@ -33,7 +33,7 @@ switch_enum ($enum1) {
 			_2122("fixed_map_clickmask", enum(component, component, $enum1, interface_161:28));
 		}
 	case enum_1745 :
-		if (%varbit6257 = 1) {
+		if (%varbit6257 = 1 | %varbit542 = ^true) {
 			if_sethide(true, interface_601:33);
 		} else {
 			if_sethide(false, interface_601:33);

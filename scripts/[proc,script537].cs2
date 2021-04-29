@@ -1,35 +1,37 @@
 // 537
-[proc,script537](stat $stat0, int $y1, int $int2, int $int3, int $int4, int $int5, int $int6, component $component7, component $component8, component $component9, int $int10, int $int11, component $component12, component $component13)(int)
-cc_create($component7, ^iftype_graphic, $int10);
-$int10 = calc($int10 + 1);
+[proc,script537](stat $stat0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, component $component8, component $component9, component $component10, int $int11, int $int12, component $component13, component $component14)(int)
+cc_create($component8, ^iftype_graphic, $int11);
+$int11 = calc($int11 + 1);
 cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
-cc_setposition(calc($int2 + (36 - 25) / 2), $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setposition(calc($int2 + (36 - 25) / 2), calc($int1 - 6), ^setpos_abs_left, ^setpos_abs_top);
 cc_setgraphic(enum(stat, graphic, enum_255, $stat0));
-def_int $int14 = calc($int3 - 40);
-$int2 = calc($int2 + 40);
-cc_create($component7, ^iftype_text, $int10);
-$int10 = calc($int10 + 1);
-cc_setsize($int14, 32, ^setsize_abs, ^setsize_abs);
-cc_setposition($int2, $y1, ^setpos_abs_left, ^setpos_abs_top);
+def_int $int15 = calc($int3 - 16);
+$int2 = calc($int2 + 32);
+cc_create($component8, ^iftype_text, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize($int15, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition($int2, $int1, ^setpos_abs_left, ^setpos_abs_top);
 cc_settextalign(^settextalign_left, ^settextalign_top, 0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
-def_int $int15 = 1;
+def_int $int16 = 1;
 if (stat_base($stat0) < 30) {
 	cc_setcolour(0x9f9f9f);
 	cc_settext("<enum(stat, string, enum_680, $stat0)> - Requires level <tostring(30)>");
-} else if (%var2876 < $int15) {
+} else if (%var2876 < $int16) {
 	cc_setcolour(0x9f9f9f);
 	cc_settext("<enum(stat, string, enum_680, $stat0)> - <tostring(calc(~script575($stat0) / 10))> XP per Token");
 } else {
-	if ($int11 = $int4 | $int11 = $int5 | $int11 = $int6) {
+	if ($int12 = $int4 | $int12 = $int5 | $int12 = $int6) {
 		cc_setcolour(^white);
 	} else {
 		cc_setcolour(0x00df00);
 	}
 	cc_settext("<enum(stat, string, enum_680, $stat0)> - <tostring(calc(~script575($stat0) / 10))> XP per Token");
 }
-$int10 = ~soul_wars_rewards_statbuttondraw($stat0, $y1, $int2, 56, $int4, $component7, $component8, $component9, $int10, $int11, $component12, $component13);
-$int10 = ~soul_wars_rewards_statbuttondraw($stat0, $y1, calc($int2 + 56), 69, $int5, $component7, $component8, $component9, $int10, $int11, $component12, $component13);
-$int10 = ~soul_wars_rewards_statbuttondraw($stat0, $y1, calc($int2 + 125), calc($int14 - 125), $int6, $component7, $component8, $component9, $int10, $int11, $component12, $component13);
-return($int10);
+$int2 = calc($int2 - 32 + (36 - 25) / 2);
+$int11 = ~soul_wars_rewards_statbuttondraw($stat0, $int1, $int2, 43, $int4, $component8, $component9, $component10, $int11, $int12, $component13, $component14);
+$int11 = ~soul_wars_rewards_statbuttondraw($stat0, $int1, calc($int2 + 43), 56, $int5, $component8, $component9, $component10, $int11, $int12, $component13, $component14);
+$int11 = ~soul_wars_rewards_statbuttondraw($stat0, $int1, calc($int2 + 99), 64, $int6, $component8, $component9, $component10, $int11, $int12, $component13, $component14);
+$int11 = ~script4122($stat0, $int1, calc($int2 + 163), calc($int15 - 163), $int7, $component8, $component9, $component10, $int11, $int12, $component13, $component14);
+return($int11);

@@ -52,4 +52,8 @@ $obj1 = oc_param($obj0, magic_runetype_4);
 if ($obj1 ! null & ~magic_runecount($obj1) < oc_param($obj0, magic_runecount_4)) {
 	return(0);
 }
+def_stat $stat2 = oc_param($obj0, param_1187);
+if ($stat2 ! null & stat($stat2) < oc_param($obj0, param_1188)) {
+	return(0);
+}
 return(1);

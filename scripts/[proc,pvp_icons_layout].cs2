@@ -195,4 +195,9 @@ if (~on_mobile = true) {
 } else {
 	if_setposition(0, 40, ^setpos_abs_right, ^setpos_abs_bottom, interface_90:47);
 }
+if (%varbit542 = ^true) {
+	if_sethide(true, interface_90:47);
+} else {
+	if_sethide(false, interface_90:47);
+}
 ~script2806;

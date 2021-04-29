@@ -5,7 +5,7 @@ cc_deleteall($component2);
 def_int $int8 = 0;
 if ($int0 ! -1) {
 	if ($enum4 = enum_3537) {
-		$text0 = enum(int, string, $enum4, $int0);
+		$text0 = ~script4124($enum4, $int0);
 	} else {
 		$text0 = oc_name(enum(int, namedobj, $enum4, $int0));
 	}
@@ -35,5 +35,5 @@ if ($int0 ! -1) {
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextfont(p12_full);
 	cc_settextshadow(false);
-	cc_settext("Confirm");
+	cc_settext("Select an option");
 }

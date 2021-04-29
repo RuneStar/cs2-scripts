@@ -1,6 +1,6 @@
 // 3459
 [proc,gravestone_hud_resynch](component $component0)
-if (%varbit10465 <= 0) {
+if (%varbit10465 <= 0 | %varbit12139 = 1) {
 	cc_sethide(true);
 	.cc_sethide(true);
 	if_setontimer(null, $component0);

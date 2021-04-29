@@ -24,7 +24,15 @@ if (%varbit4606 ! 0) {
 	if (%varbit4606 = 2) {
 		viewport_setfov(512, 220);
 		viewport_clampfov(0, 0, 0, 0);
+	} else if (%varbit4606 = 3) {
+		viewport_setfov(256, 256);
+		if ($enum1 = enum_1129) {
+			viewport_clampfov(512, 512, 512, 512);
+		} else {
+			viewport_clampfov(640, 768, 512, 512);
+		}
 	} else {
+		viewport_setfov(256, 256);
 		viewport_clampfov(512, 512, 512, 512);
 	}
 	cam_setfollowheight(50);
@@ -93,7 +101,7 @@ if ($component18 ! null) {
 			$y20 = 38;
 		}
 	}
-	if (~on_mobile = true) {
+	if (~on_mobile = true & %varbit542 = ^false) {
 		if (%varbit6254 = ^false) {
 			$x19 = calc(182 + 4);
 		} else {

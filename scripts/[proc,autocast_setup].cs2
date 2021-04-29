@@ -16,7 +16,7 @@ def_int $int2 = 1;
 def_int $x3 = -1;
 def_int $y4 = -1;
 def_obj $obj5 = null;
-while ($int2 <= 52) {
+while ($int2 <= 58) {
 	cc_create($component0, ^iftype_graphic, $int2);
 	$x3, $y4, $obj5 = ~autocast_spellpos($int2, %var664), enum(int, obj, enum_1986, $int2);
 	if ($x3 ! -1 & $y4 ! -1 & $obj5 ! null) {

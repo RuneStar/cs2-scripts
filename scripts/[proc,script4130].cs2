@@ -1,0 +1,8 @@
+// 4130
+[proc,script4130](obj $obj0)(int)
+switch_obj ($obj0) {
+	case inferior_demonbane_20398, superior_demonbane_20399, dark_demonbane_20400, mark_of_darkness_20392, ghostly_grasp_21826, skeletal_grasp_21829, undead_grasp_21832, ward_of_arceuus_20763, lesser_corruption_10511, greater_corruption_20762, demonic_offering_15346, sinister_offering_8796, degrime_15345, shadow_veil_15344, vile_vigour_15304, dark_lure_15303, death_charge_15309, resurrect_ghost_25511, resurrect_skeleton_25512, resurrect_zombie_25514 :
+		return(1);
+	case default :
+		return(0);
+}

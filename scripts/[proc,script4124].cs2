@@ -1,0 +1,23 @@
+// 4124
+[proc,script4124](enum $enum0, int $int1)(string)
+def_string $string0 = enum(int, string, $enum0, $int1);
+def_int $int2 = 0;
+def_string $string1 = ",";
+switch_int (calc($int1 / 4)) {
+	case 0 :
+		$int2 = calc(~script575(attack) * %var2971);
+	case 1 :
+		$int2 = calc(~script575(strength) * %var2971);
+	case 2 :
+		$int2 = calc(~script575(defence) * %var2971);
+	case 3 :
+		$int2 = calc(~script575(ranged) * %var2971);
+	case 4 :
+		$int2 = calc(~script575(magic) * %var2971);
+	case 5 :
+		$int2 = calc(~script575(hitpoints) * %var2971);
+	case 6 :
+		$int2 = calc(~script575(prayer) * %var2971);
+}
+$int2 = calc($int2 / 10);
+return("<~tostring_spacer($int2, $string1)> <$string0>");

@@ -1,0 +1,6 @@
+// 4136
+[proc,script4136](struct $struct0)(int)
+if (~quest_status_get($struct0) = 2) {
+	return(1);
+}
+return(0);

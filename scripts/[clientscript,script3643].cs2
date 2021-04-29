@@ -10,9 +10,9 @@ while ($size1 < $size2) {
 	cc_setoutline(1);
 	cc_setdragdeadzone(5);
 	cc_setdragdeadtime(5);
-	cc_settrans(0);
 	cc_sethide(false);
 	$size1 = calc($size1 + 1);
 }
 ~script3645($component0, $size2);
 if_setoninvtransmit("script3644($component0, $size2){inv}", $component0);
+if_setonvartransmit("script3644($component0, $size2){var1432}", $component0);

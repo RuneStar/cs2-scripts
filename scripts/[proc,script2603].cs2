@@ -33,7 +33,7 @@ if ($component0 = $component2) {
 	if_sethide(true, $component6);
 	if_sethide(false, $component7);
 	$int11 = 0;
-	while ($int11 < 5) {
+	while ($int11 < 6) {
 		cc_create($component8, ^iftype_rectangle, $int11);
 		cc_setsize(0, 25, ^setsize_minus, ^setsize_abs);
 		cc_setposition(0, calc($int11 * 25), ^setpos_abs_centre, ^setpos_abs_top);
@@ -49,6 +49,7 @@ if ($component0 = $component2) {
 	$int11 = ~script2604(2, "Show <col=ffffff>Utility</col> spells", $component8, $int11);
 	$int11 = ~script2604(3, "Show spells you lack the Magic level to cast", $component8, $int11);
 	$int11 = ~script2604(4, "Show spells you lack the runes to cast", $component8, $int11);
+	$int11 = ~script2604(5, "Show spells you lack the requirements to cast", $component8, $int11);
 } else {
 	if ($boolean1 = true) {
 		if_sethide(false, $component2);

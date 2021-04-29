@@ -1,0 +1,11 @@
+// 4132
+[proc,script4132](obj $obj0)(string)
+def_struct $struct1 = oc_param($obj0, param_1189);
+def_int $int2 = oc_param($obj0, param_1190);
+if (~script4128($obj0) = 0) {
+	return("Complete <~get_quest_name($struct1)> to unlock.");
+}
+if (~script4129($obj0) = 0) {
+	return("Complete the <enum(int, string, enum_3497, $int2)> diary to unlock.");
+}
+return("");

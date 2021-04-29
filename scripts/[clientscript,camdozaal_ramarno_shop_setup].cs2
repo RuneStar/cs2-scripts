@@ -1,6 +1,6 @@
 // 4107
 [clientscript,camdozaal_ramarno_shop_setup]
-if_settext("<col=ff981f>Total Barronite Shards:</col><col=ffffff> <tostring(calc(inv_total(inv, barronite_shards_25676) + %var2953))></col>", interface_685:2);
+if_settext("<col=ff981f>Total Barronite Shards:</col><col=ffffff> <~tostring_spacer(%var2953, ",")></col>", interface_685:2);
 ~camdozaal_ramarno_shop_setup_button(struct_2879, %varbit12099, interface_685:3, interface_685:14);
 ~camdozaal_ramarno_shop_setup_button(struct_2880, %varbit12100, interface_685:4, interface_685:5);
 ~camdozaal_ramarno_shop_setup_button(struct_2881, %varbit12101, interface_685:6, interface_685:7);

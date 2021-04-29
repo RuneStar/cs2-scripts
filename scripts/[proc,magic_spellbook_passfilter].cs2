@@ -1,5 +1,8 @@
 // 2619
 [proc,magic_spellbook_passfilter](obj $obj0)(int)
+if (~script4130($obj0) = 1 & ~tournament_beta_world = 0) {
+	return(0);
+}
 def_int $int1 = oc_param($obj0, spell_type);
 if ($int1 = 0) {
 	if (%varbit6605 = 1) {
@@ -19,6 +22,9 @@ if (%varbit6607 = 1) {
 	}
 }
 if (%varbit6608 = 1 & ~magic_spellbook_hasrunes($obj0) = 0) {
+	return(0);
+}
+if (%varbit12137 = 1 & ~script4131($obj0) = 0) {
 	return(0);
 }
 return(1);

@@ -1,0 +1,14 @@
+// 4117
+[clientscript,script4117](component $component0, component $component1, component $component2, component $component3, component $component4)
+~script4119($component1, $component2, $component3, $component4);
+if (~on_mobile = false) {
+	if_setonmouseover("script4120($component1)", $component1);
+	if_setonmouseleave("script4121($component1)", $component1);
+	if_setonmouseover("script4120($component2)", $component2);
+	if_setonmouseleave("script4121($component2)", $component2);
+	if_setonmouseover("script4120($component3)", $component3);
+	if_setonmouseleave("script4121($component3)", $component3);
+	if_setonmouseover("script4120($component4)", $component4);
+	if_setonmouseleave("script4121($component4)", $component4);
+}
+if_setoninvtransmit("script4118($component1, $component2, $component3, $component4){inv}", $component0);
