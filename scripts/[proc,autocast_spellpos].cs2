@@ -46,7 +46,7 @@ switch_int ($int1) {
 		}
 	case 4170 :
 		if (%varbit4070 = 3) {
-			return(~script4133($int0));
+			return(~arceuus_autocast_spellpos($int0));
 		}
 		switch_int ($int0) {
 			case 17 :
@@ -199,7 +199,7 @@ switch_int ($int1) {
 		}
 	case 11791 :
 		if (%varbit4070 = 3) {
-			return(~script4133($int0));
+			return(~arceuus_autocast_spellpos($int0));
 		}
 		switch_int ($int0) {
 			case 1 :
@@ -295,10 +295,10 @@ switch_int ($int1) {
 				return(60, 60);
 		}
 	case 21006 :
-		return(~script4133($int0));
+		return(~arceuus_autocast_spellpos($int0));
 	case 4710 :
 		if (%varbit4070 = 3) {
-			return(~script4133($int0));
+			return(~arceuus_autocast_spellpos($int0));
 		}
 		switch_int ($int0) {
 			case 1 :
@@ -343,6 +343,6 @@ switch_int ($int1) {
 				return(60, 61);
 		}
 	case 9013 :
-		return(~script4133($int0));
+		return(~arceuus_autocast_spellpos($int0));
 }
 return(-1, -1);

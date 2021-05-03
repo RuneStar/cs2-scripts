@@ -1,5 +1,5 @@
 // 378
-[clientscript,script378](string $text0, string $string1)
+[clientscript,menu_indexed](string $text0, string $string1)
 def_component $component0 = interface_187:0;
 def_component $component1 = interface_187:3;
 def_component $component2 = interface_187:2;
@@ -13,11 +13,11 @@ def_int $index7 = string_indexof_string($string1, "|", 0);
 def_string $string2 = "";
 while ($index7 ! -1) {
 	$string2 = substring($string1, 0, $index7);
-	$int5, $height6 = ~script379($string2, $component1, $component3, $width4, $int5, $height6);
+	$int5, $height6 = ~menu_createentry_indexed($string2, $component1, $component3, $width4, $int5, $height6);
 	$string1 = substring($string1, calc($index7 + 1), string_length($string1));
 	$index7 = string_indexof_string($string1, "|", 0);
 }
-$int5, $height6 = ~script379($string1, $component1, $component3, $width4, $int5, $height6);
+$int5, $height6 = ~menu_createentry_indexed($string1, $component1, $component3, $width4, $int5, $height6);
 if_setscrollsize(0, $height6, $component1);
 if_setscrollpos(0, 0, $component1);
 if ($height6 > if_getheight($component1)) {

@@ -1,8 +1,8 @@
 // 2401
-[proc,script2401](int $int0)(string)
+[proc,time_convert_option](int $int0)(string)
 def_string $string0 = "";
 if (%varbit11866 = 1) {
-	$string0 = ~script2411($int0);
+	$string0 = ~time_convert_ms($int0);
 } else {
 	$string0 = ~time_convert($int0);
 }

@@ -20,38 +20,38 @@ if ($int2 = 0 | $int2 = -1) {
 	$string6 = $string11;
 	$string1 = "Grab a team and get Raiding!";
 } else {
-	$string6 = ~script2401($int2);
+	$string6 = ~time_convert_option($int2);
 	$string1 = "Team: <$string1>";
 }
 if ($int3 = 0 | $int3 = -1) {
 	$string7 = $string11;
 	$string2 = "Grab a team and get Raiding!";
 } else {
-	$string7 = ~script2401($int3);
+	$string7 = ~time_convert_option($int3);
 	$string2 = "Team: <$string2>";
 }
 if ($int4 = 0 | $int4 = -1) {
 	$string8 = $string11;
 	$string3 = "Grab a team and get Raiding!";
 } else {
-	$string8 = ~script2401($int4);
+	$string8 = ~time_convert_option($int4);
 	$string3 = "Team: <$string3>";
 }
 if ($int5 = 0 | $int5 = -1) {
 	$string9 = $string11;
 	$string4 = "Grab a team and get Raiding!";
 } else {
-	$string9 = ~script2401($int5);
+	$string9 = ~time_convert_option($int5);
 	$string4 = "Team: <$string4>";
 }
 if ($int6 = 0 | $int6 = -1) {
 	$string10 = $string11;
 	$string5 = "Grab a team and get Raiding!";
 } else {
-	$string10 = ~script2401($int6);
+	$string10 = ~time_convert_option($int6);
 	$string5 = "Team: <$string5>";
 }
-if_settext(~script2401($int1), interface_21:15);
-if_settext(~script2401($int0), interface_21:13);
+if_settext(~time_convert_option($int1), interface_21:15);
+if_settext(~time_convert_option($int0), interface_21:13);
 if_settext("<$string6><br><$string7><br><$string8><br><$string9><br><$string10>", interface_21:16);
 if_settext("1. <$string1><br>2. <$string2><br>3. <$string3><br>4. <$string4><br>5. <$string5>", interface_21:17);

@@ -1,5 +1,5 @@
 // 379
-[proc,script379](string $string0, component $component0, component $component1, int $width2, int $int3, int $height4)(int, int)
+[proc,menu_createentry_indexed](string $string0, component $component0, component $component1, int $width2, int $int3, int $height4)(int, int)
 def_int $int5 = calc(paraheight($string0, $width2, p12_full) * 14 + 2);
 if (~on_mobile = true) {
 	$int5 = scale(4, 3, $int5);

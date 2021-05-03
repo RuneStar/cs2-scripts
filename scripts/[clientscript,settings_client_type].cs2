@@ -12,7 +12,7 @@ cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
 cc_setgraphic("tradebacking");
 cc_settiling(true);
-cc_setonclick("script441($component0, $component1, $component2, $component3, $component4, $component5, $layer6)");
+cc_setonclick("settings_client_type_open($component0, $component1, $component2, $component3, $component4, $component5, $layer6)");
 cc_create($component0, ^iftype_rectangle, $int7);
 $int7 = calc($int7 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
