@@ -1,0 +1,21 @@
+// 4157
+[proc,script4157](component $component0, obj $obj1, int $int2, int $int3)
+if (cc_find($component0, 1) = ^true) {
+	if ($int2 = 1) {
+		cc_setgraphic("options_radio_buttons,6");
+	} else {
+		cc_setgraphic("options_radio_buttons,5");
+	}
+}
+if (cc_find($component0, 3) = ^true) {
+	if ($int3 = 1) {
+		cc_setgraphic("options_radio_buttons,6");
+	} else {
+		cc_setgraphic("options_radio_buttons,5");
+	}
+}
+if (inv_total(inv, $obj1) <= 0) {
+	if_sethide(true, $component0);
+} else {
+	if_sethide(false, $component0);
+}

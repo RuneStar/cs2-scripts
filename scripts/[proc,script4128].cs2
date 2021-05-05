@@ -1,7 +1,11 @@
 // 4128
 [proc,script4128](obj $obj0)(int)
 def_struct $struct1 = oc_param($obj0, param_1189);
-if ($struct1 ! null & ~script4136($struct1) = 0) {
-	return(0);
+if ($struct1 ! null) {
+	if (oc_param($obj0, param_1228) = true & %varbit5314 = 1) {
+		return(1);
+	} else if (~script4136($struct1) = 0) {
+		return(0);
+	}
 }
 return(1);

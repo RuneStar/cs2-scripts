@@ -3,9 +3,9 @@
 def_struct $struct1 = oc_param($obj0, param_1189);
 def_int $int2 = oc_param($obj0, param_1190);
 if (~script4128($obj0) = 0) {
-	return("Complete <~get_quest_name($struct1)> to unlock.");
+	return("Requires <~get_quest_name($struct1)>");
 }
 if (~script4129($obj0) = 0) {
-	return("Complete the <enum(int, string, enum_3497, $int2)> diary to unlock.");
+	return("Requires the <enum(int, string, enum_3497, $int2)> diary");
 }
 return("");

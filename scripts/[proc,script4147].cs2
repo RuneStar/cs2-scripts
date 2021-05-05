@@ -1,0 +1,9 @@
+// 4147
+[proc,script4147](component $component0, component $component1, component $component2, component $component3, component $component4)
+~script4140($component0, $component1, $component2, $component3, $component4, false, 0);
+if (compare(%varcstring436, %varcstring437) ! 0) {
+	resume_stringdialog(%varcstring436);
+} else {
+	~tutorial_displayname_buttons($component0, $component1, $component2, $component3, $component4);
+}
+%varcstring437 = %varcstring436;

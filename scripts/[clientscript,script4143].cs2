@@ -1,0 +1,9 @@
+// 4143
+[clientscript,script4143](component $component0, component $component1, int $colour2, int $clock3)
+if (clientclock < $clock3) {
+	return;
+}
+sound_synth(pillory_wrong, 1, 0);
+if_setcolour($colour2, $component0);
+if_setcolour($colour2, $component1);
+if_setontimer(null, $component0);

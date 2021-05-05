@@ -11,6 +11,12 @@ switch_component ($component1) {
 		} else {
 			if_settrans(0, $component1);
 		}
+	case magic_spellbook:139, magic_spellbook:136 :
+		if (%varbit925 = 1) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
+		}
 	case magic_spellbook:124 :
 		if (%varbit5438 > 0) {
 			if_settrans(150, $component1);

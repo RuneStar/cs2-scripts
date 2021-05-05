@@ -1,0 +1,54 @@
+// 4153
+[proc,script4153](component $component0, int $int1, int $int2, int $int3, namedobj $namedobj4, string $text0)
+def_boolean $boolean5 = ~on_mobile;
+cc_create($component0, ^iftype_rectangle, 0);
+cc_setfill(true);
+cc_setop(1, "Show Fragment <tostring($int1)>");
+cc_setonop("script4156($component0, $int1, $namedobj4, 1)");
+if ($boolean5 = true) {
+	cc_setposition(5, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(32, 0, ^setsize_abs, ^setsize_minus);
+} else {
+	cc_setposition(13, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+}
+cc_settrans(255);
+cc_create($component0, ^iftype_graphic, 1);
+cc_setposition(13, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+if ($int2 = 1) {
+	cc_setgraphic("options_radio_buttons,6");
+} else {
+	cc_setgraphic("options_radio_buttons,5");
+}
+cc_create($component0, ^iftype_rectangle, 2);
+cc_setfill(true);
+cc_setop(1, "Select Fragment <tostring($int1)>");
+cc_setonop("script4156($component0, $int1, $namedobj4, 0)");
+if ($boolean5 = true) {
+	cc_setposition(42, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(32, 0, ^setsize_abs, ^setsize_minus);
+} else {
+	cc_setposition(50, 0, ^setpos_abs_left, ^setpos_abs_centre);
+	cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+}
+cc_settrans(255);
+cc_create($component0, ^iftype_graphic, 3);
+cc_setposition(50, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+if ($int3 = 1) {
+	cc_setgraphic("options_radio_buttons,6");
+} else {
+	cc_setgraphic("options_radio_buttons,5");
+}
+cc_create($component0, ^iftype_text, 4);
+cc_settext($text0);
+cc_setsize(calc(if_getwidth($component0) - 84), 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if (inv_total(inv, $namedobj4) <= 0) {
+	if_sethide(true, $component0);
+}

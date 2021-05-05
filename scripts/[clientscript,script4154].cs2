@@ -1,0 +1,8 @@
+// 4154
+[clientscript,script4154](component $component0)
+if (%var875 = 0) {
+	return;
+}
+if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
+if_settextalign(^settextalign_centre, ^settextalign_centre, 20, $component0);
+if_settext("Page has been complete!", $component0);

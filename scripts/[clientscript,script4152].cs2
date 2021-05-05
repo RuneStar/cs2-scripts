@@ -1,0 +1,8 @@
+// 4152
+[clientscript,script4152](component $component0, int $int1, component $component2, component $component3, component $component4)
+~steelbox($component0, 0, 1);
+~script4153($component2, 1, %varbit12156, %varbit12155, fragment_1_9687, "Piece 1");
+~script4153($component3, 2, %varbit12158, %varbit12157, fragment_2_9688, "Piece 2");
+~script4153($component4, 3, %varbit12160, %varbit12159, fragment_3_9689, "Piece 3");
+if_setonvartransmit("script4155($component2, $component3, $component4){var210}", $component0);
+if_setoninvtransmit("script4155($component2, $component3, $component4){inv}", $component0);

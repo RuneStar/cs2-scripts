@@ -11,6 +11,9 @@ if (if_hassub(enum(component, component, $enum2, interface_161:16)) = true) {
 		return(0);
 	}
 }
+if (if_hassub(enum(component, component, $enum2, interface_161:15)) = true & %varcint435 = true & $int0 ! 558) {
+	return(0);
+}
 if ($enum2 = enum_1132 & if_hassub(interface_165:29) = true) {
 	if ($int0 = 16) {
 		$enum2 = $enum2;

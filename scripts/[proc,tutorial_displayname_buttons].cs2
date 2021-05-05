@@ -1,18 +1,48 @@
 // 2575
-[proc,tutorial_displayname_buttons](component $component0, component $component1)
-if (%varbit5605 = 1) {
+[proc,tutorial_displayname_buttons](component $component0, component $component1, component $component2, component $component3, component $component4)
+if (%varcint435 = true) {
 	~displayname_button_init($component0, "Look up name");
-	~displayname_disablebutton($component1, "Set name");
+	if_setop(1, "Look up name", $component0);
+	if_sethide(false, $component0);
+	if_sethide(true, $component1);
+	if_setonop("script4146($component0, $component1, $component2, $component3, $component4, event_opindex)", $component0);
+} else if (%varbit5605 = 1) {
+	if (compare(%varcstring436, %varcstring437) = 0) {
+		~displayname_disablebutton($component0, "Look up name");
+		if_setop(1, "", $component0);
+		if_sethide(false, $component0);
+		if_sethide(true, $component1);
+	} else {
+		~displayname_button_init($component0, "Look up name");
+		if_setop(1, "Look up name", $component0);
+		if_sethide(false, $component0);
+		if_sethide(true, $component1);
+	}
 } else if (%varbit5605 = 2) {
-	~displayname_disablebutton($component0, "Look up name");
-	~displayname_disablebutton($component1, "Set name");
+	~displayname_disablebutton($component0, "Please wait");
+	if_setop(1, "", $component0);
+	if_sethide(false, $component0);
+	if_sethide(true, $component1);
 } else if (%varbit5605 = 4) {
-	~displayname_button_init($component0, "Look up name");
-	~displayname_button_init($component1, "Set name");
+	if (compare(%varcstring436, %varcstring437) = 0) {
+		~displayname_button_init($component1, "Set name");
+		if_setop(1, "Set name", $component1);
+		if_sethide(true, $component0);
+		if_sethide(false, $component1);
+	} else {
+		~displayname_button_init($component0, "Look up name");
+		if_setop(1, "Look up name", $component0);
+		if_sethide(false, $component0);
+		if_sethide(true, $component1);
+	}
 } else if (%varbit5605 = 5) {
-	~displayname_disablebutton($component0, "Look up name");
-	~displayname_disablebutton($component1, "Set name");
+	~displayname_disablebutton($component1, "Please wait");
+	if_setop(1, "", $component1);
+	if_sethide(true, $component0);
+	if_sethide(false, $component1);
 } else {
-	~displayname_disablebutton($component0, "Look up name");
-	~displayname_disablebutton($component1, "Set name");
+	~displayname_disablebutton($component1, "Please wait");
+	if_setop(1, "", $component1);
+	if_sethide(false, $component0);
+	if_sethide(true, $component1);
 }

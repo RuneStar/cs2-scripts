@@ -1,0 +1,36 @@
+// 3395
+[proc,script3395](int $int0, int $int1, component $component2, component $component3)
+switch_int ($int0) {
+	case 1 :
+		if ($int1 = 1) {
+			if_setmodelanim(seq_4811, $component2);
+			if_setmodelanim(seq_4811, $component3);
+		} else {
+			if_setmodelanim(seq_4815, $component2);
+			if_setmodelanim(seq_4815, $component3);
+		}
+	case 2 :
+		if ($int1 = 1) {
+			if_setmodelanim(seq_4812, $component2);
+			if_setmodelanim(seq_4812, $component3);
+		} else {
+			if_setmodelanim(seq_4816, $component2);
+			if_setmodelanim(seq_4816, $component3);
+		}
+	case 3 :
+		if ($int1 = 1) {
+			if_setmodelanim(seq_4813, $component2);
+			if_setmodelanim(seq_4813, $component3);
+		} else {
+			if_setmodelanim(seq_4817, $component2);
+			if_setmodelanim(seq_4817, $component3);
+		}
+	case default :
+		if ($int1 = 1) {
+			if_setmodelanim(seq_4814, $component2);
+			if_setmodelanim(seq_4814, $component3);
+		} else {
+			if_setmodelanim(seq_4818, $component2);
+			if_setmodelanim(seq_4818, $component3);
+		}
+}

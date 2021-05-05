@@ -1,0 +1,20 @@
+// 4158
+[proc,script4158](int $flags0, int $int1, int $int2)(int)
+def_int $int3 = 0;
+if ($int1 < 0 | $int1 > 31) {
+	return($int3);
+}
+if ($int2 < 0 | $int2 > 31) {
+	return($int3);
+}
+def_int $int4 = ~min($int1, $int2);
+def_int $int5 = 0;
+def_int $int6 = ~max($int1, $int2);
+while ($int4 <= $int6) {
+	if (testbit($flags0, $int4) = ^true) {
+		$int3 = setbit($int3, $int5);
+	}
+	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + 1);
+}
+return($int3);

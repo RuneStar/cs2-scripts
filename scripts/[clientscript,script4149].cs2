@@ -1,0 +1,8 @@
+// 4149
+[clientscript,script4149](int $int0, component $component1, component $component2, component $component3)
+def_string $text0 = if_gettext($component3);
+def_int $height4 = paraheight($text0, if_getwidth($component1), p12_full);
+def_int $height5 = calc($height4 * 12 + 5);
+if_setscrollpos(0, 0, $component1);
+if_setscrollsize(0, $height5, $component1);
+~scrollbar_vertical($component2, $component1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
