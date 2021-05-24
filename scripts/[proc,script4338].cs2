@@ -1,0 +1,54 @@
+// 4338
+[proc,script4338](component $component0, int $int1, int $int2, int $int3, struct $struct4)(int)
+def_int $int5 = ~script4333($struct4);
+cc_create($component0, ^iftype_graphic, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, calc($int2 - ($int1 / 2 + 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setgraphic("tradebacking");
+cc_settiling(true);
+cc_create($component0, ^iftype_rectangle, $int3);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, calc($int2 - ($int1 / 2 + 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^white);
+def_int $comsubid6 = $int3;
+def_int $trans7 = 255;
+if ($int5 ! 0) {
+	$trans7 = 220;
+}
+cc_settrans($trans7);
+if (%varbit12200 = 1 & ~on_mobile = false) {
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $trans7, null)");
+}
+cc_setop(1, "Select");
+cc_setonop("script4339($struct4, $component0, $int3)");
+$int3 = calc($int3 + 1);
+cc_create($component0, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, calc($int2 - ($int1 / 2 + 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component0, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(2, 18, ^setsize_minus, ^setsize_abs);
+cc_setposition(1, calc($int2 - ($int1 / 2 + 9)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_create($component0, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(10, 16, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, calc($int2 - ($int1 / 2 + 8)), ^setpos_abs_centre, ^setpos_abs_top);
+cc_settextfont(p12_full);
+if ($int5 ! 0) {
+	cc_setcolour(^white);
+} else {
+	cc_setcolour(0x808080);
+}
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setonvartransmit("script4340(event_com, $int3, $struct4, $comsubid6){var3027}");
+cc_settext(tostring(~script4333($struct4)));
+return($int3);

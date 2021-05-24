@@ -11,19 +11,37 @@ if ($key0 = ^key_return) {
 		} else if (%varcint5 = 10) {
 			%varcstring359 = %varcstring362;
 			~script222($string0);
+		} else if (%varcint5 = 20) {
+			%varcstring359 = ~script4393;
+			~script222($string0);
 		}
 	}
 	~meslayer_enter;
 	return;
 }
 switch_int (%varcint5) {
-	case 6, 9, 11 :
+	case 6, 9 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 0, $key0, $keychar1);
+	case 11 :
+		if ($key0 = ^key_escape) {
+			~meslayer_close(1, 1);
+			return;
+		}
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 0, $key0, $keychar1);
 	case 7, 16 :
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 1, $key0, $keychar1);
+	case 19 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 6, $key0, $keychar1);
 	case 12 :
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 3, $key0, $keychar1);
 		~meslayer_mode12_setprompt;
+	case 18 :
+		if ($key0 = ^key_escape) {
+			~meslayer_close(1, 1);
+			return;
+		}
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 3, $key0, $keychar1);
+		%varcstring359 = ~script1299(%varcstring359, " ", " ");
 	case 13 :
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 0, $key0, $keychar1);
 		~meslayer_mode13_setprompt;
@@ -35,6 +53,8 @@ switch_int (%varcint5) {
 			return;
 		}
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 4, $key0, $keychar1);
+	case 20, 21 :
+		%varcstring359 = ~add_to_inputstring(%varcstring359, 8, $key0, $keychar1);
 	case default :
 		%varcstring359 = ~add_to_inputstring(%varcstring359, 2, $key0, $keychar1);
 }

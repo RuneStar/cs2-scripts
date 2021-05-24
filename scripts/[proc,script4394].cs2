@@ -1,0 +1,64 @@
+// 4394
+[proc,script4394](string $string0)
+def_int $length0 = string_length($string0);
+if ($length0 > 0) {
+	$string0 = lowercase($string0);
+	%varcint441 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 0, 1), 0) + 1);
+} else {
+	%varcint441 = 0;
+}
+if ($length0 > 1) {
+	%varcint442 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 1, 2), 0) + 1);
+} else {
+	%varcint442 = 0;
+}
+if ($length0 > 2) {
+	%varcint443 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 2, 3), 0) + 1);
+} else {
+	%varcint443 = 0;
+}
+if ($length0 > 3) {
+	%varcint444 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 3, 4), 0) + 1);
+} else {
+	%varcint444 = 0;
+}
+if ($length0 > 4) {
+	%varcint445 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 4, 5), 0) + 1);
+} else {
+	%varcint445 = 0;
+}
+if ($length0 > 5) {
+	%varcint446 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 5, 6), 0) + 1);
+} else {
+	%varcint446 = 0;
+}
+if ($length0 > 6) {
+	%varcint447 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 6, 7), 0) + 1);
+} else {
+	%varcint447 = 0;
+}
+if ($length0 > 7) {
+	%varcint448 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 7, 8), 0) + 1);
+} else {
+	%varcint448 = 0;
+}
+if ($length0 > 8) {
+	%varcint449 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 8, 9), 0) + 1);
+} else {
+	%varcint449 = 0;
+}
+if ($length0 > 9) {
+	%varcint450 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 9, 10), 0) + 1);
+} else {
+	%varcint450 = 0;
+}
+if ($length0 > 10) {
+	%varcint451 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 10, 11), 0) + 1);
+} else {
+	%varcint451 = 0;
+}
+if ($length0 > 11) {
+	%varcint452 = calc(string_indexof_string("0123456789abcdefghijklmnopqrstuvwxyz _-", substring($string0, 11, 12), 0) + 1);
+} else {
+	%varcint452 = 0;
+}

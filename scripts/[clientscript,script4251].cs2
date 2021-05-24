@@ -1,0 +1,7 @@
+// 4251
+[clientscript,script4251](int $clock0, component $component1)
+if (clientclock < $clock0) {
+	return;
+}
+if_setontimer(null, $component1);
+~script4252(false, $component1);

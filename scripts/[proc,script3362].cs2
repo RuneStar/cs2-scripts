@@ -1,13 +1,13 @@
 // 3362
 [proc,script3362](boolean $boolean0, enum $enum1)(int)
-def_int $width2 = if_getwidth(interface_162:53);
+def_int $width2 = if_getwidth(interface_162:50);
 def_int $int3 = 0;
 def_int $int4 = calc($width2 / 3 + 95);
 def_int $int5 = calc($width2 / 2 - $int4 / 2);
 def_int $int6 = 0;
 def_obj $obj7 = %var2674;
 if (($enum1 = null | enum(obj, boolean, $enum1, %var2674) = true) & ($boolean0 = false | ~deadman_restricted_item($obj7) = 0)) {
-	cc_create(interface_162:53, ^iftype_rectangle, $int6);
+	cc_create(interface_162:50, ^iftype_rectangle, $int6);
 	$int6 = calc($int6 + 1);
 	cc_setonkey("meslayer_mode14_select($obj7, event_key)");
 	cc_setsize($int4, 32, ^setsize_abs, ^setsize_abs);
@@ -20,7 +20,7 @@ if (($enum1 = null | enum(obj, boolean, $enum1, %var2674) = true) & ($boolean0 =
 	cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
 	cc_setop(1, "Select");
 	cc_setonop("meslayer_mode14_select($obj7, ^key_return)");
-	cc_create(interface_162:53, ^iftype_text, $int6);
+	cc_create(interface_162:50, ^iftype_text, $int6);
 	$int6 = calc($int6 + 1);
 	cc_setsize(95, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -31,7 +31,7 @@ if (($enum1 = null | enum(obj, boolean, $enum1, %var2674) = true) & ($boolean0 =
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_setcolour(^black);
 	cc_settext("Previous search:");
-	cc_create(interface_162:53, ^iftype_text, $int6);
+	cc_create(interface_162:50, ^iftype_text, $int6);
 	$int6 = calc($int6 + 1);
 	cc_setsize(calc($int4 - 40), 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int5 + 40), 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -40,7 +40,7 @@ if (($enum1 = null | enum(obj, boolean, $enum1, %var2674) = true) & ($boolean0 =
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_setcolour(^black);
 	cc_settext(oc_name($obj7));
-	cc_create(interface_162:53, ^iftype_graphic, $int6);
+	cc_create(interface_162:50, ^iftype_graphic, $int6);
 	$int6 = calc($int6 + 1);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setposition($int5, 0, ^setpos_abs_left, ^setpos_abs_top);
@@ -51,18 +51,18 @@ if (($enum1 = null | enum(obj, boolean, $enum1, %var2674) = true) & ($boolean0 =
 	} else {
 		cc_setobject_nonum($obj7, 1);
 	}
-	cc_create(interface_162:53, ^iftype_text, $int6);
+	cc_create(interface_162:50, ^iftype_text, $int6);
 	$int6 = calc($int6 + 1);
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
-	cc_setsize($width2, calc(if_getheight(interface_162:53) / 2), ^setsize_abs, ^setsize_abs);
+	cc_setsize($width2, calc(if_getheight(interface_162:50) / 2), ^setsize_abs, ^setsize_abs);
 	cc_settextfont(p12_full);
 	cc_settextshadow(false);
 	cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 	cc_setcolour(^black);
 	cc_settext("Start typing the name of an item to search for it. You can press enter to select the last item you searched for.");
-	if_setscrollpos(0, 0, interface_162:53);
-	if_setscrollsize(0, 0, interface_162:53);
-	~scrollbar_resize(interface_162:54, interface_162:53, 0);
+	if_setscrollpos(0, 0, interface_162:50);
+	if_setscrollsize(0, 0, interface_162:50);
+	~scrollbar_resize(interface_162:51, interface_162:50, 0);
 	~script3397(5);
 	return(1);
 }

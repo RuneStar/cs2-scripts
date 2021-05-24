@@ -1,0 +1,6 @@
+// 4298
+[clientscript,script4298](int $clock0, string $text0, component $component1, graphic $graphic2)
+if (clientclock >= $clock0) {
+	if_setontimer(null, $component1);
+	~clan_stonebutton_draw(false, $text0, $graphic2, $component1);
+}

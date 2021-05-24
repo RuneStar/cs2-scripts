@@ -1,0 +1,190 @@
+// 4185
+[clientscript,script4185](component $component0)
+~script4206(interface_288:1, interface_288:2, interface_288:3, 0, $component0);
+def_struct $struct1 = enum(int, struct, enum_423, %varbit9656);
+def_enum $enum2 = null;
+if ($struct1 = null) {
+	return;
+}
+$enum2 = struct_param($struct1, param_745);
+if ($enum2 = null) {
+	return;
+}
+def_struct $struct3 = null;
+def_int $int4 = 0;
+def_int $int5 = enum_getoutputcount($enum2);
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_string $string0 = "#";
+while ($int4 < $int5) {
+	$struct3 = enum(int, struct, $enum2, $int4);
+	if ($struct3 ! null) {
+		$int7 = struct_param($struct3, param_1078);
+		$int8 = struct_param($struct3, param_1077);
+		if ($int7 = 9) {
+			if ($int8 = %varbit9657) {
+				$int5 = $int4;
+			} else {
+				$int6 = calc($int6 + 1);
+			}
+		}
+	}
+	$int4 = calc($int4 + 1);
+}
+~steelborder(interface_288:4, "Colour picker - <struct_param($struct3, param_1086)>", 1);
+def_component $component10 = interface_288:6;
+def_component $component11 = interface_288:7;
+def_component $component12 = interface_288:9;
+def_component $component13 = interface_288:8;
+cc_deleteall($component11);
+cc_deleteall($component12);
+cc_deleteall($component13);
+def_int $int14 = 0;
+cc_create($component10, ^iftype_text, $int14);
+cc_settext("Current colour");
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setsize(100, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(59, 2, ^setpos_abs_left, ^setpos_abs_top);
+$int14 = calc($int14 + 1);
+def_int $int15 = 45;
+def_int $colour16 = %var3010;
+if ($colour16 = null) {
+	$colour16 = struct_param($struct3, param_1230);
+}
+cc_create($component10, ^iftype_rectangle, $int14);
+cc_setsize($int15, $int15, ^setsize_abs, ^setsize_abs);
+cc_setposition(86, 22, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour($colour16);
+cc_setfill(true);
+$int14 = calc($int14 + 1);
+$int14 = ~script4216($component10, $int14, 86, 22, $int15, $int15, ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component10, ^iftype_text, $int14);
+cc_settext(append($string0, ~script4192($colour16)));
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setsize(80, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(69, 2, ^setpos_abs_left, ^setpos_abs_bottom);
+$int14 = calc($int14 + 1);
+cc_create($component10, ^iftype_text, $int14);
+cc_settext("New colour");
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setsize(100, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(219, 2, ^setpos_abs_left, ^setpos_abs_top);
+$int14 = calc($int14 + 1);
+if ($colour16 = null) {
+	$colour16 = struct_param($struct3, param_1230);
+}
+cc_create($component10, ^iftype_rectangle, $int14);
+cc_setsize($int15, $int15, ^setsize_abs, ^setsize_abs);
+cc_setposition(246, 22, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour($colour16);
+cc_setfill(true);
+cc_setonvartransmit("script4186(event_com, event_comsubid, $struct3){var3010}");
+def_int $comsubid17 = $int14;
+$int14 = calc($int14 + 1);
+$int14 = ~script4216($component10, $int14, 246, 22, $int15, $int15, ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component10, ^iftype_text, $int14);
+cc_settext(append($string0, ~script4192($colour16)));
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_setsize(80, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(229, 2, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_setonvartransmit("script4187(event_com, event_comsubid, $struct3){var3010}");
+def_int $comsubid18 = $int14;
+$int14 = calc($int14 + 1);
+def_int $int19 = calc(enum_getoutputcount(enum_3760) + 1);
+def_int $int20 = 26;
+def_int $int21 = 1;
+def_int $height22 = if_getheight($component11);
+def_int $int23 = calc($height22 / ($int20 + $int21));
+def_int $int24 = calc(if_getwidth($component11) / ($int21 + $int20));
+def_int $int25 = calc($int19 / $int24);
+def_int $int26 = calc($int19 % $int24);
+def_int $int27 = 0;
+if ($int26 > 0) {
+	$int27 = calc($int25 + 1);
+}
+if ($int27 > $int23) {
+	~scrollbar_vertical($component13, $component12, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	$component11 = $component12;
+	$int24 = calc(if_getwidth($component11) / ($int21 + $int20));
+	$int25 = calc($int19 / $int24);
+	$int26 = calc($int19 % $int24);
+}
+$int14 = 0;
+def_int $int28 = 0;
+def_int $int29 = 0;
+def_int $int30 = 0;
+def_int $colour31 = null;
+def_int $int32 = 0;
+def_int $int33 = 0;
+def_int $int34 = 0;
+def_int $int35 = 0;
+def_boolean $boolean36 = ~on_mobile;
+while ($int30 < $int27) {
+	if ($int30 = calc($int27 - 1)) {
+		$int24 = $int26;
+		if ($int25 = 0) {
+			$int33 = calc(if_getheight($component11) / 2 - ($int20 + $int21) / 2);
+		}
+	}
+	$int35 = calc($int24 * ($int20 + $int21));
+	$int32 = calc((if_getwidth($component11) - $int35) / 2);
+	while ($int29 < $int24) {
+		$colour31 = enum(int, int, enum_3760, $int28);
+		if ($colour31 = null) {
+			$colour31 = struct_param($struct3, param_1230);
+		}
+		cc_create($component12, ^iftype_rectangle, $int14);
+		cc_setsize($int20, $int20, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int32, $int33, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour($colour31);
+		cc_setfill(true);
+		cc_setonop("script4190(event_opindex, event_com, event_comsubid, $colour31, $component10, $comsubid17, $comsubid18, $struct3)");
+		cc_setop(1, "Select colour");
+		$int14 = calc($int14 + 1);
+		if ($boolean36 = false) {
+			cc_create($component12, ^iftype_rectangle, $int14);
+			cc_setsize($int20, $int20, ^setsize_abs, ^setsize_abs);
+			cc_setposition($int32, $int33, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setcolour(^black);
+			cc_setfill(true);
+			cc_settrans(250);
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 220, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 250, null)");
+			$int14 = calc($int14 + 1);
+		} else {
+			cc_create($component12, ^iftype_rectangle, $int14);
+			cc_sethide(true);
+			$int14 = calc($int14 + 1);
+		}
+		$int14 = ~script4216($component12, $int14, $int32, $int33, $int20, $int20, ^setpos_abs_left, ^setpos_abs_top);
+		$int32 = calc($int32 + $int20 + $int21);
+		$int28 = calc($int28 + 1);
+		$int29 = calc($int29 + 1);
+	}
+	$int29 = 0;
+	$int32 = 0;
+	$int33 = calc($int33 + $int20 + $int21);
+	$int30 = calc($int30 + 1);
+}
+if ($int27 > $int23) {
+	if_setscrollsize(0, $int33, $component11);
+	~scrollbar_resize($component13, $component11, if_getscrolly($component11));
+}
+~clan_stonebutton_init("<col=ff0000>Cancel</col>", interface_288:10, "p12_full");
+if_setonop("script4208(0, interface_288:1, interface_288:2, interface_288:3, $component0)", interface_288:10);
+~clan_stonebutton_init("<col=0dc10d>Save</col>", interface_288:11, "p12_full");
+if_setonop("script4208(1, interface_288:1, interface_288:2, interface_288:3, $component0)", interface_288:11);

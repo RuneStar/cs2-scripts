@@ -1,0 +1,13 @@
+// 4451
+[clientscript,script4451](int $opindex0, string $opbase0)
+def_string $username1 = removetags($opbase0);
+switch_int ($opindex0) {
+	case 1 :
+		mes("Removing <$username1> from the clan party.");
+	case 3 :
+		friend_del($username1);
+	case 4 :
+		friend_add($username1);
+	case 5 :
+		ignore_add($username1);
+}

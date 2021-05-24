@@ -1,0 +1,15 @@
+// 4428
+[clientscript,script4428](int $int0, int $int1, enum $enum2, component $component3, int $comsubid4, component $component5, component $component6, int $colour7)
+if ($int0 = 1 & $enum2 ! null & ($int1 = -1 | $int1 >= 0 & $int1 < enum_getoutputcount($enum2))) {
+	sound_synth(synth_2266, 1, 0);
+	if ($int1 ! -1) {
+		~script4423($enum2, $int1);
+	}
+	~script4427;
+	if_sethide(true, $component5);
+	if_setontimer(null, $component6);
+	~league_setup_display_hoveroff($component3, $colour7);
+	if (cc_find($component3, $comsubid4) = ^true) {
+		~script4419($enum2);
+	}
+}

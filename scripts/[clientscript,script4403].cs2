@@ -1,0 +1,12 @@
+// 4403
+[clientscript,script4403](int $opindex0, component $component1, int $comsubid2)
+if ($opindex0 ! 1) {
+	return;
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	sound_synth(synth_2266, 1, 0);
+	cc_settrans(175);
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setontimer("script4404(calc(clientclock + 20), event_com, cc_getid)", $component1);
+}

@@ -1,15 +1,27 @@
 // 110
 [clientscript,meslayer_mode9](int $int0, string $text0)
-if ($int0 = 2) {
-	~meslayer_open(15);
-} else {
-	~meslayer_open(9);
+switch_int ($int0) {
+	case 2 :
+		~meslayer_open(15);
+	case 7 :
+		~meslayer_open(20);
+	case 8 :
+		~meslayer_open(21);
+	case default :
+		~meslayer_open(9);
 }
-if_settext($text0, interface_162:44);
+if_settext($text0, interface_162:41);
 ~script222("");
 def_string $string1 = "";
-if_setonkey("meslayer_onkey(event_key, event_keychar, $string1)", interface_162:45);
-if_setondialogabort("meslayer_ondialogabort", interface_162:45);
+if_setonkey("meslayer_onkey(event_key, event_keychar, $string1)", interface_162:42);
+if_setondialogabort("meslayer_ondialogabort", interface_162:42);
+~meslayer_initlastnames;
+def_string $string2 = ~script4393;
+if (%varcint5 = 20 & string_length($string2) > 0) {
+	~meslayer_dynamicbutton;
+	cc_settext("<col=000000>Last clan:</col> <$string2>");
+	cc_setonclick("meslayer_lastname_click(20, $string2)");
+}
 if (~on_mobile = true) {
 	~keyboard_show(0, 80);
 }

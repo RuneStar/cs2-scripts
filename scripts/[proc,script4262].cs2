@@ -1,0 +1,43 @@
+// 4262
+[proc,script4262](component $component0, int $int1, int $int2)
+def_int $int3 = $int1;
+if_setontimer(null, $component0);
+def_string $string0 = "";
+def_boolean $boolean4 = ~on_mobile;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $comsubid7 = 0;
+def_int $int8 = 0;
+while ($int8 < $int1) {
+	$comsubid7 = activeclansettings_getsortedaffinedslot($int8);
+	if (.cc_find($component0, $comsubid7) = ^true) {
+		if (.cc_gety ! -1) {
+			.cc_sethide(false);
+			cc_create($component0, ^iftype_text, $int3);
+			$int3 = calc($int3 + 1);
+			cc_setsize(16, $int2, ^setsize_minus, ^setsize_abs);
+			cc_setposition(0, $int5, ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextfont(p12_full);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_setcolour(0xff981f);
+			cc_settextshadow(true);
+			cc_settext("Expel player");
+			.cc_setop(1, "Expel");
+			if ($boolean4 = false) {
+				.cc_setonmouserepeat("script4233(true, event_com, event_comsubid, .cc_gettrans)");
+			}
+			.cc_setonmouseleave("script4233(false, event_com, event_comsubid, .cc_gettrans)");
+			.cc_setonop("script4234(event_opindex, event_com, event_comsubid, .cc_gettrans, 6, $string0)");
+			.cc_setontimer(null);
+			$int5, $int6 = calc($int5 + $int2), calc($int6 + 1);
+		} else {
+			.cc_sethide(true);
+			.cc_clearops;
+			.cc_setonmouserepeat(null);
+			.cc_setonmouseleave(null);
+			.cc_setontimer(null);
+			.cc_setonop(null);
+		}
+	}
+	$int8 = calc($int8 + 1);
+}

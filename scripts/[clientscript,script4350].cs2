@@ -1,0 +1,9 @@
+// 4350
+[clientscript,script4350](int $opindex0, string $string0, component $component1)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+~script4353($string0, $component1, 1);
+if_setontimer("script4351(calc(clientclock + 30), $string0, $component1)", $component1);
+if_setonop(null, $component1);

@@ -1,0 +1,10 @@
+// 4246
+[proc,script4246](string $string0)(int)
+def_string $string1 = "";
+if (~script4245 = 1) {
+	$string1 = ~bankmain_filterstring;
+	if (string_length($string1) > 0) {
+		return(string_indexof_string(lowercase($string0), $string1, 0));
+	}
+}
+return(^max_32bit_int);

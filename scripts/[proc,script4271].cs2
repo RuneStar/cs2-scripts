@@ -1,0 +1,54 @@
+// 4271
+[proc,script4271](component $component0, component $component1, int $comsubid2, component $component3, component $component4, component $component5, int $int6, int $int7, component $component8, int $int9)
+def_string $string0 = "";
+def_int $clanslot10 = -1;
+def_int $int11 = -1;
+def_string $text1 = "";
+def_graphic $graphic12 = null;
+def_int $int13 = -1;
+def_int $int14 = 0;
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+	if (cc_find($component1, $comsubid2) = ^true) {
+		if (~script4245 = 1) {
+			$string0 = ~bankmain_filterstring;
+			if (string_length($string0) > 0) {
+				cc_settext("Showing banned players: <col=ff0000><$string0></col>");
+			} else {
+				cc_settext("Showing banned players: <col=ff0000>*</col>");
+			}
+		} else {
+			cc_settext("<activeclansettings_getclanname>: Ban list");
+		}
+	}
+	$clanslot10 = activeclansettings_getaffinedslot(removetags(chat_playername));
+	if ($clanslot10 ! -1) {
+		$int11 = ~script4456(struct_2956);
+		if (activeclansettings_getaffinedrank($clanslot10) >= $int11) {
+			if_settext("<~text_device("Click", "Tap")> a name to remove it from the ban list.", $component8);
+		} else {
+			$text1, $graphic12 = ~script4302($int11);
+			if_settext("Only clan members with a rank of <$text1> may unban players.", $component8);
+		}
+		$int13 = activeclansettings_getbannedcount;
+		if ($int13 > 0) {
+			$int14 = ~script4275($int13, $component3, $component4, $component5, $int6, $int7, $int9);
+		} else {
+			~script4274("The ban list is currently empty.", $component3, $component4);
+		}
+	} else {
+		if_settext("Only clan members may unban players.", $component8);
+		~script4274("Only clan members may unban players.", $component3, $component4);
+	}
+} else {
+	$text1 = ~script4287;
+	if (cc_find($component1, $comsubid2) = ^true) {
+		cc_settext($text1);
+	}
+	if_settext("<col=9f9f9f><$text1></col>", $component8);
+	~script4274($text1, $component3, $component4);
+}
+def_component $layer15 = if_getlayer($component0);
+if ($layer15 ! null) {
+	~script4272($layer15, $component0, $component3, $component4, ~max(180, $int14), if_getheight($layer15));
+}
+~script4280($component5, $int6, $int7);

@@ -7,7 +7,7 @@ $intarray0($int2) = $int4;
 def_obj $obj5 = null;
 def_obj $obj6 = null;
 def_string $string0 = "";
-if (cc_find(interface_162:53, $int4) = ^true) {
+if (cc_find(interface_162:50, $int4) = ^true) {
 	$obj6 = cc_getinvobject;
 	if ($obj6 ! null) {
 		$string0 = oc_name($obj6);
@@ -17,7 +17,7 @@ def_int $int7 = $int1;
 def_int $int8 = $int1;
 def_int $int9 = -1;
 while ($int8 < $int2) {
-	if (cc_find(interface_162:53, $intarray0($int8)) = ^true) {
+	if (cc_find(interface_162:50, $intarray0($int8)) = ^true) {
 		$obj5 = cc_getinvobject;
 	}
 	if (compare(oc_name($obj5), $string0) <= 0) {

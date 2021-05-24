@@ -1,0 +1,9 @@
+// 4485
+[proc,script4485](string $string0, string $string1)(string, string)
+if (calc(%var3008 - 1) ! -1) {
+	$string0 = ~script3739(calc(%var3008 - 1), "col");
+}
+if (calc(%var3009 - 1) ! -1) {
+	$string1 = ~script3739(calc(%var3009 - 1), "col");
+}
+return($string0, $string1);

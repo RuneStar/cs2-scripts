@@ -1,32 +1,51 @@
 // 86
-[clientscript,chat_op](int $opindex0, string $opbase0)
+[clientscript,chat_op](int $opindex0, string $opbase0, int $chattype1)
 def_string $string1 = removetags($opbase0);
-if ($opindex0 = 1) {
-	opplayer(4, $string1);
-} else if ($opindex0 = 2) {
-	opplayer(1, $string1);
-} else if ($opindex0 = 8) {
-	%varcstring370 = $string1;
-} else if ($opindex0 = 9) {
-	~friendschat_sendkick($string1);
-} else if (friend_test($string1) = true) {
-	if ($opindex0 = 6 | $opindex0 = 7) {
-		if (%varbit8119 = 1) {
-			~meslayer_mode6($string1);
+switch_int ($opindex0) {
+	case 1 :
+		opplayer(4, $string1);
+	case 2 :
+		opplayer(1, $string1);
+	case 8 :
+		%varcstring370 = $string1;
+	case 9 :
+		if ($chattype1 = 41) {
+			if (activeclanchannel_find_affined(0) = true) {
+				~script4401(7, -1, $string1, activeclanchannel_getuserslot($string1));
+			} else {
+				mes("The game cannot process your Kick request now. Please reconnect to the clan's channel.");
+			}
 		} else {
-			mes("You must set a name before you can do that.");
+			~friendschat_sendkick($string1);
 		}
-	}
-} else if ($opindex0 = 6) {
-	if (%varbit8119 = 1) {
-		friend_add($string1);
-	} else {
-		mes("You must set a name before you can do that.");
-	}
-} else if ($opindex0 = 7) {
-	if (%varbit8119 = 1) {
-		ignore_add($string1);
-	} else {
-		mes("You must set a name before you can do that.");
-	}
+	case 10 :
+		if ($chattype1 = 41) {
+			if (activeclanchannel_find_affined(0) = true) {
+				~script4401(8, -1, $string1, activeclanchannel_getuserslot($string1));
+			} else {
+				mes("The game cannot process your Ban request now. Please reconnect to the clan's channel.");
+			}
+		}
+	case default :
+		if (friend_test($string1) = true) {
+			if ($opindex0 = 6 | $opindex0 = 7) {
+				if (%varbit8119 = 1) {
+					~meslayer_mode6($string1);
+				} else {
+					mes("You must set a name before you can do that.");
+				}
+			}
+		} else if ($opindex0 = 6) {
+			if (%varbit8119 = 1) {
+				friend_add($string1);
+			} else {
+				mes("You must set a name before you can do that.");
+			}
+		} else if ($opindex0 = 7) {
+			if (%varbit8119 = 1) {
+				ignore_add($string1);
+			} else {
+				mes("You must set a name before you can do that.");
+			}
+		}
 }

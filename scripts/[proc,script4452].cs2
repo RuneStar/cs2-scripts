@@ -1,0 +1,18 @@
+// 4452
+[proc,script4452](string $string0, component $component0, graphic $graphic1)
+~clan_stonebutton_draw(false, $string0, $graphic1, $component0);
+%varcint454 = 0;
+if (~on_mobile = false) {
+	if_setonmouserepeat("script4453(true, $string0, event_com, $graphic1)", $component0);
+}
+if_setonmouseleave("script4453(false, $string0, event_com, $graphic1)", $component0);
+if (%varbit12171 = 1) {
+	if_setop(1, removetags($string0), $component0);
+}
+if_setontimer(null, $component0);
+if_settargetverb(removetags($string0), $component0);
+if_setopbase("", $component0);
+if (if_gettargetmask($component0) ! 0) {
+	if_setontargetenter("script4455(true, event_com, $string0, $graphic1)", $component0);
+	if_setontargetleave("script4455(false, event_com, $string0, $graphic1)", $component0);
+}

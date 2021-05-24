@@ -12,7 +12,15 @@ def_string $string2 = "";
 if (%varbit4285 = 1) {
 	$int3 = 1;
 	$string0 = " ";
-	$string1 = clan_getchatdisplayname;
+	if (%varbit12230 = 1) {
+		if (activeclansettings_find_affined(0) = true) {
+			$string1 = activeclansettings_getclanname;
+		} else {
+			$string1 = "Your clan";
+		}
+	} else {
+		$string1 = clan_getchatdisplayname;
+	}
 	$string2 = "Opponents";
 }
 def_string $string3 = ",";

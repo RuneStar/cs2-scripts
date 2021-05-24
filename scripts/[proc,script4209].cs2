@@ -1,0 +1,10 @@
+// 4209
+[proc,script4209](int $int0, component $component1, component $component2, component $component3, component $component4)
+sound_synth(synth_2266, 1, 0);
+if_setnoclickthrough(false, $component1);
+if_setonclick(null, $component1);
+if_sethide(true, $component3);
+~script4210(1, $component2);
+if_setonsubchange(null, $component4);
+if_setondialogabort(null, $component4);
+resume_countdialog(tostring($int0));

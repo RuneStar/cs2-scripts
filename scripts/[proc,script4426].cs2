@@ -1,0 +1,45 @@
+// 4426
+[proc,script4426](int $int0, component $component1, int $int2, component $component3, int $int4, component $component5, component $component6, component $component7)
+def_int $int8 = calc($int0 + 4);
+def_int $int9 = if_getx($component3);
+def_int $int10 = if_gety($component3);
+def_component $layer11 = if_getlayer($component3);
+$component1 = $layer11;
+while ($layer11 ! null) {
+	$int9, $int10 = calc($int9 + if_getx($layer11) - if_getscrollx($layer11)), calc($int10 + if_gety($layer11) - if_getscrolly($layer11));
+	$layer11 = if_getlayer($layer11);
+	if ($layer11 ! null) {
+		$component1 = $layer11;
+	}
+}
+if ($component1 ! null) {
+	$int2 = if_getheight($component1);
+}
+def_int $int12 = 0;
+if ($int10 > calc($int2 / 2)) {
+	$int12 = 1;
+	$int10 = calc($int10 + 20);
+} else {
+	$int10 = calc($int10 + if_getheight($component3) - 1);
+}
+def_int $int13 = 0;
+def_int $int14 = 0;
+if ($int12 = 1) {
+	$int13 = $int10;
+	$int14 = ~min($int8, $int13);
+	if_setsize($int4, $int14, ^setsize_abs, ^setsize_abs, $component7);
+	if_setposition($int9, calc($int10 - $int14), ^setpos_abs_left, ^setpos_abs_top, $component7);
+} else {
+	$int13 = calc($int2 - $int10);
+	$int14 = ~min($int8, $int13);
+	if_setsize($int4, $int14, ^setsize_abs, ^setsize_abs, $component7);
+	if_setposition($int9, $int10, ^setpos_abs_left, ^setpos_abs_top, $component7);
+}
+if ($int8 > $int14) {
+	if_setscrollsize(0, $int0, $component6);
+	~scrollbar_resize($component5, $component6, if_getscrolly($component6));
+} else {
+	if_setscrollsize(0, 0, $component6);
+	~scrollbar_resize($component5, $component6, 0);
+}
+if_setontimer("script4425($int0, $component1, $int2, $component3, $int4, $component5, $component6, $component7)", $component7);

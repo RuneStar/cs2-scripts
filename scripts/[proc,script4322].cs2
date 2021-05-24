@@ -1,0 +1,9 @@
+// 4322
+[proc,script4322](component $component0, int $count1, string $string0, int $key2)
+cc_create($component0, ^iftype_rectangle, $count1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(1, 1, ^setsize_abs, ^setsize_abs);
+if (~on_mobile = false) {
+	cc_setonkey("script4323(event_key, event_keychar, $component0, $count1, $key2, $string0)");
+}
+cc_setontimer("script4326($count1, 0)");

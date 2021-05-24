@@ -1,11 +1,11 @@
 // 2063
 [proc,meslayer_skillmulti](string $text0)
 ~meslayer_open(16);
-if_settext($text0, interface_162:44);
+if_settext($text0, interface_162:41);
 ~script222("");
 def_string $string1 = "";
-if_setonkey("meslayer_onkey(event_key, event_keychar, $string1)", interface_162:45);
-if_setondialogabort("meslayer_ondialogabort", interface_162:45);
+if_setonkey("meslayer_onkey(event_key, event_keychar, $string1)", interface_162:42);
+if_setondialogabort("meslayer_ondialogabort", interface_162:42);
 if (~on_mobile = true) {
 	~keyboard_show(1, 10);
 }

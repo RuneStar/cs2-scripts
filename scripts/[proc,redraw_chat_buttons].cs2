@@ -1,39 +1,29 @@
 // 178
 [proc,redraw_chat_buttons]
-def_int $int0 = 0;
-while ($int0 <= 5) {
-	if (%varcint42 = $int0 & %varcint41 = $int0) {
-		if_setgraphic(~graphic_device("small_button_pressed_highlight", "med_buttons,3"), enum(int, component, enum_683, $int0));
-	} else if (%varcint42 = $int0) {
-		if_setgraphic(~graphic_device("small_button_highlight", "med_buttons,0"), enum(int, component, enum_683, $int0));
-	} else if (%varcint41 = $int0) {
-		if_setgraphic(~graphic_device("small_button_pressed", "med_buttons,3"), enum(int, component, enum_683, $int0));
-	} else if (calc(~chat_alert_get($int0) / 25 % 2) = 1) {
-		if_setgraphic(~graphic_device("small_button_blue", "med_buttons,1"), enum(int, component, enum_683, $int0));
-	} else {
-		if_setgraphic(~graphic_device("small_button", "med_buttons,0"), enum(int, component, enum_683, $int0));
-	}
-	$int0 = calc($int0 + 1);
-}
-$int0 = 2;
-if (%varbit26 = 1) {
-	if_settext("<col=ffff00>Filtered", interface_162:12);
-} else {
-	if_settext("On", interface_162:12);
-}
+def_graphic $graphic0 = null;
 def_int $int1 = 0;
-while ($int0 <= 5) {
-	switch_int (~chat_get_filter($int0)) {
-		case ^chatfilter_friends :
-			if_settext("<col=ffff00>Friends", enum(int, component, enum_684, $int0));
-		case ^chatfilter_off :
-			if_settext("<col=ff0000>Off", enum(int, component, enum_684, $int0));
-		case ^chatfilter_hide :
-			if_settext("<col=00ffff>Hide", enum(int, component, enum_684, $int0));
-		case ^chatfilter_autochat :
-			if_settext("<col=00afff>Autochat", enum(int, component, enum_684, $int0));
-		case default :
-			if_settext("On", enum(int, component, enum_684, $int0));
+while ($int1 <= 6) {
+	if (%varcint41 = $int1) {
+		if (%varcint42 = $int1) {
+			$graphic0 = "graphic_3054";
+		} else {
+			$graphic0 = "graphic_3053";
+		}
+	} else if (%varcint42 = $int1) {
+		$graphic0 = "graphic_3052";
+	} else if (calc(~chat_alert_get($int1) / 25 % 2) = 1) {
+		$graphic0 = "graphic_3055";
+	} else {
+		$graphic0 = "graphic_3051";
 	}
-	$int0 = calc($int0 + 1);
+	if_setgraphic($graphic0, enum(int, component, enum_683, $int1));
+	if ($int1 >= 2) {
+		if_settext(enum(int, string, enum_3844, ~chat_get_filter($int1)), enum(int, component, enum_3843, $int1));
+	}
+	$int1 = calc($int1 + 1);
+}
+if (%varbit26 = 1) {
+	if_settext(enum(int, string, enum_3844, -1000), enum(int, component, enum_3843, 1));
+} else {
+	if_settext(enum(int, string, enum_3844, 0), enum(int, component, enum_3843, 1));
 }

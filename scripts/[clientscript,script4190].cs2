@@ -1,0 +1,13 @@
+// 4190
+[clientscript,script4190](int $opindex0, component $component1, int $comsubid2, int $colour3, component $component4, int $comsubid5, int $comsubid6, struct $struct7)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans(200);
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 20))");
+}
+%var3010 = $colour3;
+~script4188($component4, $comsubid5, $struct7);
+~script4189($component4, $comsubid6, $struct7);

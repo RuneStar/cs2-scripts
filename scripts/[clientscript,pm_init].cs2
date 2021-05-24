@@ -3,14 +3,21 @@
 def_int $int0 = 0;
 def_component $component1 = enum(int, component, enum_580, $int0);
 while ($component1 ! null) {
-	cc_create(interface_163:0, ^iftype_text, calc($int0 * 2));
-	.cc_create(interface_163:0, ^iftype_text, calc($int0 * 2 + 1));
+	cc_create(interface_163:0, ^iftype_text, calc($int0 * 4));
+	.cc_create(interface_163:0, ^iftype_text, calc($int0 * 4 + 1));
 	cc_setcolour(^cyan);
 	.cc_setcolour(^cyan);
 	cc_settextfont(p12_full);
 	.cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_left, ^settextalign_top, 13);
 	.cc_settextalign(^settextalign_left, ^settextalign_top, 13);
+	cc_sethide(true);
+	.cc_sethide(true);
+	cc_create(interface_163:0, ^iftype_text, calc($int0 * 4 + 2));
+	.cc_create(interface_163:0, ^iftype_graphic, calc($int0 * 4 + 3));
+	cc_setcolour(^cyan);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_top, 13);
 	cc_sethide(true);
 	.cc_sethide(true);
 	$int0 = calc($int0 + 1);

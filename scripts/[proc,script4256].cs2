@@ -1,0 +1,7 @@
+// 4256
+[proc,script4256](int $clanslot0)(int)
+def_int $int1 = activeclansettings_getaffinedextrainfo($clanslot0, 0, 12);
+if ($int1 ! 0) {
+	return(calc(6880 + $int1));
+}
+return(-1);

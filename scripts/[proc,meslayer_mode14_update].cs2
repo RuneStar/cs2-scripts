@@ -1,10 +1,10 @@
 // 752
 [proc,meslayer_mode14_update](boolean $boolean0, enum $enum1, boolean $boolean2)
 %varcint66 = 0;
-cc_deleteall(interface_162:53);
-if_sethide(true, interface_162:55);
-def_int $width3 = if_getwidth(interface_162:53);
-def_int $height4 = if_getheight(interface_162:53);
+cc_deleteall(interface_162:50);
+if_sethide(true, interface_162:52);
+def_int $width3 = if_getwidth(interface_162:50);
+def_int $height4 = if_getheight(interface_162:50);
 if (string_length(%varcstring359) <= 0) {
 	if (%varbit10295 = 0 & $boolean2 = true & %var2674 ! null & ~script3362($boolean0, $enum1) = 1) {
 		return;
@@ -46,7 +46,7 @@ while ($obj20 ! null) {
 		} else {
 			$x16, $x17 = $int8, $x12;
 		}
-		cc_create(interface_162:53, ^iftype_rectangle, $int7);
+		cc_create(interface_162:50, ^iftype_rectangle, $int7);
 		if ($int7 = 0) {
 			cc_setonkey("meslayer_mode14_select($obj20, event_key)");
 		}
@@ -61,7 +61,7 @@ while ($obj20 ! null) {
 		cc_setopbase("<col=ff9040><oc_name($obj20)></col>");
 		cc_setop(1, "Select");
 		cc_setonop("meslayer_mode14_select($obj20, ^key_return)");
-		cc_create(interface_162:53, ^iftype_text, $int7);
+		cc_create(interface_162:50, ^iftype_text, $int7);
 		$int7 = calc($int7 + 1);
 		cc_setsize($width11, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition($x17, $height18, ^setpos_abs_left, ^setpos_abs_top);
@@ -70,7 +70,7 @@ while ($obj20 ! null) {
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		cc_setcolour(^black);
 		cc_settext(oc_name($obj20));
-		cc_create(interface_162:53, ^iftype_graphic, $int7);
+		cc_create(interface_162:50, ^iftype_graphic, $int7);
 		$int7 = calc($int7 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition($x16, $height18, ^setpos_abs_left, ^setpos_abs_top);
@@ -96,9 +96,9 @@ if ($int15 < 2) {
 	$height18 = calc($height18 + 32);
 }
 if ($height18 > $height4) {
-	if_setscrollsize(0, $height18, interface_162:53);
+	if_setscrollsize(0, $height18, interface_162:50);
 } else {
-	if_setscrollpos(0, 0, interface_162:53);
-	if_setscrollsize(0, 0, interface_162:53);
+	if_setscrollpos(0, 0, interface_162:50);
+	if_setscrollsize(0, 0, interface_162:50);
 }
-~scrollbar_resize(interface_162:54, interface_162:53, if_getscrolly(interface_162:53));
+~scrollbar_resize(interface_162:51, interface_162:50, if_getscrolly(interface_162:50));

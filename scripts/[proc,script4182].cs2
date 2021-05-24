@@ -1,0 +1,101 @@
+// 4182
+[proc,script4182](int $int0, int $int1, int $int2, int $int3, int $trans4, struct $struct5, component $component6, component $component7, component $component8)(int, int, int, int)
+def_boolean $boolean9 = ~on_mobile;
+if ($struct5 = null) {
+	cc_create($component6, ^iftype_rectangle, $int3);
+	cc_sethide(true);
+	$int3 = calc($int3 + 1);
+	return($int0, $int1, $int2, $int3);
+}
+def_string $string0 = struct_param($struct5, param_1086);
+def_int $int10 = 50;
+if ($boolean9 = true & string_length(struct_param($struct5, param_1087)) > 0) {
+	$string0 = struct_param($struct5, param_1087);
+}
+def_string $string1 = struct_param($struct5, param_1096);
+def_int $int11 = 0;
+def_int $int12 = %varbit9665;
+def_boolean $boolean13 = struct_param($struct5, param_1119);
+if ($boolean9 = true & string_length(struct_param($struct5, param_1097)) > 0) {
+	$string1 = struct_param($struct5, param_1097);
+}
+if (string_length($string1) > 0) {
+	$int11 = calc(paraheight($string1, if_getwidth($component7) - ($int10 + 25), p12_full) * 14);
+}
+$int1 = calc($int1 + $int11);
+if ($int12 = 1 | $boolean13 = true) {
+	$int11 = 0;
+}
+def_int $int14 = calc(paraheight($string0, if_getwidth($component7) - ($int10 + 25), b12_full) * 14);
+if ($boolean9 = true & $int14 < 20) {
+	$int14 = 20;
+}
+def_int $int15 = calc($int14 + 12 + $int11);
+def_int $int16 = ~script3957($struct5);
+cc_create($component7, ^iftype_rectangle, $int2);
+cc_setsize(10, $int15, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans($trans4);
+$int2 = calc($int2 + 1);
+cc_create($component7, ^iftype_text, $int2);
+cc_setsize(calc($int10 + 25), $int14, ^setsize_minus, ^setsize_abs);
+cc_setposition(10, calc($int0 + 6), ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($string0);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+if ($int16 = 1) {
+	cc_setcolour(0xff981f);
+} else {
+	cc_setcolour(0x9f9f9f);
+}
+if ($boolean9 = false & $int12 = 1 & string_length($string1) > 0) {
+	cc_setonmouserepeat("tooltip_mouserepeat($component7, $int2, $component8, $string1, 25, 190)");
+	cc_setonmouseleave("deltooltip($component8)");
+}
+cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+$int2 = calc($int2 + 1);
+def_int $int17 = struct_param($struct5, param_1077);
+def_int $colour18 = struct_param($struct5, param_1230);
+if (~script4181($int17) ! null) {
+	$colour18 = ~script4181($int17);
+}
+cc_create($component7, ^iftype_rectangle, $int2);
+cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, calc($int0 + ($int15 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setcolour($colour18);
+cc_setfill(true);
+~script4180($component7, $int2, $struct5, $int17);
+$int2 = calc($int2 + 1);
+cc_create($component6, ^iftype_rectangle, $int3);
+cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(10, calc($int0 + ($int15 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setop(1, "Select colour");
+cc_setonop("script4183($component7, $int2, $boolean9)");
+$int3 = calc($int3 + 1);
+if ($boolean9 = false) {
+	cc_create($component7, ^iftype_rectangle, $int2);
+	$int2 = calc($int2 + 1);
+	cc_setfill(true);
+	cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
+	cc_setposition(10, calc($int0 + ($int15 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
+	cc_setcolour(^white);
+	cc_settrans(250);
+	cc_setonmouserepeat("cc_settrans_temporarily(event_com, event_comsubid, 220, 250)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 250, null)");
+}
+$int2 = ~script4216($component7, $int2, 10, calc($int0 + ($int15 / 2 - 10)), $int10, 20, ^setpos_abs_right, ^setpos_abs_top);
+if ($boolean13 = false & $int12 = 0 & $int11 > 0) {
+	cc_create($component7, ^iftype_text, $int2);
+	cc_setsize(calc($int10 + 25), $int11, ^setsize_minus, ^setsize_abs);
+	cc_setposition(10, calc($int0 + 6 + $int14), ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext($string1);
+	cc_settextfont(p12_full);
+	cc_settextshadow(true);
+	cc_setcolour(0x9f9f9f);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
+	$int2 = calc($int2 + 1);
+}
+$int0 = calc($int15 + $int0);
+return($int0, $int1, $int2, $int3);

@@ -1,0 +1,42 @@
+// 4259
+[proc,script4259](int $int0, component $component1, int $int2, int $int3)
+def_int $int4 = $int2;
+def_string $string0 = "";
+if ($int0 = 3) {
+	$string0 = %varcstring457;
+} else if ($int0 = 4) {
+	$string0 = %varcstring456;
+}
+if_setontimer("script4260($string0, $int0, $component1, $int2, $int3)", $component1);
+def_string $string1 = "";
+def_int $int5 = 0;
+while ($int5 < $int2) {
+	$string1, $string0 = ~script632($string0);
+	if (.cc_find($component1, $int5) = ^true) {
+		if (.cc_gety ! -1) {
+			.cc_sethide(false);
+			cc_create($component1, ^iftype_text, $int4);
+			$int4 = calc($int4 + 1);
+			cc_setsize(16, $int3, ^setsize_minus, ^setsize_abs);
+			cc_setposition(0, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_setcolour(0xff981f);
+			cc_settextshadow(true);
+			if (string_length($string1) > 0) {
+				cc_settext($string1);
+				cc_settextfont(p12_full);
+			} else {
+				cc_settext("<col=9f9f9f>Not available</col>");
+				cc_settextfont(p11_full);
+			}
+		} else {
+			.cc_sethide(true);
+		}
+		.cc_clearops;
+		.cc_setonmouserepeat(null);
+		.cc_setonmouseleave(null);
+		.cc_setontimer(null);
+		.cc_setonop(null);
+	}
+	$int5 = calc($int5 + 1);
+}

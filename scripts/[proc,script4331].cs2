@@ -1,0 +1,55 @@
+// 4331
+[proc,script4331](int $int0, int $count1, component $component2, component $component3, component $component4, int $int5, int $int6, int $int7, int $int8, int $int9)(int, int, int, int, int)
+def_int $int10 = $int6;
+def_struct $struct11 = enum(int, struct, enum_3800, $count1);
+def_int $int12 = 8;
+def_int $width13 = calc(300 - $int12);
+if (struct_param($struct11, param_1234) ! 0) {
+	$width13 = calc(280 - $int12);
+}
+def_int $height14 = paraheight(struct_param($struct11, param_1233), $width13, p12_full);
+def_int $int15 = calc($height14 * 16);
+def_int $int16 = calc($int15 + 16 + 4);
+cc_create($component2, ^iftype_rectangle, $int0);
+cc_setfill(true);
+cc_setsize(0, $int16, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^black);
+def_int $trans17 = 220;
+if (calc($count1 % 2) = 0) {
+	$trans17 = 200;
+}
+cc_settrans($trans17);
+if (struct_param($struct11, param_1234) = 0 & %varbit12200 = 1 & ~on_mobile = false) {
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 240, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $trans17, null)");
+}
+$int0 = calc($int0 + 1);
+$int6 = calc($int6 + 2);
+cc_create($component2, ^iftype_text, $int0);
+cc_setsize($width13, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition($int12, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext(struct_param($struct11, param_1232));
+$int0 = calc($int0 + 1);
+$int6 = calc($int6 + 16);
+cc_create($component2, ^iftype_text, $int0);
+cc_setsize($width13, $int15, ^setsize_abs, ^setsize_abs);
+cc_setposition($int12, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0x9f9f9f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext(struct_param($struct11, param_1233));
+$int0 = calc($int0 + 1);
+$int6 = calc($int10 + $int16);
+switch_int (struct_param($struct11, param_1234)) {
+	case 0 :
+		$int7 = ~script4332($component3, $int16, $int6, $int7, $struct11);
+	case 2 :
+		$int8 = ~script4338($component4, $int16, $int6, $int8, $struct11);
+}
+return($int0, $int6, $int7, $int8, $int9);

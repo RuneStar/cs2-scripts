@@ -1,17 +1,17 @@
 // 908
 [proc,toplevel_subchange](component $component0, enum $enum1)
-if (if_hassub(interface_162:562) = true) {
-	if_sethide(false, interface_162:562);
-	if_sethide(true, interface_162:561);
-	if_sethide(true, interface_162:57);
-} else if (if_hassub(interface_162:561) = true) {
-	if_sethide(true, interface_162:562);
-	if_sethide(false, interface_162:561);
-	if_sethide(true, interface_162:57);
+if (if_hassub(interface_162:559) = true) {
+	if_sethide(false, interface_162:559);
+	if_sethide(true, interface_162:558);
+	if_sethide(true, interface_162:54);
+} else if (if_hassub(interface_162:558) = true) {
+	if_sethide(true, interface_162:559);
+	if_sethide(false, interface_162:558);
+	if_sethide(true, interface_162:54);
 } else {
-	if_sethide(true, interface_162:562);
-	if_sethide(true, interface_162:561);
-	if_sethide(false, interface_162:57);
+	if_sethide(true, interface_162:559);
+	if_sethide(true, interface_162:558);
+	if_sethide(false, interface_162:54);
 }
 ~toplevel_sidebuttons_enable($enum1);
 def_component $component2 = null;

@@ -1,0 +1,36 @@
+// 4212
+[clientscript,script4212](component $component0, string $string0)
+~script4206(interface_289:1, interface_289:2, interface_289:3, 0, $component0);
+def_string $text1 = "";
+$text1, $string0 = ~script632($string0);
+if_sethide(false, interface_289:7);
+if_sethide(false, interface_289:8);
+~steelborder(interface_289:4, $text1, 1);
+~scrollbar_vertical(interface_289:9, interface_289:6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_string $string2 = "";
+$string2, $string0 = ~script632($string0);
+def_int $width1 = parawidth($string2, calc(if_getwidth($component0) - 62), p12_full);
+def_int $int2 = calc(paraheight($string2, $width1, p12_full) * 15 + 1);
+cc_deleteall(interface_289:6);
+cc_create(interface_289:6, ^iftype_text, 0);
+cc_setsize(2, $int2, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+cc_settext($string2);
+def_int $int3 = calc($int2 + 10);
+$string2, $string0 = ~script632($string0);
+def_int $int4 = calc(20 + ~max(parawidth($string2, 512, p12_full), parawidth($string0, 512, p12_full)));
+if_setsize($int4, 30, ^setsize_abs, ^setsize_abs, interface_289:7);
+if_setsize($int4, 30, ^setsize_abs, ^setsize_abs, interface_289:8);
+def_int $x5 = calc(($width1 + 2 - $int4 * 2) / 3);
+if_setposition($x5, $int3, ^setpos_abs_left, ^setpos_abs_top, interface_289:7);
+if_setposition($x5, $int3, ^setpos_abs_right, ^setpos_abs_top, interface_289:8);
+~clan_stonebutton_init($string2, interface_289:7, "p12_full");
+~clan_stonebutton_init($string0, interface_289:8, "p12_full");
+$int3 = calc($int3 + 30 + 5);
+if_setonop("script4208(0, interface_289:1, interface_289:2, interface_289:3, $component0)", interface_289:7);
+if_setonop("script4208(1, interface_289:1, interface_289:2, interface_289:3, $component0)", interface_289:8);
+~script4213(calc($width1 + 20 + 16 + 6), $int3, if_getheight(interface_289:1));

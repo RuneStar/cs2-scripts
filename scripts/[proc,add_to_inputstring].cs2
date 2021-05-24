@@ -8,12 +8,15 @@ if ($key1 = ^key_backspace) {
 	return($string0);
 }
 def_int $length4 = 80;
-if ($int0 = 3) {
-	$length4 = 10;
-} else if ($int0 = 4) {
-	$length4 = 25;
-} else if ($int0 = 5) {
-	$length4 = 500;
+switch_int ($int0) {
+	case 3 :
+		$length4 = 10;
+	case 4 :
+		$length4 = 25;
+	case 5 :
+		$length4 = 500;
+	case 6 :
+		$length4 = 4;
 }
 if (char_isprintable($keychar2) = false) {
 	if ($int0 = 5 & $key1 = ^key_return) {
@@ -36,6 +39,12 @@ if ($int0 = 2) {
 	}
 	return($string0);
 }
+if ($int0 = 8) {
+	if ((char_isalphanumeric($keychar2) = true | string_indexof_char(" ", $keychar2) ! -1) & $length3 < 12) {
+		return(append_char($string0, $keychar2));
+	}
+	return($string0);
+}
 def_int $int5 = 0;
 def_string $string1 = "";
 if ($int0 = 1) {
@@ -52,6 +61,12 @@ if ($int0 = 1) {
 		if ($int5 = 1 & $length3 <= 0) {
 			return($string0);
 		}
+		return(append_char($string0, $keychar2));
+	}
+	return($string0);
+}
+if ($int0 = 6) {
+	if (char_isnumeric($keychar2) = true & $length3 < 4) {
 		return(append_char($string0, $keychar2));
 	}
 	return($string0);

@@ -1,0 +1,8 @@
+// 4481
+[proc,script4481](string $string0, int $length0)(int)
+def_int $index1 = string_indexof_string(%varcstring335, append(":", $string0), 0);
+if ($index1 ! -1) {
+	%varcstring335 = append(":", substring(%varcstring335, $index1, $length0));
+	return(1);
+}
+return(0);

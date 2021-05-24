@@ -1,24 +1,69 @@
 // 113
 [proc,script113]
+def_graphic $graphic0 = "graphic_3057";
+def_int $int1 = 0;
+def_int $int2 = 0;
 ~toplevel_chatbox_background;
 if (~on_mobile = true) {
-	if_setop(1, "Report", interface_162:33);
+	$int2, %varcint42 = 1, -1;
+	if_setsize(519, calc(165 - 23), ^setsize_abs, ^setsize_abs, enum(component, component, ~toplevel_getcomponents, interface_161:32));
+	if_sethide(false, interface_162:36);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:1);
+	if_setsize(519, 30, ^setsize_abs, ^setsize_abs, interface_162:1);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_162:34);
+	if_setsize(519, 30, ^setsize_abs, ^setsize_minus, interface_162:34);
+	~mobile_chatbox_resize;
+	if_setop(1, "Report options", interface_162:31);
+	if_setsize(56, 0, ^setsize_abs, ^setsize_minus, interface_162:31);
+	if_setgraphic("graphic_3056", interface_162:32);
+	if_setonmouseover(null, interface_162:31);
+	if_setonmouseleave(null, interface_162:31);
+	if_setposition(8, 0, ^setpos_abs_right, ^setpos_abs_centre, interface_162:31);
+	$int1 = 64;
 } else {
-	if_setop(1, "", interface_162:33);
+	if_setsize(519, 165, ^setsize_abs, ^setsize_abs, enum(component, component, ~toplevel_getcomponents, interface_161:32));
+	if_sethide(true, interface_162:36);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_162:1);
+	if_setsize(519, 23, ^setsize_abs, ^setsize_abs, interface_162:1);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:34);
+	if_setsize(519, 23, ^setsize_abs, ^setsize_minus, interface_162:34);
+	if_setop(1, "", interface_162:31);
+	if_setsize(79, 0, ^setsize_abs, ^setsize_minus, interface_162:31);
+	if_setgraphic($graphic0, interface_162:32);
+	if_setonmouseleave("graphic_swapper(interface_162:32, $graphic0)", interface_162:31);
+	$graphic0 = "graphic_3058";
+	if_setonmouseover("graphic_swapper(interface_162:32, $graphic0)", interface_162:31);
+	if_setposition(3, 0, ^setpos_abs_right, ^setpos_abs_centre, interface_162:31);
+	$int1 = 82;
 }
-~chatbox_mobile_rearrange;
+def_int $int3 = calc((519 + 3 - ($int1 + 56 * (6 + 1))) / (6 + 2));
+def_component $component4 = null;
+def_int $int5 = 6;
+while ($int5 >= 0) {
+	$int1, $component4 = calc($int1 + $int3), enum(int, component, enum_3842, $int5);
+	if_setposition($int1, 0, ^setpos_abs_right, ^setpos_abs_centre, $component4);
+	if_setonop("chat_button_onop(event_opindex, $int5)", $component4);
+	if ($int2 = 1) {
+		if_setonmouseover(null, $component4);
+		if_setonmouseleave(null, $component4);
+	} else {
+		if_setonmouseover("script4482(true, $int5)", $component4);
+		if_setonmouseleave("script4482(false, $int5)", $component4);
+	}
+	$int1, $int5 = calc($int1 + 56), calc($int5 - 1);
+}
 if (%varbit542 = ^true & getwindowmode ! ^windowmode_fixed) {
 	if_sethide(true, interface_162:1);
 } else {
 	if_sethide(false, interface_162:1);
 }
-if (%varbit5983 = 1 & if_hassub(interface_162:562) = true) {
-	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, interface_162:562);
+if (%varbit5983 = 1 & if_hassub(interface_162:559) = true) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, interface_162:559);
 } else {
-	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, interface_162:562);
+	if_setsize(479, 96, ^setsize_abs, ^setsize_abs, interface_162:559);
 }
 ~redraw_chat_buttons;
-def_int $mesuid0 = ~script553;
-~rebuildchatbox($mesuid0);
-~rebuildpmbox($mesuid0);
+def_int $mesuid6 = ~script553;
+~rebuildchatbox($mesuid6);
+~rebuildpmbox($mesuid6);
 ~script223;

@@ -1,0 +1,150 @@
+// 4307
+[clientscript,script4307](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+~script4299($component1, "Rank Titles");
+def_string $string0 = "<col=ffb83f>Drag</col> titles from this list into the clan hierarchy, or <col=ffb83f>drag</col> existing titles to rearrange them.";
+def_string $string1 = "Authorised members of the clan may assign titles to the ranks within the clan hierarchy.";
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_component $layer12 = if_getlayer($component5);
+if ($layer12 ! null) {
+	cc_deleteall($layer12);
+	cc_create($layer12, ^iftype_text, 0);
+	cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
+	$int10 = ~max(paraheight($string0, calc(if_getwidth($layer12) - 4), p12_full), paraheight($string1, calc(if_getwidth($layer12) - 4), p12_full));
+	$int11 = calc($int10 * 15 + 1);
+	cc_setsize(4, $int11, ^setsize_minus, ^setsize_abs);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+	~script174($string0, $string1);
+	cc_setonvartransmit("script173(event_com, event_comsubid, $string0, $string1){var3026}");
+}
+$int11 = calc($int11 + 40);
+if_setsize(0, $int11, ^setsize_minus, ^setsize_minus, $component5);
+$int11 = calc($int11 + 4);
+def_int $int13 = 25;
+if (~on_mobile = true) {
+	$int13 = 35;
+}
+def_int $intarray0(263);
+cc_deleteall($component6);
+def_int $int14 = 0;
+while ($int14 < 263) {
+	cc_create($component6, ^iftype_graphic, $int14);
+	cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
+	cc_settiling(true);
+	cc_settrans(255);
+	$intarray0($int14) = calc($int14 + 1);
+	$int14 = $intarray0($int14);
+}
+def_int $int15 = 0;
+while ($int15 < 263) {
+	cc_create($component6, ^iftype_rectangle, $int14);
+	$int14 = calc($int14 + 1);
+	cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
+	cc_setfill(true);
+	cc_create($component6, ^iftype_text, $int14);
+	$int14 = calc($int14 + 1);
+	cc_setsize(calc(13 + 5), $int13, ^setsize_minus, ^setsize_abs);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+	cc_create($component6, ^iftype_graphic, $int14);
+	$int14 = calc($int14 + 1);
+	cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+	$int15 = calc($int15 + 1);
+}
+if ($int14 >= 2) {
+	~quicksort_intenum(intarray0, 0, calc(263 - 1), enum_3797);
+}
+def_int $int16 = 0;
+def_int $int17 = calc(($int13 - 13) / 2);
+def_int $int18 = 0;
+$int15 = 0;
+while ($int15 < 263) {
+	$int16 = calc($int15 * $int13);
+	if (cc_find($component6, calc($intarray0($int15) - 1)) = ^true) {
+		cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_top);
+	}
+	$int18 = calc(263 + ($intarray0($int15) - 1) * 3);
+	if (cc_find($component6, $int18) = ^true & .cc_find($component6, calc($int18 + 1)) = ^true) {
+		cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_top);
+		if (calc($int15 % 2) = 0) {
+			cc_setcolour(^white);
+		} else {
+			cc_setcolour(0xbfbfbf);
+		}
+		.cc_setposition(0, $int16, ^setpos_abs_right, ^setpos_abs_top);
+		.cc_settext(enum(int, string, enum_3797, $intarray0($int15)));
+		if (.cc_find($component6, calc($int18 + 2)) = ^true) {
+			.cc_setposition(2, calc($int16 + $int17), ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setgraphic(enum(int, graphic, enum_3798, $intarray0($int15)));
+		}
+	}
+	$int15 = calc($int15 + 1);
+}
+def_int $int19 = calc($int15 * $int13);
+~scrollbar_vertical($component7, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $int20 = calc(enum_getoutputcount(enum_3795) - 1);
+cc_deleteall($component3);
+$int14 = 0;
+while ($int14 < $int20) {
+	cc_create($component3, ^iftype_graphic, $int14);
+	cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, calc($int14 * 40), ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_settiling(true);
+	cc_settrans(255);
+	$int14 = calc($int14 + 1);
+}
+def_int $int21 = 0;
+$int15, $int17 = 0, calc((40 - 15 - 13) / 2);
+while ($int15 < $int20) {
+	$int21, $int16 = enum(int, int, enum_3795, $int15), calc($int15 * 40);
+	cc_create($component3, ^iftype_rectangle, $int14);
+	$int14 = calc($int14 + 1);
+	cc_setsize(0, 40, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_setfill(true);
+	if (calc($int15 % 2) = 0) {
+		cc_setcolour(^white);
+	} else {
+		cc_setcolour(0xbfbfbf);
+	}
+	cc_create($component3, ^iftype_text, $int14);
+	$int14 = calc($int14 + 1);
+	cc_setsize(0, calc(40 - 15), ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_create($component3, ^iftype_graphic, $int14);
+	$int14 = calc($int14 + 1);
+	cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, calc($int16 + $int17), ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_create($component3, ^iftype_text, $int14);
+	$int14 = calc($int14 + 1);
+	cc_setsize(2, 15, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, calc($int16 + 40 - 15), ^setpos_abs_centre, ^setpos_abs_bottom);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(true);
+	cc_settextfont(p11_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	if ($int21 >= 100) {
+		cc_settext("<col=ffb83f>Can be given advanced permissions</col>");
+	} else if ($int21 < 0) {
+		cc_settext("<col=9f9f9f>Not in clan</col>");
+	} else {
+		cc_settext("<col=9f9f9f>Cannot have advanced permissions</col>");
+	}
+	$int15 = calc($int15 + 1);
+}
+def_int $int22 = calc($int20 * 40);
+~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $int23 = 54;
+$int11 = calc($int11 + 50);
+def_int $int24 = ~min(calc($int23 + $int22), calc($int11 + $int19));
+~script4308($int22, $int23, $component3, $component4, $int19, $int11, $component6, $component7, $int24, $component0, if_getheight(if_getlayer($component0)));
+~script4311($int20, $component2, $component3, $component4, $component6, $component8, $component9);
+if_setonvartransmit("script4310($int20, $component2, $component3, $component4, $component6, $component8, $component9){var3023, var3024, var3025, var3026, var3027}", $component0);

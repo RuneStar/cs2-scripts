@@ -1,6 +1,11 @@
 // 2065
 [clientscript,chat_recol](component $layer0, int $int1, int $colour2)
-if (cc_find($layer0, calc($int1 * 2)) = ^true & .cc_find($layer0, calc($int1 * 2 + 1)) = ^true) {
+if (cc_find($layer0, calc($int1 * 4)) = ^true) {
 	cc_setcolour($colour2);
-	.cc_setcolour($colour2);
+}
+if (cc_find($layer0, calc($int1 * 4 + 1)) = ^true) {
+	cc_setcolour($colour2);
+}
+if (cc_find($layer0, calc($int1 * 4 + 2)) = ^true) {
+	cc_setcolour($colour2);
 }

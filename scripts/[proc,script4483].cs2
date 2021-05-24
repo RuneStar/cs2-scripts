@@ -1,0 +1,80 @@
+// 4483
+[proc,script4483](string $string0, graphic $graphic0, int $int1, int $int2, string $string1, string $string2, int $int3, component $component4, component $component5, int $width6, int $int7, int $int8, int $int9, int $setposv10, int $int11, int $colour12, boolean $boolean13)(int)
+def_int $int14 = calc($width6 - $int7);
+def_int $width15 = parawidth($string0, ^max_32bit_int, p12_full);
+def_int $width16 = parawidth($string1, ^max_32bit_int, p12_full);
+def_int $int17 = 0;
+if ($width15 > 0) {
+	$int17 = $width15;
+	if ($graphic0 ! null) {
+		$int17 = calc($int17 + 1);
+	} else if ($width16 > 0) {
+		$int17 = calc($int17 + 3);
+	}
+}
+def_int $int18 = 0;
+if ($graphic0 ! null) {
+	$int18 = $int17;
+	$int17 = calc($int17 + $int1);
+	if ($width16 > 0) {
+		$int17 = calc($int17 + 1);
+	}
+}
+def_int $int19 = 0;
+if ($width16 > 0) {
+	$int19, $int17 = $int17, calc($int17 + $width16);
+}
+if ($int17 > 0) {
+	$int17 = calc($int17 + 3);
+}
+def_int $width20 = calc($int14 - $int17);
+def_int $int21 = ~max($int2, calc(paraheight($string2, $width20, p12_full) * $int8));
+if ($setposv10 = ^setpos_abs_top & $int11 = 103) {
+	$int9 = calc($int9 - $int21);
+}
+if_setsize($int14, $int21, ^setsize_abs, ^setsize_abs, $component4);
+if_setposition($int7, $int9, ^setpos_abs_left, $setposv10, $component4);
+if (cc_find($component5, calc($int3 * 4 + 2)) = ^true) {
+	if ($width15 > 0) {
+		cc_sethide(false);
+		cc_setsize($width15, $int8, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int7, $int9, ^setpos_abs_left, $setposv10);
+		cc_settext($string0);
+		cc_setcolour($colour12);
+		cc_settextshadow($boolean13);
+	} else {
+		cc_sethide(true);
+	}
+}
+if (cc_find($component5, calc($int3 * 4 + 3)) = ^true) {
+	if ($graphic0 ! null) {
+		cc_sethide(false);
+		cc_settrans(0);
+		cc_setgraphic($graphic0);
+		cc_setsize($int1, $int2, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int7 + $int18), $int9, ^setpos_abs_left, $setposv10);
+	} else {
+		cc_sethide(true);
+	}
+}
+if (cc_find($component5, calc($int3 * 4)) = ^true) {
+	if ($width16 > 0) {
+		cc_sethide(false);
+		cc_setsize($width16, $int8, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int7 + $int19), $int9, ^setpos_abs_left, $setposv10);
+		cc_settext($string1);
+		cc_setcolour($colour12);
+		cc_settextshadow($boolean13);
+	} else {
+		cc_sethide(true);
+	}
+}
+if (cc_find($component5, calc($int3 * 4 + 1)) = ^true) {
+	cc_sethide(false);
+	cc_setsize($width20, $int21, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int7 + $int17), $int9, ^setpos_abs_left, $setposv10);
+	cc_settext($string2);
+	cc_setcolour($colour12);
+	cc_settextshadow($boolean13);
+}
+return($int21);

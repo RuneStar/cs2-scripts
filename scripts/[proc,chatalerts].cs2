@@ -32,9 +32,11 @@ while ($mesuid0 ! -1) {
 					~chat_alert_enable(3);
 				}
 			case ^chattype_tradereq, ^chattype_trade, ^chattype_chalreq_trade :
-				~chat_alert_enable(5);
+				~chat_alert_enable(6);
 			case ^chattype_friendschat, ^chattype_friendschatnotification, ^chattype_chalreq_friendschat :
 				~chat_alert_enable(4);
+			case 41, 43, 44, 46, 109, 110 :
+				~chat_alert_enable(5);
 			case default :
 				if (enum(int, boolean, enum_892, $chattype3) = true & $chattype3 ! ^chattype_108) {
 					~chat_alert_enable(1);

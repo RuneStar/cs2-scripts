@@ -1,0 +1,60 @@
+// 4406
+[clientscript,script4406](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~clan_stonebutton_init("<col=ff0000>Back</col>", $component4, "p12_full");
+def_int $int7 = %varbit12200;
+if_setonop("opsound(event_opindex, 2)", $component4);
+if (%varbit12200 = 1) {
+	~clan_stonebutton_init("<col=ff0000>Finished</col>", $component5, "p12_full");
+} else if (~script4412(chat_playername) = 1) {
+	~clan_stonebutton_init("<col=0dc10d>Edit Mode</col>", $component5, "p12_full");
+} else {
+	~clan_stonebutton_init("<col=9f9f9f>Edit Mode</col>", $component5, "p12_full");
+}
+if_setonop("opsound(event_opindex, 2)", $component5);
+if ($int7 = 1) {
+	~clan_stonebutton_init("<col=0dc10d>Create</col>", $component6, "p12_full");
+} else {
+	~clan_stonebutton_init("<col=9f9f9f>Create</col>", $component6, "p12_full");
+}
+if_setonop("opsound(event_opindex, 2)", $component6);
+def_int $comsubid8 = ~steelborder($component1, "", 0);
+if (%varbit933 = 3 & activeclansettings_find_affined(0) = true & cc_find($component1, $comsubid8) = ^true) {
+	cc_settext("<activeclansettings_getclanname>: Events");
+}
+def_int $width9 = 16384;
+def_int $height10 = 70;
+cc_deleteall($component2);
+def_int $int11 = 0;
+def_int $int12 = 0;
+while ($int12 < 10) {
+	cc_create($component2, ^iftype_rectangle, $int11);
+	$int11 = calc($int11 + 1);
+	cc_sethide(true);
+	cc_setsize($width9, $height10, ^setsize_2, ^setsize_abs);
+	cc_setfill(true);
+	cc_setcolour(^white);
+	if ($int7 = 1) {
+		cc_setop(1, "Edit");
+	}
+	$int12 = calc($int12 + 1);
+}
+$int12 = 0;
+while ($int12 < 10) {
+	cc_create($component2, ^iftype_text, $int11);
+	$int11 = calc($int11 + 1);
+	cc_sethide(true);
+	cc_setsize($width9, $height10, ^setsize_2, ^setsize_abs);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	$int12 = calc($int12 + 1);
+}
+cc_create($component2, ^iftype_text, $int11);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0xffb83f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("No events to show.");

@@ -1,0 +1,12 @@
+// 4288
+[proc,script4288](int $int0)(string)
+switch_int ($int0) {
+	case 2 :
+		return("<col=9f9f9f>Fetching data...</col>");
+	case 1, 3 :
+		return("<col=9f9f9f>No current clan</col>");
+	case 0 :
+		return("<col=9f9f9f>Connecting...</col>");
+	case default :
+		return("<col=9f9f9f>System unavailable</col>");
+}

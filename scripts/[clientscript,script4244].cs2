@@ -1,0 +1,10 @@
+// 4244
+[clientscript,script4244](int $clock0, component $component1, int $int2, int $int3, int $int4, int $int5)
+if (clientclock < $clock0) {
+	return;
+}
+if (cc_find($component1, $int2) = ^true) {
+	cc_settrans($int4);
+}
+if_setontimer("script4242(calc(clientclock + 2), event_com, $int2, $int3)", $component1);
+~script4240($component1, $int2, $int3, $int4, $int5);

@@ -1,0 +1,46 @@
+// 4255
+[proc,script4255](component $component0, int $int1, int $int2)
+def_int $int3 = $int1;
+if_setontimer(null, $component0);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+while ($int8 < $int1) {
+	$int7 = activeclansettings_getsortedaffinedslot($int8);
+	if (.cc_find($component0, $int7) = ^true) {
+		if (.cc_gety ! -1) {
+			.cc_sethide(false);
+			cc_create($component0, ^iftype_text, $int3);
+			$int3 = calc($int3 + 1);
+			cc_setsize(16, $int2, ^setsize_minus, ^setsize_abs);
+			cc_setposition(0, $int5, ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_setcolour(0xff981f);
+			cc_settextshadow(true);
+			if (activeclansettings_getaffinedrank($int7) >= 100) {
+				$int4 = ~script4256($int7);
+				if ($int4 ! -1) {
+					cc_settext(fromdate($int4));
+					cc_settextfont(p12_full);
+				} else {
+					cc_settext("<col=9f9f9f>Not available</col>");
+					cc_settextfont(p11_full);
+				}
+			} else {
+				cc_settext("<col=9f9f9f>Not an administrator</col>");
+				cc_settextfont(p11_full);
+			}
+			$int5, $int6 = calc($int5 + $int2), calc($int6 + 1);
+		} else {
+			.cc_sethide(true);
+		}
+		.cc_clearops;
+		.cc_setonmouserepeat(null);
+		.cc_setonmouseleave(null);
+		.cc_setontimer(null);
+		.cc_setonop(null);
+	}
+	$int8 = calc($int8 + 1);
+}

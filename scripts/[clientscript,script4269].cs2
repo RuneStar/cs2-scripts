@@ -1,0 +1,76 @@
+// 4269
+[clientscript,script4269](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+~scrollbar_vertical($component3, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~clan_stonebutton_init("<col=0dc10d>Add</col>", $component6, "p12_full");
+if_setonop("opsound(event_opindex, 2)", $component6);
+~clan_stonebutton_init("<col=ff0000>Back</col>", $component8, "p12_full");
+if_setonop("opsound(event_opindex, 2)", $component8);
+def_int $comsubid9 = ~steelborder($component1, "", 0);
+def_int $width10 = calc(16384 / 3);
+def_int $int11 = 25;
+if (~on_mobile = true) {
+	$int11 = scale(25, 20, $int11);
+}
+cc_deleteall($component2);
+def_int $int12 = 0;
+def_int $int13 = 0;
+while ($int13 < 500) {
+	cc_create($component2, ^iftype_rectangle, $int12);
+	$int12 = calc($int12 + 1);
+	cc_sethide(true);
+	cc_setsize($width10, $int11, ^setsize_2, ^setsize_abs);
+	cc_setfill(true);
+	cc_setcolour(^white);
+	cc_setop(1, "Unban");
+	$int13 = calc($int13 + 1);
+}
+$int13 = 0;
+while ($int13 < 500) {
+	cc_create($component2, ^iftype_text, $int12);
+	$int12 = calc($int12 + 1);
+	cc_sethide(true);
+	cc_setsize($width10, $int11, ^setsize_2, ^setsize_abs);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	$int13 = calc($int13 + 1);
+}
+cc_create($component2, ^iftype_text, $int12);
+$int12 = calc($int12 + 1);
+cc_sethide(true);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0xffb83f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+if_sethide(true, $component4);
+cc_deleteall($component4);
+cc_create($component4, ^iftype_rectangle, 0);
+.cc_create($component4, ^iftype_text, 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setsize(0, calc(16384 / 2), ^setsize_minus, ^setsize_2);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_settrans(255);
+.cc_setcolour(0xff981f);
+.cc_settextfont(p12_full);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextshadow(true);
+.cc_settext("");
+def_int $comsubid14 = cc_getid;
+def_int $comsubid15 = .cc_getid;
+if_setontimer("script4279($component4, $comsubid14, $comsubid15)", $component4);
+if (~script4245 = 1) {
+	~meslayer_close(1, 1);
+} else if (%varcint5 <= 0) {
+	%varcstring359 = "";
+}
+if_setonop("script4283(event_opindex, $component0, $component1, $comsubid9, $component5, $component2, $component3, $component4, $comsubid14, $comsubid15, $component7, $int11)", $component5);
+if_setop(1, "Search", $component5);
+~script4281($component0, $component1, $comsubid9, $component5, $component2, $component3, $component4, $comsubid14, $comsubid15, $component7, $int11);
+~script4271($component0, $component1, $comsubid9, $component2, $component3, $component4, $comsubid14, $comsubid15, $component7, $int11);
+if_setonvartransmit("script4270($component0, $component1, $comsubid9, $component2, $component3, $component4, $comsubid14, $comsubid15, $component7, $int11){var3019, var3026}", $component0);
+if_setonclansettingstransmit("script4270($component0, $component1, $comsubid9, $component2, $component3, $component4, $comsubid14, $comsubid15, $component7, $int11)", $component0);

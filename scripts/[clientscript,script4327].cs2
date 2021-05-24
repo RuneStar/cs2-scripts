@@ -1,0 +1,11 @@
+// 4327
+[clientscript,script4327]
+def_enum $enum0 = enum_3799;
+def_int $count1 = enum_getoutputcount($enum0);
+def_int $count2 = 0;
+def_struct $struct3 = null;
+while ($count2 < $count1) {
+	$struct3 = enum(int, struct, $enum0, $count2);
+	if_setmodel(struct_param($struct3, param_1237), struct_param($struct3, param_1235));
+	$count2 = calc($count2 + 1);
+}

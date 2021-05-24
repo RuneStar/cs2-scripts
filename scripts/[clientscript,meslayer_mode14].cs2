@@ -1,15 +1,15 @@
 // 750
 [clientscript,meslayer_mode14](boolean $boolean0, enum $enum1, boolean $boolean2, string $string0)
 ~meslayer_open(14);
-if_sethide(true, interface_162:44);
-if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:45);
-if_sethide(false, interface_162:49);
-~scrollbar_vertical(interface_162:54, interface_162:53, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+if_sethide(true, interface_162:41);
+if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:42);
+if_sethide(false, interface_162:46);
+~scrollbar_vertical(interface_162:51, interface_162:50, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~script222($string0);
-if_setonkey("meslayer_onkey(event_key, event_keychar, $string0)", interface_162:45);
+if_setonkey("meslayer_onkey(event_key, event_keychar, $string0)", interface_162:42);
 ~meslayer_mode14_update($boolean0, $enum1, $boolean2);
-if_setontimer("meslayer_mode14_update($boolean0, $enum1, $boolean2)", interface_162:40);
-if_setondialogabort("meslayer_ondialogabort", interface_162:45);
+if_setontimer("meslayer_mode14_update($boolean0, $enum1, $boolean2)", interface_162:37);
+if_setondialogabort("meslayer_ondialogabort", interface_162:42);
 if (~on_mobile = true) {
 	~keyboard_show(0, 25);
 }

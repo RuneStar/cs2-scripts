@@ -1,0 +1,10 @@
+// 4325
+[proc,script4325](int $count0)
+def_enum $enum1 = enum_3799;
+def_struct $struct2 = null;
+def_int $count3 = enum_getoutputcount($enum1);
+if ($count0 < $count3) {
+	$struct2 = enum(int, struct, $enum1, $count0);
+	sound_synth(struct_param($struct2, param_1239), 1, 0);
+	~script4329($count0);
+}

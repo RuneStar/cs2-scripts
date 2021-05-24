@@ -1,0 +1,21 @@
+// 4276
+[clientscript,script4276](int $opindex0, component $component1, int $comsubid2, int $int3, string $string0, component $component4, int $int5, int $int6)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(synth_2266, 1, 0);
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans(200);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	cc_setonop(null);
+	cc_setontimer("script4277(calc(clientclock + 20), event_com, event_comsubid, $int3, $string0, $component4, $int5, $int6)");
+}
+if (cc_find($component4, $int6) = ^true) {
+	cc_settext("Requesting unban for <col=ffb83f><$string0></col>...");
+}
+if_setontimer("script4278(calc(clientclock + 30), event_com, $string0)", $component1);
+if (activeclansettings_find_affined(0) = true & activeclansettings_getaffinedrank(activeclansettings_getaffinedslot(removetags(chat_playername))) >= ~script4456(struct_2956)) {
+	%varbit12199 = 1;
+	~script4280($component4, $int5, $int6);
+}

@@ -1,0 +1,10 @@
+// 4339
+[clientscript,script4339](struct $struct0, component $component1, int $int2)
+if (struct_param($struct0, param_1234) ! 2) {
+	return;
+}
+if (%varbit12200 = 0) {
+	mes("You don't have the permission to change this.");
+	return;
+}
+sound_synth(synth_2266, 1, 0);

@@ -1,0 +1,36 @@
+// 4341
+[clientscript,script4341](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+~script4299($component1, "Coffer");
+cc_deleteall($component2);
+cc_create($component2, ^iftype_text, 0);
+cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^red);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settext("Clan data is not currently available.");
+.cc_create($component2, ^iftype_graphic, 1);
+.cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+.cc_setoutline(1);
+.cc_setgraphicshadow(0x333333);
+.cc_setop(1, "Inspect");
+.cc_setop(10, "Examine");
+.cc_setopbase("<col=ff9040><oc_name(coins_995)></col>");
+~script4345;
+if_setonclansettingstransmit("script4344(true, event_com, cc_getid, .cc_getid)", $component2);
+if_setontimer("script4344(false, event_com, cc_getid, .cc_getid)", $component2);
+~script4343($component3);
+if_setonvartransmit("script4342(event_com){var3019}", $component3);
+if_setonclansettingstransmit("script4342(event_com)", $component3);
+~script4352("1", $component4);
+if_setop(1, "Withdraw", $component4);
+~script4352("1k", $component5);
+if_setop(1, "Withdraw", $component5);
+~script4352("100k", $component6);
+if_setop(1, "Withdraw", $component6);
+~script4352("X", $component7);
+if_setop(1, "Withdraw", $component7);
+~script4352("All", $component8);
+if_setop(1, "Withdraw", $component8);

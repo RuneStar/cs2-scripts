@@ -1,8 +1,8 @@
 // 3560
 [proc,script3560](enum $enum0)
-def_int $width1 = if_getwidth(interface_162:53);
-def_int $height2 = if_getheight(interface_162:53);
-cc_deleteall(interface_162:53);
+def_int $width1 = if_getwidth(interface_162:50);
+def_int $height2 = if_getheight(interface_162:50);
+cc_deleteall(interface_162:50);
 def_int $int3 = 0;
 def_int $int4 = enum_getoutputcount($enum0);
 def_int $intarray0(calc($int4 * 32));
@@ -32,16 +32,16 @@ while ($int4 > 0) {
 					$obj12 = enum(int, namedobj, $enum10, $int11);
 					$string0 = oc_name($obj12);
 					if (string_length(%varcstring359) <= 0 | string_indexof_string(lowercase($string0), lowercase(%varcstring359), 0) ! -1) {
-						cc_create(interface_162:53, ^iftype_rectangle, $int3);
+						cc_create(interface_162:50, ^iftype_rectangle, $int3);
 						cc_setopbase("<col=ff9040><$string0></col>");
 						cc_setonop("poh_costumes_searchresult($namedobj6, $enum0, ^key_return)");
 						cc_setonkey("poh_costumes_searchresult($namedobj6, $enum0, event_key)");
 						$int3 = calc($int3 + 1);
-						cc_create(interface_162:53, ^iftype_graphic, $int3);
+						cc_create(interface_162:50, ^iftype_graphic, $int3);
 						cc_setobject_nonum($obj12, 1);
 						$intarray0($int5) = $int3;
 						$int5, $int3 = calc($int5 + 1), calc($int3 + 1);
-						cc_create(interface_162:53, ^iftype_text, $int3);
+						cc_create(interface_162:50, ^iftype_text, $int3);
 						cc_settext($string0);
 						$int3 = calc($int3 + 1);
 					}
@@ -51,16 +51,16 @@ while ($int4 > 0) {
 				if ($obj12 ! null) {
 					$string0 = oc_name($obj12);
 					if (string_length(%varcstring359) <= 0 | string_indexof_string(lowercase($string0), lowercase(%varcstring359), 0) ! -1) {
-						cc_create(interface_162:53, ^iftype_rectangle, $int3);
+						cc_create(interface_162:50, ^iftype_rectangle, $int3);
 						cc_setopbase("<col=ff9040><$string0></col>");
 						cc_setonop("poh_costumes_searchresult($namedobj6, $enum0, ^key_return)");
 						cc_setonkey("poh_costumes_searchresult($namedobj6, $enum0, event_key)");
 						$int3 = calc($int3 + 1);
-						cc_create(interface_162:53, ^iftype_graphic, $int3);
+						cc_create(interface_162:50, ^iftype_graphic, $int3);
 						cc_setobject_nonum($obj12, 1);
 						$intarray0($int5) = $int3;
 						$int5, $int3 = calc($int5 + 1), calc($int3 + 1);
-						cc_create(interface_162:53, ^iftype_text, $int3);
+						cc_create(interface_162:50, ^iftype_text, $int3);
 						cc_settext($string0);
 						$int3 = calc($int3 + 1);
 					}
@@ -68,16 +68,16 @@ while ($int4 > 0) {
 			}
 			$string0 = oc_name($namedobj9);
 			if (string_length(%varcstring359) <= 0 | string_indexof_string(lowercase($string0), lowercase(%varcstring359), 0) ! -1) {
-				cc_create(interface_162:53, ^iftype_rectangle, $int3);
+				cc_create(interface_162:50, ^iftype_rectangle, $int3);
 				cc_setopbase("<col=ff9040><$string0></col>");
 				cc_setonop("poh_costumes_searchresult($namedobj6, $enum0, ^key_return)");
 				cc_setonkey("poh_costumes_searchresult($namedobj6, $enum0, event_key)");
 				$int3 = calc($int3 + 1);
-				cc_create(interface_162:53, ^iftype_graphic, $int3);
+				cc_create(interface_162:50, ^iftype_graphic, $int3);
 				cc_setobject_nonum($namedobj9, 1);
 				$intarray0($int5) = $int3;
 				$int5, $int3 = calc($int5 + 1), calc($int3 + 1);
-				cc_create(interface_162:53, ^iftype_text, $int3);
+				cc_create(interface_162:50, ^iftype_text, $int3);
 				cc_settext($string0);
 				$int3 = calc($int3 + 1);
 			}
@@ -91,16 +91,16 @@ while ($int4 > 0) {
 				$obj12 = enum(int, namedobj, $enum10, $int11);
 				$string0 = oc_name($obj12);
 				if (string_length(%varcstring359) <= 0 | string_indexof_string(lowercase($string0), lowercase(%varcstring359), 0) ! -1) {
-					cc_create(interface_162:53, ^iftype_rectangle, $int3);
+					cc_create(interface_162:50, ^iftype_rectangle, $int3);
 					cc_setopbase("<col=ff9040><$string0></col>");
 					$int3 = calc($int3 + 1);
 					cc_setonop("poh_costumes_searchresult($namedobj6, $enum0, ^key_return)");
 					cc_setonkey("poh_costumes_searchresult($namedobj6, $enum0, event_key)");
-					cc_create(interface_162:53, ^iftype_graphic, $int3);
+					cc_create(interface_162:50, ^iftype_graphic, $int3);
 					cc_setobject_nonum($obj12, 1);
 					$intarray0($int5) = $int3;
 					$int5, $int3 = calc($int5 + 1), calc($int3 + 1);
-					cc_create(interface_162:53, ^iftype_text, $int3);
+					cc_create(interface_162:50, ^iftype_text, $int3);
 					cc_settext($string0);
 					$int3 = calc($int3 + 1);
 				}
@@ -110,16 +110,16 @@ while ($int4 > 0) {
 			if ($obj12 ! null) {
 				$string0 = oc_name($obj12);
 				if (string_length(%varcstring359) <= 0 | string_indexof_string(lowercase($string0), lowercase(%varcstring359), 0) ! -1) {
-					cc_create(interface_162:53, ^iftype_rectangle, $int3);
+					cc_create(interface_162:50, ^iftype_rectangle, $int3);
 					cc_setopbase("<col=ff9040><$string0></col>");
 					cc_setonop("poh_costumes_searchresult($namedobj6, $enum0, ^key_return)");
 					cc_setonkey("poh_costumes_searchresult($namedobj6, $enum0, event_key)");
 					$int3 = calc($int3 + 1);
-					cc_create(interface_162:53, ^iftype_graphic, $int3);
+					cc_create(interface_162:50, ^iftype_graphic, $int3);
 					cc_setobject_nonum($obj12, 1);
 					$intarray0($int5) = $int3;
 					$int5, $int3 = calc($int5 + 1), calc($int3 + 1);
-					cc_create(interface_162:53, ^iftype_text, $int3);
+					cc_create(interface_162:50, ^iftype_text, $int3);
 					cc_settext($string0);
 					$int3 = calc($int3 + 1);
 				}
@@ -127,16 +127,16 @@ while ($int4 > 0) {
 		}
 		$string0 = oc_name($namedobj6);
 		if (string_length(%varcstring359) <= 0 | string_indexof_string(lowercase($string0), lowercase(%varcstring359), 0) ! -1) {
-			cc_create(interface_162:53, ^iftype_rectangle, $int3);
+			cc_create(interface_162:50, ^iftype_rectangle, $int3);
 			cc_setopbase("<col=ff9040><$string0></col>");
 			cc_setonop("poh_costumes_searchresult($namedobj6, $enum0, ^key_return)");
 			cc_setonkey("poh_costumes_searchresult($namedobj6, $enum0, event_key)");
 			$int3 = calc($int3 + 1);
-			cc_create(interface_162:53, ^iftype_graphic, $int3);
+			cc_create(interface_162:50, ^iftype_graphic, $int3);
 			cc_setobject_nonum($namedobj6, 1);
 			$intarray0($int5) = $int3;
 			$int5, $int3 = calc($int5 + 1), calc($int3 + 1);
-			cc_create(interface_162:53, ^iftype_text, $int3);
+			cc_create(interface_162:50, ^iftype_text, $int3);
 			cc_settext($string0);
 			$int3 = calc($int3 + 1);
 		}
@@ -171,14 +171,14 @@ while ($int4 < $int5) {
 	} else {
 		$x22, $x23 = $int14, $x18;
 	}
-	if (cc_find(interface_162:53, $intarray0($int4)) = ^true) {
+	if (cc_find(interface_162:50, $intarray0($int4)) = ^true) {
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition($x22, $height24, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setoutline(1);
 		cc_setgraphicshadow(0x555555);
 		$obj12 = cc_getinvobject;
 	}
-	if (cc_find(interface_162:53, calc($intarray0($int4) - 1)) = ^true & .cc_find(interface_162:53, calc($intarray0($int4) + 1)) = ^true) {
+	if (cc_find(interface_162:50, calc($intarray0($int4) - 1)) = ^true & .cc_find(interface_162:50, calc($intarray0($int4) + 1)) = ^true) {
 		cc_setsize($int13, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition($x22, $height24, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour(^white);
@@ -206,9 +206,9 @@ if ($int21 < 2) {
 	$height24 = calc($height24 + 32);
 }
 if ($height24 > $height2) {
-	if_setscrollsize(0, $height24, interface_162:53);
+	if_setscrollsize(0, $height24, interface_162:50);
 } else {
-	if_setscrollpos(0, 0, interface_162:53);
-	if_setscrollsize(0, 0, interface_162:53);
+	if_setscrollpos(0, 0, interface_162:50);
+	if_setscrollsize(0, 0, interface_162:50);
 }
-~scrollbar_resize(interface_162:54, interface_162:53, if_getscrolly(interface_162:53));
+~scrollbar_resize(interface_162:51, interface_162:50, if_getscrolly(interface_162:50));

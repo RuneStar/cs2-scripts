@@ -1,0 +1,25 @@
+// 4205
+[proc,script4205](component $component0, int $int1)(int)
+def_int $width2 = if_getwidth($component0);
+def_int $height3 = if_getheight($component0);
+def_int $x4 = calc($width2 - 9);
+def_int $y5 = calc($height3 - 9);
+def_int $width6 = calc($width2 - 18);
+def_int $height7 = calc($height3 - 18);
+~create_graphic($component0, $int1, "v2_stone_button,0", 0, 0, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,1", $x4, 0, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,2", 0, $y5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,3", $x4, $y5, ^setpos_abs_left, ^setpos_abs_top, 9, 9, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,4", 0, 9, ^setpos_abs_left, ^setpos_abs_top, 9, $height7, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,5", 9, 0, ^setpos_abs_left, ^setpos_abs_top, $width6, 9, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,6", $x4, 9, ^setpos_abs_left, ^setpos_abs_top, 9, $height7, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+~create_graphic($component0, $int1, "v2_stone_button,7", 9, $y5, ^setpos_abs_left, ^setpos_abs_top, $width6, 9, ^setsize_abs, ^setsize_abs);
+$int1 = calc($int1 + 1);
+return($int1);

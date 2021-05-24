@@ -1,0 +1,99 @@
+// 4375
+[clientscript,script4375](string $string0)
+def_int $int0 = calc((23 + 2) / 4);
+def_int $height1 = calc(50 + $int0 * 25 + 35);
+if_setsize(if_getwidth(interface_699:35), $height1, ^setsize_abs, ^setsize_abs, interface_699:35);
+cc_deleteall(interface_699:36);
+~stonepanel(0, interface_699:36, 0);
+cc_deleteall(interface_699:38);
+def_int $int2 = 0;
+def_string $string1 = "";
+def_int $int3 = 0;
+$string1, $string0 = ~script632($string0);
+cc_create(interface_699:38, ^iftype_text, $int2);
+$int2 = calc($int2 + 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setcolour(0xff981f);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_bottom, 0);
+cc_settextshadow(true);
+if (string_length($string1) > 0) {
+	cc_settext("<col=ffb83f><$string1></col>");
+	$int3 = 1;
+} else {
+	cc_settext("<col=9f9f9f>Choose an applicant</col>");
+}
+$string1, $string0 = ~script632($string0);
+cc_create(interface_699:38, ^iftype_text, $int2);
+$int2 = calc($int2 + 1);
+cc_setposition(0, 20, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc(16384 / 2), 20, ^setsize_2, ^setsize_abs);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+if (string_length($string1) > 0) {
+	cc_settext("Combat: <col=ffb83f><$string1></col>");
+} else {
+	cc_settext("<col=9f9f9f>---</col>");
+}
+$string1, $string0 = ~script632($string0);
+cc_create(interface_699:38, ^iftype_text, $int2);
+$int2 = calc($int2 + 1);
+cc_setposition(0, 20, ^setpos_abs_right, ^setpos_abs_top);
+cc_setsize(calc(16384 / 2), 20, ^setsize_2, ^setsize_abs);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+if (string_length($string1) > 0) {
+	cc_settext("Skill total: <col=ffb83f><$string1></col>");
+} else {
+	cc_settext("<col=9f9f9f>---</col>");
+}
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $y6 = 0;
+def_stat $stat7 = null;
+def_int $int8 = 1;
+while ($int8 <= 23) {
+	cc_create(interface_699:38, ^iftype_graphic, $int2);
+	$int2, $int5, $y6 = calc($int2 + 1), calc(60 * ($int4 / $int0)), calc(40 + 25 * ($int4 % $int0));
+	cc_setposition($int5, $y6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	$stat7 = enum(int, stat, enum_681, $int8);
+	cc_setgraphic(enum(stat, graphic, enum_255, $stat7));
+	$string1, $string0 = ~script632($string0);
+	cc_create(interface_699:38, ^iftype_text, $int2);
+	$int2 = calc($int2 + 1);
+	cc_setposition(calc($int5 + 25), $y6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	if (string_length($string1) > 0) {
+		cc_settext($string1);
+	} else {
+		cc_settext("<col=9f9f9f>-</col>");
+	}
+	$int4, $int8 = $int8, calc($int8 + 1);
+}
+if ($int3 = 1) {
+	~script1558(interface_699:40, "<col=0dc10d>Accept</col>", interface_699:1, enum_3806, -1);
+	~script1558(interface_699:39, "<col=ff0000>Decline</col>", interface_699:1, enum_3806, -1);
+} else {
+	~script1560(interface_699:40, "", true, 1);
+	if_setonmouserepeat(null, interface_699:40);
+	if_setonmouseleave(null, interface_699:40);
+	if_setonop(null, interface_699:40);
+	if_clearops(interface_699:40);
+	if_setontimer(null, interface_699:40);
+	~script1560(interface_699:39, "", true, 1);
+	if_setonmouserepeat(null, interface_699:39);
+	if_setonmouseleave(null, interface_699:39);
+	if_setonop(null, interface_699:39);
+	if_clearops(interface_699:39);
+	if_setontimer(null, interface_699:39);
+}

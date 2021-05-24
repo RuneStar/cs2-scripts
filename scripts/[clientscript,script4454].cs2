@@ -1,0 +1,10 @@
+// 4454
+[clientscript,script4454](int $clock0, component $component1, graphic $graphic2, string $text0)
+if (%varcint454 = 1) {
+	~clan_stonebutton_draw(true, "Invite", "p12_full", $component1);
+	return;
+}
+if (clientclock >= $clock0) {
+	if_setontimer(null, $component1);
+	~clan_stonebutton_draw(false, $text0, $graphic2, $component1);
+}

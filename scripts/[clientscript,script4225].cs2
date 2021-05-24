@@ -1,0 +1,49 @@
+// 4225
+[clientscript,script4225](component $component0, component $component1, component $component2, component $component3, int $comsubid4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17)
+sound_synth(synth_2266, 1, 0);
+~xpdrops_setup_display_hoverdisable($component0);
+if_sethide(false, $component8);
+if_setposition(if_getx($component0), calc(if_gety($component0) + if_getheight($component0)), ^setpos_abs_left, ^setpos_abs_top, $component9);
+cc_deleteall($component14);
+cc_deleteall($component17);
+cc_deleteall($component10);
+def_int $int18 = 15;
+if (~on_mobile = true) {
+	$int18 = scale(8, 5, $int18);
+}
+.cc_create($component1, ^iftype_rectangle, 0);
+.cc_setsize(0, calc($int18 + 2), ^setsize_minus, ^setsize_abs);
+.cc_setfill(true);
+.cc_setcolour(^white);
+.cc_settrans(200);
+.cc_sethide(true);
+def_int $count19 = 0;
+def_int $count20 = enum_getoutputcount(enum_3793);
+while ($count19 < $count20) {
+	cc_create($component1, ^iftype_text, calc($count19 + 1));
+	cc_setsize(0, $int18, ^setsize_minus, ^setsize_abs);
+	cc_setcolour(0xff981f);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_setop(1, "Select");
+	if (~on_mobile = false) {
+		cc_setonmouseover("xpdrops_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, 0xff981f)");
+	}
+	cc_setonmouseleave("xpdrops_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, 0xff981f)");
+	cc_setonop("script4226(event_opindex, $count19, $component0, $component2, $component3, $comsubid4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component15, $component16)");
+	cc_setposition(0, calc($count19 * $int18), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_settext(enum(int, string, enum_3793, $count19));
+	$count19 = calc($count19 + 1);
+}
+if_setscrollpos(0, 0, $component1);
+def_int $int21 = calc($count20 * $int18 + 2);
+def_int $height22 = calc($int21 + 4);
+if ($height22 > 150) {
+	if_setsize(if_getwidth($component0), 150, ^setsize_abs, ^setsize_abs, $component9);
+	if_setscrollsize(0, $int21, $component1);
+} else {
+	if_setsize(if_getwidth($component0), $height22, ^setsize_abs, ^setsize_abs, $component9);
+	if_setscrollsize(0, 0, $component1);
+}
+~scrollbar_vertical($component10, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

@@ -1,0 +1,11 @@
+// 4260
+[clientscript,script4260](string $string0, int $int0, component $component1, int $int2, int $int3)
+def_string $string1 = "";
+if ($int0 = 3) {
+	$string1 = %varcstring457;
+} else if ($int0 = 4) {
+	$string1 = %varcstring456;
+}
+if (compare($string1, $string0) ! 0 & (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true)) {
+	~script4259($int0, $component1, $int2, $int3);
+}

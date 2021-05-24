@@ -1,0 +1,51 @@
+// 4303
+[proc,script4303](int $int0)(string, graphic)
+def_int $int1 = -1;
+switch_int ($int0) {
+	case 127 :
+		$int1 = -5;
+	case 126 :
+		$int1 = -4;
+	case 125 :
+		$int1 = -3;
+	case 100 :
+		$int1 = -2;
+	case -1 :
+		$int1 = -1;
+	case 10 :
+		$int1 = %varbit12188;
+	case 20 :
+		$int1 = %varbit12189;
+	case 30 :
+		$int1 = %varbit12190;
+	case 40 :
+		$int1 = %varbit12191;
+	case 50 :
+		$int1 = %varbit12192;
+	case 60 :
+		$int1 = %varbit12193;
+	case 70 :
+		$int1 = %varbit12194;
+	case 80 :
+		$int1 = %varbit12195;
+	case 90 :
+		$int1 = %varbit12196;
+	case 105 :
+		$int1 = %varbit12197;
+	case 110 :
+		$int1 = %varbit12198;
+	case 115 :
+		$int1 = %varbit12201;
+	case 120 :
+		$int1 = %varbit12202;
+	case default :
+		$int1 = %varbit12187;
+}
+def_string $string0 = enum(int, string, enum_3797, $int1);
+if (string_length($string0) > 0) {
+	return($string0, enum(int, graphic, enum_3798, $int1));
+}
+if ($int0 > 0) {
+	return("Rank <tostring($int0)>", null);
+}
+return("Not ranked", null);

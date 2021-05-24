@@ -46,13 +46,30 @@ if ($length1 > 0) {
 				}
 				%varcint61 = clientclock;
 			}
-		case 7 :
+		case 7, 19 :
 			resume_countdialog(~script212(%varcstring359));
+			%varcint5 = 0;
 		case 8 :
 			%varcstring361 = removetags(%varcstring359);
 			resume_namedialog(%varcstring359);
-		case 9, 15 :
+			%varcint5 = 0;
+		case 9, 15, 20, 21 :
+			if (%varcint5 = 20) {
+				~script4394(removetags(%varcstring359));
+			} else if (%varcint5 = 21) {
+				%varcstring359 = ~script4191(%varcstring359, "jagex", " ");
+				%varcstring359 = ~script4191(%varcstring359, "jaqex", " ");
+				%varcstring359 = ~script4191(%varcstring359, "jagx", " ");
+				%varcstring359 = ~script4191(%varcstring359, "jgex", " ");
+				%varcstring359 = ~script4191(%varcstring359, "jgx", " ");
+				%varcstring359 = ~script4191(%varcstring359, "admin", " ");
+				%varcstring359 = ~script4191(%varcstring359, "staff", " ");
+				%varcstring359 = ~script4191(%varcstring359, "-", " ");
+				%varcstring359 = ~script4191(%varcstring359, "_", " ");
+				%varcstring359 = ~script4191(%varcstring359, "  ", " ");
+			}
 			resume_stringdialog(%varcstring359);
+			%varcint5 = 0;
 		case 10 :
 			if (%varbit8119 = 0) {
 				~meslayer_close(1, 1);
@@ -77,8 +94,8 @@ if ($length1 > 0) {
 			}
 			%varcstring358, %varcint62 = %varcstring359, 0;
 			~chat_autotyper_updateop;
-			if_setontimer("chat_autotyper(event_com, true)", interface_162:13);
-		case 11 :
+			if_setontimer("chat_autotyper(event_com, true)", interface_162:11);
+		case 11, 18 :
 			~meslayer_close(0, 1);
 			return;
 		case 16 :
@@ -86,7 +103,7 @@ if ($length1 > 0) {
 	}
 } else {
 	switch_int (%varcint5) {
-		case 7, 8, 9, 15 :
+		case 7, 8, 9, 15, 20, 21 :
 			return;
 		case 16 :
 			return;

@@ -1,0 +1,11 @@
+// 4477
+[proc,script4477](component $component0, graphic $graphic1, graphic $graphic2)
+if (cc_find($component0, 0) = ^true) {
+	cc_setgraphic($graphic1);
+}
+if (cc_find($component0, 1) = ^true) {
+	cc_setgraphic($graphic1);
+}
+if (cc_find($component0, 2) = ^true) {
+	cc_setgraphic($graphic2);
+}

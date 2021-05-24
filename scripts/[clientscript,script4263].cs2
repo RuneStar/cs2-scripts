@@ -1,0 +1,94 @@
+// 4263
+[clientscript,script4263](component $component0)
+~script4206(interface_691:1, interface_691:2, interface_691:3, 0, $component0);
+~steelborder(interface_691:4, "Clan Interests", 1);
+~scrollbar_vertical(interface_691:8, interface_691:7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+def_int $int1 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+def_string $string2 = "";
+cc_deleteall(interface_691:7);
+def_boolean $booleanarray0(calc(15 + 1));
+def_int $int2 = 0;
+while ($int2 <= 15) {
+	$string2 = enum(int, string, enum_3792, $int2);
+	if (string_length($string2) > 0) {
+		$booleanarray0($int2) = true;
+		if (calc($int1 % 2) = 0) {
+			$string0 = append($string0, "<br><$string2>");
+		} else {
+			$string1 = append($string1, "<br><$string2>");
+		}
+		$int1 = calc($int1 + 1);
+	}
+	cc_create(interface_691:7, ^iftype_rectangle, $int2);
+	cc_sethide(true);
+	$int2 = calc($int2 + 1);
+}
+def_int $int3 = calc(parawidth($string0, 512, p12_full) + 3);
+def_int $int4 = calc(parawidth($string1, 512, p12_full) + 3);
+def_int $int5 = calc(22 + $int3);
+def_int $int6 = calc(22 + $int4);
+def_int $int7 = calc($int5 + 15);
+def_int $int8 = 27;
+def_int $int9 = 0;
+if (~on_mobile = true) {
+	$int8, $int9 = 37, 1;
+}
+def_int $int10 = calc(($int8 - 17) / 2);
+def_string $text3 = "";
+def_int $int11 = 0;
+$int1 = 0;
+def_int $int12 = 0;
+while ($int12 <= 15) {
+	if ($booleanarray0($int12) = true & cc_find(interface_691:7, $int12) = ^true) {
+		cc_sethide(false);
+		$int11 = calc($int1 / 2 * $int8);
+		if (calc($int1 % 2) = 0) {
+			cc_setsize($int5, $int8, ^setsize_abs, ^setsize_abs);
+			cc_setposition(0, $int11, ^setpos_abs_left, ^setpos_abs_top);
+		} else {
+			cc_setsize($int6, $int8, ^setsize_abs, ^setsize_abs);
+			cc_setposition($int7, $int11, ^setpos_abs_left, ^setpos_abs_top);
+		}
+		cc_setcolour(^white);
+		cc_setfill(true);
+		cc_settrans(255);
+		if ($int9 = 0) {
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 225, null)");
+		}
+		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+		cc_setop(1, "Change");
+		$text3 = enum(int, string, enum_3792, $int12);
+		cc_setopbase("<col=ff9040><$text3></col>");
+		cc_setonop("script4268(event_opindex, event_com, event_comsubid, $int12, $int2, calc($int2 + 1))");
+		cc_setonvartransmit("script4266(event_com, $int12, $int2, calc($int2 + 1)){var3023}");
+		cc_create(interface_691:7, ^iftype_graphic, $int2);
+		$int2 = calc($int2 + 1);
+		.cc_create(interface_691:7, ^iftype_text, $int2);
+		$int2 = calc($int2 + 1);
+		if (calc($int1 % 2) = 0) {
+			cc_setposition(0, calc($int11 + $int10), ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(22, $int11, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setsize($int3, $int8, ^setsize_abs, ^setsize_abs);
+		} else {
+			cc_setposition($int7, calc($int11 + $int10), ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setposition(calc($int7 + 22), $int11, ^setpos_abs_left, ^setpos_abs_top);
+			.cc_setsize($int4, $int8, ^setsize_abs, ^setsize_abs);
+		}
+		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
+		.cc_settextfont(p12_full);
+		.cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		.cc_settextshadow(true);
+		.cc_settext($text3);
+		~script4267($int12);
+		$int1 = calc($int1 + 1);
+	}
+	$int12 = calc($int12 + 1);
+}
+$int11 = calc($int11 + $int8);
+~script4264(~max(180, calc(23 + $int7 + $int6 + 3 + 16)), $int11, if_getheight(interface_691:1));
+~clan_stonebutton_init("<col=ff0000>Cancel</col>", interface_691:9, "p12_full");
+if_setonop("script4208(0, interface_691:1, interface_691:2, interface_691:3, $component0)", interface_691:9);
+~clan_stonebutton_init("<col=0dc10d>Save</col>", interface_691:10, "p12_full");
+if_setonop("script4208(1, interface_691:1, interface_691:2, interface_691:3, $component0)", interface_691:10);

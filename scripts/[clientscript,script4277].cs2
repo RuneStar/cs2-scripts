@@ -1,0 +1,11 @@
+// 4277
+[clientscript,script4277](int $clock0, component $component1, int $comsubid2, int $int3, string $string0, component $component4, int $int5, int $int6)
+if (clientclock >= $clock0 & cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans(225);
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $int3, calc(clientclock + 2))");
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("script4233(true, event_com, event_comsubid, $int3)");
+	}
+	cc_setonmouseleave("script4233(false, event_com, event_comsubid, $int3)");
+	cc_setonop("script4276(event_opindex, event_com, event_comsubid, $int3, $string0, $component4, $int5, $int6)");
+}

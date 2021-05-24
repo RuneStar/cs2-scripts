@@ -1,6 +1,6 @@
 // 73
 [clientscript,chatdefault_onkey](int $key0, char $keychar1)
-if (if_gethide(interface_162:56) = true | if_gethide(interface_162:57) = true) {
+if (if_gethide(interface_162:53) = true | if_gethide(interface_162:54) = true) {
 	return;
 }
 if (%varbit8119 = 0 | ~keypress_permit(-1, 162) = 0) {
@@ -8,28 +8,96 @@ if (%varbit8119 = 0 | ~keypress_permit(-1, 162) = 0) {
 }
 def_int $length2 = string_length(%varcstring335);
 def_int $int3 = 0;
-def_int $int4 = 0;
-if (~on_mobile = true & %varcint41 = 4) {
-	$int4 = 1;
-}
 if (staffmodlevel > 0) {
 	$int3 = 1;
+	if (string_indexof_char("`", $keychar1) ! -1 & $length2 = 0) {
+		return;
+	} else if (string_indexof_char(":", $keychar1) ! -1 & string_indexof_string(%varcstring335, "::", 0) = 0 & $length2 = 2) {
+		return;
+	}
 }
-if ($int3 = 1 & string_indexof_char("`", $keychar1) ! -1 & $length2 = 0) {
-	return;
-}
+def_int $int4 = 0;
+def_int $int5 = -1;
+def_int $index6 = 0;
+def_int $int7 = -1;
 if ($key0 = ^key_return) {
 	~keyboard_hide;
 	if ($length2 > 0) {
-		if (string_indexof_string(%varcstring335, "/", 0) = 0 | $int4 = 1) {
+		if ($int3 = 1) {
+			if (~script4481("give", $length2) = 1) {
+				$length2 = string_length(%varcstring335);
+			} else if (~script4481("set", $length2) = 1) {
+				$length2 = string_length(%varcstring335);
+			} else if (~script4481("get", $length2) = 1) {
+				$length2 = string_length(%varcstring335);
+			} else if (~script4481("tele", $length2) = 1) {
+				$length2 = string_length(%varcstring335);
+			} else if (~script4481("~", $length2) = 1) {
+				$length2 = string_length(%varcstring335);
+			} else {
+				$int7 = string_indexof_string(%varcstring335, "::", 0);
+				if ($int7 > 0) {
+					%varcstring335 = substring(%varcstring335, $int7, $length2);
+					$length2 = string_length(%varcstring335);
+				}
+			}
+		}
+		if (string_indexof_string(%varcstring335, "::", 0) = 0) {
+			$int4 = 1;
+		} else if (%varcint41 = 5) {
+			$int5 = 41;
+		} else if (%varcint41 = 4) {
+			$int5 = 9;
+		}
+		if (string_indexof_string(%varcstring335, "///", 0) = 0 | string_indexof_string(lowercase(%varcstring335), "/g ", 0) = 0) {
+			$index6, $int5 = 3, 44;
+		} else if (string_indexof_string(%varcstring335, "//", 0) = 0) {
+			$index6, $int5 = 2, 41;
+		} else if (string_indexof_string(lowercase(%varcstring335), "/c ", 0) = 0) {
+			$index6, $int5 = 3, 41;
+		} else if (string_indexof_string(%varcstring335, "/", 0) = 0) {
+			$index6, $int5 = 1, 9;
+		}
+		if ($int5 = 44) {
+			if (activeclansettings_find_listened = true & activeclanchannel_find_listened = true) {
+				if ($length2 <= $index6) {
+					return;
+				}
+				if (activeclansettings_getallowunaffined = true) {
+					~chat_sendpublic(substring(%varcstring335, $index6, $length2), 4);
+				} else {
+					mes("Guests are not invited to speak in this clan's channel.");
+				}
+			} else {
+				mes("You are not chatting as a guest in a clan channel at the moment.");
+			}
+		} else if ($int5 = 41) {
+			if (activeclanchannel_find_affined(0) = true) {
+				if (%varbit931 = 0) {
+					if ($length2 <= $index6) {
+						return;
+					}
+					$int7 = activeclanchannel_getuserslot(removetags(chat_playername));
+					if ($int7 ! -1 & activeclanchannel_getuserrank($int7) >= activeclanchannel_getranktalk) {
+						~chat_sendpublic(substring(%varcstring335, $index6, $length2), 3);
+					} else {
+						mes("You do not have the required rank to talk in the clan's channel.");
+					}
+				} else {
+					mes("You have muted your clan's channel. Unmute it if you wish to talk in it.");
+				}
+			} else {
+				mes("You are not chatting in the channel of your own clan at the moment.");
+			}
+		} else if ($int5 = 9) {
 			if (clan_getchatcount > 0) {
-				if ($length2 <= 1 & $int4 = 0) {
+				if ($length2 <= $index6) {
 					return;
 				}
 				if (%varbit4394 = 1) {
 					clan_leavechat;
 				} else {
-					if ($int4 = 1) {
+					if ($index6 < 1) {
 						%varcstring335 = append("/", %varcstring335);
 					}
 					~chat_sendpublic(%varcstring335, 2);
@@ -37,7 +105,7 @@ if ($key0 = ^key_return) {
 			} else {
 				~chat_sendpublic(%varcstring335, 0);
 			}
-		} else if (string_indexof_string(%varcstring335, "::", 0) = 0) {
+		} else if ($int4 = 1) {
 			if ($length2 > 2) {
 				if (string_indexof_string(%varcstring335, "::toggleroof", 0) = 0) {
 					if (getremoveroofs = true) {

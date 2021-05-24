@@ -1,0 +1,29 @@
+// 4330
+[clientscript,script4330](component $component0, component $component1, component $component2, component $component3, component $component4, int $int5, component $component6, component $component7, component $component8)
+def_int $comsubid9 = ~steelborder($component0, "Clan hall settings", 0);
+cc_deleteall($component1);
+if (%varbit12200 = 1) {
+	~clan_stonebutton_init("<col=0dc10d>Save</col>", $component7, "p12_full");
+	if_setonop("opsound(event_opindex, 2)", $component7);
+} else {
+	~clan_stonebutton_init("<col=808080>Save</col>", $component7, "p12_full");
+}
+~clan_stonebutton_init("<col=ff0000>Back</col>", $component8, "p12_full");
+if_setonop("opsound(event_opindex, 2)", $component8);
+def_int $int10 = 0;
+def_int $count11 = 0;
+def_int $height12 = 0;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+while ($count11 < enum_getoutputcount(enum_3800)) {
+	$int10, $height12, $int13, $int14, $int15 = ~script4331($int10, $count11, $component2, $component3, $component4, $int5, $height12, $int13, $int14, $int15);
+	$count11 = calc($count11 + 1);
+}
+if_setscrollpos(0, 0, $component2);
+if ($height12 > if_getheight($component2)) {
+	if_setscrollsize(0, $height12, $component2);
+} else {
+	if_setscrollsize(0, 0, $component2);
+}
+~scrollbar_vertical($component6, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

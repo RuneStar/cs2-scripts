@@ -1,0 +1,58 @@
+// 4354
+[clientscript,script4354](component $component0, component $component1, component $component2, int $int3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+def_int $int10 = 0;
+while ($int10 < 45) {
+	if_sethide(true, enum(int, component, enum_3803, $int10));
+	$int10 = calc($int10 + 1);
+}
+if_setsize(500, calc(334 - 10), ^setsize_abs, ^setsize_abs, $component0);
+if_setscrollsize(0, 0, $component1);
+if_setscrollpos(0, 0, $component1);
+if_setscrollsize(0, 0, $component4);
+if_setscrollpos(0, 0, $component4);
+~scrollbar_vertical($component2, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+~scrollbar_vertical($component5, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+%varcint43, %varcint49 = 0, 0;
+cc_deleteall($component4);
+cc_create($component4, ^iftype_text, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setcolour(0x808080);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext("Loading...");
+if_sethide(true, $component6);
+if_sethide(true, $component8);
+if_sethide(true, $component9);
+cc_deleteall($component0);
+cc_create($component0, ^iftype_rectangle, enum(component, int, enum_3804, $component6));
+cc_sethide(true);
+cc_create($component0, ^iftype_rectangle, enum(component, int, enum_3804, $component7));
+cc_sethide(true);
+cc_create($component0, ^iftype_rectangle, enum(component, int, enum_3804, $component8));
+cc_sethide(true);
+cc_create($component0, ^iftype_rectangle, enum(component, int, enum_3804, $component9));
+cc_sethide(true);
+def_string $string0 = "List your clan";
+def_string $string1 = "<col=ff0000>De-list</col>";
+def_int $int11 = calc(20 + ~max(parawidth($string0, 512, p12_full), parawidth($string1, 512, p12_full)));
+if_setsize($int11, 10, ^setsize_abs, ^setsize_minus, $component6);
+~script4356($component0, $component6, enum_3804, $string0, $string1);
+if_setonvartransmit("script4355(event_com, $component6, enum_3804, $string0, $string1){var261}", $component0);
+$string0 = "Applicants";
+def_int $int12 = calc(20 + parawidth($string0, 512, p12_full));
+if_setsize($int12, 10, ^setsize_abs, ^setsize_minus, $component7);
+~script1558($component7, $string0, $component0, enum_3804, -1);
+$string0 = "<col=0dc10d>Refresh</col>";
+def_int $int13 = calc(20 + parawidth($string0, 512, p12_full));
+if_setsize($int13, 10, ^setsize_abs, ^setsize_minus, $component8);
+~script1558($component8, $string0, $component0, enum_3804, -1);
+def_int $int14 = calc((if_getwidth(if_getlayer($component6)) - 4 - ($int11 + $int12 + $int13)) / 4);
+def_int $int15 = calc(2 + $int14);
+if_setposition($int15, 0, ^setpos_abs_left, ^setpos_abs_centre, $component6);
+$int15 = calc($int15 + $int11 + $int14);
+if_setposition($int15, 0, ^setpos_abs_left, ^setpos_abs_centre, $component7);
+$int15 = calc($int15 + $int12 + $int14);
+if_setposition($int15, 0, ^setpos_abs_left, ^setpos_abs_centre, $component8);
+~script1558($component9, "<col=0dc10d>Reset</col>", $component0, enum_3804, -1);

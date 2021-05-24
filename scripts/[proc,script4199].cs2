@@ -1,0 +1,34 @@
+// 4199
+[proc,script4199](string $string0, component $component0, int $width1, int $int2, int $height3, enum $enum4, string $string1, enum $enum5, int $int6)(int, int)
+def_int $int7 = calc(paraheight($string0, $width1, p12_full) * 14 + 2);
+if (~on_mobile = true) {
+	$int7 = scale(4, 3, $int7);
+}
+cc_create($component0, ^iftype_text, $int2);
+cc_setposition(0, $height3, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setsize(0, $int7, ^setsize_minus, ^setsize_abs);
+cc_settextfont(p12_full);
+cc_setcolour(0x46320a);
+cc_setonmouseover("cc_colour_swapper(event_com, event_comsubid, 0x76623a)");
+cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x46320a)");
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 14);
+if ($enum4 = null & $enum5 = null) {
+	cc_setop(1, "Select");
+	cc_setonop("script4200($int2)");
+} else {
+	switch_int ($int2) {
+		case 0 :
+			cc_setop(1, "Return");
+			cc_setonop("script4196(0)");
+		case 1 :
+			cc_setop(1, "Loop");
+			cc_setonop("script4204");
+		case default :
+			cc_setop(1, "Play");
+			cc_setonop("script4203($enum4, $int2, $string1, $enum5)");
+	}
+}
+$string0 = append("<col=735a28><tostring($int2)></col>: ", $string0);
+cc_settext($string0);
+$int2 = calc($int2 + 1);
+return($int2, calc($height3 + $int7));

@@ -1,0 +1,11 @@
+// 4206
+[proc,script4206](component $component0, component $component1, component $component2, int $int3, component $component4)
+if_setsize(12, 41, ^setsize_minus, ^setsize_minus, $component0);
+if_setposition(0, 6, ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
+if_setnoclickthrough(true, $component0);
+if_setonclick("script4207(false, $component0, $component1, $component2, $int3, $component4)", $component0);
+if_setonsubchange("script4207(true, $component0, $component1, $component2, $int3, $component4)", $component4);
+if_setondialogabort("script4207(false, $component0, $component1, $component2, $int3, $component4)", $component4);
+if_sethide(false, $component2);
+if_setnoclickthrough(true, $component2);
+~script4210(0, $component1);

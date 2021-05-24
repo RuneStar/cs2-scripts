@@ -1,0 +1,14 @@
+// 4213
+[proc,script4213](int $int0, int $int1, int $height2)
+def_int $int3 = ~min(calc($height2 - 20), calc($int1 + 50 + 4));
+if_setsize($int0, $int3, ^setsize_abs, ^setsize_abs, interface_289:3);
+def_int $int4 = calc($int3 - 50);
+if ($int1 > $int4) {
+	if_setscrollsize(0, $int1, interface_289:6);
+	~scrollbar_resize(interface_289:9, interface_289:6, if_getscrolly(interface_289:6));
+} else {
+	if_setscrollsize(0, 0, interface_289:6);
+	if_setscrollpos(0, 0, interface_289:6);
+	~scrollbar_resize(interface_289:9, interface_289:6, 0);
+}
+if_setontimer("script4214($int0, $int1, $height2)", interface_289:1);

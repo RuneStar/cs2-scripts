@@ -5,11 +5,11 @@ def_int $colour0 = ^black;
 def_int $colour1 = 0x5f5f5f;
 if (~toplevel_chatbox_maketransparent = 1) {
 	$string0, $colour0, $colour1 = "<col=9090ff>", ^white, 0xbfbfbf;
-	if_settextshadow(true, interface_162:58);
+	if_settextshadow(true, interface_162:55);
 } else {
-	if_settextshadow(false, interface_162:58);
+	if_settextshadow(false, interface_162:55);
 }
-if_setcolour($colour0, interface_162:58);
+if_setcolour($colour0, interface_162:55);
 def_int $length2 = string_length(%varcstring335);
 def_string $string1 = escape(%varcstring335);
 def_string $string2 = "";
@@ -30,33 +30,33 @@ if (%varbit8119 = 1) {
 	}
 	$width3 = parawidth($string2, ^max_32bit_int, p12_full);
 	if ($boolean4 = true) {
-		if_setsize(~max(60, calc(5 + $width3)), 30, ^setsize_abs, ^setsize_abs, interface_162:39);
-		if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_162:39);
+		if_setsize(~max(60, calc(5 + $width3)), 30, ^setsize_abs, ^setsize_abs, interface_162:36);
+		if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_162:36);
 	} else {
-		if_setsize(0, 30, ^setsize_abs, ^setsize_minus, interface_162:39);
-		if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_162:39);
+		if_setsize(0, 30, ^setsize_abs, ^setsize_minus, interface_162:36);
+		if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_162:36);
 	}
-	if ($width3 > if_getwidth(interface_162:58)) {
-		if_settextalign(^settextalign_right, ^settextalign_bottom, 0, interface_162:58);
+	if ($width3 > if_getwidth(interface_162:55)) {
+		if_settextalign(^settextalign_right, ^settextalign_bottom, 0, interface_162:55);
 	} else {
-		if_settextalign(^settextalign_left, ^settextalign_bottom, 0, interface_162:58);
+		if_settextalign(^settextalign_left, ^settextalign_bottom, 0, interface_162:55);
 	}
-	if_clearops(interface_162:58);
-	if_setonmouserepeat(null, interface_162:58);
-	if_setonmouseleave(null, interface_162:58);
-	if_setonop(null, interface_162:58);
+	if_clearops(interface_162:55);
+	if_setonmouserepeat(null, interface_162:55);
+	if_setonmouseleave(null, interface_162:55);
+	if_setonop(null, interface_162:55);
 } else {
 	if (~league_world = 1) {
 		$string2 = "<img=22> You must set a name before you can chat.";
 	} else {
 		$string2 = "<enum(int, string, enum_1894, %varbit1777)> You must set a name before you can chat.";
 	}
-	if_settextalign(^settextalign_centre, ^settextalign_bottom, 0, interface_162:58);
-	if_setop(10, "Configure", interface_162:58);
-	if_setopbase("<col=ff9040>Display name</col>", interface_162:58);
-	if_setonmouserepeat("text_colour_swapper(event_com, $colour1)", interface_162:58);
-	if_setonmouseleave("text_colour_swapper(event_com, $colour0)", interface_162:58);
-	if_setonop("opsound(event_opindex, 1024)", interface_162:58);
+	if_settextalign(^settextalign_centre, ^settextalign_bottom, 0, interface_162:55);
+	if_setop(10, "Configure", interface_162:55);
+	if_setopbase("<col=ff9040>Display name</col>", interface_162:55);
+	if_setonmouserepeat("text_colour_swapper(event_com, $colour1)", interface_162:55);
+	if_setonmouseleave("text_colour_swapper(event_com, $colour0)", interface_162:55);
+	if_setonop("opsound(event_opindex, 1024)", interface_162:55);
 }
-if_settext($string2, interface_162:58);
-if_setsize(3, 16, ^setsize_minus, ^setsize_abs, interface_162:58);
+if_settext($string2, interface_162:55);
+if_setsize(3, 16, ^setsize_minus, ^setsize_abs, interface_162:55);

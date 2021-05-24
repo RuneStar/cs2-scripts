@@ -13,24 +13,24 @@ if (%varcint5 <= 0 | %varcint5 = 1) {
 	} else {
 		$int0 = 0;
 	}
-	if_settext($string0, interface_162:44);
-	if_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_top, interface_162:44);
-	if_setsize(479, 72, ^setsize_abs, ^setsize_abs, interface_162:44);
-	if_settextalign(^settextalign_centre, ^settextalign_centre, $int0, interface_162:44);
-	if_settextfont(q8_full, interface_162:44);
-	if_settextfont(q8_full, interface_162:45);
-	if_setcolour(^blue, interface_162:45);
-	if_setonmouseover("text_colour_swapper(event_com, ^white)", interface_162:45);
-	if_setonmouseleave("text_colour_swapper(event_com, ^blue)", interface_162:45);
-	if_settext("<~text_device("Click", "Tap")> here to continue", interface_162:45);
-	if_setposition(0, 96, ^setpos_abs_centre, ^setpos_abs_top, interface_162:45);
-	if_setsize(479, 17, ^setsize_abs, ^setsize_abs, interface_162:45);
-	if_settextalign(^settextalign_centre, ^settextalign_top, 0, interface_162:45);
+	if_settext($string0, interface_162:41);
+	if_setposition(0, 20, ^setpos_abs_centre, ^setpos_abs_top, interface_162:41);
+	if_setsize(479, 72, ^setsize_abs, ^setsize_abs, interface_162:41);
+	if_settextalign(^settextalign_centre, ^settextalign_centre, $int0, interface_162:41);
+	if_settextfont(q8_full, interface_162:41);
+	if_settextfont(q8_full, interface_162:42);
+	if_setcolour(^blue, interface_162:42);
+	if_setonmouseover("text_colour_swapper(event_com, ^white)", interface_162:42);
+	if_setonmouseleave("text_colour_swapper(event_com, ^blue)", interface_162:42);
+	if_settext("<~text_device("Click", "Tap")> here to continue", interface_162:42);
+	if_setposition(0, 96, ^setpos_abs_centre, ^setpos_abs_top, interface_162:42);
+	if_setsize(479, 17, ^setsize_abs, ^setsize_abs, interface_162:42);
+	if_settextalign(^settextalign_centre, ^settextalign_top, 0, interface_162:42);
 	if (~on_mobile = true) {
-		if_setonclick("meslayer_close(1)", interface_162:40);
+		if_setonclick("meslayer_close(1)", interface_162:37);
 	} else {
-		if_setonclick("meslayer_close(1)", interface_162:45);
+		if_setonclick("meslayer_close(1)", interface_162:42);
 	}
-	if_setonkey("meslayer_key_close(1, event_key)", interface_162:45);
-	if_sethide(true, interface_162:42);
+	if_setonkey("meslayer_key_close(1, event_key)", interface_162:42);
+	if_sethide(true, interface_162:39);
 }

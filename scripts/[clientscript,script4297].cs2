@@ -1,0 +1,8 @@
+// 4297
+[clientscript,script4297](boolean $boolean0, string $text0, component $component1, graphic $graphic2)
+~clan_stonebutton_draw($boolean0, $text0, $graphic2, $component1);
+if ($boolean0 = true) {
+	if_setontimer("script4298(calc(clientclock + 2), $text0, event_com, $graphic2)", $component1);
+} else {
+	if_setontimer(null, $component1);
+}

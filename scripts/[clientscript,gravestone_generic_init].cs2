@@ -5,26 +5,10 @@ if (cc_find($component1, $int18) = ^true) {
 	cc_setoninvtransmit("gravestone_generic_title(event_com, event_comsubid){inv_525}");
 }
 def_int $int19 = 0;
-def_graphic $graphic20 = null;
 if (~on_mobile = true) {
-	if_setsize(33, 33, ^setsize_abs, ^setsize_abs, $component2);
-	if_setposition(1, 1, ^setpos_abs_right, ^setpos_abs_top, $component2);
-	$graphic20 = "steelborder_close_button,0";
-	if_setgraphic($graphic20, $component2);
-	if_setonmouseleave("graphic_swapper(event_com, $graphic20)", $component2);
-	$graphic20 = "steelborder_close_button,1";
-	if_setonmouseover("graphic_swapper(event_com, $graphic20)", $component2);
 	$int19 = calc(165 - (23 + 30));
-} else {
-	if_setsize(26, 23, ^setsize_abs, ^setsize_abs, $component2);
-	if_setposition(3, 6, ^setpos_abs_right, ^setpos_abs_top, $component2);
-	$graphic20 = "close_buttons,0";
-	if_setgraphic($graphic20, $component2);
-	if_setonmouseleave("graphic_swapper(event_com, $graphic20)", $component2);
-	$graphic20 = "close_buttons,1";
-	if_setonmouseover("graphic_swapper(event_com, $graphic20)", $component2);
 }
-if_setop(1, "Close", $component2);
+~script4215($component2, "Close");
 if_setonop("opsound(event_opindex, 2)", $component2);
 if_setopkey(1, ^key_escape, 0, $component2);
 if_setop(1, "Take-All", $component8);
@@ -54,8 +38,8 @@ while ($int18 < 120) {
 	.cc_setonop("cc_settrans_temporarily(event_com, event_comsubid, 100, 0)");
 	$int18 = calc($int18 + 1);
 }
-def_int $int21 = calc(120 * 2);
-while ($int18 < $int21) {
+def_int $int20 = calc(120 * 2);
+while ($int18 < $int20) {
 	cc_create($component12, ^iftype_text, $int18);
 	cc_setsize(36, 12, ^setsize_abs, ^setsize_abs);
 	cc_sethide(true);
@@ -94,14 +78,14 @@ while ($int18 < 4) {
 	cc_settrans(calc(100 + $int18 * 10));
 	$int18 = calc($int18 + 1);
 }
-def_int $int22 = calc(12 + parawidth(~gravestone_generic_parsecoffer(^max_32bit_int), 512, p11_full) + 2 + 10);
-def_int $int23 = calc(14 + ~max(32 + 4, 42) + 2);
-def_int $int24 = 109;
-def_int $int25 = calc(40 + $int23 + $int24 + 10);
-if (%varcint395 < $int22) {
+def_int $int21 = calc(12 + parawidth(~gravestone_generic_parsecoffer(^max_32bit_int), 512, p11_full) + 2 + 10);
+def_int $int22 = calc(14 + ~max(32 + 4, 42) + 2);
+def_int $int23 = 109;
+def_int $int24 = calc(40 + $int22 + $int23 + 10);
+if (%varcint395 < $int21) {
 	%varcint395 = scale(2, 3, 512);
 }
-if (%varcint396 < $int25) {
+if (%varcint396 < $int24) {
 	%varcint396 = scale(8, 9, 334);
 }
 if (%varcint397 < 0) {
@@ -110,7 +94,7 @@ if (%varcint397 < 0) {
 if (%varcint398 < $int19) {
 	%varcint398 = ~max($int19, calc((if_getheight($component0) - %varcint396) / 2));
 }
-~gravestone_generic_window_set($component0, $component3, $component4, $int19, $int22, $int25, $component5, $int23, $component10, $int24, $component6, $component7, $component12, $component13);
-if_setoninvtransmit("gravestone_generic_window_set($component0, $component3, $component4, $int19, $int22, $int25, $component5, $int23, $component10, $int24, $component6, $component7, $component12, $component13){inv_525}", $component0);
-if_setonvartransmit("gravestone_generic_window_set($component0, $component3, $component4, $int19, $int22, $int25, $component5, $int23, $component10, $int24, $component6, $component7, $component12, $component13){var1574, var499}", $component0);
-~gravestone_generic_size_handler($component0, $component3, $component4, $int19, $int22, $int25, $component5, $int23, $component10, $int24, $component6, $component7, $component12, $component13, ^min_32bit_int, ^min_32bit_int);
+~gravestone_generic_window_set($component0, $component3, $component4, $int19, $int21, $int24, $component5, $int22, $component10, $int23, $component6, $component7, $component12, $component13);
+if_setoninvtransmit("gravestone_generic_window_set($component0, $component3, $component4, $int19, $int21, $int24, $component5, $int22, $component10, $int23, $component6, $component7, $component12, $component13){inv_525}", $component0);
+if_setonvartransmit("gravestone_generic_window_set($component0, $component3, $component4, $int19, $int21, $int24, $component5, $int22, $component10, $int23, $component6, $component7, $component12, $component13){var1574, var499}", $component0);
+~gravestone_generic_size_handler($component0, $component3, $component4, $int19, $int21, $int24, $component5, $int22, $component10, $int23, $component6, $component7, $component12, $component13, ^min_32bit_int, ^min_32bit_int);
