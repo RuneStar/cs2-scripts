@@ -1,7 +1,7 @@
 // 4247
 [proc,script4247](component $component0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
 def_int $comsubid11 = -1;
-if (~script4245 = 1) {
+if (~clan_members_searching = 1) {
 	$comsubid11 = ~script4252(true, $component3);
 	if (~on_mobile = false) {
 		if_setonmouserepeat("cc_settrans($component3, $comsubid11, 120, null)", $component3);

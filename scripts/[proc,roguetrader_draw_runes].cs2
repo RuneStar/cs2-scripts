@@ -1,0 +1,40 @@
+// 4165
+[proc,roguetrader_draw_runes](int $int0, component $component1)
+cc_deleteall($component1);
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 4;
+def_int $x5 = 12;
+def_int $int6 = 10;
+def_obj $obj7 = null;
+if ($int0 = 1) {
+	$int4 = 9;
+}
+while ($int2 <= $int4) {
+	$obj7 = enum(int, obj, enum_3759, $int2);
+	cc_create($component1, ^iftype_graphic, $int3);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition($x5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject_nonum($obj7, 1);
+	if ($int2 = 0) {
+		cc_setop(1, "Remove Runes");
+	} else {
+		cc_setopbase("<col=ff9040><oc_name($obj7)></col>");
+		cc_setop(1, "Select");
+	}
+	cc_setonop("roguetrader_selectrune($int0, $int3, $component1)");
+	cc_setgraphicshadow(0x333333);
+	if ($int2 = %varbit12162) {
+		cc_setoutline(2);
+	} else {
+		cc_setoutline(1);
+	}
+	if (calc($int2 % 2) = 0) {
+		$x5 = 50;
+	} else {
+		$int6 = calc($int6 + 37);
+		$x5 = 12;
+	}
+	$int2 = calc($int2 + 1);
+	$int3 = calc($int3 + 1);
+}

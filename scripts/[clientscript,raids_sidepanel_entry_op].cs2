@@ -1,7 +1,7 @@
 // 1552
 [clientscript,raids_sidepanel_entry_op](string $username0)
 if (clan_getchatcount > 0 & clan_getchatrank >= clan_getchatminkick) {
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 	~friendschat_sendkick($username0);
 } else {
 	mes("You don't have permission to do that.");

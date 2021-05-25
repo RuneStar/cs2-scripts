@@ -1,0 +1,6 @@
+// 4273
+[clientscript,clan_banned_checksize](component $component0, component $component1, component $component2, component $component3, int $height4, int $height5)
+def_int $height6 = if_getheight($component0);
+if ($height6 ! $height5) {
+	~clan_banned_setsize($component0, $component1, $component2, $component3, $height4, $height6);
+}

@@ -1,0 +1,77 @@
+// 4290
+[clientscript,clan_info_editable](component $component0, int $int1, int $int2, string $string0)
+cc_deleteall($component0);
+def_int $int3 = 0;
+cc_create($component0, ^iftype_graphic, $int3);
+def_int $int4 = $int3;
+$int3 = calc($int3 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_setgraphic("tradebacking_light");
+cc_settrans(180);
+def_string $string1 = "";
+$string1, $string0 = ~script632($string0);
+def_string $string2 = "";
+$string0, $string2 = ~script632($string0);
+def_int $int5 = calc(parawidth($string1, 512, p12_full) + 5);
+def_int $int6 = calc($int5 + 2);
+def_int $int7 = calc(3 + 13 * paraheight($string0, if_getwidth($component0) - $int6, p12_full));
+cc_create($component0, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+.cc_create($component0, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize($int5, $int7, ^setsize_abs, ^setsize_abs);
+.cc_setsize($int6, $int7, ^setsize_minus, ^setsize_abs);
+cc_setposition(1, 6, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setposition(1, 6, ^setpos_abs_right, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+.cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+.cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+.cc_settextalign(^settextalign_left, ^settextalign_top, 0);
+cc_settextshadow(true);
+.cc_settextshadow(true);
+cc_settext($string1);
+.cc_settext($string0);
+if ($int1 = 1) {
+	if (string_length($string2) <= 0) {
+		$string2 = "Change";
+	}
+	if_setop(1, $string2, $component0);
+	~script4293($component0, $int4, 40, 180);
+} else {
+	if_clearops($component0);
+	if_setonop(null, $component0);
+	if_setonmouserepeat(null, $component0);
+	if_setonmouseleave(null, $component0);
+}
+if_setontimer(null, $component0);
+if_setposition(0, %varcint49, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+def_int $int8 = calc(6 + $int7 + 6);
+$int8 = calc($int8 + 3);
+cc_create($component0, ^iftype_graphic, $int3);
+$int3 = calc($int3 + 1);
+cc_setgraphic("v2_borders_slim,8");
+cc_settrans(0);
+cc_settiling(true);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, calc($int8 - 20), ^setpos_abs_centre, ^setpos_abs_top);
+if_setsize(0, $int8, ^setsize_minus, ^setsize_abs, $component0);
+if ($int2 ! -1) {
+	%varcint49 = calc(%varcint49 + $int8 - 3);
+	if ($int2 = 1) {
+		~script4215(interface_690:3, "Back to Recruitment Board");
+		if_setonop("opsound(event_opindex, 2)", interface_690:3);
+		if_setopkey(1, ^key_escape, 0, interface_690:3);
+	} else {
+		~script4215(interface_690:3, "Close");
+		if_setonop("closebutton_click", interface_690:3);
+	}
+	cc_deleteall(interface_690:17);
+	~scrollbar_vertical(interface_690:17, interface_690:10, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	~clan_info_setsize(%varcint43, %varcint49, if_getheight(interface_690:0));
+} else {
+	%varcint49 = calc(%varcint49 + $int8);
+}

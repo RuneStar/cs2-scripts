@@ -1,0 +1,6 @@
+// 4373
+[clientscript,clan_board_checksize](int $int0, int $int1, component $component2, component $component3, int $int4, int $int5, component $component6, component $component7, int $int8, component $component9, int $height10)
+def_int $height11 = if_getheight(if_getlayer($component9));
+if ($height11 ! $height10) {
+	~clan_board_setsize($int0, $int1, $component2, $component3, $int4, $int5, $component6, $component7, $int8, $component9, $height11);
+}

@@ -38,7 +38,7 @@ while ($mesuid0 ! -1) {
 			case 41, 43, 44, 46, 109, 110 :
 				~chat_alert_enable(5);
 			case default :
-				if (enum(int, boolean, enum_892, $chattype3) = true & $chattype3 ! ^chattype_108) {
+				if (enum(int, boolean, enum_892, $chattype3) = true & $chattype3 ! 108) {
 					~chat_alert_enable(1);
 				}
 		}

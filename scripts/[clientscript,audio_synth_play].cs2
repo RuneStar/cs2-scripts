@@ -1,0 +1,18 @@
+// 4203
+[clientscript,audio_synth_play](enum $enum0, int $int1, string $string0, enum $enum2)
+$int1 = calc($int1 - 2);
+def_synth $synth3 = null;
+if ($enum0 = null) {
+	mes("No such enum.");
+	return;
+}
+if ($int1 > calc(enum_getoutputcount($enum0) - 1)) {
+	mes("No such index in enum.");
+	return;
+}
+$synth3 = enum(int, synth, $enum0, $int1);
+if ($synth3 = null) {
+	mes("Could not find synth.");
+}
+sound_synth($synth3, 1, 0);
+mes("Playing from Category: <$string0> - Synth: <enum(int, string, $enum2, $int1)> Menu index: <tostring(calc($int1 + 2))>");

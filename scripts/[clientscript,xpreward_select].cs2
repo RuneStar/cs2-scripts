@@ -2,7 +2,7 @@
 [clientscript,xpreward_select](int $lvl0, int $int1, component $component2, component $component3)
 def_stat $stat4 = enum(int, stat, enum_681, $int1);
 if ($stat4 ! null & ~script3809($lvl0, $stat4, 1) = 1) {
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 	~xpreward_update($int1, $component2, $component3);
 	return;
 }

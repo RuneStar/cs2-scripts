@@ -27,10 +27,10 @@ while ($int9 < $int1) {
 			cc_settext($text0);
 			.cc_setop(1, "Edit rank");
 			if ($boolean4 = false) {
-				.cc_setonmouserepeat("script4233(true, event_com, event_comsubid, .cc_gettrans)");
+				.cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, .cc_gettrans)");
 			}
-			.cc_setonmouseleave("script4233(false, event_com, event_comsubid, .cc_gettrans)");
-			.cc_setonop("script4234(event_opindex, event_com, event_comsubid, .cc_gettrans, 0, $string1)");
+			.cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, .cc_gettrans)");
+			.cc_setonop("clan_members_op(event_opindex, event_com, event_comsubid, .cc_gettrans, 0, $string1)");
 			.cc_setontimer(null);
 			$int6, $int7 = calc($int6 + $int2), calc($int7 + 1);
 		} else {

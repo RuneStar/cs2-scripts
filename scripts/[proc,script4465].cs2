@@ -12,15 +12,15 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 	if (struct_param($struct5, param_1255) = true) {
 		$int6 = -1;
 		switch_struct ($struct5) {
-			case struct_2957 :
+			case guests_may_listen_in_chat_2957 :
 				if (activeclansettings_getallowunaffined = true) {
 					$text0 = "Permitted";
 				} else {
 					$text0 = "Blocked";
 				}
-			case struct_2958 :
+			case guest_minimum_combat_2958 :
 				if (activeclansettings_getallowunaffined = true) {
-					$int8 = ~script4158(%varclansetting26, 0, 6);
+					$int8 = ~getbit_range(%varclansetting26, 0, 6);
 					if ($int8 > 0 & %varclansetting26 ! -1) {
 						$text0 = tostring($int8);
 					} else {
@@ -29,9 +29,9 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				} else {
 					$text0 = "<col=9f9f9f>N/A</col>";
 				}
-			case struct_2959 :
+			case guest_minimum_skill_total_2959 :
 				if (activeclansettings_getallowunaffined = true) {
-					$int8 = ~script4158(%varclansetting26, 7, 18);
+					$int8 = ~getbit_range(%varclansetting26, 7, 18);
 					if ($int8 > 0 & %varclansetting26 ! -1) {
 						$text0 = ~tostring_spacer($int8, ",");
 					} else {
@@ -40,9 +40,9 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				} else {
 					$text0 = "<col=9f9f9f>N/A</col>";
 				}
-			case struct_2960 :
+			case guest_minimum_qp_2960 :
 				if (activeclansettings_getallowunaffined = true) {
-					$int8 = ~script4158(%varclansetting26, 19, 29);
+					$int8 = ~getbit_range(%varclansetting26, 19, 29);
 					if ($int8 > 0 & %varclansetting26 ! -1) {
 						$text0 = tostring($int8);
 					} else {
@@ -51,10 +51,10 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				} else {
 					$text0 = "<col=9f9f9f>N/A</col>";
 				}
-			case struct_2961 :
+			case guest_iron_status_2961 :
 				if (activeclansettings_getallowunaffined = true) {
 					if (%varclansetting26 ! -1) {
-						$text0 = enum(int, string, enum_3828, ~script4158(%varclansetting26, 30, 31));
+						$text0 = enum(int, string, enum_3828, ~getbit_range(%varclansetting26, 30, 31));
 					} else {
 						$text0 = enum(int, string, enum_3828, 0);
 					}
@@ -63,14 +63,14 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				}
 		}
 	} else {
-		$int6 = ~script4456($struct5);
+		$int6 = ~clan_permission_get($struct5);
 		$text0, $graphic9 = ~script4302($int6);
 	}
 	if ($clanslot7 ! -1) {
 		$int11 = activeclansettings_getaffinedrank($clanslot7);
 		if ($int11 < $int6) {
 			$text0 = "<col=ff0000><$text0></col>";
-		} else if ($int11 >= ~script4456(struct_2943)) {
+		} else if ($int11 >= ~clan_permission_get(permission_access_2943)) {
 			$int10 = 1;
 		}
 	}

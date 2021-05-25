@@ -1,0 +1,8 @@
+// 4455
+[clientscript,clan_create_targetmode](boolean $boolean0, component $component1, string $string0, graphic $graphic2)
+if ($boolean0 = true) {
+	%varcint454 = 1;
+} else {
+	%varcint454 = 0;
+}
+~clan_stonebutton_draw($boolean0, "Invite", "p12_full", $component1);

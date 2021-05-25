@@ -3,7 +3,7 @@
 if ($opindex0 ! 1) {
 	return;
 }
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 ~poh_costumes_buttons_draw($component1, $graphic2, $obj3, true);
 if_setontimer("poh_costumes_buttons_1off_reset($component1, $graphic2, $obj3, calc(clientclock + 30))", $component1);
 if_setonop(null, $component1);

@@ -1,7 +1,7 @@
 // 1293
 [clientscript,br_loadout_menuop](int $opindex0, component $component1, int $comsubid2, int $comsubid3, int $colour4, int $trans5, int $colour6, int $trans7, component $component8, component $component9, component $drop10, component $component11)
 if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 	cc_setonmouserepeat(null);
 	cc_setonmouseleave(null);
 	.cc_setcolour($colour4);

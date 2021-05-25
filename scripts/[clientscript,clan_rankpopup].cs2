@@ -1,0 +1,69 @@
+// 4316
+[clientscript,clan_rankpopup](int $int0, int $int1, int $int2, component $component3, string $string0)
+~script4206(interface_289:1, interface_289:2, interface_289:3, calc($int0 + 1), $component3);
+if_sethide(true, interface_289:7);
+if_sethide(true, interface_289:8);
+~steelborder(interface_289:4, $string0, 1);
+~scrollbar_vertical(interface_289:9, interface_289:6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_deleteall(interface_289:6);
+def_int $int4 = 0;
+def_int $int5 = 25;
+def_int $int6 = 0;
+if (~on_mobile = true) {
+	$int5, $int6 = 40, 1;
+}
+def_int $int7 = calc(($int5 - 13) / 2);
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = enum_getoutputcount(enum_3795);
+while ($int11 > 0) {
+	$int11 = calc($int11 - 1);
+	$int8 = enum(int, int, enum_3795, $int11);
+	if ($int8 >= $int1 & $int8 <= $int2) {
+		cc_create(interface_289:6, ^iftype_rectangle, $int4);
+		$int4 = calc($int4 + 1);
+		cc_setsize(0, $int5, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top);
+		cc_setcolour(^white);
+		cc_setfill(true);
+		if (calc($int11 % 2) = 0) {
+			cc_settrans(225);
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 225, null)");
+		} else {
+			cc_settrans(245);
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 245, null)");
+		}
+		if ($int6 = 0) {
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 200, null)");
+		}
+		cc_setonclick("script4208(calc($int8 + 1), interface_289:1, interface_289:2, interface_289:3, $component3)");
+		cc_setontimer(null);
+		cc_create(interface_289:6, ^iftype_text, $int4);
+		$int4 = calc($int4 + 1);
+		.cc_create(interface_289:6, ^iftype_graphic, $int4);
+		$int4 = calc($int4 + 1);
+		cc_setsize(0, $int5, ^setsize_minus, ^setsize_abs);
+		.cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+		cc_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top);
+		if ($int8 = $int0) {
+			cc_setcolour(^white);
+			$int10 = calc($int9 + $int5 / 2);
+		} else {
+			cc_setcolour(0xff981f);
+		}
+		cc_settextshadow(true);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		~script4320($int8, calc($int9 + $int7));
+		cc_setonclansettingstransmit("script4319(event_com, cc_getid, .cc_getid, $int8, calc($int9 + $int7))");
+		$int9 = calc($int9 + $int5);
+	}
+}
+def_int $int12 = calc(parawidth($string0, 512, b12_full) + 20);
+$int11 = 263;
+while ($int11 > 0) {
+	$int12 = ~max($int12, calc(parawidth(enum(int, string, enum_3797, $int11), 512, p12_full) + 42 + (13 + 4) * 2));
+	$int11 = calc($int11 - 1);
+}
+~clan_rankpopup_setsize($int12, $int9, $int10, if_getheight(interface_289:1));

@@ -1,0 +1,6 @@
+// 4299
+[proc,clan_interfacetitle](component $component0, string $string0)
+def_int $comsubid1 = ~steelborder($component0, "", 0);
+~clan_interfacetitle_settitle($component0, $string0, $comsubid1);
+if_setonvartransmit("clan_interfacetitle_settitle($component0, $string0, $comsubid1){var3019}", $component0);
+if_setonclansettingstransmit("clan_interfacetitle_settitle($component0, $string0, $comsubid1)", $component0);

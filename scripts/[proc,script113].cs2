@@ -1,6 +1,6 @@
 // 113
 [proc,script113]
-def_graphic $graphic0 = "graphic_3057";
+def_graphic $graphic0 = "report_button,0";
 def_int $int1 = 0;
 def_int $int2 = 0;
 ~toplevel_chatbox_background;
@@ -31,7 +31,7 @@ if (~on_mobile = true) {
 	if_setsize(79, 0, ^setsize_abs, ^setsize_minus, interface_162:31);
 	if_setgraphic($graphic0, interface_162:32);
 	if_setonmouseleave("graphic_swapper(interface_162:32, $graphic0)", interface_162:31);
-	$graphic0 = "graphic_3058";
+	$graphic0 = "report_button,1";
 	if_setonmouseover("graphic_swapper(interface_162:32, $graphic0)", interface_162:31);
 	if_setposition(3, 0, ^setpos_abs_right, ^setpos_abs_centre, interface_162:31);
 	$int1 = 82;

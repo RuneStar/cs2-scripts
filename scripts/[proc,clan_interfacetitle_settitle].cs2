@@ -1,0 +1,9 @@
+// 4301
+[proc,clan_interfacetitle_settitle](component $component0, string $string0, int $comsubid1)
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_settext("<activeclansettings_getclanname>: <$string0>");
+	}
+} else if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settext(~script4287);
+}

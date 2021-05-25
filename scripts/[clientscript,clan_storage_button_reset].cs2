@@ -1,0 +1,5 @@
+// 4351
+[clientscript,clan_storage_button_reset](int $clock0, string $string0, component $component1)
+if (clientclock >= $clock0) {
+	~clan_storage_button_reset($string0, $component1);
+}

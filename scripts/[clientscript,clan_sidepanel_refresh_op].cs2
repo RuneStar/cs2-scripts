@@ -1,0 +1,12 @@
+// 4403
+[clientscript,clan_sidepanel_refresh_op](int $opindex0, component $component1, int $comsubid2)
+if ($opindex0 ! 1) {
+	return;
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	cc_settrans(175);
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setontimer("clan_sidepanel_refresh_reset(calc(clientclock + 20), event_com, cc_getid)", $component1);
+}

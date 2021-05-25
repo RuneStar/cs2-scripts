@@ -1,0 +1,63 @@
+// 4168
+[proc,roguetrader_draw_game](int $int0, int $int1, component $component2, component $component3)
+cc_deleteall($component2);
+cc_deleteall($component3);
+def_int $int4 = 0;
+def_int $int5 = 4;
+def_obj $obj6 = null;
+def_enum $enum7 = enum(int, enum, enum_3761, $int1);
+if ($int0 = 1) {
+	$int5 = 9;
+	$enum7 = enum(int, enum, enum_3762, $int1);
+}
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 6;
+def_int $int11 = 6;
+def_int $int12 = 0;
+def_int $int13 = %varbit934;
+while ($int9 < $int5) {
+	while ($int8 < $int5) {
+		if ($int13 ! 0) {
+			$int12 = ~script4173(enum(int, int, $enum7, $int4));
+		} else {
+			$int12 = enum(int, int, $enum7, $int4);
+		}
+		cc_create($component3, ^iftype_graphic, $int4);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc(3 + $int10), calc(1 + $int11), ^setpos_abs_left, ^setpos_abs_top);
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+		.cc_create($component2, ^iftype_rectangle, $int4);
+		.cc_setsize(38, 34, ^setsize_abs, ^setsize_abs);
+		.cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setfill(true);
+		.cc_settrans(255);
+		if ($int12 > 0) {
+			$obj6 = enum(int, obj, enum_3759, $int12);
+			cc_setobject_nonum($obj6, 1);
+			cc_setoutline(2);
+			.cc_setopbase("<col=ff9040><oc_name($obj6)></col>");
+			.cc_setop(1, "Examine");
+			.cc_setonop("script4169");
+		} else {
+			$obj6 = enum(int, obj, enum_3759, ~roguetrader_tile_get($int4));
+			if ($obj6 ! obj_25709) {
+				cc_setobject_nonum($obj6, 1);
+			}
+			if (%varbit12162 ! 0) {
+				.cc_setop(1, "Place <col=ff9040><oc_name(enum(int, obj, enum_3759, %varbit12162))></col>");
+			} else {
+				.cc_setop(1, "Remove Rune");
+			}
+			.cc_setonop("roguetrader_placerune($int0, $int1, $int4, $component2, $component3)");
+		}
+		$int4 = calc($int4 + 1);
+		$int10 = calc($int10 + 38);
+		$int8 = calc($int8 + 1);
+	}
+	$int11 = calc($int11 + 34);
+	$int10 = 6;
+	$int8 = 0;
+	$int9 = calc($int9 + 1);
+}

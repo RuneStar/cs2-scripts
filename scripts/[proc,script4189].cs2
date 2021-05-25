@@ -3,8 +3,8 @@
 def_string $string0 = "#";
 if (cc_find($component0, $comsubid1) = ^true) {
 	if (%var3010 = null) {
-		cc_settext(append($string0, ~script4192(struct_param($struct2, param_1230))));
+		cc_settext(append($string0, ~colour_to_string(struct_param($struct2, param_1230))));
 	} else {
-		cc_settext(append($string0, ~script4192(%var3010)));
+		cc_settext(append($string0, ~colour_to_string(%var3010)));
 	}
 }

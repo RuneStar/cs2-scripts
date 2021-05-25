@@ -1,6 +1,6 @@
 // 652
 [clientscript,poh_add_room_op](component $component0, int $comsubid1)
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 $component0 = if_getlayer($component0);
 if ($component0 = null) {
 	return;

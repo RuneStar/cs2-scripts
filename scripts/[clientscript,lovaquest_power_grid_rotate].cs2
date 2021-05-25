@@ -8,7 +8,7 @@ if ($opindex0 = 1) {
 } else {
 	return;
 }
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 def_int $int4 = ~lovaquest_power_grid_getslot($comsubid2);
 def_int $int5 = calc(($int4 + $int3) % 4);
 ~lovaquest_power_grid_setslot($comsubid2, $int5);

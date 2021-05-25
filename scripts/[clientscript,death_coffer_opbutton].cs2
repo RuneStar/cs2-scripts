@@ -3,6 +3,6 @@
 if ($opindex0 ! 1) {
 	return;
 }
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 ~death_coffer_inactivebutton($component1, $string0, 1, $component2);
 if_setontimer("death_coffer_resetbutton(calc(clientclock + 40), $component1, $string0, $component2)", $component1);

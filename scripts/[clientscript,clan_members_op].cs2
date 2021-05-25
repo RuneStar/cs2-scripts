@@ -1,0 +1,16 @@
+// 4234
+[clientscript,clan_members_op](int $opindex0, component $component1, int $comsubid2, int $int3, int $int4, string $string0)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans(200);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	cc_setonop(null);
+	cc_setontimer("clan_members_buttonreset(calc(clientclock + 20), event_com, event_comsubid, $int3, $int4, $string0)");
+}
+if ($int4 = 5) {
+	~openurl_raw(append("https://secure.runescape.com/m=hiscore_oldschool/hiscorepersonal?user1=", $string0), true, true);
+}

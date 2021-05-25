@@ -7,7 +7,7 @@ if ($int1 = 1) {
 	$bool3 = %varbit3357;
 }
 if ($bool3 = $bool2) {
-	if_setonop("tol_pressure_valveop(event_opindex, synth_3436)", $component0);
+	if_setonop("tol_pressure_valveop(event_opindex, tol_valve)", $component0);
 } else {
-	if_setonop("tol_pressure_valveop(event_opindex, synth_2402)", $component0);
+	if_setonop("tol_pressure_valveop(event_opindex, locked)", $component0);
 }

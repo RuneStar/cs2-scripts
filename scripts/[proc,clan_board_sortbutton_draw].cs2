@@ -1,0 +1,40 @@
+// 4364
+[proc,clan_board_sortbutton_draw](component $component0, string $string0, int $int1, int $int2)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string0);
+cc_create($component0, ^iftype_graphic, 1);
+cc_setsize(7, 5, ^setsize_abs, ^setsize_abs);
+cc_setposition(calc(parawidth($string0, if_getwidth($component0), p12_full) / 2 + 9), 0, ^setpos_abs_centre, ^setpos_abs_centre);
+if (%varcint453 = $int2) {
+	cc_setgraphic("sortarrows,1");
+	cc_settrans(0);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("cc_settrans(event_com, cc_getid, 120, null)", $component0);
+	}
+	if_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)", $component0);
+	if_setonclick("clan_board_clicksort($int1)", $component0);
+} else if (%varcint453 = $int1) {
+	cc_setgraphic("sortarrows,0");
+	cc_settrans(0);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("cc_settrans(event_com, cc_getid, 120, null)", $component0);
+	}
+	if_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)", $component0);
+	if_setonclick("clan_board_clicksort($int2)", $component0);
+} else {
+	cc_setgraphic("sortarrows,0");
+	cc_settrans(100);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("cc_settrans(event_com, cc_getid, 200, null)", $component0);
+	}
+	if_setonmouseleave("cc_settrans(event_com, cc_getid, 100, null)", $component0);
+	if_setonclick("clan_board_clicksort($int1)", $component0);
+}
+if_sethide(false, $component0);

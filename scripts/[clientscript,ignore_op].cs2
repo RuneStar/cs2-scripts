@@ -1,6 +1,6 @@
 // 130
 [clientscript,ignore_op](int $opindex0, string $opbase0, component $component1, int $comsubid2, int $comsubid3, string $string1, string $text2)
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 if ($opindex0 = 1) {
 	ignore_del(removetags($opbase0));
 } else if ($opindex0 = 10 & $component1 ! null & cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {

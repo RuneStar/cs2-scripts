@@ -1,0 +1,13 @@
+// 4369
+[clientscript,clan_board_filterop](component $component0, int $comsubid1, int $int2, int $int3, int $int4, int $int5)
+if (cc_find($component0, $comsubid1) = ^true) {
+	sound_synth(interface_select1, 1, 0);
+	cc_settrans($int3);
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+	cc_setonop(null);
+	cc_setontimer("clan_board_filterreset(calc(clientclock + 80), event_com, event_comsubid, $int2, $int3, $int4, $int5)");
+}
+if (cc_find($component0, $int2) = ^true) {
+	cc_resume_pausebutton;
+}

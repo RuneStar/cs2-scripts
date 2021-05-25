@@ -4,5 +4,5 @@ if ($opindex0 ! 1) {
 	return;
 }
 ~ge_offers_bigbutton($component1, $string0, 1);
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 if_setontimer("ge_offers_bigbutton_reset($component1, $string0, calc(clientclock + 20))", $component1);

@@ -4,7 +4,7 @@ if ($opindex0 ! 1) {
 	return;
 }
 if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 	%varbit619 = calc(1 - %varbit619);
 	~kourend_sidepanel_hudtoggle($component1, $component4);
 }

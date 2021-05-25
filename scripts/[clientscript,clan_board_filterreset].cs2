@@ -1,0 +1,5 @@
+// 4370
+[clientscript,clan_board_filterreset](int $clock0, component $component1, int $comsubid2, int $int3, int $int4, int $int5, int $int6)
+if (clientclock >= $clock0 & cc_find($component1, $comsubid2) = ^true) {
+	~script4368($int4, $int5, $int6, $int3);
+}

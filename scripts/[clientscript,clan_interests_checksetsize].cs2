@@ -1,0 +1,6 @@
+// 4265
+[clientscript,clan_interests_checksetsize](component $component0, int $int1, int $int2, int $height3)
+def_int $height4 = if_getheight($component0);
+if ($height4 ! $height3) {
+	~clan_interests_setsize($int1, $int2, $height4);
+}

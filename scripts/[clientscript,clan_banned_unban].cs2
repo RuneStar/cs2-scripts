@@ -1,0 +1,6 @@
+// 4278
+[clientscript,clan_banned_unban](int $clock0, component $component1, string $string0)
+if (clientclock >= $clock0) {
+	resume_stringdialog($string0);
+	if_setontimer(null, $component1);
+}

@@ -1,6 +1,6 @@
 // 2109
 [clientscript,ds2_fossil_map_stuck](int $opindex0, int $flags1)
 if (testbit($flags1, $opindex0) = ^true) {
-	sound_synth(synth_2268, 1, 0);
+	sound_synth(interface_wrong, 1, 0);
 	mes("That piece is stuck.");
 }

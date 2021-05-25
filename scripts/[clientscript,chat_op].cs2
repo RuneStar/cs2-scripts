@@ -11,7 +11,7 @@ switch_int ($opindex0) {
 	case 9 :
 		if ($chattype1 = 41) {
 			if (activeclanchannel_find_affined(0) = true) {
-				~script4401(7, -1, $string1, activeclanchannel_getuserslot($string1));
+				~clan_sidepanel_op(7, -1, $string1, activeclanchannel_getuserslot($string1));
 			} else {
 				mes("The game cannot process your Kick request now. Please reconnect to the clan's channel.");
 			}
@@ -21,7 +21,7 @@ switch_int ($opindex0) {
 	case 10 :
 		if ($chattype1 = 41) {
 			if (activeclanchannel_find_affined(0) = true) {
-				~script4401(8, -1, $string1, activeclanchannel_getuserslot($string1));
+				~clan_sidepanel_op(8, -1, $string1, activeclanchannel_getuserslot($string1));
 			} else {
 				mes("The game cannot process your Ban request now. Please reconnect to the clan's channel.");
 			}

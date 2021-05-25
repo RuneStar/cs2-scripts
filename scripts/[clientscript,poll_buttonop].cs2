@@ -1,7 +1,7 @@
 // 608
 [clientscript,poll_buttonop](component $component0, component $component1, string $string0, int $comsubid2, int $comsubid3)
 if_resume_pausebutton($component1);
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 if (cc_find($component0, $comsubid2) = ^true & .cc_find($component0, $comsubid3) = ^true) {
 	cc_setgraphic("combatboxesmed,1");
 	.cc_setcolour(^white);

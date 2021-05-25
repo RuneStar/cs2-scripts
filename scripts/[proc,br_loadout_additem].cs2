@@ -9,7 +9,7 @@ def_int $size9 = inv_size(inv);
 while ($size8 < $size9) {
 	$int7 = calc(($int2 + $size8) % $size9);
 	if (enum(int, namedobj, enum_2630, ~br_loadout_get_inv($int7)) = null) {
-		sound_synth(synth_2266, 1, 0);
+		sound_synth(interface_select1, 1, 0);
 		~br_loadout_set_inv($int7, $comsubid0);
 		~br_loadout_drawloadout($component3, $component4, $drop5, $component6);
 		return;

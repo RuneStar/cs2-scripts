@@ -1,7 +1,7 @@
 // 3452
 [clientscript,deathkeep_opitem](component $component0, int $comsubid1, string $mes0)
 if (cc_find($component0, $comsubid1) = ^true) {
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 	mes($mes0);
 	cc_settrans(100);
 	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 10))");

@@ -6,7 +6,7 @@ if (~keypress_permit(-1, 595) = 0) {
 if (%varcint190 = 1 & cc_find($component2, $comsubid3) = ^true & .cc_find($component2, $comsubid4) = ^true) {
 	if ($key0 = ^key_return) {
 		if ($coord5 ! null) {
-			sound_synth(synth_2266, 1, 0);
+			sound_synth(interface_select1, 1, 0);
 			worldmap_jumptodisplaycoord($coord5);
 			~worldmap_search_off($component2);
 		}
@@ -14,7 +14,7 @@ if (%varcint190 = 1 & cc_find($component2, $comsubid3) = ^true & .cc_find($compo
 		return;
 	}
 	if ($key0 = ^key_escape) {
-		sound_synth(synth_2266, 1, 0);
+		sound_synth(interface_select1, 1, 0);
 		~worldmap_search_off($component2);
 		~keyboard_hide;
 		return;

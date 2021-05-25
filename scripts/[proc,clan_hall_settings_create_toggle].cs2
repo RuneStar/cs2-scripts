@@ -1,0 +1,21 @@
+// 4332
+[proc,clan_hall_settings_create_toggle](component $component0, int $int1, int $int2, int $int3, struct $struct4)(int)
+cc_create($component0, ^iftype_rectangle, $int3);
+cc_setfill(true);
+cc_setsize(0, $int1, ^setsize_minus, ^setsize_abs);
+def_int $y5 = calc($int2 - $int1);
+if ($y5 < 0) {
+	$y5 = 0;
+}
+cc_setposition(0, $y5, ^setpos_abs_left, ^setpos_abs_top);
+cc_settrans(255);
+cc_setonop("clan_hall_settings_toggle_op($struct4, $component0, $int3)");
+cc_setop(1, "Toggle");
+$int3 = calc($int3 + 1);
+cc_create($component0, ^iftype_graphic, $int3);
+cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, calc($int2 - ($int1 / 2 + 9)), ^setpos_abs_right, ^setpos_abs_top);
+cc_setonvartransmit("script4335($component0, $int3, $struct4){var3027}");
+~clan_hall_settings_set_toggle($struct4);
+$int3 = calc($int3 + 1);
+return($int3);

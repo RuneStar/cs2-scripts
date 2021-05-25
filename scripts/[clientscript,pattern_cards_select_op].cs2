@@ -4,7 +4,7 @@ if ($opindex0 ! 1) {
 	return;
 }
 if (cc_find($component1, $comsubid2) = ^true) {
-	sound_synth(synth_3809, 1, 0);
+	sound_synth(patterns_turncard, 1, 0);
 	if (testbit(%varbit9756, $index3) = ^true) {
 		%varbit9756 = clearbit(%varbit9756, $index3);
 	} else {

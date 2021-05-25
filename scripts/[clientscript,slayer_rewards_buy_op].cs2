@@ -5,7 +5,7 @@ def_string $string0 = "Choose an item from the shop.";
 def_int $int9 = 0;
 def_int $int10 = 0;
 if ($opindex0 <= 1) {
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 	if_sethide(true, $component3);
 	if_sethide(false, $component4);
 	cc_deleteall($component6);
@@ -38,6 +38,6 @@ if ($opindex0 >= 10) {
 }
 if (cc_find($component1, $comsubid2) = ^true) {
 	cc_settrans(75);
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 	cc_setontimer("slayer_rewards_buy_release($component1, $comsubid2, calc(clientclock + 10))");
 }

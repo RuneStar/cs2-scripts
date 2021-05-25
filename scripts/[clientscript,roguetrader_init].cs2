@@ -1,0 +1,10 @@
+// 4162
+[clientscript,roguetrader_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+def_int $int8 = %varbit12163;
+def_int $int9 = %varbit12161;
+~roguetrader_game_size($component6, $component5, $int8);
+~roguetrader_draw_frames($component2, $component3, $component4, $int8);
+~roguetrader_draw_runes($int8, $component0);
+~roguetrader_draw_game($int8, $int9, $component1, $component7);
+if_setonvartransmit("roguetrader_selectrune_transmit($int8, $component0){var540}", $component0);
+if_setonvartransmit("roguetrader_draw_game_transmit($int8, $int9, $component1, $component7){var261, var262, var263, var264, var265, var266, var2980, var2981, var2982, var2983, var2984, var540}", $component1);

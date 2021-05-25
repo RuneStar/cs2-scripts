@@ -1,0 +1,14 @@
+// 4409
+[proc,clan_events_setsize](component $component0, component $component1, component $component2, component $component3, int $height4, int $height5)
+def_int $height6 = ~min(calc($height5 - 10), calc($height4 + 30 + 4 + 4 + 50));
+if_setsize(if_getwidth($component1), $height6, ^setsize_abs, ^setsize_abs, $component1);
+def_int $height7 = if_getheight($component2);
+if ($height4 > $height7) {
+	if_setscrollsize(0, $height4, $component2);
+	~scrollbar_resize($component3, $component2, ~max(0, ~min(calc($height4 - $height7), if_getscrolly($component2))));
+} else {
+	if_setscrollpos(0, 0, $component2);
+	if_setscrollsize(0, 0, $component2);
+	~scrollbar_resize($component3, $component2, 0);
+}
+if_setontimer("clan_events_checksize($component0, $component1, $component2, $component3, $height4, $height5)", $component0);

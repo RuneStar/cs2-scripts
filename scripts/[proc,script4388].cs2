@@ -17,7 +17,7 @@ if ($component0 = $component1) {
 	$string0, $string1 = "Combat: XXXX+", "<col=9f9f9f>Loading...</col>";
 	$int4 = ~max(parawidth($string0, 512, p12_full), parawidth($string1, 512, p12_full));
 	if (clanprofile_find = true) {
-		$int5 = ~script4158(%varclan4, 0, 6);
+		$int5 = ~getbit_range(%varclan4, 0, 6);
 		if ($int5 >= 126) {
 			$string0 = "Combat: <tostring($int5)>";
 		} else if ($int5 > 0) {
@@ -35,7 +35,7 @@ if ($component0 = $component1) {
 	$string0, $string1 = "Skill total: XXXXX+", "<col=9f9f9f>Loading...</col>";
 	$int4 = ~max(parawidth($string0, 512, p12_full), parawidth($string1, 512, p12_full));
 	if (clanprofile_find = true) {
-		$int5 = ~script4158(%varclan4, 7, 18);
+		$int5 = ~getbit_range(%varclan4, 7, 18);
 		if ($int5 >= calc(23 * 99)) {
 			$string0 = "Skill total: <~tostring_spacer($int5, ",")>";
 		} else if ($int5 > 0) {

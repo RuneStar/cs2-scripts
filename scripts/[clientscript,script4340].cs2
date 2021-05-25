@@ -1,6 +1,6 @@
 // 4340
 [clientscript,script4340](component $component0, int $comsubid1, struct $struct2, int $comsubid3)
-def_int $int4 = ~script4333($struct2);
+def_int $int4 = ~clan_hall_settings_get_value($struct2);
 if (cc_find($component0, $comsubid1) = ^true) {
 	if ($int4 = 0) {
 		cc_setcolour(0x808080);

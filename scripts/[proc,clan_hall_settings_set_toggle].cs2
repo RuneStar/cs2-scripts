@@ -1,0 +1,7 @@
+// 4336
+[proc,clan_hall_settings_set_toggle](struct $struct0)
+if (~clan_hall_settings_get_value($struct0) = 1) {
+	cc_setgraphic("toggle_box,3");
+} else {
+	cc_setgraphic("toggle_box,2");
+}

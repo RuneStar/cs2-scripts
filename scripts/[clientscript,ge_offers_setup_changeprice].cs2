@@ -8,12 +8,12 @@ if ($int0 = 1) {
 	if (%varbit4398 < ^max_32bit_int) {
 		%varbit4398 = calc(%varbit4398 + 1);
 	}
-	sound_synth(synth_3929, 1, 0);
+	sound_synth(ge_up_amount, 1, 0);
 } else if ($int0 = -1) {
 	if (%varbit4398 > 1) {
 		%varbit4398 = calc(%varbit4398 - 1);
 	}
-	sound_synth(synth_3930, 1, 0);
+	sound_synth(ge_down_amount, 1, 0);
 } else if ($int0 = 5) {
 	$int17 = calc(%varbit4398 / 20);
 	if ($int17 <= 0) {
@@ -24,7 +24,7 @@ if ($int0 = 1) {
 	} else {
 		%varbit4398 = calc(%varbit4398 + $int17);
 	}
-	sound_synth(synth_3929, 1, 0);
+	sound_synth(ge_up_amount, 1, 0);
 } else if ($int0 = -5) {
 	$int17 = calc(%varbit4398 / 20);
 	if ($int17 <= 0) {
@@ -35,6 +35,6 @@ if ($int0 = 1) {
 	} else {
 		%varbit4398 = calc(%varbit4398 - $int17);
 	}
-	sound_synth(synth_3930, 1, 0);
+	sound_synth(ge_down_amount, 1, 0);
 }
 ~ge_offers_setup_draw($component2, $comsubid3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $comsubid12, $comsubid13, $comsubid14, $component15, $comsubid16);

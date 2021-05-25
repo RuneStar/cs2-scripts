@@ -3,7 +3,7 @@
 if ($opindex0 ! 1 | $index3 < 0 | $index3 >= 32) {
 	return;
 }
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 if (testbit(%var92, $index3) = ^true) {
 	%var92 = clearbit(%var92, $index3);
 } else {

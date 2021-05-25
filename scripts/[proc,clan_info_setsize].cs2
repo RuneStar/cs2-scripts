@@ -1,0 +1,16 @@
+// 4291
+[proc,clan_info_setsize](int $int0, int $int1, int $height2)
+def_int $int3 = ~min(calc($height2 - 10), ~max(calc(50 + $int0 + $int1 + 4), 319));
+if_setsize(if_getwidth(interface_690:1), $int3, ^setsize_abs, ^setsize_abs, interface_690:1);
+def_int $int4 = calc($int3 - (50 + $int0));
+if_setsize(0, $int4, ^setsize_minus, ^setsize_abs, interface_690:9);
+$int4 = calc($int4 - 4);
+if ($int1 > $int4) {
+	if_setscrollsize(0, $int1, interface_690:10);
+	~scrollbar_resize(interface_690:17, interface_690:10, ~min(calc($int1 - $int4), ~max(0, %varcint63)));
+} else {
+	if_setscrollpos(0, 0, interface_690:10);
+	if_setscrollsize(0, 0, interface_690:10);
+	~scrollbar_resize(interface_690:17, interface_690:10, 0);
+}
+if_setontimer("clan_info_checksize($int0, $int1, $height2)", interface_690:0);

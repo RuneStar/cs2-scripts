@@ -28,13 +28,13 @@ if (~pvpw_check = 1) {
 	if_sethide(true, interface_90:1);
 } else if (%varbit5314 = 1) {
 	if (%varbit5320 > 0 & %varbit5316 > 0) {
-		if_sethide(false, temple_screen:1);
-		_2125(2, temple_screen:1);
-		if_setontimer("br_fogcolour", temple_screen:1);
+		if_sethide(false, interface_328:1);
+		_2125(2, interface_328:1);
+		if_setontimer("br_fogcolour", interface_328:1);
 		~br_fogcolour;
 	} else {
-		if_setontimer(null, temple_screen:1);
-		if_sethide(true, temple_screen:1);
+		if_setontimer(null, interface_328:1);
+		if_sethide(true, interface_328:1);
 	}
 	~script866(true);
 } else if ($int7 = 1) {

@@ -1,0 +1,81 @@
+// 4275
+[proc,clan_banned_populatedisplay](int $int0, component $component1, component $component2, component $component3, int $int4, int $int5, int $int6)(int)
+def_string $string0 = "";
+def_int $int7 = -1;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
+if (~clan_members_searching = 1) {
+	$int13 = string_length(~bankmain_filterstring);
+}
+def_int $index14 = -1;
+def_boolean $boolean15 = ~on_mobile;
+def_int $int16 = 0;
+while ($int16 < 500) {
+	if (cc_find($component1, $int16) = ^true & .cc_find($component1, calc($int16 + 500)) = ^true) {
+		if ($int16 < $int0) {
+			$string0 = activeclansettings_getbanneddisplayname($int16);
+			$int7 = ~script4246($string0);
+			if ($int7 ! -1) {
+				cc_sethide(false);
+				.cc_sethide(false);
+				$int9, $int10 = calc($int8 / 3), calc($int8 % 3);
+				$int11 = calc($int6 * $int9);
+				if ($int10 = 0) {
+					cc_setposition(0, $int11, ^setpos_abs_left, ^setpos_abs_top);
+					.cc_setposition(0, $int11, ^setpos_abs_left, ^setpos_abs_top);
+				} else if ($int10 = 1) {
+					cc_setposition(0, $int11, ^setpos_abs_centre, ^setpos_abs_top);
+					.cc_setposition(0, $int11, ^setpos_abs_centre, ^setpos_abs_top);
+				} else {
+					cc_setposition(0, $int11, ^setpos_abs_right, ^setpos_abs_top);
+					.cc_setposition(0, $int11, ^setpos_abs_right, ^setpos_abs_top);
+				}
+				cc_setopbase("<col=ff9040><$string0></col>");
+				$int12 = string_length($string0);
+				if ($int7 < $int12) {
+					$index14 = ~min($int12, calc($int7 + $int13));
+					.cc_settext(append(append(substring($string0, 0, $int7), "<col=ffffff><substring($string0, $int7, $index14)></col>"), substring($string0, $index14, $int12)));
+				} else {
+					.cc_settext($string0);
+				}
+				if (calc($int9 % 2) = 0) {
+					cc_settrans(255);
+				} else {
+					cc_settrans(245);
+				}
+				if ($boolean15 = false) {
+					cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, cc_gettrans)");
+				}
+				cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, cc_gettrans)");
+				cc_setonop("clan_banned_op(event_opindex, event_com, event_comsubid, cc_gettrans, $string0, $component3, $int4, $int5)");
+				cc_setontimer(null);
+				$int8 = calc($int8 + 1);
+			} else {
+				cc_sethide(true);
+				.cc_sethide(true);
+				cc_setontimer(null);
+			}
+		} else {
+			cc_sethide(true);
+			.cc_sethide(true);
+			cc_setontimer(null);
+		}
+	}
+	$int16 = calc($int16 + 1);
+}
+if ($int8 > 0) {
+	if (cc_find($component1, calc(500 * 2)) = ^true) {
+		cc_sethide(true);
+		cc_settext("");
+	}
+	return(calc($int11 + $int6));
+}
+if (cc_find($component1, calc(500 * 2)) = ^true) {
+	cc_sethide(false);
+	cc_settext("No entries match the current filter.");
+}
+return(0);

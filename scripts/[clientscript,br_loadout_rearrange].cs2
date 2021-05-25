@@ -38,7 +38,7 @@ if ($int14 = -1) {
 	return;
 }
 if ($drop2 = $drop7) {
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 	if ($int12 = 1) {
 		~br_loadout_set_inv($int14, 0);
 	} else {
@@ -63,7 +63,7 @@ def_namedobj $namedobj18 = enum(int, namedobj, enum_2630, $int17);
 if ($namedobj18 ! null & $int12 = 0 & oc_param($namedobj18, param_850) ! $int14) {
 	return;
 }
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 if ($int13 = 1) {
 	~br_loadout_set_inv($int15, $int4);
 } else {

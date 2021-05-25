@@ -1,0 +1,5 @@
+// 4366
+[clientscript,clan_board_filterupdate](component $component0, int $comsubid1, int $index2)
+if (.cc_find($component0, $comsubid1) = ^true) {
+	~clan_board_filterupdate($index2);
+}

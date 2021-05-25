@@ -1,0 +1,23 @@
+// 4308
+[proc,clan_ranktitles_setsize](int $int0, int $int1, component $component2, component $component3, int $int4, int $int5, component $component6, component $component7, int $int8, component $component9, int $height10)
+def_int $int11 = ~min(calc($height10 - 10), $int8);
+if_setsize(if_getwidth($component9), $int11, ^setsize_abs, ^setsize_abs, $component9);
+def_int $int12 = calc($int11 - $int1);
+if ($int0 > $int12) {
+	if_setscrollsize(0, $int0, $component2);
+	~scrollbar_resize($component3, $component2, %varcint179);
+} else {
+	if_setscrollsize(0, 0, $component2);
+	~scrollbar_resize($component3, $component2, 0);
+	%varcint179 = 0;
+}
+$int12 = calc($int11 - $int5);
+if ($int4 > $int12) {
+	if_setscrollsize(0, $int4, $component6);
+	~scrollbar_resize($component7, $component6, %varcint63);
+} else {
+	if_setscrollsize(0, 0, $component6);
+	~scrollbar_resize($component7, $component6, 0);
+	%varcint63 = 0;
+}
+if_setontimer("clan_ranktitles_checksize($int0, $int1, $component2, $component3, $int4, $int5, $component6, $component7, $int8, $component9, $height10)", $component9);

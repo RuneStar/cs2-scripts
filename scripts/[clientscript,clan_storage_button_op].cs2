@@ -1,0 +1,9 @@
+// 4350
+[clientscript,clan_storage_button_op](int $opindex0, string $string0, component $component1)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+~clan_storage_button_draw($string0, $component1, 1);
+if_setontimer("clan_storage_button_reset(calc(clientclock + 30), $string0, $component1)", $component1);
+if_setonop(null, $component1);

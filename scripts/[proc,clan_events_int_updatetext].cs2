@@ -1,0 +1,11 @@
+// 4421
+[proc,clan_events_int_updatetext](enum $enum0)
+def_string $text0 = "";
+if ($enum0 = enum_3814) {
+	$text0 = fromdate(~script4422($enum0));
+} else if ($enum0 = enum_3816) {
+	$text0 = ~current_date_time(0, ~script4422($enum0));
+} else {
+	$text0 = tostring(~script4422($enum0));
+}
+cc_settext($text0);

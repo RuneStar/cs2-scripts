@@ -62,7 +62,7 @@ if (activeclansettings_find_affined(0) = true & activeclanchannel_find_affined(0
 	if ($clanslot17 ! -1) {
 		$int18 = activeclanchannel_getuserrank($clanslot17);
 	}
-	$int19, $int20 = activeclanchannel_getrankkick, ~script4456(struct_2956);
+	$int19, $int20 = activeclanchannel_getrankkick, ~clan_permission_get(ban_from_chat_2956);
 }
 while ($mesuid10 ! -1 & $component9 ! null) {
 	$chattype11, $int12, $string12, $string13, $string14, $int15 = chat_gethistory_byuid($mesuid10);

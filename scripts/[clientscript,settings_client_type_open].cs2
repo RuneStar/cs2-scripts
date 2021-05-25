@@ -1,6 +1,6 @@
 // 441
 [clientscript,settings_client_type_open](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $layer6)
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 if_sethide(true, $component5);
 ~deltooltip_action($component5);
 ~xpdrops_setup_display_hoverdisable($component0);
@@ -69,4 +69,4 @@ if ($height12 > $height17) {
 }
 cc_deleteall($component4);
 ~scrollbar_vertical($component4, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if_setonclick("script448($component2, $component5, $component0, $component1)", $component2);
+if_setonclick("settings_client_type_dropdown_close($component2, $component5, $component0, $component1)", $component2);

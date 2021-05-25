@@ -1,0 +1,11 @@
+// 4233
+[clientscript,clan_members_hover](boolean $boolean0, component $component1, int $comsubid2, int $trans3)
+if (cc_find($component1, $comsubid2) = ^true) {
+	if ($boolean0 = true) {
+		cc_settrans(225);
+		cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans3, calc(clientclock + 2))");
+	} else {
+		cc_settrans($trans3);
+		cc_setontimer(null);
+	}
+}

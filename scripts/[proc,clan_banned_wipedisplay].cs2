@@ -1,0 +1,13 @@
+// 4274
+[proc,clan_banned_wipedisplay](string $text0, component $component0, component $component1)
+def_int $int2 = calc(2 * 500);
+if (cc_find($component0, $int2) = ^true) {
+	cc_sethide(false);
+	cc_settext($text0);
+}
+while ($int2 > 0) {
+	$int2 = calc($int2 - 1);
+	if (cc_find($component0, $int2) = ^true) {
+		cc_sethide(true);
+	}
+}

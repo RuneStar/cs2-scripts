@@ -1,0 +1,10 @@
+// 4402
+[clientscript,clan_sidepanel_refresh_init](component $component0)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(17, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("options_icons_small,10");
+~clan_sidepanel_refresh_reset($component0);
+if_setop(1, "Refresh", $component0);
+if_setonop("clan_sidepanel_refresh_op(event_opindex, event_com, cc_getid)", $component0);

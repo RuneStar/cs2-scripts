@@ -448,7 +448,7 @@
 [**445**](scripts/[proc,script445].cs2)  
 [**446**](scripts/[clientscript,orbs_update_health].cs2) `[clientscript,orbs_update_health]`  
 [**447**](scripts/[clientscript,orbs_update_runenergy].cs2) `[clientscript,orbs_update_runenergy]`  
-[**448**](scripts/[clientscript,script448].cs2)  
+[**448**](scripts/[clientscript,settings_client_type_dropdown_close].cs2) `[clientscript,settings_client_type_dropdown_close]`  
 [**449**](scripts/[proc,orbs_update].cs2) `[proc,orbs_update]`  
 [**450**](scripts/[clientscript,script450].cs2)  
 [**451**](scripts/[proc,high_risk_world].cs2) `[proc,high_risk_world]`  
@@ -527,7 +527,7 @@
 [**524**](scripts/[proc,script524].cs2)  
 [**525**](scripts/[proc,script525].cs2)  
 [**526**](scripts/[clientscript,tooltip_mouserepeat].cs2) `[clientscript,tooltip_mouserepeat]`  
-[**527**](scripts/[proc,script527].cs2)  
+[**527**](scripts/[proc,settings_client_type_dropdown_close].cs2) `[proc,settings_client_type_dropdown_close]`  
 [**528**](scripts/[clientscript,script528].cs2)  
 [**529**](scripts/[clientscript,script529].cs2)  
 [**530**](scripts/[proc,script530].cs2)  
@@ -4155,28 +4155,28 @@
 [**4155**](scripts/[clientscript,script4155].cs2)  
 [**4156**](scripts/[clientscript,script4156].cs2)  
 [**4157**](scripts/[proc,script4157].cs2)  
-[**4158**](scripts/[proc,script4158].cs2)  
-[**4159**](scripts/[proc,script4159].cs2)  
-[**4160**](scripts/[proc,script4160].cs2)  
-[**4161**](scripts/[proc,script4161].cs2)  
-[**4162**](scripts/[clientscript,script4162].cs2)  
-[**4163**](scripts/[proc,script4163].cs2)  
-[**4164**](scripts/[proc,script4164].cs2)  
-[**4165**](scripts/[proc,script4165].cs2)  
-[**4166**](scripts/[clientscript,script4166].cs2)  
-[**4167**](scripts/[clientscript,script4167].cs2)  
-[**4168**](scripts/[proc,script4168].cs2)  
+[**4158**](scripts/[proc,getbit_range].cs2) `[proc,getbit_range]`  
+[**4159**](scripts/[proc,setbit_range].cs2) `[proc,setbit_range]`  
+[**4160**](scripts/[proc,clearbit_range].cs2) `[proc,clearbit_range]`  
+[**4161**](scripts/[proc,setbit_range_toint].cs2) `[proc,setbit_range_toint]`  
+[**4162**](scripts/[clientscript,roguetrader_init].cs2) `[clientscript,roguetrader_init]`  
+[**4163**](scripts/[proc,roguetrader_game_size].cs2) `[proc,roguetrader_game_size]`  
+[**4164**](scripts/[proc,roguetrader_draw_frames].cs2) `[proc,roguetrader_draw_frames]`  
+[**4165**](scripts/[proc,roguetrader_draw_runes].cs2) `[proc,roguetrader_draw_runes]`  
+[**4166**](scripts/[clientscript,roguetrader_selectrune_transmit].cs2) `[clientscript,roguetrader_selectrune_transmit]`  
+[**4167**](scripts/[clientscript,roguetrader_selectrune].cs2) `[clientscript,roguetrader_selectrune]`  
+[**4168**](scripts/[proc,roguetrader_draw_game].cs2) `[proc,roguetrader_draw_game]`  
 [**4169**](scripts/[clientscript,script4169].cs2)  
-[**4170**](scripts/[clientscript,script4170].cs2)  
-[**4171**](scripts/[clientscript,script4171].cs2)  
+[**4170**](scripts/[clientscript,roguetrader_draw_game_transmit].cs2) `[clientscript,roguetrader_draw_game_transmit]`  
+[**4171**](scripts/[clientscript,roguetrader_placerune].cs2) `[clientscript,roguetrader_placerune]`  
 [**4172**](scripts/[clientscript,script4172].cs2)  
 [**4173**](scripts/[proc,script4173].cs2)  
-[**4174**](scripts/[proc,script4174].cs2)  
-[**4175**](scripts/[proc,script4175].cs2)  
+[**4174**](scripts/[proc,roguetrader_tile_get].cs2) `[proc,roguetrader_tile_get]`  
+[**4175**](scripts/[proc,roguetrader_tile_set].cs2) `[proc,roguetrader_tile_set]`  
 [**4176**](scripts/[clientscript,script4176].cs2)  
 [**4177**](scripts/[clientscript,script4177].cs2)  
 [**4178**](scripts/[proc,script4178].cs2)  
-[**4179**](scripts/[clientscript,script4179].cs2)  
+[**4179**](scripts/[clientscript,chat_sendabusereport].cs2) `[clientscript,chat_sendabusereport]`  
 [**4180**](scripts/[proc,script4180].cs2)  
 [**4181**](scripts/[proc,script4181].cs2)  
 [**4182**](scripts/[proc,script4182].cs2)  
@@ -4189,19 +4189,19 @@
 [**4189**](scripts/[proc,script4189].cs2)  
 [**4190**](scripts/[clientscript,script4190].cs2)  
 [**4191**](scripts/[proc,script4191].cs2)  
-[**4192**](scripts/[proc,script4192].cs2)  
+[**4192**](scripts/[proc,colour_to_string].cs2) `[proc,colour_to_string]`  
 [**4193**](scripts/[proc,script4193].cs2)  
 [**4194**](scripts/[proc,script4194].cs2)  
 [**4195**](scripts/[proc,script4195].cs2)  
-[**4196**](scripts/[clientscript,script4196].cs2)  
-[**4197**](scripts/[proc,script4197].cs2)  
-[**4198**](scripts/[proc,script4198].cs2)  
-[**4199**](scripts/[proc,script4199].cs2)  
-[**4200**](scripts/[clientscript,script4200].cs2)  
-[**4201**](scripts/[proc,script4201].cs2)  
+[**4196**](scripts/[clientscript,audio_tool].cs2) `[clientscript,audio_tool]`  
+[**4197**](scripts/[proc,audio_draw_menu].cs2) `[proc,audio_draw_menu]`  
+[**4198**](scripts/[proc,audio_menu].cs2) `[proc,audio_menu]`  
+[**4199**](scripts/[proc,audio_menu_createentry_indexed].cs2) `[proc,audio_menu_createentry_indexed]`  
+[**4200**](scripts/[clientscript,audio_category_select].cs2) `[clientscript,audio_category_select]`  
+[**4201**](scripts/[proc,audio_category_select].cs2) `[proc,audio_category_select]`  
 [**4202**](scripts/[proc,script4202].cs2)  
-[**4203**](scripts/[clientscript,script4203].cs2)  
-[**4204**](scripts/[clientscript,script4204].cs2)  
+[**4203**](scripts/[clientscript,audio_synth_play].cs2) `[clientscript,audio_synth_play]`  
+[**4204**](scripts/[clientscript,audio_loop_click].cs2) `[clientscript,audio_loop_click]`  
 [**4205**](scripts/[proc,script4205].cs2)  
 [**4206**](scripts/[proc,script4206].cs2)  
 [**4207**](scripts/[clientscript,script4207].cs2)  
@@ -4220,19 +4220,19 @@
 [**4220**](scripts/[clientscript,script4220].cs2)  
 [**4221**](scripts/[clientscript,script4221].cs2)  
 [**4222**](scripts/[clientscript,script4222].cs2)  
-[**4223**](scripts/[clientscript,script4223].cs2)  
+[**4223**](scripts/[clientscript,clan_members_init].cs2) `[clientscript,clan_members_init]`  
 [**4224**](scripts/[proc,script4224].cs2)  
 [**4225**](scripts/[clientscript,script4225].cs2)  
 [**4226**](scripts/[clientscript,script4226].cs2)  
 [**4227**](scripts/[clientscript,script4227].cs2)  
 [**4228**](scripts/[proc,script4228].cs2)  
-[**4229**](scripts/[proc,script4229].cs2)  
-[**4230**](scripts/[clientscript,script4230].cs2)  
-[**4231**](scripts/[clientscript,script4231].cs2)  
-[**4232**](scripts/[proc,script4232].cs2)  
-[**4233**](scripts/[clientscript,script4233].cs2)  
-[**4234**](scripts/[clientscript,script4234].cs2)  
-[**4235**](scripts/[clientscript,script4235].cs2)  
+[**4229**](scripts/[proc,clan_members_setsize].cs2) `[proc,clan_members_setsize]`  
+[**4230**](scripts/[clientscript,clan_members_checksize].cs2) `[clientscript,clan_members_checksize]`  
+[**4231**](scripts/[clientscript,clan_members_draw].cs2) `[clientscript,clan_members_draw]`  
+[**4232**](scripts/[proc,clan_members_draw].cs2) `[proc,clan_members_draw]`  
+[**4233**](scripts/[clientscript,clan_members_hover].cs2) `[clientscript,clan_members_hover]`  
+[**4234**](scripts/[clientscript,clan_members_op].cs2) `[clientscript,clan_members_op]`  
+[**4235**](scripts/[clientscript,clan_members_buttonreset].cs2) `[clientscript,clan_members_buttonreset]`  
 [**4236**](scripts/[proc,script4236].cs2)  
 [**4237**](scripts/[proc,script4237].cs2)  
 [**4238**](scripts/[clientscript,script4238].cs2)  
@@ -4242,7 +4242,7 @@
 [**4242**](scripts/[clientscript,script4242].cs2)  
 [**4243**](scripts/[clientscript,script4243].cs2)  
 [**4244**](scripts/[clientscript,script4244].cs2)  
-[**4245**](scripts/[proc,script4245].cs2)  
+[**4245**](scripts/[proc,clan_members_searching].cs2) `[proc,clan_members_searching]`  
 [**4246**](scripts/[proc,script4246].cs2)  
 [**4247**](scripts/[proc,script4247].cs2)  
 [**4248**](scripts/[clientscript,script4248].cs2)  
@@ -4260,62 +4260,62 @@
 [**4260**](scripts/[clientscript,script4260].cs2)  
 [**4261**](scripts/[proc,script4261].cs2)  
 [**4262**](scripts/[proc,script4262].cs2)  
-[**4263**](scripts/[clientscript,script4263].cs2)  
-[**4264**](scripts/[proc,script4264].cs2)  
-[**4265**](scripts/[clientscript,script4265].cs2)  
-[**4266**](scripts/[clientscript,script4266].cs2)  
-[**4267**](scripts/[proc,script4267].cs2)  
-[**4268**](scripts/[clientscript,script4268].cs2)  
-[**4269**](scripts/[clientscript,script4269].cs2)  
-[**4270**](scripts/[clientscript,script4270].cs2)  
-[**4271**](scripts/[proc,script4271].cs2)  
-[**4272**](scripts/[proc,script4272].cs2)  
-[**4273**](scripts/[clientscript,script4273].cs2)  
-[**4274**](scripts/[proc,script4274].cs2)  
-[**4275**](scripts/[proc,script4275].cs2)  
-[**4276**](scripts/[clientscript,script4276].cs2)  
-[**4277**](scripts/[clientscript,script4277].cs2)  
-[**4278**](scripts/[clientscript,script4278].cs2)  
-[**4279**](scripts/[clientscript,script4279].cs2)  
-[**4280**](scripts/[proc,script4280].cs2)  
-[**4281**](scripts/[proc,script4281].cs2)  
-[**4282**](scripts/[clientscript,script4282].cs2)  
-[**4283**](scripts/[clientscript,script4283].cs2)  
-[**4284**](scripts/[clientscript,script4284].cs2)  
-[**4285**](scripts/[clientscript,script4285].cs2)  
-[**4286**](scripts/[proc,script4286].cs2)  
+[**4263**](scripts/[clientscript,clan_interests].cs2) `[clientscript,clan_interests]`  
+[**4264**](scripts/[proc,clan_interests_setsize].cs2) `[proc,clan_interests_setsize]`  
+[**4265**](scripts/[clientscript,clan_interests_checksetsize].cs2) `[clientscript,clan_interests_checksetsize]`  
+[**4266**](scripts/[clientscript,clan_interests_synch].cs2) `[clientscript,clan_interests_synch]`  
+[**4267**](scripts/[proc,clan_interests_synch].cs2) `[proc,clan_interests_synch]`  
+[**4268**](scripts/[clientscript,clan_interests_op].cs2) `[clientscript,clan_interests_op]`  
+[**4269**](scripts/[clientscript,clan_banned_init].cs2) `[clientscript,clan_banned_init]`  
+[**4270**](scripts/[clientscript,clan_banned_draw].cs2) `[clientscript,clan_banned_draw]`  
+[**4271**](scripts/[proc,clan_banned_draw].cs2) `[proc,clan_banned_draw]`  
+[**4272**](scripts/[proc,clan_banned_setsize].cs2) `[proc,clan_banned_setsize]`  
+[**4273**](scripts/[clientscript,clan_banned_checksize].cs2) `[clientscript,clan_banned_checksize]`  
+[**4274**](scripts/[proc,clan_banned_wipedisplay].cs2) `[proc,clan_banned_wipedisplay]`  
+[**4275**](scripts/[proc,clan_banned_populatedisplay].cs2) `[proc,clan_banned_populatedisplay]`  
+[**4276**](scripts/[clientscript,clan_banned_op].cs2) `[clientscript,clan_banned_op]`  
+[**4277**](scripts/[clientscript,clan_banned_buttonreset].cs2) `[clientscript,clan_banned_buttonreset]`  
+[**4278**](scripts/[clientscript,clan_banned_unban].cs2) `[clientscript,clan_banned_unban]`  
+[**4279**](scripts/[clientscript,clan_banned_blocker].cs2) `[clientscript,clan_banned_blocker]`  
+[**4280**](scripts/[proc,clan_banned_blocker].cs2) `[proc,clan_banned_blocker]`  
+[**4281**](scripts/[proc,clan_banned_search_setbutton].cs2) `[proc,clan_banned_search_setbutton]`  
+[**4282**](scripts/[clientscript,clan_banned_search_refresh].cs2) `[clientscript,clan_banned_search_refresh]`  
+[**4283**](scripts/[clientscript,clan_banned_search_toggle].cs2) `[clientscript,clan_banned_search_toggle]`  
+[**4284**](scripts/[clientscript,clan_info_init].cs2) `[clientscript,clan_info_init]`  
+[**4285**](scripts/[clientscript,clan_info_draw].cs2) `[clientscript,clan_info_draw]`  
+[**4286**](scripts/[proc,clan_info_draw].cs2) `[proc,clan_info_draw]`  
 [**4287**](scripts/[proc,script4287].cs2)  
 [**4288**](scripts/[proc,script4288].cs2)  
 [**4289**](scripts/[clientscript,script4289].cs2)  
-[**4290**](scripts/[clientscript,script4290].cs2)  
-[**4291**](scripts/[proc,script4291].cs2)  
-[**4292**](scripts/[clientscript,script4292].cs2)  
+[**4290**](scripts/[clientscript,clan_info_editable].cs2) `[clientscript,clan_info_editable]`  
+[**4291**](scripts/[proc,clan_info_setsize].cs2) `[proc,clan_info_setsize]`  
+[**4292**](scripts/[clientscript,clan_info_checksize].cs2) `[clientscript,clan_info_checksize]`  
 [**4293**](scripts/[proc,script4293].cs2)  
 [**4294**](scripts/[clientscript,script4294].cs2)  
 [**4295**](scripts/[clientscript,script4295].cs2)  
 [**4296**](scripts/[clientscript,script4296].cs2)  
 [**4297**](scripts/[clientscript,script4297].cs2)  
 [**4298**](scripts/[clientscript,script4298].cs2)  
-[**4299**](scripts/[proc,script4299].cs2)  
-[**4300**](scripts/[clientscript,script4300].cs2)  
-[**4301**](scripts/[proc,script4301].cs2)  
+[**4299**](scripts/[proc,clan_interfacetitle].cs2) `[proc,clan_interfacetitle]`  
+[**4300**](scripts/[clientscript,clan_interfacetitle_settitle].cs2) `[clientscript,clan_interfacetitle_settitle]`  
+[**4301**](scripts/[proc,clan_interfacetitle_settitle].cs2) `[proc,clan_interfacetitle_settitle]`  
 [**4302**](scripts/[proc,script4302].cs2)  
 [**4303**](scripts/[proc,script4303].cs2)  
 [**4304**](scripts/[proc,script4304].cs2)  
 [**4305**](scripts/[proc,script4305].cs2)  
 [**4306**](scripts/[proc,script4306].cs2)  
-[**4307**](scripts/[clientscript,script4307].cs2)  
-[**4308**](scripts/[proc,script4308].cs2)  
-[**4309**](scripts/[clientscript,script4309].cs2)  
-[**4310**](scripts/[clientscript,script4310].cs2)  
-[**4311**](scripts/[proc,script4311].cs2)  
+[**4307**](scripts/[clientscript,clan_ranktitles_init].cs2) `[clientscript,clan_ranktitles_init]`  
+[**4308**](scripts/[proc,clan_ranktitles_setsize].cs2) `[proc,clan_ranktitles_setsize]`  
+[**4309**](scripts/[clientscript,clan_ranktitles_checksize].cs2) `[clientscript,clan_ranktitles_checksize]`  
+[**4310**](scripts/[clientscript,clan_ranktitles_draw].cs2) `[clientscript,clan_ranktitles_draw]`  
+[**4311**](scripts/[proc,clan_ranktitles_draw].cs2) `[proc,clan_ranktitles_draw]`  
 [**4312**](scripts/[clientscript,script4312].cs2)  
 [**4313**](scripts/[clientscript,script4313].cs2)  
 [**4314**](scripts/[clientscript,script4314].cs2)  
 [**4315**](scripts/[clientscript,script4315].cs2)  
-[**4316**](scripts/[clientscript,script4316].cs2)  
-[**4317**](scripts/[proc,script4317].cs2)  
-[**4318**](scripts/[clientscript,script4318].cs2)  
+[**4316**](scripts/[clientscript,clan_rankpopup].cs2) `[clientscript,clan_rankpopup]`  
+[**4317**](scripts/[proc,clan_rankpopup_setsize].cs2) `[proc,clan_rankpopup_setsize]`  
+[**4318**](scripts/[clientscript,clan_rankpopup_checksize].cs2) `[clientscript,clan_rankpopup_checksize]`  
 [**4319**](scripts/[clientscript,script4319].cs2)  
 [**4320**](scripts/[proc,script4320].cs2)  
 [**4321**](scripts/[clientscript,script4321].cs2)  
@@ -4327,50 +4327,50 @@
 [**4327**](scripts/[clientscript,script4327].cs2)  
 [**4328**](scripts/[clientscript,script4328].cs2)  
 [**4329**](scripts/[proc,script4329].cs2)  
-[**4330**](scripts/[clientscript,script4330].cs2)  
+[**4330**](scripts/[clientscript,clan_hall_init].cs2) `[clientscript,clan_hall_init]`  
 [**4331**](scripts/[proc,script4331].cs2)  
-[**4332**](scripts/[proc,script4332].cs2)  
-[**4333**](scripts/[proc,script4333].cs2)  
-[**4334**](scripts/[proc,script4334].cs2)  
+[**4332**](scripts/[proc,clan_hall_settings_create_toggle].cs2) `[proc,clan_hall_settings_create_toggle]`  
+[**4333**](scripts/[proc,clan_hall_settings_get_value].cs2) `[proc,clan_hall_settings_get_value]`  
+[**4334**](scripts/[proc,clan_hall_settings_set_value].cs2) `[proc,clan_hall_settings_set_value]`  
 [**4335**](scripts/[clientscript,script4335].cs2)  
-[**4336**](scripts/[proc,script4336].cs2)  
-[**4337**](scripts/[clientscript,script4337].cs2)  
+[**4336**](scripts/[proc,clan_hall_settings_set_toggle].cs2) `[proc,clan_hall_settings_set_toggle]`  
+[**4337**](scripts/[clientscript,clan_hall_settings_toggle_op].cs2) `[clientscript,clan_hall_settings_toggle_op]`  
 [**4338**](scripts/[proc,script4338].cs2)  
 [**4339**](scripts/[clientscript,script4339].cs2)  
 [**4340**](scripts/[clientscript,script4340].cs2)  
-[**4341**](scripts/[clientscript,script4341].cs2)  
-[**4342**](scripts/[clientscript,script4342].cs2)  
-[**4343**](scripts/[proc,script4343].cs2)  
+[**4341**](scripts/[clientscript,clan_storage_main_init].cs2) `[clientscript,clan_storage_main_init]`  
+[**4342**](scripts/[clientscript,clan_storage_main_hint].cs2) `[clientscript,clan_storage_main_hint]`  
+[**4343**](scripts/[proc,clan_storage_main_hint].cs2) `[proc,clan_storage_main_hint]`  
 [**4344**](scripts/[clientscript,script4344].cs2)  
 [**4345**](scripts/[proc,script4345].cs2)  
-[**4346**](scripts/[clientscript,script4346].cs2)  
-[**4347**](scripts/[clientscript,script4347].cs2)  
+[**4346**](scripts/[clientscript,clan_storage_opitem].cs2) `[clientscript,clan_storage_opitem]`  
+[**4347**](scripts/[clientscript,clan_storage_side_init].cs2) `[clientscript,clan_storage_side_init]`  
 [**4348**](scripts/[clientscript,script4348].cs2)  
 [**4349**](scripts/[proc,script4349].cs2)  
-[**4350**](scripts/[clientscript,script4350].cs2)  
-[**4351**](scripts/[clientscript,script4351].cs2)  
-[**4352**](scripts/[proc,script4352].cs2)  
-[**4353**](scripts/[proc,script4353].cs2)  
-[**4354**](scripts/[clientscript,script4354].cs2)  
+[**4350**](scripts/[clientscript,clan_storage_button_op].cs2) `[clientscript,clan_storage_button_op]`  
+[**4351**](scripts/[clientscript,clan_storage_button_reset].cs2) `[clientscript,clan_storage_button_reset]`  
+[**4352**](scripts/[proc,clan_storage_button_reset].cs2) `[proc,clan_storage_button_reset]`  
+[**4353**](scripts/[proc,clan_storage_button_draw].cs2) `[proc,clan_storage_button_draw]`  
+[**4354**](scripts/[clientscript,clan_board_init].cs2) `[clientscript,clan_board_init]`  
 [**4355**](scripts/[clientscript,script4355].cs2)  
 [**4356**](scripts/[proc,script4356].cs2)  
-[**4357**](scripts/[clientscript,script4357].cs2)  
-[**4358**](scripts/[proc,script4358].cs2)  
+[**4357**](scripts/[clientscript,clan_board_addline].cs2) `[clientscript,clan_board_addline]`  
+[**4358**](scripts/[proc,clan_board_entry_init].cs2) `[proc,clan_board_entry_init]`  
 [**4359**](scripts/[clientscript,script4359].cs2)  
 [**4360**](scripts/[proc,script4360].cs2)  
-[**4361**](scripts/[clientscript,script4361].cs2)  
-[**4362**](scripts/[clientscript,script4362].cs2)  
-[**4363**](scripts/[proc,script4363].cs2)  
-[**4364**](scripts/[proc,script4364].cs2)  
-[**4365**](scripts/[clientscript,script4365].cs2)  
-[**4366**](scripts/[clientscript,script4366].cs2)  
-[**4367**](scripts/[proc,script4367].cs2)  
+[**4361**](scripts/[clientscript,clan_board_entry_op].cs2) `[clientscript,clan_board_entry_op]`  
+[**4362**](scripts/[clientscript,clan_board_entry_reset].cs2) `[clientscript,clan_board_entry_reset]`  
+[**4363**](scripts/[proc,clan_board_setsort].cs2) `[proc,clan_board_setsort]`  
+[**4364**](scripts/[proc,clan_board_sortbutton_draw].cs2) `[proc,clan_board_sortbutton_draw]`  
+[**4365**](scripts/[clientscript,clan_board_clicksort].cs2) `[clientscript,clan_board_clicksort]`  
+[**4366**](scripts/[clientscript,clan_board_filterupdate].cs2) `[clientscript,clan_board_filterupdate]`  
+[**4367**](scripts/[proc,clan_board_filterupdate].cs2) `[proc,clan_board_filterupdate]`  
 [**4368**](scripts/[proc,script4368].cs2)  
-[**4369**](scripts/[clientscript,script4369].cs2)  
-[**4370**](scripts/[clientscript,script4370].cs2)  
+[**4369**](scripts/[clientscript,clan_board_filterop].cs2) `[clientscript,clan_board_filterop]`  
+[**4370**](scripts/[clientscript,clan_board_filterreset].cs2) `[clientscript,clan_board_filterreset]`  
 [**4371**](scripts/[proc,script4371].cs2)  
-[**4372**](scripts/[proc,script4372].cs2)  
-[**4373**](scripts/[clientscript,script4373].cs2)  
+[**4372**](scripts/[proc,clan_board_setsize].cs2) `[proc,clan_board_setsize]`  
+[**4373**](scripts/[clientscript,clan_board_checksize].cs2) `[clientscript,clan_board_checksize]`  
 [**4374**](scripts/[clientscript,script4374].cs2)  
 [**4375**](scripts/[clientscript,script4375].cs2)  
 [**4376**](scripts/[clientscript,script4376].cs2)  
@@ -4392,33 +4392,33 @@
 [**4392**](scripts/[clientscript,script4392].cs2)  
 [**4393**](scripts/[proc,script4393].cs2)  
 [**4394**](scripts/[proc,script4394].cs2)  
-[**4395**](scripts/[clientscript,script4395].cs2)  
-[**4396**](scripts/[clientscript,script4396].cs2)  
-[**4397**](scripts/[proc,script4397].cs2)  
+[**4395**](scripts/[clientscript,clan_sidepanel_init].cs2) `[clientscript,clan_sidepanel_init]`  
+[**4396**](scripts/[clientscript,clan_sidepanel_draw].cs2) `[clientscript,clan_sidepanel_draw]`  
+[**4397**](scripts/[proc,clan_sidepanel_draw].cs2) `[proc,clan_sidepanel_draw]`  
 [**4398**](scripts/[clientscript,script4398].cs2)  
-[**4399**](scripts/[proc,script4399].cs2)  
-[**4400**](scripts/[clientscript,script4400].cs2)  
-[**4401**](scripts/[proc,script4401].cs2)  
-[**4402**](scripts/[clientscript,script4402].cs2)  
-[**4403**](scripts/[clientscript,script4403].cs2)  
-[**4404**](scripts/[clientscript,script4404].cs2)  
-[**4405**](scripts/[proc,script4405].cs2)  
-[**4406**](scripts/[clientscript,script4406].cs2)  
-[**4407**](scripts/[clientscript,script4407].cs2)  
-[**4408**](scripts/[proc,script4408].cs2)  
-[**4409**](scripts/[proc,script4409].cs2)  
-[**4410**](scripts/[clientscript,script4410].cs2)  
-[**4411**](scripts/[clientscript,script4411].cs2)  
-[**4412**](scripts/[proc,script4412].cs2)  
-[**4413**](scripts/[clientscript,script4413].cs2)  
+[**4399**](scripts/[proc,clan_sidepanel_drawchannel].cs2) `[proc,clan_sidepanel_drawchannel]`  
+[**4400**](scripts/[clientscript,clan_sidepanel_op].cs2) `[clientscript,clan_sidepanel_op]`  
+[**4401**](scripts/[proc,clan_sidepanel_op].cs2) `[proc,clan_sidepanel_op]`  
+[**4402**](scripts/[clientscript,clan_sidepanel_refresh_init].cs2) `[clientscript,clan_sidepanel_refresh_init]`  
+[**4403**](scripts/[clientscript,clan_sidepanel_refresh_op].cs2) `[clientscript,clan_sidepanel_refresh_op]`  
+[**4404**](scripts/[clientscript,clan_sidepanel_refresh_reset].cs2) `[clientscript,clan_sidepanel_refresh_reset]`  
+[**4405**](scripts/[proc,clan_sidepanel_refresh_reset].cs2) `[proc,clan_sidepanel_refresh_reset]`  
+[**4406**](scripts/[clientscript,clan_events_init].cs2) `[clientscript,clan_events_init]`  
+[**4407**](scripts/[clientscript,clan_events_addevent].cs2) `[clientscript,clan_events_addevent]`  
+[**4408**](scripts/[proc,clan_events_create_text_component].cs2) `[proc,clan_events_create_text_component]`  
+[**4409**](scripts/[proc,clan_events_setsize].cs2) `[proc,clan_events_setsize]`  
+[**4410**](scripts/[clientscript,clan_events_checksize].cs2) `[clientscript,clan_events_checksize]`  
+[**4411**](scripts/[proc,clan_events_wipedisplay].cs2) `[proc,clan_events_wipedisplay]`  
+[**4412**](scripts/[proc,clan_events_has_permission].cs2) `[proc,clan_events_has_permission]`  
+[**4413**](scripts/[clientscript,clan_events_create_init].cs2) `[clientscript,clan_events_create_init]`  
 [**4414**](scripts/[clientscript,script4414].cs2)  
 [**4415**](scripts/[clientscript,script4415].cs2)  
 [**4416**](scripts/[proc,script4416].cs2)  
 [**4417**](scripts/[clientscript,script4417].cs2)  
-[**4418**](scripts/[clientscript,script4418].cs2)  
-[**4419**](scripts/[proc,script4419].cs2)  
-[**4420**](scripts/[clientscript,script4420].cs2)  
-[**4421**](scripts/[proc,script4421].cs2)  
+[**4418**](scripts/[clientscript,clan_events_selection_updatetext].cs2) `[clientscript,clan_events_selection_updatetext]`  
+[**4419**](scripts/[proc,clan_events_selection_updatetext].cs2) `[proc,clan_events_selection_updatetext]`  
+[**4420**](scripts/[clientscript,clan_events_int_updatetext].cs2) `[clientscript,clan_events_int_updatetext]`  
+[**4421**](scripts/[proc,clan_events_int_updatetext].cs2) `[proc,clan_events_int_updatetext]`  
 [**4422**](scripts/[proc,script4422].cs2)  
 [**4423**](scripts/[proc,script4423].cs2)  
 [**4424**](scripts/[clientscript,script4424].cs2)  
@@ -4441,20 +4441,20 @@
 [**4441**](scripts/[proc,script4441].cs2)  
 [**4442**](scripts/[proc,script4442].cs2)  
 [**4443**](scripts/[proc,script4443].cs2)  
-[**4444**](scripts/[clientscript,script4444].cs2)  
-[**4445**](scripts/[clientscript,script4445].cs2)  
+[**4444**](scripts/[clientscript,clan_icon_click].cs2) `[clientscript,clan_icon_click]`  
+[**4445**](scripts/[clientscript,clan_create_side_init].cs2) `[clientscript,clan_create_side_init]`  
 [**4446**](scripts/[clientscript,script4446].cs2)  
 [**4447**](scripts/[clientscript,script4447].cs2)  
 [**4448**](scripts/[clientscript,script4448].cs2)  
 [**4449**](scripts/[proc,script4449].cs2)  
 [**4450**](scripts/[proc,script4450].cs2)  
 [**4451**](scripts/[clientscript,script4451].cs2)  
-[**4452**](scripts/[proc,script4452].cs2)  
+[**4452**](scripts/[proc,clan_stonebutton_target_init].cs2) `[proc,clan_stonebutton_target_init]`  
 [**4453**](scripts/[clientscript,script4453].cs2)  
 [**4454**](scripts/[clientscript,script4454].cs2)  
-[**4455**](scripts/[clientscript,script4455].cs2)  
-[**4456**](scripts/[proc,script4456].cs2)  
-[**4457**](scripts/[clientscript,script4457].cs2)  
+[**4455**](scripts/[clientscript,clan_create_targetmode].cs2) `[clientscript,clan_create_targetmode]`  
+[**4456**](scripts/[proc,clan_permission_get].cs2) `[proc,clan_permission_get]`  
+[**4457**](scripts/[clientscript,clan_permission_init].cs2) `[clientscript,clan_permission_init]`  
 [**4458**](scripts/[proc,script4458].cs2)  
 [**4459**](scripts/[clientscript,script4459].cs2)  
 [**4460**](scripts/[proc,script4460].cs2)  
@@ -4466,16 +4466,16 @@
 [**4466**](scripts/[clientscript,script4466].cs2)  
 [**4467**](scripts/[clientscript,script4467].cs2)  
 [**4468**](scripts/[clientscript,script4468].cs2)  
-[**4469**](scripts/[clientscript,script4469].cs2)  
-[**4470**](scripts/[proc,script4470].cs2)  
-[**4471**](scripts/[clientscript,script4471].cs2)  
+[**4469**](scripts/[clientscript,clan_permission_settitle].cs2) `[clientscript,clan_permission_settitle]`  
+[**4470**](scripts/[proc,clan_permission_settitle].cs2) `[proc,clan_permission_settitle]`  
+[**4471**](scripts/[clientscript,side_channels_init].cs2) `[clientscript,side_channels_init]`  
 [**4472**](scripts/[clientscript,script4472].cs2)  
 [**4473**](scripts/[proc,script4473].cs2)  
-[**4474**](scripts/[proc,script4474].cs2)  
-[**4475**](scripts/[proc,script4475].cs2)  
-[**4476**](scripts/[clientscript,script4476].cs2)  
-[**4477**](scripts/[proc,script4477].cs2)  
-[**4478**](scripts/[clientscript,script4478].cs2)  
+[**4474**](scripts/[proc,side_channels_tabinit].cs2) `[proc,side_channels_tabinit]`  
+[**4475**](scripts/[proc,side_channels_settab].cs2) `[proc,side_channels_settab]`  
+[**4476**](scripts/[clientscript,side_channels_drawtab].cs2) `[clientscript,side_channels_drawtab]`  
+[**4477**](scripts/[proc,side_channels_drawtab].cs2) `[proc,side_channels_drawtab]`  
+[**4478**](scripts/[clientscript,side_channels_optab].cs2) `[clientscript,side_channels_optab]`  
 [**4479**](scripts/[proc,script4479].cs2)  
 [**4480**](scripts/[clientscript,script4480].cs2)  
 [**4481**](scripts/[proc,script4481].cs2)  

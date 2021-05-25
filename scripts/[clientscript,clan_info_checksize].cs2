@@ -1,0 +1,6 @@
+// 4292
+[clientscript,clan_info_checksize](int $int0, int $int1, int $height2)
+def_int $height3 = if_getheight(interface_690:0);
+if ($height3 ! $height2) {
+	~clan_info_setsize($int0, $int1, $height3);
+}

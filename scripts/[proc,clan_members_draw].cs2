@@ -1,0 +1,202 @@
+// 4232
+[proc,clan_members_draw](component $component0, component $component1, int $comsubid2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+if (cc_find($component6, 4) = ^true) {
+	cc_settext(enum(int, string, enum_3793, %varbit12177));
+}
+if (cc_find($component8, 4) = ^true) {
+	cc_settext(enum(int, string, enum_3793, calc((%varbit12178 + 1) % enum_getoutputcount(enum_3793))));
+}
+cc_deleteall($component3);
+def_int $int10 = 0;
+def_string $text0 = "";
+def_int $int11 = 0;
+def_int $int12 = 25;
+def_int $int13 = 0;
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_string $string1 = "";
+def_string $string2 = "";
+def_graphic $graphic16 = null;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_string $string3 = "";
+def_int $int19 = 0;
+def_int $int20 = -1;
+def_int $int21 = 0;
+def_int $index22 = 0;
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+	if (cc_find($component1, $comsubid2) = ^true) {
+		if (~clan_members_searching = 1) {
+			$string3 = ~bankmain_filterstring;
+			$int19 = string_length($string3);
+			if ($int19 > 0) {
+				cc_settext("Showing members: <col=ff0000><$string3></col>");
+			} else {
+				cc_settext("Showing members: <col=ff0000>*</col>");
+			}
+		} else {
+			cc_settext("<activeclansettings_getclanname>: Member list");
+		}
+	}
+	cc_deleteall($component5);
+	cc_deleteall($component7);
+	cc_deleteall($component9);
+	$int10 = 0;
+	$int11 = activeclansettings_getaffinedcount;
+	if ($int11 > 0) {
+		if (~on_mobile = true) {
+			$int12 = 35;
+		}
+		$int13 = calc(($int12 - 13) / 2);
+		while ($int17 < $int11) {
+			cc_create($component7, ^iftype_rectangle, $int17);
+			.cc_create($component9, ^iftype_rectangle, $int17);
+			cc_sethide(true);
+			.cc_sethide(true);
+			cc_setposition(0, -1, ^setpos_abs_centre, ^setpos_abs_top);
+			.cc_setposition(0, -1, ^setpos_abs_centre, ^setpos_abs_top);
+			cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
+			.cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
+			cc_setfill(true);
+			.cc_setfill(true);
+			cc_setcolour(^white);
+			.cc_setcolour(^white);
+			$int17 = calc($int17 + 1);
+		}
+		while ($int18 < $int11 & $int15 < 500) {
+			$int17 = activeclansettings_getsortedaffinedslot($int18);
+			$int20 = ~script4236($int17);
+			if ($int20 ! -1) {
+				$string1 = activeclansettings_getaffineddisplayname($int17);
+				if (cc_find($component7, $int17) = ^true & .cc_find($component9, $int17) = ^true) {
+					cc_setposition(0, $int14, ^setpos_abs_centre, ^setpos_abs_top);
+					.cc_setposition(0, $int14, ^setpos_abs_centre, ^setpos_abs_top);
+					if (calc($int15 % 2) = 0) {
+						cc_settrans(255);
+						.cc_settrans(255);
+					} else {
+						cc_settrans(245);
+						.cc_settrans(245);
+					}
+					cc_setopbase("<col=ff9040><$string1></col>");
+					.cc_setopbase("<col=ff9040><$string1></col>");
+				}
+				cc_create($component5, ^iftype_rectangle, $int10);
+				$int10 = calc($int10 + 1);
+				cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
+				cc_setposition(0, $int14, ^setpos_abs_centre, ^setpos_abs_top);
+				cc_setfill(true);
+				cc_setcolour(^white);
+				if (calc($int15 % 2) = 0) {
+					cc_settrans(255);
+				} else {
+					cc_settrans(245);
+				}
+				cc_create($component5, ^iftype_text, $int10);
+				$int10 = calc($int10 + 1);
+				cc_setsize(0, $int12, ^setsize_minus, ^setsize_abs);
+				cc_setposition(0, $int14, ^setpos_abs_centre, ^setpos_abs_top);
+				cc_settextfont(p12_full);
+				cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+				cc_setcolour(0xff981f);
+				cc_settextshadow(true);
+				$int21 = string_length($string1);
+				if ($int20 < $int21) {
+					$index22 = ~min($int21, calc($int20 + $int19));
+					cc_settext(append(append(substring($string1, 0, $int20), "<col=ffffff><substring($string1, $int20, $index22)></col>"), substring($string1, $index22, $int21)));
+				} else {
+					cc_settext($string1);
+				}
+				cc_create($component5, ^iftype_graphic, $int10);
+				$int10 = calc($int10 + 1);
+				cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+				cc_setposition(calc(0 - (parawidth($string1, 512, p12_full) + 8 + 13) / 2), calc($int14 + $int13), ^setpos_abs_centre, ^setpos_abs_top);
+				$string2, $graphic16 = ~script4302(activeclansettings_getaffinedrank($int17));
+				cc_setgraphic($graphic16);
+				$int14, $int15 = calc($int14 + $int12), calc($int15 + 1);
+			}
+			$int18 = calc($int18 + 1);
+		}
+		if ($int15 <= 0) {
+			cc_create($component5, ^iftype_text, $int10);
+			$int10 = calc($int10 + 1);
+			cc_setsize(10, 0, ^setsize_minus, ^setsize_minus);
+			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+			cc_settextfont(p12_full);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_setcolour(0xff981f);
+			cc_settextshadow(true);
+			cc_settext("No members of the clan match the current filters.");
+		} else if ($int15 >= 500) {
+			$string1 = "<col=9f9f9f>Unable to list more entries - please apply filters.</col>";
+			$int21 = calc(paraheight($string1, if_getwidth($component3) - 10, p12_full) * 12 + 10);
+			cc_create($component3, ^iftype_text, 0);
+			cc_setsize(10, $int21, ^setsize_minus, ^setsize_abs);
+			cc_setposition(0, $int14, ^setpos_abs_centre, ^setpos_abs_top);
+			cc_settextfont(p12_full);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_setcolour(0xff981f);
+			cc_settextshadow(true);
+			cc_settext($string1);
+			$int14 = calc($int14 + $int21);
+		}
+		switch_int (%varbit12177) {
+			case 1 :
+				~script4254($component7, $int11, $int12);
+			case 2 :
+				~script4255($component7, $int11, $int12);
+			case 3 :
+				~script4259(3, $component7, $int11, $int12);
+			case 4 :
+				~script4259(4, $component7, $int11, $int12);
+			case 5 :
+				~script4261($component7, $int11, $int12);
+			case 6 :
+				~script4262($component7, $int11, $int12);
+			case default :
+				~script4253($component7, $int11, $int12);
+		}
+		switch_int (calc((%varbit12178 + 1) % enum_getoutputcount(enum_3793))) {
+			case 1 :
+				~script4254($component9, $int11, $int12);
+			case 2 :
+				~script4255($component9, $int11, $int12);
+			case 3 :
+				~script4259(3, $component9, $int11, $int12);
+			case 4 :
+				~script4259(4, $component9, $int11, $int12);
+			case 5 :
+				~script4261($component9, $int11, $int12);
+			case 6 :
+				~script4262($component9, $int11, $int12);
+			case default :
+				~script4253($component9, $int11, $int12);
+		}
+	} else {
+		cc_create($component3, ^iftype_text, 0);
+		cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+		cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+		cc_setcolour(0xff981f);
+		cc_settextfont(p12_full);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_settext("No-one was found in this clan.");
+	}
+} else {
+	$text0 = ~script4287;
+	if (cc_find($component1, $comsubid2) = ^true) {
+		cc_settext($text0);
+	}
+	cc_create($component3, ^iftype_text, 0);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(0xff981f);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settext($text0);
+}
+def_component $layer23 = if_getlayer($component0);
+if ($layer23 ! null) {
+	~clan_members_setsize($layer23, $component0, $component3, $component4, ~max(180, $int14), if_getheight($layer23));
+}

@@ -1,0 +1,5 @@
+// 4420
+[clientscript,clan_events_int_updatetext](component $component0, int $comsubid1, enum $enum2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	~clan_events_int_updatetext($enum2);
+}

@@ -4,8 +4,8 @@ def_int $int9 = 0;
 if ($opindex0 = 10 & $int1 >= 0 & $int1 < enum_getoutputcount(enum_3795)) {
 	$int9 = enum(int, int, enum_3795, $int1);
 	if (~script4304($int9) ! 0) {
-		sound_synth(synth_2266, 1, 0);
+		sound_synth(interface_select1, 1, 0);
 		~script4305($int9, 0);
-		~script4311($int2, $component3, $component4, $component5, $component6, $component7, $component8);
+		~clan_ranktitles_draw($int2, $component3, $component4, $component5, $component6, $component7, $component8);
 	}
 }

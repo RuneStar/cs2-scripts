@@ -1,0 +1,64 @@
+// 4456
+[proc,clan_permission_get](struct $struct0)(int)
+def_int $int1 = calc(126 + 1);
+switch_struct ($struct0) {
+	case permission_access_2943 :
+		$int1 = %varclansetting12;
+	case edit_public_profile_2947 :
+		$int1 = %varclansetting13;
+	case assign_member_ranks_2948 :
+		$int1 = %varclansetting14;
+	case edit_rank_titles_2949 :
+		$int1 = %varclansetting16;
+	case expel_members_2950 :
+		$int1 = %varclansetting15;
+	case recruitment_2951 :
+		$int1 = %varclansetting17;
+	case icons_2952 :
+		$int1 = %varclansetting25;
+	case ban_from_chat_2956 :
+		$int1 = %varclansetting18;
+	case organise_events_2966 :
+		$int1 = %varclansetting21;
+	case initiate_clan_wars_2967 :
+		$int1 = %varclansetting22;
+	case deposit_into_coffer_2963 :
+		$int1 = %varclansetting19;
+	case withdraw_from_coffer_2964 :
+		$int1 = %varclansetting20;
+	case enter_clan_hall_2969 :
+		$int1 = %varclansetting23;
+	case edit_clan_hall_2970 :
+		$int1 = %varclansetting24;
+	case talk_in_chat_2954 :
+		$int1 = calc(activeclansettings_getranktalk + 1);
+	case kick_from_chat_2955 :
+		$int1 = calc(activeclansettings_getrankkick + 1);
+}
+def_int $int2 = calc($int1 - 1);
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = enum_getoutputcount(enum_3795);
+while ($int5 > 0) {
+	$int5 = calc($int5 - 1);
+	$int4 = enum(int, int, enum_3795, $int5);
+	if ($int2 = $int4) {
+		if ($int4 >= ~min(0, struct_param($struct0, param_1253)) & $int4 <= 126) {
+			$int3, $int5 = 1, 0;
+		} else {
+			$int5 = 0;
+		}
+	}
+}
+if ($int3 = 0) {
+	return(126);
+}
+def_struct $struct6 = null;
+if ($struct0 ! null) {
+	$struct6 = struct_param($struct0, param_1254);
+	if ($struct6 ! null) {
+		$int2 = ~max($int2, ~clan_permission_get($struct6));
+	}
+	$int2 = ~max($int2, struct_param($struct0, param_1253));
+}
+return($int2);

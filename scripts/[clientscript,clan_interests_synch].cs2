@@ -1,0 +1,5 @@
+// 4266
+[clientscript,clan_interests_synch](component $component0, int $index1, int $comsubid2, int $comsubid3)
+if (cc_find($component0, $comsubid2) = ^true & .cc_find($component0, $comsubid3) = ^true) {
+	~clan_interests_synch($index1);
+}

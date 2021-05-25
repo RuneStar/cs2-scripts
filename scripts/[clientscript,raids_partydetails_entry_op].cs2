@@ -12,7 +12,7 @@ def_string $string3 = "";
 if (string_length($string0) > 0) {
 	if ($opindex0 = 6) {
 		if (clan_getchatcount > 0 & clan_getchatrank >= clan_getchatminkick) {
-			sound_synth(synth_2266, 1, 0);
+			sound_synth(interface_select1, 1, 0);
 			~friendschat_sendkick($string0);
 		} else {
 			mes("You don't have permission to do that.");
@@ -22,7 +22,7 @@ if (string_length($string0) > 0) {
 	if (.cc_find(interface_507:12, 0) = ^false) {
 		return;
 	}
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 	if_sethide(true, interface_507:28);
 	if_sethide(false, interface_507:29);
 	cc_deleteall(interface_507:29);

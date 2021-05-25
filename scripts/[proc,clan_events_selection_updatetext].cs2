@@ -1,0 +1,14 @@
+// 4419
+[proc,clan_events_selection_updatetext](enum $enum0)
+def_string $string0 = "";
+def_graphic $graphic1 = null;
+if ($enum0 = enum_3795) {
+	if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+		$string0, $graphic1 = ~script4302(enum(int, int, enum_3795, ~script4422($enum0)));
+	} else {
+		$string0 = "Error";
+	}
+} else {
+	$string0 = enum(int, string, $enum0, ~script4422($enum0));
+}
+cc_settext(~script4193($string0, calc(cc_getwidth - 8), p11_full));

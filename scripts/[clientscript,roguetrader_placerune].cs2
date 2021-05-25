@@ -1,0 +1,13 @@
+// 4171
+[clientscript,roguetrader_placerune](int $int0, int $int1, int $int2, component $component3, component $component4)
+def_enum $enum5 = null;
+if (%varbit12163 = 1) {
+	$enum5 = enum(int, enum, enum_3762, %varbit12161);
+} else {
+	$enum5 = enum(int, enum, enum_3761, %varbit12161);
+}
+if (enum(int, int, $enum5, $int2) > 0) {
+	return;
+}
+~roguetrader_tile_set($int2, %varbit12162);
+~roguetrader_draw_game($int0, $int1, $component3, $component4);

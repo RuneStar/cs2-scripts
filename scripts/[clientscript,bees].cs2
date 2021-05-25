@@ -7,7 +7,7 @@ if (if_getx($component3) >= $int5 & if_getx($component3) < calc($int5 + if_getwi
 		$int5 = calc($int5 - (random(3) + 2));
 		$int6 = calc($int6 - (random(3) + 2));
 		if ($clock4 <= clientclock) {
-			sound_synth(synth_819, 1, 0);
+			sound_synth(swarm_attack, 1, 0);
 			$clock4 = calc(clientclock + 20 + random(40));
 		}
 	}
@@ -15,7 +15,7 @@ if (if_getx($component3) >= $int5 & if_getx($component3) < calc($int5 + if_getwi
 	$int5 = calc($int5 + random(3) + 2);
 	$int6 = calc($int6 + random(3) + 2);
 	if ($clock4 <= clientclock) {
-		sound_synth(synth_819, 1, 0);
+		sound_synth(swarm_attack, 1, 0);
 		$clock4 = calc(clientclock + 20 + random(40));
 	}
 }

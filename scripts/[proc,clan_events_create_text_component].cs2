@@ -1,0 +1,23 @@
+// 4408
+[proc,clan_events_create_text_component](component $component0, string $string0, string $string1, int $int1, int $y2, int $width3, int $height4, int $comsubid5, string $string2, graphic $graphic6, int $settextalignh7)(int, int)
+def_string $string3 = "<$string2><$string1></col>";
+def_fontmetrics $fontmetrics8 = enum(graphic, fontmetrics, enum_3818, $graphic6);
+if (string_length($string0) > 0) {
+	$string3 = "<$string0>: <$string2><$string1></col>";
+}
+if ($width3 = 0) {
+	$width3 = parawidth($string3, calc(if_getwidth($component0) - $int1), $fontmetrics8);
+}
+if ($settextalignh7 ! ^settextalign_centre & parawidth($string3, $width3, $fontmetrics8) < $width3) {
+	$width3 = parawidth($string3, $width3, $fontmetrics8);
+}
+$string3 = ~script4193($string3, $width3, $fontmetrics8);
+cc_create($component0, ^iftype_text, $comsubid5);
+cc_setsize($width3, $height4, ^setsize_abs, ^setsize_abs);
+cc_setposition($int1, $y2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont($graphic6);
+cc_settextalign($settextalignh7, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settext($string3);
+return(calc(cc_getid + 1), cc_getwidth);

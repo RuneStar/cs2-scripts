@@ -1,0 +1,21 @@
+// 4280
+[proc,clan_banned_blocker](component $component0, int $comsubid1, int $comsubid2)
+def_int $trans3 = 0;
+if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
+	if (%varbit12199 = 1) {
+		$trans3 = ~max(100, calc(~minmax(100, 255, cc_gettrans) - 6));
+	} else {
+		$trans3 = ~min(255, calc(~minmax(100, 255, cc_gettrans) + 9));
+	}
+	cc_settrans($trans3);
+	if ($trans3 > 175) {
+		.cc_sethide(true);
+	} else {
+		.cc_sethide(false);
+	}
+	if ($trans3 >= 255) {
+		if_sethide(true, $component0);
+	} else {
+		if_sethide(false, $component0);
+	}
+}

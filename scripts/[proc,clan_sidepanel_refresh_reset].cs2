@@ -1,0 +1,8 @@
+// 4405
+[proc,clan_sidepanel_refresh_reset](component $component0)
+cc_settrans(0);
+if (~on_mobile = false) {
+	if_setonmouserepeat("cc_settrans(event_com, cc_getid, 100, null)", $component0);
+	if_setonmouseleave("cc_settrans(event_com, cc_getid, 0, null)", $component0);
+}
+if_setontimer(null, $component0);

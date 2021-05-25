@@ -1,0 +1,57 @@
+// 4363
+[proc,clan_board_setsort]
+~clan_board_sortbutton_draw(interface_700:17, "Name", 1, 2);
+~clan_board_sortbutton_draw(interface_700:18, "Size", 3, 4);
+~clan_board_sortbutton_draw(interface_700:19, "Created", 5, 0);
+def_int $intarray0(45);
+def_int $int0 = 0;
+def_int $int1 = 0;
+while ($int1 < 45) {
+	if (cc_find(enum(int, component, enum_3803, $int1), 0) = ^true) {
+		$intarray0($int0) = $int1;
+		$int0 = calc($int0 + 1);
+	}
+	$int1 = calc($int1 + 1);
+}
+def_string $string0 = "";
+if ($int0 >= 2) {
+	switch_int (%varcint453) {
+		case 1, 2 :
+			~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 1, enum_3803);
+		case 3, 4 :
+			~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 6, enum_3803);
+		case default :
+			~raids_partylist_sort(intarray0, 0, calc($int0 - 1), 5, enum_3803);
+	}
+}
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_component $component4 = null;
+def_string $string1 = "";
+switch_int (%varcint453) {
+	case 2, 4, 0 :
+		$int2 = $int0;
+		while ($int2 > 0) {
+			$int2 = calc($int2 - 1);
+			$component4 = enum(int, component, enum_3803, $intarray0($int2));
+			if ($component4 ! null) {
+				if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
+				if (cc_find($component4, 0) = ^true & .cc_find($component4, 1) = ^true) {
+					~clan_board_entry_init($int2, $component4, $intarray0($int2), .cc_gettext, interface_700:20);
+				}
+				$int3 = calc($int3 + if_getheight($component4));
+			}
+		}
+	case default :
+		while ($int2 < $int0) {
+			$component4 = enum(int, component, enum_3803, $intarray0($int2));
+			if ($component4 ! null) {
+				if_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top, $component4);
+				if (cc_find($component4, 0) = ^true & .cc_find($component4, 1) = ^true) {
+					~clan_board_entry_init($int2, $component4, $intarray0($int2), .cc_gettext, interface_700:20);
+				}
+				$int3 = calc($int3 + if_getheight($component4));
+			}
+			$int2 = calc($int2 + 1);
+		}
+}

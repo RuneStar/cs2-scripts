@@ -1,6 +1,6 @@
 // 1708
 [clientscript,worldmap_maplist_open](component $component0, component $component1, component $component2, int $x3, int $z4)
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 ~xpdrops_setup_display_hoverdisable($component0);
 if_sethide(false, $component1);
 def_int $y5 = ^min_32bit_int;

@@ -23,15 +23,15 @@ if (%varbit11865 = 0) {
 	}
 }
 def_int $colour1 = $colour0;
-def_int $int2 = if_gettrans(temple_screen:1);
+def_int $int2 = if_gettrans(interface_328:1);
 if (%varbit5320 <= 0 & %varbit5316 <= 0) {
 	if ($colour1 ! $colour0) {
-		if_setcolour($colour0, temple_screen:1);
+		if_setcolour($colour0, interface_328:1);
 	}
 	if ($int2 ! 255) {
-		if_settrans(255, temple_screen:1);
+		if_settrans(255, interface_328:1);
 	}
-	_2124(255, temple_screen:1);
+	_2124(255, interface_328:1);
 	return;
 }
 def_int $int3 = 0;
@@ -84,11 +84,11 @@ if ($int19 < $int10) {
 } else if ($int19 > $int10) {
 	$int19 = calc($int19 - 1);
 }
-if_setcolour(~rgb_to_hex($int17, $int18, $int19), temple_screen:1);
+if_setcolour(~rgb_to_hex($int17, $int18, $int19), interface_328:1);
 if ($int2 < $int16) {
 	$int2 = calc($int2 + 1);
 } else if ($int2 > $int16) {
 	$int2 = calc($int2 - 1);
 }
-if_settrans($int2, temple_screen:1);
-_2124(255, temple_screen:1);
+if_settrans($int2, interface_328:1);
+_2124(255, interface_328:1);

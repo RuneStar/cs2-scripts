@@ -1,0 +1,13 @@
+// 4264
+[proc,clan_interests_setsize](int $int0, int $int1, int $height2)
+def_int $int3 = ~min(calc($height2 - 20), calc($int1 + 4 + 50 + 30));
+if_setsize($int0, $int3, ^setsize_abs, ^setsize_abs, interface_691:3);
+def_int $int4 = calc($int3 - 84);
+if ($int1 > $int4) {
+	if_setscrollsize(0, $int1, interface_691:7);
+	~scrollbar_resize(interface_691:8, interface_691:7, if_getscrolly(interface_691:7));
+} else {
+	if_setscrollsize(0, 0, interface_691:7);
+	~scrollbar_resize(interface_691:8, interface_691:7, 0);
+}
+if_setontimer("clan_interests_checksetsize(event_com, $int0, $int1, $height2)", interface_691:1);

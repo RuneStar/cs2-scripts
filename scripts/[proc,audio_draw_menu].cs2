@@ -1,0 +1,12 @@
+// 4197
+[proc,audio_draw_menu]
+def_string $string0 = "(Cancel)";
+def_enum $enum0 = enum_3626;
+def_enum $enum1 = enum_3625;
+def_int $count2 = enum_getoutputcount($enum1);
+def_int $count3 = 0;
+while ($count3 < $count2) {
+	$string0 = append($string0, "|<enum(int, string, $enum0, $count3)>");
+	$count3 = calc($count3 + 1);
+}
+~audio_menu("Categories", $string0, null, null, 0);

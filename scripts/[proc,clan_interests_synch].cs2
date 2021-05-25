@@ -1,0 +1,9 @@
+// 4267
+[proc,clan_interests_synch](int $index0)
+if (testbit(%var3023, $index0) = ^true) {
+	cc_setgraphic("options_radio_buttons,2");
+	.cc_setcolour(0xff981f);
+} else {
+	cc_setgraphic("options_radio_buttons,0");
+	.cc_setcolour(0x9f9f9f);
+}

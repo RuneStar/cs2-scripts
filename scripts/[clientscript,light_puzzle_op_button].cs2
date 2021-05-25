@@ -1,5 +1,5 @@
 // 1336
 [clientscript,light_puzzle_op_button](component $component0)
 ~v2_stone_button_out_filled($component0);
-sound_synth(synth_576, 1, 0);
+sound_synth(killerwatt_attack, 1, 0);
 if_setontimer("light_puzzle_button_reset(event_com, calc(clientclock + 15))", $component0);

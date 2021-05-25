@@ -6,12 +6,12 @@ if ($opindex1 ! 1 | %var1151 = null) {
 def_int $int17 = ^max_32bit_int;
 if (%var1151 = old_school_bond_13190) {
 	%varbit4396 = 1;
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 } else if (%varbit4397 = 1) {
 	$int17 = ~ge_offers_checkavailable;
 	if ($int0 >= ^max_32bit_int) {
 		%varbit4396 = $int17;
-		sound_synth(synth_3929, 1, 0);
+		sound_synth(ge_up_amount, 1, 0);
 	} else if ($int0 > 0) {
 		if ($int0 > 1 & %varbit4396 = 1) {
 			$int0 = calc($int0 - 1);
@@ -21,14 +21,14 @@ if (%var1151 = old_school_bond_13190) {
 		} else {
 			%varbit4396 = calc(%varbit4396 + $int0);
 		}
-		sound_synth(synth_3929, 1, 0);
+		sound_synth(ge_up_amount, 1, 0);
 	} else {
 		if (%varbit4396 <= calc(0 - $int0)) {
 			%varbit4396 = 1;
 		} else {
 			%varbit4396 = calc(%varbit4396 + $int0);
 		}
-		sound_synth(synth_3930, 1, 0);
+		sound_synth(ge_down_amount, 1, 0);
 	}
 } else {
 	if ($int0 >= ^max_32bit_int) {
@@ -43,14 +43,14 @@ if (%var1151 = old_school_bond_13190) {
 		} else {
 			%varbit4396 = calc(%varbit4396 + $int0);
 		}
-		sound_synth(synth_3929, 1, 0);
+		sound_synth(ge_up_amount, 1, 0);
 	} else {
 		if (%varbit4396 <= calc(0 - $int0)) {
 			%varbit4396 = 1;
 		} else {
 			%varbit4396 = calc(%varbit4396 + $int0);
 		}
-		sound_synth(synth_3930, 1, 0);
+		sound_synth(ge_down_amount, 1, 0);
 	}
 }
 ~ge_offers_setup_draw($component2, $comsubid3, $comsubid4, $comsubid5, $comsubid6, $comsubid7, $comsubid8, $comsubid9, $comsubid10, $comsubid11, $comsubid12, $comsubid13, $comsubid14, $component15, $comsubid16);

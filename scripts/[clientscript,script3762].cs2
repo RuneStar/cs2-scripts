@@ -1,7 +1,7 @@
 // 3762
 [clientscript,script3762](component $component0, int $comsubid1, int $comsubid2)
 if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
-	sound_synth(synth_2266, 1, 0);
+	sound_synth(interface_select1, 1, 0);
 	cc_settrans(180);
 	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 255, calc(clientclock + 40))");
 	.cc_resume_pausebutton;

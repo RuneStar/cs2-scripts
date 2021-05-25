@@ -3,7 +3,7 @@
 if ($opindex0 ! 1) {
 	return;
 }
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 cc_deleteall($component1);
 def_int $comsubid3 = ~options_button_on($component1, 0);
 cc_create($component1, ^iftype_text, $comsubid3);

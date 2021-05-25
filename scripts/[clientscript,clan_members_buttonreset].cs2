@@ -1,0 +1,12 @@
+// 4235
+[clientscript,clan_members_buttonreset](int $clock0, component $component1, int $comsubid2, int $int3, int $int4, string $string0)
+if (clientclock >= $clock0 & cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans(225);
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $int3, calc(clientclock + 2))");
+	cc_settrans($int3);
+	if (~on_mobile = false) {
+		cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, $int3)");
+	}
+	cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, $int3)");
+	cc_setonop("clan_members_op(event_opindex, event_com, event_comsubid, $int3, $int4, $string0)");
+}

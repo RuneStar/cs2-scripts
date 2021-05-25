@@ -5,5 +5,5 @@ if (~on_mobile = false) {
 	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, $int2, null)");
 }
 cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $int1, null)");
-cc_setonop("script4369(event_com, event_comsubid, $int3, $int0, $int1, $int2)");
+cc_setonop("clan_board_filterop(event_com, event_comsubid, $int3, $int0, $int1, $int2)");
 cc_setontimer(null);

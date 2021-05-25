@@ -1,6 +1,6 @@
 // 4338
 [proc,script4338](component $component0, int $int1, int $int2, int $int3, struct $struct4)(int)
-def_int $int5 = ~script4333($struct4);
+def_int $int5 = ~clan_hall_settings_get_value($struct4);
 cc_create($component0, ^iftype_graphic, $int3);
 $int3 = calc($int3 + 1);
 cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
@@ -50,5 +50,5 @@ if ($int5 ! 0) {
 cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_setonvartransmit("script4340(event_com, $int3, $struct4, $comsubid6){var3027}");
-cc_settext(tostring(~script4333($struct4)));
+cc_settext(tostring(~clan_hall_settings_get_value($struct4)));
 return($int3);

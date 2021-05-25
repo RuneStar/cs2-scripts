@@ -1,0 +1,12 @@
+// 4346
+[clientscript,clan_storage_opitem](int $opindex0, component $component1, int $comsubid2, string $mes0, string $mes1, int $trans3, int $trans4)
+sound_synth(interface_select1, 1, 0);
+if ($opindex0 = 1) {
+	mes($mes0);
+} else {
+	mes($mes1);
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_settrans($trans3);
+	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, $trans4, calc(clientclock + 10))");
+}

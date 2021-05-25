@@ -1,0 +1,9 @@
+// 4367
+[proc,clan_board_filterupdate](int $index0)
+if (testbit(%var807, $index0) = ^true) {
+	.cc_setgraphic("options_radio_buttons,2");
+} else if (testbit(%var808, $index0) = ^true) {
+	.cc_setgraphic("options_radio_buttons,1");
+} else {
+	.cc_setgraphic("options_radio_buttons,0");
+}

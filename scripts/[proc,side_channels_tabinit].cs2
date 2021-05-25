@@ -1,0 +1,19 @@
+// 4474
+[proc,side_channels_tabinit](component $component0, int $int1)
+if_setop(1, enum(int, string, enum_3839, $int1), $component0);
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+.cc_create($component0, ^iftype_graphic, 1);
+cc_setsize(20, 21, ^setsize_abs, ^setsize_abs);
+.cc_setsize(20, 21, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
+.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom);
+.cc_sethflip(true);
+cc_create($component0, ^iftype_graphic, 2);
+cc_setsize(40, 21, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_settiling(true);
+cc_create($component0, ^iftype_graphic, 3);
+cc_setsize(17, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setgraphic(enum(int, graphic, enum_3840, $int1));

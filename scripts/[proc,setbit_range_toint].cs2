@@ -1,0 +1,24 @@
+// 4161
+[proc,setbit_range_toint](int $int0, int $flags1, int $int2, int $int3)(int)
+if ($int2 < 0 | $int2 > 31) {
+	return($int0);
+}
+if ($int3 < 0 | $int3 > 31) {
+	return($int0);
+}
+def_int $int4 = ~min($int2, $int3);
+def_int $int5 = 0;
+def_int $int6 = ~max($int2, $int3);
+def_int $flags7 = pow(2, calc($int6 - $int4 + 1));
+if ($flags1 > $flags7) {
+	return($int0);
+}
+while ($int4 <= $int6) {
+	$int0 = clearbit($int0, $int4);
+	if (testbit($flags1, $int5) = ^true) {
+		$int0 = setbit($int0, $int4);
+	}
+	$int4 = calc($int4 + 1);
+	$int5 = calc($int5 + 1);
+}
+return($int0);

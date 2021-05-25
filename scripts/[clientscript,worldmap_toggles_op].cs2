@@ -3,7 +3,7 @@
 if ($opindex0 ! 1 | $index2 < 0 | $index2 > 4) {
 	return;
 }
-sound_synth(synth_2266, 1, 0);
+sound_synth(interface_select1, 1, 0);
 if (cc_find($component1, $comsubid3) = ^true & .cc_find($component1, $index2) = ^true) {
 	if (testbit(%varbit5640, $index2) = ^true) {
 		%varbit5640 = clearbit(%varbit5640, $index2);

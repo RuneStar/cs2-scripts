@@ -1,0 +1,16 @@
+// 4475
+[proc,side_channels_settab](int $int0, component $component1, component $component2, component $component3, component $component4)
+def_graphic $graphic5 = "tabs_short,2";
+def_graphic $graphic6 = "tabs_short,3";
+if (%varbit930 = $int0) {
+	~side_channels_drawtab($component1, "tabs_short,0", "tabs_short,1");
+	if_setonmouserepeat(null, $component1);
+	if_setonmouseleave(null, $component1);
+	if_setonop("adventurepath_do_nothing", $component1);
+} else {
+	~side_channels_drawtab($component1, $graphic5, $graphic6);
+	if_setonmouseleave("side_channels_drawtab($component1, $graphic5, $graphic6)", $component1);
+	$graphic5, $graphic6 = "tabs_short,4", "tabs_short,5";
+	if_setonmouserepeat("side_channels_drawtab($component1, $graphic5, $graphic6)", $component1);
+	if_setonop("side_channels_optab(event_opindex, $int0, $component2, $component3, $component4)", $component1);
+}

@@ -1,0 +1,14 @@
+// 4333
+[proc,clan_hall_settings_get_value](struct $struct0)(int)
+switch_struct ($struct0) {
+	case home_world_2917 :
+		return(%varbit12203);
+	case lock_hall_2919 :
+		return(%varbit12204);
+	case player_count_2918 :
+		return(%varbit12205);
+	case theme_2920 :
+		return(%varbit12206);
+	case default :
+		return(0);
+}

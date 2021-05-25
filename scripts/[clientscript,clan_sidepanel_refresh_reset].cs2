@@ -1,0 +1,8 @@
+// 4404
+[clientscript,clan_sidepanel_refresh_reset](int $clock0, component $component1, int $comsubid2)
+if (clientclock < $clock0) {
+	return;
+}
+if (cc_find($component1, $comsubid2) = ^true) {
+	~clan_sidepanel_refresh_reset($component1);
+}
