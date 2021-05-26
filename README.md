@@ -2520,6 +2520,8 @@
 [**2517**](scripts/[proc,nzone_lobby_hint].cs2) `[proc,nzone_lobby_hint]`  
 [**2518**](scripts/[proc,script2518].cs2)  
 [**2519**](scripts/[proc,script2519].cs2)  
+[**2520**](scripts/[proc,script2520].cs2)  
+[**2521**](scripts/[proc,script2521].cs2)  
 [**2522**](scripts/[clientscript,decant_itembutton_key].cs2) `[clientscript,decant_itembutton_key]`  
 [**2523**](scripts/[clientscript,script2523].cs2)  
 [**2524**](scripts/[clientscript,toplevel_mainmodal_open].cs2) `[clientscript,toplevel_mainmodal_open]`  
@@ -2580,6 +2582,7 @@
 [**2579**](scripts/[proc,script2579].cs2)  
 [**2580**](scripts/[proc,int_device].cs2) `[proc,int_device]`  
 [**2581**](scripts/[proc,mobile_chatbox_resize].cs2) `[proc,mobile_chatbox_resize]`  
+[**2582**](scripts/[proc,script2582].cs2)  
 [**2583**](scripts/[proc,telenexus_left_click].cs2) `[proc,telenexus_left_click]`  
 [**2584**](scripts/[clientscript,tutorial_overlay_hint].cs2) `[clientscript,tutorial_overlay_hint]`  
 [**2585**](scripts/[proc,tutorial_hint_chatbox].cs2) `[proc,tutorial_hint_chatbox]`  

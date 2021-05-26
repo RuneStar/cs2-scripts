@@ -1,0 +1,12 @@
+// 2520
+[proc,script2520](struct $struct0)(int)
+def_int $int1 = struct_param($struct0, param_1077);
+switch_int ($int1) {
+	case 87, 89, 92, 94, 97, 99, 101, 103, 105 :
+		if (getwindowmode ! ^windowmode_fixed & %varbit4608 = 1) {
+			return(0);
+		}
+		return(1);
+	case default :
+		return(1);
+}

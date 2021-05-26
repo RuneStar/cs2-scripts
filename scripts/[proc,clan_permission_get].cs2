@@ -1,6 +1,6 @@
 // 4456
 [proc,clan_permission_get](struct $struct0)(int)
-def_int $int1 = calc(126 + 1);
+def_int $int1 = calc(126 + 2);
 switch_struct ($struct0) {
 	case permission_access_2943 :
 		$int1 = %varclansetting12;
@@ -31,11 +31,11 @@ switch_struct ($struct0) {
 	case edit_clan_hall_2970 :
 		$int1 = %varclansetting24;
 	case talk_in_chat_2954 :
-		$int1 = calc(activeclansettings_getranktalk + 1);
+		$int1 = calc(activeclansettings_getranktalk + 2);
 	case kick_from_chat_2955 :
-		$int1 = calc(activeclansettings_getrankkick + 1);
+		$int1 = calc(activeclansettings_getrankkick + 2);
 }
-def_int $int2 = calc($int1 - 1);
+def_int $int2 = calc($int1 - 2);
 def_int $int3 = 0;
 def_int $int4 = 0;
 def_int $int5 = enum_getoutputcount(enum_3795);

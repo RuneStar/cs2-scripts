@@ -1,3 +1,5 @@
 // 4183
-[clientscript,script4183](component $component0, int $int1, boolean $boolean2)
-sound_synth(interface_select1, 1, 0);
+[clientscript,script4183](struct $struct0)
+if (~settings_op_checker($struct0) = 0) {
+	return;
+}

@@ -28,19 +28,7 @@ switch_int ($int0) {
 				return("", -1);
 		}
 	case 5 :
-		if ($int1 = 0) {
-			return("Armour", 0);
-		}
-		if ($int1 = 1) {
-			return("Penance", 1);
-		}
-		if ($int1 = 2) {
-			return("Prayers", 1);
-		}
-		if ($int1 = 3) {
-			return("Shields", 1);
-		}
-		return("", -1);
+		return(~script2521($int1));
 	case 3 :
 		if ($int1 = 0) {
 			return("Bows", 0);

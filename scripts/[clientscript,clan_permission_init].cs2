@@ -30,7 +30,7 @@ while ($count15 < $count13) {
 if_setsize($int10, 0, ^setsize_abs, ^setsize_minus, $component3);
 if_setsize(calc($int10 - 1), 0, ^setsize_minus, ^setsize_minus, $component6);
 def_int $int16 = 0;
-def_int $int17 = 263;
+def_int $int17 = 264;
 while ($int17 > 0) {
 	$int16 = ~max($int16, parawidth(enum(int, string, enum_3797, $int17), 512, p12_full));
 	$int17 = calc($int17 - 1);
