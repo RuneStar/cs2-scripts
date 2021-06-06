@@ -1,5 +1,5 @@
 // 609
-[clientscript,script609](int $colour0, int $settextalignh1, fontmetrics $fontmetrics2, fontmetrics $fontmetrics3, int $int4, int $int5, component $component6, string $string0)
+[clientscript,script609](int $int0, int $settextalignh1, fontmetrics $fontmetrics2, fontmetrics $fontmetrics3, int $int4, int $int5, component $component6, string $string0)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:15)) = false) {
 	return;
 }
@@ -9,7 +9,7 @@ def_int $int9 = 0;
 def_int $int10 = 0;
 def_int $int11 = 0;
 def_int $int12 = 0;
-$int10, $int11, $int12 = ~hex_to_rgb($colour0);
+$int10, $int11, $int12 = ~hex_to_rgb($int0);
 if ($int10 > 64) {
 	$int10 = calc($int10 - 32);
 } else {
@@ -35,7 +35,7 @@ while (string_length($string1) > 0) {
 	cc_setposition(0, %varcint49, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize($width7, $int8, ^setsize_abs, ^setsize_abs);
 	if (calc($int9 % 2) = 0) {
-		cc_setcolour($colour0);
+		cc_setcolour($int0);
 	} else {
 		cc_setcolour($colour13);
 	}

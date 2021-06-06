@@ -1,5 +1,5 @@
 // 2309
-[proc,tob_hud_fade](int $colour0, int $int1, int $int2, string $string0, int $int3)
+[proc,tob_hud_fade](int $int0, int $int1, int $int2, string $string0, int $int3)
 if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:3)) = false) {
 	return;
 }
@@ -20,7 +20,7 @@ if (cc_find(interface_28:1, 0) = ^true) {
 	}
 }
 if (cc_find(interface_28:1, 1) = ^true & .cc_find(interface_28:1, 2) = ^true) {
-	~script2310(cc_getcolour, $colour0, cc_gettrans, $int1, $int2, $string0);
+	~script2310(cc_getcolour, $int0, cc_gettrans, $int1, $int2, $string0);
 } else {
 	cc_create(interface_28:1, ^iftype_rectangle, 1);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
@@ -34,5 +34,5 @@ if (cc_find(interface_28:1, 1) = ^true & .cc_find(interface_28:1, 2) = ^true) {
 	.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	.cc_settextshadow(true);
 	.cc_settextfont(quill_oblique_large);
-	~script2310(^black, $colour0, 255, $int1, $int2, $string0);
+	~script2310(0, $int0, 255, $int1, $int2, $string0);
 }

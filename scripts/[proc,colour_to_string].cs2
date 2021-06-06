@@ -1,5 +1,5 @@
 // 4192
-[proc,colour_to_string](int $colour0)(string)
+[proc,colour_to_string](int $int0)(string)
 def_int $int1 = 0;
 def_int $int2 = 0;
 def_int $int3 = 0;
@@ -9,7 +9,7 @@ def_string $string2 = "";
 def_int $int4 = 0;
 def_int $int5 = 0;
 def_string $string3 = "";
-$int1, $int2, $int3 = ~hex_to_rgb($colour0);
+$int1, $int2, $int3 = ~hex_to_rgb($int0);
 $int4 = calc($int1 / 16);
 $int5 = calc($int1 % 16);
 if ($int4 < 10) {

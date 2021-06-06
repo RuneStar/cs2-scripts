@@ -5,7 +5,7 @@ if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:
 }
 def_int $int0 = ~max(0, calc(%varcint178 - 5));
 def_int $int1 = calc($int0 * 20);
-cc_create(interface_50:41, ^iftype_rectangle, $int1);
+cc_create(interface_50:42, ^iftype_rectangle, $int1);
 cc_setsize(0, 13, ^setsize_minus, ^setsize_abs);
 cc_setposition(0, -13, ^setpos_abs_centre, ^setpos_abs_top);
 cc_setfill(true);
@@ -18,14 +18,14 @@ if (compare(lowercase($string1), lowercase(removetags(chat_playername))) = 0) {
 	$colour2 = ^white;
 }
 def_int $int3 = 0;
-$string0, $int3 = ~script2322(1, -1, interface_50:31, $string0, $int1, $int3, $colour2);
-$string0, $int3 = ~script2322(2, 3, interface_50:32, $string0, $int1, $int3, $colour2);
-$string0, $int3 = ~script2322(4, 5, interface_50:33, $string0, $int1, $int3, $colour2);
-$string0, $int3 = ~script2322(6, 7, interface_50:34, $string0, $int1, $int3, $colour2);
-$string0, $int3 = ~script2322(8, 9, interface_50:35, $string0, $int1, $int3, $colour2);
-$string0, $int3 = ~script2322(10, 11, interface_50:36, $string0, $int1, $int3, $colour2);
-$string0, $int3 = ~script2322(12, 13, interface_50:37, $string0, $int1, $int3, $colour2);
-$string0, $int3 = ~script2322(14, 15, interface_50:38, $string0, $int1, $int3, $colour2);
-$string0, $int3 = ~script2322(16, 17, interface_50:39, $string0, $int1, $int3, $colour2);
-$string0, $int3 = ~script2322(18, 19, interface_50:40, $string0, $int1, $int3, $colour2);
+$string0, $int3 = ~script2322(1, -1, interface_50:32, $string0, $int1, $int3, $colour2);
+$string0, $int3 = ~script2322(2, 3, interface_50:33, $string0, $int1, $int3, $colour2);
+$string0, $int3 = ~script2322(4, 5, interface_50:34, $string0, $int1, $int3, $colour2);
+$string0, $int3 = ~script2322(6, 7, interface_50:35, $string0, $int1, $int3, $colour2);
+$string0, $int3 = ~script2322(8, 9, interface_50:36, $string0, $int1, $int3, $colour2);
+$string0, $int3 = ~script2322(10, 11, interface_50:37, $string0, $int1, $int3, $colour2);
+$string0, $int3 = ~script2322(12, 13, interface_50:38, $string0, $int1, $int3, $colour2);
+$string0, $int3 = ~script2322(14, 15, interface_50:39, $string0, $int1, $int3, $colour2);
+$string0, $int3 = ~script2322(16, 17, interface_50:40, $string0, $int1, $int3, $colour2);
+$string0, $int3 = ~script2322(18, 19, interface_50:41, $string0, $int1, $int3, $colour2);
 %varcint178 = calc(%varcint178 + 1);

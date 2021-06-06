@@ -1,0 +1,13 @@
+// 4497
+[proc,script4497](component $component0, component $component1, int $comsubid2)
+sound_synth(interface_select1, 1, 0);
+if (cc_find($component0, 0) = ^true) {
+	cc_setgraphic("menu_buttons,5");
+	cc_setonmouserepeat(null);
+	cc_setonmouseleave(null);
+}
+if_setonop(null, $component0);
+if_clearops($component0);
+if (cc_find($component1, $comsubid2) = ^true) {
+	cc_resume_pausebutton;
+}

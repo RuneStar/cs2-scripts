@@ -1,0 +1,64 @@
+// 4501
+[proc,script4501](component $component0, int $int1, component $component2, int $int3, string $text0, int $int4, int $int5, int $int6, int $int7, string $text1)(int, int, int)
+def_int $comsubid8 = 0;
+cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize($int6, 12, ^setsize_abs, ^setsize_abs);
+cc_setposition($int4, calc($int5 - 12), ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($text1);
+cc_settextfont(p11_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component0, ^iftype_graphic, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
+cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("tradebacking");
+cc_settiling(true);
+cc_create($component0, ^iftype_rectangle, $int1);
+def_int $int9 = $int1;
+$int1 = calc($int1 + 1);
+cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
+cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component0, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(calc($int6 - 2), calc($int7 - 2), ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int4 + 1), calc($int5 + 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(0x474745);
+$comsubid8 = $int1;
+cc_create($component0, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(calc($int6 - 6), calc($int7 - 4), ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int4 + 3), calc($int5 + 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_settext($text0);
+cc_settextfont(p12_full);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_create($component2, ^iftype_rectangle, $int3);
+cc_setsize($int6, calc($int7 + 12), ^setsize_abs, ^setsize_abs);
+cc_setposition($int4, calc($int5 - 12), ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(255);
+cc_setop(1, "Select");
+$int3 = calc($int3 + 1);
+if (~on_mobile = false) {
+	cc_setonmouseover("cc_settrans($component0, $int1, 220, null)");
+	cc_setonmouseleave("cc_settrans($component0, $int1, 255, null)");
+} else {
+	cc_setonmouseover(null);
+	cc_setonmouseleave(null);
+}
+cc_create($component0, ^iftype_rectangle, $int1);
+cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
+cc_setposition($int4, $int5, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(true);
+cc_setcolour(^black);
+cc_settrans(255);
+$int1 = calc($int1 + 1);
+return($int1, $int3, $comsubid8);

@@ -1,5 +1,5 @@
 // 3696
-[proc,league_relic_display_core](component $component0, component $component1, int $colour2)
+[proc,league_relic_display_core](component $component0, component $component1, int $int2)
 def_struct $struct3 = enum(int, struct, enum_2670, %varbit10032);
 if ($struct3 = null) {
 	return;
@@ -22,7 +22,7 @@ if ($struct7 = null) {
 }
 def_graphic $graphic8 = struct_param($struct7, param_882);
 def_string $string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 0, $colour2, $graphic8, $component1, $string0);
+~buff_bar_buff_create($component0, 0, $int2, $graphic8, $component1, $string0);
 $struct5 = enum(int, struct, $enum4, 1);
 if ($struct5 = null) {
 	return;
@@ -37,7 +37,7 @@ if ($struct7 = null) {
 }
 $graphic8 = struct_param($struct7, param_882);
 $string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 1, $colour2, $graphic8, $component1, $string0);
+~buff_bar_buff_create($component0, 1, $int2, $graphic8, $component1, $string0);
 $struct5 = enum(int, struct, $enum4, 2);
 if ($struct5 = null) {
 	return;
@@ -52,7 +52,7 @@ if ($struct7 = null) {
 }
 $graphic8 = struct_param($struct7, param_882);
 $string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 2, $colour2, $graphic8, $component1, $string0);
+~buff_bar_buff_create($component0, 2, $int2, $graphic8, $component1, $string0);
 $struct5 = enum(int, struct, $enum4, 3);
 if ($struct5 = null) {
 	return;
@@ -67,7 +67,7 @@ if ($struct7 = null) {
 }
 $graphic8 = struct_param($struct7, param_882);
 $string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 3, $colour2, $graphic8, $component1, $string0);
+~buff_bar_buff_create($component0, 3, $int2, $graphic8, $component1, $string0);
 $struct5 = enum(int, struct, $enum4, 4);
 if ($struct5 = null) {
 	return;
@@ -82,7 +82,7 @@ if ($struct7 = null) {
 }
 $graphic8 = struct_param($struct7, param_882);
 $string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 4, $colour2, $graphic8, $component1, $string0);
+~buff_bar_buff_create($component0, 4, $int2, $graphic8, $component1, $string0);
 $struct5 = enum(int, struct, $enum4, 5);
 if ($struct5 = null) {
 	return;
@@ -97,4 +97,4 @@ if ($struct7 = null) {
 }
 $graphic8 = struct_param($struct7, param_882);
 $string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 5, $colour2, $graphic8, $component1, $string0);
+~buff_bar_buff_create($component0, 5, $int2, $graphic8, $component1, $string0);

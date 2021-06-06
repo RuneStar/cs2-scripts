@@ -1,5 +1,6 @@
 // 91
 [proc,pm_filtertest](int $chattype0, string $string0, int $clock1, int $int2)(int)
+def_int $int3 = ~script4487;
 switch_int ($chattype0) {
 	case ^chattype_modprivatechat :
 		if ($clock1 < %varcint175) {
@@ -27,8 +28,12 @@ switch_int ($chattype0) {
 		if ($clock1 < %varcint175) {
 			return(0);
 		}
-		if ($chattype0 = ^chattype_loginlogoutnotification & %varbit1627 = 0 & calc(clientclock - $clock1) >= 500) {
-			return(0);
+		if ($chattype0 = ^chattype_loginlogoutnotification) {
+			if ($int3 = 2) {
+				return(0);
+			} else if ($int3 = 0 & calc(clientclock - $clock1) >= 500) {
+				return(0);
+			}
 		}
 		if (chat_getfilter_private ! ^chatfilter_off) {
 			return(1);

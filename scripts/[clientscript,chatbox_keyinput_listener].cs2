@@ -1,5 +1,5 @@
 // 57
-[clientscript,chatbox_keyinput_listener](int $key0, char $keychar1, component $component2, int $int3, component $component4, int $key5, string $string0, string $string1, int $colour6, int $clock7)
+[clientscript,chatbox_keyinput_listener](int $key0, char $keychar1, component $component2, int $int3, component $component4, int $key5, string $string0, string $string1, int $int6, int $clock7)
 if (clientclock < $clock7) {
 	return;
 }
@@ -14,4 +14,4 @@ if ($key0 ! null & $key0 = $key5) {
 } else {
 	return;
 }
-~chatbox_keyinput_matched($component2, $int3, $component4, $key5, $string0, $string1, $colour6, $clock7);
+~chatbox_keyinput_matched($component2, $int3, $component4, $key5, $string0, $string1, $int6, $clock7);

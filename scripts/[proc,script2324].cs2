@@ -1,5 +1,5 @@
 // 2324
-[proc,script2324](component $component0, string $string0, int $int1, int $int2)
+[proc,script2324](component $component0, string $string0, int $int1, int $int2, int $int3)
 if_sethide(false, $component0);
 cc_deleteall($component0);
 cc_create($component0, ^iftype_text, 0);
@@ -9,7 +9,11 @@ cc_setcolour(0xff981f);
 cc_settextfont(p11_full);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 cc_settextshadow(true);
-~script2325($string0, $int1);
+if ($int3 = 1) {
+	~script4494($string0, $int1);
+} else {
+	~script2325($string0, $int1);
+}
 if ($int2 = 2) {
 	~script2326($component0, cc_getid, $string0, $int1);
 } else {

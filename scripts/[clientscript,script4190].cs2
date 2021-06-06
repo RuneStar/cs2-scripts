@@ -1,5 +1,5 @@
 // 4190
-[clientscript,script4190](int $opindex0, component $component1, int $comsubid2, int $colour3, component $component4, int $comsubid5, int $comsubid6, struct $struct7)
+[clientscript,script4190](int $opindex0, component $component1, int $comsubid2, component $component3, int $int4, component $component5, int $comsubid6, int $comsubid7, struct $struct8, component $component9, int $comsubid10, int $comsubid11, int $comsubid12, int $comsubid13)
 if ($opindex0 ! 1) {
 	return;
 }
@@ -8,6 +8,4 @@ if (cc_find($component1, $comsubid2) = ^true) {
 	cc_settrans(200);
 	cc_setontimer("cc_settrans_temporarily_end(event_com, event_comsubid, 0, calc(clientclock + 20))");
 }
-%var3010 = $colour3;
-~script4188($component4, $comsubid5, $struct7);
-~script4189($component4, $comsubid6, $struct7);
+~script4500($component3, $int4, $component5, $comsubid6, $comsubid7, $struct8, $component9, $comsubid10, $comsubid11, $comsubid12, $comsubid13);

@@ -1,7 +1,7 @@
 // 885
 [clientscript,script885](component $component0, component $component1, component $component2, component $component3)
 cc_deleteall($component1);
-def_int $colour4 = ^white;
+def_int $int4 = 16777215;
 def_int $int5 = 0;
 .cc_create($component1, ^iftype_graphic, $int5);
 $int5 = calc($int5 + 1);
@@ -35,5 +35,5 @@ cc_settextshadow(true);
 cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 ~script1109($component1, 2);
 if_sethide(true, $component2);
-.cc_setonclick("script886($component0, $component1, $int6, $component2, $component3, $colour4)");
-~league_setup_display_hoveroff($component1, $colour4);
+.cc_setonclick("script886($component0, $component1, $int6, $component2, $component3, $int4)");
+~league_setup_display_hoveroff($component1, $int4);

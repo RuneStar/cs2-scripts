@@ -1,5 +1,5 @@
 // 3700
-[clientscript,league_setup_display_hover](boolean $boolean0, component $component1, int $colour2)
+[clientscript,league_setup_display_hover](boolean $boolean0, component $component1, int $int2)
 if ($boolean0 = true) {
 	if (cc_find($component1, 0) = ^true) {
 		cc_settrans(100);
@@ -9,8 +9,8 @@ if ($boolean0 = true) {
 		cc_setgraphic("scrollbar_v2,1");
 	}
 	if (cc_find($component1, 4) = ^true) {
-		cc_setcolour($colour2);
+		cc_setcolour($int2);
 	}
 } else {
-	~league_setup_display_hoveroff($component1, $colour2);
+	~league_setup_display_hoveroff($component1, $int2);
 }

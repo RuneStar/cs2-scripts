@@ -1,11 +1,11 @@
 // 2219
 [proc,oculus_flashers](component $component0, component $component1, component $component2)
-def_int $colour3 = calc(clientclock % 90);
-if ($colour3 > 0x00002d) {
-	$colour3 = calc(90 - $colour3);
+def_int $int3 = calc(clientclock % 90);
+if ($int3 > 45) {
+	$int3 = calc(90 - $int3);
 }
-def_int $int4 = scale(invpow(calc($colour3 * 255), 2), invpow(11475, 2), 255);
-$colour3 = ~rgb_to_hex(255, $int4, $int4);
-if_setcolour($colour3, $component0);
-if_setcolour($colour3, $component1);
-if_setcolour($colour3, $component2);
+def_int $int4 = scale(invpow(calc($int3 * 255), 2), invpow(11475, 2), 255);
+$int3 = ~rgb_to_hex(255, $int4, $int4);
+if_setcolour($int3, $component0);
+if_setcolour($int3, $component1);
+if_setcolour($int3, $component2);

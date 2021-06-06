@@ -75,6 +75,7 @@ if (%varcint55 >= %varcint202 & %varcint55 > calc(clientclock - 3000) & chat_get
 }
 $mesuid12 = $mesuid0;
 def_int $chattype17 = ^chattype_gamemessage;
+def_int $int18 = ~script4487;
 if (%var287 = 1 & (%varcint41 ! 1337 | %varbit4089 = 0)) {
 	while ($mesuid12 ! -1 & $component10 ! null & calc($int7 - $int4) < 57) {
 		$chattype17, $int13, $string1, $string2, $string0, $int14 = chat_gethistory_byuid($mesuid12);
@@ -86,7 +87,7 @@ if (%var287 = 1 & (%varcint41 ! 1337 | %varbit4089 = 0)) {
 					$int7 = calc($int7 + ~script203("<$string4>To <$string1>:</col>", "<$string4><$string0></col>", $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
 				case ^chattype_loginlogoutnotification :
 					$int7 = calc($int7 + ~script199("<$string4><$string0></col>", $int9, $component10, interface_163:0, $width8, $int1, 13, $int7, $setposv2, $int3, ^cyan, true));
-					if (%varbit1627 = 0) {
+					if ($int18 = 0) {
 						%varcint65 = calc($int13 + 500 + 1);
 						if_setontimer("script664(false)", interface_162:0);
 					}

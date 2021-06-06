@@ -2,7 +2,7 @@
 [proc,script2322](int $int0, int $int1, component $component2, string $string0, int $int3, int $int4, int $colour5)(string, int)
 def_string $string1 = "";
 $string1, $string0 = ~script632($string0);
-cc_create(interface_50:41, ^iftype_text, calc($int3 + $int0));
+cc_create(interface_50:42, ^iftype_text, calc($int3 + $int0));
 cc_setposition($int4, -13, ^setpos_abs_left, ^setpos_abs_top);
 def_int $width6 = if_getwidth($component2);
 cc_setsize($width6, 13, ^setsize_abs, ^setsize_abs);
@@ -12,7 +12,7 @@ cc_settextshadow(true);
 cc_setcolour($colour5);
 cc_settext($string1);
 if ($int1 ! -1) {
-	cc_create(interface_50:41, ^iftype_text, calc($int3 + $int1));
+	cc_create(interface_50:42, ^iftype_text, calc($int3 + $int1));
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
 	cc_sethide(true);

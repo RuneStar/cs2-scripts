@@ -15,6 +15,7 @@ if (enum(int, boolean, enum_892, $chattype0) = true & $chattype0 ! ^chattype_pla
 def_int $chatfilter4 = null;
 def_string $string3 = "";
 def_int $int5 = -1;
+def_int $int6 = ~script4487;
 switch_int ($chattype0) {
 	case ^chattype_publicchat, ^chattype_modchat :
 		if ($clock1 < %varcint199) {
@@ -89,8 +90,12 @@ switch_int ($chattype0) {
 		if ($clock1 < %varcint175) {
 			return(0);
 		}
-		if ($chattype0 = ^chattype_loginlogoutnotification & %varbit1627 = 0 & calc(clientclock - $clock1) >= 500) {
-			return(0);
+		if ($chattype0 = ^chattype_loginlogoutnotification) {
+			if ($int6 = 2) {
+				return(0);
+			} else if ($int6 = 0 & calc(clientclock - $clock1) >= 500) {
+				return(0);
+			}
 		}
 		if (%var287 = 1 & $int2 = 0 & ~trade_partner_check($chattype0, $string0, $int3) = 0) {
 			return(0);

@@ -1,0 +1,14 @@
+// 4506
+[proc,script4506](int $int0, string $string0, component $component1, component $component2, int $comsubid3, int $comsubid4, struct $struct5, component $component6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10)
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 0;
+$int11, $int12, $int13 = ~hex_to_rgb(%varcint459);
+if ($int0 = 23) {
+	$int11 = ~string_to_int($string0);
+} else if ($int0 = 24) {
+	$int12 = ~string_to_int($string0);
+} else if ($int0 = 25) {
+	$int13 = ~string_to_int($string0);
+}
+~script4500($component1, ~rgb_to_hex($int11, $int12, $int13), $component2, $comsubid3, $comsubid4, $struct5, $component6, $comsubid7, $comsubid8, $comsubid9, $comsubid10);

@@ -1,18 +1,18 @@
 // 4362
-[clientscript,clan_board_entry_reset](component $component0, int $int1, int $colour2, int $int3, int $colour4, int $int5, int $int6, string $string0, int $clock7, component $component8)
+[clientscript,clan_board_entry_reset](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, string $string0, int $clock7, component $component8)
 if (clientclock < $clock7) {
 	return;
 }
 if_setontimer(null, $component0);
 if (cc_find($component0, $int1) = ^true) {
-	cc_setcolour($colour2);
+	cc_setcolour($int2);
 	cc_settrans($int3);
 }
 if (~on_mobile = false) {
-	if_setonmouserepeat("script1015(event_com, $int1, $colour4, $int5)", $component0);
+	if_setonmouserepeat("script1015(event_com, $int1, $int4, $int5)", $component0);
 }
-if_setonmouseleave("script1015(event_com, $int1, $colour2, $int3)", $component0);
-if_setonop("clan_board_entry_op(event_opindex, event_com, $int1, $colour2, $int3, $colour4, $int5, $int6, $string0, $component8)", $component0);
+if_setonmouseleave("script1015(event_com, $int1, $int2, $int3)", $component0);
+if_setonop("clan_board_entry_op(event_opindex, event_com, $int1, $int2, $int3, $int4, $int5, $int6, $string0, $component8)", $component0);
 if_setop(1, "View clan", $component0);
 if_setop(10, "Report name", $component0);
 if_setopbase("<col=ff9040><removetags($string0)></col>", $component0);

@@ -53,7 +53,7 @@ if (cc_find($component4, $comsubid10) = ^true) {
 	}
 	cc_setposition($int12, $int13, ^setpos_abs_centre, ^setpos_abs_centre);
 } else {
-	$int21, $int22, $int23 = ~hex_to_rgb(^yellow);
+	$int21, $int22, $int23 = ~hex_to_rgb(16776960);
 	$int21, $int22, $int23 = ~max(calc($int21 - 48), 0), ~max(calc($int22 - 48), 0), ~max(calc($int23 - 48), 0);
 	$colour24 = ~rgb_to_hex($int21, $int22, $int23);
 	cc_create($component4, ^iftype_rectangle, $comsubid10);

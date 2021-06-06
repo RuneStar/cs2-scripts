@@ -17,6 +17,10 @@ switch_int ($int0) {
 		$length4 = 500;
 	case 6 :
 		$length4 = 4;
+	case 10 :
+		$length4 = 3;
+	case 9 :
+		$length4 = 6;
 }
 if (char_isprintable($keychar2) = false) {
 	if ($int0 = 5 & $key1 = ^key_return) {
@@ -72,6 +76,18 @@ if ($int0 = 6) {
 	return($string0);
 }
 if ($int0 = 5 & string_indexof_char("|", $keychar2) ! -1) {
+	return($string0);
+}
+if ($int0 = 10) {
+	if (char_isnumeric($keychar2) = true & $length3 < 3) {
+		return(append_char($string0, $keychar2));
+	}
+	return($string0);
+}
+if ($int0 = 9) {
+	if ($length3 < 6) {
+		return(append_char($string0, $keychar2));
+	}
 	return($string0);
 }
 if ($length3 < $length4) {

@@ -11,11 +11,11 @@ def_graphic $graphic28 = enum(int, graphic, enum_3337, $int0);
 if ($struct26 = null) {
 	return;
 }
-def_int $colour29 = struct_param($struct26, param_1027);
-def_int $colour30 = struct_param($struct26, param_1028);
-if_setcolour($colour29, $component6);
-if_setcolour($colour29, $component11);
-if_setcolour($colour29, $component22);
+def_int $int29 = struct_param($struct26, param_1027);
+def_int $int30 = struct_param($struct26, param_1028);
+if_setcolour($int29, $component6);
+if_setcolour($int29, $component11);
+if_setcolour($int29, $component22);
 if_sethide(false, $component4);
 if_sethide(true, $component25);
 if_sethide(true, $component1);
@@ -25,22 +25,22 @@ if_sethide(true, $component3);
 if_settext($text2, $component6);
 if_setgraphic($graphic28, $component5);
 $string1 = "Overview";
-~script3725($component7, 0, $string1, $colour29, $colour30);
+~script3725($component7, 0, $string1, $int29, $int30);
 if_setop(1, $string1, $component7);
-if_setonop("league_areas_tab_click($component7, $int0, $component7, $component8, $component9, $component10, $component11, $colour29, $colour30, $component16, $component17)", $component7);
+if_setonop("league_areas_tab_click($component7, $int0, $component7, $component8, $component9, $component10, $component11, $int29, $int30, $component16, $component17)", $component7);
 $string1 = "Key Info";
-~script3725($component8, 0, $string1, $colour29, $colour30);
+~script3725($component8, 0, $string1, $int29, $int30);
 if_setop(1, $string1, $component8);
-if_setonop("league_areas_tab_click($component8, $int0, $component7, $component8, $component9, $component10, $component11, $colour29, $colour30, $component16, $component17)", $component8);
+if_setonop("league_areas_tab_click($component8, $int0, $component7, $component8, $component9, $component10, $component11, $int29, $int30, $component16, $component17)", $component8);
 $string1 = "Unlocks";
-~script3725($component9, 0, $string1, $colour29, $colour30);
+~script3725($component9, 0, $string1, $int29, $int30);
 if_setop(1, $string1, $component9);
-if_setonop("league_areas_tab_click($component9, $int0, $component7, $component8, $component9, $component10, $component11, $colour29, $colour30, $component16, $component17)", $component9);
+if_setonop("league_areas_tab_click($component9, $int0, $component7, $component8, $component9, $component10, $component11, $int29, $int30, $component16, $component17)", $component9);
 $string1 = "Drops";
-~script3725($component10, 0, $string1, $colour29, $colour30);
+~script3725($component10, 0, $string1, $int29, $int30);
 if_setop(1, $string1, $component10);
-if_setonop("league_areas_tab_click($component10, $int0, $component7, $component8, $component9, $component10, $component11, $colour29, $colour30, $component16, $component17)", $component9);
-~league_areas_tab_details($component7, $int0, $component7, $component8, $component9, $component10, $component11, $colour29, $colour30, $component16, $component17);
+if_setonop("league_areas_tab_click($component10, $int0, $component7, $component8, $component9, $component10, $component11, $int29, $int30, $component16, $component17)", $component9);
+~league_areas_tab_details($component7, $int0, $component7, $component8, $component9, $component10, $component11, $int29, $int30, $component16, $component17);
 if ($int15 = 2) {
 	$comsubid27 = ~v2_stone_button($component12);
 	$op0 = "Unlock";
@@ -109,7 +109,7 @@ if (~on_mobile = false) {
 if_setonop("league_area_back($component1, $component2, $component3, $component4, $component14)", $component13);
 def_int $comsubid31 = ~steelborder($component21, $text2, 1);
 if (cc_find($component21, $comsubid31) = ^true) {
-	cc_setcolour($colour29);
+	cc_setcolour($int29);
 }
 if ($int0 = 2) {
 	if_settext("You are about to unlock <col=ffffff>Karamja</col> as your second area.<br><br>All participants are given <col=ffffff>Misthalin</col> and <col=ffffff>Karamja</col> as their first two areas. For later unlocks, you can choose which area you want to select.", $component22);

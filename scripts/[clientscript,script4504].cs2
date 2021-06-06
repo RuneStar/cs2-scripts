@@ -1,0 +1,19 @@
+// 4504
+[clientscript,script4504](int $key0, char $keychar1, string $string0, component $component2, component $component3, int $comsubid4, int $comsubid5, struct $struct6, component $component7, int $comsubid8, int $comsubid9, int $comsubid10, int $comsubid11)
+if (~keypress_permit(-1, 162) = 0) {
+	return;
+}
+if ($key0 = ^key_return) {
+	~script4505($component2, $component3, $comsubid4, $comsubid5, $struct6, $component7, $comsubid8, $comsubid9, $comsubid10, $comsubid11);
+	return;
+}
+if ($key0 = ^key_escape) {
+	~meslayer_close(1, 1);
+	return;
+}
+if (%varcint5 = 22) {
+	%varcstring359 = ~add_to_inputstring(%varcstring359, 9, $key0, $keychar1);
+} else {
+	%varcstring359 = ~add_to_inputstring(%varcstring359, 10, $key0, $keychar1);
+}
+~script222($string0);

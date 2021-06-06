@@ -1,32 +1,32 @@
 // 1346
 [proc,br_fogcolour]
-def_int $colour0 = 0x882000;
+def_int $int0 = 8921088;
 if (%varbit11865 = 0) {
 	switch_int (%varbit11798) {
 		case 1 :
-			$colour0 = 0x882000;
+			$int0 = 8921088;
 		case 2 :
-			$colour0 = 0xffcc66;
+			$int0 = 16764006;
 	}
 } else {
 	switch_int (%varbit11865) {
 		case 1 :
-			$colour0 = 0x00cc44;
+			$int0 = 52292;
 		case 2 :
-			$colour0 = 0xffcc66;
+			$int0 = 16764006;
 		case 3 :
-			$colour0 = 0x882000;
+			$int0 = 8921088;
 		case 4 :
-			$colour0 = 0x4dd2ff;
+			$int0 = 5100287;
 		case 5 :
-			$colour0 = 0xf5f5f0;
+			$int0 = 16119280;
 	}
 }
-def_int $colour1 = $colour0;
+def_int $int1 = $int0;
 def_int $int2 = if_gettrans(interface_328:1);
 if (%varbit5320 <= 0 & %varbit5316 <= 0) {
-	if ($colour1 ! $colour0) {
-		if_setcolour($colour0, interface_328:1);
+	if ($int1 ! $int0) {
+		if_setcolour($int0, interface_328:1);
 	}
 	if ($int2 ! 255) {
 		if_settrans(255, interface_328:1);
@@ -45,14 +45,14 @@ def_int $int10 = 0;
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $int13 = 0;
-$int11, $int12, $int13 = ~hex_to_rgb($colour0);
+$int11, $int12, $int13 = ~hex_to_rgb($int0);
 def_int $int14 = 100;
 def_int $int15 = 255;
 def_int $int16 = 0;
 def_int $int17 = 0;
 def_int $int18 = 0;
 def_int $int19 = 0;
-$int17, $int18, $int19 = ~hex_to_rgb($colour1);
+$int17, $int18, $int19 = ~hex_to_rgb($int1);
 $int4 = invpow(pow(calc(coordx(coord) - %varbit5320), 2), 2);
 $int5 = invpow(pow(calc(coordz(coord) - %varbit5316), 2), 2);
 if ($int4 > $int5) {

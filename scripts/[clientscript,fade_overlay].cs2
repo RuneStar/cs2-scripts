@@ -1,5 +1,5 @@
 // 948
-[clientscript,fade_overlay](int $colour0, int $int1, int $colour2, int $int3, int $int4)
+[clientscript,fade_overlay](int $int0, int $int1, int $int2, int $int3, int $int4)
 if ($int1 < 0) {
 	$int1 = 0;
 } else if ($int1 > 255) {
@@ -11,10 +11,10 @@ if ($int3 < 0) {
 	$int3 = 255;
 }
 if ($int4 <= 0) {
-	if_setcolour($colour2, interface_174:1);
+	if_setcolour($int2, interface_174:1);
 	if_settrans($int3, interface_174:1);
 	if_setontimer(null, interface_174:0);
 	return;
 }
-~fade_overlay_increment($colour0, $int1, $colour2, $int3, $int4, $int4);
-if_setontimer("fade_overlay_update($colour0, $int1, $colour2, $int3, $int4, calc(clientclock + $int4))", interface_174:0);
+~fade_overlay_increment($int0, $int1, $int2, $int3, $int4, $int4);
+if_setontimer("fade_overlay_update($int0, $int1, $int2, $int3, $int4, calc(clientclock + $int4))", interface_174:0);

@@ -1,20 +1,20 @@
 // 2153
-[proc,chatbox_keyinput_matched](component $component0, int $int1, component $component2, int $key3, string $string0, string $string1, int $colour4, int $clock5)
+[proc,chatbox_keyinput_matched](component $component0, int $int1, component $component2, int $key3, string $string0, string $string1, int $int4, int $clock5)
 if ($int1 ! -1 & cc_find($component0, $int1) = ^true) {
 	if (string_length(cc_gettext) > 0) {
 		cc_resume_pausebutton;
 		cc_settext("Please wait...");
-		cc_setcolour($colour4);
+		cc_setcolour($int4);
 	}
-	cc_setonkey("chatbox_keyinput_listener(event_key, event_keychar, event_com, event_comsubid, $component2, $key3, $string0, $string1, $colour4, calc(clientclock + 20))");
+	cc_setonkey("chatbox_keyinput_listener(event_key, event_keychar, event_com, event_comsubid, $component2, $key3, $string0, $string1, $int4, calc(clientclock + 20))");
 } else {
 	if (string_length(if_gettext($component0)) > 0) {
 		if_resume_pausebutton($component0);
 		if_settext("Please wait...", $component0);
-		if_setcolour($colour4, $component0);
+		if_setcolour($int4, $component0);
 	}
-	if_setonkey("chatbox_keyinput_listener(event_key, event_keychar, event_com, -1, $component2, $key3, $string0, $string1, $colour4, calc(clientclock + 20))", $component0);
+	if_setonkey("chatbox_keyinput_listener(event_key, event_keychar, event_com, -1, $component2, $key3, $string0, $string1, $int4, calc(clientclock + 20))", $component0);
 }
 if ($component2 ! null) {
-	if_setonclick("chatbox_keyinput_clicklistener($component0, $int1, event_com, $key3, $string0, $string1, $colour4, calc(clientclock + 20))", $component2);
+	if_setonclick("chatbox_keyinput_clicklistener($component0, $int1, event_com, $key3, $string0, $string1, $int4, calc(clientclock + 20))", $component2);
 }

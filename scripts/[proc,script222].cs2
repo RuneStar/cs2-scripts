@@ -15,6 +15,11 @@ switch_int (%varcint5) {
 		if (string_length(%varcstring359) >= 2) {
 			$string1 = "<substring(%varcstring359, 0, 2)>:<substring(%varcstring359, 2, string_length(%varcstring359))>";
 		}
+	case 22 :
+		$length0 = 6;
+		$string1 = append("#", $string1);
+	case 23, 24, 25 :
+		$length0 = 3;
 }
 if (string_length(%varcstring359) < $length0) {
 	$string1 = append($string1, "*");

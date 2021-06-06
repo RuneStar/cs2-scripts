@@ -1,5 +1,5 @@
 // 4484
-[proc,script4484](string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, int $int0)(string, string, string, string, string, string, string, string)
+[proc,script4484](string $string0, string $string1, string $string2, string $string3, string $string4, string $string5, string $string6, string $string7, string $string8, int $int0)(string, string, string, string, string, string, string, string, string)
 if ($int0 = 1) {
 	if (calc(%var3000 - 1) ! -1) {
 		$string0 = ~script3739(calc(%var3000 - 1), "col");
@@ -24,6 +24,9 @@ if ($int0 = 1) {
 	}
 	if (calc(%var3007 - 1) ! -1) {
 		$string7 = ~script3739(calc(%var3007 - 1), "col");
+	}
+	if (calc(%var3061 - 1) ! -1) {
+		$string8 = ~script3739(calc(%var3061 - 1), "col");
 	}
 } else {
 	if (calc(%var2992 - 1) ! -1) {
@@ -50,5 +53,8 @@ if ($int0 = 1) {
 	if (calc(%var2999 - 1) ! -1) {
 		$string7 = ~script3739(calc(%var2999 - 1), "col");
 	}
+	if (calc(%var3060 - 1) ! -1) {
+		$string8 = ~script3739(calc(%var3060 - 1), "col");
+	}
 }
-return($string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7);
+return($string0, $string1, $string2, $string3, $string4, $string5, $string6, $string7, $string8);

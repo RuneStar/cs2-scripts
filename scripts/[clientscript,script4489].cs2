@@ -1,0 +1,13 @@
+// 4489
+[clientscript,script4489](component $component0, int $comsubid1, namedobj $namedobj2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	if (%varbit12272 ! 0) {
+		cc_setop(3, "Buy-<tostring(%varbit12272)>");
+	} else {
+		cc_clearops;
+		cc_setop(1, "Value");
+		cc_setop(2, "Buy-1");
+		cc_setop(4, "Buy-All");
+		cc_setop(5, "Buy-X");
+	}
+}

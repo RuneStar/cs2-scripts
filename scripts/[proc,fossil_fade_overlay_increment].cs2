@@ -1,7 +1,7 @@
 // 2002
-[proc,fossil_fade_overlay_increment](component $component0, component $component1, int $colour2, int $int3, int $colour4, int $int5, int $int6, int $int7)
+[proc,fossil_fade_overlay_increment](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)
 if ($int7 <= 0) {
-	if_setcolour($colour4, $component1);
+	if_setcolour($int4, $component1);
 	if_settrans($int5, $component1);
 	if_setontimer(null, $component0);
 	return;
@@ -9,11 +9,11 @@ if ($int7 <= 0) {
 def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 0;
-$int8, $int9, $int10 = ~hex_to_rgb($colour2);
+$int8, $int9, $int10 = ~hex_to_rgb($int2);
 def_int $int11 = 0;
 def_int $int12 = 0;
 def_int $int13 = 0;
-$int11, $int12, $int13 = ~hex_to_rgb($colour4);
+$int11, $int12, $int13 = ~hex_to_rgb($int4);
 def_int $int14 = calc($int11 - interpolate(0, $int7, 0, $int6, $int11 - $int8));
 def_int $int15 = calc($int12 - interpolate(0, $int7, 0, $int6, $int12 - $int9));
 def_int $int16 = calc($int13 - interpolate(0, $int7, 0, $int6, $int13 - $int10));

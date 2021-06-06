@@ -14,8 +14,26 @@ def_int $int8 = 0;
 def_string $opbase0 = "";
 while ($count5 < $count6) {
 	$namedobj7 = enum(int, namedobj, enum_1952, $count5);
-	if ($namedobj7 ! null) {
+	if ($namedobj7 = stamina_potion_4_12625) {
 		cc_create($component1, ^iftype_graphic, $int8);
+		cc_setonvartransmit("script4488($component1, $int8, $namedobj7){var1746}");
+		$int8 = calc($int8 + 1);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc((36 + $int3) * ($count5 % 4)), calc($count5 / 4 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
+		$opbase0 = "<col=ff981f><oc_name($namedobj7)>";
+		cc_setobject_always_num($namedobj7, %varbit12271);
+		if (%varbit12271 = 0) {
+			cc_settrans(128);
+		}
+		cc_setopbase($opbase0);
+		cc_setop(1, "Value");
+		cc_setop(2, "Buy-1");
+		cc_setop(10, "Examine<col=ff9040>");
+		cc_setgraphicshadow(0x333333);
+		cc_setoutline(1);
+	} else if ($namedobj7 ! null) {
+		cc_create($component1, ^iftype_graphic, $int8);
+		cc_setonvartransmit("script4489($component1, $int8, $namedobj7){var1746}");
 		$int8 = calc($int8 + 1);
 		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 		cc_setposition(calc((36 + $int3) * ($count5 % 4)), calc($count5 / 4 * (32 + $int4)), ^setpos_abs_left, ^setpos_abs_top);
@@ -24,8 +42,11 @@ while ($count5 < $count6) {
 		cc_setopbase($opbase0);
 		cc_setop(1, "Value");
 		cc_setop(2, "Buy-1");
-		cc_setop(3, "Buy-All");
-		cc_setop(4, "Buy-X");
+		if (%varbit12272 ! 0) {
+			cc_setop(3, "Buy-<tostring(%varbit12272)>");
+		}
+		cc_setop(4, "Buy-All");
+		cc_setop(5, "Buy-X");
 		cc_setop(10, "Examine<col=ff9040>");
 		cc_setgraphicshadow(0x333333);
 		cc_setoutline(1);

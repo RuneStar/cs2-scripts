@@ -1,5 +1,5 @@
 // 2316
-[clientscript,tob_partydetails_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13)
+[clientscript,tob_partydetails_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
 %varcint178 = 0;
 cc_deleteall($component4);
 cc_deleteall($component7);
@@ -42,24 +42,27 @@ cc_sethide(true);
 if_sethide(true, $component13);
 cc_create($component0, ^iftype_rectangle, enum(component, int, enum_1939, $component13));
 cc_sethide(true);
-def_int $int14 = enum_getoutputcount(enum_1939);
-def_int $int15 = 5;
-while ($int15 > 0) {
-	cc_create($component0, ^iftype_rectangle, $int14);
+if_sethide(true, $component14);
+cc_create($component0, ^iftype_rectangle, enum(component, int, enum_1939, $component14));
+cc_sethide(true);
+def_int $int15 = enum_getoutputcount(enum_1939);
+def_int $int16 = 5;
+while ($int16 > 0) {
+	cc_create($component0, ^iftype_rectangle, $int15);
 	cc_sethide(true);
-	$int15, $int14 = calc($int15 - 1), calc($int14 + 1);
+	$int16, $int15 = calc($int16 - 1), calc($int15 + 1);
 }
-$int15 = 10;
-while ($int15 > 0) {
-	cc_create($component0, ^iftype_rectangle, $int14);
+$int16 = 10;
+while ($int16 > 0) {
+	cc_create($component0, ^iftype_rectangle, $int15);
 	cc_sethide(true);
-	$int15, $int14 = calc($int15 - 1), calc($int14 + 1);
+	$int16, $int15 = calc($int16 - 1), calc($int15 + 1);
 }
-$int15 = 10;
-while ($int15 > 0) {
-	cc_create($component0, ^iftype_rectangle, $int14);
+$int16 = 10;
+while ($int16 > 0) {
+	cc_create($component0, ^iftype_rectangle, $int15);
 	cc_sethide(true);
-	$int15, $int14 = calc($int15 - 1), calc($int14 + 1);
+	$int16, $int15 = calc($int16 - 1), calc($int15 + 1);
 }
 if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component3);
 if_setontimer(null, $component0);

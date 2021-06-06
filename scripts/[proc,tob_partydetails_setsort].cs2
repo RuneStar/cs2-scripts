@@ -1,20 +1,20 @@
 // 2333
 [proc,tob_partydetails_setsort](int $int0, int $int1)
-~tob_partydetails_sortbutton_draw(interface_50:31, 0, 1, "Sort by name", $int0, $int1);
-~tob_partydetails_sortbutton_draw(interface_50:32, 2, 3, "Sort by combat level", $int0, $int1);
-~tob_partydetails_sortbutton_draw(interface_50:33, 8, 9, "Sort by Attack level", $int0, $int1);
-~tob_partydetails_sortbutton_draw(interface_50:34, 10, 11, "Sort by Strength level", $int0, $int1);
-~tob_partydetails_sortbutton_draw(interface_50:35, 12, 13, "Sort by Ranged level", $int0, $int1);
-~tob_partydetails_sortbutton_draw(interface_50:36, 14, 15, "Sort by Magic level", $int0, $int1);
-~tob_partydetails_sortbutton_draw(interface_50:37, 16, 17, "Sort by Defence level", $int0, $int1);
-~tob_partydetails_sortbutton_draw(interface_50:38, 18, 19, "Sort by Hitpoints level", $int0, $int1);
-~tob_partydetails_sortbutton_draw(interface_50:39, 20, 21, "Sort by Prayer level", $int0, $int1);
-~tob_partydetails_sortbutton_draw(interface_50:40, 6, 7, "Sort by performance counter", $int0, $int1);
+~tob_partydetails_sortbutton_draw(interface_50:32, 0, 1, "Sort by name", $int0, $int1);
+~tob_partydetails_sortbutton_draw(interface_50:33, 2, 3, "Sort by combat level", $int0, $int1);
+~tob_partydetails_sortbutton_draw(interface_50:34, 8, 9, "Sort by Attack level", $int0, $int1);
+~tob_partydetails_sortbutton_draw(interface_50:35, 10, 11, "Sort by Strength level", $int0, $int1);
+~tob_partydetails_sortbutton_draw(interface_50:36, 12, 13, "Sort by Ranged level", $int0, $int1);
+~tob_partydetails_sortbutton_draw(interface_50:37, 14, 15, "Sort by Magic level", $int0, $int1);
+~tob_partydetails_sortbutton_draw(interface_50:38, 16, 17, "Sort by Defence level", $int0, $int1);
+~tob_partydetails_sortbutton_draw(interface_50:39, 18, 19, "Sort by Hitpoints level", $int0, $int1);
+~tob_partydetails_sortbutton_draw(interface_50:40, 20, 21, "Sort by Prayer level", $int0, $int1);
+~tob_partydetails_sortbutton_draw(interface_50:41, 6, 7, "Sort by performance counter", $int0, $int1);
 def_int $intarray0($int1);
 def_int $int2 = 0;
 def_int $int3 = 0;
 while ($int3 = 0 & $int2 < $int1) {
-	if (cc_find(interface_50:41, calc($int2 * 20)) = ^true) {
+	if (cc_find(interface_50:42, calc($int2 * 20)) = ^true) {
 		$intarray0($int2) = $int2;
 		$int2 = calc($int2 + 1);
 	} else {
@@ -54,7 +54,7 @@ switch_int (%varcint181) {
 		$int4 = $int2;
 		while ($int4 > 0) {
 			$int4 = calc($int4 - 1);
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20)) = ^true & .cc_find(interface_50:41, calc($intarray0($int4) * 20 + 1)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20)) = ^true & .cc_find(interface_50:42, calc($intarray0($int4) * 20 + 1)) = ^true) {
 				if (calc($int4 % 2) = 0) {
 					$int6 = 235;
 				} else {
@@ -72,38 +72,38 @@ switch_int (%varcint181) {
 					cc_setonop("script2330(event_opindex, $intarray0($int4), event_com, event_comsubid, .cc_gettext, $int6)");
 				}
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 2)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 2)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 4)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 4)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 6)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 6)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 8)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 8)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 10)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 10)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 12)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 12)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 14)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 14)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 16)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 16)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 18)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 18)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
 			$int5 = calc($int5 + 13);
 		}
 	case default :
 		while ($int4 < $int2) {
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20)) = ^true & .cc_find(interface_50:41, calc($intarray0($int4) * 20 + 1)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20)) = ^true & .cc_find(interface_50:42, calc($intarray0($int4) * 20 + 1)) = ^true) {
 				if (calc($int4 % 2) = 0) {
 					$int6 = 235;
 				} else {
@@ -121,31 +121,31 @@ switch_int (%varcint181) {
 					cc_setonop("script2330(event_opindex, $intarray0($int4), event_com, event_comsubid, .cc_gettext, $int6)");
 				}
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 2)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 2)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 4)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 4)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 6)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 6)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 8)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 8)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 10)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 10)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 12)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 12)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 14)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 14)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 16)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 16)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
-			if (cc_find(interface_50:41, calc($intarray0($int4) * 20 + 18)) = ^true) {
+			if (cc_find(interface_50:42, calc($intarray0($int4) * 20 + 18)) = ^true) {
 				cc_setposition(cc_getx, $int5, ^setpos_abs_left, ^setpos_abs_top);
 			}
 			$int5 = calc($int5 + 13);

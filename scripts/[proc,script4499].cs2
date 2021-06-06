@@ -1,0 +1,23 @@
+// 4499
+[proc,script4499](component $component0, int $comsubid1, int $comsubid2, int $comsubid3, int $comsubid4, struct $struct5)
+def_string $string0 = "#";
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_string $string1 = "";
+if (%varcint459 = -1) {
+	%varcint459 = struct_param($struct5, param_1230);
+}
+$int6, $int7, $int8 = ~hex_to_rgb(%varcint459);
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settext(append($string0, ~colour_to_string(%varcint459)));
+}
+if (cc_find($component0, $comsubid2) = ^true) {
+	cc_settext(tostring($int6));
+}
+if (cc_find($component0, $comsubid3) = ^true) {
+	cc_settext(tostring($int7));
+}
+if (cc_find($component0, $comsubid4) = ^true) {
+	cc_settext(tostring($int8));
+}

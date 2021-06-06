@@ -1,0 +1,13 @@
+// 4492
+[proc,script4492](component $component0, component $component1, component $component2)
+~script3723($component1, 0, "Normal");
+~script3723($component0, 0, "Story");
+~script3723($component2, 0, "Hard");
+switch_int (%varbit12270) {
+	case 1 :
+		~script3723($component0, 1, "Story");
+	case 2 :
+		~script3723($component2, 1, "Hard");
+	case default :
+		~script3723($component1, 1, "Normal");
+}

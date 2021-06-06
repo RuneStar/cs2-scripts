@@ -1,9 +1,9 @@
 // 3212
-[clientscript,league_task_filter_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $component4, component $component5, int $colour6)
+[clientscript,league_task_filter_open](enum $enum0, component $component1, component $component2, int $comsubid3, component $component4, component $component5, int $int6)
 sound_synth(interface_select1, 1, 0);
-~league_setup_display_hoverdisable($component2, $colour6);
+~league_setup_display_hoverdisable($component2, $int6);
 if_sethide(false, $component4);
-if_setonclick("league_task_filter_close(1, -1, $enum0, $component2, $comsubid3, $component4, $colour6)", $component4);
+if_setonclick("league_task_filter_close(1, -1, $enum0, $component2, $comsubid3, $component4, $int6)", $component4);
 def_int $int7 = if_getx($component2);
 def_int $int8 = if_gety($component2);
 def_component $layer9 = if_getlayer($component2);
@@ -40,16 +40,16 @@ while ($int15 < $int10) {
 	cc_create($component1, ^iftype_text, $int14);
 	cc_setposition(0, calc($int15 * $int11), ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, $int11, ^setsize_minus, ^setsize_abs);
-	cc_setcolour($colour6);
+	cc_setcolour($int6);
 	cc_settextshadow(true);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setop(1, "Select");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("league_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $colour6)");
-		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $colour6)");
+		cc_setonmouserepeat("league_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $int6)");
+		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int6)");
 	}
-	cc_setonop("league_task_filter_close(event_opindex, $int15, $enum0, $component2, $comsubid3, $component4, $colour6)");
+	cc_setonop("league_task_filter_close(event_opindex, $int15, $enum0, $component2, $comsubid3, $component4, $int6)");
 	cc_settext(enum(int, string, $enum0, $int15));
 	$int15, $int14 = calc($int15 + 1), calc($int14 + 1);
 }

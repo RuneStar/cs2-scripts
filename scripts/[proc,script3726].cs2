@@ -1,9 +1,9 @@
 // 3726
-[proc,script3726](component $component0, int $int1, string $string0, int $colour2, int $colour3)(int)
+[proc,script3726](component $component0, int $int1, string $string0, int $int2, int $int3)(int)
 def_graphic $graphic4 = "graphic_2564";
 def_graphic $graphic5 = "graphic_2565";
 if ($int1 = 1) {
-	$colour2 = $colour3;
+	$int2 = $int3;
 } else if ($int1 = 0) {
 	$graphic4, $graphic5 = "graphic_2566", "graphic_2567";
 } else if ($int1 = 2) {
@@ -25,11 +25,11 @@ cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_top);
 cc_setgraphic($graphic4);
 cc_sethflip(true);
 if ($int1 = 1) {
-	if_setonmouseover(null, $component0);
+	if_setonmouserepeat(null, $component0);
 	if_setonmouseleave(null, $component0);
 } else if (~on_mobile = false) {
-	if_setonmouseover("script3724($component0, 2, $string0, $colour2, $colour3)", $component0);
-	if_setonmouseleave("script3724($component0, 0, $string0, $colour2, $colour3)", $component0);
+	if_setonmouserepeat("script3724($component0, 2, $string0, $int2, $int3)", $component0);
+	if_setonmouseleave("script3724($component0, 0, $string0, $int2, $int3)", $component0);
 }
 if (string_length($string0) > 0) {
 	cc_create($component0, ^iftype_text, 3);
@@ -39,7 +39,7 @@ if (string_length($string0) > 0) {
 	cc_settextfont(p12_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settext($string0);
-	cc_setcolour($colour2);
+	cc_setcolour($int2);
 	return(4);
 }
 return(3);

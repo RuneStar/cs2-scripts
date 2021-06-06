@@ -1,0 +1,18 @@
+// 4502
+[clientscript,script4502](int $int0, component $component1, component $component2, int $comsubid3, int $comsubid4, struct $struct5, component $component6, int $comsubid7, int $comsubid8, int $comsubid9, int $comsubid10)
+%varbit9639 = 0;
+%varbit9647 = 1;
+sound_synth(interface_select1, 1, 0);
+if ($int0 > 3) {
+	return;
+}
+switch_int ($int0) {
+	case 0 :
+		~script4503("Enter a hex code: (0-9, a-f, format: #RRGGBB)", 22, $component1, $component2, $comsubid3, $comsubid4, $struct5, $component6, $comsubid7, $comsubid8, $comsubid9, $comsubid10);
+	case 1 :
+		~script4503("Enter a value for red (0-255)", 23, $component1, $component2, $comsubid3, $comsubid4, $struct5, $component6, $comsubid7, $comsubid8, $comsubid9, $comsubid10);
+	case 2 :
+		~script4503("Enter a value for green (0-255)", 24, $component1, $component2, $comsubid3, $comsubid4, $struct5, $component6, $comsubid7, $comsubid8, $comsubid9, $comsubid10);
+	case 3 :
+		~script4503("Enter a value for blue (0-255)", 25, $component1, $component2, $comsubid3, $comsubid4, $struct5, $component6, $comsubid7, $comsubid8, $comsubid9, $comsubid10);
+}

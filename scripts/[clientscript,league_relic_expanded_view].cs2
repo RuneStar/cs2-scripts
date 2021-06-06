@@ -4,14 +4,14 @@ def_struct $struct19 = enum(int, struct, enum_2670, %varbit10032);
 if ($struct19 = null) {
 	return;
 }
-def_int $colour20 = struct_param($struct19, param_1027);
-def_string $string0 = ~script3739($colour20, "u");
-if_setcolour($colour20, $component4);
-if_setcolour($colour20, $component5);
-if_setcolour($colour20, $component6);
-if_setcolour($colour20, $component14);
-if_setcolour($colour20, $component15);
-if_setcolour($colour20, $component11);
+def_int $int20 = struct_param($struct19, param_1027);
+def_string $string0 = ~script3739($int20, "u");
+if_setcolour($int20, $component4);
+if_setcolour($int20, $component5);
+if_setcolour($int20, $component6);
+if_setcolour($int20, $component14);
+if_setcolour($int20, $component15);
+if_setcolour($int20, $component11);
 def_int $comsubid21 = -1;
 def_string $op1 = "";
 def_string $string2 = struct_param($struct17, param_880);
@@ -97,7 +97,7 @@ if (~on_mobile = false) {
 if_setonop("league_relic_back($component0, $component1, $component2)", $component8);
 def_int $comsubid26 = ~steelborder($component10, struct_param($struct17, param_879), 1);
 if (cc_find($component10, $comsubid26) = ^true) {
-	cc_setcolour($colour20);
+	cc_setcolour($int20);
 }
 if_settext("Are you sure that you wish to unlock the <col=ffffff><struct_param($struct17, param_879)></col> Relic?<br><br>You can only unlock <col=ffffff>one</col> Relic from each tier, and you <col=ffffff>cannot</col> go back on this decision at any later point.", $component11);
 $comsubid21 = ~v2_stone_button($component12);

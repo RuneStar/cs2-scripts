@@ -1,20 +1,20 @@
 // 1233
 [clientscript,script1233](component $component0, int $comsubid1, int $int2, int $int3)
-def_int $colour4 = ^black;
+def_int $int4 = 0;
 def_int $int5 = 0;
 def_int $int6 = 0;
 def_int $int7 = 0;
 def_int $int8 = 0;
 if (cc_find($component0, $comsubid1) = ^true) {
-	$colour4, $int5 = enum(int, int, enum_1279, $int2), calc($int3 - clientclock);
+	$int4, $int5 = enum(int, int, enum_1279, $int2), calc($int3 - clientclock);
 	if ($int5 <= 0) {
-		cc_setcolour($colour4);
+		cc_setcolour($int4);
 		cc_setontimer(null);
 		return;
 	}
 	if ($int5 > 30) {
 		$int5 = 30;
 	}
-	$int6, $int7, $int8 = ~hex_to_rgb($colour4);
+	$int6, $int7, $int8 = ~hex_to_rgb($int4);
 	cc_setcolour(~rgb_to_hex(calc($int6 + interpolate(0, $int5, 0, 30, 255 - $int6)), calc($int7 + interpolate(0, $int5, 0, 30, 255 - $int7)), calc($int8 + interpolate(0, $int5, 0, 30, 255 - $int8))));
 }

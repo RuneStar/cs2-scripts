@@ -1,9 +1,9 @@
 // 4424
-[clientscript,script4424](enum $enum0, component $component1, component $component2, int $comsubid3, component $component4, component $component5, int $colour6)
+[clientscript,script4424](enum $enum0, component $component1, component $component2, int $comsubid3, component $component4, component $component5, int $int6)
 sound_synth(interface_select1, 1, 0);
-~league_setup_display_hoverdisable($component2, $colour6);
+~league_setup_display_hoverdisable($component2, $int6);
 if_sethide(false, $component4);
-if_setonclick("script4428(1, -1, $enum0, $component2, $comsubid3, $component4, $component5, $colour6)", $component4);
+if_setonclick("script4428(1, -1, $enum0, $component2, $comsubid3, $component4, $component5, $int6)", $component4);
 def_int $int7 = calc(enum_getoutputcount($enum0) - 1);
 def_int $int8 = 14;
 if (~on_mobile = true) {
@@ -30,16 +30,16 @@ while ($int12 < $int7) {
 	cc_create($component1, ^iftype_text, $int10);
 	cc_setposition(0, calc($int12 * $int8), ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(0, $int8, ^setsize_minus, ^setsize_abs);
-	cc_setcolour($colour6);
+	cc_setcolour($int6);
 	cc_settextshadow(true);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_setop(1, "Select");
 	if (~on_mobile = false) {
-		cc_setonmouserepeat("league_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $colour6)");
-		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $colour6)");
+		cc_setonmouserepeat("league_setup_display_dropdown_hover(true, event_com, event_comsubid, .cc_getid, $int6)");
+		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int6)");
 	}
-	cc_setonop("script4428(event_opindex, $int12, $enum0, $component2, $comsubid3, $component4, $component5, $colour6)");
+	cc_setonop("script4428(event_opindex, $int12, $enum0, $component2, $comsubid3, $component4, $component5, $int6)");
 	if ($enum0 = enum_3795) {
 		if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
 			$string0, $graphic13 = ~script4302(enum(int, int, enum_3795, $int12));

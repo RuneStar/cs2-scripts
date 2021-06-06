@@ -1,5 +1,5 @@
 // 4428
-[clientscript,script4428](int $int0, int $int1, enum $enum2, component $component3, int $comsubid4, component $component5, component $component6, int $colour7)
+[clientscript,script4428](int $int0, int $int1, enum $enum2, component $component3, int $comsubid4, component $component5, component $component6, int $int7)
 if ($int0 = 1 & $enum2 ! null & ($int1 = -1 | $int1 >= 0 & $int1 < enum_getoutputcount($enum2))) {
 	sound_synth(interface_select1, 1, 0);
 	if ($int1 ! -1) {
@@ -8,7 +8,7 @@ if ($int0 = 1 & $enum2 ! null & ($int1 = -1 | $int1 >= 0 & $int1 < enum_getoutpu
 	~script4427;
 	if_sethide(true, $component5);
 	if_setontimer(null, $component6);
-	~league_setup_display_hoveroff($component3, $colour7);
+	~league_setup_display_hoveroff($component3, $int7);
 	if (cc_find($component3, $comsubid4) = ^true) {
 		~clan_events_selection_updatetext($enum2);
 	}
