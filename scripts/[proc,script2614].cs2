@@ -1,8 +1,8 @@
 // 2614
-[proc,script2614](obj $obj0, component $component1)(int, int)
+[proc,script2614](obj $obj0, component $component1, int $int2)(int, graphic)
 if (stat(magic) < oc_param($obj0, spell_levelreq)) {
 	if_settrans(0, $component1);
-	return(0, -1);
+	return(0, null);
 }
 switch_component ($component1) {
 	case magic_spellbook:138, magic_spellbook:137 :
@@ -25,23 +25,80 @@ switch_component ($component1) {
 		}
 	case magic_spellbook:18 :
 		if ((inv_total(inv, explorers_ring_1_13125) > 0 | inv_total(inv, explorers_ring_2_13126) > 0 | inv_total(inv, explorers_ring_3_13127) > 0 | inv_total(worn, explorers_ring_1_13125) > 0 | inv_total(worn, explorers_ring_2_13126) > 0 | inv_total(worn, explorers_ring_3_13127) > 0 | inv_total(inv, explorers_ring_4_13128) > 0 | inv_total(worn, explorers_ring_4_13128) > 0) & map_members = ^true & %varbit4554 < 30) {
-			return(1, -1);
+			return(1, null);
 		}
 	case magic_spellbook:39 :
 		if ((inv_total(inv, explorers_ring_4_13128) > 0 | inv_total(worn, explorers_ring_4_13128) > 0) & map_members = ^true & %varbit4554 < 30) {
-			return(1, -1);
+			return(1, null);
+		}
+	case magic_spellbook:171, magic_spellbook:172 :
+		if (%varbit12288 = 1) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
+		}
+	case magic_spellbook:178 :
+		if (%varbit12289 = 1) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
+		}
+	case magic_spellbook:179 :
+		if (%varbit12138 = 1) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
+		}
+	case magic_spellbook:180, magic_spellbook:181, magic_spellbook:182, magic_spellbook:183, magic_spellbook:184, magic_spellbook:185, magic_spellbook:186, magic_spellbook:187, magic_spellbook:188 :
+		if (%varbit12290 = 1) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
+		}
+	case magic_spellbook:176 :
+		if (%varbit12291 = 1) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
+		}
+	case magic_spellbook:177 :
+		if (%varbit12292 = 1) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
+		}
+	case magic_spellbook:170 :
+		if (%varbit12293 = 1) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
 		}
 }
 if (~magic_spellbook_hasrunes($obj0) = 0) {
-	return(0, -1);
+	return(0, null);
 }
 if ($component1 = magic_spellbook:69 & (%varbit2010 = 0 | %varbit5604 >= 5)) {
-	return(0, 3013);
+	if ($int2 >= 40) {
+		return(0, "graphic_3362");
+	}
+	return(0, "graphic_3013");
+}
+if (~script4510($obj0) = 0) {
+	if ($int2 >= 40) {
+		return(0, "graphic_3363");
+	}
+	return(0, "graphic_3014");
 }
 if (~script4128($obj0) = 0) {
-	return(0, 3012);
+	if ($int2 >= 40) {
+		return(0, "graphic_3361");
+	}
+	return(0, "graphic_3012");
 }
 if (~script4129($obj0) = 0) {
-	return(0, 3011);
+	if ($int2 >= 40) {
+		return(0, "graphic_3360");
+	}
+	return(0, "graphic_3011");
 }
-return(1, -1);
+return(1, null);

@@ -1,0 +1,9 @@
+// 4510
+[proc,script4510](obj $obj0)(int)
+if (oc_param($obj0, param_1228) = true & %varbit5314 = 1) {
+	return(1);
+}
+if (oc_param($obj0, spell_membersonly) = true & map_members = ^false) {
+	return(0);
+}
+return(1);

@@ -575,6 +575,8 @@ switch_int ($int0) {
 					return(-1, obj_7620, "Teal hit splats are venom damage. (Members)");
 				case 5 :
 					return(-1, obj_7620, "Orange hit splats are disease damage. (Members)");
+				case 6 :
+					return(-1, obj_7620, "Dark purple hit splats are corruption damage. (Members)");
 				case default :
 					return(-1, null, "");
 			}
@@ -780,44 +782,48 @@ switch_int ($int0) {
 					case 2 :
 						return(1, agility_arena_ticket_2996, "Low-level Agility Arena obstacles");
 					case 3 :
-						return(10, mark_of_grace_11849, "Draynor Village Rooftop Course");
+						return(5, shayzien_helm_1_13359, "Shayzien Basic Course");
 					case 4 :
-						return(20, mark_of_grace_11849, "Al Kharid Rooftop Course");
+						return(10, mark_of_grace_11849, "Draynor Village Rooftop Course");
 					case 5 :
-						return(20, agility_arena_ticket_2996, "Medium-level Agility Arena obstacles");
+						return(20, mark_of_grace_11849, "Al Kharid Rooftop Course");
 					case 6 :
-						return(25, leather_boots_1061, "Werewolf Skullball game");
+						return(20, agility_arena_ticket_2996, "Medium-level Agility Arena obstacles");
 					case 7 :
-						return(30, pyramid_top_6970, "Agility Pyramid");
+						return(25, leather_boots_1061, "Werewolf Skullball game");
 					case 8 :
-						return(30, mark_of_grace_11849, "Varrock Rooftop Course");
+						return(30, pyramid_top_6970, "Agility Pyramid");
 					case 9 :
-						return(30, clockwork_suit_10595, "Penguin Agility Course");
+						return(30, mark_of_grace_11849, "Varrock Rooftop Course");
 					case 10 :
-						return(35, steel_battleaxe_1365, "Barbarian Outpost Agility Course");
+						return(30, clockwork_suit_10595, "Penguin Agility Course");
 					case 11 :
-						return(40, mark_of_grace_11849, "Canifis Rooftop Course");
+						return(35, steel_battleaxe_1365, "Barbarian Outpost Agility Course");
 					case 12 :
-						return(40, agility_arena_ticket_2996, "High-level Agility Arena obstacles");
+						return(40, mark_of_grace_11849, "Canifis Rooftop Course");
 					case 13 :
-						return(48, ninja_monkey_greegree_4024, "Ape Atoll Agility Course");
+						return(40, agility_arena_ticket_2996, "High-level Agility Arena obstacles");
 					case 14 :
-						return(50, mark_of_grace_11849, "Falador Rooftop Course");
+						return(48, ninja_monkey_greegree_4024, "Ape Atoll Agility Course");
 					case 15 :
-						return(52, skull_964, "Wilderness Course");
+						return(48, shayzien_helm_5_13379, "Shayzien Advanced Course");
 					case 16 :
-						return(60, stick_4179, "Werewolf Agility Course");
+						return(50, mark_of_grace_11849, "Falador Rooftop Course");
 					case 17 :
-						return(60, mark_of_grace_11849, "Seers' Village Rooftop Course");
+						return(52, skull_964, "Wilderness Course");
 					case 18 :
-						return(70, bullseye_lantern_4550, "Caves south of Dorgesh-Kaan");
+						return(60, stick_4179, "Werewolf Agility Course");
 					case 19 :
-						return(70, mark_of_grace_11849, "Pollnivneach Rooftop Course");
+						return(60, mark_of_grace_11849, "Seers' Village Rooftop Course");
 					case 20 :
-						return(75, crystal_shard_23962, "Prifddinas Agility Course");
+						return(70, bullseye_lantern_4550, "Caves south of Dorgesh-Kaan");
 					case 21 :
-						return(80, mark_of_grace_11849, "Rellekka Rooftop Course");
+						return(70, mark_of_grace_11849, "Pollnivneach Rooftop Course");
 					case 22 :
+						return(75, crystal_shard_23962, "Prifddinas Agility Course");
+					case 23 :
+						return(80, mark_of_grace_11849, "Rellekka Rooftop Course");
+					case 24 :
 						return(90, mark_of_grace_11849, "Ardougne Rooftop Course");
 				}
 			case 1 :
@@ -1310,8 +1316,10 @@ switch_int ($int0) {
 					case 15 :
 						return(scale(150, 100, 60), noxifer_20902, "Strong Noxifer potions");
 					case 16 :
-						return(-1, overload_4_20992, "Overload<br> with Elder, Kodai & Twisted potions");
+						return(-1, antipoison_potion_4_25761, "Antipoison potions<br> with Cicely");
 					case 17 :
+						return(-1, overload_4_20992, "Overload<br> with Elder, Kodai & Twisted potions");
+					case 18 :
 						return(-1, overload_4_20996, "For overload potions, the tier is capped at the tier of the potions used to make it.");
 					case default :
 						return(-1, null, "");

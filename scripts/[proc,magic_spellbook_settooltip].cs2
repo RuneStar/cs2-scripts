@@ -62,6 +62,34 @@ switch_obj ($obj1) {
 		if (%varbit2451 = 1) {
 			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
 		}
+	case lesser_corruption_10511, greater_corruption_20762 :
+		if (%varbit12288 = 1) {
+			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
+		}
+	case dark_lure_15303 :
+		if (%varbit12289 = 1) {
+			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
+		}
+	case death_charge_15309 :
+		if (%varbit12138 = 1) {
+			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
+		}
+	case resurrect_lesser_ghost_25511, resurrect_lesser_skeleton_25509, resurrect_lesser_zombie_25508, resurrect_superior_ghost_25506, resurrect_superior_skeleton_25512, resurrect_superior_zombie_25513, resurrect_greater_ghost_25507, resurrect_greater_skeleton_25510, resurrect_greater_zombie_25514 :
+		if (%varbit12290 = 1) {
+			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
+		}
+	case shadow_veil_15344 :
+		if (%varbit12291 = 1) {
+			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
+		}
+	case vile_vigour_15304 :
+		if (%varbit12292 = 1) {
+			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
+		}
+	case ward_of_arceuus_20763 :
+		if (%varbit12293 = 1) {
+			$string1 = "<$string1><br><col=ff0000>On cooldown</col>";
+		}
 }
 if (compare($string2, "") ! 0) {
 	$string1 = "<$string1><br><col=ff0000><$string2></col>";
@@ -74,13 +102,13 @@ if ($obj7 = null) {
 }
 def_int $int20 = 5;
 if ($comsubid3 ! -1 & cc_find($component2, $comsubid3) = ^true) {
-	if (cc_gety < 130) {
+	if (cc_gety < 110) {
 		$int20 = calc($int5 - $int19);
 		if ($int5 >= 261) {
 			$int20 = calc($int20 - 5);
 		}
 	}
-} else if (if_gety($component2) < 130) {
+} else if (if_gety($component2) < 110) {
 	$int20 = calc($int5 - $int19);
 	if ($int5 >= 261) {
 		$int20 = calc($int20 - 5);

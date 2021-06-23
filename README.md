@@ -4130,7 +4130,6 @@
 [**4127**](scripts/[proc,script4127].cs2)  
 [**4128**](scripts/[proc,script4128].cs2)  
 [**4129**](scripts/[proc,script4129].cs2)  
-[**4130**](scripts/[proc,script4130].cs2)  
 [**4131**](scripts/[proc,script4131].cs2)  
 [**4132**](scripts/[proc,script4132].cs2)  
 [**4133**](scripts/[proc,arceuus_autocast_spellpos].cs2) `[proc,arceuus_autocast_spellpos]`  
@@ -4510,3 +4509,6 @@
 [**4507**](scripts/[proc,script4507].cs2)  
 [**4508**](scripts/[proc,script4508].cs2)  
 [**4509**](scripts/[clientscript,script4509].cs2)  
+[**4510**](scripts/[proc,script4510].cs2)  
+[**4511**](scripts/[proc,script4511].cs2)  
+[**4512**](scripts/[proc,script4512].cs2)  

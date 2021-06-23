@@ -4,7 +4,7 @@ def_int $int3 = 0;
 def_int $colour4 = ^black;
 def_int $count5 = 0;
 def_int $count6 = ~quest_f2p_count;
-~magic_spellbook_redraw(magic_spellbook:3, magic_spellbook:183, magic_spellbook:192, magic_spellbook:1, magic_spellbook:189, magic_spellbook:190, magic_spellbook:191, magic_spellbook:2, magic_spellbook:185, magic_spellbook:188, "Info", "Filters", ~on_mobile);
+~magic_spellbook_redraw(magic_spellbook:3, magic_spellbook:189, magic_spellbook:198, magic_spellbook:1, magic_spellbook:195, magic_spellbook:196, magic_spellbook:197, magic_spellbook:2, magic_spellbook:191, magic_spellbook:194, "Info", "Filters", ~on_mobile);
 while ($count5 < $count6) {
 	if (cc_find($component0, $count5) = ^true) {
 		$int3 = ~quest_f2p_index_status_get($count5);

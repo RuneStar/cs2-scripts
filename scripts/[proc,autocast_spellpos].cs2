@@ -2,52 +2,12 @@
 [proc,autocast_spellpos](int $int0, int $int1)(int, int)
 switch_int ($int1) {
 	case -1 :
-		switch_int ($int0) {
-			case 1 :
-				return(-60, -62);
-			case 2 :
-				return(-20, -62);
-			case 3 :
-				return(20, -62);
-			case 4 :
-				return(60, -62);
-			case 5 :
-				return(-60, -31);
-			case 6 :
-				return(-20, -31);
-			case 7 :
-				return(20, -31);
-			case 8 :
-				return(60, -31);
-			case 9 :
-				return(-60, 0);
-			case 10 :
-				return(-20, 0);
-			case 11 :
-				return(20, 0);
-			case 12 :
-				return(60, 0);
-			case 13 :
-				return(-60, 31);
-			case 14 :
-				return(-20, 31);
-			case 15 :
-				return(20, 31);
-			case 16 :
-				return(60, 31);
-			case 48 :
-				return(-60, 61);
-			case 49 :
-				return(-20, 61);
-			case 50 :
-				return(20, 61);
-			case 51 :
-				return(60, 61);
-		}
+		return(~script4512($int0));
+	case 9013 :
+		return(~arceuus_autocast_spellpos($int0));
+	case 4675 :
+		return(~script4511($int0));
 	case 4170 :
-		if (%varbit4070 = 3) {
-			return(~arceuus_autocast_spellpos($int0));
-		}
 		switch_int ($int0) {
 			case 17 :
 				return(-33, -52);
@@ -138,7 +98,7 @@ switch_int ($int1) {
 			case 47 :
 				return(-60, 64);
 		}
-	case 22296, 24144 :
+	case 11791, 22296, 24144 :
 		switch_int ($int0) {
 			case 1 :
 				return(-60, -66);
@@ -197,152 +157,5 @@ switch_int ($int1) {
 					return(20, 64);
 				}
 		}
-	case 11791 :
-		if (%varbit4070 = 3) {
-			return(~arceuus_autocast_spellpos($int0));
-		}
-		switch_int ($int0) {
-			case 1 :
-				return(-60, -66);
-			case 2 :
-				return(-20, -66);
-			case 3 :
-				return(20, -66);
-			case 4 :
-				return(60, -66);
-			case 5 :
-				return(-60, -40);
-			case 6 :
-				return(-20, -40);
-			case 7 :
-				return(20, -40);
-			case 8 :
-				return(60, -40);
-			case 9 :
-				return(-60, -14);
-			case 10 :
-				return(-20, -14);
-			case 11 :
-				return(20, -14);
-			case 12 :
-				return(60, -14);
-			case 13 :
-				return(-60, 13);
-			case 14 :
-				return(-20, 13);
-			case 15 :
-				return(20, 13);
-			case 16 :
-				return(60, 13);
-			case 48 :
-				return(-60, 39);
-			case 49 :
-				return(-20, 39);
-			case 50 :
-				return(20, 39);
-			case 51 :
-				return(60, 39);
-			case 17 :
-				return(-60, 64);
-			case 18 :
-				return(-20, 64);
-			case 20 :
-				if ($int1 = 11791) {
-					return(20, 64);
-				}
-			case 52 :
-				if ($int1 = 22296) {
-					return(20, 64);
-				}
-			case 19 :
-				if ($int1 = 24144) {
-					return(20, 64);
-				}
-		}
-	case 4675 :
-		switch_int ($int0) {
-			case 31 :
-				return(-60, -60);
-			case 32 :
-				return(-20, -60);
-			case 33 :
-				return(20, -60);
-			case 34 :
-				return(60, -60);
-			case 35 :
-				return(-60, -20);
-			case 36 :
-				return(-20, -20);
-			case 37 :
-				return(20, -20);
-			case 38 :
-				return(60, -20);
-			case 39 :
-				return(-60, 20);
-			case 40 :
-				return(-20, 20);
-			case 41 :
-				return(20, 20);
-			case 42 :
-				return(60, 20);
-			case 43 :
-				return(-60, 60);
-			case 44 :
-				return(-20, 60);
-			case 45 :
-				return(20, 60);
-			case 46 :
-				return(60, 60);
-		}
-	case 21006 :
-		return(~arceuus_autocast_spellpos($int0));
-	case 4710 :
-		if (%varbit4070 = 3) {
-			return(~arceuus_autocast_spellpos($int0));
-		}
-		switch_int ($int0) {
-			case 1 :
-				return(-60, -62);
-			case 2 :
-				return(-20, -62);
-			case 3 :
-				return(20, -62);
-			case 4 :
-				return(60, -62);
-			case 5 :
-				return(-60, -31);
-			case 6 :
-				return(-20, -31);
-			case 7 :
-				return(20, -31);
-			case 8 :
-				return(60, -31);
-			case 9 :
-				return(-60, 0);
-			case 10 :
-				return(-20, 0);
-			case 11 :
-				return(20, 0);
-			case 12 :
-				return(60, 0);
-			case 13 :
-				return(-60, 31);
-			case 14 :
-				return(-20, 31);
-			case 15 :
-				return(20, 31);
-			case 16 :
-				return(60, 31);
-			case 48 :
-				return(-60, 61);
-			case 49 :
-				return(-20, 61);
-			case 50 :
-				return(20, 61);
-			case 51 :
-				return(60, 61);
-		}
-	case 9013 :
-		return(~arceuus_autocast_spellpos($int0));
 }
 return(-1, -1);
