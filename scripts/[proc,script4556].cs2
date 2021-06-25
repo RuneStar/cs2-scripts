@@ -1,0 +1,29 @@
+// 4556
+[proc,script4556](enum $enum0)(namedobj)
+if ($enum0 = null) {
+	return(null);
+}
+def_int $bool1 = map_members;
+def_int $lvl2 = stat(fishing);
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_namedobj $namedobj5 = null;
+def_int $int6 = 0;
+def_namedobj $namedobj7 = null;
+def_int $int8 = 0;
+def_int $int9 = 0;
+$int4 = enum_getoutputcount($enum0);
+while ($int3 < $int4) {
+	$namedobj7 = enum(int, namedobj, $enum0, $int3);
+	if ($bool1 = ^false & oc_members($namedobj7) = ^true) {
+		$int9 = 0;
+	} else if ($namedobj7 ! null) {
+		$int8 = enum(obj, int, enum_3864, $namedobj7);
+		if ($int8 > $int6 & $int8 <= $lvl2) {
+			$int6 = $int8;
+			$namedobj5 = $namedobj7;
+		}
+	}
+	$int3 = calc($int3 + 1);
+}
+return($namedobj5);

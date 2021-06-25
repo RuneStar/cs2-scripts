@@ -2,8 +2,8 @@
 [proc,buff_bar_buff_position](component $component0, int $int1)(int, int)
 def_int $width2 = if_getwidth($component0);
 def_int $height3 = if_getheight($component0);
-def_int $int4 = calc($width2 / 31);
-def_int $int5 = calc($height3 / 31);
+def_int $int4 = calc($width2 / 37);
+def_int $int5 = calc($height3 / 37);
 def_int $int6 = calc($int4 * $int5);
 if ($int1 >= $int6) {
 	return(-1, -1);
@@ -13,17 +13,17 @@ def_int $int8 = 0;
 def_int $int9 = 2;
 if (~on_mobile = true) {
 	$int9 = 1;
-} else if (%varbit9530 = 1) {
+} else if (%varbit9530 = 0) {
 	$int9 = 0;
 }
 if ($int9 = 1) {
-	$int7 = calc(2 + $int4 * 31 - 31 * ($int1 / $int5) - 31 + ($width2 - ($int4 * 31 + 1)));
-	$int8 = calc(2 + 31 * ($int1 % $int5));
+	$int7 = calc(2 + $int4 * 37 - 37 * ($int1 / $int5) - 37 + ($width2 - ($int4 * 37 + 1)));
+	$int8 = calc(2 + 37 * ($int1 % $int5));
 } else if ($int9 = 2) {
-	$int7 = calc(2 + 31 * ($int1 / $int5));
-	$int8 = calc(2 + 31 * ($int1 % $int5));
+	$int7 = calc(2 + 37 * ($int1 / $int5));
+	$int8 = calc(2 + 37 * ($int1 % $int5));
 } else {
-	$int7 = calc(2 + 31 * ($int1 % $int4));
-	$int8 = calc(2 + 31 * ($int1 / $int4));
+	$int7 = calc(2 + 37 * ($int1 % $int4));
+	$int8 = calc(2 + 37 * ($int1 / $int4));
 }
 return($int7, $int8);

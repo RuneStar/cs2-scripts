@@ -22,7 +22,7 @@ if ($struct6 = null) {
 def_int $int7 = 0;
 while ($count3 < $count4) {
 	$int7 = struct_param($struct6, param_806);
-	if (~adventurepath_return_task_status($int7) = ^true) {
+	if (~adventurepath_return_task_status($int7) = 1) {
 		return($int0);
 	}
 	$int0 = $int7;

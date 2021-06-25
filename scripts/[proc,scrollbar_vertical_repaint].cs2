@@ -3,7 +3,11 @@
 def_int $trans8 = 0;
 def_int $trans9 = 0;
 if ($int7 = 1) {
-	$trans8, $trans9 = 235, 180;
+	if (~on_enhanced = 1) {
+		$trans8, $trans9 = 185, 130;
+	} else {
+		$trans8, $trans9 = 235, 180;
+	}
 }
 if (~on_mobile = true) {
 	$trans8, $trans9 = 200, 130;

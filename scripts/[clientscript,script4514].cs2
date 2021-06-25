@@ -1,0 +1,28 @@
+// 4514
+[clientscript,script4514](component $component0, component $component1, component $component2, component $component3)
+if (~on_enhanced = 0) {
+	return;
+}
+cc_deleteall($component1);
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = calc(5 * 2);
+def_int $count7 = enum_getoutputcount(enum_681);
+def_int $count8 = 1;
+def_stat $stat9 = null;
+while ($count8 <= $count7 & $int5 <= %varbit12375) {
+	$stat9 = enum(int, stat, enum_681, $count8);
+	if ($stat9 ! hitpoints & $stat9 ! prayer & stat($stat9) ! stat_base($stat9)) {
+		$int4 = ~script4515($component1, $component2, $stat9, $int5, $int6, $int4);
+		$int5 = calc($int5 + 1);
+	}
+	$count8 = calc($count8 + 1);
+}
+if (if_gethide($component1) = false) {
+	if ($int4 > 0) {
+		if_sethide(false, $component3);
+	} else {
+		if_sethide(true, $component3);
+	}
+}
+if_setsize(calc($int6 + $int5 * 35), 35, ^setsize_abs, ^setsize_abs, $component0);

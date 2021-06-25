@@ -1,0 +1,370 @@
+// 4731
+[proc,script4731](component $component0, component $component1, int $int2, int $setposh3, int $setposv4, boolean $boolean5, int $width6, int $height7, int $int8, int $clock9, int $clock10)
+def_int $width11 = if_getwidth($component0);
+def_int $height12 = if_getheight($component0);
+def_component $layer13 = if_getlayer($component0);
+if ($layer13 ! null) {
+	$width11 = if_getwidth($layer13);
+	$height12 = if_getheight($layer13);
+}
+if (%varcint222 = $clock9 & $clock10 = %varcint384 & %varcint381 = $int8 & $width11 = $width6 & $height12 = $height7 & calc(clientclock % 75) ! 0) {
+	return;
+}
+def_int $int14 = 0;
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_boolean $boolean21 = ~on_mobile;
+def_int $int22 = ~on_enhanced;
+def_enum $enum23 = ~toplevel_getcomponents;
+def_int $int24 = 0;
+def_int $setposh25 = $setposh3;
+def_int $int26 = 0;
+def_int $int27 = 0;
+def_int $int28 = 0;
+def_int $int29 = 0;
+def_int $int30 = 0;
+def_int $int31 = 0;
+def_int $int32 = 0;
+def_int $int33 = 0;
+def_int $int34 = 0;
+def_int $int35 = 0;
+def_int $int36 = 0;
+def_int $int37 = 0;
+def_component $component38 = null;
+if_setposition(0, 0, $setposh25, $setposv4, $component0);
+if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
+if (testbit($int2, 13) = ^true & $boolean21 = true & $layer13 ! null) {
+	~script1282;
+	$int31 = scale(%varcint381, 16384, $width11);
+	$int18 = ~max(_6220, $int31);
+	$int19 = _6221;
+	$int16 = ~min(_6222, calc($width11 - $int31));
+	$int17 = _6223;
+	$component38 = null;
+	if ($component0 = interface_601:19) {
+		if (.cc_find(interface_601:2, 0) = ^true) {
+			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+			.cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
+		} else {
+			.cc_create(interface_601:2, ^iftype_text, 0);
+			.cc_setnoclickthrough(true);
+			.cc_setonclick("opsound(0, 0)");
+			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+			.cc_setsize(0, $int19, ^setsize_minus, ^setsize_abs);
+		}
+		if (.cc_find(interface_601:2, 1) = ^true) {
+			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+			.cc_setsize(0, $int17, ^setsize_minus, ^setsize_minus);
+		} else {
+			.cc_create(interface_601:2, ^iftype_text, 1);
+			.cc_setnoclickthrough(true);
+			.cc_setonclick("opsound(0, 0)");
+			.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+			.cc_setsize(0, $int17, ^setsize_minus, ^setsize_minus);
+		}
+		if (.cc_find(interface_601:2, 2) = ^true) {
+			.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+			.cc_setsize($int18, 0, ^setsize_abs, ^setsize_minus);
+		} else {
+			.cc_create(interface_601:2, ^iftype_text, 2);
+			.cc_setnoclickthrough(true);
+			.cc_setonclick("opsound(0, 0)");
+			.cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+			.cc_setsize($int18, 0, ^setsize_abs, ^setsize_minus);
+		}
+		if (.cc_find(interface_601:2, 3) = ^true) {
+			.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+			.cc_setsize($int16, 0, ^setsize_minus, ^setsize_minus);
+		} else {
+			.cc_create(interface_601:2, ^iftype_text, 3);
+			.cc_setnoclickthrough(true);
+			.cc_setonclick("opsound(0, 0)");
+			.cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+			.cc_setsize($int16, 0, ^setsize_minus, ^setsize_minus);
+		}
+		$component38 = enum(component, component, enum_1745, interface_161:23);
+		if ($component38 ! null) {
+			~script3506($component38);
+		}
+		if_setposition($int18, $int19, ^setpos_abs_left, ^setpos_abs_top, $component0);
+		if_setsize(calc($width11 - ($int16 - $int18)), calc($height12 - ($int17 - $int19)), ^setsize_minus, ^setsize_minus, $component0);
+		if_setonvartransmit("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384){var287, var3074, var1055, var1227}", $component0);
+		if_setonsubchange("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
+		if_setontimer("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
+		if_setonresize("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
+		return;
+	}
+	$int15 = calc($int15 + $int18);
+	$int14 = calc($int14 + $int19);
+	$int20 = calc($int20 + $int19);
+	$int16 = calc($width11 - $int16);
+	$int17 = calc($height12 - $int17);
+}
+$int35 = 0;
+if ($boolean21 = true & $enum23 = enum_1745) {
+	if (testbit($int2, 0) = ^true | testbit($int2, 4) = ^true) {
+		$int26 = 1;
+	}
+	if (testbit($int2, 1) = ^true) {
+		$int27 = 1;
+	}
+	if (testbit($int2, 2) = ^true) {
+		$int28 = 1;
+	}
+	if (testbit($int2, 3) = ^true) {
+		$int29 = 1;
+	}
+	if ($int26 = 1 & ~script2518 = 1) {
+		$int26 = 1;
+	} else {
+		$int26 = 0;
+	}
+	if ($int27 = 1 & ~script2519 = 1) {
+		$int27 = 1;
+	} else {
+		$int27 = 0;
+	}
+	if ($int29 = 1 & ~chatbox_open = 1) {
+		$int29 = 1;
+	} else {
+		$int29 = 0;
+	}
+	if ($int26 = 1 & (testbit($int2, 4) = ^false | ~chatbox_open = 1)) {
+		$int15 = calc($int15 + if_getwidth(enum(component, component, $enum23, interface_164:72)));
+	}
+	if ($int27 = 1) {
+		$int35 = calc($int35 + if_getwidth(enum(component, component, $enum23, interface_164:72)));
+	}
+	if ($int28 = 1) {
+		if (%varbit6254 = 0) {
+			$int35 = ~max($int35, 182);
+		} else {
+			$int35 = ~max($int35, 120);
+		}
+	}
+	if ($int29 = 1) {
+		$int14 = calc($int14 + (165 - 23) - enum(enum, int, enum_1961, $enum23) + 2);
+	}
+	$int16 = calc($int16 + $int35);
+}
+if (testbit($int2, 12) = ^true & $layer13 ! null & $enum23 ! null) {
+	$int15 = calc($int15 + enum(enum, int, enum_1960, $enum23));
+	$int14 = calc($int14 + enum(enum, int, enum_1961, $enum23));
+	$int20 = calc($int20 + enum(enum, int, enum_1961, $enum23));
+	$int16 = calc($int16 + enum(enum, int, enum_1135, $enum23));
+	$int17 = calc($int17 + enum(enum, int, enum_1136, $enum23));
+}
+if (testbit($int2, 10) = ^true & $boolean21 = false & ($setposh25 = ^setpos_abs_left | $setposh25 = ^setpos_abs_centre & getwindowmode = ^windowmode_fixed)) {
+	if ($int22 = 0 | %varbit12377 = 1) {
+		$int14 = calc($int14 + 23);
+	} else {
+		$int14 = calc($int14 + 2);
+	}
+}
+if (testbit($int2, 16) = ^true & $component1 ! null) {
+	%varcint490 = $component1;
+	if ($boolean21 = false & ($setposh25 = ^setpos_abs_left | $setposh25 = ^setpos_abs_centre & getwindowmode = ^windowmode_fixed)) {
+		if ($int22 = 0 | %varbit12377 = 1) {
+			$int14 = calc($int14 + 23);
+		} else {
+			$int14 = calc($int14 + 2);
+		}
+	}
+}
+if (testbit($int2, 17) = ^true & %varcint490 ! null & if_find(%varcint490) = true) {
+	if (~script4738($component1, $int15, $int14, %varcint490, 0, 0) = 1) {
+		$int14 = calc($int14 + if_getheight(%varcint490));
+		$int14 = calc($int14 + 2);
+	}
+	$int35 = calc($width11 - if_getwidth($component1) - $int16 - 2 * 2);
+	if (~script4738($component1, $int35, $int20, %varcint490, 0, 0) = 1) {
+		$int20 = calc($int20 + if_getheight(%varcint490));
+		$int20 = calc($int20 + 2);
+	}
+}
+$component38 = enum(component, component, ~toplevel_getcomponents, interface_161:4);
+if (testbit($int2, 18) = ^true & getwindowmode = ^windowmode_fixed & %varbit12352 = 1 & $int22 = 1 & $component1 ! null & $component38 ! null & if_hassub($component38) = true) {
+	$int35 = calc(if_getheight(interface_90:44) + if_gety(interface_90:44));
+	$int35 = calc(if_getheight($component1) + if_gety($component1) - $int35);
+	if ($int35 >= 0) {
+		$int17 = calc($int17 + 80 + $int35);
+	} else {
+		$int17 = calc($int17 + 80 - $int35);
+	}
+}
+$component38 = enum(component, component, $enum23, interface_161:8);
+if (testbit($int2, 5) = ^true & testbit($int2, 16) = ^false & $component38 ! null & if_hassub($component38) = true) {
+	if ($int22 = 1 & $setposh25 = ^setpos_abs_left & %varbit12390 = 0 & %varbit12401 = 0 & ~script4732(0) = 0) {
+		$int14 = calc($int14 + if_getheight(interface_303:4) + 2);
+	} else if ($setposh25 = ^setpos_abs_centre & %varbit12401 = 1) {
+		$int14 = calc($int14 + if_getheight(interface_303:4) + 2);
+	}
+	if (~script4732(0) = 1) {
+		$int20 = calc($int20 + if_getheight(interface_303:4));
+	}
+}
+$component38 = enum(component, component, $enum23, interface_161:14);
+if ($int22 = 1 & testbit($int2, 6) = ^true & testbit($int2, 16) = ^false & $component38 ! null & if_hassub($component38) = true) {
+	if (~script4732(1) = 0) {
+		if ($setposh25 = ^setpos_abs_left) {
+			$int14 = calc($int14 + if_getheight($component38));
+		}
+	} else {
+		$int20 = calc($int20 + if_getheight($component38));
+	}
+}
+$int24 = 0;
+if (testbit($int2, 7) = ^true & testbit($int2, 16) = ^false) {
+	if ($setposh25 = ^setpos_abs_left & %varbit4692 = 2) {
+		$int24 = 1;
+	} else if ($setposh25 = ^setpos_abs_centre & %varbit4692 = 1) {
+		$int24 = 1;
+	} else if ($setposh25 = ^setpos_abs_right & %varbit4692 = 0) {
+		$int24 = 1;
+	}
+	if (%varbit4702 = 0 & testbit($int2, 9) = ^true) {
+		$int24 = 0;
+	}
+	if ($int24 = 1) {
+		if ($setposh25 = ^setpos_abs_left & $boolean21 = false) {
+			if ($int22 = 0 | %varbit12377 = 1) {
+				$int14 = calc($int14 + 35 + 23);
+			} else {
+				$int14 = calc($int14 + 35);
+			}
+		} else {
+			$int14 = calc($int14 + 35);
+		}
+		if (%varbit4698 ! 0) {
+			$int14 = calc($int14 + 9);
+		}
+		if ($setposh25 = ^setpos_abs_centre) {
+			$int15 = calc($int15 + 0);
+		} else {
+			$int15 = calc($int15 + 2);
+		}
+	} else {
+		if ($setposh25 = ^setpos_abs_left & %varbit4692 = 0) {
+			$int24 = 0;
+			if (testbit($int2, 9) = ^true) {
+				if (%varbit4702 = 0) {
+					$int24 = 1;
+				}
+			} else {
+				$int24 = 1;
+			}
+			if ($int24 = 1) {
+				$int20 = calc($int20 + 35);
+				if (%varbit4698 ! 0) {
+					$int20 = calc($int20 + 9);
+				}
+			}
+		}
+		if ($boolean21 = false & ($setposh25 = ^setpos_abs_left | $setposh25 = ^setpos_abs_centre)) {
+			if ($int22 = 0 | %varbit12377 = 1) {
+				$int14 = calc($int14 + 23);
+			} else {
+				$int14 = calc($int14 + 2);
+			}
+		} else {
+			$int14 = calc($int14 + 2);
+		}
+		if ($setposh25 = ^setpos_abs_centre) {
+			$int15 = calc($int15 + 0);
+		} else {
+			$int15 = calc($int15 + 2);
+		}
+	}
+}
+if (testbit($int2, 14) = ^true & %var287 = 1) {
+	$int35 = 0;
+	$int33 = 0;
+	$int34 = enum_getoutputcount(enum_580);
+	while ($int33 < $int34) {
+		$component38 = enum(int, component, enum_580, $int33);
+		if ($component38 ! null & cc_find(interface_163:0, calc($int33 * 4)) = ^true & string_length(cc_gettext) > 0) {
+			$int35 = calc($int35 + if_getheight($component38));
+		}
+		$int33 = calc($int33 + 1);
+	}
+	if ($int35 > 0) {
+		$int35 = calc($int35 + 4);
+	}
+	if ($boolean21 = true) {
+		$int14 = calc($int14 + $int35);
+	} else {
+		$int17 = calc($int17 + $int35);
+	}
+}
+$component38 = enum(component, component, $enum23, interface_161:7);
+$int30 = 0;
+if (testbit($int2, 15) = ^true & $int22 = 1 & $component38 ! null & if_hassub($component38) = true & if_gethide(interface_708:2) = false) {
+	if ($setposh25 = ^setpos_abs_left) {
+		$int17 = calc($int17 + 35);
+	} else if ($setposh25 = ^setpos_abs_centre) {
+		if ($setposv4 = ^setpos_abs_bottom) {
+			$int30 = ~script4738($component1, $int15, calc(0 - $int17), interface_708:2, ~script4735($component38));
+		} else {
+			$int30 = ~script4738($component1, $int15, $int14, interface_708:2, ~script4735($component38));
+		}
+		if ($int30 = 1) {
+			$int17 = calc($int17 + 35);
+		}
+	}
+}
+$int30 = 0;
+$component38 = enum(component, component, $enum23, interface_161:6);
+if (testbit($int2, 11) = ^true & $component38 ! null & if_hassub($component38) = true & if_gethide($component38) = false & $component1 ! null) {
+	$int35, $int36 = ~script4668;
+	if ($int35 > 0 & $int36 > 0) {
+		$int32 = ~script4669;
+		if ($int32 > 0) {
+			if ($boolean21 = false) {
+				if ($setposh25 = ^setpos_abs_left | $setposh25 = ^setpos_abs_centre) {
+					if (%varbit9530 = 0) {
+						$int37 = calc($int32 / $int35);
+						if (calc($int32 % $int35) > 0) {
+							$int37 = calc($int37 + 1);
+						}
+						$int17 = calc($int17 + 37 * $int37 + 2);
+					} else if ($int32 >= $int36) {
+						$int17 = calc($int17 + 37 * $int36 + 2);
+					} else {
+						$int17 = calc($int17 + 37 * $int32 + 2);
+					}
+				}
+			} else if ($setposh25 = ^setpos_abs_right) {
+				$int37 = calc($int32 / $int36);
+				if (calc($int32 % $int36) > 0) {
+					$int37 = calc($int37 + 1);
+				}
+				$int16 = calc($int16 + 37 * $int37 + 2);
+			}
+		}
+	}
+}
+if ($boolean5 = true & $component1 ! null & $setposh25 ! ^setpos_abs_right) {
+	$int35 = if_getwidth($component1);
+	$int36 = if_getheight($component1);
+	if ($int35 <= calc($width11 - ($int15 + $int16)) & $int36 <= calc($height12 - ($int14 + $int17))) {
+		if_setposition($int15, $int14, ^setpos_abs_left, ^setpos_abs_top, $component0);
+		if_setsize(calc($int15 + $int16), calc($int14 + $int17), ^setsize_minus, ^setsize_minus, $component0);
+		~script4734($component0, $int2);
+	} else {
+		$int15 = calc($width11 - $int35 - $int16 - 2 * 2);
+		if_setposition($int15, calc($int20 + 2), ^setpos_abs_left, ^setpos_abs_top, $component0);
+		if_setsize(calc($int15 + $int16), calc($int20 + $int17), ^setsize_minus, ^setsize_minus, $component0);
+		~script4733($component0, $int2);
+	}
+} else {
+	if_setposition($int15, $int14, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if_setsize(calc($int15 + $int16), calc($int14 + $int17), ^setsize_minus, ^setsize_minus, $component0);
+}
+if_setonvartransmit("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384){var287, var3074, var1055, var1227}", $component0);
+if_setonsubchange("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
+if_setontimer("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);
+if_setonresize("script4730($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, $width11, $height12, %varcint381, %varcint222, %varcint384)", $component0);

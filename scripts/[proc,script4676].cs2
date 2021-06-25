@@ -1,0 +1,9 @@
+// 4676
+[proc,script4676](int $int0, int $int1, int $int2)(int)
+if ($int2 = 0 | $int1 <= 0) {
+	return(0);
+}
+def_int $int3 = calc($int1 * $int2);
+def_int $int4 = calc(%var3079 - $int0);
+$int4 = calc($int4 % $int2);
+return(calc($int3 - $int4));

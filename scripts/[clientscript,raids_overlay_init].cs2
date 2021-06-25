@@ -1,45 +1,5 @@
 // 1505
-[clientscript,raids_overlay_init](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
-def_string $string0 = ~tostring_spacer(5000000, ",");
-def_string $string1 = ~tostring_spacer(131071, ",");
-def_int $width7 = parawidth("Total: <$string0>", 512, p12_full);
-def_int $width8 = parawidth("<chat_playername>: <$string1>", 512, p12_full);
-def_int $width9 = $width7;
-if ($width8 > $width7) {
-	$width9 = $width8;
-}
-~script1490($component1);
-~hud_clamp_init($component2);
-~script2249($component3, setbit(0, 3));
-~script1486($component4, ^setpos_abs_left, 1, 0);
-if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top, $component5);
-if (~on_mobile = true) {
-	if_setposition(calc($width9 + 30), 2, ^setpos_abs_left, ^setpos_abs_top, $component6);
-}
-cc_deleteall($component5);
-def_int $int10 = 0;
-cc_create($component5, ^iftype_graphic, $int10);
-$int10 = calc($int10 + 1);
-cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
-cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_settiling(true);
-cc_setgraphic("tradebacking");
-$int10 = ~thinstonebox($component5, $int10);
-cc_create($component5, ^iftype_text, $int10);
-$int10 = calc($int10 + 1);
-.cc_create($component5, ^iftype_text, $int10);
-$int10 = calc($int10 + 1);
-cc_setsize(8, 0, ^setsize_minus, ^setsize_minus);
-.cc_setsize(8, 0, ^setsize_minus, ^setsize_minus);
-cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-.cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setcolour(0xff981f);
-.cc_setcolour(^white);
-cc_settextfont(p12_full);
-.cc_settextfont(p12_full);
-cc_settextshadow(true);
-.cc_settextshadow(true);
-cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
-.cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
-~raids_overlay_databox($component5);
-if_setonvartransmit("raids_overlay_databox($component5, cc_getid, .cc_getid){var1431, var1432, var1429}", $component5);
+[clientscript,raids_overlay_init](component $component0, component $component1, component $component2)
+~script4729($component1, $component2, setbit(setbit(51960, 12), 13), ^setpos_abs_left, ^setpos_abs_top, true);
+if_setonvartransmit("script4662($component2){var2856}", $component0);
+~script4663($component2);

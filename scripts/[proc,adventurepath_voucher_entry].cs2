@@ -67,7 +67,7 @@ cc_setposition(calc($int16 + 10), $height0, ^setpos_abs_left, ^setpos_abs_top);
 cc_settext($text0);
 cc_settextfont(p12_full);
 cc_settextshadow(true);
-if ($index8 ! -1 & ~adventurepath_return_voucher($index8) = ^false) {
+if ($index8 ! -1 & ~adventurepath_return_voucher($index8) = 0) {
 	cc_setcolour(0xff981f);
 } else {
 	cc_setcolour(0x0dc10d);

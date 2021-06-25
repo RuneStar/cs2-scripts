@@ -1,30 +1,30 @@
 // 132
-[clientscript,barrows_overlay_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
-~script1490($component1);
-~barrows_overlay_reward($component9);
-if_setonvartransmit("barrows_overlay_reward($component9){var453, var1697}", $component0);
-cc_deleteall($component10);
-def_int $width11 = ~barrows_overlay_createbrother("Ahrim", 0, $component10);
-def_int $width12 = ~barrows_overlay_createbrother("Dharok", 1, $component10);
-if ($width12 > $width11) {
-	$width11 = $width12;
+[clientscript,barrows_overlay_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11)
+~script4729($component1, $component2, setbit(0, 13), ^setpos_abs_centre, ^setpos_abs_centre, false);
+~barrows_overlay_reward($component10);
+if_setonvartransmit("barrows_overlay_reward($component10){var453, var1697}", $component0);
+cc_deleteall($component11);
+def_int $width12 = ~barrows_overlay_createbrother("Ahrim", 0, $component11);
+def_int $width13 = ~barrows_overlay_createbrother("Dharok", 1, $component11);
+if ($width13 > $width12) {
+	$width12 = $width13;
 }
-$width12 = ~barrows_overlay_createbrother("Guthan", 2, $component10);
-if ($width12 > $width11) {
-	$width11 = $width12;
+$width13 = ~barrows_overlay_createbrother("Guthan", 2, $component11);
+if ($width13 > $width12) {
+	$width12 = $width13;
 }
-$width12 = ~barrows_overlay_createbrother("Karil", 3, $component10);
-if ($width12 > $width11) {
-	$width11 = $width12;
+$width13 = ~barrows_overlay_createbrother("Karil", 3, $component11);
+if ($width13 > $width12) {
+	$width12 = $width13;
 }
-$width12 = ~barrows_overlay_createbrother("Torag", 4, $component10);
-if ($width12 > $width11) {
-	$width11 = $width12;
+$width13 = ~barrows_overlay_createbrother("Torag", 4, $component11);
+if ($width13 > $width12) {
+	$width12 = $width13;
 }
-$width12 = ~barrows_overlay_createbrother("Verac", 5, $component10);
-if ($width12 > $width11) {
-	$width11 = $width12;
+$width13 = ~barrows_overlay_createbrother("Verac", 5, $component11);
+if ($width13 > $width12) {
+	$width12 = $width13;
 }
-if_setsize(calc($width11 + 20), 102, ^setsize_abs, ^setsize_abs, $component10);
-~barrows_overlay_size($component0, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, ^min_32bit_int);
-if_setonsubchange("barrows_overlay_size($component0, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, ^min_32bit_int)", $component0);
+if_setsize(calc($width12 + 20), 102, ^setsize_abs, ^setsize_abs, $component11);
+~barrows_overlay_size($component0, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, ^min_32bit_int);
+if_setonsubchange("barrows_overlay_size($component0, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, ^min_32bit_int)", $component0);

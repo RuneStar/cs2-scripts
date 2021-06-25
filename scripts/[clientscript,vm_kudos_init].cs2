@@ -1,10 +1,9 @@
 // 2077
-[clientscript,vm_kudos_init](int $int0, component $component1, component $component2, component $component3)
-~script2249($component1, setbit(0, 3));
-~script1486($component2, ^setpos_abs_left, 1, 0);
-cc_deleteall($component3);
-cc_create($component3, ^iftype_text, 0);
-.cc_create($component3, ^iftype_text, 1);
+[clientscript,vm_kudos_init](component $component0, component $component1)
+~script4729($component0, $component1, 51960, ^setpos_abs_left, ^setpos_abs_top, true);
+cc_deleteall($component1);
+cc_create($component1, ^iftype_text, 0);
+.cc_create($component1, ^iftype_text, 1);
 cc_settextfont(b12_full);
 .cc_settextfont(p12_full);
 cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
@@ -16,4 +15,4 @@ cc_setcolour(0xff981f);
 cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 .cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
 ~vm_kudos_update;
-if_setonvartransmit("vm_kudos_update($component3, cc_getid, .cc_getid){var1010}", $component3);
+if_setonvartransmit("vm_kudos_update($component1, cc_getid, .cc_getid){var1010}", $component1);

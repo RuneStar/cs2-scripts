@@ -1,0 +1,84 @@
+// 4553
+[proc,script4553](newvar $newvar0, struct $struct1, npc_uid $npc_uid2, int $int3)
+_104($newvar0);
+if (_203($newvar0) = 1) {
+	cc_setonmouseleave(null);
+	cc_setonmouseover(null);
+}
+if (%varbit12349 = 1) {
+	_7002($npc_uid2, $int3, 11);
+	return;
+}
+def_namedobj $namedobj4 = struct_param($struct1, param_1265);
+def_namedobj $namedobj5 = struct_param($struct1, param_1268);
+def_int $int6 = ~script4557($namedobj4);
+def_int $int7 = ~script4557($namedobj5);
+if (%varbit12350 = 0 & $int6 = 0 & $int7 = 0) {
+	_7002($npc_uid2, $int3, 11);
+	return;
+}
+def_enum $enum8 = struct_param($struct1, param_1266);
+def_enum $enum9 = struct_param($struct1, param_1269);
+if ($enum8 = null & $enum9 = null) {
+	_7002($npc_uid2, $int3, 11);
+	return;
+}
+def_namedobj $namedobj10 = ~script4556($enum8);
+def_namedobj $namedobj11 = ~script4556($enum9);
+def_namedobj $namedobj12 = null;
+def_int $trans13 = 0;
+if ($namedobj10 = null & $namedobj11 = null) {
+	$namedobj12 = struct_param($struct1, param_1270);
+	$trans13 = 100;
+	if ($namedobj12 = null) {
+		_7002($npc_uid2, $int3, 11);
+		return;
+	}
+}
+def_int $int14 = enum(obj, int, enum_3864, $namedobj10);
+def_int $int15 = enum(obj, int, enum_3864, $namedobj11);
+def_int $lvl16 = stat(fishing);
+def_int $int17 = 0;
+if ($namedobj12 = null) {
+	if ($namedobj10 ! null & $int6 = 1 & $int14 <= $lvl16) {
+		$namedobj12 = $namedobj10;
+		$int17 = $int14;
+	}
+	if ($namedobj11 ! null & $int7 = 1 & $int15 <= $lvl16) {
+		if ($namedobj12 ! null) {
+			if ($int15 > $int14) {
+				$namedobj12 = $namedobj11;
+				$int17 = $int15;
+			}
+		} else {
+			$namedobj12 = $namedobj11;
+			$int17 = $int15;
+		}
+	}
+	if ($namedobj12 = null) {
+		if ($int14 >= $int15) {
+			$namedobj12 = $namedobj10;
+		} else {
+			$namedobj12 = $namedobj11;
+		}
+		$trans13 = 100;
+	}
+}
+if ($namedobj12 = null) {
+	_7002($npc_uid2, $int3, 11);
+	return;
+}
+_103($newvar0, 5, 0);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setobject_nonum($namedobj12, 1);
+cc_setoutline(1);
+cc_settrans($trans13);
+_7001($npc_uid2, $int3, 11);
+if (_203($newvar0) = 1) {
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	if (%varbit12351 = 0) {
+		cc_setonmouseleave("script4551($newvar0, $struct1, $npc_uid2, $int3)");
+		cc_setonmouseover("script4552($newvar0, $struct1)");
+	}
+}

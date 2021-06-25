@@ -16,7 +16,7 @@ if (~script2973($int2, $int4) ! $int2) {
 	}
 	if_setonmouserepeat("script2998($component0, $int1, $int2, $int4)", $component0);
 	if_setonmouseleave("script2999($component0, $int1, $int2, $int4)", $component0);
-} else if (~adventurepath_return_task_status($int2) = ^true) {
+} else if (~adventurepath_return_task_status($int2) = 1) {
 	if (cc_find($component0, calc($int3 + 9)) = ^true) {
 		cc_setsize(17, 17, ^setsize_abs, ^setsize_abs);
 		cc_setgraphic("tick");

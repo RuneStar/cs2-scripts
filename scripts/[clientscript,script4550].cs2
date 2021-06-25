@@ -1,0 +1,10 @@
+// 4550
+[clientscript,script4550](newvar $newvar0, struct $struct1, int $lvl2, npc_uid $npc_uid3, int $int4)
+def_int $lvl5 = stat(fishing);
+if ($lvl5 = $lvl2) {
+	return;
+}
+~script4553($newvar0, $struct1, $npc_uid3, $int4);
+if (_203($newvar0) = 1) {
+	cc_setonstattransmit("script4550($newvar0, $struct1, $lvl5, $npc_uid3, $int4){fishing, agility, strength}");
+}

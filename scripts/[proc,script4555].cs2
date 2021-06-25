@@ -1,0 +1,34 @@
+// 4555
+[proc,script4555](int $int0, int $int1, int $int2, int $int3, newvar $newvar4, enum $enum5, namedobj $namedobj6)(int, int, int, int)
+if ($enum5 = null) {
+	return($int0, 0, $int2, $int3);
+}
+if ($namedobj6 ! null) {
+	_103($newvar4, 5, $int0);
+	$int0 = calc($int0 + 1);
+	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int1, $int2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setobject_nonum($namedobj6, 1);
+	cc_setoutline(1);
+	$int1 = calc($int1 + 36);
+}
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_namedobj $namedobj9 = null;
+$int8 = enum_getoutputcount($enum5);
+while ($int7 < $int8) {
+	$namedobj9 = enum(int, namedobj, $enum5, $int7);
+	if ($namedobj9 ! null) {
+		_103($newvar4, 5, $int0);
+		$int0 = calc($int0 + 1);
+		cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int1, $int2, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setobject_nonum($namedobj9, 1);
+		cc_setoutline(1);
+		$int1 = calc($int1 + 36);
+	}
+	$int7 = calc($int7 + 1);
+}
+$int2 = calc($int2 + 32);
+$int3 = ~max($int3, $int1);
+return($int0, 0, $int2, $int3);

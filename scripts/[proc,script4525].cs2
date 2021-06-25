@@ -1,0 +1,15 @@
+// 4525
+[proc,script4525]
+if (%varbit12352 = 0) {
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
+	if_settext("", interface_90:53);
+	return;
+}
+def_string $text0 = "<img=31> ";
+def_enum $enum0 = enum(int, enum, enum_3908, %varbit357);
+def_int $int1 = %var43;
+if ($int1 = 4 & %varbit2668 = 1) {
+	$int1 = 5;
+}
+$text0 = "<$text0><col=ffffff><enum(int, string, $enum0, $int1)></col>";
+if_settext($text0, interface_90:53);

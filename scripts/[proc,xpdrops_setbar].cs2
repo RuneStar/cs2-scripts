@@ -199,10 +199,10 @@ if ($boolean9 = true) {
 	if ($boolean20 = true) {
 		if_sethide(false, $component3);
 		if_setposition(0, 28, ^setpos_abs_centre, ^setpos_abs_top, $component3);
-		if_setposition(0, calc(if_gety($component0) + 38), ^setpos_abs_centre, ^setpos_abs_top, $component5);
+		if_setposition(0, 38, ^setpos_abs_centre, ^setpos_abs_top, $component5);
 	} else {
 		if_sethide(true, $component3);
-		if_setposition(0, calc(if_gety($component0) + 29), ^setpos_abs_centre, ^setpos_abs_top, $component5);
+		if_setposition(0, 29, ^setpos_abs_centre, ^setpos_abs_top, $component5);
 	}
 } else if ($boolean20 = true) {
 	if_sethide(false, $layer19);
@@ -210,9 +210,9 @@ if ($boolean9 = true) {
 	if_setsize(0, 4, ^setsize_minus, ^setsize_abs, $layer19);
 	if_sethide(false, $component3);
 	if_setposition(0, 7, ^setpos_abs_centre, ^setpos_abs_top, $component3);
-	if_setposition(0, calc(if_gety($component0) + 17), ^setpos_abs_centre, ^setpos_abs_top, $component5);
+	if_setposition(0, 17, ^setpos_abs_centre, ^setpos_abs_top, $component5);
 } else {
 	if_sethide(true, $layer19);
 	if_sethide(true, $component3);
-	if_setposition(0, if_gety($component0), ^setpos_abs_centre, ^setpos_abs_top, $component5);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component5);
 }

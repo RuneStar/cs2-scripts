@@ -1,5 +1,4 @@
 // 2548
-[clientscript,mazetimer_init](component $component0, component $component1, component $component2)
-~script2249($component0, setbit(0, 3));
-~script1486($component1, ^setpos_abs_centre, 1, 0);
-~script2249($component2, setbit(0, 1));
+[clientscript,mazetimer_init](component $component0, component $component1, component $component2, component $component3)
+~script4729($component0, $component2, 51944, ^setpos_abs_centre, ^setpos_abs_top, false);
+~script4729($component1, $component3, setbit(35554, 18), ^setpos_abs_right, ^setpos_abs_bottom, false);

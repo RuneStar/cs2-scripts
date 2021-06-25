@@ -1,9 +1,20 @@
 // 2165
 [proc,xpdrops_setposition](component $component0)
+def_int $int1 = 2;
+def_int $int2 = 0;
+def_int $int3 = 0;
+$int2, $int3 = ~script4735($component0);
+if (%varcint490 ! null & if_find(%varcint490) = true & ~script4738($component0, 0, calc(2 - $int3), %varcint490, 0, 0) = 1) {
+	$int1 = calc($int1 + 2 + if_getheight(%varcint490));
+}
 if (~on_mobile = true | %varbit4692 = 0) {
-	if_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top, $component0);
+	if_setposition(2, $int1, ^setpos_abs_right, ^setpos_abs_top, $component0);
 } else if (%varbit4692 = 2) {
-	if_setposition(2, 24, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	if (~on_enhanced = 0 | %varbit12377 = 1) {
+		if_setposition(2, calc($int1 + 22), ^setpos_abs_left, ^setpos_abs_top, $component0);
+	} else {
+		if_setposition(2, $int1, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	}
 } else {
-	if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+	if_setposition(0, $int1, ^setpos_abs_centre, ^setpos_abs_top, $component0);
 }

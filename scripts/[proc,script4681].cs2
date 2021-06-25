@@ -1,0 +1,90 @@
+// 4681
+[proc,script4681](int $int0)(int)
+switch_int ($int0) {
+	case 4 :
+		return(%varbit2451);
+	case 5 :
+		return(%varbit5361);
+	case 6 :
+		return(%varbit6539);
+	case 7 :
+		return(calc(%varbit10385 + %varbit24));
+	case 8 :
+		return(%varbit5417);
+	case 9 :
+		return(%varbit5418);
+	case 15 :
+		return(%varbit3955);
+	case 10 :
+		return(%varbit3981);
+	case 16 :
+		return(%varbit6101);
+	case 28 :
+		return(calc((%var102 + 38) * -1));
+	case 11 :
+		return(calc(%var102 * -1));
+	case 12 :
+		return(%var272);
+	case 13 :
+		return(%varbit5438);
+	case 14 :
+		return(%varbit4099);
+	case 17 :
+		return(%var892);
+	case 18 :
+		return(%var888);
+	case 19 :
+		return(%varbit4163);
+	case 20 :
+		return(%varbit8429);
+	case 21 :
+		return(%varbit8430);
+	case 29 :
+		return(%varbit2450);
+	case 22 :
+		if (%varbit8429 = %varbit8430 & %varbit8430 = %varbit8431) {
+			return(0);
+		}
+		if (%varbit8431 = %varbit8433) {
+			return(0);
+		}
+		if (%varbit8431 = %varbit8432) {
+			return(0);
+		}
+		return(%varbit8431);
+	case 23 :
+		return(%varbit8433);
+	case 24 :
+		return(%varbit8432);
+	case 27 :
+		if (%varbit8429 = %varbit8430 & %varbit8430 = %varbit8431) {
+			return(%varbit8431);
+		}
+	case 26 :
+		if (%varbit8431 = %varbit8433) {
+			return(%varbit8431);
+		}
+	case 25 :
+		if (%varbit8431 = %varbit8432) {
+			return(%varbit8431);
+		}
+	case 31 :
+		return(%varbit12288);
+	case 30 :
+		return(%varbit12136);
+	case 32, 34, 38 :
+		return(stat_base(magic));
+	case 40 :
+		return(stat_base(magic));
+	case 33 :
+		return(%varbit12291);
+	case 35 :
+		return(%varbit12138);
+	case 36 :
+		return(%varbit12411);
+	case 37 :
+		return(%varbit12293);
+	case 39 :
+		return(%varbit12290);
+}
+return(0);

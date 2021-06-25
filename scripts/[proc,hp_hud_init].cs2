@@ -1,22 +1,12 @@
 // 3427
-[proc,hp_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20)
-def_int $int21 = 255;
-if (nc_param(%var1683, param_945) = 1) {
-	$int21 = 0;
+[proc,hp_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16)
+def_int $int17 = 255;
+if (%var1683 ! null & nc_param(%var1683, param_945) = 1 | %varbit12401 = 0) {
+	$int17 = 0;
 }
-~script2249($component3, setbit(0, 3));
-~script1486($component4, ^setpos_abs_centre, 1, 0);
-~script2249($component5, setbit(setbit(0, 3), 4));
-~script1486($component6, ^setpos_abs_left, 1, 0);
-~script1490($component1);
-~hud_clamp_init($component2);
-~hp_hud_fade_in($component14, $component15, $component13, $component16, $component11, $component12, $component10, $component17, $component18, $component19, $component20, $int21);
-if_setonsubchange("hp_hud_pos(0, $component0, $component7, $component8, $component9, $component13, $component10, $component11, $component12, $component17, $component18, $component19, $component20)", $component0);
-if_setonvartransmit("hp_hud_update($component10, $component11, $component12, $component8, $component13, $component17, $component18, $component19, $component20, false){var1682, var1683}", $component10);
-~hp_hud_pos(0, $component0, $component7, $component8, $component9, $component13, $component10, $component11, $component12, $component17, $component18, $component19, $component20);
-~hp_hud_update($component10, $component11, $component12, $component8, $component13, $component17, $component18, $component19, $component20, true);
-if (%varbit10345 = 1) {
-	if_sethide(true, $component7);
-} else if (%varbit10345 = 0) {
-	if_sethide(false, $component7);
-}
+~hp_hud_fade_in($component10, $component11, $component9, $component12, $component7, $component8, $component6, $component13, $component14, $component15, $component16, $int17);
+~script4729($component1, $component3, 51960, ^setpos_abs_left, ^setpos_abs_top, true);
+if_setonsubchange("hp_hud_pos(0, $component0, $component3, $component4, $component5, $component9, $component6, $component7, $component8, $component13, $component14, $component15, $component16, %varbit12401, $component2)", $component0);
+if_setonvartransmit("hp_hud_update($component3, $component6, $component7, $component8, $component4, $component9, $component13, $component14, $component15, $component16, false){var1682, var1683}", $component6);
+~hp_hud_pos(0, $component0, $component3, $component4, $component5, $component9, $component6, $component7, $component8, $component13, $component14, $component15, $component16, ^max_32bit_int, $component2);
+~hp_hud_update($component3, $component6, $component7, $component8, $component4, $component9, $component13, $component14, $component15, $component16, true);

@@ -1,0 +1,16 @@
+// 4735
+[proc,script4735](component $component0)(int, int)
+if ($component0 = null) {
+	return(0, 0);
+}
+def_int $x1 = if_getx($component0);
+def_int $y2 = if_gety($component0);
+def_int $int3 = $x1;
+def_int $int4 = $y2;
+def_component $layer5 = if_getlayer($component0);
+while ($layer5 ! null) {
+	$int3 = calc($int3 + if_getx($layer5));
+	$int4 = calc($int4 + if_gety($layer5));
+	$layer5 = if_getlayer($layer5);
+}
+return($int3, $int4);

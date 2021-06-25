@@ -20,7 +20,7 @@ def_int $int34 = ~adventurepath_return_path_tasks_done($int32);
 $int2 = ~script2990($component1, $int2, calc($int6 - 30), 29, calc($width4 / 2 * $int7 + ($width4 / 4 - $int6 / 2)), calc($int5 / 2 * ($int8 + 1) - 69), $int34, $int33, 0, " Tasks done");
 $int2 = ~stoneborder_free($component1, $int2, calc($width4 / 2), calc($int5 / 2), calc($width4 / 2 * $int7), calc($int5 / 2 * $int8));
 def_graphic $graphic35 = "tick";
-if (~adventurepath_return_path_status($int32) = ^true) {
+if (~adventurepath_return_path_status($int32) = 1) {
 	$int2 = ~script2984($component1, $int2, 29, 29, calc($width4 / 2 * $int7 + ($width4 / 4 + $int6 / 2 - 30)), calc($int5 / 2 * ($int8 + 1) - 69), "", $graphic35, $graphic35, 12, 12, 1, 0, 0);
 } else if ($int32 = %varbit9324) {
 	$int2 = ~script2984($component1, $int2, 29, 29, calc($width4 / 2 * $int7 + ($width4 / 4 + $int6 / 2 - 30)), calc($int5 / 2 * ($int8 + 1) - 69), "Drop<col=ff9040> Focus", "graphic_2223", "graphic_2223", 4, 4, 0, 0, 0);

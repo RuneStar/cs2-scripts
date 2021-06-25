@@ -100,7 +100,7 @@ if ($struct13 ! null) {
 	$int8 = ~script2990($component4, $int8, if_getwidth($component4), if_getheight($component4), 0, 0, 0, 0, 0, "");
 }
 $int8 = 0;
-if ($struct13 ! null & ~adventurepath_return_task_status($index14) = ^false & struct_param($struct13, param_927) ! null) {
+if ($struct13 ! null & ~adventurepath_return_task_status($index14) = 0 & struct_param($struct13, param_927) ! null) {
 	$int8 = ~v2_stone_button_filled($component6);
 	cc_create($component6, ^iftype_graphic, $int8);
 	cc_setgraphic("worldmap_icon,0");

@@ -1,0 +1,12 @@
+// 4519
+[proc,script4519]
+%varcint467 = %varcint461;
+%varcint468 = %varcint462;
+%varcint469 = %varcint463;
+def_int $int0 = calc(%varcint463 + %varcint462 * 30);
+def_int $int1 = calc(%varcint466 + %varcint465 * 30);
+if (%varcint467 <= 0 | %varcint464 > 0 & $int1 < $int0) {
+	%varcint467 = %varcint464;
+	%varcint468 = %varcint465;
+	%varcint469 = %varcint466;
+}

@@ -1,0 +1,27 @@
+// 4726
+[proc,script4726]
+def_enum $enum0 = ~toplevel_getcomponents;
+def_component $component1 = enum(component, component, $enum0, interface_161:39);
+if (~on_enhanced = 0 | ~on_mobile = true | %varbit12344 = 1 & %varbit12377 = 0 | $component1 = null) {
+	if_setontimer(null, $component1);
+	cc_deleteall($component1);
+	return;
+}
+if_setontimer("script4725", $component1);
+cc_deleteall($component1);
+if (_7108 = true) {
+	return;
+}
+def_int $int2 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+$string0, $string1 = _7101;
+def_string $string2 = "<$string0> <$string1>";
+def_int $int3 = _7110;
+def_int $int4 = _7100;
+if (%varbit12377 = 1) {
+	$int2 = ~script4727($int2, $component1, $string2, $int4, $int3);
+}
+if (%varbit12344 = 0) {
+	$int2 = ~script4728($int2, $component1, $string2, $int4);
+}

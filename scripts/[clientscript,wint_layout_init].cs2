@@ -1,5 +1,4 @@
 // 2383
-[clientscript,wint_layout_init](component $component0, component $component1, component $component2)
-~script2249($component1, setbit(setbit(0, 3), 4));
-~wint_layout_update($component2);
-if_setonsubchange("wint_layout_update($component2)", $component0);
+[clientscript,wint_layout_init](int $int0, component $component1, component $component2)
+~wint_layout_update($component2, $component1);
+~script4729($component1, $component2, 51945, ^setpos_abs_left, ^setpos_abs_top, true);

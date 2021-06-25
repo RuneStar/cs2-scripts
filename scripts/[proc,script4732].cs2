@@ -1,0 +1,17 @@
+// 4732
+[proc,script4732](int $int0)(int)
+def_enum $enum1 = ~toplevel_getcomponents;
+def_component $component2 = null;
+switch_int ($int0) {
+	case 0 :
+		$component2 = enum(component, component, $enum1, interface_161:8);
+		if (testbit(%varcint491, 0) = ^true & ~on_enhanced = 1 & %varbit12401 = 0 & if_hassub($component2) = true) {
+			return(1);
+		}
+	case 1 :
+		$component2 = enum(component, component, $enum1, interface_161:14);
+		if (testbit(%varcint491, 1) = ^true & ~on_enhanced = 1 & if_hassub($component2) = true) {
+			return(1);
+		}
+}
+return(0);

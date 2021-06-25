@@ -27,10 +27,10 @@ def_int $int13 = 25;
 if (~on_mobile = true) {
 	$int13 = 35;
 }
-def_int $intarray0(264);
+def_int $intarray0(265);
 cc_deleteall($component6);
 def_int $int14 = 0;
-while ($int14 < 264) {
+while ($int14 < 265) {
 	cc_create($component6, ^iftype_graphic, $int14);
 	cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
 	cc_settiling(true);
@@ -39,7 +39,7 @@ while ($int14 < 264) {
 	$int14 = $intarray0($int14);
 }
 def_int $int15 = 0;
-while ($int15 < 264) {
+while ($int15 < 265) {
 	cc_create($component6, ^iftype_rectangle, $int14);
 	$int14 = calc($int14 + 1);
 	cc_setsize(0, $int13, ^setsize_minus, ^setsize_abs);
@@ -56,18 +56,18 @@ while ($int15 < 264) {
 	$int15 = calc($int15 + 1);
 }
 if ($int14 >= 2) {
-	~quicksort_intenum(intarray0, 0, calc(264 - 1), enum_3797);
+	~quicksort_intenum(intarray0, 0, calc(265 - 1), enum_3797);
 }
 def_int $int16 = 0;
 def_int $int17 = calc(($int13 - 13) / 2);
 def_int $int18 = 0;
 $int15 = 0;
-while ($int15 < 264) {
+while ($int15 < 265) {
 	$int16 = calc($int15 * $int13);
 	if (cc_find($component6, calc($intarray0($int15) - 1)) = ^true) {
 		cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_top);
 	}
-	$int18 = calc(264 + ($intarray0($int15) - 1) * 3);
+	$int18 = calc(265 + ($intarray0($int15) - 1) * 3);
 	if (cc_find($component6, $int18) = ^true & .cc_find($component6, calc($int18 + 1)) = ^true) {
 		cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_top);
 		if (calc($int15 % 2) = 0) {
@@ -86,7 +86,7 @@ while ($int15 < 264) {
 }
 def_int $int19 = calc($int15 * $int13);
 ~scrollbar_vertical($component7, $component6, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-def_int $int20 = calc(enum_getoutputcount(enum_3795) - 1);
+def_int $int20 = calc(enum_getoutputcount(enum_3795) - 2);
 cc_deleteall($component3);
 $int14 = 0;
 while ($int14 < $int20) {

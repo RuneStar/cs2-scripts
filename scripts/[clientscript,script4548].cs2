@@ -1,0 +1,9 @@
+// 4548
+[clientscript,script4548](newvar $newvar0, struct $struct1, int $int2, int $int3, int $int4, npc_uid $npc_uid5, int $int6)
+if ($int2 = %varbit12349 & $int3 = %varbit12350 & $int4 = %varbit12351) {
+	return;
+}
+~script4553($newvar0, $struct1, $npc_uid5, $int6);
+if (_203($newvar0) = 1) {
+	cc_setonvartransmit("script4548($newvar0, $struct1, %varbit12349, %varbit12350, %varbit12351, $npc_uid5, $int6){var2856, var3074}");
+}

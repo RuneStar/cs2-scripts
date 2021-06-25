@@ -28,29 +28,29 @@ if (%varcint171 ! -1) {
 		}
 	}
 }
-if (if_hassub(enum(component, component, $enum1, interface_161:70)) = true) {
-	$component2 = enum(component, component, $enum1, interface_161:71);
+if (if_hassub(enum(component, component, $enum1, interface_161:76)) = true) {
+	$component2 = enum(component, component, $enum1, interface_161:77);
 	if ($component2 ! null) {
 		if_sethide(true, $component2);
 	}
-	$component2 = enum(component, component, $enum1, interface_161:54);
+	$component2 = enum(component, component, $enum1, interface_161:60);
 	if ($component2 ! null) {
 		if_sethide(true, $component2);
 	}
-	$component2 = enum(component, component, $enum1, interface_161:38);
+	$component2 = enum(component, component, $enum1, interface_161:44);
 	if ($component2 ! null) {
 		if_sethide(true, $component2);
 	}
 } else {
-	$component2 = enum(component, component, $enum1, interface_161:71);
+	$component2 = enum(component, component, $enum1, interface_161:77);
 	if ($component2 ! null) {
 		if_sethide(false, $component2);
 	}
-	$component2 = enum(component, component, $enum1, interface_161:54);
+	$component2 = enum(component, component, $enum1, interface_161:60);
 	if ($component2 ! null) {
 		if_sethide(false, $component2);
 	}
-	$component2 = enum(component, component, $enum1, interface_161:38);
+	$component2 = enum(component, component, $enum1, interface_161:44);
 	if ($component2 ! null) {
 		if_sethide(false, $component2);
 	}

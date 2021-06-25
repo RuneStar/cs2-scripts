@@ -1,9 +1,9 @@
 // 2087
 [clientscript,tob_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20, component $component21, component $component22, component $component23)
-~script2249($component3, setbit(0, 3));
-~script1486($component4, ^setpos_abs_left, 1, 0);
-~script1486($component5, ^setpos_abs_centre, 1, 0);
-~script1490($component1);
+~script4729($component1, null, setbit(0, 13), ^setpos_abs_left, ^setpos_abs_top, false);
+~script4729($component3, $component6, clearbit(clearbit(51945, 13), 12), ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($component4, $component11, clearbit(clearbit(51945, 13), 12), ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($component5, $component8, setbit(clearbit(clearbit(51944, 13), 12), 16), ^setpos_abs_centre, ^setpos_abs_top, false);
 cc_deleteall($component9);
 cc_create($component9, ^iftype_rectangle, 0);
 .cc_create($component9, ^iftype_rectangle, 1);

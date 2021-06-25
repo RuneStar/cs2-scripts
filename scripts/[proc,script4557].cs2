@@ -1,0 +1,51 @@
+// 4557
+[proc,script4557](namedobj $namedobj0)(int)
+def_int $int1 = 0;
+def_int $bool2 = map_members;
+switch_namedobj ($namedobj0) {
+	case small_fishing_net_303 :
+		if (inv_total(inv, small_fishing_net_303) > 0) {
+			$int1 = 1;
+		}
+	case big_fishing_net_305 :
+		if (inv_total(inv, big_fishing_net_305) > 0) {
+			$int1 = 1;
+		}
+	case harpoon_311 :
+		$int1 = ~script4558;
+	case fishing_rod_307 :
+		if ($bool2 = ^true & (inv_total(inv, pearl_fishing_rod_22846) > 0 | inv_total(worn, pearl_fishing_rod_22846) > 0)) {
+			$int1 = 1;
+		}
+		if (inv_total(inv, fishing_rod_307) > 0) {
+			$int1 = 1;
+		}
+	case oily_fishing_rod_1585 :
+		if (inv_total(inv, oily_fishing_rod_1585) > 0 | inv_total(inv, oily_pearl_fishing_rod_23122) > 0 | inv_total(worn, oily_pearl_fishing_rod_23122) > 0) {
+			$int1 = 1;
+		}
+	case fly_fishing_rod_309 :
+		if ($bool2 = ^true & (inv_total(inv, pearl_fly_fishing_rod_22844) > 0 | inv_total(worn, pearl_fly_fishing_rod_22844) > 0)) {
+			$int1 = 1;
+		}
+		if (inv_total(inv, fly_fishing_rod_309) > 0) {
+			$int1 = 1;
+		}
+	case barbarian_rod_11323 :
+		if (inv_total(inv, barbarian_rod_11323) > 0 | inv_total(inv, pearl_barbarian_rod_22842) > 0 | inv_total(worn, pearl_barbarian_rod_22842) > 0) {
+			$int1 = 1;
+		}
+	case cormorants_glove_22816 :
+		if (inv_total(worn, cormorants_glove_22817) > 0 | inv_total(worn, cormorants_glove_22816) > 0) {
+			$int1 = 1;
+		}
+	case karambwan_vessel_3159 :
+		if (inv_total(inv, karambwan_vessel_3159) > 0 | inv_total(inv, karambwan_vessel_3157) > 0) {
+			$int1 = 1;
+		}
+	case lobster_pot_301 :
+		if (inv_total(inv, lobster_pot_301) > 0) {
+			$int1 = 1;
+		}
+}
+return($int1);

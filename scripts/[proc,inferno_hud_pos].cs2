@@ -1,15 +1,15 @@
 // 737
-[proc,inferno_hud_pos](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
-def_int $width7 = if_getwidth(interface_596:0);
-def_int $int8 = scale(1, 4, $width7);
-$int8 = ~max($int8, 150);
-$int8 = ~min($int8, 500);
-if ($int0 = $int8) {
+[proc,inferno_hud_pos](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5)
+def_int $width6 = if_getwidth(interface_596:0);
+def_int $int7 = scale(1, 4, $width6);
+$int7 = ~max($int7, 150);
+$int7 = ~min($int7, 500);
+if ($int0 = $int7) {
 	return;
 }
-if_setsize($int8, 38, ^setsize_abs, ^setsize_abs, $component1);
-if_settextalign(^settextalign_left, ^settextalign_centre, 0, $component4);
-if_setposition(10, 0, ^setpos_abs_left, ^setpos_abs_centre, $component4);
+if_setsize($int7, 38, ^setsize_abs, ^setsize_abs, $component1);
+if_settextalign(^settextalign_left, ^settextalign_centre, 0, $component3);
+if_setposition(10, 0, ^setpos_abs_left, ^setpos_abs_centre, $component3);
 if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component2);
-if_setontimer("inferno_hud_pos($int8, $component1, $component2, $component3, $component4, $component5, $component6)", interface_596:0);
-~inferno_hud_update($component5, $component6);
+if_setontimer("inferno_hud_pos($int7, $component1, $component2, $component3, $component4, $component5)", interface_596:0);
+~inferno_hud_update($component4, $component5);

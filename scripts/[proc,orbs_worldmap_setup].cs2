@@ -8,7 +8,7 @@ def_graphic $graphic4 = null;
 def_graphic $graphic5 = null;
 $graphic4, $graphic5 = ~orbs_worldmap_graphics;
 if ($enum3 = enum_1745) {
-	if (%varbit6254 = ^false) {
+	if (%varbit6254 = 0) {
 		if_setposition(0, 17, ^setpos_abs_right, ^setpos_abs_bottom, $component0);
 	} else {
 		if_setposition(62, 37, ^setpos_abs_right, ^setpos_abs_top, $component0);
@@ -24,7 +24,7 @@ if ($enum3 = enum_1745) {
 	if_setsize(30, 30, ^setsize_abs, ^setsize_abs, $component1);
 	if_setsize(22, 22, ^setsize_abs, ^setsize_abs, $component2);
 }
-if (if_hassub(enum(component, component, $enum3, interface_161:16)) = true) {
+if (if_hassub(enum(component, component, $enum3, interface_161:21)) = true) {
 	if_settrans(125, $component2);
 	if_setgraphic($graphic5, $component2);
 	if_setonmouserepeat("settrans(event_com, 0)", $component2);
@@ -41,7 +41,7 @@ if (if_hassub(enum(component, component, $enum3, interface_161:16)) = true) {
 	if ($enum3 = enum_1745) {
 		~orbs_worldmap_op1($component2);
 		if_setop(2, "Open <col=ff9040>World Map</col>", $component2);
-		if (%varbit6254 = ^false) {
+		if (%varbit6254 = 0) {
 			if_setop(4, "Minimise <col=ff9040>Minimap</col>", $component2);
 		} else {
 			if_setop(4, "Restore <col=ff9040>Minimap</col>", $component2);

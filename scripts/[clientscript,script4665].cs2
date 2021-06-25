@@ -1,0 +1,21 @@
+// 4665
+[clientscript,script4665](int $int0, int $int1, int $int2, component $component3, component $component4, int $int5, boolean $boolean6, boolean $boolean7, int $int8)
+def_int $int9 = ~script4681($int0);
+if ($int2 = $int9) {
+	return;
+}
+if ($int9 = 0) {
+	~buff_bar_setup($component3, $component4);
+	return;
+}
+def_int $int10 = 0;
+if (cc_find($component3, $int5) = ^true) {
+	$int10 = ~script4682($int0);
+	if ($boolean6 = true) {
+		$int10 = ~script4666($int1, $int10);
+		cc_setontimer("script4664($component3, $component4, $int5, clientclock, $int10, $int0, $int1, $int9, $boolean7, $int8, 0, 0)");
+	}
+}
+if (cc_find($component3, calc($int5 - 1)) = ^true) {
+	~script4679($int0, $int1, $int9, $component3, $component4, $int5, $boolean6, $boolean7, $int8);
+}

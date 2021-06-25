@@ -1,0 +1,15 @@
+// 4650
+[proc,script4650](newvar $newvar0, int $int1)(int)
+_103($newvar0, 3, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+_103($newvar0, 3, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setfill(false);
+cc_setcolour(0x474745);
+return($int1);

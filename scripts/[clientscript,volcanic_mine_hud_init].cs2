@@ -1,8 +1,7 @@
 // 2016
-[clientscript,volcanic_mine_hud_init](component $component0, component $component1, component $component2, component $component3, int $int4)
-~script1490($component1);
-~hud_clamp_init($component2);
-~script2249($component3, setbit(setbit(0, 0), 1));
+[clientscript,volcanic_mine_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+~script4729($component1, $component3, setbit(setbit(51937, 12), 13), ^setpos_abs_left, ^setpos_abs_centre, true);
+~script4729($component2, $component4, setbit(setbit(35554, 12), 13), ^setpos_abs_right, ^setpos_abs_centre, false);
 ~volcanic_mine_set_venttext;
 ~volcanic_mine_set_chambertext;
 ~volcanic_mine_set_otherinfo;

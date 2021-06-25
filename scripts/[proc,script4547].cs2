@@ -1,0 +1,15 @@
+// 4547
+[proc,script4547](struct $struct0, npc_uid $npc_uid1, int $int2)
+if (~on_enhanced = 0) {
+	return;
+}
+if (map_members = ^false & struct_param($struct0, param_1264) = true & struct_param($struct0, param_1267) = true) {
+	return;
+}
+def_newvar $newvar3 = _7200(0, 1, 1, 1, 1);
+if (_203($newvar3) = 1) {
+	cc_setonvartransmit("script4548($newvar3, $struct0, %varbit12349, %varbit12350, %varbit12351, $npc_uid1, $int2){var2856, var3074}");
+	cc_setoninvtransmit("script4549($newvar3, $struct0, $npc_uid1, $int2){inv, worn}");
+	cc_setonstattransmit("script4550($newvar3, $struct0, stat(fishing), $npc_uid1, $int2){fishing, agility, strength}");
+}
+~script4553($newvar3, $struct0, $npc_uid1, $int2);

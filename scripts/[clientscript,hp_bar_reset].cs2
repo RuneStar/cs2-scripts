@@ -1,17 +1,14 @@
 // 3429
-[clientscript,hp_bar_reset](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8, int $int9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20)
-def_int $trans21 = 0;
-if (%varcint394 = 2 & if_gettrans($component14) < 255 & if_gettrans($component14) > 0) {
-	if_settrans($trans21, $component14);
-	if_settrans($trans21, $component15);
-	if_settrans($trans21, $component16);
-	if_settrans($trans21, $component11);
-	if_settrans($trans21, $component12);
-	if_settrans($trans21, $component17);
-	if_settrans($trans21, $component18);
-	if_settrans($trans21, $component19);
-	if_settrans($trans21, $component20);
-	if_sethide(false, $component13);
-	if_sethide(false, $component10);
-	if_setontimer(null, $component14);
-}
+[clientscript,hp_bar_reset](int $int0, int $int1, int $int2, int $int3, int $int4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15)
+if_settrans(0, $component9);
+if_settrans(0, $component10);
+if_settrans(0, $component11);
+if_settrans(0, $component6);
+if_settrans(0, $component7);
+if_settrans(0, $component12);
+if_settrans(0, $component13);
+if_settrans(0, $component14);
+if_settrans(0, $component15);
+if_sethide(false, $component8);
+if_sethide(false, $component5);
+if_setontimer(null, $component9);

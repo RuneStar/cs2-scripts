@@ -2,7 +2,7 @@
 [proc,toplevel_chatbox_background]
 cc_deleteall(interface_162:2);
 def_boolean $boolean0 = false;
-if (%varcint41 = 1337 | %varbit542 = ^true & getwindowmode ! ^windowmode_fixed) {
+if (%varcint41 = 1337 | %varbit542 = 1 & getwindowmode ! ^windowmode_fixed) {
 	if (~toplevel_chatbox_permittransparent = 1) {
 		$boolean0 = true;
 	} else if (getwindowmode = ^windowmode_fixed) {
@@ -60,7 +60,29 @@ if (%varbit2570 = 1) {
 }
 def_int $int4 = 0;
 if ($int1 = 0) {
-	if (~on_mobile = false) {
+	if (~on_enhanced = 1) {
+		while ($int4 < 20) {
+			cc_create(interface_162:35, ^iftype_rectangle, $int4);
+			cc_setsize(0, $int3, ^setsize_minus, ^setsize_2);
+			cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+			cc_setcolour(^black);
+			cc_setfill(true);
+			cc_settrans(252);
+			$int4, $int3 = calc($int4 + 1), calc($int3 - $int2);
+		}
+		cc_create(interface_162:54, ^iftype_rectangle, 0);
+		.cc_create(interface_162:54, ^iftype_rectangle, 1);
+		cc_setsize(16384, 1, ^setsize_2, ^setsize_abs);
+		.cc_setsize(16384, 1, ^setsize_2, ^setsize_abs);
+		cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition(0, 15, ^setpos_abs_left, ^setpos_abs_bottom);
+		cc_setcolour(^white);
+		.cc_setcolour(^white);
+		cc_setfill(true);
+		.cc_setfill(true);
+		cc_settrans(100);
+		.cc_settrans(120);
+	} else if (~on_mobile = false) {
 		while ($int4 < 20) {
 			cc_create(interface_162:35, ^iftype_rectangle, $int4);
 			cc_setsize(0, $int3, ^setsize_minus, ^setsize_2);
@@ -78,7 +100,7 @@ if ($int1 = 0) {
 			.cc_setcolour(^white);
 			cc_setfill(true);
 			.cc_setfill(true);
-			cc_settrans(251);
+			cc_settrans(250);
 			.cc_settrans(250);
 			$int4, $int3 = calc($int4 + 1), calc($int3 - $int2);
 		}

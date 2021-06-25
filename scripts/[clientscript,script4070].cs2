@@ -4,15 +4,15 @@ def_int $int3 = calc(clientclock - $clock0);
 def_int $int4 = scale($int3, $int1, 100);
 def_int $int5 = 51;
 if ($boolean2 = true) {
-	if_setposition(0, calc(16384 - ~script4067($int4)), ^setpos_abs_centre, ^setpos_5, interface_437:8);
-	if_settrans(interpolate(255, $int5, 0, $int1, $int3), interface_437:7);
+	if_setposition(0, calc(16384 - ~script4067($int4)), ^setpos_abs_centre, ^setpos_5, interface_437:6);
+	if_settrans(interpolate(255, $int5, 0, $int1, $int3), interface_437:5);
 } else {
-	if_setposition(0, ~script4067($int4), ^setpos_abs_centre, ^setpos_3, interface_437:8);
-	if_settrans(interpolate($int5, 255, 0, $int1, $int3), interface_437:7);
+	if_setposition(0, ~script4067($int4), ^setpos_abs_centre, ^setpos_3, interface_437:6);
+	if_settrans(interpolate($int5, 255, 0, $int1, $int3), interface_437:5);
 }
 if ($int3 >= $int1) {
-	if_setontimer(null, interface_437:5);
+	if_setontimer(null, interface_437:3);
 	if ($boolean2 = false) {
-		if_sethide(true, interface_437:5);
+		if_sethide(true, interface_437:3);
 	}
 }

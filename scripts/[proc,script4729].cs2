@@ -1,0 +1,9 @@
+// 4729
+[proc,script4729](component $component0, component $component1, int $int2, int $setposh3, int $setposv4, boolean $boolean5)
+if ($int2 = 0) {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component0);
+	return;
+}
+if (if_getlayer($component0) ! null) {
+	~script4731($component0, $component1, $int2, $setposh3, $setposv4, $boolean5, 0, 0, 0, ^min_32bit_int, ^min_32bit_int);
+}

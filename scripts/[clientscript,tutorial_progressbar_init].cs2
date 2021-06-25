@@ -1,9 +1,6 @@
 // 749
-[clientscript,tutorial_progressbar_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
-~script1490($component1);
-~hud_clamp_init($component2);
-~script2249($component3, setbit(setbit(0, 0), 1));
-~script2249($component4, setbit(setbit(0, 0), 3));
-~script1486($component5, ^setpos_abs_left, 1, 0);
-~tutorial_progressbar_set($component6);
-if_setonvartransmit("tutorial_progressbar_set($component6){var406}", $component0);
+[clientscript,tutorial_progressbar_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+~script4729($component1, $component3, 51960, ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($component2, $component4, setbit(setbit(51936, 12), 1), ^setpos_abs_centre, ^setpos_abs_bottom, false);
+~tutorial_progressbar_set($component5);
+if_setonvartransmit("tutorial_progressbar_set($component5){var406}", $component0);

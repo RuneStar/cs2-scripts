@@ -2,10 +2,7 @@
 [proc,settings_get_toggle](int $int0)(int)
 switch_int ($int0) {
 	case 7 :
-		if (getremoveroofs = true) {
-			return(1);
-		}
-		return(0);
+		return(%varbit12378);
 	case 33 :
 		return(%varbit10078);
 	case 5 :
@@ -23,7 +20,9 @@ switch_int ($int0) {
 	case 6 :
 		return(%varbit5712);
 	case 10 :
-		return(%varbit10345);
+		return(%varbit12389);
+	case 111 :
+		return(%varbit12390);
 	case 11 :
 		return(%varbit4608);
 	case 13 :
@@ -44,8 +43,6 @@ switch_int ($int0) {
 		return(%varbit4930);
 	case 42 :
 		return(%varbit5411);
-	case 44 :
-		return(~script4487);
 	case 46 :
 		return(%varbit2570);
 	case 47 :
@@ -98,6 +95,90 @@ switch_int ($int0) {
 		return(%varbit11890);
 	case 84 :
 		return(%varbit11893);
+	case 112 :
+		return(%varbit12342);
+	case 114 :
+		return(%varbit12344);
+	case 147 :
+		return(%varbit12377);
+	case 115 :
+		return(%varbit12345);
+	case 116 :
+		return(%varbit12346);
+	case 118 :
+		return(%varbit12347);
+	case 120 :
+		return(%varbit12349);
+	case 121 :
+		return(%varbit12350);
+	case 122 :
+		return(%varbit12351);
+	case 123 :
+		return(%varbit12352);
+	case 125 :
+		return(%varbit12353);
+	case 126 :
+		return(%varbit12354);
+	case 124 :
+		return(%varbit9528);
+	case 127 :
+		return(%varbit12383);
+	case 128 :
+		return(%varbit9529);
+	case 129 :
+		return(%varbit12355);
+	case 130 :
+		return(%varbit12356);
+	case 131 :
+		return(%varbit12357);
+	case 132 :
+		return(%varbit12358);
+	case 133 :
+		return(%varbit12359);
+	case 134 :
+		return(%varbit12360);
+	case 135 :
+		return(%varbit12361);
+	case 136 :
+		return(%varbit12362);
+	case 137 :
+		return(%varbit12363);
+	case 138 :
+		return(%varbit12364);
+	case 139 :
+		return(%varbit12365);
+	case 140 :
+		return(%varbit12366);
+	case 141 :
+		return(%varbit12367);
+	case 142 :
+		return(%varbit12368);
+	case 143 :
+		return(%varbit12369);
+	case 144 :
+		return(%varbit12370);
+	case 145 :
+		return(%varbit12371);
+	case 146 :
+		return(%varbit12372);
+	case 148 :
+		return(%varbit12373);
+	case 149 :
+		return(%varbit12374);
+	case 151 :
+		return(%varbit12376);
+	case 152 :
+		return(%varbit12405);
+	case 153 :
+		return(%varbit12406);
+	case 154 :
+		return(%varbit12407);
+	case 155 :
+		return(%varbit12408);
+	case 156 :
+		return(%varbit12409);
+	case 157 :
+		return(%varbit12410);
 	case default :
 		return(0);
 }

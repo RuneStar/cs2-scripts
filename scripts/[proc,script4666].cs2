@@ -1,0 +1,16 @@
+// 4666
+[proc,script4666](int $int0, int $int1)(int)
+switch_int ($int0) {
+	case 2 :
+		$int1 = calc($int1 * 3000);
+		$int1 = calc($int1 - scale(%varbit12392, 60, 3000));
+		$int1 = calc($int1 - scale(%varbit12391, 1000, 50));
+		return($int1);
+	case 3 :
+		$int1 = calc($int1 * 30);
+		return($int1);
+	case 4 :
+		return($int1);
+	case default :
+		return(0);
+}

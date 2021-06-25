@@ -1,13 +1,12 @@
 // 3145
 [clientscript,script3145](boolean $boolean0)
 if ($boolean0 = null) {
-	setremoveroofs(%varcint402);
+	setremoveroofs(~int_to_bool(%varbit12378));
 	%varcint434 = 0;
 	return;
 }
 if (%varcint434 = 1) {
 	return;
 }
-%varcint402 = getremoveroofs;
 setremoveroofs($boolean0);
 %varcint434 = 1;

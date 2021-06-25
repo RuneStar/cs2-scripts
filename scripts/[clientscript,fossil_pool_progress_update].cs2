@@ -1,6 +1,6 @@
 // 2015
 [clientscript,fossil_pool_progress_update](int $int0)
-if_setsize(interpolate(0, 16384, 0, 10, $int0), 0, ^setsize_2, ^setsize_minus, interface_606:18);
+if_setsize(interpolate(0, 16384, 0, 10, $int0), 0, ^setsize_2, ^setsize_minus, interface_606:19);
 def_int $int1 = 0;
 def_int $int2 = 0;
 if ($int0 <= 2) {
@@ -8,4 +8,4 @@ if ($int0 <= 2) {
 } else {
 	$int1, $int2 = interpolate(0, $int0, 0, 10, 255), 255;
 }
-if_setcolour(~rgb_to_hex($int1, $int2, 0), interface_606:18);
+if_setcolour(~rgb_to_hex($int1, $int2, 0), interface_606:19);

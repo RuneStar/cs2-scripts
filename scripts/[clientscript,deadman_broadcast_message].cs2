@@ -1,7 +1,7 @@
 // 2805
 [clientscript,deadman_broadcast_message](string $string0)
-if_settext($string0, interface_90:25);
-if_sethide(false, interface_90:22);
+if_settext($string0, interface_90:24);
+if_sethide(false, interface_90:21);
 ~deadman_broadcast_message_sizing($string0);
-if_setsize(0, 60, ^setsize_abs, ^setsize_abs, interface_90:22);
-if_setontimer("deadman_broadcast_message_timer(clientclock)", interface_90:21);
+if_setsize(0, 60, ^setsize_abs, ^setsize_abs, interface_90:21);
+if_setontimer("deadman_broadcast_message_timer(clientclock)", interface_90:20);

@@ -1,0 +1,18 @@
+// 4130
+[clientscript,script4130](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+if (~on_enhanced = 0) {
+	return;
+}
+if (~on_mobile = false) {
+	~script4729($component0, $component1, 30720, ^setpos_abs_left, ^setpos_abs_bottom, false);
+} else {
+	~script4729($component0, $component1, 14338, ^setpos_abs_right, ^setpos_abs_top, false);
+}
+if_setonstattransmit("script4514($component1, $component4, $component5, $component3)", $component4);
+if_setonvartransmit("script4514($component1, $component4, $component5, $component3){var3074}", $component4);
+if_setonvartransmit("script4513($component1){var3074}", $component2);
+def_int $int6 = 0;
+$int6 = ~script4516($component3, 0, $int6, true);
+$int6 = ~script4516($component3, 1, $int6, false);
+if_sethide(true, $component3);
+if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom, $component1);

@@ -1,9 +1,12 @@
 // 220
-[proc,ntk_layout](component $component0)
+[proc,ntk_layout](component $component0, component $component1)
 if (~toplevel_getcomponents = enum_1129) {
-	if_setposition(3, 35, ^setpos_abs_right, ^setpos_abs_bottom, $component0);
+	if_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_bottom, $component0);
+	~script4729($component1, $component0, 35558, ^setpos_abs_right, ^setpos_abs_top, true);
 } else if (~on_mobile = true) {
-	~script2510($component0, ^setpos_abs_left, 1, 1);
+	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, $component0);
+	~script4729($component1, $component0, 51945, ^setpos_abs_left, ^setpos_abs_top, true);
 } else {
-	~script2510($component0, ^setpos_abs_centre, 0, 1);
+	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, $component0);
+	~script4729($component1, $component0, 51944, ^setpos_abs_centre, ^setpos_abs_top, true);
 }

@@ -1,5 +1,5 @@
 // 3699
-[proc,league_task_display](int $int0, int $bool1, int $int2, int $int3)(int)
+[proc,league_task_display](int $int0, int $int1, int $int2, int $int3)(int)
 if (%varbit10033 ! 0 & %varbit10033 ! $int0) {
 	return(0);
 }
@@ -15,7 +15,7 @@ if (%varbit11692 ! 0) {
 		return(0);
 	}
 }
-if (%varbit10034 ! 0 & calc(%varbit10034 - 1) ! $bool1) {
+if (%varbit10034 ! 0 & calc(%varbit10034 - 1) ! $int1) {
 	return(0);
 }
 return(1);

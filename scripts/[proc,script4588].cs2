@@ -1,0 +1,9 @@
+// 4588
+[proc,script4588]
+if (~on_enhanced = 0 | ~on_mobile = true) {
+	return;
+}
+if (%varbit12349 = 1) {
+	return;
+}
+%varbit12350 = calc(1 - %varbit12350);

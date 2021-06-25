@@ -1,9 +1,9 @@
 // 909
 [proc,toplevel_resize](component $component0, enum $enum1)
 def_component $component2 = enum(component, component, $enum1, interface_161:2);
-def_component $component3 = enum(component, component, $enum1, interface_161:12);
-def_component $component4 = enum(component, component, $enum1, interface_161:6);
-def_component $component5 = enum(component, component, $enum1, interface_161:14);
+def_component $component3 = enum(component, component, $enum1, interface_161:17);
+def_component $component4 = enum(component, component, $enum1, interface_161:9);
+def_component $component5 = enum(component, component, $enum1, interface_161:19);
 def_int $int6 = enum(enum, int, enum_1960, $enum1);
 def_int $int7 = enum(enum, int, enum_1961, $enum1);
 def_int $int8 = enum(enum, int, enum_1135, $enum1);
@@ -17,8 +17,8 @@ def_int $int15 = 0;
 def_int $width16 = if_getwidth($component0);
 def_int $height17 = if_getheight($component0);
 if ($enum1 = enum_1745) {
-	$int14 = ~max(0, calc($width16 - if_getwidth(interface_601:14)));
-	$int15 = ~max(0, calc($height17 - if_getheight(interface_601:14)));
+	$int14 = ~max(0, calc($width16 - if_getwidth(interface_601:19)));
+	$int15 = ~max(0, calc($height17 - if_getheight(interface_601:19)));
 }
 if (%varbit4606 ! 0) {
 	if (%varbit4606 = 2) {
@@ -49,9 +49,9 @@ if (%varbit4606 ! 0) {
 			if_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top, $component5);
 			if_setsize(calc($int6 + $int8), calc($int7 + $int9), ^setsize_minus, ^setsize_minus, $component4);
 			if_setsize(calc($int6 + $int8), calc($int7 + $int9), ^setsize_minus, ^setsize_minus, $component5);
-			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, interface_161:13), $component5, $int8, $int9);
+			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, interface_161:18), $component5, $int8, $int9);
 		} else {
-			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, interface_161:13), $component3, 0, 0);
+			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, interface_161:18), $component3, 0, 0);
 		}
 	}
 } else {
@@ -70,13 +70,13 @@ if (%varbit4606 ! 0) {
 			if_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top, $component5);
 			if_setsize(calc($int6 + $int8), calc($int7 + $int9), ^setsize_minus, ^setsize_minus, $component4);
 			if_setsize(calc($int6 + $int8), calc($int7 + $int9), ^setsize_minus, ^setsize_minus, $component5);
-			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, interface_161:13), $component5, $int8, $int9);
+			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, interface_161:18), $component5, $int8, $int9);
 		} else {
-			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, interface_161:13), $component3, 0, 0);
+			~toplevel_mainmodal_bg_calculate($enum1, enum(component, component, $enum1, interface_161:18), $component3, 0, 0);
 		}
 	}
 }
-def_component $component18 = enum(component, component, $enum1, interface_161:15);
+def_component $component18 = enum(component, component, $enum1, interface_161:20);
 if ($component18 ! null) {
 	if (~on_mobile = false & if_hassub($component18) = true) {
 		if (%varcint173 = -2) {
@@ -90,19 +90,19 @@ if ($component18 ! null) {
 		if_setsize(512, 334, ^setsize_abs, ^setsize_abs, $component18);
 	}
 }
-$component18 = enum(component, component, $enum1, interface_161:17);
+$component18 = enum(component, component, $enum1, interface_161:22);
 def_int $x19 = 0;
 def_int $y20 = 0;
 if ($component18 ! null) {
-	if (if_hassub(enum(component, component, $enum1, interface_161:8)) = true) {
+	if (if_hassub(enum(component, component, $enum1, interface_161:11)) = true) {
 		if (%varbit4692 ! 0) {
 			$y20 = 0;
 		} else {
 			$y20 = 38;
 		}
 	}
-	if (~on_mobile = true & %varbit542 = ^false) {
-		if (%varbit6254 = ^false) {
+	if (~on_mobile = true & %varbit542 = 0) {
+		if (%varbit6254 = 0) {
 			$x19 = calc(182 + 4);
 		} else {
 			$x19 = calc(120 + 4);
@@ -112,11 +112,11 @@ if ($component18 ! null) {
 	}
 	if_setposition($x19, $y20, ^setpos_abs_right, ^setpos_abs_top, $component18);
 }
-$component18 = enum(component, component, $enum1, interface_161:8);
+$component18 = enum(component, component, $enum1, interface_161:11);
 $x19 = 0;
 if ($component18 ! null) {
 	if (~on_mobile = true) {
-		if (%varbit6254 = ^false) {
+		if (%varbit6254 = 0) {
 			$x19 = 182;
 		} else {
 			$x19 = 120;

@@ -1,6 +1,9 @@
 // 2357
 [proc,on_enhanced]()(int)
-if (clienttype = ^clienttype_enhanced) {
+if (%varbit6352 = 1) {
+	return(0);
+}
+if (clienttype = ^clienttype_enhanced | clienttype = 5 | clienttype = 10) {
 	return(1);
 }
 return(0);

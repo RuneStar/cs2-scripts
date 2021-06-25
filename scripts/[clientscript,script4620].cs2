@@ -1,0 +1,11 @@
+// 4620
+[clientscript,script4620](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
+~membership_benefits_prompt_button_init($component0, "Yes");
+~membership_benefits_prompt_button_init($component1, "No");
+~membership_benefits_prompt_button_init($component2, "Skip");
+if_setop(1, "Select", $component3);
+if_setonop("script4621(interface_709:10)", $component3);
+if_setonvartransmit("script4622(interface_709:10){var3076}", interface_709:10);
+if_settext("We hope you're enjoying our game client!<br><br>Would you recommend it to a friend?", $component4);
+if_setmodel(model_36049, $component5);
+if_setmodel(model_36049, $component6);

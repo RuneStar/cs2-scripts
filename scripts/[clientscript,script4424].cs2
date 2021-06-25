@@ -5,6 +5,9 @@ sound_synth(interface_select1, 1, 0);
 if_sethide(false, $component4);
 if_setonclick("script4428(1, -1, $enum0, $component2, $comsubid3, $component4, $component5, $int6)", $component4);
 def_int $int7 = calc(enum_getoutputcount($enum0) - 1);
+if ($enum0 = enum_3795) {
+	$int7 = calc($int7 - 1);
+}
 def_int $int8 = 14;
 if (~on_mobile = true) {
 	$int8 = 18;
@@ -26,6 +29,11 @@ def_int $width11 = calc(if_getwidth($component2) - 30);
 def_int $int12 = 0;
 def_string $string0 = "";
 def_graphic $graphic13 = null;
+def_int $int14 = 0;
+def_int $intarray0(enum_getoutputcount($enum0));
+if (~script441($enum0) = 1) {
+	$int14 = 1;
+}
 while ($int12 < $int7) {
 	cc_create($component1, ^iftype_text, $int10);
 	cc_setposition(0, calc($int12 * $int8), ^setpos_abs_centre, ^setpos_abs_top);
@@ -40,6 +48,9 @@ while ($int12 < $int7) {
 		cc_setonmouseleave("league_setup_display_dropdown_hover(false, event_com, event_comsubid, .cc_getid, $int6)");
 	}
 	cc_setonop("script4428(event_opindex, $int12, $enum0, $component2, $comsubid3, $component4, $component5, $int6)");
+	if ($int14 = 1) {
+		$intarray0(calc($int10 - 1)) = $int10;
+	}
 	if ($enum0 = enum_3795) {
 		if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
 			$string0, $graphic13 = ~script4302(enum(int, int, enum_3795, $int12));
@@ -51,6 +62,16 @@ while ($int12 < $int7) {
 	}
 	cc_settext(~script4193($string0, $width11, p11_full));
 	$int12, $int10 = calc($int12 + 1), calc($int10 + 1);
+}
+if ($int14 = 1) {
+	~quicksort_cctext(intarray0, $component1, 0, $int7);
+	$int12 = 0;
+	while ($int12 < enum_getoutputcount($enum0)) {
+		if (cc_find($component1, $intarray0($int12)) = ^true) {
+			cc_setposition(0, calc($int12 * $int8 - $int8), ^setpos_abs_centre, ^setpos_abs_top);
+		}
+		$int12 = calc($int12 + 1);
+	}
 }
 cc_deleteall(interface_704:27);
 ~scrollbar_vertical(interface_704:27, $component1, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");

@@ -1,0 +1,14 @@
+// 4720
+[clientscript,script4720]
+if (~on_enhanced = 0) {
+	return;
+}
+if (%varbit4084 = 0) {
+	return;
+}
+def_component $component0 = interface_160:36;
+if (~on_mobile = true) {
+	$component0 = interface_311:38;
+}
+if_setontimer(null, $component0);
+cc_deleteall($component0);

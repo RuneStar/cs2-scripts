@@ -7,10 +7,12 @@ def_string $string0 = "";
 def_string $string1 = "";
 def_string $string2 = "";
 def_int $int3 = 0;
+def_string $string3 = "";
+def_int $int4 = 0;
 if (if_hassub(interface_162:558) = true & %varbit11879 = 1) {
-	$chattype1, $int2, $string0, $string1, $string2, $int3 = chat_gethistory_byuid($mesuid0);
+	$chattype1, $int2, $string0, $string1, $string2, $int3, $string3, $int4 = chat_gethistoryex_byuid($mesuid0);
 	if (~meslayer_mode1_enabled($chattype1) = 1) {
-		~meslayer_mode1($string2);
+		~meslayer_mode1(~script4742($string3, $string2));
 	}
 }
 ~rebuildchatbox($mesuid0);

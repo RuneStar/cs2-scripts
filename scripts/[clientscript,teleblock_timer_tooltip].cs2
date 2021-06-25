@@ -10,13 +10,13 @@ if ($int5 < 10) {
 }
 if ($boolean2 = true) {
 	~tooltip_build($component0, -1, $component1, $string0, 512);
-	if_setonop("teleblock_timer_tooltip(interface_90:49, interface_90:56, false)", interface_90:49);
-	if_setontimer("teleblock_timer($component0, $component1, $int5)", interface_90:49);
-	if_setonmouseleave("teleblock_toggle_onmouseleave($component1)", interface_90:49);
+	if_setonop("teleblock_timer_tooltip(interface_90:46, interface_90:54, false)", interface_90:46);
+	if_setontimer("teleblock_timer($component0, $component1, $int5)", interface_90:46);
+	if_setonmouseleave("teleblock_toggle_onmouseleave($component1)", interface_90:46);
 	%varbit10531 = 1;
 } else {
-	if_setonop("teleblock_timer_tooltip(interface_90:49, interface_90:56, true)", interface_90:49);
-	if_setontimer(null, interface_90:49);
+	if_setonop("teleblock_timer_tooltip(interface_90:46, interface_90:54, true)", interface_90:46);
+	if_setontimer(null, interface_90:46);
 	~deltooltip_action($component1);
 	%varbit10531 = 0;
 }

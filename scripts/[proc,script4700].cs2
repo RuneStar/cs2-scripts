@@ -1,0 +1,18 @@
+// 4700
+[proc,script4700](int $int0)(int)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = 0;
+switch_int (~script4712($int0)) {
+	case 0 :
+		return(-1);
+	case 1 :
+		$int3 = ~min(parawidth(~script4714($int0), 119, b12_full), 119);
+	case 2 :
+		$int3 = ~min(parawidth(~script4714($int0), 119, p12_full), 119);
+	case 3 :
+		$int1 = parawidth(~script4714($int0), calc(119 / 2), p12_full);
+		$int2 = parawidth(~script4714(calc($int0 + 1)), calc(119 - $int1), p12_full);
+		$int3 = calc($int1 + $int2);
+}
+return($int3);

@@ -1,6 +1,6 @@
 // 993
 [clientscript,xpdrops_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
-~script2511($component1);
+~script2511($component1, $component3);
 %varcint70, %varcint71 = 0, 0;
 %varcint207, %varcint208, %varcint209, %varcint210, %varcint211, %varcint212, %varcint213 = null, null, null, null, null, null, null;
 if (%varcint76 <= 0) {
@@ -23,6 +23,6 @@ while ($component11 ! null) {
 ~xpdrops_setbar($component3, $component4, $component5, $component6, $component7, $component8, $component9);
 if_setonvartransmit("xpdrops_vartransmit($component0, $component3, $component4, $component5, $component6, $component7, $component8, $component9){var1227, var1228, var1229, var1230, var1231, var1232, var1233, var1234, var1235, var1236, var1237, var1238, var1239, var1240, var1241, var1242, var1243, var1244, var1245, var1246, var1247, var1248, var1249, var1250, var1251, var1252, var1253, var1254, var1255, var1256, var1257, var1258, var1259, var1260, var1261, var1262, var1263, var1264, var1265, var1266, var1267, var1268, var1269, var1270, var1271, var1272, var1273, var1274, var1275}", $component0);
 ~xpdrops_setstatlistener($component0, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $int10);
-if_setonvartransmit("xpdrops_setposition($component3){var1227}", $component3);
+if_setonvartransmit("xpdrops_setposition($component3){var1227, var3074}", $component3);
 if_setonsubchange("xpdrops_setposition($component3)", $component3);
 ~xpdrops_showpanel($component0, $component3, $component8, $component9);

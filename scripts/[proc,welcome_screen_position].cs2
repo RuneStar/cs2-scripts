@@ -1,7 +1,0 @@
-// 2390
-[proc,welcome_screen_position](component $component0)
-if (~on_mobile = true) {
-	if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre, $component0);
-} else {
-	if_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-}

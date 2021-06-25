@@ -1,9 +1,0 @@
-// 2246
-[proc,hud_clamp_review](component $component0, component $component1, int $width2, int $height3)
-def_int $width4 = if_getwidth($component1);
-def_int $height5 = if_getheight($component1);
-if ($width4 ! $width2 | $height5 ! $height3) {
-	~hud_clamp($component0);
-	if_setonresize("hud_clamp_review($component0, $component1, $width4, $height5)", $component0);
-	if_setonsubchange("hud_clamp_review($component0, $component1, $width4, $height5)", $component0);
-}

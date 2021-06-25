@@ -8,20 +8,20 @@ if (%varbit6704 = 1) {
 	if_sethide(true, $component1);
 }
 if (~on_mobile = true) {
-	~script1486(interface_90:5, ^setpos_abs_right, 1, 0);
+	~script4729(interface_90:4, $component0, clearbit(clearbit(35554, 13), 12), ^setpos_abs_right, ^setpos_abs_top, false);
 } else if (%varbit6715 = 2) {
 	if (%varbit4143 = 1) {
 		if_setposition(106, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
 	} else {
 		if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
 	}
-	~script1486(interface_90:5, ^setpos_abs_left, 1, 0);
+	~script4729(interface_90:4, $component0, clearbit(clearbit(51944, 13), 12), ^setpos_abs_left, ^setpos_abs_top, false);
 } else if (%varbit6715 = 3) {
 	if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $component0);
-	~script1486(interface_90:5, ^setpos_abs_centre, 1, 0);
+	~script4729(interface_90:4, $component0, clearbit(clearbit(51944, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, false);
 } else {
 	if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, $component0);
-	~script1486(interface_90:5, ^setpos_abs_right, 1, 0);
+	~script4729(interface_90:4, $component0, clearbit(clearbit(35554, 13), 12), ^setpos_abs_right, ^setpos_abs_top, true);
 }
 if (%varbit9495 = 0) {
 	if_settext("---", $component4);

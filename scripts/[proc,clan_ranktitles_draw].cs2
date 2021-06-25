@@ -20,7 +20,7 @@ def_boolean $boolean7 = false;
 def_int $int8 = 0;
 def_boolean $boolean9 = ~on_mobile;
 def_int $int10 = 1;
-while ($int10 <= 264) {
+while ($int10 <= 265) {
 	if ($int10 = $intarray0(0)) {
 		$boolean7 = true;
 	} else if ($int10 = $intarray0(10)) {
@@ -52,7 +52,7 @@ while ($int10 <= 264) {
 	} else {
 		$boolean7 = false;
 	}
-	$int8 = calc(264 + ($int10 - 1) * 3);
+	$int8 = calc(265 + ($int10 - 1) * 3);
 	if (cc_find($component4, calc($int10 - 1)) = ^true & .cc_find($component4, $int8) = ^true) {
 		cc_sethide($boolean7);
 		if ($boolean7 = true) {

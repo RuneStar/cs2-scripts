@@ -1,0 +1,27 @@
+// 4648
+[proc,script4648]
+cc_create(interface_162:54, 10, 1);
+cc_setsize(105, 105, ^setsize_abs, ^setsize_abs);
+cc_setposition(100, -5, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^yellow);
+cc_setfill(true);
+cc_create(interface_162:54, 10, 2);
+cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(75, -25, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_create(interface_162:54, 10, 3);
+cc_setsize(20, 20, ^setsize_abs, ^setsize_abs);
+cc_setposition(125, -25, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^black);
+cc_setfill(true);
+cc_create(interface_162:54, 10, 4);
+cc_setsize(90, 90, ^setsize_abs, ^setsize_abs);
+cc_setposition(100, -5, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^black);
+cc_setfill(false);
+cc_setlinewid(6);
+_1128(20384, 45152);
+def_int $int0 = _1615;
+def_int $int1 = _1616;
+mes("start:<tostring($int0)> end:<tostring($int1)>");

@@ -1,0 +1,42 @@
+// 4554
+[proc,script4554](newvar $newvar0, struct $struct1)
+_104($newvar0);
+if (%varbit12349 = 1) {
+	return;
+}
+def_enum $enum2 = struct_param($struct1, param_1266);
+def_enum $enum3 = struct_param($struct1, param_1269);
+if ($enum2 = null & $enum3 = null) {
+	return;
+}
+def_int $int4 = 0;
+def_int $int5 = 5;
+def_int $int6 = 0;
+def_int $int7 = 5;
+def_int $bool8 = map_members;
+_103($newvar0, 5, $int4);
+$int4 = calc($int4 + 1);
+cc_setgraphic("tradebacking");
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settrans(110);
+cc_settiling(true);
+def_int $int9 = 0;
+def_namedobj $namedobj10 = struct_param($struct1, param_1265);
+if ($bool8 = ^false & struct_param($struct1, param_1264) = true) {
+	$int9 = 0;
+} else {
+	$int4, $int5, $int7, $int6 = ~script4555($int4, $int5, $int7, $int6, $newvar0, $enum2, $namedobj10);
+}
+$namedobj10 = struct_param($struct1, param_1268);
+if ($bool8 = ^false & struct_param($struct1, param_1267) = true) {
+	$int9 = 0;
+} else {
+	$int4, $int5, $int7, $int6 = ~script4555($int4, $int5, $int7, $int6, $newvar0, $enum3, $namedobj10);
+}
+$int5 = calc($int5 + 5);
+$int7 = calc($int7 + 5);
+$int4 = ~script4650($newvar0, $int4);
+if (_203($newvar0) = 1) {
+	cc_setsize($int6, $int7, ^setsize_abs, ^setsize_abs);
+}

@@ -10,9 +10,11 @@ def_int $int3 = ^min_32bit_int;
 def_int $int4 = ^min_32bit_int;
 def_int $chattype5 = ^chattype_gamemessage;
 def_int $int6 = 0;
+def_string $string3 = "";
+def_int $int7 = 0;
 while ($chattype5 <= 110) {
 	if (chat_gethistorylength($chattype5) > 0) {
-		$mesuid0, $int1, $string0, $string1, $string2, $int6 = chat_gethistory_bytypeandline($chattype5, 0);
+		$mesuid0, $int1, $string0, $string1, $string2, $int6, $string3, $int7 = chat_gethistoryex_bytypeandline($chattype5, 0);
 		if ($int1 > $int3 | $mesuid0 > $mesuid2) {
 			$int3 = $int1;
 			$mesuid2 = $mesuid0;

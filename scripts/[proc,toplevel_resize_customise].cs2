@@ -5,61 +5,61 @@ def_int $int3 = 0;
 def_int $int4 = -1;
 switch_enum ($enum1) {
 	case enum_1131 :
-		$x2, $int3 = calc(if_getwidth(interface_164:35) - 33), if_getheight(interface_164:35);
-		if (calc(if_getwidth($component0) - if_getwidth(enum(component, component, $enum1, interface_161:32))) < 429) {
-			if_setposition(0, calc($int3 + if_getheight(interface_164:50)), ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, interface_164:67));
-			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:50);
+		$x2, $int3 = calc(if_getwidth(interface_164:40) - 33), if_getheight(interface_164:40);
+		if (calc(if_getwidth($component0) - if_getwidth(enum(component, component, $enum1, interface_161:37))) < 429) {
+			if_setposition(0, calc($int3 + if_getheight(interface_164:55)), ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, interface_164:72));
+			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:55);
 		} else {
-			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, interface_164:67));
-			if_setposition($x2, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:50);
+			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, interface_164:72));
+			if_setposition($x2, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:55);
 		}
 		if (%varbit4084 = 1) {
-			_2122("resize_map_mask", enum(component, component, $enum1, interface_161:28));
+			_2122("resize_map_mask", enum(component, component, $enum1, interface_161:33));
 		} else {
-			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:28));
+			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:33));
 		}
 		%varcint384 = clientclock;
 	case enum_1130 :
 		if (%varbit4084 = 1) {
-			_2122("resize_map_mask", enum(component, component, $enum1, interface_161:28));
+			_2122("resize_map_mask", enum(component, component, $enum1, interface_161:33));
 		} else {
-			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:28));
+			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:33));
 		}
 		%varcint384 = clientclock;
 	case enum_1129 :
 		if (~wiki_icon_enabled = 1) {
-			_2122("graphic_2422", enum(component, component, $enum1, interface_161:28));
+			_2122("graphic_2422", enum(component, component, $enum1, interface_161:33));
 		} else {
-			_2122("fixed_map_clickmask", enum(component, component, $enum1, interface_161:28));
+			_2122("fixed_map_clickmask", enum(component, component, $enum1, interface_161:33));
 		}
 	case enum_1745 :
-		if (%varbit6257 = 1 | %varbit542 = ^true) {
-			if_sethide(true, interface_601:33);
+		if (%varbit6257 = 1 | %varbit542 = 1) {
+			if_sethide(true, interface_601:39);
 		} else {
-			if_sethide(false, interface_601:33);
-			_2308(true, interface_601:33);
+			if_sethide(false, interface_601:39);
+			_2308(true, interface_601:39);
 			switch_int (%varbit6255) {
 				case 2 :
-					if_setgraphic("graphic_1718", interface_601:35);
-					if_setop(1, "Toggle single-tap mode", interface_601:33);
+					if_setgraphic("graphic_1718", interface_601:41);
+					if_setop(1, "Toggle single-tap mode", interface_601:39);
 				case 1 :
-					if_setgraphic("graphic_1717", interface_601:35);
-					if_setop(1, "Toggle tap-to-drop mode", interface_601:33);
+					if_setgraphic("graphic_1717", interface_601:41);
+					if_setop(1, "Toggle tap-to-drop mode", interface_601:39);
 				case 3 :
-					if_setgraphic("graphic_1716", interface_601:35);
-					if_setop(1, "Show Keyboard", interface_601:33);
+					if_setgraphic("graphic_1716", interface_601:41);
+					if_setop(1, "Show Keyboard", interface_601:39);
 				case default :
-					if_setgraphic("graphic_1715", interface_601:35);
-					if_setop(1, "", interface_601:33);
+					if_setgraphic("graphic_1715", interface_601:41);
+					if_setop(1, "", interface_601:39);
 			}
 			if (%varbit6255 ! 3 & %varbit6256 = 0) {
-				if_settrans(155, interface_601:35);
+				if_settrans(155, interface_601:41);
 			} else {
-				if_settrans(0, interface_601:35);
+				if_settrans(0, interface_601:41);
 			}
 		}
 		~mobile_chatbox_resize;
-		if_sethide(~int_to_bool(%varbit6254), interface_601:24);
+		if_sethide(~int_to_bool(%varbit6254), interface_601:30);
 		~script2526;
 		%varcint384 = clientclock;
 }

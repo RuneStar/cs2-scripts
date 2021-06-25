@@ -2,12 +2,13 @@
 [proc,inferno_hud_update](component $component0, component $component1)
 def_string $text0 = "<tostring(%varbit5653)> / <tostring(%varbit5654)>";
 if_settext($text0, $component0);
-def_int $int2 = if_getwidth(interface_596:8);
+def_int $int2 = if_getwidth(interface_596:7);
+%varbit5654 = ~max(%varbit5654, 1);
 $int2 = scale(%varbit5653, %varbit5654, $int2);
 if ($int2 = 0 & %varbit5653 > 0) {
 	$int2 = 1;
 }
-if ($int2 = if_getwidth(interface_596:8) & %varbit5653 < %varbit5654) {
+if ($int2 = if_getwidth(interface_596:7) & %varbit5653 < %varbit5654) {
 	$int2 = calc($int2 - 1);
 }
 if_setsize($int2, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);

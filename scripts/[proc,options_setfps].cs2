@@ -1,16 +1,24 @@
 // 539
 [proc,options_setfps]
-if (~on_mobile = false) {
+if (~on_mobile = false & ~on_enhanced = 0) {
 	mobile_setfps(0);
 	return;
 }
-switch_int (%varbit6364) {
+def_int $int0 = 0;
+if (~on_mobile = true) {
+	$int0 = %varbit6364;
+} else {
+	$int0 = %varbit12382;
+}
+switch_int ($int0) {
 	case 1 :
 		mobile_setfps(15);
 	case 2 :
 		mobile_setfps(20);
 	case 3 :
 		mobile_setfps(30);
+	case 4 :
+		mobile_setfps(60);
 	case default :
 		mobile_setfps(0);
 }

@@ -30,6 +30,14 @@ switch_struct ($struct0) {
 		$int1 = %varclansetting23;
 	case edit_clan_hall_2970 :
 		$int1 = %varclansetting24;
+	case joining_leaving_clan_3106 :
+		$int1 = %varclansetting27;
+	case quest_broadcasts_3107 :
+		$int1 = %varclansetting28;
+	case loot_broadcasts_3108 :
+		$int1 = %varclansetting29;
+	case level_up_broadcasts_3110 :
+		$int1 = %varclansetting30;
 	case talk_in_chat_2954 :
 		$int1 = calc(activeclansettings_getranktalk + 2);
 	case kick_from_chat_2955 :
@@ -43,7 +51,7 @@ while ($int5 > 0) {
 	$int5 = calc($int5 - 1);
 	$int4 = enum(int, int, enum_3795, $int5);
 	if ($int2 = $int4) {
-		if ($int4 >= ~min(0, struct_param($struct0, param_1253)) & $int4 <= 126) {
+		if ($int4 >= ~min(0, struct_param($struct0, param_1253)) & ($int4 <= 126 | $int4 = 128 & struct_param($struct0, param_1292) = true)) {
 			$int3, $int5 = 1, 0;
 		} else {
 			$int5 = 0;
@@ -51,6 +59,9 @@ while ($int5 > 0) {
 	}
 }
 if ($int3 = 0) {
+	if ($struct0 ! null & struct_param($struct0, param_1292) = true) {
+		return(128);
+	}
 	return(126);
 }
 def_struct $struct6 = null;

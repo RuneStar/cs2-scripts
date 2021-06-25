@@ -1,0 +1,10 @@
+// 4563
+[proc,script4563](component $component0, int $comsubid1, int $int2, int $int3, int $y4, int $int5)
+def_int $int6 = ~max(0, ~min(600, scale($int2, $int3, 600)));
+if (cc_find($component0, $comsubid1) = ^true & %varcint381 ! $int6) {
+	%varcint381 = $int6;
+	cc_setposition(calc($int5 + scale(%varcint381, 600, $int3)), $y4, ^setpos_abs_left, ^setpos_abs_top);
+	if (~toplevel_getcomponents = enum_1745) {
+		~script4729(interface_601:19, null, setbit(0, 13), ^setpos_abs_centre, ^setpos_abs_centre, false);
+	}
+}

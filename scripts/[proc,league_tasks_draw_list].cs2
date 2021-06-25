@@ -34,7 +34,7 @@ def_int $int26 = 40;
 def_int $trans27 = 255;
 def_graphic $graphic28 = "open_buttons_small,1";
 def_graphic $graphic29 = "open_buttons_small,0";
-def_int $bool30 = null;
+def_int $int30 = -1;
 def_int $int31 = -1;
 def_string $text0 = "null";
 def_string $string1 = "null";
@@ -51,14 +51,14 @@ if (%var2615 < %var2614) {
 }
 while ($int22 < $count21) {
 	$struct24 = enum(int, struct, $enum19, $int22);
-	$bool30 = ~league_task_is_completed($struct24);
+	$int30 = ~league_task_is_completed($struct24);
 	$int31 = struct_param($struct24, param_876);
 	$text0 = struct_param($struct24, param_874);
 	$string1 = struct_param($struct24, param_875);
 	$int32 = enum(int, int, enum_2671, $int31);
 	$int33 = struct_param($struct24, param_1016);
 	$int34 = struct_param($struct24, param_1017);
-	if (~league_task_display($int31, $bool30, $int33, $int34) = 1) {
+	if (~league_task_display($int31, $int30, $int33, $int34) = 1) {
 		cc_create($component2, ^iftype_rectangle, $int17);
 		if ($int22 = $int0) {
 			$int35 = paraheight("Description: <$string1>", calc(if_getwidth($component2) - 10), p11_full);
@@ -113,7 +113,7 @@ while ($int22 < $count21) {
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		if ($bool30 = ^true) {
+		if ($int30 = 1) {
 			cc_setcolour(0x0dc10d);
 		} else {
 			cc_setcolour(0x9f9f9f);

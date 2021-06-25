@@ -1,22 +1,22 @@
 // 1313
 [clientscript,cata_altar_update](int $int0, int $int1, int $int2, int $int3)
 if ($int0 = 1) {
+	if_setgraphic("magicon,9", cata_boss:5);
+} else {
+	if_setgraphic("magicoff,9", cata_boss:5);
+}
+if ($int1 = 1) {
 	if_setgraphic("magicon,9", cata_boss:6);
 } else {
 	if_setgraphic("magicoff,9", cata_boss:6);
 }
-if ($int1 = 1) {
+if ($int2 = 1) {
 	if_setgraphic("magicon,9", cata_boss:7);
 } else {
 	if_setgraphic("magicoff,9", cata_boss:7);
 }
-if ($int2 = 1) {
+if ($int3 = 1) {
 	if_setgraphic("magicon,9", cata_boss:8);
 } else {
 	if_setgraphic("magicoff,9", cata_boss:8);
-}
-if ($int3 = 1) {
-	if_setgraphic("magicon,9", cata_boss:9);
-} else {
-	if_setgraphic("magicoff,9", cata_boss:9);
 }

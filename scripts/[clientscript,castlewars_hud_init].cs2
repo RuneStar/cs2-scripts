@@ -1,8 +1,5 @@
 // 884
-[clientscript,castlewars_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-~script1490($component1);
-~hud_clamp_init($component2);
-~script2249($component3, setbit(0, 3));
-~script2249($component4, setbit(setbit(setbit(0, 3), 0), 1));
-~script2377($component5);
-if_setonsubchange("script2376($component5)", $component0);
+[clientscript,castlewars_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4)
+~script4729($component1, $component3, clearbit(setbit(setbit(51960, 12), 13), 7), ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($component0, $component2, setbit(setbit(51945, 12), 13), ^setpos_abs_left, ^setpos_abs_top, true);
+~script4729($component4, $component4, setbit(setbit(0, 12), 13), ^setpos_abs_right, ^setpos_abs_bottom, false);

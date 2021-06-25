@@ -1,100 +1,125 @@
 // 3696
-[proc,league_relic_display_core](component $component0, component $component1, int $int2)
+[proc,league_relic_display_core](component $component0, component $component1, int $int2)(int)
 def_struct $struct3 = enum(int, struct, enum_2670, %varbit10032);
 if ($struct3 = null) {
-	return;
+	return($int2);
 }
 def_enum $enum4 = struct_param($struct3, param_870);
 if ($enum4 = null) {
-	return;
+	return($int2);
 }
 def_struct $struct5 = enum(int, struct, $enum4, 0);
 if ($struct5 = null) {
-	return;
+	return($int2);
 }
 def_enum $enum6 = struct_param($struct5, param_878);
 if ($enum6 = null) {
-	return;
+	return($int2);
 }
 def_struct $struct7 = enum(int, struct, $enum6, %varbit10049);
 if ($struct7 = null) {
-	return;
+	return($int2);
 }
-def_graphic $graphic8 = struct_param($struct7, param_882);
-def_string $string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 0, $int2, $graphic8, $component1, $string0);
+def_struct $struct8 = struct_param($struct7, param_1274);
+if ($struct8 = null) {
+	return($int2);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, $struct8, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
 $struct5 = enum(int, struct, $enum4, 1);
 if ($struct5 = null) {
-	return;
+	return($int2);
 }
 $enum6 = struct_param($struct5, param_878);
 if ($enum6 = null) {
-	return;
+	return($int2);
 }
 $struct7 = enum(int, struct, $enum6, %varbit10050);
 if ($struct7 = null) {
-	return;
+	return($int2);
 }
-$graphic8 = struct_param($struct7, param_882);
-$string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 1, $int2, $graphic8, $component1, $string0);
+$struct8 = struct_param($struct7, param_1274);
+if ($struct8 = null) {
+	return($int2);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, $struct8, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
 $struct5 = enum(int, struct, $enum4, 2);
 if ($struct5 = null) {
-	return;
+	return($int2);
 }
 $enum6 = struct_param($struct5, param_878);
 if ($enum6 = null) {
-	return;
+	return($int2);
 }
 $struct7 = enum(int, struct, $enum6, %varbit10051);
 if ($struct7 = null) {
-	return;
+	return($int2);
 }
-$graphic8 = struct_param($struct7, param_882);
-$string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 2, $int2, $graphic8, $component1, $string0);
+$struct8 = struct_param($struct7, param_1274);
+if ($struct8 = null) {
+	return($int2);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, $struct8, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
 $struct5 = enum(int, struct, $enum4, 3);
 if ($struct5 = null) {
-	return;
+	return($int2);
 }
 $enum6 = struct_param($struct5, param_878);
 if ($enum6 = null) {
-	return;
+	return($int2);
 }
 $struct7 = enum(int, struct, $enum6, %varbit10052);
 if ($struct7 = null) {
-	return;
+	return($int2);
 }
-$graphic8 = struct_param($struct7, param_882);
-$string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 3, $int2, $graphic8, $component1, $string0);
+$struct8 = struct_param($struct7, param_1274);
+if ($struct8 = null) {
+	return($int2);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, $struct8, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
 $struct5 = enum(int, struct, $enum4, 4);
 if ($struct5 = null) {
-	return;
+	return($int2);
 }
 $enum6 = struct_param($struct5, param_878);
 if ($enum6 = null) {
-	return;
+	return($int2);
 }
 $struct7 = enum(int, struct, $enum6, %varbit10053);
 if ($struct7 = null) {
-	return;
+	return($int2);
 }
-$graphic8 = struct_param($struct7, param_882);
-$string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 4, $int2, $graphic8, $component1, $string0);
+$struct8 = struct_param($struct7, param_1274);
+if ($struct8 = null) {
+	return($int2);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, $struct8, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
 $struct5 = enum(int, struct, $enum4, 5);
 if ($struct5 = null) {
-	return;
+	return($int2);
 }
 $enum6 = struct_param($struct5, param_878);
 if ($enum6 = null) {
-	return;
+	return($int2);
 }
 $struct7 = enum(int, struct, $enum6, %varbit11696);
 if ($struct7 = null) {
-	return;
+	return($int2);
 }
-$graphic8 = struct_param($struct7, param_882);
-$string0 = struct_param($struct7, param_879);
-~buff_bar_buff_create($component0, 5, $int2, $graphic8, $component1, $string0);
+$struct8 = struct_param($struct7, param_1274);
+if ($struct8 = null) {
+	return($int2);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, $struct8, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
+return($int2);

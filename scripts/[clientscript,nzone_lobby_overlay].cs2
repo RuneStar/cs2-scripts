@@ -1,18 +1,18 @@
 // 264
 [clientscript,nzone_lobby_overlay](int $int0)
 if_sethide(false, interface_207:0);
-if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_207:9);
-if_setsize(1, 1, ^setsize_abs, ^setsize_abs, interface_207:9);
-if_settextalign(^settextalign_right, ^settextalign_bottom, 0, interface_207:9);
-if_setontimer("nzone_lobby_hide(interface_207:0)", interface_207:9);
-~nzone_lobby_partystatus($int0, interface_207:3);
-~nzone_lobby_hint($int0, interface_207:5);
+if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_207:7);
+if_setsize(1, 1, ^setsize_abs, ^setsize_abs, interface_207:7);
+if_settextalign(^settextalign_right, ^settextalign_bottom, 0, interface_207:7);
+if_setontimer("nzone_lobby_hide(interface_207:0)", interface_207:7);
+~nzone_lobby_partystatus($int0, interface_207:4);
+~nzone_lobby_hint($int0, interface_207:2);
 if ($int0 = 1) {
-	if_setonvartransmit(null, interface_207:9);
+	if_setonvartransmit(null, interface_207:7);
 } else {
-	if_setonvartransmit("nzone_lobby_partystatus(interface_207:3, interface_207:5){var1065, var1058}", interface_207:9);
+	if_setonvartransmit("nzone_lobby_partystatus(interface_207:4, interface_207:2){var1065, var1058}", interface_207:7);
 }
-cc_create(interface_207:8, ^iftype_rectangle, 0);
+cc_create(interface_207:6, ^iftype_rectangle, 0);
 cc_setsize(46, 55, ^setsize_abs, ^setsize_abs);
 cc_setposition(2, 4, ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour(0x7f460f);
@@ -22,18 +22,18 @@ cc_setonmouseover("cc_settrans(event_com, event_comsubid, 0, null)");
 cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 100, null)");
 cc_setop(1, "Examine");
 cc_setopbase("<col=ff9040>Coffer");
-.cc_create(interface_207:8, ^iftype_rectangle, 1);
+.cc_create(interface_207:6, ^iftype_rectangle, 1);
 .cc_setsize(46, 55, ^setsize_abs, ^setsize_abs);
 .cc_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_top);
 .cc_setcolour(0x7f460f);
 .cc_setfill(false);
-.cc_create(interface_207:8, ^iftype_graphic, 2);
+.cc_create(interface_207:6, ^iftype_graphic, 2);
 .cc_setsize(44, 53, ^setsize_abs, ^setsize_abs);
 .cc_setposition(3, 3, ^setpos_abs_right, ^setpos_abs_top);
 .cc_setgraphic("tradebacking_light");
 .cc_settiling(true);
 .cc_settrans(100);
-.cc_create(interface_207:8, ^iftype_text, 3);
+.cc_create(interface_207:6, ^iftype_text, 3);
 .cc_setsize(46, 51, ^setsize_abs, ^setsize_abs);
 .cc_setposition(2, 4, ^setpos_abs_right, ^setpos_abs_top);
 .cc_setcolour(0xff981f);
@@ -41,7 +41,7 @@ cc_setopbase("<col=ff9040>Coffer");
 .cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
 .cc_settextshadow(true);
 .cc_settext("Coffer");
-.cc_create(interface_207:8, ^iftype_graphic, 4);
+.cc_create(interface_207:6, ^iftype_graphic, 4);
 .cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 .cc_setposition(8, 21, ^setpos_abs_right, ^setpos_abs_top);
 .cc_setgraphicshadow(0x333333);

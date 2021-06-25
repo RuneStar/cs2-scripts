@@ -1,0 +1,11 @@
+// 442
+[proc,script442](enum $enum0)(int)
+def_int $int1 = calc(enum_getoutputcount($enum0) - 1);
+def_int $intarray0($int1);
+def_int $int2 = 0;
+while ($int2 < $int1) {
+	$intarray0($int2) = $int2;
+	$int2 = calc($int2 + 1);
+}
+~quicksort_intenum(intarray0, 0, calc($int1 - 1), $enum0);
+return($intarray0(0));
