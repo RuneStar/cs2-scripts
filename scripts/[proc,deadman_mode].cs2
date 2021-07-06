@@ -1,6 +1,9 @@
 // 2248
 [proc,deadman_mode]()(int)
 def_int $flags0 = worldflags;
+if (~script2237 = 1) {
+	return(3);
+}
 if (testbit($flags0, 29) = ^true) {
 	if (testbit($flags0, 26) = ^true) {
 		return(3);

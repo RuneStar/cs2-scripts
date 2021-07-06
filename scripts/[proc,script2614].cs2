@@ -73,6 +73,12 @@ switch_component ($component1) {
 		} else {
 			if_settrans(0, $component1);
 		}
+	case magic_spellbook:173, magic_spellbook:174 :
+		if (%varbit12423 = 1) {
+			if_settrans(150, $component1);
+		} else {
+			if_settrans(0, $component1);
+		}
 }
 if (~magic_spellbook_hasrunes($obj0) = 0) {
 	return(0, null);

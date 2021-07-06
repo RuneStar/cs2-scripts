@@ -22,7 +22,7 @@ if ($component0 = $component16) {
 	if_setop(1, "Hide menu", $component2);
 	if_setonop("bankmain_viewbuttons($component14, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component2);
 	if (~bankmain_searching = 1) {
-		~meslayer_close(1, 1);
+		~meslayer_close(1, 1, 1);
 	}
 	if_settext("Bank settings menu", $component7);
 	%varcint386 = false;
@@ -48,7 +48,7 @@ if ($component0 = $component16) {
 	if_setonop("bankmain_viewbuttons($component14, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component3);
 	if_setonkey("script3326(event_key, event_keychar, $component14, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, $component13, $component14, $component15, $component16, $component17, $component18, $component19, $component20, $component21)", $component3);
 	if (~bankmain_searching = 1) {
-		~meslayer_close(1, 1);
+		~meslayer_close(1, 1, 1);
 	}
 	if_settext("Equip your character...", $component7);
 	%varcint386 = true;

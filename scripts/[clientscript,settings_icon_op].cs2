@@ -5,21 +5,21 @@ def_int $int7 = ~settings_get_slider($int0);
 if ($int7 > 0) {
 	switch_int ($int0) {
 		case 30 :
-			%varbit9666 = calc(4 - $int7);
+			%varbit12426 = calc($int7 * 5);
 		case 31 :
-			%varbit9674 = calc(4 - $int7);
+			%varbit12427 = calc($int7 * 5);
 		case 32 :
-			%varbit9675 = calc(4 - $int7);
+			%varbit12428 = calc($int7 * 5);
 	}
 	~settings_set_slider($int0, 0);
 } else {
 	switch_int ($int0) {
 		case 30 :
-			~settings_set_slider($int0, calc(4 - %varbit9666));
+			~settings_set_slider($int0, calc(%varbit12426 / 5));
 		case 31 :
-			~settings_set_slider($int0, calc(4 - %varbit9674));
+			~settings_set_slider($int0, calc(%varbit12427 / 5));
 		case 32 :
-			~settings_set_slider($int0, calc(4 - %varbit9675));
+			~settings_set_slider($int0, calc(%varbit12428 / 5));
 	}
 }
 $int7 = ~settings_get_slider($int0);

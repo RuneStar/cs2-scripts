@@ -1,7 +1,8 @@
 // 4513
-[clientscript,script4513](component $component0)
-def_boolean $boolean1 = false;
+[clientscript,script4513](component $component0, component $component1)
+def_boolean $boolean2 = false;
 if (%varbit12373 = 1) {
-	$boolean1 = true;
+	$boolean2 = true;
 }
-if_sethide($boolean1, $component0);
+if_sethide($boolean2, $component0);
+~deltooltip_action($component1);

@@ -1,13 +1,13 @@
 // 299
-[proc,meslayer_close](int $int0, int $int1)
+[proc,meslayer_close](int $int0, int $int1, int $int2)
 if_sethide(true, interface_162:37);
 if_sethide(false, interface_162:53);
 ~toplevel_chatbox_background;
-def_int $mesuid2 = 0;
+def_int $mesuid3 = 0;
 if ($int1 = 1) {
-	$mesuid2 = ~script553;
-	~rebuildchatbox($mesuid2);
-	~rebuildpmbox($mesuid2);
+	$mesuid3 = ~script553;
+	~rebuildchatbox($mesuid3);
+	~rebuildpmbox($mesuid3);
 	~script223;
 	~chatdefault_setonkey(1);
 	if (~on_mobile = true) {
@@ -17,13 +17,15 @@ if ($int1 = 1) {
 if (~on_mobile = true) {
 	~mobile_chatbox_resize;
 }
-switch_int (%varcint5) {
-	case 7, 19 :
-		resume_countdialog("0");
-	case 8 :
-		resume_namedialog("");
-	case 9, 15, 20, 21 :
-		resume_stringdialog("");
+if ($int2 = 1) {
+	switch_int (%varcint5) {
+		case 7, 19 :
+			resume_countdialog("0");
+		case 8 :
+			resume_namedialog("");
+		case 9, 15, 20, 21 :
+			resume_stringdialog("");
+	}
 }
 %varcint5 = 0;
 if ($int0 = 1) {

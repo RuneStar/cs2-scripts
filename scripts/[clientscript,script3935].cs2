@@ -6,6 +6,7 @@ def_int $int5 = 0;
 def_int $width6 = if_getwidth($component1);
 def_graphic $graphic7 = "options_icons,14";
 def_int $int8 = ~settings_get_slider(32);
+~settings_set_slider(32, $int8);
 def_string $string0 = "Mute Area Sound";
 def_string $string1 = "Unmute Area Sound";
 ~settings_create_icon($int8, 32, $component2, $component1, $int4, $graphic7, $component0, $string0, $string1, $component3);

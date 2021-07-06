@@ -1,5 +1,6 @@
 // 3939
 [clientscript,script3939](int $int0, component $component1, component $component2, int $int3, graphic $graphic4, component $component5, string $string0, string $string1, component $component6)
 def_int $int7 = ~settings_get_slider($int0);
+~settings_set_slider($int0, $int7);
 ~script3941($int7, $component1, $component2, $int3);
 ~settings_update_icon($int7, $component5, $string0, $string1, $component6);

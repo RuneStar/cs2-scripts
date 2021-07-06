@@ -1,0 +1,7 @@
+// 2237
+[proc,script2237]()(int)
+def_int $flags0 = worldflags;
+if (testbit($flags0, 25) = ^true & testbit($flags0, 23) = ^false & testbit($flags0, 4) = ^true) {
+	return(1);
+}
+return(0);

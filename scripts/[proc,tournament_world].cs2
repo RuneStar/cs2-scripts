@@ -1,7 +1,7 @@
 // 438
 [proc,tournament_world]()(int)
 def_int $flags0 = worldflags;
-if (testbit($flags0, 25) = ^true & testbit($flags0, 23) = ^false) {
+if (testbit($flags0, 25) = ^true & testbit($flags0, 23) = ^false & testbit($flags0, 4) = ^false) {
 	return(1);
 }
 return(0);

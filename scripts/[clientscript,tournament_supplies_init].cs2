@@ -66,7 +66,7 @@ cc_settext("No matching items found.");
 cc_sethide(true);
 ~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 if (~bankmain_searching = 1) {
-	~meslayer_close(1, 1);
+	~meslayer_close(1, 1, 1);
 }
 ~tournament_supplies_search_off($component3, $component4, $component5, $int8, $int9);
 if (~tournament_world = 1) {

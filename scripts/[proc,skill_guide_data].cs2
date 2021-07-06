@@ -272,6 +272,9 @@ switch_int ($int0) {
 				return(70, crystal_bow_23983, "Members: Crystal bows (with 50 Agility)<br> Ammo: None");
 			}
 			if ($int2 = 12) {
+				return(75, bow_of_faerdhinen_25865, "Members: Bow of Faerdhinen (with 70 Agility)<br> Ammo: None");
+			}
+			if ($int2 = 13) {
 				return(75, twisted_bow_20997, "Members: Twisted bow<br> Ammo: Arrows up to dragon");
 			}
 			return(-1, null, "");
@@ -302,24 +305,27 @@ switch_int ($int0) {
 				return(45, chinchompa_10033, "Chinchompas");
 			}
 			if ($int2 = 8) {
-				return(55, red_chinchompa_10034, "Carnivorous chinchompas");
+				return(50, amethyst_dart_25849, "Amethyst darts");
 			}
 			if ($int2 = 9) {
-				return(60, dragon_dart_11230, "Dragon darts");
+				return(55, red_chinchompa_10034, "Carnivorous chinchompas");
 			}
 			if ($int2 = 10) {
-				return(60, dragon_knife_22804, "Dragon knives");
+				return(60, dragon_dart_11230, "Dragon darts");
 			}
 			if ($int2 = 11) {
-				return(60, toktz_xil_ul_6522, "TokTz-Xil-Ul");
+				return(60, dragon_knife_22804, "Dragon knives");
 			}
 			if ($int2 = 12) {
-				return(61, dragon_thrownaxe_20849, "Dragon thrownaxes");
+				return(60, toktz_xil_ul_6522, "TokTz-Xil-Ul");
 			}
 			if ($int2 = 13) {
-				return(65, black_chinchompa_11959, "Black chinchompas");
+				return(61, dragon_thrownaxe_20849, "Dragon thrownaxes");
 			}
 			if ($int2 = 14) {
+				return(65, black_chinchompa_11959, "Black chinchompas");
+			}
+			if ($int2 = 15) {
 				return(75, toxic_blowpipe_empty_12924, "Toxic blowpipe");
 			}
 			return(-1, null, "");
@@ -1054,10 +1060,12 @@ switch_int ($int0) {
 					case 3 :
 						return(70, ring_of_endurance_24736, "Ring of Endurance");
 					case 4 :
-						return(72, hallowed_mark_25_24717, "Hallowed Sepulchre (Floor 3)");
+						return(70, bow_of_faerdhinen_25865, "Bow of Faerdhinen<br> (with 75 Ranged)");
 					case 5 :
-						return(82, hallowed_mark_25_24717, "Hallowed Sepulchre (Floor 4)");
+						return(72, hallowed_mark_25_24717, "Hallowed Sepulchre (Floor 3)");
 					case 6 :
+						return(82, hallowed_mark_25_24717, "Hallowed Sepulchre (Floor 4)");
+					case 7 :
 						return(92, hallowed_mark_25_24717, "Hallowed Sepulchre (Floor 5)");
 				}
 		}
@@ -1768,50 +1776,48 @@ switch_int ($int0) {
 						return(85, amethyst_arrowtips_21350, "Amethyst arrowtips");
 					case 10 :
 						return(87, amethyst_javelin_heads_5_13220, "Amethyst javelin heads");
+					case 11 :
+						return(89, amethyst_dart_tip_25853, "Amethyst dart tips");
 					case default :
 						return(-1, null, "");
 				}
 			case 7 :
-				if ($int2 = 0) {
-					return(70, celestial_signet_25545, "Celestial signet<br>(with 70 Smithing)");
+				switch_int ($int2) {
+					case 0 :
+						return(70, celestial_signet_25545, "Celestial signet<br>(with 70 Smithing)");
+					case 1 :
+						return(70, crystal_helm_23971, "Crystal helm<br>(with 70 Smithing)");
+					case 2 :
+						return(72, crystal_legs_23979, "Crystal legs<br>(with 72 Smithing)");
+					case 3 :
+						return(74, crystal_body_23975, "Crystal body<br>(with 74 Smithing)");
+					case 4 :
+						return(76, crystal_pickaxe_23680, "Crystal pickaxe<br>(with 76 Smithing)");
+					case 5 :
+						return(76, crystal_axe_23673, "Crystal axe<br>(with 76 Smithing)");
+					case 6 :
+						return(76, crystal_harpoon_23762, "Crystal harpoon<br>(with 76 Smithing)");
+					case 7 :
+						return(78, crystal_bow_23983, "Crystal bow<br>(with 78 Smithing)");
+					case 8 :
+						return(78, crystal_halberd_23987, "Crystal halberd<br>(with 78 Smithing)");
+					case 9 :
+						return(78, crystal_shield_23991, "Crystal shield<br>(with 78 Smithing)");
+					case 10 :
+						return(80, enhanced_crystal_key_23951, "Enhanced crystal key<br>(with 80 Smithing)");
+					case 11 :
+						return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Smithing)");
+					case 12 :
+						return(82, blade_of_saeldor_23995, "Blade of Saeldor<br>(with 82 Smithing)");
+					case 13 :
+						return(82, blade_of_saeldor_c_24551, "Blade of Saeldor (c)<br>(with 82 Smithing)");
+					case 14 :
+						return(82, bow_of_faerdhinen_25865, "Bow of Faerdhinen<br>(with 82 Smithing)");
+					case 15 :
+						return(82, bow_of_faerdhinen_c_25867, "Bow of Faerdhinen (c)<br>(with 82 Smithing)");
+					case default :
+						return(-1, null, "");
 				}
-				if ($int2 = 1) {
-					return(70, crystal_helm_23971, "Crystal helm<br>(with 70 Smithing)");
-				}
-				if ($int2 = 2) {
-					return(72, crystal_legs_23979, "Crystal legs<br>(with 72 Smithing)");
-				}
-				if ($int2 = 3) {
-					return(74, crystal_body_23975, "Crystal body<br>(with 74 Smithing)");
-				}
-				if ($int2 = 4) {
-					return(76, crystal_pickaxe_23680, "Crystal pickaxe<br>(with 76 Smithing)");
-				}
-				if ($int2 = 5) {
-					return(76, crystal_axe_23673, "Crystal axe<br>(with 76 Smithing)");
-				}
-				if ($int2 = 6) {
-					return(76, crystal_harpoon_23762, "Crystal harpoon<br>(with 76 Smithing)");
-				}
-				if ($int2 = 7) {
-					return(78, crystal_bow_23983, "Crystal bow<br>(with 78 Smithing)");
-				}
-				if ($int2 = 8) {
-					return(78, crystal_halberd_23987, "Crystal halberd<br>(with 78 Smithing)");
-				}
-				if ($int2 = 9) {
-					return(78, crystal_shield_23991, "Crystal shield<br>(with 78 Smithing)");
-				}
-				if ($int2 = 10) {
-					return(80, enhanced_crystal_key_23951, "Enhanced crystal key<br>(with 80 Smithing)");
-				}
-				if ($int2 = 11) {
-					return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Smithing)");
-				}
-				if ($int2 = 12) {
-					return(82, blade_of_saeldor_c_24551, "Blade of Saeldor (c)<br>(with 82 Smithing)");
-				}
-				return(-1, null, "");
 			case 8 :
 				switch_int ($int2) {
 					case 0 :
@@ -2060,6 +2066,9 @@ switch_int ($int0) {
 				return(81, rune_dart_811, "Rune darts");
 			}
 			if ($int2 = 7) {
+				return(90, amethyst_dart_25849, "Amethyst darts");
+			}
+			if ($int2 = 8) {
 				return(95, dragon_dart_11230, "Dragon darts");
 			}
 			return(-1, null, "");
@@ -2983,7 +2992,16 @@ switch_int ($int0) {
 				return(80, eternal_teleport_crystal_23946, "Eternal teleport crystal<br>(with 80 Crafting)");
 			}
 			if ($int2 = 12) {
+				return(82, blade_of_saeldor_23995, "Blade of Saeldor<br>(with 82 Crafting)");
+			}
+			if ($int2 = 13) {
 				return(82, blade_of_saeldor_c_24551, "Blade of Saeldor (c)<br>(with 82 Crafting)");
+			}
+			if ($int2 = 14) {
+				return(82, bow_of_faerdhinen_25865, "Bow of Faerdhinen<br>(with 82 Crafting)");
+			}
+			if ($int2 = 15) {
+				return(82, bow_of_faerdhinen_c_25867, "Bow of Faerdhinen (c)<br>(with 82 Crafting)");
 			}
 			return(-1, null, "");
 		}

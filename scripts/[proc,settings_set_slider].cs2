@@ -3,22 +3,26 @@
 %varbit9657 = $int0;
 switch_int ($int0) {
 	case 30 :
-		if ($int1 = 0 & %var168 < 4) {
-			%varbit9666 = %var168;
+		if ($int1 = 0 & %var168 > 0) {
+			%varbit12426 = %var168;
 		}
-		%var168 = ~min(4, calc(4 - $int1));
+		%var168 = ~minmax(0, 100, calc($int1 * 5));
+		~script445;
 	case 31 :
-		if ($int1 = 0 & %var169 < 4) {
-			%varbit9674 = %var169;
+		if ($int1 = 0 & %var169 > 0) {
+			%varbit12427 = %var169;
 		}
-		%var169 = ~min(4, calc(4 - $int1));
+		%var169 = ~minmax(0, 100, calc($int1 * 5));
+		~script2177;
 	case 32 :
-		if ($int1 = 0 & %var872 < 4) {
-			%varbit9675 = %var872;
+		if ($int1 = 0 & %var872 > 0) {
+			%varbit12428 = %var872;
 		}
-		%var872 = ~min(4, calc(4 - $int1));
+		%var872 = ~minmax(0, 100, calc($int1 * 5));
+		~script2178;
 	case 15 :
-		%var166 = ~min(4, calc(1 + $int1));
+		%var166 = ~minmax(0, 100, calc($int1 * 5));
+		~script2238;
 	case 79 :
 		~script2363($int1);
 }

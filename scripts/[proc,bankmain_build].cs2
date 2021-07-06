@@ -169,7 +169,7 @@ if (%varbit4150 <= 0 | %varbit4150 > 9) {
 	return;
 }
 if (~bankmain_searching = 1) {
-	~meslayer_close(1, 1);
+	~meslayer_close(1, 1, 1);
 }
 def_int $int32 = -1;
 def_int $int33 = -1;

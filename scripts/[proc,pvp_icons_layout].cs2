@@ -57,7 +57,9 @@ if (~pvpw_check = 1) {
 	}
 	if (%var1676 >= 4) {
 		$int6 = 12;
-		if (%varbit1497 = 2) {
+		if (~script2237 = 1) {
+			$int6 = 8;
+		} else if (%varbit1497 = 2) {
 			$int6 = 13;
 		}
 		if (if_gettop = interface_80) {

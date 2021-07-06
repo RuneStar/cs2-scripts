@@ -2,13 +2,13 @@
 [proc,settings_get_slider](int $int0)(int)
 switch_int ($int0) {
 	case 30 :
-		return(calc(4 - %var168));
+		return(calc(%var168 / 5));
 	case 31 :
-		return(calc(4 - %var169));
+		return(calc(%var169 / 5));
 	case 32 :
-		return(calc(4 - %var872));
+		return(calc(%var872 / 5));
 	case 15 :
-		return(calc(%var166 - 1));
+		return(calc(%var166 / 5));
 	case 79 :
 		return(%varbit11864);
 	case default :

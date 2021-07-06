@@ -48,6 +48,11 @@ if (%varbit10341 > 0 & %varbit10341 <= $int13) {
 } else {
 	if_sethide(true, $component9);
 }
+if (%varbit12389 = 1 & ~on_enhanced = 0) {
+	if_sethide(true, $component0);
+} else {
+	if_sethide(false, $component0);
+}
 if ($int12 = 0 & %varbit6099 > 0) {
 	$int12 = 1;
 }

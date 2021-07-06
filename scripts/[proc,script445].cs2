@@ -1,6 +1,5 @@
 // 445
-[proc,script445](int $flags0)(int)
-if (testbit($flags0, 25) = ^true & testbit($flags0, 23) = ^false) {
-	return(1);
+[proc,script445]
+if (%var168 ! _3204) {
+	_3203(%var168);
 }
-return(0);

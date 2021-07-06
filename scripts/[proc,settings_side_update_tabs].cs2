@@ -3,38 +3,38 @@
 if_sethide(true, interface_116:4);
 if_sethide(true, interface_116:9);
 if_sethide(true, interface_116:10);
-if_setgraphic("tabs_tall,2", interface_116:68);
-if_setgraphic("tabs_tall,3", interface_116:69);
-if_setgraphic("tabs_tall,2", interface_116:70);
-if_setgraphic("tabs_tall,2", interface_116:74);
-if_setgraphic("tabs_tall,3", interface_116:75);
-if_setgraphic("tabs_tall,2", interface_116:76);
-if_setgraphic("tabs_tall,2", interface_116:102);
-if_setgraphic("tabs_tall,3", interface_116:103);
-if_setgraphic("tabs_tall,2", interface_116:104);
-if_setop(1, "Controls", interface_116:67);
-if_setop(1, "Audio", interface_116:72);
-if_setop(1, "Display", interface_116:73);
+if_setgraphic("tabs_tall,2", interface_116:105);
+if_setgraphic("tabs_tall,3", interface_116:106);
+if_setgraphic("tabs_tall,2", interface_116:107);
+if_setgraphic("tabs_tall,2", interface_116:111);
+if_setgraphic("tabs_tall,3", interface_116:112);
+if_setgraphic("tabs_tall,2", interface_116:113);
+if_setgraphic("tabs_tall,2", interface_116:115);
+if_setgraphic("tabs_tall,3", interface_116:116);
+if_setgraphic("tabs_tall,2", interface_116:117);
+if_setop(1, "Controls", interface_116:104);
+if_setop(1, "Audio", interface_116:109);
+if_setop(1, "Display", interface_116:110);
 switch_int ($int0) {
 	case 1 :
 		if_sethide(false, interface_116:9);
-		if_setgraphic("tabs_tall,0", interface_116:74);
-		if_setgraphic("tabs_tall,1", interface_116:75);
-		if_setgraphic("tabs_tall,0", interface_116:76);
+		if_setgraphic("tabs_tall,0", interface_116:111);
+		if_setgraphic("tabs_tall,1", interface_116:112);
+		if_setgraphic("tabs_tall,0", interface_116:113);
 		if_settext("Audio Settings", interface_116:2);
-		if_setop(1, "", interface_116:72);
+		if_setop(1, "", interface_116:109);
 	case 2 :
 		if_sethide(false, interface_116:10);
-		if_setgraphic("tabs_tall,0", interface_116:102);
-		if_setgraphic("tabs_tall,1", interface_116:103);
-		if_setgraphic("tabs_tall,0", interface_116:104);
+		if_setgraphic("tabs_tall,0", interface_116:115);
+		if_setgraphic("tabs_tall,1", interface_116:116);
+		if_setgraphic("tabs_tall,0", interface_116:117);
 		if_settext("Display Settings", interface_116:2);
-		if_setop(1, "", interface_116:73);
+		if_setop(1, "", interface_116:110);
 	case default :
 		if_sethide(false, interface_116:4);
-		if_setgraphic("tabs_tall,0", interface_116:68);
-		if_setgraphic("tabs_tall,1", interface_116:69);
-		if_setgraphic("tabs_tall,0", interface_116:70);
+		if_setgraphic("tabs_tall,0", interface_116:105);
+		if_setgraphic("tabs_tall,1", interface_116:106);
+		if_setgraphic("tabs_tall,0", interface_116:107);
 		if_settext("Controls Settings", interface_116:2);
-		if_setop(1, "", interface_116:67);
+		if_setop(1, "", interface_116:104);
 }

@@ -5,6 +5,7 @@ if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, interface_90:28);
 if_sethide($boolean2, interface_90:33);
 if ($boolean2 = false) {
 	if_setonvartransmit("deadman_tournament_timer_resynch(event_com){var1434, var1542, var1676, var1601, var1602}", interface_90:33);
+	~script1486(interface_90:37);
 	if_setonvartransmit("script1636(event_com){var1293, var1542, var1601, var1602}", interface_90:37);
 } else {
 	if_setontimer(null, interface_90:33);

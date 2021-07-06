@@ -1,7 +1,7 @@
 // 2815
 [clientscript,seed_vault_catop](component $component0, int $comsubid1, component $component2, component $component3)
 if (~seed_vault_searching = 1) {
-	~meslayer_close(1, 1);
+	~meslayer_close(1, 1, 1);
 }
 %varbit8171 = $comsubid1;
 ~seed_vault_catselect($component0, $component2, $component3);

@@ -2,7 +2,7 @@
 [clientscript,tournament_supplies_switchlayer](component $component0, component $component1, component $component2, string $string0, component $component3, string $string1, component $component4, component $component5, component $component6, int $int7, int $int8)
 sound_synth(interface_select1, 1, 0);
 if (%varcint5 = 11) {
-	~meslayer_close(1, 1);
+	~meslayer_close(1, 1, 1);
 }
 ~tournament_supplies_search_off($component4, $component5, $component6, $int7, $int8);
 ~tournament_supplies_switchlayer($component0, $component1, $component2, $string0, $component3, $string1, $component4, $component5, $component6, $int7, $int8);

@@ -6,7 +6,7 @@ if_setonop("opsound(event_opindex, 2)", $component11);
 def_int $comsubid19 = ~steelborder($component1, "", 0);
 if_sethide(true, $component8);
 if (~clan_members_searching = 1) {
-	~meslayer_close(1, 1);
+	~meslayer_close(1, 1, 1);
 } else if (%varcint5 <= 0) {
 	%varcstring359 = "";
 }

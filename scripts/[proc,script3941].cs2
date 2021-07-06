@@ -7,7 +7,7 @@ if ($int0 = calc($int3 - 1)) {
 } else if ($int0 = 0) {
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component1);
 } else {
-	$int4 = scale($int0, $int3, if_getwidth($component2));
-	$int5 = scale(calc($int0 + 1), $int3, if_getwidth($component2));
-	if_setposition(calc($int4 + (($int5 - $int4) / 2 - if_getwidth($component1) / 2)), 0, ^setpos_abs_left, ^setpos_abs_top, $component1);
+	$int4 = scale($int0, $int3, calc(if_getwidth($component2) - if_getwidth($component1)));
+	$int5 = scale(calc($int0 + 1), $int3, calc(if_getwidth($component2) - if_getwidth($component1)));
+	if_setposition(~minmax(0, calc(if_getwidth($component2) - if_getwidth($component1)), calc(if_getwidth($component1) / 2 + ($int4 + (($int5 - $int4) / 2 - if_getwidth($component1) / 2)))), 0, ^setpos_abs_left, ^setpos_abs_top, $component1);
 }

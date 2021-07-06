@@ -1,7 +1,9 @@
 // 2084
 [proc,deadman_finallocation](component $component0)
 def_string $text0 = "North of Falador";
-if (%varbit1497 = 2) {
+if (~script2237 = 1) {
+	$text0 = "Fountain of Rune";
+} else if (%varbit1497 = 2) {
 	$text0 = "Demonic Ruins (Annakarl)";
 }
 if (~wildwars_world = 1) {

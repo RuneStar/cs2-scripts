@@ -1486,9 +1486,11 @@
 [**1483**](scripts/[clientscript,hidey_tabbuttons_hover].cs2) `[clientscript,hidey_tabbuttons_hover]`  
 [**1484**](scripts/[proc,trail_slidepuzzle_getint].cs2) `[proc,trail_slidepuzzle_getint]`  
 [**1485**](scripts/[proc,trail_slidepuzzle_setint].cs2) `[proc,trail_slidepuzzle_setint]`  
+[**1486**](scripts/[proc,script1486].cs2)  
 [**1487**](scripts/[clientscript,script1487].cs2)  
 [**1488**](scripts/[clientscript,script1488].cs2)  
 [**1489**](scripts/[proc,script1489].cs2)  
+[**1490**](scripts/[proc,script1490].cs2)  
 [**1491**](scripts/[proc,quicksort_cctext].cs2) `[proc,quicksort_cctext]`  
 [**1492**](scripts/[clientscript,orbs_worldmap_init].cs2) `[clientscript,orbs_worldmap_init]`  
 [**1493**](scripts/[clientscript,pest_activity_update].cs2) `[clientscript,pest_activity_update]`  
@@ -2233,6 +2235,10 @@
 [**2232**](scripts/[clientscript,magic_flash].cs2) `[clientscript,magic_flash]`  
 [**2233**](scripts/[proc,welcome_screen_continue_text].cs2) `[proc,welcome_screen_continue_text]`  
 [**2234**](scripts/[clientscript,camera_do_zoom].cs2) `[clientscript,camera_do_zoom]`  
+[**2235**](scripts/[clientscript,script2235].cs2)  
+[**2236**](scripts/[clientscript,script2236].cs2)  
+[**2237**](scripts/[proc,script2237].cs2)  
+[**2238**](scripts/[proc,script2238].cs2)  
 [**2239**](scripts/[clientscript,keyboard_hide].cs2) `[clientscript,keyboard_hide]`  
 [**2240**](scripts/[clientscript,collection_init].cs2) `[clientscript,collection_init]`  
 [**2241**](scripts/[clientscript,script2241].cs2)  

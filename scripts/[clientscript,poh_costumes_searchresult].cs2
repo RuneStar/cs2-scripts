@@ -4,7 +4,7 @@ if ($key2 ! ^key_return) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-~meslayer_close(1, 1);
+~meslayer_close(1, 1, 1);
 resume_objdialog($obj0);
 if ($obj0 = null) {
 	return;

@@ -13,7 +13,9 @@ if ($int1 > %varcint221 & $int1 < calc(%varcint221 + 20)) {
 	return;
 }
 %varcint221 = $int1;
-$int1 = ~min($int1, scale(30, 50, 500));
+if (~script2237 = 0) {
+	$int1 = ~min($int1, scale(30, 50, 500));
+}
 $int1 = ~max($int1, 0);
 def_int $int2 = calc($int1 / 60);
 def_int $int3 = calc($int1 % 60);

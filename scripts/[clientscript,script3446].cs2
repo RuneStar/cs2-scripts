@@ -1,6 +1,15 @@
 // 3446
 [clientscript,script3446](string $string0)
 ~script3449(interface_120:7);
+if (~script2237 ! 0) {
+	if_sethide(false, interface_120:8);
+	if_setop(1, "Controls", interface_120:8);
+	~script1490(interface_120:8);
+} else {
+	if_sethide(true, interface_120:8);
+	if_clearops(interface_120:8);
+	cc_deleteall(interface_120:8);
+}
 cc_deleteall(interface_120:5);
 def_int $int0 = 0;
 while ($int0 < 50) {
