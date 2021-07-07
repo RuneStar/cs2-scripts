@@ -1,5 +1,5 @@
 // 2511
-[proc,script2511](component $component0, component $component1)
+[proc,script2511](component $component0, component $component1, component $component2)
 if (if_getlayer($component0) ! null) {
-	~script2513($component0, $component1, ^min_32bit_int, null);
+	~script2513($component0, $component1, $component2, ^min_32bit_int, null);
 }

@@ -18,4 +18,6 @@ if ($int11 <= 0) {
 	%varcint394 = 0;
 	return;
 }
+if_sethide(true, $component2);
+if_sethide(true, $component6);
 if_setontimer("hp_hud_fade_in($component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $int11)", $component0);

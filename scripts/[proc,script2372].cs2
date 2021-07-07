@@ -1,0 +1,12 @@
+// 2372
+[proc,script2372](component $component0)(int)
+if ($component0 = null) {
+	return(0);
+}
+def_int $int1 = if_gety($component0);
+def_component $layer2 = if_getlayer($component0);
+while ($layer2 ! null) {
+	$int1 = calc($int1 + if_gety($layer2));
+	$layer2 = if_getlayer($layer2);
+}
+return($int1);

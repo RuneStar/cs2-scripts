@@ -1,30 +1,33 @@
 // 2101
-[proc,hp_hud_pos](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, int $int13, component $component14)
-def_int $width15 = if_getwidth($component1);
-def_boolean $boolean16 = false;
-def_int $int17 = 150;
-def_int $setposh18 = ^setpos_abs_left;
-if (%varbit12401 = 1) {
-	$int17 = scale(1, 4, $width15);
-	$int17 = ~max($int17, 200);
-	$int17 = ~min($int17, 600);
-	$setposh18 = ^setpos_abs_centre;
+[proc,hp_hud_pos](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, int $int13, component $component14, component $component15, component $component16)
+def_int $width17 = if_getwidth($component1);
+def_boolean $boolean18 = false;
+def_int $int19 = 150;
+def_int $setposh20 = ^setpos_abs_left;
+if (%varbit12401 = 1 & ~on_mobile = false) {
+	$int19 = scale(1, 4, $width17);
+	$int19 = ~max($int19, 200);
+	$int19 = ~min($int19, 600);
+	$setposh20 = ^setpos_abs_centre;
 }
-if ($int0 = $int17) {
+if ($int0 = $int19) {
 	return;
 }
-if ($int17 ! if_getwidth($component2)) {
-	if_setsize($int17, if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
-	$boolean16 = true;
+if ($int19 ! if_getwidth($component2)) {
+	if_setsize($int19, if_getheight($component2), ^setsize_abs, ^setsize_abs, $component2);
+	$boolean18 = true;
 }
 if ($int13 ! %varbit12401) {
-	if (%varbit12401 = 1) {
-		~script4729($component14, $component2, 193160, ^setpos_abs_centre, ^setpos_abs_top, true);
+	if (%varbit12401 = 1 & ~on_mobile = false) {
+		~script4729($component14, $component2, setbit(setbit(clearbit(clearbit(52968, 5), 6), 12), 17), ^setpos_abs_centre, ^setpos_abs_top, false);
+	} else if (%varbit12401 = 0 & ~on_mobile = false) {
+		~script4729($component14, $component2, setbit(clearbit(clearbit(52968, 5), 6), 17), ^setpos_abs_left, ^setpos_abs_top, true);
 	} else {
-		~script4729($component14, $component2, 195209, ^setpos_abs_left, ^setpos_abs_top, true);
+		~script4729($component14, $component2, setbit(clearbit(clearbit(setbit(setbit(52968, 13), 12), 6), 5), 17), ^setpos_abs_left, ^setpos_abs_top, true);
 	}
 }
-if_setposition(0, 0, $setposh18, ^setpos_abs_top, $component2);
+if_setposition(0, 0, $setposh20, ^setpos_abs_top, $component2);
 if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top, $component3);
-if_setontimer("hp_hud_pos($int17, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, %varbit12401, $component14)", $component1);
-~hp_hud_update($component2, $component6, $component7, $component8, $component3, $component5, $component9, $component10, $component11, $component12, $boolean16);
+if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, $component15);
+if_setontimer("hp_hud_pos($int19, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $component12, %varbit12401, $component14, $component15, $component16)", $component1);
+~hp_hud_update($component2, $component6, $component7, $component8, $component3, $component5, $component9, $component10, $component11, $component12, $boolean18);

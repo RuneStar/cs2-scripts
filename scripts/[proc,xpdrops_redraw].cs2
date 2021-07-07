@@ -1,24 +1,24 @@
 // 995
-[proc,xpdrops_redraw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
-def_fontmetrics $fontmetrics6 = p11_full;
+[proc,xpdrops_redraw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6)
 def_fontmetrics $fontmetrics7 = p11_full;
-def_int $int8 = 16;
+def_fontmetrics $fontmetrics8 = p11_full;
+def_int $int9 = 16;
 if (%varbit4693 = 1 & ~on_mobile = false) {
-	$fontmetrics6, $fontmetrics7, $int8 = p12_full, p12_full, 25;
+	$fontmetrics7, $fontmetrics8, $int9 = p12_full, p12_full, 25;
 } else if (%varbit4693 = 2 & ~on_mobile = false) {
-	$fontmetrics6, $fontmetrics7, $int8 = b12_full, b12_full, 25;
+	$fontmetrics7, $fontmetrics8, $int9 = b12_full, b12_full, 25;
 }
-def_int $width9 = calc(28 + parawidth("+8,888,888,888", 512, $fontmetrics6) + 2);
-if_setsize($width9, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
-if_settextfont($fontmetrics7, $component2);
-def_int $int10 = 0;
-def_component $component11 = enum(int, component, enum_1163, $int10);
-while ($component11 ! null) {
-	if (cc_find($component11, 0) = ^true) {
+def_int $width10 = calc(28 + parawidth("+8,888,888,888", 512, $fontmetrics7) + 2);
+if_setsize($width10, if_getheight($component1), ^setsize_abs, ^setsize_abs, $component1);
+if_settextfont($fontmetrics8, $component3);
+def_int $int11 = 0;
+def_component $component12 = enum(int, component, enum_1163, $int11);
+while ($component12 ! null) {
+	if (cc_find($component12, 0) = ^true) {
 		cc_setcolour(enum(int, int, enum_1169, %varbit4695));
-		~xpdrops_setdropsize($component11, $int8, $fontmetrics6, $fontmetrics7, cc_gettext);
+		~xpdrops_setdropsize($component12, $int9, $fontmetrics7, $fontmetrics8, cc_gettext);
 	}
-	$int10 = calc($int10 + 1);
-	$component11 = enum(int, component, enum_1163, $int10);
+	$int11 = calc($int11 + 1);
+	$component12 = enum(int, component, enum_1163, $int11);
 }
-~xpdrops_setposition($component1);
+~xpdrops_setposition($component1, $component2);

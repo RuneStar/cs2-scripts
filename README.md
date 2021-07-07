@@ -2246,8 +2246,11 @@
 [**2243**](scripts/[proc,logout_layout_update].cs2) `[proc,logout_layout_update]`  
 [**2244**](scripts/[clientscript,logout_button_text].cs2) `[clientscript,logout_button_text]`  
 [**2245**](scripts/[proc,quest_members_count].cs2) `[proc,quest_members_count]`  
+[**2246**](scripts/[proc,script2246].cs2)  
 [**2247**](scripts/[proc,macro_pinball_score].cs2) `[proc,macro_pinball_score]`  
 [**2248**](scripts/[proc,deadman_mode].cs2) `[proc,deadman_mode]`  
+[**2249**](scripts/[clientscript,script2249].cs2)  
+[**2250**](scripts/[proc,script2250].cs2)  
 [**2251**](scripts/[clientscript,chatbox_open_input].cs2) `[clientscript,chatbox_open_input]`  
 [**2252**](scripts/[clientscript,bugreport_home].cs2) `[clientscript,bugreport_home]`  
 [**2253**](scripts/[clientscript,bugreport_next].cs2) `[clientscript,bugreport_next]`  
@@ -2369,9 +2372,12 @@
 [**2369**](scripts/[clientscript,script2369].cs2)  
 [**2370**](scripts/[clientscript,script2370].cs2)  
 [**2371**](scripts/[proc,script2371].cs2)  
+[**2372**](scripts/[proc,script2372].cs2)  
 [**2373**](scripts/[proc,toplevel_chatbox_controls_maketransparent].cs2) `[proc,toplevel_chatbox_controls_maketransparent]`  
 [**2374**](scripts/[clientscript,fade_init].cs2) `[clientscript,fade_init]`  
 [**2375**](scripts/[proc,castlewars_waitingroom_update].cs2) `[proc,castlewars_waitingroom_update]`  
+[**2376**](scripts/[clientscript,script2376].cs2)  
+[**2377**](scripts/[proc,script2377].cs2)  
 [**2378**](scripts/[clientscript,script2378].cs2)  
 [**2379**](scripts/[clientscript,toplevel_chatbox_resetbackground].cs2) `[clientscript,toplevel_chatbox_resetbackground]`  
 [**2380**](scripts/[clientscript,script2380].cs2)  
@@ -3414,7 +3420,6 @@
 [**3424**](scripts/[clientscript,boardgames_challenge_init].cs2) `[clientscript,boardgames_challenge_init]`  
 [**3425**](scripts/[clientscript,boardgames_challenge_update].cs2) `[clientscript,boardgames_challenge_update]`  
 [**3426**](scripts/[proc,boardgames_challenge_update].cs2) `[proc,boardgames_challenge_update]`  
-[**3427**](scripts/[proc,hp_hud_init].cs2) `[proc,hp_hud_init]`  
 [**3428**](scripts/[proc,bool_to_int].cs2) `[proc,bool_to_int]`  
 [**3429**](scripts/[clientscript,hp_bar_reset].cs2) `[clientscript,hp_bar_reset]`  
 [**3430**](scripts/[clientscript,script3430].cs2)  

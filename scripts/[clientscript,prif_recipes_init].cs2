@@ -1,24 +1,25 @@
 // 2924
-[clientscript,prif_recipes_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19)
+[clientscript,prif_recipes_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, component $component19, component $component20)
 if_settext("Crystal Singing Recipes", $component0);
-def_int $int20 = 0;
-$int20 = calc(8 + ~script2925($int20, $component4, "Celestial Signet", "100 Crystal Shards, 1 Celestial Ring, 1 Elven Signet & 1,000 Stardust", celestial_signet_25545));
-$int20 = calc(8 + ~script2925($int20, $component5, "Crystal Helm", "50 Crystal Shards & 1 Crystal Armour Seed", crystal_helm_23971));
-$int20 = calc(8 + ~script2925($int20, $component6, "Crystal Legs", "100 Crystal Shards & 2 Crystal Armour Seeds", crystal_legs_23979));
-$int20 = calc(8 + ~script2925($int20, $component7, "Crystal Body", "150 Crystal Shards & 3 Crystal Armour Seeds", crystal_body_23975));
-$int20 = calc(8 + ~script2925($int20, $component8, "Crystal Pickaxe", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Pickaxe", crystal_pickaxe_23680));
-$int20 = calc(8 + ~script2925($int20, $component9, "Crystal Axe", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Axe", crystal_axe_23673));
-$int20 = calc(8 + ~script2925($int20, $component10, "Crystal Harpoon", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Harpoon", crystal_harpoon_23762));
-$int20 = calc(8 + ~script2925($int20, $component11, "Crystal Bow", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_bow_24123));
-$int20 = calc(8 + ~script2925($int20, $component12, "Crystal Halberd", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_halberd_24125));
-$int20 = calc(8 + ~script2925($int20, $component13, "Crystal Shield", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_shield_24127));
-$int20 = calc(8 + ~script2925($int20, $component14, "Enhanced Crystal Key", "10 Crystal Shards & 1 Crystal Key", enhanced_crystal_key_23951));
-$int20 = calc(8 + ~script2925($int20, $component15, "Eternal Teleport Crystal", "100 Crystal Shards & 1 Enhanced Crystal Teleport Seed", eternal_teleport_crystal_23946));
-$int20 = calc(8 + ~script2925($int20, $component16, "Blade of Saeldor", "100 Crystal Shards & 1 Enhanced Crystal Weapon Seed", blade_of_saeldor_23995));
-$int20 = calc(8 + ~script2925($int20, $component17, "Blade of Saeldor (c)", "1,000 Crystal Shards & 1 Blade of Saeldor", blade_of_saeldor_c_24551));
-$int20 = calc(8 + ~script2925($int20, $component18, "Bow of Faerdhinen", "100 Crystal Shards & 1 Enhanced Crystal Weapon Seed", bow_of_faerdhinen_25865));
-$int20 = ~script2925($int20, $component19, "Bow of Faerdhinen (c)", "2,000 Crystal Shards & 1 Bow of Faerdhinen", bow_of_faerdhinen_c_25867);
-if_setsize(12, $int20, ^setsize_minus, ^setsize_abs, $component2);
-if_setscrollsize(0, $int20, $component1);
+def_int $int21 = 0;
+$int21 = calc(8 + ~script2925($int21, $component4, "Celestial Signet", "100 Crystal Shards, 1 Celestial Ring, 1 Elven Signet & 1,000 Stardust", celestial_signet_25545));
+$int21 = calc(8 + ~script2925($int21, $component5, "Crystal Helm", "50 Crystal Shards & 1 Crystal Armour Seed", crystal_helm_23971));
+$int21 = calc(8 + ~script2925($int21, $component6, "Crystal Legs", "100 Crystal Shards & 2 Crystal Armour Seeds", crystal_legs_23979));
+$int21 = calc(8 + ~script2925($int21, $component7, "Crystal Body", "150 Crystal Shards & 3 Crystal Armour Seeds", crystal_body_23975));
+$int21 = calc(8 + ~script2925($int21, $component8, "Crystal Pickaxe", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Pickaxe", crystal_pickaxe_23680));
+$int21 = calc(8 + ~script2925($int21, $component9, "Crystal Axe", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Axe", crystal_axe_23673));
+$int21 = calc(8 + ~script2925($int21, $component10, "Crystal Harpoon", "120 Crystal Shards, 1 Crystal Tool Seed & 1 Dragon Harpoon", crystal_harpoon_23762));
+$int21 = calc(8 + ~script2925($int21, $component11, "Crystal Bow", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_bow_24123));
+$int21 = calc(8 + ~script2925($int21, $component12, "Crystal Halberd", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_halberd_24125));
+$int21 = calc(8 + ~script2925($int21, $component13, "Crystal Shield", "40 Crystal Shards & 1 Crystal Weapon Seed", crystal_shield_24127));
+$int21 = calc(8 + ~script2925($int21, $component14, "Enhanced Crystal Key", "10 Crystal Shards & 1 Crystal Key", enhanced_crystal_key_23951));
+$int21 = calc(8 + ~script2925($int21, $component15, "Eternal Teleport Crystal", "100 Crystal Shards & 1 Enhanced Crystal Teleport Seed", eternal_teleport_crystal_23946));
+$int21 = calc(8 + ~script2925($int21, $component16, "Enhanced Crystal Weapon Seed", "250 Crystal Shards & 1 Blade of Saeldor or 1 Bow of Faerdhinen", enhanced_crystal_weapon_seed_25859));
+$int21 = calc(8 + ~script2925($int21, $component17, "Blade of Saeldor", "100 Crystal Shards & 1 Enhanced Crystal Weapon Seed", blade_of_saeldor_23995));
+$int21 = calc(8 + ~script2925($int21, $component18, "Blade of Saeldor (c)", "1,000 Crystal Shards & 1 Blade of Saeldor", blade_of_saeldor_c_24551));
+$int21 = calc(8 + ~script2925($int21, $component19, "Bow of Faerdhinen", "100 Crystal Shards & 1 Enhanced Crystal Weapon Seed", bow_of_faerdhinen_25865));
+$int21 = ~script2925($int21, $component20, "Bow of Faerdhinen (c)", "2,000 Crystal Shards & 1 Bow of Faerdhinen", bow_of_faerdhinen_c_25867);
+if_setsize(12, $int21, ^setsize_minus, ^setsize_abs, $component2);
+if_setscrollsize(0, $int21, $component1);
 if_setscrollpos(0, 0, $component1);
 ~scrollbar_vertical($component3, $component1, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
