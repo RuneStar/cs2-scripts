@@ -15,10 +15,19 @@ if ($int7 > 0) {
 } else {
 	switch_int ($int0) {
 		case 30 :
+			if (%varbit12426 <= 0) {
+				%varbit12426 = 25;
+			}
 			~settings_set_slider($int0, calc(%varbit12426 / 5));
 		case 31 :
+			if (%varbit12427 <= 0) {
+				%varbit12427 = 50;
+			}
 			~settings_set_slider($int0, calc(%varbit12427 / 5));
 		case 32 :
+			if (%varbit12428 <= 0) {
+				%varbit12428 = 50;
+			}
 			~settings_set_slider($int0, calc(%varbit12428 / 5));
 	}
 }
