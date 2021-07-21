@@ -2,8 +2,8 @@
 [proc,collection_searchbar_create](component $component0, int $int1)
 def_boolean $boolean2 = ~on_mobile;
 if ($boolean2 = true) {
-	if_setsize(95, 35, ^setsize_minus, ^setsize_abs, interface_621:70);
-	if_setsize(101, 6, ^setsize_minus, ^setsize_minus, interface_621:71);
+	if_setsize(95, 35, ^setsize_minus, ^setsize_abs, interface_621:71);
+	if_setsize(101, 6, ^setsize_minus, ^setsize_minus, interface_621:72);
 }
 cc_deleteall($component0);
 def_int $int3 = 0;
@@ -24,16 +24,16 @@ cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
 cc_setgraphic("graphic_1125");
 $int3 = calc($int3 + 1);
 if ($boolean2 = true) {
-	if_setsize(70, 31, ^setsize_abs, ^setsize_abs, interface_621:80);
-	if_setposition(38, 47, ^setpos_abs_right, ^setpos_abs_top, interface_621:80);
-	$int3 = ~v2_stone_button_filled(interface_621:80);
-	if_setop(1, "Search", interface_621:80);
-	if_setonop("collection_search_button_press", interface_621:80);
-	cc_create(interface_621:80, ^iftype_text, $int3);
+	if_setsize(70, 31, ^setsize_abs, ^setsize_abs, interface_621:81);
+	if_setposition(38, 47, ^setpos_abs_right, ^setpos_abs_top, interface_621:81);
+	$int3 = ~v2_stone_button_filled(interface_621:81);
+	if_setop(1, "Search", interface_621:81);
+	if_setonop("collection_search_button_press", interface_621:81);
+	cc_create(interface_621:81, ^iftype_text, $int3);
 	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
 	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 	cc_settextfont(p11_full);
 	cc_settext("<col=d6d6d6>Search");
 }
-~collection_searchbar_setup_op(1, interface_621:74, interface_621:79);
+~collection_searchbar_setup_op(1, interface_621:75, interface_621:80);

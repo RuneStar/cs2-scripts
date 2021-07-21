@@ -1,0 +1,65 @@
+// 4807
+[proc,script4807](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $settextalignh7, int $colour8, int $int9)(int)
+def_int $int10 = 4;
+def_int $int11 = calc($int6 / $int10);
+def_int $colour12 = 0x9e9e9e;
+def_int $int13 = calc(1 + scale($int2, ~max(1, $int1), $int6 - 1));
+if ($int1 = $int2) {
+	$colour12 = $colour8;
+} else if ($int2 > 0) {
+	$colour12 = ^yellow;
+}
+cc_create($component0, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setfill(true);
+cc_setcolour(^white);
+cc_settrans(255);
+cc_setsize($int6, 27, ^setsize_abs, ^setsize_abs);
+cc_setposition($int4, calc($int5 + 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component0, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_settext("<tostring($int2)>/<tostring($int1)>");
+cc_setcolour($colour12);
+cc_setsize($int6, 12, ^setsize_abs, ^setsize_abs);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign($settextalignh7, ^settextalign_top, 0);
+cc_setposition(calc($int4 + 0), calc($int5 + $int9), ^setpos_abs_left, ^setpos_abs_top);
+def_int $y14 = calc($int5 + 17);
+.cc_create($component0, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+.cc_setfill(true);
+.cc_setcolour(^black);
+.cc_settrans(150);
+.cc_setsize($int6, 7, ^setsize_abs, ^setsize_abs);
+.cc_setposition($int4, $y14, ^setpos_abs_left, ^setpos_abs_top);
+def_int $width15 = calc($int11 + 1);
+def_int $int16 = 0;
+while ($int16 < $int10) {
+	cc_create($component0, ^iftype_rectangle, $int3);
+	$int3 = calc($int3 + 1);
+	cc_setfill(false);
+	cc_setcolour(^black);
+	cc_setsize($width15, 7, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc(.cc_getx + $int16 * $int11), $y14, ^setpos_abs_left, ^setpos_abs_top);
+	$int16 = calc($int16 + 1);
+}
+def_int $width17 = calc($int11 - 1);
+def_int $y18 = calc($int5 + 18);
+$int16 = 0;
+while ($int16 < $int10) {
+	cc_create($component0, ^iftype_rectangle, $int3);
+	$int3 = calc($int3 + 1);
+	if ($int13 > $int11) {
+		cc_setsize($width17, 5, ^setsize_abs, ^setsize_abs);
+		$int13 = calc($int13 - $int11);
+	} else {
+		cc_setsize(calc($int13 - 1), 5, ^setsize_abs, ^setsize_abs);
+		$int13 = 0;
+	}
+	cc_setcolour($colour12);
+	cc_setfill(true);
+	cc_setposition(calc(.cc_getx + $int16 * $int11 + 1), $y18, ^setpos_abs_left, ^setpos_abs_top);
+	$int16 = calc($int16 + 1);
+}
+return($int3);

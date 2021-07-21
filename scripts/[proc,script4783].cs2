@@ -1,0 +1,16 @@
+// 4783
+[proc,script4783](string $string0, int $width0, fontmetrics $fontmetrics1)(string)
+def_string $string1 = $string0;
+def_string $text2 = $string1;
+def_int $int2 = string_length($string1);
+def_int $int3 = 0;
+if ($int2 > 0 & parawidth($string1, 512, $fontmetrics1) > $width0) {
+	while ($int2 > 1 & $int3 = 0) {
+		$int2 = calc($int2 - 1);
+		$string1 = append(substring($string1, 0, $int2), "...");
+		if (parawidth($string1, 512, $fontmetrics1) <= $width0) {
+			$text2, $int3 = $string1, 1;
+		}
+	}
+}
+return($text2);

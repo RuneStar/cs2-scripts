@@ -1,0 +1,12 @@
+// 4853
+[proc,script4853](component $component0, boolean $boolean1)
+def_int $comsubid2 = 0;
+if ($boolean1 = true) {
+	$comsubid2 = ~v2_stone_button_in_filled($component0);
+} else {
+	$comsubid2 = ~v2_stone_button_filled($component0);
+}
+cc_create($component0, ^iftype_graphic, $comsubid2);
+cc_setsize(18, 18, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("graphic_3389");

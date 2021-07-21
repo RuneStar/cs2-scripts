@@ -1,13 +1,17 @@
 // 3332
-[clientscript,script3332](component $component0, coord $coord1, mapelement $mapelement2, int $int3)
-def_int $x4 = -1;
-def_int $z5 = -1;
+[clientscript,script3332](component $component0, coord $coord1, mapelement $mapelement2, int $int3, int $int4, int $int5)
+def_int $int6 = -1;
+def_int $int7 = -1;
+$int6, $int7 = worldmap_getdisplayposition;
 switch_int ($int3) {
 	case 60 :
 		worldmap_jumptosourcecoord($coord1);
 	case 61 :
-		$x4, $z5 = worldmap_getdisplayposition;
-		if ($x4 ! coordx($coord1) | $z5 ! coordz($coord1)) {
+		if ($int6 = $int4 & $int7 = $int5) {
+			$int3 = calc($int3 + 1);
+		}
+		if_setontimer("script3332($component0, $coord1, $mapelement2, $int3, $int6, $int7)", $component0);
+		if ($int6 ! coordx($coord1) | $int7 ! coordz($coord1)) {
 			return;
 		}
 	case 62 :
@@ -23,4 +27,4 @@ switch_int ($int3) {
 		if_sethide(true, $component0);
 		return;
 }
-if_setontimer("script3332($component0, $coord1, $mapelement2, calc($int3 + 1))", $component0);
+if_setontimer("script3332($component0, $coord1, $mapelement2, calc($int3 + 1), $int6, $int7)", $component0);

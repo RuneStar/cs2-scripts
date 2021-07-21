@@ -1,0 +1,71 @@
+// 4806
+[proc,script4806](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+def_enum $enum6 = enum_3980;
+def_int $int7 = 16750623;
+def_int $count8 = enum_getoutputcount($enum6);
+def_int $int9 = 0;
+def_int $int10 = 2;
+def_int $int11 = 0;
+def_int $int12 = 0;
+def_int $int13 = 255;
+def_struct $struct14 = null;
+def_string $text0 = "null";
+def_graphic $graphic15 = null;
+def_int $int16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 4;
+def_int $int19 = 90;
+def_int $int20 = calc(if_getheight($component0) / ($count8 / 2) - 3);
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_int $int23 = 32;
+def_int $colour24 = ^yellow;
+def_int $int25 = 16750899;
+while ($int9 < $count8) {
+	$struct14 = enum(int, struct, $enum6, $int9);
+	$text0 = struct_param($struct14, param_1330);
+	$graphic15 = struct_param($struct14, param_1331);
+	$int16 = ~script4784(calc($int9 + 1));
+	$int17 = ~script4789(calc($int9 + 1));
+	if ($int16 > $int17) {
+		$int16 = $int17;
+	}
+	if (~script4790(calc($int9 + 1)) = 2) {
+		$colour24 = 0x0dc10d;
+		$int25 = 901389;
+	} else {
+		$colour24 = ^yellow;
+		$int25 = 16750899;
+	}
+	$int10 = calc(4 + $int9 % 2 * ($int19 + 5));
+	if ($int9 > 0 & calc($int9 % 2) = 0) {
+		$int11 = calc($int11 + $int20 + $int18);
+	}
+	cc_create($component0, ^iftype_rectangle, $int12);
+	cc_setsize($int19, $int20, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int10, $int11, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(false);
+	cc_setcolour(^black);
+	cc_settrans(200);
+	cc_setopbase("<col=ff981f><$text0></col>");
+	cc_create($component1, ^iftype_text, $int12);
+	cc_setsize($int19, 12, ^setsize_abs, ^setsize_abs);
+	cc_setposition($int10, calc($int11 + 5), ^setpos_abs_left, ^setpos_abs_top);
+	cc_settext($text0);
+	cc_settextfont(p12_full);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_setcolour(0xff9933);
+	cc_create($component2, ^iftype_graphic, $int12);
+	cc_setsize($int23, $int23, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc($int10 + $int19 / 2 - $int23 / 2), calc($int11 + 19), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic($graphic15);
+	$int21 = ~script4849($component3, $component4, "", $int10, $int11, $int19, $int20, $int21, $int12, 1);
+	if (cc_find($component4, $int12) = ^true) {
+		cc_setop(1, "<$text0> Tasks");
+		cc_setonop("button_select_sound");
+	}
+	$int22 = ~script4807($component5, $int17, $int16, $int22, calc($int10 + 9), calc($int11 + 49), calc($int19 - 18), ^settextalign_centre, $colour24, 2);
+	$int12 = calc($int12 + 1);
+	$int9 = calc($int9 + 1);
+}

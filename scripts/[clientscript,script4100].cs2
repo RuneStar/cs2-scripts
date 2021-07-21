@@ -1,6 +1,6 @@
 // 4100
 [clientscript,script4100](obj $obj0, int $int1, int $int2, struct $struct3)
-if (if_gethide(interface_621:69) = true) {
+if (if_gethide(interface_621:70) = true) {
 	return;
 }
 def_int $int4 = 0;
@@ -15,7 +15,7 @@ if ($int5 ! -1 | compare($string0, "") ! 0) {
 }
 $string1 = struct_param($struct3, param_689);
 while ($int4 < 550) {
-	if (cc_find(interface_621:76, $int4) = ^true) {
+	if (cc_find(interface_621:77, $int4) = ^true) {
 		if ($int7 = 0 & $namedobj6 = null & compare($string0, "") = 0) {
 			if (compare($string1, cc_gettext) = 0) {
 				$int7 = 1;

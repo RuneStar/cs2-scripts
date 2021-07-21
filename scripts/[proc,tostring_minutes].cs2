@@ -1,58 +1,76 @@
 // 494
-[proc,tostring_minutes](int $int0)(string)
+[proc,tostring_minutes](int $int0, int $int1)(string)
 if ($int0 < 2) {
 	return("a minute");
 }
-def_int $int1 = calc($int0 / 60);
+def_int $int2 = calc($int0 / 60);
 $int0 = calc($int0 % 60);
-def_int $int2 = calc($int1 / 24);
-if ($int2 < 1) {
-	if ($int1 < 1) {
+def_int $int3 = calc($int2 / 24);
+if ($int3 < 1) {
+	if ($int2 < 1) {
 		return("<tostring($int0)> minutes");
 	}
-	if ($int1 = 1) {
+	if ($int2 = 1) {
 		if ($int0 = 1) {
 			return("1 hour, 1 minute");
 		}
 		return("1 hour, <tostring($int0)> minutes");
 	}
 	if ($int0 = 1) {
-		return("<tostring($int1)> hours, 1 minute");
+		return("<tostring($int2)> hours, 1 minute");
 	}
-	return("<tostring($int1)> hours, <tostring($int0)> minutes");
+	return("<tostring($int2)> hours, <tostring($int0)> minutes");
 }
-$int1 = calc($int1 % 24);
-if ($int2 = 1) {
-	if ($int1 < 1) {
+$int2 = calc($int2 % 24);
+if ($int3 = 1) {
+	if ($int2 < 1) {
 		if ($int0 = 1) {
 			return("1 day, 1 minute");
 		}
 		return("1 day, <tostring($int0)> minutes");
 	}
-	if ($int1 = 1) {
+	if ($int2 = 1) {
+		if ($int1 = 1) {
+			return("1 day, 1 hour");
+		}
 		if ($int0 = 1) {
 			return("1 day, 1 hour, 1 minute");
 		}
 		return("1 day, 1 hour, <tostring($int0)> minutes");
 	}
-	if ($int0 = 1) {
-		return("1 day, <tostring($int1)> hours, 1 minute");
+	if ($int1 = 1) {
+		return("1 day, <tostring($int2)> hours");
 	}
-	return("1 day, <tostring($int1)> hours, <tostring($int0)> minutes");
+	if ($int0 = 1) {
+		return("1 day, <tostring($int2)> hours, 1 minute");
+	}
+	return("1 day, <tostring($int2)> hours, <tostring($int0)> minutes");
 }
-if ($int1 < 1) {
-	if ($int0 = 1) {
-		return("<tostring($int2)> days, 0 hours, 1 minute");
+if ($int2 < 1) {
+	if ($int1 = 1) {
+		if ($int0 = 1) {
+			return("<tostring($int3)> days, 1 minute");
+		}
+		return("<tostring($int3)> days, <tostring($int0)> minutes");
 	}
-	return("<tostring($int2)> days, 0 hours, <tostring($int0)> minutes");
+	if ($int0 = 1) {
+		return("<tostring($int3)> days, 0 hours, 1 minute");
+	}
+	return("<tostring($int3)> days, 0 hours, <tostring($int0)> minutes");
+}
+if ($int2 = 1) {
+	if ($int1 = 1) {
+		return("<tostring($int3)> days, 1 hour");
+	}
+	if ($int0 = 1) {
+		return("<tostring($int3)> days, 1 hour, 1 minute");
+	}
+	return("<tostring($int3)> days, 1 hour, <tostring($int0)> minutes");
 }
 if ($int1 = 1) {
-	if ($int0 = 1) {
-		return("<tostring($int2)> days, 1 hour, 1 minute");
-	}
-	return("<tostring($int2)> days, 1 hour, <tostring($int0)> minutes");
+	return("<tostring($int3)> days, <tostring($int2)> hours");
 }
 if ($int0 = 1) {
-	return("<tostring($int2)> days, <tostring($int1)> hours, 1 minute");
+	return("<tostring($int3)> days, <tostring($int2)> hours, 1 minute");
 }
-return("<tostring($int2)> days, <tostring($int1)> hours, <tostring($int0)> minutes");
+return("<tostring($int3)> days, <tostring($int2)> hours, <tostring($int0)> minutes");

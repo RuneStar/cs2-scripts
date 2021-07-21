@@ -1,7 +1,8 @@
 // 4471
-[clientscript,side_channels_init](component $component0, component $component1, component $component2, component $component3)
+[clientscript,side_channels_init](component $component0, component $component1, component $component2, component $component3, component $component4)
 ~side_channels_tabinit($component1, 0);
 ~side_channels_tabinit($component2, 1);
 ~side_channels_tabinit($component3, 2);
-~script4473($component1, $component2, $component3);
-if_setonvartransmit("script4472($component1, $component2, $component3){var1054}", $component0);
+~side_channels_tabinit($component4, 3);
+~script4473($component1, $component2, $component3, $component4);
+if_setonvartransmit("script4472($component1, $component2, $component3, $component4){var1054}", $component0);

@@ -1,0 +1,11 @@
+// 4854
+[clientscript,script4854](int $opindex0, component $component1)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+~script4853($component1, true);
+if_setonmouserepeat(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setonop(null, $component1);
+if_setontimer("script4855(calc(clientclock + 20), event_com)", $component1);

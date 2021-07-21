@@ -1,0 +1,11 @@
+// 3952
+[proc,script3952](component $component0, int $x1, int $y2, int $width3, int $height4, string $string0, int $int5)(int)
+cc_create($component0, ^iftype_rectangle, $int5);
+cc_setsize($width3, $height4, ^setsize_abs, ^setsize_abs);
+cc_setposition($x1, $y2, ^setpos_abs_left, ^setpos_abs_top);
+cc_settrans(255);
+if (string_length($string0) > 0) {
+	cc_setonop("button_select_sound");
+	cc_setop(1, $string0);
+}
+return(calc($int5 + 1));

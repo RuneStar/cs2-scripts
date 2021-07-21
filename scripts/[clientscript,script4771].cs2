@@ -1,0 +1,11 @@
+// 4771
+[clientscript,script4771](component $component0, component $component1, component $component2)
+if (%varbit12884 = 1) {
+	~script4803;
+}
+sound_synth(interface_select1, 1, 0);
+if_sethide(true, $component1);
+if_sethide(true, $component2);
+if (cc_find($component0, 0) = ^true) {
+	cc_setgraphic("menu_buttons,0");
+}

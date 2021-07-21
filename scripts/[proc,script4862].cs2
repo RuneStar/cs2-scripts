@@ -1,0 +1,18 @@
+// 4862
+[proc,script4862](int $height0, component $component1, component $component2, component $component3, component $component4)
+def_int $int5 = ~max(314, calc(~max(226, $height0) + 88));
+def_int $int6 = 334;
+if ($component1 ! null) {
+	$int6 = if_getheight($component1);
+}
+if_setsize(480, ~min(~min(700, calc($int6 - 8)), $int5), ^setsize_abs, ^setsize_abs, $component2);
+if ($height0 > if_getheight($component3)) {
+	if_setscrollsize(0, $height0, $component3);
+	~scrollbar_resize($component4, $component3, if_getscrolly($component3));
+} else {
+	if_setscrollsize(0, 0, $component3);
+	~scrollbar_resize($component4, $component3, 0);
+}
+if ($component1 ! null) {
+	if_setontimer("script4861($height0, $component1, $component2, $component3, $component4, $int6)", $component2);
+}

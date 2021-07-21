@@ -1,0 +1,37 @@
+// 4834
+[proc,script4834](int $int0)(int)
+if ($int0 = -1 | $int0 < 0) {
+	return(0);
+}
+def_int $index1 = calc($int0 % 32);
+def_int $int2 = calc($int0 / 32);
+switch_int ($int2) {
+	case 0 :
+		return(testbit(%var3116, $index1));
+	case 1 :
+		return(testbit(%var3117, $index1));
+	case 2 :
+		return(testbit(%var3118, $index1));
+	case 3 :
+		return(testbit(%var3119, $index1));
+	case 4 :
+		return(testbit(%var3120, $index1));
+	case 5 :
+		return(testbit(%var3121, $index1));
+	case 6 :
+		return(testbit(%var3122, $index1));
+	case 7 :
+		return(testbit(%var3123, $index1));
+	case 8 :
+		return(testbit(%var3124, $index1));
+	case 9 :
+		return(testbit(%var3125, $index1));
+	case 10 :
+		return(testbit(%var3126, $index1));
+	case 11 :
+		return(testbit(%var3127, $index1));
+	case 12 :
+		return(testbit(%var3128, $index1));
+	case default :
+		return(0);
+}

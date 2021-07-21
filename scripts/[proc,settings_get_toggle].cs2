@@ -179,6 +179,17 @@ switch_int ($int0) {
 		return(%varbit12409);
 	case 157 :
 		return(%varbit12410);
+	case 161 :
+		return(%varbit12454);
+	case 159 :
+		return(%varbit12455);
+	case 160 :
+		return(%varbit12456);
+	case 162 :
+		if (%varbit12454 = 1) {
+			return(%varbit12457);
+		}
+		return(0);
 	case default :
 		return(0);
 }

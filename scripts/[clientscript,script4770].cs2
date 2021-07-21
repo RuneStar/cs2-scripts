@@ -1,0 +1,28 @@
+// 4770
+[clientscript,script4770](int $opindex0, component $component1, component $component2, int $comsubid3, component $component4)
+if (%varbit12884 = 1) {
+	~script4803;
+}
+if ($opindex0 ! 1) {
+	return;
+}
+def_int $int5 = 0;
+if (if_gethide($component2) = false) {
+	if_sethide(true, $component2);
+	if_sethide(true, $component4);
+	if_setnoclickthrough(false, $component2);
+	$int5 = 0;
+} else {
+	if_sethide(false, $component2);
+	if_sethide(false, $component4);
+	if_setonclick("script4771($component1, $component2, $component4)", $component4);
+	if_setnoclickthrough(true, $component2);
+	$int5 = 1;
+}
+if (cc_find($component1, $comsubid3) = ^true) {
+	if ($int5 = 0) {
+		cc_setgraphic("menu_buttons,0");
+	} else {
+		cc_setgraphic("menu_buttons,1");
+	}
+}

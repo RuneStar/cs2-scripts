@@ -6,7 +6,7 @@ if (%varcint64 > 0 & %varcint64 <= 22) {
 	if_settext($text0, interface_76:8);
 } else {
 	%varcint64 = 0;
-	if_settext("Select a minigame...", interface_76:8);
+	if_settext("Select an activity...", interface_76:8);
 }
 def_int $world0 = enum(int, int, enum_850, %varcint64);
 if ($world0 = -1) {
@@ -96,7 +96,7 @@ if (if_gethide(interface_76:14) = true) {
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
 		if ($int2 = 0) {
-			cc_settext("You are not currently in a minigame chat-channel.");
+			cc_settext("You are not currently in a grouping chat-channel.");
 			cc_setsize($int5, if_getheight(interface_76:12), ^setsize_abs, ^setsize_abs);
 			cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 			return;

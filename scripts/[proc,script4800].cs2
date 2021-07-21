@@ -1,0 +1,161 @@
+// 4800
+[proc,script4800](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
+cc_deleteall($component2);
+cc_deleteall($component4);
+cc_deleteall($component5);
+cc_deleteall($component6);
+cc_deleteall($component7);
+cc_deleteall($component8);
+cc_deleteall($component9);
+cc_deleteall($component3);
+cc_deleteall($component12);
+def_int $int13 = 0;
+def_int $int14 = 16750623;
+def_int $count15 = enum_getoutputcount(enum_3987);
+def_int $count16 = 0;
+def_int $int17 = 0;
+def_int $int18 = 0;
+def_int $int19 = 88;
+def_struct $struct20 = null;
+def_string $string0 = "null";
+def_int $int21 = -1;
+def_int $int22 = -1;
+def_int $int23 = 5;
+def_int $int24 = 5;
+def_int $int25 = 145;
+def_int $int26 = 0;
+def_int $int27 = 3;
+def_int $int28 = 0;
+def_int $int29 = 0;
+def_int $int30 = 0;
+def_int $colour31 = 0xff9933;
+def_int $intarray0(calc($count15 + 1));
+def_enum $enum32 = enum_3981;
+def_int $index33 = 0;
+def_int $count34 = enum_getoutputcount($enum32);
+while ($count16 < $count34) {
+	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
+	if ($index33 <= $count15) {
+		$intarray0($index33) = calc($intarray0($index33) + 1);
+	}
+	$count16 = calc($count16 + 1);
+}
+$count16 = 0;
+$enum32 = enum_3982;
+$count34 = enum_getoutputcount($enum32);
+while ($count16 < $count34) {
+	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
+	if ($index33 <= $count15) {
+		$intarray0($index33) = calc($intarray0($index33) + 1);
+	}
+	$count16 = calc($count16 + 1);
+}
+$count16 = 0;
+$enum32 = enum_3983;
+$count34 = enum_getoutputcount($enum32);
+while ($count16 < $count34) {
+	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
+	if ($index33 <= $count15) {
+		$intarray0($index33) = calc($intarray0($index33) + 1);
+	}
+	$count16 = calc($count16 + 1);
+}
+$count16 = 0;
+$enum32 = enum_3984;
+$count34 = enum_getoutputcount($enum32);
+while ($count16 < $count34) {
+	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
+	if ($index33 <= $count15) {
+		$intarray0($index33) = calc($intarray0($index33) + 1);
+	}
+	$count16 = calc($count16 + 1);
+}
+$count16 = 0;
+$enum32 = enum_3985;
+$count34 = enum_getoutputcount($enum32);
+while ($count16 < $count34) {
+	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
+	if ($index33 <= $count15) {
+		$intarray0($index33) = calc($intarray0($index33) + 1);
+	}
+	$count16 = calc($count16 + 1);
+}
+$count16 = 0;
+$enum32 = enum_3986;
+$count34 = enum_getoutputcount($enum32);
+while ($count16 < $count34) {
+	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
+	if ($index33 <= $count15) {
+		$intarray0($index33) = calc($intarray0($index33) + 1);
+	}
+	$count16 = calc($count16 + 1);
+}
+$count16 = 0;
+while ($count16 <= $count15) {
+	cc_create($component12, ^iftype_rectangle, $count16);
+	cc_setsize(0, 0, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	$count16 = calc($count16 + 1);
+}
+$count16 = 1;
+while ($count16 <= $count15) {
+	$struct20 = enum(int, struct, enum_3987, $count16);
+	$string0 = struct_param($struct20, param_1313);
+	if (string_length(%varcstring527) <= 0 | string_indexof_string(lowercase($string0), lowercase(%varcstring527), 0) ! -1) {
+		$int21 = struct_param($struct20, param_1314);
+		$int22 = struct_param($struct20, param_1315);
+		$int29 = ~script4780($int22);
+		$int30 = $intarray0($int22);
+		if ($int29 = $int30) {
+			$colour31 = 0x0dc10d;
+		} else {
+			$colour31 = 0xff9933;
+		}
+		$int18 = calc($int24 + $int13 % $int27 * ($int25 + $int24));
+		if ($int13 > 0 & calc($int13 % $int27) = 0) {
+			$int17 = calc($int17 + $int19 + $int23);
+		}
+		cc_create($component2, ^iftype_rectangle, $int13);
+		cc_setsize($int25, $int19, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int18, $int17, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour(^black);
+		cc_setfill(false);
+		cc_settrans(50);
+		cc_setopbase("<col=ff981f><$string0></col>");
+		cc_create($component4, ^iftype_text, $int13);
+		cc_setsize(calc($int25 - 6), 24, ^setsize_abs, ^setsize_abs);
+		cc_setposition(calc($int18 + 3), calc($int17 + 9), ^setpos_abs_left, ^setpos_abs_top);
+		cc_settext($string0);
+		cc_settextfont(b12_full);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		cc_setcolour($colour31);
+		cc_create($component8, ^iftype_text, $int13);
+		cc_setsize($int25, 24, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int18, calc($int17 + 32), ^setpos_abs_left, ^setpos_abs_top);
+		if ($int21 = 0) {
+			cc_settext("<col=ff9933>Level:</col><col=ffffff> N/A</col>");
+		} else {
+			cc_settext("<col=ff9933>Level:</col><col=ffffff> <tostring($int21)></col>");
+		}
+		cc_settextfont(p11_full);
+		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		cc_settextshadow(true);
+		$int28 = ~script4807($component3, $int30, $int29, $int28, calc($int18 + 8), calc($int17 + 53), calc($int25 - 16), ^settextalign_centre, 0x0dc10d, 0);
+		$int26 = ~script4849($component5, $component6, "", $int18, $int17, $int25, $int19, $int26, $int13, 1);
+		if (cc_find($component6, $int13) = ^true) {
+			cc_setop(1, "View");
+			cc_setopbase("<col=ff9040><$string0></col>");
+			cc_setonop("script4801($component12, $count16)");
+		}
+		$int13 = calc($int13 + 1);
+	}
+	$count16 = calc($count16 + 1);
+}
+$int17 = calc($int17 + $int19 + $int23);
+~script4858($int17, if_getlayer($component0), $component0, $component1, $component11);
+if ($int13 = 0) {
+	if_sethide(false, $component10);
+} else {
+	if_sethide(true, $component10);
+}

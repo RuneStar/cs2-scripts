@@ -1,0 +1,33 @@
+// 3951
+[proc,script3951](component $component0, component $component1, int $int2, int $int3, int $int4, int $int5, graphic $graphic6, int $int7, int $int8, int $int9, string $string0, string $string1)(int, int, int, int, int, int, int)
+def_int $int10 = 0;
+def_int $int11 = 2;
+def_int $int12 = calc((if_getwidth($component0) - $int11) / 2);
+$int7 = ~script3953($component0, $int7, $int5, $int12, $int3, $int2, $int10);
+$int8 = ~script3952($component1, $int3, $int2, $int12, $int5, $string1, $int8);
+.cc_create($component0, ^iftype_text, $int7);
+.cc_setsize(calc(if_getwidth($component0) / 2 - 10), $int5, ^setsize_abs, ^setsize_abs);
+.cc_setposition(calc($int3 + 5), calc($int2 + 10), ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(0xff9933);
+.cc_settextfont(p11_full);
+.cc_settextalign(^settextalign_centre, ^settextalign_top, 0);
+.cc_settextshadow(true);
+.cc_settext($string0);
+if (string_length($string1) > 0 & ~on_mobile = false) {
+	cc_setonmouseover("cc_colour_swapper($component0, $int7, ^white)");
+	cc_setonmouseleave("cc_colour_swapper($component0, $int7, 0xff9933)");
+}
+$int7 = calc($int7 + 1);
+def_int $int13 = calc(paraheight($string0, if_getwidth($component0) / 2 - 20, p11_full) * 12);
+def_int $int14 = 18;
+cc_create($component0, ^iftype_graphic, $int7);
+cc_setgraphic($graphic6);
+cc_setsize($int14, $int14, ^setsize_abs, ^setsize_abs);
+def_int $int15 = calc($int3 + $int12 / 2);
+def_int $x16 = calc($int15 - $int14 / 2);
+cc_setposition($x16, calc($int2 + $int13 + 15), ^setpos_abs_left, ^setpos_abs_top);
+if ($int9 = 1) {
+	$int2 = calc($int2 + $int5 + 4 + $int4);
+}
+$int7, $int3 = calc($int7 + 1), calc($int12 + $int11);
+return($int7, $int8, $int2, $int3, $int12, .cc_getid, cc_getid);

@@ -2390,6 +2390,7 @@
 [**2387**](scripts/[proc,script2387].cs2)  
 [**2388**](scripts/[clientscript,collection_draw_tabs_all].cs2) `[clientscript,collection_draw_tabs_all]`  
 [**2389**](scripts/[proc,collection_draw_tabs_all].cs2) `[proc,collection_draw_tabs_all]`  
+[**2390**](scripts/[proc,script2390].cs2)  
 [**2391**](scripts/[clientscript,mobile_billing_open].cs2) `[clientscript,mobile_billing_open]`  
 [**2392**](scripts/[clientscript,trawler_overlay_init].cs2) `[clientscript,trawler_overlay_init]`  
 [**2393**](scripts/[clientscript,script2393].cs2)  
@@ -2508,6 +2509,8 @@
 [**2506**](scripts/[proc,account_name_update].cs2) `[proc,account_name_update]`  
 [**2507**](scripts/[proc,ignore_appearance].cs2) `[proc,ignore_appearance]`  
 [**2508**](scripts/[proc,friends_appearance].cs2) `[proc,friends_appearance]`  
+[**2509**](scripts/[proc,script2509].cs2)  
+[**2510**](scripts/[clientscript,script2510].cs2)  
 [**2511**](scripts/[proc,script2511].cs2)  
 [**2512**](scripts/[clientscript,script2512].cs2)  
 [**2513**](scripts/[proc,script2513].cs2)  
@@ -3170,6 +3173,9 @@
 [**3170**](scripts/[clientscript,buff_bar_mobile_tooltip].cs2) `[clientscript,buff_bar_mobile_tooltip]`  
 [**3171**](scripts/[clientscript,buff_bar_mobile_tooltip_remove].cs2) `[clientscript,buff_bar_mobile_tooltip_remove]`  
 [**3172**](scripts/[proc,buff_bar_buff_position].cs2) `[proc,buff_bar_buff_position]`  
+[**3173**](scripts/[clientscript,script3173].cs2)  
+[**3174**](scripts/[clientscript,script3174].cs2)  
+[**3175**](scripts/[clientscript,script3175].cs2)  
 [**3176**](scripts/[proc,side_journal_tab_highlight].cs2) `[proc,side_journal_tab_highlight]`  
 [**3177**](scripts/[proc,side_journal_tab_highlight_reset].cs2) `[proc,side_journal_tab_highlight_reset]`  
 [**3178**](scripts/[proc,side_journal_additional].cs2) `[proc,side_journal_additional]`  
@@ -3304,6 +3310,7 @@
 [**3307**](scripts/[clientscript,welcome_type_setup_transmit].cs2) `[clientscript,welcome_type_setup_transmit]`  
 [**3308**](scripts/[clientscript,welcome_type_setup_op].cs2) `[clientscript,welcome_type_setup_op]`  
 [**3309**](scripts/[proc,welcome_type_setup].cs2) `[proc,welcome_type_setup]`  
+[**3310**](scripts/[proc,script3310].cs2)  
 [**3311**](scripts/[clientscript,nightmare_totems_init].cs2) `[clientscript,nightmare_totems_init]`  
 [**3312**](scripts/[clientscript,nightmare_totem_hud_fade_in].cs2) `[clientscript,nightmare_totem_hud_fade_in]`  
 [**3313**](scripts/[proc,nightmare_totem_hud_fade_in].cs2) `[proc,nightmare_totem_hud_fade_in]`  
@@ -3420,6 +3427,7 @@
 [**3424**](scripts/[clientscript,boardgames_challenge_init].cs2) `[clientscript,boardgames_challenge_init]`  
 [**3425**](scripts/[clientscript,boardgames_challenge_update].cs2) `[clientscript,boardgames_challenge_update]`  
 [**3426**](scripts/[proc,boardgames_challenge_update].cs2) `[proc,boardgames_challenge_update]`  
+[**3427**](scripts/[clientscript,script3427].cs2)  
 [**3428**](scripts/[proc,bool_to_int].cs2) `[proc,bool_to_int]`  
 [**3429**](scripts/[clientscript,hp_bar_reset].cs2) `[clientscript,hp_bar_reset]`  
 [**3430**](scripts/[clientscript,script3430].cs2)  
@@ -3885,6 +3893,7 @@
 [**3890**](scripts/[clientscript,script3890].cs2)  
 [**3891**](scripts/[clientscript,script3891].cs2)  
 [**3892**](scripts/[clientscript,script3892].cs2)  
+[**3893**](scripts/[clientscript,script3893].cs2)  
 [**3894**](scripts/[clientscript,settings_zoom_position_timer].cs2) `[clientscript,settings_zoom_position_timer]`  
 [**3895**](scripts/[clientscript,settings_camera_zoom_slider_click].cs2) `[clientscript,settings_camera_zoom_slider_click]`  
 [**3896**](scripts/[clientscript,settings_zoom_slider_ondrag].cs2) `[clientscript,settings_zoom_slider_ondrag]`  
@@ -3937,6 +3946,15 @@
 [**3943**](scripts/[clientscript,zoom_timer].cs2) `[clientscript,zoom_timer]`  
 [**3944**](scripts/[clientscript,settings_side_op_sound].cs2) `[clientscript,settings_side_op_sound]`  
 [**3945**](scripts/[proc,settings_side_op_sound].cs2) `[proc,settings_side_op_sound]`  
+[**3946**](scripts/[clientscript,script3946].cs2)  
+[**3947**](scripts/[proc,script3947].cs2)  
+[**3948**](scripts/[proc,script3948].cs2)  
+[**3949**](scripts/[proc,script3949].cs2)  
+[**3950**](scripts/[proc,script3950].cs2)  
+[**3951**](scripts/[proc,script3951].cs2)  
+[**3952**](scripts/[proc,script3952].cs2)  
+[**3953**](scripts/[proc,script3953].cs2)  
+[**3954**](scripts/[clientscript,script3954].cs2)  
 [**3955**](scripts/[proc,settings_check_block].cs2) `[proc,settings_check_block]`  
 [**3956**](scripts/[proc,settings_op_checker].cs2) `[proc,settings_op_checker]`  
 [**3957**](scripts/[proc,script3957].cs2)  
@@ -3952,6 +3970,8 @@
 [**3967**](scripts/[proc,settings_set_dropdown].cs2) `[proc,settings_set_dropdown]`  
 [**3968**](scripts/[proc,settings_set_keybind].cs2) `[proc,settings_set_keybind]`  
 [**3969**](scripts/[proc,settings_clicked_button].cs2) `[proc,settings_clicked_button]`  
+[**3970**](scripts/[clientscript,script3970].cs2)  
+[**3971**](scripts/[proc,script3971].cs2)  
 [**3972**](scripts/[proc,script3972].cs2)  
 [**3973**](scripts/[proc,settings_hitsplat_tinting].cs2) `[proc,settings_hitsplat_tinting]`  
 [**3974**](scripts/[proc,settings_wiki_lookup].cs2) `[proc,settings_wiki_lookup]`  
@@ -3960,6 +3980,7 @@
 [**3977**](scripts/[proc,script3977].cs2)  
 [**3978**](scripts/[proc,script3978].cs2)  
 [**3979**](scripts/[proc,script3979].cs2)  
+[**3980**](scripts/[proc,script3980].cs2)  
 [**3981**](scripts/[proc,script3981].cs2)  
 [**3982**](scripts/[proc,script3982].cs2)  
 [**3983**](scripts/[proc,script3983].cs2)  
@@ -4051,6 +4072,8 @@
 [**4069**](scripts/[clientscript,script4069].cs2)  
 [**4070**](scripts/[clientscript,script4070].cs2)  
 [**4071**](scripts/[clientscript,tempoross_hud_init].cs2) `[clientscript,tempoross_hud_init]`  
+[**4072**](scripts/[proc,script4072].cs2)  
+[**4073**](scripts/[proc,script4073].cs2)  
 [**4074**](scripts/[clientscript,tempoross_hud_update].cs2) `[clientscript,tempoross_hud_update]`  
 [**4075**](scripts/[proc,tempoross_hud_update_bar].cs2) `[proc,tempoross_hud_update_bar]`  
 [**4076**](scripts/[clientscript,tempoross_hud_bar_movement].cs2) `[clientscript,tempoross_hud_bar_movement]`  
@@ -4742,3 +4765,99 @@
 [**4762**](scripts/[clientscript,script4762].cs2)  
 [**4763**](scripts/[clientscript,script4763].cs2)  
 [**4764**](scripts/[clientscript,script4764].cs2)  
+[**4765**](scripts/[proc,script4765].cs2)  
+[**4766**](scripts/[proc,script4766].cs2)  
+[**4767**](scripts/[proc,script4767].cs2)  
+[**4768**](scripts/[proc,script4768].cs2)  
+[**4769**](scripts/[proc,script4769].cs2)  
+[**4770**](scripts/[clientscript,script4770].cs2)  
+[**4771**](scripts/[clientscript,script4771].cs2)  
+[**4772**](scripts/[clientscript,script4772].cs2)  
+[**4773**](scripts/[clientscript,script4773].cs2)  
+[**4774**](scripts/[proc,script4774].cs2)  
+[**4775**](scripts/[proc,script4775].cs2)  
+[**4776**](scripts/[proc,script4776].cs2)  
+[**4777**](scripts/[proc,script4777].cs2)  
+[**4778**](scripts/[proc,script4778].cs2)  
+[**4779**](scripts/[proc,script4779].cs2)  
+[**4780**](scripts/[proc,script4780].cs2)  
+[**4781**](scripts/[clientscript,script4781].cs2)  
+[**4782**](scripts/[proc,script4782].cs2)  
+[**4783**](scripts/[proc,script4783].cs2)  
+[**4784**](scripts/[proc,script4784].cs2)  
+[**4785**](scripts/[proc,script4785].cs2)  
+[**4786**](scripts/[proc,script4786].cs2)  
+[**4787**](scripts/[proc,script4787].cs2)  
+[**4788**](scripts/[proc,script4788].cs2)  
+[**4789**](scripts/[proc,script4789].cs2)  
+[**4790**](scripts/[proc,script4790].cs2)  
+[**4791**](scripts/[clientscript,script4791].cs2)  
+[**4793**](scripts/[proc,script4793].cs2)  
+[**4794**](scripts/[proc,script4794].cs2)  
+[**4795**](scripts/[clientscript,script4795].cs2)  
+[**4796**](scripts/[clientscript,script4796].cs2)  
+[**4797**](scripts/[clientscript,script4797].cs2)  
+[**4798**](scripts/[clientscript,script4798].cs2)  
+[**4799**](scripts/[proc,script4799].cs2)  
+[**4800**](scripts/[proc,script4800].cs2)  
+[**4801**](scripts/[clientscript,script4801].cs2)  
+[**4802**](scripts/[proc,script4802].cs2)  
+[**4803**](scripts/[proc,script4803].cs2)  
+[**4804**](scripts/[clientscript,script4804].cs2)  
+[**4805**](scripts/[proc,script4805].cs2)  
+[**4806**](scripts/[proc,script4806].cs2)  
+[**4807**](scripts/[proc,script4807].cs2)  
+[**4808**](scripts/[proc,script4808].cs2)  
+[**4809**](scripts/[proc,script4809].cs2)  
+[**4810**](scripts/[proc,script4810].cs2)  
+[**4811**](scripts/[clientscript,script4811].cs2)  
+[**4812**](scripts/[clientscript,script4812].cs2)  
+[**4813**](scripts/[proc,script4813].cs2)  
+[**4815**](scripts/[proc,script4815].cs2)  
+[**4816**](scripts/[clientscript,script4816].cs2)  
+[**4817**](scripts/[clientscript,script4817].cs2)  
+[**4818**](scripts/[proc,script4818].cs2)  
+[**4819**](scripts/[proc,script4819].cs2)  
+[**4820**](scripts/[clientscript,script4820].cs2)  
+[**4821**](scripts/[clientscript,script4821].cs2)  
+[**4822**](scripts/[clientscript,script4822].cs2)  
+[**4823**](scripts/[proc,script4823].cs2)  
+[**4824**](scripts/[proc,script4824].cs2)  
+[**4825**](scripts/[proc,script4825].cs2)  
+[**4826**](scripts/[clientscript,script4826].cs2)  
+[**4827**](scripts/[clientscript,script4827].cs2)  
+[**4828**](scripts/[proc,script4828].cs2)  
+[**4829**](scripts/[proc,script4829].cs2)  
+[**4830**](scripts/[clientscript,script4830].cs2)  
+[**4831**](scripts/[proc,script4831].cs2)  
+[**4832**](scripts/[clientscript,script4832].cs2)  
+[**4833**](scripts/[proc,script4833].cs2)  
+[**4834**](scripts/[proc,script4834].cs2)  
+[**4835**](scripts/[clientscript,script4835].cs2)  
+[**4836**](scripts/[proc,script4836].cs2)  
+[**4837**](scripts/[proc,script4837].cs2)  
+[**4838**](scripts/[clientscript,script4838].cs2)  
+[**4839**](scripts/[proc,script4839].cs2)  
+[**4840**](scripts/[proc,script4840].cs2)  
+[**4841**](scripts/[proc,script4841].cs2)  
+[**4842**](scripts/[proc,script4842].cs2)  
+[**4843**](scripts/[proc,script4843].cs2)  
+[**4844**](scripts/[proc,script4844].cs2)  
+[**4845**](scripts/[clientscript,script4845].cs2)  
+[**4846**](scripts/[proc,script4846].cs2)  
+[**4847**](scripts/[clientscript,script4847].cs2)  
+[**4848**](scripts/[proc,script4848].cs2)  
+[**4849**](scripts/[proc,script4849].cs2)  
+[**4850**](scripts/[clientscript,script4850].cs2)  
+[**4851**](scripts/[clientscript,script4851].cs2)  
+[**4852**](scripts/[clientscript,script4852].cs2)  
+[**4853**](scripts/[proc,script4853].cs2)  
+[**4854**](scripts/[clientscript,script4854].cs2)  
+[**4855**](scripts/[clientscript,script4855].cs2)  
+[**4856**](scripts/[proc,script4856].cs2)  
+[**4857**](scripts/[clientscript,script4857].cs2)  
+[**4858**](scripts/[proc,script4858].cs2)  
+[**4859**](scripts/[clientscript,script4859].cs2)  
+[**4860**](scripts/[proc,script4860].cs2)  
+[**4861**](scripts/[clientscript,script4861].cs2)  
+[**4862**](scripts/[proc,script4862].cs2)  

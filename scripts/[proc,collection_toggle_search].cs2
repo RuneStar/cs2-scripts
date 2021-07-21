@@ -1,8 +1,8 @@
 // 4085
 [proc,collection_toggle_search](boolean $boolean0)
 def_component $component1 = interface_621:2;
-def_component $component2 = interface_621:69;
-def_component $component3 = interface_621:80;
+def_component $component2 = interface_621:70;
+def_component $component3 = interface_621:81;
 if (if_gethide($component2) = false | $boolean0 = true) {
 	if_sethide(true, $component2);
 	if_sethide(true, $component3);
@@ -20,6 +20,6 @@ if (if_gethide($component2) = false | $boolean0 = true) {
 	if_sethide(false, $component3);
 	~collection_search_button(0);
 	%varcstring417 = "";
-	~collection_searchbar_set_text(interface_621:72);
-	~collection_searchbar_op(interface_621:74, interface_621:79);
+	~collection_searchbar_set_text(interface_621:73);
+	~collection_searchbar_op(interface_621:75, interface_621:80);
 }

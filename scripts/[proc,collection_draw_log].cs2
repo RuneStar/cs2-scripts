@@ -1,41 +1,42 @@
 // 2732
-[proc,collection_draw_log](struct $struct0)
-def_component $component1 = interface_621:18;
-def_component $component2 = interface_621:19;
-def_component $component3 = interface_621:35;
-def_component $component4 = interface_621:36;
-def_component $component5 = interface_621:38;
-def_int $width6 = 0;
-def_int $height7 = 0;
-def_enum $enum8 = struct_param($struct0, param_690);
-def_int $count9 = 0;
-def_int $count10 = enum_getoutputcount($enum8);
-def_int $int11 = 0;
-def_int $int12 = 0;
+[proc,collection_draw_log](struct $struct0, enum $enum1, int $int2)
+def_component $component3 = interface_621:18;
+def_component $component4 = interface_621:19;
+def_component $component5 = interface_621:36;
+def_component $component6 = interface_621:37;
+def_component $component7 = interface_621:39;
+def_component $component8 = interface_621:20;
+def_int $width9 = 0;
+def_int $height10 = 0;
+def_enum $enum11 = struct_param($struct0, param_690);
+def_int $count12 = 0;
+def_int $count13 = enum_getoutputcount($enum11);
+def_int $int14 = 0;
+def_int $int15 = 0;
 def_string $string0 = "";
 def_string $string1 = "";
 def_string $string2 = "";
 def_string $string3 = "";
-def_int $int13 = 0;
-def_namedobj $namedobj14 = null;
-def_namedobj $namedobj15 = null;
-def_namedobj $namedobj16 = null;
-cc_deleteall($component2);
+def_int $int16 = 0;
+def_namedobj $namedobj17 = null;
+def_namedobj $namedobj18 = null;
+def_namedobj $namedobj19 = null;
+cc_deleteall($component4);
 $string1, $string2, $string3 = ~collection_category_count($struct0);
 if (string_length($string3) ! 0) {
-	if_setsize(if_getwidth($component1), 70, ^setsize_abs, ^setsize_abs, $component1);
-	if_setsize(if_getwidth($component5), 179, ^setsize_abs, ^setsize_abs, $component5);
+	if_setsize(if_getwidth($component3), 70, ^setsize_abs, ^setsize_abs, $component3);
+	if_setsize(if_getwidth($component7), 179, ^setsize_abs, ^setsize_abs, $component7);
 } else if (string_length($string2) ! 0) {
-	if_setsize(if_getwidth($component1), 58, ^setsize_abs, ^setsize_abs, $component1);
-	if_setsize(if_getwidth($component5), 191, ^setsize_abs, ^setsize_abs, $component5);
+	if_setsize(if_getwidth($component3), 58, ^setsize_abs, ^setsize_abs, $component3);
+	if_setsize(if_getwidth($component7), 191, ^setsize_abs, ^setsize_abs, $component7);
 } else if (string_length($string1) ! 0) {
-	if_setsize(if_getwidth($component1), 46, ^setsize_abs, ^setsize_abs, $component1);
-	if_setsize(if_getwidth($component5), 203, ^setsize_abs, ^setsize_abs, $component5);
+	if_setsize(if_getwidth($component3), 46, ^setsize_abs, ^setsize_abs, $component3);
+	if_setsize(if_getwidth($component7), 203, ^setsize_abs, ^setsize_abs, $component7);
 } else {
-	if_setsize(if_getwidth($component1), 41, ^setsize_abs, ^setsize_abs, $component1);
-	if_setsize(if_getwidth($component5), 208, ^setsize_abs, ^setsize_abs, $component5);
+	if_setsize(if_getwidth($component3), 41, ^setsize_abs, ^setsize_abs, $component3);
+	if_setsize(if_getwidth($component7), 208, ^setsize_abs, ^setsize_abs, $component7);
 }
-cc_create($component2, ^iftype_text, $int13);
+cc_create($component4, ^iftype_text, $int16);
 $string0 = struct_param($struct0, param_689);
 cc_settext($string0);
 cc_settextfont(b12_full);
@@ -43,61 +44,62 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 cc_settextshadow(true);
 cc_setcolour(0xff981f);
 cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
-cc_setsize(parawidth($string0, if_getwidth($component2), b12_full), 20, ^setsize_abs, ^setsize_abs);
-$int13 = calc($int13 + 1);
-cc_deleteall($component3);
-while ($count9 < $count10) {
-	if ($width6 > if_getwidth($component3)) {
-		$width6 = 0;
-		$height7 = calc($height7 + 36);
+def_int $int20 = parawidth($string0, if_getwidth($component4), b12_full);
+cc_setsize($int20, 20, ^setsize_abs, ^setsize_abs);
+$int16 = calc($int16 + 1);
+cc_deleteall($component5);
+while ($count12 < $count13) {
+	if ($width9 > if_getwidth($component5)) {
+		$width9 = 0;
+		$height10 = calc($height10 + 36);
 	}
-	$namedobj14 = enum(int, namedobj, $enum8, $count9);
-	$namedobj15 = enum(namedobj, namedobj, enum_3721, $namedobj14);
-	if ($namedobj15 ! null) {
-		$namedobj14 = $namedobj15;
+	$namedobj17 = enum(int, namedobj, $enum11, $count12);
+	$namedobj18 = enum(namedobj, namedobj, enum_3721, $namedobj17);
+	if ($namedobj18 ! null) {
+		$namedobj17 = $namedobj18;
 	}
-	$int11 = inv_total(inv_620, $namedobj14);
-	$namedobj16 = enum(namedobj, namedobj, enum_2108, $namedobj14);
-	if (%varbit6907 = 1 & $namedobj16 ! null) {
-		$namedobj14 = $namedobj16;
+	$int14 = inv_total(inv_620, $namedobj17);
+	$namedobj19 = enum(namedobj, namedobj, enum_2108, $namedobj17);
+	if (%varbit6907 = 1 & $namedobj19 ! null) {
+		$namedobj17 = $namedobj19;
 	}
-	cc_create($component3, ^iftype_graphic, $count9);
+	cc_create($component5, ^iftype_graphic, $count12);
 	cc_setoutline(1);
-	cc_setposition($width6, $height7, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition($width9, $height10, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setop(1, "Check");
-	cc_setopbase("<col=ff9040><oc_name($namedobj14)></col>");
-	cc_setonop("collection_item_click($namedobj14, $int11)");
-	if ($int11 > 1) {
-		cc_setobject($namedobj14, $int11);
+	cc_setopbase("<col=ff9040><oc_name($namedobj17)></col>");
+	cc_setonop("collection_item_click($namedobj17, $int14)");
+	if ($int14 > 1) {
+		cc_setobject($namedobj17, $int14);
 	} else {
-		cc_setobject_nonum($namedobj14, 1);
+		cc_setobject_nonum($namedobj17, 1);
 	}
-	if ($int11 = 0) {
+	if ($int14 = 0) {
 		cc_settrans(175);
 	} else {
-		$int12 = calc($int12 + 1);
+		$int15 = calc($int15 + 1);
 	}
-	$count9 = calc($count9 + 1);
-	$width6 = calc($width6 + 42);
+	$count12 = calc($count12 + 1);
+	$width9 = calc($width9 + 42);
 }
-$height7 = calc($height7 + 36);
-if ($height7 > if_getheight($component3)) {
-	if_setscrollsize(0, $height7, $component3);
+$height10 = calc($height10 + 36);
+if ($height10 > if_getheight($component5)) {
+	if_setscrollsize(0, $height10, $component5);
 } else {
-	if_setscrollsize(0, 0, $component3);
+	if_setscrollsize(0, 0, $component5);
 }
-if_setscrollpos(0, 0, $component3);
-cc_deleteall($component4);
-~scrollbar_vertical($component4, $component3, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-cc_create($component2, ^iftype_text, $int13);
+if_setscrollpos(0, 0, $component5);
+cc_deleteall($component6);
+~scrollbar_vertical($component6, $component5, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+cc_create($component4, ^iftype_text, $int16);
 $string0 = "Obtained: ";
-if ($int12 = $count10) {
-	$string0 = "<$string0><col=0dc10d><tostring($int12)>/<tostring($count10)></col>";
-} else if ($int12 > 0) {
-	$string0 = "<$string0><col=ffff00><tostring($int12)>/<tostring($count10)></col>";
+if ($int15 = $count13) {
+	$string0 = "<$string0><col=0dc10d><tostring($int15)>/<tostring($count13)></col>";
+} else if ($int15 > 0) {
+	$string0 = "<$string0><col=ffff00><tostring($int15)>/<tostring($count13)></col>";
 } else {
-	$string0 = "<$string0><col=ff0000><tostring($int12)>/<tostring($count10)></col>";
+	$string0 = "<$string0><col=ff0000><tostring($int15)>/<tostring($count13)></col>";
 }
 cc_settext($string0);
 cc_settextfont(p11_full);
@@ -109,38 +111,52 @@ if (string_length($string1) ! 0) {
 } else {
 	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom);
 }
-cc_setsize(parawidth($string0, if_getwidth($component2), p11_full), 20, ^setsize_abs, ^setsize_abs);
-$int13 = calc($int13 + 1);
+$int20 = ~max($int20, parawidth($string0, if_getwidth($component4), p11_full));
+cc_setsize($int20, 20, ^setsize_abs, ^setsize_abs);
+$int16 = calc($int16 + 1);
 if (string_length($string3) ! 0) {
-	cc_create($component2, ^iftype_text, $int13);
+	cc_create($component4, ^iftype_text, $int16);
 	cc_settext($string3);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	cc_setcolour(0xff981f);
 	cc_setposition(0, 29, ^setpos_abs_left, ^setpos_abs_bottom);
-	cc_setsize(parawidth($string3, if_getwidth($component2), p11_full), 10, ^setsize_abs, ^setsize_abs);
-	$int13 = calc($int13 + 1);
+	cc_setsize(parawidth($string3, if_getwidth($component4), p11_full), 10, ^setsize_abs, ^setsize_abs);
+	$int16 = calc($int16 + 1);
 }
 if (string_length($string2) ! 0) {
-	cc_create($component2, ^iftype_text, $int13);
+	cc_create($component4, ^iftype_text, $int16);
 	cc_settext($string2);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	cc_setcolour(0xff981f);
 	cc_setposition(0, 17, ^setpos_abs_left, ^setpos_abs_bottom);
-	cc_setsize(parawidth($string2, if_getwidth($component2), p11_full), 10, ^setsize_abs, ^setsize_abs);
-	$int13 = calc($int13 + 1);
+	cc_setsize(parawidth($string2, if_getwidth($component4), p11_full), 10, ^setsize_abs, ^setsize_abs);
+	$int16 = calc($int16 + 1);
 }
 if (string_length($string1) ! 0) {
-	cc_create($component2, ^iftype_text, $int13);
+	cc_create($component4, ^iftype_text, $int16);
 	cc_settext($string1);
 	cc_settextfont(p11_full);
 	cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
 	cc_settextshadow(true);
 	cc_setcolour(0xff981f);
 	cc_setposition(0, 5, ^setpos_abs_left, ^setpos_abs_bottom);
-	cc_setsize(parawidth($string1, if_getwidth($component2), p11_full), 10, ^setsize_abs, ^setsize_abs);
-	$int13 = calc($int13 + 1);
+	cc_setsize(parawidth($string1, if_getwidth($component4), p11_full), 10, ^setsize_abs, ^setsize_abs);
+	$int16 = calc($int16 + 1);
+}
+if (~script4841($enum1, $int2) ! 0) {
+	if_setposition(calc($int20 + 10), 4, ^setpos_abs_left, ^setpos_abs_top, $component8);
+	~script4856($component8);
+	if_setop(1, "Combat Achievements", $component8);
+	if_sethide(false, $component8);
+} else {
+	if_clearops($component8);
+	if_setonmouserepeat(null, $component8);
+	if_setonmouseleave(null, $component8);
+	if_setonop(null, $component8);
+	if_setontimer(null, $component8);
+	if_sethide(true, $component8);
 }

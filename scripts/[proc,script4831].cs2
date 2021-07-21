@@ -1,0 +1,10 @@
+// 4831
+[proc,script4831]
+def_int $int0 = 0;
+def_component $component1 = enum(int, component, enum_3966, $int0);
+while ($component1 ! null) {
+	if_sethide(true, $component1);
+	cc_deleteall($component1);
+	$int0 = calc($int0 + 1);
+	$component1 = enum(int, component, enum_3966, $int0);
+}

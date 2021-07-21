@@ -45,7 +45,7 @@ while ($int8 < $count9) {
 		cc_settrans(200);
 		cc_setonmouseover(null);
 		cc_setonmouseleave(null);
-		~collection_draw_log($struct13);
+		~collection_draw_log($struct13, $enum7, $int8);
 	} else if (~on_mobile = false) {
 		cc_setonmouseover("cc_settrans(event_com, event_comsubid, 225, null)");
 		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, $trans12, null)");

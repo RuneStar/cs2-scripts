@@ -1,0 +1,15 @@
+// 4777
+[proc,script4777](int $int0)(int)
+def_int $int1 = 0;
+def_int $int2 = 0;
+def_int $int3 = $int1;
+def_int $int4 = 0;
+while ($int1 <= 67) {
+	$int1 = calc($int1 + 1);
+	$int4 = ~script4778($int1);
+	if (enum(int, int, enum_3972, $int1) = $int0 & $int4 > $int2 & $int1 ! 36) {
+		$int3 = $int1;
+		$int2 = $int4;
+	}
+}
+return($int3);

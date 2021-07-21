@@ -1,0 +1,19 @@
+// 3948
+[proc,script3948](component $component0, int $comsubid1, int $comsubid2, int $int3, int $int4, int $int5, fontmetrics $fontmetrics6, string $text0)
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_int $x11 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settext($text0);
+	if ($comsubid2 ! -1 & .cc_find($component0, $comsubid2) = ^true) {
+		$int10 = .cc_getwidth;
+		$int7 = parawidth(cc_gettext, if_getwidth($component0), $fontmetrics6);
+		$int8 = calc($int4 + $int5 / 2);
+		$int9 = calc($int8 - ($int7 + $int10 + 4) / 2);
+		$x11 = calc($int9 + $int10 + 4);
+		cc_setposition($x11, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition($int9, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	}
+}

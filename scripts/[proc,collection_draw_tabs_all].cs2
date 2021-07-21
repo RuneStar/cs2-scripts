@@ -8,28 +8,28 @@
 if_sethide(true, interface_621:10);
 if_sethide(true, interface_621:13);
 if_sethide(true, interface_621:14);
-if_sethide(true, interface_621:21);
 if_sethide(true, interface_621:22);
 if_sethide(true, interface_621:23);
 if_sethide(true, interface_621:24);
-if_sethide(true, interface_621:26);
+if_sethide(true, interface_621:25);
 if_sethide(true, interface_621:27);
 if_sethide(true, interface_621:28);
+if_sethide(true, interface_621:29);
 switch_int ($int0) {
 	case 0 :
 		if_sethide(false, interface_621:10);
 		if_sethide(false, interface_621:13);
 	case 1 :
 		if_sethide(false, interface_621:14);
-		if_sethide(false, interface_621:21);
-	case 2 :
 		if_sethide(false, interface_621:22);
+	case 2 :
 		if_sethide(false, interface_621:23);
-	case 3 :
 		if_sethide(false, interface_621:24);
-		if_sethide(false, interface_621:26);
-	case 4 :
+	case 3 :
+		if_sethide(false, interface_621:25);
 		if_sethide(false, interface_621:27);
+	case 4 :
 		if_sethide(false, interface_621:28);
+		if_sethide(false, interface_621:29);
 }
 ~collection_search_init;
