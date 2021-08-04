@@ -7,6 +7,9 @@ def_maparea $maparea3 = _6623($coord1);
 def_int $int4 = -1;
 def_int $int5 = -1;
 $int4, $int5 = worldmap_getdisplayposition;
+if (worldmap_coordinmap($maparea3, $coord1) = false) {
+	return;
+}
 if ($maparea3 ! worldmap_getcurrentmap) {
 	worldmap_setmap($maparea3);
 }

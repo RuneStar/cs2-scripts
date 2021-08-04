@@ -1,18 +1,18 @@
 // 896
-[clientscript,mole_go_splat](int $int0)
-def_enum $enum1 = ~toplevel_getcomponents;
-if ($enum1 = null) {
+[clientscript,mole_go_splat](int $int0, model $model1)
+def_enum $enum2 = ~toplevel_getcomponents;
+if ($enum2 = null) {
 	return;
 }
-def_component $component2 = enum(component, component, $enum1, interface_161:3);
-if ($component2 = null) {
+def_component $component3 = enum(component, component, $enum2, interface_161:3);
+if ($component3 = null) {
 	return;
 }
-cc_deleteall($component2);
-cc_create($component2, ^iftype_model, 0);
+cc_deleteall($component3);
+cc_create($component3, ^iftype_model, 0);
 cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
 cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
-cc_setmodel(model_12027);
+cc_setmodel($model1);
 cc_setmodelanim(seq_3320);
-~mole_splat_zoom($component2);
+~mole_splat_zoom($component3);
 cc_setontimer("mole_go_splat_off(event_com, event_comsubid, calc(clientclock + $int0))");
