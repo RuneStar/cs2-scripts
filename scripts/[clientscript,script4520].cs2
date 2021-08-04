@@ -1,32 +1,33 @@
 // 4520
 [clientscript,script4520](component $component0, int $comsubid1, boolean $boolean2)
-def_int $int3 = 1;
-def_int $int4 = 35;
-def_int $int5 = %varcint467;
-def_int $int6 = %varcint468;
-def_int $clock7 = %varcint469;
+def_int $int3 = calc(35 - 2);
+def_int $int4 = 1;
+def_int $int5 = $int3;
+def_int $int6 = %varcint467;
+def_int $int7 = %varcint468;
+def_int $clock8 = %varcint469;
 if ($boolean2 = false) {
-	$int5 = %varcint470;
-	$int6 = %varcint471;
-	$clock7 = %varcint472;
-	$int3 = 35;
-	$int4 = 1;
+	$int6 = %varcint470;
+	$int7 = %varcint471;
+	$clock8 = %varcint472;
+	$int4 = $int3;
+	$int5 = 1;
 }
-def_int $int8 = 1;
-if ($int5 <= 0) {
-	$int8 = 0;
+def_int $int9 = 1;
+if ($int6 <= 0) {
+	$int9 = 0;
 }
-$int5 = calc(~max($int5, 1) * 30);
 $int6 = calc(~max($int6, 1) * 30);
-def_int $int9 = calc($clock7 + $int6);
-def_int $int10 = interpolate($int3, $int4, 0, $int5, calc($int5 - $int6));
-def_int $int11 = $int4;
-if ($int8 = 1) {
-	$int11 = interpolate($int10, $int4, $clock7, $int9, clientclock);
+$int7 = calc(~max($int7, 1) * 30);
+def_int $int10 = calc($clock8 + $int7);
+def_int $int11 = interpolate($int4, $int5, 0, $int6, calc($int6 - $int7));
+def_int $int12 = $int5;
+if ($int9 = 1) {
+	$int12 = interpolate($int11, $int5, $clock8, $int10, clientclock);
 } else {
-	$int11 = 0;
+	$int12 = 0;
 }
 if (cc_find($component0, $comsubid1) = ^true) {
-	cc_setsize(cc_getwidth, $int11, ^setsize_abs, ^setsize_abs);
-	cc_setposition(cc_getx, calc(35 - $int11), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setsize(cc_getwidth, $int12, ^setsize_abs, ^setsize_abs);
+	cc_setposition(cc_getx, calc($int3 - $int12), ^setpos_abs_left, ^setpos_abs_top);
 }

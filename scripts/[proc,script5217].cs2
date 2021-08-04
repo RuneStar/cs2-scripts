@@ -1,0 +1,15 @@
+// 5217
+[proc,script5217](string $string0)(int)
+if (compare($string0, chat_playername) = 0) {
+	return(1);
+}
+if (friend_test($string0) = true) {
+	return(1);
+}
+if (~script5215($string0, 0) = 1) {
+	if (ignore_test($string0) = false) {
+		return(1);
+	}
+	return(-1);
+}
+return(0);

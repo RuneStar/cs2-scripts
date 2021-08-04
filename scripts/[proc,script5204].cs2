@@ -1,0 +1,16 @@
+// 5204
+[proc,script5204]
+def_int $int0 = 2;
+def_int $int1 = 50;
+def_int $int2 = ~script5196(%var3156, highlight_current_tile_colour_3649);
+def_int $int3 = 10;
+if (%varbit12978 = 1) {
+	if (%varbit12981 = 1) {
+		$int3 = calc($int3 + 16);
+	}
+	_7035(3, $int2, $int0, $int1, $int3);
+	_7036(coord, 3, 1);
+} else {
+	_7039(3);
+	_7035(3, -1, 0, 0, 0);
+}

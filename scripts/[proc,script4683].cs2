@@ -33,5 +33,9 @@ switch_int ($int0) {
 		if (%varcint524 <= 0 | %varbit12413 = 0) {
 			return(0);
 		}
+	case 42 :
+		if (%var3160 = null | inv_getobj(worn, 3) ! %var3160 | %var3159 <= 0) {
+			return(0);
+		}
 }
 return(1);

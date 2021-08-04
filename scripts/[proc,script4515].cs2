@@ -34,7 +34,7 @@ cc_create($component0, ^iftype_rectangle, $int5);
 $int5 = calc($int5 + 1);
 cc_setsize(35, $int15, ^setsize_abs, ^setsize_abs);
 cc_setposition($int4, $y16, ^setpos_abs_left, ^setpos_abs_top);
-cc_settrans(200);
+cc_settrans(interpolate(255, 0, 0, 100, 40));
 cc_setcolour(^black);
 cc_settiling(true);
 cc_setfill(true);
@@ -43,9 +43,9 @@ $int5 = calc($int5 + 1);
 cc_setsize(35, $int12, ^setsize_abs, ^setsize_abs);
 cc_setposition($int4, $y14, ^setpos_abs_left, ^setpos_abs_top);
 if (stat($stat2) < stat_base($stat2)) {
-	cc_setcolour(0xd30b0b);
+	cc_setcolour(0xff8888);
 } else {
-	cc_setcolour(0x00b503);
+	cc_setcolour(0x93ff7a);
 }
 cc_settextfont(p12_full);
 cc_settextshadow(true);

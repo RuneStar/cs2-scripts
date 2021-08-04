@@ -12,28 +12,52 @@ if (~script4683($int5) = 0) {
 	return(0);
 }
 def_int $int7 = ~script4682($int5);
-def_boolean $boolean8 = false;
+def_int $int8 = 0;
 if ($int6 = 2 | $int6 = 3 | $int6 = 4) {
 	if ($int7 <= 0) {
 		return(0);
 	}
 	$int7 = ~script4666($int6, $int7);
-	$boolean8 = true;
+	$int8 = 1;
 }
-def_namedobj $namedobj9 = struct_param($struct3, param_1281);
-def_enum $enum10 = struct_param($struct3, param_1286);
-def_inv $inv11 = struct_param($struct3, param_1283);
-def_boolean $boolean12 = struct_param($struct3, param_1282);
-if ($namedobj9 = null & $enum10 ! null) {
-	$namedobj9 = enum(int, namedobj, $enum10, $int4);
-}
-if ($boolean12 = true) {
-	if ($namedobj9 = null | $inv11 = null) {
+def_obj $obj9 = null;
+def_enum $enum10 = null;
+def_inv $inv11 = null;
+def_boolean $boolean12 = false;
+if ($int6 = 5) {
+	$inv11 = struct_param($struct3, param_1283);
+	if ($inv11 = null) {
 		return(0);
 	}
-	$int7 = inv_total($inv11, $namedobj9);
+	$obj9 = inv_getobj($inv11, struct_param($struct3, param_1351));
+	if ($obj9 = null) {
+		return(0);
+	}
+	$int7 = inv_getnum($inv11, struct_param($struct3, param_1351));
 	if ($int7 <= 0) {
 		return(0);
+	} else if (struct_param($struct3, param_1352) = true & oc_stackable($obj9) = false) {
+		return(0);
+	}
+} else {
+	$obj9 = struct_param($struct3, param_1281);
+	$enum10 = struct_param($struct3, param_1286);
+	$inv11 = struct_param($struct3, param_1283);
+	$boolean12 = struct_param($struct3, param_1282);
+	if ($obj9 = null & $enum10 ! null) {
+		$obj9 = enum(int, namedobj, $enum10, $int4);
+	}
+	if ($obj9 = null) {
+		$obj9 = ~script5195($int5);
+	}
+	if ($boolean12 = true) {
+		if ($obj9 = null | $inv11 = null) {
+			return(0);
+		}
+		$int7 = inv_total($inv11, $obj9);
+		if ($int7 <= 0) {
+			return(0);
+		}
 	}
 }
 def_int $int13 = struct_param($struct3, param_1276);
@@ -92,16 +116,16 @@ if (struct_param($struct3, param_1285) ! null & $int4 ! -1) {
 }
 if ($graphic19 ! null) {
 	cc_setgraphic($graphic19);
-} else if ($namedobj9 ! null) {
+} else if ($obj9 ! null) {
 	cc_setoutline(1);
-	cc_setobject_nonum(oc_uncert($namedobj9), 100000);
+	cc_setobject_nonum(oc_uncert($obj9), 100000);
 }
 $int1 = calc($int1 + 1);
 if (struct_param($struct3, param_1288) = true) {
-	~script4679($int5, $int6, ~script4681($int5), $component0, $component2, $int1, $boolean8, struct_param($struct3, param_1290), struct_param($struct3, param_1291));
+	~script4679($int5, $struct3, ~script4681($int5), $component0, $component2, $int1);
 }
 cc_create($component0, ^iftype_text, $int1);
-if ($boolean8 = true) {
+if ($int8 = 1) {
 	cc_setposition($int14, calc($int15 + 1), ^setpos_abs_left, ^setpos_abs_bottom);
 	cc_setsize(calc(37 - 3), 12, ^setsize_abs, ^setsize_abs);
 	cc_setcolour(^white);

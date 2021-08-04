@@ -5,32 +5,38 @@ def_int $int3 = 0;
 def_int $int4 = -1;
 switch_enum ($enum1) {
 	case enum_1131 :
-		$x2, $int3 = calc(if_getwidth(interface_164:40) - 33), if_getheight(interface_164:40);
-		if (calc(if_getwidth($component0) - if_getwidth(enum(component, component, $enum1, interface_161:37))) < 429) {
-			if_setposition(0, calc($int3 + if_getheight(interface_164:55)), ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, interface_164:72));
-			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:55);
+		$x2, $int3 = calc(if_getwidth(interface_164:41) - 33), if_getheight(interface_164:41);
+		if (calc(if_getwidth($component0) - if_getwidth(enum(component, component, $enum1, interface_161:38))) < 429) {
+			if_setposition(0, calc($int3 + if_getheight(interface_164:56)), ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, interface_164:73));
+			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:56);
 		} else {
-			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, interface_164:72));
-			if_setposition($x2, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:55);
+			if_setposition(0, $int3, ^setpos_abs_right, ^setpos_abs_bottom, enum(component, component, $enum1, interface_164:73));
+			if_setposition($x2, 0, ^setpos_abs_right, ^setpos_abs_bottom, interface_164:56);
 		}
 		if (%varbit4084 = 1) {
-			_2122("resize_map_mask", enum(component, component, $enum1, interface_161:33));
+			_2122("resize_map_mask", enum(component, component, $enum1, interface_161:34));
 		} else {
-			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:33));
+			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:34));
 		}
 		%varcint384 = clientclock;
+		if (~on_enhanced = 1) {
+			if_sethide(~int_to_bool(%varbit12986), interface_164:26);
+		}
 	case enum_1130 :
 		if (%varbit4084 = 1) {
-			_2122("resize_map_mask", enum(component, component, $enum1, interface_161:33));
+			_2122("resize_map_mask", enum(component, component, $enum1, interface_161:34));
 		} else {
-			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:33));
+			_2122("resize_map_clickmask", enum(component, component, $enum1, interface_161:34));
 		}
 		%varcint384 = clientclock;
+		if (~on_enhanced = 1) {
+			if_sethide(~int_to_bool(%varbit12986), interface_161:26);
+		}
 	case enum_1129 :
 		if (~wiki_icon_enabled = 1) {
-			_2122("graphic_2422", enum(component, component, $enum1, interface_161:33));
+			_2122("graphic_2422", enum(component, component, $enum1, interface_161:34));
 		} else {
-			_2122("fixed_map_clickmask", enum(component, component, $enum1, interface_161:33));
+			_2122("fixed_map_clickmask", enum(component, component, $enum1, interface_161:34));
 		}
 	case enum_1745 :
 		if (%varbit6257 = 1 | %varbit542 = 1) {

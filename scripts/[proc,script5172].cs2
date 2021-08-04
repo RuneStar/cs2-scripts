@@ -1,0 +1,7 @@
+// 5172
+[proc,script5172]
+%varcint538 = calc(stat_base(agility) + 1);
+def_int $int0 = calc(enum(int, int, enum_256, %varcint538) - stat_xp(agility));
+if (%varcint539 ! 0) {
+	%varcint534 = calc($int0 / %varcint539);
+}

@@ -10,7 +10,7 @@ def_component $component2 = enum(component, component, $enum1, interface_161:25)
 if ($component2 ! null) {
 	if_sethide(~int_to_bool(%varbit542), $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:34);
+$component2 = enum(component, component, $enum1, interface_161:35);
 if ($component2 ! null) {
 	if (%varbit542 = 1 | %varbit4606 ! 0) {
 		if_sethide(true, $component2);
@@ -112,7 +112,7 @@ if ($component9 ! null) {
 if ($component7 ! null) {
 	if_setgraphic(enum(int, graphic, enum_3841, %varbit930), $component7);
 }
-$component7 = enum(component, component, $enum1, interface_161:40);
+$component7 = enum(component, component, $enum1, interface_161:41);
 if ($component7 ! null) {
 	if (%varbit4609 = 1) {
 		if_setgraphic("tradebacking_dark", $component7);
@@ -156,7 +156,7 @@ if (%varbit542 = 0) {
 } else {
 	if_sethide(true, $component2);
 }
-$component2 = enum(component, component, $enum1, interface_161:37);
+$component2 = enum(component, component, $enum1, interface_161:38);
 if ($enum1 = enum_1745) {
 	if (%varbit542 = 1 & %varbit4606 = 3) {
 		if_setposition(0, 5, ^setpos_abs_centre, ^setpos_abs_bottom, $component2);
@@ -190,6 +190,24 @@ if ($enum1 = enum_1745) {
 		if_sethide(true, interface_601:38);
 	}
 }
+$component2 = enum(component, component, $enum1, interface_161:8);
+if (%varbit542 = 0) {
+	if_sethide(false, $component2);
+} else {
+	if_sethide(true, $component2);
+}
+$component2 = enum(component, component, $enum1, interface_161:6);
+if (%varbit542 = 0) {
+	if_sethide(false, $component2);
+} else {
+	if_sethide(true, $component2);
+}
+$component2 = enum(component, component, $enum1, interface_161:4);
+if (%varbit542 = 0) {
+	if_sethide(false, $component2);
+} else {
+	if_sethide(true, $component2);
+}
 if (%varbit4134 = 1) {
 	mousecam(false);
 } else {
@@ -207,6 +225,12 @@ if (%varbit5599 = 1) {
 }
 ~options_setfps;
 ~script4726;
+$component2 = enum(component, component, $enum1, interface_161:40);
+if (%varbit542 = 0) {
+	if_sethide(false, $component2);
+} else {
+	if_sethide(true, $component2);
+}
 ~script445;
 ~script2177;
 ~script2178;

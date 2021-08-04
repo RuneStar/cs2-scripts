@@ -1,0 +1,6 @@
+// 5196
+[proc,script5196](int $int0, struct $struct1)(int)
+if ($int0 = -1 | $int0 < 1) {
+	$int0 = calc(struct_param($struct1, param_1230) + 1);
+}
+return(calc($int0 - 1));

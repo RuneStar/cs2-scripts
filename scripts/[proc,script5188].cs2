@@ -1,0 +1,7 @@
+// 5188
+[proc,script5188]
+if (testbit(%varbit11959, 0) = ^false) {
+	%varbit11959 = setbit(%varbit11959, 0);
+} else {
+	%varbit11959 = clearbit(%varbit11959, 0);
+}

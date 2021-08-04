@@ -5,14 +5,18 @@ def_int $int3 = 41;
 def_int $int4 = 20;
 def_int $colour5 = 0xff981f;
 def_int $width6 = 0;
-def_fontmetrics $fontmetrics7 = b12_full;
+def_fontmetrics $fontmetrics7 = p12_full;
 def_int $int8 = %var261;
 def_int $int9 = 0;
 def_int $int10 = 0;
 def_string $string0 = "N/A";
 if ($int8 > -1) {
 	if ($int8 > 0) {
-		$string0 = ~script2275($int8);
+		if (%varbit11866 = 1) {
+			$string0 = ~time_convert_ms($int8);
+		} else {
+			$string0 = ~time_convert($int8);
+		}
 	}
 	cc_create($component0, ^iftype_text, $int2);
 	cc_setsize($width6, $int4, ^setsize_minus, ^setsize_abs);

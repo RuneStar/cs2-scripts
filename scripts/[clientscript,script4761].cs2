@@ -1,11 +1,7 @@
 // 4761
 [clientscript,script4761](int $int0)
-def_int $int1 = %var3108;
 if ($int0 = 0) {
-	if ($int1 < 1) {
-		$int1 = calc(struct_param(tile_highlight_colour_3005, param_1230) + 1);
-	}
-	_7035(6, calc($int1 - 1), 2, 50, 90);
+	_7035(6, ~script5196(%var3108, tile_highlight_colour_3005), 2, 50, 90);
 	_6708(1, "Mark tile", 4762);
 } else {
 	_7035(6, -1, 0, 0, 64);

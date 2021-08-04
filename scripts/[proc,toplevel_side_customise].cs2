@@ -6,13 +6,13 @@ if ($enum0 = enum_1131 | $enum0 = enum_1745) {
 	if (%varcint171 ! -1) {
 		$component1 = enum(int, component, enum_1137, %varcint171);
 	}
-	$component2 = enum(component, component, $enum0, interface_164:72);
-	if ((if_hassub(enum(component, component, $enum0, interface_161:76)) = true | $component1 ! null & if_hassub(enum(component, component, $enum0, $component1)) = true) & ~script4138 = 0) {
+	$component2 = enum(component, component, $enum0, interface_164:73);
+	if ((if_hassub(enum(component, component, $enum0, interface_161:77)) = true | $component1 ! null & if_hassub(enum(component, component, $enum0, $component1)) = true) & ~script4138 = 0) {
 		if_sethide(false, $component2);
 		if ($enum0 = enum_1745) {
 			switch_component ($component1) {
-				case interface_161:78, interface_161:83, interface_161:84, interface_161:90, interface_161:86, interface_161:87, interface_161:85 :
-					if (if_hassub(enum(component, component, $enum0, interface_161:76)) = true & if_hassub(enum(component, component, $enum0, interface_161:20)) = true) {
+				case interface_161:79, interface_161:84, interface_161:85, interface_161:91, interface_161:87, interface_161:88, interface_161:86 :
+					if (if_hassub(enum(component, component, $enum0, interface_161:77)) = true & if_hassub(enum(component, component, $enum0, interface_161:20)) = true) {
 						if_setposition(37, 87, ^setpos_abs_right, ^setpos_abs_centre, $component2);
 					} else {
 						if_setposition(37, 87, ^setpos_abs_left, ^setpos_abs_centre, $component2);
@@ -27,11 +27,11 @@ if ($enum0 = enum_1131 | $enum0 = enum_1745) {
 	~script2526;
 	%varcint384 = clientclock;
 	~script2386;
-	if (if_gethide(enum(component, component, $enum0, interface_161:60)) = true) {
-		if_sethide(true, enum(component, component, $enum0, interface_161:48));
-		if_sethide(true, enum(component, component, $enum0, interface_161:55));
+	if (if_gethide(enum(component, component, $enum0, interface_161:61)) = true) {
+		if_sethide(true, enum(component, component, $enum0, interface_161:49));
+		if_sethide(true, enum(component, component, $enum0, interface_161:56));
 	} else {
-		if_sethide(false, enum(component, component, $enum0, interface_161:48));
-		if_sethide(false, enum(component, component, $enum0, interface_161:55));
+		if_sethide(false, enum(component, component, $enum0, interface_161:49));
+		if_sethide(false, enum(component, component, $enum0, interface_161:56));
 	}
 }

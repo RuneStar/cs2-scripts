@@ -7,7 +7,7 @@ if ($layer13 ! null) {
 	$width11 = if_getwidth($layer13);
 	$height12 = if_getheight($layer13);
 }
-if (%varcint222 = $clock9 & $clock10 = %varcint384 & %varcint381 = $int8 & $width11 = $width6 & $height12 = $height7 & calc(clientclock % 75) ! 0) {
+if (%varcint222 = $clock9 & $clock10 = %varcint384 & %varcint381 = $int8 & $width11 = $width6 & $height12 = $height7 & calc(clientclock % 40) ! 0) {
 	return;
 }
 def_int $int14 = 0;
@@ -140,10 +140,10 @@ if ($boolean21 = true & $enum23 = enum_1745) {
 		$int29 = 0;
 	}
 	if ($int26 = 1 & (testbit($int2, 4) = ^false | ~chatbox_open = 1)) {
-		$int15 = calc($int15 + if_getwidth(enum(component, component, $enum23, interface_164:72)));
+		$int15 = calc($int15 + if_getwidth(enum(component, component, $enum23, interface_164:73)));
 	}
 	if ($int27 = 1) {
-		$int35 = calc($int35 + if_getwidth(enum(component, component, $enum23, interface_164:72)));
+		$int35 = calc($int35 + if_getwidth(enum(component, component, $enum23, interface_164:73)));
 	}
 	if ($int28 = 1) {
 		if (%varbit6254 = 0) {

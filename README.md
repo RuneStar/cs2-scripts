@@ -1766,6 +1766,7 @@
 [**1763**](scripts/[worldmapelementmouserepeat,3].cs2) `[worldmapelementmouserepeat,3]`  
 [**1764**](scripts/[worldmapelementmouserepeat,4].cs2) `[worldmapelementmouserepeat,4]`  
 [**1765**](scripts/[worldmapelementmouserepeat,5].cs2) `[worldmapelementmouserepeat,5]`  
+[**1766**](scripts/[clientscript,script1766].cs2)  
 [**1767**](scripts/[worldmapelementmouserepeat,7].cs2) `[worldmapelementmouserepeat,7]`  
 [**1768**](scripts/[worldmapelementmouserepeat,8].cs2) `[worldmapelementmouserepeat,8]`  
 [**1769**](scripts/[worldmapelementmouserepeat,9].cs2) `[worldmapelementmouserepeat,9]`  
@@ -1853,6 +1854,7 @@
 [**1851**](scripts/[worldmapelementmouseleave,3].cs2) `[worldmapelementmouseleave,3]`  
 [**1852**](scripts/[worldmapelementmouseleave,4].cs2) `[worldmapelementmouseleave,4]`  
 [**1853**](scripts/[worldmapelementmouseleave,5].cs2) `[worldmapelementmouseleave,5]`  
+[**1854**](scripts/[proc,script1854].cs2)  
 [**1855**](scripts/[worldmapelementmouseleave,7].cs2) `[worldmapelementmouseleave,7]`  
 [**1856**](scripts/[worldmapelementmouseleave,8].cs2) `[worldmapelementmouseleave,8]`  
 [**1857**](scripts/[worldmapelementmouseleave,9].cs2) `[worldmapelementmouseleave,9]`  
@@ -5163,3 +5165,60 @@
 [**5162**](scripts/[clientscript,script5162].cs2)  
 [**5163**](scripts/[clientscript,script5163].cs2)  
 [**5164**](scripts/[clientscript,script5164].cs2)  
+[**5165**](scripts/[clientscript,script5165].cs2)  
+[**5166**](scripts/[proc,script5166].cs2)  
+[**5167**](scripts/[clientscript,script5167].cs2)  
+[**5168**](scripts/[proc,script5168].cs2)  
+[**5169**](scripts/[proc,script5169].cs2)  
+[**5170**](scripts/[clientscript,script5170].cs2)  
+[**5171**](scripts/[proc,script5171].cs2)  
+[**5172**](scripts/[proc,script5172].cs2)  
+[**5173**](scripts/[clientscript,script5173].cs2)  
+[**5174**](scripts/[clientscript,script5174].cs2)  
+[**5175**](scripts/[clientscript,script5175].cs2)  
+[**5176**](scripts/[clientscript,script5176].cs2)  
+[**5177**](scripts/[clientscript,script5177].cs2)  
+[**5178**](scripts/[clientscript,script5178].cs2)  
+[**5179**](scripts/[clientscript,script5179].cs2)  
+[**5180**](scripts/[clientscript,script5180].cs2)  
+[**5181**](scripts/[clientscript,script5181].cs2)  
+[**5182**](scripts/[proc,script5182].cs2)  
+[**5183**](scripts/[proc,script5183].cs2)  
+[**5184**](scripts/[proc,script5184].cs2)  
+[**5185**](scripts/[proc,script5185].cs2)  
+[**5186**](scripts/[proc,script5186].cs2)  
+[**5187**](scripts/[proc,script5187].cs2)  
+[**5188**](scripts/[proc,script5188].cs2)  
+[**5189**](scripts/[proc,script5189].cs2)  
+[**5190**](scripts/[proc,script5190].cs2)  
+[**5191**](scripts/[clientscript,script5191].cs2)  
+[**5192**](scripts/[clientscript,script5192].cs2)  
+[**5193**](scripts/[proc,script5193].cs2)  
+[**5194**](scripts/[clientscript,script5194].cs2)  
+[**5195**](scripts/[proc,script5195].cs2)  
+[**5196**](scripts/[proc,script5196].cs2)  
+[**5197**](scripts/[clientscript,script5197].cs2)  
+[**5198**](scripts/[proc,script5198].cs2)  
+[**5199**](scripts/[clientscript,script5199].cs2)  
+[**5200**](scripts/[proc,script5200].cs2)  
+[**5201**](scripts/[proc,script5201].cs2)  
+[**5202**](scripts/[clientscript,script5202].cs2)  
+[**5203**](scripts/[clientscript,script5203].cs2)  
+[**5204**](scripts/[proc,script5204].cs2)  
+[**5205**](scripts/[clientscript,script5205].cs2)  
+[**5206**](scripts/[proc,script5206].cs2)  
+[**5207**](scripts/[proc,script5207].cs2)  
+[**5208**](scripts/[clientscript,script5208].cs2)  
+[**5209**](scripts/[clientscript,script5209].cs2)  
+[**5210**](scripts/[proc,script5210].cs2)  
+[**5211**](scripts/[clientscript,script5211].cs2)  
+[**5212**](scripts/[proc,script5212].cs2)  
+[**5213**](scripts/[proc,script5213].cs2)  
+[**5214**](scripts/[clientscript,script5214].cs2)  
+[**5215**](scripts/[proc,script5215].cs2)  
+[**5216**](scripts/[proc,script5216].cs2)  
+[**5217**](scripts/[proc,script5217].cs2)  
+[**5218**](scripts/[clientscript,script5218].cs2)  
+[**5219**](scripts/[proc,script5219].cs2)  
+[**5220**](scripts/[proc,script5220].cs2)  
+[**5221**](scripts/[clientscript,script5221].cs2)  

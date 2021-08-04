@@ -1,0 +1,15 @@
+// 5216
+[proc,script5216](string $string0)(int)
+def_int $int0 = 0;
+def_int $int1 = 0;
+def_string $string1 = "";
+def_int $int2 = activeclanchannel_getusercount;
+while ($int1 < $int2 & $int0 = 0) {
+	$string1 = activeclanchannel_getuserdisplayname($int1);
+	if (compare($string1, $string0) = 0) {
+		$int0 = 1;
+	} else {
+		$int1 = calc($int1 + 1);
+	}
+}
+return($int0);

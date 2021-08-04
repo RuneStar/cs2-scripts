@@ -1,0 +1,6 @@
+// 5215
+[proc,script5215](string $string0, int $clanslot0)(int)
+if (activeclanchannel_find_affined($clanslot0) = true) {
+	return(~script5216($string0));
+}
+return(0);

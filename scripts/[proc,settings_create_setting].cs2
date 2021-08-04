@@ -1,59 +1,77 @@
 // 3841
-[proc,settings_create_setting](struct $struct0, struct $struct1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, int $int19, int $int20, int $int21, int $int22, string $string0, component $component23)(int, int, int, int, int, int, int)
-def_int $int24 = struct_param($struct0, param_1078);
-def_int $int25 = ~settings_check_block($struct0);
+[proc,settings_create_setting](struct $struct0, struct $struct1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14, component $component15, component $component16, component $component17, component $component18, int $int19, int $int20, int $int21, int $int22, string $string0, component $component23, int $int24)(int, int, int, int, int, int, int)
+def_int $int25 = struct_param($struct0, param_1078);
+def_int $int26 = ~settings_check_block($struct0);
 if (struct_param($struct0, param_1229) = true & ~settings_custom_check(struct_param($struct0, param_1077)) = 0) {
-	$int25 = 1;
+	$int26 = 1;
 }
-def_int $int26 = struct_param($struct0, param_1090);
-if ($int22 = 0 & $int26 > 0 & ~settings_seemore_check($int26) = 0) {
-	$int25 = 1;
+def_int $int27 = calc($int24 + 1);
+def_enum $enum28 = struct_param($struct1, param_745);
+def_int $int29 = enum_getoutputcount($enum28);
+def_struct $struct30 = null;
+if ($int25 = 5) {
+	$int26 = 1;
+	while ($int27 < $int29) {
+		$struct30 = enum(int, struct, $enum28, $int27);
+		if (struct_param($struct30, param_1078) = 5) {
+			$int27 = $int29;
+		} else if (~settings_check_block($struct30) = 0) {
+			$int26 = 0;
+			$int27 = $int29;
+		} else {
+			$int27 = calc($int27 + 1);
+		}
+	}
 }
-if ($int24 = 7 & $int22 = 1) {
-	$int25 = 1;
+def_int $int31 = struct_param($struct0, param_1090);
+if ($int22 = 0 & $int31 > 0 & ~settings_seemore_check($int31) = 0) {
+	$int26 = 1;
 }
-def_int $int27 = 0;
-def_boolean $boolean28 = ~on_mobile;
+if ($int25 = 7 & $int22 = 1) {
+	$int26 = 1;
+}
+def_int $int32 = 0;
+def_boolean $boolean33 = ~on_mobile;
 if ($int22 = 1) {
 	if (string_indexof_string(lowercase(struct_param($struct0, param_1088)), lowercase($string0), 0) ! -1) {
-		$int27 = 1;
+		$int32 = 1;
 	} else if (string_indexof_string(lowercase(struct_param($struct0, param_1086)), lowercase($string0), 0) ! -1) {
-		$int27 = 1;
-	} else if ($boolean28 = false & string_indexof_string(lowercase(struct_param($struct0, param_1096)), lowercase($string0), 0) ! -1) {
-		$int27 = 1;
-	} else if ($boolean28 = true & string_indexof_string(lowercase(struct_param($struct0, param_1097)), lowercase($string0), 0) ! -1) {
-		$int27 = 1;
+		$int32 = 1;
+	} else if ($boolean33 = false & string_indexof_string(lowercase(struct_param($struct0, param_1096)), lowercase($string0), 0) ! -1) {
+		$int32 = 1;
+	} else if ($boolean33 = true & string_indexof_string(lowercase(struct_param($struct0, param_1097)), lowercase($string0), 0) ! -1) {
+		$int32 = 1;
 	} else if (string_indexof_string(lowercase(struct_param($struct1, param_744)), lowercase($string0), 0) ! -1) {
-		$int27 = 1;
+		$int32 = 1;
 	}
-	if ($int27 = 0) {
-		$int25 = 1;
+	if ($int32 = 0) {
+		$int26 = 1;
 	}
 }
-def_int $int29 = 0;
-def_int $int30 = 0;
-if ($int25 = 1) {
+$int27 = 0;
+$int29 = 0;
+if ($int26 = 1) {
 	cc_create($component8, ^iftype_rectangle, $int3);
 	cc_sethide(true);
 	$int3 = calc($int3 + 1);
-	if ($int24 = 1 & struct_param($struct0, param_1105) = true) {
-		$int30 = struct_param($struct0, param_1101);
-		while ($int29 < $int30) {
+	if ($int25 = 1 & struct_param($struct0, param_1105) = true) {
+		$int29 = struct_param($struct0, param_1101);
+		while ($int27 < $int29) {
 			cc_create($component17, ^iftype_rectangle, $int4);
 			$int4 = calc($int4 + 1);
-			$int29 = calc($int29 + 1);
+			$int27 = calc($int27 + 1);
 		}
 	}
 	return($int5, $int6, $int2, $int3, $int4, $int20, $int21);
 }
-if ($int24 ! 3 & $int24 ! 6) {
+if ($int25 ! 3 & $int25 ! 6) {
 	$int20 = ^max_32bit_int;
 	if ($int21 > 0) {
 		$int5 = $int21;
 		$int21 = 0;
 	}
 }
-switch_int ($int24) {
+switch_int ($int25) {
 	case 5 :
 		if ($int3 > 0) {
 			$int5 = calc($int5 + 10);

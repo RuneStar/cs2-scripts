@@ -6,7 +6,7 @@ def_int $int2 = 0;
 ~toplevel_chatbox_background;
 if (~on_mobile = true) {
 	$int2, %varcint42 = 1, -1;
-	if_setsize(519, calc(165 - 23), ^setsize_abs, ^setsize_abs, enum(component, component, ~toplevel_getcomponents, interface_161:37));
+	if_setsize(519, calc(165 - 23), ^setsize_abs, ^setsize_abs, enum(component, component, ~toplevel_getcomponents, interface_161:38));
 	if_sethide(false, interface_162:36);
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top, interface_162:1);
 	if_setsize(519, 30, ^setsize_abs, ^setsize_abs, interface_162:1);
@@ -21,7 +21,7 @@ if (~on_mobile = true) {
 	if_setposition(8, 0, ^setpos_abs_right, ^setpos_abs_centre, interface_162:31);
 	$int1 = 64;
 } else {
-	if_setsize(519, 165, ^setsize_abs, ^setsize_abs, enum(component, component, ~toplevel_getcomponents, interface_161:37));
+	if_setsize(519, 165, ^setsize_abs, ^setsize_abs, enum(component, component, ~toplevel_getcomponents, interface_161:38));
 	if_sethide(true, interface_162:36);
 	if_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_bottom, interface_162:1);
 	if_setsize(519, 23, ^setsize_abs, ^setsize_abs, interface_162:1);
