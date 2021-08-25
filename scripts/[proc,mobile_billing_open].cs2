@@ -1,9 +1,6 @@
 // 2496
 [proc,mobile_billing_open](int $int0, boolean $boolean1)
 if (~on_mobile = true) {
-	if (clienttype = ^clienttype_ios & $int0 = 5) {
-		$int0 = 0;
-	}
 	if (~bonds_hide = 1 & $int0 ! 5) {
 		$int0 = 3;
 		$boolean1 = true;
