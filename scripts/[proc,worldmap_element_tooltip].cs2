@@ -8,7 +8,7 @@ if (%varcint2 = 1) {
 	return;
 }
 def_string $string0 = enum(category, string, enum_1713, mec_category(worldmap_element));
-$string0 = ~script4792($string0, worldmap_element);
+$string0 = ~worldmap_tooltip_override($string0, worldmap_element);
 if (string_length($string0) <= 0) {
 	return;
 }

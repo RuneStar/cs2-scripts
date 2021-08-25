@@ -1,0 +1,7 @@
+// 4704
+[proc,helper_generic_set_size](int $width0, int $height1)
+def_enum $enum2 = ~toplevel_getcomponents;
+def_component $component3 = enum(component, component, $enum2, interface_161:14);
+if ($component3 ! null) {
+	if_setsize($width0, $height1, ^setsize_abs, ^setsize_abs, $component3);
+}

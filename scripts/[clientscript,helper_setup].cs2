@@ -1,0 +1,11 @@
+// 4689
+[clientscript,helper_setup](component $component0, int $int1, int $width2, int $height3)
+if ($int1 = 0) {
+	if_setsize(180, 100, ^setsize_abs, ^setsize_abs, $component0);
+} else if ($int1 = 1) {
+	if_setsize(180, 150, ^setsize_abs, ^setsize_abs, $component0);
+} else if ($int1 = 2) {
+	if_setsize(180, 200, ^setsize_abs, ^setsize_abs, $component0);
+} else {
+	if_setsize($width2, $height3, ^setsize_abs, ^setsize_abs, $component0);
+}

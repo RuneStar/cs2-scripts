@@ -1,0 +1,14 @@
+// 4382
+[proc,clan_applicants_setsize](int $int0, int $int1, int $int2, int $int3, component $component4, component $component5, component $component6, int $height7)
+def_int $int8 = ~min(~max($int3, calc($height7 - 10)), $int0);
+if_setsize(if_getwidth($component6), $int8, ^setsize_abs, ^setsize_abs, $component6);
+def_int $int9 = calc($int8 - $int1);
+if ($int2 > $int9) {
+	if_setscrollsize(0, $int2, $component4);
+	~scrollbar_resize($component5, $component4, %varcint179);
+} else {
+	if_setscrollsize(0, 0, $component4);
+	~scrollbar_resize($component5, $component4, 0);
+	%varcint179 = 0;
+}
+if_setontimer("clan_applicants_checksize($int0, $int1, $int2, $int3, $component4, $component5, $component6, $height7)", $component6);

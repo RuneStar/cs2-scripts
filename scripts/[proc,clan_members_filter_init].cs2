@@ -1,0 +1,34 @@
+// 4237
+[proc,clan_members_filter_init](component $component0, string $string0, component $component1, component $component2)
+cc_deleteall($component0);
+def_int $int3 = 0;
+cc_create($component0, ^iftype_graphic, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setgraphic("tradebacking_dark");
+cc_settiling(true);
+cc_create($component0, ^iftype_rectangle, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(^white);
+cc_setfill(true);
+cc_settrans(255);
+~script4240($component0, cc_getid, 255, 225, 200);
+if_setop(1, "Set", $component0);
+if_setopbase("<col=ff9040><$string0></col>", $component0);
+$int3 = ~thinbox($component0, $int3);
+cc_create($component0, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+.cc_create($component0, ^iftype_graphic, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+.cc_setsize(13, 13, ^setsize_abs, ^setsize_abs);
+cc_setcolour(0xffb83f);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+~clan_members_filter_setrank($component0, $component1, $component2);
+if_setonvartransmit("clan_members_filter_setrank($component0, cc_getid, .cc_getid, $component1, $component2){var3021}", $component0);
+if_setonclansettingstransmit("clan_members_filter_setrank($component0, cc_getid, .cc_getid, $component1, $component2)", $component0);

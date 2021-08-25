@@ -1,0 +1,34 @@
+// 5182
+[proc,helper_agility_draw_content]
+def_string $string0 = enum(int, string, enum_3507, %varbit12633);
+def_string $string1 = "Laps Completed";
+def_string $string2 = "Laps";
+if (%varbit12633 = 2) {
+	$string1 = "Tickets Gained";
+	$string2 = "Tickets";
+}
+def_int $int0 = 0;
+def_int $int1 = 0;
+~helper_generic_setup;
+$int0 = ~helper_generic_add_title($string0);
+if (cc_find(interface_711:3, $int1) = ^true) {
+	cc_setonvartransmit("helper_agility_update_title($int0){var3153}");
+}
+$int0, $int1 = ~helper_generic_add_data("<$string1>: ", "...");
+if (cc_find(interface_711:3, $int1) = ^true) {
+	cc_setonvartransmit("helper_agility_update_laps_completed($int1){var3153}");
+}
+$int0, $int1 = ~helper_generic_add_data("<$string2> Per Hour: ", "...");
+if (cc_find(interface_711:3, $int1) = ^true) {
+	cc_setonvartransmit("script5179($int1){var3153}");
+}
+if (%varcint538 <= 99 & %varbit12633 ! 2) {
+	$int0, $int1 = ~helper_generic_add_data("Laps Until Level <tostring(%varcint538)>: ", "...");
+	if (cc_find(interface_711:3, $int0) = ^true) {
+		cc_setonvartransmit("helper_agility_update_next_level($int0){var3153}");
+	}
+	if (cc_find(interface_711:3, $int1) = ^true) {
+		cc_setonvartransmit("script5180($int1){var3153}");
+	}
+}
+~script4703;

@@ -1,0 +1,46 @@
+// 4253
+[proc,clan_members_showrank](component $component0, int $int1, int $int2)
+def_int $int3 = $int1;
+if_setontimer(null, $component0);
+def_string $text0 = "";
+def_string $string1 = "";
+def_boolean $boolean4 = ~on_mobile;
+def_graphic $graphic5 = null;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+while ($int9 < $int1) {
+	$int8 = activeclansettings_getsortedaffinedslot($int9);
+	if (.cc_find($component0, $int8) = ^true) {
+		if (.cc_gety ! -1) {
+			.cc_sethide(false);
+			cc_create($component0, ^iftype_text, $int3);
+			$int3 = calc($int3 + 1);
+			cc_setsize(16, $int2, ^setsize_minus, ^setsize_abs);
+			cc_setposition(0, $int6, ^setpos_abs_left, ^setpos_abs_top);
+			cc_settextfont(p12_full);
+			cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+			cc_setcolour(0xff981f);
+			cc_settextshadow(true);
+			$text0, $graphic5 = ~script4302(activeclansettings_getaffinedrank($int8));
+			cc_settext($text0);
+			.cc_setop(1, "Edit rank");
+			if ($boolean4 = false) {
+				.cc_setonmouserepeat("clan_members_hover(true, event_com, event_comsubid, .cc_gettrans)");
+			}
+			.cc_setonmouseleave("clan_members_hover(false, event_com, event_comsubid, .cc_gettrans)");
+			.cc_setonop("clan_members_op(event_opindex, event_com, event_comsubid, .cc_gettrans, 0, $string1)");
+			.cc_setontimer(null);
+			$int6, $int7 = calc($int6 + $int2), calc($int7 + 1);
+		} else {
+			.cc_sethide(true);
+			.cc_clearops;
+			.cc_setonmouserepeat(null);
+			.cc_setonmouseleave(null);
+			.cc_setontimer(null);
+			.cc_setonop(null);
+		}
+	}
+	$int9 = calc($int9 + 1);
+}

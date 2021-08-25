@@ -1,0 +1,7 @@
+// 4715
+[clientscript,helper_new_toplevel](enum $enum0, enum $enum1)
+def_component $component2 = enum(component, component, $enum0, interface_161:14);
+def_component $component3 = enum(component, component, $enum1, interface_161:14);
+if ($component2 ! null & $component3 ! null) {
+	if_setsize(if_getwidth($component3), if_getheight($component3), ^setsize_abs, ^setsize_abs, $component2);
+}

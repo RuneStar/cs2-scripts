@@ -1,0 +1,6 @@
+// 4389
+[clientscript,clan_applicants_frameinit](component $component0)
+def_int $comsubid1 = ~steelborder($component0, "", 0);
+~clan_applicants_framedraw($component0, $comsubid1);
+if_setonvartransmit("clan_applicants_framedraw($component0, $comsubid1){var3019}", $component0);
+if_setonclansettingstransmit("clan_applicants_framedraw($component0, $comsubid1)", $component0);

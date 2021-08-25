@@ -2,7 +2,7 @@
 [clientscript,buff_bar_init](component $component0, component $component1, component $component2, component $component3)
 if_setonsubchange("buff_bar_setup($component0, $component1)", $component0);
 if_setonvartransmit("buff_bar_setup($component0, $component1){var1734, var2632, var3074, var3075, var439, var3154}", $component0);
-~script4670($component3, $component2, $component0, $component1);
+~buff_bar_position_init($component3, $component2, $component0, $component1);
 ~buff_bar_setup($component0, $component1);
 ~deltooltip_action($component1);
 %varcint382 = -1;

@@ -1,0 +1,12 @@
+// 4219
+[proc,loading_icon_draw](int $x0, int $y1, int $count2, component $component3, obj $obj4, int $int5, int $int6, int $int7, int $int8, int $int9, int $int10, int $int11, int $int12)
+def_int $int13 = calc($int8 - $count2 * $int12);
+if ($int13 < $int7) {
+	$int13 = $int7;
+}
+cc_create($component3, ^iftype_model, $count2);
+cc_setsize($int5, $int5, ^setsize_abs, ^setsize_abs);
+cc_setposition($x0, $y1, ^setpos_abs_left, ^setpos_abs_top);
+cc_setobject($obj4, 1);
+cc_setmodelangle(0, 0, $int9, $int10, $int11, $int13);
+cc_setontimer("loading_icon_resize($int7, $component3, $count2, $int6, $int8, $int12, $int9, $int10, $int11)");

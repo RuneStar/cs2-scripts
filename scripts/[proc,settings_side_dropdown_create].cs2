@@ -1,0 +1,66 @@
+// 4567
+[proc,settings_side_dropdown_create](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $layer6, string $string0, struct $struct7)
+cc_deleteall($component0);
+if ($struct7 = null) {
+	return;
+}
+def_enum $enum8 = struct_param($struct7, param_1091);
+if (~on_mobile = true & struct_param($struct7, param_1092) ! null) {
+	$enum8 = struct_param($struct7, param_1092);
+}
+def_int $int9 = struct_param($struct7, param_1077);
+if ($enum8 = null) {
+	return;
+}
+def_int $int10 = 0;
+cc_create($component0, ^iftype_graphic, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setgraphic("tradebacking");
+cc_settiling(true);
+cc_setonclick("settings_side_dropdown_open($component0, $component1, $component2, $component3, $component4, $component5, $layer6, $enum8, $int9)");
+cc_create($component0, ^iftype_rectangle, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component0, ^iftype_rectangle, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(2, 18, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, 1, ^setpos_abs_centre, ^setpos_abs_bottom);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_create($component0, ^iftype_graphic, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(16, 16, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 2, ^setpos_abs_right, ^setpos_abs_bottom);
+cc_create($component0, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(20, 16, ^setsize_minus, ^setsize_abs);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+~settings_side_dropdown_update($component0, $enum8, $int9);
+cc_create($component0, ^iftype_text, $int10);
+$int10 = calc($int10 + 1);
+cc_setsize(0, 20, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext("<$string0>:");
+~xpdrops_setup_display_hoveroff($component0);
+switch_int ($int9) {
+	case 45 :
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){var1734}", $component0);
+	case 55 :
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){var1107}", $component0);
+	case 56 :
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){var1306}", $component0);
+	case 12 :
+		if_setonvartransmit("settings_side_dropdown_transmit($component0, $enum8, $int9){var2855}", $component0);
+}

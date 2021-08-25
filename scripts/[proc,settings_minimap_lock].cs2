@@ -1,0 +1,7 @@
+// 5190
+[proc,settings_minimap_lock]
+if (~on_enhanced = 0) {
+	return;
+}
+%varbit12983 = calc(1 - %varbit12983);
+setminimaplock(~int_to_bool(%varbit12983));

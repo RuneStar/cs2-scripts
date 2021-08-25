@@ -1,0 +1,10 @@
+// 4705
+[proc,helper_generic_add_title](string $string0)(int)
+if (%varcint494 >= 10) {
+	return(0);
+}
+cc_create(interface_711:3, ^iftype_text, %varcint494);
+~helper_generic_set_type(%varcint494, 1);
+~helper_generic_set_string(%varcint494, $string0);
+%varcint494 = calc(%varcint494 + 1);
+return(calc(%varcint494 - 1));

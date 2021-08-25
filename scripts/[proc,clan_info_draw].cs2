@@ -21,7 +21,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 		~clan_stonebutton_init("<col=9f9f9f>Permissions</col>", $component10, "p12_full");
 		~clan_stonebutton_init("<col=9f9f9f>Bans</col>", $component11, "p12_full");
 		~clan_stonebutton_init("<col=9f9f9f>Leave Clan</col>", $component12, "p12_full");
-		~script4429(0);
+		~clan_outfit_draw_button(0);
 	} else {
 		~clan_stonebutton_init("<col=0dc10d>Events</col>", $component6, "p12_full");
 		~clan_stonebutton_init("<col=0dc10d>Members</col>", $component7, "p12_full");
@@ -30,7 +30,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 		~clan_stonebutton_init("Permissions", $component10, "p12_full");
 		~clan_stonebutton_init("Bans", $component11, "p12_full");
 		~clan_stonebutton_init("<col=ff0000>Leave Clan</col>", $component12, "p12_full");
-		~script4429(1);
+		~clan_outfit_draw_button(1);
 	}
 	return;
 }

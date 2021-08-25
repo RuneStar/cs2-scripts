@@ -20,8 +20,8 @@ def_string $string2 = "<$string0> <$string1>";
 def_int $int3 = _7110;
 def_int $int4 = _7100;
 if (%varbit12377 = 1) {
-	$int2 = ~script4727($int2, $component1, $string2, $int4, $int3);
+	$int2 = ~mouseover_text($int2, $component1, $string2, $int4, $int3);
 }
 if (%varbit12344 = 0) {
-	$int2 = ~script4728($int2, $component1, $string2, $int4);
+	$int2 = ~mouseover_tooltip($int2, $component1, $string2, $int4);
 }

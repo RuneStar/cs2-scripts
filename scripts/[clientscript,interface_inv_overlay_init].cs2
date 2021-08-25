@@ -1,0 +1,16 @@
+// 3628
+[clientscript,interface_inv_overlay_init](component $component0, int $int1, int $int2, int $int3)
+cc_deleteall($component0);
+def_int $int4 = calc((if_getwidth($component0) - 36 * $int2) / ($int2 - 1));
+def_int $int5 = calc((if_getheight($component0) - 32 * $int3) / ($int3 - 1));
+def_int $int6 = 0;
+while ($int6 < $int1) {
+	cc_create($component0, ^iftype_text, $int6);
+	cc_setsize(7, 7, ^setsize_abs, ^setsize_abs);
+	cc_setposition(calc((36 + $int4) * ($int6 % $int2)), calc($int6 / $int2 * (32 + $int5)), ^setpos_abs_left, ^setpos_abs_top);
+	cc_setcolour(^yellow);
+	cc_settextfont(p12_full);
+	cc_settext(tostring(~script3633($int6)));
+	~script3630($int6, $component0);
+	$int6 = calc($int6 + 1);
+}

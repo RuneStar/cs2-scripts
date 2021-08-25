@@ -1,0 +1,8 @@
+// 4250
+[clientscript,clan_members_search_drawbutton](boolean $boolean0, component $component1)
+~clan_members_search_drawbutton($boolean0, $component1);
+if ($boolean0 = true) {
+	if_setontimer("script4251(calc(clientclock + 2), $component1)", $component1);
+} else {
+	if_setontimer(null, $component1);
+}

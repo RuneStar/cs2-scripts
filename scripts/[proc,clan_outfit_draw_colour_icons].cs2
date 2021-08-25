@@ -1,0 +1,16 @@
+// 4433
+[proc,clan_outfit_draw_colour_icons]
+def_component $component0 = interface_694:6;
+def_component $component1 = interface_694:5;
+def_component $component2 = interface_694:16;
+def_component $component3 = interface_694:17;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+$int4, $int5, $int6 = ~script4442;
+def_struct $struct7 = enum(int, struct, enum_3819, $int6);
+~clan_outfit_draw_colour($component1, struct_param($struct7, param_1244));
+def_int $int8 = ~thinbox($component1, 1);
+~clan_outfit_draw_colour($component0, struct_param($struct7, param_1243));
+~clan_outfit_draw_icon($component2, $int4);
+~clan_outfit_draw_icon($component3, $int5);

@@ -1,0 +1,5 @@
+// 4380
+[clientscript,clan_applicants_setcolour](component $component0, int $comsubid1, string $username0)
+if (cc_find($component0, $comsubid1) = ^true) {
+	~clan_applicants_setcolour($username0);
+}

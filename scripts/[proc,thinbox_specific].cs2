@@ -1,0 +1,15 @@
+// 4216
+[proc,thinbox_specific](component $component0, int $int1, int $int2, int $int3, int $int4, int $int5, int $setposh6, int $setposv7)(int)
+cc_create($component0, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition($int2, $int3, $setposh6, $setposv7);
+cc_setsize($int4, $int5, ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component0, ^iftype_rectangle, $int1);
+$int1 = calc($int1 + 1);
+cc_setposition(calc($int2 + 1), calc($int3 + 1), $setposh6, $setposv7);
+cc_setsize(calc($int4 - 2), calc($int5 - 2), ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x474745);
+return($int1);

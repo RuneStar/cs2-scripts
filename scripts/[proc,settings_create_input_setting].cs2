@@ -107,7 +107,7 @@ cc_setposition(10, calc($int0 + ($int16 / 2 - 10)), ^setpos_abs_right, ^setpos_a
 cc_setfill(true);
 cc_setcolour(^black);
 cc_settrans(255);
-~script3883($struct5, $int17, calc($int2 - 1), $int2, calc($int2 - 5), $component7, $comsubid19);
+~settings_input_setting_set_transmit($struct5, $int17, calc($int2 - 1), $int2, calc($int2 - 5), $component7, $comsubid19);
 if ($boolean11 = false & $int18 = 1) {
 	cc_setonmouseover("cc_settrans($component7, $int2, 220, null)");
 	cc_setonmouseleave("cc_settrans($component7, $int2, 255, null)");

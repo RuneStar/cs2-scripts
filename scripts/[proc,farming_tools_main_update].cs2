@@ -31,7 +31,7 @@ if ($int2 <= 1) {
 	if (oc_cert($namedobj5) ! $namedobj5) {
 		if_setop(9, "Banknotes", $component0);
 	}
-	switch_int (~script376(enum_2193)) {
+	switch_int (~get_selected_quantity(enum_2193)) {
 		case 0 :
 			if_setop(1, "Remove-1", $component0);
 			if_setop(2, "Remove-5", $component0);

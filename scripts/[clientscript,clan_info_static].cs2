@@ -1,0 +1,26 @@
+// 4289
+[clientscript,clan_info_static](string $string0, string $string1)
+def_int $width0 = parawidth($string0, 512, p12_full);
+cc_deleteall(interface_690:7);
+def_int $int1 = ~thinbox(interface_690:7, 0);
+cc_create(interface_690:7, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize($width0, 0, ^setsize_abs, ^setsize_minus);
+cc_setposition(3, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 15);
+cc_settextshadow(true);
+cc_settext($string0);
+cc_create(interface_690:7, ^iftype_text, $int1);
+$int1 = calc($int1 + 1);
+cc_setsize(calc($width0 + 8), 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setcolour(0xff981f);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 15);
+cc_settextshadow(true);
+cc_settext($string1);
+def_int $int2 = calc(9 + 15 * ~max(paraheight($string0, 512, p12_full), paraheight($string1, 512, p12_full)));
+if_setsize(0, $int2, ^setsize_minus, ^setsize_abs, interface_690:7);
+%varcint43, %varcint49 = calc($int2 + 3), 0;

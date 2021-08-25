@@ -1,0 +1,5 @@
+// 4319
+[clientscript,clan_rankpopup_updatetitle](component $component0, int $comsubid1, int $comsubid2, int $int3, int $y4)
+if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
+	~clan_rankpopup_updatetitle($int3, $y4);
+}

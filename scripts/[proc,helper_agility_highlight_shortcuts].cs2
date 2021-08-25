@@ -1,0 +1,20 @@
+// 5166
+[proc,helper_agility_highlight_shortcuts]
+def_enum $enum0 = enum_4023;
+def_loc $loc1 = null;
+def_int $count2 = 0;
+_7019(12);
+if (%varbit12976 = 1) {
+	_7015(12, 65280, 1, 30, 5);
+	if ($enum0 ! null) {
+		while ($count2 < enum_getoutputcount($enum0)) {
+			$loc1 = enum(int, loc, $enum0, $count2);
+			if ($loc1 ! null) {
+				highlight_loctype_on($loc1, 12);
+			}
+			$count2 = calc($count2 + 1);
+		}
+	}
+} else {
+	_7015(12, 65280, 2, 0, 0);
+}

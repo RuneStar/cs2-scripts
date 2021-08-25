@@ -1,0 +1,6 @@
+// 528
+[proc,settings_buff_corruption]
+if (~on_enhanced = 0) {
+	return;
+}
+%varbit12405 = calc(1 - %varbit12405);

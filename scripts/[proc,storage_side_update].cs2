@@ -23,7 +23,7 @@ def_int $int7 = enum(obj, int, $enum0, $obj2);
 if ($int7 <= 1) {
 	if_setop(1, "Store", $component1);
 } else {
-	switch_int (~script376($enum0)) {
+	switch_int (~get_selected_quantity($enum0)) {
 		case 0 :
 			if_setop(1, "Store-1", $component1);
 			if_setop(2, "Store-5", $component1);

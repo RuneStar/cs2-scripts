@@ -18,7 +18,7 @@ while ($int16 < 500) {
 	if (cc_find($component1, $int16) = ^true & .cc_find($component1, calc($int16 + 500)) = ^true) {
 		if ($int16 < $int0) {
 			$string0 = activeclansettings_getbanneddisplayname($int16);
-			$int7 = ~script4246($string0);
+			$int7 = ~clan_members_filtername($string0);
 			if ($int7 ! -1) {
 				cc_sethide(false);
 				.cc_sethide(false);

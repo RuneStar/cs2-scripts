@@ -1,0 +1,4 @@
+// 4176
+[clientscript,trawler_start_toggle](component $component0)
+%varbit923 = calc((%varbit923 + 1) % 2);
+~trawler_start_setgraphic($component0);

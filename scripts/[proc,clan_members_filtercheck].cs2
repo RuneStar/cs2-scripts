@@ -1,0 +1,10 @@
+// 4236
+[proc,clan_members_filtercheck](int $clanslot0)(int)
+def_int $int1 = activeclansettings_getaffinedrank($clanslot0);
+if ($int1 < %varbit12179) {
+	return(-1);
+}
+if ($int1 >= %varbit12180) {
+	return(-1);
+}
+return(~clan_members_filtername(activeclansettings_getaffineddisplayname($clanslot0)));

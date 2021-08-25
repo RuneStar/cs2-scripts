@@ -1,7 +1,7 @@
 // 312
 [clientscript,welcome_screen_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12)
 ~script4729($component1, $component0, setbit(setbit(0, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, false);
-~script4561($component11);
+~welcome_screen_toggle($component11);
 ~welcome_type_setup(%varbit10116, $component3, $component4, $component5, $component6, $component12);
 if_setonvartransmit("welcome_type_setup_transmit($component3, $component4, $component5, $component6, $component12){var1226}", $component11);
 if_setonop("welcome_type_setup_op($component3, $component4, $component5, $component6, $component12, $component7, $component8, $component9, $component10)", $component11);

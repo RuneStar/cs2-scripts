@@ -1,0 +1,6 @@
+// 4592
+[proc,settings_buff_leagues]
+if (~league_world = 0) {
+	return;
+}
+%varbit12383 = calc(1 - %varbit12383);

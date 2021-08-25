@@ -1,0 +1,12 @@
+// 2358
+[clientscript,settings_interface_scaling](int $int0)
+if (~on_enhanced = 0) {
+	return;
+}
+if (getwindowmode = ^windowmode_fixed) {
+	return;
+}
+~settings_interface_scaling($int0);
+def_int $int1 = calc(100 + $int0 * 10);
+$int1 = ~max(100, ~min(400, $int1));
+_6210($int1);

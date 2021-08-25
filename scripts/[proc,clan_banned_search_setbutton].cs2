@@ -2,7 +2,7 @@
 [proc,clan_banned_search_setbutton](component $component0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, int $int7, int $int8, component $component9, int $int10)
 def_int $comsubid11 = -1;
 if (~clan_members_searching = 1) {
-	$comsubid11 = ~script4252(true, $component3);
+	$comsubid11 = ~clan_members_search_drawbutton(true, $component3);
 	if (~on_mobile = false) {
 		if_setonmouserepeat("cc_settrans($component3, $comsubid11, 120, null)", $component3);
 	}
@@ -13,10 +13,10 @@ if (~clan_members_searching = 1) {
 		if_setontimer(null, $component3);
 	}
 } else {
-	~script4252(false, $component3);
+	~clan_members_search_drawbutton(false, $component3);
 	if (~on_mobile = false) {
-		if_setonmouserepeat("script4250(true, $component3)", $component3);
+		if_setonmouserepeat("clan_members_search_drawbutton(true, $component3)", $component3);
 	}
-	if_setonmouseleave("script4250(false, $component3)", $component3);
+	if_setonmouseleave("clan_members_search_drawbutton(false, $component3)", $component3);
 	if_setontimer(null, $component3);
 }

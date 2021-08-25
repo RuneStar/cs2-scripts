@@ -1,0 +1,7 @@
+// 4398
+[clientscript,clan_sidepanel_chatmute](int $opindex0, boolean $boolean1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+if ($opindex0 = 1) {
+	sound_synth(interface_select1, 1, 0);
+	%varbit931 = calc(1 - %varbit931);
+	~clan_sidepanel_draw($boolean1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9);
+}

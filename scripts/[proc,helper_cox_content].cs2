@@ -1,0 +1,64 @@
+// 4657
+[proc,helper_cox_content](string $string0, boolean $boolean0)
+def_component $component1 = interface_710:1;
+def_component $component2 = interface_710:3;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_string $string1 = "";
+def_int $int5 = 10;
+def_int $index6 = string_indexof_string($string0, "|", 0);
+def_string $text2 = "";
+if (%varbit12348 = 0 & $boolean0 = false) {
+	while ($index6 ! -1) {
+		$text2 = substring($string0, 0, $index6);
+		cc_create($component2, ^iftype_text, $int3);
+		$int3 = calc($int3 + 1);
+		cc_setsize(0, 12, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour(0xff981f);
+		cc_settextfont(p11_full);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+		cc_settext($text2);
+		$string0 = substring($string0, calc($index6 + 1), string_length($string0));
+		$index6 = string_indexof_string($string0, "|", 0);
+		$text2 = substring($string0, 0, $index6);
+		cc_create($component2, ^iftype_text, $int3);
+		$int3 = calc($int3 + 1);
+		cc_setsize(0, 12, ^setsize_minus, ^setsize_abs);
+		cc_setposition(0, $int4, ^setpos_abs_right, ^setpos_abs_top);
+		cc_setcolour(0xff981f);
+		cc_settextfont(p11_full);
+		cc_settextshadow(true);
+		cc_settextalign(^settextalign_right, ^settextalign_centre, 0);
+		cc_settext($text2);
+		$int4 = calc($int4 + 12);
+		$string0 = substring($string0, calc($index6 + 1), string_length($string0));
+		$index6 = string_indexof_string($string0, "|", 0);
+	}
+	$int4 = calc($int4 + 2);
+}
+.cc_create($component2, ^iftype_text, $int3);
+def_int $comsubid7 = $int3;
+$int3 = calc($int3 + 1);
+.cc_setsize(0, 24, ^setsize_minus, ^setsize_abs);
+.cc_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top);
+.cc_setcolour(0xff981f);
+.cc_settextfont(p11_full);
+.cc_settextshadow(true);
+.cc_settextalign(^settextalign_left, ^settextalign_centre, 12);
+$int4 = calc($int4 + 26);
+cc_create($component2, ^iftype_text, $int3);
+def_int $comsubid8 = $int3;
+$int3 = calc($int3 + 1);
+cc_setsize(0, 12, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int4, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextfont(p11_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+$int4 = calc($int4 + 12);
+~helper_cox_data($component2, calc(30 * %varbit6386));
+$int4 = calc($int4 + $int5);
+~helper_generic_set_size(calc(if_getwidth($component2) + $int5), $int4);
+if_setonvartransmit("helper_cox_data($component2, $comsubid8, $comsubid7){var1431, var1432, var1429}", $component1);

@@ -1,0 +1,9 @@
+// 4391
+[proc,clan_applicants_framedraw](component $component0, int $comsubid1)
+if (%varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+	if (cc_find($component0, $comsubid1) = ^true) {
+		cc_settext("<activeclansettings_getclanname>: Applicants");
+	}
+} else if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settext(~script4287);
+}

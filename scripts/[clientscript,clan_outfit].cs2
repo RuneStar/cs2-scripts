@@ -1,0 +1,98 @@
+// 4431
+[clientscript,clan_outfit](component $component0)
+~script4206(interface_694:1, interface_694:2, interface_694:3, 0, $component0);
+~steelborder(interface_694:4, "Icon customisation", 1);
+def_component $component1 = interface_694:8;
+def_component $component2 = interface_694:7;
+def_component $component3 = interface_694:13;
+def_component $component4 = interface_694:15;
+def_component $component5 = interface_694:14;
+def_component $component6 = interface_694:9;
+def_component $component7 = interface_694:10;
+def_component $component8 = interface_694:12;
+def_component $component9 = interface_694:11;
+~clan_outfit_draw_arrow($component6, "leftarrow", "leftarrow_highlight", 0);
+~clan_outfit_draw_arrow($component7, "rightarrow", "rightarrow_highlight", 1);
+~clan_outfit_draw_arrow($component8, "leftarrow", "leftarrow_highlight", 2);
+~clan_outfit_draw_arrow($component9, "rightarrow", "rightarrow_highlight", 3);
+~clan_stonebutton_init("<col=ff0000>Cancel</col>", $component2, "p12_full");
+if_setonop("script4208(0, interface_694:1, interface_694:2, interface_694:3, $component0)", $component2);
+~clan_stonebutton_init("<col=0dc10d>Save</col>", $component1, "p12_full");
+if_setonop("script4432(interface_694:1, interface_694:2, interface_694:3, $component0)", $component1);
+~clan_outfit_draw_colour_icons;
+cc_deleteall($component3);
+cc_deleteall($component4);
+cc_deleteall($component5);
+def_int $count10 = enum_getoutputcount(enum_3819);
+def_int $int11 = 26;
+def_int $int12 = 1;
+def_int $height13 = if_getheight($component3);
+def_int $int14 = calc($height13 / ($int11 + $int12));
+def_int $int15 = calc(if_getwidth($component3) / ($int12 + $int11));
+def_int $int16 = calc($count10 / $int15);
+def_int $int17 = calc($count10 % $int15);
+def_int $int18 = 0;
+if ($int17 > 0) {
+	$int18 = calc($int16 + 1);
+}
+if ($int18 > $int14) {
+	~scrollbar_vertical($component5, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
+	$component3 = $component4;
+	$int15 = calc(if_getwidth($component3) / ($int12 + $int11));
+	$int16 = calc($count10 / $int15);
+	$int17 = calc($count10 % $int15);
+}
+def_int $int19 = 0;
+def_int $int20 = 0;
+def_int $int21 = 0;
+def_int $int22 = 0;
+def_struct $struct23 = null;
+def_int $int24 = 0;
+def_int $int25 = 0;
+def_int $int26 = 0;
+def_int $int27 = 0;
+def_boolean $boolean28 = ~on_mobile;
+while ($int22 < $int18) {
+	if ($int22 = calc($int18 - 1)) {
+		$int15 = $int17;
+		if ($int16 = 0) {
+			$int25 = calc(if_getheight($component3) / 2 - ($int11 + $int12) / 2);
+		}
+	}
+	$int27 = calc($int15 * ($int11 + $int12));
+	$int24 = calc((if_getwidth($component3) - $int27) / 2);
+	while ($int21 < $int15) {
+		$struct23 = enum(int, struct, enum_3819, $int20);
+		cc_create($component3, ^iftype_rectangle, $int19);
+		cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
+		cc_setposition($int24, $int25, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setcolour(struct_param($struct23, param_1243));
+		cc_setfill(true);
+		cc_setonop("clan_outfit_colour_click($int20)");
+		cc_setop(1, "Select");
+		$int19 = calc($int19 + 1);
+		if (~on_mobile = false) {
+			cc_create($component3, ^iftype_rectangle, $int19);
+			cc_setsize($int11, $int11, ^setsize_abs, ^setsize_abs);
+			cc_setposition($int24, $int25, ^setpos_abs_left, ^setpos_abs_top);
+			cc_setcolour(struct_param($struct23, param_1244));
+			cc_setfill(true);
+			cc_settrans(255);
+			cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 0, null)");
+			cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 255, null)");
+			$int19 = calc($int19 + 1);
+		}
+		$int19 = ~thinbox_specific($component3, $int19, $int24, $int25, $int11, $int11, ^setpos_abs_left, ^setpos_abs_top);
+		$int24 = calc($int24 + $int11 + $int12);
+		$int20 = calc($int20 + 1);
+		$int21 = calc($int21 + 1);
+	}
+	$int21 = 0;
+	$int24 = 0;
+	$int25 = calc($int25 + $int11 + $int12);
+	$int22 = calc($int22 + 1);
+}
+if ($int18 > $int14) {
+	if_setscrollsize(0, $int25, $component3);
+	~scrollbar_resize($component5, $component3, if_getscrolly($component3));
+}

@@ -1,0 +1,52 @@
+// 4314
+[clientscript,clan_ranktitle_dragtitle](int $width0, int $int1, int $int2, component $component3, int $comsubid4, int $comsubid5, int $comsubid6, int $int7, component $component8, component $component9, component $component10)
+def_int $int11 = 0;
+def_int $int12 = 0;
+if (cc_find($component3, $comsubid4) = ^true) {
+	if ($component3 = $component9) {
+		$width0, $int1 = calc($width0 + if_getx($component9)), calc($int1 - if_getscrolly($component9));
+	}
+	if (.cc_find($component3, $comsubid5) = ^true) {
+		.cc_sethide(true);
+	}
+	if (.cc_find($component3, $comsubid6) = ^true) {
+		.cc_sethide(true);
+	}
+	cc_setontimer("clan_ranktitle_dragtimeout(calc(clientclock + 1), event_com, event_comsubid, $comsubid5, $comsubid6, $component8)");
+	if (.cc_find($component8, 0) = ^true) {
+		.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+		.cc_setposition($width0, $int1, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_settext(enum(int, string, enum_3797, $int7));
+	} else {
+		.cc_create($component8, ^iftype_text, 0);
+		.cc_setsize(cc_getwidth, cc_getheight, ^setsize_abs, ^setsize_abs);
+		.cc_setposition($width0, $int1, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setcolour(0x9f9f9f);
+		.cc_settextshadow(true);
+		.cc_settextfont(p12_full);
+		.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+		.cc_settext(enum(int, string, enum_3797, $int7));
+	}
+	if ($component3 ! $component9 & $width0 > if_getwidth(if_getlayer($component9))) {
+		return;
+	}
+	$int11 = if_getheight($component9);
+	if ($int1 < 5) {
+		$int12 = -5;
+	} else if ($int1 < 15) {
+		$int12 = -2;
+	} else if ($int1 >= calc($int11 - (5 + cc_getheight))) {
+		$int12 = 5;
+	} else if ($int1 >= calc($int11 - (15 + cc_getheight))) {
+		$int12 = 2;
+	} else {
+		return;
+	}
+	if (calc($int2 - clientclock) < 5) {
+		cc_setondrag("clan_ranktitle_dragtitle(event_mousex, event_mousey, calc(~max(clientclock, $int2) + 2), event_com, event_comsubid, $comsubid5, $comsubid6, $int7, $component8, $component9, $component10)");
+		return;
+	}
+	cc_setondrag("clan_ranktitle_dragtitle(event_mousex, event_mousey, calc($int2 + 1), event_com, event_comsubid, $comsubid5, $comsubid6, $int7, $component8, $component9, $component10)");
+	$int1 = ~min(calc(if_getscrollheight($component9) - $int11), ~max(0, calc(if_getscrolly($component9) + $int12)));
+	~scrollbar_resize($component10, $component9, $int1);
+}

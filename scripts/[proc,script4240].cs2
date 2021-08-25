@@ -1,7 +1,7 @@
 // 4240
 [proc,script4240](component $component0, int $int1, int $int2, int $int3, int $int4)
 if (~on_mobile = false) {
-	if_setonmouserepeat("script4241(true, event_com, $int1, $int2, $int3)", $component0);
+	if_setonmouserepeat("clan_members_filter_hover(true, event_com, $int1, $int2, $int3)", $component0);
 }
-if_setonmouseleave("script4241(false, event_com, $int1, $int2, $int3)", $component0);
-if_setonop("script4243(event_opindex, event_com, $int1, $int2, $int3, $int4)", $component0);
+if_setonmouseleave("clan_members_filter_hover(false, event_com, $int1, $int2, $int3)", $component0);
+if_setonop("clan_members_filter_op(event_opindex, event_com, $int1, $int2, $int3, $int4)", $component0);

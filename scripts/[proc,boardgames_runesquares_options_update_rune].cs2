@@ -1,0 +1,68 @@
+// 3999
+[proc,boardgames_runesquares_options_update_rune](int $int0)
+def_graphic $graphic1 = "options_radio_buttons,0";
+def_graphic $graphic2 = "options_radio_buttons,1";
+if_setgraphic($graphic1, interface_41:5);
+if_setgraphic($graphic1, interface_41:8);
+if_setgraphic($graphic1, interface_41:11);
+if_setgraphic($graphic1, interface_41:14);
+if_setgraphic($graphic1, interface_41:17);
+if_setgraphic($graphic1, interface_41:20);
+if_setgraphic($graphic1, interface_41:23);
+if_setgraphic($graphic1, interface_41:26);
+if_setgraphic($graphic1, interface_41:29);
+if_setgraphic($graphic1, interface_41:32);
+if_setgraphic($graphic1, interface_41:35);
+if_setgraphic($graphic1, interface_41:38);
+if (~on_mobile = false) {
+	if_setonmouserepeat("settrans(interface_41:5, 127)", interface_41:4);
+	if_setonmouseleave("settrans(interface_41:5, 0)", interface_41:4);
+	if_setonmouserepeat("settrans(interface_41:8, 127)", interface_41:7);
+	if_setonmouseleave("settrans(interface_41:8, 0)", interface_41:7);
+	if_setonmouserepeat("settrans(interface_41:11, 127)", interface_41:10);
+	if_setonmouseleave("settrans(interface_41:11, 0)", interface_41:10);
+	if_setonmouserepeat("settrans(interface_41:14, 127)", interface_41:13);
+	if_setonmouseleave("settrans(interface_41:14, 0)", interface_41:13);
+	if_setonmouserepeat("settrans(interface_41:17, 127)", interface_41:16);
+	if_setonmouseleave("settrans(interface_41:17, 0)", interface_41:16);
+	if_setonmouserepeat("settrans(interface_41:20, 127)", interface_41:19);
+	if_setonmouseleave("settrans(interface_41:20, 0)", interface_41:19);
+	if_setonmouserepeat("settrans(interface_41:23, 127)", interface_41:22);
+	if_setonmouseleave("settrans(interface_41:23, 0)", interface_41:22);
+	if_setonmouserepeat("settrans(interface_41:26, 127)", interface_41:25);
+	if_setonmouseleave("settrans(interface_41:26, 0)", interface_41:25);
+	if_setonmouserepeat("settrans(interface_41:29, 127)", interface_41:28);
+	if_setonmouseleave("settrans(interface_41:29, 0)", interface_41:28);
+	if_setonmouserepeat("settrans(interface_41:32, 127)", interface_41:31);
+	if_setonmouseleave("settrans(interface_41:32, 0)", interface_41:31);
+	if_setonmouserepeat("settrans(interface_41:35, 127)", interface_41:34);
+	if_setonmouseleave("settrans(interface_41:35, 0)", interface_41:34);
+	if_setonmouserepeat("settrans(interface_41:38, 127)", interface_41:37);
+	if_setonmouseleave("settrans(interface_41:38, 0)", interface_41:37);
+}
+switch_int ($int0) {
+	case 1 :
+		if_setgraphic($graphic2, interface_41:5);
+	case 2 :
+		if_setgraphic($graphic2, interface_41:8);
+	case 3 :
+		if_setgraphic($graphic2, interface_41:11);
+	case 4 :
+		if_setgraphic($graphic2, interface_41:14);
+	case 5 :
+		if_setgraphic($graphic2, interface_41:17);
+	case 6 :
+		if_setgraphic($graphic2, interface_41:20);
+	case 7 :
+		if_setgraphic($graphic2, interface_41:23);
+	case 8 :
+		if_setgraphic($graphic2, interface_41:26);
+	case 9 :
+		if_setgraphic($graphic2, interface_41:29);
+	case 10 :
+		if_setgraphic($graphic2, interface_41:32);
+	case 11 :
+		if_setgraphic($graphic2, interface_41:35);
+	case 12 :
+		if_setgraphic($graphic2, interface_41:38);
+}

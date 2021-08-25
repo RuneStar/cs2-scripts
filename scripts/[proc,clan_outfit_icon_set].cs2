@@ -1,0 +1,11 @@
+// 4443
+[proc,clan_outfit_icon_set](int $int0, int $int1)
+$int1 = calc($int1 + 1);
+switch_int ($int0) {
+	case 0 :
+		%var3023 = ~setbit_range_toint(%var3023, $int1, 0, 9);
+	case 1 :
+		%var3023 = ~setbit_range_toint(%var3023, $int1, 10, 19);
+	case 2 :
+		%var3023 = ~setbit_range_toint(%var3023, $int1, 20, 29);
+}

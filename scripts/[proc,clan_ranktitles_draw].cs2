@@ -77,8 +77,8 @@ while ($int10 <= 265) {
 					cc_setonmouserepeat("cc_settrans(event_com, $int8, 200, null)");
 				}
 				cc_setonmouseleave("cc_settrans(event_com, $int8, 225, null)");
-				cc_setondrag("script4314(event_mousex, event_mousey, 0, event_com, event_comsubid, calc($int8 + 1), calc($int8 + 2), $int10, $component1, $component2, $component3)");
-				cc_setondragcomplete("script4313(event_com, event_comsubid, event_drop, event_dropsubid, $int10, $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
+				cc_setondrag("clan_ranktitle_dragtitle(event_mousex, event_mousey, 0, event_com, event_comsubid, calc($int8 + 1), calc($int8 + 2), $int10, $component1, $component2, $component3)");
+				cc_setondragcomplete("clan_ranktitle_dragcomplete(event_com, event_comsubid, event_drop, event_dropsubid, $int10, $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
 			} else {
 				cc_setonmouserepeat(null);
 				cc_setonmouseleave(null);
@@ -127,9 +127,9 @@ while ($int10 < $int0) {
 					}
 					cc_setonmouseleave("cc_settrans(event_com, $int8, 225, null)");
 					cc_setop(10, "Wipe title");
-					cc_setonop("script4312(event_opindex, $int10, $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
-					cc_setondrag("script4314(event_mousex, event_mousey, 0, event_com, event_comsubid, calc($int8 + 1), calc($int8 + 2), $intarray0($int11), $component1, $component2, $component3)");
-					cc_setondragcomplete("script4313(event_com, event_comsubid, event_drop, event_dropsubid, $intarray0($int11), $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
+					cc_setonop("clan_ranktitle_wipe(event_opindex, $int10, $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
+					cc_setondrag("clan_ranktitle_dragtitle(event_mousex, event_mousey, 0, event_com, event_comsubid, calc($int8 + 1), calc($int8 + 2), $intarray0($int11), $component1, $component2, $component3)");
+					cc_setondragcomplete("clan_ranktitle_dragcomplete(event_com, event_comsubid, event_drop, event_dropsubid, $intarray0($int11), $int0, $component1, $component2, $component3, $component4, $component5, $component6)");
 				} else {
 					cc_setonmouserepeat(null);
 					cc_setonmouseleave(null);

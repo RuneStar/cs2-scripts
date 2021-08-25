@@ -15,7 +15,7 @@ if (~on_mobile = true) {
 	~mobile_chatbox_resize;
 	if_setop(1, "Report options", interface_162:31);
 	if_setsize(56, 0, ^setsize_abs, ^setsize_minus, interface_162:31);
-	if_setgraphic("graphic_3056", interface_162:32);
+	if_setgraphic("chat_tab_button,5", interface_162:32);
 	if_setonmouseover(null, interface_162:31);
 	if_setonmouseleave(null, interface_162:31);
 	if_setposition(8, 0, ^setpos_abs_right, ^setpos_abs_centre, interface_162:31);
@@ -47,8 +47,8 @@ while ($int5 >= 0) {
 		if_setonmouseover(null, $component4);
 		if_setonmouseleave(null, $component4);
 	} else {
-		if_setonmouseover("script4482(true, $int5)", $component4);
-		if_setonmouseleave("script4482(false, $int5)", $component4);
+		if_setonmouseover("chat_button_hover(true, $int5)", $component4);
+		if_setonmouseleave("chat_button_hover(false, $int5)", $component4);
 	}
 	$int1, $int5 = calc($int1 + 56), calc($int5 - 1);
 }

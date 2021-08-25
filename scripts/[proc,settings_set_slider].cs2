@@ -7,24 +7,24 @@ switch_int ($int0) {
 			%varbit12426 = %var168;
 		}
 		%var168 = ~minmax(0, 100, calc($int1 * 5));
-		~script445;
+		~setvolumemusic;
 	case 31 :
 		if ($int1 = 0 & %var169 > 0) {
 			%varbit12427 = %var169;
 		}
 		%var169 = ~minmax(0, 100, calc($int1 * 5));
-		~script2177;
+		~setvolumesounds;
 	case 32 :
 		if ($int1 = 0 & %var872 > 0) {
 			%varbit12428 = %var872;
 		}
 		%var872 = ~minmax(0, 100, calc($int1 * 5));
-		~script2178;
+		~setvolumeareasounds;
 	case 15 :
 		%var166 = ~minmax(0, 100, calc($int1 * 5));
-		~script2238;
+		~setbrightness;
 	case 79 :
-		~script2363($int1);
+		~settings_interface_scaling($int1);
 	case 168 :
 		~script5193(interpolate(25, 90, 0, calc(struct_param(view_distance_3656, param_1101) - 1), $int1));
 }

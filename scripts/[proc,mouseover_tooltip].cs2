@@ -1,0 +1,46 @@
+// 4728
+[proc,mouseover_tooltip](int $int0, component $component1, string $string0, int $int2)(int)
+if (%varcint1 >= clientclock | %varcint2 = 1) {
+	return($int0);
+}
+if (enum(int, boolean, enum_3903, $int2) = false) {
+	return($int0);
+}
+if ($int2 = 7 & _7109 = 1 & cc_getlayer = magic_spellbook:3) {
+	return($int0);
+}
+def_int $int3 = calc(parawidth($string0, if_getwidth($component1), p12_full) + 8);
+def_int $int4 = 24;
+def_int $int5 = ~min(calc(mouse_getx + 0), calc(if_getwidth($component1) - $int3));
+def_int $int6 = ~min(calc(mouse_gety + 24), calc(if_getheight($component1) - $int4));
+cc_create($component1, ^iftype_rectangle, $int0);
+cc_setposition($int5, $int6, ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize($int3, $int4, ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_settrans(150);
+$int0 = calc($int0 + 1);
+cc_create($component1, ^iftype_rectangle, $int0);
+cc_setposition(calc($int5 + 1), calc($int6 + 1), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(calc($int3 - 2), calc($int4 - 2), ^setsize_abs, ^setsize_abs);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_settrans(150);
+$int0 = calc($int0 + 1);
+cc_create($component1, ^iftype_graphic, $int0);
+cc_setsize(calc($int3 - 4), calc($int4 - 4), ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int5 + 2), calc($int6 + 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("tradebacking");
+cc_settiling(true);
+cc_settrans(150);
+$int0 = calc($int0 + 1);
+cc_create($component1, ^iftype_text, $int0);
+cc_setsize(calc($int3 - 4), calc($int4 - 4), ^setsize_abs, ^setsize_abs);
+cc_setposition(calc($int5 + 2), calc($int6 + 2), ^setpos_abs_left, ^setpos_abs_top);
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext($string0);
+cc_setcolour(^white);
+$int0 = calc($int0 + 1);
+return($int0);

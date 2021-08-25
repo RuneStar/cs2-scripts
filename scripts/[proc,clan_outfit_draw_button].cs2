@@ -1,0 +1,51 @@
+// 4429
+[proc,clan_outfit_draw_button](int $int0)
+def_int $count1 = enum_getoutputcount(enum_3820);
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+$int2, $int3, $int4 = ~clan_outfit_icon_get_all;
+def_graphic $graphic5 = enum(int, graphic, enum_3820, $int2);
+def_graphic $graphic6 = enum(int, graphic, enum_3820, $int3);
+def_struct $struct7 = enum(int, struct, enum_3819, $int4);
+def_int $colour8 = struct_param($struct7, param_1243);
+def_int $colour9 = struct_param($struct7, param_1244);
+def_component $component10 = interface_690:5;
+def_int $int11 = 0;
+cc_deleteall($component10);
+cc_create($component10, ^iftype_rectangle, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour($colour9);
+cc_setfill(true);
+if_setonop("clan_outfit_button_click", $component10);
+if_setop(1, "Edit", $component10);
+cc_create($component10, ^iftype_rectangle, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize(12, 12, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour($colour8);
+cc_setfill(true);
+if ($int0 = 1 & ~on_mobile = false) {
+	cc_create($component10, ^iftype_rectangle, $int11);
+	$int11 = calc($int11 + 1);
+	cc_setfill(true);
+	cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+	cc_setcolour(^black);
+	cc_settrans(250);
+	cc_setonmouserepeat("cc_settrans(event_com, event_comsubid, 220, null)");
+	cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 250, null)");
+}
+$int11 = ~script4205($component10, $int11);
+cc_create($component10, ^iftype_graphic, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize(64, 64, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 10, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setgraphic($graphic5);
+cc_create($component10, ^iftype_graphic, $int11);
+$int11 = calc($int11 + 1);
+cc_setsize(64, 64, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 80, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setgraphic($graphic6);

@@ -1,0 +1,22 @@
+// 4247
+[proc,clan_members_search_setbutton](component $component0, component $component1, int $int2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10)
+def_int $comsubid11 = -1;
+if (~clan_members_searching = 1) {
+	$comsubid11 = ~clan_members_search_drawbutton(true, $component3);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("cc_settrans($component3, $comsubid11, 120, null)", $component3);
+	}
+	if_setonmouseleave("cc_settrans($component3, $comsubid11, 0, null)", $component3);
+	if (%varcint5 = 18) {
+		if_setontimer("clan_members_search_refresh($component0, $component1, $int2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10)", $component3);
+	} else {
+		if_setontimer(null, $component3);
+	}
+} else {
+	~clan_members_search_drawbutton(false, $component3);
+	if (~on_mobile = false) {
+		if_setonmouserepeat("clan_members_search_drawbutton(true, $component3)", $component3);
+	}
+	if_setonmouseleave("clan_members_search_drawbutton(false, $component3)", $component3);
+	if_setontimer(null, $component3);
+}

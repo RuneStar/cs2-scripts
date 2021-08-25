@@ -1,0 +1,10 @@
+// 4449
+[proc,clan_create_side_list_players](component $component0, string $string0, string $string1, string $string2, string $string3, string $string4, string $string5)
+if (if_find($component0) = true) {
+	cc_deleteall($component0);
+	~clan_create_player_component($component0, $string0, 0, $string5);
+	~clan_create_player_component($component0, $string1, 1, $string5);
+	~clan_create_player_component($component0, $string2, 2, $string5);
+	~clan_create_player_component($component0, $string3, 3, $string5);
+	~clan_create_player_component($component0, $string4, 4, $string5);
+}

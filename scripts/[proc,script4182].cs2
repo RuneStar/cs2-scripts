@@ -58,21 +58,21 @@ cc_settextalign(^settextalign_left, ^settextalign_centre, 14);
 $int2 = calc($int2 + 1);
 def_int $int17 = struct_param($struct5, param_1077);
 def_int $colour18 = struct_param($struct5, param_1230);
-if (~script4181($int17) ! null) {
-	$colour18 = ~script4181($int17);
+if (~settings_get_colour($int17) ! null) {
+	$colour18 = ~settings_get_colour($int17);
 }
 cc_create($component7, ^iftype_rectangle, $int2);
 cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(10, calc($int0 + ($int15 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setcolour($colour18);
 cc_setfill(true);
-~script4180($component7, $int2, $struct5, $int17, $component6, $int3);
+~settings_colour_choose_transmit($component7, $int2, $struct5, $int17, $component6, $int3);
 $int2 = calc($int2 + 1);
 cc_create($component6, ^iftype_rectangle, $int3);
 cc_setsize($int10, 20, ^setsize_abs, ^setsize_abs);
 cc_setposition(10, calc($int0 + ($int15 / 2 - 10)), ^setpos_abs_right, ^setpos_abs_top);
 cc_setop(1, "Select");
-cc_setonop("script4183($struct5)");
+cc_setonop("settings_colour_input_click($struct5)");
 $int3 = calc($int3 + 1);
 if ($boolean9 = false) {
 	cc_create($component7, ^iftype_rectangle, $int2);
@@ -87,7 +87,7 @@ if ($boolean9 = false) {
 		cc_setonmouseleave("cc_settrans(event_com, event_comsubid, 250, null)");
 	}
 }
-$int2 = ~script4216($component7, $int2, 10, calc($int0 + ($int15 / 2 - 10)), $int10, 20, ^setpos_abs_right, ^setpos_abs_top);
+$int2 = ~thinbox_specific($component7, $int2, 10, calc($int0 + ($int15 / 2 - 10)), $int10, 20, ^setpos_abs_right, ^setpos_abs_top);
 if ($boolean13 = false & $int12 = 0 & $int11 > 0) {
 	cc_create($component7, ^iftype_text, $int2);
 	cc_setsize(calc($int10 + 25), $int11, ^setsize_minus, ^setsize_abs);

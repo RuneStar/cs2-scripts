@@ -63,7 +63,7 @@ if ($enum1 = enum_139) {
 def_component $component4 = enum(component, component, $enum1, interface_161:13);
 def_component $component5 = enum(component, component, $enum1, interface_161:14);
 if ($component4 ! null & $component5 ! null) {
-	~script4688($component4, $component5);
+	~helper_init($component4, $component5);
 }
 ~toplevel_redraw($component0, $enum1);
 ~toplevel_subchange($component0, $enum1);

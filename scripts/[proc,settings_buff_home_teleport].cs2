@@ -1,0 +1,6 @@
+// 4593
+[proc,settings_buff_home_teleport]
+if (~on_enhanced = 0) {
+	return;
+}
+%varbit12353 = calc(1 - %varbit12353);

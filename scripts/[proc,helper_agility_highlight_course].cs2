@@ -1,0 +1,51 @@
+// 5169
+[proc,helper_agility_highlight_course](int $int0)
+if ($int0 = -1) {
+	$int0 = %varbit12633;
+}
+def_enum $enum1 = null;
+def_enum $enum2 = null;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $count6 = enum_getoutputcount(enum_3997);
+def_int $int7 = -1;
+def_int $int8 = -1;
+def_loc $loc9 = null;
+def_npc $npc10 = null;
+_7019(11);
+_7009(11);
+_7039(10);
+~helper_agility_highlight_starts;
+if ($int0 = -1) {
+	return;
+}
+while ($int3 < $count6) {
+	$int3 = calc($int3 + 1);
+	if ($int3 = $int0) {
+		$enum1 = enum(int, enum, enum_3997, $int3);
+		if ($enum1 ! null) {
+			$int4 = 0;
+			$int7 = enum_getoutputcount($enum1);
+			while ($int4 < $int7) {
+				$loc9 = enum(int, loc, $enum1, $int4);
+				if ($loc9 ! null) {
+					highlight_loctype_on($loc9, 11);
+				}
+				$int4 = calc($int4 + 1);
+			}
+		}
+		$enum2 = enum(int, enum, enum_3998, $int3);
+		if ($enum2 ! null) {
+			$int5 = 0;
+			$int8 = enum_getoutputcount($enum2);
+			while ($int5 < $int8) {
+				$npc10 = enum(int, npc, $enum2, $int5);
+				if ($npc10 ! null) {
+					highlight_npctype_on($npc10, 11);
+				}
+				$int5 = calc($int5 + 1);
+			}
+		}
+	}
+}

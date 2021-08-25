@@ -1,0 +1,9 @@
+// 4381
+[proc,clan_applicants_setcolour](string $username0)
+if (friend_test($username0) = true) {
+	cc_setcolour(0x0dc10d);
+} else if (ignore_test($username0) = true) {
+	cc_setcolour(^red);
+} else {
+	cc_setcolour(0xff981f);
+}

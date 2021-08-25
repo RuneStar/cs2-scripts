@@ -1,0 +1,28 @@
+// 527
+[proc,settings_colour_input_update](component $component0, int $int1, struct $struct2, int $int3, component $component4, int $int5)
+def_int $colour6 = struct_param($struct2, param_1230);
+if (~settings_get_colour($int3) ! null) {
+	$colour6 = ~settings_get_colour($int3);
+}
+def_int $int7 = ~script3957($struct2);
+if (cc_find($component0, $int1) = ^true) {
+	cc_setcolour($colour6);
+	if ($int7 = 1) {
+		if (~on_mobile = false & .cc_find($component0, calc($int1 + 1)) = ^true) {
+			.cc_setonmouserepeat("cc_settrans_temporarily(event_com, calc($int1 + 1), 220, 250)");
+			.cc_setonmouseleave("cc_settrans(event_com, calc($int1 + 1), 250, null)");
+		}
+		if (.cc_find($component0, calc($int1 - 1)) = ^true) {
+			.cc_setcolour(0xff981f);
+		}
+	} else {
+		if (~on_mobile = false & .cc_find($component0, calc($int1 + 1)) = ^true) {
+			.cc_settrans(250);
+			.cc_setonmouserepeat(null);
+			.cc_setonmouseleave(null);
+		}
+		if (.cc_find($component0, calc($int1 - 1)) = ^true) {
+			.cc_setcolour(0x9f9f9f);
+		}
+	}
+}

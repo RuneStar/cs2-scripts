@@ -1,0 +1,6 @@
+// 4015
+[proc,settings_drop_item_warnings]
+if (%varbit5411 = 0 & %varbit5412 <= 0) {
+	return;
+}
+%varbit5411 = calc(1 - %varbit5411);

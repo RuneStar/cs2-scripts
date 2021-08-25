@@ -1,8 +1,0 @@
-// 4250
-[clientscript,script4250](boolean $boolean0, component $component1)
-~script4252($boolean0, $component1);
-if ($boolean0 = true) {
-	if_setontimer("script4251(calc(clientclock + 2), $component1)", $component1);
-} else {
-	if_setontimer(null, $component1);
-}

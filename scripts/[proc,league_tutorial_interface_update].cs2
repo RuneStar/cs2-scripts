@@ -45,13 +45,13 @@ if (string_length($string1) > 0) {
 		if_setsize(400, calc(277 - $int8 * 14), ^setsize_abs, ^setsize_abs, $component0);
 	}
 }
-def_string $string2 = ~script3716;
+def_string $string2 = ~league_tutorial_interface_update_button1;
 if (string_length($string2) > 0) {
 	~league_tutorial_button_draw($component3, $string2);
 } else {
 	if_sethide(true, $component3);
 }
-def_string $string3 = ~script3717;
+def_string $string3 = ~league_tutorial_interface_update_button2;
 if (string_length($string3) > 0) {
 	~league_tutorial_button_draw($component4, $string3);
 } else {

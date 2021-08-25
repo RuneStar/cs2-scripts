@@ -1,0 +1,6 @@
+// 5187
+[proc,settings_buff_ammo]
+if (~on_enhanced = 0) {
+	return;
+}
+%varbit12985 = calc(1 - %varbit12985);

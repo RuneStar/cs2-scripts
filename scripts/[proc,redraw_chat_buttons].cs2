@@ -5,16 +5,16 @@ def_int $int1 = 0;
 while ($int1 <= 6) {
 	if (%varcint41 = $int1) {
 		if (%varcint42 = $int1) {
-			$graphic0 = "graphic_3054";
+			$graphic0 = "chat_tab_button,3";
 		} else {
-			$graphic0 = "graphic_3053";
+			$graphic0 = "chat_tab_button,2";
 		}
 	} else if (%varcint42 = $int1) {
-		$graphic0 = "graphic_3052";
+		$graphic0 = "chat_tab_button,1";
 	} else if (calc(~chat_alert_get($int1) / 25 % 2) = 1) {
-		$graphic0 = "graphic_3055";
+		$graphic0 = "chat_tab_button,4";
 	} else {
-		$graphic0 = "graphic_3051";
+		$graphic0 = "chat_tab_button,0";
 	}
 	if_setgraphic($graphic0, enum(int, component, enum_683, $int1));
 	if ($int1 >= 2) {

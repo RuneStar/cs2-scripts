@@ -64,7 +64,7 @@ cc_setposition(45, 22, ^setpos_abs_left, ^setpos_abs_top);
 cc_setcolour(%varcint459);
 cc_setfill(true);
 $int17 = calc($int17 + 1);
-$int17 = ~script4216($component11, $int17, 45, 22, $int18, $int18, ^setpos_abs_left, ^setpos_abs_top);
+$int17 = ~thinbox_specific($component11, $int17, 45, 22, $int18, $int18, ^setpos_abs_left, ^setpos_abs_top);
 cc_create($component11, ^iftype_text, $int17);
 cc_settext(append($string0, ~colour_to_string(%varcint459)));
 cc_settextfont(p11_full);
@@ -90,7 +90,7 @@ cc_setcolour(%varcint459);
 cc_setfill(true);
 def_int $comsubid19 = $int17;
 $int17 = calc($int17 + 1);
-$int17 = ~script4216($component11, $int17, 164, 22, $int18, $int18, ^setpos_abs_left, ^setpos_abs_top);
+$int17 = ~thinbox_specific($component11, $int17, 164, 22, $int18, $int18, ^setpos_abs_left, ^setpos_abs_top);
 def_string $text1 = append($string0, ~colour_to_string(%varcint459));
 cc_create($component11, ^iftype_text, $int17);
 cc_settext($text1);
@@ -201,7 +201,7 @@ while ($int40 < $int37) {
 			cc_sethide(true);
 			$int17 = calc($int17 + 1);
 		}
-		$int17 = ~script4216($component15, $int17, $int42, $int43, $int30, $int30, ^setpos_abs_left, ^setpos_abs_top);
+		$int17 = ~thinbox_specific($component15, $int17, $int42, $int43, $int30, $int30, ^setpos_abs_left, ^setpos_abs_top);
 		$int42 = calc($int42 + $int30 + $int31);
 		$int38 = calc($int38 + 1);
 		$int39 = calc($int39 + 1);

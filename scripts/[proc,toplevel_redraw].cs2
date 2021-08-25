@@ -209,9 +209,9 @@ if (%varbit542 = 0) {
 	if_sethide(true, $component2);
 }
 if (%varbit4134 = 1) {
-	mousecam(false);
+	setmousecam(false);
 } else {
-	mousecam(true);
+	setmousecam(true);
 }
 def_boolean $boolean10 = false;
 if (%varbit5542 = 1) {
@@ -231,7 +231,7 @@ if (%varbit542 = 0) {
 } else {
 	if_sethide(true, $component2);
 }
-~script445;
-~script2177;
-~script2178;
-~script2238;
+~setvolumemusic;
+~setvolumesounds;
+~setvolumeareasounds;
+~setbrightness;

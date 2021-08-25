@@ -1,0 +1,12 @@
+// 4653
+[clientscript,helper_cox_init](boolean $boolean0, string $string0)
+~helper_cox_content($string0, $boolean0);
+def_component $component1 = interface_710:5;
+if ($boolean0 = true) {
+	if_sethide(true, $component1);
+	return;
+}
+if_sethide(false, $component1);
+if_setonvartransmit("helper_cox_transmit($string0, $boolean0, $component1){var2856}", $component1);
+if_setonsubchange("helper_cox_content($string0, $boolean0)", $component1);
+if_setonop("helper_cox_op($string0, $boolean0, $component1)", $component1);

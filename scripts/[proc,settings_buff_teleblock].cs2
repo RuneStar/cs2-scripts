@@ -1,0 +1,6 @@
+// 4595
+[proc,settings_buff_teleblock]
+if (~on_enhanced = 0) {
+	return;
+}
+%varbit12355 = calc(1 - %varbit12355);

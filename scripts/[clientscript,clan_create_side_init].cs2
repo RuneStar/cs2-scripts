@@ -29,10 +29,10 @@ if (%varbit12171 = 1) {
 	~clan_stonebutton_target_init("<col=ff981f>Invite</col>", $component6, "p12_full");
 	~clan_stonebutton_init("<col=0dc10d>Confirm</col>", $component7, "p12_full");
 } else {
-	if_setonop("script4446", $component6);
+	if_setonop("clan_create_member_invite", $component6);
 	~clan_stonebutton_draw(false, "<col=808080>Clan name</col>", "p12_full", $component4);
 	~clan_stonebutton_init("<col=ff0000>Cancel</col>", $component5, "p12_full");
 	~clan_stonebutton_draw(false, "<col=808080>Invite</col>", "p12_full", $component6);
 	~clan_stonebutton_draw(false, "<col=808080>Confirm</col>", "p12_full", $component7);
 }
-~script4449($component3, "", "", "", "", "", "");
+~clan_create_side_list_players($component3, "", "", "", "", "", "");

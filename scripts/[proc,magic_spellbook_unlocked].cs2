@@ -1,0 +1,15 @@
+// 4131
+[proc,magic_spellbook_unlocked](obj $obj0)(int)
+if (~script4510($obj0) = 0) {
+	return(0);
+}
+if (~script4128($obj0) = 0) {
+	return(0);
+}
+if (~script4129($obj0) = 0) {
+	return(0);
+}
+if ($obj0 = dead_orb_17152 & (%varbit2010 = 0 | %varbit5604 >= 5)) {
+	return(0);
+}
+return(1);

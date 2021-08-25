@@ -1,0 +1,28 @@
+// 4438
+[clientscript,clan_outfit_arrow_click](int $int0)
+sound_synth(interface_select1, 1, 0);
+def_int $int1 = 0;
+def_int $int2 = 0;
+switch_int ($int0) {
+	case 0 :
+		$int2 = 0;
+		$int1 = -1;
+	case 1 :
+		$int2 = 0;
+		$int1 = 1;
+	case 2 :
+		$int2 = 1;
+		$int1 = -1;
+	case 3 :
+		$int2 = 1;
+		$int1 = 1;
+}
+def_int $int3 = calc(~clan_outfit_icon_get($int2) + $int1);
+def_int $int4 = calc(enum_getoutputcount(enum_3820) - 1);
+if ($int3 < 0) {
+	$int3 = $int4;
+}
+if ($int3 > $int4) {
+	$int3 = 0;
+}
+~clan_outfit_icon_set($int2, $int3);

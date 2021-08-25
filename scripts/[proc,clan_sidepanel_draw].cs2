@@ -92,7 +92,7 @@ if ($boolean0 = true) {
 		} else {
 			~clan_stonebutton_init("<col=ff0000>Mute</col>", $component6, "p12_full");
 		}
-		if_setonop("script4398(event_opindex, $boolean0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8)", $component6);
+		if_setonop("clan_sidepanel_chatmute(event_opindex, $boolean0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8)", $component6);
 		if (activeclanchannel_find_affined(0) = true) {
 			$int11 = activeclanchannel_getusercount;
 			if ($int11 > 0) {

@@ -1,0 +1,5 @@
+// 4344
+[clientscript,clan_storage_main_drawcoins](boolean $boolean0, component $component1, int $comsubid2, int $comsubid3)
+if (($boolean0 = true | calc(clientclock % 140) = 0) & cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
+	~clan_storage_main_drawcoins;
+}

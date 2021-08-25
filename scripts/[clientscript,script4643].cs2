@@ -1,7 +1,7 @@
 // 4643
 [clientscript,script4643]
 if (_7033("player_name", 1) = 1) {
-	_7032("player_name", 1);
+	highlight_player_off("player_name", 1);
 } else {
-	_7031("player_name", 1);
+	highlight_player_on("player_name", 1);
 }

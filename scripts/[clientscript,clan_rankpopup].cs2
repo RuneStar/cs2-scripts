@@ -55,8 +55,8 @@ while ($int12 > 0) {
 		cc_settextshadow(true);
 		cc_settextfont(p12_full);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
-		~script4320($int9, calc($int10 + $int8));
-		cc_setonclansettingstransmit("script4319(event_com, cc_getid, .cc_getid, $int9, calc($int10 + $int8))");
+		~clan_rankpopup_updatetitle($int9, calc($int10 + $int8));
+		cc_setonclansettingstransmit("clan_rankpopup_updatetitle(event_com, cc_getid, .cc_getid, $int9, calc($int10 + $int8))");
 		$int10 = calc($int10 + $int6);
 	}
 }

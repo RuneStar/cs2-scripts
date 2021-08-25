@@ -1,0 +1,13 @@
+// 4698
+[proc,helper_generic_reset]
+def_int $int0 = 0;
+while ($int0 < 10) {
+	~helper_generic_set_type($int0, 0);
+	~helper_generic_set_string($int0, "null");
+	$int0 = calc($int0 + 1);
+}
+cc_deleteall(interface_711:3);
+~helper_generic_set_size(119, 300);
+%varcint492 = 0;
+%varcint493 = 0;
+%varcint494 = 0;

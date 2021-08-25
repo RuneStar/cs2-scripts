@@ -1,0 +1,74 @@
+// 3310
+[proc,summary_sidepanel_draw](component $component0, component $component1)(int)
+def_int $int2 = 0;
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 26;
+def_int $comsubid8 = 0;
+def_int $comsubid9 = 0;
+def_int $int10 = 0;
+def_int $int11 = 0;
+def_int $int12 = ~stat_totallevel;
+def_int $int13 = 0;
+def_int $int14 = 0;
+$int13, $int14 = ~stats_totalxp;
+def_int $int15 = ~script3971;
+def_int $int16 = ~script3980;
+$int7 = 40;
+if (%varcint52 = 126) {
+	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Combat Level:", "", "account_icons,0", "<col=0dc10d><tostring(%varcint52)></col>", $int2, $int3, 0);
+} else {
+	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Combat Level:", "", "account_icons,0", "<col=0dc10d><tostring(%varcint52)></col>", $int2, $int3, 0);
+}
+$int10 = $int4;
+if (cc_find($component0, $comsubid8) = ^true) {
+	cc_setonstattransmit("script3893(event_com, event_comsubid, $comsubid9, $int7, 0, $int11, p11_full){attack, strength, defence, hitpoints, prayer, magic, ranged}");
+}
+if ($int12 = 2277) {
+	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Total Level:", "", "account_icons,1", "<col=0dc10d><tostring($int12)></col>", $int2, $int3, 1);
+} else {
+	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Total Level:", "", "account_icons,1", "<col=0dc10d><tostring($int12)></col>", $int2, $int3, 1);
+}
+if (cc_find($component0, $comsubid8) = ^true) {
+	cc_setonstattransmit("script3946(event_com, event_comsubid, $comsubid9, $int7, $int10, $int11, p11_full)");
+}
+$int4 = 0;
+$int7 = 26;
+if ($int13 = 4 & $int14 = 600000000) {
+	$int2, $int3, $int5, $comsubid8, $comsubid9 = ~script3949($component0, $component1, $int5, $int6, $int7, "account_icons,2", "Total XP: <col=0dc10d><~stats_tostring_totalxp($int13, $int14)></col>", "", $int2, $int3, p11_full, p11_full);
+} else {
+	$int2, $int3, $int5, $comsubid8, $comsubid9 = ~script3949($component0, $component1, $int5, $int6, $int7, "account_icons,2", "Total XP: <col=0dc10d><~stats_tostring_totalxp($int13, $int14)></col>", "", $int2, $int3, p11_full, p11_full);
+}
+if (cc_find($component0, $comsubid8) = ^true) {
+	cc_setonstattransmit("script3427(event_com, event_comsubid, $comsubid9, $int7, p11_full)");
+}
+$int7 = 52;
+if (%var101 = %varbit1782) {
+	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Quests Completed:", "Quest List", "achievement_diary_icons,0", "<col=0dc10d><tostring(%varbit6347)>/<tostring(%varbit11877)></col>", $int2, $int3, 0);
+} else {
+	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Quests Completed:", "Quest List", "achievement_diary_icons,0", "<col=0dc10d><tostring(%varbit6347)>/<tostring(%varbit11877)></col>", $int2, $int3, 0);
+}
+if ($int15 = $int16) {
+	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Achievements Completed:", "Achievement Diaries", "achievement_diary_icons,1", "<col=0dc10d><tostring($int15)>/<tostring($int16)></col>", $int2, $int3, 1);
+} else {
+	$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Achievements Completed:", "Achievement Diaries", "achievement_diary_icons,1", "<col=0dc10d><tostring($int15)>/<tostring($int16)></col>", $int2, $int3, 1);
+}
+$int4 = 0;
+$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Combat Tasks Completed:", "Overview", "account_icons,3", "<col=0dc10d><tostring(~script4765)>/<tostring(~script4766)></col>", $int2, $int3, 0);
+if (cc_find($component1, calc($int3 - 1)) = ^true) {
+	cc_setop(2, "Bosses");
+	cc_setop(3, "Tasks");
+	cc_setop(4, "Rewards");
+}
+$int2, $int3, $int5, $int4, $int11, $comsubid8, $comsubid9 = ~script3950($component0, $component1, $int5, $int4, $int6, $int7, "Collections Logged:", "Collection Log", "account_icons,4", "<col=0dc10d><tostring(%var2943)>/<tostring(%var2944)></col>", $int2, $int3, 1);
+$int7 = 24;
+if (%varbit12933 = 1) {
+	$int2, $int3, $int5, $comsubid8, $comsubid9 = ~script3949($component0, $component1, $int5, $int6, $int7, null, "Time Played: <col=0dc10d><~tostring_minutes(%varcint526, 1)></col>", "Hide", $int2, $int3, p11_full, p11_full);
+} else if (~on_mobile = true) {
+	$int2, $int3, $int5, $comsubid8, $comsubid9 = ~script3949($component0, $component1, $int5, $int6, $int7, null, "Time Played: Tap to reveal.", "Reveal", $int2, $int3, p11_full, p11_full);
+} else {
+	$int2, $int3, $int5, $comsubid8, $comsubid9 = ~script3949($component0, $component1, $int5, $int6, $int7, null, "Time Played: Click to reveal.", "Reveal", $int2, $int3, p11_full, p11_full);
+}
+return(0);

@@ -1,0 +1,5 @@
+// 4670
+[proc,buff_bar_position_init](component $component0, component $component1, component $component2, component $component3)
+if (if_getlayer($component0) ! null) {
+	~buff_bar_position_review($component0, $component1, $component2, $component3, ^min_32bit_int);
+}

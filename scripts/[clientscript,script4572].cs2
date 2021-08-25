@@ -1,9 +1,0 @@
-// 4572
-[clientscript,script4572](component $component0, int $int1, enum $enum2, int $int3)
-$int1 = calc(1 + $int1);
-if ($int1 > 30) {
-	if_setontimer(null, $component0);
-	~script4574($component0, $enum2, $int3);
-} else {
-	if_setontimer("script4572($component0, $int1, $enum2, $int3)", $component0);
-}

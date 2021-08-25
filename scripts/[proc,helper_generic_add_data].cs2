@@ -1,0 +1,14 @@
+// 4707
+[proc,helper_generic_add_data](string $string0, string $string1)(int, int)
+if (%varcint494 >= calc(10 - 1)) {
+	return(0, 0);
+}
+cc_create(interface_711:3, ^iftype_text, %varcint494);
+~helper_generic_set_type(%varcint494, 3);
+~helper_generic_set_string(%varcint494, $string0);
+%varcint494 = calc(%varcint494 + 1);
+cc_create(interface_711:3, ^iftype_text, %varcint494);
+~helper_generic_set_type(%varcint494, 4);
+~helper_generic_set_string(%varcint494, $string1);
+%varcint494 = calc(%varcint494 + 1);
+return(calc(%varcint494 - 2), calc(%varcint494 - 1));

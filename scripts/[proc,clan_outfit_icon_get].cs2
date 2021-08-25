@@ -1,0 +1,12 @@
+// 4440
+[proc,clan_outfit_icon_get](int $int0)(int)
+switch_int ($int0) {
+	case 0 :
+		return(calc(~getbit_range(%var3023, 0, 9) - 1));
+	case 1 :
+		return(calc(~getbit_range(%var3023, 10, 19) - 1));
+	case 2 :
+		return(calc(~getbit_range(%var3023, 20, 29) - 1));
+	case default :
+		return(0);
+}

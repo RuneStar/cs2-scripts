@@ -1,8 +1,0 @@
-// 4194
-[proc,script4194](int $count0)(int)
-def_enum $enum1 = enum_3790;
-def_int $count2 = enum_getoutputcount($enum1);
-if ($count0 < $count2) {
-	return(enum(int, int, $enum1, $count0));
-}
-return(0);

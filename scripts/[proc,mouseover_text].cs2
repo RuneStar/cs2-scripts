@@ -1,0 +1,17 @@
+// 4727
+[proc,mouseover_text](int $int0, component $component1, string $text0, int $int2, int $int3)(int)
+if (enum(int, boolean, enum_3904, $int2) = false) {
+	return($int0);
+}
+if ($int3 > 1) {
+	$text0 = "<$text0></col> / <tostring(calc($int3 - 1))> more options";
+}
+cc_create($component1, ^iftype_text, $int0);
+cc_setsize(10, 10, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextfont(b12_full);
+cc_settextshadow(true);
+cc_settext($text0);
+cc_setcolour(0xd8d8d8);
+$int0 = calc($int0 + 1);
+return($int0);

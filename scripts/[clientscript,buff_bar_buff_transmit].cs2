@@ -1,0 +1,72 @@
+// 4665
+[clientscript,buff_bar_buff_transmit](int $int0, struct $struct1, int $int2, component $component3, component $component4, int $int5)
+if ($struct1 = null) {
+	return;
+}
+def_int $int6 = struct_param($struct1, param_1277);
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $int9 = 0;
+def_obj $obj10 = null;
+if ($int6 = 5) {
+	$obj10 = inv_getobj(struct_param($struct1, param_1283), struct_param($struct1, param_1351));
+	if ($obj10 ! null) {
+		$int7 = inv_getnum(struct_param($struct1, param_1283), struct_param($struct1, param_1351));
+	}
+	if ($int2 = $int7) {
+		return;
+	}
+	if (struct_param($struct1, param_1352) = true & oc_stackable($obj10) = false) {
+		$int7 = 0;
+	}
+	if ($int7 = 0) {
+		~buff_bar_setup($component3, $component4);
+		return;
+	}
+	if (cc_find($component3, $int5) = ^true) {
+		if ($int7 > 999) {
+			cc_settext("999+");
+		} else {
+			cc_settext(tostring($int7));
+		}
+	}
+} else if ($int6 = 1) {
+	$int7 = ~script4681($int0);
+	if ($int2 = $int7) {
+		return;
+	}
+	if ($int7 = 0) {
+		~buff_bar_setup($component3, $component4);
+		return;
+	}
+	if (cc_find($component3, $int5) = ^true) {
+		$int7 = ~buff_bar_get_number($int0);
+		if ($int7 > 999) {
+			cc_settext("999+");
+		} else {
+			cc_settext(tostring($int7));
+		}
+	}
+} else {
+	$int7 = ~script4681($int0);
+	if ($int2 = $int7) {
+		return;
+	}
+	if ($int7 = 0) {
+		~buff_bar_setup($component3, $component4);
+		return;
+	}
+	if ($int6 = 2 | $int6 = 3 | $int6 = 4) {
+		$int9 = 1;
+	}
+	if (cc_find($component3, $int5) = ^true) {
+		$int8 = ~buff_bar_get_number($int0);
+		if ($int9 = 1) {
+			$int8 = ~script4666($int6, $int8);
+			cc_setontimer("buff_bar_buff_timer($component3, $component4, $int5, clientclock, $int8, $int0, $int6, $int7, struct_param($struct1, param_1290), struct_param($struct1, param_1291), 0, 0)");
+		}
+	}
+}
+if (cc_find($component3, calc($int5 - 1)) = ^true) {
+	~buff_bar_get_transmit($int0, $struct1, $int7, $component3, $component4, $int5);
+}

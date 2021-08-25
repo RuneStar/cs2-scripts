@@ -1,0 +1,28 @@
+// 4450
+[proc,clan_create_player_component](component $component0, string $string0, int $int1, string $string1)
+cc_create($component0, ^iftype_text, $int1);
+cc_setposition(10, calc(20 * $int1 + 8), ^setpos_abs_left, ^setpos_abs_top);
+cc_setsize(10, 20, ^setsize_minus, ^setsize_abs);
+cc_setcolour(^white);
+cc_settextfont(p12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settextshadow(true);
+def_string $string2 = tostring(calc($int1 + 1));
+cc_settext(append("<$string2>. ", $string0));
+if (string_length($string0) = 0) {
+	return;
+}
+if (compare($string1, removetags($string0)) = 0) {
+	return;
+}
+cc_setopbase($string0);
+cc_setonop("script4451(event_opindex, event_opbase)");
+if (%varbit12171 = 1) {
+	cc_setop(1, "Kick");
+}
+if (friend_test($string0) = true) {
+	cc_setop(3, "Remove friend");
+} else {
+	cc_setop(4, "Add friend");
+	cc_setop(5, "Add ignore");
+}

@@ -1,5 +1,5 @@
 // 1505
 [clientscript,raids_overlay_init](component $component0, component $component1, component $component2)
 ~script4729($component1, $component2, setbit(setbit(52984, 12), 13), ^setpos_abs_left, ^setpos_abs_top, true);
-if_setonvartransmit("script4662($component2){var2856}", $component0);
-~script4663($component2);
+if_setonvartransmit("raids_overlay_content_transmit($component2){var2856}", $component0);
+~raids_overlay_content($component2);

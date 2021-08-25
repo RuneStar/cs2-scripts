@@ -1,0 +1,10 @@
+// 4571
+[proc,settings_side_dropdown_close](component $component0, component $component1, component $component2, component $component3)
+if (if_gethide($component0) = false) {
+	sound_synth(interface_select1, 1, 0);
+}
+if_sethide(true, $component0);
+if_sethide(true, $component3);
+if_sethide(false, $component1);
+~deltooltip_action($component1);
+~xpdrops_setup_display_hoveroff($component2);

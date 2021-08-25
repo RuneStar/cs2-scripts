@@ -65,7 +65,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 		}
 		while ($int18 < $int11 & $int15 < 500) {
 			$int17 = activeclansettings_getsortedaffinedslot($int18);
-			$int20 = ~script4236($int17);
+			$int20 = ~clan_members_filtercheck($int17);
 			if ($int20 ! -1) {
 				$string1 = activeclansettings_getaffineddisplayname($int17);
 				if (cc_find($component7, $int17) = ^true & .cc_find($component9, $int17) = ^true) {
@@ -142,7 +142,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 		}
 		switch_int (%varbit12177) {
 			case 1 :
-				~script4254($component7, $int11, $int12);
+				~clan_members_showjoined($component7, $int11, $int12);
 			case 2 :
 				~script4255($component7, $int11, $int12);
 			case 3 :
@@ -154,11 +154,11 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 			case 6 :
 				~script4262($component7, $int11, $int12);
 			case default :
-				~script4253($component7, $int11, $int12);
+				~clan_members_showrank($component7, $int11, $int12);
 		}
 		switch_int (calc((%varbit12178 + 1) % enum_getoutputcount(enum_3793))) {
 			case 1 :
-				~script4254($component9, $int11, $int12);
+				~clan_members_showjoined($component9, $int11, $int12);
 			case 2 :
 				~script4255($component9, $int11, $int12);
 			case 3 :
@@ -170,7 +170,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 			case 6 :
 				~script4262($component9, $int11, $int12);
 			case default :
-				~script4253($component9, $int11, $int12);
+				~clan_members_showrank($component9, $int11, $int12);
 		}
 	} else {
 		cc_create($component3, ^iftype_text, 0);

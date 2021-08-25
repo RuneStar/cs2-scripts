@@ -1,0 +1,11 @@
+// 4566
+[clientscript,settings_fps_limit](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $layer6)
+if (~on_mobile = true) {
+	if_setposition(0, 45, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+} else if (~on_enhanced = 1) {
+	if_setposition(0, 86, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+} else {
+	if_sethide(true, $component0);
+	return;
+}
+~settings_side_dropdown_create($component0, $component1, $component2, $component3, $component4, $component5, $layer6, "Limit Framerate", limit_framerate_2735);

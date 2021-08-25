@@ -1,0 +1,22 @@
+// 4321
+[clientscript,clan_hall_piano]
+def_component $component0 = interface_698:2;
+def_int $int1 = 1;
+def_enum $enum2 = enum_3799;
+def_int $count3 = enum_getoutputcount($enum2);
+def_string $string0 = "";
+def_int $key4 = 0;
+def_int $count5 = 0;
+def_struct $struct6 = null;
+if ($int1 = 1) {
+	~chatdefault_stopinput;
+}
+while ($count5 < $count3) {
+	$struct6 = enum(int, struct, $enum2, $count5);
+	if_setonop("script4324($count5)", struct_param($struct6, param_1236));
+	$string0 = struct_param($struct6, param_1240);
+	$key4 = struct_param($struct6, param_1241);
+	~script4322($component0, $count5, $string0, $key4);
+	$count5 = calc($count5 + 1);
+}
+~script4322($component0, $count5, "ø", 0);

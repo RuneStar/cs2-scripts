@@ -1,0 +1,23 @@
+// 4649
+[clientscript,chattimestamp](int $int0)
+def_int $int1 = chat_gettimestamps;
+mes("got chat timestamp, found value to be <tostring($int1)>");
+if ($int0 = 100) {
+	mes("Adding test highlights to right-click menus");
+	~script4624;
+}
+if ($int0 = 300) {
+	mes("starting federated_login");
+	federated_login("steam", "check");
+}
+if ($int0 = 400) {
+	~script4648;
+}
+if ($int0 = 500) {
+	mes("Zooming Ui in 2x");
+	_6210(200);
+}
+if ($int0 = 501) {
+	mes("Resetting Ui Zoom");
+	_6212;
+}

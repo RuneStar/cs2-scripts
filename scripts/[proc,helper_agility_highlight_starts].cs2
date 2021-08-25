@@ -1,0 +1,42 @@
+// 5168
+[proc,helper_agility_highlight_starts]
+def_int $count0 = 0;
+def_int $count1 = enum_getoutputcount(enum_3508);
+def_int $int2 = 0;
+def_int $int3 = -1;
+def_struct $struct4 = null;
+def_loc $loc5 = null;
+def_npc $npc6 = null;
+def_enum $enum7 = null;
+def_coord $coord8 = null;
+while ($count0 < $count1) {
+	$struct4 = enum(int, struct, enum_3508, $count0);
+	if ($struct4 ! null) {
+		$loc5 = struct_param($struct4, param_1347);
+		if ($loc5 ! null) {
+			$coord8 = struct_param($struct4, param_1348);
+			if ($coord8 = null) {
+				highlight_loctype_on($loc5, 11);
+			} else {
+				highlight_loc_on($loc5, $coord8, 11, 1);
+			}
+		}
+		$npc6 = struct_param($struct4, param_1349);
+		if ($npc6 ! null) {
+			highlight_npctype_on($npc6, 11);
+		}
+		$enum7 = struct_param($struct4, param_1350);
+		if ($enum7 ! null) {
+			$int3 = enum_getoutputcount($enum7);
+			$int2 = 0;
+			while ($int2 < $int3) {
+				$coord8 = enum(int, coord, $enum7, $int2);
+				if ($coord8 ! null) {
+					highlight_tile_on($coord8, 10, 1);
+				}
+				$int2 = calc($int2 + 1);
+			}
+		}
+	}
+	$count0 = calc($count0 + 1);
+}

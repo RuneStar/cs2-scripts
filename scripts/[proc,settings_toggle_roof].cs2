@@ -1,0 +1,4 @@
+// 4577
+[proc,settings_toggle_roof]
+%varbit12378 = calc(1 - %varbit12378);
+setremoveroofs(~int_to_bool(%varbit12378));

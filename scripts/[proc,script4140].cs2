@@ -2,7 +2,7 @@
 [proc,script4140](component $component0, component $component1, component $component2, component $component3, component $component4, boolean $boolean5, int $int6)
 %varcint435 = $boolean5;
 if ($boolean5 = true) {
-	if_setonkey("script4141($component0, $component1, $component2, $component3, $component4, event_key, event_keychar)", $component2);
+	if_setonkey("tutorial_displayname_onkey($component0, $component1, $component2, $component3, $component4, event_key, event_keychar)", $component2);
 	if_setondialogabort("script4139($component0, $component1, $component2, $component3, $component4, false)", $component2);
 	if_sethide(false, $component3);
 	if (~on_mobile = false) {

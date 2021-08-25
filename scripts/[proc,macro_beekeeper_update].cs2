@@ -1,0 +1,53 @@
+// 3060
+[proc,macro_beekeeper_update](int $int0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
+~macro_beekeeper_setcomponent($component2, %varbit10601);
+~macro_beekeeper_setcomponent($component3, %varbit10602);
+~macro_beekeeper_setcomponent($component4, %varbit10603);
+~macro_beekeeper_setcomponent($component5, %varbit10604);
+~macro_beekeeper_setcomponent($component6, %varbit10605);
+~macro_beekeeper_setcomponent($component7, %varbit10606);
+~macro_beekeeper_setcomponent($component8, %varbit10607);
+~macro_beekeeper_setcomponent($component9, %varbit10608);
+if ($int0 = 0) {
+	return;
+}
+if (%varbit10601 > 0) {
+	if_setondragcomplete("macro_beekeeper_rearrange(event_com, event_drop, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9)", $component2);
+} else {
+	if_setondragcomplete(null, $component2);
+}
+if (%varbit10602 > 0) {
+	if_setondragcomplete("macro_beekeeper_rearrange(event_com, event_drop, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9)", $component3);
+} else {
+	if_setondragcomplete(null, $component3);
+}
+if (%varbit10603 > 0) {
+	if_setondragcomplete("macro_beekeeper_rearrange(event_com, event_drop, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9)", $component4);
+} else {
+	if_setondragcomplete(null, $component4);
+}
+if (%varbit10604 > 0) {
+	if_setondragcomplete("macro_beekeeper_rearrange(event_com, event_drop, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9)", $component5);
+} else {
+	if_setondragcomplete(null, $component5);
+}
+if (%varbit10605 > 0) {
+	if_setondragcomplete("macro_beekeeper_rearrange(event_com, event_drop, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9)", $component6);
+} else {
+	if_setondragcomplete(null, $component6);
+}
+if (%varbit10606 > 0) {
+	if_setondragcomplete("macro_beekeeper_rearrange(event_com, event_drop, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9)", $component7);
+} else {
+	if_setondragcomplete(null, $component7);
+}
+if (%varbit10607 > 0) {
+	if_setondragcomplete("macro_beekeeper_rearrange(event_com, event_drop, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9)", $component8);
+} else {
+	if_setondragcomplete(null, $component8);
+}
+if (%varbit10608 > 0) {
+	if_setondragcomplete("macro_beekeeper_rearrange(event_com, event_drop, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9)", $component9);
+} else {
+	if_setondragcomplete(null, $component9);
+}

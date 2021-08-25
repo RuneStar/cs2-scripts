@@ -2,11 +2,11 @@
 [proc,autocast_spellpos](int $int0, int $int1)(int, int)
 switch_int ($int1) {
 	case -1 :
-		return(~script4512($int0));
+		return(~standard_autocast_spellpos($int0));
 	case 9013 :
 		return(~arceuus_autocast_spellpos($int0));
 	case 4675 :
-		return(~script4511($int0));
+		return(~ancient_autocast_spellpos($int0));
 	case 4170 :
 		switch_int ($int0) {
 			case 17 :

@@ -1,7 +1,0 @@
-// 5221
-[clientscript,script5221](component $component0, component $component1, int $clock2)
-if (clientclock < calc($clock2 + 10)) {
-	return;
-}
-if_setontimer(null, $component0);
-~script3310($component0, $component1);

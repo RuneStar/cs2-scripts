@@ -9,31 +9,31 @@ def_int $int4 = 0;
 %varcint493 = 0;
 while ($int0 < %varcint494) {
 	~script4701(~script4700($int0));
-	if (~script4712($int0) = 3) {
+	if (~helper_generic_get_type($int0) = 3) {
 		$int1 = 2;
 	} else {
 		$int1 = 1;
 	}
 	$int0 = calc($int0 + $int1);
 }
-~script4704(%varcint492, %varcint493);
+~helper_generic_set_size(%varcint492, %varcint493);
 $int0 = 0;
 while ($int0 < %varcint494) {
-	switch_int (~script4712($int0)) {
+	switch_int (~helper_generic_get_type($int0)) {
 		case 0 :
 			$int1 = 1;
 		case 1 :
-			~script4708($int0);
+			~helper_generic_draw_title($int0);
 			$int1 = 1;
 		case 2 :
-			~script4709($int0);
+			~helper_generic_draw_text($int0);
 			$int1 = 1;
 		case 3 :
-			~script4710($int0);
+			~helper_generic_draw_data($int0);
 			$int1 = 2;
 		case 4 :
 			$int1 = 1;
 	}
 	$int0 = calc($int0 + $int1);
 }
-~script4704(calc(%varcint492 + 8), calc(%varcint493 + 8));
+~helper_generic_set_size(calc(%varcint492 + 8), calc(%varcint493 + 8));

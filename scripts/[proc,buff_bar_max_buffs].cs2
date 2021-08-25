@@ -1,0 +1,8 @@
+// 4668
+[proc,buff_bar_max_buffs]()(int, int)
+def_int $width0 = if_getwidth(interface_651:4);
+def_int $height1 = if_getheight(interface_651:4);
+def_int $int2 = calc($width0 / 37);
+def_int $int3 = calc($height1 / 37);
+def_int $int4 = calc($int2 * $int3);
+return($int2, $int3);

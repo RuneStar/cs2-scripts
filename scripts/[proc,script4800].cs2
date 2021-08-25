@@ -142,7 +142,7 @@ while ($count16 <= $count15) {
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
 		$int28 = ~script4807($component3, $int30, $int29, $int28, calc($int18 + 8), calc($int17 + 53), calc($int25 - 16), ^settextalign_centre, 0x0dc10d, 0);
-		$int26 = ~script4849($component5, $component6, "", $int18, $int17, $int25, $int19, $int26, $int13, 1);
+		$int26 = ~dynamic_stone_button_filled($component5, $component6, "", $int18, $int17, $int25, $int19, $int26, $int13, 1);
 		if (cc_find($component6, $int13) = ^true) {
 			cc_setop(1, "View");
 			cc_setopbase("<col=ff9040><$string0></col>");

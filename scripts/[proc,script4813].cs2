@@ -70,7 +70,7 @@ while ($count23 < $count27) {
 	$int24 = calc($int24 + $int21);
 }
 $int11 = $int36;
-$int17 = ~script4216($component6, $int17, $int22, $int11, $int25, $int24, ^setpos_abs_left, ^setpos_abs_top);
+$int17 = ~thinbox_specific($component6, $int17, $int22, $int11, $int25, $int24, ^setpos_abs_left, ^setpos_abs_top);
 $int22 = 2;
 cc_create($component5, ^iftype_rectangle, $int16);
 cc_setsize(calc($int19 + 6), $int24, ^setsize_abs, ^setsize_abs);
@@ -86,7 +86,7 @@ cc_setobject($obj28, 1);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 $int16 = calc($int16 + 1);
-$int17 = ~script4216($component6, $int17, $int22, $int11, calc($int19 + 6), $int24, ^setpos_abs_left, ^setpos_abs_top);
+$int17 = ~thinbox_specific($component6, $int17, $int22, $int11, calc($int19 + 6), $int24, ^setpos_abs_left, ^setpos_abs_top);
 $int11 = calc($int11 + $int24 - 1);
 $int22 = calc($int19 + 7);
 $int24 = 0;
@@ -121,7 +121,7 @@ while ($count23 < $count30) {
 	$int24 = calc($int24 + $int21);
 }
 $int11 = $int36;
-$int17 = ~script4216($component6, $int17, $int22, $int11, $int25, $int24, ^setpos_abs_left, ^setpos_abs_top);
+$int17 = ~thinbox_specific($component6, $int17, $int22, $int11, $int25, $int24, ^setpos_abs_left, ^setpos_abs_top);
 $int22 = 2;
 cc_create($component5, ^iftype_rectangle, $int16);
 cc_setsize(calc($int19 + 6), $int24, ^setsize_abs, ^setsize_abs);
@@ -137,7 +137,7 @@ cc_setobject($obj31, 1);
 cc_setgraphicshadow(0x333333);
 cc_setoutline(1);
 $int16 = calc($int16 + 1);
-$int17 = ~script4216($component6, $int17, $int22, $int11, calc($int19 + 6), $int24, ^setpos_abs_left, ^setpos_abs_top);
+$int17 = ~thinbox_specific($component6, $int17, $int22, $int11, calc($int19 + 6), $int24, ^setpos_abs_left, ^setpos_abs_top);
 $int11 = calc($int11 + $int24);
 $int22 = calc($int19 + 7);
 $int24 = 0;
@@ -174,7 +174,7 @@ if ($obj34 ! null) {
 		$int24 = calc($int24 + $int21);
 	}
 	$int11 = $int36;
-	$int17 = ~script4216($component6, $int17, $int22, $int11, $int25, $int24, ^setpos_abs_left, ^setpos_abs_top);
+	$int17 = ~thinbox_specific($component6, $int17, $int22, $int11, $int25, $int24, ^setpos_abs_left, ^setpos_abs_top);
 	$int22 = 2;
 	cc_create($component5, ^iftype_rectangle, $int16);
 	cc_setsize(calc($int19 + 6), $int24, ^setsize_abs, ^setsize_abs);
@@ -200,7 +200,7 @@ if ($obj34 ! null) {
 		cc_setoutline(1);
 		$int16 = calc($int16 + 1);
 	}
-	$int17 = ~script4216($component6, $int17, $int22, $int11, calc($int19 + 6), $int24, ^setpos_abs_left, ^setpos_abs_top);
+	$int17 = ~thinbox_specific($component6, $int17, $int22, $int11, calc($int19 + 6), $int24, ^setpos_abs_left, ^setpos_abs_top);
 	$int11 = calc($int11 + $int24);
 }
 $int11 = calc($int11 + 5);

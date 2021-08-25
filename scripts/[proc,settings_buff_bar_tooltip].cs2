@@ -1,0 +1,6 @@
+// 4591
+[proc,settings_buff_bar_tooltip]
+if (~on_enhanced = 0 & ~league_world = 0) {
+	return;
+}
+%varbit9529 = calc(1 - %varbit9529);

@@ -55,7 +55,7 @@ def_int $int21 = calc(($int10 - 8 * 3) / 2);
 def_int $int22 = calc(8 + $int21 + 8);
 def_int $int23 = 6;
 def_int $int24 = 0;
-$int20, $int24 = ~script4463($int20, 8, $int23, calc($int10 - 8 * 2), $int16, 0, permission_access_2943, null, $component7);
+$int20, $int24 = ~clan_permissions_buttoninit($int20, 8, $int23, calc($int10 - 8 * 2), $int16, 0, permission_access_2943, null, $component7);
 $int23 = calc($int23 + $int24 + 6);
 def_int $int25 = 0;
 $count15, $int14 = 0, 1;
@@ -64,7 +64,7 @@ while ($count15 < $count13) {
 	if ($enum11 ! null) {
 		$struct12 = enum(int, struct, $enum11, -1);
 		if ($struct12 ! null) {
-			$int20, $int18 = ~script4460($int20, $int23, struct_param($struct12, param_1251), $component7, $component4, $int18, $component8, $count15, $int19);
+			$int20, $int18 = ~clan_permissions_categorytitle($int20, $int23, struct_param($struct12, param_1251), $component7, $component4, $int18, $component8, $count15, $int19);
 			$int23 = calc($int23 + 25 + 6);
 		}
 		$int17, $int25 = 0, calc(enum_getoutputcount($enum11) - 1);
@@ -72,12 +72,12 @@ while ($count15 < $count13) {
 			$struct12 = enum(int, struct, $enum11, $int17);
 			if ($struct12 ! null) {
 				if (calc($int17 % 2) = 1) {
-					$int20, $int24 = ~script4463($int20, $int22, $int23, $int21, $int16, $int14, $struct12, enum(int, struct, $enum11, calc($int17 - 1)), $component7);
+					$int20, $int24 = ~clan_permissions_buttoninit($int20, $int22, $int23, $int21, $int16, $int14, $struct12, enum(int, struct, $enum11, calc($int17 - 1)), $component7);
 					$int23 = calc($int23 + $int24 + 6);
 				} else if ($int17 < calc($int25 - 1)) {
-					$int20, $int24 = ~script4463($int20, 8, $int23, $int21, $int16, $int14, $struct12, enum(int, struct, $enum11, calc($int17 + 1)), $component7);
+					$int20, $int24 = ~clan_permissions_buttoninit($int20, 8, $int23, $int21, $int16, $int14, $struct12, enum(int, struct, $enum11, calc($int17 + 1)), $component7);
 				} else {
-					$int20, $int24 = ~script4463($int20, 8, $int23, $int21, $int16, $int14, $struct12, null, $component7);
+					$int20, $int24 = ~clan_permissions_buttoninit($int20, 8, $int23, $int21, $int16, $int14, $struct12, null, $component7);
 					$int23 = calc($int23 + $int24 + 6);
 				}
 				$int14 = calc($int14 + 1);
@@ -89,4 +89,4 @@ while ($count15 < $count13) {
 }
 ~scrollbar_vertical($component8, $component7, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 ~scrollbar_vertical($component5, $component4, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-~script4458($int23, $component7, $component8, calc($int19 * $count13), $component4, $component5, $component0, if_getheight(if_getlayer($component0)));
+~clan_permissions_setsize($int23, $component7, $component8, calc($int19 * $count13), $component4, $component5, $component0, if_getheight(if_getlayer($component0)));

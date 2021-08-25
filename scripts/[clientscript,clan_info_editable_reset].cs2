@@ -1,0 +1,10 @@
+// 4296
+[clientscript,clan_info_editable_reset](component $component0, int $int1, int $clock2, int $int3, int $int4)
+if (clientclock < $clock2) {
+	return;
+}
+if (cc_find($component0, $int1) = ^true) {
+	cc_settrans($int3);
+}
+if_setontimer("cc_settrans_temporarily_end(event_com, $int1, $int4, calc(clientclock + 2))", $component0);
+~script4293($component0, $int1, $int3, $int4);

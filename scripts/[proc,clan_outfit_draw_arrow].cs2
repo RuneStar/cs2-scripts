@@ -1,0 +1,13 @@
+// 4437
+[proc,clan_outfit_draw_arrow](component $component0, graphic $graphic1, graphic $graphic2, int $int3)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(45, 36, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic($graphic1);
+if (~on_mobile = false) {
+	cc_setonmouserepeat("cc_graphic_swapper(event_com, event_comsubid, $graphic2, null)");
+}
+cc_setonmouseleave("cc_graphic_swapper(event_com, event_comsubid, $graphic1, null)");
+cc_setop(1, "Switch");
+cc_setonop("clan_outfit_arrow_click($int3)");

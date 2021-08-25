@@ -1,0 +1,6 @@
+// 4441
+[proc,clan_outfit_icon_get_all]()(int, int, int)
+def_int $int0 = calc(~getbit_range(%varclansetting11, 0, 9) - 1);
+def_int $int1 = calc(~getbit_range(%varclansetting11, 10, 19) - 1);
+def_int $int2 = calc(~getbit_range(%varclansetting11, 20, 29) - 1);
+return($int0, $int1, $int2);

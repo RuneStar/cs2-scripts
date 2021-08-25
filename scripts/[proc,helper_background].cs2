@@ -1,0 +1,16 @@
+// 4691
+[proc,helper_background](component $component0)
+cc_create($component0, ^iftype_graphic, 0);
+cc_setgraphic("tradebacking");
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settiling(true);
+cc_settrans(100);
+cc_create($component0, ^iftype_rectangle, 1);
+cc_setcolour(0x383023);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_create($component0, ^iftype_rectangle, 2);
+cc_setcolour(0x5a5245);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);

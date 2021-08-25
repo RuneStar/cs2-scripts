@@ -1,0 +1,53 @@
+// 4388
+[proc,clan_property_updatebutton](component $component0, component $component1, component $component2, component $component3)(int)
+def_int $int4 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+def_int $int5 = 0;
+if ($component0 = $component1) {
+	$string0, $string1 = "Invite applications", "Stop inviting applications";
+	$int4 = ~max(parawidth($string0, 512, p12_full), parawidth($string1, 512, p12_full));
+	if (%varbit12170 = 1) {
+		$string0 = $string1;
+	}
+	cc_settext($string0);
+	if_setop(1, $string0, $component0);
+	if_setopbase("", $component0);
+} else if ($component0 = $component2) {
+	$string0, $string1 = "Combat: XXXX+", "<col=9f9f9f>Loading...</col>";
+	$int4 = ~max(parawidth($string0, 512, p12_full), parawidth($string1, 512, p12_full));
+	if (clanprofile_find = true) {
+		$int5 = ~getbit_range(%varclan4, 0, 6);
+		if ($int5 >= 126) {
+			$string0 = "Combat: <tostring($int5)>";
+		} else if ($int5 > 0) {
+			$string0 = "Combat: <tostring($int5)>+";
+		} else {
+			$string0 = "Combat: ---";
+		}
+	} else {
+		$string0 = $string1;
+	}
+	cc_settext($string0);
+	if_setop(1, "Set", $component0);
+	if_setopbase("<col=ff9040>Minimum combat level</col>", $component0);
+} else if ($component0 = $component3) {
+	$string0, $string1 = "Skill total: XXXXX+", "<col=9f9f9f>Loading...</col>";
+	$int4 = ~max(parawidth($string0, 512, p12_full), parawidth($string1, 512, p12_full));
+	if (clanprofile_find = true) {
+		$int5 = ~getbit_range(%varclan4, 7, 18);
+		if ($int5 >= calc(23 * 99)) {
+			$string0 = "Skill total: <~tostring_spacer($int5, ",")>";
+		} else if ($int5 > 0) {
+			$string0 = "Skill total: <~tostring_spacer($int5, ",")>+";
+		} else {
+			$string0 = "Skill total: ---";
+		}
+	} else {
+		$string0 = $string1;
+	}
+	cc_settext($string0);
+	if_setop(1, "Set", $component0);
+	if_setopbase("<col=ff9040>Minimum skill total</col>", $component0);
+}
+return(calc($int4 + 16));

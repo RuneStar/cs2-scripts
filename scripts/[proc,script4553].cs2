@@ -6,7 +6,7 @@ if (_203($newvar0) = 1) {
 	cc_setonmouseover(null);
 }
 if (%varbit12349 = 1) {
-	_7002($npc_uid2, $int3, 11);
+	highlight_npc_off($npc_uid2, $int3, 11);
 	return;
 }
 def_namedobj $namedobj4 = struct_param($struct1, param_1265);
@@ -14,13 +14,13 @@ def_namedobj $namedobj5 = struct_param($struct1, param_1268);
 def_int $int6 = ~script4557($namedobj4);
 def_int $int7 = ~script4557($namedobj5);
 if (%varbit12350 = 0 & $int6 = 0 & $int7 = 0) {
-	_7002($npc_uid2, $int3, 11);
+	highlight_npc_off($npc_uid2, $int3, 11);
 	return;
 }
 def_enum $enum8 = struct_param($struct1, param_1266);
 def_enum $enum9 = struct_param($struct1, param_1269);
 if ($enum8 = null & $enum9 = null) {
-	_7002($npc_uid2, $int3, 11);
+	highlight_npc_off($npc_uid2, $int3, 11);
 	return;
 }
 def_namedobj $namedobj10 = ~script4556($enum8);
@@ -31,7 +31,7 @@ if ($namedobj10 = null & $namedobj11 = null) {
 	$namedobj12 = struct_param($struct1, param_1270);
 	$trans13 = 100;
 	if ($namedobj12 = null) {
-		_7002($npc_uid2, $int3, 11);
+		highlight_npc_off($npc_uid2, $int3, 11);
 		return;
 	}
 }
@@ -65,7 +65,7 @@ if ($namedobj12 = null) {
 	}
 }
 if ($namedobj12 = null) {
-	_7002($npc_uid2, $int3, 11);
+	highlight_npc_off($npc_uid2, $int3, 11);
 	return;
 }
 _103($newvar0, 5, 0);
@@ -74,7 +74,7 @@ cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
 cc_setobject_nonum($namedobj12, 1);
 cc_setoutline(1);
 cc_settrans($trans13);
-_7001($npc_uid2, $int3, 11);
+highlight_npc_on($npc_uid2, $int3, 11);
 if (_203($newvar0) = 1) {
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	if (%varbit12351 = 0) {

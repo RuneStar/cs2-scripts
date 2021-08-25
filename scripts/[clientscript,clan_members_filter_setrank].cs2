@@ -1,0 +1,5 @@
+// 4238
+[clientscript,clan_members_filter_setrank](component $component0, int $comsubid1, int $comsubid2, component $component3, component $component4)
+if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
+	~clan_members_filter_setrank($component0, $component3, $component4);
+}

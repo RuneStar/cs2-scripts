@@ -60,7 +60,7 @@ while ($int9 < $count8) {
 	cc_setsize($int23, $int23, ^setsize_abs, ^setsize_abs);
 	cc_setposition(calc($int10 + $int19 / 2 - $int23 / 2), calc($int11 + 19), ^setpos_abs_left, ^setpos_abs_top);
 	cc_setgraphic($graphic15);
-	$int21 = ~script4849($component3, $component4, "", $int10, $int11, $int19, $int20, $int21, $int12, 1);
+	$int21 = ~dynamic_stone_button_filled($component3, $component4, "", $int10, $int11, $int19, $int20, $int21, $int12, 1);
 	if (cc_find($component4, $int12) = ^true) {
 		cc_setop(1, "<$text0> Tasks");
 		cc_setonop("button_select_sound");

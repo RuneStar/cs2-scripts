@@ -21,7 +21,7 @@ if (%varbit6607 = 1) {
 if (%varbit6608 = 1 & ~magic_spellbook_hasrunes($obj0) = 0) {
 	return(0);
 }
-if (%varbit12137 = 1 & ~script4131($obj0) = 0) {
+if (%varbit12137 = 1 & ~magic_spellbook_unlocked($obj0) = 0) {
 	return(0);
 }
 return(1);

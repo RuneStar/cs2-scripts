@@ -1,0 +1,12 @@
+// 4658
+[clientscript,helper_cox_data](component $component0, int $comsubid1, int $comsubid2)
+def_int $int3 = calc(30 * %varbit6386);
+if (cc_find($component0, $comsubid1) = ^true & .cc_find($component0, $comsubid2) = ^true) {
+	~helper_cox_data($component0, $int3);
+	if (%varbit6386 > 0 & %varbit5425 < 5) {
+		cc_setontimer("helper_cox_timer($component0, $comsubid1, $comsubid2, $int3)");
+	}
+	if (%varbit5425 >= 5) {
+		cc_setontimer(null);
+	}
+}

@@ -15,7 +15,7 @@ if (~on_mobile = false) {
 }
 if_setonmouseleave("cc_colour_swapper(event_com, cc_getid, 0xff981f)", $component0);
 if_setonop("script4385($component0, $component1, $component2, $component3, $component4)", $component0);
-def_int $int6 = ~script4388($component0, $component2, $component3, $component4);
+def_int $int6 = ~clan_property_updatebutton($component0, $component2, $component3, $component4);
 if_setonvartransmit("script4387($component0, cc_getid, $component2, $component3, $component4){var3019}", $component0);
 if_setonclansettingstransmit("script4387($component0, cc_getid, $component2, $component3, $component4)", $component0);
 if_setsize($int6, 0, ^setsize_abs, ^setsize_minus, $component0);

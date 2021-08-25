@@ -1,0 +1,13 @@
+// 4243
+[clientscript,clan_members_filter_op](int $opindex0, component $component1, int $int2, int $int3, int $int4, int $int5)
+if ($opindex0 ! 1) {
+	return;
+}
+sound_synth(interface_select1, 1, 0);
+if (cc_find($component1, $int2) = ^true) {
+	cc_settrans($int5);
+}
+if_setontimer("script4244(calc(clientclock + 20), event_com, $int2, $int3, $int4, $int5)", $component1);
+if_setonmouserepeat(null, $component1);
+if_setonmouseleave(null, $component1);
+if_setonop(null, $component1);

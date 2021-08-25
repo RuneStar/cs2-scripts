@@ -1,0 +1,14 @@
+// 4479
+[proc,meslayer_mode18]
+if (%varcint11 = 1) {
+	if_close;
+}
+~meslayer_open(18);
+if_settext("Show players whose names contain the following text:", interface_162:41);
+~script222("");
+def_string $string0 = "";
+if_setonkey("meslayer_onkey(event_key, event_keychar, $string0)", interface_162:42);
+if_setondialogabort("meslayer_ondialogabort", interface_162:42);
+if (~on_mobile = true) {
+	~keyboard_show(0, 10);
+}

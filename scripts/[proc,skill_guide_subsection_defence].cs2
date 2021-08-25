@@ -1,0 +1,14 @@
+// 2521
+[proc,skill_guide_subsection_defence](int $int0)(string, int)
+switch_int ($int0) {
+	case 0 :
+		return("Armour", 0);
+	case 1 :
+		return("Penance", 1);
+	case 2 :
+		return("Prayers", 1);
+	case 3 :
+		return("Shields", 1);
+	case default :
+		return("", -1);
+}

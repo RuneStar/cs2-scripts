@@ -1,0 +1,10 @@
+// 4435
+[proc,clan_outfit_draw_icon](component $component0, int $int1)
+cc_deleteall($component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setsize(64, 64, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic(enum(int, graphic, enum_3820, $int1));
+cc_setonvartransmit("clan_outfit_redraw{var3023}");
+cc_setonop("clan_icon_click($int1)");
+cc_setop(1, enum(int, string, enum_3822, $int1));

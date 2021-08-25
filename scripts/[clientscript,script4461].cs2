@@ -1,8 +1,0 @@
-// 4461
-[clientscript,script4461](component $component0, component $component1, int $comsubid2, int $int3, int $int4, int $int5)
-if (cc_find($component0, $comsubid2) = ^true) {
-	sound_synth(interface_select1, 1, 0);
-	cc_setcolour(^red);
-	cc_setontimer("script4462(event_com, event_comsubid, $int4, $int5, clientclock)");
-	~scrollbar_resize($component1, $component0, ~min(calc(if_getscrollheight($component0) - if_getheight($component0)), ~max(0, $int3)));
-}
