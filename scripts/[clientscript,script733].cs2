@@ -1,65 +1,65 @@
 // 733
 [clientscript,script733](int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7)
 if ($int0 > 0) {
-	if_sethide(false, interface_65:55);
-	if_settext(tostring($int0), interface_65:55);
+	if_sethide(false, interface_65:56);
+	if_settext(tostring($int0), interface_65:56);
 } else {
-	if_sethide(true, interface_65:55);
+	if_sethide(true, interface_65:56);
 }
-if_settext(tostring($int1), interface_65:57);
-if_settext(tostring($int2), interface_65:59);
+if_settext(tostring($int1), interface_65:58);
+if_settext(tostring($int2), interface_65:60);
 if ($int4 > 0) {
-	if_sethide(false, interface_65:70);
-	if_settext(tostring($int4), interface_65:70);
+	if_sethide(false, interface_65:71);
+	if_settext(tostring($int4), interface_65:71);
 } else {
-	if_sethide(true, interface_65:70);
+	if_sethide(true, interface_65:71);
 }
-if_settext(tostring($int5), interface_65:72);
-if_settext(tostring($int6), interface_65:74);
+if_settext(tostring($int5), interface_65:73);
+if_settext(tostring($int6), interface_65:75);
 def_int $int8 = calc($int0 + $int1 + $int2);
 def_int $int9 = calc($int4 + $int5 + $int6);
-if_settext(tostring($int8), interface_65:52);
-if_settext(tostring($int9), interface_65:67);
+if_settext(tostring($int8), interface_65:53);
+if_settext(tostring($int9), interface_65:68);
 if ($int0 > 0) {
-	if_sethide(false, interface_65:53);
+	if_sethide(false, interface_65:54);
 } else {
-	if_sethide(true, interface_65:53);
+	if_sethide(true, interface_65:54);
 }
 if ($int4 > 0) {
-	if_sethide(false, interface_65:68);
+	if_sethide(false, interface_65:69);
 } else {
-	if_sethide(true, interface_65:68);
+	if_sethide(true, interface_65:69);
 }
 if ($int5 > 0) {
-	if_sethide(false, interface_65:123);
+	if_sethide(false, interface_65:124);
 } else {
-	if_sethide(true, interface_65:123);
+	if_sethide(true, interface_65:124);
 }
 if ($int3 > 0 | $int7 > 0) {
-	if_sethide(true, interface_65:79);
-	if_sethide(false, interface_65:82);
-	if_settext("Redemption in progress", interface_65:83);
-	if_setcolour(0xff981f, interface_65:83);
-	if_sethide(true, interface_65:84);
-	if_sethide(false, interface_65:87);
-	if_settext("Redemption in progress", interface_65:88);
-	if_setcolour(0xff981f, interface_65:88);
+	if_sethide(true, interface_65:80);
+	if_sethide(false, interface_65:83);
+	if_settext("Redemption in progress", interface_65:84);
+	if_setcolour(0xff981f, interface_65:84);
+	if_sethide(true, interface_65:85);
+	if_sethide(false, interface_65:88);
+	if_settext("Redemption in progress", interface_65:89);
+	if_setcolour(0xff981f, interface_65:89);
 } else if (calc($int8 + $int9) > 0) {
-	if_sethide(false, interface_65:79);
-	if_sethide(true, interface_65:82);
-	if_settext("Redeem membership", interface_65:83);
-	if_setcolour(^white, interface_65:83);
-	if_sethide(false, interface_65:84);
-	if_sethide(true, interface_65:87);
-	if_settext("Redeem name change", interface_65:88);
-	if_setcolour(^white, interface_65:88);
+	if_sethide(false, interface_65:80);
+	if_sethide(true, interface_65:83);
+	if_settext("Redeem membership", interface_65:84);
+	if_setcolour(^white, interface_65:84);
+	if_sethide(false, interface_65:85);
+	if_sethide(true, interface_65:88);
+	if_settext("Redeem name change", interface_65:89);
+	if_setcolour(^white, interface_65:89);
 } else {
-	if_sethide(true, interface_65:79);
-	if_sethide(false, interface_65:82);
-	if_settext("Nothing to redeem", interface_65:83);
-	if_setcolour(0xff981f, interface_65:83);
-	if_sethide(true, interface_65:84);
-	if_sethide(false, interface_65:87);
-	if_settext("Nothing to redeem", interface_65:88);
-	if_setcolour(0xff981f, interface_65:88);
+	if_sethide(true, interface_65:80);
+	if_sethide(false, interface_65:83);
+	if_settext("Nothing to redeem", interface_65:84);
+	if_setcolour(0xff981f, interface_65:84);
+	if_sethide(true, interface_65:85);
+	if_sethide(false, interface_65:88);
+	if_settext("Nothing to redeem", interface_65:89);
+	if_setcolour(0xff981f, interface_65:89);
 }

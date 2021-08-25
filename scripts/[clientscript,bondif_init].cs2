@@ -1,28 +1,40 @@
 // 3650
 [clientscript,bondif_init](int $int0, int $int1)
 if ($int0 = 1) {
-	if_sethide(true, interface_65:27);
-	if_sethide(true, interface_65:30);
-	if_sethide(false, interface_65:36);
+	if_sethide(true, interface_65:28);
+	if_sethide(true, interface_65:31);
+	if_sethide(false, interface_65:37);
 } else if ($int0 = 2) {
-	if_sethide(true, interface_65:27);
-	if_sethide(false, interface_65:30);
+	if_sethide(true, interface_65:28);
+	if_sethide(false, interface_65:31);
+	if_sethide(true, interface_65:37);
+	if_sethide(false, interface_65:34);
+	if_sethide(false, interface_65:35);
+	if_sethide(false, interface_65:36);
+	if_setgraphic("premier_silver", interface_65:35);
+} else if ($int0 = 3) {
+	if_sethide(true, interface_65:28);
+	if_sethide(false, interface_65:31);
+	if_sethide(true, interface_65:37);
+	if_sethide(true, interface_65:34);
+	if_sethide(false, interface_65:35);
 	if_sethide(true, interface_65:36);
+	if_setgraphic("premier_gold", interface_65:35);
 } else {
-	if_sethide(false, interface_65:27);
-	if_sethide(true, interface_65:30);
-	if_sethide(true, interface_65:36);
+	if_sethide(false, interface_65:28);
+	if_sethide(true, interface_65:31);
+	if_sethide(true, interface_65:37);
 }
 if ($int1 = 0) {
-	~script3723(interface_65:103, 1, "Use Bonds");
-	~script3723(interface_65:104, 0, "My Bonds");
-	if_sethide(false, interface_65:14);
-	if_sethide(true, interface_65:9);
-	if_setonop("bondif_init($int0, 1)", interface_65:104);
+	~script3723(interface_65:104, 1, "Use Bonds");
+	~script3723(interface_65:105, 0, "My Bonds");
+	if_sethide(false, interface_65:15);
+	if_sethide(true, interface_65:10);
+	if_setonop("bondif_init($int0, 1)", interface_65:105);
 } else {
-	~script3723(interface_65:103, 0, "Use Bonds");
-	~script3723(interface_65:104, 1, "My Bonds");
-	if_sethide(true, interface_65:14);
-	if_sethide(false, interface_65:9);
-	if_setonop("bondif_init($int0, 0)", interface_65:103);
+	~script3723(interface_65:104, 0, "Use Bonds");
+	~script3723(interface_65:105, 1, "My Bonds");
+	if_sethide(true, interface_65:15);
+	if_sethide(false, interface_65:10);
+	if_setonop("bondif_init($int0, 0)", interface_65:104);
 }

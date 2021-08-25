@@ -1,10 +1,10 @@
 // 446
-[clientscript,orbs_update_health](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8)
+[clientscript,orbs_update_health](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9)
 if ($component0 ! null) {
 	if_setnoclickthrough(true, $component7);
-	if_setonstattransmit("orbs_update_health(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8){hitpoints}", $component0);
-	if_setonvartransmit("orbs_update_health(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8){var102, var456, var2648}", $component0);
-	if_setonsubchange("orbs_update_health(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8)", $component0);
+	if_setonstattransmit("orbs_update_health(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9){hitpoints}", $component0);
+	if_setonvartransmit("orbs_update_health(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9){var102, var456, var2648, var2898}", $component0);
+	if_setonsubchange("orbs_update_health(null, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9)", $component0);
 }
 ~orbs_update($component1, $component2, stat(hitpoints), stat_base(hitpoints));
 if (%var102 > 0 | %var456 > 0 | %varbit10151 > 0) {
@@ -33,15 +33,20 @@ if (%var102 > 0) {
 } else {
 	if_sethide(true, $component5);
 }
-def_graphic $graphic9 = "orb_frame,1";
+def_graphic $graphic10 = "orb_frame,1";
 if ((%var102 > 0 | %var456 > 0 | %varbit10151 > 0) & ~toplevel_check_sidepanel(3) = true) {
-	if_setonmouserepeat("graphic_swapper($component7, $graphic9)", $component8);
-	$graphic9 = "orb_frame,0";
-	if_setonmouseleave("graphic_swapper($component7, $graphic9)", $component8);
+	if_setonmouserepeat("graphic_swapper($component7, $graphic10)", $component8);
+	$graphic10 = "orb_frame,0";
+	if_setonmouseleave("graphic_swapper($component7, $graphic10)", $component8);
 	if_sethide(false, $component8);
 } else {
 	if_setgraphic("orb_frame,0", $component7);
 	if_setonmouserepeat(null, $component8);
 	if_setonmouseleave(null, $component8);
 	if_sethide(true, $component8);
+}
+if (stat(hitpoints) <= scale(40, 100, stat_base(hitpoints)) & %varbit13006 = 1) {
+	if_setgraphic("orb_icon,10", $component9);
+} else {
+	if_setgraphic("orb_icon,0", $component9);
 }
