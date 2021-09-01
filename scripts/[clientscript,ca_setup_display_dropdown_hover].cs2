@@ -1,0 +1,11 @@
+// 4830
+[clientscript,ca_setup_display_dropdown_hover](boolean $boolean0, component $component1, int $comsubid2, int $comsubid3, int $colour4)
+if (cc_find($component1, $comsubid2) = ^true & .cc_find($component1, $comsubid3) = ^true) {
+	cc_setcolour($colour4);
+	if ($boolean0 = true) {
+		.cc_sethide(false);
+		.cc_setposition(cc_getx, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	} else {
+		.cc_sethide(true);
+	}
+}

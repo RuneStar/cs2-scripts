@@ -1,0 +1,22 @@
+// 4844
+[proc,ca_boss_init_buttons](component $component0, component $component1, int $int2, struct $struct3)
+def_int $int4 = 0;
+def_int $int5 = 25;
+def_int $int6 = 70;
+def_int $int7 = 64;
+$int2 = ~dynamic_stone_button_filled($component0, $component1, "Boss list", 2, $int7, $int6, $int5, $int2, $int4, 1);
+if (cc_find($component1, $int4) = ^true) {
+	cc_setop(1, "Boss list");
+	cc_setonop("opsound(event_opindex, 2)");
+}
+$int4 = calc($int4 + 1);
+if (%var261 > 0) {
+	$int2 = ~dynamic_stone_button_filled($component0, $component1, "Reset time", 82, $int7, $int6, $int5, $int2, $int4, 1);
+	if (cc_find($component1, $int4) = ^true) {
+		cc_setop(1, "Reset time");
+		cc_setopbase("<col=ff9040><struct_param($struct3, param_1313)></col>");
+		cc_setonop("opsound(event_opindex, 2)");
+	}
+} else {
+	$int2 = ~dynamic_stone_button_filled($component0, $component1, "Reset time", 82, $int7, $int6, $int5, $int2, $int4, 0);
+}

@@ -1,0 +1,36 @@
+// 4100
+[clientscript,collection_delayed_transmit](obj $obj0, int $int1, int $int2, struct $struct3)
+if (if_gethide(interface_621:70) = true) {
+	return;
+}
+def_int $int4 = 0;
+def_int $int5 = 0;
+def_namedobj $namedobj6 = null;
+def_string $string0 = "";
+def_string $string1 = "";
+def_int $int7 = 0;
+$string0, $namedobj6, $int5 = ~script4102;
+if ($int5 ! -1 | compare($string0, "") ! 0) {
+	return;
+}
+$string1 = struct_param($struct3, param_689);
+while ($int4 < 550) {
+	if (cc_find(interface_621:77, $int4) = ^true) {
+		if ($int7 = 0 & $namedobj6 = null & compare($string0, "") = 0) {
+			if (compare($string1, cc_gettext) = 0) {
+				$int7 = 1;
+				cc_setcolour(0xff981f);
+			}
+		} else if ($obj0 = cc_getinvobject) {
+			cc_setonop("collection_item_click($obj0, $int1)");
+			if ($int1 > 1) {
+				cc_setobject($obj0, $int1);
+			}
+			if ($int1 > 0) {
+				cc_settrans(0);
+			}
+			$int4 = 500;
+		}
+	}
+	$int4 = calc($int4 + 1);
+}

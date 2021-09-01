@@ -1,0 +1,7 @@
+// 4803
+[proc,ca_boss_disable_search]
+if (%varbit12884 = 1) {
+	~chatdefault_restoreinput;
+	%varbit12884 = 0;
+	~ca_searchbar_setup_op(interface_716:1, interface_716:2, interface_716:5, 0);
+}

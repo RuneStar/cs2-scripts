@@ -1,0 +1,5 @@
+// 4773
+[clientscript,ca_info_mouseleave](component $component0, int $comsubid1, int $colour2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_setcolour($colour2);
+}

@@ -25,12 +25,12 @@ while ($int9 < $count8) {
 	$struct14 = enum(int, struct, $enum6, $int9);
 	$text0 = struct_param($struct14, param_1330);
 	$graphic15 = struct_param($struct14, param_1331);
-	$int16 = ~script4784(calc($int9 + 1));
-	$int17 = ~script4789(calc($int9 + 1));
+	$int16 = ~ca_tasks_completed_tier(calc($int9 + 1));
+	$int17 = ~ca_tasks_tier_total(calc($int9 + 1));
 	if ($int16 > $int17) {
 		$int16 = $int17;
 	}
-	if (~script4790(calc($int9 + 1)) = 2) {
+	if (~ca_tier_status(calc($int9 + 1)) = 2) {
 		$colour24 = 0x0dc10d;
 		$int25 = 901389;
 	} else {

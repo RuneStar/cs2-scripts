@@ -1,0 +1,10 @@
+// 3427
+[clientscript,account_summary_update_xp](component $component0, int $comsubid1, int $comsubid2, int $int3, fontmetrics $fontmetrics4)
+def_int $int5 = 0;
+def_int $int6 = 0;
+$int5, $int6 = ~stats_totalxp;
+if ($int5 = 4 & $int6 = 600000000) {
+	~account_summary_update_text($component0, $comsubid1, $comsubid2, $int3, $fontmetrics4, "Total XP: <col=0dc10d><~stats_tostring_totalxp($int5, $int6)></col>");
+} else {
+	~account_summary_update_text($component0, $comsubid1, $comsubid2, $int3, $fontmetrics4, "Total XP: <col=0dc10d><~stats_tostring_totalxp($int5, $int6)></col>");
+}

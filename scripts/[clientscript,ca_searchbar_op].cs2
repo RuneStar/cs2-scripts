@@ -1,0 +1,10 @@
+// 4797
+[clientscript,ca_searchbar_op](component $component0, component $component1, component $component2)
+if (%varbit12884 = 1) {
+	return;
+}
+~ca_boss_enable_search;
+if (~on_mobile = true) {
+	~keyboard_show(0, 50);
+}
+~ca_searchbar_setup_op($component0, $component1, $component2, 1);

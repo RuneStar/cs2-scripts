@@ -1,0 +1,5 @@
+// 4799
+[proc,ca_searchbar_set_text](component $component0)
+def_string $string0 = %varcstring527;
+$string0 = append($string0, "<col=f4f4f4>*</col>");
+if_settext("<col=ff981f><$string0></col>", $component0);

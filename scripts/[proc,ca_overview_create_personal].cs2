@@ -1,0 +1,28 @@
+// 4808
+[proc,ca_overview_create_personal](component $component0)
+def_int $int1 = 16750623;
+def_int $int2 = 0;
+def_int $int3 = 1;
+def_int $int4 = 1;
+def_int $int5 = 0;
+def_int $int6 = 255;
+def_int $int7 = calc(if_getwidth($component0) - 2 * ($int4 + 1));
+def_int $int8 = calc(if_getheight($component0) / 7);
+def_int $int9 = 0;
+def_int $int10 = ~script4777(1);
+def_int $int11 = ~script4777(2);
+def_int $int12 = ~script4777(3);
+cc_create($component0, ^iftype_rectangle, $int5);
+cc_setsize(2, 4, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setfill(false);
+cc_setcolour(^black);
+cc_settrans(150);
+$int5 = calc($int5 + 1);
+$int5, $int3 = ~script4809($component0, $int5, $int4, $int3, $int7, $int8, "Tasks Completed:", ~script2734(~script4779));
+$int5, $int3 = ~script4809($component0, $int5, $int4, $int3, $int7, $int8, "Boss Kill Count:", ~script2734(~script4776));
+$int5, $int3 = ~script4809($component0, $int5, $int4, $int3, $int7, $int8, "Skilling Boss Kill Count:", ~script2734(~script4775));
+$int5, $int3 = ~script4809($component0, $int5, $int4, $int3, $int7, $int8, "Raid Completions:", ~script2734(~script4774));
+$int5, $int3 = ~script4809($component0, $int5, $int4, $int3, $int7, $int8, "Top Boss:", ~script4810($int10));
+$int5, $int3 = ~script4809($component0, $int5, $int4, $int3, $int7, $int8, "Top Skilling Boss:", ~script4810($int11));
+$int5, $int3 = ~script4809($component0, $int5, $int4, $int3, $int7, $int8, "Top Raid:", ~script4810($int12));

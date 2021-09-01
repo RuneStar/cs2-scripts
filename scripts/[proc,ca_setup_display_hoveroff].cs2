@@ -1,0 +1,16 @@
+// 4828
+[proc,ca_setup_display_hoveroff](component $component0, int $int1)
+if (cc_find($component0, 0) = ^true) {
+	cc_settrans(0);
+	if (~on_mobile = false) {
+		cc_setonmouseover("ca_setup_display_hover(true, $component0, $int1)");
+		cc_setonmouseleave("ca_setup_display_hover(false, $component0, $int1)");
+	}
+}
+if (cc_find($component0, 3) = ^true) {
+	cc_settrans(0);
+	cc_setgraphic("scrollbar_v2,1");
+}
+if (cc_find($component0, 4) = ^true) {
+	cc_setcolour($int1);
+}

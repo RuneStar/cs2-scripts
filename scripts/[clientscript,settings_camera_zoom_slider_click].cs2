@@ -4,4 +4,4 @@
 if_setposition($int5, $y4, ^setpos_abs_left, ^setpos_abs_top, $component6);
 if_setsize($int2, 16, ^setsize_abs, ^setsize_abs, $component6);
 ~settings_zoom_slider_specific_pos($component0, $comsubid1, $int2, calc($mousex3 - 8), $y4, $int5);
-if_setontimer("script3901(0)", interface_134:3);
+if_setontimer("settings_zoom_trans_timer(0)", interface_134:3);

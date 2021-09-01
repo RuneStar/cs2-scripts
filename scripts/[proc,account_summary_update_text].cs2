@@ -1,0 +1,19 @@
+// 3947
+[proc,account_summary_update_text](component $component0, int $comsubid1, int $comsubid2, int $int3, fontmetrics $fontmetrics4, string $text0)
+def_int $int5 = 0;
+def_int $int6 = 0;
+def_int $int7 = 0;
+def_int $int8 = 0;
+def_int $x9 = 0;
+if (cc_find($component0, $comsubid1) = ^true) {
+	cc_settext($text0);
+	if ($comsubid2 ! -1 & .cc_find($component0, $comsubid2) = ^true) {
+		$int5 = .cc_getwidth;
+		$int6 = parawidth(cc_gettext, if_getwidth($component0), $fontmetrics4);
+		$int7 = calc(if_getwidth($component0) / 2);
+		$int8 = calc($int7 - ($int6 + $int5 + 4) / 2);
+		$x9 = calc($int8 + $int5 + 4);
+		cc_setposition($x9, cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+		.cc_setposition($int8, .cc_gety, ^setpos_abs_left, ^setpos_abs_top);
+	}
+}

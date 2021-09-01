@@ -1,0 +1,29 @@
+// 4723
+[proc,spec_regen_timer](int $int0)
+if (~on_enhanced = 0) {
+	return;
+}
+if (%varbit4084 = 1) {
+	return;
+}
+if (%var300 >= 1000) {
+	return;
+}
+if ($int0 >= 1500) {
+	$int0 = calc($int0 % 1500);
+}
+def_component $component1 = interface_160:36;
+if (~on_mobile = true) {
+	$component1 = interface_311:38;
+}
+cc_create($component1, 10, 0);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setcolour(0x03cffd);
+cc_setfill(false);
+cc_setlinewid(2);
+_1128(0, 0);
+if_setontimer("script4724($component1, 0, $int0, 1500, %varbit12346)", $component1);
+if (%varbit12346 = 1) {
+	cc_sethide(true);
+}

@@ -42,7 +42,7 @@ if ($int13 = 4 & $int14 = 600000000) {
 	$int2, $int3, $int5, $comsubid8, $comsubid9 = ~script3949($component0, $component1, $int5, $int6, $int7, "account_icons,2", "Total XP: <col=0dc10d><~stats_tostring_totalxp($int13, $int14)></col>", "", $int2, $int3, p11_full, p11_full);
 }
 if (cc_find($component0, $comsubid8) = ^true) {
-	cc_setonstattransmit("script3427(event_com, event_comsubid, $comsubid9, $int7, p11_full)");
+	cc_setonstattransmit("account_summary_update_xp(event_com, event_comsubid, $comsubid9, $int7, p11_full)");
 }
 $int7 = 52;
 if (%var101 = %varbit1782) {

@@ -1,0 +1,10 @@
+// 4836
+[proc,ca_boss_set_name](component $component0, string $text0)
+cc_create($component0, ^iftype_text, 0);
+cc_setsize(6, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, -1, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_settextalign(^settextalign_left, ^settextalign_centre, 0);
+cc_settext($text0);
+cc_setcolour(0xff981f);

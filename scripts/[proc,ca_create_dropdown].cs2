@@ -1,0 +1,145 @@
+// 4768
+[proc,ca_create_dropdown](component $component0, component $component1, component $component2, int $int3, int $int4)
+def_int $colour5 = 0xff981f;
+def_int $int6 = 92;
+def_int $int7 = 81;
+if (~on_mobile = true) {
+	$int6 = 112;
+	$int7 = 115;
+}
+def_int $int8 = calc($int6 / 4);
+def_int $int9 = 6;
+if_setsize($int7, calc($int6 + 12), ^setsize_abs, ^setsize_abs, $component1);
+cc_create($component1, ^iftype_graphic, $int3);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphic("tradebacking_light");
+$int3 = calc($int3 + 1);
+$int3 = ~steelbox($component1, $int3, 0);
+if_sethide(true, $component1);
+cc_create($component1, ^iftype_rectangle, $int3);
+cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+if ($int4 = 0) {
+	cc_settrans(235);
+} else {
+	cc_settrans(255);
+}
+$int3 = calc($int3 + 1);
+cc_create($component1, ^iftype_text, $int3);
+cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Overview");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int4 = 0) {
+	cc_setcolour(0xc8c8c8);
+	cc_settrans(200);
+} else {
+	cc_setcolour($colour5);
+	if (~on_mobile = false) {
+		cc_setonmouseover("ca_info_mouseover($component1, $int3)");
+		cc_setonmouseleave("ca_info_mouseleave($component1, $int3, $colour5)");
+	}
+	cc_setop(1, "View Overview");
+	cc_setonop("script4771($component0, $component1, $component2)");
+}
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int3 = calc($int3 + 1);
+$int9 = calc($int9 + $int8);
+cc_create($component1, ^iftype_rectangle, $int3);
+cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+if ($int4 = 1) {
+	cc_settrans(235);
+} else {
+	cc_settrans(255);
+}
+$int3 = calc($int3 + 1);
+cc_create($component1, ^iftype_text, $int3);
+cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Tasks");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int4 = 1) {
+	cc_setcolour(0xc8c8c8);
+	cc_settrans(200);
+} else {
+	cc_setcolour($colour5);
+	if (~on_mobile = false) {
+		cc_setonmouseover("ca_info_mouseover($component1, $int3)");
+		cc_setonmouseleave("ca_info_mouseleave($component1, $int3, $colour5)");
+	}
+	cc_setop(1, "View Tasks");
+	cc_setonop("script4771($component0, $component1, $component2)");
+}
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int3 = calc($int3 + 1);
+$int9 = calc($int9 + $int8);
+cc_create($component1, ^iftype_rectangle, $int3);
+cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+if ($int4 = 3) {
+	cc_settrans(235);
+} else {
+	cc_settrans(255);
+}
+$int3 = calc($int3 + 1);
+cc_create($component1, ^iftype_text, $int3);
+cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Bosses");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int4 = 3) {
+	cc_setcolour(0xc8c8c8);
+	cc_settrans(200);
+} else {
+	cc_setcolour($colour5);
+	if (~on_mobile = false) {
+		cc_setonmouseover("ca_info_mouseover($component1, $int3)");
+		cc_setonmouseleave("ca_info_mouseleave($component1, $int3, $colour5)");
+	}
+	cc_setop(1, "View Bosses");
+	cc_setonop("script4771($component0, $component1, $component2)");
+}
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+$int3 = calc($int3 + 1);
+$int9 = calc($int9 + $int8);
+cc_create($component1, ^iftype_rectangle, $int3);
+cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
+cc_setcolour(^white);
+cc_setfill(true);
+if ($int4 = 2) {
+	cc_settrans(235);
+} else {
+	cc_settrans(255);
+}
+$int3 = calc($int3 + 1);
+cc_create($component1, ^iftype_text, $int3);
+cc_setsize(calc($int7 - 12), $int8, ^setsize_abs, ^setsize_abs);
+cc_setposition(6, $int9, ^setpos_abs_left, ^setpos_abs_top);
+cc_settext("Rewards");
+cc_settextfont(p12_full);
+cc_settextshadow(true);
+if ($int4 = 2) {
+	cc_setcolour(0xc8c8c8);
+	cc_settrans(200);
+} else {
+	cc_setcolour($colour5);
+	if (~on_mobile = false) {
+		cc_setonmouseover("ca_info_mouseover($component1, $int3)");
+		cc_setonmouseleave("ca_info_mouseleave($component1, $int3, $colour5)");
+	}
+	cc_setop(1, "View Rewards");
+	cc_setonop("script4771($component0, $component1, $component2)");
+}
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);

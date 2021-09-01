@@ -1,9 +1,0 @@
-// 4816
-[clientscript,script4816](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
-~script4767($component12, $component13, $component14, 1);
-def_int $comsubid15 = ~steelborder($component1, "Combat Achievements - Tasks", 0);
-if_setscrollpos(0, 0, $component2);
-cc_deleteall($component11);
-~scrollbar_vertical($component11, $component2, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
-if_setonvartransmit("script4817(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $comsubid15){var3131, var3132}", $component3);
-~script4818(-1, $component0, $component1, $component2, $component3, $component4, $component5, $component6, $component7, $component8, $component9, $component10, $component11, $comsubid15);

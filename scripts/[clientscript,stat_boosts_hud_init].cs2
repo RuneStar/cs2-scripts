@@ -1,0 +1,29 @@
+// 4130
+[clientscript,stat_boosts_hud_init](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5)
+if (~on_enhanced = 0) {
+	return;
+}
+if (~on_mobile = false) {
+	~script4729($component0, $component1, 30720, ^setpos_abs_left, ^setpos_abs_bottom, false);
+} else {
+	~script4729($component0, $component1, 14338, ^setpos_abs_right, ^setpos_abs_top, false);
+}
+if_setonstattransmit("stat_boosts_hud_update_displays($component1, $component4, $component5, $component3)", $component4);
+if_setonvartransmit("stat_boosts_hud_update_displays($component1, $component4, $component5, $component3){var3074}", $component4);
+if_setonvartransmit("stat_boosts_hud_update_enabled($component1, $component5){var3074}", $component2);
+if_setsize(calc(4 * 2 + 3), 35, ^setsize_abs, ^setsize_abs, $component3);
+def_int $int6 = 0;
+$int6 = ~script4516($component3, 0, $int6, true);
+$int6 = ~script4516($component3, 1, $int6, false);
+cc_create($component3, ^iftype_rectangle, $int6);
+$int6 = calc($int6 + 1);
+cc_setcolour(0x383023);
+cc_setsize(0, 0, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+cc_create($component3, ^iftype_rectangle, $int6);
+$int6 = calc($int6 + 1);
+cc_setcolour(0x5a5245);
+cc_setsize(1, 1, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+if_sethide(true, $component3);
+if_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_bottom, $component1);

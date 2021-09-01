@@ -1,0 +1,18 @@
+// 4789
+[proc,ca_tasks_tier_total](int $int0)(int)
+switch_int ($int0) {
+	case 1 :
+		return(enum_getoutputcount(enum_3981));
+	case 2 :
+		return(enum_getoutputcount(enum_3982));
+	case 3 :
+		return(enum_getoutputcount(enum_3983));
+	case 4 :
+		return(enum_getoutputcount(enum_3984));
+	case 5 :
+		return(enum_getoutputcount(enum_3985));
+	case 6 :
+		return(enum_getoutputcount(enum_3986));
+	case default :
+		return(-1);
+}

@@ -1,0 +1,6 @@
+// 2631
+[clientscript,book_indexed_index_init](component $component0)
+if (~on_mobile = false) {
+	if_setonmouseover("text_colour_swapper($component0, ^white)", $component0);
+	if_setonmouseleave("text_colour_swapper($component0, ^black)", $component0);
+}

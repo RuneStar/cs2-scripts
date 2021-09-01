@@ -1,0 +1,5 @@
+// 4822
+[clientscript,ca_task_updatetext](component $component0, int $comsubid1, enum $enum2)
+if (cc_find($component0, $comsubid1) = ^true) {
+	~ca_task_filter_updatetext($enum2);
+}

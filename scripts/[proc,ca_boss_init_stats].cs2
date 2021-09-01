@@ -1,0 +1,58 @@
+// 4843
+[proc,ca_boss_init_stats](component $component0, struct $struct1)(int)
+def_int $int2 = 0;
+def_int $int3 = 41;
+def_int $int4 = 20;
+def_int $colour5 = 0xff981f;
+def_int $width6 = 0;
+def_fontmetrics $fontmetrics7 = p12_full;
+def_int $int8 = %var261;
+def_int $int9 = 0;
+def_int $int10 = 0;
+def_string $string0 = "N/A";
+if ($int8 > -1) {
+	if ($int8 > 0) {
+		if (%varbit11866 = 1) {
+			$string0 = ~time_convert_ms($int8);
+		} else {
+			$string0 = ~time_convert($int8);
+		}
+	}
+	cc_create($component0, ^iftype_text, $int2);
+	cc_setsize($width6, $int4, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_settextshadow(true);
+	cc_settextfont($fontmetrics7);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext("Personal Best: <col=ffffff><$string0></col>");
+	cc_setcolour($colour5);
+	$int3 = calc($int3 - $int4);
+	$int2 = calc($int2 + 1);
+} else {
+	$int3 = 32;
+}
+cc_create($component0, ^iftype_text, $int2);
+cc_setsize($width6, $int4, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics7);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settext("Kill Count: <col=ffffff><tostring(~ca_specific_killcount(struct_param($struct1, param_1315)))></col>");
+cc_setcolour($colour5);
+$int2 = calc($int2 + 1);
+$int3 = calc($int3 - $int4);
+def_int $int11 = struct_param($struct1, param_1314);
+cc_create($component0, ^iftype_text, $int2);
+cc_setsize($width6, $int4, ^setsize_minus, ^setsize_abs);
+cc_setposition(0, $int3, ^setpos_abs_centre, ^setpos_abs_top);
+cc_settextshadow(true);
+cc_settextfont($fontmetrics7);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+if ($int11 = 0) {
+	cc_settext("Combat Level: <col=ffffff>N/A</col>");
+} else {
+	cc_settext("Combat Level: <col=ffffff><tostring($int11)></col>");
+}
+cc_setcolour($colour5);
+$int2 = calc($int2 + 1);
+return($int2);

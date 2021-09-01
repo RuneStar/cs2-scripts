@@ -1,0 +1,78 @@
+// 4782
+[proc,ca_tasks_progress_bar](component $component0, int $int1, int $int2)
+if_setop(1, "", $component0);
+if_setopbase("", $component0);
+def_int $int3 = 0;
+def_int $int4 = 0;
+def_int $int5 = -1;
+def_int $int6 = -1;
+def_int $width7 = if_getwidth($component0);
+def_string $string0 = "";
+def_int $int8 = -1;
+def_int $int9 = 901389;
+def_int $int10 = 0;
+def_int $int11 = 0;
+if ($int2 = 0) {
+	$int10 = ~ca_tasks_total;
+	$int11 = ~script4779;
+} else {
+	$int10 = ~ca_tasks_boss_total(%varbit12862);
+	$int11 = ~ca_specific_taskcount(%varbit12862);
+}
+if ($int11 > $int10) {
+	$int11 = $int10;
+}
+if ($int10 = $int11) {
+	$int9 = 901389;
+} else if ($int11 > 0) {
+	$int9 = 16776960;
+}
+def_int $width12 = calc($width7 - 4);
+def_int $width13 = scale($int11, ~max($int10, 1), $width12);
+if ($width13 > $width12) {
+	$width13 = $width12;
+}
+if (cc_find($component0, 0) = ^false) {
+	if ($int2 = 1) {
+		cc_create($component0, ^iftype_graphic, $int4);
+		cc_setsize(calc($width7 - 4), 27, ^setsize_abs, ^setsize_abs);
+		cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+		cc_setop(1, "View Tasks");
+		cc_setonop("button_select_sound");
+		cc_settrans(250);
+		$int4 = calc($int4 + 1);
+	}
+	cc_create($component0, ^iftype_rectangle, $int4);
+	cc_setsize(calc($width7 - 2), 29, ^setsize_abs, ^setsize_abs);
+	cc_setposition(1, 1, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(false);
+	cc_setcolour(0x474745);
+	$int4 = calc($int4 + 1);
+	cc_create($component0, ^iftype_graphic, $int4);
+	cc_setsize(calc($width7 - 4), 27, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_3392");
+	cc_settiling(true);
+	$int4 = calc($int4 + 1);
+	cc_create($component0, ^iftype_graphic, $int4);
+	cc_setsize($width13, 27, ^setsize_abs, ^setsize_abs);
+	cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setgraphic("graphic_3391");
+	cc_settiling(true);
+	$int4 = calc($int4 + 1);
+	cc_create($component0, ^iftype_text, $int4);
+	cc_setsize($width7, 0, ^setsize_abs, ^setsize_minus);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_settextfont(p12_full);
+	cc_setcolour(^white);
+	cc_settextshadow(true);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settext("Tasks Completed: <tostring($int11)>/<tostring($int10)>");
+	$int4 = calc($int4 + 1);
+	cc_create($component0, ^iftype_rectangle, $int4);
+	cc_setsize($width7, 31, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setfill(false);
+	cc_setcolour(0x0e0e0c);
+	$int4 = calc($int4 + 1);
+}

@@ -1,0 +1,7 @@
+// 4490
+[clientscript,tob_scoreboard_init](component $component0, component $component1, component $component2, component $component3)
+if_setonvartransmit("tob_scoreboard_tab_update($component1, $component2, $component3){var1746}", $component0);
+if_setonop("tob_scoreboard_tab_select($component1, $component2, $component3, 0)", $component2);
+if_setonop("tob_scoreboard_tab_select($component1, $component2, $component3, 1)", $component1);
+if_setonop("tob_scoreboard_tab_select($component1, $component2, $component3, 2)", $component3);
+~tob_scoreboard_tab_update($component1, $component2, $component3);

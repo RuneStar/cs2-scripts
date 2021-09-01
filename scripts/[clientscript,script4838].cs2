@@ -1,8 +1,0 @@
-// 4838
-[clientscript,script4838](struct $struct0, string $string0)
-def_string $string1 = struct_param($struct0, param_1321);
-if (string_length($string1) > 0) {
-	~openurl_raw($string1, true, true);
-} else {
-	~wiki_lookup("Search", "", "", "", $string0);
-}
