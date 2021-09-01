@@ -1,0 +1,74 @@
+// 5230
+[proc,script5230](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13)
+def_int $int14 = calc(if_getwidth($component0) - 20);
+cc_deleteall($component3);
+def_int $int15 = 0;
+def_int $int16 = 0;
+def_int $int17 = 0;
+if (%var261 ! 0 | %var262 ! 0 | %var263 ! 0) {
+	if_sethide(false, $component1);
+	$int16 = 3;
+	cc_create($component3, ^iftype_text, $int15);
+	$int15 = calc($int15 + 1);
+	cc_setsize(6, 25, ^setsize_minus, ^setsize_abs);
+	cc_setposition(0, $int16, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setcolour(0xff981f);
+	cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+	cc_settextshadow(true);
+	cc_settextfont(p12_full);
+	cc_settext("First, choose a free sigil:");
+	$int16 = calc($int16 + 25);
+	$int15, $int16 = ~script5233(%var261, $component5, 235, $int14, $component3, $int15, $int16);
+	$int15, $int16 = ~script5233(%var262, $component6, 255, $int14, $component3, $int15, $int16);
+	$int15, $int16 = ~script5233(%var263, $component7, 235, $int14, $component3, $int15, $int16);
+	$int16 = calc($int16 + 2);
+	if ($int16 > 160) {
+		$int17 = if_getscrolly($component2);
+		if_setscrollsize(0, $int16, $component2);
+		$int16 = 160;
+		if_setsize(20, $int16, ^setsize_minus, ^setsize_abs, $component1);
+		~scrollbar_resize($component4, $component2, $int17);
+	} else {
+		if_setscrollsize(0, 0, $component2);
+		if_setsize(20, $int16, ^setsize_minus, ^setsize_abs, $component1);
+		~scrollbar_resize($component4, $component2, 0);
+	}
+	$int16 = calc($int16 + 3);
+} else {
+	if_sethide(true, $component1);
+}
+if_setsize(20, calc(50 + $int16), ^setsize_minus, ^setsize_minus, $component8);
+def_int $int18 = calc(($int14 - 18 + 2) / 3);
+def_int $width19 = calc($int18 - 10);
+def_struct $struct20 = null;
+def_struct $struct21 = null;
+def_struct $struct22 = null;
+def_string $string0 = "<col=9f9f9f>Empty slot</col>";
+def_string $string1 = "<col=9f9f9f>Empty slot</col>";
+def_string $string2 = "<col=9f9f9f>Empty slot</col>";
+def_namedobj $namedobj23 = enum(int, namedobj, enum_4039, %varbit13019);
+def_namedobj $namedobj24 = enum(int, namedobj, enum_4039, %varbit13020);
+def_namedobj $namedobj25 = enum(int, namedobj, enum_4039, %varbit13021);
+if ($namedobj23 ! null) {
+	$struct20 = enum(int, struct, enum_4038, oc_param($namedobj23, param_1371));
+	if ($struct20 ! null) {
+		$string0 = struct_param($struct20, param_1372);
+	}
+}
+if ($namedobj24 ! null) {
+	$struct21 = enum(int, struct, enum_4038, oc_param($namedobj24, param_1371));
+	if ($struct21 ! null) {
+		$string1 = struct_param($struct21, param_1372);
+	}
+}
+if ($namedobj25 ! null) {
+	$struct22 = enum(int, struct, enum_4038, oc_param($namedobj25, param_1371));
+	if ($struct22 ! null) {
+		$string2 = struct_param($struct22, param_1372);
+	}
+}
+def_int $int26 = calc(4 + 12 * ~max(~max(paraheight($string0, $width19, p12_full), paraheight($string1, $width19, p12_full)), paraheight($string2, $width19, p12_full)));
+def_int $int27 = ~script5234($component11, $struct20, $string0, 0, $width19, $int26, 0);
+$int27 = ~script5234($component12, $struct21, $string1, 1, $width19, $int26, $int27);
+$int27 = ~script5234($component13, $struct22, $string2, 2, $width19, $int26, $int27);
+~script5232($int16, $int27, if_getlayer($component0), $component0, $component10, $component9);

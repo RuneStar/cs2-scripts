@@ -1,0 +1,30 @@
+// 5226
+[proc,script5226](int $int0, component $component1, enum $enum2, int $int3, int $int4, int $int5, int $int6)(int, int, int, int)
+def_namedobj $namedobj7 = enum(int, namedobj, enum_4039, $int0);
+if ($namedobj7 = null) {
+	return($int3, $int4, $int5, $int6);
+}
+def_string $string0 = oc_name($namedobj7);
+cc_create($component1, ^iftype_graphic, $int3);
+$int3 = calc($int3 + 1);
+.cc_create($component1, ^iftype_text, $int3);
+$int3 = calc($int3 + 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+.cc_setsize(calc(12 + 36 + 4 + 8), 32, ^setsize_minus, ^setsize_abs);
+if ($enum2 = enum_142) {
+	.cc_setposition(12, $int4, ^setpos_abs_left, ^setpos_abs_top);
+	cc_setposition(8, $int4, ^setpos_abs_right, ^setpos_abs_top);
+} else {
+	cc_setposition(8, $int4, ^setpos_abs_left, ^setpos_abs_top);
+	.cc_setposition(12, $int4, ^setpos_abs_right, ^setpos_abs_top);
+}
+cc_setobject_nonum($namedobj7, 1);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+.cc_setcolour(0xff891f);
+.cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+.cc_settextfont(p12_full);
+.cc_settextshadow(true);
+.cc_settext($string0);
+$int6 = ~max($int6, parawidth($string0, 765, p12_full));
+return($int3, calc($int4 + 32), calc($int5 + 1), $int6);

@@ -23,7 +23,7 @@ def_int $int7 = 0;
 def_int $int8 = 0;
 def_int $int9 = 0;
 def_int $int10 = 0;
-if (~deadman_world = 1) {
+if (~deadman_world = true) {
 	$int7 = ~script1936($stat0);
 	if ($int7 ! -1) {
 		$int7 = calc($int7 / 10);

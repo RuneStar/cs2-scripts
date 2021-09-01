@@ -34,6 +34,11 @@ if (~on_mobile = true) {
 } else {
 	if_setsize(190, 28, ^setsize_abs, ^setsize_abs, interface_593:2);
 }
+if (%varbit13027 > 0) {
+	if_settext("Combat Lvl: <tostring(%varbit13027)>", interface_593:3);
+} else {
+	if_settext("", interface_593:3);
+}
 if (%varbit357 = 18 | %varbit357 = 21) {
 	if_sethide(false, interface_593:20);
 	$xarray0(0) = $int9;

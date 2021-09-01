@@ -39,7 +39,7 @@ if ($boolean0 = false & %varbit5711 = 0) {
 	if_setonmouserepeat(null, $component2);
 	if_setonmouseleave(null, $component2);
 }
-if ($int1 = 8 & (~high_risk_world = 1 | ~deadman_world = 1 | %varbit5314 = 1)) {
+if ($int1 = 8 & (~high_risk_world = 1 | ~deadman_world = true | %varbit5314 = 1)) {
 	.cc_settrans(100);
 	.cc_create($component2, ^iftype_graphic, 2);
 	.cc_setsize(25, 25, ^setsize_abs, ^setsize_abs);

@@ -1,0 +1,19 @@
+// 5235
+[clientscript,script5235](component $component0)
+cc_deleteall($component0);
+if (~deadman_mode ! 3) {
+	if_clearops($component0);
+	return;
+}
+if_setop(1, "Sigils", $component0);
+cc_create($component0, ^iftype_graphic, 0);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(36, 36, ^setsize_abs, ^setsize_abs);
+cc_setgraphic("miscgraphics,0");
+cc_create($component0, ^iftype_graphic, 1);
+cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
+cc_setposition(2, 2, ^setpos_abs_left, ^setpos_abs_top);
+cc_setgraphicshadow(0x333333);
+cc_setoutline(1);
+~script5237;
+if_setonvartransmit("script5236($component0, cc_getid){var3165}", $component0);

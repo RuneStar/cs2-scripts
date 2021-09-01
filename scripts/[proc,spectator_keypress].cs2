@@ -2,43 +2,43 @@
 [proc,spectator_keypress](int $key0)
 switch_int ($key0) {
 	case ^key_f1 :
-		if (~deadman_world = 1) {
+		if (~deadman_world = true) {
 			~deadman_freecam_enable;
 		}
 	case ^key_f2 :
-		if (~deadman_world = 1) {
+		if (~deadman_world = true) {
 			~deadman_overlay_hide;
 		}
 	case ^key_f3 :
-		if (~deadman_world = 1) {
+		if (~deadman_world = true) {
 			~deadman_map_enable;
 		}
 	case ^key_f4 :
-		if (~deadman_world = 1) {
+		if (~deadman_world = true) {
 			~deadman_area_switch;
 		}
 	case ^key_f5 :
-		if (~deadman_world = 1) {
+		if (~deadman_world = true) {
 			~deadman_final_area_1_tele;
 		}
 	case ^key_f6 :
-		if (~deadman_world = 1) {
+		if (~deadman_world = true) {
 			~deadman_final_area_2_tele;
 		}
 	case ^key_f7 :
-		if (~deadman_world = 1) {
+		if (~deadman_world = true) {
 			~deadman_arenas_tele;
 		}
 	case ^key_f8 :
-		if (~deadman_world = 1) {
+		if (~deadman_world = true) {
 			~deadman_1v1_tele;
 		}
 	case ^key_f9 :
-		if (~deadman_world = 1) {
+		if (~deadman_world = true) {
 			~deadman_chest_tele;
 		}
 	case ^key_f10 :
-		if (~deadman_world = 1) {
+		if (~deadman_world = true) {
 			~deadman_lobby_tele;
 		}
 	case ^key_f12 :

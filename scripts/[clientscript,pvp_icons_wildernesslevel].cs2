@@ -1,8 +1,8 @@
 // 388
 [clientscript,pvp_icons_wildernesslevel](component $component0)
 def_int $int1 = ~wilderness_level;
-def_int $int2 = ~deadman_world;
-if ($int2 = 1) {
+def_boolean $boolean2 = ~deadman_world;
+if ($boolean2 = true) {
 	if (%var1676 > 4) {
 		if ($int1 > 0 & %varbit5954 = 1) {
 			if_settext("Level: <tostring($int1)>", $component0);

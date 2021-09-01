@@ -8,31 +8,31 @@ switch_obj ($obj0) {
 	case ice_blitz_4645, ice_barrage_4651 :
 		if (inv_total(inv, rune_pouch_23650) > 0 & ~fake_runes_enabled = 1) {
 			return(1);
-		} else if (%varbit5963 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
+		} else if (~script5223 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
 			return(1);
 		}
 	case ice_rush_4633, ice_burst_4639 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
 			return(1);
 		}
 	case bind_3283 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_bind_sack_24609) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_bind_sack_24609) > 0) {
 			return(1);
 		}
 	case snare_3300 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_snare_sack_24611) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_snare_sack_24611) > 0) {
 			return(1);
 		}
 	case entangle_3322 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_entangle_sack_24613) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_entangle_sack_24613) > 0) {
 			return(1);
 		}
 	case tele_block_4555, dead_orb_17152 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_teleport_spell_sack_24615) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_teleport_spell_sack_24615) > 0) {
 			return(1);
 		}
 	case vengeance_9136 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_vengeance_sack_24621) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_vengeance_sack_24621) > 0) {
 			return(1);
 		}
 }

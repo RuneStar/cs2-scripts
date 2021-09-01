@@ -2,10 +2,11 @@
 [clientscript,deadman_stats_init](component $component0, int $int1, int $int2)
 def_string $opbase0 = enum(int, string, enum_108, $int1);
 def_stat $stat3 = enum(int, stat, enum_681, $int1);
-if_setop(1, "Protect", $component0);
 if_setopbase($opbase0, $component0);
 if_setonop("deadman_stats_click(event_opindex, $component0, $int1)", $component0);
-if_setonvartransmit("deadman_stats_vartransmit($component0, $int1){var1295}", $component0);
+if (~deadman_mode ! 3) {
+	if_setonvartransmit("deadman_stats_vartransmit($component0, $int1){var1295}", $component0);
+}
 cc_deleteall($component0);
 cc_create($component0, ^iftype_graphic, 0);
 cc_setposition(-2, -2, ^setpos_abs_left, ^setpos_abs_top);
@@ -47,7 +48,16 @@ cc_create($component0, ^iftype_rectangle, 7);
 cc_setposition(38, 7, ^setpos_abs_left, ^setpos_abs_top);
 cc_setsize(17, 2, ^setsize_abs, ^setsize_abs);
 cc_setcolour(^red);
-if (testbit(%var1295, calc($int1 - 1)) = ^true) {
+if (~deadman_mode = 3) {
+	~deadmanprotect_stats_refresh($int1);
+	if (cc_find($component0, 4) = ^true) {
+		cc_sethide(true);
+	}
+	if (cc_find($component0, 5) = ^true) {
+		cc_sethide(true);
+	}
+	if_setop(1, "Check", $component0);
+} else if (testbit(%var1295, calc($int1 - 1)) = ^true) {
 	~deadman_stats_set_protect($component0, $int1);
 } else {
 	~deadman_stats_set_unprotect($component0, $int1);

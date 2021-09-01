@@ -4,7 +4,9 @@ if ($opindex0 ! 1) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
-if (testbit(%var1295, calc($int2 - 1)) = ^false) {
+if (~deadman_mode = 3) {
+	mes("XP is not lost on death in this Deadman event.");
+} else if (testbit(%var1295, calc($int2 - 1)) = ^false) {
 	~script1143($component1, $int2);
 } else {
 	~script1144($component1, $int2);

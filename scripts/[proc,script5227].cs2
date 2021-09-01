@@ -1,0 +1,12 @@
+// 5227
+[proc,script5227]()(int, int)
+switch_int (%varbit13025) {
+	case 3 :
+		return(101, 126);
+	case 2 :
+		return(71, calc(101 - 1));
+	case 1 :
+		return(36, calc(71 - 1));
+	case default :
+		return(3, calc(36 - 1));
+}

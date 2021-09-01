@@ -6,8 +6,4 @@
 ~deadmanprotect_createtab(3, "deadman_deathtype,3", "Guarded");
 %varcint139 = 1;
 ~deadmanprotect_settab(1);
-def_int $int0 = 0;
-def_int $int1 = 0;
-$int0, $int1 = ~deadmanprotect_xp_counts;
-if_settext("Combat <tostring($int0)>/2", interface_226:46);
-if_settext("Other <tostring($int1)>/3", interface_226:47);
+~script5225;

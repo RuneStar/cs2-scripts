@@ -11,7 +11,7 @@ def_int $int6 = 14;
 def_int $int7 = 6;
 while ($int5 < 28) {
 	$obj3 = inv_getobj(inv_611, $int1);
-	cc_create(enum(component, component, $enum2, interface_154:58), ^iftype_graphic, $int5);
+	cc_create(enum(component, component, $enum2, interface_154:3), ^iftype_graphic, $int5);
 	cc_setposition($int6, $int7, ^setpos_abs_left, ^setpos_abs_top);
 	cc_setsize(36, 32, ^setsize_abs, ^setsize_abs);
 	cc_setgraphicshadow(0x333333);

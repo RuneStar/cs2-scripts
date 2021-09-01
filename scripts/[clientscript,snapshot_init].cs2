@@ -9,15 +9,15 @@ if_settext("<escape(%varcstring370)><col=ffff00>|", snapshot_main:5);
 %varcint6, %varcint140, %varcint224 = 0, 1, $int0;
 if (playermod = true | staffmodlevel > 0) {
 	%varcint140 = 0;
-	if_setcolour(^white, snapshot_main:14);
-	~snapshot_toggle(snapshot_main:15, %varcint6);
+	if_setcolour(^white, snapshot_main:11);
+	~snapshot_toggle(snapshot_main:12, %varcint6);
 } else {
-	if_setgraphic("checkbox,0", snapshot_main:15);
-	if_setcolour(0xbbbbbb, snapshot_main:14);
-	if_clearops(snapshot_main:15);
-	if_clearops(snapshot_main:14);
+	if_setgraphic("checkbox,0", snapshot_main:12);
+	if_setcolour(0xbbbbbb, snapshot_main:11);
+	if_clearops(snapshot_main:12);
+	if_clearops(snapshot_main:11);
 }
-~snapshot_toggle(snapshot_main:12, %varcint140);
+~snapshot_toggle(snapshot_main:9, %varcint140);
 if (~on_mobile = true) {
 	~keyboard_show(0, 12);
 	if_setonclick("snapshot_openkeyboard(0, 12)", snapshot_main:5);

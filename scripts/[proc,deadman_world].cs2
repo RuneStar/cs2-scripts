@@ -1,10 +1,3 @@
 // 1138
-[proc,deadman_world]()(int)
-def_int $flags0 = worldflags;
-if (~script2237 = 1) {
-	return(1);
-}
-if (testbit($flags0, 29) = ^true) {
-	return(1);
-}
-return(0);
+[proc,deadman_world]()(boolean)
+return(~int_to_bool(~deadman_mode));

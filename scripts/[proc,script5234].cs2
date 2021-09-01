@@ -1,0 +1,131 @@
+// 5234
+[proc,script5234](component $component0, struct $struct1, string $text0, int $int2, int $width3, int $int4, int $int5)(int)
+cc_deleteall($component0);
+def_int $int6 = 0;
+cc_create($component0, ^iftype_rectangle, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setfill(true);
+cc_settrans(235);
+def_string $string1 = "-";
+def_graphic $graphic7 = null;
+def_int $int8 = struct_param($struct1, param_1375);
+if ($struct1 ! null) {
+	$string1 = enum(int, string, enum_4041, struct_param($struct1, param_1374));
+	switch_int (struct_param($struct1, param_1374)) {
+		case 1 :
+			cc_setcolour(^red);
+			switch_int ($int8) {
+				case 2 :
+					$graphic7 = "graphic_3507";
+				case 3 :
+					$graphic7 = "graphic_3508";
+				case default :
+					$graphic7 = "graphic_3506";
+			}
+		case 2 :
+			cc_setcolour(0x0070ff);
+			switch_int ($int8) {
+				case 2 :
+					$graphic7 = "graphic_3504";
+				case 3 :
+					$graphic7 = "graphic_3505";
+				case default :
+					$graphic7 = "graphic_3503";
+			}
+		case default :
+			cc_setcolour(^yellow);
+			switch_int ($int8) {
+				case 2 :
+					$graphic7 = "graphic_3510";
+				case 3 :
+					$graphic7 = "graphic_3511";
+				case default :
+					$graphic7 = "graphic_3509";
+			}
+	}
+} else {
+	cc_setcolour(^black);
+}
+def_int $int9 = 5;
+cc_create($component0, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize($width3, 25, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settextfont(b12_full);
+cc_settext("Slot <tostring(calc($int2 + 1))>");
+$int9 = calc($int9 + 25 + 3);
+def_string $string2 = "<col=9f9f9f>Look out for sigils as you explore the world. You can attune 3 of them to give you various advantages.</col>";
+if ($struct1 ! null) {
+	cc_create($component0, ^iftype_graphic, $int6);
+	$int6 = calc($int6 + 1);
+	cc_setsize(96, 96, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setgraphic($graphic7);
+	cc_settiling(false);
+	cc_create($component0, ^iftype_graphic, $int6);
+	$int6 = calc($int6 + 1);
+	cc_setsize(48, 48, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, calc($int9 + 9), ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setgraphic(struct_param($struct1, param_1384));
+	cc_settiling(false);
+	$string2 = "Type: <col=ffb83f><$string1></col><br>Tier: <col=ffb83f><tostring($int8)></col><br><br><struct_param($struct1, param_1373)>";
+} else {
+	cc_create($component0, ^iftype_model, $int6);
+	$int6 = calc($int6 + 1);
+	cc_setsize(96, 96, ^setsize_abs, ^setsize_abs);
+	cc_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top);
+	cc_setmodel(model_4856);
+	cc_setmodelangle(0, 0, 512, 1024, 0, 780);
+}
+$int9 = calc($int9 + 96 + 8);
+cc_create($component0, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize($width3, $int4, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xffb83f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settext($text0);
+$int9 = calc($int9 + $int4 + 12);
+def_int $int10 = calc(4 + 12 * paraheight($string2, $width3, p12_full));
+cc_create($component0, ^iftype_text, $int6);
+$int6 = calc($int6 + 1);
+cc_setsize($width3, $int10, ^setsize_abs, ^setsize_abs);
+cc_setposition(0, $int9, ^setpos_abs_centre, ^setpos_abs_top);
+cc_setcolour(0xff981f);
+cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
+cc_settextshadow(true);
+cc_settextfont(p12_full);
+cc_settext($string2);
+$int9 = calc($int9 + $int10 + 5);
+cc_create($component0, ^iftype_rectangle, $int6);
+$int6 = calc($int6 + 1);
+cc_setposition(0, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(1, 0, ^setsize_abs, ^setsize_minus);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component0, ^iftype_rectangle, $int6);
+$int6 = calc($int6 + 1);
+cc_setposition(1, 0, ^setpos_abs_left, ^setpos_abs_centre);
+cc_setsize(1, 0, ^setsize_abs, ^setsize_minus);
+cc_setfill(false);
+cc_setcolour(0x474745);
+cc_create($component0, ^iftype_rectangle, $int6);
+$int6 = calc($int6 + 1);
+cc_setposition(0, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize(1, 0, ^setsize_abs, ^setsize_minus);
+cc_setfill(false);
+cc_setcolour(0x0e0e0c);
+cc_create($component0, ^iftype_rectangle, $int6);
+$int6 = calc($int6 + 1);
+cc_setposition(1, 0, ^setpos_abs_right, ^setpos_abs_centre);
+cc_setsize(1, 0, ^setsize_abs, ^setsize_minus);
+cc_setfill(false);
+cc_setcolour(0x474745);
+return(~max($int5, $int9));

@@ -36,27 +36,27 @@ switch_obj ($obj1) {
 			$string1 = "Fertilise a farming patch with super or ultra compost, consuming 2 volcanic ash to do so.";
 		}
 	case ice_rush_4633, ice_burst_4639, ice_blitz_4645, ice_barrage_4651 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_ancient_ice_sack_24607) > 0) {
 			$obj13, $int14 = blighted_ancient_ice_sack_24607, 1;
 		}
 	case bind_3283 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_bind_sack_24609) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_bind_sack_24609) > 0) {
 			$obj13, $int14 = blighted_bind_sack_24609, 1;
 		}
 	case snare_3300 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_snare_sack_24611) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_snare_sack_24611) > 0) {
 			$obj13, $int14 = blighted_snare_sack_24611, 1;
 		}
 	case entangle_3322 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_entangle_sack_24613) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_entangle_sack_24613) > 0) {
 			$obj13, $int14 = blighted_entangle_sack_24613, 1;
 		}
 	case tele_block_4555, dead_orb_17152 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_teleport_spell_sack_24615) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_teleport_spell_sack_24615) > 0) {
 			$obj13, $int14 = blighted_teleport_spell_sack_24615, 1;
 		}
 	case vengeance_9136 :
-		if (%varbit5963 = 1 & inv_total(inv, blighted_vengeance_sack_24621) > 0) {
+		if (~script5223 = 1 & inv_total(inv, blighted_vengeance_sack_24621) > 0) {
 			$obj13, $int14 = blighted_vengeance_sack_24621, 1;
 		}
 		if (%varbit2451 = 1) {

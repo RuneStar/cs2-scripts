@@ -1,0 +1,12 @@
+// 5225
+[proc,script5225]
+if (~deadman_mode = 3) {
+	if_settext("Combat: N/A", interface_226:46);
+	if_settext("Other: N/A", interface_226:47);
+	return;
+}
+def_int $int0 = 0;
+def_int $int1 = 0;
+$int0, $int1 = ~deadmanprotect_xp_counts;
+if_settext("Combat: <tostring($int0)>/2", interface_226:46);
+if_settext("Other: <tostring($int1)>/3", interface_226:47);

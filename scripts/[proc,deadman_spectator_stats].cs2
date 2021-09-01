@@ -1,33 +1,49 @@
 // 2182
-[proc,deadman_spectator_stats](string $text0, string $text1, int $int0, int $int1, int $int2, int $int3, int $int4, int $int5)
-def_enum $enum6 = enum_140;
-if ($int5 = 1) {
-	$enum6 = enum_142;
+[proc,deadman_spectator_stats](string $text0, string $text1, int $int0, int $int1, int $int2, int $int3, int $int4, int $int5, int $int6, int $int7, int $int8)
+def_enum $enum9 = enum_140;
+if ($int8 = 1) {
+	$enum9 = enum_142;
 }
-if_settext($text0, enum(component, component, $enum6, interface_154:9));
-if_settext($text1, enum(component, component, $enum6, interface_154:11));
+if_settext($text0, enum(component, component, $enum9, interface_154:10));
+if_settext($text1, enum(component, component, $enum9, interface_154:11));
 def_string $text2 = "<tostring($int0)> / <tostring($int1)>";
-if_settext($text2, enum(component, component, $enum6, interface_154:52));
+if_settext($text2, enum(component, component, $enum9, interface_154:16));
 $int0 = calc($int0 * 100 / $int1 * 500 / 100);
 if ($int0 > 500) {
 	$int0 = 500;
 }
-if_setsize($int0, 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum6, interface_154:51));
-if_setsize(calc(500 - $int0), 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum6, interface_154:50));
+if_setsize($int0, 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum9, interface_154:15));
+if_setsize(calc(500 - $int0), 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum9, interface_154:14));
 def_string $text3 = "<tostring($int2)> / <tostring($int3)>";
-if_settext($text3, enum(component, component, $enum6, interface_154:40));
+if_settext($text3, enum(component, component, $enum9, interface_154:30));
 $int2 = calc($int2 * 100 / $int3 * 247 / 100);
 if ($int2 > 247) {
 	$int2 = 247;
 }
-if_setsize($int2, 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum6, interface_154:39));
-if_setsize(calc(247 - $int2), 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum6, interface_154:38));
+if_setsize($int2, 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum9, interface_154:29));
+if_setsize(calc(247 - $int2), 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum9, interface_154:28));
 $int4 = calc($int4 / 10);
 if ($int4 > 100) {
 	$int4 = 100;
 }
 def_string $text4 = "<tostring($int4)>%";
-if_settext($text4, enum(component, component, $enum6, interface_154:46));
+if_settext($text4, enum(component, component, $enum9, interface_154:23));
 $int4 = calc($int4 * 247 / 100);
-if_setsize($int4, 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum6, interface_154:45));
-if_setsize(calc(247 - $int4), 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum6, interface_154:44));
+if_setsize($int4, 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum9, interface_154:22));
+if_setsize(calc(247 - $int4), 6, ^setsize_abs, ^setsize_minus, enum(component, component, $enum9, interface_154:21));
+def_component $component10 = enum(component, component, $enum9, interface_154:60);
+cc_deleteall($component10);
+def_int $int11 = 0;
+def_int $int12 = 8;
+def_int $int13 = 0;
+def_int $int14 = 0;
+$int11, $int12, $int13, $int14 = ~script5226($int5, $component10, $enum9, $int11, $int12, $int13, $int14);
+$int11, $int12, $int13, $int14 = ~script5226($int6, $component10, $enum9, $int11, $int12, $int13, $int14);
+$int11, $int12, $int13, $int14 = ~script5226($int7, $component10, $enum9, $int11, $int12, $int13, $int14);
+if ($int13 <= 0) {
+	if_sethide(true, $component10);
+	return;
+}
+if_sethide(false, $component10);
+if_setsize(calc(8 + 36 + 4 + $int14 + 4 + 8), calc($int12 + 8), ^setsize_abs, ^setsize_abs, $component10);
+$int11 = ~stonebox($component10, 1, $int11);

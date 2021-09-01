@@ -84,7 +84,11 @@ if (%varbit1777 = 2) {
 	$text0 = "Items that go to your <col=ffffff>GRAVESTONE</col>: <col=ffffff>(Fee: None)</col>";
 }
 $int26, $int27 = ~deathkeep_left_setsection($text0, interface_4:7, $int12, $int13, $int26, $int27);
-$int26, $int27 = ~deathkeep_left_setsection("Items <col=ff0000>LOST</col> to the player who kills you:", interface_4:8, $int14, $int15, $int26, $int27);
+if ($int0 = 1) {
+	$int26, $int27 = ~deathkeep_left_setsection("Items <col=ff0000>LOST</col> to the player who kills you:", interface_4:8, $int14, $int15, $int26, $int27);
+} else {
+	$int26, $int27 = ~deathkeep_left_setsection("Items <col=ff0000>DROPPED</col> near where you die:", interface_4:8, $int14, $int15, $int26, $int27);
+}
 if (%varbit1777 = 2) {
 	$text0 = "Items <col=ff0000>DROPPED</col> as coins:";
 } else {

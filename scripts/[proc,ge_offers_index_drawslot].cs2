@@ -12,7 +12,7 @@ def_graphic $graphic35 = "ge_icons,1";
 def_string $string1 = "Offer to BUY items.";
 def_int $int36 = 0;
 def_int $int37 = 0;
-if (~deadman_world = 1) {
+if (~deadman_world = true) {
 	if ($int9 < 8) {
 		$int37 = 1;
 	}

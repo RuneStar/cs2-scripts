@@ -389,7 +389,6 @@
 [**386**](scripts/[proc,pvp_icons_layout].cs2) `[proc,pvp_icons_layout]`  
 [**387**](scripts/[proc,pvp_icons_comlevelrange].cs2) `[proc,pvp_icons_comlevelrange]`  
 [**388**](scripts/[clientscript,pvp_icons_wildernesslevel].cs2) `[clientscript,pvp_icons_wildernesslevel]`  
-[**389**](scripts/[clientscript,combat_level_transmit].cs2) `[clientscript,combat_level_transmit]`  
 [**390**](scripts/[clientscript,combat_wilderness_transmit].cs2) `[clientscript,combat_wilderness_transmit]`  
 [**391**](scripts/[clientscript,poh_options_doors].cs2) `[clientscript,poh_options_doors]`  
 [**392**](scripts/[clientscript,steelbox].cs2) `[clientscript,steelbox]`  
@@ -5223,3 +5222,18 @@
 [**5220**](scripts/[proc,script5220].cs2)  
 [**5221**](scripts/[clientscript,summary_sidepanel_timer_draw].cs2) `[clientscript,summary_sidepanel_timer_draw]`  
 [**5222**](scripts/[clientscript,script5222].cs2)  
+[**5223**](scripts/[proc,script5223].cs2)  
+[**5224**](scripts/[clientscript,script5224].cs2)  
+[**5225**](scripts/[proc,script5225].cs2)  
+[**5226**](scripts/[proc,script5226].cs2)  
+[**5227**](scripts/[proc,script5227].cs2)  
+[**5228**](scripts/[clientscript,script5228].cs2)  
+[**5229**](scripts/[clientscript,script5229].cs2)  
+[**5230**](scripts/[proc,script5230].cs2)  
+[**5231**](scripts/[clientscript,script5231].cs2)  
+[**5232**](scripts/[proc,script5232].cs2)  
+[**5233**](scripts/[proc,script5233].cs2)  
+[**5234**](scripts/[proc,script5234].cs2)  
+[**5235**](scripts/[clientscript,script5235].cs2)  
+[**5236**](scripts/[clientscript,script5236].cs2)  
+[**5237**](scripts/[proc,script5237].cs2)  

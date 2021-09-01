@@ -1,23 +1,45 @@
 // 1120
 [clientscript,snapshot_rules_init](component $component0, component $component1)
-if_settext("Then <~text_device("click", "tap")> below to indicate which of our rules is being broken.<br>For a detailed explanation of each rule please read the manual on our website.", $component1);
+if_settext("Then <~text_device("click", "tap")> below to indicate which of our rules is being broken.<br>For a detailed explanation of each rule please visit our website.", $component1);
 cc_deleteall($component0);
-def_int $int2 = calc(if_getheight($component0) / 8);
+def_int $int2 = 0;
 def_int $int3 = 0;
 def_int $int4 = 0;
 def_int $int5 = 0;
-$int3, $int4, $int5 = ~snapshot_rules_write(1, "Seriously offensive language", 16, 0, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(2, "Scamming", 15, 0, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(3, "Breaking real-world laws", 21, 0, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(4, "Exploiting a bug", 4, 0, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(5, "Staff impersonation", 5, 0, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(6, "Encouraging rule breaking", 9, 0, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(7, "Macroing or use of bots", 7, 0, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(8, "Offensive account name", 19, 0, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(9, "Advertising websites", 11, 1, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(10, "Buying/selling accounts and services", 6, 1, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(11, "Asking for or providing contact information", 13, 1, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(12, "Solicitation", 17, 1, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(13, "Player-run Games of Chance", 22, 1, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(14, "Disruptive behaviour", 18, 1, $component0, $int3, $int4, $int5, $int2);
-$int3, $int4, $int5 = ~snapshot_rules_write(15, "Real-life threats", 20, 1, $component0, $int3, $int4, $int5, $int2);
+if (~deadman_mode = 3) {
+	$int3 = calc(if_getheight($component0) / 9);
+	$int2, $int4, $int5 = ~snapshot_rules_write(1, "Seriously offensive language", 16, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(2, "Scamming", 15, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(3, "Breaking real-world laws", 21, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(4, "Exploiting a bug", 4, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(5, "Staff impersonation", 5, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(6, "Encouraging rule breaking", 9, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(7, "Macroing or use of bots", 7, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(8, "Offensive account name", 19, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(9, "Advertising websites", 11, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(10, "Buying/selling accounts and services", 6, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(11, "Asking for or providing contact information", 13, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(12, "Solicitation", 17, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(13, "Player-run Games of Chance", 22, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(14, "Disruptive behaviour", 18, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(15, "Real-life threats", 20, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(16, "Boxing in the Deadman Tournament", 8, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(17, "Muling in the Deadman Tournament", 12, 1, $component0, $int2, $int4, $int5, $int3);
+} else {
+	$int3 = calc(if_getheight($component0) / 8);
+	$int2, $int4, $int5 = ~snapshot_rules_write(1, "Seriously offensive language", 16, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(2, "Scamming", 15, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(3, "Breaking real-world laws", 21, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(4, "Exploiting a bug", 4, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(5, "Staff impersonation", 5, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(6, "Encouraging rule breaking", 9, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(7, "Macroing or use of bots", 7, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(8, "Offensive account name", 19, 0, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(9, "Advertising websites", 11, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(10, "Buying/selling accounts and services", 6, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(11, "Asking for or providing contact information", 13, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(12, "Solicitation", 17, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(13, "Player-run Games of Chance", 22, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(14, "Disruptive behaviour", 18, 1, $component0, $int2, $int4, $int5, $int3);
+	$int2, $int4, $int5 = ~snapshot_rules_write(15, "Real-life threats", 20, 1, $component0, $int2, $int4, $int5, $int3);
+}

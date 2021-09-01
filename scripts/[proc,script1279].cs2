@@ -2,6 +2,9 @@
 [proc,script1279](int $int0)(int, int, int)
 def_stat $stat1 = enum(int, stat, enum_681, $int0);
 def_int $lvl2 = stat_base($stat1);
+if (~deadman_mode = 3) {
+	return($lvl2, $lvl2, 0);
+}
 def_int $bool3 = testbit(%var1295, calc($int0 - 1));
 def_int $int4 = 50;
 if ($bool3 = ^true) {

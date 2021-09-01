@@ -29,7 +29,7 @@ switch_int ($int0) {
 			return(0);
 		}
 	case 8 :
-		if (~high_risk_world = 1 | ~deadman_world = 1 | %varbit5314 = 1) {
+		if (~high_risk_world = 1 | ~deadman_world = true | %varbit5314 = 1) {
 			return(0);
 		}
 }

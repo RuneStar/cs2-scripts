@@ -1,28 +1,26 @@
 // 387
 [proc,pvp_icons_comlevelrange](int $int0)
 def_int $int1 = $int0;
-if (~pvpw_check = 1) {
-	$int1 = calc(15 + $int0);
-}
-def_int $int2 = calc(%varcint52 - $int1);
-def_int $int3 = calc(%varcint52 + $int1);
-if (~deadman_world = 1) {
+def_int $int2 = 3;
+def_int $int3 = 126;
+if (~deadman_world = true) {
 	if (%varbit4965 > 0) {
 		if_sethide(true, interface_90:49);
 		return;
 	}
-	$int2 = 3;
-	$int3 = 126;
 	if (%varcint78 = 2) {
 		if_settext("", interface_90:49);
 		return;
 	}
+	if (~deadman_mode = 3) {
+		$int2, $int3 = ~script5227;
+	}
 } else {
-	if ($int2 < 3) {
-		$int2 = 3;
+	if (~pvpw_check = 1) {
+		$int1 = calc(15 + $int0);
 	}
-	if ($int3 > 126) {
-		$int3 = 126;
-	}
+	$int2 = calc(%varbit13027 - $int1);
+	$int3 = calc(%varbit13027 + $int1);
+	$int2, $int3 = ~max(3, $int2), ~min(126, $int3);
 }
 if_settext("<tostring($int2)>-<tostring($int3)>", interface_90:49);

@@ -1,0 +1,18 @@
+// 5237
+[proc,script5237]
+def_namedobj $namedobj0 = enum(int, namedobj, enum_4039, %varbit13019);
+if ($namedobj0 ! null) {
+	cc_setobject_nonum($namedobj0, 1);
+} else {
+	$namedobj0 = enum(int, namedobj, enum_4039, %varbit13020);
+	if ($namedobj0 ! null) {
+		cc_setobject_nonum($namedobj0, 1);
+	} else {
+		$namedobj0 = enum(int, namedobj, enum_4039, %varbit13021);
+		if ($namedobj0 ! null) {
+			cc_setobject_nonum($namedobj0, 1);
+		} else {
+			cc_setobject_nonum(enum(int, namedobj, enum_4040, 53), 1);
+		}
+	}
+}

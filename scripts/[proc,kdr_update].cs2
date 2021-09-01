@@ -6,7 +6,7 @@ def_int $int1 = 0;
 def_int $int2 = 0;
 if (%varbit4143 = 0 | %varbit5963 = 0 & ~script2871 = 0) {
 	cc_settext("");
-} else if (~deadman_world = 1 & %varbit4965 > 0) {
+} else if (~deadman_world = true & %varbit4965 > 0) {
 	cc_settext("");
 } else if (%varbit8375 = 0) {
 	cc_settext("Kills: <~tostring_spacer(%varbit8376, $string0)><br>Deaths: 0<br>K/D Ratio: 0.0");

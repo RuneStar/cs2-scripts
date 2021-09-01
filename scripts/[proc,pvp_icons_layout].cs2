@@ -7,9 +7,9 @@ def_int $int3 = 0;
 def_enum $enum4 = ~toplevel_getcomponents;
 def_int $int5 = 15;
 def_int $int6 = 0;
-def_int $int7 = ~deadman_world;
+def_boolean $boolean7 = ~deadman_world;
 def_int $int8 = ~wilderness_level;
-if ($int7 = 0 & if_gettop = interface_80) {
+if ($boolean7 = false & if_gettop = interface_80) {
 	if_sethide(true, interface_90:0);
 	return;
 }
@@ -23,6 +23,7 @@ if (~pvpw_check = 1) {
 	if_setcolour(0xff981f, interface_90:50);
 	if_sethide(false, interface_90:49);
 	if_setposition(0, 18, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:49);
+	if_setgraphic("pvpw_icons,0", interface_90:46);
 	~pvp_icons_comlevelrange($int8);
 	~script866(true);
 	if_sethide(true, interface_90:51);
@@ -39,6 +40,7 @@ if (~pvpw_check = 1) {
 		if_setontimer(null, interface_328:1);
 		if_sethide(true, interface_328:1);
 	}
+	if_setgraphic("pvpw_icons,0", interface_90:46);
 	~script866(true);
 	if (if_gethide(interface_90:50) = false) {
 		if_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
@@ -47,7 +49,7 @@ if (~pvpw_check = 1) {
 	} else {
 		if_setposition(0, 24, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:53);
 	}
-} else if ($int7 = 1) {
+} else if ($boolean7 = true) {
 	$int5 = 0;
 	if_setcolour(0xff981f, interface_90:50);
 	if (if_gettop = interface_80) {
@@ -78,6 +80,11 @@ if (~pvpw_check = 1) {
 	} else {
 		if_setontimer(null, interface_90:1);
 		if_sethide(true, interface_90:1);
+	}
+	if (~deadman_mode = 3) {
+		if_setgraphic(enum(int, graphic, enum_4042, %varbit13017), interface_90:46);
+	} else {
+		if_setgraphic("pvpw_icons,0", interface_90:46);
 	}
 	if (%varbit4965 > 0) {
 		if_setsize(78, 73, ^setsize_abs, ^setsize_abs, interface_90:44);
@@ -127,6 +134,7 @@ if (~pvpw_check = 1) {
 	if_setposition(0, 18, ^setpos_abs_centre, ^setpos_abs_bottom, interface_90:50);
 	if_setcolour(^yellow, interface_90:50);
 	if_sethide(true, interface_90:49);
+	if_setgraphic("pvpw_icons,0", interface_90:46);
 	if (%varbit5701 >= 1) {
 		if (%varbit5701 > 2) {
 			~script1434(false, $enum4, true);
