@@ -1,0 +1,44 @@
+// 3989
+[proc,script3989](string $string0, int $int0, int $y1)(int)
+def_component $component2 = null;
+def_component $component3 = null;
+switch_int (%varcint178) {
+	case 0 :
+		$component2 = interface_50:63;
+		$component3 = interface_50:64;
+	case 1 :
+		$component2 = interface_50:65;
+		$component3 = interface_50:66;
+	case 2 :
+		$component2 = interface_50:67;
+		$component3 = interface_50:68;
+	case 3 :
+		$component2 = interface_50:69;
+		$component3 = interface_50:70;
+	case 4 :
+		$component2 = interface_50:71;
+		$component3 = interface_50:72;
+}
+$int0 = calc($int0 + 8);
+if (string_length($string0) > 0) {
+	if (if_find($component2) = true) {
+		if_sethide(false, $component2);
+		if_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top, $component2);
+		if_setsize(13, 13, ^setsize_abs, ^setsize_abs, $component2);
+		$int0 = calc($int0 + if_getwidth($component2) + 8);
+	} else {
+		mes("couldn't find component");
+	}
+	if (if_find($component3) = true) {
+		if_sethide(false, $component3);
+		if_setposition($int0, $y1, ^setpos_abs_left, ^setpos_abs_top, $component3);
+		if_setsize(13, 13, ^setsize_abs, ^setsize_abs, $component3);
+		$int0 = calc($int0 + if_getwidth($component3));
+	} else {
+		mes("couldn't find component");
+	}
+} else {
+	if_sethide(true, $component2);
+	if_sethide(true, $component3);
+}
+return($int0);

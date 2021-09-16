@@ -34,6 +34,12 @@ if_setsize(calc(247 - $int4), 6, ^setsize_abs, ^setsize_minus, enum(component, c
 def_component $component10 = enum(component, component, $enum9, interface_154:60);
 cc_deleteall($component10);
 def_int $int11 = 0;
+cc_create($component10, ^iftype_graphic, $int11);
+$int11 = calc($int11 + 1);
+cc_setposition(0, 0, ^setpos_abs_centre, ^setpos_abs_centre);
+cc_setsize(2, 2, ^setsize_minus, ^setsize_minus);
+cc_settiling(true);
+cc_setgraphic("tradebacking_dark");
 def_int $int12 = 8;
 def_int $int13 = 0;
 def_int $int14 = 0;
@@ -42,6 +48,7 @@ $int11, $int12, $int13, $int14 = ~script5226($int6, $component10, $enum9, $int11
 $int11, $int12, $int13, $int14 = ~script5226($int7, $component10, $enum9, $int11, $int12, $int13, $int14);
 if ($int13 <= 0) {
 	if_sethide(true, $component10);
+	cc_deleteall($component10);
 	return;
 }
 if_sethide(false, $component10);

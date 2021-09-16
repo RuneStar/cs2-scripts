@@ -1,22 +1,26 @@
 // 3306
 [proc,wiki_icon_update](component $component0, component $component1, component $component2, boolean $boolean3)
-def_graphic $graphic4 = "wiki_icon,0";
-def_graphic $graphic5 = "wiki_icon,1";
+def_enum $enum4 = ~toplevel_getcomponents;
+if ($enum4 = null) {
+	return;
+}
+def_graphic $graphic5 = "wiki_icon,0";
+def_graphic $graphic6 = "wiki_icon,1";
 if (%varbit10113 = 0) {
 	if_sethide(false, $component1);
 	if (~on_mobile = false) {
-		if_setonmouserepeat("graphic_swapper($component2, $graphic5)", $component1);
-		if_setonmouseleave("graphic_swapper($component2, $graphic4)", $component1);
+		if_setonmouserepeat("graphic_swapper($component2, $graphic6)", $component1);
+		if_setonmouseleave("graphic_swapper($component2, $graphic5)", $component1);
 		if_setsize(40, 24, ^setsize_abs, ^setsize_abs, $component1);
 	} else {
 		if_setsize(40, 34, ^setsize_abs, ^setsize_abs, $component1);
 	}
-	if ($boolean3 = false) {
-		if (~show_storebutton = 0) {
-			if_setposition(62, 75, ^setpos_abs_right, ^setpos_abs_top, $component0);
-		} else {
-			if_setposition(8, 101, ^setpos_abs_right, ^setpos_abs_top, $component0);
-		}
+	if ($boolean3 = false & ~show_storebutton = 0) {
+		if_setposition(62, 75, ^setpos_abs_right, ^setpos_abs_top, $component0);
+	} else if ($enum4 = enum_1129) {
+		if_setposition(8, 135, ^setpos_abs_right, ^setpos_abs_top, $component0);
+	} else {
+		if_setposition(0, 135, ^setpos_abs_right, ^setpos_abs_top, $component0);
 	}
 } else {
 	if_sethide(true, $component1);

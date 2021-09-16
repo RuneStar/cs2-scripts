@@ -1,0 +1,7 @@
+// 5240
+[clientscript,script5240]
+def_int $int0 = enum_getoutputcount(enum_1968);
+while ($int0 > 0) {
+	$int0 = calc($int0 - 1);
+	if_settext("", enum(int, component, enum_1968, $int0));
+}

@@ -82,7 +82,11 @@ if (~pvpw_check = 1) {
 		if_sethide(true, interface_90:1);
 	}
 	if (~deadman_mode = 3) {
-		if_setgraphic(enum(int, graphic, enum_4042, %varbit13017), interface_90:46);
+		if (%varbit1463 = 1) {
+			if_setgraphic(null, interface_90:46);
+		} else {
+			if_setgraphic(enum(int, graphic, enum_4042, %varbit13017), interface_90:46);
+		}
 	} else {
 		if_setgraphic("pvpw_icons,0", interface_90:46);
 	}

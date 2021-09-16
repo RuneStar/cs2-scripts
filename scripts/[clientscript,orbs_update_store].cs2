@@ -1,9 +1,15 @@
 // 2396
 [clientscript,orbs_update_store](component $component0, component $component1, component $component2, component $component3, component $component4)
+def_enum $enum5 = ~toplevel_getcomponents;
+if ($enum5 = null) {
+	return;
+}
+def_graphic $graphic6 = "graphic_2138";
+def_graphic $graphic7 = "graphic_3517";
 if ($component0 ! null) {
 	if_setnoclickthrough(true, $component2);
 	if_setnoclickthrough(true, $component1);
-	if_setonvartransmit("orbs_update_store(null, $component1, $component2, $component3, $component4){var1055, var1795}", $component0);
+	if_setonvartransmit("orbs_update_store(null, $component1, $component2, $component3, $component4){var1054, var1055, var1795}", $component0);
 }
 if (~show_storebutton = 1) {
 	if_sethide(false, $component1);
@@ -11,12 +17,20 @@ if (~show_storebutton = 1) {
 	if_sethide(false, $component3);
 	if_sethide(false, $component4);
 	if_setop(1, "Open Store", $component1);
+	if_setgraphic($graphic6, $component2);
+	if_setonmouserepeat("graphic_swapper($component2, $graphic7)", $component1);
+	if_setonmouseleave("graphic_swapper($component2, $graphic6)", $component1);
 	if (~bonds_hide = 1 & %varbit6713 = 0) {
 		if_setop(2, "", $component1);
 	} else {
 		if_setop(2, "Bond Pouch", $component1);
 	}
 	if_setonop("opsound(event_opindex, 6)", $component1);
+	if ($enum5 = enum_1129) {
+		if_setposition(0, 83, ^setpos_abs_right, ^setpos_abs_top, interface_160:38);
+	} else {
+		if_setposition(85, 143, ^setpos_abs_left, ^setpos_abs_top, interface_160:38);
+	}
 } else {
 	if_sethide(true, $component1);
 	if_sethide(true, $component2);
